@@ -1,0 +1,54 @@
+model {
+
+# Data
+# nVar = 10          number of varieties
+# nYear = 5          number of years
+# nLoc = 7           number of locs
+# nYL = 29           number of year by loc combinations in the data
+# yield[nYL, nVar]   yield in year-by-loc combination h for variety i
+# chu[nYL]           covariate: corn heat units, centered
+# year[nYL]          year for year-by-loc combination
+# loc[nYL]           loc for year-by-loc combination
+
+for (h in 1:nYL){
+  for (i in 1:nVar){
+    yield[h,i] ~ dnorm(mu[h, i], tau)
+    # Model 3.2, no covariate
+    # mu[h,i] <- phi[i, year[h]] + xi[loc[h], year[h]]
+    # Model 3.3, with covariate
+    mu[h,i] <- phi[i, year[h]] + beta[i] * chu[h] + xi[loc[h], year[h]]
+}}
+for (i in 1:nVar){
+  alpha[i] ~ dnorm(mu.v, tau.v)       # effect of variety i
+  beta[i]  ~ dnorm(mu.c, tau.c)       # slope for variety i
+  for (k in 1:nYear){
+  phi[i,k] ~ dnorm(alpha[i], tau.vy)  # effect of year-by-variety combination
+#  vef[i] <- alpha[i] - mean(alpha[])
+}}
+for (k in 1:nYear){
+  pi[k] ~ dnorm(mu.y, tau.y)          # effect of year k
+  for (j in 1:nLoc){
+    xi[j,k] ~ dnorm(pi[k], tau.ly)    # effect of year-by-loc combination
+}}
+
+# 'Expert' Priors
+mu.c   ~ dnorm(5,4)          # N(5, 0.25) expected slope
+mu.v   ~ dnorm(6, 20)        # N(6, 0.05) expected variety effect
+mu.y   ~ dnorm(0, 4)         # N(0, 0.25) expected year effect
+tau.v  ~ dgamma(25, 6.25)    # variance of 0.25 with 50 df
+tau.y  ~ dgamma(5, 1.25)     #             0.25      10 df
+tau.ly ~ dgamma(25, 25)      #             1         50 df
+tau.vy ~ dgamma(12.5, 0.625) #             0.05      25 df
+tau    ~ dgamma(12.5, 2.5)   #             0.20      25 df
+tau.c  ~ dgamma(10, 40)      #             4         20 df
+
+# Derived values, not used in model
+# alpha.bar <- mean(alpha[]) # mean variety effect
+# beta.bar <- mean(beta[])   # mean slope
+# sigsq <- pow(tau, -1)
+# sigsq.c <- pow(tau.c, -1)
+# sigsq.v <- pow(tau.v, -1)
+# sigsq.y <- pow(tau.y, -1)
+# sigsq.ly <- pow(tau.ly, -1)
+# sigsq.vy <- pow(tau.vy, -1)
+}

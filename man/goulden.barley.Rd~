@@ -1,0 +1,32 @@
+\name{goulden.barley}
+\alias{goulden.barley}
+\docType{data}
+\title{
+%%   ~~ data name/kind ... ~~
+}
+\description{
+%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+}
+\usage{data(goulden.barley)}
+\format{
+  A data frame with 400 observations on the following 3 variables.
+  \describe{
+    \item{\code{row}}{a numeric vector}
+    \item{\code{column}}{a numeric vector}
+    \item{\code{yield}}{a numeric vector}
+  }
+}
+\details{
+%%  ~~ If necessary, more details than the __description__ above ~~
+}
+\source{
+%%  ~~ reference to a publication or URL from which the data were obtained ~~
+}
+\references{
+%%  ~~ possibly secondary sources and usages ~~
+}
+\examples{
+data(goulden.barley)
+## maybe str(goulden.barley) ; plot(goulden.barley) ...
+}
+\keyword{datasets}

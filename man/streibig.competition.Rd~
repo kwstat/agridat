@@ -1,0 +1,37 @@
+\name{streibig.competition}
+\alias{streibig.competition}
+\docType{data}
+\title{
+%%   ~~ data name/kind ... ~~
+}
+\description{
+%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+}
+\usage{data(streibig.competition)}
+\format{
+  A data frame with 135 observations on the following 8 variables.
+  \describe{
+    \item{\code{pot}}{a numeric vector}
+    \item{\code{bseeds}}{a numeric vector}
+    \item{\code{sseeds}}{a numeric vector}
+    \item{\code{block}}{a numeric vector}
+    \item{\code{bfwt}}{a numeric vector}
+    \item{\code{sfwt}}{a numeric vector}
+    \item{\code{bdwt}}{a numeric vector}
+    \item{\code{sdwt}}{a numeric vector}
+  }
+}
+\details{
+%%  ~~ If necessary, more details than the __description__ above ~~
+}
+\source{
+%%  ~~ reference to a publication or URL from which the data were obtained ~~
+}
+\references{
+%%  ~~ possibly secondary sources and usages ~~
+}
+\examples{
+data(streibig.competition)
+## maybe str(streibig.competition) ; plot(streibig.competition) ...
+}
+\keyword{datasets}

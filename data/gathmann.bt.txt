@@ -1,0 +1,17 @@
+gen	thysan	aranei
+Bt	16.6	0.8
+Bt	16.4	0.8
+Bt	11	0.6
+Bt	16.8	0.4
+Bt	10.6	0.6
+Bt	18.4	0.8
+Bt	14.2	0
+Bt	10.2	0.6
+ISO	6.2	0.75
+ISO	10	0.2
+ISO	11.8	1
+ISO	15.6	0.8
+ISO	7.6	0
+ISO	7.4	0
+ISO	7.2	0.6
+ISO	4	0.4

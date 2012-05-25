@@ -1,0 +1,47 @@
+\name{cox.stripsplit}
+\alias{cox.stripsplit}
+\docType{data}
+\title{
+  Strip-split plot of barley with fertilizer, calcium, and soil factors.
+}
+\description{
+  Strip-split plot of barley with fertilizer, calcium, and soil factors.
+}
+\usage{cox.stripsplit}
+\format{
+  A data frame with 96 observations on the following 5 variables.
+  \describe{
+    \item{\code{rep}}{Rep factor, 4 levels}
+    \item{\code{soil}}{Soil factor, 3 levels}
+    \item{\code{fert}}{Fertilizer factor, 4 levels}
+    \item{\code{calcium}}{Calcium factor, 2 levels}
+    \item{\code{yield}}{Yield of winter barley}
+  }
+}
+\details{
+Four different fertilizer treatments are laid out in vertical
+strips, which are then split into subplots with different levels of
+calcium. Soil type is stripped across the split-plot experiment, and the
+entire experiment is then replicated three times.
+}
+\source{
+  Comes from the notes of Gertrude Cox and A. Rotti. 
+}
+\references{
+  \url{http://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.htm#statug_anova_sect030.htm}
+}
+\examples{
+dat <- cox.stripsplit
+
+# Raw means
+aggregate(yield ~ calcium, data=dat, mean)
+aggregate(yield ~ soil, data=dat, mean)
+aggregate(yield ~ calcium, data=dat, mean)
+
+# AOV
+m1 <- aov(yield~ fert*calcium*soil +
+          Error(rep/(fert+soil+calcium:fert+soil:fert)),
+          data=dat)
+summary(m1)
+}
+

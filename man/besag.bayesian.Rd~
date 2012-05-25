@@ -1,0 +1,33 @@
+\name{besag.bayesian}
+\alias{besag.bayesian}
+\docType{data}
+\title{
+%%   ~~ data name/kind ... ~~
+}
+\description{
+%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+}
+\usage{data(besag.bayesian)}
+\format{
+  A data frame with 225 observations on the following 4 variables.
+  \describe{
+    \item{\code{column}}{a numeric vector}
+    \item{\code{row}}{a numeric vector}
+    \item{\code{yield}}{a numeric vector}
+    \item{\code{gen}}{a factor with levels \code{G01} \code{G02} \code{G03} \code{G04} \code{G05} \code{G06} \code{G07} \code{G08} \code{G09} \code{G10} \code{G11} \code{G12} \code{G13} \code{G14} \code{G15} \code{G16} \code{G17} \code{G18} \code{G19} \code{G20} \code{G21} \code{G22} \code{G23} \code{G24} \code{G25} \code{G26} \code{G27} \code{G28} \code{G29} \code{G30} \code{G31} \code{G32} \code{G33} \code{G34} \code{G35} \code{G36} \code{G37} \code{G38} \code{G39} \code{G40} \code{G41} \code{G42} \code{G43} \code{G44} \code{G45} \code{G46} \code{G47} \code{G48} \code{G49} \code{G50} \code{G51} \code{G52} \code{G53} \code{G54} \code{G55} \code{G56} \code{G57} \code{G58} \code{G59} \code{G60} \code{G61} \code{G62} \code{G63} \code{G64} \code{G65} \code{G66} \code{G67} \code{G68} \code{G69} \code{G70} \code{G71} \code{G72} \code{G73} \code{G74} \code{G75}}
+  }
+}
+\details{
+%%  ~~ If necessary, more details than the __description__ above ~~
+}
+\source{
+%%  ~~ reference to a publication or URL from which the data were obtained ~~
+}
+\references{
+%%  ~~ possibly secondary sources and usages ~~
+}
+\examples{
+data(besag.bayesian)
+## maybe str(besag.bayesian) ; plot(besag.bayesian) ...
+}
+\keyword{datasets}
