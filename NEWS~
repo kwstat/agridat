@@ -3,11 +3,12 @@ News for 'agridat'
 Changes in version 1.5 (unreleased)
 
   * New data:
-  besag.bayesian, cochran.wireworms, goulden.barley, immer.sugarbeet,
-  minnesota.barley.yield, springer.maize
+  besag.bayesian, caribbean.maize, cochran.wireworms, 
+  goulden.barley, immer.sugarbeet,
+  minnesota.barley.yield, 
 
   * Renamed crowder.germination to crowder.seeds.
-
+  * Change 'column' to 'col' in all data.
   * Function 'desplot' gains an argument 'flip'.
 
 Changes in version 1.4 (Mar 2012)
