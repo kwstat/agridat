@@ -1,4 +1,4 @@
-"row"	"column"	"yield"
+row	col	yield
 12	1	191
 11	1	188
 10	1	211

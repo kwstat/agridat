@@ -9,7 +9,7 @@
   Data from Fisher's 1929 paper \emph{Studies in Crop Variation 6}.
   A different design was used each year.
 }
-\usage{eden.potato}
+\usage{data(eden.potato)}
 \format{
   A data frame with 225 observations on the following 9 variables.
   \describe{
@@ -17,7 +17,7 @@
     \item{\code{yield}}{Yield in pounds per plot}
     \item{\code{block}}{Bloc factor}
     \item{\code{row}}{Row}
-    \item{\code{column}}{Column}
+    \item{\code{col}}{Column}
     \item{\code{trt}}{Treatment factor}
     \item{\code{nitro}}{Nitrogen fertilizer, cwt/acre}
     \item{\code{potash}}{Potash fertilizer, cwt/acre}
@@ -57,29 +57,29 @@ dat <- eden.potato
 
 # 1925 qualitative
 d5a <- subset(dat, year=='1925a')
-desplot(trt~column*row, d5a, text=yield, cex=1, shorten='no')
-anova(m5a <- aov(yield~trt+factor(row)+factor(column), d5a)) # table 2
+desplot(trt~col*row, d5a, text=yield, cex=1, shorten='no')
+anova(m5a <- aov(yield~trt+factor(row)+factor(col), d5a)) # table 2
 
 # 1926 qualitative
 d6a <- subset(dat, year=='1926a')
-desplot(trt~column*row, d6a, text=yield, cex=1, shorten='no')
-anova(m6a <- aov(yield~trt+factor(row)+factor(column), d6a)) # table 4
+desplot(trt~col*row, d6a, text=yield, cex=1, shorten='no')
+anova(m6a <- aov(yield~trt+factor(row)+factor(col), d6a)) # table 4
 
 # 1925 quantitative
 d5 <- subset(dat, year=='1925b')
-desplot(yield ~ column*row, d5, out1=block, text=trt, cex=1)
+desplot(yield ~ col*row, d5, out1=block, text=trt, cex=1)
 # Trt 't' not defined, seems to be the same as 'a'
 dotplot(trt~yield|block, d5)
 anova(m5 <- aov(yield~trt+block, d5)) # table 6
 
 # 1926 quantitative
 d6 <- subset(dat, year=='1926b')
-desplot(yield ~ column*row, d6, out1=block, text=trt, cex=1)
+desplot(yield ~ col*row, d6, out1=block, text=trt, cex=1)
 anova(m6 <- aov(yield~trt+block, d6)) # table 7
 
 # 1927 qualitative + quantitative
 d7 <- droplevels(subset(dat, year==1927))
-desplot(yield ~ column*row, d7, out1=block, text=trt, cex=1, col=ptype)
+desplot(yield ~ col*row, d7, out1=block, text=trt, cex=1, col=ptype)
 
 # Table 8.  Anova, mean yield tons / acre
 anova(m7 <- aov(yield~trt+block+ptype + ptype:potash, d7))

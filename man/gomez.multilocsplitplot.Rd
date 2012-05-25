@@ -9,7 +9,7 @@ Rice multilocation Split-Plot
   Within each rep, the main plot was 6 nitrogen fertilizer treatments
   and the sub plot was 2 rice varieties.
 }
-\usage{gomez.multilocsplitplot}
+\usage{data(gomez.multilocsplitplot)}
 \format{
   A data frame with 108 observations on the following 5 variables.
   \describe{

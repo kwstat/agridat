@@ -3,17 +3,19 @@ News for 'agridat'
 Changes in version 1.5 (unreleased)
 
   * New data:
-  besag.bayesian, cochran.wireworms, goulden.barley, springer.maize
+  besag.bayesian, cochran.wireworms, goulden.barley, immer.sugarbeet,
+  minnesota.barley.yield, springer.maize
 
-  * Renamed crowder.germination to crowder.seeds
+  * Renamed crowder.germination to crowder.seeds.
+
+  * Function 'desplot' gains an argument 'flip'.
 
 Changes in version 1.4 (Mar 2012)
 
   * New data:
-    archbold.apple, blackman.wheat, cochran.crd, cochran.latin, 
-    darwin.maize, denis.ryegrass, digby.jointregression,
-    engelstad.nitro, federer.diagcheck, gilmour.slatehall, 
-    john.alpha, ilra.sheep, kempton.slatehall, 
+    archbold.apple, blackman.wheat, cochran.crd, cochran.latin, darwin.maize,
+    denis.ryegrass, digby.jointregression, engelstad.nitro, federer.diagcheck,
+    gilmour.slatehall, john.alpha, ilra.sheep, kempton.slatehall, 
     ryder.groundnut, steel.soybeanmet, vsn.lupin3
 
   * Removed 'suggests pcaMethods' to make CRAN check happier.

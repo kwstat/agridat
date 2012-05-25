@@ -7,7 +7,7 @@
 \description{
   Impact of Bt Corn on non-target species
 }
-\usage{gathmann.bt}
+\usage{data(gathmann.bt)}
 \format{
   A data frame with 16 observations on the following 3 variables.
   \describe{

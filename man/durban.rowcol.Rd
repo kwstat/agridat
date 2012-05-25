@@ -7,7 +7,7 @@
 \description{
   Row column design of a spring barley trial with many varieties
 }
-\usage{durban.rowcol}
+\usage{data(durban.rowcol)}
 \format{
   A data frame with 544 observations on the following 5 variables.
   \describe{

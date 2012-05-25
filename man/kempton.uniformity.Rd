@@ -12,7 +12,7 @@
   Each plot is 5 feet wide, 14 feet long. 
   Conducted by the Plant Breeding Institute in Cambridge, England.
 }
-\usage{kempton.uniformity}
+\usage{data(kempton.uniformity)}
 \format{
   A data frame with 196 observations on the following 3 variables.
   \describe{

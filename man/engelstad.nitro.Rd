@@ -8,7 +8,7 @@
   Corn yield response to nitrogen fertilizer for a single variety of
   corn at two locations over five years
 }
-\usage{engelstad.nitro}
+\usage{data(engelstad.nitro)}
 \format{
   A data frame with 60 observations on the following 4 variables.
   \describe{

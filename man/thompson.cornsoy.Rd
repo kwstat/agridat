@@ -10,7 +10,7 @@
   Pre-season precipitation and average temperature and precipitation
   during each month of the growing season is included.
 }
-\usage{thompson.cornsoy}
+\usage{data(thompson.cornsoy)}
 \format{
   \describe{
     \item{\code{state}}{State}

@@ -7,7 +7,7 @@
 \description{
   Balanced incomplete block design in corn
 }
-\usage{cochran.bib}
+\usage{data(cochran.bib)}
 \format{
   A data frame with 52 observations on the following 3 variables.
   \describe{

@@ -2,12 +2,12 @@
 \alias{mercer.wheat}
 \docType{data}
 \title{
-  Uniformity trial of wheat in 1910
+  Mercer and Hall's uniformity trial of wheat in 1910
 }
 \description{
   Uniformity trial of wheat in 1910
 }
-\usage{mercer.wheat}
+\usage{data(mercer.wheat)}
 \format{
   A data frame with 500 observations on the following 4 variables.
   \describe{
@@ -30,7 +30,7 @@ dimensions of each plot were approximately 3.2 meters by 2.5 meters.
   \emph{The Journal of Agricultural Science}, 4, 107-132. Table 5.
 }
 \references{
-The spdep package includes the grain yields
+The 'spdep' package includes the grain yields
 (only) and spatial positions of plot centres in its example dataset 'wheat'.
 }
 \examples{

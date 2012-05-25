@@ -7,20 +7,21 @@ Uniformity trial of wheat
 \description{
 A uniformity trial of 1500 plots of wheat conducted in Idaho in 1927.
 }
-\usage{wiebe.wheat}
+\usage{data(wiebe.wheat)}
 \format{
   A data frame with 1500 observations on the following 3 variables.
   \describe{
-    \item{\code{row}}{a numeric vector}
-    \item{\code{column}}{a numeric vector}
-    \item{\code{yield}}{Yield}
+    \item{\code{row}}{Row}
+    \item{\code{col}}{Column (series)}
+    \item{\code{yield}}{Yield in grams per plot}
   }
 }
 
 \details{
-  Yield trial conducted in 1927 near Aberdeen, Idaho.  Plots were seeded
-  on April 18 with a drill that sowed eight rows at a time.  Rows were 1
-  foot apart and 15 feet long.
+  Yield trial conducted in 1927 near Aberdeen, Idaho.  The crop was
+  Federation wheat (C.I. no 4734). Plots were seeded
+  on April 18 with a drill that sowed eight rows at a time.
+  Rows were 1 foot apart and 15 feet long.
   
   Some authors recommend analyzing the square root of the yields.
 
@@ -30,6 +31,7 @@ A uniformity trial of 1500 plots of wheat conducted in Idaho in 1927.
 \source{
   Wiebe, G.A. 1935. Variation and Correlation in Grain Yield among 1,500 Wheat
   Nursery Plots, \emph{Journal of Agricultural Research}, 50, 331-357.
+  \url{naldc.nal.usda.gov/download/IND43968632/PDF}
 }
 
 \references{
@@ -41,7 +43,7 @@ A uniformity trial of 1500 plots of wheat conducted in Idaho in 1927.
 dat <- wiebe.wheat
 
 require("lattice")
-desplot(yield~column+row, dat) # aspect is just a guess
+desplot(yield~col+row, dat, aspect=15, flip=TRUE) # row 1 is at south
 
 # Preece (1981) found the last digits have an interesting distribution.
 dig <- substring(dat$yield, nchar(dat$yield))
@@ -49,23 +51,23 @@ dig <- as.numeric(dig)
 hist(dig, breaks=0:10-.5, main="Histogram of last digit")
 table(dat$col, dig) # Table 3 of Preece
 
-# Median yields of rows/columns show obvious trends
+# Median yields of rows/cols show obvious trends
 plot(tapply(dat$yield, dat$row, median), xlab="Row", ylab="Yield")
-plot(tapply(dat$yield, dat$column, median), xlab="Column", ylab="Yield")
+plot(tapply(dat$yield, dat$col, median), xlab="Column", ylab="Yield")
 # Spatial trends are obvious
-xyplot(yield~column, dat, type=c('p','smooth'))
+xyplot(yield~col, dat, type=c('p','smooth'))
 
 # Median polish
 require("reshape2")
 mat <- melt(dat, measure.var='yield')
-mat <- acast(mat, row~column)
+mat <- acast(mat, row~col)
 image(mat)
 m1 <- medpolish(mat)
 plot(mat-m1$res, m1$res, xlab="Residual", ylab="Fitted value",
      ylim=c(-300,300))
 
 # Loess
-m3 <- loess(yield~row+column, dat)
+m3 <- loess(yield~row+col, dat)
 plot(fitted(m3), resid(m3), ylim=c(-300,300))
 }
 \keyword{datasets}

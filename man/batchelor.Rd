@@ -13,12 +13,12 @@
   Yields of apples, lemons, oranges, and walnuts from uniformity trials.
 }
 \usage{
-batchelor.apple
-batchelor.lemon
-batchelor.navel1
-batchelor.navel2
-batchelor.valencia
-batchelor.walnut
+data(batchelor.apple)
+data(batchelor.lemon)
+data(batchelor.navel1)
+data(batchelor.navel2)
+data(batchelor.valencia)
+data(batchelor.walnut)
 }
 \format{
   Each dataset has the following format

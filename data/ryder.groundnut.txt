@@ -1,4 +1,4 @@
-block	row	column	gen	wet	dry
+block	row	col	gen	wet	dry
 B1	4	1	F	3.8	2.3
 B1	4	2	A	5.2	3.3
 B1	4	3	D	3	1.8

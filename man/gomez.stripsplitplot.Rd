@@ -9,7 +9,7 @@ Rice strip-split-plot experiment
   strip, nitrogen fertilizer as the vertical strip, and planting method
   as the subplot factor.
 }
-\usage{gomez.stripsplitplot}
+\usage{data(gomez.stripsplitplot)}
 \format{
   \describe{
     \item{\code{yield}}{Grain yield in kg/ha}

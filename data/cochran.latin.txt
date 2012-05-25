@@ -1,4 +1,4 @@
-row	column	operator	diff
+row	col	operator	diff
 1	1	f	3.5
 1	2	b	4.2
 1	3	a	6.7

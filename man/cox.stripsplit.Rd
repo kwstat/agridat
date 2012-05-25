@@ -7,7 +7,7 @@
 \description{
   Strip-split plot of barley with fertilizer, calcium, and soil factors.
 }
-\usage{cox.stripsplit}
+\usage{data(cox.stripsplit)}
 \format{
   A data frame with 96 observations on the following 5 variables.
   \describe{

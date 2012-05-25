@@ -7,7 +7,7 @@
 \description{
   Maize yields for four cropping systems at 14 on-farm trials.
 }
-\usage{hildebrand.systems}
+\usage{data(hildebrand.systems)}
 \format{
   A data frame with 56 observations on the following 4 variables.
   \describe{

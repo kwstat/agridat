@@ -7,7 +7,7 @@
 \description{
   Potato factorial experiment with missing values
 }
-\usage{yates.missing}
+\usage{data(yates.missing)}
 \format{
   A data frame with 80 observations on the following 3 variables.
   \describe{

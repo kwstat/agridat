@@ -7,6 +7,7 @@
 \description{
   Height of Tobacco plants exposed to radiation
 }
+\usage{data(federer.tobacco)}
 \format{
   A data frame with 56 observations on the following 4 variables.
   \describe{

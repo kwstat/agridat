@@ -8,11 +8,11 @@
   An RCB experiment of wheat in South Australia, with strong spatial
   variation and serpentine row/column effects.
 }
-\usage{gilmour.serpentine}
+\usage{data(gilmour.serpentine)}
 \format{
   A data frame with 330 observations on the following 5 variables.
   \describe{
-    \item{\code{column}}{Column, numeric}
+    \item{\code{col}}{Column, numeric}
     \item{\code{row}}{Row, numeric}
     \item{\code{rep}}{Replicate factor, 3 levels}
     \item{\code{gen}}{Wheat variety, 108 levels}
@@ -39,14 +39,14 @@
 \examples{
 dat <- gilmour.serpentine
 
-desplot(yield~ column*row, data=dat, num=gen, out1=rep)
+desplot(yield~ col*row, data=dat, num=gen, out1=rep)
 
 # Extreme field trend.  Blocking insufficient--needs a spline/smoother
-xyplot(yield~column, data=dat)
+xyplot(yield~col, data=dat)
 
 \dontrun{
 require(asreml)
-dat <- transform(dat, rowf=factor(row), colf=factor(10*(column-8)))
+dat <- transform(dat, rowf=factor(row), colf=factor(10*(col-8)))
 
 # RCB
 m0 <- asreml(yield ~ gen, data=dat, random=~rep)
@@ -55,8 +55,8 @@ m0 <- asreml(yield ~ gen, data=dat, random=~rep)
 m1 <- asreml(yield ~ gen, data=dat, rcov = ~ar1(colf):ar1(rowf))
 
 # Add spline
-m2 <- asreml(yield ~ gen + column, data=dat,
-             random= ~ spl(column) + colf,
+m2 <- asreml(yield ~ gen + col, data=dat,
+             random= ~ spl(col) + colf,
              rcov = ~ar1(colf):ar1(rowf))
 
 # Figure 4 shows serpentine spraying
@@ -65,7 +65,7 @@ plot(p2$predicted, type='b', xlab="column number", ylab="BLUP")
 
 # Define column code (due to serpentine spraying)
 # Rhelp doesn't like double-percent modulus symbol, so compute by hand
-dat <- transform(dat, colcode = factor(dat$column-floor((dat$column-1)/4)*4 -1))
+dat <- transform(dat, colcode = factor(dat$col-floor((dat$col-1)/4)*4 -1))
 
 m3 <- asreml(yield ~ gen + lin(colf) + colcode, data=dat,
              random= ~ colf + rowf + spl(colf),

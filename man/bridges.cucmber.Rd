@@ -7,14 +7,14 @@
 \description{
   Cucumber yields in Latin Square design at two locs.
 }
-\usage{bridges.cucumber}
+\usage{data(bridges.cucumber)}
 \format{
   A data frame with 32 observations on the following 5 variables.
   \describe{
     \item{\code{loc}}{Loc factor}
     \item{\code{gen}}{Cultivar factor}
     \item{\code{row}}{Row position}
-    \item{\code{column}}{Column position}
+    \item{\code{col}}{Column position}
     \item{\code{yield}}{Weight of marketable fruit per plot}
   }
 }
@@ -34,9 +34,9 @@
 \examples{
 
 dat <- bridges.cucumber
-dat <- transform(dat, rowf=factor(row), colf=factor(column))
+dat <- transform(dat, rowf=factor(row), colf=factor(col))
 
-desplot(yield~column*row|loc, data=dat, text=gen, cex=1)
+desplot(yield~col*row|loc, data=dat, text=gen, cex=1)
 
 \dontrun{
 require("asreml")

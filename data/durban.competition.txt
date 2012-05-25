@@ -1,4 +1,4 @@
-gen	column	block	wheel	yield
+gen	col	block	wheel	yield
 G19	2	1	1	14.2
 B	1	1	NA	37.1
 G23	3	1	2	29.9

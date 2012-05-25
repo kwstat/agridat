@@ -6,7 +6,7 @@
   The data is the average yield (kg/acre) of 20 genotypes of corn at 7
   locations.
 }
-\usage{corsten.interaction}
+\usage{data(corsten.interaction)}
 \format{
   A data frame with 140 observations on the following 3 variables.
   \describe{

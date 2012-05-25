@@ -1,4 +1,4 @@
-inf	trt	row	column
+inf	trt	row	col
 9	F3	4	1
 12	O	4	2
 18	S6	4	3

@@ -8,7 +8,7 @@
   Disease incidence on grape leaves in RCB experiment with 6 different
   treatments.
 }
-\usage{hughes.grapes}
+\usage{data(hughes.grapes)}
 \format{
   A data frame with 270 observations on the following 6 variables.
   \describe{

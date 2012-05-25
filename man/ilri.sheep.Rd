@@ -8,7 +8,7 @@ Birth weight and weaning weight of Dorper x Red Maasi lambs
   Birth weight and weaning weight of 882 lambs from a partial diallel
   cross of Dorper and Red Maasi breeds.
 }
-\usage{ilri.sheep}
+\usage{data(ilri.sheep)}
 \format{
   A data frame with 882 observations on the following 12 variables.
   \describe{

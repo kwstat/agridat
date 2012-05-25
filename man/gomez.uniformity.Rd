@@ -9,7 +9,7 @@
   harvest, a 1-meter border was removed around the field and discarded.
   Each square meter (1 meter by 1 meter) was harvested and weighed.
 }
-\usage{gomez.uniformity}
+\usage{data(gomez.uniformity)}
 \format{
   A data frame with 648 observations on the following 3 variables.
   \describe{

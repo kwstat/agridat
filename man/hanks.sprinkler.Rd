@@ -8,7 +8,7 @@
   Three wheat varieties planted in 3 blocks, with a line sprinkler
   crossing all whole plots.
 }
-\usage{hanks.sprinkler}
+\usage{data(hanks.sprinkler)}
 \format{
   A data frame with 108 observations on the following 7 variables.
   \describe{

@@ -1,4 +1,4 @@
-column	row	yield	gen
+col	row	yield	gen
 1	75	9.29	G57
 1	74	8.16	G39
 1	73	8.97	G03

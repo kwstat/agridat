@@ -7,13 +7,13 @@
 \description{
   Yields for a trial at Slate Hall Farm in 1976.
 }
-\usage{kempton.slatehall}
+\usage{data(kempton.slatehall)}
 \format{
   A data frame with 150 observations on the following 5 variables.
   \describe{
     \item{\code{rep}}{Rep factor, 6 levels}
     \item{\code{row}}{Row}
-    \item{\code{column}}{Column}
+    \item{\code{col}}{Column}
     \item{\code{gen}}{Genotype factor, 25 levels}
     \item{\code{yield}}{Yield (grams/plot)}
   }
@@ -36,9 +36,9 @@
 }
 \examples{
 dat <- kempton.slatehall
-desplot(yield ~ column * row, dat, num=gen, out1=rep)
+desplot(yield ~ col * row, dat, num=gen, out1=rep)
 
-dat <- transform(dat, xf=factor(column), yf=factor(row))
+dat <- transform(dat, xf=factor(col), yf=factor(row))
 
 # Incomplete block model of Gilmour et al 1995
 require(lme4)

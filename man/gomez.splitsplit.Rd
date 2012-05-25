@@ -11,7 +11,7 @@ Rice split-split plot experiment
   practice as the sub-plot, and rice variety as the sub-sub plot.
 }
 
-\usage{gomez.splitsplit}
+\usage{data(gomez.splitsplit)}
 
 \format{
   A data frame with 135 observations on the following 7 variables.

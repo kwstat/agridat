@@ -8,7 +8,7 @@ Lupin yields for different varieties and locations, at many densities
   Yield of 9 varieties of lupin at different planting densities across
   2 years and multiple locations.
 }
-\usage{verbyla.lupin}
+\usage{data(verbyla.lupin)}
 \format{
   \describe{
     \item{\code{gen}}{Genotype factor, 9 varieties}

@@ -8,14 +8,14 @@
   Yield of sugar beets for 36 varieties in a 3-rep RCB experiment.
   Competition effects are present.
 }
-\usage{kempton.competition}
+\usage{data(kempton.competition)}
 \format{
   A data frame with 108 observations on the following 5 variables.
   \describe{
     \item{\code{gen}}{Genotype factor, 36 levels}
     \item{\code{rep}}{Rep factor, 3 levels}
     \item{\code{row}}{Row}
-    \item{\code{column}}{Column}
+    \item{\code{col}}{Column}
     \item{\code{yield}}{Yield in kg/plot}
   }
 }
@@ -39,7 +39,7 @@ round(tapply(dat$yield, dat$gen, mean),2)
 # Autocorrelation of neighboring plots within the same rep
 require("nlme")
 m1 <- lme(yield ~ -1+gen, random=~1|rep, data=dat,
-          corr=corAR1(form=~column|rep))
+          corr=corAR1(form=~col|rep))
 # Lag 1 autocorrelation is negative--evidence of competition
 plot(ACF(m1), alpha=.05, grid=TRUE)
 

@@ -7,12 +7,12 @@
 \description{
   Sugar beet yields with competition effects
 }
-\usage{durban.competition}
+\usage{data(durban.competition)}
 \format{
   A data frame with 114 observations on the following 5 variables.
   \describe{
     \item{\code{gen}}{Genotype factor, 36 levels plus Border}
-    \item{\code{column}}{Column}
+    \item{\code{col}}{Column}
     \item{\code{block}}{Row/Block}
     \item{\code{wheel}}{Position relative to wheel tracks}
     \item{\code{yield}}{Root yields, kg/plot}
@@ -48,13 +48,13 @@ dat <- durban.competition
 # Check that genotypes were balanced across wheel tracks.
 with(dat, table(gen,wheel))
 
-desplot(yield ~ column*block, dat, out1=block, text=gen, col=wheel)
+desplot(yield ~ col*block, dat, out1=block, text=gen, col=wheel)
 
 # Calculate residual after removing block/genotype effects
 m1 <- lm(yield ~ gen + block, data=dat)
 dat$res <- resid(m1)
 
-desplot(res ~ column*block, dat, out1=block, text=gen, col=wheel)
+desplot(res ~ col*block, dat, out1=block, text=gen, col=wheel)
 
 # Calculate mean of neighboring plots
 dat$comp <- NA

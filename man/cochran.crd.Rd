@@ -14,7 +14,7 @@
     \item{\code{inf}}{Numeric, infection percent}
     \item{\code{trt}}{Treatment factor}
     \item{\code{row}}{Row}
-    \item{\code{column}}{Column}
+    \item{\code{col}}{Column}
   }
 }
 \details{
@@ -43,7 +43,7 @@ uncovered significant differences (Tamura, 1988).
 dat <- cochran.crd
 
 # Field plan
-desplot(inf~column*row, data=dat, text=trt, cex=1)
+desplot(inf~col*row, data=dat, text=trt, cex=1)
 
 # CRD anova.  Table 6 of Tamura 1988
 contrasts(dat$trt) <- cbind(c1=c(1,1,1,-6,1,1,1),   # Control vs Sulf
@@ -53,7 +53,7 @@ anova(m1)
 summary(m1, split=list(trt=list("Control vs Sulf"=1, "Fall vs Spring"=2)))
 
 # Quadratic polynomial for columns...slightly different than Tamura 1988
-m2 <- aov(inf ~ trt + poly(column,2), data=dat)
+m2 <- aov(inf ~ trt + poly(col,2), data=dat)
 anova(m2)
 summary(m2, split=list(trt=list("Control vs Sulf"=1, "Fall vs Spring"=2)))
 

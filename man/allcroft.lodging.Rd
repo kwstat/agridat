@@ -7,7 +7,7 @@
 \description{
   Percent lodging is given for 32 genotypes at 7 environments.
 }
-\usage{allcroft.lodging}
+\usage{data(allcroft.lodging)}
 \format{
   A data frame with 224 observations on the following 3 variables.
   \describe{

@@ -8,7 +8,7 @@
   Percent of leaf area affected by leaf blotch on 10 varieties of barley
   at 9 sites.
 }
-\usage{wedderburn.barley}
+\usage{data(wedderburn.barley)}
 
 \format{
   A data frame with 90 observations on the following 3 variables.

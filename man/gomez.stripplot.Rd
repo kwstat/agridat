@@ -8,7 +8,7 @@ Rice strip-plot experiment
   A strip-plot experiment with three reps, variety as the horizontal
   strip and nitrogen fertilizer as the vertical strip.
 }
-\usage{gomez.stripplot}
+\usage{data(gomez.stripplot)}
 \format{
   \describe{
     \item{\code{yield}}{Grain yield in kg/ha}

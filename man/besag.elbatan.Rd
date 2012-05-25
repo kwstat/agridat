@@ -9,7 +9,7 @@
   RCB experiment of 50 varieties of wheat in 3 blocks with strong
   spatial trend.
 }
-\usage{besag.elbatan}
+\usage{data(besag.elbatan)}
 \format{
   A data frame with 150 observations on the following 4 variables.
   \describe{

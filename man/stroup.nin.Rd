@@ -6,7 +6,7 @@
   The yield data from an advanced Nebraska Intrastate Nursery (NIN) breeding
   trial conducted at Alliance, Nebraska, in 1988/89.
 }
-\usage{stroup.nin}
+\usage{data(stroup.nin)}
 \format{
   \describe{
     \item{gen}{Genotype factor, 56 levels}

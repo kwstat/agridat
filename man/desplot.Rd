@@ -98,7 +98,7 @@ gnut <- ryder.groundnut
 m1 <- lm(dry~block+gen, gnut)
 gnut$res <- resid(m1)
 # Note largest positive/negative residuals are adjacent
-desplot(res ~ column + row, gnut, text=gen, cex=1)
+desplot(res ~ col + row, gnut, text=gen, cex=1)
 
 }
 

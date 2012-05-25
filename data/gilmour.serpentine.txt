@@ -1,4 +1,4 @@
-column	row	rep	gen	yield
+col	row	rep	gen	yield
 1	1	R1	ANGAS	483
 1	2	R1	BT_SCHOMBURG	526
 1	3	R1	DGR/MNX-9-9e	557

@@ -7,7 +7,7 @@
 \description{
   Height / Survival of 37 tree species at six sites in Thailand
 }
-\usage{williams.trees}
+\usage{data(williams.trees)}
 \format{
   A data frame with 222 observations on the following 4 variables.
   \describe{

@@ -7,7 +7,7 @@
 \description{
   Silage yields for maize in 5 years at 7 districts for 10 hybrids.
 }
-\usage{theobald.covariate}
+\usage{data(theobald.covariate)}
 \format{
   A data frame with 256 observations on the following 5 variables.
   \describe{

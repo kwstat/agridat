@@ -1,4 +1,4 @@
-gen	rep	row	column	yield
+gen	rep	row	col	yield
 G19	R1	1	1	12
 G29	R1	1	2	20.2
 G08	R1	1	3	4.3

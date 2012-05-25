@@ -7,12 +7,12 @@
 \description{
   Yields for a trial at Slate Hall Farm in 1978.
 }
-\usage{gilmour.slatehall}
+\usage{data(gilmour.slatehall)}
 \format{
   A data frame with 150 observations on the following 5 variables.
   \describe{
     \item{\code{row}}{Row}
-    \item{\code{column}}{Column}
+    \item{\code{col}}{Column}
     \item{\code{yield}}{Yield (grams/plot)}
     \item{\code{gen}}{Genotype factor, 25 levels}
     \item{\code{rep}}{Rep factor, 6 levels}
@@ -34,22 +34,22 @@
 \examples{
 
 dat <- gilmour.slatehall
-desplot(yield ~ column * row, dat, num=gen, out1=rep)
+desplot(yield ~ col * row, dat, num=gen, out1=rep)
 
 \dontrun{
 # Model 4 of Gilmour et al 1997
 require(asreml)
-dat <- transform(dat, xf=factor(column), yf=factor(row))
+dat <- transform(dat, xf=factor(col), yf=factor(row))
 dat <- dat[order(dat$xf, dat$yf), ]
 m4 <- asreml(yield ~ gen + lin(row), data=dat,
-             random = ~ dev(row) + dev(column),
+             random = ~ dev(row) + dev(col),
              rcov = ~ ar1(xf):ar1(yf))
 coef(m4)$fixed[1] # linear row
 # [1] 31.72252 # (sign switch due to row ordering)
 summary(m4)$varcomp
 #      Effect  Estimate   Std Err Z Ratio Con
 #    dev(row) 20290     10260         2   Pos
-# dev(column)  2519      1959         1.3 Pos
+#    dev(col)  2519      1959         1.3 Pos
 #  R!variance 23950      4616         5.2 Pos
 #    R!xf.cor     0.439     0.113     3.9 Unc
 #    R!yf.cor     0.125     0.117     1.1 Unc

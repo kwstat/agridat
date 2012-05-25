@@ -8,7 +8,7 @@
   Yield of Durum wheat, 7 genotypes, 6 years, with 16 genotypic variates
   and 16 environment variates.
 }
-\usage{vargas.wheat1}
+\usage{data(vargas.wheat1)}
 \format{
   A list of two data frames, \code{genvals} and \code{envvals}.
 

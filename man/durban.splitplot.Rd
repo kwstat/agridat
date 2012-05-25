@@ -7,7 +7,7 @@
 \description{
     Split-plot barley variety trial with fungicide treatments.
 }
-\usage{durban.splitplot}
+\usage{data(durban.splitplot)}
 \format{
   A data frame with 560 observations on the following 6 variables.
   \describe{

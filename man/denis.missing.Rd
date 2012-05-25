@@ -8,7 +8,7 @@ Multi-environment trial with structured missing values
   Grain yield was measured on 5 genotypes in 26 environments.  Missing
   values were non-random, but structured.
 }
-\usage{denis.missing}
+\usage{data(denis.missing)}
 \format{
   \describe{
     \item{\code{env}}{Environment factor, 26 levels}

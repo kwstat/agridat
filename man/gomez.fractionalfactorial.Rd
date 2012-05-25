@@ -8,7 +8,7 @@
   A 1/2 fractional factorial experiment with 6 treatments.  Two reps
   with 2 blocks in each rep.
 }
-\usage{gomez.fractionalfactorial}
+\usage{data(gomez.fractionalfactorial)}
 \format{
   A data frame with 64 observations on the following 6 variables.
   \describe{

@@ -12,7 +12,7 @@ Lint yield from a cotton uniformity trial
   A data frame with 288 observations on the following 3 variables.
   \describe{
     \item{\code{row}}{Row position}
-    \item{\code{column}}{Column position}
+    \item{\code{col}}{Column position}
     \item{\code{yield}}{Cotton lint yield, kg/ha divided by 10}
   }
 }
@@ -31,14 +31,14 @@ dat <- williams.cotton
 
 require("lattice")
 asp = (12*12)/(24*1) # true aspect
-desplot(yield ~ column*row, dat, aspect=asp)
+desplot(yield ~ col*row, dat, aspect=asp)
 
 # Smoothed contour/persp plot like Williams 1988 Fig 1a, 2a
-dat$fit <- fitted(loess(yield~column*row, dat, span=.5))
-contourplot(fit~column*row, data=dat, cuts=6)
-wireframe(fit~column*row, data=dat, zlim=c(100, 250))
+dat$fit <- fitted(loess(yield~col*row, dat, span=.5))
+contourplot(fit~col*row, data=dat, cuts=6)
+wireframe(fit~col*row, data=dat, zlim=c(100, 250))
 
 # Williams table 1
-anova(aov(yield ~ factor(row) + factor(column), dat))
+anova(aov(yield ~ factor(row) + factor(col), dat))
 }
 \keyword{datasets}

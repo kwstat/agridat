@@ -7,7 +7,7 @@
 \description{
   Yield of brussels sprouts, RCB with 9 fertilizer treatments
 }
-\usage{rothamsted.brussels}
+\usage{data(rothamsted.brussels)}
 \format{
   A data frame with 48 observations on the following 5 variables.
   \describe{

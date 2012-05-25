@@ -12,7 +12,7 @@
   A data frame with 400 observations on the following 3 variables.
   \describe{
     \item{\code{row}}{Row}
-    \item{\code{column}}{Column}
+    \item{\code{col}}{Column}
     \item{\code{yield}}{Yield, grams per plot}
   }
 }
@@ -31,7 +31,7 @@
 
 dat <- goulden.barley
 
-desplot(yield ~ column*row, data=dat)
+desplot(yield ~ col*row, data=dat)
 
 # See LeClerg, Leonard, Clark
 hist(dat$yield, breaks=c(21,40,59,78,97,116,135,154,173,192,211,230,249)+.5)

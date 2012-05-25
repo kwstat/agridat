@@ -7,9 +7,7 @@
 \description{
   Strawberry yields in RCB experiment
 }
-\usage{
-mead.strawberry
-}
+\usage{data(mead.strawberry)}
 \format{
   A data frame with 32 observations on the following 5 variables.
   \describe{

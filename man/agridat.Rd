@@ -42,6 +42,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{besag.met}                 \tab 64  \tab 6  \tab 3   \tab    \tab     \tab xy, incblock\tab asreml, lme \cr
 \link{blackman.wheat}            \tab 12  \tab 7  \tab     \tab    \tab 2   \tab \tab biplot \cr
 \link{bridges.cucumber}          \tab 4   \tab 2  \tab 4   \tab    \tab     \tab xy, latin, hetero\tab asreml \cr
+\link{caribbean.maize}           \tab     \tab 17 \tab 4   \tab    \tab 3   \tab \tab \cr
 \link{cochran.bib}               \tab 13  \tab 13 \tab     \tab    \tab     \tab BIB\tab aov, lme \cr
 \link{cochran.crd}               \tab     \tab    \tab     \tab    \tab 7   \tab xy, crd\tab aov \cr
 \link{cochran.latin}             \tab     \tab    \tab 6   \tab    \tab 6   \tab xy, latin\tab aov \cr
@@ -87,7 +88,6 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{rothamsted.brussels}       \tab     \tab    \tab 4   \tab    \tab 6   \tab \tab \cr
 \link{ryder.groundnut}           \tab 5   \tab    \tab 4   \tab    \tab     \tab xy, rcb \tab lm \cr
 \link{shafii.rapeseed}           \tab 6   \tab 14 \tab 3   \tab 3  \tab     \tab \tab biplot \cr
-\link{springer.maize}            \tab     \tab 17 \tab 4   \tab    \tab 3   \tab \tab \cr
 \link{steel.soybeanmet}          \tab 12  \tab 3  \tab 3   \tab    \tab     \tab \tab \cr
 \link{stroup.nin}                \tab 56  \tab    \tab 4   \tab    \tab     \tab xy \tab asreml \cr
 \link{stroup.splitplot}          \tab     \tab    \tab 4   \tab    \tab     \tab \tab asreml, MCMCglmm \cr
@@ -110,6 +110,8 @@ The original sources for these data use several different words to refer to
 genetics including \emph{line}, \emph{cultivar}, \emph{hybrid},
 \emph{variety}, \emph{type}, \emph{stock}, and \emph{genotype}.
 For simplicity and consistency, these datasets all use \code{gen} (genotype).
+Also for consistency \code{row} and \code{col} are often used for the
+coordinates.
 
 Box (1957) said, "I had hoped that we had seen the end of the obscene
 tribal habit practiced by statisticians of continually exhuming and

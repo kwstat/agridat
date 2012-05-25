@@ -11,7 +11,7 @@
   were applied to the main plots and the manurial (nitrogen) treatments
   to the sub-plots. 
 }
-\usage{yates.oats}
+\usage{data(yates.oats)}
 \format{
   \describe{
     \item{\code{block}}{Factor with 6 levels}

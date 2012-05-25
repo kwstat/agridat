@@ -12,7 +12,7 @@
   A data frame with 25 observations on the following 4 variables.
   \describe{
     \item{\code{row}}{Row}
-    \item{\code{column}}{Column}
+    \item{\code{col}}{Column}
     \item{\code{trt}}{Fumigant treatment, 5 levels}
     \item{\code{worms}}{Count of wireworms}
   }
@@ -39,7 +39,7 @@ dat <- cochran.wireworms
 bwplot(worms ~ trt, dat)
 
 # Snedecor and Cochran do ANOVA on sqrt(x+1).
-dat <- transform(dat, rowf=factor(row), colf=factor(column))
+dat <- transform(dat, rowf=factor(row), colf=factor(col))
 m1 <- aov(sqrt(worms+1) ~ rowf + colf + trt, data=dat)
 anova(m1)
 

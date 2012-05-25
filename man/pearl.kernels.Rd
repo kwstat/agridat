@@ -8,7 +8,7 @@
   Counts of yellow/white and sweet/starchy kernels on each of 4 maize
   ears by 15 observers.
 }
-\usage{pearl.kernels}
+\usage{data(pearl.kernels)}
 \format{
   A data frame with 59 observations on the following 6 variables.
   \describe{

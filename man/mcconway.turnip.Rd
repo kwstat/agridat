@@ -8,7 +8,7 @@
   Yields of turnips grown for winter fodder with two treatments for
   planting date and density, planted as RCB.
 }
-\usage{mcconway.turnip}
+\usage{data(mcconway.turnip)}
 \format{
   A data frame with 64 observations on the following 6 variables.
   \describe{

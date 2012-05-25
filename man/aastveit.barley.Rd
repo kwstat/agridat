@@ -8,7 +8,7 @@
   Average height for 15 genotypes of barley in each of 9 years.  A
   second matrix contains 19 covariates in each of 9 years.
 }
-\usage{aastveit.barley}
+\usage{data(aastveit.barley)}
 \format{
   A list of two matrices, \code{height} and \code{covs}.
   See details below.

@@ -7,7 +7,7 @@
 \description{
   Rapeseed yield multi-environment trial, 3 years
 }
-\usage{shafii.rapeseed}
+\usage{data(shafii.rapeseed)}
 \format{
   A data frame with 648 observations on the following 5 variables.
   \describe{

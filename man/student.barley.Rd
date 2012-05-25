@@ -8,7 +8,7 @@
   Yield for two varieties of barley grown at 51 locations in the years
   1901 to 1906.
 }
-\usage{student.barley}
+\usage{data(student.barley)}
 \format{
   A data frame with 102 observations on the following 7 variables.
   \describe{

@@ -8,9 +8,7 @@
   Wheat yields of 35 genotypes, 2 reps, planted in a row-column
   design. Two plots are missing.
 }
-\usage{
-kempton.rowcol
-}
+\usage{data(kempton.rowcol)}
 \format{
   A data frame with 68 observations on the following 5 variables.
   \describe{

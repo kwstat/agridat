@@ -7,7 +7,7 @@
 \description{
   Group balanced split-plot design
 }
-\usage{gomez.groupsplit}
+\usage{data(gomez.groupsplit)}
 \format{
   A data frame with 270 observations on the following 7 variables.
   \describe{

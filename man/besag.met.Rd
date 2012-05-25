@@ -7,7 +7,7 @@
 \description{
   Multi-environment trial of corn laid out in incomplete-blocks
 }
-\usage{besag.met}
+\usage{data(besag.met)}
 \format{
   A data frame with 1152 observations on the following 7 variables.
   \describe{

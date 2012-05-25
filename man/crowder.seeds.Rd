@@ -8,7 +8,7 @@
   Number of Orobanche seeds tested/germinated for two genotypes and
   two treatments.
 }
-\usage{crowder.seeds}
+\usage{data(crowder.seeds)}
 \format{
   \describe{
     \item{\code{plate}}{Factor for replication}

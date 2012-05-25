@@ -14,7 +14,7 @@
   \if{html}{\figure{stroupsplitplot.png}{options: width=50\% alt="Figure: stroup.splitplot.png"}}
   \if{latex}{\figure{stroupsplitplot.pdf}{options: width=7cm}}
 }
-\usage{stroup.splitplot}
+\usage{data(stroup.splitplot)}
 \format{
   \describe{
     \item{\code{y}}{a numeric vector}

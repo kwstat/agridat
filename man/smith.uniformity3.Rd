@@ -8,7 +8,7 @@
   Uniformity trial of corn in three consecutive years, 1895-1897.  The
   same field/plots were used in all three years.
 }
-\usage{smith.uniformity3}
+\usage{data(smith.uniformity3)}
 \format{
   A data frame with 360 observations on the following 5 variables.
   \describe{

@@ -9,7 +9,7 @@
   locations across two years in Australia.  This is four-way data of
   Year x Loc x Gen x Trait.
 }
-\usage{australia.soybean}
+\usage{data(australia.soybean)}
 \format{
   A data frame with 464 observations on the following 10 variables.
   \describe{
