@@ -12,16 +12,14 @@
 RedGrayBlue(n)
 }
 \arguments{
-  \item{n}{
-    Number of colors to create
-  }
+  \item{n}{Number of colors to create}
 }
 \details{
   Function to create a Red-Gray-Blue palette.  Using gray instead of
   white allows missing values to appear as white (transparent).
 }
 \value{
-  A vector of colors.
+  A vector of n colors.
 }
 \examples{
 pie(rep(1,11), col=RedGrayBlue(11))

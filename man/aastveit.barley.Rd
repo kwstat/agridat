@@ -41,6 +41,8 @@
   \emph{J. App. Stat.} 18, 331--353.
 }
 \examples{
+data(aastveit.barley)
+
 # First, PCA of each matrix separately
 
 Z <- aastveit.barley$height
@@ -48,7 +50,7 @@ Z <- sweep(Z, 1, rowMeans(Z))
 Z <- sweep(Z, 2, colMeans(Z)) # Double-centered
 sum(Z^2)*4 # Total SS
 sv <- svd(Z)$d
-round(100 * sv^2/sum(sv^2),1) # Prop variance each axis
+round(100 * sv^2/sum(sv^2),1) # Prop of variance each axis
 biplot(prcomp(Z)) # Aastveit Figure 1.  PCA of height
 
 U <- aastveit.barley$covs

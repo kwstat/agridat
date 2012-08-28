@@ -53,7 +53,7 @@ dat <- federer.diagcheck
 # Show the layout in Federer 1998.
 dat$check <- ifelse(dat$gen == "G121" | dat$gen=="G122", "C","N")
 desplot(yield ~ col*row, dat, text=gen, show.key=FALSE,
-      shorten='no', col=check, cex=.8, col.text=c("yellow","gray"))
+      shorten='no', col=check, cex=.8, col.text=c("yellow","white"))
 
 # Only to match SAS results
 dat$row <- 16 - dat$row

@@ -43,5 +43,21 @@ m1 <- aov(yield~ fert*calcium*soil +
           Error(rep/(fert+soil+calcium:fert+soil:fert)),
           data=dat)
 summary(m1)
+
+# With balanced data, the following are all basically identical
+\dontrun{
+require('lme4')
+m2 <- lmer(yield ~ fert*soil*calcium + (1|rep) + (1|rep:fert) +
+(1|rep:soil) + (1|rep:fert:calcium) + (1|rep:soil:fert), data=dat)
+
+# afex uses Kenword-Rogers approach for denominator d.f.
+require('afex')
+mixed(yield ~ fert*soil*calcium + (1|rep) + (1|rep:fert) +
+(1|rep:soil) + (1|rep:fert:calcium) + (1|rep:soil:fert), data=dat)
+
+# MixMod uses Satterthwaite approximation for deg of freedom
+require('MixMod') 
+totalAnalysis(m2, data=dat)
+}
 }
 

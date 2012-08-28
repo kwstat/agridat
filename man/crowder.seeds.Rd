@@ -84,7 +84,7 @@ round(summary(m1.hglm)$FixCoefMat,2)
 # JAGS/BUGS.  See http://mathstat.helsinki.fi/openbugs/Examples/Seeds.html
 # Germination rate depends on p, which is a logit of a linear predictor
 # based on genotype and extract, plus random deviation to intercept
-require(jags)
+require("rjags")
 
 # To match the output on the BUGS web page, use: dat$gen=="O73".
 # We use dat$gen=="O75" to compare with the parameterization above.
@@ -126,7 +126,7 @@ hpd <- HPDinterval(c2)[[1]]
 med <- summary(c2, quantiles=.5)$quantiles
 fit <- data.frame(med, hpd)
 
-require(latticeExtra)
+require("latticeExtra")
 obs <- dotplot(1:21 ~ germ/n, dat, ylab="plate",
                col=as.numeric(dat$gen), pch=substring(dat$extract,1))
 obs + segplot(1:21 ~ lower + upper, data=fit, centers=med)

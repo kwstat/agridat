@@ -1,3 +1,2 @@
-export(RedGrayBlue)
 export(desplot)
-export(panel.outlinelevelplot)
+export(RedGrayBlue)

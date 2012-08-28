@@ -24,8 +24,11 @@ Suggests:
     HH,
     latticeExtra,
     lme4,
+    mapproj,
+    maps,
     MASS,
     MCMCglmm,
+    mgcv,
     nlme,
     pls,
     rgl,
@@ -33,5 +36,3 @@ Suggests:
     survival,
 License: GPL-2
 LazyData: yes
-Collate:
-    'desplot.r'

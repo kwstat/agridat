@@ -36,12 +36,15 @@ The 'spdep' package includes the grain yields
 \examples{
 dat <- mercer.wheat
 
-require(lattice)
+require('lattice')
 desplot(grain ~ col*row, dat)
 
 densityplot(~grain, data=dat)
 
 xyplot(straw ~ grain, data=dat, type=c('p','r'), main="mercer.wheat - regression")
+
+# require(hexbin)
+# hexbinplot(straw ~ grain, data=dat)
 
 require(gstat)
 plot.wid <- 2.5
