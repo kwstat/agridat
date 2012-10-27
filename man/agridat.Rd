@@ -39,10 +39,11 @@ name                             \tab dimensions \tab other \tab model \cr
 \bold{Animals}
 
 \tabular{llllllll}{
-name                             \tab gen \tab loc\tab reps\tab years \tab trt \tab other \tab model \cr
-\link{diggle.cow}                \tab     \tab    \tab     \tab    \tab 4   \tab ts \tab \cr
-\link{henderson.milkfat}         \tab     \tab    \tab     \tab    \tab     \tab  \tab nls,lm,glm,gam\cr
-\link{ilri.sheep}                \tab 4   \tab    \tab     \tab 6  \tab     \tab diallel \tab lmer, asreml \cr
+name                             \tab gen \tab loc\tab years \tab trt \tab other \tab model \cr
+\link{diggle.cow}                \tab     \tab    \tab    \tab 4   \tab ts \tab \cr
+\link{henderson.milkfat}         \tab     \tab    \tab    \tab     \tab  \tab nls,lm,glm,gam\cr
+\link{ilri.sheep}                \tab 4   \tab    \tab 6  \tab     \tab diallel \tab lmer, asreml \cr
+\link{zuidhof.broiler}           \tab     \tab    \tab    \tab     \tab ts \tab \cr
 }
 
 % ------------------------------------------------------------------------------
@@ -70,7 +71,6 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{besag.met}                 \tab 64  \tab 6  \tab 3   \tab    \tab     \tab xy, incblock\tab asreml, lme \cr
 \link{blackman.wheat}            \tab 12  \tab 7  \tab     \tab    \tab 2   \tab \tab biplot \cr
 \link{bridges.cucumber}          \tab 4   \tab 2  \tab 4   \tab    \tab     \tab xy, latin, hetero\tab asreml \cr
-\link{broadbalk.wheat}           \tab     \tab    \tab     \tab 74 \tab 17  \tab \tab \cr
 \link{caribbean.maize}           \tab     \tab 17 \tab 4   \tab    \tab 3   \tab \tab \cr
 \link{carmer.density}            \tab 8   \tab    \tab     \tab    \tab 4   \tab \tab nls\cr
 \link{cochran.bib}               \tab 13  \tab 13 \tab     \tab    \tab     \tab BIB\tab aov, lme \cr
@@ -119,17 +119,9 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{mead.strawberry}           \tab 8   \tab    \tab 4   \tab    \tab     \tab \tab \cr
 \link{minnesota.barley.weather}  \tab     \tab 6  \tab     \tab 10 \tab     \tab \tab \cr
 \link{minnesota.barley.yield}    \tab 22  \tab 6  \tab     \tab 10 \tab     \tab \tab dotplot\cr
-\link{nass.barley}               \tab     \tab    \tab     \tab 146\tab     \tab \tab \cr
-\link{nass.corn}                 \tab     \tab    \tab     \tab 146\tab     \tab \tab \cr
-\link{nass.cotton}               \tab     \tab    \tab     \tab 146\tab     \tab \tab \cr
-\link{nass.hay}                  \tab     \tab    \tab     \tab 104\tab     \tab \tab \cr
-\link{nass.sorghum}              \tab     \tab    \tab     \tab 93 \tab     \tab \tab \cr
-\link{nass.wheat}                \tab     \tab    \tab     \tab 146\tab     \tab \tab \cr
-\link{nass.rice}                 \tab     \tab    \tab     \tab 117\tab     \tab \tab \cr
-\link{nass.soybean}              \tab     \tab    \tab     \tab 88 \tab     \tab \tab \cr
-\link{nebraska.farmincome}       \tab     \tab 93 \tab     \tab    \tab     \tab \tab choropleth\cr
 \link{rothamsted.brussels}       \tab     \tab    \tab 4   \tab    \tab 6   \tab \tab \cr
 \link{ryder.groundnut}           \tab 5   \tab    \tab 4   \tab    \tab     \tab xy, rcb \tab lm \cr
+\link{senshu.rice}               \tab     \tab 40 \tab     \tab    \tab     \tab \tab lm,Fieller \cr
 \link{shafii.rapeseed}           \tab 6   \tab 14 \tab 3   \tab 3  \tab     \tab \tab biplot \cr
 \link{steel.soybeanmet}          \tab 12  \tab 3  \tab 3   \tab    \tab     \tab \tab \cr
 \link{streibig.competition}      \tab 2   \tab    \tab 3   \tab    \tab     \tab \tab glm \cr
@@ -149,12 +141,30 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{yates.oats}                \tab 3   \tab    \tab 6   \tab    \tab     \tab xy, nitro\tab lmer \cr
 }
 
+\bold{Time series}
+\tabular{lllll}{
+name                             \tab years \tab trt \tab other \tab model \cr
+\link{broadbalk.wheat}           \tab 74 \tab 17 \tab \tab \cr
+\link{hessling.argentina}        \tab 30 \tab    \tab temp,precip\tab \cr
+\link{nass.barley}               \tab 146\tab    \tab \tab \cr
+\link{nass.corn}                 \tab 146\tab    \tab \tab \cr
+\link{nass.cotton}               \tab 146\tab    \tab \tab \cr
+\link{nass.hay}                  \tab 104\tab    \tab \tab \cr
+\link{nass.sorghum}              \tab 93 \tab    \tab \tab \cr
+\link{nass.wheat}                \tab 146\tab    \tab \tab \cr
+\link{nass.rice}                 \tab 117\tab    \tab \tab \cr
+\link{nass.soybean}              \tab 88 \tab    \tab \tab \cr
+
+}
+
 \bold{Other}
 
 \tabular{ll}{
-  \link{cate.potassium}    \tab cate-nelson \cr
-  \link{johnson.blight}    \tab logistic regression\cr
-  \link{pearl.kernels}     \tab chisq \cr
+name                       \tab model \cr
+\link{cate.potassium}      \tab cate-nelson \cr
+\link{johnson.blight}      \tab logistic regression\cr
+\link{nebraska.farmincome} \tab choropleth\cr
+\link{pearl.kernels}       \tab chisq \cr
 }
 
 The original sources for these data use several different words to refer to

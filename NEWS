@@ -6,12 +6,12 @@ Changes in version 1.5 (unreleased)
   besag.bayesian, box.cork, broadbalk.wheat, caribbean.maize,
   carmer.density, cate.potassium, cochran.wireworms, fan.stability, 
   gotway.hessianfly, goulden.barley, henderson.milkfat, hernandez.nitrogen,
-  immer.sugarbeet, ivins.herbs, johnson.blight,
+  hessling.argentina, immer.sugarbeet, ivins.herbs, johnson.blight,
   lyon.potato, mead.cowpeamaize, mead.germination,
   minnesota.barley.weather, minnesota.barley.yield, nebraska.farmincome, 
   nass.barley, nass.corn, nass.cotton, nass.hay, nass.rice, 
   nass.sorghum, nass.soybean, nass.wheat
-  streibig.competition
+  senshu.rice, streibig.competition, zuidhof.broiler
 
   * Renamed crowder.germination to crowder.seeds.
   * Change 'column' to 'col' in all data.

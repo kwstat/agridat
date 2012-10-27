@@ -1,5 +1,5 @@
 # desplot.r
-# Time-stamp: <21 May 2012 19:48:59 c:/x/rpack/agridat/R/desplot.r>
+# Time-stamp: <11 Sep 2012 11:59:08 c:/x/rpack/agridat/R/desplot.r>
 # Copyright 2011, Kevin Wright
 
 # Needs grid, lattice, reshape2
@@ -528,6 +528,36 @@ panel.outlinelevelplot <- function(x, y, z, subscripts, at, ...,
 
 # ----------------------------------------------------------------------------
 if(FALSE){
+  dd <- data.frame(loc = cs(loc1,loc1,loc1,loc1,loc2,loc2,loc2,loc2,loc2,loc2),
+                   x=c(1,2,1,2, 1,2,3,1,2,3),
+                   y=c(1,1,2,2, 1,1,1,2,2,2),
+                   rep=cs(R1,R1,R2,R2, R1,R2,R3,R1,R2,R3),
+                   yield=c(9.29, 11.20, 9.36, 9.89, 8.47, 9.17, 8.86, 10.48, 10.22, 11.29),
+                   trt1=cs(Treat1,Treat2,Treat2,Treat1, Trt1, Trt2, Trt1, Trt2,Trt1,Trt2),
+                   trt2=cs(Hybrid1,Hybrid1,Hybrid2,Hybrid2,
+                     Hybrid1,Hybrid2,Hybrid3,Hybrid1,Hybrid2,Hybrid3))
+  windows(width=3, height=2)
+  dplot(yield ~ x+y|loc, data=dd)
+  dplot(yield ~ x+y|loc, data=dd, strip.cex=1.5)
+  dplot(yield ~ x+y|loc, data=dd, col.regions=terrain.colors)
+
+  dplot( ~ x+y|loc, data=dd, num=trt1, cex=1)
+  dplot( ~ x+y|loc, data=dd, col=trt1, cex=1)
+  dplot( ~ x+y|loc, data=dd, text=trt1, cex=.8)
+  
+  dplot( ~ x+y|loc, data=dd, text=trt1, cex=.8, shorten='none')
+  dplot( ~ x+y|loc, data=dd, text=trt1, cex=.8, shorten='none', key.cex=.5)
+  dplot( ~ x+y|loc, data=dd, text=trt1, cex=.8, shorten='none', show.key=FALSE)
+  dplot( ~ x+y|loc, data=dd, text=trt2, col=trt1, cex=1,
+        col.text=c('red','black','blue','plum'), text.levels=c('A','B','C'))
+  
+  dplot(rep ~ x+y|loc, data=dd, out1=rep)
+  dplot(rep ~ x+y|loc, data=dd, out1=rep, out2=y)
+  dplot(rep ~ x+y|loc, data=dd, out1=rep, flip=TRUE)
+  dplot(rep ~ x+y|loc, data=dd, tick=TRUE)
+  dplot(rep ~ x+y|loc, data=dd, main="title", xlab="xlab", ylab="ylab")
+  dev.off()
+  
   data(yates.oats, package="agridat")
   oats35 <- yates.oats
 
