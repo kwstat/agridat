@@ -30,7 +30,7 @@
   A simple statistical procedure for partitioning soil test correlation
   data into two classes. \emph{Soil Science Society of America Journal},
   35, 658--660.
-  \url{https://www.crops.org/publications/sssaj/abstracts/35/4/SS0350040658}
+  \url{http://www.crops.org/publications/sssaj/abstracts/35/4/SS0350040658}
 }
 
 \examples{
@@ -66,7 +66,7 @@ CateNelson <- function(dat){
 
 cn <- CateNelson(dat)
 ix <- which.max(cn$r2)
-with(dat, plot(y~x, ylim=c(0,110)))
+with(dat, plot(y~x, ylim=c(0,110), xlab="Potassium", ylab="Yield"))
 title("Cate-Nelson")
 abline(v=dat$x[ix], col='wheat')
 

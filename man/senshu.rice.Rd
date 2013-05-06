@@ -58,7 +58,8 @@ x <- u + gam * sig12 / (2 * sig22)
 f <- tval / (-2*b2)
 sq <- sqrt(sig11 + 4*u*sig12 + 4*u^2*sig22 - gam * (sig11 - sig12^2 / sig22) )
 ci <- (x + c(1,-1)*f*sq) / (1-gam)
-plot(yield ~ mint, dat, xlim=c(17, 32))
+plot(yield ~ mint, dat, xlim=c(17, 32),
+main="Quadratic fit and Fieller confidence interval")
 lines(17:32, predict(m2, new=data.frame(mint=17:32)))
 abline(v=ci, col="blue")
 }

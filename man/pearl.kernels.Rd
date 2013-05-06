@@ -54,7 +54,7 @@
   Raymond Pearl, 1911.
   The Personal Equation In Breeding Experiments Involving Certain
   Characters of Maize, Biol. Bull., 21, 339-366.
-  \url{www.biolbull.org/cgi/reprint/21/6/339.pdf}
+  \url{http://www.biolbull.org/cgi/reprint/21/6/339.pdf}
 }
 
 \examples{

@@ -35,7 +35,7 @@
   Statistical Analysis of Results from Irrigation Experiments Using the
   Line-Source Sprinkler System.
   \emph{Soil Science Society of America Journal}, 44, 886-888. 
-  \url{https://www.soils.org/publications/sssaj/abstracts/44/4/SS0440040886}
+  \url{http://www.soils.org/publications/sssaj/abstracts/44/4/SS0440040886}
 }
 \references{
   Johnson, D. E., Chaudhuri, U. N., and Kanemasu, E. T. (1983).

@@ -41,7 +41,7 @@
 \examples{
 dat <- streibig.competition
 
-# See Schaberger and Pierce, pages 370-
+# See Schaberger and Pierce, pages 370+
 # Consider only the mono-species barley data (no competition from sinapis)
 d1 <- subset(dat, sseeds<1)
 d1 <- transform(d1, x=bseeds, y=bdwt, block=factor(block))

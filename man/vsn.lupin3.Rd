@@ -43,7 +43,8 @@ dat <- within(dat, {
 })
 
 desplot(yield~ col*row|site, dat)
-desplot(check~ col*row|site, dat) # Site 1 & 2 used same randomization
+desplot(check~ col*row|site, dat,
+        main="Check plot placement") # Site 1 & 2 used same randomization
 
 \dontrun{
 require("asreml")

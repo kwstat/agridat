@@ -1,21 +1,25 @@
 News for 'agridat'
 
-Changes in version 1.5 (unreleased)
+Changes in version 1.5 (Apr 2013)
 
   * New data:
-  besag.bayesian, box.cork, broadbalk.wheat, caribbean.maize,
-  carmer.density, cate.potassium, cochran.wireworms, fan.stability, 
+  adugna.sorghum, ars.earlywhitecorn96, besag.bayesian, bond.diallel, 
+  box.cork, broadbalk.wheat, byers.apple, caribbean.maize,
+  carmer.density, cate.potassium, cleveland.soil,
+  cochran.eelworms, cochran.wireworms, fan.stability, gomez.seedrate,
   gotway.hessianfly, goulden.barley, henderson.milkfat, hernandez.nitrogen,
-  hessling.argentina, immer.sugarbeet, ivins.herbs, johnson.blight,
-  lyon.potato, mead.cowpeamaize, mead.germination,
+  hessling.argentina, immer.sugarbeet, ivins.herbs, jenkyn.mildew, 
+  johnson.blight, lambert.soiltemp, lavoranti.eucalyptus, lyon.potato, 
+  lyons.wheat, mead.cowpeamaize, mead.germination,
   minnesota.barley.weather, minnesota.barley.yield, nebraska.farmincome, 
   nass.barley, nass.corn, nass.cotton, nass.hay, nass.rice, 
-  nass.sorghum, nass.soybean, nass.wheat
-  senshu.rice, streibig.competition, zuidhof.broiler
+  nass.sorghum, nass.soybean, nass.wheat, ortiz.tomato, pacheco.soybean,
+  senshu.rice, snedecor.asparagus, streibig.competition, zuidhof.broiler
 
   * Renamed crowder.germination to crowder.seeds.
   * Change 'column' to 'col' in all data.
   * Function 'desplot' gains an argument 'flip' for vertical flips.
+  * Removed rgl and rjags from 'Suggests' to facilitate cross-platform checking
 
 Changes in version 1.4 (Mar 2012)
 
@@ -40,10 +44,6 @@ Changes in version 1.2 (Jun 2011)
     aastveit, gathmann.bt, kempton.competition, wedderburn.barley
 
   * desplot now supports xlab, ylab
-
-Changes in version 1.1
-
-  * The 'desplot' function now passes more tests.  Some arguments changed.
 
 Changes in version 1.0
 

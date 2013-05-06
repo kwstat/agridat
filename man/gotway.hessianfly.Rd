@@ -47,8 +47,10 @@ a2 <- asreml(prop ~ gen, data=dat, random=~block,
              family=asreml.binomial(),
              weights=n)
 coef(a2)
+
+# To do: Add spatial.  Throws an error in asreml
+
 }
 
-# To do: Add spatial
 }
 \keyword{datasets}

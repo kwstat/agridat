@@ -29,9 +29,9 @@ name                             \tab dimensions \tab other \tab model \cr
 \link{lyon.potato}               \tab 34 x 6 \tab xy \tab \cr
 \link{mercer.wheat}              \tab 25 x 20 \tab xy, 2 traits \tab spplot \cr
 \link{smith.uniformity3}         \tab 6 x 20 \tab xy, 3 years \tab rgl \cr
+\link{wiebe.wheat}               \tab 12 x 125 \tab xy \tab medianpolish, loess \cr
 \link{williams.barley}           \tab 48 x 15 \tab xy \tab loess \cr
 \link{williams.cotton}           \tab 24 x 12 \tab xy \tab loess \cr
-\link{wiebe.wheat}               \tab 12 x 125 \tab xy \tab medianpolish, loess \cr
 }
 
 % ------------------------------------------------------------------------------
@@ -54,6 +54,7 @@ name                             \tab gen \tab loc\tab years \tab trt \tab other
 name                             \tab gen \tab loc\tab reps\tab years \tab trt \tab other \tab model \cr
 \link{archbold.apple}            \tab 2   \tab    \tab 5   \tab    \tab 24  \tab split-split \tab lmer \cr
 \link{box.cork}                  \tab     \tab    \tab     \tab    \tab     \tab repeated \tab radial, asreml \cr
+\link{lavoranti.eucalyptus}      \tab 70  \tab 7  \tab     \tab    \tab     \tab  \tab svd \cr
 \link{williams.trees}            \tab 37  \tab 6  \tab     \tab    \tab 2   \tab \tab \cr
 }
 
@@ -63,13 +64,16 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 
 \tabular{llllllll}{
 name                             \tab gen \tab loc\tab reps\tab years \tab trt \tab other \tab model \cr
+\link{adugna.sorghum}            \tab 28  \tab 13 \tab     \tab 5  \tab     \tab \tab \cr
 \link{aastveit.barley}           \tab 15  \tab    \tab     \tab 9  \tab     \tab Yr*Gen~Yr*Trait\tab pls \cr
 \link{allcroft.lodging}          \tab 32  \tab 7  \tab     \tab    \tab     \tab percent \tab tobit \cr
+\link{ars.earlywhitecorn96}      \tab 60  \tab 9  \tab     \tab    \tab     \tab 6 traits \tab dotplot \cr
 \link{australia.soybean}         \tab 58  \tab 4  \tab     \tab 2  \tab     \tab 4-way, 6 traits \tab biplot \cr
 \link{besag.bayesian}            \tab 75  \tab    \tab 3   \tab    \tab     \tab xy  \tab asreml \cr
 \link{besag.elbatan}             \tab 50  \tab    \tab 3   \tab    \tab     \tab xy  \tab lm, gam \cr
 \link{besag.met}                 \tab 64  \tab 6  \tab 3   \tab    \tab     \tab xy, incblock\tab asreml, lme \cr
 \link{blackman.wheat}            \tab 12  \tab 7  \tab     \tab    \tab 2   \tab \tab biplot \cr
+\link{bond.diallel}              \tab 6*6 \tab    \tab     \tab    \tab     \tab \tab diallel \cr
 \link{bridges.cucumber}          \tab 4   \tab 2  \tab 4   \tab    \tab     \tab xy, latin, hetero\tab asreml \cr
 \link{caribbean.maize}           \tab     \tab 17 \tab 4   \tab    \tab 3   \tab \tab \cr
 \link{carmer.density}            \tab 8   \tab    \tab     \tab    \tab 4   \tab \tab nls\cr
@@ -77,6 +81,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{cochran.crd}               \tab     \tab    \tab     \tab    \tab 7   \tab xy, crd\tab aov \cr
 \link{cochran.latin}             \tab     \tab    \tab 6   \tab    \tab 6   \tab xy, latin\tab aov \cr
 \link{cochran.wireworms}         \tab     \tab    \tab 5   \tab    \tab 5   \tab xy, latin\tab glm \cr
+\link{cochran.eelworms}          \tab     \tab    \tab 4   \tab    \tab 5   \tab xy \tab aov \cr
 \link{corsten.interaction}       \tab 20  \tab 7  \tab     \tab    \tab     \tab \tab \cr
 \link{crowder.seeds}             \tab 2   \tab    \tab 21  \tab    \tab 2   \tab \tab glm,jags \cr
 \link{cox.stripsplit}            \tab     \tab    \tab  4  \tab    \tab 3,4,2 \tab \tab aov \cr
@@ -99,6 +104,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{gomez.fractionalfactorial} \tab     \tab    \tab 2   \tab    \tab 6   \tab xy \tab lm \cr
 \link{gomez.groupsplit}          \tab 45  \tab    \tab 3   \tab    \tab 2   \tab xy, 3 gen groups \tab aov \cr
 \link{gomez.multilocsplitplot}   \tab 2   \tab 3  \tab 3   \tab    \tab     \tab nitro \tab aov, lmer \cr
+\link{gomez.seedrate}            \tab     \tab    \tab 4   \tab    \tab 6   \tab rate \tab lm\cr
 \link{gomez.splitsplit}          \tab 3   \tab    \tab 3   \tab    \tab     \tab xy, nitro, mgmt \tab aov, lmer \cr
 \link{gomez.stripplot}           \tab 6   \tab    \tab 3   \tab    \tab     \tab xy, nitro \tab aov \cr
 \link{gomez.stripsplitplot}      \tab 6   \tab    \tab 3   \tab    \tab     \tab xy, nitro\tab aov \cr
@@ -109,28 +115,33 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{hildebrand.systems}        \tab     \tab 14 \tab     \tab    \tab 4   \tab \tab asreml\cr
 \link{hughes.grapes}             \tab     \tab    \tab 3   \tab    \tab 6   \tab binomial \tab lmer, aod, glmm\cr
 \link{ivins.herbs}               \tab 13  \tab    \tab 6   \tab    \tab     \tab 2 traits \tab lm,friedman\cr
+\link{jenkyn.mildew}             \tab     \tab    \tab 9   \tab    \tab 4   \tab \tab lm\cr
 \link{john.alpha}                \tab 24  \tab    \tab 3   \tab    \tab     \tab alpha \tab lm,lmer \cr
 \link{kempton.competition}       \tab 36  \tab    \tab 3   \tab    \tab     \tab xy, competition \tab lme AR1 \cr
 \link{kempton.rowcol}            \tab 35  \tab    \tab 2   \tab    \tab     \tab xy, row-col \tab lmer \cr
 \link{kempton.slatehall}         \tab 25  \tab    \tab 6   \tab    \tab     \tab xy \tab asreml,lmer\cr
+\link{lyons.wheat}               \tab     \tab 12 \tab     \tab 4  \tab     \tab  \tab \cr
 \link{mcconway.turnip}           \tab 2   \tab    \tab 4   \tab    \tab 2,4 \tab hetero\tab aov, lme\cr
 \link{mead.cowpeamaize}          \tab 3,2 \tab    \tab 3   \tab    \tab 4   \tab intercrop \tab \cr
 \link{mead.germination}          \tab     \tab    \tab 4   \tab    \tab 4,4 \tab binomial\tab glm\cr
 \link{mead.strawberry}           \tab 8   \tab    \tab 4   \tab    \tab     \tab \tab \cr
 \link{minnesota.barley.weather}  \tab     \tab 6  \tab     \tab 10 \tab     \tab \tab \cr
 \link{minnesota.barley.yield}    \tab 22  \tab 6  \tab     \tab 10 \tab     \tab \tab dotplot\cr
+\link{ortiz.tomato}              \tab 15  \tab 18 \tab     \tab   \tab 16   \tab Env*Gen~Env*Cov\tab pls \cr
+\link{pacheco.soybean}           \tab 18  \tab 11 \tab     \tab    \tab     \tab \tab AMMI\cr
 \link{rothamsted.brussels}       \tab     \tab    \tab 4   \tab    \tab 6   \tab \tab \cr
 \link{ryder.groundnut}           \tab 5   \tab    \tab 4   \tab    \tab     \tab xy, rcb \tab lm \cr
 \link{senshu.rice}               \tab     \tab 40 \tab     \tab    \tab     \tab \tab lm,Fieller \cr
 \link{shafii.rapeseed}           \tab 6   \tab 14 \tab 3   \tab 3  \tab     \tab \tab biplot \cr
+\link{snedecor.asparagus}        \tab     \tab    \tab 4   \tab 4  \tab 4   \tab \tab split-plot,antedependence \cr
 \link{steel.soybeanmet}          \tab 12  \tab 3  \tab 3   \tab    \tab     \tab \tab \cr
 \link{streibig.competition}      \tab 2   \tab    \tab 3   \tab    \tab     \tab \tab glm \cr
 \link{stroup.nin}                \tab 56  \tab    \tab 4   \tab    \tab     \tab xy \tab asreml \cr
 \link{stroup.splitplot}          \tab     \tab    \tab 4   \tab    \tab     \tab \tab asreml, MCMCglmm \cr
 \link{student.barley}            \tab 2   \tab 51 \tab     \tab 6  \tab     \tab \tab lmer \cr
-\link{talbot.potato}             \tab 9   \tab 12 \tab     \tab 6  \tab     \tab Gen*Env~Gen*Trait \tab pls \cr
+\link{talbot.potato}             \tab 9   \tab 12 \tab     \tab    \tab     \tab Gen*Env~Gen*Trait \tab pls \cr
 \link{theobald.covariate}        \tab 10  \tab 7  \tab 5   \tab    \tab     \tab cov \tab jags \cr
-\link{thompson.cornsoy}          \tab     \tab 5  \tab 33  \tab    \tab     \tab repeated measures \tab aov \cr
+\link{thompson.cornsoy}          \tab     \tab 5  \tab     \tab 33 \tab     \tab repeated measures \tab aov \cr
 \link{vargas.wheat1}             \tab 7   \tab    \tab     \tab 6  \tab     \tab G*Y~G*Trait, Y*G~Y*Cov\tab pls \cr
 \link{vargas.wheat2}             \tab 8   \tab 7  \tab     \tab    \tab     \tab Env*Gen~Env*Cov \tab pls \cr
 \link{verbyla.lupin}             \tab 9   \tab 8  \tab     \tab 2  \tab     \tab xy, density\tab \cr
@@ -144,8 +155,10 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \bold{Time series}
 \tabular{lllll}{
 name                             \tab years \tab trt \tab other \tab model \cr
+\link{byers.apple}               \tab    \tab    \tab \tab lme\cr
 \link{broadbalk.wheat}           \tab 74 \tab 17 \tab \tab \cr
 \link{hessling.argentina}        \tab 30 \tab    \tab temp,precip\tab \cr
+\link{lambert.soiltemp}          \tab 1  \tab 7  \tab \tab \cr
 \link{nass.barley}               \tab 146\tab    \tab \tab \cr
 \link{nass.corn}                 \tab 146\tab    \tab \tab \cr
 \link{nass.cotton}               \tab 146\tab    \tab \tab \cr
@@ -162,6 +175,7 @@ name                             \tab years \tab trt \tab other \tab model \cr
 \tabular{ll}{
 name                       \tab model \cr
 \link{cate.potassium}      \tab cate-nelson \cr
+\link{cleveland.soil}      \tab loess 2D \cr
 \link{johnson.blight}      \tab logistic regression\cr
 \link{nebraska.farmincome} \tab choropleth\cr
 \link{pearl.kernels}       \tab chisq \cr

@@ -41,12 +41,12 @@
 }
 \examples{
 dat <- hessling.argentina
-pairs(dat, gap=.25)
 
 # Fig 1 of Hessling.  Use avg Aug-Nov temp to predict yield
 dat <- transform(dat, avetmp=(t08+t09+t10+t11)/4) # Avg temp
 m0 <- lm(yield ~ avetmp, dat)
-plot(yield~year, dat, ylim=c(200,1400), type='l')
+plot(yield~year, dat, ylim=c(200,1400), type='l',
+main="Observed (black) and predicted yield (blue)")
 lines(fitted(m0)~year, dat, col="blue")
 
 # A modern, PLS approach

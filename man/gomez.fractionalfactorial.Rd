@@ -57,7 +57,7 @@ anova(m0)
 m1 <- lm(yield ~ rep * block + (a+b+c+d+e+f)^3, dat)
 anova(m1)
 
-levelplot(yield~x*y, dat) # trt abcdef has the highest yield
+desplot(yield~x*y, dat) # trt abcdef has the highest yield
 
 \dontrun{
 # Not sure FrF2 works with multi-rep data.

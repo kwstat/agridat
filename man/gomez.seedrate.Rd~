@@ -1,0 +1,32 @@
+\name{gomez.seedrate}
+\alias{gomez.seedrate}
+\docType{data}
+\title{
+%%   ~~ data name/kind ... ~~
+}
+\description{
+%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+}
+\usage{data(gomez.seedrate)}
+\format{
+  A data frame with 24 observations on the following 3 variables.
+  \describe{
+    \item{\code{rate}}{a numeric vector}
+    \item{\code{rep}}{a factor with levels \code{R1} \code{R2} \code{R3} \code{R4}}
+    \item{\code{yield}}{a numeric vector}
+  }
+}
+\details{
+%%  ~~ If necessary, more details than the __description__ above ~~
+}
+\source{
+%%  ~~ reference to a publication or URL from which the data were obtained ~~
+}
+\references{
+%%  ~~ possibly secondary sources and usages ~~
+}
+\examples{
+data(gomez.seedrate)
+## maybe str(gomez.seedrate) ; plot(gomez.seedrate) ...
+}
+\keyword{datasets}

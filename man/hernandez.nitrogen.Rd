@@ -25,7 +25,7 @@
   Hernandez, J.A. and Mulla, D.J. 2008.
   Estimating uncertainty of economically optimum fertilizer rates,
   \emph{Agronomy Journal}, 100, 1221-1229.
-  \url{https://www.crops.org/publications/aj/abstracts/100/5/1221}.
+  \url{http://www.crops.org/publications/aj/abstracts/100/5/1221}.
 
   Electronic data kindly supplied by Jose Hernandez.
 }

@@ -2,7 +2,7 @@ Package: agridat
 Type: Package
 Title: Agricultural datasets
 Version: 1.5
-Date: 2012-03-10
+Date: 2013-04-26
 Author: Kevin Wright
 Maintainer: Kevin Wright <kw.stat@gmail.com>
 Description: Datasets from books and papers related to agriculture.
@@ -31,8 +31,6 @@ Suggests:
     mgcv,
     nlme,
     pls,
-    rgl,
-    rjags,
     survival,
 License: GPL-2
 LazyData: yes

@@ -46,6 +46,7 @@ require("latticeExtra")
 # Raw, county-wide incomes.  Note the outlier Cuming county
 mapplot(county ~ crop + animal,
         data = dat, colramp=RedGrayBlue,
+        main="Agricultural income per county",
         map = map('county', 'nebraska', plot = FALSE, fill = TRUE,
                   projection = "mercator"))
 
@@ -57,6 +58,7 @@ dat <- within(dat, {
 # And use manual breakpoints.
 mapplot(county ~ crop.rate + animal.rate,
         data = dat,
+        main="Agricultural income per square mile (percentile breaks)",
         map = map('county', 'nebraska', plot = FALSE, fill = TRUE,
                   projection = "mercator"),
         colramp=RedGrayBlue,

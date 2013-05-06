@@ -38,13 +38,13 @@ m1 <- nls(yield ~ alpha * week^beta * exp(gamma * week),
 
 # Or, take logs and fit a linear model
 # log(yield) ~ log(alpha) + beta*log(t)  + gamma*t
-m2 <- lm(log(yield) ~ week + log(week), dat)
+m2 <- lm(log(yield) ~ 1 + log(week) + week, dat)
 
 # Or, use glm and a link to do the transform
-m3 <- glm(yield ~ week + log(week), quasi(link = "log"), dat)
+m3 <- glm(yield ~ 1 + log(week) + week, quasi(link = "log"), dat)
 
 # Note: m2 has E[log(y)] = log(alpha) + beta*log(t)  + gamma*t
-#  and m3 has log(E[y]) = log(alpha) + beta*log(t)  + gamma*t
+#  and m3 has  log(E[y]) = log(alpha) + beta*log(t)  + gamma*t
 
 # Generalized additive models
 require("mgcv")

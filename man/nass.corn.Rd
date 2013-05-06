@@ -39,10 +39,13 @@
 \examples{
 dat <- nass.corn
 
+# Use only states that grew at least 100K acres of corn in 2011
 keep <- droplevels(subset(dat, year == 2011 & acres > 100000))$state
 dat <- droplevels(subset(dat, is.element(state, keep)))
 
-xyplot(acres ~ year|state, dat, type='l', as.table=TRUE)
+# Acres of corn grown each year
+xyplot(acres ~ year|state, dat, type='l', as.table=TRUE,
+title="State trends in corn acreage")
 
 # Plain levelplot, using only states
 datm <- acast(dat, year~state, value.var='yield')
@@ -53,5 +56,18 @@ levelplot(datm, aspect=.5, col.regions=RedGrayBlue,
 library("mvtsplot")
 mvtsplot(datm, levels=11, margin=FALSE, norm='global')
 }
+
+# Model the rate of genetic gain in Illinois as a piecewise regression
+# Breakpoints define periods of open-pollinated varieties, double-cross,
+# single-cross, and transgenic hybrids.
+
+dil <- subset(nass.corn, state=="Illinois" & year >= 1900)
+m1 <- lm(yield ~ pmin(year,1932) + pmax(1932, pmin(year, 1959)) +
+         pmax(1959, pmin(year, 1995)) + pmax(1995, year), dil)
+signif(coef(m1)[-1],3) # Rate of gain for each segment
+plot(yield ~ year, dil, main="Piecewise linear model of Illinois corn yields")
+lines(dil$year, fitted(m1))
+abline(v=c(1932,1959,1995), col="wheat")
+
 }
 \keyword{datasets}

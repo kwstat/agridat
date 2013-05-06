@@ -1,0 +1,541 @@
+"loc"	"gen"	"yield"	"stand"	"rootlodge"	"stalklodge"	"earht"	"flower"	"moisture"
+"Knoxville,TN"	"AgriGold A6680W"	138.2	91.1	0	0	47.3	67.3	21.7
+"Knoxville,TN"	"AgriGold XA4323W"	151	86.1	0	0.6	45	67.7	21.5
+"Knoxville,TN"	"Asgrow XP7555W"	139.6	94.4	0	0.6	46.3	67	19.8
+"Knoxville,TN"	"Beck Ex2251"	190.1	90	0	0	57	67.3	19.4
+"Knoxville,TN"	"Crow's W54"	140.7	88.9	0	0.6	47	68.7	21.1
+"Knoxville,TN"	"Crow's W55"	139.3	88.9	0	1.2	52	66.7	20
+"Knoxville,TN"	"Crow's EX551"	178.9	88.9	0	0.7	47	67.3	20.2
+"Knoxville,TN"	"Crow's EX552"	180	94.4	0	1.8	49	67.7	19.9
+"Knoxville,TN"	"DEKALB Genetics DK703W"	166.3	98.9	0	0.6	47	67	21.3
+"Knoxville,TN"	"DEKALB Genetics DK631W"	169.1	99.4	0	1.1	37	65.3	19.1
+"Knoxville,TN"	"DEKALB Genetics EXP564W"	178.4	93.9	0	0.6	49	68	18.8
+"Knoxville,TN"	"Golden Harvest EX-106W"	194.2	98.3	0	0.6	53.3	66.7	19.1
+"Knoxville,TN"	"Hoegemeyer 1125W"	147.7	97.2	0	0	48	67.7	21.6
+"Knoxville,TN"	"Hoegemeyer 1131W"	152.3	91.7	0	0.6	51.7	70	20.9
+"Knoxville,TN"	"Hoegemeyer 1142W"	146.4	95	0	0.6	46	69.3	23.3
+"Knoxville,TN"	"ICI Seeds 8320W"	147	95	0	0.6	46	67.3	20.8
+"Knoxville,TN"	"ICI Seeds N3527W"	151.5	92.2	0	1.2	40.7	63	17.6
+"Knoxville,TN"	"IFSI 90-1"	172.9	87.2	0	0.6	51	67	21.1
+"Knoxville,TN"	"IFSI 93-4"	192.5	92.8	0	1.3	48.7	67.3	21.6
+"Knoxville,TN"	"IFSI 95-2"	189.2	94.4	0	0.6	57	66	19.5
+"Knoxville,TN"	"LG Seeds NB571W"	160.7	92.8	0	4.3	40	65.7	16.6
+"Knoxville,TN"	"LG Seeds NB710W"	168.9	94.4	0	0	49	65.7	19.8
+"Knoxville,TN"	"LG Seeds NB739W"	175	99.4	0	1.1	40.3	66.7	20.7
+"Knoxville,TN"	"LG Seeds NB742W"	156	91.1	0	1.3	34.3	65.3	20.3
+"Knoxville,TN"	"LG Seeds NB749W"	146.5	97.8	0.6	0	48	68	21.3
+"Knoxville,TN"	"Mycogen 7860W"	145.6	87.8	0	0	47.3	66.7	20.9
+"Knoxville,TN"	"Mycogen X6688W"	189.6	92.8	0	1.2	57.7	66.7	19.3
+"Knoxville,TN"	"NC+ 5633W"	166.9	92.8	0	0	51	67.3	19.9
+"Knoxville,TN"	"NC+ 6555W"	135.8	99.4	0	0	47	68	20.7
+"Knoxville,TN"	"Northrup King X6545W"	180.6	91.1	0	1.3	52	66.7	20.3
+"Knoxville,TN"	"Northrup King X6955W"	173.1	92.2	0	1.8	52	67.3	20.8
+"Knoxville,TN"	"Pioneer 3287W"	151.3	97.2	0	0	45.7	64.3	20.2
+"Knoxville,TN"	"Pioneer 3392W"	179.9	95.6	0	1.2	50	66	18.6
+"Knoxville,TN"	"Pioneer 3443W"	171.4	98.9	0	0	51	64	19.6
+"Knoxville,TN"	"Pioneer 3463W"	173.9	96.7	0	1.2	45.7	63.3	18.8
+"Knoxville,TN"	"Pioneer X1155FW"	184.2	98.9	0	0	46	65.7	19.9
+"Knoxville,TN"	"SeedTec ST-7545W"	200.6	95.6	0	1.2	51	68.7	19.4
+"Knoxville,TN"	"Sturdy Grow SG730W"	172.7	95	0	0	53	67	20
+"Knoxville,TN"	"Sturdy Grow SG765W"	187.8	95	0	1.1	50	67.3	20
+"Knoxville,TN"	"Sturdy Grow SG777W"	151.8	83.9	0	0	51.7	67.3	21
+"Knoxville,TN"	"Sturdy Grow SG781W"	147.9	91.1	0	0	47	68	21.3
+"Knoxville,TN"	"Sturdy Grow SG797W"	131.3	94.4	0	0.6	48.7	70.7	21.6
+"Knoxville,TN"	"Trisler T4113W"	189.1	91.7	0	1.8	48	66.7	20.2
+"Knoxville,TN"	"Trisler T4211W"	183.6	96.1	0	2.9	57	66.3	19.5
+"Knoxville,TN"	"Vineyard V413W"	145.5	90.6	0	0	51.7	67.7	18.5
+"Knoxville,TN"	"Vineyard V414W"	152.1	91.7	0	0.7	46	66.3	18.8
+"Knoxville,TN"	"Vineyard V424W"	168.1	98.9	0	0.6	48.7	66.7	20
+"Knoxville,TN"	"Vineyard V438W"	149.9	92.8	0	0.6	46	65.7	19.8
+"Knoxville,TN"	"Vineyard V448W"	182.8	95.6	0	0.6	48	66	19.8
+"Knoxville,TN"	"Vineyard V449W"	166.4	97.2	0	0	44	66.7	20.7
+"Knoxville,TN"	"Whisnand 50W"	186.4	95.6	0	1.1	51	67.7	20.1
+"Knoxville,TN"	"Whisnand 51AW"	175.3	93.3	0.6	0	48.7	67.7	21
+"Knoxville,TN"	"Whisnand 52AW"	181.3	96.1	0	1.1	47	67.3	20.9
+"Knoxville,TN"	"Wilson 1780W"	179.2	92.2	0	0	45	65.7	20
+"Knoxville,TN"	"Wilson 1790W"	157.3	88.9	0	0	46.3	67	19.7
+"Knoxville,TN"	"Wilson E1732"	177	96.1	0	0	52	69.3	19.3
+"Knoxville,TN"	"Wilson E1789"	173.3	97.2	0	1.3	53	68.7	20.8
+"Knoxville,TN"	"Zimmerman Z73W"	160.8	97.8	0	0	47.3	71.7	19.4
+"Knoxville,TN"	"Yellow check B73xMo17"	158.7	97.8	0	4.6	49.7	65	17.5
+"Knoxville,TN"	"Yellow check Pioneer 3394"	186.9	94.4	0	0	48	64.3	17.6
+"Galesburg,IL"	"AgriGold A6680W"	110.3	100	NA	NA	41	NA	23.5
+"Galesburg,IL"	"AgriGold XA4323W"	89.9	46.7	NA	NA	39	NA	21.5
+"Galesburg,IL"	"Asgrow XP7555W"	116.6	100	NA	NA	40	NA	19.6
+"Galesburg,IL"	"Beck Ex2251"	116	94.4	NA	NA	48.3	NA	21.3
+"Galesburg,IL"	"Crow's W54"	113.8	70.6	NA	NA	44.7	NA	22.4
+"Galesburg,IL"	"Crow's W55"	107	96.7	NA	NA	43.3	NA	22.4
+"Galesburg,IL"	"Crow's EX551"	116.9	93.9	NA	NA	39	NA	21.3
+"Galesburg,IL"	"Crow's EX552"	106	88.9	NA	NA	48.3	NA	21.2
+"Galesburg,IL"	"DEKALB Genetics DK703W"	94	96.1	NA	NA	37.3	NA	22.9
+"Galesburg,IL"	"DEKALB Genetics DK631W"	120.6	97.8	NA	NA	27.7	NA	19.5
+"Galesburg,IL"	"DEKALB Genetics EXP564W"	114.9	73.9	NA	NA	40	NA	20.6
+"Galesburg,IL"	"Golden Harvest EX-106W"	115.1	100	NA	NA	46.3	NA	21.9
+"Galesburg,IL"	"Hoegemeyer 1125W"	118	99.4	NA	NA	42	NA	22.5
+"Galesburg,IL"	"Hoegemeyer 1131W"	113.5	91.1	NA	NA	36	NA	22.5
+"Galesburg,IL"	"Hoegemeyer 1142W"	122.6	86.7	NA	NA	43	NA	25.5
+"Galesburg,IL"	"ICI Seeds 8320W"	112	93.3	NA	NA	45	NA	21.8
+"Galesburg,IL"	"ICI Seeds N3527W"	105.6	98.9	NA	NA	29.7	NA	19.1
+"Galesburg,IL"	"IFSI 90-1"	119.5	92.8	NA	NA	46	NA	21
+"Galesburg,IL"	"IFSI 93-4"	124.2	98.9	NA	NA	39.7	NA	20.3
+"Galesburg,IL"	"IFSI 95-2"	122.3	94.4	NA	NA	48.7	NA	22.9
+"Galesburg,IL"	"LG Seeds NB571W"	97.9	78.3	NA	NA	30.3	NA	19.7
+"Galesburg,IL"	"LG Seeds NB710W"	99.8	79.4	NA	NA	40.3	NA	19.6
+"Galesburg,IL"	"LG Seeds NB739W"	113.8	92.2	NA	NA	33.3	NA	23.4
+"Galesburg,IL"	"LG Seeds NB742W"	113.8	86.7	NA	NA	38.3	NA	22.2
+"Galesburg,IL"	"LG Seeds NB749W"	120.5	100	NA	NA	44	NA	23
+"Galesburg,IL"	"Mycogen 7860W"	116.4	98.9	NA	NA	47	NA	21.6
+"Galesburg,IL"	"Mycogen X6688W"	137	97.8	NA	NA	46	NA	20.7
+"Galesburg,IL"	"NC+ 5633W"	104.5	92.8	NA	NA	40.7	NA	21.2
+"Galesburg,IL"	"NC+ 6555W"	127.8	92.2	NA	NA	45	NA	22.9
+"Galesburg,IL"	"Northrup King X6545W"	107.3	97.8	NA	NA	41	NA	21.5
+"Galesburg,IL"	"Northrup King X6955W"	114.5	92.8	NA	NA	43.3	NA	20.6
+"Galesburg,IL"	"Pioneer 3287W"	111.1	83.3	NA	NA	39.3	NA	22
+"Galesburg,IL"	"Pioneer 3392W"	110.7	100	NA	NA	39.7	NA	19.1
+"Galesburg,IL"	"Pioneer 3443W"	95.6	98.3	NA	NA	37	NA	19.2
+"Galesburg,IL"	"Pioneer 3463W"	103	85	NA	NA	34	NA	19
+"Galesburg,IL"	"Pioneer X1155FW"	125.3	98.3	NA	NA	40	NA	20.9
+"Galesburg,IL"	"SeedTec ST-7545W"	119	86.7	NA	NA	41.7	NA	21.7
+"Galesburg,IL"	"Sturdy Grow SG730W"	91.9	92.8	NA	NA	43	NA	19.8
+"Galesburg,IL"	"Sturdy Grow SG765W"	109.2	99.4	NA	NA	41	NA	21.7
+"Galesburg,IL"	"Sturdy Grow SG777W"	119.1	96.1	NA	NA	52	NA	22.1
+"Galesburg,IL"	"Sturdy Grow SG781W"	126.1	100	NA	NA	41	NA	21.8
+"Galesburg,IL"	"Sturdy Grow SG797W"	142.1	94.4	NA	NA	46.7	NA	23
+"Galesburg,IL"	"Trisler T4113W"	128.2	91.7	NA	NA	40.7	NA	21.6
+"Galesburg,IL"	"Trisler T4211W"	114.2	100	NA	NA	49.7	NA	21.9
+"Galesburg,IL"	"Vineyard V413W"	111.4	92.8	NA	NA	38.3	NA	21.1
+"Galesburg,IL"	"Vineyard V414W"	111.8	100	NA	NA	39.3	NA	20.3
+"Galesburg,IL"	"Vineyard V424W"	118.9	100	NA	NA	44.3	NA	22.7
+"Galesburg,IL"	"Vineyard V438W"	112.9	100	NA	NA	41.3	NA	22
+"Galesburg,IL"	"Vineyard V448W"	128.6	100	NA	NA	38	NA	22.7
+"Galesburg,IL"	"Vineyard V449W"	118.8	92.2	NA	NA	41.3	NA	22.3
+"Galesburg,IL"	"Whisnand 50W"	108.8	96.7	NA	NA	50	NA	21.5
+"Galesburg,IL"	"Whisnand 51AW"	112.8	99.4	NA	NA	45.7	NA	22.1
+"Galesburg,IL"	"Whisnand 52AW"	101.2	76.1	NA	NA	41.3	NA	20.9
+"Galesburg,IL"	"Wilson 1780W"	141.2	100	NA	NA	36.7	NA	24.5
+"Galesburg,IL"	"Wilson 1790W"	133.9	87.8	NA	NA	38	NA	23.9
+"Galesburg,IL"	"Wilson E1732"	126.8	93.9	NA	NA	41.3	NA	21.8
+"Galesburg,IL"	"Wilson E1789"	97.5	96.7	NA	NA	46	NA	24.1
+"Galesburg,IL"	"Zimmerman Z73W"	109.5	85.6	NA	NA	44.7	NA	22.5
+"Galesburg,IL"	"Yellow check B73xMo17"	125.3	90.6	NA	NA	39.7	NA	21.1
+"Galesburg,IL"	"Yellow check Pioneer 3394"	134.1	90	NA	NA	38	NA	19.3
+"Wanatah,IN"	"AgriGold A6680W"	125.1	96.8	0.5	23.2	51.5	NA	25.4
+"Wanatah,IN"	"AgriGold XA4323W"	131.4	84.7	0	18.5	47.1	NA	23.1
+"Wanatah,IN"	"Asgrow XP7555W"	123.9	96.8	0.5	25.1	50.1	NA	24.2
+"Wanatah,IN"	"Beck Ex2251"	121.1	92.3	0	42	55.4	NA	22
+"Wanatah,IN"	"Crow's W54"	125.1	86.5	0	16.3	50.1	NA	24.1
+"Wanatah,IN"	"Crow's W55"	129.4	93.2	0	26.7	53.2	NA	24.7
+"Wanatah,IN"	"Crow's EX551"	125.2	94.1	0	13.8	46.2	NA	23.4
+"Wanatah,IN"	"Crow's EX552"	131.4	92.8	0	22.9	54.3	NA	23
+"Wanatah,IN"	"DEKALB Genetics DK703W"	121.5	88.7	0	25.8	50.8	NA	24.5
+"Wanatah,IN"	"DEKALB Genetics DK631W"	116.3	95	0	12.2	33.3	NA	22.9
+"Wanatah,IN"	"DEKALB Genetics EXP564W"	127.1	92.3	0	10.7	44.7	NA	24.4
+"Wanatah,IN"	"Golden Harvest EX-106W"	113.6	93.7	0	40.5	52	NA	22.3
+"Wanatah,IN"	"Hoegemeyer 1125W"	129.8	94.6	0	19	51.9	NA	24.6
+"Wanatah,IN"	"Hoegemeyer 1131W"	121	93.7	0	20.1	52.9	NA	24.6
+"Wanatah,IN"	"Hoegemeyer 1142W"	143.8	92.3	0	14.2	50.4	NA	26.9
+"Wanatah,IN"	"ICI Seeds 8320W"	123.7	90.5	0.5	34.7	52	NA	23.5
+"Wanatah,IN"	"ICI Seeds N3527W"	124.6	94.6	0	8.6	31.7	NA	21.4
+"Wanatah,IN"	"IFSI 90-1"	138	92.8	0	20	52.9	NA	23.9
+"Wanatah,IN"	"IFSI 93-4"	129.1	97.3	0	21.7	49.8	NA	23.5
+"Wanatah,IN"	"IFSI 95-2"	122	88.7	0	31.2	55.8	NA	22.9
+"Wanatah,IN"	"LG Seeds NB571W"	113.8	87.4	0	21.6	35.8	NA	21.9
+"Wanatah,IN"	"LG Seeds NB710W"	118.3	89.6	0.5	25.9	45.2	NA	23.9
+"Wanatah,IN"	"LG Seeds NB739W"	130.1	91	0.5	12.3	37.1	NA	26
+"Wanatah,IN"	"LG Seeds NB742W"	132.1	87.4	0	20	37.7	NA	25.7
+"Wanatah,IN"	"LG Seeds NB749W"	133.3	94.1	0	29.1	52.1	NA	24.8
+"Wanatah,IN"	"Mycogen 7860W"	127.7	96.4	0.9	21.4	49.8	NA	23.3
+"Wanatah,IN"	"Mycogen X6688W"	129.2	95.5	0	34.5	54.3	NA	22.8
+"Wanatah,IN"	"NC+ 5633W"	128.2	91.4	0	23.2	48.6	NA	24.4
+"Wanatah,IN"	"NC+ 6555W"	136	94.6	1	21.5	51.9	NA	24.8
+"Wanatah,IN"	"Northrup King X6545W"	120.3	92.3	0	34.2	50.4	NA	22.8
+"Wanatah,IN"	"Northrup King X6955W"	128.9	88.7	0.5	22.5	51.5	NA	24.9
+"Wanatah,IN"	"Pioneer 3287W"	135.1	97.7	0.5	4.2	43.6	NA	25.7
+"Wanatah,IN"	"Pioneer 3392W"	128.9	96.8	0	15.3	45.2	NA	21.8
+"Wanatah,IN"	"Pioneer 3443W"	105.9	94.6	0	25.9	41.9	NA	21.6
+"Wanatah,IN"	"Pioneer 3463W"	105.5	98.2	0	14.2	41.9	NA	21.6
+"Wanatah,IN"	"Pioneer X1155FW"	144.1	98.2	0	15.5	45.8	NA	22.1
+"Wanatah,IN"	"SeedTec ST-7545W"	124.1	91.4	0	11.6	48.4	NA	24
+"Wanatah,IN"	"Sturdy Grow SG730W"	117.4	94.6	0	28.6	48.4	NA	23.1
+"Wanatah,IN"	"Sturdy Grow SG765W"	120.1	89.6	0.5	27.1	48.8	NA	24.5
+"Wanatah,IN"	"Sturdy Grow SG777W"	130.3	96.4	0	23.4	54.6	NA	23.3
+"Wanatah,IN"	"Sturdy Grow SG781W"	127.3	95.5	0	23.4	46.8	NA	25.5
+"Wanatah,IN"	"Sturdy Grow SG797W"	118.6	93.2	0	11.6	52.8	NA	26.1
+"Wanatah,IN"	"Trisler T4113W"	128.9	86.5	0	20.5	47.8	NA	23.1
+"Wanatah,IN"	"Trisler T4211W"	129.4	95.9	0	18	52.1	NA	23
+"Wanatah,IN"	"Vineyard V413W"	99.2	91.4	0.5	18.7	45.2	NA	22.6
+"Wanatah,IN"	"Vineyard V414W"	118.6	92.8	0	24.2	43.8	NA	22.6
+"Wanatah,IN"	"Vineyard V424W"	136.3	91	0.5	13.3	49.3	NA	25.1
+"Wanatah,IN"	"Vineyard V438W"	110.7	90.5	0	8.5	45.1	NA	24.5
+"Wanatah,IN"	"Vineyard V448W"	141.2	95.5	0	14.1	51.2	NA	25.4
+"Wanatah,IN"	"Vineyard V449W"	139.4	94.1	0.5	13.3	46.4	NA	25.3
+"Wanatah,IN"	"Whisnand 50W"	131.6	93.7	0	27.3	53.2	NA	23.4
+"Wanatah,IN"	"Whisnand 51AW"	131.2	91.9	0	32.4	54.7	NA	23.2
+"Wanatah,IN"	"Whisnand 52AW"	125.7	93.2	0	31.1	49.5	NA	23.2
+"Wanatah,IN"	"Wilson 1780W"	145.4	95.9	0	13.1	45	NA	26.3
+"Wanatah,IN"	"Wilson 1790W"	140.4	94.1	0	10.5	42.9	NA	26.4
+"Wanatah,IN"	"Wilson E1732"	139	95	0	16.6	48.4	NA	24.7
+"Wanatah,IN"	"Wilson E1789"	118.6	89.2	0	26.8	49.4	NA	25.7
+"Wanatah,IN"	"Zimmerman Z73W"	119.3	91.4	0	24.7	54.5	NA	23.5
+"Wanatah,IN"	"Yellow check B73xMo17"	115.5	91	0	24.3	47.7	NA	25
+"Wanatah,IN"	"Yellow check Pioneer 3394"	124.9	91.9	0	18.1	41.1	NA	21.9
+"Ogden,IA"	"AgriGold A6680W"	132.9	95.4	NA	NA	NA	NA	26.8
+"Ogden,IA"	"AgriGold XA4323W"	125.4	55.2	NA	NA	NA	NA	24.3
+"Ogden,IA"	"Asgrow XP7555W"	127.2	96	NA	NA	NA	NA	21.5
+"Ogden,IA"	"Beck Ex2251"	149.5	91.4	NA	NA	NA	NA	22.2
+"Ogden,IA"	"Crow's W54"	112.9	79.3	NA	NA	NA	NA	23.5
+"Ogden,IA"	"Crow's W55"	129.4	85.6	NA	NA	NA	NA	23.6
+"Ogden,IA"	"Crow's EX551"	132.3	86.2	NA	NA	NA	NA	21.8
+"Ogden,IA"	"Crow's EX552"	147	92	NA	NA	NA	NA	21.8
+"Ogden,IA"	"DEKALB Genetics DK703W"	122.3	90.2	NA	NA	NA	NA	26.3
+"Ogden,IA"	"DEKALB Genetics DK631W"	120.9	87.9	NA	NA	NA	NA	21.5
+"Ogden,IA"	"DEKALB Genetics EXP564W"	104.1	93.1	NA	NA	NA	NA	24.6
+"Ogden,IA"	"Golden Harvest EX-106W"	143.2	85.6	NA	NA	NA	NA	21.8
+"Ogden,IA"	"Hoegemeyer 1125W"	137.7	97.1	NA	NA	NA	NA	24.1
+"Ogden,IA"	"Hoegemeyer 1131W"	106.3	80.5	NA	NA	NA	NA	26.9
+"Ogden,IA"	"Hoegemeyer 1142W"	116.1	89.7	NA	NA	NA	NA	31.1
+"Ogden,IA"	"ICI Seeds 8320W"	134.1	78.2	NA	NA	NA	NA	23.8
+"Ogden,IA"	"ICI Seeds N3527W"	140.5	85.6	NA	NA	NA	NA	17.6
+"Ogden,IA"	"IFSI 90-1"	139.4	74.7	NA	NA	NA	NA	23.1
+"Ogden,IA"	"IFSI 93-4"	131.6	90.2	NA	NA	NA	NA	20.6
+"Ogden,IA"	"IFSI 95-2"	144.9	94.8	NA	NA	NA	NA	21.3
+"Ogden,IA"	"LG Seeds NB571W"	111.1	65.5	NA	NA	NA	NA	20.3
+"Ogden,IA"	"LG Seeds NB710W"	110.4	72.4	NA	NA	NA	NA	24
+"Ogden,IA"	"LG Seeds NB739W"	103.6	82.2	NA	NA	NA	NA	25.1
+"Ogden,IA"	"LG Seeds NB742W"	118	75.9	NA	NA	NA	NA	27.1
+"Ogden,IA"	"LG Seeds NB749W"	137.8	90.8	NA	NA	NA	NA	24.2
+"Ogden,IA"	"Mycogen 7860W"	139.4	96	NA	NA	NA	NA	22.5
+"Ogden,IA"	"Mycogen X6688W"	145.2	83.3	NA	NA	NA	NA	22.1
+"Ogden,IA"	"NC+ 5633W"	139	92.5	NA	NA	NA	NA	25.3
+"Ogden,IA"	"NC+ 6555W"	130.7	96	NA	NA	NA	NA	26
+"Ogden,IA"	"Northrup King X6545W"	128.9	91.4	NA	NA	NA	NA	23.5
+"Ogden,IA"	"Northrup King X6955W"	127.8	92	NA	NA	NA	NA	23.4
+"Ogden,IA"	"Pioneer 3287W"	127.2	87.9	NA	NA	NA	NA	23.7
+"Ogden,IA"	"Pioneer 3392W"	147.2	93.7	NA	NA	NA	NA	19.6
+"Ogden,IA"	"Pioneer 3443W"	127.6	95.4	NA	NA	NA	NA	17.8
+"Ogden,IA"	"Pioneer 3463W"	131.3	92	NA	NA	NA	NA	17.9
+"Ogden,IA"	"Pioneer X1155FW"	159.4	93.1	NA	NA	NA	NA	21.9
+"Ogden,IA"	"SeedTec ST-7545W"	111.2	91.4	NA	NA	NA	NA	25.1
+"Ogden,IA"	"Sturdy Grow SG730W"	132.1	90.2	NA	NA	NA	NA	24.3
+"Ogden,IA"	"Sturdy Grow SG765W"	132.6	90.2	NA	NA	NA	NA	24.3
+"Ogden,IA"	"Sturdy Grow SG777W"	140	89.1	NA	NA	NA	NA	22.7
+"Ogden,IA"	"Sturdy Grow SG781W"	134	92.5	NA	NA	NA	NA	24.1
+"Ogden,IA"	"Sturdy Grow SG797W"	138.8	83.9	NA	NA	NA	NA	26
+"Ogden,IA"	"Trisler T4113W"	140.7	82.2	NA	NA	NA	NA	23
+"Ogden,IA"	"Trisler T4211W"	143.6	92.5	NA	NA	NA	NA	21.8
+"Ogden,IA"	"Vineyard V413W"	119.7	88.5	NA	NA	NA	NA	24.3
+"Ogden,IA"	"Vineyard V414W"	128.1	92.5	NA	NA	NA	NA	22.2
+"Ogden,IA"	"Vineyard V424W"	120.6	90.8	NA	NA	NA	NA	26.3
+"Ogden,IA"	"Vineyard V438W"	110.8	97.1	NA	NA	NA	NA	25.3
+"Ogden,IA"	"Vineyard V448W"	123.5	91.4	NA	NA	NA	NA	27.8
+"Ogden,IA"	"Vineyard V449W"	136.8	96	NA	NA	NA	NA	28.9
+"Ogden,IA"	"Whisnand 50W"	136.2	93.7	NA	NA	NA	NA	22.1
+"Ogden,IA"	"Whisnand 51AW"	147.5	91.4	NA	NA	NA	NA	22.9
+"Ogden,IA"	"Whisnand 52AW"	133.6	81	NA	NA	NA	NA	21.9
+"Ogden,IA"	"Wilson 1780W"	127.1	85.6	NA	NA	NA	NA	30
+"Ogden,IA"	"Wilson 1790W"	140	83.9	NA	NA	NA	NA	28.3
+"Ogden,IA"	"Wilson E1732"	140.8	85.6	NA	NA	NA	NA	27.5
+"Ogden,IA"	"Wilson E1789"	135.3	88.5	NA	NA	NA	NA	28.4
+"Ogden,IA"	"Zimmerman Z73W"	103.1	85.6	NA	NA	NA	NA	23.5
+"Ogden,IA"	"Yellow check B73xMo17"	121.8	91.4	NA	NA	NA	NA	20.7
+"Ogden,IA"	"Yellow check Pioneer 3394"	136.5	89.1	NA	NA	NA	NA	19.1
+"StJoseph,MO"	"AgriGold A6680W"	210.2	100	1.8	3	NA	NA	17.9
+"StJoseph,MO"	"AgriGold XA4323W"	187.2	100	7.1	1.2	NA	NA	16.6
+"StJoseph,MO"	"Asgrow XP7555W"	204.9	100	33.9	14.3	NA	NA	17.3
+"StJoseph,MO"	"Beck Ex2251"	230.4	100	0.6	1.2	NA	NA	16.8
+"StJoseph,MO"	"Crow's W54"	215.4	100	2.4	7.1	NA	NA	18.1
+"StJoseph,MO"	"Crow's W55"	211.6	100	0.6	3.6	NA	NA	18.2
+"StJoseph,MO"	"Crow's EX551"	214.8	100	4.8	1.2	NA	NA	16.3
+"StJoseph,MO"	"Crow's EX552"	254.4	100	5.4	1.2	NA	NA	17
+"StJoseph,MO"	"DEKALB Genetics DK703W"	206.6	100	2.4	5.4	NA	NA	18.7
+"StJoseph,MO"	"DEKALB Genetics DK631W"	165.7	100	0	14.3	NA	NA	16.4
+"StJoseph,MO"	"DEKALB Genetics EXP564W"	273.2	100	0	0	NA	NA	19.6
+"StJoseph,MO"	"Golden Harvest EX-106W"	260.5	100	0	0.6	NA	NA	17.1
+"StJoseph,MO"	"Hoegemeyer 1125W"	236.6	94	3.7	0.7	NA	NA	18.4
+"StJoseph,MO"	"Hoegemeyer 1131W"	203	100	6	3.6	NA	NA	18.5
+"StJoseph,MO"	"Hoegemeyer 1142W"	203.8	100	10.1	13.7	NA	NA	21.4
+"StJoseph,MO"	"ICI Seeds 8320W"	222.4	100	10.7	1.2	NA	NA	17.8
+"StJoseph,MO"	"ICI Seeds N3527W"	170.7	100	0	4.2	NA	NA	15.6
+"StJoseph,MO"	"IFSI 90-1"	222.4	100	3.6	0.6	NA	NA	18.3
+"StJoseph,MO"	"IFSI 93-4"	220.8	100	3.6	7.1	NA	NA	16.8
+"StJoseph,MO"	"IFSI 95-2"	238.2	100	0	3	NA	NA	17.2
+"StJoseph,MO"	"LG Seeds NB571W"	163.4	100	0	8.9	NA	NA	15.4
+"StJoseph,MO"	"LG Seeds NB710W"	234.7	100	4.2	0	NA	NA	16.2
+"StJoseph,MO"	"LG Seeds NB739W"	164.1	100	0.6	1.8	NA	NA	18.6
+"StJoseph,MO"	"LG Seeds NB742W"	183.2	100	0	1.8	NA	NA	18.7
+"StJoseph,MO"	"LG Seeds NB749W"	198.5	100	0.6	3.6	NA	NA	18
+"StJoseph,MO"	"Mycogen 7860W"	227.2	100	16.1	24.4	NA	NA	17.6
+"StJoseph,MO"	"Mycogen X6688W"	243.1	100	7.1	1.2	NA	NA	17.3
+"StJoseph,MO"	"NC+ 5633W"	206.6	100	6	13.1	NA	NA	17.1
+"StJoseph,MO"	"NC+ 6555W"	211.2	100	7.1	1.2	NA	NA	18.5
+"StJoseph,MO"	"Northrup King X6545W"	233	100	6	2.4	NA	NA	17.5
+"StJoseph,MO"	"Northrup King X6955W"	222.7	100	1.8	14.3	NA	NA	17.2
+"StJoseph,MO"	"Pioneer 3287W"	185	100	0	0	NA	NA	18.2
+"StJoseph,MO"	"Pioneer 3392W"	174.8	100	6	4.2	NA	NA	16.2
+"StJoseph,MO"	"Pioneer 3443W"	209.9	100	1.8	0.6	NA	NA	16.5
+"StJoseph,MO"	"Pioneer 3463W"	180.9	100	0	0	NA	NA	15.9
+"StJoseph,MO"	"Pioneer X1155FW"	240.1	100	1.8	0	NA	NA	19
+"StJoseph,MO"	"SeedTec ST-7545W"	254.9	100	0	0.6	NA	NA	19.5
+"StJoseph,MO"	"Sturdy Grow SG730W"	213.1	100	2.4	1.8	NA	NA	17.7
+"StJoseph,MO"	"Sturdy Grow SG765W"	197.5	100	3.6	8.3	NA	NA	17.1
+"StJoseph,MO"	"Sturdy Grow SG777W"	218.5	100	7.1	4.2	NA	NA	17.6
+"StJoseph,MO"	"Sturdy Grow SG781W"	219.4	100	1.2	1.2	NA	NA	18.5
+"StJoseph,MO"	"Sturdy Grow SG797W"	217.1	100	1.8	3	NA	NA	18.7
+"StJoseph,MO"	"Trisler T4113W"	227.7	100	1.2	4.8	NA	NA	17.1
+"StJoseph,MO"	"Trisler T4211W"	271.2	100	3	0	NA	NA	17.5
+"StJoseph,MO"	"Vineyard V413W"	200.1	100	0	0.6	NA	NA	16.8
+"StJoseph,MO"	"Vineyard V414W"	204.9	100	4.8	1.8	NA	NA	17.4
+"StJoseph,MO"	"Vineyard V424W"	251.1	100	3.6	0.6	NA	NA	18.5
+"StJoseph,MO"	"Vineyard V438W"	209.3	100	0.6	0.6	NA	NA	17.8
+"StJoseph,MO"	"Vineyard V448W"	215.3	100	2.4	1.2	NA	NA	18.7
+"StJoseph,MO"	"Vineyard V449W"	200.1	100	1.8	1.8	NA	NA	18.9
+"StJoseph,MO"	"Whisnand 50W"	248.2	100	5.4	1.2	NA	NA	17
+"StJoseph,MO"	"Whisnand 51AW"	242.8	100	6	3	NA	NA	18.1
+"StJoseph,MO"	"Whisnand 52AW"	207.4	100	7.1	2.4	NA	NA	17
+"StJoseph,MO"	"Wilson 1780W"	222.2	100	0	4.8	NA	NA	20.2
+"StJoseph,MO"	"Wilson 1790W"	222.9	100	1.8	1.8	NA	NA	19.4
+"StJoseph,MO"	"Wilson E1732"	248.8	100	1.2	3	NA	NA	18.1
+"StJoseph,MO"	"Wilson E1789"	231.2	100	1.2	0	NA	NA	18.6
+"StJoseph,MO"	"Zimmerman Z73W"	201.9	100	0	0.6	NA	NA	19.2
+"StJoseph,MO"	"Yellow check B73xMo17"	217.4	100	3	4.2	NA	NA	17.1
+"StJoseph,MO"	"Yellow check Pioneer 3394"	205.7	100	0.6	1.2	NA	NA	16.3
+"ClayCenter,NE"	"AgriGold A6680W"	180.5	95.1	10.8	5.8	NA	87.3	19.1
+"ClayCenter,NE"	"AgriGold XA4323W"	152.1	69.1	2.1	6.4	NA	87	17.6
+"ClayCenter,NE"	"Asgrow XP7555W"	182.5	103.9	2.9	5.5	NA	87.3	16.4
+"ClayCenter,NE"	"Beck Ex2251"	201.5	96.1	3	14.1	NA	88.3	16.8
+"ClayCenter,NE"	"Crow's W54"	198.6	90.7	1.6	4.8	NA	88	18.3
+"ClayCenter,NE"	"Crow's W55"	165.6	91.7	0.5	3.8	NA	87.7	17.4
+"ClayCenter,NE"	"Crow's EX551"	183.3	99	1.5	10.3	NA	86	16.7
+"ClayCenter,NE"	"Crow's EX552"	200	98	10.5	4.6	NA	87	17.4
+"ClayCenter,NE"	"DEKALB Genetics DK703W"	167.4	94.6	23.1	10.3	NA	86.3	18
+"ClayCenter,NE"	"DEKALB Genetics DK631W"	175.9	97.1	0	1.5	NA	84.3	16.7
+"ClayCenter,NE"	"DEKALB Genetics EXP564W"	169.3	92.2	0.5	3.7	NA	89	17.3
+"ClayCenter,NE"	"Golden Harvest EX-106W"	173.6	91.7	13.8	7	NA	87.3	17.7
+"ClayCenter,NE"	"Hoegemeyer 1125W"	177.1	97.1	10.4	8.8	NA	89	18.7
+"ClayCenter,NE"	"Hoegemeyer 1131W"	163.8	95.1	0.6	4.6	NA	89	17.6
+"ClayCenter,NE"	"Hoegemeyer 1142W"	166.2	94.1	11.5	9.4	NA	88	21.8
+"ClayCenter,NE"	"ICI Seeds 8320W"	174.6	89.7	4.6	5.7	NA	89	17.7
+"ClayCenter,NE"	"ICI Seeds N3527W"	178.6	100.5	1.4	3.3	NA	83	15.8
+"ClayCenter,NE"	"IFSI 90-1"	195.9	95.1	1.6	6.1	NA	89	17.7
+"ClayCenter,NE"	"IFSI 93-4"	149	100	5.6	9.2	NA	86.3	16.8
+"ClayCenter,NE"	"IFSI 95-2"	192.6	94.1	5.7	9.9	NA	87.3	17
+"ClayCenter,NE"	"LG Seeds NB571W"	153.9	79.4	5.1	1.9	NA	83.3	15.5
+"ClayCenter,NE"	"LG Seeds NB710W"	179.6	82.8	18.8	8.7	NA	84	16.3
+"ClayCenter,NE"	"LG Seeds NB739W"	166.3	91.7	6.9	6.5	NA	85.3	18.2
+"ClayCenter,NE"	"LG Seeds NB742W"	165.4	89.2	7.2	5.2	NA	84	18.6
+"ClayCenter,NE"	"LG Seeds NB749W"	153	86.8	3.7	5.3	NA	89	18.5
+"ClayCenter,NE"	"Mycogen 7860W"	175.1	94.6	5.2	4.3	NA	87.3	17.8
+"ClayCenter,NE"	"Mycogen X6688W"	180.5	93.1	1.1	17	NA	89	17.1
+"ClayCenter,NE"	"NC+ 5633W"	168.7	93.1	8.5	10.4	NA	87.7	18.2
+"ClayCenter,NE"	"NC+ 6555W"	170.4	102.9	10.9	5.8	NA	89	18.4
+"ClayCenter,NE"	"Northrup King X6545W"	165.6	86.3	6	9.6	NA	87.3	17
+"ClayCenter,NE"	"Northrup King X6955W"	182.6	84.3	1.8	10.4	NA	86.3	17.3
+"ClayCenter,NE"	"Pioneer 3287W"	155.6	94.1	8.1	3.1	NA	84.3	17.9
+"ClayCenter,NE"	"Pioneer 3392W"	161.5	96.6	6.8	4.6	NA	88.3	15.5
+"ClayCenter,NE"	"Pioneer 3443W"	142	106.9	2.7	15.2	NA	85	16.1
+"ClayCenter,NE"	"Pioneer 3463W"	174.2	105.9	2.8	0.5	NA	83.3	15.9
+"ClayCenter,NE"	"Pioneer X1155FW"	198.2	95.6	4.1	7.7	NA	84.7	17.9
+"ClayCenter,NE"	"SeedTec ST-7545W"	150.1	98.5	0.5	2	NA	89	16.4
+"ClayCenter,NE"	"Sturdy Grow SG730W"	171.7	86.8	6.2	8.3	NA	87	17.6
+"ClayCenter,NE"	"Sturdy Grow SG765W"	159.7	99.5	4.9	17.2	NA	86.7	17.1
+"ClayCenter,NE"	"Sturdy Grow SG777W"	155.4	91.7	7.2	8.2	NA	88.3	17.7
+"ClayCenter,NE"	"Sturdy Grow SG781W"	185	95.1	3.9	4.9	NA	88.3	16.9
+"ClayCenter,NE"	"Sturdy Grow SG797W"	183.1	102.5	4.3	10.9	NA	88	18.9
+"ClayCenter,NE"	"Trisler T4113W"	176.8	89.7	3.1	10.2	NA	85.7	16.6
+"ClayCenter,NE"	"Trisler T4211W"	188.6	98	8.4	7.5	NA	87.7	17.5
+"ClayCenter,NE"	"Vineyard V413W"	160.8	95.1	0.5	12.3	NA	88	17
+"ClayCenter,NE"	"Vineyard V414W"	146.5	96.6	1.5	7.1	NA	86.3	17.3
+"ClayCenter,NE"	"Vineyard V424W"	196.1	100	6.1	5.5	NA	86.7	18.2
+"ClayCenter,NE"	"Vineyard V438W"	173.6	101.5	3.3	5.9	NA	85	17.3
+"ClayCenter,NE"	"Vineyard V448W"	180.9	94.6	4.1	9.2	NA	87	19
+"ClayCenter,NE"	"Vineyard V449W"	165.1	97.1	3	10.3	NA	85.7	18.6
+"ClayCenter,NE"	"Whisnand 50W"	190.05	97.5	8.3	8.5	NA	88	17.15
+"ClayCenter,NE"	"Whisnand 51AW"	199.5	102	10.7	12.1	NA	89	18
+"ClayCenter,NE"	"Whisnand 52AW"	168.4	86.3	3.3	15	NA	85	16.5
+"ClayCenter,NE"	"Wilson 1780W"	203.6	100	1.8	2	NA	88.3	19.9
+"ClayCenter,NE"	"Wilson 1790W"	203.55	98.5	8.2	3.5	NA	87.7	19.1
+"ClayCenter,NE"	"Wilson E1732"	195.9	87.7	4.2	0.6	NA	89	17.7
+"ClayCenter,NE"	"Wilson E1789"	180	93.1	2	4.6	NA	89	18.8
+"ClayCenter,NE"	"Zimmerman Z73W"	177.9	92.6	4.5	3.7	NA	89	17
+"ClayCenter,NE"	"Yellow check B73xMo17"	168.7	81.9	5.6	6.2	NA	86.3	16.4
+"ClayCenter,NE"	"Yellow check Pioneer 3394"	205.4	102	1.4	4.8	NA	86.3	16.1
+"Gothenburg,NE"	"AgriGold A6680W"	102.9	108.7	NA	16.3	NA	NA	17.8
+"Gothenburg,NE"	"AgriGold XA4323W"	90.8	45.3	NA	7.7	NA	NA	16.2
+"Gothenburg,NE"	"Asgrow XP7555W"	99.5	110.3	NA	13.6	NA	NA	15.7
+"Gothenburg,NE"	"Beck Ex2251"	112.9	101.7	NA	19.2	NA	NA	15.6
+"Gothenburg,NE"	"Crow's W54"	105.7	81	NA	12.3	NA	NA	16.2
+"Gothenburg,NE"	"Crow's W55"	97.9	96.3	NA	12.4	NA	NA	16.6
+"Gothenburg,NE"	"Crow's EX551"	108.7	98.7	NA	13.9	NA	NA	15.9
+"Gothenburg,NE"	"Crow's EX552"	119.9	96	NA	19.6	NA	NA	15.8
+"Gothenburg,NE"	"DEKALB Genetics DK703W"	115.6	101.7	NA	13	NA	NA	17.7
+"Gothenburg,NE"	"DEKALB Genetics DK631W"	139.4	98	NA	7.4	NA	NA	16.7
+"Gothenburg,NE"	"DEKALB Genetics EXP564W"	84.2	91.3	NA	9.8	NA	NA	15.3
+"Gothenburg,NE"	"Golden Harvest EX-106W"	110.2	101.3	NA	20.4	NA	NA	15.2
+"Gothenburg,NE"	"Hoegemeyer 1125W"	116.4	104.7	NA	17	NA	NA	17.8
+"Gothenburg,NE"	"Hoegemeyer 1131W"	97.3	89	NA	8.9	NA	NA	17.8
+"Gothenburg,NE"	"Hoegemeyer 1142W"	117.9	109.3	NA	14.3	NA	NA	22.2
+"Gothenburg,NE"	"ICI Seeds 8320W"	96.2	95	NA	14.5	NA	NA	15.5
+"Gothenburg,NE"	"ICI Seeds N3527W"	126	95	NA	9.1	NA	NA	15.6
+"Gothenburg,NE"	"IFSI 90-1"	119.1	96.7	NA	19.3	NA	NA	15.5
+"Gothenburg,NE"	"IFSI 93-4"	97.7	101	NA	14.8	NA	NA	16
+"Gothenburg,NE"	"IFSI 95-2"	127.6	99	NA	13.8	NA	NA	15.6
+"Gothenburg,NE"	"LG Seeds NB571W"	113.2	86.3	NA	17.4	NA	NA	14.8
+"Gothenburg,NE"	"LG Seeds NB710W"	107.9	80.7	NA	17	NA	NA	18.4
+"Gothenburg,NE"	"LG Seeds NB739W"	128.5	96.7	NA	10.7	NA	NA	21.9
+"Gothenburg,NE"	"LG Seeds NB742W"	94.8	95	NA	15.5	NA	NA	19.3
+"Gothenburg,NE"	"LG Seeds NB749W"	116.6	102	NA	15.7	NA	NA	17.8
+"Gothenburg,NE"	"Mycogen 7860W"	96.3	103.7	NA	18.3	NA	NA	15.5
+"Gothenburg,NE"	"Mycogen X6688W"	115.1	100.3	NA	19.6	NA	NA	15.5
+"Gothenburg,NE"	"NC+ 5633W"	104.7	106	NA	25.8	NA	NA	17.1
+"Gothenburg,NE"	"NC+ 6555W"	99.6	108	NA	17.1	NA	NA	18.9
+"Gothenburg,NE"	"Northrup King X6545W"	81	102.3	NA	25.4	NA	NA	15.8
+"Gothenburg,NE"	"Northrup King X6955W"	111.1	99.3	NA	18.7	NA	NA	17
+"Gothenburg,NE"	"Pioneer 3287W"	149.5	108	NA	6.8	NA	NA	17.5
+"Gothenburg,NE"	"Pioneer 3392W"	99.2	102.7	NA	12.7	NA	NA	14.2
+"Gothenburg,NE"	"Pioneer 3443W"	89.3	108	NA	21.9	NA	NA	13.3
+"Gothenburg,NE"	"Pioneer 3463W"	122	106	NA	8.9	NA	NA	14.7
+"Gothenburg,NE"	"Pioneer X1155FW"	138	105.3	NA	12.7	NA	NA	16
+"Gothenburg,NE"	"SeedTec ST-7545W"	81	98.7	NA	11.6	NA	NA	15.5
+"Gothenburg,NE"	"Sturdy Grow SG730W"	97.4	101	NA	20.1	NA	NA	15.7
+"Gothenburg,NE"	"Sturdy Grow SG765W"	105.8	94.3	NA	22.2	NA	NA	16.4
+"Gothenburg,NE"	"Sturdy Grow SG777W"	96.6	97.3	NA	16.6	NA	NA	16
+"Gothenburg,NE"	"Sturdy Grow SG781W"	98.1	104	NA	19.5	NA	NA	18.3
+"Gothenburg,NE"	"Sturdy Grow SG797W"	80.4	109.7	NA	19.3	NA	NA	18.7
+"Gothenburg,NE"	"Trisler T4113W"	112.8	91	NA	8.1	NA	NA	15.7
+"Gothenburg,NE"	"Trisler T4211W"	123.1	94.7	NA	18.9	NA	NA	15.2
+"Gothenburg,NE"	"Vineyard V413W"	97	93.3	NA	13.4	NA	NA	15.5
+"Gothenburg,NE"	"Vineyard V414W"	92.2	107	NA	24.3	NA	NA	15.7
+"Gothenburg,NE"	"Vineyard V424W"	113	98.7	NA	10.3	NA	NA	18.7
+"Gothenburg,NE"	"Vineyard V438W"	105.5	103	NA	12.5	NA	NA	17.1
+"Gothenburg,NE"	"Vineyard V448W"	106.2	101	NA	16.2	NA	NA	19.3
+"Gothenburg,NE"	"Vineyard V449W"	122.4	102.7	NA	14.8	NA	NA	20.2
+"Gothenburg,NE"	"Whisnand 50W"	128.9	100.3	NA	16.9	NA	NA	15.3
+"Gothenburg,NE"	"Whisnand 51AW"	105.8	105	NA	16.9	NA	NA	15.5
+"Gothenburg,NE"	"Whisnand 52AW"	109.1	84	NA	12.3	NA	NA	15.6
+"Gothenburg,NE"	"Wilson 1780W"	149.1	109	NA	9.9	NA	NA	22.5
+"Gothenburg,NE"	"Wilson 1790W"	144.7	102.3	NA	8.2	NA	NA	22.4
+"Gothenburg,NE"	"Wilson E1732"	131.2	94	NA	12.6	NA	NA	19.9
+"Gothenburg,NE"	"Wilson E1789"	88.6	105.7	NA	14.8	NA	NA	20.7
+"Gothenburg,NE"	"Zimmerman Z73W"	82.9	96	NA	7.7	NA	NA	15.6
+"Gothenburg,NE"	"Yellow check B73xMo17"	127.7	97.7	NA	12.4	NA	NA	16.8
+"Gothenburg,NE"	"Yellow check Pioneer 3394"	152.5	96.3	NA	15.1	NA	NA	14.6
+"Hoytville,OH"	"AgriGold A6680W"	81	120.2	0	94.6	48.7	83.3	24.1
+"Hoytville,OH"	"AgriGold XA4323W"	87.6	89.1	0	89.3	40.3	79.7	19.6
+"Hoytville,OH"	"Asgrow XP7555W"	89.7	108.9	0	97.1	38.7	79.7	19.1
+"Hoytville,OH"	"Beck Ex2251"	90.1	109.3	0	99	48.7	79.7	18.9
+"Hoytville,OH"	"Crow's W54"	81.2	94.2	0	96.8	44	79.7	19.2
+"Hoytville,OH"	"Crow's W55"	78.8	97.3	0	94.6	41	78.7	19.3
+"Hoytville,OH"	"Crow's EX551"	84.4	100.8	0	100	46.7	80.3	19.2
+"Hoytville,OH"	"Crow's EX552"	82.4	101.2	0	94.9	49.3	80.7	18.3
+"Hoytville,OH"	"DEKALB Genetics DK703W"	79.8	100.4	0	95.4	42.7	80.3	20
+"Hoytville,OH"	"DEKALB Genetics DK631W"	92	104.3	0	100	37	77	18.5
+"Hoytville,OH"	"DEKALB Genetics EXP564W"	67.1	107.8	0	86.3	46.3	82	17.6
+"Hoytville,OH"	"Golden Harvest EX-106W"	72.1	99.6	0	100	49	78	16.7
+"Hoytville,OH"	"Hoegemeyer 1125W"	81.4	105.4	0	99	45.3	81.3	20.7
+"Hoytville,OH"	"Hoegemeyer 1131W"	103.1	101.6	0	97.6	46.7	79.7	19
+"Hoytville,OH"	"Hoegemeyer 1142W"	98.5	100	0	91.2	39.7	79.7	23.4
+"Hoytville,OH"	"ICI Seeds 8320W"	84.9	110.9	0	97.3	43.7	80.7	20
+"Hoytville,OH"	"ICI Seeds N3527W"	85.5	90.7	0	91.3	45	74.7	15.8
+"Hoytville,OH"	"IFSI 90-1"	82.7	91.1	0	93.4	48.3	80.3	19
+"Hoytville,OH"	"IFSI 93-4"	91.5	99.6	0	97.7	41.7	77	16.7
+"Hoytville,OH"	"IFSI 95-2"	80.1	102.3	0	100	50.3	79	16.7
+"Hoytville,OH"	"LG Seeds NB571W"	92.6	101.2	0	92.8	37	76.7	16.5
+"Hoytville,OH"	"LG Seeds NB710W"	80.9	95.7	0	94	43.3	80	19.7
+"Hoytville,OH"	"LG Seeds NB739W"	90.8	90.7	0	91.9	43.3	80	19.5
+"Hoytville,OH"	"LG Seeds NB742W"	83.9	89.9	0	94.5	35.7	78.3	18.1
+"Hoytville,OH"	"LG Seeds NB749W"	84.2	90.7	0	100	43	78.7	18.5
+"Hoytville,OH"	"Mycogen 7860W"	77.3	116.3	0	91.3	47	82	19.9
+"Hoytville,OH"	"Mycogen X6688W"	87.3	105	0	96.5	51	80.3	17.1
+"Hoytville,OH"	"NC+ 5633W"	83	116.7	0	95.7	46	81	21
+"Hoytville,OH"	"NC+ 6555W"	66.5	114	0	95.2	45	80.3	20.5
+"Hoytville,OH"	"Northrup King X6545W"	74.8	101.9	0	99.6	46	79	18.5
+"Hoytville,OH"	"Northrup King X6955W"	78.9	103.1	0	96.6	47.3	80.3	20.2
+"Hoytville,OH"	"Pioneer 3287W"	86.4	106.6	0	96.8	38.7	75	19.2
+"Hoytville,OH"	"Pioneer 3392W"	86.2	105	0	93.4	39.3	79.7	19.1
+"Hoytville,OH"	"Pioneer 3443W"	76.8	114.3	0	93.9	37.3	74.7	16.4
+"Hoytville,OH"	"Pioneer 3463W"	77	111.6	0	97.7	39.3	76	17.9
+"Hoytville,OH"	"Pioneer X1155FW"	86.9	102.3	0	98.9	43	79.3	17.4
+"Hoytville,OH"	"SeedTec ST-7545W"	76	102.7	0	96.6	50	81.3	19.7
+"Hoytville,OH"	"Sturdy Grow SG730W"	88.5	109.7	0	93.7	49.3	79.3	17.2
+"Hoytville,OH"	"Sturdy Grow SG765W"	92.2	107.8	0	91.1	45.3	80.3	21.1
+"Hoytville,OH"	"Sturdy Grow SG777W"	86	107	0	85.2	52.3	81.7	19.6
+"Hoytville,OH"	"Sturdy Grow SG781W"	85.6	108.1	0	91.3	43.3	78.7	21.1
+"Hoytville,OH"	"Sturdy Grow SG797W"	74.2	118.6	0	95.7	44.7	83.3	21.7
+"Hoytville,OH"	"Trisler T4113W"	82.3	100	0	92.8	43.7	80.7	19.8
+"Hoytville,OH"	"Trisler T4211W"	89.3	95.7	0	98.3	45	79.7	19.4
+"Hoytville,OH"	"Vineyard V413W"	76.7	103.5	0	97	46	80	17.7
+"Hoytville,OH"	"Vineyard V414W"	77.2	102.7	0	95.9	44.7	79.3	18.6
+"Hoytville,OH"	"Vineyard V424W"	85.7	98.4	0	94.6	42	78.7	19.8
+"Hoytville,OH"	"Vineyard V438W"	77	108.1	0	97.4	45.3	81.3	19.3
+"Hoytville,OH"	"Vineyard V448W"	99.9	106.2	0	84.1	45.3	81.3	21.7
+"Hoytville,OH"	"Vineyard V449W"	84.8	111.6	0	88.7	44.3	82	21.5
+"Hoytville,OH"	"Whisnand 50W"	93.1	100.8	0	100	50.7	79	16.9
+"Hoytville,OH"	"Whisnand 51AW"	88.4	100.8	0	99.2	44.3	79	18.7
+"Hoytville,OH"	"Whisnand 52AW"	97.9	99.6	0	97.9	46	79	19.1
+"Hoytville,OH"	"Wilson 1780W"	77.3	112	0	98.5	44.7	81	20.4
+"Hoytville,OH"	"Wilson 1790W"	75.8	108.5	0	97.3	44.7	80.7	20.5
+"Hoytville,OH"	"Wilson E1732"	96.7	89.5	0	88.2	50.7	80.3	23.5
+"Hoytville,OH"	"Wilson E1789"	84.5	111.2	0	98.6	46.3	80.7	19.8
+"Hoytville,OH"	"Zimmerman Z73W"	75	95.7	0	100	42.3	80.3	18.9
+"Hoytville,OH"	"Yellow check B73xMo17"	93.3	110.5	0	99.6	48.7	79	18.5
+"Hoytville,OH"	"Yellow check Pioneer 3394"	88.3	96.5	0	95.3	42.7	78.3	19.8
+"Marion,IA"	"AgriGold A6680W"	184.9	NA	NA	NA	56	91.7	33.1
+"Marion,IA"	"AgriGold XA4323W"	113.7	NA	NA	NA	52	91.7	34.1
+"Marion,IA"	"Asgrow XP7555W"	203.6	NA	NA	NA	54	91.3	33.5
+"Marion,IA"	"Beck Ex2251"	214	NA	NA	NA	60	92	31.7
+"Marion,IA"	"Crow's W54"	135.5	NA	NA	NA	55.3	93.3	31.9
+"Marion,IA"	"Crow's W55"	171.8	NA	NA	NA	56	91.3	33
+"Marion,IA"	"Crow's EX551"	205.3	NA	NA	NA	55	90.3	33.1
+"Marion,IA"	"Crow's EX552"	207.1	NA	NA	NA	56	91.3	31.6
+"Marion,IA"	"DEKALB Genetics DK703W"	222.1	NA	NA	NA	52.7	91	28.7
+"Marion,IA"	"DEKALB Genetics DK631W"	184.2	NA	NA	NA	35.7	87	29.2
+"Marion,IA"	"DEKALB Genetics EXP564W"	167.5	NA	NA	NA	58	93	33.8
+"Marion,IA"	"Golden Harvest EX-106W"	201.4	NA	NA	NA	59	91	32.2
+"Marion,IA"	"Hoegemeyer 1125W"	186.8	NA	NA	NA	55	93	33
+"Marion,IA"	"Hoegemeyer 1131W"	114.4	NA	NA	NA	55	92.3	33.7
+"Marion,IA"	"Hoegemeyer 1142W"	154.2	NA	NA	NA	52	91.3	34.2
+"Marion,IA"	"ICI Seeds 8320W"	185	NA	NA	NA	57	93	32.1
+"Marion,IA"	"ICI Seeds N3527W"	177.2	NA	NA	NA	44	86	27.5
+"Marion,IA"	"IFSI 90-1"	211.3	NA	NA	NA	57.3	91.7	31.3
+"Marion,IA"	"IFSI 93-4"	192.6	NA	NA	NA	55	91	33.2
+"Marion,IA"	"IFSI 95-2"	207.6	NA	NA	NA	58	91.3	32.5
+"Marion,IA"	"LG Seeds NB571W"	181.5	NA	NA	NA	46	89	30
+"Marion,IA"	"LG Seeds NB710W"	147.8	NA	NA	NA	51.3	88.7	33.1
+"Marion,IA"	"LG Seeds NB739W"	164.8	NA	NA	NA	40.3	89	33.7
+"Marion,IA"	"LG Seeds NB742W"	182.9	NA	NA	NA	45	89	32.6
+"Marion,IA"	"LG Seeds NB749W"	207.2	NA	NA	NA	54	92	32.3
+"Marion,IA"	"Mycogen 7860W"	194.4	NA	NA	NA	60	92.7	31.7
+"Marion,IA"	"Mycogen X6688W"	202.8	NA	NA	NA	58	92	32
+"Marion,IA"	"NC+ 5633W"	202.7	NA	NA	NA	57	91.3	32
+"Marion,IA"	"NC+ 6555W"	204.2	NA	NA	NA	57	92.3	33
+"Marion,IA"	"Northrup King X6545W"	204.6	NA	NA	NA	56	91.3	31.2
+"Marion,IA"	"Northrup King X6955W"	196.7	NA	NA	NA	55	91.3	33.1
+"Marion,IA"	"Pioneer 3287W"	164.9	NA	NA	NA	52	89	30.8
+"Marion,IA"	"Pioneer 3392W"	197.6	NA	NA	NA	53.7	92	28.5
+"Marion,IA"	"Pioneer 3443W"	197.5	NA	NA	NA	50	89	29.4
+"Marion,IA"	"Pioneer 3463W"	185.2	NA	NA	NA	50	88.3	26.9
+"Marion,IA"	"Pioneer X1155FW"	167.8	NA	NA	NA	53	88.7	30
+"Marion,IA"	"SeedTec ST-7545W"	154.7	NA	NA	NA	52	94.3	34
+"Marion,IA"	"Sturdy Grow SG730W"	178.4	NA	NA	NA	52.3	91.3	32
+"Marion,IA"	"Sturdy Grow SG765W"	186.3	NA	NA	NA	55	91.3	32
+"Marion,IA"	"Sturdy Grow SG777W"	197.8	NA	NA	NA	54	92	32.7
+"Marion,IA"	"Sturdy Grow SG781W"	191.5	NA	NA	NA	53.3	91.3	34.1
+"Marion,IA"	"Sturdy Grow SG797W"	179.9	NA	NA	NA	57	94	32.5
+"Marion,IA"	"Trisler T4113W"	188.6	NA	NA	NA	50	90.7	33.3
+"Marion,IA"	"Trisler T4211W"	185.4	NA	NA	NA	56	91.3	31.7
+"Marion,IA"	"Vineyard V413W"	154.7	NA	NA	NA	54.7	91.7	30.7
+"Marion,IA"	"Vineyard V414W"	190.9	NA	NA	NA	46	91	28
+"Marion,IA"	"Vineyard V424W"	169.8	NA	NA	NA	58	91	33.8
+"Marion,IA"	"Vineyard V438W"	161.2	NA	NA	NA	49	91.3	33.3
+"Marion,IA"	"Vineyard V448W"	160.8	NA	NA	NA	51	92	34.4
+"Marion,IA"	"Vineyard V449W"	181.5	NA	NA	NA	49	91.7	31.4
+"Marion,IA"	"Whisnand 50W"	211.9	NA	NA	NA	58	91.3	32
+"Marion,IA"	"Whisnand 51AW"	208.9	NA	NA	NA	56.7	93.3	31.5
+"Marion,IA"	"Whisnand 52AW"	129.6	NA	NA	NA	50	91.7	34.7
+"Marion,IA"	"Wilson 1780W"	174.8	NA	NA	NA	51.7	91.7	33.8
+"Marion,IA"	"Wilson 1790W"	192.5	NA	NA	NA	52	92	33.4
+"Marion,IA"	"Wilson E1732"	176.6	NA	NA	NA	51.7	93.3	34.3
+"Marion,IA"	"Wilson E1789"	181	NA	NA	NA	58	94.7	34.7
+"Marion,IA"	"Zimmerman Z73W"	132.6	NA	NA	NA	59	93.7	33.4
+"Marion,IA"	"Yellow check B73xMo17"	223.4	NA	NA	NA	52	89.7	32.7
+"Marion,IA"	"Yellow check Pioneer 3394"	196.8	NA	NA	NA	48	90.3	26.7

@@ -21,7 +21,10 @@ A uniformity trial of 1500 plots of wheat conducted in Idaho in 1927.
   Yield trial conducted in 1927 near Aberdeen, Idaho.  The crop was
   Federation wheat (C.I. no 4734). Plots were seeded
   on April 18 with a drill that sowed eight rows at a time.
-  Rows were 1 foot apart and 15 feet long.
+  Individual rows were harvested in August and threshed with a small
+  nursery thresher.
+  
+  Rows were 15 feet long, 1 foot apart.
   
   Some authors recommend analyzing the square root of the yields.
 
@@ -31,7 +34,7 @@ A uniformity trial of 1500 plots of wheat conducted in Idaho in 1927.
 \source{
   Wiebe, G.A. 1935. Variation and Correlation in Grain Yield among 1,500 Wheat
   Nursery Plots, \emph{Journal of Agricultural Research}, 50, 331-357.
-  \url{naldc.nal.usda.gov/download/IND43968632/PDF}
+  \url{http://naldc.nal.usda.gov/download/IND43968632/PDF}
 }
 
 \references{
@@ -43,7 +46,9 @@ A uniformity trial of 1500 plots of wheat conducted in Idaho in 1927.
 dat <- wiebe.wheat
 
 require("lattice")
-desplot(yield~col+row, dat, aspect=15, flip=TRUE) # row 1 is at south
+# 125 rows = 125 feet tall. 12 cols * 15 feet = 180 feet wide.
+desplot(yield~col+row, dat, aspect=125/180, flip=TRUE,
+  main="Plot yields of wheat uniformity trial") # row 1 is at south
 
 # Preece (1981) found the last digits have an interesting distribution.
 dig <- substring(dat$yield, nchar(dat$yield))
@@ -56,15 +61,6 @@ plot(tapply(dat$yield, dat$row, median), xlab="Row", ylab="Yield")
 plot(tapply(dat$yield, dat$col, median), xlab="Column", ylab="Yield")
 # Spatial trends are obvious
 xyplot(yield~col, dat, type=c('p','smooth'))
-
-# Median polish
-require("reshape2")
-mat <- melt(dat, measure.var='yield')
-mat <- acast(mat, row~col)
-image(mat)
-m1 <- medpolish(mat)
-plot(mat-m1$res, m1$res, xlab="Residual", ylab="Fitted value",
-     ylim=c(-300,300))
 
 # Loess
 m3 <- loess(yield~row+col, dat)

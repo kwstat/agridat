@@ -63,7 +63,7 @@ dat$locyr <- reorder(dat$locyr, dat$yield, mean)
 
 # This picture tells most of the story
 # Now change symbols
-tpg <- trellis.par.get()
+op <- tpg <- trellis.par.get()
 tpg$superpose.symbol$pch <- c('7','8','9')
 trellis.par.set(tpg)
 dotplot(loc~yield|gen,group=year,data=dat,auto.key=TRUE,
@@ -79,6 +79,6 @@ dm <- melt(datm, measure.var='res', id.var=c('gen', 'locyr'))
 dmat <- acast(dm, gen~locyr)
 # AMMI biplot.  Figure 1 of Shafii (1998)
 biplot(prcomp(dmat))
-
+trellis.par.set(op) # Unset graphics changes
 }
 

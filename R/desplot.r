@@ -1,5 +1,5 @@
 # desplot.r
-# Time-stamp: <11 Sep 2012 11:59:08 c:/x/rpack/agridat/R/desplot.r>
+# Time-stamp: <03 Apr 2013 10:09:40 c:/x/rpack/agridat/R/desplot.r>
 # Copyright 2011, Kevin Wright
 
 # Needs grid, lattice, reshape2
@@ -556,9 +556,11 @@ if(FALSE){
   dplot(rep ~ x+y|loc, data=dd, out1=rep, flip=TRUE)
   dplot(rep ~ x+y|loc, data=dd, tick=TRUE)
   dplot(rep ~ x+y|loc, data=dd, main="title", xlab="xlab", ylab="ylab")
+  dplot(rep ~ x+y|loc, data=dd, aspect=2)
   dev.off()
-  
-  data(yates.oats, package="agridat")
+
+  # CRAN check doesn't like 'data' here
+  # data(yates.oats, package="agridat")
   oats35 <- yates.oats
 
   desplot(yield~x+y, oats35)

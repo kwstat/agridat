@@ -40,8 +40,8 @@
 
   Some of the gen names are different in Stroup et al (1994).
   (Sometimes an experimental genotype is given a new name when it is
-  released for commercial use.)  At a
-  minimum, the following differences in gen names should be noted
+  released for commercial use.)  At a minimum, the following differences
+  in gen names should be noted:
   \tabular{ll}{
     stroup.nin \tab Stroup et al \cr
     NE83498 \tab Rawhide \cr
@@ -82,6 +82,22 @@ dat <- transform(dat, xf=factor(x), yf=factor(y))
 # Note: all "Buckskin" plots are near left side
 desplot(yield~x*y, dat, out1="rep", num=gen, cex=1, main="stroup.nin")
 
+require(nlme)
+# Random block model
+lme1 <- lme(yield ~ 0 + gen, random=~1|rep, data=dat, na.action=na.omit)
+
+# Linear (Manhattan distance) correlation model
+lme2 = gls(yield ~ 0 + gen, correlation = corLin(form = ~ x+y,nugget=TRUE), data=dat,
+  na.action=na.omit)
+
+# Compare the estimates from the two methods
+eff = data.frame(ranblock=fixef(lme1), spat = coef(lme2))
+rownames(eff) <- gsub("gen", "", rownames(eff))
+plot(eff$ranblock, eff$spat, xlim=c(13,37), ylim=c(13,37),
+  xlab="RCB (random block)", ylab="corLin",type='n')
+text(eff$ranblock, eff$spat, rownames(eff), cex=0.5)
+abline(0,1)
+
 \dontrun{
 require("asreml")
 
@@ -90,7 +106,7 @@ dat.rcb <- asreml(yield ~ gen, random = ~ rep, data=dat,
             na.method.X="omit")
 pred.rcb <- predict(dat.rcb,classify="gen")$predictions
 
-# Two-dimensional spatial model
+# Two-dimensional AR1xAR1 spatial model
 dat <- dat[order(dat$xf, dat$yf),]
 dat.sp <- asreml(yield~gen, rcov=~ar1(xf):ar1(yf),data=dat)
 pred.sp <- predict(dat.sp,classify="gen")$predictions
