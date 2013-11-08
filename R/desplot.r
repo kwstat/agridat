@@ -1,6 +1,6 @@
 # desplot.r
-# Time-stamp: <03 Apr 2013 10:09:40 c:/x/rpack/agridat/R/desplot.r>
-# Copyright 2011, Kevin Wright
+# Time-stamp: <15 Oct 2013 14:36:55 c:/x/rpack/agridat/R/desplot.r>
+# Copyright 2013, Kevin Wright
 
 # Needs grid, lattice, reshape2
 
@@ -66,9 +66,14 @@ desplot <- function(form=formula(NULL ~ x + y), data,
   if (missing(ylab))
     ylab <- ifelse(ticks, y.var, "")
 
-  # Determine what fills the cells: nothing, factor, or numeric
+  # Determine what fills the cells: nothing, character/factor, or numeric
   if(is.null(fill.var)) fill.type="none"
-  else fill.type <- ifelse(is.factor(data[[fill.var]]), "factor", "num")
+  else if (is.factor(data[[fill.var]]))
+    fill.type <- "factor"
+  else if (is.character(data[[fill.var]])){
+    data[[fill.var]] <- as.factor(data[[fill.var]])
+    fill.type <- "factor"
+  } else fill.type <- "num"
 
   # Now get the fill values/length
   if(fill.type=="none") {
@@ -79,7 +84,7 @@ desplot <- function(form=formula(NULL ~ x + y), data,
     data[['.const']] <- fill.val
   } else if(fill.type=="num"){
     fill.val <- data[[fill.var]]
-  } else { # factor
+  } else { # character/factor
     fill.val <- data[[fill.var]]
     fill.n <- nlevels(fill.val)
   }
@@ -104,7 +109,7 @@ desplot <- function(form=formula(NULL ~ x + y), data,
   }
   else if(fill.type=="num") {
     # col.regions can be either a function, or vector.  Make it a vector.
-    zrng <- lattice:::extend.limits(range(as.numeric(fill.val), finite = TRUE))
+    zrng <- lel(range(as.numeric(fill.val), finite = TRUE))
     if(is.function(col.regions)) {
       # if 'at' is not given, use 16 break points (15 colors)
       if(missing(at)) at <- seq(zrng[1], zrng[2], length.out = 16)
@@ -348,20 +353,20 @@ prepanel.desplot <- function (x, y, subscripts, flip, ...) {
   pad <- lattice.getOption("axis.padding")$numeric
 
   # Note: x and y are NOT factors
-  
+
   if (length(subscripts) > 0) {
     x <- x[subscripts]
     y <- y[subscripts]
-    
+
     ux <- sort(unique(x[is.finite(x)]))
-    if ((ulen <- length(ux)) < 2) 
+    if ((ulen <- length(ux)) < 2)
       xlim <- ux + c(-1, 1)
     else {
       diffs <- diff(as.numeric(ux))[c(1, ulen - 1)]
       xlim <- c(ux[1] - diffs[1]/2, ux[ulen] + diffs[2]/2)
     }
     uy <- sort(unique(y[is.finite(y)]))
-    if ((ulen <- length(uy)) < 2) 
+    if ((ulen <- length(uy)) < 2)
       ylim <- uy + c(-1, 1)
     else {
       diffs <- diff(as.numeric(uy))[c(1, ulen - 1)]
@@ -369,17 +374,17 @@ prepanel.desplot <- function (x, y, subscripts, flip, ...) {
     }
 
     # This is returned
-    ret <- list(xlim = lattice:::extend.limits(xlim, prop = -pad/(1 + 2 * pad)),
-                ylim = lattice:::extend.limits(ylim, prop = -pad/(1 + 2 * pad)),
+    ret <- list(xlim = lel(xlim, prop = -pad/(1 + 2 * pad)),
+                ylim = lel(ylim, prop = -pad/(1 + 2 * pad)),
                 dx = length(ux),
                 dy = length(uy))
     if(flip) ret$ylim <- rev(ret$ylim)
-    
+
     ret
   }
   else {
     # This is the value of the prepanel.null() function
-    list(xlim = rep(NA_real_, 2), ylim = rep(NA_real_, 2), dx = NA_real_, 
+    list(xlim = rep(NA_real_, 2), ylim = rep(NA_real_, 2), dx = NA_real_,
         dy = NA_real_)
   }
 }
@@ -391,9 +396,9 @@ panel.outlinelevelplot <- function(x, y, z, subscripts, at, ...,
     col.regions=dots$col.regions
 
     # parent function forces x,y to be numeric, not factors
-    
+
     if (length(subscripts) == 0L) return()
-    
+
     z <- as.numeric(z)
     zcol <- level.colors(z, at, col.regions, colors = TRUE)
     x <- x[subscripts]
@@ -402,8 +407,8 @@ panel.outlinelevelplot <- function(x, y, z, subscripts, at, ...,
     zlim <- range(z, finite = TRUE)
     z <- z[subscripts]
     zcol <- zcol[subscripts]
-    
-    ux <- sort(unique(x[!is.na(x)])) 
+
+    ux <- sort(unique(x[!is.na(x)]))
     bx <- if (length(ux) > 1L) { # breakpoints
       c(3 * ux[1] - ux[2], ux[-length(ux)] + ux[-1],
         3 * ux[length(ux)] - ux[length(ux) - 1])/2
@@ -442,7 +447,7 @@ panel.outlinelevelplot <- function(x, y, z, subscripts, at, ...,
 
       # Since 'out' could be 1 row or column, surround it with NAs
       out1 <- cbind(NA, rbind(NA, out1, NA), NA)
-      
+
       # Horizontal lines above boxes
       hor <- out1[2:nrow(out1)-1, ] != out1[2:nrow(out1), ]
       hor <- melt(hor)
@@ -526,41 +531,76 @@ panel.outlinelevelplot <- function(x, y, z, subscripts, at, ...,
   return(dat)
 }
 
+# lel is a modified version of lattice:::extend.limits
+# Copied here because CRAN does not like ::: anymore as of 8.25.13
+lel <- function (lim, prop = lattice.getOption("axis.padding")$numeric) {
+  ## if (all(is.na(lim)))
+  ##   NA_real_
+  ## else if (is.character(lim)) {
+  ##   c(1, length(lim)) + c(-1, 1) * lattice.getOption("axis.padding")$factor
+  ## }
+  ## else if (length(lim) == 2) {
+    ## if (lim[1] > lim[2]) {
+    ##     ccall <- match.call()
+    ##     ccall$lim <- rev(lim)
+    ##     ans <- eval.parent(ccall)
+    ##     return(rev(ans))
+    ## }
+    ## if (!missing(length) && !missing(prop))
+    ##     stop("'length' and 'prop' cannot both be specified")
+    ## if (length <= 0)
+    ##     stop("'length' must be positive")
+    ## if (!missing(length)) {
+    ##     prop <- (1 - as.numeric(diff(lim)))/(2 *
+    ##         as.numeric(diff(lim)))
+    ## }
+    if (lim[1] == lim[2])
+      lim + 0.5 * c(-1, 1)
+    else {
+      d <- diff(as.numeric(lim))
+      lim + prop * d * c(-1, 1)
+    }
+  ## }
+  ## else {
+  ##   print(lim)
+  ##   stop("improper length of 'lim'")
+  ## }
+}
+
 # ----------------------------------------------------------------------------
 if(FALSE){
-  dd <- data.frame(loc = cs(loc1,loc1,loc1,loc1,loc2,loc2,loc2,loc2,loc2,loc2),
+  dd <- data.frame(loc = c('loc1','loc1','loc1','loc1','loc2','loc2','loc2','loc2','loc2','loc2'),
                    x=c(1,2,1,2, 1,2,3,1,2,3),
                    y=c(1,1,2,2, 1,1,1,2,2,2),
-                   rep=cs(R1,R1,R2,R2, R1,R2,R3,R1,R2,R3),
+                   rep=c('R1','R1','R2','R2',' R1','R2','R3','R1','R2','R3'),
                    yield=c(9.29, 11.20, 9.36, 9.89, 8.47, 9.17, 8.86, 10.48, 10.22, 11.29),
-                   trt1=cs(Treat1,Treat2,Treat2,Treat1, Trt1, Trt2, Trt1, Trt2,Trt1,Trt2),
-                   trt2=cs(Hybrid1,Hybrid1,Hybrid2,Hybrid2,
-                     Hybrid1,Hybrid2,Hybrid3,Hybrid1,Hybrid2,Hybrid3))
+                   trt1=c('Treat1','Treat2','Treat2','Treat1','Trt1','Trt2','Trt1','Trt2','Trt1','Trt2'),
+                   trt2=c('Hybrid1','Hybrid1','Hybrid2','Hybrid2','Hybrid1',
+                     'Hybrid2','Hybrid3','Hybrid1','Hybrid2','Hybrid3'))
   windows(width=3, height=2)
-  dplot(yield ~ x+y|loc, data=dd)
-  dplot(yield ~ x+y|loc, data=dd, strip.cex=1.5)
-  dplot(yield ~ x+y|loc, data=dd, col.regions=terrain.colors)
+  desplot(yield ~ x+y|loc, data=dd)
+  desplot(yield ~ x+y|loc, data=dd, strip.cex=1.5)
+  desplot(yield ~ x+y|loc, data=dd, col.regions=terrain.colors)
 
-  dplot( ~ x+y|loc, data=dd, num=trt1, cex=1)
-  dplot( ~ x+y|loc, data=dd, col=trt1, cex=1)
-  dplot( ~ x+y|loc, data=dd, text=trt1, cex=.8)
-  
-  dplot( ~ x+y|loc, data=dd, text=trt1, cex=.8, shorten='none')
-  dplot( ~ x+y|loc, data=dd, text=trt1, cex=.8, shorten='none', key.cex=.5)
-  dplot( ~ x+y|loc, data=dd, text=trt1, cex=.8, shorten='none', show.key=FALSE)
-  dplot( ~ x+y|loc, data=dd, text=trt2, col=trt1, cex=1,
+  desplot( ~ x+y|loc, data=dd, num=trt1, cex=1) # err
+  desplot( ~ x+y|loc, data=dd, col=trt1, cex=1)
+  desplot( ~ x+y|loc, data=dd, text=trt1, cex=.8)
+
+  desplot( ~ x+y|loc, data=dd, text=trt1, cex=.8, shorten='none')
+  desplot( ~ x+y|loc, data=dd, text=trt1, cex=.8, shorten='none', key.cex=.5)
+  desplot( ~ x+y|loc, data=dd, text=trt1, cex=.8, shorten='none', show.key=FALSE)
+  desplot( ~ x+y|loc, data=dd, text=trt2, col=trt1, cex=1,
         col.text=c('red','black','blue','plum'), text.levels=c('A','B','C'))
-  
-  dplot(rep ~ x+y|loc, data=dd, out1=rep)
-  dplot(rep ~ x+y|loc, data=dd, out1=rep, out2=y)
-  dplot(rep ~ x+y|loc, data=dd, out1=rep, flip=TRUE)
-  dplot(rep ~ x+y|loc, data=dd, tick=TRUE)
-  dplot(rep ~ x+y|loc, data=dd, main="title", xlab="xlab", ylab="ylab")
-  dplot(rep ~ x+y|loc, data=dd, aspect=2)
+
+  desplot(rep ~ x+y|loc, data=dd, out1=rep)
+  desplot(rep ~ x+y|loc, data=dd, out1=rep, out2=y)
+  desplot(rep ~ x+y|loc, data=dd, out1=rep, flip=TRUE)
+  desplot(rep ~ x+y|loc, data=dd, tick=TRUE)
+  desplot(rep ~ x+y|loc, data=dd, main="title", xlab="xlab", ylab="ylab")
+  desplot(rep ~ x+y|loc, data=dd, aspect=2)
   dev.off()
 
-  # CRAN check doesn't like 'data' here
-  # data(yates.oats, package="agridat")
+  # data(yates.oats, package="agridat") # CRAN check doesn't like 'data' here
   oats35 <- yates.oats
 
   desplot(yield~x+y, oats35)
@@ -590,12 +630,15 @@ if(FALSE){
   desplot(yield~x+y, oats35, col.regions=RedYellowBlue(7),
           at=eightnum(oats35$yield))
 
+  # What if the response is character?  Treat it like a factor
+  oats35$genchar <- as.character(oats35$gen)
+  desplot(gen~x+y, oats35, col=block, num=nitro, cex=1, out1=block)
+  desplot(genchar~x+y, oats35, col=block, num=nitro, cex=1, out1=block)
 
   # Test abbreviations
-  desplot(block~x+y, oats35, col=nitro, text=gen, cex=1, shorten='abb') # def
+  desplot(block~x+y, oats35, col=nitro, text=gen, cex=1, shorten='abb') # default
   desplot(block~x+y, oats35, col=nitro, text=gen, cex=1, shorten='sub')
   desplot(block~x+y, oats35, col=nitro, text=gen, cex=1, shorten='no')
-
 
   # Show actual yield values
   desplot(block~x+y, oats35, text=yield, shorten='no')
@@ -617,7 +660,25 @@ if(FALSE){
   desplot(nitro~x+y|block, oats35, text="gen", cex=1)
   desplot(block~x+y|block, oats35, col="nitro", text="gen", cex=1)
 
-  # stop
+  # Test cases with 1 or 2 rows or columns
+
+  # data(besag.met, package="agridat") # CRAN check doesn't like 'data' here
+  dmet <- besag.met
+
+  desplot(yield~col*row|county, dmet, out1=rep, out2=block, tick=TRUE)
+
+  # Create new data in which C1 has one row, C2 two rows
+  # C4 has one column, C5 two columns
+  dmet2 <- dmet
+  dmet2 <- subset(dmet2, !(county=="C1" & row<18))
+  dmet2 <- subset(dmet2, !(county=="C2" & row<17))
+  dmet2 <- subset(dmet2, !(county=="C4" & col<11))
+  dmet2 <- subset(dmet2, !(county=="C5" & col<10))
+
+  desplot(yield~col*row|county, dmet2, tick=TRUE)
+  desplot(yield~col*row|county, dmet2, out1=rep, out2=block, tick=TRUE)
+
+  # stop here
 
   # Check the 'cleanup' function.  These all err (as they should)
   desplot(yield~x+y, oats35, num=junk)

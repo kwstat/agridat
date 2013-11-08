@@ -8,7 +8,7 @@
   Yields of turnips grown for winter fodder with two treatments for
   planting date and density, planted as RCB.
 }
-\usage{data(mcconway.turnip)}
+
 \format{
   A data frame with 64 observations on the following 6 variables.
   \describe{
@@ -51,6 +51,7 @@
   \emph{Agronomy Journal}, 101, 865--869.
 }
 \examples{
+
 dat <- mcconway.turnip
 dat$densf <- factor(dat$density)
 
@@ -83,5 +84,6 @@ anova(m3)
 # Table 3 of Piepho, using transformation
 m4 <- aov( yield^.235 ~ gen * date * densf + block, dat )
 summary(m4)
+
 }
 

@@ -7,7 +7,7 @@
 \description{
   Height of Eucalyptus trees in southern Brazil
 }
-\usage{data(lavoranti.eucalyptus)}
+
 \format{
   A data frame with 490 observations on the following 4 variables.
   \describe{
@@ -19,10 +19,11 @@
 }
 \details{
   The genotypes originated from three different locations in Queensland,
-  Australia, and were tested in southern Brazil.
-  The experiment was conducted as a randomized complete
-  block design with 6 plants per plot and 10 blocks.  Mean tree height
-  is reported.  The testing locations are described in the following table:
+  Australia, and were tested in southern Brazil.  The experiment was
+  conducted as a randomized complete block design with 6 plants per plot
+  and 10 blocks.  Mean tree height is reported.
+
+  The testing locations are described in the following table:
   \tabular{lllllllll}{
     Loc	\tab City \tab Lat (S) \tab Long (W) \tab Altitude \tab Avg min temp \tab Avg max temp \tab Avg temp (C) \tab Precip (mm)\cr
     L1 \tab Barra Ribeiro, RS \tab 30.33 \tab 51.23 \tab 30 \tab 9 \tab 25 \tab 19 \tab 1400\cr
@@ -49,14 +50,13 @@
   interaction, \emph{Biometrical Letters}, 47, 1--14.
 }
 \examples{
-data(lavoranti.eucalyptus)
 
 # Arciniegas-Alarcon et al use SVD and regression to estimate missing values.
 # Partition the matrix X as a missing value xm, row vector xr1, column
 # vector xc1, and submatrix X11
-# X = [ xm  xr1 ] 
+# X = [ xm  xr1 ]
 #     [ xc1 X11 ] and let X11 = UDV'.
-# Estimate the missing value xm = xr1 V D^{-1} U' xc1 
+# Estimate the missing value xm = xr1 V D^{-1} U' xc1
 
 dat <- lavoranti.eucalyptus
 dat <- droplevels(subset(dat, origin=="Ravenshoe"))

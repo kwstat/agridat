@@ -2,31 +2,40 @@
 \alias{gomez.seedrate}
 \docType{data}
 \title{
-%%   ~~ data name/kind ... ~~
+  Rice yield at six different densities
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+  Rice yield at six different densities
 }
-\usage{data(gomez.seedrate)}
+
 \format{
   A data frame with 24 observations on the following 3 variables.
   \describe{
-    \item{\code{rate}}{a numeric vector}
-    \item{\code{rep}}{a factor with levels \code{R1} \code{R2} \code{R3} \code{R4}}
-    \item{\code{yield}}{a numeric vector}
+    \item{\code{rate}}{kg seeds per hectare}
+    \item{\code{rep}}{rep, four levels}
+    \item{\code{yield}}{yield, kg/ha}
   }
 }
 \details{
-%%  ~~ If necessary, more details than the __description__ above ~~
+  Rice yield at six different densities.
 }
 \source{
-%%  ~~ reference to a publication or URL from which the data were obtained ~~
+  Gomez, K.A. and Gomez, A.A.. 1984,
+  \emph{Statistical Procedures for Agricultural Research}.
+  Wiley-Interscience. Page 26.
+
+  Used with permission of Kwanchai Gomez.
 }
-\references{
-%%  ~~ possibly secondary sources and usages ~~
-}
+
 \examples{
-data(gomez.seedrate)
-## maybe str(gomez.seedrate) ; plot(gomez.seedrate) ...
+
+dat <- gomez.seedrate
+
+require(lattice)
+#xyplot(yield ~ rate, data=dat, group=rep)
+bwplot(yield ~ rate, data=dat, horizontal=FALSE)
+# Quadratic response
+m1 <- lm(yield ~ poly(rate,2), dat)
+
 }
 \keyword{datasets}

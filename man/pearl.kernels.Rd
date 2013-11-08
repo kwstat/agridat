@@ -8,7 +8,7 @@
   Counts of yellow/white and sweet/starchy kernels on each of 4 maize
   ears by 15 observers.
 }
-\usage{data(pearl.kernels)}
+
 \format{
   A data frame with 59 observations on the following 6 variables.
   \describe{
@@ -48,7 +48,7 @@
     14 \tab Asst plant physiology \cr
     15 \tab Prof biology \cr
   }
-    
+
 }
 \source{
   Raymond Pearl, 1911.
@@ -58,14 +58,18 @@
 }
 
 \examples{
+
 dat <- pearl.kernels
 
-xyplot(ys+yt+ws+wt~obs|ear, dat, type='l', as.table=TRUE, auto.key=TRUE,
+xyplot(ys+yt+ws+wt~obs|ear, dat, type='l', as.table=TRUE,
+auto.key=list(columns=8),
+title="pearl.kernels", xlab="observer",
 layout=c(4,1), scales=list(x=list(rot=90)))
 
 # Test hypothesis that distribution is 'Mendelian' 9:3:3:1
 dat$pval <- apply(dat[, 3:6], 1, function(x)
                   chisq.test(x, p=c(9,3,3,1)/16)$p.val)
-dotplot(pval~obs|ear, dat, layout=c(1,4))
+dotplot(pval~obs|ear, dat, layout=c(1,4), main="pearl.kernels")
+
 }
 

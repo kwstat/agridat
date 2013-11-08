@@ -8,7 +8,7 @@
   Plant strength of perennial ryegrass in France for 21 genotypes at 7
   locations. 
 }
-\usage{data(denis.ryegrass)}
+
 \format{
   A data frame with 147 observations on the following 3 variables.
   \describe{

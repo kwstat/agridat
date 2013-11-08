@@ -8,7 +8,7 @@
   This is monthly weather summaries for the 6 sites where barley yield
   trials were conducted.
 }
-\usage{data(minnesota.barley.weather)}
+
 \format{
   A data frame with 719 observations on the following 8 variables.
   \describe{
@@ -27,7 +27,7 @@
   Center, the following weather stations were chosen, based on
   availability of weather data in the given time frame (1927-1936)
   and the proximity to the town (site) for the barley data.
-  
+
   \tabular{lll}{
     site\tab station name\tab station\cr
     Morris\tab MORRIS WC EXPERIMENTAL STATION\tab USC00215638\cr
@@ -40,7 +40,7 @@
 
   'cdd' are cooling degree days, which is the number of degree days with
   a temperature _above_ 65 Fahrenheit.
-  
+
   'hdd' are heating degree days, _below_ 65 Fahrenheit.
 
   No data is available for Duluth in Dec, 1931.
@@ -48,6 +48,13 @@
 \source{
   National Climate Data Center, \url{http://www.ncdc.noaa.gov/}.
 }
+
+\references{
+  Kevin Wright. 2013.  Revisiting Immer's Barley Data.
+  \emph{The American Statistitician}.
+  \url{http://dx.doi.org/10.1080/00031305.2013.801783}.
+}
+
 \examples{
 dat <- minnesota.barley.yield
 datw <- minnesota.barley.weather
@@ -55,6 +62,7 @@ datw <- minnesota.barley.weather
 # Weather trends over time
 require(latticeExtra)
 useOuterStrips(xyplot(cdd~mo|year*site, datw, groups=year,
+main="minnesota.barley", xlab="month", ylab="Cooling degree days",
 subset=(mo > 3 & mo < 10), scales=list(alternating=FALSE),
 type='l', auto.key=list(columns=5)))
 
@@ -82,7 +90,7 @@ oldpar <- tpg <- trellis.par.get()
 tpg$superpose.symbol$pch <- substring(levels(mecy$yr),4) # Last digit of year
 trellis.par.set(tpg)
 foo <- xyplot(y~x|covar*site, data=mecy, groups=yr, cex=1, ylim=c(5,65),
-              xlab="", ylab="yield",
+              xlab="", ylab="yield", main="minnesota.barley",
               panel=function(x,y,...) {
                 panel.lmline(x,y,..., col="gray")
                 panel.superpose(x,y,...)

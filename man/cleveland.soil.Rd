@@ -7,7 +7,7 @@
 \description{
   Soil resistivity in a field
 }
-\usage{data(cleveland.soil)}
+
 \format{
   A data frame with 8641 observations on the following 5 variables.
   \describe{
@@ -32,7 +32,6 @@
 \examples{
 \dontrun{
 
-data(cleveland.soil)
 dat <- cleveland.soil
 
 # Similar to Cleveland fig 4.64

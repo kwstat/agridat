@@ -7,11 +7,11 @@
 \description{
   Maize fertilization trial on Antigua and St. Vincent.
 }
-\usage{data(caribbean.maize)}
+
 \format{
   A data frame with 612 observations on the following 7 variables.
   \describe{
-    \item{\code{isle}}{Island factor}
+    \item{\code{isle}}{Island factor, 2 levels}
     \item{\code{site}}{Site factor}
     \item{\code{block}}{Block, factor}
     \item{\code{plot}}{Plot, numeric}
@@ -27,7 +27,7 @@
 
   Plots were 16 feet by 18 feet. A central area 12 feet by 12 feet was
   harvested and recorded.
-  
+
   The number of ears harvested was only recorded on the isle of Antigua.
 
   The digits of the treatment represent the levels of nitrogen,
@@ -39,21 +39,31 @@
 \source{
   D.F. Andrews and A.M. Herzberg. 1985.
 	\emph{Data: A Collection of Problems from Many Fields for the Student
-	  and Research Worker}.  Springer.
+	  and Research Worker}.
 
   Retrieved from \url{http://lib.stat.cmu.edu/datasets/Andrews/}.
 }
 \references{
-  Also in the DAAG package as antigua, stVincent.
+  Also in the DAAG package as data sets antigua, stVincent.
 }
 \examples{
 dat <- caribbean.maize
 
-# Yield and ears are highly correlated
-xyplot(yield~ears|site, dat, ylim=c(0,10), subset=isle=="Antigua")
+# Yield and ears are correlated
+xyplot(yield~ears|site, dat, ylim=c(0,10), subset=isle=="Antigua",
+       main="Yield vs ears at sites on Antiqua")
 
 # Some locs show large response to nitrogen (as expected), e.g. UISV, OOSV
-dotplot(trt~yield|site, data=dat)
+dotplot(trt~yield|site, data=dat, main="caribbean.maize treatment response")
 
+# The pattern is a bit hard to see, so we split the treatment factor
+# into separate factors, and group sites by island
+dat <- transform(dat, N=factor(substring(trt,2,2)),
+                      P=factor(substring(trt,3,3)),
+                      K=factor(substring(trt,4,4)))
+dat <- transform(dat, env=paste(substring(isle,1,1),site,sep="-"))
+# Now we can see the strong N*site interaction
+bwplot(yield~N|env, dat,
+       main="caribbean.maize", xlab="nitrogen")
 }
 \keyword{datasets}

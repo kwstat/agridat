@@ -9,7 +9,7 @@ Rice strip-split-plot experiment
   strip, nitrogen fertilizer as the vertical strip, and planting method
   as the subplot factor.
 }
-\usage{data(gomez.stripsplitplot)}
+
 \format{
   \describe{
     \item{\code{yield}}{Grain yield in kg/ha}
@@ -25,7 +25,7 @@ Rice strip-split-plot experiment
   Gomez, K.A. and Gomez, A.A.. 1984,
   \emph{Statistical Procedures for Agricultural Research}.
   Wiley-Interscience. Page 155.
-  
+
   Used with permission of Kwanchai Gomez.
 }
 \examples{
@@ -33,8 +33,7 @@ Rice strip-split-plot experiment
 dat <- gomez.stripsplitplot
 
 # Layout
-desplot(gen~x+y, dat, out1=rep, out2=gen, col=nitro, text=planting,
-cex=1)
+desplot(gen~x+y, dat, out1=rep, col=nitro, text=planting, cex=1)
 
 # Gomez table 4.19, ANOVA of strip-split-plot design
 dat <- transform(dat, nf=factor(nitro))

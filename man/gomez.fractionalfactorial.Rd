@@ -8,7 +8,7 @@
   A 1/2 fractional factorial experiment with 6 treatments.  Two reps
   with 2 blocks in each rep.
 }
-\usage{data(gomez.fractionalfactorial)}
+
 \format{
   A data frame with 64 observations on the following 6 variables.
   \describe{
@@ -57,7 +57,8 @@ anova(m0)
 m1 <- lm(yield ~ rep * block + (a+b+c+d+e+f)^3, dat)
 anova(m1)
 
-desplot(yield~x*y, dat) # trt abcdef has the highest yield
+# trt abcdef has the highest yield
+desplot(yield~x*y, dat, main="gomez.fractionalfactorial")
 
 \dontrun{
 # Not sure FrF2 works with multi-rep data.

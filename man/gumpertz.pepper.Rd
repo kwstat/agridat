@@ -1,0 +1,91 @@
+\name{gumpertz.pepper}
+\alias{gumpertz.pepper}
+\docType{data}
+\title{
+  Phytophtera disease incidence in a pepper field
+}
+\description{
+  Phytophtera disease incidence in a pepper field
+}
+
+\format{
+  A data frame with 800 observations on the following 6 variables.
+  \describe{
+    \item{\code{field}}{field factor, 2 levels}
+    \item{\code{row}}{x ordinate}
+    \item{\code{quadrat}}{y ordinate}
+    \item{\code{disease}}{presence (1) or absence (0) of disease}
+    \item{\code{water}}{soil moisture percent}
+    \item{\code{leaf}}{leaf assay count}
+  }
+}
+\details{
+  Each field is 20 rows by 20 quadrates, with 2 to 3 bell pepper plants
+  per plot.  If any plant was wilted, dead, or had lesions, the
+  Phytophthora disease was considered to be present in the plot.  The
+  soil pathogen load was assayed as the number of leaf disks colonized
+  out of five.  In field 2, the pattern of disease presence appears to
+  follow soil water content.  In field 1, no obvious trends were
+  present.
+
+  Gumpertz et al. model the presence of disease  using soil moisture and
+  leaf assay as covariates, and using disease presence of neighboring
+  plots as covariates in an autologistic model.
+}
+
+\source{
+  Marcia L. Gumpertz; Jonathan M. Graham; Jean B. Ristaino (1997).
+  Autologistic Model of Spatial Pattern of Phytophthora Epidemic in Bell Pepper:
+  Effects of Soil Variables on Disease Presence.
+  \emph{Journal of Agricultural, Biological, and Environmental
+    Statistics}, Vol. 2, No. 2., pp. 131-156.
+
+  Used with permission of Marcia Gumpertz.  Research funded by USDA.
+}
+
+\examples{
+
+dat <- gumpertz.pepper
+
+# Gumpertz deletes two outliers
+dat[ dat$field =="F1" & dat$row==20 & dat$quadrat==10, 'water'] <- NA
+dat[ dat$field =="F2" & dat$row==5 & dat$quadrat==4, 'water'] <- NA
+
+# Horizontal flip
+dat <- transform(dat, row=21-row)
+
+# Disease presence.  Gumpertz fig 1a, 2a.
+desplot(disease ~ row*quadrat|field, data=dat,
+        main="gumpertz.pepper disease presence", aspect=1,
+        col.region=c('lightgray','black'))
+
+# Soil water.  Gumpertz fig 1b, 2b
+desplot(water ~ row*quadrat|field, data=dat,
+        main="gumpertz.pepper soil moisture", aspect=1,
+        col.regions=c("#D9D9D9","#B3B3B3","#848484","#5A5A5A","#252525"),
+        at=c(5,7.5,10,12.5,15,18))
+
+# Leaf assay.  Gumpertz fig 1c, 2c
+desplot(leaf ~ row*quadrat|field, data=dat,
+        main="gumpertz.pepper leaf assay", aspect=1,
+        col.regions=c("#D9D9D9","#BDBDBD","#969696",
+          "#737373","#525252","#252525"))
+        at=c(0,1,2,3,4,5,6)-.5
+
+# Use the inner 16x16 grid of plots in field 2
+dat2 <- droplevels(subset(dat, field=="F2" & !is.na(water) &
+                          row > 2 & row < 19 & quadrat > 2 & quadrat < 19))
+
+m21 <- glm(disease ~ water + leaf, data=dat2, family=binomial)
+coef(m21) # These match Gumpertz et al table 4, model 1
+## (Intercept)       water        leaf
+##  -9.1019623   0.7059993   0.4603931
+dat2$res21 <- resid(m21)
+desplot(res21 ~ row*quadrat, data=dat2,
+        main="gumpertz.pepper field 2, model 1 residuals")
+
+# Still shows obvious trends.  Gumpertz et al add spatial covariates for
+# neighboring plots, but with only minor improvement in misclassification
+
+}
+\keyword{datasets}

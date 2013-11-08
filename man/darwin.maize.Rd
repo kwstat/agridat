@@ -7,7 +7,7 @@
 \description{
   Darwin's maize data of crossed/inbred plant heights.
 }
-\usage{data(darwin.maize)}
+
 \format{
   A data frame with 30 observations on the following 4 variables.
   \describe{
@@ -39,14 +39,14 @@
  experiments of this kind require so much time--mine having been
  continued during eleven years--that they are not likely soon to be
  repeated."
-  
+
   Darwin asked his cousin Francis Galton for help in understanding the
   data.  Galton did not have modern statistical methods to approach
   the problem and said, "I doubt, after making many tests, whether it is
   possible to derive useful conclusions from these few observations.  We
   ought to have at least 50 plants in each case, in order to be in a
   position to deduce fair results".
-  
+
   Later, R. A. Fisher used Darwin's data in a book about design of
   experiments and showed that a t-test exhibits a significant difference
   between the two groups.
@@ -64,13 +64,19 @@
 dat <- darwin.maize
 
 # Compare self-pollination with cross-pollination
-require("lattice")
-bwplot(height~type, dat)
+require(lattice)
+bwplot(height~type, dat, main="darwin.maize")
 
-require("reshape2")
+require(reshape2)
 dm <- melt(dat)
 d2 <- dcast(dm, pot+pair~type)
 d2$diff <- d2$cross-d2$self
 t.test(d2$diff)
+## 	One Sample t-test
+## t = 2.148, df = 14, p-value = 0.0497
+## alternative hypothesis: true mean is not equal to 0
+## 95 percent confidence interval:
+##  0.003899165 5.229434169
+
 }
 \keyword{datasets}

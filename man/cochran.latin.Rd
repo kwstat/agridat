@@ -10,14 +10,14 @@ measured. The operators sampled plots in six ordered sequences.
 The dependent variate was the difference between measured
 height and true height of the plot.
 }
-\usage{data(cochran.latin)}
+
 \format{
   A data frame with 36 observations on the following 4 variables.
   \describe{
-    \item{\code{row}}{Row}
-    \item{\code{col}}{Column}
-    \item{\code{operator}}{Operator factor}
-    \item{\code{diff}}{Difference between measured height and true height}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
+    \item{\code{operator}}{operator factor}
+    \item{\code{diff}}{difference between measured height and true height}
   }
 }
 \source{
@@ -27,7 +27,7 @@ height and true height of the plot.
 \examples{
 dat <- cochran.latin
 
-desplot(diff~col*row, dat, text=operator, cex=1)
+desplot(diff~col*row, dat, text=operator, cex=1, main="cochran.latin")
 dat <- transform(dat, rf=factor(row), cf=factor(col))
 aov.dat <- aov(diff ~ operator + Error(rf*cf), dat)
 summary(aov.dat)

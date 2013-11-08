@@ -7,7 +7,7 @@
 \description{
   Balanced incomplete block design in corn
 }
-\usage{data(cochran.bib)}
+
 \format{
   A data frame with 52 observations on the following 3 variables.
   \describe{
@@ -19,7 +19,7 @@
 \details{
   Incomplete block design.  Each loc/block has 4 genotypes/lines.
   The blocks are planted at different locations.
-  
+
   Conducted in 1943 in North Carolina.
 }
 \source{
@@ -31,7 +31,13 @@
   \emph{Experimental Designs}, 2nd ed., Wiley and Sons, New York, p. 448.
 }
 \examples{
+
 dat <- cochran.bib
+
+# Show the incomplete-block structure
+with(dat, table(gen,loc))
+rowSums(as.matrix(with(dat, table(gen,loc))))
+colSums(as.matrix(with(dat, table(gen,loc))))
 
 m1 = aov(yield ~ gen + Error(loc), data=dat)
 summary(m1)
@@ -43,5 +49,6 @@ m2 = lme(yield ~ -1 + gen, data=dat, random=~1|loc)
 require(agricolae)
 BIB.test(dat$loc, dat$gen, y=dat$yield)
 }
+
 }
 

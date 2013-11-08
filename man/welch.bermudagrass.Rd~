@@ -1,0 +1,33 @@
+\name{welch.bermudagrass}
+\alias{welch.bermudagrass}
+\docType{data}
+\title{
+%%   ~~ data name/kind ... ~~
+}
+\description{
+%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+}
+\usage{data(welch.bermudagrass)}
+\format{
+  A data frame with 64 observations on the following 4 variables.
+  \describe{
+    \item{\code{n}}{a numeric vector}
+    \item{\code{p}}{a numeric vector}
+    \item{\code{k}}{a numeric vector}
+    \item{\code{yield}}{a numeric vector}
+  }
+}
+\details{
+%%  ~~ If necessary, more details than the __description__ above ~~
+}
+\source{
+%%  ~~ reference to a publication or URL from which the data were obtained ~~
+}
+\references{
+%%  ~~ possibly secondary sources and usages ~~
+}
+\examples{
+data(welch.bermudagrass)
+## maybe str(welch.bermudagrass) ; plot(welch.bermudagrass) ...
+}
+\keyword{datasets}

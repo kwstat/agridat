@@ -8,7 +8,7 @@
   Percent of leaf area affected by leaf blotch on 10 varieties of barley
   at 9 sites.
 }
-\usage{data(wedderburn.barley)}
+
 
 \format{
   A data frame with 90 observations on the following 3 variables.
@@ -25,18 +25,21 @@
 \source{
   Wedderburn, R W M (1974).
   Quasilikelihood functions, generalized linear models and the
-  Gauss-Newton method. \emph{Biometrika}, 61, 439--47. 
+  Gauss-Newton method.
+  \emph{Biometrika}, 61, 439--47.
 }
+
 \references{
   McCullagh, P and Nelder, J A (1989).
   \emph{Generalized Linear Models} (2nd ed).
 }
+
 \examples{
 
 dat <- wedderburn.barley
 dat$y <- dat$y/100
 
-dotplot(gen~y|site, dat)
+dotplot(gen~y|site, dat, main="wedderburn.barley")
 
 # Use the variance function mu(1-mu).  McCullagh page 330
 m1 <- glm(y ~ gen + site, data=dat, family="binomial")
@@ -47,7 +50,7 @@ plot(m1, which=1)
 
 # Compare data and model
 dat$pbin <- predict(m1, type="response")
-dotplot(gen~pbin+y|site, dat)
+dotplot(gen~pbin+y|site, dat, main="wedderburn.barley: observed/predicted")
 
 \dontrun{
 # Wedderburn suggested variance function mu^2 * (1-mu)^2

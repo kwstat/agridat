@@ -7,7 +7,7 @@ New York soybean yields, 1977 to 1988
 \description{
   New York soybean yields, 1977 to 1988, for 7 genotypes in 55 environments.
 }
-\usage{data(gauch.soy)}
+
 \format{
   A data frame with 1454 observations on the following 4 variables.
   \describe{
@@ -53,7 +53,7 @@ New York soybean yields, 1977 to 1988
 
 dat <- gauch.soy
 
-if(require("agricolae")){
+if(require(agricolae)){
 # Figure 1 of Zobel et al 1988, means vs PC1 score
 dat2 <- droplevels(subset(dat, is.element(env, c("A77","C77","V77",
 "V78","A79","C79","G79","R79","V79","A80","C80","G80","L80","D80",

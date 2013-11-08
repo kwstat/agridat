@@ -7,7 +7,7 @@
 \description{
   Impact of Bt Corn on non-target species
 }
-\usage{data(gathmann.bt)}
+
 \format{
   A data frame with 16 observations on the following 3 variables.
   \describe{
@@ -21,7 +21,7 @@
   control variety.  Species abundances were measured for
   \emph{Thysanoptera} (thrips) and \emph{Araneida} (spiders)
   in 8 different plots.
-  Each response is probably a mean across repeated measurements. 
+  Each response is probably a mean across repeated measurements.
 }
 \source{
   L. A. Hothorn, 2005.
@@ -38,40 +38,39 @@ bwdot=function(x,y,...){
     panel.xyplot(jitter(as.numeric(x)),y,...)
     panel.bwplot(x,y,...)
 }
-bwplot(thysan~gen, dat, panel=bwdot)
-bwplot(aranei~gen, dat, panel=bwdot)
+bwplot(thysan~gen, dat, panel=bwdot, main="gathmann.bt: thysan")
+bwplot(aranei~gen, dat, panel=bwdot, main="gathmann.bt: aranei")
 
 \dontrun{
-# ----- Parametric CI.  Thysan significant, aranei not significant.
-require("equivalence")
-tt <- with(dat, tost(thysan[1:8], thysan[9:16], epsilon=1))
-lapply(tt[c("mean.diff","ci.diff")], round, 2)
 
-ta <- with(dat, tost(aranei[1:8], aranei[9:16], alpha=.05, epsilon=.4))
-lapply(ta[c("mean.diff","ci.diff")], round, 2)
+# ----- Parametric CI.  Thysan significant, aranei not significant.
+require(equivalence)
+th0 <- with(dat, tost(thysan[1:8], thysan[9:16], epsilon=1))
+lapply(th0[c("mean.diff","ci.diff")], round, 2)
+
+ar0 <- with(dat, tost(aranei[1:8], aranei[9:16], alpha=.05, epsilon=.4))
+lapply(ar0[c("mean.diff","ci.diff")], round, 2)
+
 
 # ----- Non-parametric exact CI.  Same result.
-require("exactRankTests")
-nont <- with(dat, wilcox.exact(thysan ~ gen, data=dat,
-                               exact=TRUE, conf.int=TRUE, conf.level=0.9))
-lapply(nont[c("estimate","conf.int")], function(x) round(x,1))
+require(coin)
+th1 <- wilcox_test(thysan ~ gen, data=dat, conf.int=TRUE, conf.level=0.9)
+lapply(confint(th1), round, 2)
 
-nona <- with(dat, wilcox.exact(aranei ~ gen, data=dat,
-                               exact=TRUE, conf.int=TRUE, conf.level=0.9))
-lapply(nona[c("estimate","conf.int")], function(x) round(x,2))
+ar1 <- wilcox_test(aranei ~ gen, data=dat, conf.int=TRUE, conf.level=0.9)
+lapply(confint(ar1), round, 2)
 
 
 # ----- Log-transformed exact CI. Same result.
-logt <- with(dat, wilcox.exact(log(thysan) ~ gen, data=dat, 
-                             alternative=c("two.sided"), exact=TRUE,
-                             conf.int=TRUE, conf.level=0.9))
-lapply(logt[c("estimate","conf.int")], function(x) round(exp(x),1))
+th2 <- wilcox_test(log(thysan) ~ gen, data=dat, alternative=c("two.sided"),
+                   conf.int=TRUE, conf.level=0.9)
+lapply(confint(th2), function(x) round(exp(x),2))
 
 # ----- Log-transform doesn't work on aranei, but asinh(x/2) does
-loga <- with(dat, wilcox.exact(asinh(aranei/2) ~ gen, data=dat, 
-                             alternative=c("two.sided"), exact=TRUE,
-                             conf.int=TRUE, conf.level=0.9))
-lapply(loga[c("estimate","conf.int")], function(x) round(sinh(x)*2,1))
+ar2 <- wilcox_test(asinh(aranei/2) ~ gen, data=dat,
+                   alternative=c("two.sided"),
+                   conf.int=TRUE, conf.level=0.9)
+lapply(confint(ar2), function(x) round(sinh(x)*2,1))
 
 }
 }

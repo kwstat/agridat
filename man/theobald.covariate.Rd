@@ -7,7 +7,7 @@
 \description{
   Silage yields for maize in 5 years at 7 districts for 10 hybrids.
 }
-\usage{data(theobald.covariate)}
+
 \format{
   A data frame with 256 observations on the following 5 variables.
   \describe{
@@ -25,7 +25,7 @@
   The covariate CHU (Corn Heat Units) is the accumulated average daily
   temperatures (thousands of degrees Celsius) during the growing season
   at each location.
-  
+
   Thanks to Chris Theobald for permission to use the data and for BUGS code.
 }
 \source{
@@ -33,34 +33,37 @@
   A Bayesian Approach to Regional and Local-Area Prediction From Crop
   Variety Trials, \emph{Journ Agric Biol Env Sciences}, 7, 403--419.
 }
+
 \examples{
-theo <- theobald.covariate
+
+dat <- theobald.covariate
 
 # REML estimates (Means) in table 3 of Theobald 2002
-require("lme4")
-theo <- transform(theo, year=factor(year))
-m0 <- lmer(yield ~ -1 + gen + (1|year/env) + (1|gen:year), data=theo)
+if(require(lme4)){
+dat <- transform(dat, year=factor(year))
+m0 <- lmer(yield ~ -1 + gen + (1|year/env) + (1|gen:year), data=dat)
 round(fixef(m0),2)
+}
 
 \dontrun{
 
 # Use JAGS to fit Theobald (2002) model 3.2 with 'Expert' prior
 
-require("reshape2")
-ymat <- acast(theo, year+env~gen, value_var='yield')
-chu <- acast(theo, year+env~., mean, value_var='chu', na.rm=TRUE)
+require(reshape2)
+ymat <- acast(dat, year+env~gen, value.var='yield')
+chu <- acast(dat, year+env~., mean, value.var='chu', na.rm=TRUE)
 chu <- as.vector(chu - mean(chu))  # Center the covariate
-theo$yr <- as.numeric(theo$year)
-yridx <- as.vector(acast(theo, year+env~., mean, value_var='yr', na.rm=TRUE))
-theo$loc <- as.numeric(theo$env)
-locidx <- acast(theo, year+env~., mean, value_var='loc', na.rm=TRUE)
+dat$yr <- as.numeric(dat$year)
+yridx <- as.vector(acast(dat, year+env~., mean, value.var='yr', na.rm=TRUE))
+dat$loc <- as.numeric(dat$env)
+locidx <- acast(dat, year+env~., mean, value.var='loc', na.rm=TRUE)
 locidx <- as.vector(locidx)
 
 jdat <- list(nVar = 10, nYear = 5, nLoc = 7, nYL = 29, yield = ymat,
-            chu = chu, year = yridx, loc = locidx) 
+            chu = chu, year = yridx, loc = locidx)
 
 require(rjags)
-m1 <- jags.model(file=system.file("/files/theobald.bug", package="agdata"),
+m1 <- jags.model(file=system.file("/files/theobald.bug", package="agridat"),
   data=jdat, n.chains=2)
 
 # Table 3, Variety deviations from means (Expert prior)
@@ -68,7 +71,7 @@ c1 <- coda.samples(m1, variable.names=(c('alpha')),
                    n.iter=10000, thin=10)
 s1 <- summary(c1)
 effs <- s1$statistics[,'Mean']
-rev(sort(round(effs - mean(effs), 2))) # Perfect match
+rev(sort(round(effs - mean(effs), 2))) # Perfect match (different order?)
 }
 
 }

@@ -8,7 +8,7 @@ Rice strip-plot experiment
   A strip-plot experiment with three reps, variety as the horizontal
   strip and nitrogen fertilizer as the vertical strip.
 }
-\usage{data(gomez.stripplot)}
+
 \format{
   \describe{
     \item{\code{yield}}{Grain yield in kg/ha}
@@ -33,7 +33,8 @@ Rice strip-plot experiment
 dat <- gomez.stripplot
 
 # Gomez figure 3.7
-desplot(gen~x*y, data=dat, out1=rep, num=nitro, cex=1)
+desplot(gen~x*y, data=dat, out1=rep, num=nitro, cex=1,
+        main="gomez.stripplot")
 
 # Gomez table 3.12
 tapply(dat$yield, dat$rep, sum)

@@ -7,7 +7,7 @@
 \description{
     Split-plot barley variety trial with fungicide treatments.
 }
-\usage{data(durban.splitplot)}
+
 \format{
   A data frame with 560 observations on the following 6 variables.
   \describe{
@@ -36,33 +36,34 @@
   Used with permission of Maria Durban.
 }
 \examples{
-d2 <- durban.splitplot
+dat <- durban.splitplot
 
 # Durban 2003, Figure 2
-m20 <- lm(yield~gen*fung, data=d2)
-d2$resid <- m20$resid
+m20 <- lm(yield~gen*fung, data=dat)
+dat$resid <- m20$resid
 require(lattice)
-xyplot(resid~row, d2, type=c('p','smooth'))
-xyplot(resid~bed, d2, type=c('p','smooth'))
+xyplot(resid~row, dat, type=c('p','smooth'), main="durban.splitplot")
+xyplot(resid~bed, dat, type=c('p','smooth'), main="durban.splitplot")
 
 # Figure 4 doesn't quite match due to different break points
-coplot(resid~bed|row, data=d2, number=8,cex=.5, panel=function(x,y,...) panel.smooth(x,y,span=.4,...))
+coplot(resid~bed|row, data=dat, number=8, cex=.5,
+       panel=function(x,y,...) panel.smooth(x,y,span=.4,...))
 
 \dontrun{
 # Figure 6 - field trend
 require(gam)
-m2lo <- gam(yield ~ gen*fung + lo(row, bed, span=.082), data=d2)
-new2 <- expand.grid(row=unique(d2$row), bed=unique(d2$bed))
+m2lo <- gam(yield ~ gen*fung + lo(row, bed, span=.082), data=dat)
+new2 <- expand.grid(row=unique(dat$row), bed=unique(dat$bed))
 new2 <- cbind(new2, gen="G01", fung="F1")
 p2lo <- predict(m2lo, new=new2)
 wireframe(p2lo~row+bed, new2, aspect=c(1,.5), main="Field trend")
 
-d2 <- transform(d2, rowf=factor(row), bedf=factor(bed))
-d2 <- d2[order(d2$rowf, d2$bedf),]
+dat <- transform(dat, rowf=factor(row), bedf=factor(bed))
+dat <- dat[order(dat$rowf, dat$bedf),]
 
 # Table 5, variance components.  Table 6, F tests
 require(asreml)
-m2a2 <- asreml(yield ~ gen*fung, random=~block/fung+units, data=d2,
+m2a2 <- asreml(yield ~ gen*fung, random=~block/fung+units, data=dat,
 rcov=~ar1v(rowf):ar1(bedf))
 summary(m2a2)$varcomp
 anova(m2a2)

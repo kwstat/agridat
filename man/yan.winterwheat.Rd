@@ -14,7 +14,7 @@
   This data has often been used to illustrate GGE biplots.
 }
 
-\usage{data(yan.winterwheat)}
+
 \format{
   A data frame with 162 observations on the following 3 variables.
   \describe{

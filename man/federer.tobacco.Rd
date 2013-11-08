@@ -7,7 +7,7 @@
 \description{
   Height of Tobacco plants exposed to radiation
 }
-\usage{data(federer.tobacco)}
+
 \format{
   A data frame with 56 observations on the following 4 variables.
   \describe{
@@ -42,7 +42,7 @@
   \emph{Handbook of Formulas and Software for Plant Geneticists and
     Breeders}, Haworth Press.
 
-  Paul N Hinz, 1987.
+  Paul N Hinz, (1987).
   Nearest-Neighbor Analysis in Practice,
   \emph{Iowa State Journal of Research}, 62, 199--217.
 }
@@ -56,7 +56,8 @@ m1 <- lm(height ~ blockf + dosef, data=dat)
 anova(m1)
 
 # RCB residuals show strong spatial trends
-levelplot(resid(m1) ~ row * block, data=dat, col.regions=RedGrayBlue(21))
+levelplot(resid(m1) ~ row * block, data=dat,
+col.regions=RedGrayBlue(21), main="federer.tobacco")
 
 # Row-column analysis.  Treatment now significant
 m2 <- lm(height ~ rowf + blockf + dosef, data=dat)

@@ -8,7 +8,7 @@ Multi-environment trial with structured missing values
   Grain yield was measured on 5 genotypes in 26 environments.  Missing
   values were non-random, but structured.
 }
-\usage{data(denis.missing)}
+
 \format{
   \describe{
     \item{\code{env}}{Environment factor, 26 levels}
@@ -32,16 +32,17 @@ Multi-environment trial with structured missing values
 dat <- denis.missing
 
 # View missingness structure
-require("reshape2")
-m1 <- melt(dat, measure.var='yield')
-acast(m1, env~gen)
+require(reshape2)
+acast(dat, env~gen, value.var='yield')
 
 # Stability variance (Table 3 in Piepho)
 library("nlme")
-dat.lme <- lme(yield ~ -1 + gen, data=dat, random= ~ 1|env,
-               weights = varIdent(form= ~ 1|gen),
-               na.action=na.omit)
-dat.lme$sigma^2 * c(1, coef(dat.lme$modelStruct$varStruct, unc = FALSE))^2
-
+m1 <- lme(yield ~ -1 + gen, data=dat, random= ~ 1|env,
+          weights = varIdent(form= ~ 1|gen),
+          na.action=na.omit)
+svar <- m1$sigma^2 * c(1, coef(m1$modelStruct$varStruct, unc = FALSE))^2
+round(svar, 2)
+##          G5    G3    G1    G2
+## 39.25 22.95 54.36 12.17 23.77
 }
 

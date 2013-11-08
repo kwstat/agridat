@@ -7,7 +7,7 @@
 \description{
   Yields of 18 soybean genotypes at 11 environments in Brazil.
 }
-\usage{data(pacheco.soybean)}
+
 \format{
   \describe{ 
     \item{\code{gen}}{Genotype factor, 18 levels}
@@ -27,7 +27,6 @@
   Used with permission of Robert Pacheco.
 }
 \examples{
-data(pacheco.soybean)
 
 dat <- pacheco.soybean
 

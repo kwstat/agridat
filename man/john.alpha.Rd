@@ -7,7 +7,7 @@
 \description{
   Alpha lattice design of spring oats
 }
-\usage{data(john.alpha)}
+
 \format{
   A data frame with 72 observations on the following 5 variables.
   \describe{
@@ -45,16 +45,28 @@ m1 <- lm(yield ~ 0 + gen + rep + rep:block, dat)
 anova(m1)
 
 # Block random (combined inter-intra block analysis)
-require(lme4)
+if(require(lme4)){
 m2 <- lmer(yield ~ 0 + gen + rep + (1|rep:block), dat)
 anova(m2)
-# summary(m2)@REmat
+print(VarCorr(m2), comp=c("Variance","Std.Dev."))
+## Groups    Name        Variance Std.Dev.
+## rep:block (Intercept) 0.061945 0.24889
+## Residual              0.085225 0.29193
 
 # Variety means.  John and Williams table 7.5.  Slight, constant
 # difference for each method as compared to John and Williams.
 means <- data.frame(rcb=coef(m0)[1:24],
                     ib=coef(m1)[1:24],
                     intra=fixef(m2)[1:24])
+## head(means)
+##             rcb       ib    intra
+## genG01 5.201233 5.268742 5.146433
+## genG02 4.552933 4.665389 4.517265
+## genG03 3.381800 3.803790 3.537934
+## genG04 4.439400 4.728175 4.528828
+## genG05 5.103100 5.225708 5.075944
+## genG06 4.749067 4.618234 4.575394
+}
 
 \dontrun{
 # Heritability calculation of Piepho & Mohring, Example 1
@@ -67,7 +79,7 @@ vblue <- predict(m3, classify="gen")$pred$avsed ^ 2
 # H^2 = .803
 sg2 / (sg2 + vblue/2)
 # H^2c = .809
-1-(vblup / 2 / sg2) 
+1-(vblup / 2 / sg2)
 }
 }
 \keyword{datasets}

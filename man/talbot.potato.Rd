@@ -8,7 +8,7 @@
   Yield and 14 trait scores for each of 9 potato varieties at 12
   locations in UK.
 }
-\usage{data(talbot.potato)}
+
 \format{
   A list of two matrices, \code{yield} and \code{char}.
   See details below.
@@ -51,6 +51,7 @@
   \url{http://www.bioss.ac.uk/smart/unix/mplsgxe/slides/}
 }
 \examples{
+
 \dontrun{
 require(pls)
 

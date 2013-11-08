@@ -7,7 +7,7 @@
 \description{
     Yield of 10 spring wheat varieties for 17 locations in 1976.
 }
-\usage{data(digby.jointregression)}
+
 \format{
   A data frame with 134 observations on the following 3 variables.
   \describe{

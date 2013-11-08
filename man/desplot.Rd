@@ -17,15 +17,18 @@
 \description{Plot the layout/data of a field experiment}
 
 \details{
+
+  Note, not all lattice parameters are passed down to \code{xyplot}, but
+  it is possible to make almost any change to the plot by assigning the
+  desplot object to a variable and then edit the object by hand or use
+  \code{update} to modify the object.  Then print it manually.  See the
+  first example below.
+  
   Ryder (1981) discusses the need to examine the layout of the
   experiment design, and not just the data.  This function provides a
   a tool for plotting the layout of a field experiment and also the
   observed data.
  
-  Not all parameters are passed down to \code{xyplot}.  One way around
-  this is assign the desplot object to a variable, then use
-  \code{update} to modify the plot, and then print it.
-  
   Use \code{col.regions} to specify fill colors.  This can either be a
   vector of colors or a function that produces a vector of colors.
   If the response variable is a factor and \code{col.regions} is a
@@ -78,13 +81,18 @@
   \emph{Experimental Agriculture}, 17, 243--256.
 }
 \examples{
-data("Wheat2", package="nlme")
-# Convert lat/long to integers
-Wheat2$y <- as.numeric(as.factor(Wheat2$latitude))
-Wheat2$x <- as.numeric(as.factor(Wheat2$longitude))
-desplot(yield ~ x*y, data=Wheat2, out1=Block, aspect=2)
 
-desplot(Block ~ x*y, data=Wheat2, num=variety, out1=Block)
+# Show how to customize any feature.  In this case, make the strips bigger.
+d1 <- desplot(yield ~ col*row|county, besag.met, main="besag.met",
+        out1=rep, out2=block, out2.gpar=gpar(col="white"), strip.cex=3)
+d1 <- update(d1, par.settings = list(layout.heights=list(strip=2)))
+print(d1)
+# Or: d1$par.settings = list(layout.heights=list(strip=2))
+
+
+# Show experiment layout
+# Note: all "Buckskin" plots are near left side
+desplot(yield~x*y, stroup.nin, out1="rep", num=gen, cex=1, main="stroup.nin")
 
 desplot(yield ~ x+y, yates.oats, out1=block, out2=gen)
 

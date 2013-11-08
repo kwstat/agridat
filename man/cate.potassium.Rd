@@ -7,7 +7,7 @@
 \description{
   Relative cotton yield for different soil potassium concentrations
 }
-\usage{data(cate.potassium)}
+
 \format{
   A data frame with 24 observations on the following 2 variables.
   \describe{
@@ -34,7 +34,6 @@
 }
 
 \examples{
-data(cate.potassium)
 
 dat <- cate.potassium
 names(dat) <- c('y','x')

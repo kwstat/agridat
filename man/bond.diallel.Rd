@@ -7,13 +7,21 @@
 \description{
   Diallel cross of winter beans
 }
-\usage{data(bond.diallel)}
+
 \format{
   A data frame with 36 observations on the following 3 variables.
   \describe{
     \item{\code{female}}{Female parent factor}
     \item{\code{male}}{Male parent factor}
     \item{\code{yield}}{Yield, grams/plot}
+    \item{\code{stems}}{Stems per plot}
+    \item{\code{nodes}}{Podded nodes per stem}
+    \item{\code{pods}}{Pods per podded node}
+    \item{\code{seeds}}{Seeds per pod}
+    \item{\code{weight}}{Weight (g) per 100 seeds}
+    \item{\code{height}}{Height (cm) in April}
+    \item{\code{width}}{Width (cm) in April}
+    \item{\code{flower}}{Mean flowering date in May}
   }
 }
 \details{
@@ -30,5 +38,8 @@
 }
 \examples{
 dat <- bond.diallel
+
+# Needs an example.  Bond says yield heterosis of F1 hybrids over parent
+# means is 22.56, but I cannot match.
 }
 \keyword{datasets}

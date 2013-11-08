@@ -7,7 +7,7 @@
 \description{
   Height / Survival of 37 tree species at six sites in Thailand
 }
-\usage{data(williams.trees)}
+
 \format{
   A data frame with 222 observations on the following 4 variables.
   \describe{
@@ -31,8 +31,8 @@
     Tropics: Growing Australian Multipurpose Trees and Shrubs in
     Developing Countries}. Pages 145--152.
   \url{http://aciar.gov.au/publication/MN010}
-  
-  Used with permission of Emlyn Williams.    
+
+  Used with permission of Emlyn Williams.
 }
 \references{
   E. R. Williams and A. C. Matheson and C. E Harwood,
@@ -41,6 +41,7 @@
 }
 \examples{
 dat <- williams.trees
-xyplot(survival~height|env,dat)
+xyplot(survival~height|env,dat, main="williams.trees", xlab="Height",
+ylab="Percent surviving")
 }
 

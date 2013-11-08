@@ -8,7 +8,7 @@
   Number of Orobanche seeds tested/germinated for two genotypes and
   two treatments.
 }
-\usage{data(crowder.seeds)}
+
 \format{
   \describe{
     \item{\code{plate}}{Factor for replication}
@@ -46,45 +46,73 @@
 dat <- crowder.seeds
 m1.glm <- m1.glmm <- m1.bb <- m1.hglm <- NA
 
-# Graphic
-require(lattice)
-dotplot(germ/n~gen|extract, dat)
 
-# GLM
+# ----- Graphic
+require(lattice)
+dotplot(germ/n~gen|extract, dat, main="crowder.seeds")
+
+
+# ----- GLM
 m1.glm <- glm(cbind(germ,n-germ) ~ gen*extract,
    data=dat, family=quasibinomial())
 summary(m1.glm)
 
-# GLMM.  Assumes Gaussian random effects
+
+# --- GLMM.  Assumes Gaussian random effects
 library(MASS)
 m1.glmm <- glmmPQL(cbind(germ, n-germ) ~ gen*extract, random= ~1|plate,
   family=binomial(), data=dat)
 summary(m1.glmm)
 
-# AOD package
-if(require(aod)){
-  m1.bb <- betabin(cbind(germ, n - germ) ~ gen * extract, ~ 1, data = dat)
-  summary(m1.bb)
-}
 
-# HGML package. Beta-binomial with beta-distributed random effects
-if(require(hglm)){
-  m1.hglm <- hglm(fixed= germ/n ~ I(gen=="O75")*extract, weights=n, data=dat,
-                  random=~1|plate, family=binomial(), rand.family=Beta(),
-                  fix.disp=1)
-}
+# ----- AODS3 package
+# require(aods3)
+# m1.bb <- aodml(cbind(germ, n-germ) ~ gen * extract, data=dat, family="bb")
 
+
+# ----- HGML package. Beta-binomial with beta-distributed random effects
+# require(hglm)
+# m1.hglm <- hglm(fixed= germ/n ~ I(gen=="O75")*extract, weights=n, data=dat,
+#                 random=~1|plate, family=binomial(), rand.family=Beta(),
+#                 fix.disp=1)
+
+\dontrun{
 # Compare coefficients
+
 round(summary(m1.glm)$coef,2)
+##                        Estimate Std. Error t value Pr(>|t|)
+## (Intercept)               -0.41       0.25   -1.64     0.12
+## genO75                    -0.15       0.30   -0.48     0.64
+## extractcucumber            0.54       0.34    1.58     0.13
+## genO75:extractcucumber     0.78       0.42    1.86     0.08
+
 round(summary(m1.glmm)$tTable,2)
-round(summary(m1.bb)@Coef,2)
+##                        Value Std.Error DF t-value p-value
+## (Intercept)            -0.44      0.25 17   -1.80    0.09
+## genO75                 -0.10      0.31 17   -0.34    0.74
+## extractcucumber         0.52      0.34 17    1.56    0.14
+## genO75:extractcucumber  0.80      0.42 17    1.88    0.08
+
+round(summary(m1.bb)$BCoef,2)
+##                        Estimate Std. Error z value Pr(> |z|)
+## (Intercept)               -0.44       0.22   -2.04      0.04
+## genO75                    -0.10       0.27   -0.36      0.72
+## extractcucumber            0.52       0.30    1.76      0.08
+## genO75:extractcucumber     0.80       0.38    2.11      0.03
+
 round(summary(m1.hglm)$FixCoefMat,2)
+##                                     Estimate Std. Error t-value Pr(>|t|)
+## (Intercept)                            -0.47       0.24   -1.92     0.08
+## I(gen == "O75")TRUE                    -0.08       0.31   -0.25     0.81
+## extractcucumber                         0.51       0.33    1.53     0.16
+## I(gen == "O75")TRUE:extractcucumber     0.83       0.43    1.92     0.08
+}
 
 \dontrun{
 # JAGS/BUGS.  See http://mathstat.helsinki.fi/openbugs/Examples/Seeds.html
 # Germination rate depends on p, which is a logit of a linear predictor
 # based on genotype and extract, plus random deviation to intercept
-require("rjags")
+require(rjags)
 
 # To match the output on the BUGS web page, use: dat$gen=="O73".
 # We use dat$gen=="O75" to compare with the parameterization above.
@@ -116,9 +144,14 @@ j1 <- jags.model(textConnection(mod.bug), data=jdat, inits=jinit, n.chains=1)
 
 c1 <- coda.samples(j1, c("int","genO75","g75ecuke","extcuke","sigma"),
                    n.iter=20000)
-summary(c1)
-# Medians are very similar to estimates from hglm
-# round(summary(m1.hglm)$FixCoefMat,2)
+summary(c1) # Medians are very similar to estimates from hglm
+## Quantiles for each variable:
+##               2.5%     25%     50%     75%   97.5%
+## extcuke  -0.181347  0.3006  0.5220  0.7340 1.15979
+## g75ecuke  0.005857  0.5557  0.8274  1.1033 1.71047
+## genO75   -0.714404 -0.2838 -0.1000  0.1007 0.53403
+## int      -0.950749 -0.6174 -0.4543 -0.2951 0.04221
+## sigma     0.040928  0.1705  0.2681  0.3649 0.58064
 
 # Plot observed data with HPD intervals for germination probability
 c2 <- coda.samples(j1, c("p"), n.iter=20000)
@@ -126,7 +159,7 @@ hpd <- HPDinterval(c2)[[1]]
 med <- summary(c2, quantiles=.5)$quantiles
 fit <- data.frame(med, hpd)
 
-require("latticeExtra")
+require(latticeExtra)
 obs <- dotplot(1:21 ~ germ/n, dat, ylab="plate",
                col=as.numeric(dat$gen), pch=substring(dat$extract,1))
 obs + segplot(1:21 ~ lower + upper, data=fit, centers=med)

@@ -7,7 +7,7 @@
 \description{
   Sorghum yields at 3 locations across 5 years
 }
-\usage{data(adugna.sorghum)}
+
 \format{
   A data frame with 289 observations on the following 6 variables.
   \describe{
@@ -38,11 +38,8 @@
 }
 
 \examples{
-data(adugna.sorghum)
-
-dat <- adugna.sorghum
-
 # Genotype means match Adugna
+dat <- adugna.sorghum
 tapply(dat$yield, dat$gen, mean)
 
 # CV for each genotype.  G1..G15 match, except for G2.

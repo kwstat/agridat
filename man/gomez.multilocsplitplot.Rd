@@ -9,7 +9,7 @@ Rice multilocation Split-Plot
   Within each rep, the main plot was 6 nitrogen fertilizer treatments
   and the sub plot was 2 rice varieties.
 }
-\usage{data(gomez.multilocsplitplot)}
+
 \format{
   A data frame with 108 observations on the following 5 variables.
   \describe{
@@ -25,28 +25,39 @@ Rice multilocation Split-Plot
   Gomez, K.A. and Gomez, A.A.. 1984,
   \emph{Statistical Procedures for Agricultural Research}.
   Wiley-Interscience. Page 339.
-  
+
   Used with permission of Kwanchai Gomez.
 }
 \examples{
 dat <- gomez.multilocsplitplot
+dat$nf <- factor(dat$nitro)
 
 # Gomez figure 8.3
-xyplot(yield~nitro, dat, group=loc, type=c('p','smooth'), auto.key=TRUE)
+xyplot(yield~nitro, dat, group=loc, type=c('p','smooth'), auto.key=TRUE,
+       main="gomez.multilocsplitplot")
 
 # AOV
 # Be careful to use the right stratum, 'nf' appears in both strata.
 # Still not quite the same as Gomez table 8.21
-dat$nf <- factor(dat$nitro)
 t1 <- terms(yield ~ loc * nf * gen + Error(loc:rep:nf),
             "Error", keep.order=TRUE)
 m1 <- aov(t1, data=dat)
 summary(m1)
 
 # F values are somewhat similar to Gomez Table 8.21
-require(lme4)
+if(require(lme4)){
 m2 <- lmer(yield ~ loc*nf*gen + (1|loc/rep/nf), dat)
 anova(m2)
+## Analysis of Variance Table
+##            Df   Sum Sq  Mean Sq F value
+## loc         2    34792    17396  0.0450
+## nf          5 72841432 14568286 37.6777
+## gen         1  7557570  7557570 19.5460
+## loc:nf     10 10137188  1013719  2.6218
+## loc:gen     2  4270469  2135235  5.5223
+## nf:gen      5  1501767   300353  0.7768
+## loc:nf:gen 10  1502273   150227  0.3885
+}
 
 }
 

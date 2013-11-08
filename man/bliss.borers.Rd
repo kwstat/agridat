@@ -1,0 +1,85 @@
+\name{bliss.borers}
+\alias{bliss.borers}
+\docType{data}
+\title{
+  Corn borer infestation under four treatments
+}
+\description{
+  Corn borer infestation under four treatments
+}
+
+\format{
+  A data frame with 48 observations on the following 3 variables.
+  \describe{
+    \item{\code{borers}}{number of borers per hill}
+    \item{\code{treat}}{treatment factor, 4 levels}
+    \item{\code{freq}}{frequency of the borer count}
+  }
+}
+\details{
+  Four treatments to control corn borers.  Treatment 1 is the control.
+
+  In 15 blocks, for each treatment, 8 hills of plants were examined, and the
+  number of corn borers present was recorded.  The data here are
+  aggregated across blocks.
+
+  Bliss mentions that the level of infestation varied significantly
+  between the blocks.
+}
+\source{
+  C. Bliss and R. A. Fisher. (1953).
+  Fitting the Negative Binomial Distribution to Biological Data.
+  \emph{Biometrics}, 9, 176--200.  Table 3.
+
+  Geoffrey Beall. 1940. The Fit and Significance of Contagious
+  Distributions when Applied to Observations on Larval Insects.
+  \emph{Ecology}, 21, 460-474.  Page 463.
+  \url{http://www.jstor.org/stable/1930285}.
+}
+
+\examples{
+dat <- bliss.borers
+
+# Add 0 frequencies
+dat0 <- expand.grid(borers=0:26, treat=c('T1','T2','T3','T4'))
+dat0 <- merge(dat0,dat, all=TRUE)
+dat0$freq[is.na(dat0$freq)] <- 0
+
+# Expand to individual (non-aggregated) counts for each hill
+dd <- data.frame(borers = rep(dat0$borers, times=dat0$freq),
+                 treat = rep(dat0$treat, times=dat0$freq))
+
+library(lattice)
+histogram(~borers|treat, dd, type='count', breaks=0:27-.5,
+          layout=c(1,4), main="bliss.borers", xlab="Borers per hill")
+
+
+library(MASS)
+m1 <- glm.nb(borers~0+treat, data=dd)
+# Bliss, table 3, presents treatment means, which are matched by:
+exp(coef(m1)) # 4.033333 3.166667 1.483333 1.508333
+# Bliss gives treatment values k = c(1.532,1.764,1.333,1.190).
+# The mean of these is 1.45, similar to this across-treatment estimate
+m1$theta # 1.47
+
+
+# Plot observed and expected distributions for treatment 2
+xx <- 0:26
+yy <- dnbinom(0:26, mu=3.17, size=1.47)*120 # estimates are from glm.nb
+library(latticeExtra)
+histogram(~borers, dd, type='count', subset=treat=='T2',
+          main="Treatment 2 observed and expected",
+          breaks=0:27-.5) +
+xyplot(yy~xx, col='navy', type='b')
+
+
+# "Poissonness"-type plot
+library(vcd)
+dat2 <- droplevels(subset(dat, treat=='T2'))
+distplot(dat2$borers, type = "nbinomial")
+# Better way is a rootogram
+g1 <- goodfit(dat2$borers, "nbinomial")
+plot(g1, main="bliss.borers - Treatment 2")
+
+}
+\keyword{datasets}

@@ -7,14 +7,14 @@
 \description{
   Long term wheat yields on Broadbalk fields at Rothamsted.
 }
-\usage{data(broadbalk.wheat)}
+
 \format{
   A data frame with 1258 observations on the following 4 variables.
   \describe{
-    \item{\code{year}}{Year}
-    \item{\code{plot}}{Plot factor}
-    \item{\code{grain}}{Grain yield, tonnes}
-    \item{\code{straw}}{Straw yield, tonnes}
+    \item{\code{year}}{year}
+    \item{\code{plot}}{plot factor}
+    \item{\code{grain}}{grain yield, tonnes}
+    \item{\code{straw}}{straw yield, tonnes}
   }
 }
 \details{
@@ -62,12 +62,14 @@
 \examples{
 dat <- broadbalk.wheat
 
-require("lattice")
-xyplot(grain~straw|plot, dat, type=c('p','smooth'), as.table=TRUE)
-xyplot(grain~year|plot, dat, type=c('p','smooth'), as.table=TRUE)
+require(lattice)
+xyplot(grain~straw|plot, dat, type=c('p','smooth'), as.table=TRUE,
+       main="broadbalk.wheat")
+xyplot(grain~year|plot, dat, type=c('p','smooth'), as.table=TRUE,
+       main="broadbalk.wheat") # yields are decreasing
 
 # See the treatment descriptions to understand the patterns
-levelplot(grain~year*plot, dat, main="Grain")
-levelplot(straw~year*plot, dat, main="Straw")
+levelplot(grain~year*plot, dat, main="broadbalk.wheat: Grain", col.regions=RedGrayBlue)
+levelplot(straw~year*plot, dat, main="broadbalk.wheat: Straw", col.regions=RedGrayBlue)
 }
 \keyword{datasets}

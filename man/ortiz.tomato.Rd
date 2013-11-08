@@ -7,7 +7,7 @@
 \description{
   Tomato weight/yield and environmental covariates in Latin America
 }
-\usage{data(ortiz.tomato)}
+
 \format{
   A list of three matrices, \code{yield}, \code{weight}, and \code{covs}.
   See details below.
@@ -71,7 +71,8 @@ Y <- sweep(Y, 2, colMeans(Y, na.rm=TRUE))
 
 # Standardized covariates
 X <- ortiz.tomato$covs
-X <- X[,c("MxT","MnT","MeT","Prec","Day","pH","OM","P","K","ExN","ExP","ExK","Trim","Driv","Irr","Dha")] 
+X <- X[,c("MxT", "MnT", "MeT", "Prec", "Day", "pH", "OM", "P", "K",
+          "ExN", "ExP", "ExK", "Trim", "Driv", "Irr", "Dha")] 
 X <- scale(X)
 
 # Now, PLS relating the two matrices

@@ -1,0 +1,71 @@
+\name{wallace.iowaland}
+\alias{wallace.iowaland}
+\docType{data}
+\title{
+  1925 Iowa farmland values by county
+}
+\description{
+  1925 Iowa farmland values by county
+}
+\usage{data(wallace.iowaland)}
+\format{
+  A data frame with 99 observations on the following 10 variables.
+  \describe{
+    \item{\code{county}}{county factor, 99 levels}
+    \item{\code{fips}}{FIPS code (state+county)}
+    \item{\code{lat}}{latitude}
+    \item{\code{long}}{longitude}
+    \item{\code{yield}}{average corn yield per acre (bu)}
+    \item{\code{corn}}{percent of land in corn}
+    \item{\code{grain}}{percent of land in small grains}
+    \item{\code{untillable}}{percent of land untillable}
+    \item{\code{fedval}}{land value (excluding buildings) per acre, 1925 federal census}
+    \item{\code{stval}}{land value (excluding buildings) per acre, 1925 state census}
+  }
+}
+\details{
+  None.
+}
+\source{
+  H.A. Wallace (1926). Comparative Farm-Land Values in Iowa.
+  \emph{The Journal of Land & Public Utility Economics}, 2, 385-392.
+  Page 387-388.
+  \url{http://www.jstor.org/stable/3138610}
+}
+\references{
+  Larry Winner. Spatial Data Analysis.
+  \url{http://www.stat.ufl.edu/~winner/data/iowaland.txt}
+}
+\examples{
+
+dat <- wallace.iowaland
+
+# Interesting trends involving latitude
+splom(~dat[,-c(1:2)], type=c('p','smooth'), lwd=2)
+
+# Means. Similar to Wallace table 1
+apply(dat[, c('yield','corn','grain','untillable','fedval')], 2, mean)
+
+# Correlations.  Similar to Wallace table 2
+round(cor(dat[, c('yield','corn','grain','untillable','fedval')]),2)
+
+m1 <- lm(fedval ~ yield + corn + grain + untillable, dat)
+summary(m1) # estimates similar to Wallace, top of p. 389
+
+# Choropleth map
+require(maps)
+data(county.fips)
+# define color bins
+colpal <- RedGrayBlue(12)
+dat <- transform(dat, valbin = as.numeric(cut(dat$fedval, 6:18*10)))
+dat <- transform(dat, polnm = paste0('iowa,',county))
+
+# Check the data are sorted correctly
+all(dat$polnm == map("county", 'iowa', plot=FALSE)$names) # TRUE
+# Draw the map.  Compare to http://en.wikipedia.org/wiki/File:Landforms_of_Iowa.jpg
+map("county", 'iowa', col = colpal[dat$valbin], fill = TRUE,
+    resolution = 0, lty = 0)
+title("1925 Federal land values")
+
+}
+\keyword{datasets}

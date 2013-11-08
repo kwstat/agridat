@@ -7,7 +7,7 @@ Early White Food Corn Performance Tests
 \description{
   Early White Food Corn Performance Tests of 60 white hybrids.
 }
-\usage{data(ars.earlywhitecorn96)}
+
 \format{
   A data frame with 540 observations on the following 9 variables.
   \describe{
@@ -25,13 +25,15 @@ Early White Food Corn Performance Tests
 \details{
   Data are the average of 3 replications.
 
-  Yields were measured for each plot and converted to bushels / acre and adjusted to 15.5 percent moisture.
+  Yields were measured for each plot and converted to bushels / acre and
+  adjusted to 15.5 percent moisture.
 
   Stand is expressed as a percentage of the optimum plant stand.
-  
+
   Lodging is expressed as a percentage of the total plants for each hybrid.
-  
-  Ear height was measured from soil level to the top ear leaf collar.  Heights are expressed in inches.
+
+  Ear height was measured from soil level to the top ear leaf collar.
+  Heights are expressed in inches.
 
   Days to flowering is the number of days from planting to mid-tassel or mid-silk.
 
@@ -44,11 +46,13 @@ Early White Food Corn Performance Tests
   Agricultural Research Service Special Report 502.
 }
 \examples{
+require(lattice)
 dat <- ars.earlywhitecorn96
-
-require("lattice")
-dotplot(gen~yield, dat, group=loc, auto.key=list(columns=3))
-dotplot(gen~stalklodge, dat, group=loc, auto.key=list(columns=3))
+# These views emphasize differences between locations
+dotplot(gen~yield, dat, group=loc, auto.key=list(columns=3),
+        main="ars.earlywhitecorn96")
+dotplot(gen~stalklodge, dat, group=loc, auto.key=list(columns=3),
+        main="ars.earlywhitecorn96")
 splom(~dat[,3:9], group=dat$loc, auto.key=list(columns=3))
 }
 \keyword{datasets}

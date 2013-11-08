@@ -7,13 +7,13 @@
 \description{
   Percent lodging is given for 32 genotypes at 7 environments.
 }
-\usage{data(allcroft.lodging)}
+
 \format{
   A data frame with 224 observations on the following 3 variables.
   \describe{
-    \item{\code{env}}{Factor for environment, 1-7}
-    \item{\code{gen}}{Factor for genotype, 1-32}
-    \item{\code{y}}{Percent lodged}
+    \item{\code{env}}{environment factor, 1-7}
+    \item{\code{gen}}{genotype factor, 1-32}
+    \item{\code{y}}{percent lodged}
   }
 }
 \details{
@@ -36,26 +36,19 @@ dat$sy <- sqrt(dat$y)
 dat[dat$env=='E5' & dat$gen=='G04',]$sy <- .01
 
 dotplot(env~y|gen, dat, as.table=TRUE,
-xlab="Percent lodged (by genotype)", ylab="Variety",
+        xlab="Percent lodged (by genotype)", ylab="Variety",
         main="allcroft.lodging")
 
 \dontrun{
-require("Zelig")
-# Bayesian tobit model using zelig
-m3 <- zelig(sy ~ -1 + gen + env, below=0, above=100, model="tobit.bayes",
-            data=dat)
-s3 <- summary(m3)
-# Average env effect is sum(0+e2+e3+...+e7)/7
-avgenv <- apply(m3$coefficients[,33:38], 1, function(x) sum(x)/7)
-# Add avgenv to each genotype
-p3 <- m3$coefficients[,1:32] + avgenv
-# Probability of observing 0.  Compare to Allcroft Table 2,.
-round(apply(p3, 2, function(x) mean(x<0)),2)
-# Expected squared value of non-zeros.  Somewhat different from Allcroft.
-round(apply(p3, 2, function(x) { x <- x[x>0]; mean(x^2) }),2)
 
-# Density plots
-plot(p3[,1:4])
+require(AER)
+m3 <- tobit(sy ~ 1 + gen + env, left=0, right=100, data=dat)
+
+# Table 2 trial/variety means
+preds <- expand.grid(gen=levels(dat$gen), env=levels(dat$env))
+preds$pred <- predict(m3, newdata=preds)
+round(tapply(preds$pred, preds$gen, mean),2)
+round(tapply(preds$pred, preds$env, mean),2)
+
 }
 }
-

@@ -7,7 +7,7 @@
 \description{
   Potato blight due to weather in Prosser, Washington
 }
-\usage{data(johnson.blight)}
+
 \format{
   A data frame with 25 observations on the following 6 variables.
   \describe{
@@ -31,7 +31,6 @@
   Vinayanand Kandala, Logistic Regression.
 }
 \examples{
-data(johnson.blight)
 
 dat <- johnson.blight
 

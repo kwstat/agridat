@@ -7,7 +7,7 @@
 \description{
   Yield of brussels sprouts, RCB with 9 fertilizer treatments
 }
-\usage{data(rothamsted.brussels)}
+
 \format{
   A data frame with 48 observations on the following 5 variables.
   \describe{
@@ -33,10 +33,12 @@
   Engineering Science}, 462, 2119--2143.
 }
 \examples{
+
 dat <- rothamsted.brussels
 
-bwplot(yield~trt, dat)
-desplot(yield~col*row, data=dat, num=trt, out1=block, cex=1)
+bwplot(yield~trt, dat, main="rothamsted.brussels")
+desplot(yield~col*row, data=dat, num=trt, out1=block, cex=1,
+        main="rothamsted.brussels")
 
 }
 

@@ -7,7 +7,7 @@
 \description{
   Yields for a trial at Slate Hall Farm in 1976.
 }
-\usage{data(kempton.slatehall)}
+
 \format{
   A data frame with 150 observations on the following 5 variables.
   \describe{
@@ -24,7 +24,7 @@
   Each row within a rep is an (incomplete) block.
 }
 \source{
-  R A Kempton and P N Fox. (1997). 
+  R A Kempton and P N Fox. (1997).
   \emph{Statistical Methods for Plant Variety Evaluation},
   Chapman and Hall.   Page 84.
 }
@@ -32,18 +32,25 @@
   Gilmour, Arthur R and Robin Thompson and Brian R Cullis. (1994).
   Average Information REML: An Efficient Algorithm for Variance
   Parameter Estimation in Linear Mixed Models, \emph{Biometrics},
-  51, 1440-1450.  
+  51, 1440-1450.
 }
 \examples{
 dat <- kempton.slatehall
-desplot(yield ~ col * row, dat, num=gen, out1=rep)
-
 dat <- transform(dat, xf=factor(col), yf=factor(row))
 
+desplot(yield ~ col * row, dat, num=gen, out1=rep,
+        main="kempton.slatehall")
+
 # Incomplete block model of Gilmour et al 1995
-require(lme4)
+if(require(lme4)){
 m1 <- lmer(yield ~ gen + (1|rep) + (1|rep:yf) + (1|rep:xf), data=dat)
-summary(m1)@REmat
+print(VarCorr(m1), comp=c("Variance","Std.Dev."))
+## Groups   Name        Variance Std.Dev.
+## rep:xf   (Intercept) 14811.6  121.703
+## rep:yf   (Intercept) 15595.0  124.880
+## rep      (Intercept)  4262.4   65.287
+## Residual              8061.8   89.788
+}
 
 \dontrun{
 # Incomplete block model of Gilmour et al 1995

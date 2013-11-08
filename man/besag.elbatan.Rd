@@ -9,7 +9,7 @@
   RCB experiment of 50 varieties of wheat in 3 blocks with strong
   spatial trend.
 }
-\usage{data(besag.elbatan)}
+
 \format{
   A data frame with 150 observations on the following 4 variables.
   \describe{
@@ -39,9 +39,10 @@
 dat <- besag.elbatan
 
 # Besag figure 1
-xyplot(yield~row, dat, groups=block, type=c('l'))
+xyplot(yield~row, dat, groups=block, type=c('l'),
+       main="besag.elbatan")
 
-desplot(yield~block*row, dat)
+desplot(yield~block*row, dat, main="besag.elbatan")
 
 # RCB
 m1 <- lm(yield ~ 0 + gen + block, dat)

@@ -8,7 +8,7 @@
   This is monthly weather summaries for the 6 sites where barley yield
   trials were conducted.
 }
-\usage{data(minnesota.barley.weather)}
+
 \format{
   A data frame with 719 observations on the following 8 variables.
   \describe{
@@ -46,15 +46,23 @@
   No data is available for Duluth in Dec, 1931.
 }
 \source{
-  National Climate Data Center, \url{http://gis.ncdc.noaa.gov/map/cdo/}.
+  National Climate Data Center, \url{http://www.ncdc.noaa.gov/}.
 }
+
+\references{
+  Kevin Wright. 2013.  Revisiting Immer's Barley Data.
+  \emph{The American Statistitician}.
+  \url{http://dx.doi.org/10.1080/00031305.2013.801783}.
+}
+
 \examples{
 dat <- minnesota.barley.yield
 datw <- minnesota.barley.weather
 
 # Weather trends over time
-require("latticeExtra")
+require(latticeExtra)
 useOuterStrips(xyplot(cdd~mo|year*site, datw, groups=year,
+main="minnesota.barley",
 subset=(mo > 3 & mo < 10), scales=list(alternating=FALSE),
 type='l', auto.key=list(columns=5)))
 
@@ -67,9 +75,28 @@ yy <- aggregate(yield~site+year, dat, mean)
 
 minn <- merge(ww, yy)
 
+
 # Higher yields generally associated with cooler temps, more precip
-splom(~minn[,c('cdd','hdd','precip','yield')]|site, data=minn,
-      groups=year, auto.key=list(columns=5), varname.cex=.8,
-      pscales=2, axis.text.cex=.5, axis.line.tck=0.2)
+require(reshape2)
+me <- melt(minn, id.var=c('site','year'))
+mey <- subset(me, variable=="yield")
+mey <- mey[,c('site','year','value')]
+names(mey) <- c('site','year','y')
+mec <- subset(me, variable!="yield")
+names(mec) <- c('site','year','covar','x')
+mecy <- merge(mec, mey)
+mecy$yr <- factor(mecy$year)
+oldpar <- tpg <- trellis.par.get()
+tpg$superpose.symbol$pch <- substring(levels(mecy$yr),4) # Last digit of year
+trellis.par.set(tpg)
+foo <- xyplot(y~x|covar*site, data=mecy, groups=yr, cex=1, ylim=c(5,65),
+              xlab="", ylab="yield", main="minnesota.barley",
+              panel=function(x,y,...) {
+                panel.lmline(x,y,..., col="gray")
+                panel.superpose(x,y,...)
+              },
+              scales=list(x=list(relation="free")))
+foo <- useOuterStrips(foo, strip.left = strip.custom(par.strip.text=list(cex=.7)))
+combineLimits(foo, margin.x=2L)
 }
 \keyword{datasets}

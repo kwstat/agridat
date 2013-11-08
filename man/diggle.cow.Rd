@@ -7,13 +7,13 @@ Bodyweight of cows in a 2-by-2 factorial experiment
 \description{
   Bodyweight of cows in a 2-by-2 factorial experiment.
 }
-\usage{data(diggle.cow)}
+
 \format{
   A data frame with 598 observations on the following 5 variables.
   \describe{
     \item{\code{animal}}{Animal factor, 26 levels}
-    \item{\code{iron}}{Factor with levels \code{Iron} \code{NoIron}}
-    \item{\code{infect}}{Factor with levels \code{Infected} \code{NonInfected}}
+    \item{\code{iron}}{Factor with levels \code{Iron}, \code{NoIron}}
+    \item{\code{infect}}{Factor levels \code{Infected}, \code{NonInfected}}
     \item{\code{weight}}{Weight in (rounded to nearest 5) kilograms}
     \item{\code{day}}{Days after birth}
   }
@@ -22,15 +22,15 @@ Bodyweight of cows in a 2-by-2 factorial experiment
 
   Diggle et al., 1994, pp. 100-101, consider an experiment that studied
   how iron dosing (none/standard) and micro-organism (infected or
-  non-infected) influence the weight of cows. 
+  non-infected) influence the weight of cows.
   Twenty-eight cows were allocated in a 2-by-2 factorial design
   with these factors.  Some calves were inoculated with Mycobacterium at six
   weeks of age.  At six months, some calves were maintained on
-  supplemental iron diet for a further 27 months. 
+  supplemental iron diet for a further 27 months.
   The weight of each animal was measured at 23 times,
   unequally spaced. One cow died during the study and data for another
   cow was removed.
-  
+
 }
 \source{
   Diggle, P. J., Liang, K.-Y., & Zeger, S. L. (1994).
@@ -54,26 +54,25 @@ Bodyweight of cows in a 2-by-2 factorial experiment
 
   SAS/STAT(R) 9.2 User's Guide, Second Edition.
   \url{http://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.htm#statug_glimmix_sect018.htm}
-  
+
 }
 \examples{
-data(diggle.cow)
 
 dat <- diggle.cow
 
 # Figure 1 of Verbyla 1999
-require("lattice")
-xyplot(weight ~ day|iron*infect, dat, type='b',group=animal)
+require(lattice)
+require(latticeExtra)
+useOuterStrips(xyplot(weight ~ day|iron*infect, dat, type='b',group=animal,
+       main="diggle.cow"))
 
 # Scaling
 dat <- transform(dat, time = (day-122)/10)
 
 \dontrun{
-  
-# Smooth for each animal.  No treatment effects. Similar to Output 38.6.9 here:
-# http://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.htm#statug_glimmix_sect018.htm
-require("asreml")
-require("latticeExtra")
+
+# Smooth for each animal.  No treatment effects. Similar to SAS Output 38.6.9
+require(asreml)
 
 m1 <- asreml(weight ~ 1 + lin(time) + animal + animal:lin(time), data=dat,
              random = ~ animal:spl(time))

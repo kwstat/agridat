@@ -9,7 +9,7 @@
   Data from Fisher's 1929 paper \emph{Studies in Crop Variation 6}.
   A different design was used each year.
 }
-\usage{data(eden.potato)}
+
 \format{
   A data frame with 225 observations on the following 9 variables.
   \describe{
@@ -57,33 +57,39 @@ dat <- eden.potato
 
 # 1925 qualitative
 d5a <- subset(dat, year=='1925a')
-desplot(trt~col*row, d5a, text=yield, cex=1, shorten='no')
+desplot(trt~col*row, d5a, text=yield, cex=1, shorten='no',
+        main="eden.potato: 1925 qualitative")
 anova(m5a <- aov(yield~trt+factor(row)+factor(col), d5a)) # table 2
 
 # 1926 qualitative
 d6a <- subset(dat, year=='1926a')
-desplot(trt~col*row, d6a, text=yield, cex=1, shorten='no')
+desplot(trt~col*row, d6a, text=yield, cex=1, shorten='no',
+        main="eden.potato: 1926 qualitative")
 anova(m6a <- aov(yield~trt+factor(row)+factor(col), d6a)) # table 4
 
 # 1925 quantitative
 d5 <- subset(dat, year=='1925b')
-desplot(yield ~ col*row, d5, out1=block, text=trt, cex=1)
+desplot(yield ~ col*row, d5, out1=block, text=trt, cex=1,
+        main="eden.potato: 1925 quantitative")
 # Trt 't' not defined, seems to be the same as 'a'
-dotplot(trt~yield|block, d5)
+dotplot(trt~yield|block, d5,
+        main="eden.potato: 1925 quantitative")
 anova(m5 <- aov(yield~trt+block, d5)) # table 6
 
 # 1926 quantitative
 d6 <- subset(dat, year=='1926b')
-desplot(yield ~ col*row, d6, out1=block, text=trt, cex=1)
+desplot(yield ~ col*row, d6, out1=block, text=trt, cex=1,
+        main="eden.potato: 1926 quantitative")
 anova(m6 <- aov(yield~trt+block, d6)) # table 7
 
 # 1927 qualitative + quantitative
 d7 <- droplevels(subset(dat, year==1927))
-desplot(yield ~ col*row, d7, out1=block, text=trt, cex=1, col=ptype)
+desplot(yield ~ col*row, d7, out1=block, text=trt, cex=1, col=ptype,
+        main="eden.potato: 1927 qualitative + quantitative")
 
 # Table 8.  Anova, mean yield tons / acre
 anova(m7 <- aov(yield~trt+block+ptype + ptype:potash, d7))
-require("reshape2")
+require(reshape2)
 me7 <- melt(d7, measure.vars='yield')
 acast(me7, potash~nitro, fun=mean) * 40/2240 # English ton = 2240 lbs
 acast(me7, potash~ptype, fun=mean) * 40/2240

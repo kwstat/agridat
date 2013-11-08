@@ -7,7 +7,7 @@
 \description{
   Wheat varieties with heteroskedastic yields
 }
-\usage{data(graybill.heteroskedastic)}
+
 \format{
   A data frame with 52 observations on the following 3 variables.
   \describe{
@@ -34,7 +34,7 @@
 dat <- graybill.heteroskedastic
 
 # Genotypes are obviously not homoscedastic
-boxplot(yield ~ gen, dat)
+boxplot(yield ~ gen, dat, main="graybill.heteroskedastic")
 
 # Shukla stability variance of each genotype, same as Grubbs' estimate
 # Matches Piepho 1994 page 143.
@@ -48,5 +48,9 @@ w <- w + mean(datm)
 w <- rowSums(w^2)
 k=4; n=13
 sig2 <- k*w/((k-2)*(n-1)) - sum(w)/((k-1)*(k-2)*(n-1))
+## sig2
+##     G1     G2     G3     G4
+## 145.98 -14.14  75.15  18.25
+
 }
 

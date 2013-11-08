@@ -7,7 +7,7 @@
 \description{
   Soybean yields in a multi-environment trial in North Carolina.
 }
-\usage{data(steel.soybeanmet)}
+
 \format{
   A data frame with 108 observations on the following 4 variables.
   \describe{
@@ -23,14 +23,25 @@
 \source{
   Steel, R.G.D. and Torrie, J.H., 1980.
   \emph{Principles and procedures of statistics: a biometrical approach},
-  McGraw-Hill New York.  Page 400.
+  McGraw-Hill.  Page 400.
 }
 \references{
   Mick O'Neill, 2010.  Anova and REML: A Guide to Linear Mixed Models In
   An Experimental Design Context.
 }
 \examples{
-data(steel.soybeanmet)
-## maybe str(steel.soybeanmet) ; plot(steel.soybeanmet) ...
+
+dat <- steel.soybeanmet
+
+if(require(lme4)){
+# REML analysis as in O'Neill, p. 130.
+m1 <- lmer(yield ~ loc + (1|gen) + (1|gen:loc) + (1|loc:block), data=dat)
+# Are gen:loc effects significant?  No.
+m2 <- lmer(yield ~ loc + (1|gen) + (1|loc:block), data=dat)
+anova(m1,m2)
+# h^2 deviations
+ranef(m2)$gen
+}
+
 }
 \keyword{datasets}

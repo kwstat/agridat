@@ -8,7 +8,7 @@
   Yield of Durum wheat, 7 genotypes, 6 years, with 16 genotypic variates
   and 16 environment variates.
 }
-\usage{data(vargas.wheat1)}
+
 \format{
   A list of two data frames, \code{genvals} and \code{envvals}.
 
@@ -35,7 +35,7 @@
     \item{\code{VGR}}{Vegetative growth rate, kg/ha/day, STW/ANT}
     \item{\code{KGR}}{Kernel growth rate, mg/kernel/day}
   }
-  
+
   The \code{envals} data frame has 17 variables for each of 6 years:
   \describe{
     \item{\code{year}}{Year, 1990-1995}
@@ -70,14 +70,15 @@
   Data kindly provided by Jose Crossa.
 }
 \examples{
+
 \dontrun{
 gvals <- vargas.wheat1$genvals
 evals <- vargas.wheat1$envvals
 
-require("pls")
+require(pls)
 
 # Yield as a function of gen variates
-require("reshape2")
+require(reshape2)
 gv <- melt(gvals, id.var=c('gen','rep','year'))
 Y0 <- subset(gv, variable=="yield")
 Y0 <- acast(Y0, gen~year, mean)

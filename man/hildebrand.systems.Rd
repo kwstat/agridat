@@ -7,7 +7,7 @@
 \description{
   Maize yields for four cropping systems at 14 on-farm trials.
 }
-\usage{data(hildebrand.systems)}
+
 \format{
   A data frame with 56 observations on the following 4 variables.
   \describe{
@@ -20,8 +20,8 @@
 \details{
   Yields from 14 on-farm trials in Phalombe Project region of
   south-eastern Malawi.  The farms were located near two different
-  villages.  
-  
+  villages.
+
   On each farm, four different cropping systems were tested.  The
   systems were:
   LM = Local Maize, LMF = Local Maize with Fertilizer,
@@ -42,7 +42,8 @@
 dat <- hildebrand.systems
 
 # Piepho 1998 Fig 1
-dotplot(yield ~ system, dat, groups=village, auto.key=TRUE)
+dotplot(yield ~ system, dat, groups=village, auto.key=TRUE,
+        main="hildebrand.systems", xlab="cropping system by village")
 
 \dontrun{
 require("asreml")
@@ -71,7 +72,7 @@ m2 <- asreml(yield ~ system, data=dat,
              rcov = ~ at(system):units)
 p2 <- predict(m2, classify="system")$predictions$pvals
 # Variances, table 6
-#> vc(m2)
+# vc(m2)
 #               Effect  Estimate Std Err Z Ratio Con
 #        farm!farm.var 0.2996     0.1175     2.5 Pos
 #   system_LM!variance 0.0000002      NA      NA Bnd
@@ -87,15 +88,18 @@ mu1 = 1.35; mu2 = 2.70
 lambda <- seq(from=0, to=5, length=20)
 system1 <- pnorm((lambda-mu1)/sqrt(s11))
 system2 <- pnorm((lambda-mu2)/sqrt(s22))
-plot(system1, system2, xlim=c(0,1), ylim=c(0,1), type="l")
+plot(system1, system2, xlim=c(0,1), ylim=c(0,1), type="l",
+     main="hildebrand.systems")
 
 # A simpler view
 plot(lambda, system1, type="l", xlim=c(0,5), ylim=c(0,1),
-     xlab="Yield level", ylab="Prob(yield < level)")
+     xlab="Yield level", ylab="Prob(yield < level)",
+     main="hildebrand.systems")
 lines(lambda, system2, col="red")
 
 # Prob of system 1 outperforming system 2. Table 8
-pnorm((mu1-mu2)/sqrt(s11+s22-2*s12)) # .03
+pnorm((mu1-mu2)/sqrt(s11+s22-2*s12))
+# .0331
 
 }
 

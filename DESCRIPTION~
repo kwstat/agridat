@@ -1,8 +1,8 @@
 Package: agridat
 Type: Package
 Title: Agricultural datasets
-Version: 1.5
-Date: 2012-03-10
+Version: 1.8
+Date: 2013-09-20
 Author: Kevin Wright
 Maintainer: Kevin Wright <kw.stat@gmail.com>
 Description: Datasets from books and papers related to agriculture.
@@ -13,17 +13,16 @@ Depends:
     reshape2
 Suggests:
     agricolae,
-    aod,
     car,
+    coin,
+    corrgram,
     equivalence,
-    exactRankTests,
     FrF2,
     gam,
     gstat,
-    hglm,
     HH,
     latticeExtra,
-    lme4,
+    lme4 (>= 1.0),
     mapproj,
     maps,
     MASS,
@@ -31,6 +30,8 @@ Suggests:
     mgcv,
     nlme,
     pls,
+    sp,
     survival,
+    vcd
 License: GPL-2
 LazyData: yes

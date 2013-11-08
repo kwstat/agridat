@@ -7,7 +7,7 @@
 \description{
   Strawberry yields in RCB experiment
 }
-\usage{data(mead.strawberry)}
+
 \format{
   A data frame with 32 observations on the following 5 variables.
   \describe{
@@ -43,8 +43,10 @@
 
 }
 \examples{
+
 dat <- mead.strawberry
 dat$sub <- ifelse(is.element(dat$gen, c('G', 'V', 'R1', 'F')),
               "S1","S2")
-desplot(yield~col*row, dat, text=gen, cex=1, out1=block, out2=sub)
+desplot(yield~col*row, dat, text=gen, cex=1, out1=block, out2=sub,
+        main="mead.strawberry")
 }

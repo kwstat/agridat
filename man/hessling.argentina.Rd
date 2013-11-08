@@ -7,7 +7,7 @@
 \description{
   Relation between wheat yield and weather in Argentina
 }
-\usage{data(hessling.argentina)}
+
 \format{
   A data frame with 30 observations on the following 15 variables.
   \describe{
@@ -45,8 +45,8 @@ dat <- hessling.argentina
 # Fig 1 of Hessling.  Use avg Aug-Nov temp to predict yield
 dat <- transform(dat, avetmp=(t08+t09+t10+t11)/4) # Avg temp
 m0 <- lm(yield ~ avetmp, dat)
-plot(yield~year, dat, ylim=c(200,1400), type='l',
-main="Observed (black) and predicted yield (blue)")
+plot(yield~year, dat, ylim=c(100,1500), type='l',
+main="hessling.argentina: observed (black) and predicted yield (blue)")
 lines(fitted(m0)~year, dat, col="blue")
 
 # A modern, PLS approach

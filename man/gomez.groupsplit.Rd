@@ -7,7 +7,7 @@
 \description{
   Group balanced split-plot design
 }
-\usage{data(gomez.groupsplit)}
+
 \format{
   A data frame with 270 observations on the following 7 variables.
   \describe{
@@ -35,7 +35,8 @@
 dat <- gomez.groupsplit
 
 # Gomez figure 3.10.  Obvious fert and group effects
-desplot(group~x*y, dat, out1=rep, col=fert, text=gen)
+desplot(group~x*y, dat, out1=rep, col=fert, text=gen,
+        main="gomez.groupsplit")
 
 # Gomez table 3.19 (not partitioned by group)
 m1 <- aov(yield ~ fert*group + gen:group + fert:gen:group + Error(rep/fert/group), data=dat)

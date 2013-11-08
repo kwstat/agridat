@@ -11,12 +11,12 @@ Rice split-split plot experiment
   practice as the sub-plot, and rice variety as the sub-sub plot.
 }
 
-\usage{data(gomez.splitsplit)}
+
 
 \format{
   A data frame with 135 observations on the following 7 variables.
   \describe{
-    \item{\code{rep}}{Replicate factor, 3 levels}
+    \item{\code{rep}}{Blocking factor, 3 levels}
     \item{\code{nitro}}{Nitrogen fertilizer, in kilograms/hectare}
     \item{\code{management}}{Plot management}
     \item{\code{gen}}{Variety of rice}
@@ -38,12 +38,14 @@ Rice split-split plot experiment
 dat <- gomez.splitsplit
 dat$nf <- factor(dat$nitro)
 
-desplot(yield~x*y, dat)
-desplot(nf~x*y, dat, out1=rep, col=management, num=gen, cex=1)
+desplot(yield~x*y, dat, main="gomez.splitsplit")
+desplot(nf~x*y, dat, out1=rep, col=management, num=gen, cex=1,
+        main="gomez.splitsplit")
 
 if(require(HH)){
 position(dat$nf) <- c(0,50,80,110,140)
 interaction2wt(yield~rep+nf+management+gen, data=dat,
+               main="gomez.splitsplit",
                relation=list(x="free", y="same"),
                rot=c(90,0), xlab="",
                par.strip.text.input=list(cex=.7))
@@ -52,7 +54,7 @@ interaction2wt(yield~rep+nf+management+gen, data=dat,
 # AOV.  Gomez page 144-153
 m0 <- aov(yield~ nf * management * gen + Error(rep/nf/management),
          data=dat)
-summary(m0) # Compare to Gomez, p. 153.
+summary(m0) # Similar to Gomez, p. 153.
 
 }
 

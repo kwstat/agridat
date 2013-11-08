@@ -8,7 +8,7 @@ Birth weight and weaning weight of Dorper x Red Maasi lambs
   Birth weight and weaning weight of 882 lambs from a partial diallel
   cross of Dorper and Red Maasi breeds.
 }
-\usage{data(ilri.sheep)}
+
 \format{
   A data frame with 882 observations on the following 12 variables.
   \describe{
@@ -33,7 +33,7 @@ Birth weight and weaning weight of Dorper x Red Maasi lambs
   Kenya. A susceptible breed, the Dorper,
   was chosen to provide a direct comparison with the Red Maasai. The
   Dorper is well-adapted to this area and is also larger than the Red
-  Maasai, and this makes these sheep attractive to farmers. 
+  Maasai, and this makes these sheep attractive to farmers.
 
   Throughout six years from 1991 to 1996 Dorper (D), Red Maasai (R) and
   Red Maasai x Dorper crossed ewes were mated to Red Maasai and Dorper
@@ -45,10 +45,10 @@ Birth weight and weaning weight of Dorper x Red Maasi lambs
 }
 \source{
   Case Study 4: Mixed model analysis for the estimation of components of genetic
-  variation in lamb weaning weight. International Livestock Research Institute.  
+  variation in lamb weaning weight. International Livestock Research Institute.
   \url{http://www.ilri.org/biometrics/CS/case\%20study\%204/case\%20study\%204.1.htm}
     Retrieved Dec 2011.
-    
+
   Used under Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License.
 }
 \references{
@@ -69,22 +69,25 @@ dat <- within(dat, {
   dl <- ifelse(dl > 7, 8, dl)
   dq <- dl^2
 })
-  
+
 dat <- subset(dat, !is.na(weanage))
 
 # EDA
-require("lattice")
-bwplot(weanwt ~ year, dat) # Year effect
-bwplot(weanwt ~ factor(dl), dat) # Dam age effect
-bwplot(weanwt ~ gen, dat) # Genotype differences
-xyplot(weanwt ~ weanage, dat, type=c('p','smooth')) # Age covariate
+require(lattice)
+bwplot(weanwt ~ year, dat, main="ilri.sheep", xlab="year") # Year effect
+bwplot(weanwt ~ factor(dl), dat,
+       main="ilri.sheep", xlab="Dam age", ylab="Wean weight") # Dam age effect
+bwplot(weanwt ~ gen, dat,
+       main="ilri.sheep", xlab="Genotype", ylab="Wean weight") # Genotype differences
+xyplot(weanwt ~ weanage, dat, type=c('p','smooth'),
+       main="ilri.sheep", xlab="Wean age", ylab="Wean weight") # Age covariate
 
 # case study page 4.18
 lm1 <- lm(weanwt ~ year + sex + weanage + dl + dq + ewegen + ramgen, data=dat)
 summary(lm1)
 anova(lm1)
 
-require("lme4")
+if(require(lme4)){
 lme1 <- lmer(weanwt ~ year + sex + weanage + dl + dq + ewegen + ramgen +
              (1|ewe) + (1|ram), data=dat)
 print(lme1, corr=FALSE)
@@ -93,9 +96,10 @@ lme2 <- lmer(weanwt ~ year + sex + weanage + dl + dq + ewegen + ramgen +
 lme3 <- lmer(weanwt ~ year + sex + weanage + dl + dq + ewegen + ramgen +
              (1|ram), data=dat)
 anova(lme1, lme2,  lme3)
+}
 
 \dontrun{
-  require("asreml")
+require(asreml)
 # case study page 4.20
 m1 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
              data=dat)

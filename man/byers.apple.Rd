@@ -7,7 +7,7 @@
 \description{
   Measurements of the diameters of apples
 }
-\usage{data(byers.apple)}
+
 \format{
   A data frame with 480 observations on the following 6 variables.
   \describe{
@@ -39,7 +39,8 @@
 dat <- byers.apple
 
 library(lattice)
-xyplot(diameter ~ time | factor(appleid), data=dat, type=c('p','l'))
+xyplot(diameter ~ time | factor(appleid), data=dat, type=c('p','l'),
+       main="byers.apple")
 
 # Overall fixed linear trend, plus random intercept/slope deviations
 # for each apple.  Observations within each apple are correlated.
@@ -49,5 +50,10 @@ m1 <- lme(diameter ~ 1 + time, data=dat,
           cor = corAR1(0, form=~ time|appleid),
           na.action=na.omit)
 VarCorr(m1)
+## appleid = pdLogChol(time)
+##             Variance     StdDev     Corr
+## (Intercept) 7.353789e-03 0.08575423 (Intr)
+## time        3.632377e-05 0.00602692 0.83
+## Residual    4.555256e-04 0.02134305
 }
 \keyword{datasets}

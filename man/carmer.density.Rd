@@ -7,7 +7,7 @@
 \description{
   Maize yield-density model.
 }
-\usage{data(carmer.density)}
+
 \format{
   A data frame with 32 observations on the following 3 variables.
   \describe{
@@ -32,26 +32,41 @@
 }
 
 \examples{
-data(carmer.density)
 
 dat <- carmer.density
 dat$gen <- factor(dat$gen, levels=c('Hy2x0h7','WF9xC103','R61x187-2',
                              'WF9x38-11','WF9xB14','C103xB14',
                              '0h43xB37','WF9xH60'))
-xyplot(yield~pop|gen, dat, pch=16, as.table=TRUE)
+xyplot(yield~pop|gen, dat, pch=16, as.table=TRUE,
+       main="carmer.density")
 
+# Separate analysis for each hybrid
 # Model: y = x * a * k^x.  Table 1 of Carmer and Jackobs.
 out <- data.frame(a=rep(NA,8), k=NA)
+preds <- NULL
 rownames(out) <- levels(dat$gen)
+newdat <- data.frame(pop=seq(2,8,by=.1))
 for(i in levels(dat$gen)){
   print(i)
   dati <- subset(dat, gen==i)
   mi <- nls(yield ~ pop * a * k^pop, data=dati, start=list(a=10,k=1))
   out[i, ] <- mi$m$getPars()
+  # Predicted values
+  pi <- cbind(gen=i, newdat, pred= predict(mi, newdat=newdat))
+  preds <- rbind(preds, pi)
 }
 # Optimum plant density is -1/log(k)
 out$pop.opt <- -1/log(out$k)
 round(out, 3)
+
+require(latticeExtra)
+xyplot(yield~pop|gen, dat, pch=16, as.table=TRUE,
+       main="carmer.density models") +
+xyplot(pred~pop|gen, preds, col='black', as.table=TRUE,
+       type='l')
+
+# A better approach might be to use nlme to fit an overall fixed-effect
+# model with random deviations for each hybrid.
 
 }
 \keyword{datasets}

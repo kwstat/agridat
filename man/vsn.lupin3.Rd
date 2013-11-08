@@ -7,7 +7,7 @@
 \description{
   Early generation lupin trial with 3 sites, 330 test lines, 6 check lines.
 }
-\usage{data(vsn.lupin3)}
+
 \format{
   A data frame with 1236 observations on the following 5 variables.
   \describe{
@@ -42,9 +42,9 @@ dat <- within(dat, {
   gen=factor(gen)
 })
 
-desplot(yield~ col*row|site, dat)
+desplot(yield~ col*row|site, dat, main="vsn.lupin3")
 desplot(check~ col*row|site, dat,
-        main="Check plot placement") # Site 1 & 2 used same randomization
+        main="vsn.lupin3: check plot placement") # Site 1 & 2 used same randomization
 
 \dontrun{
 require("asreml")
@@ -86,7 +86,7 @@ m3 <- asreml(yield ~ site + check:site, data=dat,
              + at(site,3):id(colf):ar1(rowf))
 m3$loglik
 
-# Unstructured genetic variance matrix 
+# Unstructured genetic variance matrix
 m4 <- asreml(yield ~ site + check:site, data=dat,
              random = ~ at(site):colf + at(site,3):rowf + us(site):test,
              rcov = ~ at(site,c(1,2)):ar1(colf):ar1(rowf)

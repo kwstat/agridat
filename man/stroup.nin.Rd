@@ -6,7 +6,7 @@
   The yield data from an advanced Nebraska Intrastate Nursery (NIN) breeding
   trial conducted at Alliance, Nebraska, in 1988/89.
 }
-\usage{data(stroup.nin)}
+
 \format{
   \describe{
     \item{gen}{Genotype factor, 56 levels}
@@ -19,7 +19,7 @@
 
 \details{
   Four replicates of 19 released cultivars, 35 experimental wheat lines
-  and 2 additional triticale lines were laid out in a 22 
+  and 2 additional triticale lines were laid out in a 22
   row by 11 column rectangular array of plots; the varieties were
   allocated to the plots using a randomised complete block (RCB) design.
   The blocks are not rectangular but partially overlap columns.
@@ -32,8 +32,8 @@
 
   These data were first analyzed by Stroup et al (1994) and subsequently
   by Littell et al (1996, page 321), Pinheiro and Bates (2000, page 260),
-  and Butler et al (2004).  
-  
+  and Butler et al (2004).
+
   This version of the data expresses
   the yield in bushels per acre. The results published in Stroup et al
   (1994) are expressed in kg/ha.  For wheat, 1 bu/ac = 67.25 kg/ha.
@@ -99,7 +99,7 @@ text(eff$ranblock, eff$spat, rownames(eff), cex=0.5)
 abline(0,1)
 
 \dontrun{
-require("asreml")
+require(asreml)
 
 # RCB analysis
 dat.rcb <- asreml(yield ~ gen, random = ~ rep, data=dat,
@@ -114,6 +114,7 @@ pred.sp <- predict(dat.sp,classify="gen")$predictions
 # Compare the estimates from the two methods
 plot(pred.rcb$pvals[,2],pred.sp$pvals[,2], xlim=c(16,37), ylim=c(16,37),
   xlab="RCB",ylab="AR1xAR1",type='n')
+title("stroup.nin: Comparison of predicted values")
 text(pred.rcb$pvals[,2],pred.sp$pvals[,2],
      as.character(pred.rcb$pvals[,1]),cex=0.5)
 abline(0,1)

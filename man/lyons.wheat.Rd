@@ -7,13 +7,13 @@
 \description{
   Yield of winter wheat at 12 sites in 4 years.
 }
-\usage{data(lyons.wheat)}
+
 \format{
   A data frame with 48 observations on the following 3 variables.
   \describe{
-    \item{\code{loc}}{Loc factor, 12 levels}
-    \item{\code{year}}{Year, numeric}
-    \item{\code{yield}}{Yield (kg)}
+    \item{\code{loc}}{loc factor, 12 levels}
+    \item{\code{year}}{year, numeric}
+    \item{\code{yield}}{yield (kg)}
   }
 }
 \details{
@@ -28,8 +28,10 @@
   \emph{Principles of multivariate analysis}. Oxford University Press.
 }
 \examples{
+
 dat <- lyons.wheat
 xyplot(yield~factor(year), dat, group=loc,
+  main="lyons.wheat",
   auto.key=list(columns=4), type=c('p','l'))
 }
 \keyword{datasets}

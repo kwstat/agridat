@@ -6,15 +6,15 @@
 }
 \description{
   Average monthly soil temperature near Zurich, at seven depths,
-  averaged over four years.  
+  averaged over four years.
 }
-\usage{data(lambert.soiltemp)}
+
 \format{
   A data frame with 84 observations on the following 3 variables.
   \describe{
     \item{\code{month}}{Month as a number}
     \item{\code{depth}}{Depth in soil (feet)}
-    \item{\code{temp}}{Temperature (du Crest)}
+    \item{\code{temp}}{Temperature (the units are "du Crest")}
   }
 }
 \details{
@@ -28,7 +28,7 @@
   scale.  If you can read German, use the Google books link to see if
   you can figure out why.)  Even the scale on Lambert's own graph
   doesn't match the data.
-  
+
   Greater depths show less variation and a greater lag in temperature
   responsiveness to the air temperature.
 
@@ -51,6 +51,7 @@ dat <- lambert.soiltemp
 dat <- rbind(dat, transform(dat, month=month-12),
              transform(dat, month=month+12))
 xyplot(temp ~ month, dat, group=depth, type=c('p','smooth'),
+       main="lambert.soiltemp"
        xlim=c(-3,15), ylab="Soil temperature (du Crest) at depth (feet)",
        span=.2, auto.key=list(columns=4))
 

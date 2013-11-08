@@ -7,7 +7,7 @@
 \description{
   Daily weight, feed, egg measurements for a broiler
 }
-\usage{data(zuidhof.broiler)}
+
 \format{
   A data frame with 59 observations on the following 6 variables.
   \describe{
@@ -22,7 +22,7 @@
 \details{
   Using graphs like the one in the examples section, the authors
   discovered that a drop in body weight commonly occurs around the time
-  of first egg production. 
+  of first egg production.
 }
 \source{
   Martin J. Zuidhof and Robert A. Renema and Frank E. Robinson, (2008).
@@ -34,20 +34,21 @@
 \examples{
 dat <- zuidhof.broiler
 
-dat <- transform(dat, age=age/7)
+dat <- transform(dat, age=age/7) # Change days into weeks
 
 # Reproducing figure 1 of Zuidhof et al.
 
 # Plot using left axis
 op <- par(mar=c(5,4,4,4))
-plot(bw~age, dat, xlab="Age (wk)", ylab="BW (g)", main="Cage 1", 
+plot(bw~age, dat, xlab="Age (wk)", ylab="BW (g)",
+     main="zuidhof.broiler, cage 1",
      xlim=c(20,32), ylim=c(0,4000), pch=20)
 lines(targetbw~age, subset(dat, !is.na(targetbw)), col="black")
 
 # Now plot using the right axis
 par(new=TRUE)
 plot(adfi~age, subset(dat, !is.na(adfi)),
-     xlab="", ylab="", xlim=c(20,32), xaxt="n",yaxt="n", 
+     xlab="", ylab="", xlim=c(20,32), xaxt="n",yaxt="n",
      ylim=c(-50,175), col="red", type="s", lty=2)
 axis(4, at=c(-50,-25,0,25,50,75,100,125,150,175), col="red")
 mtext("Weight (g)", side=4, line=2)

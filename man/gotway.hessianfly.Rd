@@ -7,7 +7,7 @@
 \description{
   Hessian fly damage to wheat varities
 }
-\usage{data(gotway.hessianfly)}
+
 \format{
   \describe{
     \item{\code{block}}{block factor, 4 levels}
@@ -23,7 +23,7 @@
 }
 \source{
   C. A. Gotway and W. W. Stroup.
-  A Generalized Linear Model Approach to Spatial Data Analysis and Prediction 
+  A Generalized Linear Model Approach to Spatial Data Analysis and Prediction
   \emph{Journal of Agricultural, Biological, and Environmental
     Statistics}, 2, 157-178.
 }
@@ -33,13 +33,17 @@
 \examples{
 dat <- gotway.hessianfly
 dat$prop <- dat$y / dat$n
-desplot(prop~long*lat, dat, out1=block, text=gen, cex=1, shorten='no')
+desplot(prop~long*lat, dat, out1=block, text=gen, cex=1, shorten='no',
+        main="gotway.hessianfly")
+
 
 # Block random.  See Glimmix manual, output 1.18.
 # Note: (Different parameterization)
-require('lme4')
-l2 <- lmer(cbind(y, n-y) ~ gen + (1|block), data=dat, family=binomial)
+if(require(lme4)){
+l2 <- glmer(cbind(y, n-y) ~ gen + (1|block), data=dat, family=binomial,
+   control=glmerControl(check.nlev.gtr.1="ignore"))
 coef(l2)
+}
 
 \dontrun{
 require('asreml')
@@ -47,8 +51,6 @@ a2 <- asreml(prop ~ gen, data=dat, random=~block,
              family=asreml.binomial(),
              weights=n)
 coef(a2)
-
-# To do: Add spatial.  Throws an error in asreml
 
 }
 

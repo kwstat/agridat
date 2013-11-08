@@ -7,7 +7,7 @@
 \description{
   Yields for a trial at Slate Hall Farm in 1978.
 }
-\usage{data(gilmour.slatehall)}
+
 \format{
   A data frame with 150 observations on the following 5 variables.
   \describe{
@@ -34,7 +34,8 @@
 \examples{
 
 dat <- gilmour.slatehall
-desplot(yield ~ col * row, dat, num=gen, out1=rep)
+
+desplot(yield ~ col * row, dat, num=gen, out1=rep, main="gilmour.slatehall")
 
 \dontrun{
 # Model 4 of Gilmour et al 1997

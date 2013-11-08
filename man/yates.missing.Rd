@@ -7,7 +7,7 @@
 \description{
   Potato factorial experiment with missing values
 }
-\usage{data(yates.missing)}
+
 \format{
   A data frame with 80 observations on the following 3 variables.
   \describe{
@@ -33,10 +33,12 @@
   2nd Edition, page 212.
 }
 \examples{
-require("reshape2")
+
 dat <- yates.missing
+
+require("reshape2")
 mat0 <- acast(dat[, c('trt','block','y')], trt~block,
-               id.var=c('trt','block'))
+               id.var=c('trt','block'), value.var='y')
 
 # Use lm to estimate missing values.  The estimated missing values
 # are the same as in Yates (1933)
@@ -44,7 +46,7 @@ m1 <- lm(y~trt+block, dat)
 dat$pred <- predict(m1, new=dat[, c('trt','block')])
 dat$filled <- ifelse(is.na(dat$y), dat$pred, dat$y)
 mat1 <- acast(dat[, c('trt','block','pred')], trt~block,
-               id.var=c('trt','block'))
+               id.var=c('trt','block'), value.var='pred')
 
 \dontrun{
 # Another method to estimate missing values via PCA
@@ -53,7 +55,7 @@ m2 <- pca(mat0, method="nipals", center=FALSE, nPcs=3)
 mat2 <- m2@scores %*% t(m2@loadings)
 
 # Compare
-ord <- c("O","N","K","P","NK","NP","KP","NKP")
+ord <- c("0","N","K","P","NK","NP","KP","NKP")
 print(mat0[ord,], na.print=".")
 round(mat1[ord,] ,2)
 round(mat2[ord,] ,2)

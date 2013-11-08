@@ -7,7 +7,7 @@
 \description{
   Asparagus yields for different cutting treatments, in 4 years.
 }
-\usage{data(snedecor.asparagus)}
+
 \format{
   A data frame with 64 observations on the following 4 variables.
   \describe{
@@ -28,10 +28,9 @@
 \references{
   Mick O'Neill, 2010. \emph{A Guide To Linear Mixed Models In An
     Experimental Design Context}.
-  STatistical Advisory & Training Service Pty Ltd.
+  Statistical Advisory & Training Service Pty Ltd.
 }
 \examples{
-data(snedecor.asparagus)
 
 dat <- snedecor.asparagus
 
@@ -43,8 +42,9 @@ dotplot(yield ~ trt|year, data=dat,
         main="Yield in each year for different cutting treatments")
 
 # Split-plot
-require(lme4)
+if(require(lme4)){
 m1 <- lmer(yield ~ trt + year + trt:year + (1|block) + (1|block:trt), data=dat)
+}
 
 \dontrun{
 # Split-plot with asreml
@@ -55,7 +55,7 @@ summary(m2)$varcomp
 # Antedependence with asreml.  See O'Neill (2010).
 dat <- dat[order(dat$block, dat$trt), ]
 m3 <- asreml(yield ~ year * trt, data=dat,
-             random = ~ block, 
+             random = ~ block,
              rcov = ~ block:trt:ante(year,1))
 # Extract the covariance matrix for years and convert to correlation
 covmat <- diag(4)

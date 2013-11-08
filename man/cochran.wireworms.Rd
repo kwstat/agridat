@@ -7,7 +7,7 @@
 \description{
   Wireworms controlled by fumigants in a latin square
 }
-\usage{data(cochran.wireworms)}
+
 \format{
   A data frame with 25 observations on the following 4 variables.
   \describe{
@@ -35,8 +35,10 @@
 
 dat <- cochran.wireworms
 
+# desplot(worms ~ col*row, data=dat, text=trt, cex=1)
+
 # Trt K is effective, but not the others.  Really, this says it all.
-bwplot(worms ~ trt, dat)
+bwplot(worms ~ trt, dat, main="cochran.wireworms")
 
 # Snedecor and Cochran do ANOVA on sqrt(x+1).
 dat <- transform(dat, rowf=factor(row), colf=factor(col))
@@ -48,9 +50,11 @@ m2 <- glm(worms ~ trt + rowf + colf, data=dat, family="poisson")
 anova(m2)
 
 # GLM with random blocking.
-require(lme4)
-m3 <- lmer(worms ~ -1 + trt + (1|rowf) + (1|colf),
+if(require(lme4)){
+m3 <- glmer(worms ~ -1 + trt + (1|rowf) + (1|colf),
            data=dat, family="poisson")
-summary(m3)
+           summary(m3)
+}
+
 }
 \keyword{datasets}

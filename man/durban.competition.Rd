@@ -7,7 +7,7 @@
 \description{
   Sugar beet yields with competition effects
 }
-\usage{data(durban.competition)}
+
 \format{
   A data frame with 114 observations on the following 5 variables.
   \describe{
@@ -20,7 +20,7 @@
 }
 \details{
   The trial was conducted in 1979.
-  
+
   Single-row plots, 12 m long, 0.5 m between rows.  Each block is made
   up of all 36 genotypes laid out side by side.  Guard/border plots are
   at each end.  Root yields were collected.
@@ -48,13 +48,15 @@ dat <- durban.competition
 # Check that genotypes were balanced across wheel tracks.
 with(dat, table(gen,wheel))
 
-desplot(yield ~ col*block, dat, out1=block, text=gen, col=wheel)
+desplot(yield ~ col*block, dat, out1=block, text=gen, col=wheel,
+        main="durban.competition")
 
 # Calculate residual after removing block/genotype effects
 m1 <- lm(yield ~ gen + block, data=dat)
 dat$res <- resid(m1)
 
-desplot(res ~ col*block, dat, out1=block, text=gen, col=wheel)
+desplot(res ~ col*block, dat, out1=block, text=gen, col=wheel,
+        main="durban.competition - residuals")
 
 # Calculate mean of neighboring plots
 dat$comp <- NA
@@ -64,5 +66,6 @@ dat$comp[79:112] <- ( dat$yield[78:111] + dat$yield[80:113] ) / 2
 
 # Demonstrate the competition effect
 # Competitor plots have low/high yield -> residuals are negative/positive
-xyplot(res~comp, dat, type=c('p','r'))
+xyplot(res~comp, dat, type=c('p','r'), main="durban.competition",
+       xlab="Average yield of neighboring plots", ylab="Residual")
 }

@@ -8,7 +8,7 @@
   Yield for two varieties of barley grown at 51 locations in the years
   1901 to 1906.
 }
-\usage{data(student.barley)}
+
 \format{
   A data frame with 102 observations on the following 7 variables.
   \describe{
@@ -33,7 +33,7 @@
   The phrase "analysis of variance" first appears in the abstract (only)
   of a 1918 paper by Fisher.  The 1923 paper by Student contained the
   first analysis of variance table (but not for this data).
-  
+
   One stone is 14 pounds.
   To convert lb/ac to tonnes/ha, multiply by 0.00112085116
 
@@ -43,23 +43,24 @@
   maximum income for Goldthorpe is 220 shillings (11 pounds, 0
   shillings) in 1901 at Thurles.  Also, the results of Kempton could not
   be reproduced exactly, perhaps due to rounding or the conversion
-  factor that was used. 
+  factor that was used.
 }
 \source{
-  Student. 1923. On Testing Varieties of Cereals. \emph{Biometrika}, 15,
-  271--293. 
+  Student. 1923. On Testing Varieties of Cereals.
+  \emph{Biometrika}, 15, 271--293.
 }
 \references{
-  R A Kempton and P N Fox, 1997, \emph{Statistical Methods for Plant
-  Variety Evaluation}.
+  R A Kempton and P N Fox, 1997.
+  \emph{Statistical Methods for Plant Variety Evaluation}.
 }
+
 \examples{
 dat <- student.barley
 dat$year <- factor(dat$year)
 dat$income <- NULL
 
 # convert to tons/ha
-dat <- transform(dat, yield=yield*14 * 0.00112085116) 
+dat <- transform(dat, yield=yield*14 * 0.00112085116)
 
 # Define 'loc' the way that Kempton does
 dat$loc <- rep("",nrow(dat))
@@ -87,8 +88,9 @@ cor(d2$Archer,d2$Goldthorpe)
 # Kempton Table 9.6b
 if(require(lme4)){
 m2 <- lmer(yield~1 + (1|loc) + (1|year) +
-             (1|loc:year) + (1|gen:loc) + (1|gen:year), data=dat)
-(m2)
+            (1|loc:year) + (1|gen:loc) + (1|gen:year), data=dat,
+          control=lmerControl(check.nobs.vs.rankZ="ignore"))
 }
+
 }
 
