@@ -47,11 +47,17 @@ anova(m1)
 # Block random (combined inter-intra block analysis)
 if(require(lme4)){
 m2 <- lmer(yield ~ 0 + gen + rep + (1|rep:block), dat)
+
 anova(m2)
-print(VarCorr(m2), comp=c("Variance","Std.Dev."))
-## Groups    Name        Variance Std.Dev.
-## rep:block (Intercept) 0.061945 0.24889
-## Residual              0.085225 0.29193
+## Analysis of Variance Table
+##     Df Sum Sq Mean Sq  F value
+## gen 24 380.43 15.8513 185.9942
+## rep  2   1.57  0.7851   9.2123
+
+vc(m2)
+##     groups        name variance stddev
+##  rep:block (Intercept)  0.06194 0.2489
+##  Residual               0.08522 0.2919
 
 # Variety means.  John and Williams table 7.5.  Slight, constant
 # difference for each method as compared to John and Williams.

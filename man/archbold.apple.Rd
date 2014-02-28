@@ -62,14 +62,16 @@ desplot(spacing~row*pos, dat, col=stock, cex=1, num=gen,
         main="archbold.apple")
 
 if(require(lme4)){
+
 m1 <- lmer(yield ~ -1 + trt + (1|rep/mp/sp), dat)
-print(VarCorr(m1), comp=c("Variance","Std.Dev.")) # Variances/means on page 59
-## Random effects:
-##  Groups      Name        Variance Std.Dev.
-##  sp:(mp:rep) (Intercept)  193.31  13.903
-##  mp:rep      (Intercept)  203.78  14.275
-##  rep         (Intercept)  197.32  14.047
-##  Residual                1015.28  31.863
+
+vc(m1)  # Variances/means on page 59
+##      groups        name variance stddev
+## sp:(mp:rep) (Intercept)    193.3  13.9
+## mp:rep      (Intercept)    203.8  14.28
+## rep         (Intercept)    197.3  14.05
+## Residual                  1015    31.86
+
 }
 
 ## library(HH)

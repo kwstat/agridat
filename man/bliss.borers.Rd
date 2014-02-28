@@ -68,7 +68,7 @@ xx <- 0:26
 yy <- dnbinom(0:26, mu=3.17, size=1.47)*120 # estimates are from glm.nb
 library(latticeExtra)
 histogram(~borers, dd, type='count', subset=treat=='T2',
-          main="Treatment 2 observed and expected",
+          main="bliss.borers trt T2 observed and expected",
           breaks=0:27-.5) +
 xyplot(yy~xx, col='navy', type='b')
 
@@ -76,7 +76,8 @@ xyplot(yy~xx, col='navy', type='b')
 # "Poissonness"-type plot
 library(vcd)
 dat2 <- droplevels(subset(dat, treat=='T2'))
-distplot(dat2$borers, type = "nbinomial")
+distplot(dat2$borers, type = "nbinomial",
+main="bliss.borers neg binomialness plot")
 # Better way is a rootogram
 g1 <- goodfit(dat2$borers, "nbinomial")
 plot(g1, main="bliss.borers - Treatment 2")

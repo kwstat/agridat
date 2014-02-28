@@ -66,7 +66,7 @@ Z <- vargas.txe$yields
 Z <- sweep(Z, 1, rowMeans(Z))
 Z <- sweep(Z, 2, colMeans(Z)) # Double-centered like AMMI
 # Vargas figure 1
-biplot(prcomp(Z, scale.=FALSE))
+biplot(prcomp(Z, scale.=FALSE), main="vargas.txe")
 
 \dontrun{
 

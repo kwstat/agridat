@@ -53,17 +53,21 @@ desplot(yield~col+row, dat, aspect=125/180, flip=TRUE,
 # Preece (1981) found the last digits have an interesting distribution.
 dig <- substring(dat$yield, nchar(dat$yield))
 dig <- as.numeric(dig)
-hist(dig, breaks=0:10-.5, main="Histogram of last digit")
+hist(dig, breaks=0:10-.5, xlab="Last digit",
+     main="wiebe.wheat.uniformity - histogram of last digit")
 table(dat$col, dig) # Table 3 of Preece
 
 # Median yields of rows/cols show obvious trends
-plot(tapply(dat$yield, dat$row, median), xlab="Row", ylab="Yield")
-plot(tapply(dat$yield, dat$col, median), xlab="Column", ylab="Yield")
+plot(tapply(dat$yield, dat$row, median), xlab="Row", ylab="Yield",
+      main="wiebe.wheat.uniformity")
+plot(tapply(dat$yield, dat$col, median), xlab="Column", ylab="Yield",
+      main="wiebe.wheat.uniformity")
 # Spatial trends are obvious
-xyplot(yield~col, dat, type=c('p','smooth'))
+xyplot(yield~col, dat, type=c('p','smooth'), main="wiebe.wheat.uniformity")
 
 # Loess
 m3 <- loess(yield~row+col, dat)
-plot(fitted(m3), resid(m3), ylim=c(-300,300))
+plot(fitted(m3), resid(m3), ylim=c(-300,300),
+     main="wiebe.wheat.uniformity")
 }
 \keyword{datasets}

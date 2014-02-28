@@ -13,10 +13,19 @@
 }
 \description{
   Yields and acres harvested in each state for the major agricultural
-  crops, from approximately 1900 to 2011.  Crops include: barley, corn,
-  cotton, hay, rice, sorghum, soybeans, wheat.
+  crops in the United States, from approximately 1900 to 2011.
+  Crops include: barley, corn, cotton, hay, rice, sorghum, soybeans, wheat.
 }
-
+\usage{
+  nass.barley
+  nass.corn
+  nass.cotton
+  nass.hay
+  nass.sorghum
+  nass.wheat
+  nass.rice
+  nass.soybean
+}
 \format{
   \describe{
     \item{\code{year}}{Year, numeric}
@@ -30,6 +39,9 @@
 
   Yields are in bushels/acre, except: cotton pounds/acre, hay tons/acre,
   rice pounds/acre.
+
+  Each crop is in a separate dataset: nass.barley, nass.corn, nass.cotton,
+  nass.hay, nass.sorghum, nass.wheat, nass.rice, nass.soybean.
 }
 \source{
   United States Department of Agriculture,

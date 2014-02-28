@@ -11,10 +11,10 @@
 \format{
   A data frame with 500 observations on the following 4 variables.
   \describe{
-    \item{\code{row}}{Row}
-    \item{\code{col}}{Column}
-    \item{\code{grain}}{Grain yield, pounds}
-    \item{\code{straw}}{Straw yield, pounds}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
+    \item{\code{grain}}{grain yield, pounds}
+    \item{\code{straw}}{straw yield, pounds}
   }
 }
 \details{
@@ -37,9 +37,10 @@ The 'spdep' package includes the grain yields
 dat <- mercer.wheat.uniformity
 
 require('lattice')
-desplot(grain ~ col*row, dat, main="mercer.wheat.uniformity")
+desplot(grain ~ col*row, dat, main="mercer.wheat.uniformity - grain yield")
 
-densityplot(~grain, data=dat, main="mercer.wheat.uniformity")
+densityplot(~grain, data=dat, main="mercer.wheat.uniformity",
+xlab="grain yield")
 
 xyplot(straw ~ grain, data=dat, type=c('p','r'), main="mercer.wheat.uniformity - regression")
 
@@ -66,6 +67,6 @@ spplot(dat.sp, zcol = "grain", cuts=8,
 
 # variogram
 vg <- variogram(grain ~ 1, dat.sp, cutoff = plot.wid * 10, width = plot.wid)
-plot(vg, plot.numbers = TRUE)
+plot(vg, plot.numbers = TRUE, main="mercer.wheat.uniformity")
 }
 

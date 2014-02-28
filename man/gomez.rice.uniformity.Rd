@@ -56,11 +56,12 @@ tab <- index.smith(dmat, col="red")$uniformity
 tab <- data.frame(tab)
 
 # Gomez figure 12.2
-par(mar=c(5,4,4,4)+.1)
+op <- par(mar=c(5,4,4,4)+.1)
 m1 <- nls(Vx ~ 9041/Size^b, data=tab, start=list(b=1))
 plot(Vx ~ Size, tab, xlab="Plot size, m^2")
 lines(fitted(m1) ~ tab$Size, col='red')
 axis(4, at=tab$Vx, labels=tab$CV)
 mtext("CV", 4, line=2)
+par(op)
 }
 }

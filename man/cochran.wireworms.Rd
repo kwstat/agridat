@@ -14,7 +14,7 @@
     \item{\code{row}}{Row}
     \item{\code{col}}{Column}
     \item{\code{trt}}{Fumigant treatment, 5 levels}
-    \item{\code{worms}}{Count of wireworms}
+    \item{\code{worms}}{Count of wireworms per plot}
   }
 }
 \details{
@@ -28,6 +28,10 @@
   \emph{Empire Journal of Experimental Agriculture}, 6, 157--175.
 }
 \references{
+  W. Cochran (1940). The analysis of variance when experimental errors
+  follow the Poisson or binomial laws.
+  \emph{The Annals of Mathematical Statistics}, 11, 335-347.
+
   G W Snedecor and W G Cochran, 1980. \emph{Statistical Methods},
   Iowa State University Press.  Page 288.
 }
@@ -38,7 +42,7 @@ dat <- cochran.wireworms
 # desplot(worms ~ col*row, data=dat, text=trt, cex=1)
 
 # Trt K is effective, but not the others.  Really, this says it all.
-bwplot(worms ~ trt, dat, main="cochran.wireworms")
+bwplot(worms ~ trt, dat, main="cochran.wireworms", xlab="Treatment")
 
 # Snedecor and Cochran do ANOVA on sqrt(x+1).
 dat <- transform(dat, rowf=factor(row), colf=factor(col))
@@ -53,7 +57,7 @@ anova(m2)
 if(require(lme4)){
 m3 <- glmer(worms ~ -1 + trt + (1|rowf) + (1|colf),
            data=dat, family="poisson")
-           summary(m3)
+summary(m3)
 }
 
 }

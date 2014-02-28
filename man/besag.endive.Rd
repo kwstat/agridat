@@ -39,7 +39,6 @@
 }
 \examples{
 
-
 dat <- besag.endive
 
 # Incidence map.  Figure 2 of Friel and Pettitt
@@ -48,36 +47,38 @@ desplot(disease~col*row, dat, col.regions=c('lightgray','black'),
 
 \dontrun{
 
-  # Besag 2000 "An Introduction to Markov Chain Monte Carlo" suggested
-  # that the autologistic model is not a very good fit for this data.
-  # We try it anyway.  No idea if this is correct or how to interpret...
-  require(ngspatial)
-  A = adjacency.matrix(179,14)
-  X = cbind(x=dat$col, y=dat$row)
-  Z = as.numeric(dat$disease=="Y")
-  m1 <- autologistic(Z ~ 0+X, A=A, control=list(confint="none"))
-  summary(m1)
-  ## Coefficients:
-  ##      Estimate Lower Upper MCSE
-  ## Xx  -0.007824    NA    NA   NA
-  ## Xy  -0.144800    NA    NA   NA
-  ## eta  0.806200    NA    NA   NA
+# Besag 2000 "An Introduction to Markov Chain Monte Carlo" suggested
+# that the autologistic model is not a very good fit for this data.
+# We try it anyway.  No idea if this is correct or how to interpret...
 
+require(ngspatial)
+A = adjacency.matrix(179,14)
+X = cbind(x=dat$col, y=dat$row)
+Z = as.numeric(dat$disease=="Y")
+m1 <- autologistic(Z ~ 0+X, A=A, control=list(confint="none"))
 
-  # Now try an AR1xAR1 model.
-  dat2 <- transform(dat, xf=factor(col), yf=factor(row),
-                    pres=as.numeric(disease=="Y"))
-  require(asreml)
-  m2 <- asreml(pres ~ 1, data=dat2, rcov= ~ar1(xf):ar1(yf))
-  # The 0/1 response is arbitrary, but there is some suggestion
-  # of auto-correlation in the x (.17) and y (.10) directions,
-  # suggesting the pattern is more 'patchy' than just random noise,
-  # but is it meaningful?
-  summary(m2)$varcomp
-  ##       effect component std.error z.ratio           con
-  ## R!variance   0.1301   0.003798    34        Positive
-  ##   R!xf.cor   0.1699   0.01942      8.7 Unconstrained
-  ##   R!yf.cor   0.09842  0.02038      4.8 Unconstrained
+summary(m1)
+## Coefficients:
+##      Estimate Lower Upper MCSE
+## Xx  -0.007824    NA    NA   NA
+## Xy  -0.144800    NA    NA   NA
+## eta  0.806200    NA    NA   NA
+
+# Now try an AR1xAR1 model.
+dat2 <- transform(dat, xf=factor(col), yf=factor(row),
+                  pres=as.numeric(disease=="Y"))
+require(asreml)
+m2 <- asreml(pres ~ 1, data=dat2, rcov= ~ar1(xf):ar1(yf))
+# The 0/1 response is arbitrary, but there is some suggestion
+# of auto-correlation in the x (.17) and y (.10) directions,
+# suggesting the pattern is more 'patchy' than just random noise,
+# but is it meaningful?
+
+vc(m2)
+##     effect component std.error z.ratio constr
+## R!variance   0.1301   0.003798    34      pos
+##   R!xf.cor   0.1699   0.01942      8.7  uncon
+##   R!yf.cor   0.09842  0.02038      4.8  uncon
 
 }
 

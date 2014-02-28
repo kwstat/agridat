@@ -44,7 +44,8 @@ library(HH)
 interaction2wt(nitro ~ rep/trt + trt*stage, data=dat,
                main="gomez.nitrogen")
 # Just the fertilizer profiles
-with(dat, interaction.plot(stage, trt, nitro, col=1:4, lty=1:3))
+with(dat, interaction.plot(stage, trt, nitro,
+     col=1:4, lty=1:3, main="gomez.nitrogen"))
 
 # Gomez table 6.16
 m1 <- aov(nitro ~ Error(rep/trt) + trt*stage, data=dat)

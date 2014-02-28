@@ -1,14 +1,29 @@
 News for 'agridat'
 
-Version 1.9 (unreleased)
+Version 1.9 (Apr 2014) -  for R 3.1
 
   * New data:
-    besag.endive, butron.maize, cullis.earlygen,
-    gomez.splitplot.subsample, gumpertz.pepper, harrison.priors, maindonald.barley,
-    mead.cauliflower, stirret.borers, turner.herbicide, vargas.txe, wallace.iowaland,
-    walsh.cottonprice, welch.bermudagrass, yang.barley
+    besag.endive, brandt.switchback, butron.maize,
+    carlson.germination, cullis.earlygen, connolly.potato,
+    fisher.latin, foulley.calving,
+    gomez.splitplot.subsample, goulden.latin,
+    gumpertz.pepper, harrison.priors,
+    heady.fertilizer, hunter.corn, jansen.strawberry, kalamkar.potato.uniformity,
+    karcher.turfgrass, lee.potatoblight, lucas.switchback, maindonald.barley,
+    mead.cauliflower, mercer.mangold.uniformity, patterson.switchback,
+    sinclair.clover, snijders.fusarium, stirret.borers,
+    turner.herbicide, vargas.txe, vold.longterm, wallace.iowaland,
+    walsh.cottonprice, welch.bermudagrass, weiss.incblock, weiss.lattice, yang.barley
 
-  * Use if(require(lme4)) in examples.  Ripley request.
+  * New functions:
+    vc: to extract variance component estimates from mixed models
+
+  * Other:
+    Use if(require(lme4)) in examples.  Ripley request.
+
+  * To do:
+    Write BUGS code for besag.elbatan (?).
+    Write BUGS code for lee.potatoblight.
 
 Version 1.8 (Sep 2013)
 

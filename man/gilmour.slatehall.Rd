@@ -35,7 +35,8 @@
 
 dat <- gilmour.slatehall
 
-desplot(yield ~ col * row, dat, num=gen, out1=rep, main="gilmour.slatehall")
+desplot(yield ~ col * row, dat, num=gen,
+        out1=rep, main="gilmour.slatehall")
 
 \dontrun{
 # Model 4 of Gilmour et al 1997
@@ -47,13 +48,15 @@ m4 <- asreml(yield ~ gen + lin(row), data=dat,
              rcov = ~ ar1(xf):ar1(yf))
 coef(m4)$fixed[1] # linear row
 # [1] 31.72252 # (sign switch due to row ordering)
-summary(m4)$varcomp
-#      Effect  Estimate   Std Err Z Ratio Con
-#    dev(row) 20290     10260         2   Pos
-#    dev(col)  2519      1959         1.3 Pos
-#  R!variance 23950      4616         5.2 Pos
-#    R!xf.cor     0.439     0.113     3.9 Unc
-#    R!yf.cor     0.125     0.117     1.1 Unc
+
+vc(m4)
+##      effect component std.error z.ratio constr
+##    dev(row) 20290     10260         2      pos
+##    dev(col)  2519      1959         1.3    pos
+##  R!variance 23950      4616         5.2    pos
+##    R!xf.cor     0.439     0.113     3.9  uncon
+##    R!yf.cor     0.125     0.117     1.1  uncon
+
 plot(variogram(m4))
 }
 }

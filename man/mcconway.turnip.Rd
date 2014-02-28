@@ -58,6 +58,18 @@ dat$densf <- factor(dat$density)
 # Table 2 of Lee et al.
 m0 <- aov( yield ~ gen * densf * date + block, dat )
 summary(m0)
+##                Df Sum Sq Mean Sq F value   Pr(>F)
+## gen             1   84.0   83.95   8.753  0.00491 **
+## densf           3  470.4  156.79  16.347 2.51e-07 ***
+## date            1  233.7  233.71  24.367 1.14e-05 ***
+## block           3  163.7   54.58   5.690  0.00216 **
+## gen:densf       3    8.6    2.88   0.301  0.82485
+## gen:date        1   36.5   36.45   3.800  0.05749 .
+## densf:date      3  154.8   51.60   5.380  0.00299 **
+## gen:densf:date  3   18.0    6.00   0.626  0.60224
+## Residuals      45  431.6    9.59
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 # Boxplots suggest heteroskedasticity for date, density
 # require("HH")

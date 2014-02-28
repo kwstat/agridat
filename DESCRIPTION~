@@ -1,7 +1,7 @@
 Package: agridat
 Type: Package
 Title: Agricultural datasets
-Version: 1.8
+Version: 1.9
 Date: 2013-09-20
 Author: Kevin Wright
 Maintainer: Kevin Wright <kw.stat@gmail.com>

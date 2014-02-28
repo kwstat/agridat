@@ -19,7 +19,7 @@
   }
 }
 \details{
-  The trial was conducted in 1979.
+  This sugar-beet trial was conducted in 1979.
 
   Single-row plots, 12 m long, 0.5 m between rows.  Each block is made
   up of all 36 genotypes laid out side by side.  Guard/border plots are

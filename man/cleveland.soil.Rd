@@ -25,7 +25,7 @@
   William Cleveland, (1993), \emph{Visualizing Data}.
   Electronic version from StatLib,
   \url{http://lib.stat.cmu.edu/datasets/}.
-  
+
   Cleaned version from Luke Tierney
   \url{http://homepage.stat.uiowa.edu/~luke/classes/248/examples/soil}
 }
@@ -54,7 +54,7 @@ xyplot(resistivity ~ easting | factor(track), data = dat, subset=!is.ns,
 sg1 <- expand.grid(easting = seq(.15, 1.410, by = .015),
                         northing = seq(.150, 3.645, by = .015))
 fit1 <- with(dat,
-                predict(loess(resistivity~easting*northing, span = 0.25, 
+                predict(loess(resistivity~easting*northing, span = 0.25,
                         degree = 2), sg1))
 levelplot(fit1 ~ sg1$easting * sg1$northing,
           col.regions=colorRampPalette(c("red","gray","blue")),

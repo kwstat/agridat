@@ -36,7 +36,7 @@ Data frame with 28 observations on the following 5 variables.
 
 dat <- box.cork
 
-pairs(dat[,2:5], xlim=c(25,100), ylim=c(25,100))
+pairs(dat[,2:5], xlim=c(25,100), ylim=c(25,100), main="box.cork")
 
 \dontrun{
 ## Each tree is one line

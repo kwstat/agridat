@@ -74,7 +74,7 @@
 dat <- ivins.herbs
 
 # Nettle is primarily established in legumes.
-xyplot(herb~nettle|gen, dat, main="ivins.herbs")
+xyplot(herb~nettle|gen, dat, main="ivins.herbs - herb yield vs weeds")
 
 # O'Brien used first 7 species to test gen differences
 dat7 <- droplevels(subset(dat, is.element(gen, c('G01','G02','G03','G04','G05','G06','G07'))))

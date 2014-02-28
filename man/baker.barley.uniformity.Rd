@@ -29,19 +29,22 @@
 \examples{
 dat <- baker.barley.uniformity
 
-desplot(yield~col*row|year, data=dat, main="Heatmaps by year")
-dat2 <- aggregate(yield ~ row*col, data=dat, FUN=mean, na.rm=TRUE)
 asp <- (161*3+30)/827 # True aspect ratio
-desplot(yield~col*row, data=dat2, main="Avg yield over 10 years", aspect=asp)
-# Note lower yield in upper right, slanting to left a bit due to sandy soil.
+desplot(yield~col*row|year, data=dat,
+        main="baker.barley.uniformity heatmaps by year", aspect=asp)
+dat2 <- aggregate(yield ~ row*col, data=dat, FUN=mean, na.rm=TRUE)
+desplot(yield~col*row, data=dat2, main="baker.barley.uniformity 10-year average", aspect=asp)
+# Note low yield in upper right, slanting to left a bit due to sandy soil.
 
 # Baker fig 2, stdev vs mean
 dat3 <- aggregate(yield ~ row*col, data=dat, FUN=sd, na.rm=TRUE)
-plot(dat2$yield, dat3$yield, xlab="Mean yield", ylab="Std Dev yield")
+plot(dat2$yield, dat3$yield, xlab="Mean yield", ylab="Std Dev yield",
+     main="baker.barley.uniformity")
 
 # Baker table 4, correlation of plots across years
 require(reshape2)
 mat <- acast(dat, row+col~year)
 round(cor(mat, use='pair'),2)
+
 }
 \keyword{datasets}

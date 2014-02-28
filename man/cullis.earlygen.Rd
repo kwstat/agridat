@@ -37,7 +37,7 @@
   spatial analysis.  Below, a two-dimensional spatial analysis is
   presented.
 
-  Note: The 'row' and 'col' variables are as in the link below (switched
+  Note: The 'row' and 'col' variables are as in the VSN link below (switched
   compared to the paper by Cullis et al.)
 }
 \source{
@@ -64,37 +64,37 @@ desplot(weed ~ col*row, dat, main="cullis.earlygen (weed)", flip=TRUE)
 bwplot(yield ~ weed, dat, horizontal=FALSE, main="cullis.earlygen")
 
 \dontrun{
-  require(asreml)
-  # Start with the standard AR1xAR1 analysis
-  dat <- transform(dat, xf=factor(col), yf=factor(row))
-  dat <- dat[order(dat$xf, dat$yf),]
-  m2 <- asreml(yield ~ weed, data=dat, random= ~gen,
-               rcov = ~ ar1(xf):ar1(yf))
+require(asreml)
+# Start with the standard AR1xAR1 analysis
+dat <- transform(dat, xf=factor(col), yf=factor(row))
+dat <- dat[order(dat$xf, dat$yf),]
+m2 <- asreml(yield ~ weed, data=dat, random= ~gen,
+             rcov = ~ ar1(xf):ar1(yf))
 
-  # Variogram suggests a polynomial trend
-  m3 <- update(m2, fixed= yield~weed+pol(col,-1))
+# Variogram suggests a polynomial trend
+m3 <- update(m2, fixed= yield~weed+pol(col,-1))
 
-  # Now add a nugget variance
-  m4 <- update(m3, random= ~ gen + units)
+# Now add a nugget variance
+m4 <- update(m3, random= ~ gen + units)
 
-  summary(m4)$varcomp
-  ##          effect  component std.error z.ratio           con
-  ##     gen!gen.var   73770    10420         7.1      Positive
-  ## units!units.var   30440     8074         3.8      Positive
-  ##      R!variance   54720    10630         5.1      Positive
-  ##        R!xf.cor       0.84     0.045    19   Unconstrained
-  ##        R!yf.cor       0.38     0.115     3.3 Unconstrained
+vc(m4)
+##           effect component std.error z.ratio constr
+##      gen!gen.var  73770    10420         7.1    pos
+##  units!units.var  30440     8074         3.8    pos
+##       R!variance  54720    10630         5.1    pos
+##         R!xf.cor      0.38     0.115     3.3  uncon
+##         R!yf.cor      0.84     0.045    19    uncon
 
-  # Predictions from models m3 and m4 are non-estimable.  Why?
-  # Use model m2 for predictions
-  predict(m2)$pred
-  ##         gen predicted.value standard.error est.status
-  ## 1    Banks         2723.534       93.14633  Estimable
-  ## 2    Eno008        2981.057      162.85053  Estimable
-  ## 3    Eno009        2978.009      161.56930  Estimable
-  ## 4    Eno010        2821.399      153.96697  Estimable
-  ## 5    Eno011        2991.610      161.53308  Estimable
-  ## 6    Eno012        2771.148      162.21897  Estimable
+# Predictions from models m3 and m4 are non-estimable.  Why?
+# Use model m2 for predictions
+predict(m2)$pred
+##         gen predicted.value standard.error est.status
+## 1    Banks         2723.534       93.14633  Estimable
+## 2    Eno008        2981.057      162.85053  Estimable
+## 3    Eno009        2978.009      161.56930  Estimable
+## 4    Eno010        2821.399      153.96697  Estimable
+## 5    Eno011        2991.610      161.53308  Estimable
+## 6    Eno012        2771.148      162.21897  Estimable
 
 }
 

@@ -40,6 +40,7 @@
 dat <- gilmour.serpentine
 
 desplot(yield~ col*row, data=dat, num=gen, out1=rep,
+        #aspect = 6/.75,
         main="gilmour.serpentine")
 
 # Extreme field trend.  Blocking insufficient--needs a spline/smoother

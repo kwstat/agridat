@@ -60,5 +60,6 @@ legend(20, -40, c("Body weight", "Target BW", "Feed /d", "Gain /d", "Egg wt"),
        bty="n", cex=.65, ncol=5,
        col=c("black","black","red","red","red"),
        lty=c(-1,1,2,1,1), lwd=c(1,1,1,2,1), pch=c(20,-1,-1,-1,-1))
+par(op)
 }
 \keyword{datasets}

@@ -58,26 +58,28 @@ m1 <- asreml(yield ~ site + check:site, data=dat,
              rcov = ~ at(site,c(1,2)):ar1(colf):ar1(rowf)
              + at(site,3):id(colf):ar1(rowf))
 m1$loglik
-summary(m1)$varcomp
-# Variance components
-#                      Effect Estimate  Std Err Z Ratio Con
-#  at(site, S1):colf!colf.var  0.6228  0.4284       1.5 Pos
-#  at(site, S2):colf!colf.var  0.159   0.1139       1.4 Pos
-#  at(site, S3):colf!colf.var  0.04832 0.02618      1.8 Pos
-#  at(site, S3):rowf!rowf.var  0.0235  0.008483     2.8 Pos
-#               test!test.var  0.1031  0.01468      7   Pos
-#            site_S1!variance  2.771   0.314        8.8 Pos
-#            site_S1!colf.cor  0.1959  0.05375      3.6 Unc
-#            site_S1!rowf.cor  0.6503  0.03873     17   Unc
-#            site_S2!variance  0.9926  0.1079       9.2 Pos
-#            site_S2!colf.cor  0.2868  0.05246      5.5 Unc
-#            site_S2!rowf.cor  0.5744  0.0421      14   Unc
-#            site_S3!variance  0.1205  0.01875      6.4 Pos
-#            site_S3!rowf.cor  0.6394  0.06323     10   Unc
+## [1] -314.2616
+
+vc(m1)
+##                      effect component std.error z.ratio constr
+##  at(site, S1):colf!colf.var   0.6228   0.4284       1.5    pos
+##  at(site, S2):colf!colf.var   0.159    0.1139       1.4    pos
+##  at(site, S3):colf!colf.var   0.04832  0.02618      1.8    pos
+##  at(site, S3):rowf!rowf.var   0.0235   0.008483     2.8    pos
+##               test!test.var   0.1031   0.01468      7      pos
+##            site_S1!variance   2.771    0.314        8.8    pos
+##            site_S1!colf.cor   0.1959   0.05375      3.6  uncon
+##            site_S1!rowf.cor   0.6503   0.03873     17    uncon
+##            site_S2!variance   0.9926   0.1079       9.2    pos
+##            site_S2!colf.cor   0.2868   0.05246      5.5  uncon
+##            site_S2!rowf.cor   0.5744   0.0421      14    uncon
+##            site_S3!variance   0.1205   0.01875      6.4    pos
+##            site_S3!rowf.cor   0.6394   0.06323     10    uncon
 
 # Add site:test
 m2 <- update(m1, random=~. + site:test)
 m2$loglik
+## [1] -310.8794
 
 # CORUH structure on the site component of site:test
 m3 <- asreml(yield ~ site + check:site, data=dat,
@@ -85,6 +87,7 @@ m3 <- asreml(yield ~ site + check:site, data=dat,
              rcov = ~ at(site,c(1,2)):ar1(colf):ar1(rowf)
              + at(site,3):id(colf):ar1(rowf))
 m3$loglik
+## [1] -288.4837
 
 # Unstructured genetic variance matrix
 m4 <- asreml(yield ~ site + check:site, data=dat,
@@ -92,6 +95,7 @@ m4 <- asreml(yield ~ site + check:site, data=dat,
              rcov = ~ at(site,c(1,2)):ar1(colf):ar1(rowf)
              + at(site,3):id(colf):ar1(rowf))
 m4$loglik
+## [1] -286.8239
 
 # Note that a 3x3 unstructured matrix can be written LL'+Psi with 1 factor L
 # Explicitly fit the factor analytic model
@@ -101,17 +105,26 @@ m5 <- asreml(yield ~ site + check:site, data=dat,
              rcov = ~ at(site,c(1,2)):ar1(colf):ar1(rowf)
              + at(site,3):id(colf):ar1(rowf))
 m5$loglik # Same as m4
+## [1] -286.8484
 
 # Model 4, Unstructured (symmetric) genetic variance matrix
 un <- diag(3)
 un[upper.tri(un,TRUE)] <- m4$gammas[5:10]
 round(un+t(un)-diag(diag(un)),3)
+##       [,1]  [,2]  [,3]
+## [1,] 0.992 0.158 0.132
+## [2,] 0.158 0.073 0.078
+## [3,] 0.132 0.078 0.122
 
 # Model 5, FA matrix = LL'+Psi.  Not quite the same as unstructured,
 # since the FA model fixes site 2 variance at 0.
 psi <- diag(m5$gammas[5:7])
 lam <- matrix(m5$gammas[8:10], ncol=1)
 round(tcrossprod(lam,lam)+psi,3)
+##       [,1]  [,2]  [,3]
+## [1,] 0.991 0.156 0.133
+## [2,] 0.156 0.092 0.078
+## [3,] 0.133 0.078 0.122
 
 }
 }

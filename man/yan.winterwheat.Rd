@@ -47,6 +47,6 @@ mat <- acast(mat, gen~env)
 mat.sc <- scale(mat)
 
 # Environment-standardized GGE biplot
-biplot(princomp(mat.sc))
+biplot(princomp(mat.sc), main="yan.winterwheat")
 
 }

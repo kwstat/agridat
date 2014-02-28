@@ -49,11 +49,12 @@ m1 <- lme(diameter ~ 1 + time, data=dat,
           random = ~ time|appleid, method='ML',
           cor = corAR1(0, form=~ time|appleid),
           na.action=na.omit)
-VarCorr(m1)
-## appleid = pdLogChol(time)
-##             Variance     StdDev     Corr
-## (Intercept) 7.353789e-03 0.08575423 (Intr)
-## time        3.632377e-05 0.00602692 0.83
-## Residual    4.555256e-04 0.02134305
+
+vc(m1)
+##       effect   variance   stddev corr
+##  (Intercept) 0.007354   0.08575    NA
+##         time 0.00003632 0.006027 0.83
+##     Residual 0.0004555  0.02134    NA
+
 }
 \keyword{datasets}

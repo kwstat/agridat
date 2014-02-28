@@ -35,6 +35,7 @@
   51, 1440-1450.
 }
 \examples{
+
 dat <- kempton.slatehall
 dat <- transform(dat, xf=factor(col), yf=factor(row))
 
@@ -44,21 +45,31 @@ desplot(yield ~ col * row, dat, num=gen, out1=rep,
 # Incomplete block model of Gilmour et al 1995
 if(require(lme4)){
 m1 <- lmer(yield ~ gen + (1|rep) + (1|rep:yf) + (1|rep:xf), data=dat)
-print(VarCorr(m1), comp=c("Variance","Std.Dev."))
-## Groups   Name        Variance Std.Dev.
-## rep:xf   (Intercept) 14811.6  121.703
-## rep:yf   (Intercept) 15595.0  124.880
-## rep      (Intercept)  4262.4   65.287
-## Residual              8061.8   89.788
+
+vc(m1)
+##    groups        name variance stddev
+##  rep:xf   (Intercept)    14810 121.7
+##  rep:yf   (Intercept)    15600 124.9
+##  rep      (Intercept)     4262  65.29
+##  Residual                 8062  89.79
+
 }
 
 \dontrun{
 # Incomplete block model of Gilmour et al 1995
 require("asreml")
 m2 <- asreml(yield ~ gen, random = ~ rep/(xf+yf), data=dat)
-summary(m2)$varcomp
+
+vc(m2)
+##          effect component std.error z.ratio constr
+##     rep!rep.var      4262      6890    0.62    pos
+##  rep:xf!rep.var     14810      4865    3       pos
+##  rep:yf!rep.var     15600      5091    3.1     pos
+##      R!variance      8062      1340    6       pos
+
 # Table 4
 predict(m2, classify="gen")$predictions$pvals
+
 }
 }
 \keyword{datasets}

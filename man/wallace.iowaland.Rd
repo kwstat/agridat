@@ -65,7 +65,7 @@ all(dat$polnm == map("county", 'iowa', plot=FALSE)$names) # TRUE
 # Draw the map.  Compare to http://en.wikipedia.org/wiki/File:Landforms_of_Iowa.jpg
 map("county", 'iowa', col = colpal[dat$valbin], fill = TRUE,
     resolution = 0, lty = 0)
-title("1925 Federal land values")
+title("wallace.ioaland - land values")
 
 }
 \keyword{datasets}

@@ -120,6 +120,7 @@ dat <- droplevels(subset(dat, !is.element(gen, c("CompCross","Dryland","Jeans","
 
 # 1934 has huge swings from one loc to the next
 dotplot(gen~yield|site, dat, groups=yr,
+        main="minnesota.barley.yield",
         auto.key=list(columns=5), scales=list(y=list(cex=.5)))
 }
 \keyword{datasets}

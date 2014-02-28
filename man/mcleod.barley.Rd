@@ -62,7 +62,8 @@ signif(d1,3)
 d2 <- melt(d1, id.var='rate')
 xyplot(value~rate|variable, data=d2,
        scales=list(y=list(relation="free")), type='b',
-       main="mcleod.barley")
+       xlab="Nitrogen rate", ylab="Trait value",
+       main="mcleod.barley - nitrogen response curves")
 
 }
 \keyword{datasets}

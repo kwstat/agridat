@@ -58,6 +58,15 @@ for(i in levels(dat$gen)){
 # Optimum plant density is -1/log(k)
 out$pop.opt <- -1/log(out$k)
 round(out, 3)
+##               a     k pop.opt
+## Hy2x0h7   0.782 0.865   6.875
+## WF9xC103  1.039 0.825   5.192
+## R61x187-2 0.998 0.798   4.441
+## WF9x38-11 1.042 0.825   5.203
+## WF9xB14   1.067 0.806   4.647
+## C103xB14  0.813 0.860   6.653
+## 0h43xB37  0.673 0.862   6.740
+## WF9xH60   0.858 0.854   6.358
 
 require(latticeExtra)
 xyplot(yield~pop|gen, dat, pch=16, as.table=TRUE,
@@ -67,6 +76,24 @@ xyplot(pred~pop|gen, preds, col='black', as.table=TRUE,
 
 # A better approach might be to use nlme to fit an overall fixed-effect
 # model with random deviations for each hybrid.
+require(nlme)
+m1 <- nlme(yield ~ pop * a * k^pop,
+           fixed = a + k ~ 1, random = a+k ~ 1|gen,
+           data=dat, start=c(a=10,k=1))
+# summary(m1) # Random effect for 'a' probably not needed
+
+# Plot Data, fixed-effect prediction, random-effect prediction.
+pdat <- expand.grid(gen=levels(dat$gen), pop=seq(2,8,length=50))
+pdat$pred <- predict(m1, pdat)
+pdat$predf <- predict(m1, pdat, level=0)
+
+xyplot(yield~pop|gen, dat, pch=16, as.table=TRUE,
+       main="carmer.density models",
+       key=simpleKey(text=c("Data", "Fixed","Random"),
+         col=c("blue", "red","darkgreen"), columns=3, points=FALSE)) +
+xyplot(predf~pop|gen, pdat, type='l', as.table=TRUE, col="red") +
+xyplot(pred~pop|gen, pdat, type='l', col="darkgreen", lwd=2)
 
 }
 \keyword{datasets}
+

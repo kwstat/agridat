@@ -69,33 +69,33 @@ xyplot(yield~subplot|block, dat, type=c('b'), group=gen,
 
 \dontrun{
 
-# This is the model from the SAS documentation
-# proc mixed;
-# class block gen dir irr;
-# model yield = gen|dir|irr@2;
-# random block block*dir block*irr;
-# repeated / type=toep(4) sub=block*gen r;
+## This is the model from the SAS documentation
+## proc mixed;
+## class block gen dir irr;
+## model yield = gen|dir|irr@2;
+## random block block*dir block*irr;
+## repeated / type=toep(4) sub=block*gen r;
 
 dat <- transform(dat, subf=factor(subplot),
                  irrf=factor(irr))
 dat <- dat[order(dat$block, dat$gen, dat$subplot),]
 
-# Re-produced with asreml
-require('asreml')
+# Reproduced with asreml
+require(asreml)
 m1 <- asreml(yield ~ gen + dir + irrf + gen:dir + gen:irrf + dir:irrf,
              data=dat,
              random= ~ block + block:dir + block:irrf,
              rcov= ~ block:gen:corb(subf, k=3))
 
-## summary(m1)$varcomp
-##                effect component std.error z.ratio           con
-##       block!block.var  0.2194     0.2393     0.92      Positive
-##   block:dir!block.var  0.01768    0.03154    0.56      Positive
-##  block:irrf!block.var  0.03539    0.03617    0.98      Positive
-##            R!variance  0.285      0.05086    5.6       Positive
-##                R!cor1  0.02802    0.1143     0.25 Unconstrained
-##                R!cor2  0.005095   0.1278     0.04 Unconstrained
-##                R!cor3 -0.3246     0.0905    -3.6  Unconstrained
+vc(m1)
+##                effect component std.error z.ratio constr
+##       block!block.var  0.2194     0.2393     0.92    pos
+##   block:dir!block.var  0.01768    0.03154    0.56    pos
+##  block:irrf!block.var  0.03539    0.03617    0.98    pos
+##            R!variance  0.285      0.05086    5.6     pos
+##                R!cor1  0.02802    0.1143     0.25  uncon
+##                R!cor2  0.005095   0.1278     0.04  uncon
+##                R!cor3 -0.3246     0.0905    -3.6   uncon
 
 ## # convert asreml correlations to SAS covariances
 ## round(.2850 * c(1, .02802, .005095, -.3246),4) # res var * (cor1, cor2, cor3)

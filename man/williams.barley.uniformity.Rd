@@ -39,8 +39,9 @@ desplot(yield ~ col*row, dat, aspect=asp,
 
 # Smoothed contour/persp plot like Williams Fig 1b, 2b
 dat$fit <- fitted(loess(yield~col*row, dat, span=.1))
-contourplot(fit~col*row, data=dat)
-wireframe(fit~col*row, data=dat, zlim=c(100, 350))
+contourplot(fit~col*row, data=dat, main="williams.barley.uniformity")
+wireframe(fit~col*row, data=dat, zlim=c(100, 350),
+          main="williams.barley.uniformity")
 
 # Williams table 1
 anova(aov(yield ~ factor(row) + factor(col), dat))

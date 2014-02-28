@@ -33,10 +33,10 @@ consecutive years 1970, 1971.
 The 58 different genotypes of soybeans consisted of 43 lines (40
 local Australian selections from a cross, their two parents, and one other
 which was used a parent in earlier trials) and 15 other lines of which 12 were
-from the US. 
+from the US.
 
 Lines 1-40 were local Australian selections from Mamloxi (CPI 172) and
-Avoyelles (CPI 15939). 
+Avoyelles (CPI 15939).
 
 \tabular{ll}{
 No. \tab Line \cr
@@ -62,16 +62,16 @@ No. \tab Line \cr
 }
 
 Note on the data in Basford and Tukey book. The values for line 58 for
-Nambour 1970 and Redland Bay 1971 are 
+Nambour 1970 and Redland Bay 1971 are
 incorrectly listed on page 477 as 20.490 and 15.070. They should be 17.350 and
 13.000, respectively. In the data set made available here, these values have
-been corrected. 
+been corrected.
 }
 
 \source{
   Basford, K. E., and Tukey, J. W. (1999). Graphical analysis of multiresponse
   data illustrated with a plant breeding trial. Chapman and Hall/CRC.
-  
+
   Retrieved from:
   \url{http://three-mode.leidenuniv.nl/data/soybeaninf.htm}.
 
@@ -81,7 +81,7 @@ been corrected.
   K E Basford. 1982. The Use of Multidimensional Scaling in Analysing
   Multi-Attribute Genotype Response Across Environments,
   \emph{Aust J Agric Res}, 33, 473--480.
-  
+
   Kroonenberg, P. M., & Basford, K. E. B. (1989). An investigation of
   multi-attribute genotype response across environments using three-mode
   principal component analysis. \emph{Euphytica}, 44, 109--123.
@@ -98,7 +98,8 @@ biplot(princomp(dmat), main="australia.soybean trait x gen biplot", cex=.75)
 # Figure 1 of Kozak 2010, lines 44-58
 dmat2 <- dmat[44:58,]
 require("lattice")
-parallelplot(dmat2[,c(2:6,1)], horiz=FALSE)
+parallelplot(dmat2[,c(2:6,1)],
+main="australia.soybean", horiz=FALSE)
 
 }
 

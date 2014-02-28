@@ -44,16 +44,19 @@ round(tapply(dat$yield, dat$gen, mean),0)
 # sigma^2_gl: 9369  gy: 14027 g: 72632 resid: 150000
 # Brandle analyzed rep-level data, so the residual variance is different.
 # The other components are matched by the following analysis.
+
 if(require(lme4)){
 dat$year <- factor(dat$year)
 m1 <- lmer(yield ~ year + loc + year:loc + (1|gen) +
            (1|gen:loc) + (1|gen:year), data=dat)
-print(VarCorr(m1), comp=c('Variance','Std.Dev.'))
-## Groups   Name        Variance Std.Dev.
-## gen:loc  (Intercept)  9362.9   96.762
-## gen:year (Intercept) 14030.0  118.448
-## gen      (Intercept) 72628.5  269.497
-## Residual             75008.1  273.876
+
+vc(m1)
+##   groups        name variance stddev
+## gen:loc  (Intercept)     9363  96.76
+## gen:year (Intercept)    14030 118.4
+## gen      (Intercept)    72630 269.5
+## Residual                75010 273.9
+
 }
 
 }

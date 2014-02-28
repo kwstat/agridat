@@ -51,7 +51,7 @@ dat <- caribbean.maize
 
 # Yield and ears are correlated
 xyplot(yield~ears|site, dat, ylim=c(0,10), subset=isle=="Antigua",
-       main="Yield vs ears at sites on Antiqua")
+       main="caribbean.maize - Antiqua")
 
 # Some locs show large response to nitrogen (as expected), e.g. UISV, OOSV
 dotplot(trt~yield|site, data=dat, main="caribbean.maize treatment response")

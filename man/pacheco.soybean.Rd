@@ -9,7 +9,7 @@
 }
 
 \format{
-  \describe{ 
+  \describe{
     \item{\code{gen}}{Genotype factor, 18 levels}
     \item{\code{env}}{Environment factor, 11 levels}
     \item{\code{yield}}{Yield, kg/ha}
@@ -32,7 +32,7 @@ dat <- pacheco.soybean
 
 # AMMI biplot similar to Fig 2 of Pacheco et al.
 require(agricolae)
-m1 <- with(dat, AMMI(env, gen, REP=1, yield))
+m1 <- with(dat, AMMI(env, gen, REP=1, yield, graph=""))
 bip <- m1$biplot[,1:3]
 # Fig 1 of Pacheco et al.
 with(bip, plot(yield, PC1, cex=0.0,

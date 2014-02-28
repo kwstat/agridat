@@ -35,6 +35,7 @@
 \examples{
 
 dat <- lyon.potato.uniformity
+
 desplot(yield ~ row*section, dat, tick=TRUE,
         main="lyon.potato.uniformity")
 

@@ -37,6 +37,7 @@
   \emph{Statistical Science}, 24, 223-237.
 }
 \examples{
+
 dat <- pearce.apple
 
 require(lattice)

@@ -36,8 +36,6 @@
 
 dat <- senshu.rice
 
-plot(yield~mint, dat, main="senshu.rice")
-
 # Model 1 of Senshu & Cady
 m1 <- lm(yield ~ 1 + rad + mint + I(mint^2), dat)
 coef(m1)
@@ -60,7 +58,8 @@ f <- tval / (-2*b2)
 sq <- sqrt(sig11 + 4*u*sig12 + 4*u^2*sig22 - gam * (sig11 - sig12^2 / sig22) )
 ci <- (x + c(1,-1)*f*sq) / (1-gam)
 plot(yield ~ mint, dat, xlim=c(17, 32),
-main="senshu.rice: Quadratic fit and Fieller confidence interval")
+main="senshu.rice: Quadratic fit and Fieller confidence interval",
+     xlab="Minimum temperature", ylab="Yield")
 lines(17:32, predict(m2, new=data.frame(mint=17:32)))
 abline(v=ci, col="blue")
 }

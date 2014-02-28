@@ -39,7 +39,7 @@ dat$trt <- factor(dat$trt,
                   levels=c("Jun-01", "Jun-15", "Jul-01", "Jul-15"))
 # Continued cutting reduces plant vigor and yield
 dotplot(yield ~ trt|year, data=dat,
-        main="Yield in each year for different cutting treatments")
+        xlab="Cutting treatment", main="snedecor.asparagus")
 
 # Split-plot
 if(require(lme4)){
@@ -50,13 +50,19 @@ m1 <- lmer(yield ~ trt + year + trt:year + (1|block) + (1|block:trt), data=dat)
 # Split-plot with asreml
 m2 <- asreml(yield ~ trt + year + trt:year, data=dat,
              random = ~ block + block:trt)
-summary(m2)$varcomp
+
+vc(m2)
+##               effect component std.error z.ratio constr
+##      block!block.var     476.7     518.2    0.92    pos
+##  block:trt!block.var     499.7     287.4    1.7     pos
+##           R!variance     430.2     101.4    4.2     pos
 
 # Antedependence with asreml.  See O'Neill (2010).
 dat <- dat[order(dat$block, dat$trt), ]
 m3 <- asreml(yield ~ year * trt, data=dat,
              random = ~ block,
              rcov = ~ block:trt:ante(year,1))
+
 # Extract the covariance matrix for years and convert to correlation
 covmat <- diag(4)
 covmat[upper.tri(covmat,diag=TRUE)] <- m3$R.param$R$year$initial
@@ -70,21 +76,29 @@ round(cov2cor(covmat),2) # correlation among the 4 years
 
 # We can also build the covariance Sigma by hand from the estimated
 # variance components via: Sigma^-1 = U D^-1 U'
-vc <- summary(m3)$varcomp
-#                         gamma    component    std.error    z.ratio
-# block!block.var  86.561895082 86.561895082 1.568621e+02  0.5518344
-# R!variance        1.000000000  1.000000000           NA         NA
-# R!year.1930:1930  0.002334098  0.002334098 1.056378e-03  2.2095294
-# R!year.1931:1930 -0.716912985 -0.716912985 4.528335e-01 -1.5831713
-# R!year.1931:1931  0.001157711  0.001157711 4.802921e-04  2.4104308
-# R!year.1932:1931 -1.138914965 -1.138914965 1.961619e-01 -5.8059955
-# R!year.1932:1932  0.002081314  0.002081314 8.514173e-04  2.4445288
-# R!year.1933:1932 -0.678201750 -0.678201750 1.554912e-01 -4.3616722
-# R!year.1933:1933  0.002011556  0.002011556 8.305976e-04  2.4218174
-U <-  diag(4)
-U[1,2] <- vc[4,2] ; U[2,3] <- vc[6,2] ; U[3,4] <- vc[8,2]
-Dinv <- diag(c(vc[3,2], vc[5,2], vc[7,2], vc[9,2]))
+vv <- vc(m3)
+print(vv)
+##            effect component std.error z.ratio constr
+##   block!block.var  86.56    156.9        0.55    pos
+##        R!variance   1              NA      NA    fix
+##  R!year.1930:1930   0.00233   0.00106    2.2   uncon
+##  R!year.1931:1930  -0.7169    0.4528    -1.6   uncon
+##  R!year.1931:1931   0.00116   0.00048    2.4   uncon
+##  R!year.1932:1931  -1.139     0.1962    -5.8   uncon
+##  R!year.1932:1932   0.00208   0.00085    2.4   uncon
+##  R!year.1933:1932  -0.6782    0.1555    -4.4   uncon
+##  R!year.1933:1933   0.00201   0.00083    2.4   uncon
+
+U <- diag(4)
+U[1,2] <- vv[4,2] ; U[2,3] <- vv[6,2] ; U[3,4] <- vv[8,2]
+Dinv <- diag(c(vv[3,2], vv[5,2], vv[7,2], vv[9,2]))
 solve(U %*% Dinv %*% t(U)) # same as 'covmat' above
+##          [,1]      [,2]      [,3]      [,4]
+## [1,] 428.4310  307.1478  349.8152  237.2453
+## [2,] 307.1478 1083.9717 1234.5516  837.2751
+## [3,] 349.8152 1234.5516 1886.5150 1279.4378
+## [4,] 237.2453  837.2751 1279.4378 1364.8446
+
 }
 
 }

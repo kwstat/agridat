@@ -21,10 +21,12 @@
 \details{
   Conducted at Clemson University in 1985.  four cucumber cultivars
   were grown in a Latin Square design at Clemson, SC, and Tifton, GA.
+
+  Separate variances are modeled each location.
 }
 \source{
-  William Bridges, 1989. Analysis of a plant breeding experiment with heterogeneous
-  variances using mixed model equations.
+  William Bridges, 1989. Analysis of a plant breeding experiment with
+  heterogeneous variances using mixed model equations.
   \emph{Applications of mixed models in agriculture and related
     disciplines, S. Coop. Ser. Bull}, 45--51.
 
@@ -44,24 +46,25 @@ require(asreml)
 ## Random row/col/resid. Same as Bridges 1989, p. 147
 m1 <- asreml(yield ~ 1 + gen + loc + loc:gen,
              random = ~ rowf:loc + colf:loc, data=dat)
-summary(m1)$varcomp
-##            Effect Estimate Std Err Z Ratio Con
-## rowf:loc!rowf.var    31.62   23.02     1.4 Pos
-##  loc:colf!loc.var    18.08   15.32     1.2 Pos
-##        R!variance    31.48   12.85     2.4 Pos
+
+vc(m1)
+##             effect component std.error z.ratio constr
+##  rowf:loc!rowf.var     31.62     23.02     1.4    pos
+##  colf:loc!colf.var     18.08     15.32     1.2    pos
+##         R!variance     31.48     12.85     2.4    pos
 
 ## Random row/col/resid at each loc. Matches p. 147
 m2 <- asreml(yield ~ 1 + gen + loc + loc:gen,
              random = ~ at(loc):rowf + at(loc):colf, data=dat,
              rcov = ~at(loc):units)
-summary(m2)$varcomp
-##                         Effect Estimate Std Err Z Ratio Con
-## at(loc, Clemson):rowf!rowf.var    32.32  36.58     0.88 Pos
-##  at(loc, Tifton):rowf!rowf.var    30.92  28.63     1.1  Pos
-## at(loc, Clemson):colf!colf.var    22.55  28.78     0.78 Pos
-##  at(loc, Tifton):colf!colf.var    13.62  14.59     0.93 Pos
-##           loc_Clemson!variance    46.85  27.05     1.7  Pos
-##            loc_Tifton!variance    16.11   9.299    1.7  Pos
+vc(m2)
+##                          effect component std.error z.ratio constr
+##  at(loc, Clemson):rowf!rowf.var     32.32    36.58     0.88    pos
+##   at(loc, Tifton):rowf!rowf.var     30.92    28.63     1.1     pos
+##  at(loc, Clemson):colf!colf.var     22.55    28.78     0.78    pos
+##   at(loc, Tifton):colf!colf.var     13.62    14.59     0.93    pos
+##            loc_Clemson!variance     46.85    27.05     1.7     pos
+##             loc_Tifton!variance     16.11     9.299    1.7     pos
 
 predict(m2, classify='loc:gen')$predictions$pvals
 ##     loc      gen Predicted Std Err    Status

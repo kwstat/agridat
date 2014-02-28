@@ -43,6 +43,7 @@
   \emph{J. R. Statist. Soc. B}, 58:619-678.
 }
 \examples{
+
 dat <- crowder.seeds
 m1.glm <- m1.glmm <- m1.bb <- m1.hglm <- NA
 
@@ -112,7 +113,6 @@ round(summary(m1.hglm)$FixCoefMat,2)
 # JAGS/BUGS.  See http://mathstat.helsinki.fi/openbugs/Examples/Seeds.html
 # Germination rate depends on p, which is a logit of a linear predictor
 # based on genotype and extract, plus random deviation to intercept
-require(rjags)
 
 # To match the output on the BUGS web page, use: dat$gen=="O73".
 # We use dat$gen=="O75" to compare with the parameterization above.
@@ -140,6 +140,7 @@ model {
   sigma <- 1 / sqrt(tau)
 }"
 
+require(rjags)
 j1 <- jags.model(textConnection(mod.bug), data=jdat, inits=jinit, n.chains=1)
 
 c1 <- coda.samples(j1, c("int","genO75","g75ecuke","extcuke","sigma"),

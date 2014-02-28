@@ -51,7 +51,7 @@ dat <- lambert.soiltemp
 dat <- rbind(dat, transform(dat, month=month-12),
              transform(dat, month=month+12))
 xyplot(temp ~ month, dat, group=depth, type=c('p','smooth'),
-       main="lambert.soiltemp"
+       main="lambert.soiltemp",
        xlim=c(-3,15), ylab="Soil temperature (du Crest) at depth (feet)",
        span=.2, auto.key=list(columns=4))
 

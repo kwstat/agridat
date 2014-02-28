@@ -37,14 +37,17 @@
   Service. \url{http://censtats.census.gov/usa/usa.shtml}
 }
 \examples{
+
 dat <- nebraska.farmincome
 
 require("maps")
 require("mapproj")
 require("latticeExtra")
 
+dat$stco <- paste0('nebraska,', dat$county)
+
 # Raw, county-wide incomes.  Note the outlier Cuming county
-mapplot(county ~ crop + animal,
+mapplot(stco ~ crop + animal,
         data = dat, colramp=RedGrayBlue,
         main="nebraska.farmincome: income per county",
         map = map('county', 'nebraska', plot = FALSE, fill = TRUE,
@@ -56,7 +59,7 @@ dat <- within(dat, {
   animal.rate <- animal/area
 })
 # And use manual breakpoints.
-mapplot(county ~ crop.rate + animal.rate,
+mapplot(stco ~ crop.rate + animal.rate,
         data = dat,
         main="nebraska.farmincome: income per square mile (percentile breaks)",
         map = map('county', 'nebraska', plot = FALSE, fill = TRUE,

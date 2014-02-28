@@ -94,7 +94,7 @@ lme2 = gls(yield ~ 0 + gen, correlation = corLin(form = ~ x+y,nugget=TRUE), data
 eff = data.frame(ranblock=fixef(lme1), spat = coef(lme2))
 rownames(eff) <- gsub("gen", "", rownames(eff))
 plot(eff$ranblock, eff$spat, xlim=c(13,37), ylim=c(13,37),
-  xlab="RCB (random block)", ylab="corLin",type='n')
+  main="stroup.nin", xlab="RCB (random block)", ylab="corLin",type='n')
 text(eff$ranblock, eff$spat, rownames(eff), cex=0.5)
 abline(0,1)
 

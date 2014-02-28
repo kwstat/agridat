@@ -76,7 +76,7 @@ b1 <- m1$biplot[,1:4]
 b1$PC1 <- -1 * b1$PC1 # Flip vertical
 plot(b1$yield, b1$PC1, cex=0.0,
      text(b1$yield, b1$PC1, cex=.5, labels=row.names(b1),col="brown"),
-     main="AMMI BIPLOT", xlab="Average yield", ylab="PC1", frame=TRUE)
+     main="crossa.wheat AMMI biplot", xlab="Average yield", ylab="PC1", frame=TRUE)
 mn <- mean(b1$yield)
 abline(h=0, v=mn, col='wheat')
 

@@ -29,6 +29,6 @@
 dat <- li.millet.uniformity
 
 mean(dat$yield) # matches Li et al.
-desplot(yield~col*row, dat, main="li.millet.uniformity")
+desplot(yield~col*row, dat, main="li.millet.uniformity", aspect=100/100)
 }
 \keyword{datasets}

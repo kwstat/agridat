@@ -60,9 +60,9 @@ dat2 <- droplevels(subset(dat, is.element(env, c("A77","C77","V77",
 "R80","V80","A81","C81","G81","L81","D81","R81","V81","A82","L82",
 "G82","V82","A83","I83","G83","A84","N84","C84","I84","G84"))))
 
-m2 <- with(dat2, AMMI(env, gen, rep, yield))
+m2 <- with(dat2, AMMI(env, gen, rep, yield, graph=""))
 bip <- m2$biplot
-with(bip, plot(yield, PC1, type='n'))
+with(bip, plot(yield, PC1, type='n', main="gauch.soy"))
 with(bip, text(yield, PC1, rownames(bip),
                col=ifelse(bip$type=="GEN", "darkgreen", "blue"),
                cex=ifelse(bip$type=="GEN", 1.5, .75)))

@@ -29,14 +29,14 @@
   Gomez, K.A. and Gomez, A.A.. 1984,
   \emph{Statistical Procedures for Agricultural Research}.
   Wiley-Interscience. Page 171-172.
-  
+
   Used with permission of Kwanchai Gomez.
 }
 \examples{
 dat <- gomez.fractionalfactorial
 
 # Gomez, Figure 4.8
-with(dat, plot(y~x, type='n'))
+with(dat, plot(y~x, type='n', main="gomez.fractionalfactorial"))
 with(dat, text(x,y,trt, col=as.numeric(block)))
 
 # Split treatment into individual factors

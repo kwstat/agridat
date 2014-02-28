@@ -43,6 +43,6 @@ dmat <- acast(m1, loc~gen)
 # (please contact the package maintainer if this is not true).
 # For comparison, the 'heatmap' function clusters the rows and
 # columns _independently_ of each other.
-heatmap(dmat)
+heatmap(dmat, main="corsten.interaction")
 }
 

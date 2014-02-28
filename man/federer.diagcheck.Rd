@@ -58,7 +58,7 @@ desplot(yield ~ col*row, dat, text=gen, show.key=FALSE,
 
 # Only to match SAS results
 dat$row <- 16 - dat$row
-dat=dat[order(dat$col, dat$row), ]
+dat <- dat[order(dat$col, dat$row), ]
 
 # Add row / column polynomials to the data.
 # The scaling factors sqrt() are arbitrary, but used to match SAS
@@ -104,8 +104,44 @@ m2n <- lmer(yield ~ trtn + (0+r1|one) + (0+r2|one) + (0+r4|one) + (0+r8|one) + (
 # FIXME: Nelder_Mead gives very different results from bobyqa, ASREML, MIXED
 logLik(m2b)
 logLik(m2n)
-print(VarCorr(m2b), comp=c("Variance","Std.Dev."))
-print(VarCorr(m2n), comp=c("Variance","Std.Dev."))
+
+vc(m2b)
+##    groups        name variance stddev
+##  new.gen  (Intercept)   2869    53.57
+##  one      r1:c3         5532    74.38
+##  one.1    r1:c2        58230   241.3
+##  one.2    r1:c1       128000   357.8
+##  one.3    c8            6456    80.35
+##  one.4    c6            1400    37.41
+##  one.5    c4            1792    42.33
+##  one.6    c3            2549    50.49
+##  one.7    c2            5942    77.08
+##  one.8    c1               0     0
+##  one.9    r10           1133    33.66
+##  one.10   r8            1355    36.81
+##  one.11   r4            2269    47.63
+##  one.12   r2             241.8  15.55
+##  one.13   r1            9200    95.92
+##  Residual               4412    66.42
+
+vc(m2n)
+##    groups        name variance   stddev
+##  new.gen  (Intercept)   3228    56.82
+##  one      r1:c3         7688    87.68
+##  one.1    r1:c2        69750   264.1
+##  one.2    r1:c1       107400   327.8
+##  one.3    c8            6787    82.38
+##  one.4    c6            1636    40.45
+##  one.5    c4           12270   110.8
+##  one.6    c3            2686    51.83
+##  one.7    c2            7645    87.43
+##  one.8    c1               0     0.0351
+##  one.9    r10           1976    44.45
+##  one.10   r8            1241    35.23
+##  one.11   r4            2811    53.02
+##  one.12   r2             928.2  30.47
+##  one.13   r1           10360   101.8
+##  Residual               4127    64.24
 
 }
 

@@ -31,6 +31,10 @@
   The GLIMMIX procedure. \url{http://www.ats.ucla.edu/stat/SAS/glimmix.pdf}.
 }
 \examples{
+
+## Could the spaMM package be useful here...????
+
+
 dat <- gotway.hessianfly
 dat$prop <- dat$y / dat$n
 desplot(prop~long*lat, dat, out1=block, text=gen, cex=1, shorten='no',

@@ -26,7 +26,7 @@
   temperatures (thousands of degrees Celsius) during the growing season
   at each location.
 
-  Thanks to Chris Theobald for permission to use the data and for BUGS code.
+  Used with permission of Chris Theobald.
 }
 \source{
   Chris M. Theobald and Mike Talbot and Fabian Nabugoomu, 2002.

@@ -23,7 +23,7 @@ Lint yield from a cotton uniformity trial
 }
 \source{
   Williams, ER and Luckett, DJ. 1988. The use of uniformity data in the
-  design and analysis of cotton and barley variety trials. 
+  design and analysis of cotton and barley variety trials.
   \emph{Australian Journal of Agricultural Research}, 39, 339-350.
 }
 \examples{
@@ -35,8 +35,8 @@ desplot(yield ~ col*row, dat, aspect=asp, main="williams.cotton.uniformity")
 
 # Smoothed contour/persp plot like Williams 1988 Fig 1a, 2a
 dat$fit <- fitted(loess(yield~col*row, dat, span=.5))
-contourplot(fit~col*row, data=dat, cuts=6)
-wireframe(fit~col*row, data=dat, zlim=c(100, 250))
+contourplot(fit~col*row, data=dat, cuts=6, main="williams.cotton.uniformity")
+wireframe(fit~col*row, data=dat, zlim=c(100, 250), main="williams.cotton.uniformity")
 
 # Williams table 1
 anova(aov(yield ~ factor(row) + factor(col), dat))

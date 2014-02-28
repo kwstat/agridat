@@ -46,12 +46,12 @@ d2 <- subset(dat, field=="Oakley")
 coordinates(d1) <- data.frame(x=d1$x, y=d1$y)
 coordinates(d2) <- data.frame(x=d2$x, y=d2$y)
 spplot(d1, zcol = "nitro", cuts=8, cex = 1.6,
-       main = "Davis field - nitrogen",
+       main = "waynick.soil - Davis field - nitrogen",
        col.regions =  bpy.colors(8), key.space = "right")
 
 # Variogram
 v1 <- variogram(nitro~1, data=d1)
-plot(v1, main="Davis field - nitrogen") # Maybe hasn't reached sill
+plot(v1, main="waynick.soil - Davis field - nitrogen") # Maybe hasn't reached sill
 
 }
 \keyword{datasets}

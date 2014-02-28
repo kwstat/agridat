@@ -1,0 +1,177 @@
+# vc.r
+# Time-stamp: c:/x/rpack/kw/R/vc.r
+
+##' Extract variance components from mixed models
+##'
+##' Extract the variance components from a fitted model.  Currently
+##' supports \code{asreml}, \code{lme4}, \code{nlme} objects.
+##' @param object A fitted model object
+##' @param ... Extra arguments
+##' @return A data frame or other object.
+##' @export
+##' @docType methods
+##' @rdname vc-methods
+##' @examples
+##' require("nlme")
+##' data(Rail)
+##' m3 <- lme(travel~1, random=~1|Rail, data=Rail)
+##' vc(m3)
+##'
+##' #require("lme4")
+##' #m4 <- lmer(travel~1 + (1|Rail), data=Rail)
+##' #vc(m4)
+##'
+##' require("asreml")
+##' ma <- asreml(travel~1, random=~Rail, data=Rail)
+##' vc(ma)
+vc <- function(object, ...) UseMethod("vc")
+
+##' @method vc default
+##' @export
+##' @rdname vc-methods
+vc.default <- function(object, ...) {
+  stop("No default method exists for 'vc'.")
+}
+
+# ----- lme4 -----
+
+##' #@importMethodsFrom lme4 summary
+##'
+##' @method vc lmerMod
+##' @export
+##' @rdname vc-methods
+vc.lmerMod <- function(object,...){
+  vv <- summary(object)$varcor
+  vv <- lme4:::formatVC(vv, useScale=attr(vv, "useSc"), ...)
+  #browser()
+  vv <- data.frame(vv)
+  vv <- transform(vv, Variance=fac2num(Variance), Std.Dev.=fac2num(Std.Dev.))
+  lucid(vv)
+  #print(vv, quote=FALSE)
+  return()
+}
+
+
+# ----- lme -----
+##' @method vc lme
+##' @export
+##' @rdname vc-methods
+vc.lme <- function(object, ...) {
+  vv <- nlme::VarCorr(object)
+  vv <- as.matrix(vv)
+  vv[] <- signif(as.numeric(vv),4)
+  return(vv)
+}
+
+# ----- asreml -----
+
+##' @param gamma If gamma=FALSE, then the 'gamma' column is omitted from the results
+##' @method vc asreml
+##' @export
+##' @rdname vc-methods
+vc.asreml <- function (object, gamma=FALSE) {
+  # Kevin Wright
+
+  vv <- summary(object)$varcomp
+  if(gamma==FALSE)
+    vv$gamma <- NULL
+  response <- as.character(object$call$fixed)[2]
+  nm <- rownames(vv)
+  nm <- factor(nm, levels=nm) # to prevent alphanum sorting factor levels
+  vv <- cbind(effect=nm, terms=NA, vv)
+
+  # Calculate 'terms', similar to asreml
+  # browser()
+  # G-side
+  # ix <- pmatch(names(object$nolev), vv$effect)
+  # ix <- ix[!is.na(ix)]
+  # vv$terms[ix] <- object$nolev[ix]
+  # R-side $R.param$S2$rowf$levels
+
+  rownames(vv) <- NULL
+  attr(vv, "response") <- response
+  class(vv) <- c("vc.asreml", class(vv))
+  return(vv)
+}
+
+##' Print asreml variance components
+##'
+##' @param x The object to print
+##' @param heading Should the notes heading be removed from predictions?
+##' @param dig Number of digits for 'lucid' printing
+##' @param ... Not used
+##' @method print vc.asreml
+##' @export
+print.vc.asreml  <- function(x, heading=FALSE, dig=4, ...){
+  # Kevin Wright
+  # Adapted from printCoefmat and anova.asreml
+
+  class(x) <- "data.frame"
+
+  lcols <- c("gamma", "component", "std.error", "predicted.value", "standard.error")
+  lcols <- lcols[lcols %in% colnames(x)]
+  x[, lcols] <- lapply(x[, lcols], lucid, dig)
+
+  # Use 2 signif decimals for z.ratio
+  if("z.ratio" %in% colnames(x))
+    x$z.ratio <- lucid(x$z.ratio, dig=2)
+
+  # Remove heading from predictions?
+  if(!heading) attr(x, "heading") <- NULL
+
+  # Rename for printing.  Not all columns are always present--don't use reName
+  cn <- colnames(x)
+  cn[cn=="effect"] <- "effect"
+  cn[cn=="gamma"] <- "gamma"
+  cn[cn=="estimate"] <- "estimate"
+  cn[cn=="component"] <- "component"
+  cn[cn=="predicted.value"] <- "pred.value"
+  cn[cn=="std.error"] <- "std.error"
+  cn[cn=="standard.error"] <- "std.error"
+  cn[cn=="z.ratio"] <- "z.ratio"
+  cn[cn=="constraint"] <- "con"
+  cn[cn=="est.status"] <- "est.stat"
+  colnames(x) <- cn
+
+  # Shorten constraint to 3-letter code
+  if('Con' %in% names(x)) {
+    levels(x$Con)[levels(x$Con)=="Fixed"] <- "Fix"
+    levels(x$Con)[levels(x$Con)=="Boundary"] <- "Bnd"
+    levels(x$Con)[levels(x$Con)=="Positive"] <- "Pos"
+    levels(x$Con)[levels(x$Con)=="Unconstrained"] <- "Unc"
+  }
+
+  head <- attr(x, "heading")
+  if (!is.null(head))
+    cat("\nNotes:", head, sep = "\n")
+  attr(x, "head") <- NULL
+
+  # Clean up random coefficient names
+  rn <- as.character(x$Effect)
+  # us(2)
+  introws <- which(grepl("!us\\(2\\).1:1", rn))
+  if(length(introws) > 0){
+    pluspos <- regexpr("\\+",rn[introws])
+    bangpos <- regexpr("\\!",rn[introws])
+    int <- substring(rn[introws], 1, pluspos-1)
+    slp <- substring(rn[introws], pluspos+1, bangpos-1)
+    rn[introws] <- paste(int, " us(2)")
+    rn[introws+1] <- "(corr)  us(2)"
+    rn[introws+2] <- paste(slp, " us(2)")
+    x$Effect <- rn
+  }
+  # diag(2)
+  introws <- which(grepl("!diag\\(2\\).1.var", rn))
+  if(length(introws) > 0){
+    pluspos <- regexpr("\\+",rn[introws])
+    bangpos <- regexpr("\\!",rn[introws])
+    int <- substring(rn[introws], 1, pluspos-1)
+    slp <- substring(rn[introws], pluspos+1, bangpos-1)
+    rn[introws] <- paste(int, " diag(2)")
+    rn[introws+1] <- paste(slp, " diag(2)")
+    x$Effect <- rn
+  }
+
+  print(x, row.names=FALSE)
+  invisible(x)
+}

@@ -19,7 +19,7 @@
   }
 }
 \details{
-  Incidence of Rhynchosporium secalis (leaf blotch) on the leaves of
+  Incidence of \emph{Rhynchosporium secalis} (leaf blotch) on the leaves of
   10 varieties of barley grown at 9 sites in 1965.
 }
 \source{
@@ -27,11 +27,20 @@
   Quasilikelihood functions, generalized linear models and the
   Gauss-Newton method.
   \emph{Biometrika}, 61, 439--47.
+  \url{http://www.jstor.org/stable/2334725}.
+
+  Wedderburn credits the original data to an unpublished thesis by
+  J. F. Jenkyn.
 }
 
 \references{
   McCullagh, P and Nelder, J A (1989).
   \emph{Generalized Linear Models} (2nd ed).
+
+  R. B. Millar.
+  \emph{Maximum Likelihood Estimation and Inference: With Examples in R,
+    SAS and ADMB}.  Chapter 8.
+
 }
 
 \examples{
@@ -42,27 +51,39 @@ dat$y <- dat$y/100
 dotplot(gen~y|site, dat, main="wedderburn.barley")
 
 # Use the variance function mu(1-mu).  McCullagh page 330
-m1 <- glm(y ~ gen + site, data=dat, family="binomial")
+# Note, 'binomial' gives same results as 'quasibinomial', but also a warning
+m1 <- glm(y ~ gen + site, data=dat, family="quasibinomial")
 summary(m1)
 
 # Same shape (different scale) as McCullagh fig 9.1a
-plot(m1, which=1)
+plot(m1, which=1, main="wedderburn.barley")
 
 # Compare data and model
 dat$pbin <- predict(m1, type="response")
 dotplot(gen~pbin+y|site, dat, main="wedderburn.barley: observed/predicted")
 
+
+# Wedderburn suggested variance function: mu^2 * (1-mu)^2
+# Millar shows how to do this explicitly.
+wedder <- list(varfun=function(mu) (mu*(1-mu))^2,
+             validmu=function(mu) all(mu>0) && all(mu<1),
+             dev.resids=function(y,mu,wt) wt * ((y-mu)^2)/(mu*(1-mu))^2,
+             initialize=expression({
+               n <- rep.int(1, nobs)
+               mustart <- pmax(0.001, pmin(0.99,y)) }),
+             name="(mu(1-mu))^2")
+m2 <- glm(y ~ gen + site, data=dat, family=quasi(link="logit", variance=wedder))
+
 \dontrun{
-# Wedderburn suggested variance function mu^2 * (1-mu)^2
-# which is the 'wedderburn' family in the gnm package
+# Alternatively, the 'gnm' package has the 'wedderburn' family.
 library(gnm)
-m2 <- glm(y ~ gen + site, data=dat, family="wedderburn")
-summary(m2)
+m3 <- glm(y ~ gen + site, data=dat, family="wedderburn")
+summary(m3)
 # Similar to McCullagh fig 9.2
-plot(m2, which=1)
+plot(m3, which=1)
 
 # Compare data and model
-dat$pwed <- predict(m2, type="response")
+dat$pwed <- predict(m3, type="response")
 dotplot(gen~pwed+y|site, dat)
 }
 

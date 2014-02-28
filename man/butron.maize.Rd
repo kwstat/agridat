@@ -2,10 +2,10 @@
 \alias{butron.maize}
 \docType{data}
 \title{
-  Maize yields in a multi-environment trial
+  Maize yields in a multi-environment trial.  Pedigree included.
 }
 \description{
-  Maize yields in a multi-environment trial
+  Maize yields in a multi-environment trial.  Pedigree included.
 }
 
 \format{

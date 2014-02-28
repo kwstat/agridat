@@ -1,16 +1,13 @@
 Package: agridat
-Type: Package
-Title: Agricultural datasets
 Version: 1.9
 Date: 2013-09-20
+Title: Agricultural datasets
+Type: Package
 Author: Kevin Wright
 Maintainer: Kevin Wright <kw.stat@gmail.com>
 Description: Datasets from books and papers related to agriculture.
     Example analyses included.
-Depends:
-    grid,
-    lattice,
-    reshape2
+Imports: grid, lattice, reshape2
 Suggests:
     agricolae,
     car,

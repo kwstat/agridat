@@ -44,6 +44,7 @@
 \examples{
 
 dat <- blackman.wheat
+
 require(lattice)
 require(reshape2)
 
@@ -51,7 +52,7 @@ require(reshape2)
 bwplot(yield~type|loc,dat, main="blackman.wheat")
 # Peculiar interaction--Ear/Edn locs have reverse nitro response
 dotplot(gen~yield|loc, dat, group=nitro, auto.key=TRUE,
-        main="blackman.wheat")
+        main="blackman.wheat: yield for low/high nitrogen")
 
 # Height data from table 6 of Blackman.  Height at Trumpington loc.
 # Shorter varieties have higher yields, greater response to nitro.

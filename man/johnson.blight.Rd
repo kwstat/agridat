@@ -20,7 +20,7 @@
   }
 }
 \details{
-  The variable 'blight detected' is 1 if 'area' > 0.  
+  The variable 'blight detected' is 1 if 'area' > 0.
 }
 \source{
   Johnson, D.A. and Alldredge, J.R. and Vakoch, D.L. (1996).
@@ -41,10 +41,28 @@ dat$blight.prev <- factor(dat$blight.prev)
 dat$blight <- factor(dat$blight)
 
 # Johnson et al developed two logistic models to predict outbreak of blight
+
 m1 <- glm(blight ~ blight.prev + rain.am + rain.ja, data=dat, family=binomial)
 m1
+## Call:  glm(formula = blight ~ blight.prev + rain.am + rain.ja, family = binomial,
+##     data = dat)
+## Coefficients:
+##  (Intercept)  blight.prev1       rain.am       rain.ja
+##     -11.4699        3.8796        0.7162        0.2587
+## Degrees of Freedom: 24 Total (i.e. Null);  21 Residual
+## Null Deviance:	    34.62
+## Residual Deviance: 13.7 	AIC: 21.7
+
 m2 <- glm(blight ~ blight.prev + rain.am + precip.m, data=dat, family=binomial)
 m2
+## Call:  glm(formula = blight ~ blight.prev + rain.am + precip.m, family = binomial,
+##     data = dat)
+## Coefficients:
+##  (Intercept)  blight.prev1       rain.am      precip.m
+##      -7.5483        3.5526        0.6290       -0.0904
+## Degrees of Freedom: 24 Total (i.e. Null);  21 Residual
+## Null Deviance:	    34.62
+## Residual Deviance: 14.08 	AIC: 22.08
 
 }
 \keyword{datasets}

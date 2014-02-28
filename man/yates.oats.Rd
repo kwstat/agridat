@@ -44,13 +44,14 @@ desplot(yield ~ x*y, dat, out1=block, text=gen, col=nitro, cex=1,
 # block has lower yield.  The blocking is inadequate!
 require(lattice)
 xyplot(yield ~ x|factor(nitro), dat, type = c('p', 'smooth'),
-       xlab='x', span=1, as.table = TRUE)
+       xlab='x', span=1, as.table = TRUE, main="yates.oats")
 
 # Typical split-plot analysis
 if(require(lme4)){
 m3 <- lmer(yield ~ nitro * gen + (1|block/gen), data=dat)
 # Residuals still show structure
-xyplot(resid(m3) ~ dat$x, xlab='x', type=c('p','smooth'))
+xyplot(resid(m3) ~ dat$x, xlab='x', type=c('p','smooth'),
+       main="yates.oats")
 
 # Add a linear trend for x
 m4 <- lmer(yield ~ x + nitro * gen + (1|block/gen), data=dat)

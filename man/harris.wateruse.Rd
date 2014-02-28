@@ -42,7 +42,7 @@ dat <- harris.wateruse
 require(latticeExtra)
 useOuterStrips(xyplot(water ~ day|species*age,dat, as.table=TRUE,
        group=tree, type=c('p','smooth'),
-       main="Water use by 2 species, 2 ages (10 trees each)"))
+       main="harris.wateruse 2 species, 2 ages (10 trees each)"))
 # Note that measurements on day 268 are all below the trend line and
 # thus considered outliers.  Delete them.
 dat <- subset(dat, day!=268)
@@ -51,7 +51,8 @@ dat <- subset(dat, day!=268)
 # Schabenberger figure 7.24
 xyplot(water ~ day|tree,dat, subset=age=="A2" & species=="S2",
        as.table=TRUE, type=c('p','smooth'),
-       main="Water use profiles of individual trees (Age 2, Species 2)")
+       ylab="Water use profiles of individual trees",
+       main="harris.wateruse (Age 2, Species 2)")
 
 # Rescale day for nicer output, and convergence issues, add quadratic term
 dat <- transform(dat, ti=day/100)
@@ -76,23 +77,25 @@ require(nlme)
 ## We use pdDiag() to get uncorrelated random effects
 m1n <- lme(water ~ 1 + ti + ti2, data=d22, na.action=na.omit,
            random = list(tree=pdDiag(~1+ti+ti2)))
-VarCorr(m1n)
-##             Variance     StdDev
-## (Intercept) 2.691398e-01 5.187869e-01
-## ti          2.068800e-10 1.438333e-05
-## ti2         1.493064e-11 3.864019e-06
-## Residual    1.471960e-01 3.836614e-01
+
+vc(m1n)
+##       effect variance    stddev
+##  (Intercept)   0.2691 0.5188
+##           ti   0      0.0000144
+##          ti2   0      0.0000039
+##     Residual   0.1472 0.3837
 
 if(require(lme4)){
 m1l <- lmer(water ~ 1 + ti + ti2 + (1|tree) +
             (0+ti|tree) + (0+ti2|tree), data=d22)
-print(VarCorr(m1l), comp=c("Variance","Std.Dev.")) # Output 7.26.
 
-## Groups   Name        Variance Std.Dev.
-## tree     (Intercept) 0.26914  0.51879
-## tree     ti          0.00000  0.00000
-## tree     ti2         0.00000  0.00000
-## Residual             0.14720  0.38366
+vc(m1l)
+##    groups        name variance stddev
+##  tree     (Intercept)   0.2691 0.5188
+##  tree.1   ti            0      0
+##  tree.2   ti2           0      0
+##  Residual               0.1472 0.3837
+
 }
 
 # Once the overall quadratic trend has been removed, there is not
@@ -101,7 +104,8 @@ d22r <- subset(d22, !is.na(water))
 d22r$res <- resid(m1n)
 xyplot(res ~ day|tree,d22r,
        as.table=TRUE, type=c('p','smooth'),
-       main="Residuals of individual trees")
+       ylab="residual",
+       main="harris.wateruse - Residuals of individual trees")
 op <- par(mfrow=c(4,3))
 tapply(d22r$res, d22r$tree, acf)
 par(op)
@@ -127,14 +131,15 @@ m2l <- lme(water ~ 1 + ti + ti2, data=d22,
           cor = corExp(form=~ day|tree),
           na.action=na.omit)
 m2l # Match output 7.27.  Same fixef, ranef, variances, exp corr
-print(VarCorr(m2l), comp=c("Variance","Std.Dev."))
-## tree = pdLogChol(1)
-##             Variance  StdDev
-## (Intercept) 0.2656415 0.5154042
-## Residual    0.1541173 0.3925777
 
+vc(m2l)
+##       effect variance stddev
+##  (Intercept)   0.2656 0.5154
+##     Residual   0.1541 0.3926
 
-## Now use asreml.  When I tried rcov=~tree:exp(ti)),
+\dontrun{
+
+## Now use asreml.  When I tried rcov=~tree:exp(ti),
 ## the estimated parameter value was on the 'boundary', i.e. 0.
 ## Changing rcov to the 'day' scale produced a sensible estimate
 ## that matched SAS.
@@ -142,18 +147,21 @@ print(VarCorr(m2l), comp=c("Variance","Std.Dev."))
 ## SAS uses exp(-d/phi) and asreml uses phi^d.
 ## SAS reports 3.79, asreml reports 0.77, and exp(-1/3.7945) = 0.7683274
 ## Note: normally a quadratic would be included as 'pol(day,2)'
-## require(asreml)
-## d22 <- d22[order(d22$tree, d22$day),]
-## m2a <- asreml(water ~ 1 + ti + ti2,
-##               data=d22,
-##               random = ~ tree,
-##               rcov=~tree:exp(day))
-## summary(m2a)$varcomp
-##              effect component std.error z.ratio           con
-##       tree!tree.var    0.2656   0.1301      2        Positive
-##          R!variance    0.1541   0.01611     9.6      Positive
-##           R!day.pow    0.7683   0.04191    18   Unconstrained
 
+require(asreml)
+d22 <- d22[order(d22$tree, d22$day),]
+m2a <- asreml(water ~ 1 + ti + ti2,
+              data=d22,
+              random = ~ tree,
+              rcov=~tree:exp(day))
+
+vc(m2a)
+##         effect component std.error z.ratio constr
+##  tree!tree.var    0.2656   0.1301      2      pos
+##     R!variance    0.1541   0.01611     9.6    pos
+##      R!day.pow    0.7683   0.04191    18    uncon
+
+}
 
 # ----- Model 3. Full model for all species/ages.  Schabenberger p. 518
 
@@ -170,29 +178,32 @@ m3l <- lme(water ~ 0 + age:species + age:species:ti + age:species:ti2,
            random = list(tree=pdDiag(~1+ti)),
            cor = corExp(form=~ day|tree),
            )
-m3l # Match output 7.27.  Same fixef, ranef, variances, exp corr
-print(VarCorr(m3l), comp=c("Variance","Std.Dev."))
-## tree = pdDiag(1 + ti)
-##             Variance   StdDev
-## (Intercept) 0.15489986 0.3935732
-## ti          0.02785168 0.1668882
-## Residual    0.16000850 0.4000106
 
+m3l # Match Schabenberger output 7.27.  Same fixef, ranef, variances, exp corr
 
-## dat <- dat[order(dat$tree,dat$day),]
-## m3a <- asreml(water ~ 0 + age:species + age:species:ti + age:species:ti2,
-##              data=dat,
-##              random = ~ age:species:tree + age:species:tree:ti,
-##              rcov = ~ tree:exp(day)
-##              )
-## summary(m3a)$varcomp # Note: day.pow = .8091 = exp(-1/4.7217)
-##                         effect component std.error z.ratio           con
-##       age:species:tree!age.var   0.1549   0.07192      2.2      Positive
-##    age:species:tree:ti!age.var   0.02785  0.01343      2.1      Positive
-##                     R!variance   0.16     0.008917    18        Positive
-##                      R!day.pow   0.8091   0.01581     51   Unconstrained
+vc(m3l)
+##       effect variance stddev
+##  (Intercept)  0.1549  0.3936
+##           ti  0.02785 0.1669
+##     Residual  0.16    0.4
 
+\dontrun{
 
+dat <- dat[order(dat$tree,dat$day),]
+m3a <- asreml(water ~ 0 + age:species + age:species:ti + age:species:ti2,
+             data=dat,
+             random = ~ age:species:tree + age:species:tree:ti,
+             rcov = ~ tree:exp(day)
+             )
+
+vc(m3a) # Note: day.pow = .8091 = exp(-1/4.7217)
+##                       effect component std.error z.ratio constr
+##     age:species:tree!age.var   0.1549   0.07192      2.2    pos
+##  age:species:tree:ti!age.var   0.02785  0.01343      2.1    pos
+##                   R!variance   0.16     0.008917    18      pos
+##                    R!day.pow   0.8091   0.01581     51    uncon
+
+}
 
 
 }

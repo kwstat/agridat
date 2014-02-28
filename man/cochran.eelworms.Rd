@@ -49,7 +49,9 @@ dat <- cochran.eelworms
 desplot(initial ~ col*row, data=dat, flip=TRUE, main="cochran.eelworms")
 
 # final counts are strongly related to initial counts
-xyplot(final~initial|dose, data=dat, group=fumigant, auto.key=list(columns=5))
+xyplot(final~initial|dose, data=dat, group=fumigant,
+       main="cochran.eelworms", xlab="Initial worm count",
+       ylab="Final worm count", auto.key=list(columns=5))
 
 # One approach...log transform, use 'initial' as covariate, create 9 treatments
 dat <- transform(dat, trt=factor(paste0(fumigant, dose)))

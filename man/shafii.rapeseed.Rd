@@ -70,7 +70,8 @@ trellis.par.set(tpg)
 dotplot(loc~yield|gen,group=year,data=dat,
         auto.key=list(columns=3),
         main="shafii.rapeseed",ylab="Location")
-dotplot(loc~yield|gen,group=year,data=datm,auto.key=TRUE)
+#dotplot(loc~yield|gen,group=year,data=datm,auto.key=TRUE,
+#        main="shafii.rapeseed")
 
 # AMMI biplot.  Remove gen and locyr effects.
 m1.lm <- lm(yield ~ gen + locyr, data=datm)

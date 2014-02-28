@@ -37,7 +37,7 @@ dat <- welch.bermudagrass
 # Welch uses 100-pound units of n,p,k
 dat <- transform(dat, n=n/100, p=p/100, k=k/100)
 m1 <- lm(yield ~ n + p + k + I(n^2) + I(p^2) + I(k^2) + n:p + n:k + p:k + n:p:k, data=dat)
-R> signif(coef(m1),4) # These match the 3-yr coefficients of Welch, Table 2
+signif(coef(m1),4) # These match the 3-yr coefficients of Welch, Table 2
 ## (Intercept)           n           p           k      I(n^2)      I(p^2)
 ##     1.94300     2.00700     1.47100     0.61880    -0.33150    -1.29500
 ##      I(k^2)         n:p         n:k         p:k       n:p:k
@@ -45,7 +45,7 @@ R> signif(coef(m1),4) # These match the 3-yr coefficients of Welch, Table 2
 
 require(latticeExtra)
 useOuterStrips(xyplot(yield~n|factor(p)*factor(k), data=dat, type='l',
-                      main="welch.bermudagrass"))
+                      main="welch.bermudagrass: yield for each P*K", xlab="nitro"))
 
 # Welch Fig 4.  Modeled response curves
 
@@ -55,11 +55,15 @@ d2 <- expand.grid(n=0, p=0, k=seq(0, 1.68, length=50))
 d2$pred <- predict(m1, d2)
 d3 <- expand.grid(n=0, p=seq(0, .88, length=50), k=0)
 d3$pred <- predict(m1, d3)
-par(mfrow=c(1,3))
-plot(pred~n, data=d1, type='l', ylim=c(0,8), xlab="N 100 lb/ac", ylab="yield")
-plot(pred~k, data=d2, type='l', ylim=c(0,8), xlab="K 100 lb/ac", ylab="yield")
-title("welch.bermudagrass")
-plot(pred~p, data=d3, type='l', ylim=c(0,8), xlab="P 100 lb/ac", ylab="yield")
+\dontrun{  # Causes Rcmd check to say: 'plot region too large'
+op <- par(mfrow=c(1,3))
+plot(pred~n, data=d1, type='l', ylim=c(0,6), xlab="N 100 lb/ac", ylab="")
+plot(pred~k, data=d2, type='l', ylim=c(0,6), xlab="K 100 lb/ac", ylab="")
+title("welch.bermudagrass - yield vs fertilizer", outer=TRUE, line= -3)
+plot(pred~p, data=d3, type='l', ylim=c(0,6), xlab="P 100 lb/ac",
+ylab="")
+par(op)
+}
 
 # Grid-search optimization of fertilizer quantities, using
 # $25/ton for grass, $.12/lb for N, $.18/lb for P, $.07/lb for K
