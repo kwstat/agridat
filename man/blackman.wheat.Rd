@@ -69,7 +69,7 @@ dat$env <- factor(paste(dat$loc,dat$nitro,sep="-"))
 datm <- acast(dat, gen~env, value.var="yield")
 datm <- sweep(datm, 1, rowMeans(datm))
 datm <- sweep(datm, 2, colMeans(datm))
-biplot(prcomp(datm), main="blackman.wheat")
+biplot(prcomp(datm), main="blackman.wheat AMMI-style biplot")
 
 }
 \keyword{datasets}

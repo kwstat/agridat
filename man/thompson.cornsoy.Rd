@@ -102,7 +102,7 @@ main="thompson.cornsoy", auto.key=list(columns=5), ylab='corn yield')
 # Rain and temperature have negative correlation in each month.
 # July is a critical month: temp and yield are negatively correlated,
 # while rain and yield are positively correlated.
-splom(~dat[-1,-1], col=dat$state, cex=.5, main="thompson.cornsoy")
+# splom(~dat[-1,-1], col=dat$state, cex=.5, main="thompson.cornsoy")
 
 \dontrun{
 # Plots similar to those in Venables' Exegeses paper.

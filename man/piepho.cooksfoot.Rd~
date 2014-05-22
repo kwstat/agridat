@@ -1,0 +1,32 @@
+\name{piepho.cooksfoot}
+\alias{piepho.cooksfoot}
+\docType{data}
+\title{
+%%   ~~ data name/kind ... ~~
+}
+\description{
+%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+}
+\usage{data(piepho.cooksfoot)}
+\format{
+  A data frame with 111 observations on the following 3 variables.
+  \describe{
+    \item{\code{gen}}{a factor with levels \code{G01} \code{G02} \code{G03} \code{G04} \code{G05} \code{G06} \code{G07} \code{G08} \code{G09} \code{G10} \code{G11} \code{G12} \code{G13} \code{G14} \code{G15} \code{G16} \code{G17} \code{G18} \code{G19} \code{G20} \code{G21} \code{G22} \code{G23} \code{G24} \code{G25}}
+    \item{\code{year}}{a factor with levels \code{1990} \code{1991} \code{1992} \code{1993} \code{1994} \code{1995} \code{1996}}
+    \item{\code{date}}{a numeric vector}
+  }
+}
+\details{
+%%  ~~ If necessary, more details than the __description__ above ~~
+}
+\source{
+%%  ~~ reference to a publication or URL from which the data were obtained ~~
+}
+\references{
+%%  ~~ possibly secondary sources and usages ~~
+}
+\examples{
+data(piepho.cooksfoot)
+## maybe str(piepho.cooksfoot) ; plot(piepho.cooksfoot) ...
+}
+\keyword{datasets}

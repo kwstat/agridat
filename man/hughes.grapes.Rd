@@ -62,7 +62,7 @@ tapply(dat$rate, dat$trt, max)
 # Piepho model 3.  Binomial data.  May not be exactly the same model
 
 # Use the binomial count data with lme4
-library(lme4)
+require(lme4)
 m1 <- glmer(cbind(diseased, total-diseased) ~ trt + block + (1|plot/vine),
            data=dat, family=binomial)
 m1

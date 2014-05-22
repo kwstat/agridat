@@ -31,7 +31,7 @@
 dat <- ratkowsky.onions
 
 # Model inverse yield as a quadratic.  Could be better...
-library(lattice)
+require(lattice)
 dat <- transform(dat, iyield = 1/yield)
 m1 <- lm(iyield ~ I(density^2)*loc, dat)
 dat$pred <- predict(m1)

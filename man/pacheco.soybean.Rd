@@ -37,6 +37,8 @@ bip <- m1$biplot[,1:3]
 # Fig 1 of Pacheco et al.
 with(bip, plot(yield, PC1, cex=0.0,
                text(yield,PC1,labels=row.names(bip), col="blue"),
-               xlim=c(1000,3000),main="AMMI BIPLOT",frame=TRUE))
+               xlim=c(1000,3000),main="pacheco.soybean - AMMI biplot",frame=TRUE))
+with(bip[19:29,], points(yield, PC1, cex=0.0,
+               text(yield,PC1,labels=row.names(bip[19:29,]), col="darkgreen")))
 }
 \keyword{datasets}

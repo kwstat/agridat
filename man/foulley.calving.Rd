@@ -58,10 +58,7 @@ barchart(d2, par.settings=thm, main="foulley.calving",
 
 ## Ordinal multinomial model
 
-require(MASS)
-dat$sex <- relevel(dat$sex, "M") # Default first level is 'F'
-m1 <- polr(score ~ sex*age , data=dat, weights=count, method='probit')
-summary(m1)
+
 
 ## Note 1.0196-.3244 = 0.6952 matches Foulley's '2-3' threshold estimate
 

@@ -24,9 +24,9 @@
   Planting rates varied from 15,000 to 21,000 planter per acre.
 }
 \source{
-  Albert S. Hunter, John A. Yungen (1955).  The  Influence  of
-  Variations  in  Fertility  Levels  Upon  the  Yield  and  Protein
-  Content  of  Field  Corn  in  Eastern  Oregon.
+  Albert S. Hunter, John A. Yungen (1955).  The Influence of
+  Variations in Fertility Levels Upon the Yield and Protein
+  Content of Field Corn in Eastern Oregon.
   \emph{Soil Science Society of America Journal}, 19, 214-218.
 }
 \references{

@@ -81,7 +81,7 @@ require("reshape2")
 dm <- melt(datm, measure.var='res', id.var=c('gen', 'locyr'))
 dmat <- acast(dm, gen~locyr)
 # AMMI biplot.  Figure 1 of Shafii (1998)
-biplot(prcomp(dmat), main="shafii.rapeseed")
+biplot(prcomp(dmat), main="shafii.rapeseed - AMMI biplot")
 trellis.par.set(op) # Unset graphics changes
 
 }

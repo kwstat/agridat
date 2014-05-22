@@ -60,14 +60,15 @@ table(dat$col, dig) # Table 3 of Preece
 # Median yields of rows/cols show obvious trends
 plot(tapply(dat$yield, dat$row, median), xlab="Row", ylab="Yield",
       main="wiebe.wheat.uniformity")
-plot(tapply(dat$yield, dat$col, median), xlab="Column", ylab="Yield",
-      main="wiebe.wheat.uniformity")
+# plot(tapply(dat$yield, dat$col, median), xlab="Column", ylab="Yield",
+#       main="wiebe.wheat.uniformity")
 # Spatial trends are obvious
-xyplot(yield~col, dat, type=c('p','smooth'), main="wiebe.wheat.uniformity")
+# xyplot(yield~col, dat, type=c('p','smooth'), main="wiebe.wheat.uniformity")
 
 # Loess
 m3 <- loess(yield~row+col, dat)
-plot(fitted(m3), resid(m3), ylim=c(-300,300),
-     main="wiebe.wheat.uniformity")
+# plot(fitted(m3), resid(m3), ylim=c(-300,300),
+#      main="wiebe.wheat.uniformity")
+
 }
 \keyword{datasets}

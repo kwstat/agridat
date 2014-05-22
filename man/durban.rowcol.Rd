@@ -45,12 +45,13 @@ desplot(yield~bed*row, dat, out1=rep, main="durban.rowcol")
 m10 <- lm(yield~gen, data=dat)
 dat$resid <- m10$resid
 require(lattice)
-xyplot(resid~row, dat, type=c('p','smooth'), main="durban.rowcol")
-xyplot(resid~bed, dat, type=c('p','smooth'), main="durban.rowcol")
+# xyplot(resid~row, dat, type=c('p','smooth'), main="durban.rowcol")
+# xyplot(resid~bed, dat, type=c('p','smooth'), main="durban.rowcol")
 
 # Figure 3
 coplot(resid~bed|factor(row), data=dat, cex=.5,
 panel=function(x,y,...) panel.smooth(x,y,span=.75,...))
+title("durban.rowcol")
 
 \dontrun{
 # Figure 5 - field trend

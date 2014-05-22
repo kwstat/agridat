@@ -1,29 +1,38 @@
 News for 'agridat'
 
-Version 1.9 (Apr 2014) -  for R 3.1
+Version 1.9
 
   * New data:
-    besag.endive, brandt.switchback, butron.maize,
-    carlson.germination, cullis.earlygen, connolly.potato,
-    fisher.latin, foulley.calving,
-    gomez.splitplot.subsample, goulden.latin,
-    gumpertz.pepper, harrison.priors,
-    heady.fertilizer, hunter.corn, jansen.strawberry, kalamkar.potato.uniformity,
-    karcher.turfgrass, lee.potatoblight, lucas.switchback, maindonald.barley,
+    beall.webworms, besag.endive, brandt.switchback, butron.maize,
+    carlson.germination, cochran.factorial, connolly.potato, cornelius.maize,
+    cullis.earlygen, fisher.latin, foulley.calving, fox.wheat,
+    gomez.splitplot.subsample,
+    goulden.latin, gumpertz.pepper, harrison.priors, hazell.vegetables,
+    heady.fertilizer, holland.arthropods, hunter.corn,
+    jansen.strawberry, kalamkar.potato.uniformity,
+    kang.maize, kang.peanut, karcher.turfgrass, keen.potatodamage,
+    lasrosas.corn, lee.potatoblight, lonnquist.maize,
+    lucas.switchback, maindonald.barley,
     mead.cauliflower, mercer.mangold.uniformity, patterson.switchback,
-    sinclair.clover, snijders.fusarium, stirret.borers,
+    piepho.cooksfoot, sinclair.clover, snijders.fusarium,
+    stirret.borers, theobald.barley,
     turner.herbicide, vargas.txe, vold.longterm, wallace.iowaland,
-    walsh.cottonprice, welch.bermudagrass, weiss.incblock, weiss.lattice, yang.barley
+    walsh.cottonprice, wassom.brome1.uniformity,
+    welch.bermudagrass, weiss.incblock, weiss.lattice, yang.barley
 
   * New functions:
-    vc: to extract variance component estimates from mixed models
+    vc: to extract variance component estimates from mixed models.
+    gge: to fit and plot GGE biplots.
 
   * Other:
     Use if(require(lme4)) in examples.  Ripley request.
+    hayman.diallel is now hayman.tobacco
 
   * To do:
-    Write BUGS code for besag.elbatan (?).
-    Write BUGS code for lee.potatoblight.
+    JAGS code for lee.potatoblight
+    JAGS code for theobald.barley
+    JAGS code for besag.elbatan.
+    Example for bond.diallel.
 
 Version 1.8 (Sep 2013)
 

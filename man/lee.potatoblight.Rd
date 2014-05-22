@@ -94,7 +94,18 @@ head(tab) # Matches Lee page 27.
 
 
 # Note the progression to lower scores as time passes in each year
-desplot(y ~ col*row|date, dat, main="lee.potatoblight")
+skp <- c(rep(0,10),
+         rep(0,7),1,1,1,
+         rep(0,8),1,1,
+         rep(0,6),1,1,1,1,
+         rep(0,5),1,1,1,1,1,
+         rep(0,5),1,1,1,1,1,
+         rep(0,6),1,1,1,1,
+         rep(0,5),1,1,1,1,1,
+         rep(0,5),1,1,1,1,1,
+         rep(0,5),1,1,1,1,1)
+desplot(y ~ col*row|date, dat, main="lee.potatoblight",
+        layout=c(10,11),skip=skp)
 
 # 1983 only.  I.Hardy succumbs quickly
 xyplot(y ~ date|gen, dat, subset=year==1983, group=rep,

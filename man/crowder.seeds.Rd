@@ -60,7 +60,7 @@ summary(m1.glm)
 
 
 # --- GLMM.  Assumes Gaussian random effects
-library(MASS)
+require(MASS)
 m1.glmm <- glmmPQL(cbind(germ, n-germ) ~ gen*extract, random= ~1|plate,
   family=binomial(), data=dat)
 summary(m1.glmm)

@@ -39,7 +39,9 @@ dat <- transform(dat, category=ordered(category, levels=c('C1','C2','C3')))
 
 ftable(xtabs(count~male + female + category, data=dat))
 mosaicplot(xtabs(count~male + female + category, data=dat),
-           main="jansen.strawberry disease ratings")
+           color=c("lemonchiffon1","moccasin","lightsalmon1","indianred"),
+           main="jansen.strawberry disease ratings",
+           xlab="Male parent", ylab="Female parent")
 
 }
 \keyword{datasets}

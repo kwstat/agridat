@@ -49,12 +49,12 @@ dat0$freq[is.na(dat0$freq)] <- 0
 dd <- data.frame(borers = rep(dat0$borers, times=dat0$freq),
                  treat = rep(dat0$treat, times=dat0$freq))
 
-library(lattice)
+require(lattice)
 histogram(~borers|treat, dd, type='count', breaks=0:27-.5,
           layout=c(1,4), main="bliss.borers", xlab="Borers per hill")
 
 
-library(MASS)
+require(MASS)
 m1 <- glm.nb(borers~0+treat, data=dd)
 # Bliss, table 3, presents treatment means, which are matched by:
 exp(coef(m1)) # 4.033333 3.166667 1.483333 1.508333
@@ -66,7 +66,7 @@ m1$theta # 1.47
 # Plot observed and expected distributions for treatment 2
 xx <- 0:26
 yy <- dnbinom(0:26, mu=3.17, size=1.47)*120 # estimates are from glm.nb
-library(latticeExtra)
+require(latticeExtra)
 histogram(~borers, dd, type='count', subset=treat=='T2',
           main="bliss.borers trt T2 observed and expected",
           breaks=0:27-.5) +
@@ -74,7 +74,7 @@ xyplot(yy~xx, col='navy', type='b')
 
 
 # "Poissonness"-type plot
-library(vcd)
+require(vcd)
 dat2 <- droplevels(subset(dat, treat=='T2'))
 distplot(dat2$borers, type = "nbinomial",
 main="bliss.borers neg binomialness plot")

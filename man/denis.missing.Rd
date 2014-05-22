@@ -36,7 +36,7 @@ require(reshape2)
 acast(dat, env~gen, value.var='yield')
 
 # Stability variance (Table 3 in Piepho)
-library("nlme")
+require("nlme")
 m1 <- lme(yield ~ -1 + gen, data=dat, random= ~ 1|env,
           weights = varIdent(form= ~ 1|gen),
           na.action=na.omit)

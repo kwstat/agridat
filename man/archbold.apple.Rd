@@ -66,15 +66,15 @@ if(require(lme4)){
 m1 <- lmer(yield ~ -1 + trt + (1|rep/mp/sp), dat)
 
 vc(m1)  # Variances/means on page 59
-##      groups        name variance stddev
-## sp:(mp:rep) (Intercept)    193.3  13.9
-## mp:rep      (Intercept)    203.8  14.28
-## rep         (Intercept)    197.3  14.05
-## Residual                  1015    31.86
+##         grp        var1 var2   vcov sdcor
+## sp:(mp:rep) (Intercept) <NA>  193.3 13.9
+##      mp:rep (Intercept) <NA>  203.8 14.28
+##         rep (Intercept) <NA>  197.3 14.05
+##    Residual        <NA> <NA> 1015   31.86
 
 }
 
-## library(HH)
+## require(HH)
 ## interaction2wt(yield~spacing+stock+gen, dat)
 
 }

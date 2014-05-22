@@ -1,0 +1,77 @@
+\name{cornelius.maize}
+\alias{cornelius.maize}
+\docType{data}
+\title{
+  Maize yields for 9 cultivars at 20 locations.
+}
+\description{
+  Maize yields for 9 cultivars at 20 locations.
+}
+\usage{data(cornelius.maize)}
+\format{
+  A data frame with 180 observations on the following 3 variables.
+  \describe{
+    \item{\code{env}}{environment factor, 20 levels}
+    \item{\code{gen}}{genotype/cultivar, 9 levels}
+    \item{\code{yield}}{yield, kg/ha}
+  }
+}
+\details{
+  Cell means (kg/hectare) for the CIMMYT EVT16B maize yield trial.
+}
+\source{
+  P L Cornelius and J Crossa and M S Seyedsadr. (1996).
+  Statistical Tests and Estimators of Multiplicative Models for
+  Genotype-by-Environment Interaction.  Book:
+  \emph{Genotype-by-Environment Interaction}. Pages 199-234.
+}
+\references{
+  Forkman, Johannes and Piepho, Hans-Peter. (2014).
+  Parametric bootstrap methods for testing multiplicative terms in GGE
+  and AMMI models. \emph{Biometrics}.
+}
+\examples{
+\dontrun{
+dat <- cornelius.maize
+
+# This reproduces the analysis of Forkman and Piepho.
+
+require(reshape2)
+Y <- acast(dat, env~gen, value.var='yield')
+
+# Singular value decomposition of double-centered Y
+Y0 <- Y
+Y <- sweep(Y, 1, rowMeans(Y0))
+Y <- sweep(Y, 2, colMeans(Y0))
+Y <- Y + mean(Y0)
+Y.svd <- svd(Y)
+lambda <- Y.svd$d
+
+I <- nrow(Y) # n.env
+J <- ncol(Y) # n.gen
+M <- min(I - 1, J - 1) # AMMI.  For GGE, use min(I,J-1)
+M <- min(M, 6) # Never use more than 5 components
+
+n.boot <- 10000 # Number of bootstrap samples.
+t.boot <- matrix(NA, nrow=n.boot, ncol=M-1)
+
+# t.obs[k] is the proportion of variance explained by the kth term out of
+# the k...M terms, e.g. t.obs[2] is lam[2]^2 / sum(lam[2:M]^2)
+t.obs <- { lambda^2/rev(cumsum(rev(lambda^2))) } [1:(M-1)]
+
+for(ii in 1:(M-1)){
+  # K represents the first 'K' multiplicative terms in the svd
+  K <- ii - 1
+  for(bb in 1:n.boot){
+    E.b <- matrix(rnorm((I-1 - K)*(J-1 - K)), nrow = I-1 - K, ncol = J-1 - K)
+    lam.b <- svd(E.b)$d
+    t.boot[bb, ii] <- lam.b[1]^2 / sum(lam.b^2) # bootstrap test statistic
+  }
+}
+
+# P-value is proportion of time bootstrap values exceed t.obs
+colMeans(t.boot > matrix(rep(t.obs, n.boot), nrow=n.boot, byrow=TRUE))
+# [1] 0.0000 0.1558 0.2734 0.0430 0.1106
+}
+}
+\keyword{datasets}

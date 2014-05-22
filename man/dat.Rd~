@@ -1,0 +1,34 @@
+\name{dat}
+\alias{dat}
+\docType{data}
+\title{
+%%   ~~ data name/kind ... ~~
+}
+\description{
+%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+}
+\usage{data(dat)}
+\format{
+  A data frame with 6 observations on the following 5 variables.
+  \describe{
+    \item{\code{year}}{a factor with levels \code{t1} \code{t2} \code{t3} \code{t4} \code{t5} \code{t6}}
+    \item{\code{carrot}}{a numeric vector}
+    \item{\code{celery}}{a numeric vector}
+    \item{\code{cucumber}}{a numeric vector}
+    \item{\code{pepper}}{a numeric vector}
+  }
+}
+\details{
+%%  ~~ If necessary, more details than the __description__ above ~~
+}
+\source{
+%%  ~~ reference to a publication or URL from which the data were obtained ~~
+}
+\references{
+%%  ~~ possibly secondary sources and usages ~~
+}
+\examples{
+data(dat)
+## maybe str(dat) ; plot(dat) ...
+}
+\keyword{datasets}

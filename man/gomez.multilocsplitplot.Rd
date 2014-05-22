@@ -50,7 +50,7 @@ m2 <- lmer(yield ~ loc*nf*gen + (1|loc/rep/nf), dat)
 anova(m2)
 ## Analysis of Variance Table
 ##            Df   Sum Sq  Mean Sq F value
-## loc         2    34792    17396  0.0450
+## loc         2   117942    58971  0.1525
 ## nf          5 72841432 14568286 37.6777
 ## gen         1  7557570  7557570 19.5460
 ## loc:nf     10 10137188  1013719  2.6218

@@ -45,7 +45,7 @@ dat <- weiss.incblock
 
 # True aspect as shown in Weiss and Cox
 desplot(yield~col*row, dat, text=gen, shorten='none', cex=.8, out1=block,
-    main="weiss.incblock", aspect=252/96)
+    main="weiss.incblock", xlab="Soybean yields", aspect=252/96)
 
 # Standard inc block analysis used by Weiss and Cox
 \dontrun{

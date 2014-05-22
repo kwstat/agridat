@@ -114,8 +114,8 @@ desplot(yield~col*row|year, dat, layout=c(1,3),
         main="smith.corn.uniformity: yield across years 1895-1987")
 
 # Outliers are obvious
-xyplot(yield~row|factor(col), dat, groups=year,
-auto.key=list(columns=3), main="smith.corn.uniformity")
+# xyplot(yield~row|factor(col), dat, groups=year,
+# auto.key=list(columns=3), main="smith.corn.uniformity")
 
 \dontrun{
 require(rgl)

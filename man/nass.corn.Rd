@@ -66,7 +66,7 @@ levelplot(datm, aspect=.7, col.regions=RedGrayBlue,
           scales=list(x=list(rot=90, cex=.7)))
 
 \dontrun{
-library("mvtsplot")
+require("mvtsplot")
 mvtsplot(datm, levels=11, margin=FALSE, norm='global')
 }
 

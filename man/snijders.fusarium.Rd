@@ -74,7 +74,7 @@ anova(m2) # Match to VanEeuwijk table 5
 \dontrun{
 
 # GLM on untransformed data using logit link, variance mu^2(1-mu)^2
-library(gnm)
+require(gnm)
 m2 <- glm(y ~ yrstr + gen, data=dat, family="wedderburn")
 anova(m2) # Main effects match VanEeuwijk table 6
 

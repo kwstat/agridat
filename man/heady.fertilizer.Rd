@@ -56,10 +56,15 @@
 
 dat <- heady.fertilizer
 
+xyplot(yield ~ P|crop, data=dat, scales=list(relation="free"),
+       groups=factor(paste(dat$N,dat$K)), auto.key=list(columns=5),
+       main="heady.fertilizer", xlab="Phosphorous")
+
 # Corn. Matches Heady, p. 292
 d1 <- subset(dat, crop=="corn")
 m1 <- lm(yield ~ N + P + sqrt(N) + sqrt(P) + sqrt(N*P), data=d1)
 summary(m1)
+
 
 # Alfalfa. Matches Heady, p. 292.  Also Pesek equation 3, p. 241
 d2 <- subset(dat, crop=="alfalfa")
@@ -73,6 +78,7 @@ summary(m2)
 ## sqrt(K)      0.0617458  0.0160142   3.856 0.000196 ***
 ## sqrt(P)      0.1735383  0.0160142  10.837  < 2e-16 ***
 ## sqrt(K * P) -0.0014402  0.0007109  -2.026 0.045237 *
+
 
 # Clover. Matches Heady, p. 292.
 d3 <- subset(dat, crop=="clover")

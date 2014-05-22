@@ -7,7 +7,7 @@
 \usage{
   desplot(form=formula(NULL ~ x + y), data,
   num, col, text, out1, out2,
-  col.regions=RedGrayBlue, col.text=NULL, text.levels=NULL, 
+  col.regions=RedGrayBlue, col.text=NULL, text.levels=NULL,
   out1.gpar=gpar(col = "black", lwd = 3),
   out2.gpar=gpar(col = "yellow", lwd = 1, lty = 1),
   at, ticks=FALSE, flip=FALSE, main, xlab, ylab,
@@ -23,12 +23,12 @@
   desplot object to a variable and then edit the object by hand or use
   \code{update} to modify the object.  Then print it manually.  See the
   first example below.
-  
+
   Ryder (1981) discusses the need to examine the layout of the
   experiment design, and not just the data.  This function provides a
   a tool for plotting the layout of a field experiment and also the
   observed data.
- 
+
   Use \code{col.regions} to specify fill colors.  This can either be a
   vector of colors or a function that produces a vector of colors.
   If the response variable is a factor and \code{col.regions} is a
@@ -36,9 +36,9 @@
   default light-colored backgrounds and a key is placed on the left.
   If the response variable is \emph{numeric},
   the cells are colored according to \code{col.regions}, and a ribbon
-  key is placed on the right. 
+  key is placed on the right.
 
-  The default \code{shorten='abb'} will shorten the cell text using the 
+  The default \code{shorten='abb'} will shorten the cell text using the
   \code{abbreviate} function.
   Other choices include \code{shorten='sub'} to use a 3-character
   substring, and \code{shorten='no'} for no shortening.
@@ -91,22 +91,18 @@ print(d1)
 
 
 # Show experiment layout
-# Note: all "Buckskin" plots are near left side
-desplot(yield~x*y, stroup.nin, out1="rep", num=gen, cex=1, main="stroup.nin")
-
 desplot(yield ~ x+y, yates.oats, out1=block, out2=gen)
 
-desplot(gen ~ x+y, yates.oats, col=block, num=nitro, cex=1,
-out1=block)
-
-desplot(block ~ x+y, yates.oats, col=nitro, text=gen, cex=1, out1=block)
+desplot(block ~ x+y, yates.oats, col=nitro, text=gen, cex=1, out1=block,
+        out2=gen, out2.gpar=gpar(col = "gray50", lwd = 1, lty = 1))
 
 # Example from Ryder.
 gnut <- ryder.groundnut
 m1 <- lm(dry~block+gen, gnut)
 gnut$res <- resid(m1)
 # Note largest positive/negative residuals are adjacent
-desplot(res ~ col + row, gnut, text=gen, cex=1)
+desplot(res ~ col + row, gnut, text=gen, cex=1,
+        main="ryder.groundnut residuals from RCB model")
 
 }
 

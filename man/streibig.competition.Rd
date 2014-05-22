@@ -58,7 +58,8 @@ m1 <- glm(y ~ block + block:x + x+I(x^2), data=d1,
 # Predict and plot
 newdf <- expand.grid(x=seq(0,120,length=50), block=factor(c('B1','B2','B3')) )
 newdf$pred <- predict(m1, new=newdf, type='response')
-plot(y~x, data=d1, col=block, main="streibig.competition")
+plot(y~x, data=d1, col=block, main="streibig.competition - by block",
+     xlab="Barley seeds", ylab="Barley dry weight")
 for(bb in 1:3){
   newbb <- subset(newdf, block==c('B1','B2','B3')[bb])
   lines(pred~x, data=newbb, col=bb)

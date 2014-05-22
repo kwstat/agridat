@@ -1,0 +1,34 @@
+\name{theobald.barley}
+\alias{theobald.barley}
+\docType{data}
+\title{
+%%   ~~ data name/kind ... ~~
+}
+\description{
+%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+}
+\usage{data(theobald.barley)}
+\format{
+  A data frame with 105 observations on the following 5 variables.
+  \describe{
+    \item{\code{yield}}{a numeric vector}
+    \item{\code{gen}}{a factor with levels \code{Georgie} \code{Midas} \code{Sundance}}
+    \item{\code{loc}}{a factor with levels \code{C1} \code{C2} \code{C3} \code{C4} \code{C5}}
+    \item{\code{nitro}}{a numeric vector}
+    \item{\code{year}}{a numeric vector}
+  }
+}
+\details{
+%%  ~~ If necessary, more details than the __description__ above ~~
+}
+\source{
+%%  ~~ reference to a publication or URL from which the data were obtained ~~
+}
+\references{
+%%  ~~ possibly secondary sources and usages ~~
+}
+\examples{
+data(theobald.barley)
+## maybe str(theobald.barley) ; plot(theobald.barley) ...
+}
+\keyword{datasets}

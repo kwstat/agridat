@@ -39,9 +39,6 @@ dat <- mercer.wheat.uniformity
 require('lattice')
 desplot(grain ~ col*row, dat, main="mercer.wheat.uniformity - grain yield")
 
-densityplot(~grain, data=dat, main="mercer.wheat.uniformity",
-xlab="grain yield")
-
 xyplot(straw ~ grain, data=dat, type=c('p','r'), main="mercer.wheat.uniformity - regression")
 
 # require(hexbin)
@@ -59,6 +56,7 @@ y = seq(plot.len/2, by=plot.len, length=nr))
 dat.sp <- dat
 coordinates(dat.sp) <- xy
 
+\dontrun{
 # heatmap
 spplot(dat.sp, zcol = "grain", cuts=8,
        cex = 1.6,
@@ -67,6 +65,8 @@ spplot(dat.sp, zcol = "grain", cuts=8,
 
 # variogram
 vg <- variogram(grain ~ 1, dat.sp, cutoff = plot.wid * 10, width = plot.wid)
-plot(vg, plot.numbers = TRUE, main="mercer.wheat.uniformity")
+plot(vg, plot.numbers = TRUE,
+     main="mercer.wheat.uniformity - variogram")
+}
 }
 

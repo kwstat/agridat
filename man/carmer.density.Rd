@@ -37,8 +37,9 @@ dat <- carmer.density
 dat$gen <- factor(dat$gen, levels=c('Hy2x0h7','WF9xC103','R61x187-2',
                              'WF9x38-11','WF9xB14','C103xB14',
                              '0h43xB37','WF9xH60'))
-xyplot(yield~pop|gen, dat, pch=16, as.table=TRUE,
-       main="carmer.density")
+# xyplot(yield~pop|gen, dat, pch=16, as.table=TRUE,
+#        main="carmer.density")
+
 
 # Separate analysis for each hybrid
 # Model: y = x * a * k^x.  Table 1 of Carmer and Jackobs.
@@ -68,11 +69,13 @@ round(out, 3)
 ## 0h43xB37  0.673 0.862   6.740
 ## WF9xH60   0.858 0.854   6.358
 
+
 require(latticeExtra)
 xyplot(yield~pop|gen, dat, pch=16, as.table=TRUE,
-       main="carmer.density models") +
+       main="carmer.density (independent fit per panel)") +
 xyplot(pred~pop|gen, preds, col='black', as.table=TRUE,
        type='l')
+
 
 # A better approach might be to use nlme to fit an overall fixed-effect
 # model with random deviations for each hybrid.
@@ -89,7 +92,7 @@ pdat$predf <- predict(m1, pdat, level=0)
 
 xyplot(yield~pop|gen, dat, pch=16, as.table=TRUE,
        main="carmer.density models",
-       key=simpleKey(text=c("Data", "Fixed","Random"),
+       key=simpleKey(text=c("Data", "Fixed effect","Random effect"),
          col=c("blue", "red","darkgreen"), columns=3, points=FALSE)) +
 xyplot(predf~pop|gen, pdat, type='l', as.table=TRUE, col="red") +
 xyplot(pred~pop|gen, pdat, type='l', col="darkgreen", lwd=2)

@@ -69,12 +69,12 @@ m1 <- lmer(yield ~ cultivar * spacing * pop +
 
 ## Variances match Schabenberger, page 498.
 vc(m1)
-##                  groups        name variance stddev
-##  block:cultivar:pop     (Intercept)   2.421  1.556
-##  block:cultivar:spacing (Intercept)   1.244  1.116
-##  block:cultivar         (Intercept)   0.4522 0.6725
-##  block                  (Intercept)   3.037  1.743
-##  Residual                             3.928  1.982
+##                    grp        var1 var2   vcov  sdcor
+##     block:cultivar:pop (Intercept) <NA> 2.421  1.556
+## block:cultivar:spacing (Intercept) <NA> 1.244  1.116
+##         block:cultivar (Intercept) <NA> 0.4523 0.6725
+##                  block (Intercept) <NA> 3.037  1.743
+##               Residual        <NA> <NA> 3.928  1.982
 
 }
 

@@ -90,11 +90,11 @@ m1l <- lmer(water ~ 1 + ti + ti2 + (1|tree) +
             (0+ti|tree) + (0+ti2|tree), data=d22)
 
 vc(m1l)
-##    groups        name variance stddev
-##  tree     (Intercept)   0.2691 0.5188
-##  tree.1   ti            0      0
-##  tree.2   ti2           0      0
-##  Residual               0.1472 0.3837
+##      grp        var1 var2   vcov  sdcor
+##     tree (Intercept) <NA> 0.2691 0.5188
+##   tree.1          ti <NA> 0      0
+##   tree.2         ti2 <NA> 0      0
+## Residual        <NA> <NA> 0.1472 0.3837
 
 }
 

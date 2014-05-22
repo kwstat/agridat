@@ -49,8 +49,8 @@ dat1 <- subset(dat, site=='S5')
 # and matches the results of the nls model below.
 lm1 <- lm(inc ~ 1 + nitro + I(nitro^2), data=dat1) # Note, 'poly' gives weird coefs
 require("latticeExtra")
-xyplot(inc~nitro, dat1, main="hernandez.nitrogen") +
-  xyplot(fitted(lm1) ~ nitro, dat1, type='l')
+# xyplot(inc~nitro, dat1, main="hernandez.nitrogen") +
+#   xyplot(fitted(lm1) ~ nitro, dat1, type='l')
 c1 <- coef(lm1)
 -c1[2] / (2*c1[3])
 ##    nitro
@@ -90,7 +90,7 @@ round(wald(nls1),2)
 
 
 # Likelihood conf int
-library(MASS)
+require(MASS)
 round(confint(nls1, "th2", level = 0.9),2)
 ##       5%      95%
 ## 147.96 401.65
@@ -98,7 +98,7 @@ plot(profile(nls1,  "th2"),  conf  =  c(50, 80, 90, 95)/100)
 
 
 # Bootstrap conf int
-library(boot)
+require(boot)
 dat1$fit <- fitted(nls1)
 bootfun <- function(rs, i) { # bootstrap the residuals
   dat1$y <- dat1$fit + rs[i]

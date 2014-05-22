@@ -38,13 +38,14 @@
 \examples{
 dat <- byers.apple
 
-library(lattice)
+require(lattice)
 xyplot(diameter ~ time | factor(appleid), data=dat, type=c('p','l'),
+       strip=strip.custom(par.strip.text=list(cex=.7)),
        main="byers.apple")
 
 # Overall fixed linear trend, plus random intercept/slope deviations
 # for each apple.  Observations within each apple are correlated.
-library(nlme)
+require(nlme)
 m1 <- lme(diameter ~ 1 + time, data=dat,
           random = ~ time|appleid, method='ML',
           cor = corAR1(0, form=~ time|appleid),

@@ -1,5 +1,5 @@
 # desplot.r
-# Time-stamp: <15 Oct 2013 14:36:55 c:/x/rpack/agridat/R/desplot.r>
+# Time-stamp: <17 Mar 2014 16:52:39 c:/x/rpack/agridat/R/desplot.r>
 # Copyright 2013, Kevin Wright
 
 # Needs grid, lattice, reshape2
@@ -531,40 +531,16 @@ panel.outlinelevelplot <- function(x, y, z, subscripts, at, ...,
   return(dat)
 }
 
-# lel is a modified version of lattice:::extend.limits
+# lel is a very simple version of lattice:::extend.limits
 # Copied here because CRAN does not like ::: anymore as of 8.25.13
 lel <- function (lim, prop = lattice.getOption("axis.padding")$numeric) {
-  ## if (all(is.na(lim)))
-  ##   NA_real_
-  ## else if (is.character(lim)) {
-  ##   c(1, length(lim)) + c(-1, 1) * lattice.getOption("axis.padding")$factor
-  ## }
-  ## else if (length(lim) == 2) {
-    ## if (lim[1] > lim[2]) {
-    ##     ccall <- match.call()
-    ##     ccall$lim <- rev(lim)
-    ##     ans <- eval.parent(ccall)
-    ##     return(rev(ans))
-    ## }
-    ## if (!missing(length) && !missing(prop))
-    ##     stop("'length' and 'prop' cannot both be specified")
-    ## if (length <= 0)
-    ##     stop("'length' must be positive")
-    ## if (!missing(length)) {
-    ##     prop <- (1 - as.numeric(diff(lim)))/(2 *
-    ##         as.numeric(diff(lim)))
-    ## }
-    if (lim[1] == lim[2])
-      lim + 0.5 * c(-1, 1)
-    else {
-      d <- diff(as.numeric(lim))
-      lim + prop * d * c(-1, 1)
-    }
-  ## }
-  ## else {
-  ##   print(lim)
-  ##   stop("improper length of 'lim'")
-  ## }
+
+  if (lim[1] == lim[2])
+    lim + 0.5 * c(-1, 1)
+  else {
+    d <- diff(as.numeric(lim))
+    lim + prop * d * c(-1, 1)
+  }
 }
 
 # ----------------------------------------------------------------------------

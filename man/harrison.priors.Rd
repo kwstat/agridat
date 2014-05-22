@@ -70,7 +70,7 @@ m0 <- mean(log(d1t$xx)) # 6.37
 s0 <- sd(log(d1t$xx)) # .833
 mod <- nls(yy ~ plnorm(xx, meanlog, sdlog), data=d1t,
            start=list(meanlog=m0, sdlog=s0))
-## coef(mod) # Matches Harrison 2012
+coef(mod) # Matches Harrison 2012
 ##   meanlog     sdlog
 ## 6.4187829 0.6081558
 
@@ -79,12 +79,14 @@ plot(yy~xx, data=d1t, xlim=c(0,2000), ylim=c(0,1),
 mlog <- coef(mod)[1] # 6.4
 slog <- coef(mod)[2] # .61
 xvals <- seq(0, 2000, length=100)
-lines(xvals, plnorm(xvals, meanlog=6.418934, sdlog=.61))
+lines(xvals, plnorm(xvals, meanlog=mlog, sdlog=slog))
 
 
 d1a <- d1
+d1a$source <- as.character(d1a$source)
 d1a[19,'source'] <- "(All)" # Add a blank row for the densitystrip
-library(latticeExtra)
+d1
+require(latticeExtra)
 # Plot the range for each source, a density curve (with arbitary
 # vertical scale) for the common prior distribution, and a density
 # strip by stacking the individual bands and using transparency

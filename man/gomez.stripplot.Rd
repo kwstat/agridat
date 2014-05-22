@@ -20,12 +20,20 @@ Rice strip-plot experiment
   }
 }
 
+\details{
+  Note, this is a subset of the the 'gomez.stripsplitplot' data.
+}
 \source{
   Gomez, K.A. and Gomez, A.A.. 1984,
   \emph{Statistical Procedures for Agricultural Research}.
   Wiley-Interscience. Page 110.
 
   Used with permission of Kwanchai Gomez.
+}
+\references{
+  Jan Gertheiss (2014).
+  ANOVA for Factors With Ordered Levels.
+  \emph{J Agric Biological Environmental Stat}.
 }
 
 \examples{
@@ -35,6 +43,9 @@ dat <- gomez.stripplot
 # Gomez figure 3.7
 desplot(gen~x*y, data=dat, out1=rep, num=nitro, cex=1,
         main="gomez.stripplot")
+
+# Gertheiss figure 1
+# dotplot(factor(nitro) ~ yield|gen, data=dat)
 
 # Gomez table 3.12
 tapply(dat$yield, dat$rep, sum)

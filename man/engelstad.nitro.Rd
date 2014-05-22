@@ -44,9 +44,9 @@
 
 dat <- engelstad.nitro
 
-require(lattice)
-xyplot(yield ~ nitro | factor(year)*loc, dat,
-       main="engelstad.nitro")
+require(latticeExtra)
+useOuterStrips(xyplot(yield ~ nitro | factor(year)*loc, dat,
+       main="engelstad.nitro"))
 
 # Fit a quadratic plateau model to one year/loc
 j62 <- droplevels(subset(dat, loc=="Jackson" & year==1962))

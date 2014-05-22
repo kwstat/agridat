@@ -55,7 +55,7 @@ xyplot(resid(m3) ~ dat$x, xlab='x', type=c('p','smooth'),
 
 # Add a linear trend for x
 m4 <- lmer(yield ~ x + nitro * gen + (1|block/gen), data=dat)
-xyplot(resid(m4) ~ dat$x, type=c('p','smooth'), xlab='x')
+# xyplot(resid(m4) ~ dat$x, type=c('p','smooth'), xlab='x')
 
 ## Compare fits
 ## AIC(m3,m4)

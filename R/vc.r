@@ -1,5 +1,6 @@
+
 # vc.r
-# Time-stamp: <11 Feb 2014 14:08:22 c:/x/rpack/agridat/R/vc.r>
+# Time-stamp: <30 Apr 2014 21:08:40 c:/x/rpack/agridat/R/vc.r>
 
 # ----- lucid -----
 
@@ -17,7 +18,6 @@ lucid <- function(x, dig=4, ...) {
 # ----- generic -----
 
 vc <- function(object, ...) UseMethod("vc")
-
 
 # ----- default -----
 
@@ -122,38 +122,53 @@ print.vc.lme <- function(x, dig=4, ...) {
 
 # ----- lme4 -----
 
+## This no longer needed.  as.data.frame.VarCorr.lmerMod
+## vc.lmerMod <- function(object, ...) {
+##   # Kevin Wright
+##   oo <- options(scipen=15) # turn off scientific notation
+##   tt <- capture.output(print(VarCorr(object), comp=c("Variance","Std.Dev.")))
+##   options(oo) # restore settings
+##   tt1 <- tt[1] # header row
+##   c1 <- regexpr("Groups",tt1)
+##   c2 <- regexpr("Name",tt1)
+##   c3 <- regexpr("Variance",tt1)
+##   c4 <- regexpr("Std.Dev.",tt1)
+##   c5 <- regexpr("Corr",tt1)
+
+##   # What about random correlations???
+##   dd <- data.frame(groups=substring(tt[-1], c1, c2-2),
+##                    name=substring(tt[-1], c2, c3-2),
+##                    variance=as.numeric(substring(tt[-1], c3, c4-2)),
+##                    stddev=as.numeric(substring(tt[-1], c4)))
+##   if(c5 > 0) {
+##     warning("Correlations exist, use VarCorr()\n")
+##     ## cc <- substring(tt[-1], c5)
+##     ## # Replace leading/trailing zeros
+##     ## cc <- gsub("^ +","",cc)
+##     ## cc <- gsub(" +$","",cc)
+##     ## cc <- lapply(strsplit(cc, " +"), as.numeric)
+##     ## Need to unroll the correlation matrix into a vector
+##     ## unlist(cc)
+##     ## outer(dd$name[1:4], dd$name[1:4], paste)[lower.tri(diag(4))]
+##   }
+
+##   class(dd) <- c("vc.lmerMod", class(dd))
+##   return(dd)
+## }
+
+vc.glmerMod <- function(object, ...) {
+  dd <- as.data.frame(VarCorr(object))
+  class(dd) <- c("vc.lmerMod", class(dd))
+  return(dd)
+
+}
+
 vc.lmerMod <- function(object, ...) {
-  # Kevin Wright
-  oo <- options(scipen=15) # turn off scientific notation
-  tt <- capture.output(print(VarCorr(object), comp=c("Variance","Std.Dev.")))
-  options(oo) # restore settings
-  tt1 <- tt[1] # header row
-  c1 <- regexpr("Groups",tt1)
-  c2 <- regexpr("Name",tt1)
-  c3 <- regexpr("Variance",tt1)
-  c4 <- regexpr("Std.Dev.",tt1)
-  c5 <- regexpr("Corr",tt1)
-
-  # What about random correlations???
-  dd <- data.frame(groups=substring(tt[-1], c1, c2-2),
-                   name=substring(tt[-1], c2, c3-2),
-                   variance=as.numeric(substring(tt[-1], c3, c4-2)),
-                   stddev=as.numeric(substring(tt[-1], c4)))
-  if(c5 > 0) {
-    warning("Correlations exist, use VarCorr()\n")
-    ## cc <- substring(tt[-1], c5)
-    ## # Replace leading/trailing zeros
-    ## cc <- gsub("^ +","",cc)
-    ## cc <- gsub(" +$","",cc)
-    ## cc <- lapply(strsplit(cc, " +"), as.numeric)
-    ## Need to unroll the correlation matrix into a vector
-    ## unlist(cc)
-    ## outer(dd$name[1:4], dd$name[1:4], paste)[lower.tri(diag(4))]
-  }
-
+  dd <- as.data.frame(VarCorr(object))
   class(dd) <- c("vc.lmerMod", class(dd))
   return(dd)
 }
+
 print.vc.lmerMod <- function(x, dig=4, ...){
   class(x) <- class(x)[-1] # remove vc.lmerMod
   x[] <- lapply(x, lucid, dig)

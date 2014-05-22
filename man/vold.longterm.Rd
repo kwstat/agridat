@@ -48,7 +48,7 @@ require(latticeExtra) # for layers
 foo1 <- xyplot(yield ~ nitro | factor(year), data = dat,
        as.table=TRUE, type = "o",
        main=list("vold.longterm", cex=1.5),
-       xlab = list("N fertilizer",cex=1.5),
+       xlab = list("N fertilizer",cex=1.5,font=4),
        ylab = list("Yield", cex=1.5))
 # print(foo1)
 
@@ -101,9 +101,11 @@ m3.lme <- nlme(yield ~ SSasymp(nitro, max, int, lograte), data=dat,
 pdat2 <- expand.grid(year=1970:1988, nitro=seq(0,15,length=50))
 pdat2$pred <- predict(m3.lme, new=pdat2)
 pdat2$predf <- predict(m3.lme, new=pdat2, level=0)
-update(foo1, type='p') + # raw data
-  xyplot(predf~nitro|year, data=pdat2, type='l', col="red") + # global
-  xyplot(pred~nitro|year, data=pdat2, type='l', col="darkgreen", lwd=2)
+foo1 <- update(foo1, type='p', key=simpleKey(c("Observed","Fixed","Random"),
+                     col=c("blue","darkgreen","red"), points=FALSE, columns=3))
+foo1 + xyplot(pred~nitro|year, data=pdat2, type='l', col="red") +
+  xyplot(predf~nitro|year, data=pdat2, type='l', col="darkgreen",lwd=2)
+
 
 ## # Income is maximized at about 15
 ## pdat2 <- transform(pdat2, income = predf*2 - 7*nitro)

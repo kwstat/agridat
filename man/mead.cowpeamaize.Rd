@@ -40,7 +40,8 @@ dat <- mead.cowpeamaize
 # Cowpea and maize yields are clearly in competition
 require("latticeExtra")
 useOuterStrips(xyplot(myield ~ cyield|maize*cowpea, dat, group=nitro,
-                      main="mead.cowpeamaize", xlab="cowpea yield",
+                      main="mead.cowpeamaize - intercropping",
+                      xlab="cowpea yield",
                       ylab="maize yield", auto.key=list(columns=4)))
 
 # Mead Table 2 Cowpea yield anova...strongly affected by maize variety.

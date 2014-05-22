@@ -65,7 +65,7 @@ levelplot(pct~gen+bunt,d2, col.regions=RedGrayBlue,
 
 \dontrun{
 # We don't have individual counts, so use beta regression
-library(betareg)
+require(betareg)
 dat$y <- dat$pct/100 + .001 # Beta regression does not allow 0
 dat$gen <- reorder(dat$gen, dat$pct) # For a prettier dot plot
 
@@ -79,7 +79,7 @@ p1 <- cbind(dat,
 p1 <- subset(p1, rep=="R1")
 
 # Plot the model intervals over the original data
-library(latticeExtra)
+require(latticeExtra)
 dotplot(bunt~y|gen, data=dat, pch='x', col='red',
         main="Observed data and 95% intervals for bunt infection") +
 segplot(bunt~lo+up|gen, data=p1, centers=est, draw.bands=FALSE)

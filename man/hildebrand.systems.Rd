@@ -96,7 +96,7 @@ system2 <- pnorm((lambda-mu2)/sqrt(s22))
 # A simpler view
 plot(lambda, system1, type="l", xlim=c(0,5), ylim=c(0,1),
      xlab="Yield level", ylab="Prob(yield < level)",
-     main="hildebrand.systems")
+     main="hildebrand.systems - risk of failure for each system")
 lines(lambda, system2, col="red")
 
 # Prob of system 1 outperforming system 2. Table 8

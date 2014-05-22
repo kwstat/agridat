@@ -33,7 +33,7 @@
 dat <- turner.herbicide
 
 dat <- transform(dat, prop=dead/live)
-xyplot(prop~rate,dat, pch=20, main="turner.herbicide", ylab="Proportion killed")
+# xyplot(prop~rate,dat, pch=20, main="turner.herbicide", ylab="Proportion killed")
 
 m1 <- glm(prop~rate, data=dat, weights=live, family=binomial)
 coef(m1) # -3.46, 2.6567  Same as Turner eqn 3

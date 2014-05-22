@@ -43,7 +43,7 @@ rep (instead of across reps).
 dat <- weiss.lattice
 
 desplot(yield~col*row|rep,dat, text=gen, aspect=3/16,
-        main="weiss.lattice", shorten="none", cex=.8)
+        main="weiss.lattice", xlab="Soybean yields", shorten="none", cex=.8)
 dat <- transform(dat, xf=factor(col), yf=factor(row))
 m1 <- lm(terms(yield ~ rep + rep:xf + rep:yf + gen, keep.order=TRUE), data=dat)
 anova(m1) # Matches Weiss table 7

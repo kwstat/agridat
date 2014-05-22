@@ -1,6 +1,6 @@
 # desplot.r
-# Time-stamp: <27 Aug 2013 08:27:44 c:/x/rpack/agridat/R/desplot.r>
-# Copyright 2011, Kevin Wright
+# Time-stamp: <15 Oct 2013 14:36:55 c:/x/rpack/agridat/R/desplot.r>
+# Copyright 2013, Kevin Wright
 
 # Needs grid, lattice, reshape2
 

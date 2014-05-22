@@ -42,12 +42,13 @@ dat <- durban.splitplot
 m20 <- lm(yield~gen*fung, data=dat)
 dat$resid <- m20$resid
 require(lattice)
-xyplot(resid~row, dat, type=c('p','smooth'), main="durban.splitplot")
-xyplot(resid~bed, dat, type=c('p','smooth'), main="durban.splitplot")
+# xyplot(resid~row, dat, type=c('p','smooth'), main="durban.splitplot")
+# xyplot(resid~bed, dat, type=c('p','smooth'), main="durban.splitplot")
 
 # Figure 4 doesn't quite match due to different break points
 coplot(resid~bed|row, data=dat, number=8, cex=.5,
        panel=function(x,y,...) panel.smooth(x,y,span=.4,...))
+title("durban.splitplot")
 
 \dontrun{
 # Figure 6 - field trend

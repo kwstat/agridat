@@ -30,25 +30,16 @@
   \url{http://homepage.stat.uiowa.edu/~luke/classes/248/examples/soil}
 }
 \examples{
-\dontrun{
 
 dat <- cleveland.soil
 
 # Similar to Cleveland fig 4.64
-library(latticeExtra)
-levelplot(resistivity ~ easting + northing, data = dat,
-          col.regions=colorRampPalette(c("red","gray","blue")),
-          panel=panel.levelplot.points,
-          aspect=2.4, xlab= "Easting (km)", ylab= "Northing (km)")
-
-# Profile plots of each track. Cleveland fig 4.66
-xyplot(resistivity ~ easting | factor(track), data = dat, subset=!is.ns,
-       layout = c(4,10), strip=strip.custom(style=3, fg=NA),
-       panel = function(x, y) {
-         panel.grid(h = 2)
-         panel.xyplot(x, y, pch = ".", cex = 1.25)
-       } ,
-       xlab = "Easting (km)", ylab = "Resistivity (ohm-cm)")
+## require(latticeExtra)
+## levelplot(resistivity ~ easting + northing, data = dat,
+##           col.regions=RedGrayBlue,
+##           panel=panel.levelplot.points,
+##           aspect=2.4, xlab= "Easting (km)", ylab= "Northing (km)",
+##           main="cleveland")
 
 # 2D loess plot. Cleveland fig 4.68
 sg1 <- expand.grid(easting = seq(.15, 1.410, by = .015),
@@ -57,12 +48,14 @@ fit1 <- with(dat,
                 predict(loess(resistivity~easting*northing, span = 0.25,
                         degree = 2), sg1))
 levelplot(fit1 ~ sg1$easting * sg1$northing,
-          col.regions=colorRampPalette(c("red","gray","blue")),
+          col.regions=RedGrayBlue,
           cuts = 9,
-          aspect=2.4, xlab = "Easting (km)", ylab = "Northing (km)")
+          aspect=2.4, xlab = "Easting (km)", ylab = "Northing (km)",
+          main="cleveland.soil - 2D smooth of Resistivity")
 
+\dontrun{
 # 3D loess plot with data overlaid
-library(rgl)
+require(rgl)
 bg3d(color = "white")
 clear3d()
 points3d(dat$easting, dat$northing, dat$resistivity / 100,

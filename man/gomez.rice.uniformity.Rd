@@ -45,7 +45,8 @@ dmat3 <- (m0[rx+1,cx+1]+m0[rx+1,cx]+m0[rx+1,cx-1]+
           m0[rx,cx+1]+m0[rx,cx]+m0[rx,cx-1]+
           m0[rx-1,cx+1]+m0[rx-1,cx]+m0[rx-1,cx-1])/9
 dat3 <- melt(dmat3)
-desplot(value~Var2*Var1, dat3, at=c(576,637,695,753,811,870,927),
+desplot(value~Var2*Var1, dat3, aspect=38/20,
+        at=c(576,637,695,753,811,870,927),
         main="gomez.rice.uniformity smoothed")
 
 \dontrun{

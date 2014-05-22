@@ -62,7 +62,7 @@ dat2 <- droplevels(subset(dat, is.element(env, c("A77","C77","V77",
 
 m2 <- with(dat2, AMMI(env, gen, rep, yield, graph=""))
 bip <- m2$biplot
-with(bip, plot(yield, PC1, type='n', main="gauch.soy"))
+with(bip, plot(yield, PC1, type='n', main="gauch.soy -- AMMI biplot"))
 with(bip, text(yield, PC1, rownames(bip),
                col=ifelse(bip$type=="GEN", "darkgreen", "blue"),
                cex=ifelse(bip$type=="GEN", 1.5, .75)))

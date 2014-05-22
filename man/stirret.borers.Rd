@@ -37,8 +37,11 @@
 
 dat <- stirret.borers
 
+xyplot(count2~count1|trt,dat, main="stirret.borers - by treatment",
+       xlab="Early count of borers", ylab="Late count")
+
 # Even though the data are counts, Normal distribution seems okay
-qqmath(~count1|trt, dat, main="stirret.borers")
+# qqmath(~count1|trt, dat, main="stirret.borers")
 
 m1 <- lm(count1 ~ trt + block, dat)
 anova(m1)

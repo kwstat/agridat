@@ -36,7 +36,13 @@ Data frame with 28 observations on the following 5 variables.
 
 dat <- box.cork
 
-pairs(dat[,2:5], xlim=c(25,100), ylim=c(25,100), main="box.cork")
+splom(dat[,2:5], pscales=3,
+  prepanel.limits = function(x) c(25,100),
+  main="box.cork", xlab="Cork yield on side of tree",
+  panel=function(x,y,...){
+    panel.splom(x,y,...)
+    panel.abline(0,1,col="gray80")
+})
 
 \dontrun{
 ## Each tree is one line

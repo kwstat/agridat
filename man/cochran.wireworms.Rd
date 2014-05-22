@@ -56,7 +56,8 @@ anova(m2)
 # GLM with random blocking.
 if(require(lme4)){
 m3 <- glmer(worms ~ -1 + trt + (1|rowf) + (1|colf),
-           data=dat, family="poisson")
+           data=dat, family="poisson",
+           control=glmerControl(check.conv.grad=.makeCC(action="ignore", tol=0.01)))
 summary(m3)
 }
 

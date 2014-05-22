@@ -39,6 +39,7 @@ dat <- mercer.mangold.uniformity
 
 # Show field in true aspect ratio
 asp = (7.25 * 20) / (30.25 * 10)
+
 desplot(roots~col*row, data=dat,
         main="mercer.mangold.uniformity roots", aspect=asp)
 desplot(leaves~col*row, data=dat,

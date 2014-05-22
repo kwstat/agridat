@@ -37,7 +37,7 @@ var(dat$yield, na.rm=TRUE)
 
 # Besag Fig 2. Reverse row numbers to match Besag, Davison
 dat$rrow <- 76 - dat$row
-library("lattice")
+require("lattice")
 xyplot(yield ~ rrow|col, dat, layout=c(1,3), type='s',
        main="besag.bayesian")
 

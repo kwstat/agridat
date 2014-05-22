@@ -17,7 +17,7 @@
   }
 }
 \details{
-  A Phosphorous by Sulfur factorial experiment at Dipton in Southland,
+  A phosphorous by sulfur factorial experiment at Dipton in Southland,
   New Zealand.  There were 3 reps.  Plots were harvested repeatedly from
   Dec 1992 to Mar 1994.  Yields reported are the total dry matter across
   all cuttings.
@@ -36,6 +36,8 @@
 
 dat <- sinclair.clover
 
+xyplot(yield~P|factor(S), dat, layout=c(5,1), main="sinclair.clover")
+
 # Dodds fits a two-dimensional Mitscherlich-like model:
 # z = a*(1+b*{(s+t*x)/(x+1)}^y) * (1+d*{(th+r*y)/(y+1)}^x)
 
@@ -49,7 +51,7 @@ zmm <- 10.5
 # The parameters are somewhat sensitive to starting values.
 # I had to try a couple different initial values to match the paper by Dodds
 m1 <- nls(yield ~ alpha*(1 + beta*{(sig+tau*x)/(x+1)}^y) * (1 + del*{(th+rho*y)/(y+1)}^x),
-          data=dat, trace=TRUE,
+          data=dat, # trace=TRUE,
           start=list(alpha=zmm, beta=(zm0/zmm)-1, del=(z0m/zmm)-1,
                      sig=.51, tau=.6, th=.5, rho=.7))
 summary(m1) # Match Dodds Table 2
@@ -72,7 +74,7 @@ pred <- expand.grid(x=0:17, y=0:9)
 pred$z <- predict(m1, pred)
 
 # 3D plot of data with fitted surface.  Matches Dodds figure 2.
-library(rgl)
+require(rgl)
 bg3d(color = "white")
 clear3d()
 spheres3d(dat$x, dat$y, dat$yield,
@@ -81,7 +83,10 @@ surface3d(seq(0, 17, by = 1), seq(0, 9, by = 1), pred$z,
           alpha=0.9, col="wheat",
           front="fill", back="fill")
 axes3d()
-title3d("","", "x=P/10", "y=S/10", "")
+title3d("sinclair.clover - yield","", xlab="Phosphorous/10",
+        ylab="Sulfur/10", zlab="", line=3, cex=1.5)
+view3d(userMatrix=matrix(c(.7,.2,-.7,0, -.7,.2,-.6,0, 0,.9,.3,0, 0,0,0,1),ncol=4))
+# snapshot3d(file, "png")
 }
 
 }

@@ -56,6 +56,11 @@ yld <- as.matrix(sweep(yld, 2, colMeans(yld)))
 cov <- dat[,c("p06","p07","p08","p09","p10","p11", "t08","t09","t10","t11")]
 cov <- as.matrix(scale(cov))
 m2 <- plsr(yld~cov)
-biplot(m2, which="x", var.axes=TRUE, main="hessling.argentina")
+
+# biplot(m2, which="x", var.axes=TRUE, main="hessling.argentina")
+
+require(corrgram)
+corrgram(dat, main="hessling.argentina - correlations of yield and covariates")
+
 }
 \keyword{datasets}

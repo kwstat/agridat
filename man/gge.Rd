@@ -1,0 +1,126 @@
+\name{gge}
+\alias{gge}
+\alias{gge.default}
+\alias{gge.formula}
+\alias{gge.matrix}
+\alias{biplot.gge}
+\alias{plot.gge}
+
+\title{
+  GGE biplots
+}
+\description{
+  Fit a GGE (genotype + genotype * environment) model and
+  display the results.
+}
+\usage{
+gge(x, ...)
+
+\method{gge}{default}(x, ...)
+
+\method{gge}{data.frame}(x, ...)
+
+\method{gge}{matrix}(x, center = TRUE, scale = TRUE, focus = "env",
+  envGroup = NULL, method = "svd", impute = "no", ...)
+
+\method{gge}{formula}(formula, data = NULL, envGroup = NULL, ...)
+
+\method{predict}{gge}(object, comps = c(1, 2), ...)
+
+\method{plot}{gge}(x, title = substitute(x), subtitle = "",
+  col.regions = RedYellowBlue(13), ...)
+
+\method{biplot}{gge}(x, title = substitute(x), subtitle = "",
+  cex.gen = 0.55, cex.env = 0.45, col.gen = "#005000", col.env,
+  lab.gen = TRUE, lab.env = TRUE, comps = 1:2, flip = "auto",
+  alpha = 0.7, ...)
+
+biplot3D(object, ...)
+
+\method{biplot3D}{gge}(object, title = "", subtitle = "",
+  col.gen = "#005000", col.env = "black", comps = c(1, 2, 3),
+  lab.env = TRUE, ...)
+
+\method{plot}{resid.gge}(x, col.regions = RedYellowBlue(13), ...)
+
+}
+
+\arguments{
+  \item{x}{A matrix or data.frame.}
+  \item{\dots}{Other arguments}
+}
+\details{
+  If there is replication in G*E, then the replications are
+  averaged together before constructing the biplot.
+
+  The singular value decomposition of \code{x} is used to
+  calculate the principal components for the biplot.  Missing
+  values are NOT allowed. The NIPALS algorithm can be used
+  when there are missing data.
+
+  If missing values are imputed, this is done first, before
+  scaling, etc.
+
+}
+\value{
+  A list of class \code{gge} containing:
+  \item{method}{}
+  \item{center}{Data centered?}
+  \item{scale}{Data scaled?}
+  \item{gen.group}{
+    This is only used for plotting.
+    If not NULL, this specifies a classification of genotypes into
+    groups.
+  }
+  \item{env.group}{
+    If not NULL, this specifies a classification of
+    environments into groups.  When using the formula method, then
+    \code{envGroup} is the name of a column in the \code{data}.
+    When using the matrix method, then \code{envGroup} must be a vector
+    the same length as the number of columns in \code{data}, the
+    contents of the vector contain the grouping information.
+  }
+
+}
+\references{
+  Jean-Louis Laffont, Kevin Wright and Mohamed Hanafi (2013).
+  Genotype + Genotype x Block of Environments (GGB) Biplots.
+  \emph{Crop Science}, 53, 2332-2341.
+  \url{https://www.crops.org/publications/cs/abstracts/53/6/2332}.
+
+  Kroonenberg, Pieter M. (1997) \emph{Introduction to Biplots
+    for GxE Tables}, Research Report 51, Centre for Statistics,
+  The University of Queensland, Brisbane, Australia.
+  \url{http://three-mode.leidenuniv.nl/document/biplot.pdf}
+
+  Yan, W. and Kang, M.S. (2003) \emph{GGE Biplot Analysis}.
+  CRC Press \url{http://www.ggebiplot.com}.
+
+}
+\author{
+  Jean-Louis Laffont, Kevin Wright
+}
+\note{
+}
+
+\seealso{
+  The 'agricolae' package has functions for AMMI biplots.
+}
+\examples{
+# Example 1.  Data is a data.frame in 'matrix' format
+B <- data.frame(E1= c(50, 55, 65, 50, 60, 65, 75.),
+E2= c(67, 71, 76, 80, 82, 89, 95),
+E3= c(90, 93, 95, 102, 97, 106, 117),
+E4= c(98, 102, 105, 130, 135, 137, 133),
+E5= c(120, 129, 134, 138, 151, 153, 155))
+rownames(B) <- c("G1","G2","G3","G4","G5","G6","G7")
+#m1 = gge(B)
+#plot(m1)
+#biplot(m1, title="Example biplot")
+
+# cross.wheat biplot
+
+}
+
+\keyword{hplot}
+
