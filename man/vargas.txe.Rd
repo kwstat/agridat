@@ -58,9 +58,9 @@
 
 \examples{
 
+require(lattice)
 levelplot(vargas.txe$yields, col.regions=RedGrayBlue,
-main="vargas.txe", xlab="year", ylab="treatment",
-)
+          main="vargas.txe", xlab="year", ylab="treatment")
 
 Z <- vargas.txe$yields
 Z <- sweep(Z, 1, rowMeans(Z))

@@ -56,6 +56,8 @@
 
 \examples{
 dat <- student.barley
+bwplot(yield ~ gen|district, dat, main="student.barley - yield")
+
 dat$year <- factor(dat$year)
 dat$income <- NULL
 

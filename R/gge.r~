@@ -1,7 +1,10 @@
 # gge.r
 # Time-stamp: c:/x/rpack/agridat/R/gge.r
 
+# TODO: Add biplot example to denis.ryegrass
+
 if(0){
+  require("reshape2")
   # matrix data
   mat1 <- matrix(c(50, 55, 65, 50, 60, 65, 75,
                    67, 71, 76, 80, 82, 89, 95,
@@ -40,7 +43,7 @@ if(0){
   biplot(m3)
 
   bar <- transform(lattice::barley, env=paste0(site,year))
-  m21 <- gge(yield~variety*site, bar, env.group=year) # errs
+  m21 <- gge(yield~variety*site, bar, env.group=year) # errs, as it should
   m22 <- gge(yield~variety*env, bar)
   biplot(m22)
   biplot(m22, lab.env=FALSE) # label locs
@@ -51,13 +54,13 @@ if(0){
   m23 <- gge(yield~variety*env, bar, env.group=year)
   plot(m23)
   biplot(m23)
-  biplot(m23, lab.env=TRUE) # label locs   FIXME
+  biplot(m23, lab.env=TRUE) # default is to label locs
   biplot(m23, lab.env=FALSE) # label locs
 
   # Scaling options
   m31 <- gge(yield ~ variety * env, data=bar, scale="none")
   biplot(m31)
-  m32 <- gge(yield ~ variety * env, data=bar, scale=FALSE, method="svd")
+  m32 <- gge(yield ~ variety * env, data=bar, scale=FALSE)
   biplot(m32)
   m33 <- gge(yield ~ variety * env, data=bar, scale=TRUE)
   biplot(m33)
@@ -77,26 +80,16 @@ if(0){
   biplot(m41)
   m42 <- gge(yield ~ variety * env, data=bar, scale="uv", method="nipals")
   biplot(m42)
-  m43 <- gge(yield ~ variety * env, data=bar, scale="uv", method="bpca")
-  biplot(m43) # FIXME
+  #m43 <- gge(yield ~ variety * env, data=bar, scale="uv", method="bpca")
+  #biplot(m43) # FIXME.  Seems to be a problem with bpca
   m44 <- gge(yield ~ variety * env, data=bar, scale="uv", method="ppca")
   biplot(m44)
   m45 <- gge(yield ~ variety * env, data=bar, scale="uv", method="svdImpute")
   biplot(m45)
 
-  biplot(m36, cex.gen=1, col.gen=c("black", "orange","purple")) # black since no gen.group
 
+#  biplot(m36, cex.gen=1, col.gen=c("black", "orange","purple")) # black since no gen.group
 
-# Example 6.  Using 'reshape2' to create a matrix
-require(reshape2)
-barm <- acast(melt(bar2, id.var=c("variety","env"), measure.var="yield"),
-              variety~env)
-m6 <- gge(barm)
-biplot(m6)
-# biplot(m6, comps=c(2,3)) # Needs interactive clicking
-plot(resid(m6))
-dotplot(m6)
-dotplot(resid(m6))
 
 # Example 7.  Custom colors for gen/env
 
@@ -278,7 +271,7 @@ gge.matrix <- function(x,
       cat("Changing scale from FALSE to 'none' for pcaMethods.\n")
       scale <- "none"
     }
-#browser()
+
     x.svd <- NULL
     x.pca <- pca(x, nPcs=min(nrow(x), ncol(x)-1), completeObs=TRUE,
                  center=center, scale=scale, verbose=TRUE, method=method)
@@ -350,7 +343,6 @@ gge.matrix <- function(x,
   n.gen <- nrow(x)
   genCoord <- ROT * sqrt(n.gen - 1)
 
-
   # Block coordinates
   blockCoord <- t(x.g + x.gb) %*% ROT / sqrt(n.gen - 1)
 
@@ -412,7 +404,7 @@ plot.gge <- function(x, title=substitute(x), ...) {
   #browser()
   op1 <- par(mfrow=c(2,2))
   R2 <- x$R2
-  #R2cum <-
+
   # Scree plot
   op2 <- par(pty='s', mar=c(3,5,2,1))
   plot(1:length(R2), R2, type="b", axes=FALSE,
@@ -480,6 +472,7 @@ biplot.gge <- function(x, title=substitute(x), subtitle="",
   } else {
     col.env <- rep(col.env, length=n.env.grp)
   }
+
 
   # Flip. If 'auto', flip the axis so that genotype ordinate is positively
   # correlated with genotype means.
@@ -586,7 +579,6 @@ biplot.gge <- function(x, title=substitute(x), subtitle="",
     #pch.gen <- rep(pch.gen, length=n.gen.grp)
   }
 
-#  browser()
   # New coordinate system for genotypes
   par(new = TRUE)
   plot(NULL, type = "n", xaxt="n", yaxt="n", xlab="", ylab="",

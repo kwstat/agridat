@@ -55,9 +55,10 @@ anova(m2)
 ## rep  2   1.57  0.7851   9.2123
 
 vc(m2)
-##     groups        name variance stddev
-##  rep:block (Intercept)  0.06194 0.2489
-##  Residual               0.08522 0.2919
+##        grp        var1 var2    vcov  sdcor
+##  rep:block (Intercept) <NA> 0.06194 0.2489
+##   Residual        <NA> <NA> 0.08523 0.2919
+
 
 # Variety means.  John and Williams table 7.5.  Slight, constant
 # difference for each method as compared to John and Williams.

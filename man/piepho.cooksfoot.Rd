@@ -32,7 +32,7 @@
 dat <- piepho.cooksfoot
 dat$env <- factor(dat$year)
 
-# densityplot(~date|env, data=dat) # Gaussian, not gamma distn
+densityplot(~date|env, data=dat, main="piepho.cooksfoot - heading date") # Gaussian, not gamma distn
 
 if(require(lme4)){
   # A simple mixed model gives results similar to Piepho, Table 2.

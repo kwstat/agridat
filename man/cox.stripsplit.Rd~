@@ -47,9 +47,9 @@ summary(m1)
 # With balanced data, the following are all basically identical
 
 if(require(lme4)){
+# The 'rep:soil:fert' term causes problems...so we drop it.
 m2 <- lmer(yield ~ fert*soil*calcium + (1|rep) + (1|rep:fert) +
-           (1|rep:soil) + (1|rep:fert:calcium) + (1|rep:soil:fert), data=dat,
-           control=lmerControl(check.nobs.vs.rankZ="ignore"))
+           (1|rep:soil) + (1|rep:fert:calcium), data=dat)
 }
 
 \dontrun{

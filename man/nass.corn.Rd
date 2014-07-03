@@ -56,19 +56,15 @@ keep <- droplevels(subset(dat, year == 2011 & acres > 100000))$state
 dat <- droplevels(subset(dat, is.element(state, keep)))
 
 # Acres of corn grown each year
+require(lattice)
 xyplot(acres ~ year|state, dat, type='l', as.table=TRUE,
        main="nass.corn: state trends in corn acreage")
 
-# Plain levelplot, using only states
-datm <- acast(dat, year~state, value.var='yield')
-levelplot(datm, aspect=.7, col.regions=RedGrayBlue,
-          main="nass.corn",
-          scales=list(x=list(rot=90, cex=.7)))
-
-\dontrun{
-require("mvtsplot")
-mvtsplot(datm, levels=11, margin=FALSE, norm='global')
-}
+## Plain levelplot, using only states
+## datm <- acast(dat, year~state, value.var='yield')
+## levelplot(datm, aspect=.7, col.regions=RedGrayBlue,
+##           main="nass.corn",
+##           scales=list(x=list(rot=90, cex=.7)))
 
 # Model the rate of genetic gain in Illinois as a piecewise regression
 # Breakpoints define periods of open-pollinated varieties, double-cross,

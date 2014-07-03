@@ -37,6 +37,9 @@
 \examples{
 
 dat <- theobald.covariate
+xyplot(yield ~ chu|gen, dat, type=c('p','smooth'),
+       xlab =  "chu = corn heat units",
+       main="theobald.covariate - yield vs heat")
 
 # REML estimates (Means) in table 3 of Theobald 2002
 if(require(lme4)){

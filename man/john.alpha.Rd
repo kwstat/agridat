@@ -29,11 +29,13 @@ alpha design.  The plots were laid out in a single line.
   \emph{Cyclic and computer generated designs},
   Chapman and Hall, London.  Page 146.
 }
+
 \references{
   Piepho, H.P. and M{\"o}hring, J. (2007),
   Computing heritability and selection response from unbalanced
   plant breeding trials, \emph{Genetics}, 177, 1881--1888.
 }
+
 \examples{
 dat <- john.alpha
 
@@ -73,6 +75,8 @@ means <- data.frame(rcb=coef(m0)[1:24],
 ## genG04 4.439400 4.728175 4.528828
 ## genG05 5.103100 5.225708 5.075944
 ## genG06 4.749067 4.618234 4.575394
+splom(means, data=means, main="john.alpha - means for RCB, IB, Intra-block")
+
 }
 
 \dontrun{

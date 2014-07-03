@@ -49,14 +49,15 @@ Iowa State College, Agricultural Research Bulletins. Bulletin 234. Book 22.
 dat <- brandt.switchback
 
 # In each period, treatment 2 is slightly higher
-bwplot(yield~trt|period,dat, layout=c(3,1), main="brandt.switchback",
-    xlab="Treatment", ylab="Milk yield")
+# bwplot(yield~trt|period,dat, layout=c(3,1), main="brandt.switchback",
+#     xlab="Treatment", ylab="Milk yield")
 
 # Yield at period 2 (trt T2) is above the trend in group A,
 # below the trend (trt T1) in group B
 xyplot(yield~period|group, data=dat, group=cow, type=c('l','r'),
     auto.key=list(columns=5), main="brandt.switchback",
-    xlab="Treatment", ylab="Milk yield")
+    xlab="Period.  Group A: T1,T2,T1.  Group B: T2,T1,T2",
+    ylab="Milk yield (observed and trend) per cow")
 
 # Similar to Brandt Table 10
 m1 <- aov(yield~period+group+cow:group+period:group, data=dat)

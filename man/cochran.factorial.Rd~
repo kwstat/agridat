@@ -1,33 +1,56 @@
-\name{cochran.fractionalfactorial}
-\alias{cochran.fractionalfactorial}
+\name{cochran.factorial}
+\alias{cochran.factorial}
 \docType{data}
 \title{
-%%   ~~ data name/kind ... ~~
+   Factorial experiment in beans
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+   Factorial experiment in beans
 }
-\usage{data(cochran.fractionalfactorial)}
+\usage{data(cochran.factorial)}
 \format{
   A data frame with 32 observations on the following 4 variables.
   \describe{
-    \item{\code{rep}}{a factor with levels \code{R1} \code{R2}}
-    \item{\code{block}}{a factor with levels \code{B1} \code{B2}}
-    \item{\code{trt}}{a factor with levels \code{(1)} \code{d} \code{dk} \code{dn} \code{dnk} \code{dnp} \code{dnpk} \code{dp} \code{dpk} \code{k} \code{n} \code{nk} \code{np} \code{npk} \code{p} \code{pk}}
-    \item{\code{yield}}{a numeric vector}
+    \item{\code{rep}}{rep factor}
+    \item{\code{block}}{block factor}
+    \item{\code{trt}}{treatment factor, 16 levels}
+    \item{\code{yield}}{yield (pounds)}
   }
 }
 \details{
-%%  ~~ If necessary, more details than the __description__ above ~~
+  Conducted by Rothamsted Experiment Station in 1936.  The treatments
+  are listed below.
+
+  d = dung: None, 10 tons/acre.
+
+  n = nitrochalk: None, 0.4 hundredweight nitrogen per acre.
+
+  p = Superphosphate: None, 0.6 hundredweight per acre
+
+  k = muriate of potash: None, 1 hundredweight K20 per acres.
+
+  The response variable is the yield of beans.
 }
 \source{
-%%  ~~ reference to a publication or URL from which the data were obtained ~~
+  Cochran, W.G. and Cox, G.M. (1957),
+  \emph{Experimental Designs}, 2nd ed., Wiley and Sons, New York, p. 160.
 }
-\references{
-%%  ~~ possibly secondary sources and usages ~~
-}
+
 \examples{
-data(cochran.fractionalfactorial)
-## maybe str(cochran.fractionalfactorial) ; plot(cochran.fractionalfactorial) ...
+
+dat <- cochran.factorial
+
+# Split treatment into individual factors
+dat <- transform(dat,
+                 d = -1 + 2 * grepl('d',trt),
+                 n = -1 + 2 * grepl('n',trt),
+                 p = -1 + 2 * grepl('p',trt),
+                 k = -1 + 2 * grepl('k',trt))
+dat <- transform(dat, d=factor(d), n=factor(n), p=factor(p), k=factor(k))
+
+# Cochran table 6.5.
+m0 <- aov(yield~rep/block+(d+n+p+k)^3, data=dat)
+anova(m0)
+
 }
 \keyword{datasets}

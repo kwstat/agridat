@@ -21,7 +21,11 @@
   Yields are root weights.  Data originally collected by Mercer and
   Hall as part of a uniformity trial.
 
+  This data is the same as the data from columns 1-5, rows 16-20, of the
+  mercer.mangold.uniformity data in this package.
+
   Unsurprisingly, there are no significant treatment differences.
+
 }
 \source{
   Mercer, WB and Hall, AD, 1911. The experimental error of field trials

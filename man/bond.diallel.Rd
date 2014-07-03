@@ -39,6 +39,8 @@
 \examples{
 dat <- bond.diallel
 
+splom(dat[,3:11], main="bond.diallel")
+
 # Needs an example.  Bond says yield heterosis of F1 hybrids over parent
 # means is 22.56, but I cannot match.
 }

@@ -55,8 +55,8 @@ desplot(yield ~ col*block, dat, out1=block, text=gen, col=wheel,
 m1 <- lm(yield ~ gen + block, data=dat)
 dat$res <- resid(m1)
 
-desplot(res ~ col*block, dat, out1=block, text=gen, col=wheel,
-        main="durban.competition - residuals")
+## desplot(res ~ col*block, dat, out1=block, text=gen, col=wheel,
+##         main="durban.competition - residuals")
 
 # Calculate mean of neighboring plots
 dat$comp <- NA

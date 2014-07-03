@@ -47,7 +47,7 @@ dat <- holland.arthropods
 require(lattice)
 contourplot(linyphiidae ~ col*row, dat, at=c(0,40,80,120,160,200), region=TRUE,
             col.regions=c('gray90','gray70','gray50','gray30','gray10'),
-            main="linyphiidae counts in winter wheat")
+            main="holland.arthropods - linyphiidae counts in winter wheat")
 
 \dontrun{
 contourplot(n.brevicollis ~ col*row, dat, region=TRUE)

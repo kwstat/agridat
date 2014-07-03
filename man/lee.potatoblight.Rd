@@ -25,7 +25,7 @@
 These data werre collected from biennial screening trials conducted by
 the New Zealand Institute of Crop and Food Research at the Pukekohe
 Field Station.  The trials evaluate the resistance of potato cultivars
-to late blight caused by the fungus \emph{ Phytophthora infestans}. In
+to late blight caused by the fungus \emph{Phytophthora infestans}. In
 each trial, the damage to necrotic tissue was rated on a 1-9 scale at
 multiple time points during the growing season.
 
@@ -104,12 +104,16 @@ skp <- c(rep(0,10),
          rep(0,5),1,1,1,1,1,
          rep(0,5),1,1,1,1,1,
          rep(0,5),1,1,1,1,1)
-desplot(y ~ col*row|date, dat, main="lee.potatoblight",
+desplot(y ~ col*row|date, dat,
+        main="lee.potatoblight - maps of blight resistance",
+        ylab="Year of testing",
         layout=c(10,11),skip=skp)
 
 # 1983 only.  I.Hardy succumbs quickly
 xyplot(y ~ date|gen, dat, subset=year==1983, group=rep,
-       ylab="Blight resistance score", main="lee.potatoblight", as.table=TRUE)
-
+       xlab="Date", ylab="Blight resistance score",
+       main="lee.potatoblight 1983", as.table=TRUE,
+       auto.key=list(columns=5),
+       scales=list(alternating=FALSE, x=list(rot=90, cex=.7)))
 }
 \keyword{datasets}

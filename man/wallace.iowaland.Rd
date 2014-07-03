@@ -61,6 +61,7 @@ require("latticeExtra")
 mapplot(polnm~fedval , data=dat, colramp=RedGrayBlue,
         main="wallace.iowaland - Federal land values",
         xlab="Land value, dollars per acre",
+        scales=list(draw=FALSE),
         map=map('county', 'iowa', plot=FALSE,
                 fill=TRUE, projection="mercator"))
 

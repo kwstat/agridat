@@ -69,9 +69,9 @@
 
 dat <- crossa.wheat
 
-# AMMI biplot.  Fig 3 of Crossa at al
+# AMMI biplot.  Fig 3 of Crossa et al.
 require(agricolae)
-m1 <- with(dat, AMMI(E=loc, G=gen, R=1, Y=yield, graph=""))
+m1 <- with(dat, AMMI(E=loc, G=gen, R=1, Y=yield))
 b1 <- m1$biplot[,1:4]
 b1$PC1 <- -1 * b1$PC1 # Flip vertical
 plot(b1$yield, b1$PC1, cex=0.0,
@@ -87,6 +87,8 @@ e1 <- subset(b1,type=="ENV")
 arrows(mn, 0,
        0.95*(e1$yield - mn) + mn, 0.95*e1$PC1,
        col= "brown", lwd=1.8,length=0.1)
+
+# GGB example ...
 
 }
 \keyword{datasets}

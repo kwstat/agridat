@@ -91,6 +91,9 @@ X1 <- scale(X1) # scaled columns
 m1 <- plsr(Y1~X1)
 loadings(m1)[,1,drop=FALSE] # X loadings in Table 1 of Vargas
 
+biplot(m1, cex=.5, which="x", var.axes=TRUE,
+       main="vargas.wheat1 - gen ~ trait") # Vargas figure 2a
+
 # Yield as a function of env variates
 Y2 <- t(Y0)
 X2 <- vargas.wheat1$envvals

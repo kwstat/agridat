@@ -14,7 +14,7 @@
     \item{\code{cow}}{cow factor, 12 levels}
     \item{\code{trt}}{treatment factor, 3 levels}
     \item{\code{period}}{period factor, 3 levels}
-    \item{\code{y}}{yield (FCM = fat corrected milk), pounds/day}
+    \item{\code{yield}}{yield (FCM = fat corrected milk), pounds/day}
     \item{\code{block}}{block factor}
   }
 }
@@ -45,9 +45,10 @@ dat <- lucas.switchback
 # Create a numeric period variable
 dat$p <- as.numeric(substring(dat$period,2))
 
+
 # Need to use 'terms' to preserve the order of the model terms
 # Really, cow(block), p:cow(block), period(block)
-m1 <- aov(terms(y ~ block + cow:block + p:cow:block +
+m1 <- aov(terms(yield ~ block + cow:block + p:cow:block +
                 period:block + trt, keep.order=TRUE), data=dat)
 anova(m1) # Match Sanders & Gaynor table 3
 ## Analysis of Variance Table

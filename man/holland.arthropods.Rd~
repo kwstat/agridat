@@ -40,7 +40,6 @@
 
   Used with permission of John Holland.
 }
-}
 \examples{
 
 dat <- holland.arthropods

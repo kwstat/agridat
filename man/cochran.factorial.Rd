@@ -49,8 +49,14 @@ dat <- transform(dat,
 dat <- transform(dat, d=factor(d), n=factor(n), p=factor(p), k=factor(k))
 
 # Cochran table 6.5.
-m0 <- aov(yield~rep/block+(d+n+p+k)^3, data=dat)
-anova(m0)
+m1 <- lm(yield ~ rep * block + (d+n+p+k)^3, data=dat)
+anova(m1)
+
+
+require(FrF2)
+aliases(m1)
+MEPlot(m1, select=3:6,
+       main="cochran.factorial - main effects plot")
 
 }
 \keyword{datasets}

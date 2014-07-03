@@ -71,10 +71,10 @@ round(out, 3)
 
 
 require(latticeExtra)
-xyplot(yield~pop|gen, dat, pch=16, as.table=TRUE,
-       main="carmer.density (independent fit per panel)") +
-xyplot(pred~pop|gen, preds, col='black', as.table=TRUE,
-       type='l')
+## xyplot(yield~pop|gen, dat, pch=16, as.table=TRUE,
+##        main="carmer.density (independent fit per panel)") +
+## xyplot(pred~pop|gen, preds, col='black', as.table=TRUE,
+##        type='l')
 
 
 # A better approach might be to use nlme to fit an overall fixed-effect

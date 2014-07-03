@@ -49,17 +49,18 @@ xyplot(yield~col, data=dat, main="gilmour.serpentine")
 \dontrun{
 require(asreml)
 dat <- transform(dat, rowf=factor(row), colf=factor(10*(col-8)))
+dat <- dat[order(dat$rowf, dat$colf), ] # Sort order needed by asreml
 
 # RCB
 m0 <- asreml(yield ~ gen, data=dat, random=~rep)
 
 # Add AR1 x AR1
-m1 <- asreml(yield ~ gen, data=dat, rcov = ~ar1(colf):ar1(rowf))
+m1 <- asreml(yield ~ gen, data=dat, rcov = ~ar1(rowf):ar1(colf))
 
 # Add spline
 m2 <- asreml(yield ~ gen + col, data=dat,
              random= ~ spl(col) + colf,
-             rcov = ~ar1(colf):ar1(rowf))
+             rcov = ~ar1(rowf):ar1(colf))
 
 # Figure 4 shows serpentine spraying
 p2 <- predict(m2, classify="colf")$predictions$pvals
@@ -71,7 +72,7 @@ dat <- transform(dat, colcode = factor(dat$col-floor((dat$col-1)/4)*4 -1))
 
 m3 <- asreml(yield ~ gen + lin(colf) + colcode, data=dat,
              random= ~ colf + rowf + spl(colf),
-             rcov = ~ar1(colf):ar1(rowf))
+             rcov = ~ar1(rowf):ar1(colf))
 
 # Figure 6 shows serpentine row effects
 p3 <- predict(m3, classify="rowf")$predictions$pvals
@@ -86,7 +87,7 @@ levels(dat$rowcode) <- c('2','2','1','2','2','1','2','2','1',
 
 m6 <- asreml(yield ~ gen + lin(colf) + colcode +rowcode, data=dat,
              random= ~ colf + rowf + spl(col),
-             rcov = ~ar1(colf):ar1(rowf))
+             rcov = ~ar1(rowf):ar1(colf))
 plot(variogram(m6), xlim=c(0:17), ylim=c(0,11), zlim=c(0,4000),
      main="gilmour.serpentine")
 

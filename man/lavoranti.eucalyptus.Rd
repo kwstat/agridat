@@ -59,6 +59,8 @@
 # Estimate the missing value xm = xr1 V D^{-1} U' xc1
 
 dat <- lavoranti.eucalyptus
+levelplot(height~loc*gen, dat, main="lavoranti.eucalyptus - GxE heatmap")
+
 dat <- droplevels(subset(dat, origin=="Ravenshoe"))
 dat <- acast(dat, gen~loc, value.var="height")
 

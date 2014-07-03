@@ -65,11 +65,6 @@ levelplot(datm, aspect=.7, col.regions=RedGrayBlue,
           main="nass.corn",
           scales=list(x=list(rot=90, cex=.7)))
 
-\dontrun{
-library("mvtsplot")
-mvtsplot(datm, levels=11, margin=FALSE, norm='global')
-}
-
 # Model the rate of genetic gain in Illinois as a piecewise regression
 # Breakpoints define periods of open-pollinated varieties, double-cross,
 # single-cross, and transgenic hybrids.

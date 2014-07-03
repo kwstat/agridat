@@ -28,6 +28,8 @@ entire experiment is then replicated three times.
   Comes from the notes of Gertrude Cox and A. Rotti.
 }
 \references{
+  SAS/STAT(R) 9.2 User's Guide, Second Edition.
+  Example 23.5 Strip-Split Plot.
   \url{http://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.htm#statug_anova_sect030.htm}
 }
 \examples{
@@ -37,6 +39,10 @@ dat <- cox.stripsplit
 aggregate(yield ~ calcium, data=dat, mean)
 aggregate(yield ~ soil, data=dat, mean)
 aggregate(yield ~ calcium, data=dat, mean)
+
+require(HH)
+interaction2wt(yield ~ rep + soil + fert + calcium, dat,
+               main="cox.stripsplit")
 
 # AOV
 m1 <- aov(yield~ fert*calcium*soil +

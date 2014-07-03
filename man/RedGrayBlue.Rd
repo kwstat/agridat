@@ -23,4 +23,5 @@ RedGrayBlue(n)
 }
 \examples{
 pie(rep(1,11), col=RedGrayBlue(11))
+title("RedGrayBlue(11)")
 }

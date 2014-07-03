@@ -1,6 +1,8 @@
 # gge.r
 # Time-stamp: c:/x/rpack/agridat/R/gge.r
 
+# TODO: Add biplot example to denis.ryegrass
+
 if(0){
   require("reshape2")
   # matrix data
@@ -429,9 +431,10 @@ biplot.gge <- function(x, title=substitute(x), subtitle="",
                        #pch.gen=1,
                        lab.env = TRUE,
                        comps=1:2,
-                       flip="auto"){
+                       flip="auto", ...){
 
   # x: A model object of class 'gge'
+  # Must include ... because the generic 'biplot' does
 
   gen.group <- x$gen.group
   env.group <- x$env.group
@@ -448,10 +451,10 @@ biplot.gge <- function(x, title=substitute(x), subtitle="",
   n.gen.grp <- length(unique(gen.group)) # 0 for NULL
   n.env.grp <- length(unique(env.group))
 
-  expand.range <- function(x) {
-    if(x[1] > 0) x[1] <-  - x[1]
-    else if(x[2] < 0) x[2] <-  - x[2]
-    return(x)
+  expand.range <- function(xx) {
+    if(xx[1] > 0) xx[1] <-  - xx[1]
+    else if(xx[2] < 0) xx[2] <-  - xx[2]
+    return(xx)
   }
 
   # Subtitle

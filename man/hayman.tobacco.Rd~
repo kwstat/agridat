@@ -1,4 +1,5 @@
 \name{hayman.tobacco}
+\alias{hayman.tobacco}
 \docType{data}
 \title{
   Two reps of full diallel cross of Aztec tobacco
@@ -108,14 +109,14 @@ dat2 <- subset(hayman.tobacco, year==1952)
 
 # Does flowering date follow a gamma distn?  Maybe.
 require(lattice)
-densityplot(~flower, data=dat2, main="hayman.tobacco")
+densityplot(~day, data=dat2, main="hayman.tobacco")
 
 
 d1 <- subset(dat2, block=='B1')
 d2 <- subset(dat2, block=='B2')
 
-m1 <- acast(d1, male~female, value.var='flower')
-m2 <- acast(d2, male~female, value.var='flower')
+m1 <- acast(d1, male~female, value.var='day')
+m2 <- acast(d2, male~female, value.var='day')
 
 mn1 <- (m1+t(m1))/2
 mn2 <- (m2+t(m2))/2

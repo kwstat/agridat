@@ -6,7 +6,7 @@
 }
 \description{
   Plant strength of perennial ryegrass in France for 21 genotypes at 7
-  locations. 
+  locations.
 }
 
 \format{
@@ -20,8 +20,9 @@
 \details{
   INRA conducted a breeding trial in western France with 21 genotypes at
   7 locations.  The observed data is 'strength' averaged over 7-10
-  plants per plot and three plot per location (after adjusting for
+  plants per plot and three plots per location (after adjusting for
   blocking effects).  Each plant was scored on a scale 0-9.
+
   The original data had a value of 86.0 for genotype G1 at location
   L4--this was replaced by an additive estimated value of 361.2 as in
   Gower and Hand (1996).

@@ -34,6 +34,10 @@ dat <- denis.missing
 # View missingness structure
 require(reshape2)
 acast(dat, env~gen, value.var='yield')
+require(lattice)
+levelplot(yield ~ gen*env, data=dat,
+          col.regions=RedGrayBlue,
+          main="denis.missing - incidence heatmap")
 
 # Stability variance (Table 3 in Piepho)
 require("nlme")

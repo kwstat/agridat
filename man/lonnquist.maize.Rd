@@ -25,7 +25,7 @@
   J. H. Lonnquist, C. O. Gardner. (1961)
   Heterosis in Intervarietal Crosses in Maize and Its Implication in
   Breeding Procedures.
-  \emph{Crop Science}, 1, 179-183.
+  \emph{Crop Science}, 1, 179-183.  Table 1.
 
 }
 \references{
@@ -49,6 +49,9 @@ dat <- transform(dat,
                    levels=c("C","L","M","H","G","P","B","RM","N","K","R2","K2")),
                  p2=factor(p2,
                    levels=c("C","L","M","H","G","P","B","RM","N","K","R2","K2")))
+require(lattice)
+levelplot(yield ~ p1*p2, dat, col.regions=RedGrayBlue,
+          main="lonnquist.maize - yield of diallel cross")
 
 # Calculate the F1 means in Lonnquist, table 1
 mat <- acast(dat, p1~p2)

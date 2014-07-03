@@ -35,6 +35,11 @@
 dat <- cochran.bib
 
 # Show the incomplete-block structure
+require(lattice)
+levelplot(yield~loc*gen, dat,
+          col.regions=RedGrayBlue,
+          xlab="loc (block)", main="cochran.bib - incomplete blocks")
+
 with(dat, table(gen,loc))
 rowSums(as.matrix(with(dat, table(gen,loc))))
 colSums(as.matrix(with(dat, table(gen,loc))))

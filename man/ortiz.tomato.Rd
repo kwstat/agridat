@@ -29,7 +29,7 @@
   Chillan, Chile (E42), Curacavi, Chile (E43), Colina, Chile (44),
   Belem, Brazil (E50), Caacupe, Paraguay (E51),
   Centeno, Trinidad Tobago (E53).
-  
+
   The \code{covs} matrix contains 16 environmental covariates.
   \tabular{ll}{
   Lat  \tab Latitude \cr
@@ -62,8 +62,6 @@
 }
 \examples{
 
-\dontrun{
-
 # Double-centered yield matrix
 Y <- ortiz.tomato$yield
 Y <- sweep(Y, 1, rowMeans(Y, na.rm=TRUE))
@@ -72,17 +70,16 @@ Y <- sweep(Y, 2, colMeans(Y, na.rm=TRUE))
 # Standardized covariates
 X <- ortiz.tomato$covs
 X <- X[,c("MxT", "MnT", "MeT", "Prec", "Day", "pH", "OM", "P", "K",
-          "ExN", "ExP", "ExK", "Trim", "Driv", "Irr", "Dha")] 
+          "ExN", "ExP", "ExK", "Trim", "Driv", "Irr", "Dha")]
 X <- scale(X)
 
 # Now, PLS relating the two matrices
 require(pls)
 m1 <- plsr(Y~X)
 # Inner-product relationships similar to Ortiz figure 1.
-biplot(m1, which="x", var.axes=TRUE)
-biplot(m1, which="y", var.axes=TRUE)
+biplot(m1, which="x", var.axes=TRUE, main="ortiz.tomato - env*cov biplot")
+#biplot(m1, which="y", var.axes=TRUE)
 
-}
 
 }
 \keyword{datasets}

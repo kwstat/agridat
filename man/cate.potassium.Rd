@@ -26,7 +26,7 @@
   were rounded?
 }
 \source{
-  Cate, R.B. and Nelson, L.A. (1971). 
+  Cate, R.B. and Nelson, L.A. (1971).
   A simple statistical procedure for partitioning soil test correlation
   data into two classes. \emph{Soil Science Society of America Journal},
   35, 658--660.
@@ -42,13 +42,13 @@ CateNelson <- function(dat){
   dat <- dat[order(dat$x),] # Sort the data by x
   x <- dat$x
   y <- dat$y
-  
+
   # Create a data.frame to store the results
   out <- data.frame(x=NA, mean1=NA, css1=NA, mean2=NA, css2=NA, r2=NA)
 
   css <- function(x) { var(x) * (length(x)-1) }
   tcss <- css(y) # Total corrected sum of squares
-  
+
   for(i in 2:(length(y)-2)){
     y1 <- y[1:i]
     y2 <- y[-(1:i)]
@@ -66,7 +66,7 @@ CateNelson <- function(dat){
 cn <- CateNelson(dat)
 ix <- which.max(cn$r2)
 with(dat, plot(y~x, ylim=c(0,110), xlab="Potassium", ylab="Yield"))
-title("Cate-Nelson")
+title("cate.potassium - Cate-Nelson analysis")
 abline(v=dat$x[ix], col='wheat')
 
 }

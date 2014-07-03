@@ -45,7 +45,9 @@ signif(coef(m1),4) # These match the 3-yr coefficients of Welch, Table 2
 
 require(latticeExtra)
 useOuterStrips(xyplot(yield~n|factor(p)*factor(k), data=dat, type='l',
-                      main="welch.bermudagrass: yield for each P*K", xlab="nitro"))
+                      main="welch.bermudagrass: yield for each P*K",
+                      xlab="Nitro for each Phosphorous level",
+                      ylab="Yield for each Potassim level"))
 
 # Welch Fig 4.  Modeled response curves
 

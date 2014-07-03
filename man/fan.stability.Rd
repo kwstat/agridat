@@ -44,5 +44,7 @@ dm <- acast(dat, gen~env, value.var="yield")
 require(agricolae)
 # Use 0.464 as pooled error from ANOVA.  Calculate yield mean/stability.
 stability.par(dm, rep=3, MSerror=0.464) # Table 5 of Fan et al.
+
+dotplot(gen~yield|env, dat, main="fan.stability")
 }
 \keyword{datasets}

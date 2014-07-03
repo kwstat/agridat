@@ -55,7 +55,7 @@
   Data kindly provided by Jose Crossa.
 }
 \examples{
-\dontrun{
+
 dat <- vargas.wheat2
 yield <- dat$yield
 covs <- dat$covs
@@ -72,14 +72,15 @@ m2 <- plsr(yield ~ covs)
 plot(m2)
 
 # Loadings
-plot(m2, "loadings", xaxt='n')
-axis(1, at=1:ncol(covs), labels=colnames(covs), las=2)
+# plot(m2, "loadings", xaxt='n')
+# axis(1, at=1:ncol(covs), labels=colnames(covs), las=2)
 
 # Biplots
-biplot(m2, cex=.5, which="y", var.axes=TRUE) # Vargas figure 2a
+biplot(m2, cex=.5, which="y", var.axes=TRUE,
+       main="vargas.wheat2 - yield ~ covs") # Vargas figure 2a
 biplot(m2, cex=.5, which="x", var.axes=TRUE) # Vectors form figure 2 b
-biplot(m2, cex=.5, which="scores", var.axes=TRUE)
-biplot(m2, cex=.5, which="loadings", var.axes=TRUE)
-}
+# biplot(m2, cex=.5, which="scores", var.axes=TRUE)
+# biplot(m2, cex=.5, which="loadings", var.axes=TRUE)
+
 }
 

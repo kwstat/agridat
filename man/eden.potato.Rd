@@ -15,7 +15,7 @@
   \describe{
     \item{\code{year}}{Factor for year/type}
     \item{\code{yield}}{Yield in pounds per plot}
-    \item{\code{block}}{Bloc factor}
+    \item{\code{block}}{Block factor}
     \item{\code{row}}{Row}
     \item{\code{col}}{Column}
     \item{\code{trt}}{Treatment factor}

@@ -52,19 +52,18 @@ dat <- transform(dat,
 
 # Gomez table 4.24, trt SS totalled together.
 # Why didn't Gomez nest block within rep?
-m0 <- lm(yield~rep*block+trt, dat)
+m0 <- lm(yield ~ rep * block + trt, dat)
 anova(m0)
 
 # Gomez table 4.24, trt SS split apart
 m1 <- lm(yield ~ rep * block + (a+b+c+d+e+f)^3, dat)
 anova(m1)
 
-\dontrun{
-# Not sure FrF2 works with multi-rep data.
 require(FrF2)
 aliases(m1)
-MEPlot(m1)
-}
+MEPlot(m1, select=3:8,
+       main="gomez.fractionalfactorial - main effects plot")
+#IAPlot(m1, select=3:8)
 
 }
 

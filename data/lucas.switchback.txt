@@ -1,4 +1,4 @@
-"cow"	"trt"	"period"	"y"	"block"
+"cow"	"trt"	"period"	"yield"	"block"
 "C1"	"T1"	"P1"	34.6	"B1"
 "C2"	"T2"	"P1"	22.8	"B1"
 "C3"	"T3"	"P1"	32.9	"B1"

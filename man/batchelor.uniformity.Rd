@@ -107,31 +107,37 @@ require(lattice)
 # Apple
 dat <- batchelor.apple.uniformity
 desplot(yield~col*row, dat, aspect=30/16,
-          main="Jonathon apple tree yields")
+        main="batchelor.apple.uniformity",
+        ylab="Jonathon apple tree yields")
 
 # Lemon
 dat <- batchelor.lemon.uniformity
 desplot(yield~col*row, dat, aspect=26/14,
-          main="Eureka lemon tree yields")
+        main="batchelor.lemon.uniformity",
+        ylab="Eureka lemon tree yields")
 
 # Navel1 (Arlington)
 dat <- batchelor.navel1.uniformity
 desplot(yield~col*row, dat, aspect=50/20,
-          main="Navel orange tree yields (Arlington)")
+        main="batchelor.navel1.uniformity",
+        ylab="Navel orange tree yields (Arlington)")
 
 # Navel2 (Antelope)
 dat <- batchelor.navel2.uniformity
 desplot(yield~col*row, dat, aspect=33/15,
-          main="Navel orange tree yields (Antelope)")
+        main="batchelor.navel2.uniformity",
+        ylab="Navel orange tree yields (Antelope)")
 
 # Valencia
 dat <- batchelor.valencia.uniformity
 desplot(yield~col*row, dat, aspect=20/12,
-          main="Valencia orange tree yields")
+        main="batchelor.valencia.uniformity",
+        ylab="Valencia orange tree yields")
 
 # Walnut
 dat <- batchelor.walnut.uniformity
 desplot(yield~col*row, dat, aspect=32/10,
-          main="Seedling walnut yields")
+        main="batchelor.walnut.uniformity",
+        ylab="Seedling walnut yields")
 }
 

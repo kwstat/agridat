@@ -52,7 +52,6 @@
 }
 \examples{
 
-\dontrun{
 require(pls)
 
 char <- talbot.potato$char
@@ -68,6 +67,8 @@ summary(m1)
 # Loadings factor 1
 lo <- loadings(m1)[,1,drop=FALSE]
 round(-1*lo[order(-1*lo),1,drop=FALSE],2)
-}
+
+biplot(m1, main="talbot.potato - biplot")
+
 }
 

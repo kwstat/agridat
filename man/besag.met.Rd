@@ -24,6 +24,13 @@
   Multi-environment trial of 64 corn hybrids in six counties in North
   Carolina.  Each location had 3 replicates in in incomplete-block
   design.
+
+  Note: In the original data, each county had 6 missing plots.  This
+  data has rows for each missing plot that uses the same
+  county/block/rep to fill-out the row, sets the genotype to G01, and
+  sets the yield to missing.  These missing values were added to the
+  data so that asreml could more easily do AR1xAR1 analysis using
+  rectangular fields.
 }
 \source{
   Julian Besag and D Higdon, 1999.
@@ -40,7 +47,8 @@
 \examples{
 dat <- besag.met
 
-desplot(yield ~ col*row|county, out1=rep, dat, main="besag.met")
+desplot(yield ~ col*row|county, out1=rep, out2=block, dat,
+        main="besag.met")
 
 \dontrun{
 # Heteroskedastic variance model (separate variance for each variety)
@@ -80,6 +88,57 @@ m1l$sigma^2 * c(1, coef(m1l$modelStruct$varStruct, unc = F))^2
 # We get the same results from asreml & lme
 plot(m1a$gammas[-1],
      m1l$sigma^2 * c(1, coef(m1l$modelStruct$varStruct, unc = F))^2)
+
+}
+
+\dontrun{
+
+# The following example shows how to construct a GxE biplot
+# from the FA2 model.
+
+dat <- besag.met
+dat <- transform(dat, xf=factor(col), yf=factor(row))
+dat <- dat[order(dat$county, dat$xf, dat$yf), ]
+
+# First, AR1xAR1
+m1 <- asreml(yield ~ county, data=dat,
+              random = ~ gen:county,
+              rcov = ~ at(county):ar1(xf):ar1(yf))
+# Add FA1
+m2 <- update(m1, random=~gen:fa(county,1))
+# FA2
+m3 <- update(m2, random=~gen:fa(county,2))
+
+# Use the loadings to make a biplot
+vars <- vc(m3)
+psi <- vars[grepl(".var$", vars$effect), "component"]
+la1 <- vars[grepl(".fa1$", vars$effect), "component"]
+la2 <- vars[grepl(".fa2$", vars$effect), "component"]
+mat <- as.matrix(data.frame(psi, la1, la2))
+rot <- svd(mat[,-1])$v # rotation matrix
+lam <- mat[,-1] %*% rot # Rotate the loadings
+colnames(lam) <- c("load1", "load2")
+
+co3 <- coef(m3)$random # Scores are the GxE coefficients
+ix1 <- grepl("_Comp1$", rownames(co3))
+ix2 <- grepl("_Comp2$", rownames(co3))
+sco <- matrix(c(co3[ix1], co3[ix2]), ncol=2, byrow=FALSE)
+sco <- sco %*% rot # Rotate the scores
+dimnames(sco) <- list(levels(dat$gen) , c('load1','load2'))
+rownames(lam) <- levels(dat$county)
+sco[,1] <- -1 * sco[,1]
+lam[,1] <- -1 * lam[,1]
+biplot(sco, lam, cex=.5, main="FA2 coefficient biplot")
+# G variance matrix
+gvar <- lam %*% t(lam) + diag(mat[,1])
+
+# Now get predictions and make an ordinary biplot
+p3 <- predict(m3, classify="county:gen")
+p3 <- p3$pred$pval
+bi3 <- gge(predicted.value ~ gen*county, data=p3, scale=FALSE)
+windows()
+# Very similar to the coefficient biplot
+biplot(bi3, stand=FALSE, title="SVD biplot of FA2 predictions")
 }
 }
 

@@ -22,6 +22,8 @@
 }
 \details{
   Minimum temperature is the average across 30 days post flowering.
+
+  Opinion: Fitting a quadratic model to this data makes no sense.
 }
 \source{
   Seshu, D. V. and Cady, F. B. 1984. Response of rice to solar radiation

@@ -26,8 +26,10 @@
   Melkassa (39 deg 21 min E, 8 deg 24 min N),
   Mieso (39 deg 22 min E, 8 deg 41 min N) and
   Kobo (39 deg 37 min E, 12 deg 09 min N).
-  Trial 1 was 14 hybrids and one open-pollinated variety.  Trial 2 was
-  12 experimental lines.
+
+  Trial 1 was 14 hybrids and one open-pollinated variety.
+
+  Trial 2 was 12 experimental lines.
 }
 \source{
   Asfaw Adugna (2008), Assessment of yield stability in sorghum using
@@ -40,6 +42,11 @@
 \examples{
 # Genotype means match Adugna
 dat <- adugna.sorghum
+
+require(lattice)
+levelplot(yield ~ env*gen, data=dat, main="adugna.sorghum gxe heatmap",
+          col.regions=RedGrayBlue)
+
 tapply(dat$yield, dat$gen, mean)
 
 # CV for each genotype.  G1..G15 match, except for G2.

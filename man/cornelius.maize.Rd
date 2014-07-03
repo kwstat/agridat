@@ -32,6 +32,17 @@
 }
 \examples{
 
+dat <- cornelius.maize
+# dotplot(gen~yield|env,dat) # We cannot compare genotype yields easily
+# Subtract environment mean from each observation
+require(reshape2)
+mat <- acast(dat, gen~env)
+mat <- scale(mat, scale=FALSE)
+dat2 <- melt(mat)
+names(dat2) <- c('gen','env','yield')
+bwplot(yield ~ gen, dat2,
+       main="cornelius.maize - environment centered yields")
+
 \dontrun{
 # This reproduces the analysis of Forkman and Piepho.
 

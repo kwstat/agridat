@@ -55,18 +55,9 @@ summary(m1) # estimates similar to Wallace, top of p. 389
 # Choropleth map
 require(maps)
 data(county.fips)
-# define color bins
-colpal <- RedGrayBlue(12)
-dat <- transform(dat, valbin = as.numeric(cut(dat$fedval, 6:18*10)))
 dat <- transform(dat, polnm = paste0('iowa,',county))
 
-# Check the data are sorted correctly
-# all(dat$polnm == map("county", 'iowa', plot=FALSE)$names) # TRUE
-# Draw the map.  Compare to http://en.wikipedia.org/wiki/File:Landforms_of_Iowa.jpg
-## map("county", 'iowa', col = colpal[dat$valbin], fill = TRUE,
-##     resolution = 0, lty = 0)
-## title("wallace.iowaland - land values")
-
+require("latticeExtra")
 mapplot(polnm~fedval , data=dat, colramp=RedGrayBlue,
         main="wallace.iowaland - Federal land values",
         xlab="Land value, dollars per acre",

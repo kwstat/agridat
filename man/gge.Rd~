@@ -1,6 +1,5 @@
 \name{gge}
 \alias{gge}
-\alias{gge.default}
 \alias{gge.formula}
 \alias{gge.matrix}
 \alias{biplot.gge}
@@ -16,38 +15,38 @@
 \usage{
 gge(x, ...)
 
-\method{gge}{default}(x, ...)
+\method{gge}{formula}(formula, data = NULL, gen.group = NULL, env.group = NULL, ...)
 
-\method{gge}{data.frame}(x, ...)
+\method{gge}{matrix}(x, center = TRUE, scale = TRUE, gen.group=NULL,
+  env.group = NULL, comps=c(1,2), method = "svd", ...)
 
-\method{gge}{matrix}(x, center = TRUE, scale = TRUE, focus = "env",
-  envGroup = NULL, method = "svd", impute = "no", ...)
-
-\method{gge}{formula}(formula, data = NULL, envGroup = NULL, ...)
-
-\method{predict}{gge}(object, comps = c(1, 2), ...)
-
-\method{plot}{gge}(x, title = substitute(x), subtitle = "",
-  col.regions = RedYellowBlue(13), ...)
+\method{plot}{gge}(x, title = substitute(x), ...)
 
 \method{biplot}{gge}(x, title = substitute(x), subtitle = "",
-  cex.gen = 0.55, cex.env = 0.45, col.gen = "#005000", col.env,
-  lab.gen = TRUE, lab.env = TRUE, comps = 1:2, flip = "auto",
-  alpha = 0.7, ...)
-
-biplot3D(object, ...)
-
-\method{biplot3D}{gge}(object, title = "", subtitle = "",
-  col.gen = "#005000", col.env = "black", comps = c(1, 2, 3),
-  lab.env = TRUE, ...)
-
-\method{plot}{resid.gge}(x, col.regions = RedYellowBlue(13), ...)
+  cex.gen = 0.7, cex.env = 0.6, col.gen = "#005000", col.env="darkorange4",
+  lab.env = TRUE, comps = 1:2, flip = "auto", ...)
 
 }
 
 \arguments{
   \item{x}{A matrix or data.frame.}
+  \item{formula}{A formula}
+  \item{data}{Data frame}
   \item{\dots}{Other arguments}
+  \item{title}{title}
+  \item{center}{center?}
+  \item{scale}{scale?}
+  \item{subtitle}{subtitle}
+  \item{gen.group}{genotype group}
+  \item{env.group}{env group}
+  \item{cex.gen}{character expansion for genotypes}
+  \item{cex.env}{character expansion for environments}
+  \item{col.gen}{color for genotypes}
+  \item{col.env}{color for envts}
+  \item{lab.env}{label envts}
+  \item{comps}{comps}
+  \item{flip}{If "auto"}
+  \item{method}{method used to find principal component directions}
 }
 \details{
   If there is replication in G*E, then the replications are
@@ -58,8 +57,6 @@ biplot3D(object, ...)
   values are NOT allowed. The NIPALS algorithm can be used
   when there are missing data.
 
-  If missing values are imputed, this is done first, before
-  scaling, etc.
 
 }
 \value{
@@ -67,6 +64,11 @@ biplot3D(object, ...)
   \item{method}{}
   \item{center}{Data centered?}
   \item{scale}{Data scaled?}
+  \item{gen.group}{
+    This is only used for plotting.
+    If not NULL, this specifies a classification of genotypes into
+    groups.
+  }
   \item{env.group}{
     If not NULL, this specifies a classification of
     environments into groups.  When using the formula method, then
@@ -95,25 +97,37 @@ biplot3D(object, ...)
 \author{
   Jean-Louis Laffont, Kevin Wright
 }
-\note{
-}
 
 \seealso{
   The 'agricolae' package has functions for AMMI biplots.
 }
 \examples{
+
 # Example 1.  Data is a data.frame in 'matrix' format
-B <- data.frame(E1= c(50, 55, 65, 50, 60, 65, 75.),
-E2= c(67, 71, 76, 80, 82, 89, 95),
-E3= c(90, 93, 95, 102, 97, 106, 117),
-E4= c(98, 102, 105, 130, 135, 137, 133),
-E5= c(120, 129, 134, 138, 151, 153, 155))
+B <- matrix(c(50, 67, 90, 98, 120,
+              55, 71, 93, 102, 129,
+              65, 76, 95, 105, 134,
+              50, 80, 102, 130, 138,
+              60, 82, 97, 135, 151,
+              65, 89, 106, 137, 153,
+              75, 95, 117, 133, 155), ncol=5, byrow=TRUE)
 rownames(B) <- c("G1","G2","G3","G4","G5","G6","G7")
+colnames(B) <- c("E1","E2","E3","E4","E5")
+
 m1 = gge(B)
 plot(m1)
 biplot(m1, title="Example biplot")
 
-# cross.wheat biplot
+# crossa.wheat biplot
+
+# Specify env.group as column in data frame
+dat2 <- crossa.wheat
+dat2$eg <- ifelse(is.element(dat2$loc,
+c("KN","NB","PA","BJ","IL","TC", "JM","PI","AS","ID","SC","SS",
+"SJ","MS","MG","MM")), "Grp1", "Grp2")
+m4 <- gge(yield~gen*loc, dat2, env.group=eg, scale=FALSE)
+biplot(m4, lab.env=TRUE, title="crossa.wheat")
+
 
 }
 

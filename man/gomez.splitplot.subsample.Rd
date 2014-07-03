@@ -19,7 +19,7 @@
   }
 }
 \details{
-  Split-plot experiment in three blocks.  Whole-plot is 'management',
+  A split-plot experiment in three blocks.  Whole-plot is 'management',
   sub-plot is 'time' of application, with two subsamples.  The data are
   the heights, measured on two single-hill sampling units in each plot.
 }
@@ -34,6 +34,9 @@
 \examples{
 
 dat <- gomez.splitplot.subsample
+require(HH)
+interaction2wt(height ~ rep + time + manage, data=dat,
+               main="gomez.splitplot.subsample - plant height")
 
 # Management totals, Gomez table 6.8
 tapply(dat$height, dat$manage, sum)
