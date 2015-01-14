@@ -36,11 +36,14 @@
   Larry Winner. Spatial Data Analysis.
   \url{http://www.stat.ufl.edu/~winner/data/iowaland.txt}
 }
+
 \examples{
 
+data(wallace.iowaland)
 dat <- wallace.iowaland
 
 # Interesting trends involving latitude
+require(lattice)
 splom(~dat[,-c(1:2)], type=c('p','smooth'), lwd=2, main="wallace.iowaland")
 
 # Means. Similar to Wallace table 1
@@ -57,13 +60,14 @@ require(maps)
 data(county.fips)
 dat <- transform(dat, polnm = paste0('iowa,',county))
 
-require("latticeExtra")
-mapplot(polnm~fedval , data=dat, colramp=RedGrayBlue,
-        main="wallace.iowaland - Federal land values",
-        xlab="Land value, dollars per acre",
-        scales=list(draw=FALSE),
-        map=map('county', 'iowa', plot=FALSE,
-                fill=TRUE, projection="mercator"))
+if(require("latticeExtra")){ # for mapplot
+  mapplot(polnm~fedval , data=dat, colramp=RedGrayBlue,
+          main="wallace.iowaland - Federal land values",
+          xlab="Land value, dollars per acre",
+          scales=list(draw=FALSE),
+          map=map('county', 'iowa', plot=FALSE,
+            fill=TRUE, projection="mercator"))
+}
 
 }
 \keyword{datasets}

@@ -58,6 +58,8 @@
 
 \examples{
 
+data(vargas.txe)
+
 require(lattice)
 levelplot(vargas.txe$yields, col.regions=RedGrayBlue,
           main="vargas.txe", xlab="year", ylab="treatment")

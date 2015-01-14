@@ -36,6 +36,7 @@
 
 \examples{
 
+data(harris.wateruse)
 dat <- harris.wateruse
 
 # Compare to Schabenberger & Pierce, fig 7.23
@@ -78,6 +79,7 @@ require(nlme)
 m1n <- lme(water ~ 1 + ti + ti2, data=d22, na.action=na.omit,
            random = list(tree=pdDiag(~1+ti+ti2)))
 
+require(lucid)
 vc(m1n)
 ##       effect variance    stddev
 ##  (Intercept)   0.2691 0.5188
@@ -90,11 +92,11 @@ m1l <- lmer(water ~ 1 + ti + ti2 + (1|tree) +
             (0+ti|tree) + (0+ti2|tree), data=d22)
 
 vc(m1l)
-##    groups        name variance stddev
-##  tree     (Intercept)   0.2691 0.5188
-##  tree.1   ti            0      0
-##  tree.2   ti2           0      0
-##  Residual               0.1472 0.3837
+##      grp        var1 var2   vcov  sdcor
+##     tree (Intercept) <NA> 0.2691 0.5188
+##   tree.1          ti <NA> 0      0
+##   tree.2         ti2 <NA> 0      0
+## Residual        <NA> <NA> 0.1472 0.3837
 
 }
 

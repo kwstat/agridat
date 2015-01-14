@@ -42,6 +42,7 @@
 
 \examples{
 
+data(beall.webworms)
 dat <- beall.webworms
 
 # Match Beall table 1

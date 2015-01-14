@@ -65,28 +65,31 @@
   \emph{Crop Science}, 53, 2332-2341.
   \url{https://www.crops.org/publications/cs/abstracts/53/6/2332}.
 }
+
 \examples{
 
+data(crossa.wheat)
 dat <- crossa.wheat
 
 # AMMI biplot.  Fig 3 of Crossa et al.
-require(agricolae)
-m1 <- with(dat, AMMI(E=loc, G=gen, R=1, Y=yield))
-b1 <- m1$biplot[,1:4]
-b1$PC1 <- -1 * b1$PC1 # Flip vertical
-plot(b1$yield, b1$PC1, cex=0.0,
-     text(b1$yield, b1$PC1, cex=.5, labels=row.names(b1),col="brown"),
-     main="crossa.wheat AMMI biplot", xlab="Average yield", ylab="PC1", frame=TRUE)
-mn <- mean(b1$yield)
-abline(h=0, v=mn, col='wheat')
+if(require(agricolae)){
+  m1 <- with(dat, AMMI(E=loc, G=gen, R=1, Y=yield))
+  b1 <- m1$biplot[,1:4]
+  b1$PC1 <- -1 * b1$PC1 # Flip vertical
+  plot(b1$yield, b1$PC1, cex=0.0,
+       text(b1$yield, b1$PC1, cex=.5, labels=row.names(b1),col="brown"),
+       main="crossa.wheat AMMI biplot", xlab="Average yield", ylab="PC1", frame=TRUE)
+  mn <- mean(b1$yield)
+  abline(h=0, v=mn, col='wheat')
 
-g1 <- subset(b1,type=="GEN")
-text(g1$yield, g1$PC1, rownames(g1), col="darkgreen", cex=.5)
+  g1 <- subset(b1,type=="GEN")
+  text(g1$yield, g1$PC1, rownames(g1), col="darkgreen", cex=.5)
 
-e1 <- subset(b1,type=="ENV")
-arrows(mn, 0,
-       0.95*(e1$yield - mn) + mn, 0.95*e1$PC1,
-       col= "brown", lwd=1.8,length=0.1)
+  e1 <- subset(b1,type=="ENV")
+  arrows(mn, 0,
+         0.95*(e1$yield - mn) + mn, 0.95*e1$PC1,
+         col= "brown", lwd=1.8,length=0.1)
+}
 
 # GGB example ...
 

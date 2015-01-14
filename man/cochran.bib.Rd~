@@ -30,12 +30,16 @@
   Cochran, W.G. and Cox, G.M. (1957),
   \emph{Experimental Designs}, 2nd ed., Wiley and Sons, New York, p. 448.
 }
+
 \examples{
 
+data(cochran.bib)
 dat <- cochran.bib
 
 # Show the incomplete-block structure
+require(lattice)
 levelplot(yield~loc*gen, dat,
+          col.regions=RedGrayBlue,
           xlab="loc (block)", main="cochran.bib - incomplete blocks")
 
 with(dat, table(gen,loc))

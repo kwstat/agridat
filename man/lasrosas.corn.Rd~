@@ -19,6 +19,7 @@
     \item{\code{topo}}{topographic factor}
     \item{\code{bv}}{brightness value (proxy for low organic matter content)}
     \item{\code{rep}}{rep factor}
+    \item{\code{nf}}{nitrogen as a factor, N0-N4}
   }
 }
 \details{
@@ -39,6 +40,10 @@
 
   The 'rep' factor in this data was added by hand and did not appear in
   the original data.
+
+  Slightly different levels of nitrogen were used in the two years, so
+  the nitrogen factor 'nf' was created to have common levels across
+  years.
 
   Published descriptions of the data describe the experiment design as
   having randomized nitrogen treatments.  The nitrogen treatments were
@@ -68,7 +73,7 @@
 }
 \references{
 
-  Bongiovanni and Lowenberg-DeBoer (2002).
+  Bongiovanni and Lowenberg-DeBoer (2000).
   Nitrogen management in corn with a spatial regression model.
   \emph{Proceedings of the  Fifth International Conference on  Precision
   Agriculture}
@@ -84,12 +89,14 @@
   \emph{Precision Agriculture}, 5, 579-600.
 
 }
+
 \examples{
 
-
+data(lasrosas.corn)
 dat <- lasrosas.corn
 
 # yield map
+require(lattice)
 require(latticeExtra)
 levelplot(yield ~ long*lat|factor(year), data=dat,
           main="lasrosas.corn grain yield", xlab="Longitude", ylab="Latitude",

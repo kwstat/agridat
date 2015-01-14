@@ -39,8 +39,13 @@
   \emph{Experimental Design and Analysis for Tree Improvement},
   CSIRO Publishing, 2002.
 }
+
 \examples{
+
+data(williams.trees)
 dat <- williams.trees
+
+require(lattice)
 xyplot(survival~height|env,dat, main="williams.trees", xlab="Height",
 ylab="Percent surviving")
 }

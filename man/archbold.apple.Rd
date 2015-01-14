@@ -48,6 +48,8 @@
     Disciplines}.  Pages 55-79.
 }
 \examples{
+
+data(archbold.apple)
 dat <- archbold.apple
 
 # Define main plot and subplot
@@ -61,7 +63,7 @@ dat <- transform(dat, rep=factor(rep), spacing=factor(spacing), trt=factor(trt),
 desplot(spacing~row*pos, dat, col=stock, cex=1, num=gen,
         main="archbold.apple")
 
-if(require(lme4)){
+if(require("lme4") & require("lucid")){
 
 m1 <- lmer(yield ~ -1 + trt + (1|rep/mp/sp), dat)
 

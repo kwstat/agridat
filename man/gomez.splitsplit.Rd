@@ -35,6 +35,8 @@ Rice split-split plot experiment
 }
 
 \examples{
+
+data(gomez.splitsplit)
 dat <- gomez.splitsplit
 dat$nf <- factor(dat$nitro)
 

@@ -28,6 +28,8 @@
 }
 
 \examples{
+
+data(gomez.rice.uniformity)
 dat <- gomez.rice.uniformity
 
 # Raw data plot
@@ -49,20 +51,20 @@ desplot(value~Var2*Var1, dat3, aspect=38/20,
         at=c(576,637,695,753,811,870,927),
         main="gomez.rice.uniformity smoothed")
 
-\dontrun{
-require("agricolae")
+if(require("agricolae")){
 
-# Gomez table 12.4
-tab <- index.smith(dmat, col="red")$uniformity
-tab <- data.frame(tab)
+  # Gomez table 12.4
+  tab <- index.smith(dmat, col="red")$uniformity
+  tab <- data.frame(tab)
 
-# Gomez figure 12.2
-op <- par(mar=c(5,4,4,4)+.1)
-m1 <- nls(Vx ~ 9041/Size^b, data=tab, start=list(b=1))
-plot(Vx ~ Size, tab, xlab="Plot size, m^2")
-lines(fitted(m1) ~ tab$Size, col='red')
-axis(4, at=tab$Vx, labels=tab$CV)
-mtext("CV", 4, line=2)
-par(op)
+  # Gomez figure 12.2
+  op <- par(mar=c(5,4,4,4)+.1)
+  m1 <- nls(Vx ~ 9041/Size^b, data=tab, start=list(b=1))
+  plot(Vx ~ Size, tab, xlab="Plot size, m^2")
+  lines(fitted(m1) ~ tab$Size, col='red')
+  axis(4, at=tab$Vx, labels=tab$CV)
+  mtext("CV", 4, line=2)
+  par(op)
 }
+
 }

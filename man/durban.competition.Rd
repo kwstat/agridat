@@ -43,6 +43,7 @@
 
 \examples{
 
+data(durban.competition)
 dat <- durban.competition
 
 # Check that genotypes were balanced across wheel tracks.
@@ -66,6 +67,7 @@ dat$comp[79:112] <- ( dat$yield[78:111] + dat$yield[80:113] ) / 2
 
 # Demonstrate the competition effect
 # Competitor plots have low/high yield -> residuals are negative/positive
+require(lattice)
 xyplot(res~comp, dat, type=c('p','r'), main="durban.competition",
        xlab="Average yield of neighboring plots", ylab="Residual")
 }

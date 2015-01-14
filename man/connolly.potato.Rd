@@ -50,11 +50,13 @@
 
 \examples{
 
+data(connolly.potato)
 dat <- connolly.potato
 
 # Field plan
 desplot(yield~col*row, data=dat, out1=rep, main="connolly.potato yields")
 # Later maturities are higher yielding
+require(lattice)
 bwplot(yield~matur, dat, main="connolly.potato yield by maturity")
 
 # Observed raw means. Matches Connolly table 2.
@@ -62,6 +64,7 @@ mn <- aggregate(yield~gen, data=dat, FUN=mean)
 mn[rev(order(mn$yield)),]
 
 # Create a covariate which is the average of neighboring plot yields
+require(reshape2)
 mat <- acast(dat, row~col, value.var='yield')
 mat2 <- matrix(NA, nrow=4, ncol=20)
 mat2[,2:19] <- (mat[ , 1:18] + mat[ , 3:20])/2

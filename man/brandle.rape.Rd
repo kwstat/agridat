@@ -35,6 +35,7 @@
 
 \examples{
 
+data(brandle.rape)
 dat <- brandle.rape
 
 require(lattice)
@@ -49,12 +50,11 @@ round(tapply(dat$yield, dat$gen, mean),0)
 # Brandle analyzed rep-level data, so the residual variance is different.
 # The other components are matched by the following analysis.
 
-if(require(lme4)){
-dat$year <- factor(dat$year)
-m1 <- lmer(yield ~ year + loc + year:loc + (1|gen) +
-           (1|gen:loc) + (1|gen:year), data=dat)
-
-vc(m1)
+if(require(lme4) & require(lucid)){
+  dat$year <- factor(dat$year)
+  m1 <- lmer(yield ~ year + loc + year:loc + (1|gen) +
+               (1|gen:loc) + (1|gen:year), data=dat)
+  vc(m1)
 ##      grp        var1 var2  vcov  sdcor
 ##  gen:loc (Intercept) <NA>  9363  96.76
 ## gen:year (Intercept) <NA> 14030 118.4

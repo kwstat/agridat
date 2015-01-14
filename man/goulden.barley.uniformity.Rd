@@ -27,8 +27,10 @@
 \references{
   See LeClerg, Leonard, Clark. \emph{Field Plot Technique}. Page 27.
 }
+
 \examples{
 
+data(goulden.barley.uniformity)
 dat <- goulden.barley.uniformity
 
 desplot(yield ~ col*row, data=dat, main="goulden.barley.uniformity")

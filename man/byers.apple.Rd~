@@ -35,11 +35,14 @@
   \emph{Contemporary Statistical Models for the Plant and Soil
     Sciences}. CRC Press, Boca Raton, FL.
 }
+
 \examples{
+data(byers.apple)
 dat <- byers.apple
 
 require(lattice)
 xyplot(diameter ~ time | factor(appleid), data=dat, type=c('p','l'),
+       strip=strip.custom(par.strip.text=list(cex=.7)),
        main="byers.apple")
 
 # Overall fixed linear trend, plus random intercept/slope deviations
@@ -50,6 +53,7 @@ m1 <- lme(diameter ~ 1 + time, data=dat,
           cor = corAR1(0, form=~ time|appleid),
           na.action=na.omit)
 
+require(lucid)
 vc(m1)
 ##       effect   variance   stddev corr
 ##  (Intercept) 0.007354   0.08575    NA

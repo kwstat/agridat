@@ -36,8 +36,10 @@
   Analysis of Covariance in Designed Experiments.
   \emph{Statistical Science}, 24, 223-237.
 }
+
 \examples{
 
+data(pearce.apple)
 dat <- pearce.apple
 
 require(lattice)

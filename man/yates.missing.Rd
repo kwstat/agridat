@@ -32,8 +32,10 @@
   Steel & Torrie, 1980, Principles and Procedures of Statistics,
   2nd Edition, page 212.
 }
+
 \examples{
 
+data(yates.missing)
 dat <- yates.missing
 
 require("reshape2")
@@ -50,7 +52,7 @@ mat1 <- acast(dat[, c('trt','block','pred')], trt~block,
 
 \dontrun{
 # Another method to estimate missing values via PCA
-require("pcaMethods")
+require("pcaMethods") # From Bioconductor, not CRAN
 m2 <- pca(mat0, method="nipals", center=FALSE, nPcs=3)
 mat2 <- m2@scores %*% t(m2@loadings)
 

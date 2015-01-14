@@ -5,7 +5,7 @@
   Three-way table of rape seed yields
 }
 \description{
-  Rape seed yields for 5 genotypes, 2 years, 9 locations.
+  Rape seed yields for 5 genotypes, 3 years, 9 locations.
 }
 
 \format{
@@ -21,7 +21,7 @@
   The yields are the mean of 4 reps.
 
   Note, in table 2 of Brandle, the value of Triton in 1985 at Bagot is
-  shown as 2355.  This should be changed to 2555 to match the means reported
+  shown as 2355, but should be 2555 to match the means reported
   in the paper.
 }
 \source{
@@ -35,6 +35,7 @@
 
 \examples{
 
+data(brandle.rape)
 dat <- brandle.rape
 
 require(lattice)
@@ -54,6 +55,7 @@ dat$year <- factor(dat$year)
 m1 <- lmer(yield ~ year + loc + year:loc + (1|gen) +
            (1|gen:loc) + (1|gen:year), data=dat)
 
+require(lucid)
 vc(m1)
 ##      grp        var1 var2  vcov  sdcor
 ##  gen:loc (Intercept) <NA>  9363  96.76

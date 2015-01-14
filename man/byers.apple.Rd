@@ -35,7 +35,9 @@
   \emph{Contemporary Statistical Models for the Plant and Soil
     Sciences}. CRC Press, Boca Raton, FL.
 }
+
 \examples{
+data(byers.apple)
 dat <- byers.apple
 
 require(lattice)
@@ -45,17 +47,17 @@ xyplot(diameter ~ time | factor(appleid), data=dat, type=c('p','l'),
 
 # Overall fixed linear trend, plus random intercept/slope deviations
 # for each apple.  Observations within each apple are correlated.
-require(nlme)
-m1 <- lme(diameter ~ 1 + time, data=dat,
-          random = ~ time|appleid, method='ML',
-          cor = corAR1(0, form=~ time|appleid),
-          na.action=na.omit)
-
-vc(m1)
-##       effect   variance   stddev corr
-##  (Intercept) 0.007354   0.08575    NA
-##         time 0.00003632 0.006027 0.83
-##     Residual 0.0004555  0.02134    NA
+if(require(nlme) & require(lucid)){
+  m1 <- lme(diameter ~ 1 + time, data=dat,
+            random = ~ time|appleid, method='ML',
+            cor = corAR1(0, form=~ time|appleid),
+            na.action=na.omit)
+  vc(m1)
+  ##       effect   variance   stddev corr
+  ##  (Intercept) 0.007354   0.08575    NA
+  ##         time 0.00003632 0.006027 0.83
+  ##     Residual 0.0004555  0.02134    NA
+}
 
 }
 \keyword{datasets}

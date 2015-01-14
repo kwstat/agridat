@@ -42,8 +42,10 @@
   Hierarchical generalized linear models with discussion.
   \emph{J. R. Statist. Soc. B}, 58:619-678.
 }
+
 \examples{
 
+data(crowder.seeds)
 dat <- crowder.seeds
 m1.glm <- m1.glmm <- m1.bb <- m1.hglm <- NA
 
@@ -110,6 +112,9 @@ round(summary(m1.hglm)$FixCoefMat,2)
 }
 
 \dontrun{
+
+  # --- rjags version ---
+
 # JAGS/BUGS.  See http://mathstat.helsinki.fi/openbugs/Examples/Seeds.html
 # Germination rate depends on p, which is a logit of a linear predictor
 # based on genotype and extract, plus random deviation to intercept
@@ -123,7 +128,7 @@ jdat =list(germ = dat$germ, n = dat$n,
 
 jinit = list(int = 0, genO75 = 0, extcuke = 0, g75ecuke = 0, tau = 10)
 
-# Unlike BUGS, we use names THAT WE CAN ACTUALLY INTERPRET!
+# Unlike the BUGS docs, we use names that we can actually interpret!
 mod.bug = "
 model {
   for(i in 1:nobs) {
@@ -160,10 +165,61 @@ hpd <- HPDinterval(c2)[[1]]
 med <- summary(c2, quantiles=.5)$quantiles
 fit <- data.frame(med, hpd)
 
-require(latticeExtra)
-obs <- dotplot(1:21 ~ germ/n, dat, ylab="plate",
-               col=as.numeric(dat$gen), pch=substring(dat$extract,1))
-obs + segplot(1:21 ~ lower + upper, data=fit, centers=med)
+if(require(latticeExtra)){
+  obs <- dotplot(1:21 ~ germ/n, dat, ylab="plate",
+                 col=as.numeric(dat$gen), pch=substring(dat$extract,1))
+  obs + segplot(1:21 ~ lower + upper, data=fit, centers=med)
+}
+
+# ----------------------------------------------------------------------------
+## --- R2jags version ---
+
+require(agridat)
+require(R2jags)
+dat <- crowder.seeds
+
+# To match the output on the BUGS web page, use: dat$gen=="O73".
+# We use dat$gen=="O75" to compare with the parameterization above.
+jdat =list(germ = dat$germ, n = dat$n,
+           root = as.numeric(dat$extract=="cucumber"),
+           gen = as.numeric(dat$gen=="O75"),
+           nobs = nrow(dat))
+
+jinit = list(list(int = 0, genO75 = 0, extcuke = 0, g75ecuke = 0, tau = 10))
+
+mod.bug = function() {
+  for(i in 1:nobs) {
+    germ[i] ~ dbin(p[i], n[i])
+    b[i] ~ dnorm(0.0, tau)
+    logit(p[i]) <- int + genO75 * gen[i] + extcuke * root[i] +
+      g75ecuke * gen[i] * root[i] + b[i]
+  }
+  int ~ dnorm(0.0, 1.0E-6)
+  genO75 ~ dnorm(0.0, 1.0E-6)
+  extcuke ~ dnorm(0.0, 1.0E-6)
+  g75ecuke ~ dnorm(0.0, 1.0E-6)
+  tau ~ dgamma(0.001, 0.001)
+  sigma <- 1 / sqrt(tau)
+}
+
+parms <- c("int","genO75","g75ecuke","extcuke","sigma")
+
+# set.seed(123456) # Seed does not seem to affect results
+
+j1 <- jags(data=jdat, inits=jinit, parms, model.file=mod.bug,
+           n.iter=20000, n.chains=1)
+print(j1)
+##          mu.vect sd.vect   2.5%    25%     50%     75%   97.5%
+## extcuke    0.519   0.325 -0.140  0.325   0.531   0.728   1.158
+## g75ecuke   0.834   0.429 -0.019  0.552   0.821   1.101   1.710
+## genO75    -0.096   0.305 -0.670 -0.295  -0.115   0.089   0.552
+## int       -0.461   0.236 -0.965 -0.603  -0.455  -0.312   0.016
+## sigma      0.255   0.148  0.033  0.140   0.240   0.352   0.572
+## deviance 103.319   7.489 90.019 98.010 102.770 108.689 117.288
+
+traceplot(as.mcmc(j1))
+densityplot(as.mcmc(j1))
+HPDinterval(as.mcmc(j1))
 
 }
 }

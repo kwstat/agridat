@@ -75,6 +75,8 @@
 }
 
 \examples{
+
+data(stroup.nin)
 dat <- stroup.nin
 dat <- transform(dat, xf=factor(x), yf=factor(y))
 

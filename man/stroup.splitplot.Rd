@@ -39,6 +39,9 @@
 }
 
 \examples{
+
+data(stroup.splitplot)
+
 \dontrun{
 dat <- stroup.splitplot
 

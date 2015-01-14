@@ -41,9 +41,11 @@
   \url{http://books.google.com/books?id=G5I_AAAAcAAJ&pg=PA358}.
   Graph: \url{http://www.fisme.science.uu.nl/wiskrant/artikelen/hist_grafieken/begin/images/pyrometrie.gif}.
 }
+
 \examples{
 # Reproduce Lambert figure 39.
 
+data(lambert.soiltemp)
 dat <- lambert.soiltemp
 
 # Make 3 cycles of the data so that the loess line bends back up at

@@ -32,6 +32,8 @@
 }
 
 \examples{
+
+data(waynick.soil)
 dat <- waynick.soil
 
 # Strong relationship between N,C

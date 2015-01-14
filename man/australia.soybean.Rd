@@ -87,7 +87,11 @@ been corrected.
   principal component analysis. \emph{Euphytica}, 44, 109--123.
 }
 \examples{
+
+data(australia.soybean)
 dat <- australia.soybean
+
+require(reshape2)
 dm <- melt(dat, id.var=c('env', 'year','loc','gen'))
 
 # Joint plot of genotypes & traits. Similar to Figure 1 of Kroonenberg 1989

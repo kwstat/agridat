@@ -40,6 +40,7 @@
 
 \examples{
 
+data(yan.winterwheat)
 dat <- yan.winterwheat
 
 require("reshape2")

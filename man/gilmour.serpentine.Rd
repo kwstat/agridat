@@ -37,6 +37,8 @@
 }
 
 \examples{
+
+data(gilmour.serpentine)
 dat <- gilmour.serpentine
 
 desplot(yield~ col*row, data=dat, num=gen, out1=rep,

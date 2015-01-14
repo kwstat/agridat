@@ -34,7 +34,7 @@
 
 ## Could the spaMM package be useful here...????
 
-
+data(gotway.hessianfly)
 dat <- gotway.hessianfly
 dat$prop <- dat$y / dat$n
 desplot(prop~long*lat, dat, out1=block, text=gen, cex=1, shorten='no',

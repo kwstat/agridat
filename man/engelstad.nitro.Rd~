@@ -28,6 +28,7 @@
   and 1966 data for the Knoxville location was not used as it appeared
   that the response due to nitrogen was minimal in 1965 and nonexistant
   in 1966.  The economic optimum can be found by setting the tangent
+  equal to the ratio of (fertilizer price)/(grain price).
 }
 \source{
   Engelstad, OP and Parks, WL.  1971.
@@ -42,11 +43,12 @@
 
 \examples{
 
+data(engelstad.nitro)
 dat <- engelstad.nitro
 
-require(lattice)
-xyplot(yield ~ nitro | factor(year)*loc, dat,
-       main="engelstad.nitro")
+require(latticeExtra)
+useOuterStrips(xyplot(yield ~ nitro | factor(year)*loc, dat,
+       main="engelstad.nitro"))
 
 # Fit a quadratic plateau model to one year/loc
 j62 <- droplevels(subset(dat, loc=="Jackson" & year==1962))

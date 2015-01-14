@@ -48,7 +48,10 @@
   National Agricultural Statistics Service.
   \url{http://quickstats.nass.usda.gov/}
 }
+
 \examples{
+
+data(nass.corn)
 dat <- nass.corn
 
 # Use only states that grew at least 100K acres of corn in 2011
@@ -61,6 +64,7 @@ xyplot(acres ~ year|state, dat, type='l', as.table=TRUE,
        main="nass.corn: state trends in corn acreage")
 
 ## Plain levelplot, using only states
+## require(reshape2)
 ## datm <- acast(dat, year~state, value.var='yield')
 ## levelplot(datm, aspect=.7, col.regions=RedGrayBlue,
 ##           main="nass.corn",

@@ -65,8 +65,10 @@
   \emph{Crop Science}, 53, 2332-2341.
   \url{https://www.crops.org/publications/cs/abstracts/53/6/2332}.
 }
+
 \examples{
-\dontrun{
+
+data(crossa.wheat)
 dat <- crossa.wheat
 
 # AMMI biplot.  Fig 3 of Crossa et al.
@@ -89,6 +91,6 @@ arrows(mn, 0,
        col= "brown", lwd=1.8,length=0.1)
 
 # GGB example ...
-}
+
 }
 \keyword{datasets}

@@ -49,6 +49,7 @@
 
 \examples{
 
+data(keen.potatodamage)
 dat <- keen.potatodamage
 
 # Energy E1, Rod R4, Weight W1 have higher proportions of severe damage
@@ -57,16 +58,15 @@ d2 <- xtabs(count~energy+rod+gen+weight+damage, data=dat)
 mosaicplot(d2, color=c("lemonchiffon1","moccasin","lightsalmon1","indianred"),
            xlab="Energy / Genotype", ylab="Rod / Weight", main="keen.potatodamage")
 
-\dontrun{
-require(ordinal)
-# Note, the clmm2 function can have only 1 random term.  Results are
-# similar to Keen & Engle, but necessarily different (they had multiple
-# random terms).
-m1 <- clmm2(damage ~ rod + energy + gen + weight, data=dat,
-            weights=count, random=rod:energy, link='probit')
-round(coef(m1)[4:10],2)
-## rodR2 rodR3 rodR4 rodR5 rodR6 rodR7 rodR8
-## -1.19 -0.41  0.50 -1.46 -1.73 -1.67 -1.99
+if(require(ordinal)){
+  # Note, the clmm2 function can have only 1 random term.  Results are
+  # similar to Keen & Engle, but necessarily different (they had multiple
+  # random terms).
+  m1 <- clmm2(damage ~ rod + energy + gen + weight, data=dat,
+              weights=count, random=rod:energy, link='probit')
+  round(coef(m1)[4:10],2)
+  ## rodR2 rodR3 rodR4 rodR5 rodR6 rodR7 rodR8
+  ## -1.19 -0.41  0.50 -1.46 -1.73 -1.67 -1.99
 }
 
 }

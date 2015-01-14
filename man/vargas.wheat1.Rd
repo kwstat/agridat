@@ -14,47 +14,47 @@
 
   The \code{genvals} data frame contains 126 observations of genetic
   variables for each year*rep*gen:
-  \describe{
-    \item{\code{year}}{Year, 1990-1995}
-    \item{\code{rep}}{Replicate factor, 3 levels}
-    \item{\code{gen}}{Genotype factor, 7 levels}
-    \item{\code{yield}}{Yield, kg/ha}
-    \item{\code{ANT}}{Anthesis, days after emergence}
-    \item{\code{MAT}}{Maturity, days after emergence}
-    \item{\code{GFI}}{Grainfill, MAT-ANT}
-    \item{\code{PLH}}{Plant height, cm}
-    \item{\code{BIO}}{Biomass above ground, kg/ha}
-    \item{\code{HID}}{Harvest index}
-    \item{\code{STW}}{Straw yield, kg/ha}
-    \item{\code{NSM}}{Spikes / m^2}
-    \item{\code{NGM}}{Grains / m^2}
-    \item{\code{NGS}}{Grains per spike}
-    \item{\code{TKW}}{Thousand kernel weight, g}
-    \item{\code{WTI}}{Weight per tiller, g}
-    \item{\code{SGW}}{Spike grain weight, g}
-    \item{\code{VGR}}{Vegetative growth rate, kg/ha/day, STW/ANT}
-    \item{\code{KGR}}{Kernel growth rate, mg/kernel/day}
+  \tabular{ll}{
+    year \tab Year, 1990-1995 \cr
+    rep \tab Replicate factor, 3 levels \cr
+    gen \tab Genotype factor, 7 levels \cr
+    yield \tab Yield, kg/ha \cr
+    ANT \tab Anthesis, days after emergence \cr
+    MAT \tab Maturity, days after emergence \cr
+    GFI \tab Grainfill, MAT-ANT \cr
+    PLH \tab Plant height, cm \cr
+    BIO \tab Biomass above ground, kg/ha \cr
+    HID \tab Harvest index \cr
+    STW \tab Straw yield, kg/ha \cr
+    NSM \tab Spikes / m^2 \cr
+    NGM \tab Grains / m^2 \cr
+    NGS \tab Grains per spike \cr
+    TKW \tab Thousand kernel weight, g \cr
+    WTI \tab Weight per tiller, g \cr
+    SGW \tab Spike grain weight, g \cr
+    VGR \tab Vegetative growth rate, kg/ha/day, STW/ANT \cr
+    KGR \tab Kernel growth rate, mg/kernel/day \cr
   }
 
   The \code{envals} data frame has 17 variables for each of 6 years:
-  \describe{
-    \item{\code{year}}{Year, 1990-1995}
-    \item{\code{MTD}}{Mean daily max temperature December, deg C}
-    \item{\code{MTJ}}{January}
-    \item{\code{MTF}}{February}
-    \item{\code{MTM}}{March}
-    \item{\code{mTD}}{Mean daily minimum temperature December, deg C}
-    \item{\code{mTJ}}{January}
-    \item{\code{mTF}}{February}
-    \item{\code{mTM}}{March}
-    \item{\code{PRD}}{Monthly precipitation in December, mm}
-    \item{\code{PRJ}}{January}
-    \item{\code{PRF}}{February}
-    \item{\code{PRM}}{March}
-    \item{\code{SHD}}{Sun hours per day December}
-    \item{\code{SHJ}}{Sun hours per day January}
-    \item{\code{SHF}}{Sun hours per day February}
-    \item{\code{SHM}}{Sun hours per day March}
+  \tabular{ll}{
+    year \tab Year, 1990-1995 \cr
+    MTD \tab Mean daily max temperature December, deg C \cr
+    MTJ \tab January \cr
+    MTF \tab February \cr
+    MTM \tab March \cr
+    mTD \tab Mean daily minimum temperature December, deg C \cr
+    mTJ \tab January \cr
+    mTF \tab February \cr
+    mTM \tab March \cr
+    PRD \tab Monthly precipitation in December, mm \cr
+    PRJ \tab January \cr
+    PRF \tab February \cr
+    PRM \tab March \cr
+    SHD \tab Sun hours per day December \cr
+    SHJ \tab Sun hours per day January \cr
+    SHF \tab Sun hours per day February \cr
+    SHM \tab Sun hours per day March \cr
   }
 }
 
@@ -69,7 +69,10 @@
 
   Data kindly provided by Jose Crossa.
 }
+
 \examples{
+
+data(vargas.wheat1)
 
 \dontrun{
 gvals <- vargas.wheat1$genvals

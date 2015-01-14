@@ -34,8 +34,10 @@
   Parameter Estimation in Linear Mixed Models, \emph{Biometrics},
   51, 1440-1450.
 }
+
 \examples{
 
+data(kempton.slatehall)
 dat <- kempton.slatehall
 dat <- transform(dat, xf=factor(col), yf=factor(row))
 
@@ -43,9 +45,8 @@ desplot(yield ~ col * row, dat, num=gen, out1=rep,
         main="kempton.slatehall")
 
 # Incomplete block model of Gilmour et al 1995
-if(require(lme4)){
+if(require(lme4) & require(lucid)){
 m1 <- lmer(yield ~ gen + (1|rep) + (1|rep:yf) + (1|rep:xf), data=dat)
-
 vc(m1)
 ##    groups        name variance stddev
 ##  rep:xf   (Intercept)    14810 121.7

@@ -40,6 +40,7 @@ uncovered significant differences (Tamura, 1988).
 }
 \examples{
 
+data(cochran.crd)
 dat <- cochran.crd
 
 # Field plan

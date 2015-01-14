@@ -28,7 +28,10 @@ Multi-environment trial with structured missing values
   H P Piepho, (1999) Stability analysis using the SAS system,
   \emph{Agron Journal}, 91, 154--160.
 }
+
 \examples{
+
+data(denis.missing)
 dat <- denis.missing
 
 # View missingness structure

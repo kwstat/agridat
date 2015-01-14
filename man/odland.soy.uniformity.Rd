@@ -42,12 +42,14 @@ Odland and Garber provide no agronomic context for the yield variation.
 
 \examples{
 
+data( odland.soyhay.uniformity)
 dat1 <- odland.soyhay.uniformity
 desplot(yield ~ col*row, dat1, flip=TRUE,
         aspect=200/(42*30/12), # true aspect ratio
         main="odland.soyhay.uniformity")
 
 
+data( odland.soybean.uniformity)
 dat2 <- odland.soybean.uniformity
 desplot(yield ~ col*row, dat2, flip=TRUE,
         aspect = 232/(55*30/12), # true aspect

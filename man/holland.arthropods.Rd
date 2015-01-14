@@ -40,8 +40,10 @@
 
   Used with permission of John Holland.
 }
+
 \examples{
 
+data(holland.arthropods)
 dat <- holland.arthropods
 
 require(lattice)

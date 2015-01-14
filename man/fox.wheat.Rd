@@ -39,6 +39,7 @@
 
 \examples{
 
+data(fox.wheat)
 dat <- fox.wheat
 
 # Means of varieties.  Slight differences from Fox and Rathjen suggest

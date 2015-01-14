@@ -37,6 +37,7 @@
 
 \examples{
 
+data(holshouser.splitstrip)
 dat <- holshouser.splitstrip
 dat$spacing <- factor(dat$spacing)
 dat$pop <- factor(dat$pop)
@@ -62,13 +63,11 @@ interaction2wt(yield~cultivar*spacing*pop, dat,
 ## run;
 
 ## Now lme4. This design has five error terms--four are explicitly given.
-if(require(lme4)){
+if(require(lme4) & require(lucid)){
 m1 <- lmer(yield ~ cultivar * spacing * pop +
            (1|block) + (1|block:cultivar) + (1|block:cultivar:spacing) +
            (1|block:cultivar:pop), data=dat)
-
-## Variances match Schabenberger, page 498.
-vc(m1)
+vc(m1) ## Variances match Schabenberger, page 498.
 ##                    grp        var1 var2   vcov  sdcor
 ##     block:cultivar:pop (Intercept) <NA> 2.421  1.556
 ## block:cultivar:spacing (Intercept) <NA> 1.244  1.116

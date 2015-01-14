@@ -33,6 +33,7 @@
 }
 \examples{
 
+data(gilmour.slatehall)
 dat <- gilmour.slatehall
 
 desplot(yield ~ col * row, dat, num=gen,
@@ -49,6 +50,7 @@ m4 <- asreml(yield ~ gen + lin(row), data=dat,
 coef(m4)$fixed[1] # linear row
 # [1] 31.72252 # (sign switch due to row ordering)
 
+require(lucid)
 vc(m4)
 ##      effect component std.error z.ratio constr
 ##    dev(row) 20290     10260         2      pos

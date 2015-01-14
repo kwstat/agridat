@@ -51,14 +51,17 @@
   \url{http://www.jstor.org/stable/2533001}
 
 }
+
 \examples{
 
+data(snijders.fusarium)
 dat <- snijders.fusarium
 aggregate(y ~ strain + year, dat, FUN=mean) # Match means in Snijders table 1
 
 dat <- transform(dat, y=y/100, year=factor(year), yrstr=factor(paste0(year,"-",strain)))
 
 # Strain F329 shows little variation across years. F39 shows a lot.
+require(lattice)
 dotplot(gen~y|strain, data=dat, group=year,
         main="snijders.fusarium : infection by strain",
         xlab="Fraction infected", ylab="variety",

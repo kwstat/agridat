@@ -32,7 +32,10 @@ entire experiment is then replicated three times.
   Example 23.5 Strip-Split Plot.
   \url{http://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.htm#statug_anova_sect030.htm}
 }
+
 \examples{
+
+data(cox.stripsplit)
 dat <- cox.stripsplit
 
 # Raw means
@@ -40,9 +43,10 @@ aggregate(yield ~ calcium, data=dat, mean)
 aggregate(yield ~ soil, data=dat, mean)
 aggregate(yield ~ calcium, data=dat, mean)
 
-require(HH)
-interaction2wt(yield ~ rep + soil + fert + calcium, dat,
-               main="cox.stripsplit")
+if(require(HH)) {
+  interaction2wt(yield ~ rep + soil + fert + calcium, dat,
+                 main="cox.stripsplit")
+}
 
 # AOV
 m1 <- aov(yield~ fert*calcium*soil +

@@ -26,6 +26,8 @@
 }
 
 \examples{
+
+data(li.millet.uniformity)
 dat <- li.millet.uniformity
 
 mean(dat$yield) # matches Li et al.

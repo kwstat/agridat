@@ -54,8 +54,10 @@
 
 \examples{
 
+data(heady.fertilizer)
 dat <- heady.fertilizer
 
+require(lattice)
 xyplot(yield ~ P|crop, data=dat, scales=list(relation="free"),
        groups=factor(paste(dat$N,dat$K)), auto.key=list(columns=5),
        main="heady.fertilizer", xlab="Phosphorous")

@@ -32,6 +32,7 @@
 
 \examples{
 
+data(hernandez.nitrogen)
 dat <- hernandez.nitrogen
 cprice <- 118.1 # $118.1/Mg or $3/bu
 nprice <- 0.6615 # $0.66/kg N or $0.30/lb N
@@ -39,6 +40,7 @@ nprice <- 0.6615 # $0.66/kg N or $0.30/lb N
 # Hernandez optimized yield with a constraint on the ratio of the prices.
 # Simpler to just calculate the income and optimize that.
 dat <- transform(dat, inc = yield * cprice - nitro * nprice)
+require(lattice)
 xyplot(inc ~ nitro|site, dat, groups=rep, auto.key=list(columns=4),
        main="hernandez.nitrogen")
 
@@ -90,7 +92,7 @@ round(wald(nls1),2)
 
 
 # Likelihood conf int
-library(MASS)
+require(MASS)
 round(confint(nls1, "th2", level = 0.9),2)
 ##       5%      95%
 ## 147.96 401.65
@@ -98,7 +100,7 @@ plot(profile(nls1,  "th2"),  conf  =  c(50, 80, 90, 95)/100)
 
 
 # Bootstrap conf int
-library(boot)
+require(boot)
 dat1$fit <- fitted(nls1)
 bootfun <- function(rs, i) { # bootstrap the residuals
   dat1$y <- dat1$fit + rs[i]

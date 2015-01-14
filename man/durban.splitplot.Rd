@@ -35,7 +35,10 @@
 
   Used with permission of Maria Durban.
 }
+
 \examples{
+
+data(durban.splitplot)
 dat <- durban.splitplot
 
 # Durban 2003, Figure 2
@@ -67,6 +70,7 @@ m2a2 <- asreml(yield ~ gen*fung, random=~block/fung+units, data=dat,
                rcov=~ar1v(rowf):ar1(bedf))
 m2a2 <- update(m2a2)
 
+require(lucid)
 vc(m2a2)
 ##                effect component std.error z.ratio constr
 ##       block!block.var 0.0000001        NA      NA  bound

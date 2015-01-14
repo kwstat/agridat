@@ -30,14 +30,17 @@
     Experimental Design Context}.
   Statistical Advisory & Training Service Pty Ltd.
 }
+
 \examples{
 
+data(snedecor.asparagus)
 dat <- snedecor.asparagus
 
 dat <- transform(dat, year=factor(year))
 dat$trt <- factor(dat$trt,
                   levels=c("Jun-01", "Jun-15", "Jul-01", "Jul-15"))
 # Continued cutting reduces plant vigor and yield
+require(lattice)
 dotplot(yield ~ trt|year, data=dat,
         xlab="Cutting treatment", main="snedecor.asparagus")
 
@@ -48,9 +51,11 @@ m1 <- lmer(yield ~ trt + year + trt:year + (1|block) + (1|block:trt), data=dat)
 
 \dontrun{
 # Split-plot with asreml
-m2 <- asreml(yield ~ trt + year + trt:year, data=dat,
+require(asreml)
+  m2 <- asreml(yield ~ trt + year + trt:year, data=dat,
              random = ~ block + block:trt)
 
+require(lucid)
 vc(m2)
 ##               effect component std.error z.ratio constr
 ##      block!block.var     476.7     518.2    0.92    pos

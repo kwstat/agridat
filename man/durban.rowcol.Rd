@@ -36,7 +36,10 @@
 
   Used with permission of Maria Durban.
 }
+
 \examples{
+
+data(durban.rowcol)
 dat <- durban.rowcol
 
 desplot(yield~bed*row, dat, out1=rep, main="durban.rowcol")

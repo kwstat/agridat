@@ -62,6 +62,7 @@
 }
 \examples{
 
+data(ortiz.tomato)
 # Double-centered yield matrix
 Y <- ortiz.tomato$yield
 Y <- sweep(Y, 1, rowMeans(Y, na.rm=TRUE))
@@ -73,13 +74,14 @@ X <- X[,c("MxT", "MnT", "MeT", "Prec", "Day", "pH", "OM", "P", "K",
           "ExN", "ExP", "ExK", "Trim", "Driv", "Irr", "Dha")]
 X <- scale(X)
 
-# Now, PLS relating the two matrices
-require(pls)
+# Now, PLS relating the two matrices.
+# Note: plsr deletes observations with missing values
+if(require(pls)){
 m1 <- plsr(Y~X)
 # Inner-product relationships similar to Ortiz figure 1.
 biplot(m1, which="x", var.axes=TRUE, main="ortiz.tomato - env*cov biplot")
 #biplot(m1, which="y", var.axes=TRUE)
-
+}
 
 }
 \keyword{datasets}

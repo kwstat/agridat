@@ -29,7 +29,10 @@
   Adjustment for competition between varieties in plant breeding trials,
   \emph{Journal of Agricultural Science}, 98, 599-611.
 }
+
 \examples{
+
+data(kempton.competition)
 dat <- kempton.competition
 
 # Raw means in Kempton table 2

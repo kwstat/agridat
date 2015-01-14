@@ -35,11 +35,13 @@
   R-help mailing list, 9 May 2013.
   Data provided by Cyril Lundrigan.  Analysis method by Rich Heiberger.
 }
+
 \examples{
 
+data(gomez.nitrogen)
 dat <- gomez.nitrogen
 
-# Note the depletion of nitrogren over time (stage)
+# Note the depletion of nitrogen over time (stage)
 require(HH)
 interaction2wt(nitro ~ rep/trt + trt*stage, data=dat,
                main="gomez.nitrogen")

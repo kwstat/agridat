@@ -37,8 +37,11 @@
   Peter John, \emph{Statistical Design and Analysis of Experiments}, p. 85.
 }
 \examples{
+
+data(bond.diallel)
 dat <- bond.diallel
 
+require(lattice)
 splom(dat[,3:11], main="bond.diallel")
 
 # Needs an example.  Bond says yield heterosis of F1 hybrids over parent

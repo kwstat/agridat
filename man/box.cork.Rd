@@ -34,8 +34,10 @@ Data frame with 28 observations on the following 5 variables.
 
 \examples{
 
+data(box.cork)
 dat <- box.cork
 
+require(lattice)
 splom(dat[,2:5], pscales=3,
   prepanel.limits = function(x) c(25,100),
   main="box.cork", xlab="Cork yield on side of tree",

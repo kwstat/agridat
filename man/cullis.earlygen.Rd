@@ -20,7 +20,8 @@
   }
 }
 \details{
-  Experiment conducted at Tullibigeal, New South Wales, Australia in
+  The data are from an unreplicated field
+  experiment conducted at Tullibigeal, New South Wales, Australia in
   1987-88.  In each row, every 6th plot was the variety 'Kite'.  Six
   other standard varieties were randomly interspersed over the trial.
   Each plot was 15m x 1.8m.
@@ -51,8 +52,10 @@
 \references{
   \url{http://www.vsni.co.uk/software/asreml/htmlhelp/asreml/xwheat.htm}.
 }
+
 \examples{
 
+data(cullis.earlygen)
 dat <- cullis.earlygen
 
 # Show field layout of checks.  Cullis Table 1.
@@ -61,6 +64,8 @@ desplot(yield ~ col*row, dat, main="cullis.earlygen (yield)",
         col="check", cex=1, flip=TRUE)
 
 desplot(weed ~ col*row, dat, main="cullis.earlygen (weed)", flip=TRUE)
+
+require(lattice)
 bwplot(yield ~ weed, dat, horizontal=FALSE, main="cullis.earlygen")
 
 \dontrun{
@@ -77,6 +82,7 @@ m3 <- update(m2, fixed= yield~weed+pol(col,-1))
 # Now add a nugget variance
 m4 <- update(m3, random= ~ gen + units)
 
+require(lucid)
 vc(m4)
 ##           effect component std.error z.ratio constr
 ##      gen!gen.var  73770    10420         7.1    pos
@@ -95,6 +101,28 @@ predict(m2)$pred
 ## 4    Eno010        2821.399      153.96697  Estimable
 ## 5    Eno011        2991.610      161.53308  Estimable
 ## 6    Eno012        2771.148      162.21897  Estimable
+
+
+# Compare AR1 with Moving Grid
+require(mvngGrAd)
+shape <- list(c(1),
+              c(1),
+              c(1:4),
+              c(1:4))
+# sketchGrid(10,10,20,20,shapeCross=shape, layers=1, excludeCenter=TRUE)
+m5 <- movingGrid(rows=dat$row, columns=dat$col, obs=dat$yield,
+                 shapeCross=shape, layers=NULL)
+dat$mg <- fitted(m5)
+dat$ar1 <- fitted(m2)
+head(dat[ , c('yield','ar1','mg')])
+##    yield      ar1       mg
+## 1   2652 2467.980 2531.998
+## 11  3394 3071.681 3052.160
+## 21  3148 2826.188 2807.031
+## 31  3426 3026.985 3183.649
+## 41  3555 3070.102 3195.910
+## 51  3453 3006.352 3510.511
+pairs(dat[ , c('yield','ar1','mg')])
 
 }
 

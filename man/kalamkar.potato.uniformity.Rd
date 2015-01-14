@@ -31,6 +31,7 @@
 
 \examples{
 
+data(kalamkar.potato.uniformity)
 dat <- kalamkar.potato.uniformity
 
 # True field dimension is 132 foot-long row horizontal, 96*3=288 feet vertical

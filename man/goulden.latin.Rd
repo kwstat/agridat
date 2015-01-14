@@ -34,6 +34,7 @@
 
 \examples{
 
+data(goulden.latin)
 dat <- goulden.latin
 desplot(yield ~ col*row, dat, text=trt, cex=1, main="goulden.latin")
 

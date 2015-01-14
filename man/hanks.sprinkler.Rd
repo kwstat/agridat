@@ -52,13 +52,17 @@
   SAS Stat User's Guide.
   \url{http://support.sas.com/documentation/cdl/en/statug/63347/HTML/default/viewer.htm#statug_mixed_sect038.htm}
 }
+
 \examples{
+
+data(hanks.sprinkler)
 dat <- hanks.sprinkler
 
 # The line sprinkler is vertical between subplots 6 & 7
 desplot(yield~subplot*row, dat, out1=block, out2=irr, cex=1,
         num=gen, main="hanks.sprinkler")
 
+require(lattice)
 xyplot(yield~subplot|block, dat, type=c('b'), group=gen,
        layout=c(1,3), auto.key=TRUE,
        main="hanks.sprinkler",
@@ -87,6 +91,7 @@ m1 <- asreml(yield ~ gen + dir + irrf + gen:dir + gen:irrf + dir:irrf,
              random= ~ block + block:dir + block:irrf,
              rcov= ~ block:gen:corb(subf, k=3))
 
+require(lucid)
 vc(m1)
 ##                effect component std.error z.ratio constr
 ##       block!block.var  0.2194     0.2393     0.92    pos

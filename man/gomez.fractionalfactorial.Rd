@@ -32,7 +32,10 @@
 
   Used with permission of Kwanchai Gomez.
 }
+
 \examples{
+
+data(gomez.fractionalfactorial)
 dat <- gomez.fractionalfactorial
 
 # trt abcdef has the highest yield
@@ -59,11 +62,12 @@ anova(m0)
 m1 <- lm(yield ~ rep * block + (a+b+c+d+e+f)^3, dat)
 anova(m1)
 
-require(FrF2)
-aliases(m1)
-MEPlot(m1, select=3:8,
-       main="gomez.fractionalfactorial - main effects plot")
-#IAPlot(m1, select=3:8)
+if(require(FrF2)){
+  aliases(m1)
+  MEPlot(m1, select=3:8,
+         main="gomez.fractionalfactorial - main effects plot")
+  #IAPlot(m1, select=3:8)
+}
 
 }
 

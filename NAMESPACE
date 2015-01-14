@@ -1,18 +1,18 @@
+
+## Recommended packages
+## importFrom("nlme", fixef,ranef,VarCorr)
+
 import(grid)
 import(lattice)
 import(reshape2)
+
+## Exports
 export(desplot)
 export(RedGrayBlue)
+
+# Methods
 export(gge)
 S3method(gge, formula)
 S3method(gge, matrix)
 S3method(plot, gge)
 S3method(biplot, gge)
-S3method(print, vc.asreml)
-S3method(print, vc.lme)
-S3method(print, vc.lmerMod)
-export(vc)
-S3method(vc, asreml)
-S3method(vc, default)
-S3method(vc, lme)
-S3method(vc, lmerMod)

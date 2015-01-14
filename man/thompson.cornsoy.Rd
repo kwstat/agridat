@@ -86,7 +86,10 @@
   Draper, N. R. and Smith, H. (1981).  \emph{Applied Regression Analysis},
   second ed., Wiley, New York.
 }
+
 \examples{
+
+data(thompson.cornsoy)
 dat <- thompson.cornsoy
 
 # The droughts of 1934/36 were severe in IA/MO. Less so in OH.

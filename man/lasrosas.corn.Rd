@@ -89,19 +89,22 @@
   \emph{Precision Agriculture}, 5, 579-600.
 
 }
+
 \examples{
 
-
+data(lasrosas.corn)
 dat <- lasrosas.corn
 
 # yield map
-require(latticeExtra)
-levelplot(yield ~ long*lat|factor(year), data=dat,
-          main="lasrosas.corn grain yield", xlab="Longitude", ylab="Latitude",
-          scales=list(alternating=FALSE),
-          prepanel = prepanel.default.xyplot,
-          panel = panel.levelplot.points,
-          type = c("p", "g"), aspect = "iso", col.regions=RedGrayBlue)
+require(lattice)
+if(require(latticeExtra)){  # for panel.levelplot.points
+  levelplot(yield ~ long*lat|factor(year), data=dat,
+            main="lasrosas.corn grain yield", xlab="Longitude", ylab="Latitude",
+            scales=list(alternating=FALSE),
+            prepanel = prepanel.default.xyplot,
+            panel = panel.levelplot.points,
+            type = c("p", "g"), aspect = "iso", col.regions=RedGrayBlue)
+}
 
 d1 <- subset(dat, year==1999)
 

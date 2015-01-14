@@ -51,20 +51,26 @@
 
 \references{
   Kevin Wright. 2013.  Revisiting Immer's Barley Data.
-  \emph{The American Statistitician}.
+  \emph{The American Statistitician}, 67, 129-133.
   \url{http://dx.doi.org/10.1080/00031305.2013.801783}.
 }
 
 \examples{
+
+data(minnesota.barley.yield)
 dat <- minnesota.barley.yield
+data( minnesota.barley.weather)
 datw <- minnesota.barley.weather
 
 # Weather trends over time
-require(latticeExtra)
-useOuterStrips(xyplot(cdd~mo|year*site, datw, groups=year,
-main="minnesota.barley", xlab="month", ylab="Cooling degree days",
-subset=(mo > 3 & mo < 10), scales=list(alternating=FALSE),
-type='l', auto.key=list(columns=5)))
+if(require(latticeExtra)){
+  useOuterStrips(xyplot(cdd~mo|year*site, datw, groups=year,
+                        main="minnesota.barley",
+                        xlab="month", ylab="Cooling degree days",
+                        subset=(mo > 3 & mo < 10),
+                        scales=list(alternating=FALSE),
+                        type='l', auto.key=list(columns=5)))
+}
 
 # Total cooling/heating/precip in Apr-Aug for each site/yr
 ww <- subset(datw, mo>=4 & mo<=8)
@@ -96,7 +102,10 @@ foo <- xyplot(y~x|covar*site, data=mecy, groups=yr, cex=1, ylim=c(5,65),
                 panel.superpose(x,y,...)
               },
               scales=list(x=list(relation="free")))
-foo <- useOuterStrips(foo, strip.left = strip.custom(par.strip.text=list(cex=.7)))
-combineLimits(foo, margin.x=2L)
+if(require(latticeExtra)){
+  foo <- useOuterStrips(foo, strip.left = strip.custom(par.strip.text=list(cex=.7)))
+  combineLimits(foo, margin.x=2L) # Use a common x axis for all rows
+}
+
 }
 \keyword{datasets}

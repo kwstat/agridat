@@ -59,8 +59,10 @@
 \references{
   R. A. Fisher, (1935) \emph{Design of Experiments},  Oliver and Boyd. Page 30.
 }
+
 \examples{
 
+data(darwin.maize)
 dat <- darwin.maize
 
 # Compare self-pollination with cross-pollination

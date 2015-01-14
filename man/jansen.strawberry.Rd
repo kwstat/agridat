@@ -34,6 +34,7 @@
 
 \examples{
 
+data(jansen.strawberry)
 dat <- jansen.strawberry
 dat <- transform(dat, category=ordered(category, levels=c('C1','C2','C3')))
 

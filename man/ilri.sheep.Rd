@@ -58,7 +58,10 @@ Birth weight and weaning weight of Dorper x Red Maasi lambs
   productivity of Red Maasai, Dorper and Red Maasai x Dorper crossbred
   lambs in the sub-humid tropics.  \emph{Animal Science}, 76, 119-136.
 }
+
 \examples{
+
+data(ilri.sheep)
 dat <- ilri.sheep
 dat <- transform(dat, lamb=factor(lamb), ewe=factor(ewe), ram=factor(ram),
                  year=factor(year))

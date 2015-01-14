@@ -38,6 +38,7 @@
 
 \examples{
 
+data(cochran.factorial)
 dat <- cochran.factorial
 
 # Split treatment into individual factors
@@ -53,10 +54,11 @@ m1 <- lm(yield ~ rep * block + (d+n+p+k)^3, data=dat)
 anova(m1)
 
 
-require(FrF2)
-aliases(m1)
-MEPlot(m1, select=3:6,
-       main="cochran.factorial - main effects plot")
+if(require(FrF2)){
+  aliases(m1)
+  MEPlot(m1, select=3:6,
+         main="cochran.factorial - main effects plot")
+}
 
 }
 \keyword{datasets}

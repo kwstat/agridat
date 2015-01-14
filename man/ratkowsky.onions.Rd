@@ -1,4 +1,5 @@
 \name{ratkowsky.onions}
+
 \alias{ratkowsky.onions}
 \title{Onion yields for different densities at two locations}
 
@@ -26,8 +27,10 @@
   \emph{Semiparametric Regression}. Cambridge University Press.
   \url{http://stat.tamu.edu/~carroll/semiregbook/}
 }
+
 \examples{
 
+data(ratkowsky.onions)
 dat <- ratkowsky.onions
 
 # Model inverse yield as a quadratic.  Could be better...
@@ -36,12 +39,11 @@ dat <- transform(dat, iyield = 1/yield)
 m1 <- lm(iyield ~ I(density^2)*loc, dat)
 dat$pred <- predict(m1)
 
-require(latticeExtra)
-xyplot(iyield ~ density, data=dat, group=loc, auto.key=TRUE,
-       main="ratkowski.onions",ylab="Inverse yield") +
-xyplot(pred ~ density, data=dat, group=loc, type='l')
-
-# To do: semiparametric / gam model
+if(require(latticeExtra)) {
+  foo <- xyplot(iyield ~ density, data=dat, group=loc, auto.key=TRUE,
+                 main="ratkowski.onions",ylab="Inverse yield")
+  foo + xyplot(pred ~ density, data=dat, group=loc, type='l')
+}
 
 }
 \keyword{datasets}

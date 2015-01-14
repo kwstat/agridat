@@ -56,7 +56,10 @@
 }
 
 \examples{
+
+data(minnesota.barley.yield)
 dat <- minnesota.barley.yield
+data( minnesota.barley.weather)
 datw <- minnesota.barley.weather
 
 # Weather trends over time

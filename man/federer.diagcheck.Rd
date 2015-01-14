@@ -27,8 +27,8 @@
   the genetic effects.
 
   Note: Federer and Wolfinger (2003) provide a SAS program for analysis
-  of this data.  However, when the SAS program is used to analyze this data,
-  the results do not match the results given in Federer (1998) nor
+  of this data.  However, when the SAS program is used to analyze this
+  data, the results do not match the results given in Federer (1998) nor
   Federer and Wolfinger (2003).  The differences are slight, which
   suggests a typographical error in the presentation of the data.
 
@@ -47,14 +47,19 @@
   \emph{Handbook of Formulas and Software for Plant Geneticists
     and Breeders}, Haworth Press.
 }
+
 \examples{
+
+data(federer.diagcheck)
 dat <- federer.diagcheck
 
-# Show the layout in Federer 1998.
+# Show the layout as in Federer 1998.
 dat$check <- ifelse(dat$gen == "G121" | dat$gen=="G122", "C","N")
 desplot(yield ~ col*row, dat, text=gen, show.key=FALSE,
       main="federer.diagcheck",
-      shorten='no', col=check, cex=.8, col.text=c("black","gray"))
+      shorten='no', col=check, cex=.8, col.text=c("yellow","gray"))
+
+# Now reproduce the analysis of Federer 2003.
 
 # Only to match SAS results
 dat$row <- 16 - dat$row
@@ -84,16 +89,15 @@ Anova(m1, type=3) # Matches PROC GLM output
 }
 
 # lmer
-if(require(lme4)){
+if(require(lme4) & require(lucid)){
 
 dat$one <- factor(rep(1, nrow(dat)))
 
-# lme4 1.1-5 uses bobyqa as default
-m2b <- lmer(yield ~ trtn + (0+r1|one) + (0+r2|one) + (0+r4|one) + (0+r8|one) + (0+r10|one)
-           + (0+c1|one) + (0+c2|one) + (0+c3|one) + (0+c4|one) + (0+c6|one) + (0+c8|one)
-           + (0+r1:c1|one) + (0+r1:c2|one) + (0+r1:c3|one) +(1|new:gen)
-           , data = dat, control=lmerControl(check.nlev.gtr.1="ignore"))
-
+# lmer with bobyqa (default)
+m2b <- lmer(yield ~ trtn + (0 + r1 + r2 + r4 + r8 + r10 +
+            c1 + c2 + c3 + c4 + c6 + c8 + r1:c1 + r1:c2 + r1:c3 || one) +
+            (1|new:gen)
+            , data = dat, control=lmerControl(check.nlev.gtr.1="ignore"))
 vc(m2b)
 ##      grp        var1 var2     vcov  sdcor
 ##  new.gen (Intercept) <NA>   2869    53.57
@@ -113,8 +117,13 @@ vc(m2b)
 ##   one.13          r1 <NA>   9200    95.92
 ## Residual        <NA> <NA>   4412    66.42
 
-## Nelder_Mead results from using
-## control=lmerControl(optimizer="Nelder_Mead",check.nlev.gtr.1="ignore")
+## lmer with Nelder_Mead gives 'wrong' results
+## m2n <- lmer(yield ~ trtn + (0 + r1 + r2 + r4 + r8 + r10 +
+##             c1 + c2 + c3 + c4 + c6 + c8 + r1:c1 + r1:c2 + r1:c3 || one) +
+##             (1|new:gen)
+##             , data = dat,
+##             control=lmerControl(optimizer="Nelder_Mead",check.nlev.gtr.1="ignore"))
+## vc(m2n)
 ##    groups        name variance   stddev
 ##  new.gen  (Intercept)   3228    56.82
 ##  one      r1:c3         7688    87.68
@@ -137,8 +146,10 @@ vc(m2b)
 
 
 \dontrun{
+
 # asreml
 require(asreml)
+require(lucid)
 m3 <- asreml(yield ~ -1 + trtn, data=dat,
              random = ~ r1 + r2 + r4 + r8 + r10 +
              c1 + c2 + c3 + c4 + c6 + c8 + r1:c1 + r1:c2 + r1:c3 + new:gen)
@@ -152,7 +163,25 @@ rev(sort(round(coef(m3)$fixed[3] + coef(m3)$random[137:256,],0)))
 ## gen_G046 gen_G061 gen_G082 gen_G038 gen_G090
 ##      932      931      927      927      926
 
-summary(m3)$varcomp
+vc(m3)
+##           effect component std.error z.ratio constr
+##        r1!r1.var   9201        13720    0.67    pos
+##        r2!r2.var    241.7       1059    0.23    pos
+##        r4!r4.var   2269         3915    0.58    pos
+##        r8!r8.var   1355         2627    0.52    pos
+##      r10!r10.var   1133         2312    0.49    pos
+##        c1!c1.var      0.01         0    4.8   bound
+##        c2!c2.var   5942         8969    0.66    pos
+##        c3!c3.var   2549         4177    0.61    pos
+##        c4!c4.var   1792         3106    0.58    pos
+##        c6!c6.var   1400         2551    0.55    pos
+##        c8!c8.var   6456         9702    0.67    pos
+##     r1:c1!r1.var 128000       189700    0.67    pos
+##     r1:c2!r1.var  58230        90820    0.64    pos
+##     r1:c3!r1.var   5531        16550    0.33    pos
+##  new:gen!new.var   2869         1367    2.1     pos
+##       R!variance   4412          915    4.8     pos
+
 }
 
 }

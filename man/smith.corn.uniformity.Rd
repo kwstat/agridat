@@ -104,16 +104,18 @@
   19, 279--314.
   \url{http://books.google.com/books?id=jyEXAAAAYAAJ&pg=PA279}
 }
+
 \examples{
 
+data(smith.corn.uniformity)
 dat <- smith.corn.uniformity
 
-require(lattice)
 dat = transform(dat, year=factor(year))
 desplot(yield~col*row|year, dat, layout=c(1,3),
         main="smith.corn.uniformity: yield across years 1895-1987")
 
 # Outliers are obvious
+# require(lattice)
 # xyplot(yield~row|factor(col), dat, groups=year,
 # auto.key=list(columns=3), main="smith.corn.uniformity")
 

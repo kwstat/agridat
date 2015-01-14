@@ -32,8 +32,10 @@
   \emph{Proceedings of the Conference on applied statistics in
     agriculture}, 1989.
 }
+
 \examples{
 
+data(patterson.switchback)
 dat <- patterson.switchback
 
 # Create a numeric period variable

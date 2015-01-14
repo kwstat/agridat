@@ -38,6 +38,7 @@ Rice strip-plot experiment
 
 \examples{
 
+data(gomez.stripplot)
 dat <- gomez.stripplot
 
 # Gomez figure 3.7

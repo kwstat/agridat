@@ -43,6 +43,8 @@ A uniformity trial of 1500 plots of wheat conducted in Idaho in 1927.
 }
 
 \examples{
+
+data(wiebe.wheat.uniformity)
 dat <- wiebe.wheat.uniformity
 
 require("lattice")

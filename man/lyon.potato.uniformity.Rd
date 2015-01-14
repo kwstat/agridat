@@ -32,8 +32,10 @@
   influencing plot yields. \emph{Journal of Agricultural Research}, 19, 279-314.
   \url{http://books.google.com/books?id=jyEXAAAAYAAJ&pg=PA279}
 }
+
 \examples{
 
+data(lyon.potato.uniformity)
 dat <- lyon.potato.uniformity
 
 desplot(yield ~ row*section, dat, tick=TRUE,

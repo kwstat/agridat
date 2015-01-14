@@ -24,7 +24,10 @@ height and true height of the plot.
   Cochran, W.G. and Cox, G.M. (1957),
   \emph{Experimental Designs}, 2nd ed., Wiley and Sons, New York.
 }
+
 \examples{
+
+data(cochran.latin)
 dat <- cochran.latin
 
 desplot(diff~col*row, dat, text=operator, cex=1, main="cochran.latin")

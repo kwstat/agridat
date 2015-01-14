@@ -31,7 +31,10 @@
 
   Used with permission of Martin Zuidhof.
 }
+
 \examples{
+
+data(zuidhof.broiler)
 dat <- zuidhof.broiler
 
 dat <- transform(dat, age=age/7) # Change days into weeks

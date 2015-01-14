@@ -56,9 +56,12 @@
   Interpretation of Genotype x Environment Interaction.
   \emph{Crop Science}, 53, 2400-2410.
 }
+
 \examples{
 
-  dat <- yang.barley
+data(yang.barley)
+dat <- yang.barley
+  require(reshape2)
   dat <- acast(dat, gen~site, value.var='yield')
 
 \dontrun{

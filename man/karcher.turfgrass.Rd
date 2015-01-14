@@ -46,6 +46,7 @@
 
 \examples{
 
+data(karcher.turfgrass)
 dat <- karcher.turfgrass
 
 dat$rating <- ordered(dat$rating, levels=c('Poor','Average', 'Good','Excellent'))

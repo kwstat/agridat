@@ -25,11 +25,13 @@
 \source{
   David L. Turner and Michael H. Ralphs and John O. Evans (1992).
   Logistic Analysis for Monitoring and Assessing Herbicide Efficacy.
-  emph{Weed Technology}, 6, 424-430.
+  \emph{Weed Technology}, 6, 424-430.
   \url{http://www.jstor.org/stable/3987312}.
 }
+
 \examples{
 
+data(turner.herbicide)
 dat <- turner.herbicide
 
 dat <- transform(dat, prop=dead/live)
@@ -43,11 +45,14 @@ p1 <- cbind(p1, predict(m1, newdata=p1, type='response', se.fit=TRUE))
 p1 <- transform(p1, lo = fit - 2*se.fit, up = fit + 2*se.fit)
 
 # Figure 2 of Turner
-require(latticeExtra)
-xyplot(prop~rate,dat, cex=1.5, main="turner.herbicide (model with 2*S.E.)",
-       xlab="Herbicide rate", ylab="Proportion killed") +
-  xyplot(fit~rate, p1, type='l') +
-  xyplot(lo+up~rate, p1, type='l', lty=1, col='gray')
+if(require(latticeExtra)){
+  foo1 <- xyplot(prop~rate,dat, cex=1.5,
+                 main="turner.herbicide (model with 2*S.E.)",
+                 xlab="Herbicide rate", ylab="Proportion killed")
+  foo2 <- xyplot(fit~rate, p1, type='l')
+  foo3 <- xyplot(lo+up~rate, p1, type='l', lty=1, col='gray')
+  print(foo1 + foo2 + foo3)
+}
 
 }
 \keyword{datasets}

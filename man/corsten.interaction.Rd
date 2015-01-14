@@ -31,6 +31,8 @@
 }
 
 \examples{
+
+data(corsten.interaction)
 dat <- corsten.interaction
 
 require(reshape2)

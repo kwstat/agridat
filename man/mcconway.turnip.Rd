@@ -50,8 +50,10 @@
   with changing treatment variance.
   \emph{Agronomy Journal}, 101, 865--869.
 }
+
 \examples{
 
+data(mcconway.turnip)
 dat <- mcconway.turnip
 dat$densf <- factor(dat$density)
 
@@ -72,9 +74,10 @@ summary(m0)
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 # Boxplots suggest heteroskedasticity for date, density
-require("HH")
-interaction2wt(yield ~ gen + date + densf +block, dat,
-               main="mcconway.turnip - yield")
+if(require("HH")){
+  interaction2wt(yield ~ gen + date + densf +block, dat,
+                 main="mcconway.turnip - yield")
+}
 
 require(nlme)
 # Random block model

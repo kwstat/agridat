@@ -40,6 +40,7 @@ rep (instead of across reps).
 
 \examples{
 
+data(weiss.lattice)
 dat <- weiss.lattice
 
 desplot(yield~col*row|rep,dat, text=gen, aspect=3/16,

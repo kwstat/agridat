@@ -43,6 +43,7 @@
 }
 \examples{
 
+data(blackman.wheat)
 dat <- blackman.wheat
 
 require(lattice)
@@ -67,7 +68,7 @@ xyplot(yield~height|loc,dat,group=nitro,type=c('p','r'),
 
 # AMMI-style biplot Fig 6.4 of Gower 2011
 dat$env <- factor(paste(dat$loc,dat$nitro,sep="-"))
-datm <- acast(dat, gen~env, value.var="yield")
+datm <- acast(dat, gen~env, value.var='yield')
 datm <- sweep(datm, 1, rowMeans(datm))
 datm <- sweep(datm, 2, colMeans(datm))
 biplot(prcomp(datm), main="blackman.wheat AMMI-style biplot")

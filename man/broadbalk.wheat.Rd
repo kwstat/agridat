@@ -60,6 +60,8 @@
   \url{http://www.era.rothamsted.ac.uk/index.php?area=home&page=index&dataset=4}
 }
 \examples{
+
+data(broadbalk.wheat)
 dat <- broadbalk.wheat
 
 require(lattice)

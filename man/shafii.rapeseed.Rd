@@ -42,8 +42,10 @@
   Additive Main Effects and Multiplicative Interaction Model
   and Stability Estimates, \emph{JABES}, 3, 335--345.
 }
+
 \examples{
 
+data(shafii.rapeseed)
 dat <- shafii.rapeseed
 
 dat$gen <- with(dat, reorder(gen, yield, mean))
@@ -62,6 +64,7 @@ datm$gen <- factor(datm$gen,
                          "Dwarf","Glacier","Jet"))
 dat$locyr <- reorder(dat$locyr, dat$yield, mean)
 
+require(lattice)
 # This picture tells most of the story
 # Now change symbols
 op <- tpg <- trellis.par.get()

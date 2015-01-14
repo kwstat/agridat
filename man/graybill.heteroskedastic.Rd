@@ -30,7 +30,10 @@
   Missing observations in the analysis of stability, \emph{Heredity},
   72, 141--145.
 }
+
 \examples{
+
+data(graybill.heteroskedastic)
 dat <- graybill.heteroskedastic
 
 # Genotypes are obviously not homoscedastic

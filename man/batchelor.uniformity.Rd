@@ -23,6 +23,9 @@
 }
 \details{
 
+  A few of the trees affected by disease were eliminated and the yield
+  was replaced by the average of the eight surrounding trees.
+
   The following details are from Batchelor (1918).
 
   \bold{Jonathan Apples}
@@ -105,38 +108,44 @@
 require(lattice)
 
 # Apple
-dat <- batchelor.apple.uniformity
-desplot(yield~col*row, dat, aspect=30/16,
+data(batchelor.apple.uniformity)
+desplot(yield~col*row, data=batchelor.apple.uniformity,
+        aspect=30/16,
         main="batchelor.apple.uniformity",
         ylab="Jonathon apple tree yields")
 
 # Lemon
-dat <- batchelor.lemon.uniformity
-desplot(yield~col*row, dat, aspect=26/14,
+data(batchelor.lemon.uniformity)
+desplot(yield~col*row, data=batchelor.lemon.uniformity,
+        aspect=26/14,
         main="batchelor.lemon.uniformity",
         ylab="Eureka lemon tree yields")
 
 # Navel1 (Arlington)
+data(batchelor.navel1.uniformity)
 dat <- batchelor.navel1.uniformity
 desplot(yield~col*row, dat, aspect=50/20,
         main="batchelor.navel1.uniformity",
         ylab="Navel orange tree yields (Arlington)")
 
 # Navel2 (Antelope)
-dat <- batchelor.navel2.uniformity
-desplot(yield~col*row, dat, aspect=33/15,
+data(batchelor.navel2.uniformity)
+desplot(yield~col*row, data=batchelor.navel2.uniformity,
+        aspect=33/15,
         main="batchelor.navel2.uniformity",
         ylab="Navel orange tree yields (Antelope)")
 
 # Valencia
-dat <- batchelor.valencia.uniformity
-desplot(yield~col*row, dat, aspect=20/12,
+data(batchelor.valencia.uniformity)
+desplot(yield~col*row, data=batchelor.valencia.uniformity,
+        aspect=20/12,
         main="batchelor.valencia.uniformity",
         ylab="Valencia orange tree yields")
 
 # Walnut
-dat <- batchelor.walnut.uniformity
-desplot(yield~col*row, dat, aspect=32/10,
+data(batchelor.walnut.uniformity)
+desplot(yield~col*row, data=batchelor.walnut.uniformity,
+        aspect=32/10,
         main="batchelor.walnut.uniformity",
         ylab="Seedling walnut yields")
 }

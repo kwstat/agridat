@@ -26,7 +26,10 @@ Lint yield from a cotton uniformity trial
   design and analysis of cotton and barley variety trials.
   \emph{Australian Journal of Agricultural Research}, 39, 339-350.
 }
+
 \examples{
+
+data(williams.cotton.uniformity)
 dat <- williams.cotton.uniformity
 
 require("lattice")

@@ -42,8 +42,10 @@
     Methodology)},61, 691--746. Table 4.
 
 }
+
 \examples{
 
+data(mead.strawberry)
 dat <- mead.strawberry
 dat$sub <- ifelse(is.element(dat$gen, c('G', 'V', 'R1', 'F')),
               "S1","S2")

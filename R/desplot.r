@@ -1,6 +1,6 @@
 # desplot.r
-# Time-stamp: <17 Mar 2014 16:52:39 c:/x/rpack/agridat/R/desplot.r>
-# Copyright 2013, Kevin Wright
+# Time-stamp: <30 Sep 2014 11:50:43 c:/x/rpack/agridat/R/desplot.r>
+# Copyright 2014, Kevin Wright
 
 # Needs grid, lattice, reshape2
 
@@ -9,8 +9,8 @@ RedGrayBlue <- colorRampPalette(c("firebrick", "lightgray", "#305a7f"))
 desplot <- function(form=formula(NULL ~ x + y), data,
                     num=NULL, col=NULL, text=NULL, out1=NULL, out2=NULL,
                     col.regions=RedGrayBlue, col.text=NULL, text.levels=NULL,
-                    out1.gpar=gpar(col="black", lwd=3),
-                    out2.gpar=gpar(col="yellow", lwd=1, lty=1),
+                    out1.gpar=list(col="black", lwd=3),
+                    out2.gpar=list(col="yellow", lwd=1, lty=1),
                     at, ticks=FALSE, flip=FALSE,
                     main=NULL, xlab, ylab,
                     shorten='abb',
@@ -22,7 +22,9 @@ desplot <- function(form=formula(NULL ~ x + y), data,
   # Use data name for default title
   if(missing(main)) main <- deparse(substitute(data))
 
-  # Force character, in case we forgot to quote the argument
+  # Force character, in case we forgot to quote the argument.
+  # This is non-standard evaluation.  Beware.
+  
   dn <- names(data)
   cleanup <- function(x, dn){
     if(is.null(x)) return(x)
@@ -222,6 +224,10 @@ desplot <- function(form=formula(NULL ~ x + y), data,
                          data=list(NULL, longstring))))
 
     offset <- 1
+
+    # If user used a list to define out1.gpar, we need to make it class 'gpar'
+    if(class(out1.gpar) != "gpar") class(out1.gpar) <- "gpar"
+    if(class(out2.gpar) != "gpar") class(out2.gpar) <- "gpar"
 
     if(has.out1){ # outline
       foo <- placeGrob(foo, linesGrob(x = unit(c(.2, .8), "npc"),

@@ -35,6 +35,7 @@
 
 \examples{
 
+data(cate.potassium)
 dat <- cate.potassium
 names(dat) <- c('y','x')
 

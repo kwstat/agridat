@@ -29,7 +29,10 @@
   K. Ryder (1981). Field plans: why the biometrician finds them useful,
   \emph{Experimental Agriculture}, 17, 243--256.
 }
+
 \examples{
+
+data(ryder.groundnut)
 dat <- ryder.groundnut
 
 # RCB model

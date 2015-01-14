@@ -41,6 +41,9 @@
   \emph{J. App. Stat.} 18, 331--353.
 }
 \examples{
+
+data(aastveit.barley)
+
 # First, PCA of each matrix separately
 
 Z <- aastveit.barley$height
@@ -57,9 +60,8 @@ U <- scale(U) # Standardized covariates
 sv <- svd(U)$d
 round(100 * sv^2/sum(sv^2),1) # Prop variance each axis
 
-\dontrun{
 # Now, PLS relating the two matrices
-require(pls)
+if(require(pls)){
 m1 <- plsr(Z~U)
 loadings(m1)
 # Aastveit Fig 2a (genotypes), not rotated as they did

@@ -45,6 +45,7 @@
 
 \examples{
 
+data(gumpertz.pepper)
 dat <- gumpertz.pepper
 
 # Gumpertz deletes two outliers

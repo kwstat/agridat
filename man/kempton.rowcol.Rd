@@ -27,8 +27,10 @@
   \emph{Statistical Methods for Plant Variety Evaluation},
   Chapman and Hall, 1997.
 }
+
 \examples{
 
+data(kempton.rowcol)
 dat <- kempton.rowcol
 dat <- transform(dat, rowf=factor(row), colf=factor(col))
 

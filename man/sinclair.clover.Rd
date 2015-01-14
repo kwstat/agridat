@@ -32,10 +32,13 @@
   A bivariate response surface for growth data.
   \emph{Fertilizer research}, 45, 117-122.
 }
+
 \examples{
 
+data(sinclair.clover)
 dat <- sinclair.clover
 
+require(lattice)
 xyplot(yield~P|factor(S), dat, layout=c(5,1), main="sinclair.clover")
 
 # Dodds fits a two-dimensional Mitscherlich-like model:

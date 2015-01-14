@@ -22,7 +22,7 @@
 }
 \details{
   Antigua is a coral island in the Caribbean with sufficient level land
-  for experiments and a semi-arid climate. In contrast, St. Vincent is
+  for experiments and a semi-arid climate, while St. Vincent is
   volcanic and level areas are uncommon, but the rainfall can be seasonally heavy.
 
   Plots were 16 feet by 18 feet. A central area 12 feet by 12 feet was
@@ -46,10 +46,13 @@
 \references{
   Also in the DAAG package as data sets antigua, stVincent.
 }
+
 \examples{
+data(caribbean.maize)
 dat <- caribbean.maize
 
 # Yield and ears are correlated
+require(lattice)
 xyplot(yield~ears|site, dat, ylim=c(0,10), subset=isle=="Antigua",
        main="caribbean.maize - Antiqua")
 

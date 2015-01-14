@@ -49,6 +49,7 @@
 
 \examples{
 
+data(keen.potatodamage)
 dat <- keen.potatodamage
 
 # Energy E1, Rod R4, Weight W1 have higher proportions of severe damage

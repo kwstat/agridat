@@ -56,6 +56,7 @@
 }
 \examples{
 
+data(vargas.wheat2)
 dat <- vargas.wheat2
 yield <- dat$yield
 covs <- dat$covs

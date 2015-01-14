@@ -74,9 +74,9 @@ following:
   \url{https://researchspace.auckland.ac.nz/handle/2292/5240}.
 }
 
-
 \examples{
 
+data(lee.potatoblight)
 dat <- lee.potatoblight
 
 # Common cultivars across years.
@@ -110,6 +110,7 @@ desplot(y ~ col*row|date, dat,
         layout=c(10,11),skip=skp)
 
 # 1983 only.  I.Hardy succumbs quickly
+require(lattice)
 xyplot(y ~ date|gen, dat, subset=year==1983, group=rep,
        xlab="Date", ylab="Blight resistance score",
        main="lee.potatoblight 1983", as.table=TRUE,

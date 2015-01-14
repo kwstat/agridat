@@ -33,6 +33,7 @@
 
 \examples{
 
+data(carmer.density)
 dat <- carmer.density
 dat$gen <- factor(dat$gen, levels=c('Hy2x0h7','WF9xC103','R61x187-2',
                              'WF9x38-11','WF9xB14','C103xB14',
@@ -71,10 +72,10 @@ round(out, 3)
 
 
 require(latticeExtra)
-xyplot(yield~pop|gen, dat, pch=16, as.table=TRUE,
-       main="carmer.density (independent fit per panel)") +
-xyplot(pred~pop|gen, preds, col='black', as.table=TRUE,
-       type='l')
+## xyplot(yield~pop|gen, dat, pch=16, as.table=TRUE,
+##        main="carmer.density (independent fit per panel)") +
+## xyplot(pred~pop|gen, preds, col='black', as.table=TRUE,
+##        type='l')
 
 
 # A better approach might be to use nlme to fit an overall fixed-effect

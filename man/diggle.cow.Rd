@@ -56,15 +56,18 @@ Bodyweight of cows in a 2-by-2 factorial experiment
   \url{http://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.htm#statug_glimmix_sect018.htm}
 
 }
+
 \examples{
 
+data(diggle.cow)
 dat <- diggle.cow
 
 # Figure 1 of Verbyla 1999
 require(lattice)
-require(latticeExtra)
-useOuterStrips(xyplot(weight ~ day|iron*infect, dat, type='b',group=animal,
-       main="diggle.cow"))
+if(require(latticeExtra)){
+  useOuterStrips(xyplot(weight ~ day|iron*infect, dat, type='b',group=animal,
+                        main="diggle.cow"))
+}
 
 # Scaling
 dat <- transform(dat, time = (day-122)/10)

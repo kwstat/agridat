@@ -70,6 +70,7 @@
 
 # 1951 data.  Fit the first REML model of Mohring 2011 Supplement.
 
+data(hayman.tobacco)
 dat1 <- subset(hayman.tobacco, year==1951)
 
 # Make a factor 'comb' in which G1xG2 is the same cross as G2xG1
@@ -94,6 +95,7 @@ dat1 <- transform(dat1,
 # The block effect is minimial and therefore ignored.
 ## m1 <- asreml(day~1, data=dat1,
 ##              random = ~ male + and(female) + comb + comb:dr)
+## require(lucid)
 ## vc(m1)
 ##           effect component std.error z.ratio      con
 ##    male!male.var   12.77      7.502      1.7 Positive
@@ -116,6 +118,7 @@ densityplot(~day, data=dat2, main="hayman.tobacco",
 d1 <- subset(dat2, block=='B1')
 d2 <- subset(dat2, block=='B2')
 
+require(reshape2)
 m1 <- acast(d1, male~female, value.var='day')
 m2 <- acast(d2, male~female, value.var='day')
 

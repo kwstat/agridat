@@ -31,8 +31,10 @@ Rice strip-split-plot experiment
 
   Used with permission of Kwanchai Gomez.
 }
+
 \examples{
 
+data(gomez.stripsplitplot)
 dat <- gomez.stripsplitplot
 
 # Layout

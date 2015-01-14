@@ -30,8 +30,10 @@
   R.M. Walsh (1944). Response to Price in Production of Cotton
   and Cottonseed, \emph{Journal of Farm Economics}, 26, 359-372.
 }
+
 \examples{
 
+data(walsh.cottonprice)
 dat <- walsh.cottonprice
 
 dat <- transform(dat, acres=acres/1000) # convert to million acres
@@ -46,6 +48,7 @@ percentchg <- function(x){ # percent change from previous to current
 dat <- transform(dat, chga = percentchg(acres), chgp = percentchg(adjcombined))
 
 with(dat, cor(chga, chgp, use='pair')) # .501 correlation
+require(lattice)
 xyplot(chga~chgp, dat, type=c('p','r'),
        main="walsh.cottonprice",
        xlab="Percent change in previous price", ylab="Percent change in acres")

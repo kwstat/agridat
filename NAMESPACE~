@@ -1,13 +1,22 @@
+
+## Recommended packages
+## importFrom("nlme", fixef,ranef,VarCorr)
+
+## Bioconductor
+importFrom("pcaMethods", pca, prep)
+
 import(grid)
 import(lattice)
+#import(lucid) # for lucid/vc functions
 import(reshape2)
+
+## Exports
 export(desplot)
 export(RedGrayBlue)
-export(vc)
-S3method(print, vc.asreml)
-S3method(print, vc.lme)
-S3method(print, vc.lmerMod)
-S3method(vc, asreml)
-S3method(vc, default)
-S3method(vc, lme)
-S3method(vc, lmerMod)
+
+# Methods
+export(gge)
+S3method(gge, formula)
+S3method(gge, matrix)
+S3method(plot, gge)
+S3method(biplot, gge)

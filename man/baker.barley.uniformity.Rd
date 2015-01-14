@@ -27,6 +27,8 @@
 }
 
 \examples{
+
+data(baker.barley.uniformity)
 dat <- baker.barley.uniformity
 
 asp <- (161*3+30)/827 # True aspect ratio

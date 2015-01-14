@@ -82,8 +82,10 @@
   experimental field. \emph{Jour. Agr. Res}, 36, 15--40.
   \url{http://naldc.nal.usda.gov/catalog/IND43967538}
 }
+
 \examples{
 
+data(harris.multi.uniformity)
 dat <- harris.multi.uniformity
 # Combine year/crop into 'harvest'
 dat <- transform(dat, harv = factor(paste0(year,".",crop)))

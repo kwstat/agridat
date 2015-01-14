@@ -45,9 +45,11 @@
 
 \examples{
 
+data(wedderburn.barley)
 dat <- wedderburn.barley
 dat$y <- dat$y/100
 
+require(lattice)
 dotplot(gen~y|site, dat, main="wedderburn.barley")
 
 # Use the variance function mu(1-mu).  McCullagh page 330

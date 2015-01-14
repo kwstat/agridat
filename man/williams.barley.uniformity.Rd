@@ -29,7 +29,10 @@ Yield from a barley uniformity trial
   design and analysis of cotton and barley variety trials.
   \emph{Australian Journal of Agricultural Research}, 39, 339-350.
 }
+
 \examples{
+
+data(williams.barley.uniformity)
 dat <- williams.barley.uniformity
 
 require("lattice")

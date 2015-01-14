@@ -34,7 +34,10 @@
   RJOINT procedure in GenStat.
   \url{http://www.vsni.co.uk/software/genstat/htmlhelp/server/RJOINT.htm}
 }
+
 \examples{
+
+data(digby.jointregression)
 dat <- digby.jointregression
 
 # Simple gen means, ignoring unbalanced data
@@ -78,6 +81,7 @@ while(!done){
 
 }
 
+require(lattice)
 xyplot(yield ~ theta|gen, data=dat, xlab="theta (environment effect)",
        main="digby.jointregression - stability plot")
 

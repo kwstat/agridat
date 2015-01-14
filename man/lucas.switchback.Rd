@@ -40,6 +40,7 @@
 
 \examples{
 
+data(lucas.switchback)
 dat <- lucas.switchback
 
 # Create a numeric period variable

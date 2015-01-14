@@ -31,6 +31,7 @@
 
 \examples{
 
+data(vsn.lupin3)
 dat <- vsn.lupin3
 
 # Split gen into check/test, make factors
@@ -60,6 +61,7 @@ m1 <- asreml(yield ~ site + check:site, data=dat,
 m1$loglik
 ## [1] -314.2616
 
+require(lucid)
 vc(m1)
 ##                      effect component std.error z.ratio constr
 ##  at(site, S1):colf!colf.var   0.6228   0.4284       1.5    pos

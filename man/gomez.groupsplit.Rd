@@ -31,7 +31,10 @@
 
   Used with permission of Kwanchai Gomez.
 }
+
 \examples{
+
+data(gomez.groupsplit)
 dat <- gomez.groupsplit
 
 # Gomez figure 3.10.  Obvious fert and group effects

@@ -37,8 +37,10 @@
   Gower, J.C. and Hand, D.J., 1996.  Biplots.
   Chapman and Hall.
 }
+
 \examples{
 
+data(denis.ryegrass)
 dat <- denis.ryegrass
 anova(aov(strength ~ gen + loc, dat))
 

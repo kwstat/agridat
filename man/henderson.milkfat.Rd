@@ -23,8 +23,10 @@
 \references{
   None.
 }
+
 \examples{
 
+data(henderson.milkfat)
 dat <- henderson.milkfat
 
 plot(yield~week, data=dat, cex = 0.8, ylim=c(0,.9),

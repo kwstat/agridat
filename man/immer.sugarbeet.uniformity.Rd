@@ -36,7 +36,10 @@
   Size and shape of plot in relation to field experiments with sugar beets.
   \emph{Jour. Agr. Research}, 44, 649--668.
 }
+
 \examples{
+
+data(immer.sugarbeet.uniformity)
 dat <- immer.sugarbeet.uniformity
 
 # Immer numbers rows from the top

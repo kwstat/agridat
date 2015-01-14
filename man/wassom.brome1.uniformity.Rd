@@ -46,6 +46,7 @@
 
 \examples{
 
+data(wassom.brome1.uniformity)
 dat <- wassom.brome1.uniformity
 desplot(yield~col*row, dat, main="wassom.brome1.uniformity", flip=TRUE)
 

@@ -8,8 +8,8 @@
   desplot(form=formula(NULL ~ x + y), data,
   num, col, text, out1, out2,
   col.regions=RedGrayBlue, col.text=NULL, text.levels=NULL,
-  out1.gpar=gpar(col = "black", lwd = 3),
-  out2.gpar=gpar(col = "yellow", lwd = 1, lty = 1),
+  out1.gpar=list(col = "black", lwd = 3),
+  out2.gpar=list(col = "yellow", lwd = 1, lty = 1),
   at, ticks=FALSE, flip=FALSE, main, xlab, ylab,
   shorten="abb", show.key=TRUE, key.cex, cex=0.4, strip.cex=0.75, ...)
 }
@@ -47,6 +47,11 @@
   can be adjacent to each other by virtue of appearing in different
   whole-plots.  To correctly outline the split-plot factor, simply
   concatenate the whole-plot factor and sub-plot factor together.
+
+
+  To call this function inside another function, you can hack thusly:
+  vr <- "yield"; vx <- "x"; vy <- "y"
+  eval(parse(text=paste("desplot(", vr, "~", vx, "*", vy, ", data=yates.oats)")))
 }
 
 \author{Kevin Wright}
@@ -61,8 +66,10 @@
 \item{col.regions}{Colors for regions}
 \item{col.text}{Colors for text strings}
 \item{text.levels}{Character strings to use instead of default 'levels'}
-\item{out1.gpar}{Graphics parameters for outlining}
-\item{out2.gpar}{Graphics parameters for outlining}
+\item{out1.gpar}{A list of graphics parameters for outlining.  Can
+  either be an ordinary \code{list()} or A call to \code{gpar()} from
+  the \code{grid} package.}
+\item{out2.gpar}{Second level of outlining.}
 \item{at}{Breakpoints for the color ribbon}
 \item{ticks}{If TRUE, show tick marks row/column}
 \item{flip}{If TRUE, vertically flip the image}
@@ -83,20 +90,23 @@
 \examples{
 
 # Show how to customize any feature.  In this case, make the strips bigger.
+data(besag.met)
 d1 <- desplot(yield ~ col*row|county, besag.met, main="besag.met",
-        out1=rep, out2=block, out2.gpar=gpar(col="white"), strip.cex=3)
+        out1=rep, out2=block, out2.gpar=list(col="white"), strip.cex=3)
 d1 <- update(d1, par.settings = list(layout.heights=list(strip=2)))
 print(d1)
 # Or: d1$par.settings = list(layout.heights=list(strip=2))
 
 
 # Show experiment layout
+data(yates.oats)
 desplot(yield ~ x+y, yates.oats, out1=block, out2=gen)
 
 desplot(block ~ x+y, yates.oats, col=nitro, text=gen, cex=1, out1=block,
-        out2=gen, out2.gpar=gpar(col = "gray50", lwd = 1, lty = 1))
+        out2=gen, out2.gpar=list(col = "gray50", lwd = 1, lty = 1))
 
 # Example from Ryder.
+data(ryder.groundnut)
 gnut <- ryder.groundnut
 m1 <- lm(dry~block+gen, gnut)
 gnut$res <- resid(m1)

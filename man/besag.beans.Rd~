@@ -1,0 +1,35 @@
+\name{besag.beans}
+\alias{besag.beans}
+\docType{data}
+\title{
+%%   ~~ data name/kind ... ~~
+}
+\description{
+%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+}
+\usage{data("besag.beans")}
+\format{
+  A data frame with 152 observations on the following 6 variables.
+  \describe{
+    \item{\code{gen}}{a character vector}
+    \item{\code{height}}{a numeric vector}
+    \item{\code{yield}}{a numeric vector}
+    \item{\code{row}}{a numeric vector}
+    \item{\code{rep}}{a numeric vector}
+    \item{\code{col}}{a numeric vector}
+  }
+}
+\details{
+%%  ~~ If necessary, more details than the __description__ above ~~
+}
+\source{
+%%  ~~ reference to a publication or URL from which the data were obtained ~~
+}
+\references{
+%%  ~~ possibly secondary sources and usages ~~
+}
+\examples{
+data(besag.beans)
+## maybe str(besag.beans) ; plot(besag.beans) ...
+}
+\keyword{datasets}

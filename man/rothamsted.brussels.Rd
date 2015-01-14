@@ -32,10 +32,13 @@
   \emph{Proceedings of the Royal Society A: Mathematical, Physical and
   Engineering Science}, 462, 2119--2143.
 }
+
 \examples{
 
+data(rothamsted.brussels)
 dat <- rothamsted.brussels
 
+require(lattice)
 bwplot(yield~trt, dat, main="rothamsted.brussels")
 desplot(yield~col*row, data=dat, num=trt, out1=block, cex=1,
         main="rothamsted.brussels")

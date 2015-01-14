@@ -36,6 +36,7 @@
 
 \examples{
 
+data(fisher.latin)
 dat <- fisher.latin
 
 # Standard latin-square analysis

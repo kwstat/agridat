@@ -13,8 +13,8 @@
   \describe{
     \item{\code{roots}}{root yields, pounds}
     \item{\code{leaves}}{leaf yields, pounds}
-    \item{\code{col}}{column}
-    \item{\code{row}}{row}
+    \item{\code{col}}{column, 1-10}
+    \item{\code{row}}{row, 1-20}
   }
 }
 \details{
@@ -33,8 +33,10 @@
   \emph{Proceedings of the Royal Society A: Mathematical, Physical and
   Engineering Science}, 462, 2119--2143.
 }
+
 \examples{
 
+data(mercer.mangold.uniformity)
 dat <- mercer.mangold.uniformity
 
 # Show field in true aspect ratio

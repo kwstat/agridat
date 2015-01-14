@@ -1,6 +1,6 @@
 # desplot.r
-# Time-stamp: <15 Oct 2013 14:36:55 c:/x/rpack/agridat/R/desplot.r>
-# Copyright 2013, Kevin Wright
+# Time-stamp: <29 Aug 2014 18:40:48 c:/x/rpack/agridat/R/desplot.r>
+# Copyright 2014, Kevin Wright
 
 # Needs grid, lattice, reshape2
 
@@ -9,8 +9,8 @@ RedGrayBlue <- colorRampPalette(c("firebrick", "lightgray", "#305a7f"))
 desplot <- function(form=formula(NULL ~ x + y), data,
                     num=NULL, col=NULL, text=NULL, out1=NULL, out2=NULL,
                     col.regions=RedGrayBlue, col.text=NULL, text.levels=NULL,
-                    out1.gpar=gpar(col="black", lwd=3),
-                    out2.gpar=gpar(col="yellow", lwd=1, lty=1),
+                    out1.gpar=list(col="black", lwd=3),
+                    out2.gpar=list(col="yellow", lwd=1, lty=1),
                     at, ticks=FALSE, flip=FALSE,
                     main=NULL, xlab, ylab,
                     shorten='abb',
@@ -222,6 +222,10 @@ desplot <- function(form=formula(NULL ~ x + y), data,
                          data=list(NULL, longstring))))
 
     offset <- 1
+
+    # If user used a list to define out1.gpar, we need to make it class 'gpar'
+    if(class(out1.gpar) != "gpar") class(out1.gpar) <- "gpar"
+    if(class(out2.gpar) != "gpar") class(out2.gpar) <- "gpar"
 
     if(has.out1){ # outline
       foo <- placeGrob(foo, linesGrob(x = unit(c(.2, .8), "npc"),
@@ -531,40 +535,16 @@ panel.outlinelevelplot <- function(x, y, z, subscripts, at, ...,
   return(dat)
 }
 
-# lel is a modified version of lattice:::extend.limits
+# lel is a very simple version of lattice:::extend.limits
 # Copied here because CRAN does not like ::: anymore as of 8.25.13
 lel <- function (lim, prop = lattice.getOption("axis.padding")$numeric) {
-  ## if (all(is.na(lim)))
-  ##   NA_real_
-  ## else if (is.character(lim)) {
-  ##   c(1, length(lim)) + c(-1, 1) * lattice.getOption("axis.padding")$factor
-  ## }
-  ## else if (length(lim) == 2) {
-    ## if (lim[1] > lim[2]) {
-    ##     ccall <- match.call()
-    ##     ccall$lim <- rev(lim)
-    ##     ans <- eval.parent(ccall)
-    ##     return(rev(ans))
-    ## }
-    ## if (!missing(length) && !missing(prop))
-    ##     stop("'length' and 'prop' cannot both be specified")
-    ## if (length <= 0)
-    ##     stop("'length' must be positive")
-    ## if (!missing(length)) {
-    ##     prop <- (1 - as.numeric(diff(lim)))/(2 *
-    ##         as.numeric(diff(lim)))
-    ## }
-    if (lim[1] == lim[2])
-      lim + 0.5 * c(-1, 1)
-    else {
-      d <- diff(as.numeric(lim))
-      lim + prop * d * c(-1, 1)
-    }
-  ## }
-  ## else {
-  ##   print(lim)
-  ##   stop("improper length of 'lim'")
-  ## }
+
+  if (lim[1] == lim[2])
+    lim + 0.5 * c(-1, 1)
+  else {
+    d <- diff(as.numeric(lim))
+    lim + prop * d * c(-1, 1)
+  }
 }
 
 # ----------------------------------------------------------------------------

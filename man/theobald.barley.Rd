@@ -39,6 +39,7 @@
 
 \examples{
 
+data(theobald.barley)
 dat <- theobald.barley
 dat <- transform(dat,  env=paste(loc,year,sep="-"))
 dat <- transform(dat, income=100*yield - 400*nitro/1000)

@@ -34,8 +34,10 @@
   Walter W. Piegorsch, A. John Bailer. (2005)
   \emph{Analyzing Environmental Data}, Wiley.
 }
+
 \examples{
 
+data(senshu.rice)
 dat <- senshu.rice
 
 # Model 1 of Senshu & Cady

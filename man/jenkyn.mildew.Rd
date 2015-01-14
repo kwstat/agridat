@@ -37,8 +37,10 @@
   Maria Durban, Christine Hackett, Iain Currie.
   Blocks, Trend and Interference in Field Trials.
 }
+
 \examples{
 
+data(jenkyn.mildew)
 dat <- jenkyn.mildew
 
 require(lattice)

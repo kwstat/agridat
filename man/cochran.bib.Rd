@@ -30,8 +30,10 @@
   Cochran, W.G. and Cox, G.M. (1957),
   \emph{Experimental Designs}, 2nd ed., Wiley and Sons, New York, p. 448.
 }
+
 \examples{
 
+data(cochran.bib)
 dat <- cochran.bib
 
 # Show the incomplete-block structure
@@ -50,9 +52,8 @@ summary(m1)
 require(nlme)
 m2 = lme(yield ~ -1 + gen, data=dat, random=~1|loc)
 
-\dontrun{
-require(agricolae)
-BIB.test(dat$loc, dat$gen, y=dat$yield)
+if(require(agricolae)){
+  BIB.test(dat$loc, dat$gen, y=dat$yield)
 }
 
 }

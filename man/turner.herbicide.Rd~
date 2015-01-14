@@ -25,15 +25,17 @@
 \source{
   David L. Turner and Michael H. Ralphs and John O. Evans (1992).
   Logistic Analysis for Monitoring and Assessing Herbicide Efficacy.
-  emph{Weed Technology}, 6, 424-430.
+  \emph{Weed Technology}, 6, 424-430.
   \url{http://www.jstor.org/stable/3987312}.
 }
+
 \examples{
 
+data(turner.herbicide)
 dat <- turner.herbicide
 
 dat <- transform(dat, prop=dead/live)
-xyplot(prop~rate,dat, pch=20, main="turner.herbicide", ylab="Proportion killed")
+# xyplot(prop~rate,dat, pch=20, main="turner.herbicide", ylab="Proportion killed")
 
 m1 <- glm(prop~rate, data=dat, weights=live, family=binomial)
 coef(m1) # -3.46, 2.6567  Same as Turner eqn 3

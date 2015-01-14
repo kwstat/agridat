@@ -32,6 +32,7 @@
 
 \examples{
 
+data(hernandez.nitrogen)
 dat <- hernandez.nitrogen
 cprice <- 118.1 # $118.1/Mg or $3/bu
 nprice <- 0.6615 # $0.66/kg N or $0.30/lb N
@@ -39,6 +40,7 @@ nprice <- 0.6615 # $0.66/kg N or $0.30/lb N
 # Hernandez optimized yield with a constraint on the ratio of the prices.
 # Simpler to just calculate the income and optimize that.
 dat <- transform(dat, inc = yield * cprice - nitro * nprice)
+require(lattice)
 xyplot(inc ~ nitro|site, dat, groups=rep, auto.key=list(columns=4),
        main="hernandez.nitrogen")
 
@@ -48,9 +50,10 @@ dat1 <- subset(dat, site=='S5')
 # When we optimize on income, a simple quadratic model works just fine,
 # and matches the results of the nls model below.
 lm1 <- lm(inc ~ 1 + nitro + I(nitro^2), data=dat1) # Note, 'poly' gives weird coefs
-require("latticeExtra")
+if(require("latticeExtra")){
 # xyplot(inc~nitro, dat1, main="hernandez.nitrogen") +
-#   xyplot(fitted(lm1) ~ nitro, dat1, type='l')
+  #   xyplot(fitted(lm1) ~ nitro, dat1, type='l')
+}
 c1 <- coef(lm1)
 -c1[2] / (2*c1[3])
 ##    nitro

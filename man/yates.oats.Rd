@@ -35,6 +35,7 @@
 
 \examples{
 
+data(yates.oats)
 dat <- yates.oats
 
 desplot(yield ~ x*y, dat, out1=block, text=gen, col=nitro, cex=1,
@@ -62,6 +63,31 @@ m4 <- lmer(yield ~ x + nitro * gen + (1|block/gen), data=dat)
 ##    df      AIC
 ## m3  9 581.2372
 ## m4 10 557.9424
+}
+
+\dontrun{
+
+  # Demonstrate the use of the lsmeans package and asreml::predict
+
+  # --- nlme ---
+  require(nlme)
+  require(lsmeans)
+  dat2 <- yates.oats[-c(1,2,3,5,8,13,21,34,55),]
+  m5l <- lme(yield ~ factor(nitro) + gen, random = ~1 | block/gen,
+             data = dat2)
+
+  # --- asreml ---
+  require(asreml)
+  m5a <- asreml(yield ~ factor(nitro) + gen,
+                random = ~ block + block:gen, data=dat2)
+
+  require(lucid)
+  vc(m5l) # warning.  FIXME
+  vc(m5a)
+
+  lsmeans(m5l, "gen")
+  predict(m5a, classify="gen")$predictions$pvals
+
 }
 
 }

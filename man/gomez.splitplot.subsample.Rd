@@ -33,6 +33,7 @@
 
 \examples{
 
+data(gomez.splitplot.subsample)
 dat <- gomez.splitplot.subsample
 require(HH)
 interaction2wt(height ~ rep + time + manage, data=dat,

@@ -52,7 +52,10 @@
   \emph{Proceedings of the Royal Society A: Mathematical, Physical and
   Engineering Science}, 462, 2119--2143.
 }
+
 \examples{
+
+data(eden.potato)
 dat <- eden.potato
 
 # 1925 qualitative
@@ -72,6 +75,7 @@ d5 <- subset(dat, year=='1925b')
 desplot(yield ~ col*row, d5, out1=block, text=trt, cex=1,
         main="eden.potato: 1925 quantitative")
 # Trt 't' not defined, seems to be the same as 'a'
+require(lattice)
 dotplot(trt~yield|block, d5,
         main="eden.potato: 1925 quantitative")
 anova(m5 <- aov(yield~trt+block, d5)) # table 6

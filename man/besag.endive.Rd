@@ -39,6 +39,7 @@
 }
 \examples{
 
+data(besag.endive)
 dat <- besag.endive
 
 # Incidence map.  Figure 2 of Friel and Pettitt
@@ -74,6 +75,7 @@ m2 <- asreml(pres ~ 1, data=dat2, rcov= ~ar1(xf):ar1(yf))
 # suggesting the pattern is more 'patchy' than just random noise,
 # but is it meaningful?
 
+require(lucid)
 vc(m2)
 ##     effect component std.error z.ratio constr
 ## R!variance   0.1301   0.003798    34      pos

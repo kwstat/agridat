@@ -52,23 +52,27 @@
 }
 \examples{
 
-require(pls)
+data(talbot.potato)
 
-char <- talbot.potato$char
-yield <- talbot.potato$yield
+if(require(pls)){
 
-# Transform columns to zero mean and unit variance
-char <- scale(char)
-yield <- scale(yield)
+  char <- talbot.potato$char
+  yield <- talbot.potato$yield
 
-m1 <- plsr(yield ~ char, ncomp=3)
-summary(m1)
+  # Transform columns to zero mean and unit variance
+  char <- scale(char)
+  yield <- scale(yield)
 
-# Loadings factor 1
-lo <- loadings(m1)[,1,drop=FALSE]
-round(-1*lo[order(-1*lo),1,drop=FALSE],2)
+  m1 <- plsr(yield ~ char, ncomp=3)
+  summary(m1)
 
-biplot(m1, main="talbot.potato - biplot")
+  # Loadings factor 1
+  lo <- loadings(m1)[,1,drop=FALSE]
+  round(-1*lo[order(-1*lo),1,drop=FALSE],2)
+
+  biplot(m1, main="talbot.potato - biplot")
+
+}
 
 }
 

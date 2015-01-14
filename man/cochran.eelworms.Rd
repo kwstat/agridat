@@ -41,14 +41,17 @@
 \references{
   R. A. Bailey, 2008. \emph{Design of Comparative Experiments}. Cambridge.
 }
+
 \examples{
 
+data(cochran.eelworms)
 dat <- cochran.eelworms
 
 # Very strong spatial trends
 desplot(initial ~ col*row, data=dat, flip=TRUE, main="cochran.eelworms")
 
 # final counts are strongly related to initial counts
+require(lattice)
 xyplot(final~initial|dose, data=dat, group=fumigant,
        main="cochran.eelworms", xlab="Initial worm count",
        ylab="Final worm count", auto.key=list(columns=5))

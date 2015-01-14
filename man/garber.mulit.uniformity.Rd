@@ -20,7 +20,7 @@
 \details{
   In 1923 the field was planted to oats and harvested as hay.  In 1924
   the field was planted to wheat and harvested for grain.
-  
+
   Garber: "Plots 211 to 214, and 261 to 264, [note, these are rows
   11-14, columns 5-6] inclusive, were eliminated from this study because
   of the fact that a few years ago a straw stack had stood on or in the
@@ -43,6 +43,7 @@
 
 \examples{
 
+data(garber.multi.uniformity)
 dat <- garber.multi.uniformity
 
 desplot(oats ~ col*row, data=dat, flip=TRUE, tick=TRUE,

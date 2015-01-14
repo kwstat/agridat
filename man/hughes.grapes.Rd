@@ -44,15 +44,21 @@
   Analysing disease incidence data from designed experiments by
   generalized linear mixed models. \emph{Plant Pathology}, 48, 668--684.
 }
+
 \examples{
+
+data(hughes.grapes)
 dat <- hughes.grapes
 
 dat <- transform(dat, rate = diseased/total, plot=trt:block)
 
 # Trt 1 has higher rate, more variable, Trt 3 lower rate, less variable
+require(lattice)
 foo <- bwplot(rate ~ vine|block*trt, dat, main="hughes.grapes",
               xlab="vine")
-if (require(latticeExtra)) useOuterStrips(foo) else print(foo)
+if(require(latticeExtra)){
+  useOuterStrips(foo)
+}
 
 # Table 1 of Piepho 1999
 tapply(dat$rate, dat$trt, mean) # trt 1 does not match Piepho

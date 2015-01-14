@@ -34,6 +34,7 @@
 
 \examples{
 
+data(kang.maize)
 dat <- kang.maize
 
 # Sweep out loc means, then show interaction plot.
