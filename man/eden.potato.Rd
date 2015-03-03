@@ -44,7 +44,6 @@
   Studies in Crop Variation. VI. Experiments on the response of the
   potato to potash and nitrogen.
   \emph{Journal of Agricultural Science}, 19: 201-213.
-  \url{http://digital.library.adelaide.edu.au/coll/special/fisher/78.pdf}
 }
 \references{
   McCullagh, P. and Clifford, D., (2006).

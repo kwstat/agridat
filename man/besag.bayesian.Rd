@@ -43,8 +43,9 @@ require("lattice")
 xyplot(yield ~ rrow|col, dat, layout=c(1,3), type='s',
        main="besag.bayesian")
 
-# Use asreml to fit a model with AR1 gradient in rows
-if(require(asreml)){
+\dontrun{
+  # Use asreml to fit a model with AR1 gradient in rows
+  require(asreml)
   dat <- transform(dat, cf=factor(col), rf=factor(rrow))
   m1 <- asreml(yield ~ -1 + gen, data=dat, random=~ar1v(rf))
 

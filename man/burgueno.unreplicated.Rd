@@ -45,7 +45,9 @@ dat$check <- ifelse(dat$gen=="G000", 2, 1)
 desplot(yield ~ col*row, data=dat, main="burgueno.unreplicated",
         col=check, text=gen, cex=.75)
 
-if(require(asreml) && require(lucid)){
+\dontrun{
+  require(asreml)
+  require(lucid)
 
   # AR1 x AR1 with random genotypes
   dat <- transform(dat, xf=factor(col), yf=factor(row))

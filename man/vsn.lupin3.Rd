@@ -48,7 +48,7 @@ desplot(check~ col*row|site, dat,
         main="vsn.lupin3: check plot placement") # Site 1 & 2 used same randomization
 
 \dontrun{
-require("asreml")
+require(asreml)
 
 # Single-site analyses suggested random row term for site 3, random column terms
 # for all sites, AR1 was unnecessary for the col dimension of site 3

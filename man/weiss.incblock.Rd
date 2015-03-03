@@ -48,8 +48,9 @@ dat <- weiss.incblock
 desplot(yield~col*row, dat, text=gen, shorten='none', cex=.8, out1=block,
     main="weiss.incblock", xlab="Soybean yields", aspect=252/96)
 
-# Standard inc block analysis used by Weiss and Cox
-if(require(asreml)){
+\dontrun{
+  # Standard inc block analysis used by Weiss and Cox
+  require(asreml)
   m1 <- asreml(yield ~ gen + block , data=dat)
   predict(m1, classify="gen")$predictions$pvals
   ## gen pred.value std.error est.stat

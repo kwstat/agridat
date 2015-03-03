@@ -67,11 +67,11 @@ following:
 \source{
   Lee, Arier Chi-Lun (2009). Random effects models for ordinal data.
   Ph.D. thesis, The University of Auckland.
-  \url{https://researchspace.auckland.ac.nz/handle/2292/4544}.
+  https://researchspace.auckland.ac.nz/handle/2292/4544.
 
   Used with permission of Arier Chi Lun Lee and John Anderson.
   Licensed via Open Database License.  Data retrieved from
-  \url{https://researchspace.auckland.ac.nz/handle/2292/5240}.
+  https://researchspace.auckland.ac.nz/handle/2292/5240.
 }
 
 \examples{

@@ -51,7 +51,8 @@ if(require(lme4) && require(lucid)){
   ##   Residual        <NA> <NA> 133200 365
 }
 
-if(require(asreml)){
+\dontrun{
+  require(asreml)
   # Inc block model
   m2 <- asreml(yield ~ gen, data=dat, random = ~ rep/block)
   m2$loglik # Matches Burgueno p. 26

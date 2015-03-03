@@ -58,7 +58,7 @@ vc(m1)
 
 \dontrun{
 # Incomplete block model of Gilmour et al 1995
-require("asreml")
+require(asreml)
 m2 <- asreml(yield ~ gen, random = ~ rep/(xf+yf), data=dat)
 
 vc(m2)

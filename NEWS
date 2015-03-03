@@ -1,19 +1,20 @@
 News for 'agridat'
 
-Version 1.11 (Unreleased)
+Version 1.11 (Mar 2015)
 
 * New data:
-  besag.beans, besag.triticale, burgeuno.alpha, burgueno.rowcol, burgueno.unreplicated
+  besag.beans, besag.triticale, burgeuno.alpha, burgueno.rowcol,
+  burgueno.unreplicated, steptoe.morex.geno, steptoe.morex.pheno
 
 * Other
   Now includes 'nipals' function for principal components with missing data.
-  Removed pcaMethods from Imports.
+  Removed non-CRAN package pcaMethods from Imports.
+  Removed (after adding) asreml from Suggests (due to CRAN check problems).
 
 * Wish list:
   JAGS code for lee.potatoblight
   JAGS code for theobald.barley
   JAGS code for besag.elbatan.
-  Example for bond.diallel.
 
 Version 1.10 (Nov 2014)
 
@@ -47,7 +48,6 @@ Version 1.9 (Jul 2014)
   gge: to fit and plot GGE biplots.
 
 * Other:
-  Fix AMMI examples due to change in agricolae package.
   Use if(require(lme4)) in examples.  Ripley request.
   hayman.diallel is now hayman.tobacco
   besag.met now includes missing values (to form complete rectangles).

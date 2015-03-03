@@ -43,13 +43,9 @@
   least squares regression.
   \emph{Biuletyn Oceny Odmian}, 21/22, 19--25.
 
-  Also: \url{http://www.bioss.ac.uk/smart/unix/mplsgxe/example/t2.g}
-
   Used with permission of Mike Talbot.
 }
-\references{
-  \url{http://www.bioss.ac.uk/smart/unix/mplsgxe/slides/}
-}
+
 \examples{
 
 data(talbot.potato)

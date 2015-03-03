@@ -85,7 +85,7 @@ mean(c(coef(m1)[21], coef(m1)[21]+coef(m1)[22:40]))
   ##  - Rescale variables?;Model is nearly unidentifiable: large eigenvalue ratio
   ##  - Rescale variables?
 
-  # Looks dangerous.  Try asreml.  No problem.
+  # Results from lme4 look dangerous.  Try asreml.  No problem.
   require(asreml)
   m2a <- asreml(y ~ 1 + yor, data=dat, random = ~ env + env:yor)
 

@@ -200,6 +200,8 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{snedecor.asparagus}        \tab     \tab    \tab 4   \tab 4  \tab 4   \tab \tab split-plot, antedependence \cr
 \link{snijders.fusarium}         \tab 17  \tab    \tab     \tab 3  \tab 4   \tab percent \tab glm/gnm,AMMI \cr
 \link{steel.soybean}             \tab 12  \tab 3  \tab 3   \tab    \tab     \tab \tab \cr
+\link{steptoe.morex.pheno}       \tab 152 \tab 16 \tab     \tab    \tab     \tab 10 traits \tab \cr
+\link{steptoe.morex.geno}        \tab 150 \tab    \tab     \tab    \tab     \tab 223 markers, qtl \tab \cr
 \link{streibig.competition}      \tab 2   \tab    \tab 3   \tab    \tab     \tab \tab glm \cr
 \link{stroup.nin}                \tab 56  \tab    \tab 4   \tab    \tab     \tab xy \tab asreml \cr
 \link{stroup.splitplot}          \tab     \tab    \tab 4   \tab    \tab     \tab \tab asreml, MCMCglmm \cr

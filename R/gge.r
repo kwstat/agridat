@@ -81,7 +81,9 @@ if(0){  # Tests
 
   # Corssa example
   require("reshape2")
-  data(crossa.wheat, package="agridat")
+  # CRAN check doesn't like data() loading into global envt, so keep
+  # this commented out.
+  # data(crossa.wheat, package="agridat")
   dat1 <- crossa.wheat
   mat1 <- acast(dat1, gen~loc)
   mat1 <- mat1[, c("SR","SG","CA","AK","TB","SE","ES","EB","EG",

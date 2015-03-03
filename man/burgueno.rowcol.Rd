@@ -49,8 +49,8 @@ if(require(lme4) && require(lucid)){
 
 }
 
-if(require(asreml) && require(lucid)){
-
+\dontrun{
+  require(asreml)
   # AR1 x AR1 with linear row/col effects, random spline row/col
   dat <- transform(dat, xf=factor(col), yf=factor(row))
   dat <- dat[order(dat$xf,dat$yf),]
@@ -60,6 +60,7 @@ if(require(asreml) && require(lucid)){
   m2 <- update(m2) # More iterations
 
   # Scaling of spl components has changed in asreml from old versions
+  require(lucid))
   vc(m2) # Match Burgueno p. 42
   ##      effect component std.error z.ratio constr
   ##     spl(yf)  0.09077    0.08252   1.1      pos

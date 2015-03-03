@@ -52,9 +52,32 @@ m1 <- lm(yield ~ 0 + gen + factor(block), dat)
 p1 <- coef(m1)[1:50]
 
 # Add smooth trend with GAM
-if(require(gam)){
+if(require(mgcv)){
+  m3 <- gam(yield ~ -1 + gen + factor(block) + s(row), data=dat)
+  plot(m3, residuals=TRUE, cex=3, main="besag.elbatan")
+  # pred <- cbind(dat, predict(m3, data=dat, type="terms"))
+
+  # Compare estimates
+  p2 <- coef(m3)[1:50]
+  lims <- range(c(p1,p2))
+  plot(p1, p2, xlab="RCB prediction",
+       ylab="RCB with smooth trend (predicted)",
+       type='n', xlim=lims, ylim=lims,
+       main="besag.elbatan")
+  text(p1, p2, 1:50, cex=.5)
+  abline(0,1,col="gray")
+}
+
+# Formerly used gam package, but as of R 3.1, Rcmd check --as-cran
+# is complaining
+# Calls: plot.gam ... model.matrix.gam -> predict -> predict.gam -> array
+# but it works perfectly in interactive mode !!!
+# Remove the FALSE to run the code below
+if(FALSE & require(gam)){
   m2 <- gam(yield ~ -1 + gen + factor(block) + lo(row), data=dat)
-  plot(m2, residuals=TRUE, se=TRUE,,
+  plot.gam(m2)
+
+  plot(m2, residuals=TRUE, se=TRUE,
        terms="lo(row)", main="besag.elbatan")
   pred <- cbind(dat, predict(m2, dat, type="terms"))
   # Need to correct for the average loess effect, which is like

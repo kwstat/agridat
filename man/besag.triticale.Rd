@@ -65,7 +65,7 @@ xyplot(res ~ col|as.character(row), data=dat,
   # Besag uses an adjustment based on neighboring plots.
   # This analysis fits the standard AR1xAR1 residual model
   # Needs asreml package (not on CRAN)
-  library(asreml)
+  require(asreml)
   dat <- dat[order(dat$xf, dat$yf), ]
   m3 <- asreml(yield ~ gen + rate + nitro + regulator +
                  gen:rate + gen:nitro + gen:regulator +
