@@ -1,6 +1,6 @@
 Package: agridat
 Version: 1.11
-Date: 2014-12-01
+Date: 2015-03-01
 Title: Agricultural Datasets
 Type: Package
 Author: Kevin Wright
@@ -8,16 +8,15 @@ Maintainer: Kevin Wright <kw.stat@gmail.com>
 Description: Datasets from books, papers, and websites related to agriculture.
     Example analyses are included.  Includes functions for plotting field
     designs and GGE biplots.
-Imports:
-    grid,
-    lattice,
-    reshape2
+Imports: grid, lattice, reshape2
 Suggests:
     AER,
     agricolae (>= 1.2),
+    betareg,
     car,
     coin,
     corrgram,
+    effects,
     equivalence,
     FrF2,
     gam,
@@ -33,9 +32,9 @@ Suggests:
     MCMCglmm,
     mgcv,
     nlme,
-    pcaMethods,
+    ordinal,
     pls,
-    pscl,
+    pscl, qtl,
     sp,
     survival,
     vcd
