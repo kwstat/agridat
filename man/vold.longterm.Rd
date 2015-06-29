@@ -56,24 +56,28 @@ foo1 <- xyplot(yield ~ nitro | factor(year), data = dat,
 \dontrun{
 # Long term trend shows decreasing yields
 xyplot(yield ~ year , data = dat, group=nitro, type='o',
-       main="vold.longterm")
-
-# First, asymptotic model for each year
-m1.nls <- nls(yield ~ SSasymp(nitro, max, int, lograte), data=dat)
-summary(m1.nls)
-confint(m1.nls)
-
-# Raw data plus global model.  Year variation not modeled.
-pdat <- data.frame(nitro=seq(0,14,0.5))
-pdat$pred <- predict(m1.nls, newdata=pdat)
-if(require(latticeExtra)) { # for layers
-  foo1 + xyplot(pred ~ nitro , data = pdat,
-                as.table=TRUE, type='l', col='red', lwd=2)
+       main="vold.longterm - yield grouped by nitrogen", auto.key=list(columns=7))
 }
 
-# Separate fit for each year.  This is overfitting with 3x19=57 params.
-m2.lis <- nlsList(yield ~ SSasymp(nitro,max,int,lograte) | year, data=dat)
-plot(intervals(m2.lis),layout = c(3,1)) # lograte might be same for each year
+\dontrun{
+  # Global model
+  m1.nls <- nls(yield ~ SSasymp(nitro, max, int, lograte), data=dat)
+  summary(m1.nls)
+  confint(m1.nls)
+  
+  # Raw data plus global model.  Year variation not modeled.
+  pdat <- data.frame(nitro=seq(0,14,0.5))
+  pdat$pred <- predict(m1.nls, newdata=pdat)
+  if(require(latticeExtra)) { # for layers
+    foo1 + xyplot(pred ~ nitro , data = pdat,
+                  as.table=TRUE, type='l', col='red', lwd=2)
+  }
+}
+
+\dontrun{
+  # Separate fit for each year.  Overfitting with 3x19=57 params.
+  m2.lis <- nlsList(yield ~ SSasymp(nitro,max,int,lograte) | year, data=dat)
+  plot(intervals(m2.lis),layout = c(3,1)) # lograte might be same for each year
 }
 
 # Fixed overall asymptotic model, plus random deviations for each year
@@ -101,7 +105,7 @@ m3.lme <- nlme(yield ~ SSasymp(nitro, max, int, lograte), data=dat,
 ## # intervals(fit4.lm3, which="var-cov")
 ## # anova(m3.lme, fit4.lm3)
 
-# Random-effect model gives an excellent fit
+# Plot the random-effect model.  Good fit with few parameters.
 pdat2 <- expand.grid(year=1970:1988, nitro=seq(0,15,length=50))
 pdat2$pred <- predict(m3.lme, new=pdat2)
 pdat2$predf <- predict(m3.lme, new=pdat2, level=0)

@@ -1,5 +1,5 @@
 % agridat_examples.Rnw
-% Time-stamp: <01 Dec 2014 13:44:32 c:/x/rpack/agridat/vignettes/agridat_examples.Rnw>
+% Time-stamp: <30 Apr 2015 13:21:58 c:/x/rpack/agridat/vignettes/agridat_examples.Rnw>
 
 % \VignetteEngine{knitr::knitr}
 % \VignetteIndexEntry{Graphical Gems in the 'agridat' Package}
@@ -314,7 +314,7 @@ if(require(HH)){
 @
 % ----------------------------------------------------------------------------
 \pagebreak
-\section{3D view}
+\section{3D yield response to fertilizers}
 
 \cite{sinclair1994sulphur} examined clover yields as a function of sulfur and
 phosphorous fertilizer in a factorial-treatment experiment.
@@ -335,7 +335,7 @@ How would you decide the optimal fertilizer levels?
 \end{center}
 % ----------------------------------------------------------------------------
 \pagebreak
-\section{Mosaic plot of data}
+\section{Mosaic plot of potato damage from harvesting}
 
 \cite{keen1997analysis} looked at damage to potatoes caused by lifting rods
 during harvest. In this experiment, eight
@@ -359,7 +359,7 @@ mosaicplot(d2, color=c("lemonchiffon1","moccasin","lightsalmon1","indianred"),
 @
 % ----------------------------------------------------------------------------
 \pagebreak
-\section{Lattice barley data}
+\section{Yield vs covariate for lattice::barley}
 
 \cite{wright2013revisiting} investigated the \code{lattice::barley} data.
 The original two years of data were extended to 10 years (from original source
@@ -449,7 +449,7 @@ biplot(m4, lab.env=TRUE, title="crossa.wheat")
 % ----------------------------------------------------------------------------
 
 \pagebreak
-\section{Nebraska farming income}
+\section{Nebraska farming income choropleth}
 
 The Red-Blue palette in the \code{RColorBrewer} package is a divergent palette
 with light colors near the middle of the scale.  This can cause problems when
@@ -523,8 +523,8 @@ mapplot(stco ~ crop.rate + animal.rate, data = dat,
 \cite{anselin2004spatial} and \cite{lambert2004comparison} looked at yield
 monitor data collected from a corn field in Argentina in 1999 and 2001,
 to see how yield
-was affected by field topography and nitrogen fertilizer.  The figure below
-shows heatmaps for the yield each year, and also the experiment design (colors
+was affected by field topography and nitrogen fertilizer.  The figures below
+show heatmaps for the yield each year, and also the experiment design (colors
 are reps, shades of color are nitrogen level, plotting character is topography).
 
 Which year showed greater spatial variation in yield?
@@ -597,7 +597,7 @@ plot(foo2, split = c(1, 2, 1, 2), newpage = FALSE)
 % ----------------------------------------------------------------------------
 
 \pagebreak
-\section{NASS}
+\section{Time series of corn yields by state}
 
 The National Agricultural Statistics Service tracks the total number of acres
 planted to corn (and other crops) for each state in the U.S.  The plot below

@@ -42,7 +42,7 @@ Bodyweight of cows in a 2-by-2 factorial experiment
 
 \references{
   Lepper, AWD and Lewis, VM, 1989. Effects of altered dietary iron
-  intake in Mycobacterium paratuberculosis-mfecteA dairy cattle:
+  intake in Mycobacterium paratuberculosis-infected dairy cattle:
   sequential observations on growth, iron and copper metabolism and
   development of paratuberculosis, \emph{Research in veterinary
     science}, 46, 289--296.

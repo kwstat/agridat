@@ -43,7 +43,7 @@
 
   B. I. Hayman (1954a). The Analysis of Variance of Diallel Tables.
   \emph{Biometrics}, 10, 235-244.  Table 5, page 241.
-  \url{http://www.jstor.org/stable/3001877}.
+  http://www.jstor.org/stable/3001877
 
   Hayman, B.I. (1954b). The theory and analysis of diallel crosses.
   \emph{Genetics}, 39, 789-809.  Table 3, page 805.

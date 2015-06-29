@@ -29,7 +29,8 @@
   Tubers were rated as undamaged (D1) to severely damaged (D4).
 
   The main interest is in differences between rods, and not in
-  interactions.
+  interactions.  The other factors (besides rod) were introduced to
+  create variety in experimental conditions and are not of interest.
 
   Keen and Engle estimated the following rod effects.
 
@@ -68,7 +69,13 @@ mosaicplot(d2, color=c("lemonchiffon1","moccasin","lightsalmon1","indianred"),
   round(coef(m1)[4:10],2)
   ## rodR2 rodR3 rodR4 rodR5 rodR6 rodR7 rodR8
   ## -1.19 -0.41  0.50 -1.46 -1.73 -1.67 -1.99
+
+  # Alternative
+  # m2 <- clmm(damage ~ rod + energy + gen + weight +
+  #          (1|rod:energy), data=dat, weights=count, link='probit')
+
 }
+
 
 }
 \keyword{datasets}

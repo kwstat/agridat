@@ -113,6 +113,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{cochran.crd}               \tab     \tab    \tab     \tab    \tab 7   \tab xy, crd\tab aov \cr
 \link{cochran.factorial}         \tab     \tab    \tab 2   \tab    \tab 4^2 \tab factorial \tab aov \cr
 \link{cochran.latin}             \tab     \tab    \tab 6   \tab    \tab 6   \tab xy, latin\tab aov \cr
+\link{cochran.lattice}           \tab     \tab    \tab 5   \tab    \tab 16  \tab xy, latin\tab lmer \cr
 \link{cochran.wireworms}         \tab     \tab    \tab 5   \tab    \tab 5   \tab xy, latin\tab glm \cr
 \link{cochran.eelworms}          \tab     \tab    \tab 4   \tab    \tab 5   \tab xy \tab aov \cr
 \link{connolly.potato}           \tab 20  \tab    \tab 4   \tab    \tab     \tab xy, competition \tab lm \cr
@@ -163,6 +164,8 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{hughes.grapes}             \tab     \tab    \tab 3   \tab    \tab 6   \tab binomial \tab lmer, aod, glmm\cr
 \link{hunter.corn}               \tab     \tab 12 \tab     \tab 3  \tab 1   \tab rsm1 \tab xyplot \cr
 \link{ivins.herbs}               \tab 13  \tab    \tab 6   \tab    \tab     \tab 2 traits \tab lm, friedman\cr
+\link{jansen.apple}              \tab 3   \tab    \tab 4   \tab    \tab 3   \tab binomial \tab glmer\cr
+\link{jansen.carrot}             \tab 16  \tab    \tab 3   \tab    \tab 2   \tab binomial \tab glmer\cr
 \link{jansen.strawberry}         \tab 12  \tab    \tab 4   \tab    \tab     \tab ordinal \tab mosaicplot\cr
 \link{jenkyn.mildew}             \tab     \tab    \tab 9   \tab    \tab 4   \tab \tab lm\cr
 \link{john.alpha}                \tab 24  \tab    \tab 3   \tab    \tab     \tab alpha \tab lm, lmer \cr
@@ -276,9 +279,9 @@ White and van Evert (2008) present some guidelines for publication of data.
 
 Some of the examples use the \code{asreml} package since it is the _only_
 R tool for fitting mixed models with complex variance structures to
-large datasets, and also the only option (even for small datasets) for
+large datasets, and almost the only option (even for small datasets) for
 modelling AR1xAR1 residual variance structures.
-A free trial version is available. Commercial use requires a license:
+Commercial use of \code{asreml} requires a license:
 \url{http://www.vsni.co.uk/downloads/asreml/}.
 
 \bold{Comments on the package structure}
@@ -287,15 +290,15 @@ The original sources for these data use several different words to refer to
 genotypes including \emph{breed}, \emph{cultivar}, \emph{genotype}, \emph{hybrid},
 \emph{line}, \emph{progeny}, \emph{stock}, \emph{type}, and \emph{variety}.
 For consistency, these datasets mostly use \code{gen} (genotype).
-Also for consistency \code{row} and \code{col} are often used for the
+Also for consistency \code{row} and \code{col} are usually used for the
 coordinates.
 
 In dataframes, 'block', 'rep', and similar terms are almost always coded
 like B1, B2, B3 instead of 1, 2, 3.  This causes R to treat the data as
-a factor instead of a numeric covariate.
+a factor instead of a numeric covariate (which is a good thing).
 
-In almost all cases, the data are presented as data frames.  In a few
-cases, the data are lists of matrices.
+Most data are presented as data frames.  In a few cases, the data are
+lists of matrices. 
 
 Although using \code{data()} is not necessary to access the data files,
 the example sections do include the use of \code{data()} because
@@ -312,14 +315,31 @@ decades) in this package.
 Data produced from work of the United States government is not subject to
 copyright. \url{http://en.wikipedia.org/wiki/Copyright_status_of_work_by_the_U.S._government}
 
+\bold{Other resources}
+
+The SDaA package
+\url{http://cran.r-project.org/package=SDaA} contains
+county-level data from the United States Census of Agriculture, along
+with a vignette to illustrate survey sampling analyses.
+
+\code{lmtest:ChickEgg} has time series of annual chicken and egg
+production in the United States 1930-1983.
+
+Payne 2013 - Design and Analysis of Long-Term Rotation Experiments.
+https://www.agronomy.org/publications/aj/pdfs/107/2/772
+Data and R code.
+
+
 }
 
 \author{
   Kevin Wright, kw.stat@gmail.com
 
   The author is grateful to the many people who granted permission to
-  include their data in this package.  If you use these data, please
-  cite this package and the original source of the data.
+  include their data in this package.
+
+  If you use these data, please cite the agridat package and the
+  original source of the data.
 }
 
 \references{

@@ -24,8 +24,8 @@
   Connolly et el use this data to illustrate how yield can be affected
   by competition from neighboring plots.
 
-  This data uses 'M1','M2','M3' for maturity, while Connolly et al use
-  'FE','SE','M' (first early, second early, maincrop).
+  This data uses M1, M2, M3 for maturity, while Connolly et al use
+  FE (first early), SE (second early) and M (maincrop).
 
   The trial was 20 sections, each of which was an independent row of 20
   drills.  The data here are four reps of single-drill plots from
@@ -43,9 +43,11 @@
 }
 \source{
   Connolly, T and Currie, ID and Bradshaw, JE and McNicol, JW. (1993).
-  Inter-plot competition in yield trials of potatoes (Solanum tuberosum
-  L.) with single-drill plots.
+  Inter-plot competition in yield trials of potatoes
+  \emph{Solanum tuberosum L.} with single-drill plots.
   \emph{Annals of applied biology}, 123, 367-377.
+
+  Used with permission of Iain Currie.
 }
 
 \examples{

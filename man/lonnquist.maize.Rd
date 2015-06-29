@@ -37,7 +37,7 @@
   C. O. Gardner and S. A. Eberhart. 1966.
   Analysis and Interpretation of the Variety Cross Diallel and Related
   Populations. \emph{Biometrics}, 22, 439-452.
-  \url{http://www.jstor.org/stable/2528181}
+  http://www.jstor.org/stable/2528181
 
 }
 

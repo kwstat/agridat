@@ -48,8 +48,6 @@ Birth weight and weaning weight of Dorper x Red Maasi lambs
   variation in lamb weaning weight. International Livestock Research Institute.
   \url{http://www.ilri.org/biometrics/CS/case\%20study\%204/case\%20study\%204.1.htm}
     Retrieved Dec 2011.
-
-  Used under Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License.
 }
 \references{
   Baker, RL and Nagda, S. and Rodriguez-Zas, SL and Southey, BR and

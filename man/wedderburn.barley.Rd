@@ -27,7 +27,7 @@
   Quasilikelihood functions, generalized linear models and the
   Gauss-Newton method.
   \emph{Biometrika}, 61, 439--47.
-  \url{http://www.jstor.org/stable/2334725}.
+  http://www.jstor.org/stable/2334725.
 
   Wedderburn credits the original data to an unpublished thesis by
   J. F. Jenkyn.

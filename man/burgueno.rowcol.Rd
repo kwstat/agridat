@@ -29,6 +29,9 @@
     ASREML}.  CIMMYT.
 
   Electronic version of the data obtained from CropStat software.
+
+  Used with permission of Juan Burgueno.
+
 }
 
 \examples{

@@ -128,9 +128,9 @@ jdat =list(germ = dat$germ, n = dat$n,
 
 jinit = list(int = 0, genO75 = 0, extcuke = 0, g75ecuke = 0, tau = 10)
 
-# Unlike the BUGS docs, we use names that we can actually interpret!
-mod.bug = "
-model {
+# Unlike the BUGS docs, we use names that we can actually interpret
+mod.bug =
+"model {
   for(i in 1:nobs) {
     germ[i] ~ dbin(p[i], n[i])
     b[i] ~ dnorm(0.0, tau)
@@ -146,18 +146,21 @@ model {
 }"
 
 require(rjags)
-j1 <- jags.model(textConnection(mod.bug), data=jdat, inits=jinit, n.chains=1)
+oo <- textConnection(mod.bug)
+j1 <- jags.model(oo, data=jdat, inits=jinit, n.chains=1)
+close(oo)
 
 c1 <- coda.samples(j1, c("int","genO75","g75ecuke","extcuke","sigma"),
                    n.iter=20000)
 summary(c1) # Medians are very similar to estimates from hglm
-## Quantiles for each variable:
-##               2.5%     25%     50%     75%   97.5%
-## extcuke  -0.181347  0.3006  0.5220  0.7340 1.15979
-## g75ecuke  0.005857  0.5557  0.8274  1.1033 1.71047
-## genO75   -0.714404 -0.2838 -0.1000  0.1007 0.53403
-## int      -0.950749 -0.6174 -0.4543 -0.2951 0.04221
-## sigma     0.040928  0.1705  0.2681  0.3649 0.58064
+# require(lucid)
+# print(vc(c1),3)
+##             Mean    SD    2.5%  Median   97.5%
+## extcuke   0.543  0.331 -0.118   0.542   1.2   
+## g75ecuke  0.807  0.436 -0.0586  0.802   1.7   
+## genO75   -0.0715 0.309 -0.665  -0.0806  0.581 
+## int      -0.479  0.241 -0.984  -0.473  -0.0299
+## sigma     0.289  0.142  0.0505  0.279   0.596 
 
 # Plot observed data with HPD intervals for germination probability
 c2 <- coda.samples(j1, c("p"), n.iter=20000)
@@ -203,8 +206,6 @@ mod.bug = function() {
 }
 
 parms <- c("int","genO75","g75ecuke","extcuke","sigma")
-
-# set.seed(123456) # Seed does not seem to affect results
 
 j1 <- jags(data=jdat, inits=jinit, parms, model.file=mod.bug,
            n.iter=20000, n.chains=1)

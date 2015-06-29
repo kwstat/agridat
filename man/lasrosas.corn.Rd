@@ -52,10 +52,10 @@
 
   Anselin et al. used corn grain price of $6.85/quintal and nitrogen
   cost of $0.4348/kg.
-
+  
   The corners of the field in 1999 are:
-  \url{http://mapper.acme.com/?ll=-33.05012577,-63.84886365&z=15},
-  \url{http://mapper.acme.com/?ll=-33.05229635,-63.84181819&z=15}.
+  \url{https://www.google.com/maps/place/-33.0501258,-63.8488636}
+  \url{https://www.google.com/maps/place/-33.05229635,-63.84181819}
 
   Anselin et al. found a significant response to nitrogen for slope.
   However, Bongiovanni and Lowenberg-DeBoer (2002) found that slope
@@ -64,9 +64,9 @@
 }
 \source{
 
-  The Las Rosas data files obtained from
-  \url{https://geodacenter.asu.edu/sdata}.  Converted from ESRI shape
-  files to a flat data.frame.
+  The Las Rosas data files were obtained from
+  \url{https://geodacenter.asu.edu/sdata}
+  and converted from ESRI shape files to a flat data.frame.
 
   Used with permission of the ASU GeoDa Center.
 

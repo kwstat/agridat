@@ -1,10 +1,12 @@
 # desplot.r
-# Time-stamp: <30 Sep 2014 11:50:43 c:/x/rpack/agridat/R/desplot.r>
+# Time-stamp: <10 Jun 2015 16:41:15 c:/x/rpack/agridat/R/desplot.r>
 # Copyright 2014, Kevin Wright
+
+# TODO: If we have 'text' and shorten='no', don't bother with the key.
 
 # Needs grid, lattice, reshape2
 
-RedGrayBlue <- colorRampPalette(c("firebrick", "lightgray", "#305a7f"))
+RedGrayBlue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
 
 desplot <- function(form=formula(NULL ~ x + y), data,
                     num=NULL, col=NULL, text=NULL, out1=NULL, out2=NULL,
@@ -54,7 +56,7 @@ desplot <- function(form=formula(NULL ~ x + y), data,
   ff <- latticeParseFormula(form, data)
   ff <- list(resp = ff$left.name,
              xy = strsplit(ff$right.name, " ")[[1]],
-             cond = names(ff$cond))
+             cond = names(ff$condition))
   if(length(ff$resp)==0L) ff$resp <- NULL
 
   fill.var <- ff$resp
@@ -75,8 +77,10 @@ desplot <- function(form=formula(NULL ~ x + y), data,
   else if (is.character(data[[fill.var]])){
     data[[fill.var]] <- as.factor(data[[fill.var]])
     fill.type <- "factor"
-  } else fill.type <- "num"
-
+  } else {
+    fill.type <- "num"
+  }
+  
   # Now get the fill values/length
   if(fill.type=="none") {
     fill.val <- rep(1, nrow(data))
@@ -131,7 +135,7 @@ desplot <- function(form=formula(NULL ~ x + y), data,
     col.text <- c("black", "red3", "darkorange2", "chartreuse4",
                   "deepskyblue4", "blue", "purple4", "darkviolet", "maroon")
 
-  # Change x/y from factor to numeric if needed.  Add missing levels.
+  # Change x/y from factor to numeric if needed.  Add missing x,y levels.
   fac2num <- function(x) as.numeric(levels(x))[x]
   if(is.factor(data[[x.var]])) data[[x.var]] <- fac2num(data[[x.var]])
   if(is.factor(data[[y.var]])) data[[y.var]] <- fac2num(data[[y.var]])
@@ -209,6 +213,11 @@ desplot <- function(form=formula(NULL ~ x + y), data,
   # We might not have a key, even though it was requested
   if (lr==0) show.key <- FALSE
 
+  # In function call we use 'list' instead of 'gpar' because gpar is not
+  # exported from grid, so now fixup the class for out1.gpar, out2.gpar
+  if(class(out1.gpar) != "gpar") class(out1.gpar) <- "gpar"
+  if(class(out2.gpar) != "gpar") class(out2.gpar) <- "gpar"
+  
   # ----- Now we can actually set up the legend grobs -----
   if(show.key) {
     longstring <- lt[which.max(nchar(lt))]
@@ -224,10 +233,6 @@ desplot <- function(form=formula(NULL ~ x + y), data,
                          data=list(NULL, longstring))))
 
     offset <- 1
-
-    # If user used a list to define out1.gpar, we need to make it class 'gpar'
-    if(class(out1.gpar) != "gpar") class(out1.gpar) <- "gpar"
-    if(class(out2.gpar) != "gpar") class(out2.gpar) <- "gpar"
 
     if(has.out1){ # outline
       foo <- placeGrob(foo, linesGrob(x = unit(c(.2, .8), "npc"),
@@ -315,6 +320,7 @@ desplot <- function(form=formula(NULL ~ x + y), data,
   out1.val <- if(has.out1) data[[out1.var]] else NULL
   out2.val <- if(has.out2) data[[out2.var]] else NULL
 
+  #browser()
   out <-
     levelplot(form,
               data=data
@@ -448,6 +454,7 @@ panel.outlinelevelplot <- function(x, y, z, subscripts, at, ...,
       # reshape melts char vector to char, reshape 2 melts to factor!
       # both packages could be attached, hack to fix this...
       out1$value <- as.character(out1$value)
+
       out1 <- acast(out1, y~x)
       # Careful.  The 'out' matrix is upside down from the levelplot
 

@@ -58,10 +58,15 @@ anova(m2)
 
 # GLM with random blocking.
 if(require(lme4)){
-m3 <- glmer(worms ~ -1 + trt + (1|rowf) + (1|colf),
-           data=dat, family="poisson",
-           control=glmerControl(check.conv.grad=.makeCC(action="ignore", tol=0.01)))
+m3 <- glmer(worms ~ -1 +trt +(1|rowf) +(1|colf), data=dat, family="poisson")
 summary(m3)
+## Fixed effects:
+##      Estimate Std. Error z value Pr(>|z|)    
+## trtK   0.1393     0.4275   0.326    0.745    
+## trtM   1.7814     0.2226   8.002 1.22e-15 ***
+## trtN   1.9028     0.2142   8.881  < 2e-16 ***
+## trtO   1.7147     0.2275   7.537 4.80e-14 ***
+
 }
 
 }

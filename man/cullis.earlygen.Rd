@@ -26,8 +26,8 @@
   other standard varieties were randomly interspersed over the trial.
   Each plot was 15m x 1.8m.
 
-  The 'weed' variable is a visual score, 0 = no weeds, 10 = 100 percent
-  weeds.
+  The 'weed' variable is a visual score on a 0 to 10 scale,
+  0 = no weeds, 10 = 100 percent weeds.
 
   The replicated check variety was numbered 526. A further 6 replicated
   commercially available varieties (numbered 527 to 532) were also
@@ -47,7 +47,7 @@
   A New Procedure for the Analysis of Early Generation Variety Trials.
   \emph{Journal of the Royal Statistical Society. Series C (Applied
     Statistics)}, 38, 361-375.
-  \url{http://www.jstor.org/stable/2348066}.
+  http://www.jstor.org/stable/2348066
 }
 \references{
   \url{http://www.vsni.co.uk/software/asreml/htmlhelp/asreml/xwheat.htm}.

@@ -34,7 +34,7 @@
   Geoffrey Beall. 1940. The Fit and Significance of Contagious
   Distributions when Applied to Observations on Larval Insects.
   \emph{Ecology}, 21, 460-474.  Page 463.
-  \url{http://www.jstor.org/stable/1930285}.
+  http://www.jstor.org/stable/1930285.
 }
 
 \examples{

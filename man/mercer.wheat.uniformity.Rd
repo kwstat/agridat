@@ -18,20 +18,32 @@
   }
 }
 \details{
-The wheat crop was grown in the summer of 1910 at Rothamsted Experiment Station
-(Harpenden, Herts, England).  In the Great Knott, a seemingly uniform area of
-1 acre was harvested in separate plots, each 1/500th acre in size.  The
-grain and straw from each plot was weighed separately.  Row 1 is the
-south edge, row 20 is the north.  Column 1 is the west edge.  The
-dimensions of each plot were approximately 3.2 meters by 2.5 meters.
+  The wheat crop was grown in the summer of 1910 at Rothamsted
+  Experiment Station (Harpenden, Hertfordshire, England).  In the Great Knott, a
+  seemingly uniform area of 1 acre was harvested in separate plots, each
+  1/500th acre in size.  The grain and straw from each plot was weighed
+  separately.
+
+  Row 1 is the south edge, row 20 is the north.
+  Column 1 is the west edge.
+  The dimensions of each plot were approximately 3.2 meters by 2.5
+  meters.
+
+  D. G. Rossiter (2014) uses this data for an extensive data analysis
+  tutorial.
+  
 }
 \source{
-  Mercer, WB and Hall, AD, 1911. The experimental error of field trials
+  Mercer, WB and Hall, AD, (1911). The experimental error of field trials
   \emph{The Journal of Agricultural Science}, 4, 107-132. Table 5.
 }
+
 \references{
-The 'spdep' package includes the grain yields
-(only) and spatial positions of plot centres in its example dataset 'wheat'.
+  D. G. Rossiter (2014). Tutorial: Using the R Environment for Statistical Computing
+  An example with the Mercer & Hall wheat yield dataset.
+  
+  The 'spdep' package includes the grain yields
+  (only) and spatial positions of plot centres in its example dataset 'wheat'.
 }
 
 \examples{

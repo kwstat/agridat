@@ -2,7 +2,7 @@
 \alias{cochran.latin}
 \docType{data}
 \title{
-  Latin square design
+  Latin square design in wheat
 }
 \description{
 Six wheat plots were sampled by six operators and shoot heights

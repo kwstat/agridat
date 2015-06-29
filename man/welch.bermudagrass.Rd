@@ -92,7 +92,7 @@ d4[which.max(d4$income),] # Optimum at 300 lb N, 71 lb P, 148 lb K
 # ----- JAGS -----
 \dontrun{
   # Congdon (2007) p. 124, provides a Bayesian model based on a GLM
-  # by McCullagh & Nelder.  We use JAGS and clean up the code.
+  # by McCullagh & Nelder.  We use JAGS and simplify the code.
   # y ~ gamma with shape = nu, scale = nu * eps_i
   # 1/eps = b0 + b1/(N+a1) + b2/(P+a2) + b3/(K+a3)
   # N,P,K are added fertilizer amounts, a1,a2,a3 are background
@@ -100,8 +100,8 @@ d4[which.max(d4$income),] # Optimum at 300 lb N, 71 lb P, 148 lb K
 
   require(rjags)
 
-  mod.bug = "
-model {
+  mod.bug =
+  "model {
   for(i in 1:nobs) {
     yield[i] ~ dgamma(nu, mu[i])
     mu[i] <- nu * eta[i]
@@ -124,13 +124,17 @@ model {
                list(yield=yield, N=n, P=p, K=k, nobs=64))
   jinit = list(a1=40, a2=22, a3=32, b0=.1, b1=10, b2=1, b3=1)
 
-  j1 <- jags.model(textConnection(mod.bug), data=jdat,
-                   inits=jinit, n.chains=3)
+  oo <- textConnection(mod.bug)
+  j1 <- jags.model(oo, data=jdat, inits=jinit, n.chains=3)
+  close(oo)
+  
   c1 <- coda.samples(j1, c("b0","b1","b2","b3", "a1","a2","a3"),
                      n.iter=10000)
 
   # Results nearly identical go Congdon
   print(summary(c1)$statistics[,1:2],dig=1)
+  # require(lucid)
+  # print(vc(c1),3)
   ##       Mean     SD
   ## a1  44.85  4.123
   ## a2  23.63  7.37

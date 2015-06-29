@@ -2,10 +2,10 @@
 \alias{theobald.covariate}
 \docType{data}
 \title{
-  Silage yields for Year * Loc * Variety with covariate
+  Corn silage yields for Year * Loc * Variety with covariate
 }
 \description{
-  Silage yields for maize in 5 years at 7 districts for 10 hybrids.
+  Corn silage yields for maize in 5 years at 7 districts for 10 hybrids.
 }
 
 \format{
@@ -15,7 +15,7 @@
     \item{\code{env}}{Environment/District, 1-7}
     \item{\code{gen}}{Genotype factor, 1-10}
     \item{\code{yield}}{Dry-matter silage yield for corn}
-    \item{\code{chu}}{Corn Heat Units}
+    \item{\code{chu}}{Corn heat units, thousand degrees Celsius}
   }
 }
 \details{

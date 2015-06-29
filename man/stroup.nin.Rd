@@ -20,15 +20,14 @@
 \details{
   Four replicates of 19 released cultivars, 35 experimental wheat lines
   and 2 additional triticale lines were laid out in a 22
-  row by 11 column rectangular array of plots; the varieties were
+  row by 11 column rectangular array of plots.
+  The varieties were
   allocated to the plots using a randomised complete block (RCB) design.
   The blocks are not rectangular but partially overlap columns.
+  
   All plots with missing data are coded as being gen = "Lancer".
   (For ASREML, missing plots need to be included for spatial analysis and the
   level of 'gen' needs to be one that is already in the data.)
-  The complete experiment was grown at four locations (Lincoln, Clay
-  Center, North Platte, and Alliance).  Only data for the Alliance
-  location is included here.
 
   These data were first analyzed by Stroup et al (1994) and subsequently
   by Littell et al (1996, page 321), Pinheiro and Bates (2000, page 260),
@@ -52,6 +51,13 @@
   To obtain the correct value of 'long', multiply 'x' by 1.2.
   To obtain the correct value of 'lat', multiply 'y' by 4.3.
 
+  Relatively low yields were clustered in the northwest corner, which is
+  explained by a low rise in this part of the field, causing increased
+  exposure to winter kill from wind damage and thus depressed yield.
+  The genotype 'Buckskin' is a known superior variety, but was
+  disadvantaged by assignment to unfavorable locations within the
+  blocks.
+  
 }
 
 \source{
@@ -112,6 +118,13 @@ pred.rcb <- predict(dat.rcb,classify="gen")$predictions
 dat <- dat[order(dat$xf, dat$yf),]
 dat.sp <- asreml(yield~gen, rcov=~ar1(xf):ar1(yf),data=dat)
 pred.sp <- predict(dat.sp,classify="gen")$predictions
+
+# require(lucid)
+# vc(dat.sp)
+##     effect component std.error z.ratio constr
+## R!variance   48.7      7.155       6.8    pos
+##   R!xf.cor    0.6555   0.05638    12      unc
+##   R!yf.cor    0.4375   0.0806      5.4    unc
 
 # Compare the estimates from the two methods
 plot(pred.rcb$pvals[,2],pred.sp$pvals[,2], xlim=c(16,37), ylim=c(16,37),

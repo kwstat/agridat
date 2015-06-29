@@ -29,8 +29,8 @@
 }
 \source{
   Norman Draper and Irwin Guttman (1980).
-  "Incorporating Overlap Effects from Neighboring Units into Response
-  Surface Models".
+  Incorporating Overlap Effects from Neighboring Units into Response
+  Surface Models.
   \emph{Appl Statist}, 29, 128--134.
 }
 \references{

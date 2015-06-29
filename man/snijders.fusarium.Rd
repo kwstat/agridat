@@ -48,7 +48,7 @@
   Fred A van Eeuwijk. 1995.
   Multiplicative interaction in generalized linear models.
   \emph{Biometrics}, 51, 1017-1032.
-  \url{http://www.jstor.org/stable/2533001}
+  http://www.jstor.org/stable/2533001
 
 }
 

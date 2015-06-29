@@ -28,7 +28,6 @@ A uniformity trial of 1500 plots of wheat conducted in Idaho in 1927.
 
   Some authors recommend analyzing the square root of the yields.
 
-  Produced by the U.S. Dept of Agriculture.
 }
 
 \source{
@@ -40,6 +39,9 @@ A uniformity trial of 1500 plots of wheat conducted in Idaho in 1927.
 \references{
   D.A. Preece, 1981, Distributions of final digits in data,
   \emph{The Statistician}, 30, 31--60.
+
+  Wilkinson et al. (1983). Nearest Neighbour (NN) Analysis of Field
+  Experiments. \emph{J. R. Statist. Soc. B}, 45, 151-211.
 }
 
 \examples{
@@ -52,25 +54,28 @@ require("lattice")
 desplot(yield~col+row, dat, aspect=125/180, flip=TRUE,
   main="wiebe.wheat.uniformity: yield") # row 1 is at south
 
-# Preece (1981) found the last digits have an interesting distribution.
+# Preece (1981) found the last digits have an interesting distribution
+# with 0 and 5 much more common than other digits.
 dig <- substring(dat$yield, nchar(dat$yield))
 dig <- as.numeric(dig)
 hist(dig, breaks=0:10-.5, xlab="Last digit",
      main="wiebe.wheat.uniformity - histogram of last digit")
 table(dat$col, dig) # Table 3 of Preece
 
-# Median yields of rows/cols show obvious trends
-plot(tapply(dat$yield, dat$row, median), xlab="Row", ylab="Yield",
-      main="wiebe.wheat.uniformity")
-# plot(tapply(dat$yield, dat$col, median), xlab="Column", ylab="Yield",
-#       main="wiebe.wheat.uniformity")
-# Spatial trends are obvious
-# xyplot(yield~col, dat, type=c('p','smooth'), main="wiebe.wheat.uniformity")
-
 # Loess
-m3 <- loess(yield~row+col, dat)
-# plot(fitted(m3), resid(m3), ylim=c(-300,300),
+# m3 <- loess(yield~row+col, dat)
+# plot(dat$row, resid(m3), ylim=c(-300,300),
 #      main="wiebe.wheat.uniformity")
+
+# Wilkinson (1983, p. 152) noted that an 8-row planter was used which
+# produced a recurring pattern of row effects on yield.  This can be seen
+# in the high autocorrelations of row means at lag 8 and lag 16
+rowm <- tapply(dat$yield, dat$row, mean)
+acf(rowm, main="wiebe.wheat.uniformity row means")
+# Plot the row mean against the planter row unit 1-8
+xyplot(rowm~rep(1:8, length=125),
+       main="wiebe.wheat.uniformity",
+       xlab="Planter row unit", ylab="Row mean yield")
 
 }
 \keyword{datasets}

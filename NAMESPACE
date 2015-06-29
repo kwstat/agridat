@@ -2,9 +2,12 @@
 ## Recommended packages
 ## importFrom("nlme", fixef,ranef,VarCorr)
 
+import(graphics)
+import(grDevices)
 import(grid)
 import(lattice)
 import(reshape2)
+import(stats)
 
 ## Exports
 export(desplot)

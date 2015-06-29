@@ -1,10 +1,20 @@
 News for 'agridat'
 
+Version 1.12 (Jun 2015)
+
+* New data:
+  cochran.beets, cochran.lattice, jansen.apple, jansen.carrot
+  
+* Other
+  Fix bug with desplot( , show.key=FALSE)
+  Changed links to Jstor, now they are plain text.
+
+
 Version 1.11 (Mar 2015)
 
 * New data:
   besag.beans, besag.triticale, burgeuno.alpha, burgueno.rowcol,
-  burgueno.unreplicated, steptoe.morex.geno, steptoe.morex.pheno
+  burgueno.unreplicated, steptoe.morex.pheno
 
 * Other
   Now includes 'nipals' function for principal components with missing data.
@@ -91,7 +101,6 @@ Version 1.5 (Apr 2013)
   senshu.rice, snedecor.asparagus, streibig.competition, zuidhof.broiler
 
 * Other
-  Function 'desplot' gains an argument 'flip' for vertical flips.
   Removed rgl and rjags from 'Suggests' to facilitate cross-platform checking
 
 Version 1.4 (Mar 2012)
@@ -114,10 +123,10 @@ Version 1.2 (Jun 2011)
 * New data:
   aastveit, gathmann.bt, kempton.competition, wedderburn.barley
 
-Version 1.0
+Version 1.0 (Apr 2011)
 
-* First release to CRAN 2011-04-26
+* First release to CRAN.
 
-Version 0.0
+Version 0.0 (Oct 2010)
 
-* Development begins 2010-10-07.
+* Development begins.

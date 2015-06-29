@@ -1,4 +1,4 @@
-"week"	"rep"	"manage"	"nitro"	"rating"	"y"
+"week"	"rep"	"manage"	"nitro"	"rating"	"count"
 1	"R1"	"M1"	"N1"	"Poor"	1
 1	"R1"	"M1"	"N2"	"Average"	2
 1	"R1"	"M2"	"N1"	"Poor"	1

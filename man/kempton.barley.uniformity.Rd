@@ -1,4 +1,4 @@
-\name{kempton.barley.uniformity}
+ \name{kempton.barley.uniformity}
 \alias{kempton.barley.uniformity}
 \docType{data}
 \title{

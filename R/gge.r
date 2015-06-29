@@ -701,9 +701,9 @@ nipals <- function(x, maxcomp=min(nrow(x), ncol(x)-1),
     eval <- c(eval, sum(u*u))
     if(verbose >= 2) {
       cat("scores\n")
-      print(head(u))
+      print(u[1:5,])
       cat("loadings\n")
-      print( head(v))
+      print(v[1:5,])
     }
 
     # Cumulative proportion of variance
