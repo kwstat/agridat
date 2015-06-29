@@ -1,0 +1,68 @@
+\name{jansen.carrot}
+\alias{jansen.carrot}
+\docType{data}
+\title{
+  Infestation of carrots by fly larvae
+}
+\description{
+  Infestation of 16 carrot genotypes by fly larvae, comparing 2
+  treatments in 16 blocks.
+}
+\usage{data("jansen.carrot")}
+\format{
+  A data frame with 96 observations on the following 5 variables.
+  \describe{
+    \item{\code{trt}}{treatment}
+    \item{\code{gen}}{genotype}
+    \item{\code{block}}{block}
+    \item{\code{n}}{number of carrots sampled per plot}
+    \item{\code{y}}{number of carrots infested per plot}
+  }
+}
+\details{
+
+  This experiment was designed to compare different genotypes of carrots
+  with respect to their resistance to infestation by larvae of the
+  carrotfly.
+  
+  There were 16 genotypes, 2 levels of pest-control treatments, conducted
+  in 3 randomized complete blocks.  About 50 carrots were sampled from
+  each plot and evaluated.  The data show the number of carrots and the
+  number infested by fly larvae.
+
+}
+\source{
+
+  J. Jansen & J.A. Hoekstra (1993).
+  The analysis of proportions in agricultural experiments by a
+  generalized linear mixed model. 
+  \emph{Statistica Neerlandica}, 47(3), 161-174.
+
+  Used with permission of J. Jansen. Electronic version supplied by Miroslav Zoric.
+
+}
+\references{
+  None.
+}
+\examples{
+data(jansen.carrot)
+
+dat <- jansen.carrot
+require(lattice)
+dotplot(gen ~ y/n, data=dat, group=trt, auto.key=TRUE,
+        main="jansen.carrot",
+        xlab="Proportion of carrots infected per block", ylab="Genotype")
+
+if(FALSE & require(lme4)){
+  # 'FALSE' used here because CRAN wants < 5 seconds per example
+  # Tentative model.  Needs improvement.
+  m1 <- glmer(cbind(y,n-y) ~ gen*trt + (1|block),
+              data=dat, family=binomial)
+  summary(m1)
+}
+
+# Todo: Why are these results different from Jansen?
+# Maybe he used ungrouped bernoulli data?  Too slow with 4700 obs
+
+}
+\keyword{datasets}
