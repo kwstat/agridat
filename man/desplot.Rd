@@ -50,7 +50,7 @@
 
 
   To call this function inside another function, you can hack thusly:
-  vr <- "yield"; vx <- "x"; vy <- "y"
+  vr <- "yield"; vx <- "x"; vy <- "y";
   eval(parse(text=paste("desplot(", vr, "~", vx, "*", vy, ", data=yates.oats)")))
 }
 

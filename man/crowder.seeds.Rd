@@ -2,7 +2,7 @@
 \alias{crowder.seeds}
 \docType{data}
 \title{
-  Germination of Orobanche seeds from Crowder (1978)
+  Germination of Orobanche seeds for two genotypes and two treatments.
 }
 \description{
   Number of Orobanche seeds tested/germinated for two genotypes and
@@ -19,21 +19,27 @@
   }
 }
 \details{
+
   Orobanche aegyptiaca (commonly known as Egyptian broomrape) is a
-  parasitic plant family.
-  The plants have no chlorophyll and grow on the roots of other plants.
-  The seeds remain dormant in soil until certain compounds from
-  living plants stimulate germination.
+  parasitic plant family.  The plants have no chlorophyll and grow on
+  the roots of other plants.  The seeds remain dormant in soil until
+  certain compounds from living plants stimulate germination.
+  
   Two genotypes were studied in the experiment, \emph{O. aegyptiaca 73} and
   \emph{O. aegyptiaca 75}.  The seeds were brushed with one of two extracts
   prepared from either a bean plant or cucmber plant.
+
   The experimental design was a 2x2 factorial, each with 5 or 6 reps of plates.
 }
 \source{
+
   Crowder, M.J., 1978. Beta-binomial anova for proportions.
   \emph{Appl. Statist.}, 27, 34-37.
+
 }
+
 \references{
+  
   N. E. Breslow and D. G. Clayton. 1993.
   Approximate inference in generalized linear mixed models.
   \emph{Journal of the American Statistical Association}, 88:9-25.
@@ -41,6 +47,7 @@
   Y. Lee and J. A. Nelder. 1996.
   Hierarchical generalized linear models with discussion.
   \emph{J. R. Statist. Soc. B}, 58:619-678.
+
 }
 
 \examples{
@@ -128,7 +135,7 @@ jdat =list(germ = dat$germ, n = dat$n,
 
 jinit = list(int = 0, genO75 = 0, extcuke = 0, g75ecuke = 0, tau = 10)
 
-# Unlike the BUGS docs, we use names that we can actually interpret
+# Use logical names (unlike BUGS documentation)
 mod.bug =
 "model {
   for(i in 1:nobs) {

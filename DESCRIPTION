@@ -1,14 +1,19 @@
 Package: agridat
-Version: 1.12
-Date: 2015-06-28
 Title: Agricultural Datasets
+Version: 1.13
+Authors@R: person("Kevin","Wright", email="kw.stat@gmail.com", role=c("aut","cre"))
+Date: 2015-06-28
 Type: Package
-Author: Kevin Wright
-Maintainer: Kevin Wright <kw.stat@gmail.com>
 Description: Datasets from books, papers, and websites related to agriculture.
     Example analyses are included.  Includes functions for plotting field
     designs and GGE biplots.
-Imports: graphics, grDevices, grid, lattice, reshape2, stats
+Imports:
+    graphics,
+    grDevices,
+    grid,
+    lattice,
+    reshape2,
+    stats
 Suggests:
     AER,
     agricolae (>= 1.2),
@@ -39,7 +44,7 @@ Suggests:
     sp,
     survival,
     vcd
-License: GPL-2
+License: CC BY-SA 4.0 + file LICENSE
 LazyData: yes
 URL: https://github.com/kwstat/agridat
 BugReports: https://github.com/kwstat/agridat/issues

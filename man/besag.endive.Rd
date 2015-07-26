@@ -35,7 +35,7 @@
   N Friel & A. N Pettitt (2004). Likelihood Estimation and Inference
   for the Autologistic Model.
   \emph{Journal of Computational and Graphical Statistics}, 13:1,
-  232-246. \url{http://dx.doi.org/10.1198/1061860043029}
+  232-246. \url{http://doi.org/10.1198/1061860043029}
 }
 \examples{
 

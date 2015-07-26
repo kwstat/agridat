@@ -223,6 +223,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{weiss.incblock}            \tab 31  \tab    \tab 6   \tab    \tab     \tab xy,incblock \tab asreml \cr
 \link{weiss.lattice}             \tab 49  \tab    \tab 4   \tab    \tab     \tab xy,lattice \tab lm,asreml \cr
 \link{welch.bermudagrass}        \tab     \tab    \tab     \tab    \tab 4,4,4 \tab rsm3, factorial \tab lm, jags \cr
+\link{wheatley.carrot}           \tab     \tab    \tab 3   \tab    \tab 11  \tab \tab glm-binomial \cr
 \link{yan.winterwheat}           \tab 18  \tab 9  \tab     \tab    \tab     \tab \tab GGE,biplot \cr
 \link{yang.barley}               \tab 6   \tab 18 \tab     \tab    \tab     \tab \tab biplot \cr
 \link{yates.missing}             \tab     \tab    \tab 10  \tab    \tab 3^2 \tab factorial \tab lm, pca \cr
@@ -304,35 +305,10 @@ Although using \code{data()} is not necessary to access the data files,
 the example sections do include the use of \code{data()} because
 \code{devtools::run_examples()} needs it.
 
-Note: In the U.S., raw data are generally not subject to copyright.  See
-\url{http://www.lib.umich.edu/copyright-office-mpublishing/copyrightability-charts-tables-and-graphs}
-and \url{http://sciencecommons.org/about/towards} for some discussion.
-
-Nonetheless, substantial effort has been made to contact people to
-secure permission to include data (published within the past few
-decades) in this package.
-
-Data produced from work of the United States government is not subject to
-copyright. \url{http://en.wikipedia.org/wiki/Copyright_status_of_work_by_the_U.S._government}
-
-\bold{Other resources}
-
-The SDaA package
-\url{http://cran.r-project.org/package=SDaA} contains
-county-level data from the United States Census of Agriculture, along
-with a vignette to illustrate survey sampling analyses.
-
-\code{lmtest:ChickEgg} has time series of annual chicken and egg
-production in the United States 1930-1983.
-
-Payne 2013 - Design and Analysis of Long-Term Rotation Experiments.
-https://www.agronomy.org/publications/aj/pdfs/107/2/772
-Data and R code.
-
-
 }
 
 \author{
+  
   Kevin Wright, kw.stat@gmail.com
 
   The author is grateful to the many people who granted permission to
@@ -343,11 +319,14 @@ Data and R code.
 }
 
 \references{
+
   Box G. E. P. (1957), Integration of Techniques in Process Development,
   \emph{Transactions of the American Society for Quality Control}.
 
   J. White and Frits van Evert. (2008).
   Publishing Agronomic Data.
   \emph{Agron J.} 100, 1396-1400.
+  \url{http://doi.org/10.2134/agronj2008.0080F}
+  
 }
 

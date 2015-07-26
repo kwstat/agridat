@@ -46,8 +46,8 @@ New York soybean yields, 1977 to 1988
 \references{
   Zobel, RW and Wright, MJ and Gauch Jr, HG. 1998.
   Statistical analysis of a yield trial, \emph{Agronomy journal},
-  80, 388-393,
-  \url{http://www.soils.org/publications/aj/abstracts/80/3/AJ0800030388}.
+  80, 388-393.
+  \url{https://doi.org/10.2134/agronj1988.00021962008000030002x}
 }
 
 \examples{

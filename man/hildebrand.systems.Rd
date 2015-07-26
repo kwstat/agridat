@@ -31,7 +31,7 @@
   P. E. Hildebrand, 1984.
   Modified Stability Analysis of Farmer Managed, On-Farm Trials.
   \emph{Agronomy Journal}, 76, 271--274.
-  \url{https://www.agronomy.org/publications/aj/abstracts/76/2/AJ0760020271}.
+  \url{https://doi.org/10.2134/agronj1984.00021962007600020023x}
 }
 \references{
   H. P. Piepho, 1998.

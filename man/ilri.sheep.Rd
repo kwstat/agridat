@@ -44,10 +44,15 @@ Birth weight and weaning weight of Dorper x Red Maasi lambs
   Records are missing in 182 of the lambs, mostly because of earlier death.
 }
 \source{
+  
   Case Study 4: Mixed model analysis for the estimation of components of genetic
   variation in lamb weaning weight. International Livestock Research Institute.
   \url{http://www.ilri.org/biometrics/CS/case\%20study\%204/case\%20study\%204.1.htm}
-    Retrieved Dec 2011.
+  Retrieved Dec 2011.
+
+  Licensed with Creative Commons BY-NC-SA 3.0 Unported license.
+  http://creativecommons.org/licenses/by-nc-sa/3.0/
+  
 }
 \references{
   Baker, RL and Nagda, S. and Rodriguez-Zas, SL and Southey, BR and

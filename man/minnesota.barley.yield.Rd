@@ -108,7 +108,7 @@
 
   Kevin Wright. (2013).  Revisiting Immer's Barley Data.
   \emph{The American Statistitician}, 67, 129-133.
-  \url{http://dx.doi.org/10.1080/00031305.2013.801783}.
+  \url{http://doi.org/10.1080/00031305.2013.801783}.
 }
 \examples{
 

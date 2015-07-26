@@ -33,6 +33,10 @@
 
   William G. Cochran, Gertrude M. Cox. \emph{Experimental Designs}, 2nd
   Edition. Page 490.
+
+  Originally from: F. M. Wadley (1946).
+  Incomplete block designs in insect population problems.
+  \emph{J. Economic Entomology}, 38, 651--654.
   
 }
 \references{

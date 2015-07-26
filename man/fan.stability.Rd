@@ -29,7 +29,7 @@
   Xu, C. (2007). Yield stability of maize hybrids evaluated in
   multi-environment trials in Yunnan, China. \emph{Agronomy Journal},
   99, 220-228.
-  \url{https://www.soils.org/publications/aj/abstracts/99/1/220}
+  \url{https://doi.org/doi:10.2134/agronj2006.0144}
 
   Used with permission of Manjit Kang.
 }

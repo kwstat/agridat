@@ -65,13 +65,18 @@ following:
 
 }
 \source{
+  
   Lee, Arier Chi-Lun (2009). Random effects models for ordinal data.
   Ph.D. thesis, The University of Auckland.
   https://researchspace.auckland.ac.nz/handle/2292/4544.
 
-  Used with permission of Arier Chi Lun Lee and John Anderson.
-  Licensed via Open Database License.  Data retrieved from
+  Used with permission of Arier Chi-Lun Lee and John Anderson.
+
+  Data retrieved from
   https://researchspace.auckland.ac.nz/handle/2292/5240.
+  
+  Licensed via Open Database License 1.0. (allows sub-licensing).
+  See: http://opendatacommons.org/licenses/dbcl/1.0/
 }
 
 \examples{

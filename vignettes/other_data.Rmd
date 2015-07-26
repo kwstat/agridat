@@ -1,0 +1,72 @@
+---
+title: "Other sources of agricultural data"
+author: "Kevin Wright"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Other sources of agricultural data}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+This document lists other sources of agricultural data.
+
+## Books
+
+Peter Diggle. _Longitudinal Data Analysis_.
+http://www.maths.lancs.ac.uk/~diggle/lda/Datasets/
+Pig weight data is in the package `SemiPar::pig.weights`.
+The Sitka spruce data is in `geepack::spruce`.
+The Milk protein data is in `nlme::Milk`.
+
+Goulden, _Methods of Statistical Analysis_.
+http://archive.org/details/methodsofstatist031744mbp
+Has some interesting incomplete-block experiments.
+
+## Papers
+
+Kenward, Michael G. (1987).  A Method for Comparing Profiles of Repeated
+Measurements.  _Applied Statistics_, 36, 296-308.
+An ante-dependence model is fit to repeated measures of cattle weight.
+Data available here:
+https://faculty.biostat.ucla.edu/robweiss/filedepot_download/87/495
+
+Roger Payne (2015). The Design and Analysis of Long-Term Rotation Experiments.
+_Agronomy Journal_, 107, 772-784.
+https://www.agronomy.org/publications/aj/pdfs/107/2/772
+Contains data and R code.
+
+## R packages
+
+`agricolae` has assorted data and functions for analysis.
+
+`BGLR`. Bayesian Generalized Linear Regression.
+Has an A matrix (but no pedigree) for 499 genotypes at 4 locations.
+
+`BLR`. Bayesian Linear Regression.
+Has an A matrix (but no pedigree) for 499 genotypes at 4 locations.
+
+`cropcc`. Climate change on crops.
+https://r-forge.r-project.org/projects/cropcc/
+
+`drc` is a package for dose response curves.
+
+`lmtest::ChickEgg` has time series of annual chicken and egg
+production in the United States 1930-1983.
+
+`lsmeans::feedlot` is used to demonstrate an unbalanced
+analysis-of-covariance.
+
+`nlraa` is for Non-linear models in agriculture.
+http://r-forge.r-project.org/R/?group_id=1599
+
+`plantbreeding`
+https://r-forge.r-project.org/projects/plantbreeding/
+
+`SDaA` This package has county-level data from the United States Census of
+Agriculture, along with a vignette to illustrate survey sampling analyses.
+http://cran.r-project.org/package=SDaA
+
+`SMPracticals::barley` is from a barley field trial.
+

@@ -23,10 +23,12 @@ Bodyweight of cows in a 2-by-2 factorial experiment
   Diggle et al., 1994, pp. 100-101, consider an experiment that studied
   how iron dosing (none/standard) and micro-organism (infected or
   non-infected) influence the weight of cows.
+  
   Twenty-eight cows were allocated in a 2-by-2 factorial design
   with these factors.  Some calves were inoculated with Mycobacterium at six
   weeks of age.  At six months, some calves were maintained on
   supplemental iron diet for a further 27 months.
+
   The weight of each animal was measured at 23 times,
   unequally spaced. One cow died during the study and data for another
   cow was removed.
@@ -34,7 +36,7 @@ Bodyweight of cows in a 2-by-2 factorial experiment
 }
 \source{
   Diggle, P. J., Liang, K.-Y., & Zeger, S. L. (1994).
-  \emph{Analysisof Longitudinal Data}. Page 100-101.
+  \emph{Analysis of Longitudinal Data}. Page 100-101.
 
   Retrieved Oct 2011 from
   \url{http://www.maths.lancs.ac.uk/~diggle/lda/Datasets/}

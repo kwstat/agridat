@@ -28,7 +28,7 @@
   JL. 1963. Yield response surfaces, isoquants, and economic fertilizer
   optima for Coastal Bermudagrass. \emph{Agronomy Journal}, 55,
   63-67. Table 1.
-  \url{https://dl.sciencesocieties.org/publications/aj/abstracts/55/1/AJ0550010063}
+  \url{https://doi.org/10.2134/agronj1963.00021962005500010023x}
 }
 
 \references{

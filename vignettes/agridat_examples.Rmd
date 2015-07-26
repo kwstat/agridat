@@ -1,81 +1,41 @@
-% agridat_examples.Rnw
-% Time-stamp: <30 Apr 2015 13:21:58 c:/x/rpack/agridat/vignettes/agridat_examples.Rnw>
 
-% \VignetteEngine{knitr::knitr}
-% \VignetteIndexEntry{Graphical Gems in the 'agridat' Package}
+---
+title: "Graphical Gems in the agridat Package"
+author: "Kevin Wright"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    css: avenir-white.css
+    highlight: tango
+bibliography: agridat.bib
+vignette: >
+  % \VignetteIndexEntry{Graphical Gems in the agridat Package}
+  % \VignetteEncoding{UTF-8}
+  % \VignetteEngine{knitr::rmarkdown}
+---
 
-\documentclass[12pt]{article}
-% Note, 11 pt fails with a missing font unless we have \usepackage{ae}
+## Abstract
 
-\usepackage{color}
-\definecolor{navy}{rgb}{0,0,0.5}
-\definecolor{maroon}{rgb}{0.6,0.0,0.0}
-\definecolor{lightgray}{rgb}{0.7,0.7,0.7}
-
-\usepackage[colorlinks,citecolor=navy,linkcolor=navy,urlcolor=navy]{hyperref}
-
-%\usepackage{url}     % Don't break long URLs
-\raggedright         % Don't right-justify
-\usepackage{parskip} % Extra vertical space between paragraphs
-
-\usepackage{enumitem}
-\setlist{nolistsep}  % Reduce spacing between list items
-
-\usepackage[left=.5in,top=.5in,right=.5in,bottom=1in]{geometry}
-
-\newcommand{\code}[1]{\texttt{\textcolor{maroon}{#1}}}
-
-% Header & footer
-\usepackage{titling} % copy \title{} into \thetitle
-\usepackage{fancyhdr}
-\pagestyle{fancy}
-\renewcommand{\headrule}{}  % no line between header and body
-\renewcommand{\footrule}{}  % no line between body and footer
-\fancyhf{} % clear header and footer fields
-\fancyfoot[L]{\small \color{lightgray} \thetitle}
-\fancyfoot[R]{\small \thepage}
-
-\usepackage[round]{natbib}
-% plainnat to include url's in bibliography.  Authors first name is first
-% apalike does NOT handle urls
-\bibliographystyle{plainnat}
-
-\renewcommand{\familydefault}{\sfdefault} % Use arial everywhere
-% Load this AFTER arial and it will redefine tt family to use inconsolata.
-\IfFileExists{zi4.sty}{\usepackage[noupquote]{zi4}}{\usepackage{inconsolata}}
-
-% ----------------------------------------------------------------------------
-
-\begin{document}
-
-\title{Graphical Gems in the \textbf{agridat} Package}
-\author{Kevin Wright}
-\maketitle
-\thispagestyle{fancy}
-
-% Setup stuff.
-<<setup, echo=FALSE, results="hide">>=
-library("knitr")
-opts_chunk$set(fig.align="center", fig.width=7, fig.height=7)
-options(width=90)
-@
-
-% ----------------------------------------------------------------------------
-\section{Abstract}
-
-The \code{agridat} package is an extensive collection of data sets that have
+The `agridat` package is an extensive collection of data sets that have
 been previously published in books and journals, primarily from agricultural
 experiments.
 
 A sample of datasets in the package are presented graphically with
 interpretive comments.
 
-% ----------------------------------------------------------------------------
-\section{Setup}
+One surprising aspect of this project is that most published analyses of data
+require only on the order of 10-20 lines of R code to reproduce.
 
-This exhibition of agricultural data uses the following packages.
+## Setup
 
-<<packs, message=FALSE>>=
+```{r setup, echo=FALSE, results="hide"}
+library("knitr")
+opts_chunk$set(fig.align="center", fig.width=6, fig.height=6)
+options(width=90)
+```
+This exhibit of agricultural data uses the following packages.
+
+```{r packs, message=FALSE}
 library("agridat")
 library("HH")
 library("lattice")
@@ -83,16 +43,13 @@ library("latticeExtra")
 library("mapproj")
 library("maps")
 library("reshape2")
-@
+```
 
-%One surprising aspect of this project is that most published analyses of data
-%require only on the order of 10-20 lines of R code to reproduce.
+-----
 
-% ----------------------------------------------------------------------------
-\pagebreak
-\section{Potato blight incidence over space and time}
+## Potato blight incidence over space and time
 
-\cite{lee2009random} analyzed a large dataset to evaluate the resistance of
+@lee2009random analyzed a large dataset to evaluate the resistance of
 potato varieties to blight.  This data contains evaluations of a changing set
 of varieties every two years, evaluated in 5 blocks, repeatedly throughout the
 growing season to track the progress of the disease.  Each panel shows a field
@@ -100,7 +57,7 @@ map on the given date, with a separate row for each year.
 
 Would you include field spatial trends in a model for these data?
 
-<<lee1, echo=FALSE, fig.height=7.5>>=
+```{r lee1, fig.height=7.5}
 dat <- lee.potatoblight
 # Note the progression to lower scores as time passes in each year
 skp <- c(rep(0,10),
@@ -117,9 +74,10 @@ desplot(y ~ col*row|date, dat,
         main="lee.potatoblight",
         between=list(y=.3), strip.cex =.7,
         layout=c(10,11), skip=as.logical(skp))
-@
-% ----------------------------------------------------------------------------
-\pagebreak
+```
+
+-----
+
 In 1983 20 varieties were evaluated in 5 blocks (shown by colored numbers).
 Resistance scores start at 9 for all varieties (shown in panels).  As the growing
 season progresses, the 'I.HARDY' variety succumbs quickly to blight, while
@@ -127,7 +85,7 @@ season progresses, the 'I.HARDY' variety succumbs quickly to blight, while
 
 Does this view show differences between blocks?
 
-<<lee2, echo=FALSE>>=
+```{r lee2}
 # 1983 only.  I.Hardy succumbs quickly
 dat <- lee.potatoblight
 dat$dd <- as.Date(dat$date)
@@ -140,13 +98,13 @@ foo <- xyplot(y ~ dd|gen, d83, group=rep,
            pch=c("1","2","3","4","5"))),
        scales=list(alternating=FALSE, x=list(rot=90, cex=.7)))
 foo + xyplot(y ~ dd|gen, d83, subset=year==1983, type='smooth', col='gray80')
-@
-% ----------------------------------------------------------------------------
+```
 
-\pagebreak
-\section{An informative prior}
+-----
 
-\cite{harrison2012bayesian} used a Bayesian approach to model daidzein levels
+## An informative prior
+
+@harrison2012bayesian used a Bayesian approach to model daidzein levels
 in soybean samples.  From 18 previous publications, they extracted the
 published minimum and maximum daidzein levels, and the number of samples
 tested.  Each line in the dotplot shows large, dark dots for one published
@@ -160,7 +118,7 @@ The common prior is shown by the density at the top of the dotplot.
 Do you think it is better to use a non-informative prior, or this informative
 prior?
 
-<<harrison, echo=FALSE, fig.height=6>>=
+```{r harrison, fig.height=6}
 d1 <- subset(harrison.priors, substance=="daidzein")
 d1 <- d1[ , c("source","number","min","max")]
 out <- data.frame(source=vector("character"),
@@ -199,11 +157,13 @@ foo0 + xyplot((19+4000*dlnorm(xvals, mu0, sd0))~xvals, type='l',
                 panel.abline(h=19, col="gray90")
               })
 
-@
-% ----------------------------------------------------------------------------
-\pagebreak
-\section{Data densities for a binomial GLM}
-\cite{mead2002statistical} present data for germination of seeds under four
+```
+
+-----
+
+## Data densities for a binomial GLM
+
+@mead2002statistical present data for germination of seeds under four
 temperatures (T1-T4) and four chemical concentrations.  For each of the 4*4=16
 treatments, 50 seeds were tested in each of four reps.  In the graphic, each
 point is one rep. The blue line is a fitted curve from a GLM with Temperature
@@ -213,7 +173,7 @@ central 95\% of the binomial density at that position.
 Does this display help you understand the logit link and changing shape of the
 binomial density?
 
-<<mead, echo=FALSE>>=
+```{r mead}
 dat <- mead.germination
 # dat <- transform(dat, concf=factor(conc))
 
@@ -265,12 +225,13 @@ food <- xyplot(germ~logconc|temp, dat, layout=c(4,1),
        ylab="Seeds germinating (out of 50)", cex=1.5, pch=20, col='black')
 foob + fool + food
 
-@
-% ----------------------------------------------------------------------------
-\pagebreak
-\section{Verification of experiment layout}
+```
 
-\cite{gomez1984statistical} provide data for an experiment with 3 reps, 6
+-----
+
+## Verification of experiment layout
+
+@gomez1984statistical provide data for an experiment with 3 reps, 6
 genotypes, 3 levels of nitrogen and 2 planting dates.  The experiment layout
 is putatively a ``split strip-plot''.  To verify the design, the
 \code{agridat} package contains a function \code{desplot} for plotting the
@@ -278,19 +239,19 @@ designs of field experiments, which is used in the graphic below.
 
 How is the design different from a ``split-split-plot'' design?
 
-<<gomez, echo=FALSE>>=
+```{r gomez}
 dat <- gomez.stripsplitplot
 
 # Layout
 desplot(gen~x+y, dat, out1=rep, col=nitro, text=planting, cex=1,
         main="gomez.stripsplitplot")
-@
+```
 
-% ----------------------------------------------------------------------------
-\pagebreak
-\section{Visualizing main effects, two-way interactions}
+-----
 
-\cite{heiberger2004statistical} provide an interesting way to use lattice
+## Visualizing main effects, two-way interactions
+
+@heiberger2004statistical provide an interesting way to use lattice
 graphics to visualize the main effects (using boxplots) and interactions
 (using interaction plots) in data.  Below, rice yield is plotted
 versus replication, nitrogen, management type, and genotype variety.
@@ -300,25 +261,27 @@ varieties.
 
 Do you think interaction plots show interaction (lack of parallelism)?
 
-<<gomez2, echo=FALSE>>=
+```{r gomez2}
 dat <- gomez.splitsplit
 dat$nitrogen <- factor(dat$nitro)
-if(require(HH)){
-  position(dat$nitrogen) <- c(0,50,80,110,140)
-  interaction2wt(yield~rep+nitrogen+management+gen, data=dat,
-                 main="gomez.splitsplit",
-                 relation=list(x="free", y="same"),
-                 rot=c(90,0), xlab="",
-                 par.strip.text.input=list(cex=.8))
-}
-@
-% ----------------------------------------------------------------------------
-\pagebreak
-\section{3D yield response to fertilizers}
+require(HH)
+#position(dat$rep) <- position(dat$management) <-
+#  position(dat$gen) <- c(10,70,130)
+#position(dat$nitrogen) <- c(0,50,80,110,140)
+interaction2wt(yield~rep+nitrogen+management+gen, data=dat,
+               main="gomez.splitsplit",
+               relation=list(x="free", y="same"),
+               rot=c(90,0), xlab="",
+               par.strip.text.input=list(cex=.8))
+```
 
-\cite{sinclair1994sulphur} examined clover yields as a function of sulfur and
+-----
+
+## 3D yield response to fertilizers
+
+@sinclair1994sulphur examined clover yields as a function of sulfur and
 phosphorous fertilizer in a factorial-treatment experiment.
-\cite{dodds1996bivariate} modeled the yield
+@dodds1996bivariate modeled the yield
 response using a Mitzerlisch-like equation that allows interacting curvature
 in two dimensions $x$ and $y$:
 $$
@@ -330,14 +293,15 @@ drawn by the (\code{rgl} package).
 
 How would you decide the optimal fertilizer levels?
 
-\begin{center}
 \includegraphics[width=0.9\textwidth]{sinclair-clover}
-\end{center}
-% ----------------------------------------------------------------------------
-\pagebreak
-\section{Mosaic plot of potato damage from harvesting}
 
-\cite{keen1997analysis} looked at damage to potatoes caused by lifting rods
+![3D view of response surface.](sinclair-clover.png)
+
+-----
+
+## Mosaic plot of potato damage from harvesting
+
+@keen1997analysis looked at damage to potatoes caused by lifting rods
 during harvest. In this experiment, eight
 types of lifting rods were compared.  Two energy levels, six
 genotypes and three weight classes were used.
@@ -346,7 +310,7 @@ undamaged (D1, yellow) to severely damaged (D4, red).  Counts per treatment
 are shown in a mosaic plot.
 
 Which lifting rods cause the least/most damage to potatoes?
-<<keen, echo=FALSE, fig.width=7, fig.height=7.5>>=
+```{r keen, fig.width=7, fig.height=7.5}
 dat <- keen.potatodamage
 
 # Energy E1, Rod R4, Weight W1 have higher proportions of severe damage
@@ -356,12 +320,13 @@ mosaicplot(d2, color=c("lemonchiffon1","moccasin","lightsalmon1","indianred"),
            xlab="Energy / Genotype", ylab="Rod / Weight", main="keen.potatodamage",
            off=c(3,10,10,8,0),border="gray50")
 
-@
-% ----------------------------------------------------------------------------
-\pagebreak
-\section{Yield vs covariate for lattice::barley}
+```
 
-\cite{wright2013revisiting} investigated the \code{lattice::barley} data.
+-----
+
+## Yield vs covariate for lattice::barley
+
+@wright2013revisiting investigated the \code{lattice::barley} data.
 The original two years of data were extended to 10 years (from original source
 documents), and supplemented with weather covariates for the 6 locations and
 10 years.  Each panel shows a scatterplot and regression for average location
@@ -374,7 +339,7 @@ location.
 
 Does barley yield better in cooler or warmer weather?
 
-<<wright, echo=FALSE>>=
+```{r wright}
 dat <- minnesota.barley.yield
 datw <- minnesota.barley.weather
 
@@ -418,14 +383,13 @@ foo <- xyplot(y~x|covar*site, data=mecy, groups=yr, cex=1, ylim=c(5,65),
               scales=list(x=list(relation="free")))
 foo <- useOuterStrips(foo, strip.left = strip.custom(par.strip.text=list(cex=.7)))
 combineLimits(foo, margin.x=2L)
-@
+```
 
-% ----------------------------------------------------------------------------
-\pagebreak
+-----
 
-\section{GGE biplot}
+## GGE biplot
 
-\cite{laffont2013genotype} developed a variation of the GGE (genotype plus
+@laffont2013genotype developed a variation of the GGE (genotype plus
 genotype-by-environment) biplot to include auxiliary information about a
 block/group of environments.  In the example below, each location is
 classified into one of two mega-environments (colored).  The mosaic plots
@@ -434,7 +398,7 @@ partition variation simultaneously by principal component axis and source
 
 Which genotypes are best to each mega-environment?
 
-<<crossa, echo=FALSE, message=FALSE>>=
+```{r crossa, message=FALSE}
 
 # Specify env.group as column in data frame
 dat2 <- crossa.wheat
@@ -444,12 +408,11 @@ c("KN","NB","PA","BJ","IL","TC", "JM","PI","AS","ID","SC","SS",
 m4 <- gge(yield~gen*loc, dat2, env.group=eg, scale=FALSE)
 # plot(m4)
 biplot(m4, lab.env=TRUE, title="crossa.wheat")
-@
+```
 
-% ----------------------------------------------------------------------------
+-----
 
-\pagebreak
-\section{Nebraska farming income choropleth}
+## Nebraska farming income choropleth
 
 The Red-Blue palette in the \code{RColorBrewer} package is a divergent palette
 with light colors near the middle of the scale.  This can cause problems when
@@ -461,7 +424,7 @@ clearly distinguish missing values.
 How does the outlier county (Butler) in northeast Nebraska affect interpration of
 spatial patterns in the data?
 
-<<nebr1, echo=FALSE>>=
+```{r nebr1}
 library("maps")
 library("mapproj")
 library("latticeExtra")
@@ -479,9 +442,10 @@ mapplot(stco ~ crop + animal, data = dat,
         map = map('county', 'nebraska', plot = FALSE, fill = TRUE,
                   projection = "mercator"))
 
-@
-% ----------------------------------------------------------------------------
-\pagebreak
+```
+
+-----
+
 Because counties are different sizes, the second graphic uses an income rate
 per square mile.  Because of the outlier, it might be smart to use percentile
 break points, but doing so hides the outlier.  Instead, the break points are
@@ -493,7 +457,7 @@ Counties with missing data are white, which is easily distinguished from gray.
 
 Where are farm incomes highest?  Why?
 
-<<nebr2, echo=FALSE>>=
+```{r nebr2}
 
 # Now scale to income/mile^2
 dat <- within(dat, {
@@ -514,13 +478,13 @@ mapplot(stco ~ crop.rate + animal.rate, data = dat,
         #breaks=classIntervals(na.omit(c(dat$crop.rate, dat$animal.rate)), n=7, style='fisher')$brks
         breaks=c(0,.049, .108, .178, .230, .519, .958, 1.31)
         )
-@
+```
 
-% ----------------------------------------------------------------------------
-\pagebreak
-\section{Las Rosas yield monitor}
+-----
 
-\cite{anselin2004spatial} and \cite{lambert2004comparison} looked at yield
+## Las Rosas yield monitor
+
+@anselin2004spatial and @lambert2004comparison looked at yield
 monitor data collected from a corn field in Argentina in 1999 and 2001,
 to see how yield
 was affected by field topography and nitrogen fertilizer.  The figures below
@@ -529,7 +493,7 @@ are reps, shades of color are nitrogen level, plotting character is topography).
 
 Which year showed greater spatial variation in yield?
 
-<<lasrosas,echo=FALSE, fig.height=7.5>>=
+```{r lasrosas,fig.height=7.5}
 
 dat <- lasrosas.corn
 library(latticeExtra)
@@ -593,11 +557,11 @@ foo2 <- xyplot(lat~long|factor(year), data=dat,
 plot(foo1, split = c(1, 1, 1, 2))
 plot(foo2, split = c(1, 2, 1, 2), newpage = FALSE)
 
-@
-% ----------------------------------------------------------------------------
+```
 
-\pagebreak
-\section{Time series of corn yields by state}
+-----
+
+## Time series of corn yields by state
 
 The National Agricultural Statistics Service tracks the total number of acres
 planted to corn (and other crops) for each state in the U.S.  The plot below
@@ -606,7 +570,7 @@ shows large changes over the past century in corn acreage for selected states.
 Which states were in the corn belt in 1925?
 Which states were in the corn belt in 2000?
 
-<<nass, echo=FALSE, fig.height=8>>=
+```{r nass, fig.height=8}
 dat <- nass.corn
 dat$acres <- dat$acres/1000000
 
@@ -623,17 +587,11 @@ xyplot(acres ~ year|state, dat, type='l', as.table=TRUE,
        strip=strip.custom(par.strip.text=list(cex=.5)),
        main="nass.corn", xlab="Year", ylab="Million acres of corn")
 
-@
+```
 
-% ----------------------------------------------------------------------------
+## Session information
+```{r session}
+sessionInfo()
+```
 
-\pagebreak
-\section{Appendix}
-
-Session information:
-<<finish, echo=FALSE, results="asis">>=
-toLatex(sessionInfo(), locale=FALSE)
-@
-
-\bibliography{agridat}
-\end{document}
+## References

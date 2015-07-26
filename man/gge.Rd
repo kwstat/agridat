@@ -92,7 +92,7 @@ gge(x, ...)
   Jean-Louis Laffont, Kevin Wright and Mohamed Hanafi (2013).
   Genotype + Genotype x Block of Environments (GGB) Biplots.
   \emph{Crop Science}, 53, 2332-2341.
-  \url{https://www.crops.org/publications/cs/abstracts/53/6/2332}.
+  \url{https://doi.org/10.2135/cropsci2013.03.0178}.
 
   Kroonenberg, Pieter M. (1997) \emph{Introduction to Biplots
     for GxE Tables}, Research Report 51, Centre for Statistics,
