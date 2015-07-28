@@ -9,6 +9,13 @@
 }
 \details{
 
+  \bold{Functions}
+
+  This package contains these functions:
+  \link{desplot}
+  \link{gge}
+  \link{papcov}
+  
 Abbreviations in the 'other' column include: xy = coordinates,
 pls = partial least squares, row-col = row-column design, ts = time series.
 
@@ -109,7 +116,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{caribbean.maize}           \tab     \tab 17 \tab 4   \tab    \tab 3   \tab \tab \cr
 \link{carmer.density}            \tab 8   \tab    \tab     \tab    \tab 4   \tab \tab nls,nlme \cr
 \link{carlson.germination}       \tab 15  \tab    \tab     \tab    \tab 8   \tab \tab glm\cr
-\link{cochran.bib}               \tab 13  \tab 13 \tab     \tab    \tab     \tab BIB \tab aov, lme \cr
+\link{cochran.bib}               \tab 13  \tab 13 \tab     \tab    \tab     \tab bib \tab aov, lme \cr
 \link{cochran.crd}               \tab     \tab    \tab     \tab    \tab 7   \tab xy, crd\tab aov \cr
 \link{cochran.factorial}         \tab     \tab    \tab 2   \tab    \tab 4^2 \tab factorial \tab aov \cr
 \link{cochran.latin}             \tab     \tab    \tab 6   \tab    \tab 6   \tab xy, latin\tab aov \cr
@@ -119,7 +126,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{connolly.potato}           \tab 20  \tab    \tab 4   \tab    \tab     \tab xy, competition \tab lm \cr
 \link{cornelius.maize}           \tab 9   \tab 20 \tab     \tab    \tab     \tab \tab svd\cr
 \link{corsten.interaction}       \tab 20  \tab 7  \tab     \tab    \tab     \tab \tab \cr
-\link{crossa.wheat}              \tab 18  \tab 25 \tab     \tab    \tab     \tab \tab AMMI \cr
+\link{crossa.wheat}              \tab 18  \tab 25 \tab     \tab    \tab     \tab \tab ammi \cr
 \link{crowder.seeds}             \tab 2   \tab    \tab 21  \tab    \tab 2   \tab \tab glm,jags \cr
 \link{cox.stripsplit}            \tab     \tab    \tab  4  \tab    \tab 3,4,2 \tab \tab aov \cr
 \link{cullis.earlygen}           \tab 532 \tab    \tab     \tab    \tab     \tab xy \tab asreml \cr
@@ -135,10 +142,10 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{fan.stability}             \tab 13  \tab 10 \tab     \tab 2  \tab     \tab 3-way \tab stability \cr
 \link{federer.diagcheck}         \tab 122 \tab    \tab     \tab    \tab     \tab xy \tab lm, lmer, asreml \cr
 \link{federer.tobacco}           \tab     \tab    \tab 8   \tab    \tab 7   \tab xy \tab lm \cr
-\link{fisher.latin}              \tab     \tab    \tab 5   \tab    \tab 5   \tab xy,lating \tab lm \cr
+\link{fisher.latin}              \tab     \tab    \tab 5   \tab    \tab 5   \tab xy,latin \tab lm \cr
 \link{fox.wheat}                 \tab 22  \tab 14 \tab     \tab    \tab     \tab \tab lm\cr
-\link{gathmann.bt}               \tab 2   \tab    \tab 8   \tab    \tab     \tab \tab TOST \cr
-\link{gauch.soy}                 \tab 7   \tab 7  \tab 4   \tab 12 \tab     \tab \tab AMMI \cr
+\link{gathmann.bt}               \tab 2   \tab    \tab 8   \tab    \tab     \tab \tab tost \cr
+\link{gauch.soy}                 \tab 7   \tab 7  \tab 4   \tab 12 \tab     \tab \tab ammi \cr
 \link{gilmour.serpentine}        \tab 108 \tab    \tab 3   \tab    \tab     \tab xy, serpentine\tab asreml \cr
 \link{gilmour.slatehall}         \tab 25  \tab    \tab 6   \tab    \tab     \tab xy \tab asreml \cr
 \link{gomez.fractionalfactorial} \tab     \tab    \tab 2   \tab    \tab 6   \tab xy \tab lm \cr
@@ -171,7 +178,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{john.alpha}                \tab 24  \tab    \tab 3   \tab    \tab     \tab alpha \tab lm, lmer \cr
 \link{johnson.blight}            \tab     \tab    \tab     \tab 2  \tab     \tab \tab logistic \cr
 \link{kang.maize}                \tab 17  \tab 4  \tab     \tab 3  \tab 2,4 \tab \tab \cr
-\link{kang.peanut}               \tab 10  \tab 15 \tab 4   \tab    \tab     \tab \tab GGE \cr
+\link{kang.peanut}               \tab 10  \tab 15 \tab 4   \tab    \tab     \tab \tab gge \cr
 \link{karcher.turfgrass}         \tab     \tab    \tab 4   \tab    \tab 2,4 \tab ordinal \tab polr \cr
 \link{keen.potatodamage}         \tab 6   \tab    \tab 4   \tab    \tab 2,3,8 \tab ordinal \tab mosaicplot \cr
 \link{kempton.competition}       \tab 36  \tab    \tab 3   \tab    \tab     \tab xy, competition \tab lme AR1 \cr
@@ -190,10 +197,10 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{minnesota.barley.weather}  \tab     \tab 6  \tab     \tab 10 \tab     \tab \tab \cr
 \link{minnesota.barley.yield}    \tab 22  \tab 6  \tab     \tab 10 \tab     \tab \tab dotplot\cr
 \link{ortiz.tomato}              \tab 15  \tab 18 \tab     \tab   \tab 16   \tab env*gen~env*cov \tab pls \cr
-\link{pacheco.soybean}           \tab 18  \tab 11 \tab     \tab    \tab     \tab \tab AMMI\cr
+\link{pacheco.soybean}           \tab 18  \tab 11 \tab     \tab    \tab     \tab \tab ammi\cr
 \link{perry.springwheat}         \tab 28  \tab 5  \tab     \tab 4  \tab     \tab gain \tab lm,lmer,asreml\cr
 \link{piepho.cocksfoot}          \tab 25  \tab    \tab     \tab 7  \tab     \tab \tab lmer\cr
-\link{ridout.appleshoots}        \tab     \tab    \tab 30  \tab    \tab 2,4 \tab ZIP \tab zeroinfl\cr
+\link{ridout.appleshoots}        \tab     \tab    \tab 30  \tab    \tab 2,4 \tab zip \tab zeroinfl\cr
 \link{rothamsted.brussels}       \tab     \tab    \tab 4   \tab    \tab 6   \tab \tab \cr
 \link{ryder.groundnut}           \tab 5   \tab    \tab 4   \tab    \tab     \tab xy, rcb \tab lm \cr
 \link{salmon.bunt}               \tab 10  \tab    \tab 2   \tab    \tab 20  \tab \tab betareg \cr
@@ -201,7 +208,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{shafii.rapeseed}           \tab 6   \tab 14 \tab 3   \tab 3  \tab     \tab \tab biplot \cr
 \link{sinclair.clover}           \tab     \tab    \tab     \tab    \tab 5,5 \tab rsm2,mitzerlich \tab nls,rgl \cr
 \link{snedecor.asparagus}        \tab     \tab    \tab 4   \tab 4  \tab 4   \tab \tab split-plot, antedependence \cr
-\link{snijders.fusarium}         \tab 17  \tab    \tab     \tab 3  \tab 4   \tab percent \tab glm/gnm,AMMI \cr
+\link{snijders.fusarium}         \tab 17  \tab    \tab     \tab 3  \tab 4   \tab percent \tab glm/gnm,ammi \cr
 \link{steel.soybean}             \tab 12  \tab 3  \tab 3   \tab    \tab     \tab \tab \cr
 \link{steptoe.morex.pheno}       \tab 152 \tab 16 \tab     \tab    \tab     \tab 10 traits \tab \cr
 \link{steptoe.morex.geno}        \tab 150 \tab    \tab     \tab    \tab     \tab 223 markers, qtl \tab \cr
@@ -224,10 +231,10 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{weiss.lattice}             \tab 49  \tab    \tab 4   \tab    \tab     \tab xy,lattice \tab lm,asreml \cr
 \link{welch.bermudagrass}        \tab     \tab    \tab     \tab    \tab 4,4,4 \tab rsm3, factorial \tab lm, jags \cr
 \link{wheatley.carrot}           \tab     \tab    \tab 3   \tab    \tab 11  \tab \tab glm-binomial \cr
-\link{yan.winterwheat}           \tab 18  \tab 9  \tab     \tab    \tab     \tab \tab GGE,biplot \cr
+\link{yan.winterwheat}           \tab 18  \tab 9  \tab     \tab    \tab     \tab \tab gge,biplot \cr
 \link{yang.barley}               \tab 6   \tab 18 \tab     \tab    \tab     \tab \tab biplot \cr
 \link{yates.missing}             \tab     \tab    \tab 10  \tab    \tab 3^2 \tab factorial \tab lm, pca \cr
-\link{yates.oats}                \tab 3   \tab    \tab 6   \tab    \tab     \tab xy, nitro\tab lmer \cr
+\link{yates.oats}                \tab 3   \tab    \tab 6   \tab    \tab     \tab xy,split,nitro\tab lmer \cr
 }
 
 \bold{Time series}
@@ -304,6 +311,10 @@ lists of matrices.
 Although using \code{data()} is not necessary to access the data files,
 the example sections do include the use of \code{data()} because
 \code{devtools::run_examples()} needs it.
+
+A large part of these data appear in electronic form here for the first
+time.  A great deal of effort has gone into preparing the data in
+electronic format, but mistakes are possible.  Please file a bug report.
 
 }
 

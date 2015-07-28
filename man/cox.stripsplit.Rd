@@ -48,7 +48,7 @@ if(require(HH)) {
                  main="cox.stripsplit")
 }
 
-# AOV
+# Traditional AOV
 m1 <- aov(yield~ fert*calcium*soil +
           Error(rep/(fert+soil+calcium:fert+soil:fert)),
           data=dat)

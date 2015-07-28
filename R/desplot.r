@@ -1,5 +1,5 @@
 # desplot.r
-# Time-stamp: <10 Jun 2015 16:41:15 c:/x/rpack/agridat/R/desplot.r>
+# Time-stamp: <27 Jul 2015 11:43:01 c:/x/rpack/agridat/R/desplot.r>
 # Copyright 2014, Kevin Wright
 
 # TODO: If we have 'text' and shorten='no', don't bother with the key.
@@ -9,7 +9,8 @@
 RedGrayBlue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
 
 desplot <- function(form=formula(NULL ~ x + y), data,
-                    num=NULL, col=NULL, text=NULL, out1=NULL, out2=NULL,
+                    num=NULL, col=NULL, text=NULL,
+                    out1=NULL, out2=NULL,
                     col.regions=RedGrayBlue, col.text=NULL, text.levels=NULL,
                     out1.gpar=list(col="black", lwd=3),
                     out2.gpar=list(col="yellow", lwd=1, lty=1),
@@ -195,7 +196,6 @@ desplot <- function(form=formula(NULL ~ x + y), data,
     text.n <- length(lt.text)
     lr <- lr + 2 + text.n
     lt <- c(lt, lt.text)
-    #if(length(col.text) < text.n) col.text <- rep(col.text, length=text.n)
   }
 
   # Set up short version of text
@@ -320,7 +320,6 @@ desplot <- function(form=formula(NULL ~ x + y), data,
   out1.val <- if(has.out1) data[[out1.var]] else NULL
   out2.val <- if(has.out2) data[[out2.var]] else NULL
 
-  #browser()
   out <-
     levelplot(form,
               data=data

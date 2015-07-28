@@ -1,12 +1,12 @@
-News for `agridat`
-
-# Version 1.13 (unpublished)
 
 ## Wish list
 
-- JAGS code for lee.potatoblight
-- JAGS code for theobald.barley
-- JAGS code for besag.elbatan
+* JAGS code for lee.potatoblight
+* JAGS code for theobald.barley
+* JAGS code for besag.elbatan
+
+
+# agridat 1.13 (unpublished)
 
 ## New data
 
@@ -14,10 +14,11 @@ wheatley.carrot
 
 ## Other
 
-- Switch to CC-BY-SA 4.0 + file LICENSE.  Similar to igraphdata package.
-- Change vignette from Rnw/pdf to Rmd/html.
+* Switch to CC-BY-SA 4.0 + file LICENSE.  Similar to igraphdata package.
+* Change vignette from Rnw/pdf to Rmd/html.
+* New function `papcov()` to make Papadakis nearest neighbor covariates.
 
-# Version 1.12 (Jun 2015)
+# agridat 1.12 - Jun 2015
 
 ## New data
 
@@ -25,11 +26,11 @@ cochran.beets, cochran.lattice, jansen.apple, jansen.carrot
   
 ## Other
 
-- Fix bug with `desplot( , show.key=FALSE)`
-- Changed links to Jstor to be plain text.
-- Add graphics, grDevices, stats to Imports.
+* Fix bug with `desplot( , show.key=FALSE)`
+* Changed Jstor links to be plain text.
+* Add graphics, grDevices, stats to Imports.
 
-# Version 1.11 (Mar 2015)
+# agridat 1.11 - Mar 2015
 
 ## New data
 
@@ -38,11 +39,11 @@ burgueno.unreplicated, steptoe.morex.pheno
 
 ## Other
 
-- Now includes `nipals()` function for principal components with missing data.
-- Removed non-CRAN package pcaMethods from Imports.
-- Removed (after adding) asreml from Suggests (due to CRAN check problems).
+* Now includes `nipals()` function for principal components with missing data.
+* Removed non-CRAN package pcaMethods from Imports.
+* Removed (after adding) **asreml** package from Suggests (due to CRAN check problems).
 
-# Version 1.10 (Nov 2014)
+# agridat 1.10 - Nov 2014
 
 ## New data
 
@@ -50,11 +51,11 @@ beaven.barley, perry.springwheat, ridout.appleshoots
 
 ## Other
 
-- Move packages from Depends to Imports.
-- JAGS example added to welch.bermudagrass.
-- Moved `vc()` function to the **lucid** package.
+* Move packages from Depends to Imports.
+* JAGS example added to welch.bermudagrass.
+* Moved `vc()` function to the **lucid** package.
 
-# Version 1.9 (Jul 2014)
+# agridat 1.9 - Jul 2014
 
 ## New data
 
@@ -74,30 +75,30 @@ welch.bermudagrass, weiss.incblock, weiss.lattice, yang.barley
 
 ## New functions:
 
-- `vc()` to extract variance component estimates from mixed models.
-- `gge()` to fit and plot GGE biplots.
+* `vc()` to extract variance component estimates from mixed models.
+* `gge()` to fit and plot GGE biplots.
 
 ## Other
 
-- Use `if(require(lme4))` in examples.  Ripley request.
-- hayman.diallel is now hayman.tobacco
-- besag.met now includes missing values (to form complete rectangles).
-- All data (almost) now have an example graphic.
+* Use `if(require(lme4))` in examples.  Ripley request.
+* hayman.diallel is now hayman.tobacco
+* besag.met now includes missing values (to form complete rectangles).
+* All data (almost) now have an example graphic.
 
-# Version 1.8 (Sep 2013)
+# agridat 1.8 - Sep 2013
 
 ## New data
 
 brandle.rape, salmon.bunt
 
-# Version 1.7 (Sep 2013)
+# agridat 1.7 - Sep 2013
 
 ## New data
 
 baker.barley.uniformity, bliss.borers, bond.diallel, harris.wateruse,
 hayman.diallel, holshouser.splitstrip, pearce.apple, waynick.soil
 
-# Version 1.6 (June 2013)
+# agridat 1.6 - June 2013
 
 ## New data
 
@@ -108,9 +109,9 @@ stephens.sorghum.uniformity
 
 ## Other
 
-- All uniformity trials now include `uniformity` in the data name.
+* All uniformity trials now include `uniformity` in the data name.
 
-# Version 1.5 (Apr 2013)
+# agridat 1.5 - Apr 2013
 
 ## New data
 
@@ -129,9 +130,9 @@ senshu.rice, snedecor.asparagus, streibig.competition, zuidhof.broiler
 
 ## Other
 
-- Removed rgl and rjags from 'Suggests' to facilitate cross-platform checking
+* Removed rgl and rjags from 'Suggests' to facilitate cross-platform checking
 
-# Version 1.4 (Mar 2012)
+# agridat 1.4 - Mar 2012
 
 ## New data
 
@@ -140,7 +141,7 @@ denis.ryegrass, digby.jointregression, engelstad.nitro, federer.diagcheck,
 gilmour.slatehall, john.alpha, ilra.sheep, kempton.slatehall,
 ryder.groundnut, steel.soybean, vsn.lupin3
 
-# Version 1.3 (Sep 2011)
+# agridat 1.3 - Sep 2011
 
 ## New data
 
@@ -148,16 +149,16 @@ bridges.cucumber, cox.stripsplit, diggle.cow, eden.potato, gauch.soy,
 graybill.heteroskedastic, hanks.sprinkler, mcconway.turnip, pearl.kernels,
 williams.barley.uniformity, williams.cotton.uniformity
 
-# Version 1.2 (Jun 2011)
+# agridat 1.2 - Jun 2011
 
 ## New data
 
 aastveit, gathmann.bt, kempton.competition, wedderburn.barley
 
-# Version 1.0 (Apr 2011)
+# agridat 1.0 - Apr 2011
 
 ## First release to CRAN.
 
-# Version 0.0 (Oct 2010)
+# agridat 0.0 - Oct 2010
 
 ## Development begins.

@@ -22,10 +22,11 @@
   treatment involved exposing tobacco seeds to seven different doses of
   radiation.  The seedlings were transplanted to the field in an RCB
   experiment with 7 treatments in 8 blocks.  The physical layout of the
-  experiment was in 8 rows and 7 columns.  Shortly after the plants were
-  transplanted to the field it became apparent that an environmental
-  gradient existed. The response variable was the total height
-  (centimeters) of 20 plants.
+  experiment was in 8 rows and 7 columns.
+
+  Shortly after the plants were transplanted to the field it became
+  apparent that an environmental gradient existed. The response variable
+  was the total height (centimeters) of 20 plants.
 }
 \source{
   Walter T Federer and C S Schlottfeldt, 1954.
@@ -66,4 +67,5 @@ col.regions=RedGrayBlue(21), main="federer.tobacco")
 # Row-column analysis.  Treatment now significant
 m2 <- lm(height ~ rowf + blockf + dosef, data=dat)
 anova(m2)
+
 }
