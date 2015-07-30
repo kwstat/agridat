@@ -16,7 +16,8 @@ wheatley.carrot
 
 * Switch to CC-BY-SA 4.0 + file LICENSE.  Similar to igraphdata package.
 * Change vignette from Rnw/pdf to Rmd/html.
-* New function `papcov()` to make Papadakis nearest neighbor covariates.
+* New function `papcov()` to make nearest neighbor Papadakis covariates.
+* `devtools::run_examples()` now works even without suggested packages installed.
 
 # agridat 1.12 - Jun 2015
 

@@ -79,7 +79,7 @@ means <- data.frame(rcb=coef(m0)[1:24],
 ## genG05 5.103100 5.225708 5.075944
 ## genG06 4.749067 4.618234 4.575394
 require(lattice)
-splom(means, data=means, main="john.alpha - means for RCB, IB, Intra-block")
+splom(means, main="john.alpha - means for RCB, IB, Intra-block")
 
 }
 

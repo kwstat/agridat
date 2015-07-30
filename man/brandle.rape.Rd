@@ -60,8 +60,10 @@ if(require(lme4) & require(lucid)){
 ## gen:year (Intercept) <NA> 14030 118.4
 ##      gen (Intercept) <NA> 72630 269.5
 ## Residual        <NA> <NA> 75010 273.9
-
+  
 }
+
+
 
 }
 \keyword{datasets}

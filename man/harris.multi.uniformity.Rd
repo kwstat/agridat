@@ -98,7 +98,10 @@ aggregate(yield~harv, dat, mean)
 # Corrgram
 require(reshape2)
 mat <- acast(dat, series+plot~harv, value.var='yield')
-if(require(corrgram)) corrgram(mat, main="harris.multi.uniformity")
+if(require(corrgram)) {
+  corrgram(mat, main="harris.multi.uniformity")
+}
+
 # Compare to Harris 1928, table 4.  More positive than negative correlations.
 # densityplot(as.vector(cor(mat)), xlab="correlations",
 #             main="harris.multi.uniformity")

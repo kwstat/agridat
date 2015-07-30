@@ -105,6 +105,7 @@ anova(m4)
 
 
 # Now an iterated procedure as given in Stroup et al, Table 2
+data(stroup.nin)
 dat2 <- stroup.nin
 dat2 <- subset(dat2,!is.na(yield))
 n.gen <- nlevels(dat2$gen)
@@ -125,7 +126,7 @@ m7 <- lm(yield ~ gen - 1 + LR + UD, data=dat2)
 # Papadakis adjusted means
 adjmn <- coef(m7)[1:n.gen]
 # Residual = observed - adjusted mean
-resid <- dat2$yield - lookup(paste0("gen",dat2$gen), names(adjmn), adjmn)
+resid <- dat2$yield - adjmn[match(paste0("gen",dat2$gen),names(adjmn))]
 
 # Now iterate Papadakis method to convergence
 iter <- 0
@@ -143,7 +144,7 @@ while(notConv){
   tol <- sum((adjmn - prevmn)^2)
   cat("Iteration: ",iter," tol: ",tol,"\n")
   notConv <- tol > .001
-  resid <- dat2$yield - lookup(paste0("gen",dat2$gen), names(adjmn), adjmn)
+  resid <- dat2$yield - adjmn[match(paste0("gen",dat2$gen),names(adjmn))]
 }
 pred.pap <- adjmn
 

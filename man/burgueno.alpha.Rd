@@ -51,6 +51,7 @@ if(require(lme4) && require(lucid)){
   ##  block:rep (Intercept) <NA>  86900 294.8
   ##        rep (Intercept) <NA> 200900 448.2
   ##   Residual        <NA> <NA> 133200 365
+  
 }
 
 \dontrun{

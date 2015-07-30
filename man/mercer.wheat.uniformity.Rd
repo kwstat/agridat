@@ -59,29 +59,28 @@ xyplot(straw ~ grain, data=dat, type=c('p','r'), main="mercer.wheat.uniformity -
 # require(hexbin)
 # hexbinplot(straw ~ grain, data=dat)
 
-require(sp)
-require(gstat)
-plot.wid <- 2.5
-plot.len <- 3.2
-nr <- length(unique(dat$row))
-nc <- length(unique(dat$col))
+if(require(sp) & require(gstat)) { 
+  plot.wid <- 2.5
+  plot.len <- 3.2
+  nr <- length(unique(dat$row))
+  nc <- length(unique(dat$col))
 
-xy <- expand.grid(x = seq(plot.wid/2, by=plot.wid, length=nc),
-y = seq(plot.len/2, by=plot.len, length=nr))
-dat.sp <- dat
-coordinates(dat.sp) <- xy
+  xy <- expand.grid(x = seq(plot.wid/2, by=plot.wid, length=nc),
+                    y = seq(plot.len/2, by=plot.len, length=nr))
+  dat.sp <- dat
+  coordinates(dat.sp) <- xy
 
-\dontrun{
-# heatmap
-spplot(dat.sp, zcol = "grain", cuts=8,
-       cex = 1.6,
-       col.regions =  bpy.colors(8),
-       main = "Grain yield", key.space = "right")
-
-# variogram
-vg <- variogram(grain ~ 1, dat.sp, cutoff = plot.wid * 10, width = plot.wid)
-plot(vg, plot.numbers = TRUE,
-     main="mercer.wheat.uniformity - variogram")
+  # heatmap
+  spplot(dat.sp, zcol = "grain", cuts=8,
+         cex = 1.6,
+         col.regions =  bpy.colors(8),
+         main = "Grain yield", key.space = "right")
+  
+  # variogram
+  vg <- variogram(grain ~ 1, dat.sp, cutoff = plot.wid * 10, width = plot.wid)
+  plot(vg, plot.numbers = TRUE,
+       main="mercer.wheat.uniformity - variogram")
 }
+
 }
 

@@ -35,9 +35,10 @@
 
 data(gomez.splitplot.subsample)
 dat <- gomez.splitplot.subsample
-require(HH)
-interaction2wt(height ~ rep + time + manage, data=dat,
-               main="gomez.splitplot.subsample - plant height")
+if(require(HH)){
+  interaction2wt(height ~ rep + time + manage, data=dat,
+                 main="gomez.splitplot.subsample - plant height")
+}
 
 # Management totals, Gomez table 6.8
 tapply(dat$height, dat$manage, sum)

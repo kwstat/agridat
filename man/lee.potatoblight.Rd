@@ -112,7 +112,7 @@ skp <- c(rep(0,10),
 desplot(y ~ col*row|date, dat,
         main="lee.potatoblight - maps of blight resistance",
         ylab="Year of testing",
-        layout=c(10,11),skip=skp)
+        layout=c(10,11),skip=as.logical(skp))
 
 # 1983 only.  I.Hardy succumbs quickly
 require(lattice)

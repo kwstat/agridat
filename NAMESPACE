@@ -12,6 +12,7 @@ import(stats)
 ## Exports
 export(desplot)
 export(RedGrayBlue)
+export(papcov)
 
 # Methods
 export(gge)

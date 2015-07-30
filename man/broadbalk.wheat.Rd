@@ -73,5 +73,6 @@ xyplot(grain~straw|plot, dat, type=c('p','smooth'), as.table=TRUE,
 # See the treatment descriptions to understand the patterns
 levelplot(grain~year*plot, dat, main="broadbalk.wheat: Grain", col.regions=RedGrayBlue)
 levelplot(straw~year*plot, dat, main="broadbalk.wheat: Straw", col.regions=RedGrayBlue)
+
 }
 \keyword{datasets}

@@ -81,6 +81,9 @@ require(nlme)
 m1n <- lme(water ~ 1 + ti + ti2, data=d22, na.action=na.omit,
            random = list(tree=pdDiag(~1+ti+ti2)))
 
+\dontrun{  
+  # Various other models with lme4 & asreml
+  
 require(lucid)
 vc(m1n)
 ##       effect variance    stddev
@@ -89,7 +92,7 @@ vc(m1n)
 ##          ti2   0      0.0000039
 ##     Residual   0.1472 0.3837
 
-if(require(lme4)){
+require(lme4)
 m1l <- lmer(water ~ 1 + ti + ti2 + (1|tree) +
             (0+ti|tree) + (0+ti2|tree), data=d22)
 
@@ -100,7 +103,6 @@ vc(m1l)
 ##   tree.2         ti2 <NA> 0      0
 ## Residual        <NA> <NA> 0.1472 0.3837
 
-}
 
 # Once the overall quadratic trend has been removed, there is not
 # too much evidence for consecutive observations being correlated
@@ -141,7 +143,7 @@ vc(m2l)
 ##  (Intercept)   0.2656 0.5154
 ##     Residual   0.1541 0.3926
 
-\dontrun{
+# ---
 
 ## Now use asreml.  When I tried rcov=~tree:exp(ti),
 ## the estimated parameter value was on the 'boundary', i.e. 0.
@@ -164,8 +166,9 @@ vc(m2a)
 ##  tree!tree.var    0.2656   0.1301      2      pos
 ##     R!variance    0.1541   0.01611     9.6    pos
 ##      R!day.pow    0.7683   0.04191    18    uncon
+print("Junk for devtools::run_examples")
 
-}
+
 
 # ----- Model 3. Full model for all species/ages.  Schabenberger p. 518
 
@@ -191,7 +194,7 @@ vc(m3l)
 ##           ti  0.02785 0.1669
 ##     Residual  0.16    0.4
 
-\dontrun{
+# --- asreml
 
 dat <- dat[order(dat$tree,dat$day),]
 m3a <- asreml(water ~ 0 + age:species + age:species:ti + age:species:ti2,
@@ -208,7 +211,5 @@ vc(m3a) # Note: day.pow = .8091 = exp(-1/4.7217)
 ##                    R!day.pow   0.8091   0.01581     51    uncon
 
 }
-
-
 }
 \keyword{datasets}

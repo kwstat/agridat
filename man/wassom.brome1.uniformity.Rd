@@ -50,9 +50,11 @@ data(wassom.brome1.uniformity)
 dat <- wassom.brome1.uniformity
 desplot(yield~col*row, dat, main="wassom.brome1.uniformity", flip=TRUE)
 
+data(wassom.brome2.uniformity)
 dat <- wassom.brome2.uniformity
 desplot(yield~col*row, dat, main="wassom.brome2.uniformity", flip=TRUE)
 
+data(wassom.brome3.uniformity)
 dat <- wassom.brome3.uniformity
 desplot(yield~col*row, dat, main="wassom.brome3.uniformity", flip=TRUE)
 

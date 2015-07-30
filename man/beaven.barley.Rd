@@ -49,7 +49,7 @@ tapply(dat$yield, dat$gen, mean)
 ## 298.080 300.710 318.685 295.260 306.410 276.475 304.605 271.820
 
 # Compare to Student 1923, diagram I,II
-desplot(yield ~ col*row, data=dat, aspect="iso",
+desplot(yield ~ col*row, data=dat, aspect=5/32,
         main="beaven.barley", text=gen)
 
 }

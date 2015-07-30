@@ -41,8 +41,7 @@ require(lattice)
 xyplot(nitro~carbon|field, data=dat, main="waynick.soil")
 
 # Spatial plot
-require(sp)
-require(gstat)
+if(require(sp) & require(gstat)){
 d1 <- subset(dat, field=="Davis")
 d2 <- subset(dat, field=="Oakley")
 coordinates(d1) <- data.frame(x=d1$x, y=d1$y)
@@ -54,6 +53,7 @@ spplot(d1, zcol = "nitro", cuts=8, cex = 1.6,
 # Variogram
 v1 <- variogram(nitro~1, data=d1)
 plot(v1, main="waynick.soil - Davis field - nitrogen") # Maybe hasn't reached sill
+}
 
 }
 \keyword{datasets}

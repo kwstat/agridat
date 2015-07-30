@@ -66,7 +66,7 @@ covs <- dat$covs
 # yield <- scale(yield)
 covs <- scale(covs)
 
-require(pls)
+if(require(pls)){
 m2 <- plsr(yield ~ covs)
 
 # Plot predicted vs observed for each genotype using all components
@@ -82,6 +82,7 @@ biplot(m2, cex=.5, which="y", var.axes=TRUE,
 biplot(m2, cex=.5, which="x", var.axes=TRUE) # Vectors form figure 2 b
 # biplot(m2, cex=.5, which="scores", var.axes=TRUE)
 # biplot(m2, cex=.5, which="loadings", var.axes=TRUE)
+}
 
 }
 

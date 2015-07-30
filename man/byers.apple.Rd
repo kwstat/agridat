@@ -57,6 +57,7 @@ if(require(nlme) & require(lucid)){
   ##  (Intercept) 0.007354   0.08575    NA
   ##         time 0.00003632 0.006027 0.83
   ##     Residual 0.0004555  0.02134    NA
+
 }
 
 }

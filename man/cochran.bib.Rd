@@ -52,9 +52,5 @@ summary(m1)
 require(nlme)
 m2 = lme(yield ~ -1 + gen, data=dat, random=~1|loc)
 
-if(require(agricolae)){
-  BIB.test(dat$loc, dat$gen, y=dat$yield)
-}
-
 }
 

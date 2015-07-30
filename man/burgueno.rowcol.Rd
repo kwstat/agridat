@@ -49,7 +49,7 @@ if(require(lme4) && require(lucid)){
   # Random rep, row and col within rep
   m1 <- lmer(yield ~ gen + (1|rep) + (1|rep:row) + (1|rep:col), data=dat)
   vc(m1) # Match components of Burgueno p. 40
-
+  
 }
 
 \dontrun{

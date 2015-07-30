@@ -44,7 +44,7 @@ m1 <- lmer(yield ~ loc + (1|gen) + (1|gen:loc) + (1|loc:block), data=dat)
 m2 <- lmer(yield ~ loc + (1|gen) + (1|loc:block), data=dat)
 anova(m1,m2)
 # h^2 deviations
-ranef(m2)$gen
+# ranef(m2)$gen  # This fails if 'ordinal' package is attached
 }
 
 }
