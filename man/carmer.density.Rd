@@ -2,10 +2,10 @@
 \alias{carmer.density}
 \docType{data}
 \title{
-  Maize yield-density model
+  Nonlinear maize yield-density model
 }
 \description{
-  Maize yield-density model.
+  Nonlinear maize yield-density model.
 }
 
 \format{
@@ -21,9 +21,9 @@
   included because it was believed they had optimum yields at relatively
   high and low popultions.  Planted in 1963.  Plots were thinned to
   2, 4, 6, 8 plants per hill, giving densities 8, 16, 24, 32 thousand
-  plants per acre.  Hills were in rows 40 inches apart--one hill =
-  1/4000 acre.  Split-plot design with 5 reps, density is main plot and
-  subplot was hybrid.
+  plants per acre.  Hills were in rows 40 inches apart.
+  One hill = 1/4000 acre.
+  Split-plot design with 5 reps, density is main plot and subplot was hybrid.
 }
 \source{
   S G Carmer and J A Jackobs (1965).

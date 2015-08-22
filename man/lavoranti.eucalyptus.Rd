@@ -63,7 +63,8 @@ data(lavoranti.eucalyptus)
 dat <- lavoranti.eucalyptus
 
 require(lattice)
-levelplot(height~loc*gen, dat, main="lavoranti.eucalyptus - GxE heatmap")
+levelplot(height~loc*gen, dat, main="lavoranti.eucalyptus - GxE heatmap",
+          col.regions=RedGrayBlue)
 
 dat <- droplevels(subset(dat, origin=="Ravenshoe"))
 require(reshape2)

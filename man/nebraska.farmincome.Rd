@@ -45,11 +45,14 @@ if(require("maps") & require("mapproj") & require("latticeExtra")) {
   # latticeExtra for mapplot
 
   dat$stco <- paste0('nebraska,', dat$county)
-
+  # Scale to million dollars per county
+  dat <- transform(dat, crop=crop/1000, animal=animal/1000)
+  
   # Raw, county-wide incomes.  Note the outlier Cuming county
-  mapplot(stco ~ crop + animal, data = dat,
-          scales = list(draw = FALSE), colramp=RedGrayBlue,
-          main="nebraska.farmincome: income per county",
+  mapplot(stco ~ crop + animal, data = dat, colramp=RedGrayBlue,
+          main="nebraska.farmincome",
+          xlab="Farm income from animals and crops (million $ per county)",
+          scales = list(draw = FALSE), 
           map = map('county', 'nebraska', plot = FALSE, fill = TRUE,
             projection = "mercator") )
 
@@ -59,9 +62,10 @@ if(require("maps") & require("mapproj") & require("latticeExtra")) {
     animal.rate <- animal/area
   })
   # And use manual breakpoints.
-  mapplot(stco ~ crop.rate + animal.rate, data = dat,
-          scales = list(draw = FALSE), colramp=RedGrayBlue,
+  mapplot(stco ~ crop.rate + animal.rate, data = dat, colramp=RedGrayBlue,
           main="nebraska.farmincome: income per square mile (percentile breaks)",
+          xlab="Farm income (million $ / mi^2) from animals and crops",
+          scales = list(draw = FALSE), 
           map = map('county', 'nebraska', plot = FALSE, fill = TRUE,
             projection = "mercator"),
           # Percentile break points

@@ -35,7 +35,7 @@
 data(steel.soybean)
 dat <- steel.soybean
 require(lattice)
-dotplot(gen~yield|loc, dat, main="steele.soybean - yield by location")
+dotplot(gen~yield|loc, dat, main="steel.soybean - yield by location")
 
 if(require(lme4)){
 # REML analysis as in O'Neill, p. 130.

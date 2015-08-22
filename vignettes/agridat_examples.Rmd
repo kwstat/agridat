@@ -9,9 +9,9 @@ output:
     highlight: tango
 bibliography: agridat.bib
 vignette: >
-  % \VignetteIndexEntry{Graphical Gems in the agridat Package}
-  % \VignetteEncoding{UTF-8}
-  % \VignetteEngine{knitr::rmarkdown}
+  %\VignetteIndexEntry{Graphical Gems in the agridat Package}
+  %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
 ---
 
 ## Abstract

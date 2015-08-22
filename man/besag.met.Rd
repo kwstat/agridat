@@ -36,10 +36,10 @@
   Julian Besag and D Higdon, 1999.
   Bayesian Analysis of Agricultural Field Experiments,
   \emph{Journal of the Royal Statistical Society: Series B (Statistical
-    Methodology)},61, 691--746. Table 1.
+    Methodology)}, 61, 691--746. Table 1.
 
   Retrieved from
-  \url{http://web.archive.org/web/19990505223413/www.stat.duke.edu/~higdon/trials/nc.dat}.
+  http://web.archive.org/web/19990505223413/www.stat.duke.edu/~higdon/trials/nc.dat
 
   Used with permission of David Higdon.
 }
