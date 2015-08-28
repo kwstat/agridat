@@ -17,7 +17,8 @@
   \link{papcov}
   
 Abbreviations in the 'other' column include: xy = coordinates,
-pls = partial least squares, row-col = row-column design, ts = time series.
+pls = partial least squares, row-col = row-column design,
+ts = time series, ym = yield monitor
 
 \bold{Uniformity trials with a single genotype}
 
@@ -144,6 +145,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{federer.tobacco}           \tab     \tab    \tab 8   \tab    \tab 7   \tab xy \tab lm \cr
 \link{fisher.latin}              \tab     \tab    \tab 5   \tab    \tab 5   \tab xy,latin \tab lm \cr
 \link{fox.wheat}                 \tab 22  \tab 14 \tab     \tab    \tab     \tab \tab lm\cr
+\link{gartner.corn}              \tab     \tab    \tab     \tab    \tab     \tab xy,ym \tab \cr
 \link{gathmann.bt}               \tab 2   \tab    \tab 8   \tab    \tab     \tab \tab tost \cr
 \link{gauch.soy}                 \tab 7   \tab 7  \tab 4   \tab 12 \tab     \tab \tab ammi \cr
 \link{gilmour.serpentine}        \tab 108 \tab    \tab 3   \tab    \tab     \tab xy, serpentine\tab asreml \cr
@@ -184,7 +186,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{kempton.competition}       \tab 36  \tab    \tab 3   \tab    \tab     \tab xy, competition \tab lme AR1 \cr
 \link{kempton.rowcol}            \tab 35  \tab    \tab 2   \tab    \tab     \tab xy, row-col \tab lmer \cr
 \link{kempton.slatehall}         \tab 25  \tab    \tab 6   \tab    \tab     \tab xy \tab asreml, lmer\cr
-\link{lasrosas.corn}             \tab     \tab    \tab 3   \tab 2  \tab 6   \tab xy \tab lm\cr
+\link{lasrosas.corn}             \tab     \tab    \tab 3   \tab 2  \tab 6   \tab xy,ym \tab lm\cr
 \link{lee.potatoblight}          \tab 337 \tab    \tab 4   \tab 11 \tab     \tab xy, ordinal, repeated \tab \cr
 \link{lonnquist.maize}           \tab 11  \tab    \tab     \tab    \tab     \tab diallel \tab asreml \cr
 \link{lyons.wheat}               \tab     \tab 12 \tab     \tab 4  \tab     \tab \tab \cr

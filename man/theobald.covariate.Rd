@@ -68,7 +68,7 @@ jdat <- list(nVar = 10, nYear = 5, nLoc = 7, nYL = 29, yield = ymat,
             chu = chu, year = yridx, loc = locidx)
 
 require(rjags)
-m1 <- jags.model(file=system.file("/files/theobald.bug", package="agridat"),
+m1 <- jags.model(file=system.file(package="agridat", "files/theobald.covariate.bug"),
   data=jdat, n.chains=2)
 
 # Table 3, Variety deviations from means (Expert prior)

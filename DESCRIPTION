@@ -40,6 +40,7 @@ Suggests:
     ordinal,
     pls,
     pscl,
+    rgdal,
     qtl,
     sp,
     survival,

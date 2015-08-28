@@ -484,12 +484,12 @@ mapplot(stco ~ crop.rate + animal.rate, data = dat,
 
 ## Las Rosas yield monitor
 
-@anselin2004spatial and @lambert2004comparison looked at yield
-monitor data collected from a corn field in Argentina in 1999 and 2001,
-to see how yield
+@anselin2004spatial and @lambert2004comparison looked at yield monitor data
+collected from a corn field in Argentina in 1999 and 2001, to see how yield
 was affected by field topography and nitrogen fertilizer.  The figures below
 show heatmaps for the yield each year, and also the experiment design (colors
-are reps, shades of color are nitrogen level, plotting character is topography).
+are reps, shades of color are nitrogen level, plotting character is
+topography).
 
 Which year showed greater spatial variation in yield?
 
@@ -500,7 +500,7 @@ library(latticeExtra)
 
 # yield map
 foo1 <- levelplot(yield ~ long*lat|factor(year), data=dat,
-          aspect=1,
+          aspect=1, layout=c(2,1),
           main="lasrosas.corn grain yield (qu/ha)", xlab="Longitude", ylab="Latitude",
           scales=list(alternating=FALSE),
           prepanel = prepanel.default.xyplot,
@@ -546,13 +546,14 @@ mypanel <- function(x,y,...,subscripts,col,pch) {
 }
 
 foo2 <- xyplot(lat~long|factor(year), data=dat,
-       aspect=1, xlim=xl, ylim=yl, cex=0.9,
-       main="lasrosas.corn experiment design", xlab="", ylab="",
-       scales=list(alternating=FALSE),
-       col=sseq[dat$repnf],
-       #pch=levels(dat$topo)[dat$topo],
-       pch=c('-','+','/','\\')[dat$topo],
-       panel=mypanel)
+               aspect=1, layout=c(2,1),
+               xlim=xl, ylim=yl, cex=0.9,
+               main="lasrosas.corn experiment design", xlab="", ylab="",
+               scales=list(alternating=FALSE),
+               col=sseq[dat$repnf],
+               #pch=levels(dat$topo)[dat$topo],
+               pch=c('-','+','/','\\')[dat$topo],
+               panel=mypanel)
 
 plot(foo1, split = c(1, 1, 1, 2))
 plot(foo2, split = c(1, 2, 1, 2), newpage = FALSE)
