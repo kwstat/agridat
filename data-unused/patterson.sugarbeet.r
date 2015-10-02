@@ -11,7 +11,7 @@
 library(lattice)
 library(rio)
 
-setwd("c:/x/rpack/agridat2/unused/")
+setwd("c:/x/rpack/agridat/data-unused/")
 dat <- import("patterson.sugarbeet.csv")
 library(reshape2)
 dm <- melt(dat, id.var=c('year','variety'))

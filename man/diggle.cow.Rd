@@ -25,7 +25,7 @@ Bodyweight of cows in a 2-by-2 factorial experiment
   non-infected) influence the weight of cows.
   
   Twenty-eight cows were allocated in a 2-by-2 factorial design
-  with these factors.  Some calves were inoculated with Mycobacterium at six
+  with these factors.  Some calves were inoculated with tuberculosis at six
   weeks of age.  At six months, some calves were maintained on
   supplemental iron diet for a further 27 months.
 
@@ -46,8 +46,8 @@ Bodyweight of cows in a 2-by-2 factorial experiment
   Lepper, AWD and Lewis, VM, 1989. Effects of altered dietary iron
   intake in Mycobacterium paratuberculosis-infected dairy cattle:
   sequential observations on growth, iron and copper metabolism and
-  development of paratuberculosis, \emph{Research in veterinary
-    science}, 46, 289--296.
+  development of paratuberculosis.
+  \emph{Research in veterinary science}, 46, 289--296.
 
   Arunas P. Verbyla and Brian R. Cullis and Michael G. Kenward
   and Sue J. Welham, (1999), The analysis of designed experiments and
@@ -67,7 +67,8 @@ dat <- diggle.cow
 # Figure 1 of Verbyla 1999
 require(lattice)
 if(require(latticeExtra)){
-  useOuterStrips(xyplot(weight ~ day|iron*infect, dat, type='b',group=animal,
+  useOuterStrips(xyplot(weight ~ day|iron*infect, dat, group=animal,
+                        type='b', cex=.5, 
                         main="diggle.cow"))
 }
 

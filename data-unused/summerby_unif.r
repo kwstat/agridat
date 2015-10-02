@@ -1,6 +1,5 @@
 
-# summerby 1934
-
+# Summerby 1934
 # The value of preliminary uniformity trials in increasing the precision
 # of field experiments.
 
@@ -10,7 +9,7 @@
 library(rio)
 library(agridat)
 
-dat=import("c:/x/rpack/agridat2/unused/summerby_unif.csv")
+dat <- import("c:/x/rpack/agridat/data-unused/summerby_unif.csv")
 
 desplot(yield~plot*range|year, dat, tick=TRUE)
 

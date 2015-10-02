@@ -5,7 +5,6 @@ author: "Kevin Wright"
 date: "`r Sys.Date()`"
 output:
   html_document:
-    css: avenir-white.css
     highlight: tango
 bibliography: agridat.bib
 vignette: >
@@ -13,6 +12,13 @@ vignette: >
   %\VignetteEncoding{UTF-8}
   %\VignetteEngine{knitr::rmarkdown}
 ---
+<style type="text/css">
+body, td { font-size: 14pt; color: #000; padding:1em; }
+code, pre, #ws, #message { font-size: 12pt;
+  color: #000; background-color: #f5f5f5; }
+code {border: 1px solid #e0e0e0; padding: 0 5px;}
+pre > code { border: 0; }
+</style>
 
 ## Abstract
 
@@ -28,7 +34,7 @@ require only on the order of 10-20 lines of R code to reproduce.
 
 ## Setup
 
-```{r setup, echo=FALSE, results="hide"}
+```{r setup, results="hide"}
 library("knitr")
 opts_chunk$set(fig.align="center", fig.width=6, fig.height=6)
 options(width=90)

@@ -1,7 +1,7 @@
 # crossa.87evt13.r
 # Time-stamp: c:/x/rpack/agridat2/crossa.87evt13.r
 
-# Obtained from Crossa 1997, 
+# Crossa 1997
 # Sites Regression and Shifted Multiplicative Model Clustering
 
 # Site codes are listed in Crossa et al 1993,
@@ -13,7 +13,7 @@
 library(lattice)
 library(rio)
 
-setwd("c:/x/rpack/agridat2/unused/")
+setwd("c:/x/rpack/agridat/data-unused/")
 mat <- import("crossa.87evt13.csv")
 
 library(reshape2)

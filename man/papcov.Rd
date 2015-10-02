@@ -84,6 +84,7 @@ A list of length 2:
 \examples{
 
 # Reproduce Hinz 1987 case 2.
+data(federer.tobacco)
 dat <- federer.tobacco
 dat <- transform(dat, height=height-600)
 

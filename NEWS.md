@@ -10,7 +10,7 @@
 
 ## New data
 
-gartner.corn, wheatley.carrot
+gartner.corn, kenward.cattle, montgomery.wheat.uniformity, wheatley.carrot
 
 ## Other
 
@@ -27,7 +27,7 @@ cochran.beets, cochran.lattice, jansen.apple, jansen.carrot
   
 ## Other
 
-* Fix bug with `desplot( , show.key=FALSE)`
+* Fixed bug with `desplot( , show.key=FALSE)`
 * Changed Jstor links to be plain text.
 * Add graphics, grDevices, stats to Imports.
 
@@ -40,8 +40,8 @@ burgueno.unreplicated, steptoe.morex.pheno
 
 ## Other
 
-* Now includes `nipals()` function for principal components with missing data.
 * Removed non-CRAN package pcaMethods from Imports.
+* R-code `nipals()` function for principal components with missing data.
 * Removed (after adding) **asreml** package from Suggests (due to CRAN check problems).
 
 # agridat 1.10 - Nov 2014
@@ -63,24 +63,21 @@ beaven.barley, perry.springwheat, ridout.appleshoots
 beall.webworms, besag.endive, brandt.switchback, butron.maize,
 carlson.germination, cochran.factorial, connolly.potato, cornelius.maize,
 cullis.earlygen, fisher.latin, foulley.calving, fox.wheat,
-gomez.splitplot.subsample, goulden.latin, gumpertz.pepper,
-harrison.priors, hazell.vegetables, heady.fertilizer, holland.arthropods,
-hunter.corn, jansen.strawberry, kalamkar.potato.uniformity, kang.maize,
-kang.peanut, karcher.turfgrass, keen.potatodamage, lasrosas.corn,
-lee.potatoblight, lonnquist.maize, lucas.switchback, maindonald.barley,
-mead.cauliflower, mercer.mangold.uniformity, patterson.switchback,
-piepho.cocksfoot, sinclair.clover, snijders.fusarium, stirret.borers,
-theobald.barley, turner.herbicide, vargas.txe, vold.longterm,
-wallace.iowaland, walsh.cottonprice, wassom.brome1.uniformity,
-welch.bermudagrass, weiss.incblock, weiss.lattice, yang.barley
-
-## New functions:
-
-* `vc()` to extract variance component estimates from mixed models.
-* `gge()` to fit and plot GGE biplots.
+gomez.splitplot.subsample, goulden.latin, gumpertz.pepper, harrison.priors,
+hazell.vegetables, heady.fertilizer, holland.arthropods, hunter.corn,
+jansen.strawberry, kalamkar.potato.uniformity, kang.maize, kang.peanut,
+karcher.turfgrass, keen.potatodamage, lasrosas.corn, lee.potatoblight,
+lonnquist.maize, lucas.switchback, maindonald.barley, mead.cauliflower,
+mercer.mangold.uniformity, patterson.switchback, piepho.cocksfoot,
+sinclair.clover, snijders.fusarium, stirret.borers, theobald.barley,
+turner.herbicide, vargas.txe, vold.longterm, wallace.iowaland,
+walsh.cottonprice, wassom.brome1.uniformity, welch.bermudagrass,
+weiss.incblock, weiss.lattice, yang.barley
 
 ## Other
 
+* Function `vc()` to extract variance component estimates from mixed models.
+* Function `gge()` to fit and plot GGE biplots.
 * Use `if(require(lme4))` in examples.  Ripley request.
 * hayman.diallel is now hayman.tobacco
 * besag.met now includes missing values (to form complete rectangles).
@@ -104,9 +101,8 @@ hayman.diallel, holshouser.splitstrip, pearce.apple, waynick.soil
 ## New data
 
 crossa.wheat, garber.multi.uniformity, gomez.nitrogen,
-harris.multi.uniformity, li.millet.uniformity,
-odland.soybean.uniformity, odland.soyhay.uniformity, ratkowsky.onions,
-stephens.sorghum.uniformity
+harris.multi.uniformity, li.millet.uniformity, odland.soybean.uniformity,
+odland.soyhay.uniformity, ratkowsky.onions, stephens.sorghum.uniformity
 
 ## Other
 
@@ -117,21 +113,21 @@ stephens.sorghum.uniformity
 ## New data
 
 adugna.sorghum, ars.earlywhitecorn96, besag.bayesian, box.cork,
-broadbalk.wheat, byers.apple, caribbean.maize, carmer.density,
-cate.potassium, cleveland.soil, cochran.eelworms, cochran.wireworms,
-fan.stability, gomez.seedrate, gotway.hessianfly,
-goulden.barley.uniformity, henderson.milkfat, hernandez.nitrogen,
-hessling.argentina, immer.sugarbeet.uniformity, ivins.herbs, jenkyn.mildew,
-johnson.blight, lambert.soiltemp, lavoranti.eucalyptus,
-lyon.potato.uniformity, lyons.wheat, mead.cowpeamaize, mead.germination,
-minnesota.barley.weather, minnesota.barley.yield, nebraska.farmincome,
-nass.barley, nass.corn, nass.cotton, nass.hay, nass.rice,
-nass.sorghum, nass.soybean, nass.wheat, ortiz.tomato, pacheco.soybean,
-senshu.rice, snedecor.asparagus, streibig.competition, zuidhof.broiler
+broadbalk.wheat, byers.apple, caribbean.maize, carmer.density, cate.potassium,
+cleveland.soil, cochran.eelworms, cochran.wireworms, fan.stability,
+gomez.seedrate, gotway.hessianfly, goulden.barley.uniformity,
+henderson.milkfat, hernandez.nitrogen, hessling.argentina,
+immer.sugarbeet.uniformity, ivins.herbs, jenkyn.mildew, johnson.blight,
+lambert.soiltemp, lavoranti.eucalyptus, lyon.potato.uniformity, lyons.wheat,
+mead.cowpeamaize, mead.germination, minnesota.barley.weather,
+minnesota.barley.yield, nebraska.farmincome, nass.barley, nass.corn,
+nass.cotton, nass.hay, nass.rice, nass.sorghum, nass.soybean, nass.wheat,
+ortiz.tomato, pacheco.soybean, senshu.rice, snedecor.asparagus,
+streibig.competition, zuidhof.broiler
 
 ## Other
 
-* Removed rgl and rjags from 'Suggests' to facilitate cross-platform checking
+* Removed rgl and rjags from Suggests to facilitate cross-platform checking
 
 # agridat 1.4 - Mar 2012
 

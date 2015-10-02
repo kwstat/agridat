@@ -1,4 +1,4 @@
-"long"	"lat"	"mass"	"time"	"seconds"	"dist"	"moist"	"altitude"
+"long"	"lat"	"mass"	"time"	"seconds"	"dist"	"moist"	"elev"
 -93.97842	43.927265	16.54	0	3	116	18.5	1030.58
 -93.978421	43.927228	22.52	3	3	159	16.7	1030.58
 -93.978422	43.927184	27.01	6	3	169	17.2	1029.92

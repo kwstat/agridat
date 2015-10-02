@@ -1,8 +1,8 @@
 Package: agridat
 Title: Agricultural Datasets
 Version: 1.13
-Authors@R: person("Kevin","Wright", email="kw.stat@gmail.com", role=c("aut","cre"))
 Date: 2015-06-28
+Authors@R: person("Kevin","Wright", email="kw.stat@gmail.com", role=c("aut","cre"))
 Type: Package
 Description: Datasets from books, papers, and websites related to agriculture.
     Example analyses are included.  Includes functions for plotting field

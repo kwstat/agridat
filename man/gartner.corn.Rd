@@ -24,7 +24,7 @@
     \item{\code{seconds}}{Seconds elapsed for each datum}
     \item{\code{dist}}{Distance traveled for each datum, in inches}
     \item{\code{moist}}{Grain moisture, percent}
-    \item{\code{altitude}}{Altitude, feet}
+    \item{\code{elev}}{Elevation, feet}
   }
 }
 
@@ -118,6 +118,17 @@ tapply(dat$yield, dat$mu, sd)
 require(lattice)
 densityplot(~yield|mu, dat, layout=c(1,5),
             main="gartner.corn - yield density plot")
+}
+
+\dontrun{
+# Draw a 3D surface.  Clearly shows the low drainage area
+library(rgl)
+dat <- transform(dat, x=long-min(long), y=lat-min(lat), z=elev-min(elev))
+clear3d()
+points3d(dat$x, dat$y, dat$z/50000,
+         col=RedGrayBlue(ncols)[dat$yldbin])
+axes3d()
+title3d(xlab='x',ylab='y',zlab='elev')
 }
 
 }

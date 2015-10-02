@@ -42,6 +42,7 @@ name                                  \tab dimensions \tab other \tab model \cr
 \link{lyon.potato.uniformity}         \tab 34 x 6 \tab xy \tab \cr
 \link{mercer.mangold.uniformity}      \tab 10 x 25 \tab xy, 2 traits \tab \cr
 \link{mercer.wheat.uniformity}        \tab 25 x 20 \tab xy, 2 traits \tab spplot \cr
+\link{montgomery.wheat.uniformity}    \tab 14 x 16 \tab xy, \tab lm \cr
 \link{odland.soybean.uniformity}      \tab 25 x 42 \tab xy \tab \cr
 \link{odland.soyhay.uniformity}       \tab 28 x 55 \tab xy \tab \cr
 \link{smith.corn.uniformity}          \tab 6 x 20 \tab xy, 3 years \tab rgl \cr
@@ -66,6 +67,7 @@ name                             \tab gen \tab loc\tab years \tab trt \tab other
 \link{henderson.milkfat}         \tab     \tab    \tab    \tab     \tab \tab nls,lm,glm,gam\cr
 \link{holland.arthropods}        \tab 5   \tab    \tab    \tab     \tab \tab \cr
 \link{ilri.sheep}                \tab 4   \tab    \tab 6  \tab     \tab diallel \tab lmer, asreml \cr
+\link{kenward.cattle}            \tab     \tab    \tab    \tab 2   \tab \tab asreml \cr
 \link{lucas.switchback}          \tab 12  \tab    \tab    \tab 3   \tab \tab aov \cr
 \link{patterson.switchback}      \tab 12  \tab    \tab    \tab 4   \tab \tab aov \cr
 \link{zuidhof.broiler}           \tab     \tab    \tab    \tab     \tab ts \tab \cr
@@ -225,7 +227,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{vargas.wheat1}             \tab 7   \tab    \tab     \tab 6  \tab     \tab gen*yr~gen*trt, yr*gen~yr*cov\tab pls \cr
 \link{vargas.wheat2}             \tab 8   \tab 7  \tab     \tab    \tab     \tab env*gen~env*cov \tab pls \cr
 \link{vargas.txe}                \tab     \tab    \tab     \tab 10 \tab 24  \tab yr*trt~yr*cov \tab pls \cr
-\link{verbyla.lupin}             \tab 9   \tab 8  \tab     \tab 2  \tab     \tab rsm1, xy, density\tab \cr
+\link{verbyla.lupin}             \tab 9   \tab 8  \tab     \tab 2  \tab     \tab rsm1, xy, density\tab asreml\cr
 \link{vold.longterm}             \tab     \tab    \tab     \tab 19 \tab 4   \tab rsm1 \tab nls,nlme \cr
 \link{vsn.lupin3}                \tab 336 \tab 3  \tab     \tab    \tab     \tab xy \tab asreml\cr
 \link{wedderburn.barley}         \tab 10  \tab 9  \tab     \tab    \tab     \tab percent \tab glm/gnm \cr

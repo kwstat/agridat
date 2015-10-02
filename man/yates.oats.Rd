@@ -25,7 +25,7 @@
 
 \source{
   Yates, Frank (1935) Complex experiments,
-  \emph{Journal of the Royal Statistical Society Suppl}. 2, 181--247.
+  \emph{Journal of the Royal Statistical Society Suppl}. 2, 181-247.
 }
 
 \references{
@@ -82,7 +82,7 @@ m4 <- lmer(yield ~ x + nitro * gen + (1|block/gen), data=dat)
                 random = ~ block + block:gen, data=dat2)
 
   require(lucid)
-  vc(m5l) # warning.  FIXME
+  vc(m5l)
   vc(m5a)
 
   lsmeans(m5l, "gen")
