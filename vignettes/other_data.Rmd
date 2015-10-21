@@ -84,6 +84,10 @@ https://r-forge.r-project.org/projects/plantbreeding/
 Agriculture, along with a vignette to illustrate survey sampling analyses.
 http://cran.r-project.org/package=SDaA
 
+`spdep` has a vignette 'The Problem of Spatial Autocorrelation: forty years
+on' that examines agriculture in Irish counties.  See also the data
+`ade4::irishdata`. 
+
 ## Web sites
 
 Statistical Analysis of Agricultural Experiments with R

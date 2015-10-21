@@ -247,6 +247,7 @@ name                             \tab years \tab trt \tab other \tab model \cr
 \link{byers.apple}               \tab     \tab    \tab \tab lme\cr
 \link{broadbalk.wheat}           \tab 74  \tab 17 \tab \tab \cr
 \link{hessling.argentina}        \tab 30  \tab    \tab temp,precip\tab \cr
+\link{kreusler.maize}            \tab 4   \tab 5  \tab plant growth \tab \cr
 \link{lambert.soiltemp}          \tab 1   \tab 7  \tab \tab \cr
 \link{nass.barley}               \tab 146 \tab    \tab \tab \cr
 \link{nass.corn}                 \tab 146 \tab    \tab \tab \cr

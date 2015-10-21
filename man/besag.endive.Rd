@@ -44,11 +44,12 @@ dat <- besag.endive
 
 # Incidence map.  Figure 2 of Friel and Pettitt
 desplot(disease~col*row, dat, col.regions=c('lightgray','black'),
-        main="besag.endive")
+        aspect = .3, # No idea if this is right.
+        main="besag.endive - Disease incidence")
 
 \dontrun{
 
-# Besag 2000 "An Introduction to Markov Chain Monte Carlo" suggested
+# Besag (2000) "An Introduction to Markov Chain Monte Carlo" suggested
 # that the autologistic model is not a very good fit for this data.
 # We try it anyway.  No idea if this is correct or how to interpret...
 

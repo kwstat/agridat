@@ -31,6 +31,11 @@
   of field experiments.  \emph{Journal of Agricultural, Biological, and
   Environmental Statistics}, 2, 269-293.
 }
+
+\references{
+  None.
+}
+
 \examples{
 
 data(gilmour.slatehall)

@@ -5,7 +5,7 @@
   Slate Hall Farm 1976 spring wheat
 }
 \description{
-  Yields for a trial at Slate Hall Farm in 1976.
+  Yields for a Slate Hall Farm 1976 spring wheat trial.
 }
 
 \format{
@@ -26,13 +26,19 @@
 \source{
   R A Kempton and P N Fox. (1997).
   \emph{Statistical Methods for Plant Variety Evaluation},
-  Chapman and Hall.   Page 84.
+  Chapman and Hall.  Page 84.
+
+  Julian Besag and David Higdon. 1993.
+  Bayesian Inference for Agricultural Experiments.
+  Bull. Int. Statist. Table 4.1.
 }
+
 \references{
   Gilmour, Arthur R and Robin Thompson and Brian R Cullis. (1994).
   Average Information REML: An Efficient Algorithm for Variance
   Parameter Estimation in Linear Mixed Models, \emph{Biometrics},
   51, 1440-1450.
+
 }
 
 \examples{
@@ -41,8 +47,11 @@ data(kempton.slatehall)
 dat <- kempton.slatehall
 dat <- transform(dat, xf=factor(col), yf=factor(row))
 
+# Besag 1993 figure 4.1 (left panel)
+WhiteBlack <- colorRampPalette(c("white","black"))
 desplot(yield ~ col * row, dat, num=gen, out1=rep,
-        main="kempton.slatehall")
+        col.regions=WhiteBlack,
+        main="kempton.slatehall - spring wheat yields")
 
 # Incomplete block model of Gilmour et al 1995
 if(require(lme4) & require(lucid)){
