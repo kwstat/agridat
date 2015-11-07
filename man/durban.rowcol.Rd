@@ -42,6 +42,7 @@
 data(durban.rowcol)
 dat <- durban.rowcol
 
+require("agrifun")
 desplot(yield~bed*row, dat, out1=rep, main="durban.rowcol")
 
 # Durban 2003 Figure 1

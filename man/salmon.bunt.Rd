@@ -62,7 +62,8 @@ d2$bunt <- reorder(d2$bunt, d2$pct)
 # are susceptible to all bunts.  Note the groups of bunt races that are similar,
 # such as the first 4 rows of this plot.  Also note the strong wheat*bunt interaction.
 require(lattice)
-levelplot(pct~gen+bunt,d2, col.regions=RedGrayBlue,
+redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
+levelplot(pct~gen+bunt,d2, col.regions=redblue,
           main="salmon.bunt percent of heads infected",
           xlab="Wheat variety", ylab="bunt line")
 

@@ -32,12 +32,13 @@ Lint yield from a cotton uniformity trial
 data(williams.cotton.uniformity)
 dat <- williams.cotton.uniformity
 
-require("lattice")
 asp = (12*12)/(24*1) # true aspect
+require("agrifun")
 desplot(yield ~ col*row, dat, aspect=asp, main="williams.cotton.uniformity")
 
 # Smoothed contour/persp plot like Williams 1988 Fig 1a, 2a
 dat$fit <- fitted(loess(yield~col*row, dat, span=.5))
+require("lattice")
 contourplot(fit~col*row, data=dat, cuts=6, main="williams.cotton.uniformity")
 wireframe(fit~col*row, data=dat, zlim=c(100, 250), main="williams.cotton.uniformity")
 

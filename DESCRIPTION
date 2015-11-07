@@ -5,18 +5,12 @@ Date: 2015-06-28
 Authors@R: person("Kevin","Wright", email="kw.stat@gmail.com", role=c("aut","cre"))
 Type: Package
 Description: Datasets from books, papers, and websites related to agriculture.
-    Example analyses are included.  Includes functions for plotting field
-    designs and GGE biplots.
+    Example analyses are included.
 Imports:
-    graphics,
-    grDevices,
-    grid,
-    lattice,
-    reshape2,
-    stats
 Suggests:
     AER,
     agricolae (>= 1.2),
+    agrifun,
     betareg,
     car,
     coin,

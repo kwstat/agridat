@@ -63,8 +63,9 @@ data(lavoranti.eucalyptus)
 dat <- lavoranti.eucalyptus
 
 require(lattice)
+grays <- colorRampPalette(c("#d9d9d9","#252525"))
 levelplot(height~loc*gen, dat, main="lavoranti.eucalyptus - GxE heatmap",
-          col.regions=RedGrayBlue)
+          col.regions=grays)
 
 dat <- droplevels(subset(dat, origin=="Ravenshoe"))
 require(reshape2)

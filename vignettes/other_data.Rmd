@@ -64,7 +64,8 @@ Has an A matrix (but no pedigree) for 499 genotypes at 4 locations.
 `cropcc`. Climate change on crops.
 https://r-forge.r-project.org/projects/cropcc/
 
-`drc` is a package for dose response curves.
+`drc` is a package for dose response curves, including germination data for
+mungbean, rice, wheat.
 
 `lmtest::ChickEgg` has time series of annual chicken and egg
 production in the United States 1930-1983.

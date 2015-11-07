@@ -56,22 +56,23 @@ dat[ dat$field =="F2" & dat$row==5 & dat$quadrat==4, 'water'] <- NA
 dat <- transform(dat, row=21-row)
 
 # Disease presence.  Gumpertz fig 1a, 2a.
+require("agrifun")
+grays <- colorRampPalette(c("#d9d9d9","#252525"))
 desplot(disease ~ row*quadrat|field, data=dat,
         main="gumpertz.pepper disease presence", aspect=1,
-        col.region=c('lightgray','black'))
+        col.regions=grays)
 
 # Soil water.  Gumpertz fig 1b, 2b
 desplot(water ~ row*quadrat|field, data=dat,
         main="gumpertz.pepper soil moisture", aspect=1,
-        col.regions=c("#D9D9D9","#B3B3B3","#848484","#5A5A5A","#252525"),
+        col.regions=grays(5),
         at=c(5,7.5,10,12.5,15,18))
 
 # Leaf assay.  Gumpertz fig 1c, 2c
 desplot(leaf ~ row*quadrat|field, data=dat,
         main="gumpertz.pepper leaf assay", aspect=1,
-        col.regions=c("#D9D9D9","#BDBDBD","#969696",
-          "#737373","#525252","#252525"))
-        at=c(0,1,2,3,4,5,6)-.5
+        col.regions=grays(6),
+        at=c(0,1,2,3,4,5,6)-.5)
 
 # Use the inner 16x16 grid of plots in field 2
 dat2 <- droplevels(subset(dat, field=="F2" & !is.na(water) &

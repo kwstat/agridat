@@ -50,6 +50,7 @@ data(montgomery.wheat.uniformity)
 dat <- montgomery.wheat.uniformity
 
 # Montgomery figure 10, page 37.
+require("agrifun")
 desplot(yield ~ col*row, dat, text=yield,
         cex=1, shorten="none",
         main="montgomery.wheat.uniformity - observed yield")

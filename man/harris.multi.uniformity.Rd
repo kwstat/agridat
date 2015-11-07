@@ -119,6 +119,7 @@ d2$plot <- as.numeric(substring(d2$ord,3))
 d2$xord <- 5 - dat$series
 # Note that for alfalfa, higher-yielding plots in 1912-1914 were
 # lower-yielding in 1922-1923.
+require("agrifun")
 desplot(yield ~ xord*plot|harv, data=d2, aspect=.84, flip=TRUE,
         main="harris.multi.uniformity")
 

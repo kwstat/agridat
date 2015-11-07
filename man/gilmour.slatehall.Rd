@@ -41,6 +41,7 @@
 data(gilmour.slatehall)
 dat <- gilmour.slatehall
 
+require("agrifun")
 desplot(yield ~ col * row, dat, num=gen,
         out1=rep, main="gilmour.slatehall")
 

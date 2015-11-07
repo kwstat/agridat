@@ -44,6 +44,8 @@ Odland and Garber provide no agronomic context for the yield variation.
 
 data( odland.soyhay.uniformity)
 dat1 <- odland.soyhay.uniformity
+
+require("agrifun")
 desplot(yield ~ col*row, dat1, flip=TRUE,
         aspect=200/(42*30/12), # true aspect ratio
         main="odland.soyhay.uniformity")

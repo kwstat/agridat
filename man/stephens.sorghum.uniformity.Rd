@@ -47,7 +47,12 @@ d4 <- dat
 d4$row2 <- ceiling((d4$row-2)/4)
 d4 <- aggregate(yield ~ row2+col, data=d4, FUN=sum)
 d4$row2 <- 25-d4$row2 # flip horizontally
-desplot(yield ~ row2*col, data=d4, flip=TRUE, main="stephens.sorghum.uniformity",
-        at=c(500,680,780,1000), col.regions=c('white','gray','gray30'))
+require("agrifun")
+grays <- colorRampPalette(c("#d9d9d9","#252525"))
+desplot(yield ~ row2*col, data=d4, flip=TRUE,
+        main="stephens.sorghum.uniformity",
+        col.regions=grays(3),
+        at=c(500,680,780,1000),
+        )
 }
 \keyword{datasets}

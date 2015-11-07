@@ -38,12 +38,13 @@
 data(yates.oats)
 dat <- yates.oats
 
+require("agrifun")
 desplot(yield ~ x*y, dat, out1=block, text=gen, col=nitro, cex=1,
         main="yates.oats")
 
 # Roughly linear gradient across the field.  The right-half of each
 # block has lower yield.  The blocking is inadequate!
-require(lattice)
+require("lattice")
 xyplot(yield ~ x|factor(nitro), dat, type = c('p', 'smooth'),
        xlab='x', span=1, as.table = TRUE, main="yates.oats")
 

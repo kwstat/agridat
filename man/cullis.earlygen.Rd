@@ -62,6 +62,7 @@ dat <- cullis.earlygen
 
 # Show field layout of checks.  Cullis Table 1.
 dat$check <- ifelse(dat$entry < 8, dat$entry, NA)
+require("agrifun")
 desplot(yield ~ col*row, dat, main="cullis.earlygen (yield)",
         col="check", cex=1, flip=TRUE)
 

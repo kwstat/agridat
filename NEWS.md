@@ -10,13 +10,13 @@
 
 ## New data
 
-gartner.corn, kenward.cattle, kreusler.maize, montgomery.wheat.uniformity, wheatley.carrot
+battese.survey, gartner.corn, kenward.cattle, kreusler.maize, montgomery.wheat.uniformity, wheatley.carrot
 
 ## Other
 
+* Moved `desplot`, `gge` functions to new package `agrifun`.
 * Switch to CC-BY-SA 4.0 + file LICENSE.  Similar to igraphdata package.
 * Change vignette from Rnw/pdf to Rmd/html.
-* New function `papcov()` to make nearest neighbor Papadakis covariates.
 * `devtools::run_examples()` now works even without suggested packages installed.
 
 # agridat 1.12 - Jun 2015
@@ -27,7 +27,6 @@ cochran.beets, cochran.lattice, jansen.apple, jansen.carrot
   
 ## Other
 
-* Fixed bug with `desplot( , show.key=FALSE)`
 * Changed Jstor links to be plain text.
 * Add graphics, grDevices, stats to Imports.
 
@@ -40,8 +39,6 @@ burgueno.unreplicated, steptoe.morex.pheno
 
 ## Other
 
-* Removed non-CRAN package pcaMethods from Imports.
-* R-code `nipals()` function for principal components with missing data.
 * Removed (after adding) **asreml** package from Suggests (due to CRAN check problems).
 
 # agridat 1.10 - Nov 2014
@@ -54,7 +51,6 @@ beaven.barley, perry.springwheat, ridout.appleshoots
 
 * Move packages from Depends to Imports.
 * JAGS example added to welch.bermudagrass.
-* Moved `vc()` function to the **lucid** package.
 
 # agridat 1.9 - Jul 2014
 
@@ -76,11 +72,7 @@ weiss.incblock, weiss.lattice, yang.barley
 
 ## Other
 
-* Function `vc()` to extract variance component estimates from mixed models.
-* Function `gge()` to fit and plot GGE biplots.
 * Use `if(require(lme4))` in examples.  Ripley request.
-* hayman.diallel is now hayman.tobacco
-* besag.met now includes missing values (to form complete rectangles).
 * All data (almost) now have an example graphic.
 
 # agridat 1.8 - Sep 2013
@@ -94,7 +86,7 @@ brandle.rape, salmon.bunt
 ## New data
 
 baker.barley.uniformity, bliss.borers, bond.diallel, harris.wateruse,
-hayman.diallel, holshouser.splitstrip, pearce.apple, waynick.soil
+hayman.tobacco, holshouser.splitstrip, pearce.apple, waynick.soil
 
 # agridat 1.6 - June 2013
 
@@ -103,10 +95,6 @@ hayman.diallel, holshouser.splitstrip, pearce.apple, waynick.soil
 crossa.wheat, garber.multi.uniformity, gomez.nitrogen,
 harris.multi.uniformity, li.millet.uniformity, odland.soybean.uniformity,
 odland.soyhay.uniformity, ratkowsky.onions, stephens.sorghum.uniformity
-
-## Other
-
-* All uniformity trials now include `uniformity` in the data name.
 
 # agridat 1.5 - Apr 2013
 
@@ -124,10 +112,6 @@ minnesota.barley.yield, nebraska.farmincome, nass.barley, nass.corn,
 nass.cotton, nass.hay, nass.rice, nass.sorghum, nass.soybean, nass.wheat,
 ortiz.tomato, pacheco.soybean, senshu.rice, snedecor.asparagus,
 streibig.competition, zuidhof.broiler
-
-## Other
-
-* Removed rgl and rjags from Suggests to facilitate cross-platform checking
 
 # agridat 1.4 - Mar 2012
 

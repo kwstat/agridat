@@ -33,11 +33,11 @@ data(gomez.rice.uniformity)
 dat <- gomez.rice.uniformity
 
 # Raw data plot
-require(lattice)
+require("agrifun")
 desplot(yield ~ x*y, data=dat, aspect=38/20, main="gomez.rice.uniformity")
 
 # 3x3 moving average.  Gomez figure 12.1
-require(reshape2)
+require("reshape2")
 dmat <- melt(dat, id.var=c('x','y'))
 dmat <- acast(dmat, y~x)
 m0 <- dmat

@@ -49,6 +49,7 @@ dat <- durban.competition
 # Check that genotypes were balanced across wheel tracks.
 with(dat, table(gen,wheel))
 
+require("agrifun")
 desplot(yield ~ col*block, dat, out1=block, text=gen, col=wheel,
         main="durban.competition")
 

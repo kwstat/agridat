@@ -42,6 +42,7 @@ data(besag.triticale)
 dat <- besag.triticale
 
 require(lattice)
+# require("agrifun")
 # desplot(yield ~ col*row, data=dat, main="besag.triticale")
 
 # Besag & Kempton are not perfectly clear on the model, but

@@ -34,6 +34,7 @@ data(kempton.rowcol)
 dat <- kempton.rowcol
 dat <- transform(dat, rowf=factor(row), colf=factor(col))
 
+require("agrifun")
 desplot(yield~col*row|rep, dat, num=gen, out1=rep,
         main="kempton.rowcol")
 

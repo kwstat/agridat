@@ -66,7 +66,8 @@ xyplot(acres ~ year|state, dat, type='l', as.table=TRUE,
 ## Plain levelplot, using only states
 ## require(reshape2)
 ## datm <- acast(dat, year~state, value.var='yield')
-## levelplot(datm, aspect=.7, col.regions=RedGrayBlue,
+## redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
+## levelplot(datm, aspect=.7, col.regions=redblue,
 ##           main="nass.corn",
 ##           scales=list(x=list(rot=90, cex=.7)))
 

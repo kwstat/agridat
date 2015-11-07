@@ -184,8 +184,8 @@ if(require(latticeExtra)){
 # ----------------------------------------------------------------------------
 ## --- R2jags version ---
 
-require(agridat)
-require(R2jags)
+require("agridat")
+require("R2jags")
 dat <- crowder.seeds
 
 # To match the output on the BUGS web page, use: dat$gen=="O73".

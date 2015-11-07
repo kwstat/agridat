@@ -31,6 +31,7 @@ data(li.millet.uniformity)
 dat <- li.millet.uniformity
 
 mean(dat$yield) # matches Li et al.
+require("agrifun")
 desplot(yield~col*row, dat, main="li.millet.uniformity", aspect=100/100)
 }
 \keyword{datasets}

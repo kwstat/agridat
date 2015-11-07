@@ -38,8 +38,9 @@ dat <- cochran.bib
 
 # Show the incomplete-block structure
 require(lattice)
+redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
 levelplot(yield~loc*gen, dat,
-          col.regions=RedGrayBlue,
+          col.regions=redblue,
           xlab="loc (block)", main="cochran.bib - incomplete blocks")
 
 with(dat, table(gen,loc))

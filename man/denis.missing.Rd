@@ -38,8 +38,9 @@ dat <- denis.missing
 require(reshape2)
 acast(dat, env~gen, value.var='yield')
 require(lattice)
+redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
 levelplot(yield ~ gen*env, data=dat,
-          col.regions=RedGrayBlue,
+          col.regions=redblue,
           main="denis.missing - incidence heatmap")
 
 # Stability variance (Table 3 in Piepho)

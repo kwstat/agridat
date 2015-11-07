@@ -49,7 +49,8 @@ if(require("maps") & require("mapproj") & require("latticeExtra")) {
   dat <- transform(dat, crop=crop/1000, animal=animal/1000)
   
   # Raw, county-wide incomes.  Note the outlier Cuming county
-  mapplot(stco ~ crop + animal, data = dat, colramp=RedGrayBlue,
+  redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
+  mapplot(stco ~ crop + animal, data = dat, colramp=redblue,
           main="nebraska.farmincome",
           xlab="Farm income from animals and crops (million $ per county)",
           scales = list(draw = FALSE), 
@@ -62,7 +63,7 @@ if(require("maps") & require("mapproj") & require("latticeExtra")) {
     animal.rate <- animal/area
   })
   # And use manual breakpoints.
-  mapplot(stco ~ crop.rate + animal.rate, data = dat, colramp=RedGrayBlue,
+  mapplot(stco ~ crop.rate + animal.rate, data = dat, colramp=redblue,
           main="nebraska.farmincome: income per square mile (percentile breaks)",
           xlab="Farm income (million $ / mi^2) from animals and crops",
           scales = list(draw = FALSE), 

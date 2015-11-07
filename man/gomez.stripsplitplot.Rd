@@ -38,6 +38,7 @@ data(gomez.stripsplitplot)
 dat <- gomez.stripsplitplot
 
 # Layout
+require("agrifun")
 desplot(gen~x+y, dat, out1=rep, col=nitro, text=planting, cex=1,
         main="gomez.stripsplitplot")
 

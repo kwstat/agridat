@@ -37,8 +37,9 @@ dat <- cleveland.soil
 
 # Similar to Cleveland fig 4.64
 ## require(latticeExtra)
+## redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
 ## levelplot(resistivity ~ easting + northing, data = dat,
-##           col.regions=RedGrayBlue,
+##           col.regions=redblue,
 ##           panel=panel.levelplot.points,
 ##           aspect=2.4, xlab= "Easting (km)", ylab= "Northing (km)",
 ##           main="cleveland")
@@ -50,8 +51,9 @@ fit1 <- with(dat,
                 predict(loess(resistivity~easting*northing, span = 0.25,
                         degree = 2), sg1))
 require(lattice)
+redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
 levelplot(fit1 ~ sg1$easting * sg1$northing,
-          col.regions=RedGrayBlue,
+          col.regions=redblue,
           cuts = 9,
           aspect=2.4, xlab = "Easting (km)", ylab = "Northing (km)",
           main="cleveland.soil - 2D smooth of Resistivity")

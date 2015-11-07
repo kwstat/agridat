@@ -76,6 +76,7 @@ skp <- c(rep(0,10),
          rep(0,5),1,1,1,1,1,
          rep(0,5),1,1,1,1,1,
          rep(0,5),1,1,1,1,1)
+require("agrifun")
 desplot(y ~ col*row|date, dat,
         main="lee.potatoblight",
         between=list(y=.3), strip.cex =.7,
@@ -156,7 +157,7 @@ foo0 <- dotplot(source ~ vals, out, main="harrison.priors", xlab="Daidzein level
 mu0 <- mean(log(out$vals))
 sd0 <- sd(log(out$vals))
 xvals <- seq(0,2000, length=100)
-library(latticeExtra)
+library("latticeExtra")
 foo0 + xyplot((19+4000*dlnorm(xvals, mu0, sd0))~xvals, type='l',
               panel=function(x,y,...){
                 panel.xyplot(x,y,...)
@@ -350,7 +351,7 @@ dat <- minnesota.barley.yield
 datw <- minnesota.barley.weather
 
 # Weather trends over time
-library(latticeExtra)
+library("latticeExtra")
 #useOuterStrips(xyplot(cdd~mo|year*site, datw, groups=year,
 #main="minnesota.barley", xlab="month", ylab="Cooling degree days",
 #subset=(mo > 3 & mo < 10), scales=list(alternating=FALSE),
@@ -367,7 +368,7 @@ minn <- merge(ww, yy)
 
 
 # Higher yields generally associated with cooler temps, more precip
-library(reshape2)
+library("reshape2")
 me <- melt(minn, id.var=c('site','year'))
 mey <- subset(me, variable=="yield")
 mey <- mey[,c('site','year','value')]
@@ -502,16 +503,17 @@ Which year showed greater spatial variation in yield?
 ```{r lasrosas,fig.height=7.5}
 
 dat <- lasrosas.corn
-library(latticeExtra)
+library("latticeExtra")
 
 # yield map
+redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
 foo1 <- levelplot(yield ~ long*lat|factor(year), data=dat,
           aspect=1, layout=c(2,1),
           main="lasrosas.corn grain yield (qu/ha)", xlab="Longitude", ylab="Latitude",
           scales=list(alternating=FALSE),
           prepanel = prepanel.default.xyplot,
           panel = panel.levelplot.points,
-          type = c("p", "g"), col.regions=RedGrayBlue)
+          type = c("p", "g"), col.regions=redblue)
 
 # Experiment design...shows problems in 2001
 dat <- lasrosas.corn

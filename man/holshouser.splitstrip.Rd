@@ -43,6 +43,7 @@ dat$spacing <- factor(dat$spacing)
 dat$pop <- factor(dat$pop)
 
 # Experiment layout and field trends
+require("agrifun")
 desplot(spacing ~ col*row, data=dat, out1=block, out2=cultivar,
         col=cultivar, text=pop, cex=.8, shorten='none', col.regions=c('wheat','white'),
         main="holshouser.splitstrip experiment design")

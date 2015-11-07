@@ -43,7 +43,10 @@ data(besag.endive)
 dat <- besag.endive
 
 # Incidence map.  Figure 2 of Friel and Pettitt
-desplot(disease~col*row, dat, col.regions=c('lightgray','black'),
+require("agrifun")
+grays <- colorRampPalette(c("#d9d9d9","#252525"))
+desplot(disease~col*row, dat,
+        col.regions=grays(2),
         aspect = .3, # No idea if this is right.
         main="besag.endive - Disease incidence")
 

@@ -109,13 +109,15 @@ skp <- c(rep(0,10),
          rep(0,5),1,1,1,1,1,
          rep(0,5),1,1,1,1,1,
          rep(0,5),1,1,1,1,1)
+
+require("agrifun")
 desplot(y ~ col*row|date, dat,
         main="lee.potatoblight - maps of blight resistance",
         ylab="Year of testing",
         layout=c(10,11),skip=as.logical(skp))
 
 # 1983 only.  I.Hardy succumbs quickly
-require(lattice)
+require("lattice")
 xyplot(y ~ date|gen, dat, subset=year==1983, group=rep,
        xlab="Date", ylab="Blight resistance score",
        main="lee.potatoblight 1983", as.table=TRUE,

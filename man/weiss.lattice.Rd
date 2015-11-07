@@ -43,6 +43,7 @@ rep (instead of across reps).
 data(weiss.lattice)
 dat <- weiss.lattice
 
+require("agrifun")
 desplot(yield~col*row|rep,dat, text=gen, aspect=3/16,
         main="weiss.lattice", xlab="Soybean yields", shorten="none", cex=.8)
 dat <- transform(dat, xf=factor(col), yf=factor(row))

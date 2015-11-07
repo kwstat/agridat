@@ -50,9 +50,11 @@ with(dat, table(y,trt))
 # histogram(~y|trt, data=dat, layout=c(1,4), as.table=TRUE)
 
 # Visualize Beall tble 6.  Block effects may exist, but barely.
+require("agrifun")
+grays <- colorRampPalette(c("#d9d9d9","#252525"))
 desplot(y ~ col*row, data=dat, out1=block, out2=trt, num=trt, flip=TRUE,
         main="beall.webworms (count of worms)",
-        col.regions=colorRampPalette(c("white","black"))(9))
+        col.regions=grays(9))
 
 # Following plot suggests interaction is needed
 # with(dat, interaction.plot(spray, lead, y))

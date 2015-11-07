@@ -35,12 +35,13 @@ Yield from a barley uniformity trial
 data(williams.barley.uniformity)
 dat <- williams.barley.uniformity
 
-require("lattice")
+require("agrifun")
 asp = (15*5)/(48*.75) # true aspect
 desplot(yield ~ col*row, dat, aspect=asp,
         main="williams.barley.uniformity")
 
 # Smoothed contour/persp plot like Williams Fig 1b, 2b
+require("lattice")
 dat$fit <- fitted(loess(yield~col*row, dat, span=.1))
 contourplot(fit~col*row, data=dat, main="williams.barley.uniformity")
 wireframe(fit~col*row, data=dat, zlim=c(100, 350),

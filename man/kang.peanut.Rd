@@ -46,6 +46,7 @@ require(reshape2)
 round(acast(dat, env~gen, value.var='yield', fun=mean),2)
 
 # GGE biplot of Kang, p. 82.
+library("agrifun")
 m1 <- gge(yield~gen*env, data=dat, scale=FALSE)
 biplot(m1, flip=c(1,1), title="kang.peanut - GGE biplot")
 

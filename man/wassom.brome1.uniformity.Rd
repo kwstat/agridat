@@ -48,6 +48,8 @@
 
 data(wassom.brome1.uniformity)
 dat <- wassom.brome1.uniformity
+
+require("agrifun")
 desplot(yield~col*row, dat, main="wassom.brome1.uniformity", flip=TRUE)
 
 data(wassom.brome2.uniformity)

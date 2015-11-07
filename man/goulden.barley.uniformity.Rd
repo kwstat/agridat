@@ -33,6 +33,7 @@
 data(goulden.barley.uniformity)
 dat <- goulden.barley.uniformity
 
+require("agrifun")
 desplot(yield ~ col*row, data=dat, main="goulden.barley.uniformity")
 
 # See LeClerg, Leonard, Clark

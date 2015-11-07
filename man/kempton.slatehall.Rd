@@ -48,9 +48,10 @@ dat <- kempton.slatehall
 dat <- transform(dat, xf=factor(col), yf=factor(row))
 
 # Besag 1993 figure 4.1 (left panel)
-WhiteBlack <- colorRampPalette(c("white","black"))
+require("agrifun")
+grays <- colorRampPalette(c("#d9d9d9","#252525"))
 desplot(yield ~ col * row, dat, num=gen, out1=rep,
-        col.regions=WhiteBlack,
+        col.regions=grays,
         main="kempton.slatehall - spring wheat yields")
 
 # Incomplete block model of Gilmour et al 1995

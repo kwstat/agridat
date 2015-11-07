@@ -40,6 +40,7 @@
 data(burgueno.alpha)
 dat <- burgueno.alpha
 
+require("agrifun")
 desplot(yield~col*row, dat, main='burgueno.alpha', out1=rep, out2=block,
         text=gen, cex=1,shorten="none")
 

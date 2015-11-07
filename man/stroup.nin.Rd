@@ -88,6 +88,7 @@ dat <- transform(dat, xf=factor(x), yf=factor(y))
 
 # Show experiment layout
 # Note: all "Buckskin" plots are near left side
+require("agrifun")
 desplot(yield~x*y, dat, out1="rep", num=gen, cex=1, main="stroup.nin")
 
 require(nlme)

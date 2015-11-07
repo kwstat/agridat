@@ -111,6 +111,7 @@ data(smith.corn.uniformity)
 dat <- smith.corn.uniformity
 
 dat = transform(dat, year=factor(year))
+require("agrifun")
 desplot(yield~col*row|year, dat, layout=c(1,3),
         main="smith.corn.uniformity: yield across years 1895-1987")
 

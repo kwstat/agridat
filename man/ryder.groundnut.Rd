@@ -43,6 +43,7 @@ dat$res1 <- resid(m1)
 round(dat$res1 * 596.6,0)
 
 # Visually.  Note largest positive/negative residuals are adjacent
+require("agrifun")
 desplot(res1 ~ col + row, dat, text=gen, main="ryder.groundnut")
 
 # Swap the dry yields for the plots and re-analyze

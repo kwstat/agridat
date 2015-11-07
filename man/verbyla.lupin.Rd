@@ -85,6 +85,7 @@ data(verbyla.lupin)
 dat <- verbyla.lupin
 
 # The same RCB randomization was used at all sites in each year
+require("agrifun")
 desplot(gen~col+row|site, data=dat, main="verbyla.lupin")
 
 # Figure 3 of Verbyla

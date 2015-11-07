@@ -36,6 +36,7 @@ dat <- kalamkar.potato.uniformity
 
 # True field dimension is 132 foot-long row horizontal, 96*3=288 feet vertical
 # Similar to figure 1 of Kalamkar
+require("agrifun")
 desplot(yield~col*row, data=dat, main="kalamkar.potato.uniformity",
         flip=TRUE, tick=TRUE, aspect=288/132)
 

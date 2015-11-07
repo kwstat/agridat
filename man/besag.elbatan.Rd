@@ -40,6 +40,7 @@
 data(besag.elbatan)
 dat <- besag.elbatan
 
+require("agrifun")
 desplot(yield~block*row, dat, main="besag.elbatan wheat yields",
 num=gen)
 

@@ -29,10 +29,15 @@
   \emph{GGE biplot analysis: A graphical tool for breeders, geneticists, and
   agronomists}, 2002. CRC. Page 59.
 
+  Weikai Yan and Nicholas A. Tinker. 2006.
+  Biplot analysis of multi-environment trial data: Principles and
+  applications. Table 1.
+
   Used with permission of Weikai Yan.
 }
 
 \references{
+  
   Weikai Yan and Manjit S. Kang and Baoluo Ma and Sheila Woods, 2007,
   GGE Biplot vs. AMMI Analysis of Genotype-by-Environment Data,
   \emph{Crop Science}, 2007, 47, 641--653.
@@ -52,6 +57,7 @@ mat.sc <- scale(mat)
 # Environment-standardized GGE biplot
 # biplot(princomp(mat.sc), main="yan.winterwheat - GGE biplot")
 
+require("agrifun")
 m1 <- gge(yield ~ gen*env, data=dat)
 biplot(m1, flip=c(0,1), title="yan.winterwheat - GGE biplot")
 

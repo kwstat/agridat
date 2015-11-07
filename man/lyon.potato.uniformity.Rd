@@ -38,6 +38,7 @@
 data(lyon.potato.uniformity)
 dat <- lyon.potato.uniformity
 
+require("agrifun")
 desplot(yield ~ row*section, dat, tick=TRUE,
         main="lyon.potato.uniformity")
 

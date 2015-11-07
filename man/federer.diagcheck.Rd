@@ -55,6 +55,7 @@ dat <- federer.diagcheck
 
 # Show the layout as in Federer 1998.
 dat$check <- ifelse(dat$gen == "G121" | dat$gen=="G122", "C","N")
+require("agrifun")
 desplot(yield ~ col*row, dat, text=gen, show.key=FALSE,
       main="federer.diagcheck",
       shorten='no', col=check, cex=.8, col.text=c("yellow","gray"))

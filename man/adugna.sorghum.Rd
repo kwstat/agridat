@@ -42,14 +42,14 @@
 \examples{
 
 data(adugna.sorghum)
-
-# Genotype means match Adugna
 dat <- adugna.sorghum
 
 require(lattice)
+redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
 levelplot(yield ~ env*gen, data=dat, main="adugna.sorghum gxe heatmap",
-          col.regions=RedGrayBlue)
+          col.regions=redblue)
 
+# Genotype means match Adugna
 tapply(dat$yield, dat$gen, mean)
 
 # CV for each genotype.  G1..G15 match, except for G2.

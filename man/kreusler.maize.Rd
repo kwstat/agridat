@@ -102,8 +102,8 @@ West (1920) give all temperature in Celsius.
 }
 
 \examples{
-data(kreusler.maize)
 
+data(kreusler.maize)
 dat <- kreusler.maize
 dat$date2 <- as.Date(dat$date,"\%d \%b \%Y")
 dat$doy <- as.numeric(strftime(dat$date2, format="\%j"))

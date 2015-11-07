@@ -38,6 +38,7 @@ data(gomez.groupsplit)
 dat <- gomez.groupsplit
 
 # Gomez figure 3.10.  Obvious fert and group effects
+require("agrifun")
 desplot(group~x*y, dat, out1=rep, col=fert, text=gen,
         main="gomez.groupsplit")
 

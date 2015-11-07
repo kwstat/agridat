@@ -46,6 +46,7 @@
 data(garber.multi.uniformity)
 dat <- garber.multi.uniformity
 
+require("agrifun")
 desplot(oats ~ col*row, data=dat, flip=TRUE, tick=TRUE,
         main="garber.multi.uniformity oats")
 desplot(wheat ~ col*row, data=dat, flip=TRUE, tick=TRUE,

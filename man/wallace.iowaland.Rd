@@ -61,7 +61,8 @@ data(county.fips)
 dat <- transform(dat, polnm = paste0('iowa,',county))
 
 if(require("latticeExtra")){ # for mapplot
-  mapplot(polnm~fedval , data=dat, colramp=RedGrayBlue,
+  redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
+  mapplot(polnm~fedval , data=dat, colramp=redblue,
           main="wallace.iowaland - Federal land values",
           xlab="Land value, dollars per acre",
           scales=list(draw=FALSE),

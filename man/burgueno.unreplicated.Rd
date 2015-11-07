@@ -45,6 +45,7 @@ dat <- burgueno.unreplicated
 # Define a 'check' variable for colors
 dat$check <- ifelse(dat$gen=="G000", 2, 1)
 # Every fourth column is the 'check' genotype
+require("agrifun")
 desplot(yield ~ col*row, data=dat, main="burgueno.unreplicated",
         col=check, text=gen, cex=.75)
 

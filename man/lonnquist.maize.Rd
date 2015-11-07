@@ -51,7 +51,8 @@ dat <- transform(dat,
                  p2=factor(p2,
                    levels=c("C","L","M","H","G","P","B","RM","N","K","R2","K2")))
 require(lattice)
-levelplot(yield ~ p1*p2, dat, col.regions=RedGrayBlue,
+redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
+levelplot(yield ~ p1*p2, dat, col.regions=redblue,
           main="lonnquist.maize - yield of diallel cross")
 
 # Calculate the F1 means in Lonnquist, table 1

@@ -39,7 +39,7 @@
 data(kempton.barley.uniformity)
 dat <- kempton.barley.uniformity
 
-require(lattice)
+require("agrifun")
 desplot(yield~col*row, dat, main="kempton.barley.uniformity")
 asp <- (28*14)/(7*5) # aspect ratio (rows * ft)/(cols * ft)
 desplot(yield~col*row, dat, aspect=asp,

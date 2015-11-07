@@ -60,6 +60,7 @@ dat <- transform(dat, rep=factor(rep), spacing=factor(spacing), trt=factor(trt),
 # Due to 'spacing', the plots are different sizes, but the following layout
 # shows the relative position of the plots and treatments. Note that the
 # 'spacing' treatments are not contiguous in some reps.
+require("agrifun")
 desplot(spacing~row*pos, dat, col=stock, cex=1, num=gen,
         main="archbold.apple")
 

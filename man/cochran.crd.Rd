@@ -44,6 +44,7 @@ data(cochran.crd)
 dat <- cochran.crd
 
 # Field plan
+require("agrifun")
 desplot(inf~col*row, data=dat, text=trt, cex=1, main="cochran.crd")
 
 # CRD anova.  Table 6 of Tamura 1988

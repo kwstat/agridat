@@ -42,6 +42,7 @@ data(gomez.stripplot)
 dat <- gomez.stripplot
 
 # Gomez figure 3.7
+require("agrifun")
 desplot(gen~x*y, data=dat, out1=rep, out2=nitro, num=nitro, cex=1,
         main="gomez.stripplot")
 

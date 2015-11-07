@@ -47,8 +47,9 @@ data(holland.arthropods)
 dat <- holland.arthropods
 
 require(lattice)
+grays <- colorRampPalette(c("#d9d9d9","#252525"))
 contourplot(linyphiidae ~ col*row, dat, at=c(0,40,80,120,160,200), region=TRUE,
-            col.regions=c('gray90','gray70','gray50','gray30','gray10'),
+            col.regions=grays(5),
             main="holland.arthropods - linyphiidae counts in winter wheat")
 
 \dontrun{

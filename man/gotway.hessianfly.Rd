@@ -36,7 +36,9 @@
 
 data(gotway.hessianfly)
 dat <- gotway.hessianfly
+
 dat$prop <- dat$y / dat$n
+require("agrifun")
 desplot(prop~long*lat, dat, out1=block, text=gen, cex=1, shorten='no',
         main="gotway.hessianfly")
 

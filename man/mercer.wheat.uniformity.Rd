@@ -51,9 +51,10 @@
 data(mercer.wheat.uniformity)
 dat <- mercer.wheat.uniformity
 
-require('lattice')
+require("agrifun")
 desplot(grain ~ col*row, dat, main="mercer.wheat.uniformity - grain yield")
 
+require("lattice")
 xyplot(straw ~ grain, data=dat, type=c('p','r'), main="mercer.wheat.uniformity - regression")
 
 # require(hexbin)

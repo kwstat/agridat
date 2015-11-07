@@ -1,22 +1,2 @@
 
 ## Recommended packages
-## importFrom("nlme", fixef,ranef,VarCorr)
-
-import(graphics)
-import(grDevices)
-import(grid)
-import(lattice)
-import(reshape2)
-import(stats)
-
-## Exports
-export(desplot)
-export(RedGrayBlue)
-export(papcov)
-
-# Methods
-export(gge)
-S3method(gge, formula)
-S3method(gge, matrix)
-S3method(plot, gge)
-S3method(biplot, gge)

@@ -52,6 +52,7 @@
 data(cochran.lattice)
 dat <- cochran.lattice
 
+require("agrifun")
 desplot(y~row*col|rep, dat, text=trt, cex=2, main="cochran.lattice")
 
 # Random rep,row,column model often used by Federer

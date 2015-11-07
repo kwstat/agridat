@@ -105,7 +105,7 @@
 }
 \examples{
 
-require(lattice)
+require("agrifun")
 
 # Apple
 data(batchelor.apple.uniformity)

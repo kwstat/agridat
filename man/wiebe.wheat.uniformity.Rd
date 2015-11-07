@@ -49,7 +49,7 @@ A uniformity trial of 1500 plots of wheat conducted in Idaho in 1927.
 data(wiebe.wheat.uniformity)
 dat <- wiebe.wheat.uniformity
 
-require("lattice")
+require("agrifun")
 # 125 rows = 125 feet tall. 12 cols * 15 feet = 180 feet wide.
 desplot(yield~col+row, dat, aspect=125/180, flip=TRUE,
   main="wiebe.wheat.uniformity: yield") # row 1 is at south
@@ -73,6 +73,7 @@ table(dat$col, dig) # Table 3 of Preece
 rowm <- tapply(dat$yield, dat$row, mean)
 acf(rowm, main="wiebe.wheat.uniformity row means")
 # Plot the row mean against the planter row unit 1-8
+require("lattice")
 xyplot(rowm~rep(1:8, length=125),
        main="wiebe.wheat.uniformity",
        xlab="Planter row unit", ylab="Row mean yield")

@@ -59,6 +59,7 @@ dat <- eden.potato
 
 # 1925 qualitative
 d5a <- subset(dat, year=='1925a')
+require("agrifun")
 desplot(trt~col*row, d5a, text=yield, cex=1, shorten='no',
         main="eden.potato: 1925 qualitative")
 anova(m5a <- aov(yield~trt+factor(row)+factor(col), d5a)) # table 2

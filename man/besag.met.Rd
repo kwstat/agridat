@@ -49,6 +49,7 @@
 data(besag.met)
 dat <- besag.met
 
+require("agrifun")
 desplot(yield ~ col*row|county, out1=rep, out2=block, dat,
         main="besag.met")
 
@@ -138,6 +139,7 @@ gvar <- lam %*% t(lam) + diag(mat[,1])
 # Now get predictions and make an ordinary biplot
 p3 <- predict(m3, classify="county:gen")
 p3 <- p3$pred$pval
+require("agrifun")  
 bi3 <- gge(predicted.value ~ gen*county, data=p3, scale=FALSE)
 windows()
 # Very similar to the coefficient biplot

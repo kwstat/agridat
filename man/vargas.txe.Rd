@@ -61,8 +61,10 @@
 data(vargas.txe)
 
 require(lattice)
-levelplot(vargas.txe$yields, col.regions=RedGrayBlue,
-          main="vargas.txe", xlab="year", ylab="treatment")
+redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
+levelplot(vargas.txe$yields, col.regions=redblue,
+          main="vargas.txe", xlab="year", ylab="treatment",
+          scales=list(x=list(rot=90)))
 
 Z <- vargas.txe$yields
 Z <- sweep(Z, 1, rowMeans(Z))

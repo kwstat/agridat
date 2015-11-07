@@ -48,6 +48,7 @@ data(cochran.eelworms)
 dat <- cochran.eelworms
 
 # Very strong spatial trends
+require("agrifun")
 desplot(initial ~ col*row, data=dat, flip=TRUE, main="cochran.eelworms")
 
 # final counts are strongly related to initial counts

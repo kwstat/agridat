@@ -43,6 +43,7 @@ data(immer.sugarbeet.uniformity)
 dat <- immer.sugarbeet.uniformity
 
 # Immer numbers rows from the top
+require("agrifun")
 desplot(yield~col*row, data=dat, tick=TRUE, flip=TRUE,
         main="immer.sugarbeet.uniformity - yield")
 desplot(sugar~col*row, data=dat, tick=TRUE, flip=TRUE,

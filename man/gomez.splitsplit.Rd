@@ -40,6 +40,7 @@ data(gomez.splitsplit)
 dat <- gomez.splitsplit
 dat$nf <- factor(dat$nitro)
 
+require("agrifun")
 desplot(nf~x*y, dat, out1=rep, col=management, num=gen, cex=1,
         main="gomez.splitsplit")
 desplot(yield~x*y, dat, out1=rep, main="gomez.splitsplit")

@@ -56,6 +56,7 @@ data(connolly.potato)
 dat <- connolly.potato
 
 # Field plan
+require("agrifun")
 desplot(yield~col*row, data=dat, out1=rep, main="connolly.potato yields")
 # Later maturities are higher yielding
 require(lattice)

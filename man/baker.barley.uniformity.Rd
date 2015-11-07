@@ -32,6 +32,7 @@ data(baker.barley.uniformity)
 dat <- baker.barley.uniformity
 
 asp <- (161*3+30)/827 # True aspect ratio
+require("agrifun")
 desplot(yield~col*row|year, data=dat,
         main="baker.barley.uniformity heatmaps by year", aspect=asp)
 dat2 <- aggregate(yield ~ row*col, data=dat, FUN=mean, na.rm=TRUE)

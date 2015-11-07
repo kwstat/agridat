@@ -91,8 +91,9 @@ shp <- readOGR(system.file(package="agridat", "files"), "gartner.corn")
 # Plot the shapefiles first to set up the coordinate system
 plot(shp, xlim=range(dat$long), ylim=range(dat$lat))
 box() # Add the yield points
+redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
 with(dat, points(long,lat, main="yield heat map",
-                 col=RedGrayBlue(ncols)[yldbin], cex=.75, pch=16))
+                 col=redblue(ncols)[yldbin], cex=.75, pch=16))
 plot(shp, add=TRUE, lwd=2) # Overlay soil polygons on top
 title("gartner.corn - yield heatmap with soil map unit symbols")
 # Manual annotation of soil map units
@@ -110,7 +111,7 @@ dat$ix <- over(SpatialPoints(dat[ , c('long','lat')]),
                SpatialPolygons(shp@polygons))
 dat$mu <- shp@data[, "MUSYM"][dat$ix]
 # Check the points are properly identified
-# with(dat, points(long,lat, col=RedGrayBlue(ncols)[ix], cex=.75, pch=16))
+# with(dat, points(long,lat, col=redblue(ncols)[ix], cex=.75, pch=16))
 
 # Aggregate points by soil type and analyze
 tapply(dat$yield, dat$mu, mean)
@@ -126,7 +127,7 @@ library(rgl)
 dat <- transform(dat, x=long-min(long), y=lat-min(lat), z=elev-min(elev))
 clear3d()
 points3d(dat$x, dat$y, dat$z/50000,
-         col=RedGrayBlue(ncols)[dat$yldbin])
+         col=redblue(ncols)[dat$yldbin])
 axes3d()
 title3d(xlab='x',ylab='y',zlab='elev')
 }
