@@ -43,6 +43,7 @@ This exhibit of agricultural data uses the following packages.
 
 ```{r packs, message=FALSE}
 library("agridat")
+library("agrifun")
 library("HH")
 library("lattice")
 library("latticeExtra")

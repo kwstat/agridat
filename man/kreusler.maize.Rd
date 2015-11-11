@@ -67,7 +67,7 @@ West (1920) give all temperature in Celsius.
   The 1875-1876 data are from:
   
   A. Prehn & G. Becker. (1878)
-  \emph{Jahresbericht für Agrikultur-chemie}, Vol 20, p. 216-220.
+  \emph{Jahresbericht fur Agrikultur-chemie}, Vol 20, p. 216-220.
   \url{https://books.google.com/books?id=ZfxNAAAAYAAJ&pg=216}
 
   The 1877 data are from:

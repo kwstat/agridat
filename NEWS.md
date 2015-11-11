@@ -10,7 +10,8 @@
 
 ## New data
 
-battese.survey, gartner.corn, kenward.cattle, kreusler.maize, montgomery.wheat.uniformity, wheatley.carrot
+battese.survey, gartner.corn, kenward.cattle, kreusler.maize,
+montgomery.wheat.uniformity, onofri.winterwheat, wheatley.carrot
 
 ## Other
 

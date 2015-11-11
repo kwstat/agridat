@@ -194,7 +194,8 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{mead.strawberry}           \tab 8   \tab    \tab 4   \tab    \tab     \tab \tab \cr
 \link{minnesota.barley.weather}  \tab     \tab 6  \tab     \tab 10 \tab     \tab \tab \cr
 \link{minnesota.barley.yield}    \tab 22  \tab 6  \tab     \tab 10 \tab     \tab \tab dotplot\cr
-\link{ortiz.tomato}              \tab 15  \tab 18 \tab     \tab   \tab 16   \tab env*gen~env*cov \tab pls \cr
+\link{onofri.winterwheat}        \tab 8   \tab    \tab 3   \tab 7  \tab     \tab \tab ammi\cr
+\link{ortiz.tomato}              \tab 15  \tab 18 \tab     \tab    \tab 16   \tab env*gen~env*cov \tab pls \cr
 \link{pacheco.soybean}           \tab 18  \tab 11 \tab     \tab    \tab     \tab \tab ammi\cr
 \link{perry.springwheat}         \tab 28  \tab 5  \tab     \tab 4  \tab     \tab gain \tab lm,lmer,asreml\cr
 \link{piepho.cocksfoot}          \tab 25  \tab    \tab     \tab 7  \tab     \tab \tab lmer\cr

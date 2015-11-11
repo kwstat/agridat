@@ -5,7 +5,7 @@ Date: 2015-06-28
 Authors@R: person("Kevin","Wright", email="kw.stat@gmail.com", role=c("aut","cre"))
 Type: Package
 Description: Datasets from books, papers, and websites related to agriculture.
-    Example analyses are included.
+    Example graphics and analyses are included.
 Imports:
 Suggests:
     AER,
@@ -22,6 +22,7 @@ Suggests:
     gstat,
     HH,
     knitr,
+    lattice,
     latticeExtra,
     lme4 (>= 1.1-5),
     lucid,
@@ -34,6 +35,7 @@ Suggests:
     ordinal,
     pls,
     pscl,
+    reshape2,
     rgdal,
     qtl,
     sp,

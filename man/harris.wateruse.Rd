@@ -166,8 +166,6 @@ vc(m2a)
 ##  tree!tree.var    0.2656   0.1301      2      pos
 ##     R!variance    0.1541   0.01611     9.6    pos
 ##      R!day.pow    0.7683   0.04191    18    uncon
-print("Junk for devtools::run_examples")
-
 
 
 # ----- Model 3. Full model for all species/ages.  Schabenberger p. 518
