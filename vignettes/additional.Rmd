@@ -1,0 +1,102 @@
+---
+title: "Additional sources of agricultural data"
+author: "Kevin Wright"
+date: "`r Sys.Date()`"
+output: 
+  rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Additional sources of agricultural data}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+<style type="text/css">
+body, td { font-size: 14pt; color: #000; padding:1em; }
+code, pre, #ws, #message { font-size: 12pt;
+  color: #000; background-color: #f5f5f5; }
+code {border: 1px solid #e0e0e0; padding: 0 5px;}
+pre > code { border: 0; }
+</style>
+
+This document lists additional sources of agricultural data.
+
+## Books
+
+Peter Diggle. _Longitudinal Data Analysis_.
+http://www.maths.lancs.ac.uk/~diggle/lda/Datasets/
+
+Pig weight data is in the package `SemiPar::pig.weights`.
+
+The Sitka spruce data is in `geepack::spruce`.
+
+The Milk protein data is in `nlme::Milk`.
+
+Goulden, _Methods of Statistical Analysis_.
+http://archive.org/details/methodsofstatist031744mbp
+Has some interesting incomplete-block experiments.
+
+## Papers
+
+Kenward, Michael G. (1987).  A Method for Comparing Profiles of Repeated
+Measurements.  _Applied Statistics_, 36, 296-308.
+An ante-dependence model is fit to repeated measures of cattle weight.
+Data available here:
+https://faculty.biostat.ucla.edu/robweiss/filedepot_download/87/495
+
+Roger Payne (2015). The Design and Analysis of Long-Term Rotation Experiments.
+_Agronomy Journal_, 107, 772-784.
+https://www.agronomy.org/publications/aj/pdfs/107/2/772
+Contains data and R code.
+
+Matthew A. Cleveland, John M. Hickey, Selma Forni. (2012).
+A Common Dataset for Genomic Analysis of Livestock Populations
+G3, Vol 2.
+http://doi.org/10.1534/g3.111.001453
+The supplemental information for this paper contains data for 3534 pigs with
+high-density genotypes (50000 SNPs), and a pedigree including parents and
+grandparents of the animals.
+
+1982 CIMMYT trials.
+http://pdf.usaid.gov/pdf_docs/PNAAQ389.pdf
+
+## R packages
+
+`agricolae` has assorted data and functions for analysis.
+
+`BGLR`. Bayesian Generalized Linear Regression.
+Has an A matrix (but no pedigree) for 499 genotypes at 4 locations.
+
+`BLR`. Bayesian Linear Regression.
+Has an A matrix (but no pedigree) for 499 genotypes at 4 locations.
+
+`cropcc`. Climate change on crops.
+https://r-forge.r-project.org/projects/cropcc/
+
+`drc` is a package for dose response curves, including germination data for
+mungbean, rice, wheat.
+
+`lmtest::ChickEgg` has time series of annual chicken and egg
+production in the United States 1930-1983.
+
+`lsmeans::feedlot` is used to demonstrate an unbalanced
+analysis-of-covariance.
+
+`nlraa` is for Non-linear models in agriculture.
+http://r-forge.r-project.org/R/?group_id=1599
+
+`nlme::Orange` shows to growth of orange trees.
+
+`plantbreeding`
+https://r-forge.r-project.org/projects/plantbreeding/
+
+`SDaA` This package has county-level data from the United States Census of
+Agriculture, along with a vignette to illustrate survey sampling analyses.
+http://cran.r-project.org/package=SDaA
+
+`spdep` has a vignette 'The Problem of Spatial Autocorrelation: forty years
+on' that examines agriculture in Irish counties.  See also the data
+`ade4::irishdata`. 
+
+## Web sites
+
+Statistical Analysis of Agricultural Experiments with R
+http://rstats4ag.org/
