@@ -2,7 +2,7 @@
 # Time-stamp: c:/x/rpack/agridat/R/defunct.r
 
 .onAttach <- function(lib,pkg,...){
-  warning("The desplot and gge functions are now in the 'agrifun' package.")
+  packageStartupMessage("The desplot and gge functions are now in the 'agrifun' package.\n")
   invisible()
 }
 

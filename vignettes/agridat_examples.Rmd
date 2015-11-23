@@ -32,7 +32,7 @@ interpretive comments.
 One surprising aspect of this project is that most published analyses of data
 require only on the order of 10-20 lines of R code to reproduce.
 
-## Setup
+## Setup4
 
 ```{r setup, results="hide"}
 library("knitr")
@@ -442,11 +442,12 @@ dat$stco <- paste0('nebraska,', dat$county)
 dat <- transform(dat, crop=crop/1000, animal=animal/1000)
 
 # Raw, county-wide incomes.  Note the outlier Cuming county
+redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
 mapplot(stco ~ crop + animal, data = dat,
         scales = list(draw = FALSE),
         main="nebraska.farmincome",
         xlab="", ylab="Income ($1000) per county",
-        colramp=RedGrayBlue,
+        colramp=redblue,
         map = map('county', 'nebraska', plot = FALSE, fill = TRUE,
                   projection = "mercator"))
 
@@ -468,10 +469,7 @@ Where are farm incomes highest?  Why?
 ```{r nebr2}
 
 # Now scale to income/mile^2
-dat <- within(dat, {
-  crop.rate <- crop/area
-  animal.rate <- animal/area
-})
+dat <- transform(dat, crop.rate=crop/area, animal.rate=animal/area)
 # And use manual breakpoints.
 mapplot(stco ~ crop.rate + animal.rate, data = dat,
         scales = list(draw = FALSE),
@@ -479,7 +477,7 @@ mapplot(stco ~ crop.rate + animal.rate, data = dat,
         xlab="", ylab="Income ($1000) per square mile (percentile breaks)",
         map = map('county', 'nebraska', plot = FALSE, fill = TRUE,
                   projection = "mercator"),
-        colramp=RedGrayBlue,
+        colramp=redblue,
         #breaks=quantile(c(dat$crop.rate, dat$animal.rate),
         #                c(0,.1,.2,.4,.6,.8,.9,1), na.rm=TRUE)
         # To eliminate dependency on classInt package, hardcode the breakpoints

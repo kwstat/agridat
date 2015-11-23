@@ -21,6 +21,10 @@ This document lists additional sources of agricultural data.
 
 ## Books
 
+D. Bayisa (2010). _Application of Spatial Mixed Model in Agricultural Field
+Experiment_. Master thesis. Department of Statistics, Addis Ababa University.
+At least one dataset from wheat, RCB, with field coordinates.
+
 Peter Diggle. _Longitudinal Data Analysis_.
 http://www.maths.lancs.ac.uk/~diggle/lda/Datasets/
 

@@ -5,8 +5,9 @@ Date: 2015-06-28
 Authors@R: person("Kevin","Wright", email="kw.stat@gmail.com", role=c("aut","cre"))
 Type: Package
 Description: Datasets from books, papers, and websites related to agriculture.
-    Example graphics and analyses are included.
-Imports:
+    Example graphics and analyses are included. Data come frome small-plot trials,
+    multi-environment trials, uniformity trials, yield monitors, and more.
+Imports:    
 Suggests:
     AER,
     agricolae (>= 1.2),
@@ -46,3 +47,4 @@ LazyData: yes
 URL: https://github.com/kwstat/agridat
 BugReports: https://github.com/kwstat/agridat/issues
 VignetteBuilder: knitr
+RoxygenNote: 5.0.1

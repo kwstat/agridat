@@ -1,12 +1,15 @@
 \name{agridat}
 \alias{agridat}
 \docType{package}
-\title{Datasets from agricultural experiments}
+\title{
+  Datasets from agricultural experiments
+}
 \description{
   This package contains datasets from published papers and books
   relating to agriculture including field crops, tree crops, animal
   studies, and a few others.
 }
+
 \details{
 
 Abbreviations in the 'other' column include: xy = coordinates,
@@ -33,7 +36,7 @@ name                                  \tab dimensions \tab other \tab model \cr
 \link{kempton.barley.uniformity}      \tab 7 x 28 \tab xy \tab \cr
 \link{li.millet.uniformity}           \tab 6 x 100 \tab xy \tab \cr
 \link{lyon.potato.uniformity}         \tab 34 x 6 \tab xy \tab \cr
-\link{mercer.mangold.uniformity}      \tab 10 x 25 \tab xy, 2 traits \tab \cr
+\link{mercer.mangold.uniformity}      \tab \tab \tab \cr
 \link{mercer.wheat.uniformity}        \tab 25 x 20 \tab xy, 2 traits \tab spplot \cr
 \link{montgomery.wheat.uniformity}    \tab 14 x 16 \tab xy, \tab lm \cr
 \link{odland.soybean.uniformity}      \tab 25 x 42 \tab xy \tab \cr
@@ -72,7 +75,6 @@ name                             \tab gen \tab loc\tab years \tab trt \tab other
 
 \tabular{llllllll}{
 name                             \tab gen \tab loc\tab reps\tab years \tab trt \tab other \tab model \cr
-\link{archbold.apple}            \tab 2   \tab    \tab 5   \tab    \tab 24  \tab split-split \tab lmer \cr
 \link{box.cork}                  \tab     \tab    \tab     \tab    \tab     \tab repeated \tab radial, asreml \cr
 \link{harris.wateruse}           \tab 2   \tab    \tab     \tab    \tab 2   \tab repeated \tab asreml,lme \cr
 \link{lavoranti.eucalyptus}      \tab 70  \tab 7  \tab     \tab    \tab     \tab  \tab svd \cr
@@ -90,6 +92,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{adugna.sorghum}            \tab 28  \tab 13 \tab     \tab 5  \tab     \tab \tab \cr
 \link{aastveit.barley}           \tab 15  \tab    \tab     \tab 9  \tab     \tab yr*gen~yr*trt\tab pls \cr
 \link{allcroft.lodging}          \tab 32  \tab 7  \tab     \tab    \tab     \tab percent \tab tobit \cr
+\link{archbold.apple}            \tab 2   \tab    \tab 5   \tab    \tab 24  \tab split-split \tab lmer \cr
 \link{ars.earlywhitecorn96}      \tab 60  \tab 9  \tab     \tab    \tab     \tab 6 traits \tab dotplot \cr
 \link{australia.soybean}         \tab 58  \tab 4  \tab     \tab 2  \tab     \tab 4-way, 6 traits \tab biplot \cr
 \link{battese.survey}            \tab     \tab 12 \tab 1-5 \tab    \tab 2   \tab \tab lmer \cr
@@ -306,7 +309,7 @@ like B1, B2, B3 instead of 1, 2, 3.  This causes R to treat the data as
 a factor instead of a numeric covariate (which is a good thing).
 
 Most data are presented as data frames.  In a few cases, the data are
-lists of matrices. 
+lists of matrices.
 
 Although using \code{data()} is not necessary to access the data files,
 the example sections do include the use of \code{data()} because
@@ -319,7 +322,7 @@ electronic format, but mistakes are possible.  Please file a bug report.
 }
 
 \author{
-  
+
   Kevin Wright, kw.stat @ gmail.com
 
   The author is grateful to the many people who granted permission to
@@ -338,6 +341,6 @@ electronic format, but mistakes are possible.  Please file a bug report.
   Publishing Agronomic Data.
   \emph{Agron J.} 100, 1396-1400.
   \url{http://doi.org/10.2134/agronj2008.0080F}
-  
+
 }
 

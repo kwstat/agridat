@@ -4,7 +4,9 @@
 
 # Straw length of genotype * year
 
-# Two-way bilinear model.  Original paper also has ear-length data.
+# Two-way bilinear model.  
+# Piepho paper also has ear-emergence data.
+# The paper by Giles may have a superset of this daata.
 
 lib(kw)
 dat <- import("c:/x/rpack/agridat/data-unused/giles.csv", head=TRUE)

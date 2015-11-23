@@ -14,7 +14,7 @@
     \item{\code{field}}{field factor, 2 levels}
     \item{\code{row}}{x ordinate}
     \item{\code{quadrat}}{y ordinate}
-    \item{\code{disease}}{presence (1) or absence (0) of disease}
+    \item{\code{disease}}{presence (Y) or absence (N) of disease}
     \item{\code{water}}{soil moisture percent}
     \item{\code{leaf}}{leaf assay count}
   }
@@ -35,8 +35,8 @@
 
 \source{
   Marcia L. Gumpertz; Jonathan M. Graham; Jean B. Ristaino (1997).
-  Autologistic Model of Spatial Pattern of Phytophthora Epidemic in Bell Pepper:
-  Effects of Soil Variables on Disease Presence.
+  Autologistic Model of Spatial Pattern of Phytophthora Epidemic
+  in Bell Pepper: Effects of Soil Variables on Disease Presence.
   \emph{Journal of Agricultural, Biological, and Environmental
     Statistics}, Vol. 2, No. 2., pp. 131-156.
 
@@ -60,7 +60,7 @@ require("agrifun")
 grays <- colorRampPalette(c("#d9d9d9","#252525"))
 desplot(disease ~ row*quadrat|field, data=dat,
         main="gumpertz.pepper disease presence", aspect=1,
-        col.regions=grays)
+        col.regions=c('white','black'))
 
 # Soil water.  Gumpertz fig 1b, 2b
 desplot(water ~ row*quadrat|field, data=dat,

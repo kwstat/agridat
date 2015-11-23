@@ -96,15 +96,27 @@ require(nlme)
 lme1 <- lme(yield ~ 0 + gen, random=~1|rep, data=dat, na.action=na.omit)
 
 # Linear (Manhattan distance) correlation model
-lme2 = gls(yield ~ 0 + gen, correlation = corLin(form = ~ x+y,nugget=TRUE), data=dat,
-  na.action=na.omit)
+lme2 <- gls(yield ~ 0 + gen, data=dat,
+           correlation = corLin(form = ~ x+y,nugget=TRUE),
+           na.action=na.omit)
+
+# Random block and spatial correlation.
+# Note: corExp and corSpher give nearly identical results
+lme3 <- lme(yield ~ 0 + gen, data=dat,
+            random = ~ 1 | rep,
+            correlation = corExp(form = ~ x + y),
+            na.action=na.omit)
+
+AIC(lme1,lme2,lme3) # lme2 is lowest
 
 # Compare the estimates from the two methods
-eff = data.frame(ranblock=fixef(lme1), spat = coef(lme2))
+eff = data.frame(ranblock=fixef(lme1), corLin = coef(lme2),
+                 corExp = fixef(lme3))
 rownames(eff) <- gsub("gen", "", rownames(eff))
-plot(eff$ranblock, eff$spat, xlim=c(13,37), ylim=c(13,37),
-  main="stroup.nin", xlab="RCB (random block)", ylab="corLin",type='n')
-text(eff$ranblock, eff$spat, rownames(eff), cex=0.5)
+plot(eff$ranblock, eff$corLin, xlim=c(13,37), ylim=c(13,37),
+     main="stroup.nin - Gen estimates (intercepts differ)",
+     xlab="RCB (random block)", ylab="corLin",type='n')
+text(eff$ranblock, eff$corLin, rownames(eff), cex=0.5)
 abline(0,1)
 
 \dontrun{

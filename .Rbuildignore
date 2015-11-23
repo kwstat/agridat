@@ -1,5 +1,6 @@
-cran-comments.md
+.gitignore
+^.*\.Rproj$
+^\.Rproj\.user$
+cran_comments.md
 data-done
 data-unused
-old
-

@@ -43,7 +43,12 @@
   An example with the Mercer & Hall wheat yield dataset.
   
   The 'spdep' package includes the grain yields
-  (only) and spatial positions of plot centres in its example dataset 'wheat'.
+  (only) and spatial positions of plot centres in its example dataset
+  'wheat'.
+
+  Note, checked that all '4.03' values in this data match the original
+  document.
+  
 }
 
 \examples{

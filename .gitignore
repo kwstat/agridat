@@ -1,9 +1,3 @@
-.gitignore~
-DESCRIPTION~
-NEWS~
-man/*~
-/NEWS~
-/R/gge.r~
-/R/desplot.r~
-inst/doc
-data-done/*
+.Rhistory
+.Rproj.user
+agridat.Rproj

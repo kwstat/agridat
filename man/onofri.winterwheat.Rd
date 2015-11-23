@@ -29,6 +29,8 @@
   
   Downloaded electronic version from here Nov 2015:
   http://www.casaonofri.it/Biometry/index.html
+
+  Used with permission of Andrea Onofri.
 }
 
 \references{
