@@ -2,10 +2,10 @@
 \alias{goulden.barley.uniformity}
 \docType{data}
 \title{
-  Barley uniformity trial
+  Uniformity trial of barley
 }
 \description{
-  Barley uniformity trial
+  Uniformity trial of barley
 }
 
 \format{
@@ -22,10 +22,11 @@
 \source{
   C. H. Goulden, 1939. \emph{Methods of statistical analysis}.
   Wiley. Page 18.
-  \url{http://archive.org/details/methodsofstatist031744mbp}
+  https://archive.org/stream/methodsofstatist031744mbp#page/n31/mode/2up
 }
 \references{
-  See LeClerg, Leonard, Clark. \emph{Field Plot Technique}. Page 27.
+  See LeClerg, Leonard, Clark. \emph{Field Plot Technique}.
+  https://archive.org/stream/fieldplottechniq00leon#page/38/mode/2up
 }
 
 \examples{
@@ -33,8 +34,11 @@
 data(goulden.barley.uniformity)
 dat <- goulden.barley.uniformity
 
-require("agrifun")
-desplot(yield ~ col*row, data=dat, main="goulden.barley.uniformity")
+if(require(desplot)){
+  desplot(yield ~ col*row, data=dat,
+          aspect=1, main="goulden.barley.uniformity")
+}
+
 
 # See LeClerg, Leonard, Clark
 hist(dat$yield, main="goulden.barley.uniformity",

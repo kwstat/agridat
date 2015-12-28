@@ -32,9 +32,11 @@
   Trial 2 was 12 experimental lines.
 }
 \source{
-  Asfaw Adugna (2008), Assessment of yield stability in sorghum using
+  Asfaw Adugna (2008).
+  Assessment of yield stability in sorghum using
   univariate and multivariate statistical approaches, \emph{Hereditas},
   145, 28--37.
+  \url{doi.org/10.1111/j.0018-0661.2008.2023.x}
 
   Used with permission of Asfaw Adugna.
 }
@@ -54,7 +56,7 @@ tapply(dat$yield, dat$gen, mean)
 
 # CV for each genotype.  G1..G15 match, except for G2.
 # The table in Adugna scrambles the means for G16..G28
-require(reshape2)
+if(require(reshape2)){
 mat <- acast(dat, gen~env,  value.var='yield')
 round(sqrt(apply(mat, 1, var, na.rm=TRUE)) / apply(mat, 1, mean, na.rm=TRUE) * 100,2)
 
@@ -68,6 +70,8 @@ w <- w + mean(mat1, na.rm=TRUE)
 w <- rowSums(w^2, na.rm=TRUE)
 sig2 <- k*w/((k-2)*(n-1)) - sum(w)/((k-1)*(k-2)*(n-1))
 round(sig2/10000,1) # Genotypes in T1 are divided by 10000
+}
+
 
 }
 \keyword{datasets}

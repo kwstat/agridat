@@ -30,6 +30,7 @@
   Newton, Adrian and Thomas, William and Currie, Iain. 2003.
   The practical use of semiparametric models in field trials,
   \emph{Journal of Agric Biological and Envir Stats}, 8, 48-66.
+  \url{http://doi.org/10.1198/1085711031265}.
 
   Retrieved from \url{ftp://ftp.bioss.sari.ac.uk/pub/maria}.
 

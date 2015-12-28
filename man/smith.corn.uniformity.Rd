@@ -2,21 +2,20 @@
 \alias{smith.corn.uniformity}
 \docType{data}
 \title{
-  Uniformity trial of corn in three consecutive years
+  Uniformity trial of corn, 3 years on same ground
 }
 \description{
-  Uniformity trial of corn in three consecutive years, 1895-1897.  The
-  same field/plots were used in all three years.
+  Uniformity trial of corn, 3 years on same ground, 1895-1897
 }
 
 \format{
   A data frame with 360 observations on the following 5 variables.
   \describe{
-    \item{\code{plot}}{Plot, consistent across years}
-    \item{\code{row}}{Row}
-    \item{\code{col}}{Column}
-    \item{\code{year}}{Year, numeric.  Last two digits of 1895, 1896, 1897}
-    \item{\code{yield}}{Yield in bushels / acre}
+    \item{\code{plot}}{plot number, consistent across years}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
+    \item{\code{year}}{year. Last two digits of 1895, 1896, 1897}
+    \item{\code{yield}}{yield, bushels / acre}
   }
 }
 \details{
@@ -111,9 +110,10 @@ data(smith.corn.uniformity)
 dat <- smith.corn.uniformity
 
 dat = transform(dat, year=factor(year))
-require("agrifun")
+if(require(desplot)){
 desplot(yield~col*row|year, dat, layout=c(1,3),
         main="smith.corn.uniformity: yield across years 1895-1987")
+}
 
 # Outliers are obvious
 # require(lattice)

@@ -2,10 +2,11 @@
 \alias{mercer.mangold.uniformity}
 \docType{data}
 \title{
-  Mercer and Hall's uniformity trial of mangolds in 1910
+  Uniformity trial of mangolds
 }
 \description{
-  Mercer and Hall's uniformity trial of mangolds in 1910
+  Uniformity trial of mangolds at Rothamsted Experiment Station,
+  England, 1910.
 }
 \usage{data(mercer.mangold.uniformity)}
 \format{
@@ -42,11 +43,12 @@ dat <- mercer.mangold.uniformity
 # Show field in true aspect ratio
 asp = (7.25 * 20) / (30.25 * 10)
 
-require("agrifun")
+if(require(desplot)){
 desplot(roots~col*row, data=dat,
         main="mercer.mangold.uniformity roots", aspect=asp)
 desplot(leaves~col*row, data=dat,
         main="mercer.mangold.uniformity leaves", aspect=asp)
+}
 
 # xyplot(roots~leaves, data=dat)
 

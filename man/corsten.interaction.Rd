@@ -24,8 +24,10 @@
   The correct order of the loc labels is 1 2 4 5 6 7 3.
 }
 \source{
-  L C A Corsten and J B Denis, Structuring Interaction in Two-Way Tables
-  By Clustering, \emph{Biometrics}, 1990, 46, 207--215. Table 1.
+  L C A Corsten and J B Denis, (1990).
+  Structuring Interaction in Two-Way Tables By Clustering.
+  \emph{Biometrics}, 46, 207--215. Table 1.
+  \url{http://doi.org/10.2307/2531644}
 
   Used with permission of Jean-Baptiste Denis.
 }
@@ -35,7 +37,7 @@
 data(corsten.interaction)
 dat <- corsten.interaction
 
-require(reshape2)
+if(require(reshape2)){
 m1 <- melt(dat, measure.var='yield')
 dmat <- acast(m1, loc~gen)
 
@@ -46,5 +48,8 @@ dmat <- acast(m1, loc~gen)
 # For comparison, the 'heatmap' function clusters the rows and
 # columns _independently_ of each other.
 heatmap(dmat, main="corsten.interaction")
+}
+
+
 }
 

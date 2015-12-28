@@ -68,7 +68,7 @@ levelplot(height~loc*gen, dat, main="lavoranti.eucalyptus - GxE heatmap",
           col.regions=grays)
 
 dat <- droplevels(subset(dat, origin=="Ravenshoe"))
-require(reshape2)
+if(require(reshape2)){
 dat <- acast(dat, gen~loc, value.var='height')
 
 dat[1,1] <- NA
@@ -78,5 +78,7 @@ xc1 <- dat[-1,][,1]
 xr1 <- dat[,-1][1,]
 xm <- xr1 %*% X11.svd$v %*% diag(1/X11.svd$d) %*% t(X11.svd$u) %*% xc1
 xm # = 18.29, Original value was 17.4
+}
+
 }
 \keyword{datasets}

@@ -43,7 +43,7 @@
 
   B. I. Hayman (1954a). The Analysis of Variance of Diallel Tables.
   \emph{Biometrics}, 10, 235-244.  Table 5, page 241.
-  http://www.jstor.org/stable/3001877
+  \url{http://doi.org/10.2307/3001877}
 
   Hayman, B.I. (1954b). The theory and analysis of diallel crosses.
   \emph{Genetics}, 39, 789-809.  Table 3, page 805.
@@ -118,7 +118,7 @@ densityplot(~day, data=dat2, main="hayman.tobacco",
 d1 <- subset(dat2, block=='B1')
 d2 <- subset(dat2, block=='B2')
 
-require(reshape2)
+if(require(reshape2)){
 m1 <- acast(d1, male~female, value.var='day')
 m2 <- acast(d2, male~female, value.var='day')
 
@@ -142,6 +142,8 @@ with(summ, text(vr, wr, male)) # Match Hayman figure 2
 abline(0,1,col="gray")
 # Hayman notes that 1 and 3 do not lie along the line, so modifies them
 # and re-analyzes.
+}
+
 
 }
 \keyword{datasets}

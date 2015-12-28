@@ -56,7 +56,7 @@ dat[ dat$field =="F2" & dat$row==5 & dat$quadrat==4, 'water'] <- NA
 dat <- transform(dat, row=21-row)
 
 # Disease presence.  Gumpertz fig 1a, 2a.
-require("agrifun")
+if(require(desplot)){
 grays <- colorRampPalette(c("#d9d9d9","#252525"))
 desplot(disease ~ row*quadrat|field, data=dat,
         main="gumpertz.pepper disease presence", aspect=1,
@@ -73,6 +73,8 @@ desplot(leaf ~ row*quadrat|field, data=dat,
         main="gumpertz.pepper leaf assay", aspect=1,
         col.regions=grays(6),
         at=c(0,1,2,3,4,5,6)-.5)
+}
+
 
 # Use the inner 16x16 grid of plots in field 2
 dat2 <- droplevels(subset(dat, field=="F2" & !is.na(water) &
@@ -83,11 +85,13 @@ coef(m21) # These match Gumpertz et al table 4, model 1
 ## (Intercept)       water        leaf
 ##  -9.1019623   0.7059993   0.4603931
 dat2$res21 <- resid(m21)
-desplot(res21 ~ row*quadrat, data=dat2,
-        main="gumpertz.pepper field 2, model 1 residuals")
+if(require(desplot)){
+  desplot(res21 ~ row*quadrat, data=dat2,
+          main="gumpertz.pepper field 2, model 1 residuals")
+  # Still shows obvious trends.  Gumpertz et al add spatial covariates for
+  # neighboring plots, but with only minor improvement in misclassification
+}
 
-# Still shows obvious trends.  Gumpertz et al add spatial covariates for
-# neighboring plots, but with only minor improvement in misclassification
 
 }
 \keyword{datasets}

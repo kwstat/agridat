@@ -39,9 +39,10 @@ data(bridges.cucumber)
 dat <- bridges.cucumber
 dat <- transform(dat, rowf=factor(row), colf=factor(col))
 
-require("agrifun")
+if(require(desplot)){
 desplot(yield~col*row|loc, data=dat, text=gen, cex=1,
         main="bridges.cucumber")
+}
 
 \dontrun{
 require(asreml)

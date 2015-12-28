@@ -2,18 +2,18 @@
 \alias{williams.barley.uniformity}
 \docType{data}
 \title{
-Yield from a barley uniformity trial
+  Uniformity trial of barley
 }
 \description{
-  Yield from a barley uniformity trial
+  Uniformity trial of barley at Narrabri, New South Wales, 1984.
 }
 
 \format{
   A data frame with 720 observations on the following 3 variables.
   \describe{
-    \item{\code{row}}{Row position}
-    \item{\code{col}}{Column position}
-    \item{\code{yield}}{Yield kg/ha divided by 10}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
+    \item{\code{yield}}{grain yield kg/ha divided by 10}
   }
 }
 \details{
@@ -35,15 +35,19 @@ Yield from a barley uniformity trial
 data(williams.barley.uniformity)
 dat <- williams.barley.uniformity
 
-require("agrifun")
+if(require(desplot)){
 asp = (15*5)/(48*.75) # true aspect
 desplot(yield ~ col*row, dat, aspect=asp,
         main="williams.barley.uniformity")
+}
+
 
 # Smoothed contour/persp plot like Williams Fig 1b, 2b
 require("lattice")
 dat$fit <- fitted(loess(yield~col*row, dat, span=.1))
-contourplot(fit~col*row, data=dat, main="williams.barley.uniformity")
+contourplot(fit~col*row, data=dat,
+            region=TRUE,
+            main="williams.barley.uniformity")
 wireframe(fit~col*row, data=dat, zlim=c(100, 350),
           main="williams.barley.uniformity")
 

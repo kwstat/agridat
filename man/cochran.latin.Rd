@@ -30,8 +30,12 @@ height and true height of the plot.
 data(cochran.latin)
 dat <- cochran.latin
 
-require("agrifun")
-desplot(diff~col*row, dat, text=operator, cex=1, main="cochran.latin")
+if(require(desplot)){
+desplot(diff~col*row, dat, text=operator, cex=1,
+        main="cochran.latin")
+}
+
+
 dat <- transform(dat, rf=factor(row), cf=factor(col))
 aov.dat <- aov(diff ~ operator + Error(rf*cf), dat)
 summary(aov.dat)

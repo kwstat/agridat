@@ -2,10 +2,10 @@
 \alias{li.millet.uniformity}
 \docType{data}
 \title{
-  Uniformity trial of 600 millet plots.
+  Uniformity trial of millet
 }
 \description{
-  Uniformity trial of 600 millet plots.
+  Uniformity trial of millet at China.
 }
 
 \format{
@@ -22,7 +22,8 @@
 \source{
   Li, HW and Meng, CJ and Liu, TN. 1936.
   Field Results in a Millet Breeding Experiment.
-  \emph{Agronomy Journal}, 28, 1--15.
+  \emph{Agronomy Journal}, 28, 1-15.  Table 1.
+  \url{http://doi.org/10.2134/agronj1936.00021962002800010001x}
 }
 
 \examples{
@@ -31,7 +32,10 @@ data(li.millet.uniformity)
 dat <- li.millet.uniformity
 
 mean(dat$yield) # matches Li et al.
-require("agrifun")
-desplot(yield~col*row, dat, main="li.millet.uniformity", aspect=100/100)
+if(require(desplot)){
+  desplot(yield~col*row, dat, main="li.millet.uniformity", aspect=100/100)
+}
+
+
 }
 \keyword{datasets}

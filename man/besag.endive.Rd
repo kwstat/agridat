@@ -35,7 +35,8 @@
   N Friel & A. N Pettitt (2004). Likelihood Estimation and Inference
   for the Autologistic Model.
   \emph{Journal of Computational and Graphical Statistics}, 13:1,
-  232-246. \url{http://doi.org/10.1198/1061860043029}
+  232-246.
+  \url{http://doi.org/10.1198/1061860043029}
 }
 \examples{
 
@@ -43,12 +44,13 @@ data(besag.endive)
 dat <- besag.endive
 
 # Incidence map.  Figure 2 of Friel and Pettitt
-require("agrifun")
+if(require(desplot)){
 grays <- colorRampPalette(c("#d9d9d9","#252525"))
 desplot(disease~col*row, dat,
         col.regions=grays(2),
         aspect = .3, # No idea if this is right.
         main="besag.endive - Disease incidence")
+}
 
 \dontrun{
 

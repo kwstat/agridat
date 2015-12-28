@@ -37,7 +37,7 @@
   Julian Besag and Rob Kempton (1986).
   Statistical Analysis of Field Experiments Using Neighbouring Plots.
   \emph{Biometrics}, 42, 231-251.  Table 6.
-  http://www.jstor.org/stable/2531047
+  \url{http://doi.org/10.2307/2531047}
 }
 \references{
   Kempton, RA and Lockwood, G. (1984).
@@ -49,9 +49,9 @@
 data(besag.beans)
 dat = besag.beans
 
-# Add a covariate = excess height of neighbors
-require(reshape2)
-mat <- acast(dat, row~col, value.var='height')
+if(require(reshape2)){
+  # Add a covariate = excess height of neighbors
+  mat <- acast(dat, row~col, value.var='height')
 mat2 <- matrix(NA, nrow=4, ncol=38)
 mat2[,2:37] <- (mat[,1:36] + mat[,3:38] - 2*mat[,2:37])
 dat2 <- melt(mat2)
@@ -84,6 +84,8 @@ dat$blk <- factor(dat$row)
 dat$blkrep <- factor(paste(dat$blk, dat$rep))
 m2 <- lm(yield ~ -1 + gen + blkrep + cov, data=dat)
 coef(m2) # slope 'cov' = -.72, while Kempton says -.79
+}
+
 
 }
 \keyword{datasets}

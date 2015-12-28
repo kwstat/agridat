@@ -12,9 +12,12 @@
 
 \details{
 
-Abbreviations in the 'other' column include: xy = coordinates,
-pls = partial least squares, row-col = row-column design,
-ts = time series, ym = yield monitor
+  Abbreviations in the 'other' column include:
+  xy = coordinates,
+  pls = partial least squares,
+  row-col = row-column design,
+  ts = time series,
+  ym = yield monitor
 
 \bold{Uniformity trials with a single genotype}
 
@@ -28,12 +31,13 @@ name                                  \tab dimensions \tab other \tab model \cr
 \link{batchelor.valencia.uniformity}  \tab 12 x 20 \tab xy \tab \cr
 \link{batchelor.walnut.uniformity}    \tab 10 x 28 \tab xy \tab \cr
 \link{garber.multi.uniformity}        \tab 45 x 6 \tab xy, 2 years/crops \tab \cr
-\link{gomez.rice.uniformity}          \tab 18 x 36 \tab xy \tab aov \cr
+\link{gomez.rice.uniformity}          \tab 18 x 36 \tab xy \tab aov,smith \cr
 \link{goulden.barley.uniformity}      \tab 20 x 20 \tab xy \tab \cr
 \link{harris.multi.uniformity}        \tab 2 x 23 \tab xy, 23 crops \tab corrgram\cr
 \link{immer.sugarbeet.uniformity}     \tab 10 x 60 \tab xy, 3 traits \tab \cr
 \link{kalamkar.potato.uniformity}     \tab 6 x 96 \tab xy \tab \cr
 \link{kempton.barley.uniformity}      \tab 7 x 28 \tab xy \tab \cr
+\link{lessman.sorghum.uniformity}     \tab 46 x 60 \tab xy \tab \cr
 \link{li.millet.uniformity}           \tab 6 x 100 \tab xy \tab \cr
 \link{lyon.potato.uniformity}         \tab 34 x 6 \tab xy \tab \cr
 \link{mercer.mangold.uniformity}      \tab \tab \tab \cr
@@ -41,6 +45,11 @@ name                                  \tab dimensions \tab other \tab model \cr
 \link{montgomery.wheat.uniformity}    \tab 14 x 16 \tab xy, \tab lm \cr
 \link{odland.soybean.uniformity}      \tab 25 x 42 \tab xy \tab \cr
 \link{odland.soyhay.uniformity}       \tab 28 x 55 \tab xy \tab \cr
+\link{polson.safflower.uniformity}    \tab 52 x 33 \tab xy \tab smith\cr
+\link{smith.beans1.uniformity}        \tab 18 x 12 \tab xy \tab \cr
+\link{smith.beans2.uniformity}        \tab 18 x 12 \tab xy \tab \cr
+\link{smith.beans3.uniformity}        \tab 16 x 15 \tab xy \tab \cr
+\link{smith.beans4.uniformity}        \tab 16 x 15 \tab xy \tab \cr
 \link{smith.corn.uniformity}          \tab 6 x 20 \tab xy, 3 years \tab rgl \cr
 \link{stephens.sorghum.uniformity}    \tab 100 x 20 \tab xy \tab \cr
 \link{wassom.brome1.uniformity}       \tab 36 x 36 \tab xy \tab \cr
@@ -293,7 +302,7 @@ R tool for fitting mixed models with complex variance structures to
 large datasets, and almost the only option (even for small datasets) for
 modelling AR1xAR1 residual variance structures.
 Commercial use of \code{asreml} requires a license:
-\url{http://www.vsni.co.uk/downloads/asreml/}.
+http://www.vsni.co.uk/downloads/asreml.
 
 \bold{Comments on the package structure}
 
@@ -323,7 +332,7 @@ electronic format, but mistakes are possible.  Please file a bug report.
 
 \author{
 
-  Kevin Wright, kw.stat @ gmail.com
+  Kevin Wright
 
   The author is grateful to the many people who granted permission to
   include their data in this package.
@@ -334,7 +343,7 @@ electronic format, but mistakes are possible.  Please file a bug report.
 
 \references{
 
-  Box G. E. P. (1957), Integration of Techniques in Process Development,
+  G. E. P. Box (1957), Integration of Techniques in Process Development,
   \emph{Transactions of the American Society for Quality Control}.
 
   J. White and Frits van Evert. (2008).

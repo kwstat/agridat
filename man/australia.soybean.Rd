@@ -91,7 +91,7 @@ been corrected.
 data(australia.soybean)
 dat <- australia.soybean
 
-require(reshape2)
+if(require(reshape2)){
 dm <- melt(dat, id.var=c('env', 'year','loc','gen'))
 
 # Joint plot of genotypes & traits. Similar to Figure 1 of Kroonenberg 1989
@@ -103,6 +103,9 @@ biplot(princomp(dmat), main="australia.soybean trait x gen biplot", cex=.75)
 # dmat2 <- dmat[44:58,]
 # require("lattice")
 # parallelplot(dmat2[,c(2:6,1)], main="australia.soybean", horiz=FALSE)
+
+}
+
 
 }
 

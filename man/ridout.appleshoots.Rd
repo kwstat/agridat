@@ -110,7 +110,7 @@ newdat$ltrtn <- log(newdat$trtn)
 
 # The predicted (Poisson + Zero) probabilities
 d2 <- cbind(newdat[,c('bap','photo')], predict(m2, newdata=newdat, type="prob"))
-require(reshape2)
+if(require(reshape2)){
 d2 <- melt(d2, id.var = c('bap','photo')) # wide to tall
 d2$xpos <- as.numeric(as.character(d2$variable))
 foo.poi <- xyplot(value~xpos|photo*bap, d2, col="black", pch=20, cex=1.5)
@@ -118,7 +118,8 @@ foo.poi <- xyplot(value~xpos|photo*bap, d2, col="black", pch=20, cex=1.5)
 # Plot data and model
 foo.obs <- update(foo.obs, main="ridout.appleshoots: observed (bars) & predicted")
 useOuterStrips(foo.obs + foo.poi)
-
+}
+  
 # Restore contrasts
 options(oo)
 

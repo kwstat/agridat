@@ -3,10 +3,11 @@
 \alias{odland.soyhay.uniformity}
 \docType{data}
 \title{
-  Uniformity trials of soy hay and soybeans.
+  Uniformity trials of soy hay and soybeans
 }
 \description{
-  Uniformity trials of soy hay and soybeans.
+  Uniformity trials of soy hay and soybeans at Virginia Experiment
+  Station 1925-1926.
 }
 
 \format{
@@ -45,17 +46,19 @@ Odland and Garber provide no agronomic context for the yield variation.
 data( odland.soyhay.uniformity)
 dat1 <- odland.soyhay.uniformity
 
-require("agrifun")
+if(require(desplot)){
 desplot(yield ~ col*row, dat1, flip=TRUE,
         aspect=200/(42*30/12), # true aspect ratio
         main="odland.soyhay.uniformity")
-
+}
 
 data( odland.soybean.uniformity)
 dat2 <- odland.soybean.uniformity
-desplot(yield ~ col*row, dat2, flip=TRUE,
-        aspect = 232/(55*30/12), # true aspect
-        main="odland.soybean.uniformity")
+if(require(desplot)){
+  desplot(yield ~ col*row, dat2, flip=TRUE,
+          aspect = 232/(55*30/12), # true aspect
+          main="odland.soybean.uniformity")
+}
 
 }
 \keyword{datasets}

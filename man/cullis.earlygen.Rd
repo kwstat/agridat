@@ -47,7 +47,7 @@
   A New Procedure for the Analysis of Early Generation Variety Trials.
   \emph{Journal of the Royal Statistical Society. Series C (Applied
     Statistics)}, 38, 361-375.
-  http://www.jstor.org/stable/2348066
+  \url{http://doi.org/10.2307/2348066}
 }
 \references{
 
@@ -62,11 +62,12 @@ dat <- cullis.earlygen
 
 # Show field layout of checks.  Cullis Table 1.
 dat$check <- ifelse(dat$entry < 8, dat$entry, NA)
-require("agrifun")
+if(require(desplot)){
 desplot(yield ~ col*row, dat, main="cullis.earlygen (yield)",
         col="check", cex=1, flip=TRUE)
 
 desplot(weed ~ col*row, dat, main="cullis.earlygen (weed)", flip=TRUE)
+}
 
 require(lattice)
 bwplot(yield ~ weed, dat, horizontal=FALSE, main="cullis.earlygen")

@@ -38,9 +38,11 @@ data(gomez.stripsplitplot)
 dat <- gomez.stripsplitplot
 
 # Layout
-require("agrifun")
+if(require(desplot)){
 desplot(gen~x+y, dat, out1=rep, col=nitro, text=planting, cex=1,
         main="gomez.stripsplitplot")
+}
+
 
 # Gomez table 4.19, ANOVA of strip-split-plot design
 dat <- transform(dat, nf=factor(nitro))

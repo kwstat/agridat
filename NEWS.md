@@ -4,21 +4,25 @@
 * JAGS code for lee.potatoblight
 * JAGS code for theobald.barley
 * JAGS code for besag.elbatan
+* Added DOIs for most references A-G.
 
 
 # agridat 1.13 (unpublished)
 
 ## New data
 
-battese.survey, gartner.corn, kenward.cattle, kreusler.maize,
-montgomery.wheat.uniformity, onofri.winterwheat, wheatley.carrot
+battese.survey, gartner.corn, giles.wheat, kenward.cattle, kreusler.maize,
+lessman.sorghum.uniformity, montgomery.wheat.uniformity, onofri.winterwheat,
+polson.safflower.uniformity, smith.beans1.uniformity, wheatley.carrot
 
 ## Other
 
-* Moved `desplot`, `gge` functions to new package `agrifun`.
-* Switch to CC-BY-SA 4.0 + file LICENSE.  Similar to igraphdata package.
+* Moved `desplot` function to package `desplot`.
+* Moved `gge` function to package `gge`.
+* Switch to CC-BY-SA 4.0 + file LICENSE.  Similar to `igraphdata` package.
 * Change vignette from Rnw/pdf to Rmd/html.
-* `devtools::run_examples()` now works even without suggested packages installed.
+* `devtools::run_examples()` now works even without suggested packages
+installed.
 
 # agridat 1.12 - Jun 2015
 

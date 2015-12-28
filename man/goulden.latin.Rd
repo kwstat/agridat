@@ -37,8 +37,9 @@
 data(goulden.latin)
 dat <- goulden.latin
 
-require("agrifun")
+if(require(desplot)){
 desplot(yield ~ col*row, dat, text=trt, cex=1, main="goulden.latin")
+}
 
 # Matches Goulden.
 m1 <- lm(yield~ trt + factor(row) + factor(col), data=dat)

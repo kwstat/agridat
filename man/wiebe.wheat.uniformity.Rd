@@ -2,10 +2,10 @@
 \alias{wiebe.wheat.uniformity}
 \docType{data}
 \title{
-Uniformity trial of wheat
+  Uniformity trial of wheat
 }
 \description{
-A uniformity trial of 1500 plots of wheat conducted in Idaho in 1927.
+  Uniformity trial of wheat at Aberdeen, Idaho, 1927.
 }
 
 \format{
@@ -49,10 +49,12 @@ A uniformity trial of 1500 plots of wheat conducted in Idaho in 1927.
 data(wiebe.wheat.uniformity)
 dat <- wiebe.wheat.uniformity
 
-require("agrifun")
+if(require(desplot)){
 # 125 rows = 125 feet tall. 12 cols * 15 feet = 180 feet wide.
 desplot(yield~col+row, dat, aspect=125/180, flip=TRUE,
   main="wiebe.wheat.uniformity: yield") # row 1 is at south
+}
+
 
 # Preece (1981) found the last digits have an interesting distribution
 # with 0 and 5 much more common than other digits.

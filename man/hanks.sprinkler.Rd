@@ -59,9 +59,10 @@ data(hanks.sprinkler)
 dat <- hanks.sprinkler
 
 # The line sprinkler is vertical between subplots 6 & 7
-require("agrifun")
+if(require(desplot)){
 desplot(yield~subplot*row, dat, out1=block, out2=irr, cex=1,
         num=gen, main="hanks.sprinkler")
+}
 
 require("lattice")
 xyplot(yield~subplot|block, dat, type=c('b'), group=gen,

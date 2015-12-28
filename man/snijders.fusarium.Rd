@@ -48,7 +48,7 @@
   Fred A van Eeuwijk. 1995.
   Multiplicative interaction in generalized linear models.
   \emph{Biometrics}, 51, 1017-1032.
-  http://www.jstor.org/stable/2533001
+  \url{http://doi.org/10.2307/2533001}
 
 }
 
@@ -82,7 +82,7 @@ m2 <- glm(y ~ yrstr + gen, data=dat, family="wedderburn")
 anova(m2) # Main effects match VanEeuwijk table 6
 
 # Generalized AMMI-2 model. Matches VanEeuwijk table 6
-bilin2 <- gnm(y ~ yrstr + gen +instances(Mult(yrstr, gen), 2),
+bilin2 <- gnm(y ~ yrstr + gen + instances(Mult(yrstr, gen), 2),
               data=dat, family = wedderburn)
 # plot(bilin2,1) # Resid vs fitted plot matches VanEeuwijk figure 3c
 anova(bilin2)

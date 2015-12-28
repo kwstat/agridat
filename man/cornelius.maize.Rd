@@ -28,7 +28,8 @@
 \references{
   Forkman, Johannes and Piepho, Hans-Peter. (2014).
   Parametric bootstrap methods for testing multiplicative terms in GGE
-  and AMMI models. \emph{Biometrics}.
+  and AMMI models. \emph{Biometrics}, 70(3), 639-647.
+  \url{http://doi.org/10.1111/biom.12162}
 }
 
 \examples{
@@ -37,7 +38,7 @@ data(cornelius.maize)
 dat <- cornelius.maize
 # dotplot(gen~yield|env,dat) # We cannot compare genotype yields easily
 # Subtract environment mean from each observation
-require(reshape2)
+if(require(reshape2)){
 mat <- acast(dat, gen~env)
 mat <- scale(mat, scale=FALSE)
 dat2 <- melt(mat)
@@ -45,6 +46,7 @@ names(dat2) <- c('gen','env','yield')
 require(lattice)
 bwplot(yield ~ gen, dat2,
        main="cornelius.maize - environment centered yields")
+}
 
 \dontrun{
 # This reproduces the analysis of Forkman and Piepho.

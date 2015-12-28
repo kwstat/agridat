@@ -38,7 +38,7 @@ data(kang.maize)
 dat <- kang.maize
 
 # Sweep out loc means, then show interaction plot.
-require(reshape2)
+if(require(reshape2)){
 mat <- acast(dat, gen~env, value.var='yield')
 mat <- sweep(mat, 2, colMeans(mat))
 dat2 <- melt(mat)
@@ -51,6 +51,7 @@ xyplot(yield~env|gen, data=dat2, type='l', group=gen,
        },
        ylab="Environment-centered yield",
        main="kang.maize - maize hybrid yields", scales=list(x=list(rot=90)))
+}
 
 # Weather covariates for each environment.
 covs <- data.frame(env=c("AL85","AL86","AL87", "BR85","BR86","BR87",

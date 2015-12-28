@@ -2,18 +2,18 @@
 \alias{williams.cotton.uniformity}
 \docType{data}
 \title{
-Lint yield from a cotton uniformity trial
+  Uniformity trial of cotton
 }
 \description{
-  Lint yield from a cotton uniformity trial
+  Uniformity trial of cotton at Narrabri, New South Wales, 1984.
 }
 
 \format{
   A data frame with 288 observations on the following 3 variables.
   \describe{
-    \item{\code{row}}{Row position}
-    \item{\code{col}}{Column position}
-    \item{\code{yield}}{Cotton lint yield, kg/ha divided by 10}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
+    \item{\code{yield}}{lint yield, kg/ha divided by 10}
   }
 }
 \details{
@@ -32,15 +32,22 @@ Lint yield from a cotton uniformity trial
 data(williams.cotton.uniformity)
 dat <- williams.cotton.uniformity
 
+if(require(desplot)){
 asp = (12*12)/(24*1) # true aspect
-require("agrifun")
-desplot(yield ~ col*row, dat, aspect=asp, main="williams.cotton.uniformity")
+desplot(yield ~ col*row, dat,
+        aspect=asp,
+        main="williams.cotton.uniformity")
+}
+
 
 # Smoothed contour/persp plot like Williams 1988 Fig 1a, 2a
 dat$fit <- fitted(loess(yield~col*row, dat, span=.5))
 require("lattice")
-contourplot(fit~col*row, data=dat, cuts=6, main="williams.cotton.uniformity")
-wireframe(fit~col*row, data=dat, zlim=c(100, 250), main="williams.cotton.uniformity")
+contourplot(fit~col*row, data=dat,
+            region=TRUE, cuts=6,
+            main="williams.cotton.uniformity")
+wireframe(fit~col*row, data=dat, zlim=c(100, 250),
+          main="williams.cotton.uniformity")
 
 # Williams table 1
 anova(aov(yield ~ factor(row) + factor(col), dat))

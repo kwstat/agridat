@@ -34,6 +34,7 @@
 }
 
 \references{
+
   Gilmour, Arthur R and Robin Thompson and Brian R Cullis. (1994).
   Average Information REML: An Efficient Algorithm for Variance
   Parameter Estimation in Linear Mixed Models, \emph{Biometrics},
@@ -48,11 +49,13 @@ dat <- kempton.slatehall
 dat <- transform(dat, xf=factor(col), yf=factor(row))
 
 # Besag 1993 figure 4.1 (left panel)
-require("agrifun")
+if(require(desplot)){
 grays <- colorRampPalette(c("#d9d9d9","#252525"))
 desplot(yield ~ col * row, dat, num=gen, out1=rep,
         col.regions=grays,
         main="kempton.slatehall - spring wheat yields")
+}
+
 
 # Incomplete block model of Gilmour et al 1995
 if(require(lme4) & require(lucid)){

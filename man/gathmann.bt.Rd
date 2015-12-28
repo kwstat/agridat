@@ -39,7 +39,7 @@ dat <- gathmann.bt
 
 # EDA suggests Bt vs ISO is significant for thysan, not for aranei
 require(lattice)
-require(reshape2)
+if(require(reshape2)){
 d2 <- melt(dat)
 bwdot=function(x,y,...){
     panel.xyplot(jitter(as.numeric(x)),y,...)
@@ -48,6 +48,8 @@ bwdot=function(x,y,...){
 bwplot(value ~ gen|variable, d2,
        main="gathmann.bt", ylab="Insect abundance", panel=bwdot,
        scales=list(relation="free"))
+}
+
 
 \dontrun{
 

@@ -2,10 +2,10 @@
 \alias{mercer.wheat.uniformity}
 \docType{data}
 \title{
-  Mercer and Hall's uniformity trial of wheat in 1910
+  Uniformity trial of wheat
 }
 \description{
-  Uniformity trial of wheat in 1910
+  Uniformity trial of wheat at Rothamsted Experiment Station, England, 1910.
 }
 
 \format{
@@ -56,11 +56,14 @@
 data(mercer.wheat.uniformity)
 dat <- mercer.wheat.uniformity
 
-require("agrifun")
+if(require(desplot)){
 desplot(grain ~ col*row, dat, main="mercer.wheat.uniformity - grain yield")
+}
+
 
 require("lattice")
-xyplot(straw ~ grain, data=dat, type=c('p','r'), main="mercer.wheat.uniformity - regression")
+xyplot(straw ~ grain, data=dat, type=c('p','r'),
+       main="mercer.wheat.uniformity - regression")
 
 # require(hexbin)
 # hexbinplot(straw ~ grain, data=dat)

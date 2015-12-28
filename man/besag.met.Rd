@@ -37,6 +37,7 @@
   Bayesian Analysis of Agricultural Field Experiments,
   \emph{Journal of the Royal Statistical Society: Series B (Statistical
     Methodology)}, 61, 691--746. Table 1.
+  \url{http://doi.org/10.1111/1467-9868.00201}
 
   Retrieved from
   http://web.archive.org/web/19990505223413/www.stat.duke.edu/~higdon/trials/nc.dat
@@ -49,9 +50,11 @@
 data(besag.met)
 dat <- besag.met
 
-require("agrifun")
-desplot(yield ~ col*row|county, out1=rep, out2=block, dat,
-        main="besag.met")
+if(require(desplot)){
+  desplot(yield ~ col*row|county, dat,
+          out1=rep, out2=block,
+          main="besag.met")
+}
 
 \dontrun{
 # Heteroskedastic variance model (separate variance for each variety)
@@ -139,9 +142,9 @@ gvar <- lam %*% t(lam) + diag(mat[,1])
 # Now get predictions and make an ordinary biplot
 p3 <- predict(m3, classify="county:gen")
 p3 <- p3$pred$pval
-require("agrifun")  
+require("gge")  
 bi3 <- gge(predicted.value ~ gen*county, data=p3, scale=FALSE)
-windows()
+dev.new()
 # Very similar to the coefficient biplot
 biplot(bi3, stand=FALSE, title="SVD biplot of FA2 predictions")
 }

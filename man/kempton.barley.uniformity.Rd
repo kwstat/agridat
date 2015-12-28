@@ -2,10 +2,10 @@
 \alias{kempton.barley.uniformity}
 \docType{data}
 \title{
-  Uniformity trial of Spring Barley in 1978
+  Uniformity trial of barley
 }
 \description{
-  Uniformity trial of Spring Barley in 1978
+  Uniformity trial of barley at Cambridge, England, 1978.
 }
 \details{
   A uniformity trial of spring barley planted in 1978.  Conducted by the
@@ -17,15 +17,16 @@
 \format{
   A data frame with 196 observations on the following 3 variables.
   \describe{
-    \item{\code{row}}{Row position}
-    \item{\code{col}}{Column position}
-    \item{\code{yield}}{Grain yield, kg}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
+    \item{\code{yield}}{grain yield, kg}
   }
 }
 \source{
-  R. A. Kempton and C. W. Howes (1981). The use of neighbouring plot
-  values in the analysis of variety trials. \emph{Applied Statistics},
-  30, 59--70.
+  R. A. Kempton and C. W. Howes (1981).
+  The use of neighbouring plot values in the analysis of variety trials.
+  \emph{Applied Statistics}, 30, 59--70.
+  \url{http://doi.org/10.2307/2346657}
 }
 \references{
   McCullagh, P. and Clifford, D., (2006).
@@ -39,17 +40,20 @@
 data(kempton.barley.uniformity)
 dat <- kempton.barley.uniformity
 
-require("agrifun")
+if(require(desplot)){
 desplot(yield~col*row, dat, main="kempton.barley.uniformity")
 asp <- (28*14)/(7*5) # aspect ratio (rows * ft)/(cols * ft)
 desplot(yield~col*row, dat, aspect=asp,
         main="kempton.barley.uniformity (true aspect)") # true view
+}
 
-dat <- transform(dat, xf = factor(col), yf=factor(row))
+
 
 \dontrun{
 
 # Kempton estimated auto-regression coefficients b1=0.10, b2=0.91
+
+dat <- transform(dat, xf = factor(col), yf=factor(row))
 require(asreml)
 m1 <- asreml(yield ~ 1, data=dat, rcov=~ar1(xf):ar1(yf))
 

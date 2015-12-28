@@ -40,9 +40,11 @@ data(burgueno.rowcol)
 dat <- burgueno.rowcol
 
 # Two contiguous reps in 8 rows, 16 columns
-require("agrifun")
-desplot(yield ~ col*row, data=dat, out1=rep, main="burgueno.rowcol",
-        text=gen, shorten="none", cex=.75)
+if(require(desplot)){
+  desplot(yield ~ col*row, data=dat,
+          out1=rep, main="burgueno.rowcol",
+          text=gen, shorten="none", cex=.75)
+}
 
 if(require(lme4) && require(lucid)){
 

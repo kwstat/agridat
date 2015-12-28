@@ -7,7 +7,7 @@
 \alias{batchelor.walnut.uniformity}
 \docType{data}
 \title{
-  Uniformity trials of fruit tree yields.
+  Uniformity trials of apples, lemons, oranges, and walnuts.
 }
 \description{
   Uniformity trials of apples, lemons, oranges, and walnuts.
@@ -101,11 +101,12 @@
   McCullagh, P. and Clifford, D., (2006).
   Evidence for conformal invariance of crop yields,
   \emph{Proceedings of the Royal Society A: Mathematical, Physical and
-  Engineering Science}, 462, 2119--2143.
+    Engineering Science}, 462, 2119--2143.
+  \url{http://doi.org/10.1098/rspa.2006.1667}
 }
 \examples{
 
-require("agrifun")
+if(require(desplot)){
 
 # Apple
 data(batchelor.apple.uniformity)
@@ -148,5 +149,8 @@ desplot(yield~col*row, data=batchelor.walnut.uniformity,
         aspect=32/10,
         main="batchelor.walnut.uniformity",
         ylab="Seedling walnut yields")
+
+}
+
 }
 

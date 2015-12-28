@@ -31,7 +31,7 @@
   Interpretation of Adjusted Treatment Means and Regressions in Analysis
   of Covariance.
   \emph{Biometrics}, 13, 282-308.
-  http://www.jstor.org/stable/2527917
+  \url{http://doi.org/10.2307/2527917}
 }
 \examples{
 data(cochran.beets)

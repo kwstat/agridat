@@ -34,9 +34,11 @@ data(kempton.rowcol)
 dat <- kempton.rowcol
 dat <- transform(dat, rowf=factor(row), colf=factor(col))
 
-require("agrifun")
+if(require(desplot)){
 desplot(yield~col*row|rep, dat, num=gen, out1=rep,
         main="kempton.rowcol")
+}
+
 
 # Model with rep, row, col as random.  Kempton, page 62.
 # Use "-1" so that the vcov matrix doesn't include intercept

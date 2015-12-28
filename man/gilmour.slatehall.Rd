@@ -41,9 +41,10 @@
 data(gilmour.slatehall)
 dat <- gilmour.slatehall
 
-require("agrifun")
+if(require(desplot)){
 desplot(yield ~ col * row, dat, num=gen,
         out1=rep, main="gilmour.slatehall")
+}
 
 \dontrun{
 # Model 4 of Gilmour et al 1997

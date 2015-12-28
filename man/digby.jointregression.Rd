@@ -25,14 +25,16 @@
   Digby, P.G.N. (1979). Modified joint regression analysis for
   incomplete variety x environment data.
   \emph{Journal of Agricultural Science}, 93, 81-86.
+  \url{http://doi.org/10.1017/S0021859600086159}
 }
 \references{
   Hans-Pieter Piepho, 1997.
   Analyzing Genotype-Environment Data by Mixed-Models with
   Multiplicative Terms. \emph{Biometrics}, 53, 761-766.
+  \url{http://doi.org/10.2307/2533976}
 
   RJOINT procedure in GenStat.
-  \url{http://www.vsni.co.uk/software/genstat/htmlhelp/server/RJOINT.htm}
+  http://www.vsni.co.uk/software/genstat/htmlhelp/server/RJOINT.htm
 }
 
 \examples{
@@ -40,8 +42,15 @@
 data(digby.jointregression)
 dat <- digby.jointregression
 
-# Simple gen means, ignoring unbalanced data
+# Simple gen means, ignoring unbalanced data.
+# Matches Digby table 2, Unadjusted Mean
 round(tapply(dat$yield, dat$gen, mean),3)
+
+# Two-way model. Matches Digby table 2, Fitting Constants
+m00 <- lm(yield ~ 0 + gen + env, dat)
+round(coef(m00)[1:10]-2.756078+3.272,3) # Adjust intercept
+# genG01 genG02 genG03 genG04 genG05 genG06 genG07 genG08 genG09 genG10 
+#  3.272  3.268  4.051  3.724  3.641  3.195  3.232  3.268  3.749  3.179 
 
 n.gen <- nlevels(dat$gen)
 n.env <- nlevels(dat$env)
@@ -72,7 +81,7 @@ while(!done){
   thetas <- coef(m2)[-c(1:n.gen)]
   thetas[is.na(thetas)] <- 0  # Change last coefficient from NA to 0
   dat$theta <- thetas[match(paste("env",dat$env,":beta",sep=""), names(thetas))]
-  print(thetas)
+  # print(thetas)
 
   # Check convergence
   chg <- sum(((betas-betas0)/betas0)^2)
@@ -87,15 +96,21 @@ xyplot(yield ~ theta|gen, data=dat, xlab="theta (environment effect)",
 
 # Dibgy Table 2, modified joint regression
 
-round(betas,3)
+# Genotype sensitivities (slopes)
+round(betas,3) # Match Digby table 2, Modified joint regression sensitivity
 # genG01 genG02 genG03 genG04 genG05 genG06 genG07 genG08 genG09 genG10
 #  0.953  0.739  1.082  1.024  1.142  0.877 1.089  0.914  1.196  0.947
 
-round(thetas,3)+1.164-.515 # re-parameterize to match Digby
+# Env effects. Match Digby table 3, Modified joint reg
+round(thetas,3)+1.164-.515 # Adjust intercept to match
 # envE01 envE02 envE03 envE04 envE05 envE06 envE07 envE08 envE09 envE10
 # -0.515 -0.578 -0.990 -1.186  1.811  1.696 -1.096  0.046  0.057  0.825
 # envE11 envE12 envE13 envE14 envE15 envE16 envE17
 # -0.576  1.568 -0.779 -0.692  0.836 -1.080  0.649
+
+# How to use gnm package for this?
+# require(gnm)
+# m3 <- gnm(yield ~ gen + Mult(gen,env), data=dat) # slopes negated
 
 }
 \keyword{datasets}

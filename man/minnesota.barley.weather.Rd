@@ -83,7 +83,7 @@ minn <- merge(ww, yy)
 
 
 # Higher yields generally associated with cooler temps, more precip
-require(reshape2)
+if(require(reshape2)){
 me <- melt(minn, id.var=c('site','year'))
 mey <- subset(me, variable=="yield")
 mey <- mey[,c('site','year','value')]
@@ -105,7 +105,8 @@ foo <- xyplot(y~x|covar*site, data=mecy, groups=yr, cex=1, ylim=c(5,65),
 if(require(latticeExtra)){
   foo <- useOuterStrips(foo, strip.left = strip.custom(par.strip.text=list(cex=.7)))
   combineLimits(foo, margin.x=2L) # Use a common x axis for all rows
-}
+} 
+} # reshape2
 
 }
 \keyword{datasets}

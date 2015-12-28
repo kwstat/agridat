@@ -23,6 +23,7 @@
   D. J. Allcroft and C. A. Glasbey, 2003.
   Analysis of crop lodging using a latent variable model.
   \emph{Journal of Agricultural Science}, 140, 383--393.
+  \url{http://doi.org/10.1017/S0021859603003332}
 
   Used with permission of Chris Glasbey.
 }

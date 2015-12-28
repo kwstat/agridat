@@ -27,6 +27,7 @@ Multi-environment trial with structured missing values
 \references{
   H P Piepho, (1999) Stability analysis using the SAS system,
   \emph{Agron Journal}, 91, 154--160.
+  \url{http://doi.og/10.2134/agronj1999.00021962009100010024x}
 }
 
 \examples{
@@ -35,8 +36,11 @@ data(denis.missing)
 dat <- denis.missing
 
 # View missingness structure
-require(reshape2)
-acast(dat, env~gen, value.var='yield')
+if(require(reshape2)){
+  acast(dat, env~gen, value.var='yield')
+}
+
+
 require(lattice)
 redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
 levelplot(yield ~ gen*env, data=dat,

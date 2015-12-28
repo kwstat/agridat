@@ -38,7 +38,7 @@
 data(yates.missing)
 dat <- yates.missing
 
-require("reshape2")
+if(require(reshape2)){
 mat0 <- acast(dat[, c('trt','block','y')], trt~block,
                id.var=c('trt','block'), value.var='y')
 
@@ -49,6 +49,7 @@ dat$pred <- predict(m1, new=dat[, c('trt','block')])
 dat$filled <- ifelse(is.na(dat$y), dat$pred, dat$y)
 mat1 <- acast(dat[, c('trt','block','pred')], trt~block,
                id.var=c('trt','block'), value.var='pred')
+}
 
 \dontrun{
 # Another method to estimate missing values via PCA

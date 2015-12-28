@@ -2,18 +2,18 @@
 \alias{montgomery.wheat.uniformity}
 \docType{data}
 \title{
-  Uniformity trial of wheat in 1909.
+  Uniformity trial of wheat
 }
 \description{
-  Uniformity trial of wheat in 1909.
+  Uniformity trial of wheat at Nebraska Experiment Station, 1909.
 }
 \usage{data("montgomery.wheat.uniformity")}
 \format{
   A data frame with 224 observations on the following 3 variables.
   \describe{
-    \item{\code{row}}{row ordinate}
-    \item{\code{col}}{column ordinate}
-    \item{\code{yield}}{yield per plot, grams}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
+    \item{\code{yield}}{yield, grams}
   }
 }
 \details{
@@ -35,7 +35,7 @@
   Variation in Nitrogen and Yield.
   U.S. Dept of Agriculture, Bureau of Plant Industry, Bulletin 269.
   Figure 10, page 37.
-  \url{http://dx.doi.org/10.5962/bhl.title.43602}
+  \url{http://doi.org/10.5962/bhl.title.43602}
 }
 
 \references{
@@ -50,10 +50,12 @@ data(montgomery.wheat.uniformity)
 dat <- montgomery.wheat.uniformity
 
 # Montgomery figure 10, page 37.
-require("agrifun")
+if(require(desplot)){
 desplot(yield ~ col*row, dat, text=yield,
         cex=1, shorten="none",
         main="montgomery.wheat.uniformity - observed yield")
+}
+
 
 # Surface & Pearl adjust yield for fertility effects.
 # They calculate smoothed yield as (row sum)*(column sum)/(total)
@@ -67,6 +69,7 @@ dev1 <- predict(m1) - mean(dat$yield)
 # Corrected.  Similar (but not exact) to Surface, fig 2.
 dat$correct <- round(dat$yield - dev1,0)
 if(FALSE){
+  require(desplot)
   desplot(yield ~ col*row, dat, main="observed")
   desplot(correct ~ col*row, dat, text=correct,
           cex=1, shorten="none",

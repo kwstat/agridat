@@ -45,9 +45,11 @@ data(weiss.incblock)
 dat <- weiss.incblock
 
 # True aspect as shown in Weiss and Cox
-require("agrifun")
+if(require(desplot)){
 desplot(yield~col*row, dat, text=gen, shorten='none', cex=.8, out1=block,
     main="weiss.incblock", xlab="Soybean yields", aspect=252/96)
+}
+
 
 \dontrun{
   # Standard inc block analysis used by Weiss and Cox

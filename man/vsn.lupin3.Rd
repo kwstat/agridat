@@ -43,10 +43,11 @@ dat <- within(dat, {
   gen=factor(gen)
 })
 
-require("agrifun")
+if(require(desplot)){
 desplot(yield~ col*row|site, dat, main="vsn.lupin3 - yield")
 desplot(check~ col*row|site, dat,
         main="vsn.lupin3: check plot placement") # Site 1 & 2 used same randomization
+}
 
 \dontrun{
 require(asreml)

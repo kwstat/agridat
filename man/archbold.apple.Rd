@@ -22,6 +22,7 @@
     \item{\code{trt}}{Treatment code}
   }
 }
+
 \details{
   In rep 1, the 10-foot-spacing main plot was split into two
   non-contiguous pieces.  This also happened in rep 4.  In the analysis
@@ -33,12 +34,13 @@
   where stock=0,1,6,7 for Seedling,MM111,MM106,M0007 and gen=1,2 for
   Redspur,Golden, respectively.
 }
+
 \source{
   D Archbold and G. R. Brown and P. L. Cornelius. (1987).
   Rootstock and in-row spacing effects on growth and yield of spur-type
   delicious and Golden delicious apple.
   \emph{Journal of the American Society for Horticultural Science},
-  112, 219--222.
+  112, 219-222.
 }
 \references{
   Cornelius, PL and Archbold, DD, 1989.
@@ -60,9 +62,11 @@ dat <- transform(dat, rep=factor(rep), spacing=factor(spacing), trt=factor(trt),
 # Due to 'spacing', the plots are different sizes, but the following layout
 # shows the relative position of the plots and treatments. Note that the
 # 'spacing' treatments are not contiguous in some reps.
-require("agrifun")
-desplot(spacing~row*pos, dat, col=stock, cex=1, num=gen,
-        main="archbold.apple")
+if(require(desplot)){
+  desplot(spacing~row*pos, dat, col=stock, cex=1, num=gen,
+          main="archbold.apple")
+}
+
 
 if(require("lme4") & require("lucid")){
 
@@ -76,7 +80,6 @@ vc(m1)  # Variances/means on page 59
 ##    Residual        <NA> <NA> 1015   31.86
 
 }
-
 
 
 ## require(HH)

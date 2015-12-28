@@ -2,10 +2,11 @@
 \alias{immer.sugarbeet.uniformity}
 \docType{data}
 \title{
-  Uniformity study of sugarbeets with measurements of yield, sugar, purity
+  Uniformity trial of sugarbeets, measurements of yield, sugar, purity
 }
 \description{
-  A uniformity study of sugarbeets.
+  Uniformity trial of sugarbeets, at Minnesota, 1930, with measurements
+  of yield, sugar, purity.
 }
 
 \format{
@@ -43,13 +44,14 @@ data(immer.sugarbeet.uniformity)
 dat <- immer.sugarbeet.uniformity
 
 # Immer numbers rows from the top
-require("agrifun")
+if(require(desplot)){
 desplot(yield~col*row, data=dat, tick=TRUE, flip=TRUE,
         main="immer.sugarbeet.uniformity - yield")
 desplot(sugar~col*row, data=dat, tick=TRUE, flip=TRUE,
         main="immer.sugarbeet.uniformity - sugar")
 desplot(purity~col*row, data=dat, tick=TRUE, flip=TRUE,
         main="immer.sugarbeet.uniformity - purity")
+}
 pairs(dat[,c('yield','sugar','purity')], main="immer.sugarbeet.uniformity")
 }
 \keyword{datasets}

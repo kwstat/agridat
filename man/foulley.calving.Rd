@@ -35,8 +35,9 @@
 \source{
   JL Foulley, D Gianola (1996).
   Statistical Analysis of Ordered Categorical Data via a Structured
-  Heteroskedastic Threshold Model. \emph{Gent Sel Evol}, 28, 249--273.
-
+  Heteroskedastic Threshold Model. \emph{Genet Sel Evol}, 28, 249--273.
+  \url{http://doi.org/10.1051/gse:19960304}
+  
   Used with permission of Jean-Louis Foulley.
 }
 
@@ -46,10 +47,12 @@ data(foulley.calving)
 dat <- foulley.calving
 
 ## Plot
-d2 <- transform(dat, age=ordered(age, levels=c("0.0-2.0","2.0-2.5","2.5-3.0","3.0-3.5","3.5-4.0",
-                                         "4.0-4.5","4.5-5.0","5.0-8.0","8.0+")),
-                 score=ordered(score, levels=c('S1','S2','S3')))
-require(reshape2)
+d2 <- transform(dat,
+                age=ordered(age, levels=c("0.0-2.0","2.0-2.5","2.5-3.0",
+                                          "3.0-3.5","3.5-4.0",
+                                          "4.0-4.5","4.5-5.0","5.0-8.0","8.0+")),
+                score=ordered(score, levels=c('S1','S2','S3')))
+if(require(reshape2)){
 d2 <- acast(dat, sex+age~score, value.var='count')
 d2 <- prop.table(d2, margin=1)
 require(lattice)
@@ -57,6 +60,8 @@ thm <- simpleTheme(col=c('skyblue','gray','pink'))
 barchart(d2, par.settings=thm, main="foulley.calving",
          xlab="Frequency of calving difficulty", ylab="Calf gender and dam age",
          auto.key=list(columns=3, text=c("Easy","Assited","Difficult")))
+}
+
 
 ## Ordinal multinomial model
 

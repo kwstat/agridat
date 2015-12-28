@@ -56,6 +56,7 @@
   HG. (1991). AMMI adjustment for statistical analysis of an
   international wheat yield trial.
   \emph{Theoretical and Applied Genetics}, 81, 27--37.
+  \url{http://doi.org/10.1007/BF00226108}
 
   Used with permission of Jose' Crossa.
 }
@@ -63,7 +64,7 @@
   Jean-Louis Laffont, Kevin Wright and Mohamed Hanafi (2013).
   Genotype + Genotype x Block of Environments (GGB) Biplots.
   \emph{Crop Science}, 53, 2332-2341.
-  \url{https://www.crops.org/publications/cs/abstracts/53/6/2332}.
+  \url{http://doi.org/10.2135/cropsci2013.03.0178}
 }
 
 \examples{
@@ -92,6 +93,20 @@ if(require(agricolae)){
 }
 
 # GGB example ...
+library(agridat)
+data(crossa.wheat)
+dat2 <- crossa.wheat
+
+# Define mega-environment groups of locations
+dat2$eg <- ifelse(is.element(dat2$loc,
+                             c("KN","NB","PA","BJ","IL","TC",
+                               "JM","PI","AS","ID","SC","SS",
+                               "SJ","MS","MG","MM")), "Grp1", "Grp2")
+
+library(gge)
+# Specify env.group as column in data frame
+m2 <- gge(yield~gen*loc, dat2, env.group=eg, scale=FALSE)
+biplot(m2, title="crossa.wheat - GGB biplot")
 
 }
 \keyword{datasets}

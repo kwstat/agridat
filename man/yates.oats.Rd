@@ -26,6 +26,7 @@
 \source{
   Yates, Frank (1935) Complex experiments,
   \emph{Journal of the Royal Statistical Society Suppl}. 2, 181-247.
+  \url{http://doi.org/10.2307/2983638}
 }
 
 \references{
@@ -38,9 +39,11 @@
 data(yates.oats)
 dat <- yates.oats
 
-require("agrifun")
+if(require(desplot)){
 desplot(yield ~ x*y, dat, out1=block, text=gen, col=nitro, cex=1,
         main="yates.oats")
+}
+
 
 # Roughly linear gradient across the field.  The right-half of each
 # block has lower yield.  The blocking is inadequate!

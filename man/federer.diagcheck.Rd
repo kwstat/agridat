@@ -40,6 +40,7 @@
   Federer, Walter T. 1998. Recovery of interblock, intergradient, and
   intervariety information in incomplete block and lattice rectangle
   design experiments. \emph{Biometrics}, 54, 471--481.
+  \url{http://doi.org/10.2307/3109756}
 }
 \references{
   Walter T Federer and Russell D Wolfinger, 2003.
@@ -55,10 +56,12 @@ dat <- federer.diagcheck
 
 # Show the layout as in Federer 1998.
 dat$check <- ifelse(dat$gen == "G121" | dat$gen=="G122", "C","N")
-require("agrifun")
+if(require(desplot)){
 desplot(yield ~ col*row, dat, text=gen, show.key=FALSE,
       main="federer.diagcheck",
       shorten='no', col=check, cex=.8, col.text=c("yellow","gray"))
+}
+
 
 # Now reproduce the analysis of Federer 2003.
 

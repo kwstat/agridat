@@ -49,9 +49,11 @@ dat <- durban.competition
 # Check that genotypes were balanced across wheel tracks.
 with(dat, table(gen,wheel))
 
-require("agrifun")
+if(require(desplot)){
 desplot(yield ~ col*block, dat, out1=block, text=gen, col=wheel,
         main="durban.competition")
+}
+
 
 # Calculate residual after removing block/genotype effects
 m1 <- lm(yield ~ gen + block, data=dat)
@@ -71,4 +73,5 @@ dat$comp[79:112] <- ( dat$yield[78:111] + dat$yield[80:113] ) / 2
 require(lattice)
 xyplot(res~comp, dat, type=c('p','r'), main="durban.competition",
        xlab="Average yield of neighboring plots", ylab="Residual")
+
 }

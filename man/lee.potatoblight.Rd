@@ -110,11 +110,13 @@ skp <- c(rep(0,10),
          rep(0,5),1,1,1,1,1,
          rep(0,5),1,1,1,1,1)
 
-require("agrifun")
+if(require(desplot)){
 desplot(y ~ col*row|date, dat,
         main="lee.potatoblight - maps of blight resistance",
         ylab="Year of testing",
         layout=c(10,11),skip=as.logical(skp))
+}
+
 
 # 1983 only.  I.Hardy succumbs quickly
 require("lattice")

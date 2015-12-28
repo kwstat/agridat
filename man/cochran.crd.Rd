@@ -37,6 +37,7 @@ uncovered significant differences (Tamura, 1988).
   Tamura, R.N. and Nelson, L.A. and Naderman, G.C., (1988).
   An investigation of the validity and usefulness of trend analysis for field plot data.
   \emph{Agronomy Journal}, 80, 712-718.
+  \url{http://doi.org/10.2134/agronj1988.00021962008000050003x}
 }
 \examples{
 
@@ -44,8 +45,9 @@ data(cochran.crd)
 dat <- cochran.crd
 
 # Field plan
-require("agrifun")
+if(require(desplot)){
 desplot(inf~col*row, data=dat, text=trt, cex=1, main="cochran.crd")
+}
 
 # CRD anova.  Table 6 of Tamura 1988
 contrasts(dat$trt) <- cbind(c1=c(1,1,1,-6,1,1,1),   # Control vs Sulf

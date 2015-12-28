@@ -41,7 +41,7 @@
 data(cochran.wireworms)
 dat <- cochran.wireworms
 
-# require("agrifun")
+# require(desplot)
 # desplot(worms ~ col*row, data=dat, text=trt, cex=1)
 
 # Trt K is effective, but not the others.  Really, this says it all.

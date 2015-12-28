@@ -32,10 +32,11 @@
   Walter T Federer and C S Schlottfeldt, 1954.
   The use of covariance to control gradients in experiments.
   \emph{Biometrics}, 10, 282--290.
+  \url{http://doi.org/10.2307/3001881}
 }
 \references{
   R. D. Cook and S. Weisberg (1999).
-  \emph{Applied Statistics Including Computing and Graphics}.
+  \emph{Applied Regression Including Computing and Graphics}.
 
   Walter T Federer and Russell D Wolfinger, 2003.
   PROC GLM and PROC MIXED Codes for Trend Analyses for
@@ -60,10 +61,11 @@ m1 <- lm(height ~ blockf + dosef, data=dat)
 anova(m1)
 
 # RCB residuals show strong spatial trends
-require(agrifun)
+if(require(desplot)){
 dat$resid <- resid(m1)
 desplot(resid ~ row * block, data=dat,
         main="federer.tobacco")
+}
 
 # Row-column analysis.  Treatment now significant
 m2 <- lm(height ~ rowf + blockf + dosef, data=dat)

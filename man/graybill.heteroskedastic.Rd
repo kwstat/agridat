@@ -42,7 +42,7 @@ boxplot(yield ~ gen, dat, main="graybill.heteroskedastic")
 # Shukla stability variance of each genotype, same as Grubbs' estimate
 # Matches Piepho 1994 page 143.
 # Do not do this!  Nowadays, use mixed models instead.
-require("reshape2")
+if(require("reshape2")){
 datm <- acast(dat, gen~env)
 w <- datm
 w <- sweep(w, 1, rowMeans(datm))
@@ -54,6 +54,8 @@ sig2 <- k*w/((k-2)*(n-1)) - sum(w)/((k-1)*(k-2)*(n-1))
 ## sig2
 ##     G1     G2     G3     G4
 ## 145.98 -14.14  75.15  18.25
+}
+
 
 }
 

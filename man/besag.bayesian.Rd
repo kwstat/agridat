@@ -24,6 +24,7 @@
   Besag, J. E., Green, P. J., Higdon, D. and Mengersen, K. (1995).
   Bayesian computation and stochastic systems.
   \emph{Statistical Science}, 10, 3-66.
+  http://www.jstor.org/stable/2246224
 
   Used with permission of David Higdon.
 }

@@ -40,10 +40,10 @@ dat <- gomez.fractionalfactorial
 
 # trt abcdef has the highest yield
 # Gomez, Figure 4.8
-require("agrifun")
+if(require(desplot)){
 desplot(yield~x*y, dat, main="gomez.fractionalfactorial - treatment & yield",
         text=trt, shorten="none", show.key=FALSE, cex=1)
-
+}
 
 # Split treatment into individual factors
 dat <- transform(dat,

@@ -30,7 +30,7 @@
   H.A. Wallace (1926). Comparative Farm-Land Values in Iowa.
   \emph{The Journal of Land & Public Utility Economics}, 2, 385-392.
   Page 387-388.
-  http://www.jstor.org/stable/3138610
+  \url{http://doi.org/10.2307/3138610}
 }
 \references{
   Larry Winner. Spatial Data Analysis.

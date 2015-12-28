@@ -41,9 +41,9 @@ the production of milk. The average increase was 21.7 pounds per cow for
 a 28-day period.
 }
 \source{
-A.E. Brandt (1938). Tests of Significance in Reversal or Switchback Trials
-Iowa State College, Agricultural Research Bulletins. Bulletin 234. Book 22.
-\url{http://lib.dr.iastate.edu/ag_researchbulletins/22/}
+  A.E. Brandt (1938). Tests of Significance in Reversal or Switchback Trials
+  Iowa State College, Agricultural Research Bulletins. Bulletin 234. Book 22.
+  \url{http://lib.dr.iastate.edu/ag_researchbulletins/22/}
 }
 \examples{
 

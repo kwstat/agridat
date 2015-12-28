@@ -37,7 +37,7 @@
   C. O. Gardner and S. A. Eberhart. 1966.
   Analysis and Interpretation of the Variety Cross Diallel and Related
   Populations. \emph{Biometrics}, 22, 439-452.
-  http://www.jstor.org/stable/2528181
+  \url{http://doi.org/10.2307/2528181}
 
 }
 
@@ -56,13 +56,14 @@ levelplot(yield ~ p1*p2, dat, col.regions=redblue,
           main="lonnquist.maize - yield of diallel cross")
 
 # Calculate the F1 means in Lonnquist, table 1
-require(reshape2)
+if(require(reshape2)){
 mat <- acast(dat, p1~p2)
 mat[upper.tri(mat)] <- t(mat)[upper.tri(mat)] # make symmetric
 diag(mat) <- NA
 round(rowMeans(mat, na.rm=TRUE),1)
 ##    C     L     M     H     G     P     B    RM     N     K    R2    K2
 ## 94.8  89.2  95.0  96.4  95.3  95.2  97.3  93.7  95.0  94.0  98.9 102.4
+}
 
 
 \dontrun{

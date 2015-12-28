@@ -2,10 +2,11 @@
 \alias{garber.multi.uniformity}
 \docType{data}
 \title{
-  Uniformity trials of oat hay and wheat
+  Uniformity trials of oat hay and wheat grain
 }
 \description{
-  Uniformity trials of oat straw and wheat
+  Uniformity trials of oat hay and wheat grain, at West Virginia
+  Agricultural Experiment Station, 1923-1924.
 }
 
 \format{
@@ -46,11 +47,12 @@
 data(garber.multi.uniformity)
 dat <- garber.multi.uniformity
 
-require("agrifun")
+if(require(desplot)){
 desplot(oats ~ col*row, data=dat, flip=TRUE, tick=TRUE,
         main="garber.multi.uniformity oats")
 desplot(wheat ~ col*row, data=dat, flip=TRUE, tick=TRUE,
         main="garber.multi.uniformity wheat")
+}
 with(dat, cor(oats, wheat)) # = .37 matches Garber
 
 }

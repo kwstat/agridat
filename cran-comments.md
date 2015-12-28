@@ -4,3 +4,9 @@
 
 ## Rcmd check results
 
+No notes.
+
+## License change
+
+Include license FILE here.
+

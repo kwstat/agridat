@@ -1,6 +1,9 @@
 .gitignore
-^.*\.Rproj$
-^\.Rproj\.user$
-cran_comments.md
+.Rproj
+.Rproj\.user
+README.md
+cran-comments.md
+NEWS.md
+.travis\.yml
 data-done
 data-unused

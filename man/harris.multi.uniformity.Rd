@@ -2,29 +2,30 @@
 \alias{harris.multi.uniformity}
 \docType{data}
 \title{
-  Multi-year uniformity trials with different crops at Huntley
+  Uniformity trials with multiple crops, 15 years on the same land
 }
 \description{
-  Multi-year uniformity trials with different crops at Huntley
+  Uniformity trials with multiple crops, at Huntley Field Station,
+  Montana, 1911-1925.
 }
 
 \format{
   A data frame with 1058 observations on the following 5 variables.
   \describe{
-    \item{\code{series}}{Series (field coordinate)}
-    \item{\code{plot}}{Plot number (field coordinate)}
-    \item{\code{year}}{Year, 1911-1925}
-    \item{\code{crop}}{Crop factor}
-    \item{\code{yield}}{Yield, numeric}
+    \item{\code{series}}{series (field coordinate)}
+    \item{\code{plot}}{plot number (field coordinate)}
+    \item{\code{year}}{year, 1911-1925}
+    \item{\code{crop}}{crop factor}
+    \item{\code{yield}}{yield, numeric}
   }
 }
 \details{
 
   All yields are given in pound per plot, except sugar beets, which are
-  given in tons per acre.
+  given in tons per acre.  Harris (1928) shows a map of the location.
 
   Harris 1920:
-  "In the spring of 1911 this field was laid out into 46 plots, each
+  In the spring of 1911 this field was laid out into 46 plots, each
   measuring 23.5 by 317 feet and containing 0.17 acre, arranged in two
   parallel series of 23 plots each. The two series of plots were
   separated merely by a temporary irrigation ditch. In 1911 it was
@@ -45,9 +46,10 @@
   In 1915 and 1916 ear corn was grown. In 1917 the fields were planted
   to oats, and records were made of grain, straw, and total yield.  In
   1918 silage corn was grown. In 1919 the land produced a crop of
-  barley."
+  barley.
 
-  Harris 1928: "The southeast corner of Series II, the east series, is
+  Harris 1928:
+  The southeast corner of Series II, the east series, is
   about 80 feet from the main canal, and the southwest corner of Series
   III is about 50 feet from Ouster Coulee. The main project canal
   carries normally during the irrigation season about 400 second-feet of
@@ -58,9 +60,9 @@
   volume of this seepage has been larger in recent years than it was in
   the earlier years of the cropping experiments, probably because the
   canal bank has been worn away by internal erosion, exposing a stratum
-  of sandy subsoil that underlies the canal and part of the field. "
+  of sandy subsoil that underlies the canal and part of the field.
 
-  "Whereas in the earlier crops Series II was better for
+  Whereas in the earlier crops Series II was better for
   alfalfa, Series III was better for alfalfa in the later period.  The
   writers feel inclined to suggest that in the earlier experiments the
   height of the water table had no harmful effect upon a deep-rooted
@@ -69,7 +71,8 @@
   II. The higher water tables of recent years have probably had a
   deleterious influence, which has been especially marked on Series II,
   where the water apparently comes nearer to the surface than in Series
-  III."
+  III.
+  
 }
 \source{
   Harris, J Arthur and Scofield, CS. (1920).
@@ -96,16 +99,17 @@ dat$yield[dat$year==1911] <- 340 * dat$yield[dat$year==1911]
 aggregate(yield~harv, dat, mean)
 
 # Corrgram
-require(reshape2)
-mat <- acast(dat, series+plot~harv, value.var='yield')
-if(require(corrgram)) {
-  corrgram(mat, main="harris.multi.uniformity")
+if(require(reshape2) & require(corrgram)){
+  mat <- acast(dat, series+plot~harv, value.var='yield')
+  corrgram(mat, main="harris.multi.uniformity - correlation of crop yields")
 }
 
 # Compare to Harris 1928, table 4.  More positive than negative correlations.
 # densityplot(as.vector(cor(mat)), xlab="correlations",
 #             main="harris.multi.uniformity")
 
+\dontrun{
+  
 # Standardize yields for each year
 mats <- scale(mat)
 # Melt and re-name columns so we can make field maps.  Obvious spatial
@@ -119,14 +123,21 @@ d2$plot <- as.numeric(substring(d2$ord,3))
 d2$xord <- 5 - dat$series
 # Note that for alfalfa, higher-yielding plots in 1912-1914 were
 # lower-yielding in 1922-1923.
-require("agrifun")
-desplot(yield ~ xord*plot|harv, data=d2, aspect=.84, flip=TRUE,
-        main="harris.multi.uniformity")
+if(require(desplot)){
+  desplot(yield ~ xord*plot|harv, d2,
+          aspect=0.84, flip=TRUE,
+          main="harris.multi.uniformity")
 
 # Crude fertility map by averaging across years shows probable
 # sub-surface water effects
 agg <- aggregate(yield ~ xord + plot, data=d2, mean)
-desplot(yield ~ xord + plot, agg, main="harris.multi.uniformity fertility")
+desplot(yield ~ xord + plot, agg,
+        aspect=0.84,
+        main="harris.multi.uniformity fertility")
+
+}
+
+} # dontrun
 
 }
 \keyword{datasets}

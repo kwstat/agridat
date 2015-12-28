@@ -31,7 +31,8 @@
   Newton, Adrian and Thomas, William and Currie, Iain. 2003.
   The practical use of semiparametric models in field trials,
   \emph{Journal of Agric Biological and Envir Stats}, 8, 48-66.
-
+  \url{http://doi.org/10.1198/1085711031265}
+  
   Retrieved from \url{ftp://ftp.bioss.sari.ac.uk/pub/maria}.
 
   Used with permission of Maria Durban.
@@ -42,8 +43,9 @@
 data(durban.rowcol)
 dat <- durban.rowcol
 
-require("agrifun")
+if(require(desplot)){
 desplot(yield~bed*row, dat, out1=rep, main="durban.rowcol")
+}
 
 # Durban 2003 Figure 1
 m10 <- lm(yield~gen, data=dat)

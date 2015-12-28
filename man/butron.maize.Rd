@@ -48,6 +48,7 @@
   Yield evaluation of maize cultivars across environments with different
   levels of pink stem borer infestation.
   \emph{Crop science}, 44, 741-747.
+  \url{http://doi.org/10.2135/cropsci2004.7410}
 
   Used with permission of Ana Butron.
 }
@@ -60,7 +61,7 @@ dat <- butron.maize
 # require(lattice)
 # densityplot(~yield|env, dat, layout=c(1,5))
 
-require(reshape2)
+if(require(reshape2)){
 mat <- acast(dat, gen~env, value.var='yield')
 mat <- sweep(mat, 2, colMeans(mat))
 mat.svd <- svd(mat)
@@ -69,6 +70,8 @@ mat.svd <- svd(mat)
 # round(mat.svd$u[,1:2] %*% diag(sqrt(mat.svd$d[1:2])) %*% diag(c(-1,1)),3)
 
 biplot(princomp(mat), main="butron.maize", cex=.7) # Figure 1 of Butron
+}
+
 
 # ----------------------------------------------------------------------------
 

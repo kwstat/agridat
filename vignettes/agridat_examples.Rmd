@@ -43,7 +43,8 @@ This exhibit of agricultural data uses the following packages.
 
 ```{r packs, message=FALSE}
 library("agridat")
-library("agrifun")
+library("desplot")
+library("gge")
 library("HH")
 library("lattice")
 library("latticeExtra")
@@ -77,7 +78,7 @@ skp <- c(rep(0,10),
          rep(0,5),1,1,1,1,1,
          rep(0,5),1,1,1,1,1,
          rep(0,5),1,1,1,1,1)
-require("agrifun")
+require(desplot)
 desplot(y ~ col*row|date, dat,
         main="lee.potatoblight",
         between=list(y=.3), strip.cex =.7,
@@ -251,6 +252,7 @@ How is the design different from a ``split-split-plot'' design?
 dat <- gomez.stripsplitplot
 
 # Layout
+require(desplot)
 desplot(gen~x+y, dat, out1=rep, col=nitro, text=planting, cex=1,
         main="gomez.stripsplitplot")
 ```
@@ -413,6 +415,7 @@ dat2 <- crossa.wheat
 dat2$eg <- ifelse(is.element(dat2$loc,
 c("KN","NB","PA","BJ","IL","TC", "JM","PI","AS","ID","SC","SS",
 "SJ","MS","MG","MM")), "Grp1", "Grp2")
+require(gge)
 m4 <- gge(yield~gen*loc, dat2, env.group=eg, scale=FALSE)
 # plot(m4)
 biplot(m4, lab.env=TRUE, title="crossa.wheat")

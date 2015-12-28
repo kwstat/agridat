@@ -77,7 +77,7 @@ dat[dat$farmer=="Mulhall","loc"] <- "3"
 
 dat <- transform(dat, loc=factor(paste(place,loc,sep="")))
 
-require("reshape2")
+if(require(reshape2)){
 datm <- melt(dat, measure.var='yield')
 
 # Kempton Table 9.5
@@ -90,6 +90,8 @@ mean(d2$Goldthorpe)
 mean(d2$Archer-d2$Goldthorpe)
 sqrt(var(d2$Archer-d2$Goldthorpe)/51)
 cor(d2$Archer,d2$Goldthorpe)
+}
+
 
 # Kempton Table 9.6b
 if(require(lme4)){
