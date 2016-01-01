@@ -34,13 +34,20 @@
   
 }
 \source{
-  Mercer, WB and Hall, AD, (1911). The experimental error of field trials
+  Mercer, WB and Hall, AD, (1911).
+  The experimental error of field trials
   \emph{The Journal of Agricultural Science}, 4, 107-132. Table 5.
+  \url{http://doi.org/10.1017/S002185960000160X}
 }
 
 \references{
   D. G. Rossiter (2014). Tutorial: Using the R Environment for Statistical Computing
   An example with the Mercer & Hall wheat yield dataset.
+
+  G. A. Baker (1941).
+  Fundamental Distribution of Errors for Agricultural Field Trials.
+  \emph{National Mathematics Magazine}, 16, 7-19.
+  \url{http://doi.org/10.2307/3028105}
   
   The 'spdep' package includes the grain yields
   (only) and spatial positions of plot centres in its example dataset

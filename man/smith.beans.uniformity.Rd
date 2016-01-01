@@ -21,19 +21,9 @@
 }
 \details{
   
-  Trials were conducted in California. In 1955 plots were twice as wide
-  and twice as long as in 1954. 
+  Trials were conducted in California.
+  In 1955 plots were twice as wide and twice as long as in 1954. 
   Red Kidney is a bush variety bean, Standard Pink is a viny variety.
-
-  There are four datasets:
-  
-  beans1 - 1954, Red Kidney, each plot 30in x 15ft, field 45ft x 180ft.
-  
-  beans2 - 1954, Standard Pink, plot 30in x 15ft, field 45ft x 180ft.
-  
-  beans3 - 1955, Red Kidney, plot 60in x 30ft, field 80ft x 450ft.
-  
-  beans4 - 1955, Standard Pink, plot 60in x 30ft, field 80ft x 450ft.
 
   Smith randomly assigned A,B,C,D to plots and used these as 'varieties'
   for calculating ANOVA tables.  Plots were combined side-by-side and
@@ -41,6 +31,24 @@
   increases in plot sizes.  LSDs were seldom above 200, which was
   considered to be a noticeable difference for the farmers.
 
+  There are four datasets:
+
+  \bold{1954}
+  
+  beans1: Red Kidney, beans2: Standard Pink
+
+  Field width: 18 plots * 30 inches = 45 ft
+  
+  Field height: 12 plots * 15 ft = 180 ft
+
+  \bold{1955}
+  
+  beans3: Red Kidney, beans4: Standard Pink
+
+  Field width: 16 plots * 2 rows * 30 in = 80 ft
+
+  Field height: 15 plots * 30 ft = 450 ft
+  
 }
 \source{
   

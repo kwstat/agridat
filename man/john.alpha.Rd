@@ -35,7 +35,9 @@
 \references{
   Piepho, H.P. and M{\"o}hring, J. (2007),
   Computing heritability and selection response from unbalanced
-  plant breeding trials, \emph{Genetics}, 177, 1881--1888.
+  plant breeding trials,
+  \emph{Genetics}, 177, 1881-1888.
+  \url{http://doi.org/10.1534/genetics.107.074229}
 }
 
 \examples{

@@ -19,7 +19,13 @@
   }
 }
 \details{
-  Ten years of uniformity trials were sown on the same ground.
+  Ten years of uniformity trials were sown on the same ground.  Baker
+  (1952) shows a map of the field.
+
+  Field width: 19 plots = 827 ft
+
+  Field height: 3 plots * 161 ft + 2 alleys * 15 feet = 513 ft
+  
 }
 \source{
   Baker, GA and Huberty, MR and Veihmeyer, FJ.  (1952)
@@ -37,12 +43,14 @@ dat <- baker.barley.uniformity
 dat2 <- aggregate(yield ~ row*col, data=dat, FUN=mean, na.rm=TRUE)
 
 if(require(desplot)){
-asp <- (161*3+30)/827 # True aspect ratio
 desplot(yield~col*row|year, data=dat,
-        main="baker.barley.uniformity heatmaps by year", aspect=asp)
+        aspect = 513/827,
+        main="baker.barley.uniformity heatmaps by year")
 desplot(yield~col*row, data=dat2,
-        main="baker.barley.uniformity 10-year average", aspect=asp)
-# Note low yield in upper right, slanting to left a bit due to sandy soil.
+        aspect = 513/827,
+        main="baker.barley.uniformity 10-year average")
+  # Note low yield in upper right, slanting to left a bit due to sandy soil
+  # as shown in Baker figure 1.
 }
 
 # Baker fig 2, stdev vs mean

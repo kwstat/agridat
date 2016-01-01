@@ -37,6 +37,7 @@
   slightly. The trees are planted 16 feet apart, east and west, and 30
   feet apart north and south.
 
+  
   \bold{Eureka Lemon}
 
   The lemon (Citrus limonia) tree yields were obtained from a grove of
@@ -50,6 +51,10 @@
   yet a field observation gives one the impression that the grove as a
   whole is remarkably uniform.
 
+  Field width: 14 trees * 24 feet = 336 feet
+
+  Field height: 26 trees * 24 feet = 624 feet
+  
   \bold{Navel 1 (Arlington)}
 
   These records were of the 1915-16 yields of one thousand 24-year-old
@@ -64,6 +69,10 @@
   variations, which are present in every orchard, bring uncertainty into
   the results offield experiments.
 
+  Field width: 50 trees * 22 feet = 1100 feet
+
+  Field height: 20 trees * 22 feet = 440 feet
+  
   \bold{Navel 2 (Antelope)}
 
   The navel-orange grove later referred to as the Antelope Heights
@@ -73,12 +82,17 @@
   greater than a comparison of the individual tree production
   substantiates.
 
+  Field width: 15 trees * 22 feet = 330 feet
+
+  Field height 33 trees * 22 feet = 726 feet
+  
   \bold{Valencia Orange}
 
   The Valencia orange grove is composed of 240 15-year-old trees,
   planted 21 feet 6 inches by 22 feet 6 inches, located at Villa Park,
   California. The yields were obtained in 1916.
 
+  
   \bold{Walnut}
 
   The walnut (Juglans regia) yields were obtained during the seasons of
@@ -90,6 +104,10 @@
   side which is adjacent to an orange grove. The trees are planted on
   the square system, 50 feet apart.
 
+  Field width: 10 trees * 50 feet = 500 feet
+
+  Field height: 32 trees * 50 feet = 1600 feet
+  
 }
 \source{
   Batchelor, LD and Reed, HS. 1918.

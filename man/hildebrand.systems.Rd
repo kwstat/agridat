@@ -37,6 +37,7 @@
   H. P. Piepho, 1998.
   Methods for Comparing the Yield Stability of Cropping Systems.
   \emph{Journal of Agronomy and Crop Science}, 180, 193--213.
+  \url{http://doi.org/10.1111/j.1439-037X.1998.tb00526.x}
 }
 
 \examples{

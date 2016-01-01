@@ -29,13 +29,15 @@
 \source{
   Lucas, HL. 1956.
   Switchback trials for more than two treatments.
-  \emph{Journal of Dairy Science}, 39, 146--154.
+  \emph{Journal of Dairy Science}, 39, 146-154.
+  \url{http://doi.org/10.3168/jds.S0022-0302(56)94721-X}
 }
 
 \references{
   Sanders, WL and Gaynor, PJ. 1987.
   Analysis of Switchback Data Using Statistical Analysis System.
-  \emph{Journal of Dairy Science}, 70, 2186--2191.
+  \emph{Journal of Dairy Science}, 70, 2186-2191.
+  \url{http://doi.org/10.3168/jds.S0022-0302(87)80273-4}
 }
 
 \examples{

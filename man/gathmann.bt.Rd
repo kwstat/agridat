@@ -2,10 +2,10 @@
 \alias{gathmann.bt}
 \docType{data}
 \title{
-  Impact of Bt Corn on non-target species
+  Impact of Bt corn on non-target species
 }
 \description{
-  Impact of Bt Corn on non-target species
+  Impact of Bt corn on non-target species
 }
 
 \format{

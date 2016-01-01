@@ -37,6 +37,7 @@
   The analysis of proportions in agricultural experiments by a
   generalized linear mixed model. 
   \emph{Statistica Neerlandica}, 47(3), 161-174.
+  \url{http://doi.org/10.1111/j.1467-9574.1993.tb01414.x}
 
   Used with permission of J. Jansen. Electronic version supplied by Miroslav Zoric.
 
@@ -46,8 +47,8 @@
 }
 \examples{
 data(jansen.carrot)
-
 dat <- jansen.carrot
+
 require(lattice)
 dotplot(gen ~ y/n, data=dat, group=trt, auto.key=TRUE,
         main="jansen.carrot",

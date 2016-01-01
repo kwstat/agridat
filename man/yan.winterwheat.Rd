@@ -2,7 +2,7 @@
 \alias{yan.winterwheat}
 \docType{data}
 \title{
-  Multi-environment trial of Winter Wheat in Ontario
+  Multi-environment trial of winter wheat in Ontario
 }
 \description{
   Yield of 18 varieties of winter wheat grown at 9 environments in

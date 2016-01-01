@@ -11,25 +11,31 @@
 \format{
   A data frame with 150 observations on the following 5 variables.
   \describe{
-    \item{\code{row}}{Row}
-    \item{\code{col}}{Column}
-    \item{\code{yield}}{Yield (grams/plot)}
-    \item{\code{gen}}{Genotype factor, 25 levels}
-    \item{\code{rep}}{Rep factor, 6 levels}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
+    \item{\code{yield}}{yield (grams/plot)}
+    \item{\code{gen}}{genotype factor, 25 levels}
+    \item{\code{rep}}{rep factor, 6 levels}
   }
 }
 \details{
-  The trial was a balanced lattice with 25 varieties in 6 replicates.
-  The plot size was 1.5 meters by 4 meters, so the total area was
-  15 x 1.5 meters by 10 x 4 meters.  The 'rep' labels are arbitrary (no
+  The trial was of spring wheat at Slate Hall Farm in 1978.  The
+  experiment was a balanced lattice with 25 varieties in 6 replicates.
+  The plot size was 1.5 meters by 4 meters. The 'rep' labels are arbitrary (no
   rep labels appeared in the source data).   Each row within a rep is an
-  (incomplete) block.
+  incomplete block.
+
+  Field height: 15 plots x 1.5 meters = 22.5 m
+  Field width: 10 plots x 4 m = 40 m
+  
 }
 \source{
   Arthur R Gilmour and Brian R Cullis and Arunas P Verbyla (1997).
   Accounting for natural and extraneous variation in the analysis
-  of field experiments.  \emph{Journal of Agricultural, Biological, and
-  Environmental Statistics}, 2, 269-293.
+  of field experiments.
+  \emph{Journal of Agricultural, Biological, and Environmental
+    Statistics}, 2, 269-293.
+  \url{http://doi.org/10.2307/1400446}
 }
 
 \references{
@@ -42,8 +48,9 @@ data(gilmour.slatehall)
 dat <- gilmour.slatehall
 
 if(require(desplot)){
-desplot(yield ~ col * row, dat, num=gen,
-        out1=rep, main="gilmour.slatehall")
+  desplot(yield ~ col * row, dat,
+          aspect=22.5/40, num=gen, out1=rep, cex=1,
+          main="gilmour.slatehall")
 }
 
 \dontrun{

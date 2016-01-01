@@ -55,18 +55,22 @@
 }
 
 \source{
-  Ivins, JD. (1952). Concerning the Ecology of Urtica Dioica L.,
+  Ivins, JD. (1952).
+  Concerning the Ecology of Urtica Dioica L.,
   \emph{Journal of Ecology}, 40, 380-382.
+  \url{http://doi.org/10.2307/2256806}
 }
 
 \references{
   Ivins, JD (1950). Weeds in relation to the establishment of the Ley.
   \emph{Grass and Forage Science}, 5, 237--242.
+  \url{http://doi.org/10.1111/j.1365-2494.1950.tb01287.x}
 
   O'Gorman, T.W. (2001). A comparison of the F-test, Friedman's test,
   and several aligned rank tests for the analysis of randomized complete
   blocks, \emph{Journal of agricultural, biological, and environmental
     statistics}, 6, 367--378.
+  \url{http://doi.org/10.1198/108571101317096578}
 }
 
 \examples{

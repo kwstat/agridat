@@ -1,10 +1,11 @@
 
-## Wish list
+## Wish list / To do
 
 * JAGS code for lee.potatoblight
 * JAGS code for theobald.barley
 * JAGS code for besag.elbatan
-* Added DOIs for most references A-G.
+* Check aspect where possible.
+* Added DOIs for most source documents A-N.
 
 
 # agridat 1.13 (unpublished)
@@ -13,16 +14,18 @@
 
 battese.survey, gartner.corn, giles.wheat, kenward.cattle, kreusler.maize,
 lessman.sorghum.uniformity, montgomery.wheat.uniformity, onofri.winterwheat,
-polson.safflower.uniformity, smith.beans1.uniformity, wheatley.carrot
+polson.safflower.uniformity, smith.beans1.uniformity, wheatley.carrot, wiedemann.safflower.uniformity
 
 ## Other
 
 * Moved `desplot` function to package `desplot`.
 * Moved `gge` function to package `gge`.
+* Fixed all examples to use `desplot` and `gge` packages.
 * Switch to CC-BY-SA 4.0 + file LICENSE.  Similar to `igraphdata` package.
-* Change vignette from Rnw/pdf to Rmd/html.
+* Changed vignette from Rnw/pdf to Rmd/html.
 * `devtools::run_examples()` now works even without suggested packages
 installed.
+* Improvements to titles in Rd pages
 
 # agridat 1.12 - Jun 2015
 
@@ -32,7 +35,7 @@ cochran.beets, cochran.lattice, jansen.apple, jansen.carrot
   
 ## Other
 
-* Changed Jstor links to be plain text.
+* Changed Jstor links to be plain text (because the links re-direct).
 * Add graphics, grDevices, stats to Imports.
 
 # agridat 1.11 - Mar 2015
@@ -139,7 +142,7 @@ williams.barley.uniformity, williams.cotton.uniformity
 
 ## New data
 
-aastveit, gathmann.bt, kempton.competition, wedderburn.barley
+aastveit.barley, gathmann.bt, kempton.competition, wedderburn.barley
 
 # agridat 1.0 - Apr 2011
 

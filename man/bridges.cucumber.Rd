@@ -2,10 +2,10 @@
 \alias{bridges.cucumber}
 \docType{data}
 \title{
-  Cucumber yields in Latin Square design.
+  Cucumber yields in latin square design.
 }
 \description{
-  Cucumber yields in Latin Square design at two locs.
+  Cucumber yields in latin square design at two locs.
 }
 
 \format{
@@ -20,7 +20,7 @@
 }
 \details{
   Conducted at Clemson University in 1985.  four cucumber cultivars
-  were grown in a Latin Square design at Clemson, SC, and Tifton, GA.
+  were grown in a latin square design at Clemson, SC, and Tifton, GA.
 
   Separate variances are modeled each location.
 }

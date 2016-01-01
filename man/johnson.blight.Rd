@@ -28,7 +28,8 @@
   south-central Washington. \emph{Phytopathology}, 86, 480--484.
 }
 \references{
-  Vinayanand Kandala, Logistic Regression.
+  Vinayanand Kandala,
+  \emph{Logistic Regression}
 }
 
 \examples{

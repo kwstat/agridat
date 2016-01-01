@@ -1,0 +1,86 @@
+\name{wiedemann.safflower}
+\alias{wiedemann.safflower}
+\docType{data}
+\title{
+  Uniformity trial of safflower
+}
+\description{
+  Uniformity trial of safflower at Farmington, Utah, 1960.
+}
+\usage{data("wiedemann.safflower")}
+\format{
+  A data frame with 1782 observations on the following 3 variables.
+  \describe{
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
+    \item{\code{yield}}{yield, grams}
+  }
+}
+\details{
+
+This trial was planted at University Field Station, Farmington, Utah, in
+1960, on a plot of land about one half acre in size.  The soil was not
+too uniform...the northern third of the field was clay and the rest was
+gravelly. Rows were planted 22 inches apart, 62 rows total, each row
+running the length of the field. Before harvest, 4 rows were removed
+from each side, and 12 feet was removed from each end.  Each row was
+harvested in five-foot lengths, threshed, and the seed weighed to the
+nearest gram.
+
+The northern third of the field had yields twice as high as the
+remaining part of the field because the soil had better moisture
+retention. The remaining part of the field had yields that were more
+uniform.
+
+Wiedemann determined the optimum plot size to be about 8 basic plots.
+The shape of the plot was not very important. But, two-row plots were
+recommended for simplicity of harvest, so 3.33 feet by 20 feet.
+
+Based on operational costs, K1=74 percent and K2=26 percent.
+
+Field width: 114 feet - (8 rows * 22 in/row / 12in/ft) = 99 feet = 54 rows * 22 in/row.
+
+Field length: 189 feet - 2*12ft = 165 feet = 33 ranges * 4 ft/range.
+
+For this R package, the tables in Wiedemann were converted by OCR to
+digital format, and all values were checked by hand.
+
+The original source document has columns labeled 33, 32, ... 1.  Here
+the columns are labeled 1:33 so that plotting tools work normally.  See
+Wiedemann figure 8.
+
+Wiedemann notes the statistical analysis of the data required 100 hours
+of labor.  Today the analysis takes only a second.
+
+}
+
+\source{
+Wiedemann, Alfred Max. 1962.
+"Estimation of Optimum Plot Size and Shape for Use in Safflower Yield Trails".
+All Graduate Theses and Dissertations. Paper 3600.
+http://digitalcommons.usu.edu/etd/3600
+}
+\references{
+None.
+}
+\examples{
+data(wiedemann.safflower)
+dat <- wiedemann.safflower
+
+# CV of entire field = 39%, matches Wiedemann p. 16
+sd(dat$yield)/mean(dat$yield)
+
+if(require(desplot)){
+  desplot(yield~col*row, dat,
+          flip=TRUE, tick=TRUE, aspect =99/165,
+          main="wiedemann.safflower (true shape)")
+}
+
+\dontrun{
+  require(agricolae)
+  dmat <- acast(dat, row~col, value.var='yield')
+  index.smith(dmat)
+}
+
+}
+\keyword{datasets}

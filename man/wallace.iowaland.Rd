@@ -2,10 +2,10 @@
 \alias{wallace.iowaland}
 \docType{data}
 \title{
-  1925 Iowa farmland values by county
+  Iowa farmland values by county in 1925
 }
 \description{
-  1925 Iowa farmland values by county
+  Iowa farmland values by county in 1925
 }
 \usage{data(wallace.iowaland)}
 \format{

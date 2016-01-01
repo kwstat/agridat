@@ -47,7 +47,8 @@
   Arciniegas-Alarcon, S. and Garcia-Pena, M. and dos Santos Dias,
   C.T. and Krzanowski, W.J. (2010). An alternative methodology for
   imputing missing data in trials with genotype-by-environment
-  interaction, \emph{Biometrical Letters}, 47, 1--14.
+  interaction, \emph{Biometrical Letters}, 47, 1-14.
+  \url{http://doi.org/10.2478/bile-2014-0006}
 }
 
 \examples{

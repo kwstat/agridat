@@ -40,7 +40,7 @@ name                                  \tab dimensions \tab other \tab model \cr
 \link{lessman.sorghum.uniformity}     \tab 46 x 60 \tab xy \tab \cr
 \link{li.millet.uniformity}           \tab 6 x 100 \tab xy \tab \cr
 \link{lyon.potato.uniformity}         \tab 34 x 6 \tab xy \tab \cr
-\link{mercer.mangold.uniformity}      \tab \tab \tab \cr
+\link{mercer.mangold.uniformity}      \tab 10 x 20 \tab xy \tab \cr
 \link{mercer.wheat.uniformity}        \tab 25 x 20 \tab xy, 2 traits \tab spplot \cr
 \link{montgomery.wheat.uniformity}    \tab 14 x 16 \tab xy, \tab lm \cr
 \link{odland.soybean.uniformity}      \tab 25 x 42 \tab xy \tab \cr
@@ -56,6 +56,7 @@ name                                  \tab dimensions \tab other \tab model \cr
 \link{wassom.brome2.uniformity}       \tab 36 x 36 \tab xy \tab \cr
 \link{wassom.brome3.uniformity}       \tab 36 x 36 \tab xy \tab \cr
 \link{wiebe.wheat.uniformity}         \tab 12 x 125 \tab xy \tab medianpolish, loess \cr
+\link{wiedemann.safflower.uniformity} \tab 54 x 33 \tab xy \tab smith \cr
 \link{williams.barley.uniformity}     \tab 48 x 15 \tab xy \tab loess \cr
 \link{williams.cotton.uniformity}     \tab 24 x 12 \tab xy \tab loess \cr
 }

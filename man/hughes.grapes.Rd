@@ -36,6 +36,7 @@
   Some methods allowing for aggregated patterns of disease incidence in
   the analysis of data from designed experiments.
   \emph{Plant Pathology}, 44, 927--943.
+  \url{http://doi.org/10.1111/j.1365-3059.1995.tb02651.x}
 
   Used with permission of Larry Madden.
 }
@@ -43,6 +44,7 @@
   Hans-Pieter Piepho. 1999.
   Analysing disease incidence data from designed experiments by
   generalized linear mixed models. \emph{Plant Pathology}, 48, 668--684.
+  \url{10.1046/j.1365-3059.1999.00383.x}
 }
 
 \examples{
