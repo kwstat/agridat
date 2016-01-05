@@ -14,8 +14,8 @@
   \describe{
     \item{\code{row}}{row}
     \item{\code{col}}{column}
-    \item{\code{year}}{year, numeric}
-    \item{\code{yield}}{yield, (pound/acre)}
+    \item{\code{year}}{year}
+    \item{\code{yield}}{yield, pound/acre}
   }
 }
 \details{
@@ -24,7 +24,7 @@
 
   Field width: 19 plots = 827 ft
 
-  Field height: 3 plots * 161 ft + 2 alleys * 15 feet = 513 ft
+  Field length: 3 plots * 161 ft + 2 alleys * 15 feet = 513 ft
   
 }
 \source{
@@ -45,10 +45,10 @@ dat2 <- aggregate(yield ~ row*col, data=dat, FUN=mean, na.rm=TRUE)
 if(require(desplot)){
 desplot(yield~col*row|year, data=dat,
         aspect = 513/827,
-        main="baker.barley.uniformity heatmaps by year")
+        main="baker.barley.uniformity - heatmaps by year")
 desplot(yield~col*row, data=dat2,
         aspect = 513/827,
-        main="baker.barley.uniformity 10-year average")
+        main="baker.barley.uniformity - heatmap of 10-year average")
   # Note low yield in upper right, slanting to left a bit due to sandy soil
   # as shown in Baker figure 1.
 }

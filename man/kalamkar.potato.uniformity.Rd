@@ -2,7 +2,7 @@
 \alias{kalamkar.potato.uniformity}
 \docType{data}
 \title{
-  Uniformity trial of potatoes.
+  Uniformity trial of potatoes
 }
 \description{
   Uniformity trial of potatoes at Saskatchewan, Canada, 1929.
@@ -22,6 +22,10 @@
 
   Each row was harvested as six plots, each 22 feet long.  Each hill had
   one seed piece.  Hills were spaced 2 feet apart in each row.
+
+  Field width: 6 plots * 22 feet = 132 feet
+
+  Field length: 96 rows * 3 feet = 288 feet
 }
 \source{
   Kalamkar, R.J. (1932).

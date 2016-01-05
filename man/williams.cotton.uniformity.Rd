@@ -20,6 +20,11 @@
   Cotton uniformity trial grown at Narrabri, New South Wales, 1984-1985.
   Plots were 12m long, 1m apart, 12 rows by 24 columns, with an
   irrigation furrow between columns.
+
+  Field width: 24 plots * 1 m = 24 m
+
+  Field length: 12 plots * 12 m = 144 m
+  
 }
 \source{
   Williams, ER and Luckett, DJ. 1988. The use of uniformity data in the
@@ -33,9 +38,8 @@ data(williams.cotton.uniformity)
 dat <- williams.cotton.uniformity
 
 if(require(desplot)){
-asp = (12*12)/(24*1) # true aspect
 desplot(yield ~ col*row, dat,
-        aspect=asp,
+        aspect=144/24,
         main="williams.cotton.uniformity")
 }
 

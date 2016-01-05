@@ -11,8 +11,8 @@
 \format{
   A data frame with 500 observations on the following 4 variables.
   \describe{
-    \item{\code{row}}{row, 1-20}
-    \item{\code{col}}{column, 1-25}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
     \item{\code{grain}}{grain yield, pounds}
     \item{\code{straw}}{straw yield, pounds}
   }
@@ -24,11 +24,12 @@
   1/500th acre in size.  The grain and straw from each plot was weighed
   separately.
 
-  Row 1 is the south edge, row 20 is the north.
-  Column 1 is the west edge.
-  The dimensions of each plot were approximately 3.2 meters by 2.5
-  meters.
+  McCullagh gives more information about the plot size.
+  
+  Field width: 25 plots * 8 ft = 200 ft
 
+  Field length: 20 plots * 10.82 ft = 216 ft
+  
   D. G. Rossiter (2014) uses this data for an extensive data analysis
   tutorial.
   
@@ -41,6 +42,13 @@
 }
 
 \references{
+
+  McCullagh, P. and Clifford, D., (2006).
+  Evidence for conformal invariance of crop yields,
+  \emph{Proceedings of the Royal Society A: Mathematical, Physical and
+    Engineering Science}, 462, 2119--2143.
+  \url{http://doi.org/10.1098/rspa.2006.1667}
+
   D. G. Rossiter (2014). Tutorial: Using the R Environment for Statistical Computing
   An example with the Mercer & Hall wheat yield dataset.
 
@@ -64,7 +72,9 @@ data(mercer.wheat.uniformity)
 dat <- mercer.wheat.uniformity
 
 if(require(desplot)){
-desplot(grain ~ col*row, dat, main="mercer.wheat.uniformity - grain yield")
+  desplot(grain ~ col*row, dat,
+          aspect=216/200,
+          main="mercer.wheat.uniformity - grain yield")
 }
 
 
@@ -72,8 +82,10 @@ require("lattice")
 xyplot(straw ~ grain, data=dat, type=c('p','r'),
        main="mercer.wheat.uniformity - regression")
 
-# require(hexbin)
-# hexbinplot(straw ~ grain, data=dat)
+\dontrun{
+  require(hexbin)
+  hexbinplot(straw ~ grain, data=dat)
+}
 
 if(require(sp) & require(gstat)) { 
   plot.wid <- 2.5

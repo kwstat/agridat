@@ -12,14 +12,24 @@
 \format{
   A data frame with 600 observations on the following 5 variables.
   \describe{
-    \item{\code{row}}{Row}
-    \item{\code{col}}{Column}
-    \item{\code{yield}}{Yield, pounds}
-    \item{\code{sugar}}{Sugar percentage}
-    \item{\code{purity}}{Apparent purity}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
+    \item{\code{yield}}{yield, pounds}
+    \item{\code{sugar}}{sugar percentage}
+    \item{\code{purity}}{apparent purity}
   }
 }
 \details{
+
+  Beets were planted in rows 22 inches apart, thinned to 1 plant per
+  row. At harvest, the rows were marked into segments 33 feet long with
+  2 foot alleys between ends of plots.  The harvested area was 60 rows
+  350 feet long.
+  
+  Field width: 10 plots * 33 feet + 9 alleys * 2 feet = 348 feet
+
+  Field length: 60 plots/rows * 22 in/row / 12 in/feet = 110 feet
+  
   Planted in 1930.  Field conditions were uniform.  Beets were planted
   in rows 22 inches apart.  After thinning, one beet was left in each
   12-inch unit.  At harvest, the field was marked out in plot 33 feet
@@ -36,6 +46,7 @@
   F. R. Immer. 1932.
   Size and shape of plot in relation to field experiments with sugar beets.
   \emph{Jour. Agr. Research}, 44, 649--668.
+  naldc.nal.usda.gov/download/IND43968078/PDF
 }
 
 \examples{
@@ -45,12 +56,15 @@ dat <- immer.sugarbeet.uniformity
 
 # Immer numbers rows from the top
 if(require(desplot)){
-desplot(yield~col*row, data=dat, tick=TRUE, flip=TRUE,
-        main="immer.sugarbeet.uniformity - yield")
-desplot(sugar~col*row, data=dat, tick=TRUE, flip=TRUE,
-        main="immer.sugarbeet.uniformity - sugar")
-desplot(purity~col*row, data=dat, tick=TRUE, flip=TRUE,
-        main="immer.sugarbeet.uniformity - purity")
+  desplot(yield~col*row, data=dat,
+          aspect=110/348, tick=TRUE, flip=TRUE,
+          main="immer.sugarbeet.uniformity - yield")
+  desplot(sugar~col*row, data=dat,
+          aspect=110/348, tick=TRUE, flip=TRUE,
+          main="immer.sugarbeet.uniformity - sugar")
+  desplot(purity~col*row, data=dat,
+          aspect=110/348, tick=TRUE, flip=TRUE,
+          main="immer.sugarbeet.uniformity - purity")
 }
 pairs(dat[,c('yield','sugar','purity')], main="immer.sugarbeet.uniformity")
 }

@@ -22,6 +22,10 @@
   East side higher yielding than west side.
   Yields are weight (ounces) of green forage each rod-row.
   Total area harvested: 100*40/12 = 333.33 feet by 20*16.5=330 feet.
+  
+  Field width: 20 plots * 16.5 ft (1 rod) = 330 feet.
+  
+  Field length: 100 plots * 40 in = 333 feet
 }
 \source{
 Stephens, Joseph C. 1928.
@@ -49,7 +53,8 @@ d4$row2 <- 25-d4$row2 # flip horizontally
 
 if(require(desplot)){
   grays <- colorRampPalette(c("#d9d9d9","#252525"))
-  desplot(yield ~ row2*col, data=d4, flip=TRUE,
+  desplot(yield ~ row2*col, data=d4,
+          aspect=333/330, flip=TRUE,
           main="stephens.sorghum.uniformity",
           col.regions=grays(3),
           at=c(500,680,780,1000))

@@ -20,8 +20,15 @@
 }
 \details{
   Grown in 1910.
-  Each plot was 3 "drills", each 2.4 feet wide.
+  Each plot was 3 drills, each drill being 2.4 feet wide.
   Plots were 1/200 acres, 7.2 feet by 30.25 feet long
+  The "length of the plots runs with the horizontal lines of figures [in
+  Table I], this being also the direction of the drills across the field."
+
+  Field width: 10 plots * 30.25ft = 302.5 feet
+
+  Field length: 20 plots * 7.25 ft = 145 feet
+  
 }
 \source{
   Mercer, WB and Hall, AD, 1911. The experimental error of field trials
@@ -42,17 +49,19 @@
 data(mercer.mangold.uniformity)
 dat <- mercer.mangold.uniformity
 
-# Show field in true aspect ratio
-asp = (7.25 * 20) / (30.25 * 10)
-
 if(require(desplot)){
-desplot(roots~col*row, data=dat,
-        main="mercer.mangold.uniformity roots", aspect=asp)
-desplot(leaves~col*row, data=dat,
-        main="mercer.mangold.uniformity leaves", aspect=asp)
+  desplot(roots~col*row, data=dat,
+          aspect=145/302,
+          main="mercer.mangold.uniformity - roots")
+  desplot(leaves~col*row, data=dat,
+          aspect=145/302,
+          main="mercer.mangold.uniformity - leaves")
 }
 
-# xyplot(roots~leaves, data=dat)
+\dontrun{
+  require(lattice)
+  xyplot(roots~leaves, data=dat)
+}
 
 }
 \keyword{datasets}

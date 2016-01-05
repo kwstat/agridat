@@ -11,7 +11,7 @@
 \format{
   A data frame with 648 observations on the following 3 variables.
   \describe{
-    \item{\code{yield}}{grain yield in g/m^2}
+    \item{\code{yield}}{grain yield, grams/m^2}
     \item{\code{x}}{column}
     \item{\code{y}}{row}
   }
@@ -21,6 +21,10 @@
   An area 20 meters by 38 meters was planted to rice variety IR8.  At
   harvest, a 1-meter border was removed around the field and discarded.
   Each square meter (1 meter by 1 meter) was harvested and weighed.
+
+  Field width: 18 plots x 1 m = 18 m
+
+  Field length: 38 plots x 1 m = 38 m
 }
 
 \source{
@@ -38,7 +42,7 @@ dat <- gomez.rice.uniformity
 
 if(require(agricolae) & require(desplot) & require(reshape2)){
   # Raw data plot
-  desplot(yield ~ x*y, data=dat, aspect=38/20,
+  desplot(yield ~ x*y, data=dat, aspect=38/18,
           main="gomez.rice.uniformity")
 
   # 3x3 moving average.  Gomez figure 12.1
@@ -51,7 +55,7 @@ if(require(agricolae) & require(desplot) & require(reshape2)){
               m0[rx,cx+1]+m0[rx,cx]+m0[rx,cx-1]+
               m0[rx-1,cx+1]+m0[rx-1,cx]+m0[rx-1,cx-1])/9
   dat3 <- melt(dmat3)
-  desplot(value~Var2*Var1, dat3, aspect=38/20,
+  desplot(value~Var2*Var1, dat3, aspect=38/18,
           at=c(576,637,695,753,811,870,927),
         main="gomez.rice.uniformity smoothed")
   

@@ -12,13 +12,24 @@
 \format{
   A data frame with 270 observations on the following 4 variables.
   \describe{
-    \item{\code{row}}{row ordinate}
-    \item{\code{col}}{column ordinate}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
     \item{\code{oats}}{yield of oat hay}
     \item{\code{wheat}}{yield of wheat grain}
   }
 }
 \details{
+
+  Each plot was 68 feet x 21 feet. After discarding a 3.5 foot border on
+  all sides, the harvested area was 61 feet x 14 feet. The plots were
+  laid out in doubles with a 14-foot roadway between the plots.
+  
+  Note: The orientation of the plots is a guess.
+  
+  Field width: 6 plots * 68 feet + 14 ft/roadway * 2 = 436 feet
+
+  Field length: 45 plots * 21 feet/plot = 945 feet
+  
   In 1923 the field was planted to oats and harvested as hay.  In 1924
   the field was planted to wheat and harvested for grain.
 
@@ -48,10 +59,13 @@ data(garber.multi.uniformity)
 dat <- garber.multi.uniformity
 
 if(require(desplot)){
-desplot(oats ~ col*row, data=dat, flip=TRUE, tick=TRUE,
-        main="garber.multi.uniformity oats")
-desplot(wheat ~ col*row, data=dat, flip=TRUE, tick=TRUE,
-        main="garber.multi.uniformity wheat")
+  desplot(oats ~ col*row, data=dat,
+          aspect=945/436, flip=TRUE, tick=TRUE,          
+          main="garber.multi.uniformity oats")
+  
+  desplot(wheat ~ col*row, data=dat,
+          aspect=945/436, flip=TRUE, tick=TRUE,
+          main="garber.multi.uniformity wheat")
 }
 with(dat, cor(oats, wheat)) # = .37 matches Garber
 

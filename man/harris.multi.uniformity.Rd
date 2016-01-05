@@ -21,6 +21,10 @@
 }
 \details{
 
+  Field width: 2 plots * 317 ft  + 5 feet alley = 639 feet
+
+  Field length: 23 plots * 23.3 feet = 536 feet
+  
   All yields are given in pound per plot, except sugar beets, which are
   given in tons per acre.  Harris (1928) shows a map of the location.
 
@@ -118,21 +122,21 @@ d2 <- melt(mats)
 names(d2) <- c('ord','harv','yield')
 d2$series <- as.numeric(substring(d2$ord,1,1))
 d2$plot <- as.numeric(substring(d2$ord,3))
-# True field shape: aspect=.84 (536 ft North-South by 639 ft E-W)
+
 # Series 2 is on the east side, so switch 2 and 3 for correct plotting
 d2$xord <- 5 - dat$series
 # Note that for alfalfa, higher-yielding plots in 1912-1914 were
 # lower-yielding in 1922-1923.
 if(require(desplot)){
   desplot(yield ~ xord*plot|harv, d2,
-          aspect=0.84, flip=TRUE,
+          aspect=536/639, flip=TRUE,
           main="harris.multi.uniformity")
 
 # Crude fertility map by averaging across years shows probable
 # sub-surface water effects
 agg <- aggregate(yield ~ xord + plot, data=d2, mean)
 desplot(yield ~ xord + plot, agg,
-        aspect=0.84,
+        aspect=536/639,
         main="harris.multi.uniformity fertility")
 
 }

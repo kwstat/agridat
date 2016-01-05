@@ -105,5 +105,12 @@ on' that examines agriculture in Irish counties.  See also the data
 
 ## Web sites
 
+Electronic Rothamsted Documents Archive
+http://www.era.rothamsted.ac.uk/eradoc/collections.php
+
+Electronic Rothamsted Archive
+http://www.era.rothamsted.ac.uk/index.php
+
+
 Statistical Analysis of Agricultural Experiments with R
 http://rstats4ag.org/

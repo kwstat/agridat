@@ -36,7 +36,8 @@ dat <- goulden.barley.uniformity
 
 if(require(desplot)){
   desplot(yield ~ col*row, data=dat,
-          aspect=1, main="goulden.barley.uniformity")
+          aspect=1,
+          main="goulden.barley.uniformity")
 }
 
 

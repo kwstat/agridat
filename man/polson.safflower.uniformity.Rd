@@ -23,15 +23,17 @@
   A four-row planter was used, 22 inches between rows.
   Four rows on either side and 12 feet on both ends were removed before
   harvesting.
-  Five-foot sections were cut from each row, 33 sections x 5 ft + 12 ft
-  + 12 ft = 189 feet.
-  (52 rows + 8 border rows) * 22 inches = 110 feet.
+
   Yield of threshed grain was recorded in grams.
+
+  Field width: (52 rows + 8 border rows) * 22 in =  110 ft
+
+  Field length: 33 sections * 5ft + 2 borders * 12 ft = 189 ft
 }
 \source{
   David Polson. 1964.
   Estimation of Optimum Size, Shape, and Replicate
-  Number of Safflower Plots for Yield Trials.
+  Number of Safflower Plots for Yield Trials. Table 6.
   http://digitalcommons.usu.edu/etd/2979
 }
 \references{
@@ -43,8 +45,8 @@ dat <- polson.safflower.uniformity
 
 if(require("desplot")){
   desplot(yield ~ col*row, data=dat,
-          main="polson.safflower.uniformity",
-          flip=TRUE, aspect=189/110) # 189 ft tall, 110 feet wide
+          flip=TRUE, aspect=189/110,
+          main="polson.safflower.uniformity")
 }
 
 if(require(agricolae) & require(reshape2)){

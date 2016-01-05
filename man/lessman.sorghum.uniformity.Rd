@@ -25,6 +25,10 @@
   harvested in 5-foot lengths.  Threshed grain was dried to 8-10 percent
   moisture before weighing. Weights are ounces.  Average yield for the
   field was 95.3 bu/ac.
+
+  Field width: 48 rows * 40 inches / 12in/ft = 160 feet
+
+  Field length: 300 feet
   
   Plot yields from the two outer rows on each side of the field were
   omitted from the analysis.
@@ -47,12 +51,10 @@
 data(lessman.sorghum.uniformity)
 dat <- lessman.sorghum.uniformity
 
-# aspect 300ft tall, 48 'rows' x 40in/row / 12in/ft = 160ft wide
 if(require(desplot)){
   desplot(yield ~ col*row, dat,
-          main="lessman.sorghum.uniformity",
-          tick=TRUE, flip=TRUE,
-          aspect=300/(48*40/12))
+          aspect=300/160, tick=TRUE, flip=TRUE,
+          main="lessman.sorghum.uniformity")
 }
 
 # Omit outer two columns (called 'rows' by Lessman)

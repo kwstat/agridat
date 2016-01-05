@@ -1,5 +1,5 @@
-\name{wiedemann.safflower}
-\alias{wiedemann.safflower}
+\name{wiedemann.safflower.uniformity}
+\alias{wiedemann.safflower.uniformity}
 \docType{data}
 \title{
   Uniformity trial of safflower
@@ -7,7 +7,7 @@
 \description{
   Uniformity trial of safflower at Farmington, Utah, 1960.
 }
-\usage{data("wiedemann.safflower")}
+\usage{data("wiedemann.safflower.uniformity")}
 \format{
   A data frame with 1782 observations on the following 3 variables.
   \describe{
@@ -38,9 +38,9 @@ recommended for simplicity of harvest, so 3.33 feet by 20 feet.
 
 Based on operational costs, K1=74 percent and K2=26 percent.
 
-Field width: 114 feet - (8 rows * 22 in/row / 12in/ft) = 99 feet = 54 rows * 22 in/row.
+Field width: 33 plots/ranges * 5ft = 165 feet
 
-Field length: 189 feet - 2*12ft = 165 feet = 33 ranges * 4 ft/range.
+Field length: 54 rows * 22 in/row = 99 feet
 
 For this R package, the tables in Wiedemann were converted by OCR to
 digital format, and all values were checked by hand.
@@ -55,17 +55,17 @@ of labor.  Today the analysis takes only a second.
 }
 
 \source{
-Wiedemann, Alfred Max. 1962.
-"Estimation of Optimum Plot Size and Shape for Use in Safflower Yield Trails".
-All Graduate Theses and Dissertations. Paper 3600.
-http://digitalcommons.usu.edu/etd/3600
+  Wiedemann, Alfred Max. 1962.
+  "Estimation of Optimum Plot Size and Shape for Use in Safflower Yield Trails". Table 5.
+  All Graduate Theses and Dissertations. Paper 3600. Table 5.
+  http://digitalcommons.usu.edu/etd/3600
 }
 \references{
 None.
 }
 \examples{
-data(wiedemann.safflower)
-dat <- wiedemann.safflower
+data(wiedemann.safflower.uniformity)
+dat <- wiedemann.safflower.uniformity
 
 # CV of entire field = 39%, matches Wiedemann p. 16
 sd(dat$yield)/mean(dat$yield)
@@ -73,7 +73,7 @@ sd(dat$yield)/mean(dat$yield)
 if(require(desplot)){
   desplot(yield~col*row, dat,
           flip=TRUE, tick=TRUE, aspect =99/165,
-          main="wiedemann.safflower (true shape)")
+          main="wiedemann.safflower.uniformity (true shape)")
 }
 
 \dontrun{

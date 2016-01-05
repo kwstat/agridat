@@ -12,6 +12,11 @@
   Plant Breeding Institute in Cambridge, England.
 
   Each plot is 5 feet wide, 14 feet long.
+
+  Field width: 7 plots * 14 feet = 98 feet
+
+  Field length: 28 plots * 5 feet = 140 feet
+  
 }
 
 \format{
@@ -41,12 +46,10 @@ data(kempton.barley.uniformity)
 dat <- kempton.barley.uniformity
 
 if(require(desplot)){
-desplot(yield~col*row, dat, main="kempton.barley.uniformity")
-asp <- (28*14)/(7*5) # aspect ratio (rows * ft)/(cols * ft)
-desplot(yield~col*row, dat, aspect=asp,
-        main="kempton.barley.uniformity (true aspect)") # true view
+  desplot(yield~col*row, dat,
+          aspect=140/98, tick=TRUE,
+          main="kempton.barley.uniformity (true aspect)")
 }
-
 
 
 \dontrun{

@@ -6,15 +6,17 @@
 * JAGS code for besag.elbatan
 * Check aspect where possible.
 * Added DOIs for most source documents A-N.
-
+* Figure out best way to use jags.
 
 # agridat 1.13 (unpublished)
 
 ## New data
 
 battese.survey, gartner.corn, giles.wheat, kenward.cattle, kreusler.maize,
-lessman.sorghum.uniformity, montgomery.wheat.uniformity, onofri.winterwheat,
-polson.safflower.uniformity, smith.beans1.uniformity, wheatley.carrot, wiedemann.safflower.uniformity
+lessman.sorghum.uniformity, montgomery.wheat.uniformity,
+nonnecke.corn.uniformity, nonnecke.peas.uniformity, onofri.winterwheat,
+polson.safflower.uniformity, smith.beans1.uniformity, wheatley.carrot,
+wiedemann.safflower.uniformity
 
 ## Other
 
@@ -25,7 +27,8 @@ polson.safflower.uniformity, smith.beans1.uniformity, wheatley.carrot, wiedemann
 * Changed vignette from Rnw/pdf to Rmd/html.
 * `devtools::run_examples()` now works even without suggested packages
 installed.
-* Improvements to titles in Rd pages
+* Improvements to titles in Rd pages.
+* Combined wassom.brome datasets into one.
 
 # agridat 1.12 - Jun 2015
 
@@ -75,7 +78,7 @@ lonnquist.maize, lucas.switchback, maindonald.barley, mead.cauliflower,
 mercer.mangold.uniformity, patterson.switchback, piepho.cocksfoot,
 sinclair.clover, snijders.fusarium, stirret.borers, theobald.barley,
 turner.herbicide, vargas.txe, vold.longterm, wallace.iowaland,
-walsh.cottonprice, wassom.brome1.uniformity, welch.bermudagrass,
+walsh.cottonprice, wassom.brome.uniformity, welch.bermudagrass,
 weiss.incblock, weiss.lattice, yang.barley
 
 ## Other

@@ -23,6 +23,11 @@
   A three-plot seeder was used, planting in a serpentine fashion.
   Williams noted that it appears that the middle plot of each pass
   has a lower yield, possibly due to soil compaction from the tractor.
+
+  Field width: 48 plots * .75 m = 36 m
+
+  Field length: 15 plots * 5 m = 75 m
+  
 }
 \source{
   Williams, ER and Luckett, DJ. 1988. The use of uniformity data in the
@@ -36,9 +41,10 @@ data(williams.barley.uniformity)
 dat <- williams.barley.uniformity
 
 if(require(desplot)){
-asp = (15*5)/(48*.75) # true aspect
-desplot(yield ~ col*row, dat, aspect=asp,
-        main="williams.barley.uniformity")
+
+  desplot(yield ~ col*row, dat,
+          aspect= 75/36,
+          main="williams.barley.uniformity")
 }
 
 
@@ -46,6 +52,7 @@ desplot(yield ~ col*row, dat, aspect=asp,
 require("lattice")
 dat$fit <- fitted(loess(yield~col*row, dat, span=.1))
 contourplot(fit~col*row, data=dat,
+            aspect=75/36,
             region=TRUE,
             main="williams.barley.uniformity")
 wireframe(fit~col*row, data=dat, zlim=c(100, 350),

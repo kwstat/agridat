@@ -42,7 +42,9 @@ name                                  \tab dimensions \tab other \tab model \cr
 \link{lyon.potato.uniformity}         \tab 34 x 6 \tab xy \tab \cr
 \link{mercer.mangold.uniformity}      \tab 10 x 20 \tab xy \tab \cr
 \link{mercer.wheat.uniformity}        \tab 25 x 20 \tab xy, 2 traits \tab spplot \cr
-\link{montgomery.wheat.uniformity}    \tab 14 x 16 \tab xy, \tab lm \cr
+\link{montgomery.wheat.uniformity}    \tab 14 x 16 \tab xy \tab lm \cr
+\link{nonnecke.corn.uniformity}       \tab 32 x 18 \tab xy, 3 loc \tab \cr
+\link{nonnecke.peas.uniformity}       \tab 15 x 18 \tab xy, 2 traits \tab \cr
 \link{odland.soybean.uniformity}      \tab 25 x 42 \tab xy \tab \cr
 \link{odland.soyhay.uniformity}       \tab 28 x 55 \tab xy \tab \cr
 \link{polson.safflower.uniformity}    \tab 52 x 33 \tab xy \tab smith\cr
@@ -52,9 +54,7 @@ name                                  \tab dimensions \tab other \tab model \cr
 \link{smith.beans4.uniformity}        \tab 16 x 15 \tab xy \tab \cr
 \link{smith.corn.uniformity}          \tab 6 x 20 \tab xy, 3 years \tab rgl \cr
 \link{stephens.sorghum.uniformity}    \tab 100 x 20 \tab xy \tab \cr
-\link{wassom.brome1.uniformity}       \tab 36 x 36 \tab xy \tab \cr
-\link{wassom.brome2.uniformity}       \tab 36 x 36 \tab xy \tab \cr
-\link{wassom.brome3.uniformity}       \tab 36 x 36 \tab xy \tab \cr
+\link{wassom.brome.uniformity}        \tab 36 x 36 \tab xy, 3 expts \tab \cr
 \link{wiebe.wheat.uniformity}         \tab 12 x 125 \tab xy \tab medianpolish, loess \cr
 \link{wiedemann.safflower.uniformity} \tab 54 x 33 \tab xy \tab smith \cr
 \link{williams.barley.uniformity}     \tab 48 x 15 \tab xy \tab loess \cr

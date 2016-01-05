@@ -22,6 +22,7 @@
   drill, 5.5 feet wide, was driven across the first series of 14 blocks,
   the boundaries of the blocks being later established.  Each series was
   sown the same way, no space was allowed between the blocks.
+  Each block was 5.5 ft square.
 
   Montgomery (1913) has nice photos of various field experiments.
 
@@ -52,7 +53,7 @@ dat <- montgomery.wheat.uniformity
 # Montgomery figure 10, page 37.
 if(require(desplot)){
 desplot(yield ~ col*row, dat, text=yield,
-        cex=1, shorten="none",
+        aspect=1, cex=1, shorten="none",
         main="montgomery.wheat.uniformity - observed yield")
 }
 

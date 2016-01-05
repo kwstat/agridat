@@ -7,7 +7,7 @@
 \alias{batchelor.walnut.uniformity}
 \docType{data}
 \title{
-  Uniformity trials of apples, lemons, oranges, and walnuts.
+  Uniformity trials of apples, lemons, oranges, and walnuts
 }
 \description{
   Uniformity trials of apples, lemons, oranges, and walnuts.
@@ -130,43 +130,37 @@ if(require(desplot)){
 data(batchelor.apple.uniformity)
 desplot(yield~col*row, data=batchelor.apple.uniformity,
         aspect=30/16,
-        main="batchelor.apple.uniformity",
-        ylab="Jonathon apple tree yields")
+        main="batchelor.apple.uniformity")
 
 # Lemon
 data(batchelor.lemon.uniformity)
 desplot(yield~col*row, data=batchelor.lemon.uniformity,
         aspect=26/14,
-        main="batchelor.lemon.uniformity",
-        ylab="Eureka lemon tree yields")
+        main="batchelor.lemon.uniformity")
 
 # Navel1 (Arlington)
-data(batchelor.navel1.uniformity)
-dat <- batchelor.navel1.uniformity
-desplot(yield~col*row, dat, aspect=50/20,
-        main="batchelor.navel1.uniformity",
-        ylab="Navel orange tree yields (Arlington)")
+  data(batchelor.navel1.uniformity)
+  desplot(yield~col*row, batchelor.navel1.uniformity,
+          aspect=50/20,
+          main="batchelor.navel1.uniformity - Arlington")
 
 # Navel2 (Antelope)
 data(batchelor.navel2.uniformity)
 desplot(yield~col*row, data=batchelor.navel2.uniformity,
         aspect=33/15,
-        main="batchelor.navel2.uniformity",
-        ylab="Navel orange tree yields (Antelope)")
+        main="batchelor.navel2.uniformity - Antelope")
 
 # Valencia
 data(batchelor.valencia.uniformity)
 desplot(yield~col*row, data=batchelor.valencia.uniformity,
         aspect=20/12,
-        main="batchelor.valencia.uniformity",
-        ylab="Valencia orange tree yields")
+        main="batchelor.valencia.uniformity")
 
 # Walnut
 data(batchelor.walnut.uniformity)
 desplot(yield~col*row, data=batchelor.walnut.uniformity,
         aspect=32/10,
-        main="batchelor.walnut.uniformity",
-        ylab="Seedling walnut yields")
+        main="batchelor.walnut.uniformity")
 
 }
 
