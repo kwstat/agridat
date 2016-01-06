@@ -1,0 +1,111 @@
+model {
+	# fixed effects
+	for (gg in 1:n.gen){
+
+    # Priors for the sigmoidal curve for each genotype.
+    # Prior means are from the BUGS model without random effects
+		AA[gg]~ dnorm(3, 0.05)
+		BB[gg] ~ dnorm(-0.2, 60)I(, 0) # BB is negative
+		CC[gg] ~ dnorm(10, 0.01)
+		MM[gg] ~ dnorm(20, 0.01)
+
+    # For each genotype gg, define the sigmoidal curve.  Eqn 7.3, 9.2
+		for (dd in 1:n.date){
+			mu.fix[gg,dd] <-  AA[gg] + CC[gg]/ ( 1 + exp(-BB[gg]*(time[dd]-MM[gg])) )
+		}
+
+	}
+
+	# random column effects
+	for (cc in 1:n.col) {
+		mu.col[cc] ~ dnorm(0, tau.col)
+	}
+  mean.mu.col <- mean(mu.col)
+
+	# random row effects
+	for (rr in 1:n.row) {
+		mu.row[rr] ~ dnorm(0, tau.row)
+	}
+  mean.mu.row <- mean(mu.row)
+
+
+	for (oo in 1:n.obs) {
+		for (dd in 1:n.date) {
+      # Mean for plot oo, date dd is
+      # mu.fix + col effect + row effect - mean(col effects) - mean(row effects)
+			mu[oo, dd] <- mu.fix[variety[oo], dd] + mu.col[cols[oo]] +
+                    mu.row[rows[oo]] -mean.mu.col-mean.mu.row
+
+			for (cc in 1:n.cut){
+				# cum prob of cc or lower.  Eqn 7.2, 9.1
+				logit(Q[oo, dd, cc]) <- a[cc] - mu[oo, dd]
+			}
+
+			# prob of response = cc
+			p[oo, dd, 1] <- Q[oo, dd, 1]
+			for (cc in 2 : (n.cut)) {
+				p[oo, dd, cc] <- Q[oo, dd, cc] - Q[oo, dd, (cc-1)]
+			}
+			p[oo, dd, (n.cut+1)] <- 1 - Q[oo, dd, (n.cut)]
+			grade[oo, dd] ~ dcat(p[oo, dd, ])			# posterior predictive grade
+
+			pred.grade[oo, dd] ~ dcat(p[oo, dd, ]) # categorical
+
+			score[oo,dd] <- p[oo,dd,1]*1 + p[oo,dd,2]*2 + p[oo,dd,3]*3 + p[oo,dd,4]*4 +
+        p[oo,dd,5]*5 + p[oo,dd,6]*6 + p[oo,dd,7]*7 + p[oo,dd,8]*8 + p[oo,dd,9]*9
+
+		}
+	}
+
+	# genotype estimates
+
+  for (gg in 1:n.gen) {
+
+		for (dd in 1:n.date) {
+
+			for (cc in 1:n.cut){
+				# cum prob of cc or lower
+				logit(Q.fix[gg, dd, cc]) <- a[cc] - mu.fix[gg, dd]
+			}
+
+			# prob of response = cc
+			p.fix[gg, dd,1] <- Q.fix[gg, dd, 1]
+			for (cc in 2 : (n.cut)) {
+				p.fix[gg, dd, cc] <- Q.fix[gg, dd, cc] - Q.fix[gg, dd, (cc-1)]
+			}
+			p.fix[gg, dd, (n.cut+1)] <- 1 - Q.fix[gg, dd, (n.cut)]
+
+      # Eqn 7.4
+			score.fix[gg,dd] <- p.fix[gg,dd,1]*1 + p.fix[gg,dd,2]*2 + p.fix[gg,dd,3]*3 +
+        p.fix[gg,dd,4]*4 + p.fix[gg,dd,5]*5 + p.fix[gg,dd,6]*6 + p.fix[gg,dd,7]*7 +
+          p.fix[gg,dd,8]*8+p.fix[gg,dd,9]*9
+
+		}
+
+		totalscore.fix[gg] <- score.fix[gg,1] + score.fix[gg,2] + score.fix[gg,3] +
+      score.fix[gg,4] + score.fix[gg,5]
+
+	}
+
+  # Priors for the cut points are from a BUGS model without fixed
+  # or random effects.
+  # Note that BUGS uses I() for intervals to ensure that
+  # a[1] is less than a[2].  E.g.
+	# a0[1] ~ dnorm(-1.43, 1.0E-06)I(, a0[2])
+  # While JAGS uses 'sort' to ensure ordered values
+	a0[1] ~ dnorm(-1.43, 1.0E-06)
+	a0[2] ~ dnorm(-0.93, 1.0E-06)
+	a0[3] ~ dnorm(-0.68, 1.0E-06)
+	a0[4] ~ dnorm(-0.42, 1.0E-06)
+	a0[5] ~ dnorm(-0.21, 1.0E-06)
+	a0[6] ~ dnorm(-0.03, 1.0E-06)
+	a0[7] ~ dnorm(0.26, 1.0E-06)
+	a0[8] ~ dnorm(0.72, 1.0E-06)
+  a[1:8] <- sort(a0) # Ensure the cut points are ordered
+
+	# Gamma priors
+	tau.col ~ dgamma(0.01, 0.01)
+	tau.row ~ dgamma(0.01, 0.01)
+	var.col <- 1/tau.col
+	var.row <- 1/tau.row
+}

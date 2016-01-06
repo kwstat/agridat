@@ -24,6 +24,7 @@ This document lists additional sources of agricultural data.
 D. Bayisa (2010). _Application of Spatial Mixed Model in Agricultural Field
 Experiment_. Master thesis. Department of Statistics, Addis Ababa University.
 At least one dataset from wheat, RCB, with field coordinates.
+See also http://www.ethstat.org.et/esa_publications.html, Volume 19
 
 Peter Diggle. _Longitudinal Data Analysis_.
 http://www.maths.lancs.ac.uk/~diggle/lda/Datasets/
@@ -53,7 +54,7 @@ Contains data and R code.
 
 Matthew A. Cleveland, John M. Hickey, Selma Forni. (2012).
 A Common Dataset for Genomic Analysis of Livestock Populations
-G3, Vol 2.
+_G3_, Vol 2.
 http://doi.org/10.1534/g3.111.001453
 The supplemental information for this paper contains data for 3534 pigs with
 high-density genotypes (50000 SNPs), and a pedigree including parents and
@@ -78,6 +79,9 @@ https://r-forge.r-project.org/projects/cropcc/
 `drc` is a package for dose response curves, including germination data for
 mungbean, rice, wheat.
 
+`FW` https://github.com/lian0090/FW/ has phenotype data and marker data for
+599 wheat lines in 4 environments.
+
 `lmtest::ChickEgg` has time series of annual chicken and egg
 production in the United States 1930-1983.
 
@@ -87,7 +91,7 @@ analysis-of-covariance.
 `nlraa` is for Non-linear models in agriculture.
 http://r-forge.r-project.org/R/?group_id=1599
 
-`nlme::Orange` shows to growth of orange trees.
+`nlme::Orange` shows growth of orange trees.
 
 `plantbreeding`
 https://r-forge.r-project.org/projects/plantbreeding/
@@ -100,17 +104,19 @@ http://cran.r-project.org/package=SDaA
 on' that examines agriculture in Irish counties.  See also the data
 `ade4::irishdata`. 
 
-`FW` https://github.com/lian0090/FW/ has phenotype data and marker data for
-599 wheat lines in 4 environments.
+`SoyNAM` Soybean nested association mapping dataset with phenotype data 3 yr,
+9 locations, 18 environments, 60 thousand observations for height, maturity,
+lodging, moisture, protein, oil, fiber, seed size. There are 5000+ straints,
+40 families.
+
 
 ## Web sites
-
-Electronic Rothamsted Documents Archive
-http://www.era.rothamsted.ac.uk/eradoc/collections.php
 
 Electronic Rothamsted Archive
 http://www.era.rothamsted.ac.uk/index.php
 
+Electronic Rothamsted Documents Archive
+http://www.era.rothamsted.ac.uk/eradoc/collections.php
 
 Statistical Analysis of Agricultural Experiments with R
 http://rstats4ag.org/

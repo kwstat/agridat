@@ -307,12 +307,12 @@ http://www.vsni.co.uk/downloads/asreml.
 
 \bold{Comments on the package structure}
 
-The original sources for these data use several different words to refer to
-genotypes including \emph{breed}, \emph{cultivar}, \emph{genotype}, \emph{hybrid},
-\emph{line}, \emph{progeny}, \emph{stock}, \emph{type}, and \emph{variety}.
-For consistency, these datasets mostly use \code{gen} (genotype).
-Also for consistency \code{row} and \code{col} are usually used for the
-coordinates.
+The original sources for these data use several different words to refer
+to genotypes including \emph{accession}, \emph{breed}, \emph{cultivar},
+\emph{genotype}, \emph{hybrid}, \emph{line}, \emph{progeny},
+\emph{stock}, \emph{type}, and \emph{variety}.  For consistency, these
+datasets mostly use \code{gen} (genotype).  Also for consistency
+\code{row} and \code{col} are usually used for the coordinates.
 
 In dataframes, 'block', 'rep', and similar terms are almost always coded
 like B1, B2, B3 instead of 1, 2, 3.  This causes R to treat the data as

@@ -12,10 +12,10 @@
 \format{
   A data frame with 247 observations on the following 4 variables.
   \describe{
-    \item{\code{gen}}{Genotype. Note, this is numeric!}
-    \item{\code{env}}{Environment factor}
-    \item{\code{straw}}{Straw length}
-    \item{\code{emergence}}{Ear emergence Julian date}
+    \item{\code{gen}}{genotype. Note, this is numeric!}
+    \item{\code{env}}{environment factor}
+    \item{\code{straw}}{straw length}
+    \item{\code{emergence}}{ear emergence, Julian date}
   }
 }
 \details{
@@ -53,7 +53,46 @@
   
 }
 \examples{
+
 data(giles.wheat)
-## maybe str(giles.wheat) ; plot(giles.wheat) ...
+dat <- giles.wheat
+dat <- transform(dat, gen=factor(gen))
+dat1 <- subset(dat, !is.na(straw))
+dat2 <- subset(dat, !is.na(emergence))
+
+
+# Traits are weakly related
+# with(dat, plot(straw~emergence))
+
+# Analysis of straw length
+
+if(require(lsmeans) & require(gnm)){
+
+# Mean across years. Matches Piepho Table 7 'Simple'
+m1 = lm(straw ~ gen, data=dat1)
+lsmeans(m1, 'gen')
+
+# Simple two-way model.  NOT the bi-additive model of Piepho.
+m2 = lm(straw ~ gen + env, data=dat1)
+lsmeans(m2, 'gen')
+
+# Bi-additive model. Matches Piepho Table 6, rows (c)
+library(gnm)
+m3 <- gnm(straw ~ env + Mult(gen,env), data=dat1)
+cbind(adjusted=round(fitted(m3),0), dat1) 
+
+}
+
+# Analysis of Ear emergence
+
+if(require(lsmeans)){
+  
+# Simple two-way model. 
+m4 = lm(emergence ~ 1 + gen + env, data=dat2)
+lsmeans(m4, c('gen','env')) # Matches Piepho Table 9. rpws (c)
+lsmeans(m4, 'gen') # Match Piepho table 10, Least Squares column
+
+}
+
 }
 \keyword{datasets}

@@ -6,7 +6,7 @@ Bayisa, D. (2010).
 Application of Spatial Mixed Model in Agricultural Field Experiment.
 Master thesis. Department of Statistics, Addis Ababa University.
 
-Electronic version from Johannes Forkman
+Electronic version from Johannes Forkman document
 "Exercise: Agricultural field experiment with spatial correlation"
 
 library(asreml)
@@ -20,7 +20,7 @@ dat0 <- import("bayisa.wheat.xlsx")
 
 dat <- dat0
 
-lib(agrifun)
+lib(desplot)
 desplot(yield~east+north, dat, out1=rep)
 str(dat)
 describe(dat)
