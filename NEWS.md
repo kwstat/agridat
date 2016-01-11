@@ -1,6 +1,7 @@
 
 ## Wish list / To do
 
+* Use Clifford's regress package
 * JAGS code for lee.potatoblight
 * JAGS code for theobald.barley
 * JAGS code for besag.elbatan
@@ -15,7 +16,8 @@
 battese.survey, gartner.corn, giles.wheat, kenward.cattle, kreusler.maize,
 lessman.sorghum.uniformity, montgomery.wheat.uniformity,
 nonnecke.corn.uniformity, nonnecke.peas.uniformity, onofri.winterwheat,
-polson.safflower.uniformity, smith.beans1.uniformity, wheatley.carrot,
+polson.safflower.uniformity, sawyer.multi.uniformity,
+smith.beans1.uniformity, wheatley.carrot,
 wiedemann.safflower.uniformity
 
 ## Other

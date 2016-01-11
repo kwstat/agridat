@@ -3,6 +3,7 @@
 Sawyer field at Rothamsted, Mentioned in McCullagh's paper. 
 http://www.era.rothamsted.ac.uk/eradoc/book/84
 page 154
+Pages 138-153 have traditional RCB experiments.
 
 Fairfield Smith data
 http://www.stat.uchicago.edu/~pmcc/reml/
@@ -367,7 +368,7 @@ genetic basis and implicates a GST gene
 
 * Jstor
 
-Baker 1953. Strawberry uniformity yield trials.
+
 Bartlet 1988. Stochastic Models and Field Trials.
 Cullins 1990 A Model for the Analysis of Growth Data from Designed Experiments
   Has growth data for infected/non-infected pigs.

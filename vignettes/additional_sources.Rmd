@@ -41,6 +41,12 @@ Has some interesting incomplete-block experiments.
 
 ## Papers
 
+Baker 1953. Strawberry uniformity yield trials. _Biometrics_,
+Vol. 9, No. 3 (Sep., 1953), pp. 412-421.
+http://doi.org/10.2307/3001713
+Two uniformity trials with yield per plant for 200, 500 plants.  CVs fairly
+high and correlation between neighboring plants very low.
+
 Kenward, Michael G. (1987).  A Method for Comparing Profiles of Repeated
 Measurements.  _Applied Statistics_, 36, 296-308.
 An ante-dependence model is fit to repeated measures of cattle weight.
@@ -106,7 +112,7 @@ on' that examines agriculture in Irish counties.  See also the data
 
 `SoyNAM` Soybean nested association mapping dataset with phenotype data 3 yr,
 9 locations, 18 environments, 60 thousand observations for height, maturity,
-lodging, moisture, protein, oil, fiber, seed size. There are 5000+ straints,
+lodging, moisture, protein, oil, fiber, seed size. There are 5000+ strains,
 40 families.
 
 

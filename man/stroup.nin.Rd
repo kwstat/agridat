@@ -1,7 +1,7 @@
 \name{stroup.nin}
 \alias{stroup.nin}
 \docType{data}
-\title{Nebraska Intrastate Nursery field experiment}
+\title{RCB experiment of wheat at the Nebraska Intrastate Nursery}
 \description{
   The yield data from an advanced Nebraska Intrastate Nursery (NIN) breeding
   trial conducted at Alliance, Nebraska, in 1988/89.
@@ -18,12 +18,19 @@
 }
 
 \details{
-  Four replicates of 19 released cultivars, 35 experimental wheat lines
-  and 2 additional triticale lines were laid out in a 22
-  row by 11 column rectangular array of plots.
-  The varieties were
-  allocated to the plots using a randomised complete block (RCB) design.
-  The blocks are not rectangular but partially overlap columns.
+
+  Four replicates of 19 released cultivars, 35 experimental
+  wheat lines and 2 additional triticale lines were laid out in a 22 row
+  by 11 column rectangular array of plots.  The varieties were allocated
+  to the plots using a randomised complete block (RCB) design.
+  Each plot was sown in four rows 4.3 m long and 0.3 m apart.
+  Plots were trimmed down to 2.4 m in length before harvest.  The
+  orientation of the plots is not clear from the paper, but the data in
+  Littel et al are given in meters and make the orientation clear.
+
+  Field width: 22 plots * 1.2 m = 26.4 m
+
+  Field length: 11 plots * 4.3 m = 47.3 m
   
   All plots with missing data are coded as being gen = "Lancer".
   (For ASREML, missing plots need to be included for spatial analysis and the
@@ -33,9 +40,9 @@
   by Littell et al (1996, page 321), Pinheiro and Bates (2000, page 260),
   and Butler et al (2004).
 
-  This version of the data expresses
-  the yield in bushels per acre. The results published in Stroup et al
-  (1994) are expressed in kg/ha.  For wheat, 1 bu/ac = 67.25 kg/ha.
+  This version of the data give the yield in bushels per acre. The yield
+  values published in Stroup et al (1994) are expressed in kg/ha.  For
+  wheat, 1 bu/ac = 67.25 kg/ha.
 
   Some of the gen names are different in Stroup et al (1994).
   (Sometimes an experimental genotype is given a new name when it is
@@ -57,6 +64,10 @@
   The genotype 'Buckskin' is a known superior variety, but was
   disadvantaged by assignment to unfavorable locations within the
   blocks.
+
+  Note that the figures in Stroup 2002 claim to be based on this data,
+  but the number of rows and columns are both off by 1 and the positions
+  of Buckskin as shown in Stroup 2002 do not appear to be quite right.
   
 }
 
@@ -65,6 +76,7 @@
   Removing Spatial Variation from Wheat Yield Trials: A Comparison of
   Methods. \emph{Crop Science}, 86:62--66.
 }
+
 \references{
   Littell, R.C. and Milliken, G.A. and Stroup, W.W. and Wolfinger,
   R.D. 1996. \emph{SAS system for mixed models}, SAS Institute, Cary, NC.
@@ -74,6 +86,13 @@
 
   Butler, D., B R Cullis, A R Gilmour, B J Goegel.  (2004)
   \emph{Spatial Analysis Mixed Models for S language environments}
+
+  W. W. Stroup (2002).
+  Power Analysis Based on Spatial Effects Mixed Models: A Tool for
+  Comparing Design and Analysis Strategies in the Presence of Spatial
+  Variability. \emph{Journal of Agricultural, Biological, and
+    Environmental Statistics}, 7(4), 491-511.
+  
 }
 \seealso{
   Identical data (except for the missing values) are available
@@ -89,7 +108,9 @@ dat <- transform(dat, xf=factor(x), yf=factor(y))
 # Show experiment layout
 # Note: all "Buckskin" plots are near left side
 if(require(desplot)){
-desplot(yield~x*y, dat, out1="rep", num=gen, cex=1, main="stroup.nin")
+  desplot(yield~x*y, dat,
+          aspect=47.3/26.4, out1="rep", num=gen, cex=1,
+          main="stroup.nin - yield heatmap (true shape)")
 }
 
 
