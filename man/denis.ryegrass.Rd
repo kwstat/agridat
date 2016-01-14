@@ -32,7 +32,7 @@
   Asymptotic confidence regions for biadditive models:
   interpreting genotype-environment interaction,
   \emph{Applied Statistics}, 45, 479-493.
-  \url{http://doi.org/10.2307/2986069}
+  http://doi.org/10.2307/2986069
 }
 \references{
   Gower, J.C. and Hand, D.J., 1996.  Biplots.

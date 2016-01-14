@@ -28,7 +28,7 @@
     Statistics}, 2, 157-178.
 }
 \references{
-  The GLIMMIX procedure. \url{http://www.ats.ucla.edu/stat/SAS/glimmix.pdf}.
+  The GLIMMIX procedure. http://www.ats.ucla.edu/stat/SAS/glimmix.pdf
 }
 \examples{
 

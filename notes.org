@@ -13,28 +13,26 @@ http://www.stat.uchicago.edu/~pmcc/reml/
 ** Summary of meta-analyses
 http://www6.versailles-grignon.inra.fr/agronomie/Meta-analysis-in-agronomy/References
 
-** Paper: Comparison of statistical models in a meta-analysis
-of fungicide treatments for the control of citrus black spot
-caused by Phyllosticta citricarpa
-
 * QTL
 
-QTL analysis using Integrated Breeding Platform. CC-BY-SA license
+QTL analysis using Integrated Breeding Platform.
 https://www.integratedbreeding.net/165/training/bms-user-manual/qtl-analysis
+CC-BY-SA license
+
 
 
 * Yield monitor
 
 Richard Plant
-CC-SA license
 http://www.plantsciences.ucdavis.edu/plant/qgislabs.htm
+CC-SA license
+
 
 
 
 MapCalc
-Joseph Berry.  Looks interesting, free for education.  Center pivot data.
 http://www.innovativegis.com/basis/
-
+Joseph Berry.  Looks interesting, free for education.  Center pivot data.
 
 Analyzing Precision Ag Data <-- interesting workshop
 http://www.innovativegis.com/basis/Books/AnalyzingPAdata/Default.htm
@@ -46,7 +44,6 @@ http://www.innovativegis.com/basis/pfprimer/Topic4/Topic4.htm
 
 * Papers
 
-Yan2002, p 992.  GxE table for biplot (not the 1993 data)
 Biplot/StdErr/VanEeuwijk 1993 - Incorporating env info
 Biplot/Bartkowiak GxE table
 GE folder: Crossa 1997
@@ -70,15 +67,16 @@ http://books.google.com/books?id=jyEXAAAAYAAJ&pg=PA279
 
 
 Malosetti 2013 - F2 data.  Folder: GE
-Published under CC license:
-1. http://www.frontiersin.org/Plant_Physiology/10.3389/fphys.2013.00044/abstract
+http://www.frontiersin.org/Plant_Physiology/10.3389/fphys.2013.00044/abstract
+CC license:
 
 
 Barrero 2013 - MET shows slight improvements in Texas maize
 
 da Silva - A Bayesian Shrinkage Approach for AMMI Models
-CC-BY. Partial code, data.
 http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0131414#pone-0131414-t001
+CC-BY. Partial code, data.
+
 
 
 Perez
@@ -97,18 +95,33 @@ Plant	Breeding Three-way data
 
 * Books
 
-Hill et al. Quantitative and Ecological Aspects of Plant Breeding.
+** Hill et al. Quantitative and Ecological Aspects of Plant Breeding.
 
 * Other
 
-http://www.uky.edu/Ag/GrainCrops/varietytesting.htm   Links to many other tests.
+http://www.uky.edu/Ag/GrainCrops/varietytesting.htm   
+Links to many other tests.
+
 http://vt.cropsci.illinois.edu/corn.html
 
 Food Corn Performance Tests
 http://cdm.sos.mo.gov/cdm4/results.php?CISOOP1=any&CISOFIELD1=CISOSEARCHALL&CISOROOT=/agexptstn&CISOBOX1=weeks&CISOSORT=title%7Cr
 
-Germplasm Enhancement of Maize (ISU)
-http://www.public.iastate.edu/~usda-gem/index.htm
+Many interesting pages.  Non-open license...?
+Lecture and data
+http://articles.extension.org/plant_breeding_genomics
+http://articles.extension.org/pages/68660/plant-breeding-and-genomics-learning-lessons
+http://articles.extension.org/pages/60430/introduction-to-the-augmented-experimental-design-webinar
+
+
+* Augmented
+
+Jennifer Kling Lattice Design.  Data.
+http://cropandsoil.oregonstate.edu/system/files/u534/Lattice_seminar.pdf
+https://passel.unl.edu/pages/printinformationmodule.php?idinformationmodule=1130447275
+https://passel.unl.edu/pages/informationmodule.php?idinformationmodule=1130447276
+https://passel.unl.edu/pages/informationmodule.php?idinformationmodule=1130447273
+
 
 
 * Journals
@@ -185,33 +198,8 @@ http://chla.library.cornell.edu/c/chla/browse.html
 
 # ----------------------------------------------------------------------------
 # ----------------------------------------------------------------------------
-# ----------------------------------------------------------------------------
 
-Done
-
-* Journals / Proceedings
-
-** Applied Statistics in Agriculture
-http://newprairiepress.org/agstatconference/
-1989-2014
-
-** Computers and Electronics in Agriculture.
-http://www.sciencedirect.com/science/journal/01681699/103
-Vol 1-110
-
-** Journal of Agricultural Science
-http://journals.cambridge.org/action/displayJournal?jid=AGS
-Vol 128(1997) - 152(2014)
-
-** SAS SUGI
-\\phibred.com\jh\Stat\Conference Notes\SAS Global Forum
-22-23 25-31
-
-** SAS Global Forum
-http://support.sas.com/resources/papers/proceedings13/
-http://support.sas.com/events/sasglobalforum/previous/online.html
- 2007 2009-2010 2012-2013
-
+* Done
 
 * Books
 
@@ -232,8 +220,9 @@ Milk protein in nlme::Milk
 xyplot(protein~Time|Diet, data=Milk, group=Cow, type='l')
 
 
-Federer. Analysis of intercropping experiments.
-Federer. Variations on split-plot.
+** Federer. 
+Analysis of intercropping experiments.
+Variations on split-plot.
 
 
 ** Goulden. Methods of Statistical Analysis.
@@ -264,9 +253,6 @@ http://www.archive.org/details/statisticaltechn031729mbp
 ** Arellano
 http://www.stat.ncsu.edu/people/arellano/courses/st524/Fall08/
 
-** Phil Dixon
-http://www.public.iastate.edu/~pdixon/
-
 ** Hernandez
 http://www.soils.umn.edu/academics/classes/soil4111/hw/
 Web pages are gone, but still on Wayback. Yield monitor.  Has soils layer. 
@@ -275,9 +261,9 @@ Web pages are gone, but still on Wayback. Yield monitor.  Has soils layer.
 
 Ecol 563 Stat Meth in Ecology
 http://www.unc.edu/courses/2010fall/ecol/563/001/
-# Interesting GLM graph
+Interesting GLM graph:
 http://www.unc.edu/courses/2008fall/ecol/563/001/docs/lectures/lecture3.htm
-# Random intercept models
+Random intercept models:
 http://www.unc.edu/courses/2008fall/ecol/563/001/docs/lectures/lecture21.htm
 
 Env Studies 562 Stat for Envt Science
@@ -287,20 +273,31 @@ Ecol 145
 http://www.unc.edu/courses/2006spring/ecol/145/001/docs/lectures.htm
 
 
-** Winner
-http://www.stat.ufl.edu/~winner/data/
-I looked through his "cases" directory.  Two interesting items:
-1. Cross-over irrigation study
-http://www.stat.ufl.edu/~winner/cases/irrig_corn.ppt
-This is messy.  Missing predictor in 1990.  Latin square.  How is
-precipitation handled?  Not used.
-2. Land value study
-http://www.stat.ufl.edu/~winner/cases/iowaland.ppt
-http://www.stat.ufl.edu/~winner/data/iowaland.txt
-3. Herbicide
-http://www.stat.ufl.edu/~winner/data/picloram.txt  See agridat::turner.herbicide
+* Journals / Proceedings
 
-* Data Journals
+** Applied Statistics in Agriculture
+http://newprairiepress.org/agstatconference/
+1989-2014
+
+** Computers and Electronics in Agriculture.
+http://www.sciencedirect.com/science/journal/01681699/103
+Vol 1-110
+
+** Journal of Agricultural Science
+http://journals.cambridge.org/action/displayJournal?jid=AGS
+Vol 128(1997) - 152(2014)
+
+** SAS SUGI
+\\phibred.com\jh\Stat\Conference Notes\SAS Global Forum
+22-23 25-31
+
+** SAS Global Forum
+http://support.sas.com/resources/papers/proceedings13/
+http://support.sas.com/events/sasglobalforum/previous/online.html
+ 2007 2009-2010 2012-2013
+
+
+* Journals for Data
 
 Ag Data Commons
 https://data.nal.usda.gov/about-ag-data-commons
@@ -337,10 +334,7 @@ Too esoteric.
 Payne 2013 - Design and Analysis of Long-Term Rotation Experiments.
 https://dl.sciencesocieties.org/publications/aj/abstracts/107/2/772
 Open access, but closed copyright.
-The data and R code appeared in the original paper, so not used.
-
-
-PLS/Sinebo 2005.  Ahg, soil covariates are NOT given in the table!
+The data and R code appeared in the original paper.
 
 
 Arier Chi-Lun Lee, 2009. Random Effects Models for Ordinal Data
@@ -354,16 +348,20 @@ https://books.google.com/books?hl=en&lr=&id=SqlJAAAAMAAJ&oi=fnd&pg=PA446
 No significant differences between fertilizer treatments--maybe a more
 powerful analysis could find one?
 
-Jansen 1993 - GLMMs in plant breeding thesis
+Jansen 1993 - Generalized Linear Mixed Models in plant breeding thesis
 P 29. Proportions.  Carrots, 3 block, 2 trt, 16 gen.  agridat::jansen.carrots
 P 30. Proportion.  Apple. 3 Inoculum concentration, 4 blk, 3 gen. agridat::jansen.apple
-P. 63. Ordinal. Carnations, 2 trt, 4 gen, 4 categories.  Part of larger data.
+P 63. Ordinal. Carnations, 2 trt, 4 gen, 4 categories.  Part of larger data.
 P 74. Ordinal. Strawberry, 12 gen, 4 blk, 3 categories. agridat::jansen.strawberry
 
 
 Wisser 2011. http://www.pnas.org/content/108/18/7339.long?tab=ds
 Multivariate analysis of maize disease resistances suggests a pleiotropic
 genetic basis and implicates a GST gene
+
+Yan 2002. Singular value partitioning in biplots. Agron J.
+Winter wheat, 31 gen in 8 loc. Different data from Yan's earlier papers.
+
 
 
 * Jstor
@@ -372,8 +370,7 @@ genetic basis and implicates a GST gene
 Bartlet 1988. Stochastic Models and Field Trials.
 Cullins 1990 A Model for the Analysis of Growth Data from Designed Experiments
   Has growth data for infected/non-infected pigs.
-Cullis 1991. Spatial Analysis of Field Experiments-An Extension to Two
-Dimensions
+Cullis 1991. Spatial Analysis of Field Experiments-An Extension to Two Dimensions
 Freeman 1975 - Analysis of Interactions in Incomplete Two-Way Tables
 Nielsen 2004. Nonlinear Mixed-Model Regression to Analyze Herbicide Dose
 ? ?. An Experimental Design Used to Estimate the Optimum Planting Date for Cotton
@@ -383,58 +380,66 @@ Nielsen 2004. Nonlinear Mixed-Model Regression to Analyze Herbicide Dose
 * R packages
 
 ** biotools
-   Path analysis for distance matrices
+Path analysis for distance matrices
 
 ** BGLR
-   Has A matrix (but no pedigree) for 499 genotypes at 4 locs.
+Has A matrix (but no pedigree) for 499 genotypes at 4 locs.
 
 ** BLR 
-   Has a 599 genotype, 4 mega-environment data.  Also "A" matrix
+Has a 599 genotype, 4 mega-environment data.  Also "A" matrix
 
 ** BSagri
-   Safety assessment in agriculture trials
+Safety assessment in agriculture trials
 
 ** cropcc
-   Climate change on crops
-   https://r-forge.r-project.org/projects/cropcc/
+https://r-forge.r-project.org/projects/cropcc/
+Climate change on crops
 
 ** drc
-   Has nice herbicide dose response curves.
+Has nice herbicide dose response curves.
 
 ** missMDA The referenced source for 'geno' data does NOT contain the data.
 
 ** nlraa
-   Miguez.  R package: Non-linear models in agriculture.  Not a meta-analysis.
-   http://r-forge.r-project.org/R/?group_id=1599
+http://r-forge.r-project.org/R/?group_id=1599
+Miguez.  R package: Non-linear models in agriculture.  Not a meta-analysis.
+   
+** plantbreeding  
+https://r-forge.r-project.org/projects/plantbreeding/
+data: fulldial
+linetester
+Data: peanut data from Kang is same as agridat::kang.peanut
 
-** plantbreeding  https://r-forge.r-project.org/projects/plantbreeding/
-   data: fulldial
-   linetester
-   Data: peanut data from Kang is same as agridat::kang.peanut
+** SemiPar
+onions data is same as agridat::ratkowski.onions
 
-** SemiPar.
-   onions data is same as agridat::ratkowski.onions
-
-** SMPracticals. Data: barley
+** SMPracticals
+Data: barley
 
 
-* Other
+* Web sites
 
-Google datasets search engine
+** Germplasm Enhancement of Maize (ISU)
+http://www.public.iastate.edu/~usda-gem/index.htm
+
+
+** Google datasets search engine
 https://cse.google.com/cse/publicurl?cx=002720237717066476899:v2wv26idk7m
 
 
-ILRI
-Nice dialel example with data.  Dorpa, Red Maasi sheep.
+** ILRI
 http://www.ilri.org/biometrics/CS/
+Nice dialel example with data.  Dorpa, Red Maasi sheep.
 
 
-IRRI.  STAR, PBTools, CropStat (successor to ILREML)
+** IRRI
+STAR, PBTools, CropStat (successor to ILREML)
 The STAR user guide has well-documented data (even using 2 from agridat), but
 the PBTools user guide does not document the data.
 
 
-NASS http://www.nass.usda.gov/Data_and_Statistics/index.asp
+** NASS 
+http://www.nass.usda.gov/Data_and_Statistics/index.asp
 http://quickstats.nass.usda.gov/
 Group:       Field Crops
 Commodity:   Corn

@@ -39,7 +39,7 @@ Bodyweight of cows in a 2-by-2 factorial experiment
   \emph{Analysis of Longitudinal Data}. Page 100-101.
 
   Retrieved Oct 2011 from
-  \url{http://www.maths.lancs.ac.uk/~diggle/lda/Datasets/}
+  http://www.maths.lancs.ac.uk/~diggle/lda/Datasets/
 }
 
 \references{
@@ -55,7 +55,7 @@ Bodyweight of cows in a 2-by-2 factorial experiment
   48, 269--311.
 
   SAS/STAT(R) 9.2 User's Guide, Second Edition.
-  \url{http://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.htm#statug_glimmix_sect018.htm}
+  http://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.htm#statug_glimmix_sect018.htm
 
 }
 

@@ -32,7 +32,7 @@
   Walter T Federer and C S Schlottfeldt, 1954.
   The use of covariance to control gradients in experiments.
   \emph{Biometrics}, 10, 282--290.
-  \url{http://doi.org/10.2307/3001881}
+  http://doi.org/10.2307/3001881
 }
 \references{
   R. D. Cook and S. Weisberg (1999).

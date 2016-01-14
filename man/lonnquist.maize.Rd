@@ -33,12 +33,12 @@
   Mohring, Melchinger, Piepho. (2011).
   REML-Based Diallel Analysis.
   \emph{Crop Science}, 51, 470-478.
-  \url{http://doi.org/10.2135/cropsci2010.05.0272}
+  http://doi.org/10.2135/cropsci2010.05.0272
 
   C. O. Gardner and S. A. Eberhart. 1966.
   Analysis and Interpretation of the Variety Cross Diallel and Related
   Populations. \emph{Biometrics}, 22, 439-452.
-  \url{http://doi.org/10.2307/2528181}
+  http://doi.org/10.2307/2528181
 
 }
 

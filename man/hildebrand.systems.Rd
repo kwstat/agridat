@@ -31,13 +31,13 @@
   P. E. Hildebrand, 1984.
   Modified Stability Analysis of Farmer Managed, On-Farm Trials.
   \emph{Agronomy Journal}, 76, 271--274.
-  \url{https://doi.org/10.2134/agronj1984.00021962007600020023x}
+  https://doi.org/10.2134/agronj1984.00021962007600020023x
 }
 \references{
   H. P. Piepho, 1998.
   Methods for Comparing the Yield Stability of Cropping Systems.
   \emph{Journal of Agronomy and Crop Science}, 180, 193--213.
-  \url{http://doi.org/10.1111/j.1439-037X.1998.tb00526.x}
+  http://doi.org/10.1111/j.1439-037X.1998.tb00526.x
 }
 
 \examples{

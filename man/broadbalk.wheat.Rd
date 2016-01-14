@@ -53,11 +53,11 @@
 	\emph{Data: A Collection of Problems from Many Fields for the Student
 	  and Research Worker}.  Springer.
 
-  Retrieved from \url{http://lib.stat.cmu.edu/datasets/Andrews/}.
+  Retrieved from http://lib.stat.cmu.edu/datasets/Andrews/
 }
 \references{
   Broadbalk Winter Wheat Experiment.
-  \url{http://www.era.rothamsted.ac.uk/index.php?area=home&page=index&dataset=4}
+  http://www.era.rothamsted.ac.uk/index.php?area=home&page=index&dataset=4
 }
 \examples{
 

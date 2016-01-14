@@ -56,7 +56,7 @@
   HG. (1991). AMMI adjustment for statistical analysis of an
   international wheat yield trial.
   \emph{Theoretical and Applied Genetics}, 81, 27--37.
-  \url{http://doi.org/10.1007/BF00226108}
+  http://doi.org/10.1007/BF00226108
 
   Used with permission of Jose' Crossa.
 }
@@ -64,7 +64,7 @@
   Jean-Louis Laffont, Kevin Wright and Mohamed Hanafi (2013).
   Genotype + Genotype x Block of Environments (GGB) Biplots.
   \emph{Crop Science}, 53, 2332-2341.
-  \url{http://doi.org/10.2135/cropsci2013.03.0178}
+  http://doi.org/10.2135/cropsci2013.03.0178
 }
 
 \examples{

@@ -32,7 +32,7 @@
   Aastveit, A. H. and Martens, H. (1986).
   ANOVA interactions interpreted by partial least squares regression.
   \emph{Biometrics}, 42, 829--844.
-  \url{doi.org/10.2307/2530697}.
+  http://doi.org/10.2307/2530697
 
   Used with permission of Harald Martens.
 }
@@ -40,7 +40,7 @@
   J. Chadoeuf and J. B. Denis (1991).
   Asymptotic variances for the multiplicative interaction model.
   \emph{J. App. Stat.} 18, 331--353.
-  \url{doi.org/10.1080/02664769100000032}
+  http://doi.org/10.1080/02664769100000032
 }
 \examples{
 

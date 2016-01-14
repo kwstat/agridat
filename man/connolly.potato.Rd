@@ -46,7 +46,7 @@
   Inter-plot competition in yield trials of potatoes
   \emph{Solanum tuberosum L.} with single-drill plots.
   \emph{Annals of Applied Biology}, 123, 367-377.
-  \url{http://doi.org/10.1111/j.1744-7348.1993.tb04099.x}
+  http://doi.org/10.1111/j.1744-7348.1993.tb04099.x
   
   Used with permission of Iain Currie.
 }

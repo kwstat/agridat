@@ -2,7 +2,7 @@
 \alias{denis.missing}
 \docType{data}
 \title{
-Multi-environment trial with structured missing values
+  Multi-environment trial with structured missing values
 }
 \description{
   Grain yield was measured on 5 genotypes in 26 environments.  Missing
@@ -27,7 +27,7 @@ Multi-environment trial with structured missing values
 \references{
   H P Piepho, (1999) Stability analysis using the SAS system,
   \emph{Agron Journal}, 91, 154--160.
-  \url{http://doi.og/10.2134/agronj1999.00021962009100010024x}
+  http://doi.og/10.2134/agronj1999.00021962009100010024x
 }
 
 \examples{

@@ -26,7 +26,7 @@
 \source{
   Yates, Frank (1935) Complex experiments,
   \emph{Journal of the Royal Statistical Society Suppl}. 2, 181-247.
-  \url{http://doi.org/10.2307/2983638}
+  http://doi.org/10.2307/2983638
 }
 
 \references{

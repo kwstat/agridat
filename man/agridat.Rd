@@ -43,11 +43,18 @@ name                                  \tab dimensions \tab other \tab model \cr
 \link{mercer.mangold.uniformity}      \tab 10 x 20 \tab xy \tab \cr
 \link{mercer.wheat.uniformity}        \tab 25 x 20 \tab xy, 2 traits \tab spplot \cr
 \link{montgomery.wheat.uniformity}    \tab 14 x 16 \tab xy \tab lm \cr
+\link{moore.polebean.uniformity}      \tab 12 x 12 \tab xy \tab \cr
+\link{moore.bushbean.uniformity}      \tab 24 x 24 \tab xy \tab \cr
+\link{moore.sweetcorn.uniformity}      \tab 24 x 12 \tab xy \tab \cr
+\link{moore.carrots.uniformity}        \tab 24 x 12 \tab xy \tab \cr
+\link{moore.springcauliflower.uniformity} \tab 12 x 20 \tab xy \tab \cr
+\link{moore.fallcauliflower.uniformity}   \tab 12 x 20 \tab xy \tab \cr
 \link{nonnecke.corn.uniformity}       \tab 32 x 18 \tab xy, 3 loc \tab \cr
 \link{nonnecke.peas.uniformity}       \tab 15 x 18 \tab xy, 2 traits \tab \cr
 \link{odland.soybean.uniformity}      \tab 25 x 42 \tab xy \tab \cr
 \link{odland.soyhay.uniformity}       \tab 28 x 55 \tab xy \tab \cr
 \link{polson.safflower.uniformity}    \tab 52 x 33 \tab xy \tab smith\cr
+\link{sawyer.multi.uniformity}        \tab 8 x 6   \tab xy, 2 year \tab \cr
 \link{smith.beans1.uniformity}        \tab 18 x 12 \tab xy \tab \cr
 \link{smith.beans2.uniformity}        \tab 18 x 12 \tab xy \tab \cr
 \link{smith.beans3.uniformity}        \tab 16 x 15 \tab xy \tab \cr
@@ -350,7 +357,7 @@ electronic format, but mistakes are possible.  Please file a bug report.
   J. White and Frits van Evert. (2008).
   Publishing Agronomic Data.
   \emph{Agron J.} 100, 1396-1400.
-  \url{http://doi.org/10.2134/agronj2008.0080F}
+  http://doi.org/10.2134/agronj2008.0080F
 
 }
 

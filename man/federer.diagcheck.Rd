@@ -40,7 +40,7 @@
   Federer, Walter T. 1998. Recovery of interblock, intergradient, and
   intervariety information in incomplete block and lattice rectangle
   design experiments. \emph{Biometrics}, 54, 471--481.
-  \url{http://doi.org/10.2307/3109756}
+  http://doi.org/10.2307/3109756
 }
 \references{
   Walter T Federer and Russell D Wolfinger, 2003.

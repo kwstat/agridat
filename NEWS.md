@@ -15,10 +15,12 @@
 
 battese.survey, gartner.corn, giles.wheat, kenward.cattle, kreusler.maize,
 lessman.sorghum.uniformity, montgomery.wheat.uniformity,
+moore.polebean.uniformity, moore.bushbean.uniformity,
+moore.sweetcorn.uniformity, moore.carrots.uniformity,
+moore.springcauliflower.uniformity, moore.fallcauliflower.uniformity,
 nonnecke.corn.uniformity, nonnecke.peas.uniformity, onofri.winterwheat,
-polson.safflower.uniformity, sawyer.multi.uniformity,
-smith.beans1.uniformity, wheatley.carrot,
-wiedemann.safflower.uniformity
+polson.safflower.uniformity, sawyer.multi.uniformity, smith.beans1.uniformity,
+wheatley.carrot, wiedemann.safflower.uniformity
 
 ## Other
 
@@ -31,6 +33,8 @@ wiedemann.safflower.uniformity
 installed.
 * Improvements to titles in Rd pages.
 * Combined wassom.brome datasets into one.
+* Changed all hyperlinks to plain text (for faster package checking, avoiding re-direct
+  errors).
 
 # agridat 1.12 - Jun 2015
 
@@ -40,7 +44,6 @@ cochran.beets, cochran.lattice, jansen.apple, jansen.carrot
   
 ## Other
 
-* Changed Jstor links to be plain text (because the links re-direct).
 * Add graphics, grDevices, stats to Imports.
 
 # agridat 1.11 - Mar 2015

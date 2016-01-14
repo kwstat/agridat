@@ -49,7 +49,7 @@
   Piepho, HP (2003).
   Model-based mean adjustment in quantitative germplasm evaluation data.
   \emph{Genetic Resources and Crop Evolution}, 50, 281-290.
-  \url{http://doi.org/10.1023/A:1023503900759}
+  http://doi.org/10.1023/A:1023503900759
   
 }
 \examples{

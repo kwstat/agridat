@@ -1,0 +1,15 @@
+#+title: uniformity.org
+#+latex_header: \usepackage{wright-knit}
+
+R D Bose, 1935.
+Some soil-heterogeneity trials at Pusa and the size and shape of experimental plots. Indian Jour. Agr. Sci. 5 (5), 579-608.
+Not avail. Summary: http://digital.library.unt.edu/ark:/67531/metadc5082/m1/496/
+
+Moore, John Francis, 1952: A study of field plot technique with sprouting
+broccoli. Proc Amer Soc Hort Sci: 1-474
+Not avail. Summary: http://eurekamag.com/research/013/624/013624967.php
+
+Moore, John F and Darroch, JG, 1956.
+Field plot technique with Blue Lake pole beans, bush beans, carrots, sweet corn, spring and fall cauliflower.
+Washington Agricultural Experiment Stations, Institute of Agricultural Sciences, State College of Washington.
+Done.

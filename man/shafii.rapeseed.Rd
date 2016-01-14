@@ -2,7 +2,7 @@
 \alias{shafii.rapeseed}
 \docType{data}
 \title{
-  Rapeseed yield multi-environment trial, 3 years
+  Multi-environment trial of rapeseed
 }
 \description{
   Rapeseed yield multi-environment trial, 3 years
@@ -20,7 +20,7 @@
 }
 \details{
   SAS codes for the analysis can be found at
-  \url{http://www.uiweb.uidaho.edu/ag/statprog/ammi/}
+  http://www.uiweb.uidaho.edu/ag/statprog/ammi/
 
   The data are from the U.S. National Winter Rapeseed trials conducted
   in 1986, 1987, and 1988.  Trial locations included Georgia (GGA, TGA),
@@ -31,16 +31,18 @@
 
 }
 \source{
-  Electronic version retrieved from
-  \url{http://www.uiweb.uidaho.edu/ag/statprog/ammi/yld.data}.
-
-  Used with permission of Benjamin Price.
-}
-\references{
   Bahman Shafii and William J Price, 1998.
   Analysis of Genotype-by-Environment Interaction Using the
   Additive Main Effects and Multiplicative Interaction Model
   and Stability Estimates, \emph{JABES}, 3, 335--345.
+
+  Electronic version from:
+  http://www.uiweb.uidaho.edu/ag/statprog/ammi/yld.data
+
+  Used with permission of Benjamin Price.
+}
+\references{
+  None.
 }
 
 \examples{

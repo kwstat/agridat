@@ -32,7 +32,7 @@
   D. A. Bond (1966). Yield and components of yield in diallel crosses
   between inbred lines of winter beans (Viciafaba).
   \emph{The Journal of Agricultural Science}, 67, 325--336.
-  \url{http://doi.org/10.1017/S0021859600017329}
+  http://doi.org/10.1017/S0021859600017329
 }
 \references{
   Peter John, \emph{Statistical Design and Analysis of Experiments}, p. 85.

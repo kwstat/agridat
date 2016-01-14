@@ -30,9 +30,10 @@
   1925 and was not used in the Rothamsted summary statistics.  Note the
   summaries in the report are calibrated to acres.
 
-  The field is 8 plots wide, 8 plots long.  The plots are drawn as
-  squares .098 acres each, but the plot dimensions are not actually
-  given.  
+  The field is 8 plots wide, 6 plots long.  The plots are drawn in the
+  source document as squares .098 acres each, but the plot dimensions
+  are not actually given.
+  
 }
 \source{
   Rothamsted Experimental Station Report 1925-26.

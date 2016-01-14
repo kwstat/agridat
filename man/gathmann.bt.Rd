@@ -26,7 +26,7 @@
 \source{
   L. A. Hothorn, 2005.
   Evaluation of Bt-Maize Field Trials by a Proof of Safety.
-  \url{http://www.seedtest.org/upload/cms/user/presentation7Hothorn.pdf}
+  http://www.seedtest.org/upload/cms/user/presentation7Hothorn.pdf
 
   Used with permission of Achim Gathmann.
 }

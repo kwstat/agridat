@@ -37,7 +37,7 @@
   within winter wheat.
   Bulletin of Entomological Research, 89: 499-513.  Figure 3 (large
   grid in 1996).
-  \url{http://doi.org/10.1017/S0007485399000656}
+  http://doi.org/10.1017/S0007485399000656
   
   Used with permission of John Holland.
 }

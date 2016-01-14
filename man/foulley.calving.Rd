@@ -36,7 +36,7 @@
   JL Foulley, D Gianola (1996).
   Statistical Analysis of Ordered Categorical Data via a Structured
   Heteroskedastic Threshold Model. \emph{Genet Sel Evol}, 28, 249--273.
-  \url{http://doi.org/10.1051/gse:19960304}
+  http://doi.org/10.1051/gse:19960304
   
   Used with permission of Jean-Louis Foulley.
 }

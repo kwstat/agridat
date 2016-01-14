@@ -37,7 +37,7 @@
   Computing heritability and selection response from unbalanced
   plant breeding trials,
   \emph{Genetics}, 177, 1881-1888.
-  \url{http://doi.org/10.1534/genetics.107.074229}
+  http://doi.org/10.1534/genetics.107.074229
 }
 
 \examples{

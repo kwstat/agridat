@@ -54,8 +54,8 @@
   cost of $0.4348/kg.
   
   The corners of the field in 1999 are:
-  \url{https://www.google.com/maps/place/-33.0501258,-63.8488636}
-  \url{https://www.google.com/maps/place/-33.05229635,-63.84181819}
+  https://www.google.com/maps/place/-33.0501258,-63.8488636
+  https://www.google.com/maps/place/-33.05229635,-63.84181819
 
   Anselin et al. found a significant response to nitrogen for slope.
   However, Bongiovanni and Lowenberg-DeBoer (2002) found that slope
@@ -65,7 +65,7 @@
 \source{
 
   The Las Rosas data files were obtained from
-  \url{https://geodacenter.asu.edu/sdata}
+  https://geodacenter.asu.edu/sdata
   and converted from ESRI shape files to a flat data.frame.
 
   Used with permission of the ASU GeoDa Center.

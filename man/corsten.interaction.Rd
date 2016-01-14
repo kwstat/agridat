@@ -1,7 +1,9 @@
 \name{corsten.interaction}
 \alias{corsten.interaction}
 \docType{data}
-\title{Corn yield in multi-environment trial}
+\title{
+  Multi-environment trial of corn
+}
 \description{
   The data is the average yield (kg/acre) of 20 genotypes of corn at 7
   locations.
@@ -27,7 +29,7 @@
   L C A Corsten and J B Denis, (1990).
   Structuring Interaction in Two-Way Tables By Clustering.
   \emph{Biometrics}, 46, 207--215. Table 1.
-  \url{http://doi.org/10.2307/2531644}
+  http://doi.org/10.2307/2531644
 
   Used with permission of Jean-Baptiste Denis.
 }

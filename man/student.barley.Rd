@@ -2,7 +2,7 @@
 \alias{student.barley}
 \docType{data}
 \title{
-  Barley yield of two varieties in a multi-environment trial
+  Multi-environment trial of barley
 }
 \description{
   Yield for two varieties of barley grown at 51 locations in the years

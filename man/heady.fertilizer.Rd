@@ -41,7 +41,7 @@
   Crop Response Surfaces and Economic Optima in Fertilizer Use.
   Agricultural Experiment Station, Iowa State College. Research bulletin
   424.  Pages 330-332.
-  \url{https://lib.dr.iastate.edu/cgi/viewcontent.cgi?filename=12&article=1032&context=ag_researchbulletins&type=additional}
+  https://lib.dr.iastate.edu/cgi/viewcontent.cgi?filename=12&article=1032&context=ag_researchbulletins&type=additional
 }
 
 \references{
@@ -49,7 +49,7 @@
   A two nutrient-response function with determination of economic optima
   for the rate and grade of fertilizer for alfalfa.
   \emph{Soil Science Society of America Journal}, 20, 240-246.
-  \url{https://doi.org/10.2136/sssaj1956.03615995002000020025x}
+  https://doi.org/10.2136/sssaj1956.03615995002000020025x
 }
 
 \examples{

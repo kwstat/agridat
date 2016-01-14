@@ -35,7 +35,7 @@
   of field experiments.
   \emph{Journal of Agricultural, Biological, and Environmental
     Statistics}, 2, 269-293.
-  \url{http://doi.org/10.2307/1400446}
+  http://doi.org/10.2307/1400446
 }
 
 \references{

@@ -45,7 +45,7 @@ season most plants were nearly dead.
 Note, in plant-breeding, it is common to use a "breeder code" for each genotype,
 which after several years of testing is changed to a registered variety name.
 For this R package, the Potato Pedigree Database,
-\url{http://www.plantbreeding.wur.nl/potatopedigree/reverselookup.php},
+http://www.plantbreeding.wur.nl/potatopedigree/reverselookup.php,
 was used to change breeder codes (in early testing) to the variety names
 used in later testing.  For example, among the changes made were the
 following:

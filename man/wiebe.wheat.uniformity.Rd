@@ -36,7 +36,7 @@
 \source{
   Wiebe, G.A. 1935. Variation and Correlation in Grain Yield among 1,500 Wheat
   Nursery Plots, \emph{Journal of Agricultural Research}, 50, 331-357.
-  \url{http://naldc.nal.usda.gov/download/IND43968632/PDF}
+  http://naldc.nal.usda.gov/download/IND43968632/PDF
 }
 
 \references{

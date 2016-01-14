@@ -36,7 +36,7 @@
   Variation in Nitrogen and Yield.
   U.S. Dept of Agriculture, Bureau of Plant Industry, Bulletin 269.
   Figure 10, page 37.
-  \url{http://doi.org/10.5962/bhl.title.43602}
+  http://doi.org/10.5962/bhl.title.43602
 }
 
 \references{

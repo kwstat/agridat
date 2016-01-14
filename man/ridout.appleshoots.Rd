@@ -46,7 +46,7 @@
 \references{
 
   SAS. Fitting Zero-Inflated Count Data Models by Using PROC GENMOD.
-  \url{support.sas.com/rnd/app/examples/stat/GENMODZIP/roots.pdf}
+  support.sas.com/rnd/app/examples/stat/GENMODZIP/roots.pdf
 
 }
 

@@ -31,7 +31,7 @@
   R. A. Kempton and C. W. Howes (1981).
   The use of neighbouring plot values in the analysis of variety trials.
   \emph{Applied Statistics}, 30, 59--70.
-  \url{http://doi.org/10.2307/2346657}
+  http://doi.org/10.2307/2346657
 }
 \references{
   McCullagh, P. and Clifford, D., (2006).

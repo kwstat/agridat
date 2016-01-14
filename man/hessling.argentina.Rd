@@ -37,7 +37,7 @@
   N. A. Hessling, 1922.
   Relations between the weather and the yield of wheat in the
   Argentine republic, \emph{Monthly Weather Review}, 50, 302-308.
-  \url{http://doi.org/10.1175/1520-0493(1922)50<302:RBTWAT>2.0.CO;2}
+  http://doi.org/10.1175/1520-0493(1922)50<302:RBTWAT>2.0.CO;2
 }
 \examples{
 

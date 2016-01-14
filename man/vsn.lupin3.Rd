@@ -24,7 +24,7 @@
 }
 \source{
   Multi-Environment Trials - Lupins.
-  \url{http://www.vsni.co.uk/software/asreml/htmlhelp/asreml/xlupin.htm}
+  http://www.vsni.co.uk/software/asreml/htmlhelp/asreml/xlupin.htm
 
   Used with permission of Arthur Gilmour, Brian Cullis, Robin Thompson.
 }

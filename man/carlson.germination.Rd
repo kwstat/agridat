@@ -26,7 +26,7 @@
   RE. (1983).
   Alfalfa Seed Germination in Antiobiotic Agar Containing NaCl.
   \emph{Crop science}, 23, 882-885.
-  \url{http://doi.org/10.2135/cropsci1983.0011183X002300050016x}.
+  http://doi.org/10.2135/cropsci1983.0011183X002300050016x
 }
 
 \examples{

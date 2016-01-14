@@ -56,7 +56,7 @@
   Effects of plot size, plot shape, and number of replications on the
   efficacy of bean yield trials.
   \emph{Hilgardia}, 28, 43-63.
-  \url{http://doi.org/10.3733/hilg.v28n02p043}
+  http://doi.org/10.3733/hilg.v28n02p043
   
 }
 \references{

@@ -28,10 +28,10 @@
   Bayesian Analysis of Agricultural Field Experiments,
   \emph{Journal of the Royal Statistical Society: Series B (Statistical
     Methodology)},61, 691--746. Table 1.
-  \url{http://doi.org/10.1111/1467-9868.00201}
+  http://doi.org/10.1111/1467-9868.00201
 
   Retrieved from
-  \url{http://web.archive.org/web/19991008143232/www.stat.duke.edu/~higdon/trials/elbatan.dat}.
+  http://web.archive.org/web/19991008143232/www.stat.duke.edu/~higdon/trials/elbatan.dat
 
   Used with permission of David Higdon.
 }

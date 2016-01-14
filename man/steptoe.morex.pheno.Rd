@@ -50,7 +50,8 @@ Seed from a single head of each parent was used to create the F1, from which a
 set of 150 lines was developed.
 
 Phenotypic values for the parents Steptoe and Morex are here:
-\url{http://wheat.pw.usda.gov/ggpages/SxM/parental_values.html}
+http://wheat.pw.usda.gov/ggpages/SxM/parental_values.html
+
 There are 16 locations, The average across locations is in column 17.  Not all
 traits were collected at every location.  At each location, all 150 lines were
 included in block 1, a random subset of 50 lines was used in block 2.
@@ -65,14 +66,17 @@ Grain Protein (percent),
 Grain Yield (Mt/Ha).
 
 Phenotypic values of the 150 lines in the F1 population are here:
-\url{http://wheat.pw.usda.gov/ggpages/SxM/phenotypes.html}
+http://wheat.pw.usda.gov/ggpages/SxM/phenotypes.html
+
 Each trait is in a different file, in which each block of numbers represents
 one location.
 
 The 223-markers Steptoe/Morex base map is here:
-\url{http://wheat.pw.usda.gov/ggpages/SxM/smbasev2.map}.
+http://wheat.pw.usda.gov/ggpages/SxM/smbasev2.map
+.
 The data for these markers on the 150 lines is
-\url{http://wheat.pw.usda.gov/ggpages/SxM/smbasev2.mrk}.
+http://wheat.pw.usda.gov/ggpages/SxM/smbasev2.mrk
+
 These were hand-assembled (e.g. marker distances were
 cumulated to marker positions) into a .csv file which was then imported into
 R using \code{qtl::read.cross}.  The class was manually changed from
@@ -81,7 +85,7 @@ c('bc','cross') to c('dh','cross').
 The marker data is coded as A = Steptoe, B = Morex, - = missing.
 
 The pedigrees for the 150 lines are found here:
-\url{http://wheat.pw.usda.gov/ggpages/SxM/pedigrees.html}
+http://wheat.pw.usda.gov/ggpages/SxM/pedigrees.html
 
 }
 
@@ -91,7 +95,7 @@ The pedigrees for the 150 lines are found here:
 
   The Steptoe x Morex Barley Mapping Population.
   Map: Version 2, August 1, 1995
-  \url{http://wheat.pw.usda.gov/ggpages/SxM}.  Accessed Jan 2015.
+  http://wheat.pw.usda.gov/ggpages/SxM.  Accessed Jan 2015.
 
   Data provided by the United States Department of Agriculture.
 }

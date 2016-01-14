@@ -40,7 +40,7 @@
   Yield improvement and associated characteristics of some Australian
   spring wheat cultivars introduced between 1860 and 1982.
   \emph{Australian Journal of Agricultural Research}, 40(3), 457--472.
-  \url{http://www.publish.csiro.au/nid/43/issue/1237.htm}
+  http://www.publish.csiro.au/nid/43/issue/1237.htm
 
   Used with permission of Mario D'Antuono and CSIRO Publishing.
 

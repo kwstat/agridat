@@ -31,7 +31,7 @@
   Julian Besag and Rob Kempton (1986).
   Statistical Analysis of Field Experiments Using Neighbouring Plots.
   \emph{Biometrics}, 42, 231-251.
-  \url{http://doi.org/10.2307/2531047}
+  http://doi.org/10.2307/2531047
 }
 \references{
   None.

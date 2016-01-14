@@ -51,7 +51,7 @@
   Interpreting Treatment x Environment Interaction in Agronomy Trials.
   \emph{Agron. J.}, 93, 949-960.  Table A1, A3.
   Doi: 10.2134/agronj2001.934949x .
-  \url{https://doi.org/10.2134/agronj2001.934949x}
+  https://doi.org/10.2134/agronj2001.934949x
 
   Used with permission of Jose Crossa.
 }

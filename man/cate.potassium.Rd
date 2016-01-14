@@ -28,9 +28,9 @@
 \source{
   Cate, R.B. and Nelson, L.A. (1971).
   A simple statistical procedure for partitioning soil test correlation
-  data into two classes. \emph{Soil Science Society of America Journal},
-  35, 658--660.
-  \url{http://doi.org/10.2136/sssaj1971.03615995003500040048x}
+  data into two classes.
+  \emph{Soil Science Society of America Journal}, 35, 658--660.
+  http://doi.org/10.2136/sssaj1971.03615995003500040048x
 }
 
 \examples{

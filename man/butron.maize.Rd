@@ -2,7 +2,7 @@
 \alias{butron.maize}
 \docType{data}
 \title{
-  Maize yields in a multi-environment trial.  Pedigree included.
+  Multi-environment trial of maize with pedigrees
 }
 \description{
   Maize yields in a multi-environment trial.  Pedigree included.
@@ -48,7 +48,7 @@
   Yield evaluation of maize cultivars across environments with different
   levels of pink stem borer infestation.
   \emph{Crop science}, 44, 741-747.
-  \url{http://doi.org/10.2135/cropsci2004.7410}
+  http://doi.org/10.2135/cropsci2004.7410
 
   Used with permission of Ana Butron.
 }

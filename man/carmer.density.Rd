@@ -29,7 +29,7 @@
   S G Carmer and J A Jackobs (1965).
   An Exponential Model for Predicting Optimum Plant Density and Maximum
   Corn Yield. \emph{Agronomy Journal}, 57, 241--244.
-  \url{http://doi.org/10.2134/agronj1965.00021962005700030003x}
+  http://doi.org/10.2134/agronj1965.00021962005700030003x
 }
 
 \examples{

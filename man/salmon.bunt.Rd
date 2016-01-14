@@ -40,7 +40,7 @@
   S.C. Salmon, 1938.
   Generalized standard errors for evaluating bunt experiments with wheat.
   \emph{Agronomy Journal}, 30, 647--663.  Table 1.
-  \url{http://doi.org/10.2134/agronj1938.00021962003000080003x}
+  http://doi.org/10.2134/agronj1938.00021962003000080003x
 }
 \references{
   Salmon says the data came from:
@@ -48,7 +48,7 @@
   H. A. Rodenhiser and C. S. Holton (1937).
   Physiologic races of Tilletia tritici and T. levis.
   \emph{Journal of Agricultural Research}, 55, 483-496.
-  \url{naldc.nal.usda.gov/download/IND43969050/PDF}.
+  naldc.nal.usda.gov/download/IND43969050/PDF
 }
 
 \examples{

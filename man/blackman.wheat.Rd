@@ -36,7 +36,7 @@
   Response of semi-dwarf and conventional winter wheat varieties to the
   application of nitrogen fertilizer.
   \emph{The Journal of Agricultural Science}, 90, 543--550.
-  \url{http://doi.org/10.1017/S0021859600056070}
+  http://doi.org/10.1017/S0021859600056070
 }
 \references{
   Gower, J. and Lubbe, S.G. and Gardner, S. and Le Roux, N. (2011).

@@ -91,12 +91,12 @@
   H V Harlan and P R Cowan and Lucille Reinbach. (1935).
   \emph{Yields of barley varieties in the United States and Canada, 1927-1931}.
   United States Dept of Agriculture.
-  \url{http://naldc.nal.usda.gov/download/CAT86200440/PDF}.
+  http://naldc.nal.usda.gov/download/CAT86200440/PDF
 
   Gustav A. Wiebe, Philip Russell Cowan, Lucille Reinbach-Welch. (1940).
   \emph{Yields of barley varieties in the United States and Canada, 1932-36}.
   United States Dept of Agriculture.
-  \url{http://books.google.com/books?id=OUfxLocnpKkC&pg=PA19}.
+  http://books.google.com/books?id=OUfxLocnpKkC&pg=PA19
 }
 \references{
   Immer, R. F. and H. K. Hayes and LeRoy Powers. (1934).
@@ -108,7 +108,7 @@
 
   Kevin Wright. (2013).  Revisiting Immer's Barley Data.
   \emph{The American Statistitician}, 67, 129-133.
-  \url{http://doi.org/10.1080/00031305.2013.801783}.
+  http://doi.org/10.1080/00031305.2013.801783
 }
 \examples{
 

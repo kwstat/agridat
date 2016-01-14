@@ -31,7 +31,7 @@
   Li, HW and Meng, CJ and Liu, TN. 1936.
   Field Results in a Millet Breeding Experiment.
   \emph{Agronomy Journal}, 28, 1-15.  Table 1.
-  \url{http://doi.org/10.2134/agronj1936.00021962002800010001x}
+  http://doi.org/10.2134/agronj1936.00021962002800010001x
 }
 
 \examples{

@@ -68,19 +68,19 @@ West (1920) give all temperature in Celsius.
   
   A. Prehn & G. Becker. (1878)
   \emph{Jahresbericht fur Agrikultur-chemie}, Vol 20, p. 216-220.
-  \url{https://books.google.com/books?id=ZfxNAAAAYAAJ&pg=216}
+  https://books.google.com/books?id=ZfxNAAAAYAAJ&pg=216
 
   The 1877 data are from:
   
   A. Kreusler, A. Prehn, Hornberger. (1880)
   \emph{Jahresbericht fur Agrikultur-Chemie}, Vol 21, p 248.
-  \url{https://books.google.com/books?id=U3IYAQAAIAAJ&pg=248}
+  https://books.google.com/books?id=U3IYAQAAIAAJ&pg=248
 
   The 1878 data are from:
   
   U. Kreusler, A. Prehn, R. Hornberger. (1880).
   \emph{Jahresbericht fur Agrikultur-Chemie}, Vol 22, p. 211.
-  \url{https://books.google.com/books?id=9HIYAQAAIAAJ&pg=211}
+  https://books.google.com/books?id=9HIYAQAAIAAJ&pg=211
 
   Dry plant weight and leaf area for all genotypes and years are
   repeated by:

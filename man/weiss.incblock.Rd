@@ -36,7 +36,7 @@
  Balanced Incomplete Block and Lattice Square Designs for Testing Yield
  Differences Among Large Numbers of Soybean Varieties.
  \emph{Agricultural Research Bulletins, Nos. 251-259}.
- \url{http://lib.dr.iastate.edu/ag_researchbulletins/24/}
+ http://lib.dr.iastate.edu/ag_researchbulletins/24/
 }
 
 \examples{

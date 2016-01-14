@@ -36,7 +36,7 @@
   \emph{J. of Agricultural Science}, 136, 129--140.
 
   Retrieved from
-  \url{http://www.ma.hw.ac.uk/~iain/research/JAgSciData/data/Trial1.dat}
+  http://www.ma.hw.ac.uk/~iain/research/JAgSciData/data/Trial1.dat
 
   Used with permission of Iain Currie.
 }

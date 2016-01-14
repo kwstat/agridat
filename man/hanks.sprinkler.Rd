@@ -35,7 +35,7 @@
   Statistical Analysis of Results from Irrigation Experiments Using the
   Line-Source Sprinkler System.
   \emph{Soil Science Society of America Journal}, 44, 886-888.
-  \url{http://doi.org/10.2136/sssaj1980.03615995004400040048x}
+  http://doi.org/10.2136/sssaj1980.03615995004400040048x
 }
 \references{
   Johnson, D. E., Chaudhuri, U. N., and Kanemasu, E. T. (1983).
@@ -50,7 +50,7 @@
     Disciplines, Southern Cooperative Series Bulletin No. 343}, 104-122.
 
   SAS Stat User's Guide.
-  \url{http://support.sas.com/documentation/cdl/en/statug/63347/HTML/default/viewer.htm#statug_mixed_sect038.htm}
+  http://support.sas.com/documentation/cdl/en/statug/63347/HTML/default/viewer.htm#statug_mixed_sect038.htm
 }
 
 \examples{

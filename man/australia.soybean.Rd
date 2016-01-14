@@ -73,7 +73,7 @@ been corrected.
   data illustrated with a plant breeding trial. Chapman and Hall/CRC.
 
   Retrieved from:
-  \url{http://three-mode.leidenuniv.nl/data/soybeaninf.htm}.
+  http://three-mode.leidenuniv.nl/data/soybeaninf.htm
 
   Used with permission of Kaye Basford, Pieter Kroonenberg.
 }

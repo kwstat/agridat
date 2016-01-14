@@ -41,7 +41,7 @@
   Bayesian statistical approaches to compositional analyses of transgenic
   crops 2. Application and validation of informative prior distributions.
   \emph{Regulatory Toxicology and Pharmacology}, 65, 251-258.
-  \url{https://doi.org/10.1016/j.yrtph.2012.12.002}.
+  https://doi.org/10.1016/j.yrtph.2012.12.002
 
   Data retrieved from the Supplemental Information of this source.
 }

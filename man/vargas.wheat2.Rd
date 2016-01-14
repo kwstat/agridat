@@ -2,7 +2,7 @@
 \alias{vargas.wheat2}
 \docType{data}
 \title{
-  Wheat yields for a multi-environment trial and environmental covariates
+  Multi-environment trial of wheat with environmental covariates
 }
 \description{
   The yield of 8 wheat genotypes was measured in 21 low-humidity

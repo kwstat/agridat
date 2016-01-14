@@ -2,7 +2,7 @@
 \alias{gomez.multilocsplitplot}
 \docType{data}
 \title{
-Rice multilocation Split-Plot
+  Multi-environment trial of rice, split-plot design
 }
 \description{
   Grain yield was measured at 3 locations with 3 reps per location.

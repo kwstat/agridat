@@ -50,7 +50,7 @@
   Size of Plat and Number of Replications in Field Experiments with
   Soybeans.
   \emph{Agronomy Journal}, 20, 93--108.
-  \url{http://doi.org/10.2134/agronj1928.00021962002000020002x}
+  http://doi.org/10.2134/agronj1928.00021962002000020002x
 }
 
 \examples{

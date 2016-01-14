@@ -2,7 +2,7 @@
 \alias{theobald.barley}
 \docType{data}
 \title{
-  Barley yields at multiple locs, years, fertilizer levels
+  Multi-environment trial of barley with multiple years, fertilizer levels
 }
 \description{
   Barley yields at multiple locs, years, fertilizer levels

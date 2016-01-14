@@ -47,12 +47,12 @@
   A New Procedure for the Analysis of Early Generation Variety Trials.
   \emph{Journal of the Royal Statistical Society. Series C (Applied
     Statistics)}, 38, 361-375.
-  \url{http://doi.org/10.2307/2348066}
+  http://doi.org/10.2307/2348066
 }
 \references{
 
   Unreplicated early generation variety trial in Wheat.
-  \url{http://www.vsni.co.uk/software/asreml/htmlhelp/asreml/xwheat.htm}.
+  http://www.vsni.co.uk/software/asreml/htmlhelp/asreml/xwheat.htm
 }
 
 \examples{

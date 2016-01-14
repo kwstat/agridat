@@ -33,7 +33,7 @@
 \source{
   Mercer, WB and Hall, AD, 1911. The experimental error of field trials
   \emph{The Journal of Agricultural Science}, 4, 107-132. Table 1.
-  \url{http://doi.org/10.1017/S002185960000160X}
+  http://doi.org/10.1017/S002185960000160X
 }
 
 \references{
@@ -41,7 +41,7 @@
   Evidence for conformal invariance of crop yields,
   \emph{Proceedings of the Royal Society A: Mathematical, Physical and
     Engineering Science}, 462, 2119--2143.
-  \url{http://doi.org/10.1098/rspa.2006.1667}
+  http://doi.org/10.1098/rspa.2006.1667
 }
 
 \examples{

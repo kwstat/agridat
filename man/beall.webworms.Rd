@@ -37,7 +37,7 @@
   The fit and significance of contagious distributions when applied to
   observations on larval insects.
   \emph{Ecology}, 21, 460--474. Table 6.
-  \url{http://doi.org/10.2307/1930285}
+  http://doi.org/10.2307/1930285
 }
 
 \examples{

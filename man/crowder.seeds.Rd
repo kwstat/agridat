@@ -35,7 +35,7 @@
 
   Crowder, M.J., 1978. Beta-binomial anova for proportions.
   \emph{Appl. Statist.}, 27, 34-37.
-  \url{http://doi.org/10.2307/2346223}
+  http://doi.org/10.2307/2346223
 
 }
 
@@ -44,7 +44,7 @@
   N. E. Breslow and D. G. Clayton. 1993.
   Approximate inference in generalized linear mixed models.
   \emph{Journal of the American Statistical Association}, 88:9-25.
-  \url{http://doi.org/10.2307/2290687}
+  http://doi.org/10.2307/2290687
   
   Y. Lee and J. A. Nelder. 1996.
   Hierarchical generalized linear models with discussion.

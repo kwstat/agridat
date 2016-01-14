@@ -46,7 +46,7 @@
 \source{
   United States Department of Agriculture,
   National Agricultural Statistics Service.
-  \url{http://quickstats.nass.usda.gov/}
+  http://quickstats.nass.usda.gov/
 }
 
 \examples{

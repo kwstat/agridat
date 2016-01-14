@@ -29,7 +29,7 @@
   Forkman, Johannes and Piepho, Hans-Peter. (2014).
   Parametric bootstrap methods for testing multiplicative terms in GGE
   and AMMI models. \emph{Biometrics}, 70(3), 639-647.
-  \url{http://doi.org/10.1111/biom.12162}
+  http://doi.org/10.1111/biom.12162
 }
 
 \examples{

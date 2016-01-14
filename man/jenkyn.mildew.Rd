@@ -32,7 +32,7 @@
   Incorporating Overlap Effects from Neighboring Units into Response
   Surface Models.
   \emph{Appl Statist}, 29, 128--134.
-  \url{http://doi.org/10.2307/2986297}
+  http://doi.org/10.2307/2986297
 }
 \references{
   Maria Durban, Christine Hackett, Iain Currie.

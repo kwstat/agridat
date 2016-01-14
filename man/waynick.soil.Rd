@@ -28,7 +28,7 @@
   Waynick, Dean, and Sharp, Leslie. (1918).
   Variability in soils and its significance to past and future soil investigations, I-II.
   University of California press.
-  \url{http://archive.org/details/variabilityinsoi45wayn}
+  http://archive.org/details/variabilityinsoi45wayn
 }
 
 \examples{

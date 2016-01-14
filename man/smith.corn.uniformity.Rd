@@ -96,12 +96,12 @@
 \source{
   Smith, L.H. 1910. Plot arrangement for variety experiment with corn.
   \emph{Agronomy Journal}, 1, 84--89.
-  \url{http://books.google.com/books?id=mQT0AAAAMAAJ&pg=PA84}
+  http://books.google.com/books?id=mQT0AAAAMAAJ&pg=PA84
 
   Harris, J.A. 1920. Practical universality of field heterogeneity as a factor
   influencing plot yields. \emph{Journal of Agricultural Research},
   19, 279--314.
-  \url{http://books.google.com/books?id=jyEXAAAAYAAJ&pg=PA279}
+  http://books.google.com/books?id=jyEXAAAAYAAJ&pg=PA279
 }
 
 \examples{

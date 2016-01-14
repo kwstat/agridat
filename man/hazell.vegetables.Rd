@@ -29,7 +29,7 @@
   A linear alternative to quadratic and semivariance programming for farm planning
   under uncertainty.
   \emph{Am. J. Agric. Econ.}, 53, 53-62.
-  \url{http://doi.org/10.2307/3180297}
+  http://doi.org/10.2307/3180297
 }
 \references{
   Carlos Romero, Tahir Rehman. (2003).
