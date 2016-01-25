@@ -39,6 +39,7 @@
   Genotype x strain interactions for resistance to Fusarium head blight
   caused by Fusarium culmorum in winter wheat.
   \emph{Theoretical and Applied Genetics}, 81, 239--244. Table 1.
+  http://doi.org/10.1007/BF00215729
 
   Used with permission of Fred van Eeuwijk.
 

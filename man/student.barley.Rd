@@ -46,8 +46,10 @@
   factor that was used.
 }
 \source{
-  Student. 1923. On Testing Varieties of Cereals.
+  Student. 1923.
+  On Testing Varieties of Cereals.
   \emph{Biometrika}, 15, 271--293.
+  http://doi.org/10.1093/biomet/15.3-4.271
 }
 \references{
   R A Kempton and P N Fox, 1997.

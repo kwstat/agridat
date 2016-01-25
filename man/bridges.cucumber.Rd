@@ -11,11 +11,11 @@
 \format{
   A data frame with 32 observations on the following 5 variables.
   \describe{
-    \item{\code{loc}}{Loc factor}
-    \item{\code{gen}}{Cultivar factor}
-    \item{\code{row}}{Row position}
-    \item{\code{col}}{Column position}
-    \item{\code{yield}}{Weight of marketable fruit per plot}
+    \item{\code{loc}}{loc factor}
+    \item{\code{gen}}{genotype/cultivar factor}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
+    \item{\code{yield}}{weight of marketable fruit per plot}
   }
 }
 \details{
@@ -23,6 +23,8 @@
   were grown in a latin square design at Clemson, SC, and Tifton, GA.
 
   Separate variances are modeled each location.
+
+  Plot dimensions are not given.
 }
 \source{
   William Bridges, 1989. Analysis of a plant breeding experiment with
@@ -40,8 +42,10 @@ dat <- bridges.cucumber
 dat <- transform(dat, rowf=factor(row), colf=factor(col))
 
 if(require(desplot)){
-desplot(yield~col*row|loc, data=dat, text=gen, cex=1,
-        main="bridges.cucumber")
+  desplot(yield~col*row|loc, data=dat,
+          aspect=1, # unknown
+          text=gen, cex=1,
+          main="bridges.cucumber")
 }
 
 \dontrun{

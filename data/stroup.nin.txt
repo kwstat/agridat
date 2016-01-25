@@ -1,4 +1,4 @@
-gen	rep	yield	x	y
+gen	rep	yield	col	row
 Lancer	NA	NA	1	1
 Lancer	NA	NA	2	1
 Lancer	NA	NA	3	1

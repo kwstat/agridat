@@ -2,22 +2,22 @@
 \alias{gomez.groupsplit}
 \docType{data}
 \title{
-  Rice group balanced split-plot design
+  Group balanced split-plot design in rice
 }
 \description{
-  Group balanced split-plot design
+  Group balanced split-plot design in rice
 }
 
 \format{
   A data frame with 270 observations on the following 7 variables.
   \describe{
-    \item{\code{x}}{Column ordinate}
-    \item{\code{y}}{Row ordinate}
-    \item{\code{rep}}{Replicate factor, 3 levels}
-    \item{\code{fert}}{Fertilizer factor, 2 levels}
-    \item{\code{gen}}{Genotype factor, 45 levels}
-    \item{\code{group}}{Grouping (genotype) factor, 3 levels}
-    \item{\code{yield}}{Yield of rice}
+    \item{\code{col}}{column ordinate}
+    \item{\code{row}}{row ordinate}
+    \item{\code{rep}}{replicate factor, 3 levels}
+    \item{\code{fert}}{fertilizer factor, 2 levels}
+    \item{\code{gen}}{genotype factor, 45 levels}
+    \item{\code{group}}{grouping (genotype) factor, 3 levels}
+    \item{\code{yield}}{yield of rice}
   }
 }
 \details{
@@ -39,8 +39,9 @@ dat <- gomez.groupsplit
 
 # Gomez figure 3.10.  Obvious fert and group effects
 if(require(desplot)){
-desplot(group~x*y, dat, out1=rep, col=fert, text=gen,
-        main="gomez.groupsplit")
+  desplot(group ~ col*row, dat,
+          out1=rep, col=fert, text=gen,
+          main="gomez.groupsplit")
 }
 
 # Gomez table 3.19 (not partitioned by group)

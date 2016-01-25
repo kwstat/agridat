@@ -36,6 +36,8 @@
   Wolfinger, R.D. and Kass, R.E., 2000.
   Nonconjugate Bayesian analysis of variance component models,
   \emph{Biometrics}, 56, 768--774.
+  http://doi.org/10.1111/j.0006-341X.2000.00768.x
+  
 }
 
 \examples{

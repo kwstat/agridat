@@ -11,8 +11,8 @@
 \format{
   A data frame with 576 observations on the following 3 variables.
   \describe{
-    \item{\code{row}}{row number, 1-96}
-    \item{\code{col}}{column number, 1-6}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
     \item{\code{yield}}{yield of potatoes per plot}
   }
 }

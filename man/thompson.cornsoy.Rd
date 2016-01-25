@@ -28,9 +28,8 @@
   }
 }
 \details{
-  Note: The Iowa corn data has sometimes been
-  identified (in other sources) as the "Iowa wheat" data,
-  but this is incorrect.
+  Note: The Iowa corn data has sometimes been identified (in other
+  sources) as the "Iowa wheat" data, but this is incorrect.
 
   The 'year' variable affects yield through (1) improvements in
   plant genetics (2) changes in management techniques such as

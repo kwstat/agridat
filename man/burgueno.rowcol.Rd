@@ -20,13 +20,16 @@
 }
 
 \details{
-  A field experiment with two contiguous replicates in 8 rows, 16 columns.
+  A field experiment with two contiguous replicates in 8 rows, 16
+  columns.
+
+  The plot size is not given.
 }
 
 \source{
   J Burgueno, A Cadena, J Crossa, M Banziger, A Gilmour, B Cullis. 2000.
   \emph{User's guide for spatial analysis of field variety trials using
-    ASREML}.  CIMMYT.
+    ASREML}.  CIMMYT.  
 
   Electronic version of the data obtained from CropStat software.
 
@@ -42,8 +45,9 @@ dat <- burgueno.rowcol
 # Two contiguous reps in 8 rows, 16 columns
 if(require(desplot)){
   desplot(yield ~ col*row, data=dat,
-          out1=rep, main="burgueno.rowcol",
-          text=gen, shorten="none", cex=.75)
+          out1=rep, aspect=1, # unknown aspect
+          text=gen, shorten="none", cex=.75,
+          main="burgueno.rowcol")
 }
 
 if(require(lme4) && require(lucid)){

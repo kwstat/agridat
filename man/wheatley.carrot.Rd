@@ -22,7 +22,8 @@
 }
 \details{
   
-  In 1964 an experiment was conducted with microplots to evaluate the effectiveness of treatments against carrot fly larvae.
+  In 1964 an experiment was conducted with microplots to evaluate the
+  effectiveness of treatments against carrot fly larvae.
 
   Famoye (1995) used the same data to fit a generalized binomial regression model.
   Hardin & Hilbe also fit a generalized binomial model.

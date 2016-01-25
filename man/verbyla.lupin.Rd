@@ -65,6 +65,7 @@ Myallie \tab 1995\cr
   The analysis of designed experiments and longitudinal data by using
   smoothing splines. 
   \emph{Appl. Statist.}, 48, 269--311.
+  http://doi.org/10.1111/1467-9876.00154
 
   Arunas P. Verbyla and Brian R. Cullis and Michael G. Kenward
   and Sue J. Welham, (1997).

@@ -24,6 +24,8 @@
 \details{
   A field experiment with 280 new genotypes.  A check genotype is
   planted in every 4th column.
+
+  The plot size is not given.
 }
 
 \source{
@@ -46,8 +48,9 @@ dat <- burgueno.unreplicated
 dat$check <- ifelse(dat$gen=="G000", 2, 1)
 # Every fourth column is the 'check' genotype
 if(require(desplot)){
-desplot(yield ~ col*row, data=dat, main="burgueno.unreplicated",
-        col=check, text=gen, cex=.75)
+  desplot(yield ~ col*row, data=dat,
+          col=check, text=gen, cex=.75, aspect=1, # unknown aspect
+          main="burgueno.unreplicated")
 }
 
 

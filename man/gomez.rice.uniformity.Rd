@@ -12,8 +12,8 @@
   A data frame with 648 observations on the following 3 variables.
   \describe{
     \item{\code{yield}}{grain yield, grams/m^2}
-    \item{\code{x}}{column}
-    \item{\code{y}}{row}
+    \item{\code{col}}{column}
+    \item{\code{row}}{row}
   }
 }
 
@@ -42,12 +42,13 @@ dat <- gomez.rice.uniformity
 
 if(require(agricolae) & require(desplot) & require(reshape2)){
   # Raw data plot
-  desplot(yield ~ x*y, data=dat, aspect=38/18,
+  desplot(yield ~ col*row, data=dat,
+          aspect=38/18,
           main="gomez.rice.uniformity")
 
   # 3x3 moving average.  Gomez figure 12.1
-  dmat <- melt(dat, id.var=c('x','y'))
-  dmat <- acast(dmat, y~x)
+  dmat <- melt(dat, id.var=c('col','row'))
+  dmat <- acast(dmat, row~col)
   m0 <- dmat
   cx <- 2:17
   rx <- 2:35
@@ -55,9 +56,10 @@ if(require(agricolae) & require(desplot) & require(reshape2)){
               m0[rx,cx+1]+m0[rx,cx]+m0[rx,cx-1]+
               m0[rx-1,cx+1]+m0[rx-1,cx]+m0[rx-1,cx-1])/9
   dat3 <- melt(dmat3)
-  desplot(value~Var2*Var1, dat3, aspect=38/18,
+  desplot(value~Var2*Var1, dat3,
+          aspect=38/18,
           at=c(576,637,695,753,811,870,927),
-        main="gomez.rice.uniformity smoothed")
+          main="gomez.rice.uniformity smoothed")
   
   # Gomez table 12.4
   tab <- index.smith(dmat, col="red")$uniformity

@@ -28,7 +28,7 @@ Suggests:
     knitr,
     lattice,
     latticeExtra,
-    lme4 (>= 1.1-5),
+    lme4,
     lsmeans,
     lucid,
     mapproj,

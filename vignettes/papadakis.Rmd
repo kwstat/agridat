@@ -134,7 +134,7 @@ rev(57-sort(rank(pred.rcb)))
 # Initial genotype model (no blocks)
 m6 <-  lm(yield ~ gen -1, data=dat2)
 # Calculate Papadakis covariates
-pp <- papcov(resid(m6), dat2$x, dat2$y)
+pp <- papcov(resid(m6), dat2$col, dat2$row)
 dat2$LR <- pp$LR
 dat2$UD <- pp$UD
 # Single iteration of Papadakis model
@@ -150,7 +150,7 @@ notConv <- TRUE
 while(notConv){
   iter <- iter + 1
   # Covariates based on residuals
-  pp <- papcov(resid, dat2$x, dat2$y)
+  pp <- papcov(resid, dat2$col, dat2$row)
   dat2$LR <- pp$LR
   dat2$UD <- pp$UD
   m8 <- lm(yield ~ gen - 1 + LR + UD, data=dat2)
@@ -170,7 +170,8 @@ all[order(all$rcb),]
 
 # Visually compare the coefficients from the two methods
 lims=range(c(pred.rcb,pred.pap))
-plot(pred.rcb,pred.pap,xlim=lims, ylim=lims,xlab="RCB",ylab="Papadakis",type='n')
+plot(pred.rcb, pred.pap, xlim=lims, ylim=lims,
+     xlab="RCB",ylab="Papadakis",type='n')
 text(pred.rcb,pred.pap, substring(names(pred.rcb),4),cex=0.5)
 title("Iterated Papadakis vs. RCB")
 abline(0,1)

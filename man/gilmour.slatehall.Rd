@@ -21,11 +21,13 @@
 \details{
   The trial was of spring wheat at Slate Hall Farm in 1978.  The
   experiment was a balanced lattice with 25 varieties in 6 replicates.
-  The plot size was 1.5 meters by 4 meters. The 'rep' labels are arbitrary (no
-  rep labels appeared in the source data).   Each row within a rep is an
-  incomplete block.
-
-  Field height: 15 plots x 1.5 meters = 22.5 m
+  The 'rep' labels are arbitrary (no rep labels appeared in the source
+  data).  
+  Each row within a rep is an incomplete block.
+  The plot size was 1.5 meters by 4 meters.
+  
+  Field length: 15 plots x 1.5 meters = 22.5 m
+  
   Field width: 10 plots x 4 m = 40 m
   
 }

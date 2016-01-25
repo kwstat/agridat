@@ -107,11 +107,13 @@ http://wheat.pw.usda.gov/ggpages/SxM/pedigrees.html
   Quantitative trait locus effects and environmental interaction in a sample of
   North American barley germplasm.
   \emph{Theoretical and Applied Genetics}, 87, 392--401.
+  http://doi.org/10.1007/BF01184929
 
   Ignacio Romagosa, Steven E. Ullrich, Feng Han, Patrick M. Hayes. 1996.
   Use of the additive main effects and multiplicative interaction model
   in QTL mapping for adaptation in barley.
   \emph{Theor Appl Genet}, 93, 30-37.
+  http://doi.org/10.1007/BF00225723
 
   Piepho, Hans-Peter. 2000.
   A mixed-model approach to mapping quantitative trait loci in barley on
@@ -122,6 +124,7 @@ http://wheat.pw.usda.gov/ggpages/SxM/pedigrees.html
   Mixed models including environmental covariables for studying QTL by
   environment interaction.
   \emph{Euphytica}, 137, 139-145.
+  http://doi.org/10.1023/B:EUPH.0000040511.4638
 
 }
 
@@ -129,15 +132,29 @@ http://wheat.pw.usda.gov/ggpages/SxM/pedigrees.html
 
 data(steptoe.morex.pheno)
 dat <- steptoe.morex.pheno
+
+\dontrun{
+  # Visualize GxE of traits
+  require(lattice)
+  levelplot(amylase~env*gen, data=dat, scales=list(x=list(rot=90)), main="amylase")
+  levelplot(diapow~env*gen, data=dat, scales=list(x=list(rot=90)), main="diapow")
+  levelplot(hddate~env*gen, data=dat, scales=list(x=list(rot=90)), main="hddate")
+  levelplot(lodging~env*gen, data=dat, scales=list(x=list(rot=90)), main="lodging")
+  levelplot(malt~env*gen, data=dat, scales=list(x=list(rot=90)), main="malt")
+  levelplot(height~env*gen, data=dat, scales=list(x=list(rot=90)), main="height")
+  levelplot(protein~env*gen, data=dat, scales=list(x=list(rot=90)), main="protein")
+  levelplot(yield~env*gen, data=dat, scales=list(x=list(rot=90)), main="yield")
+}
+
 # Calculate avg yield for each loc as in Romagosa 1996, table 3
 t(t(round(tapply(dat$yield, dat$env, FUN=mean),2)))
 # SKo92,SKg92 means in table 3 are switched.  Who is right, him or me?
 
 # Draw marker map
 if(require(qtl)){
-data(steptoe.morex.geno)
-datg <- steptoe.morex.geno
-plot.map(datg)  # or just use plot()
+  data(steptoe.morex.geno)
+  datg <- steptoe.morex.geno
+  plot.map(datg)  # or just use plot()
 }
 
 \dontrun{

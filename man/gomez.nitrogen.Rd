@@ -11,10 +11,10 @@
 \format{
   A data frame with 96 observations on the following 4 variables.
   \describe{
-    \item{\code{trt}}{Nitrogen treatment factor}
-    \item{\code{nitro}}{Soil nitrogen content, percent}
-    \item{\code{rep}}{Rep}
-    \item{\code{stage}}{Growth stage, three periods}
+    \item{\code{trt}}{nitrogen treatment factor}
+    \item{\code{nitro}}{soil nitrogen content, percent}
+    \item{\code{rep}}{replicate}
+    \item{\code{stage}}{growth stage, three periods}
   }
 }
 \details{

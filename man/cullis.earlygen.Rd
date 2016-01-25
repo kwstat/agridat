@@ -63,10 +63,13 @@ dat <- cullis.earlygen
 # Show field layout of checks.  Cullis Table 1.
 dat$check <- ifelse(dat$entry < 8, dat$entry, NA)
 if(require(desplot)){
-desplot(yield ~ col*row, dat, main="cullis.earlygen (yield)",
-        col="check", cex=1, flip=TRUE)
+  desplot(yield ~ col*row, dat,
+          col="check", cex=1, flip=TRUE,
+          main="cullis.earlygen (yield)")
 
-desplot(weed ~ col*row, dat, main="cullis.earlygen (weed)", flip=TRUE)
+desplot(weed ~ col*row, dat,
+        flip=TRUE,
+        main="cullis.earlygen (weed)")
 }
 
 require(lattice)

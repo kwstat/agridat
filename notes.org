@@ -52,12 +52,9 @@ Stability folder
 Fan 2007 - Yield stability of maize
 GxE / Flores 1998 Flores 1998 - bean & pea yields, Flores 2012, Flores 2013
 
-Edwards
+Jode Edwards
 Data analyzed in this report were obtained from the Iowa
 State University Oat Variety Trial for the years 1997 to 2003.
-
-ARS oats trials
-http://www.ars.usda.gov/Main/docs.htm?docid=8419&page=4
 
 Harris - Universality of Heterogeneity
  Harris, J.A. (1920). Practical universality of field heterogeneity as a factor
@@ -117,8 +114,9 @@ http://articles.extension.org/pages/60430/introduction-to-the-augmented-experime
 * Augmented
 
 Jennifer Kling Lattice Design.  Data.
+http://articles.extension.org/pages/60430/introduction-to-the-augmented-experimental-design-webinar
 http://cropandsoil.oregonstate.edu/system/files/u534/Lattice_seminar.pdf
-https://passel.unl.edu/pages/printinformationmodule.php?idinformationmodule=1130447275
+https://passel.unl.edu/pages/informationmodule.php?idinformationmodule=1130447275
 https://passel.unl.edu/pages/informationmodule.php?idinformationmodule=1130447276
 https://passel.unl.edu/pages/informationmodule.php?idinformationmodule=1130447273
 
@@ -366,7 +364,6 @@ Winter wheat, 31 gen in 8 loc. Different data from Yan's earlier papers.
 
 * Jstor
 
-
 Bartlet 1988. Stochastic Models and Field Trials.
 Cullins 1990 A Model for the Analysis of Growth Data from Designed Experiments
   Has growth data for infected/non-infected pigs.
@@ -419,6 +416,10 @@ Data: barley
 
 * Web sites
 
+** ARS oat trials
+http://www.ars.usda.gov/Main/docs.htm?docid=8419&page=4
+
+
 ** Germplasm Enhancement of Maize (ISU)
 http://www.public.iastate.edu/~usda-gem/index.htm
 
@@ -449,3 +450,18 @@ Domain:      Total
 Geography:   State
 
 
+# ----------------------------------------------------------------------------
+# uniformity trials
+
+R D Bose, 1935.
+Some soil-heterogeneity trials at Pusa and the size and shape of experimental plots. Indian Jour. Agr. Sci. 5 (5), 579-608.
+Not avail. Summary: http://digital.library.unt.edu/ark:/67531/metadc5082/m1/496/
+
+Moore, John Francis, 1952: A study of field plot technique with sprouting
+broccoli. Proc Amer Soc Hort Sci: 1-474
+Not avail. Summary: http://eurekamag.com/research/013/624/013624967.php
+
+Moore, John F and Darroch, JG, 1956.
+Field plot technique with Blue Lake pole beans, bush beans, carrots, sweet corn, spring and fall cauliflower.
+Washington Agricultural Experiment Stations, Institute of Agricultural Sciences, State College of Washington.
+Done.

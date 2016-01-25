@@ -24,11 +24,19 @@
   These data were prepared from Richey (1926) because the copy was
   cleaner.
 
+  Each plot was planted 40 inches on a side, but only the middle square
+  36 inches on a side was harvested.
+
+  Field length: 5 plots * 3 feet = 15 feet
+
+  Field width: 25 plots * 3 feet = 75 feet.
 }
 \source{
 
   Student. (1923).
-  On testing varieties of cereals. \emph{Biometrika}, 271-293.
+  On testing varieties of cereals.
+  \emph{Biometrika}, 271-293.
+  http://doi.org/10.1093/biomet/15.3-4.271
 
 }
 \references{
@@ -51,7 +59,7 @@ tapply(dat$yield, dat$gen, mean)
 # Compare to Student 1923, diagram I,II
 if(require(desplot)){
   desplot(yield ~ col*row, data=dat,
-          aspect=5/32,
+          aspect=15/75,
           main="beaven.barley", text=gen)
 }
 

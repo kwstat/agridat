@@ -23,6 +23,8 @@
 \details{
   A field experiment with 3 reps, 4 blocks per rep, laid out as an alpha
   design.
+
+  The plot size is not given.
 }
 
 \source{
@@ -42,8 +44,9 @@ dat <- burgueno.alpha
 
 if(require(desplot)){
   desplot(yield~col*row, dat,
-          main='burgueno.alpha', out1=rep, out2=block,
-          text=gen, cex=1,shorten="none")
+          out1=rep, out2=block, aspect=1, # unknown aspect
+          text=gen, cex=1,shorten="none",
+          main='burgueno.alpha')
 }
 
 

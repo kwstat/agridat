@@ -23,7 +23,8 @@
 \details{
   Multi-environment trial of 64 corn hybrids in six counties in North
   Carolina.  Each location had 3 replicates in in incomplete-block
-  design.
+  design with an 18x11 lattice of plots whose length-to-width ratio was
+  about 2:1.
 
   Note: In the original data, each county had 6 missing plots.  This
   data has rows for each missing plot that uses the same
@@ -31,6 +32,13 @@
   sets the yield to missing.  These missing values were added to the
   data so that asreml could more easily do AR1xAR1 analysis using
   rectangular fields.
+
+  Each location/panel is:
+  
+  Field length: 18 rows * 2 units = 36 units.
+
+  Field width: 11 plots * 1 unit = 11 units.
+  
 }
 \source{
   Julian Besag and D Higdon, 1999.
@@ -52,6 +60,7 @@ dat <- besag.met
 
 if(require(desplot)){
   desplot(yield ~ col*row|county, dat,
+          aspect=36/11, # true aspect
           out1=rep, out2=block,
           main="besag.met")
 }

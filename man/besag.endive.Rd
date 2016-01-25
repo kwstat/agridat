@@ -17,8 +17,9 @@
   }
 }
 \details{
-  In a field of endives, does each plant have footrot, or not?
-
+  In a field of endives, does each plant have footrot, or not?  Data are
+  binary on a lattice of 14 x 179 plants.
+  
   Modeled as an autologistic distribution.
 
   We assume the endives are a single genotype.
@@ -26,9 +27,12 @@
   Besag (1978) may have had data taken at 4 time points.  This data
   was extracted from Friel and Pettitt.  It is not clear what, if any,
   time point was used.
+
+  Friel does not give the dimensions. Besag is not available.
 }
 \source{
-  J Besag (1978). Some Methods of Statistical Analysis for Spatial Data.
+  J Besag (1978).
+  Some Methods of Statistical Analysis for Spatial Data.
   \emph{Bulletin of the International Statistical Institute}, 47, 77-92.
 }
 \references{

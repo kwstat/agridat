@@ -1,4 +1,4 @@
-x	y	rep	fert	gen	group	yield
+col	row	rep	fert	gen	group	yield
 1	27	R1	F1	G01	S1	4.252
 3	9	R1	F2	G01	S1	4.331
 5	4	R2	F1	G01	S1	3.548

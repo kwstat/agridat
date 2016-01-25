@@ -64,9 +64,14 @@ require(lattice)
 dotplot(germ/n~gen|extract, dat, main="crowder.seeds")
 
 
-# ----- GLM
+# ----- GLM.
+# family=binomial() fixes dispersion at 1
+# family=quasibinomial() estimates dispersion, had larger std errors
 m1.glm <- glm(cbind(germ,n-germ) ~ gen*extract,
-   data=dat, family=quasibinomial())
+              data=dat,
+              #family="binomial",
+              family=quasibinomial()
+              )
 summary(m1.glm)
 
 

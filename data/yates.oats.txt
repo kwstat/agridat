@@ -1,4 +1,4 @@
-y	x	yield	nitro	gen	block
+row	col	yield	nitro	gen	block
 1	1	91	0.2	Victory	B2
 2	1	61	0	Victory	B2
 3	1	121	0.4	Marvellous	B2

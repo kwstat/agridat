@@ -17,8 +17,8 @@ Rice strip-split-plot experiment
     \item{\code{rep}}{Rep factor, 3 levels}
     \item{\code{nitro}}{Nitrogen fertilizer in kg/ha}
     \item{\code{gen}}{Genotype factor, G1 to G6}
-    \item{\code{x}}{Ordinate in the field}
-    \item{\code{y}}{Ordinate in the field}
+    \item{\code{col}}{column ordinate in the field}
+    \item{\code{row}}{row ordinate in the field}
   }
 }
 \details{
@@ -39,8 +39,9 @@ dat <- gomez.stripsplitplot
 
 # Layout
 if(require(desplot)){
-desplot(gen~x+y, dat, out1=rep, col=nitro, text=planting, cex=1,
-        main="gomez.stripsplitplot")
+  desplot(gen ~ col*row, dat,
+          out1=rep, col=nitro, text=planting, cex=1,
+          main="gomez.stripsplitplot")
 }
 
 
@@ -55,7 +56,7 @@ summary(m1)
 # an artifact that blocking will remove, or may need to be modeled.
 # Note the outside values in the high-nitro boxplot.
 require("HH")
-interaction2wt(yield ~ nitro + gen + planting + y, dat, x.relation="free")
+interaction2wt(yield ~ nitro + gen + planting + row, dat, x.relation="free")
 }
 }
 

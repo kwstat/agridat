@@ -9,11 +9,11 @@
 
 \format{
   \describe{
-    \item{gen}{Genotype factor, 56 levels}
-    \item{rep}{Replicate factor, 4 levels}
-    \item{yield}{The yield in bu/ac}
-    \item{x}{Column ordinate}
-    \item{y}{Row ordinate}
+    \item{gen}{genotype factor, 56 levels}
+    \item{rep}{replicate factor, 4 levels}
+    \item{yield}{yield, bu/ac}
+    \item{col}{column ordinate}
+    \item{row}{row ordinate}
   }
 }
 
@@ -54,9 +54,9 @@
     KS831374 \tab Karl
   }
 
-  Some published versions of the data use long/lat instead of x/y.
-  To obtain the correct value of 'long', multiply 'x' by 1.2.
-  To obtain the correct value of 'lat', multiply 'y' by 4.3.
+  Some published versions of the data use long/lat instead of col/row.
+  To obtain the correct value of 'long', multiply 'col' by 1.2.
+  To obtain the correct value of 'lat', multiply 'row' by 4.3.
 
   Relatively low yields were clustered in the northwest corner, which is
   explained by a low rise in this part of the field, causing increased
@@ -73,8 +73,9 @@
 
 \source{
   Stroup, Walter W., P Stephen Baenziger, Dieter K Mulitze (1994)
-  Removing Spatial Variation from Wheat Yield Trials: A Comparison of
-  Methods. \emph{Crop Science}, 86:62--66.
+  Removing Spatial Variation from Wheat Yield Trials: A Comparison of Methods.
+  \emph{Crop Science}, 86:62--66.
+  http://doi.org/10.2135/cropsci1994.0011183X003400010011x
 }
 
 \references{
@@ -92,6 +93,7 @@
   Comparing Design and Analysis Strategies in the Presence of Spatial
   Variability. \emph{Journal of Agricultural, Biological, and
     Environmental Statistics}, 7(4), 491-511.
+  http://doi.org/10.1198/108571102780
   
 }
 \seealso{
@@ -103,31 +105,30 @@
 
 data(stroup.nin)
 dat <- stroup.nin
-dat <- transform(dat, xf=factor(x), yf=factor(y))
+dat <- transform(dat, xf=factor(col), yf=factor(row))
 
-# Show experiment layout
-# Note: all "Buckskin" plots are near left side
+# Experiment layout. All "Buckskin" plots are near left side
 if(require(desplot)){
-  desplot(yield~x*y, dat,
+  desplot(yield~col*row, dat,
           aspect=47.3/26.4, out1="rep", num=gen, cex=1,
           main="stroup.nin - yield heatmap (true shape)")
 }
 
 
 require(nlme)
-# Random block model
+# Random RCB model
 lme1 <- lme(yield ~ 0 + gen, random=~1|rep, data=dat, na.action=na.omit)
 
 # Linear (Manhattan distance) correlation model
 lme2 <- gls(yield ~ 0 + gen, data=dat,
-           correlation = corLin(form = ~ x+y,nugget=TRUE),
+           correlation = corLin(form = ~ col + row, nugget=TRUE),
            na.action=na.omit)
 
 # Random block and spatial correlation.
 # Note: corExp and corSpher give nearly identical results
 lme3 <- lme(yield ~ 0 + gen, data=dat,
             random = ~ 1 | rep,
-            correlation = corExp(form = ~ x + y),
+            correlation = corExp(form = ~ col + row),
             na.action=na.omit)
 
 AIC(lme1,lme2,lme3) # lme2 is lowest
@@ -152,7 +153,8 @@ pred.rcb <- predict(dat.rcb,classify="gen")$predictions
 
 # Two-dimensional AR1xAR1 spatial model
 dat <- dat[order(dat$xf, dat$yf),]
-dat.sp <- asreml(yield~gen, rcov=~ar1(xf):ar1(yf),data=dat)
+dat.sp <- asreml(yield~gen, data=dat,
+                 rcov=~ar1(xf):ar1(yf))
 pred.sp <- predict(dat.sp,classify="gen")$predictions
 
 # require(lucid)

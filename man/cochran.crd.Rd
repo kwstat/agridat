@@ -11,23 +11,23 @@
 \format{
   A data frame with 32 observations on the following 5 variables.
   \describe{
-    \item{\code{inf}}{Numeric, infection percent}
-    \item{\code{trt}}{Treatment factor}
-    \item{\code{row}}{Row}
-    \item{\code{col}}{Column}
+    \item{\code{inf}}{infection percent}
+    \item{\code{trt}}{treatment factor}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
   }
 }
 \details{
-The experiment was conducted to investigate the effect of sulfur on
-controlling scab disease in potatoes. There were seven treatments.
-Control, plus spring and fall application of 300, 600, 1200 lbs/acre of
-sulfur.  The response variable was infection as a percent of the surface
-area covered with scab.  A completely randomized design was used with 8
-replications of the control and 4 replications of the other treatments.
-
-Although the original analysis did not show significant differences in
-the sulfur treatments, including a polynomial trend in the model
-uncovered significant differences (Tamura, 1988).
+  The experiment was conducted to investigate the effect of sulfur on
+  controlling scab disease in potatoes. There were seven treatments.
+  Control, plus spring and fall application of 300, 600, 1200 lbs/acre of
+  sulfur.  The response variable was infection as a percent of the surface
+  area covered with scab.  A completely randomized design was used with 8
+  replications of the control and 4 replications of the other treatments.
+  
+  Although the original analysis did not show significant differences in
+  the sulfur treatments, including a polynomial trend in the model
+  uncovered significant differences (Tamura, 1988).
 }
 \source{
   W.G. Cochran and G. Cox, 1957.  \emph{Experimental Designs}, 2nd
@@ -46,7 +46,9 @@ dat <- cochran.crd
 
 # Field plan
 if(require(desplot)){
-desplot(inf~col*row, data=dat, text=trt, cex=1, main="cochran.crd")
+  desplot(inf~col*row, data=dat,
+          text=trt, cex=1, aspect=1, # unknown aspect
+          main="cochran.crd")
 }
 
 # CRD anova.  Table 6 of Tamura 1988

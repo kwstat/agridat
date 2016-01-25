@@ -1,4 +1,4 @@
-yield	rep	nitro	gen	x	y
+yield	rep	nitro	gen	col	row
 2373	R1	0	G1	1	1
 4076	R1	60	G1	3	1
 7254	R1	120	G1	2	1

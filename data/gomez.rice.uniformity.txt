@@ -1,4 +1,4 @@
-yield	x	y
+yield	col	row
 842	1	36
 803	1	35
 773	1	34

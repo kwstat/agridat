@@ -40,6 +40,7 @@ name                                  \tab dimensions \tab other \tab model \cr
 \link{lessman.sorghum.uniformity}     \tab 46 x 60 \tab xy \tab \cr
 \link{li.millet.uniformity}           \tab 6 x 100 \tab xy \tab \cr
 \link{lyon.potato.uniformity}         \tab 34 x 6 \tab xy \tab \cr
+\link{masood.rice.uniformity}         \tab 12 x 24 \tab xy \tab \cr
 \link{mercer.mangold.uniformity}      \tab 10 x 20 \tab xy \tab \cr
 \link{mercer.wheat.uniformity}        \tab 25 x 20 \tab xy, 2 traits \tab spplot \cr
 \link{montgomery.wheat.uniformity}    \tab 14 x 16 \tab xy \tab lm \cr

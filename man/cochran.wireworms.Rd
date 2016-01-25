@@ -41,8 +41,11 @@
 data(cochran.wireworms)
 dat <- cochran.wireworms
 
-# require(desplot)
-# desplot(worms ~ col*row, data=dat, text=trt, cex=1)
+if(require(desplot)){
+  desplot(worms ~ col*row, data=dat,
+          text=trt, cex=1,
+          main="cochran.wireworms")
+}
 
 # Trt K is effective, but not the others.  Really, this says it all.
 require(lattice)

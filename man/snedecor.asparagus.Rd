@@ -26,8 +26,8 @@
   Snedecor and Cochran, 1989. \emph{Statistical Methods}.
 }
 \references{
-  Mick O'Neill, 2010. \emph{A Guide To Linear Mixed Models In An
-    Experimental Design Context}.
+  Mick O'Neill, 2010.
+  \emph{A Guide To Linear Mixed Models In An Experimental Design Context}.
   Statistical Advisory & Training Service Pty Ltd.
 }
 

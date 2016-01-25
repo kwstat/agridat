@@ -20,8 +20,8 @@ Rice split-split plot experiment
     \item{\code{management}}{Plot management}
     \item{\code{gen}}{Variety of rice}
     \item{\code{yield}}{Yield of rice}
-    \item{\code{x}}{Column position in the field}
-    \item{\code{y}}{Row position in the field}
+    \item{\code{col}}{column position in the field}
+    \item{\code{row}}{row position in the field}
   }
 }
 
@@ -40,9 +40,11 @@ dat <- gomez.splitsplit
 dat$nf <- factor(dat$nitro)
 
 if(require(desplot)){
-desplot(nf~x*y, dat, out1=rep, col=management, num=gen, cex=1,
-        main="gomez.splitsplit")
-desplot(yield~x*y, dat, out1=rep, main="gomez.splitsplit")
+  desplot(nf ~ col*row, dat,
+          out1=rep, col=management, num=gen, cex=1,
+          main="gomez.splitsplit")
+  desplot(yield ~ col*row, dat,
+          out1=rep, main="gomez.splitsplit")
 }
 
 if(require(HH)){

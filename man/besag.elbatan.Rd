@@ -13,15 +13,18 @@
 \format{
   A data frame with 150 observations on the following 4 variables.
   \describe{
-    \item{\code{yield}}{Yield of wheat}
-    \item{\code{gen}}{Genetic variety, factor with 50 levels}
-    \item{\code{block}}{Block/column (numeric)}
-    \item{\code{row}}{Row (numeric)}
+    \item{\code{yield}}{yield of wheat}
+    \item{\code{gen}}{genotype, factor with 50 levels}
+    \item{\code{col}}{column/block}
+    \item{\code{row}}{row}
   }
 }
 \details{
   RCB experiment on wheat at El Batan, Mexico.  There are three
   single-column replicates with 50 varieties in each replicate.
+
+  Plot dimensions are not given by Besag.
+  
 }
 \source{
   Julian Besag and D Higdon, 1999.
@@ -36,23 +39,29 @@
   Used with permission of David Higdon.
 }
 
+\references{
+  Wilkinson 1984.
+
+  Besag & Seheult 1989.
+}
+
 \examples{
 
 data(besag.elbatan)
 dat <- besag.elbatan
 
 if(require(desplot)){
-desplot(yield~block*row, dat,
-        main="besag.elbatan wheat yields",
-        num=gen)
+  desplot(yield~col*row, dat,
+          num=gen,
+          main="besag.elbatan wheat yields")
 }
 
 # Besag figure 1
-# xyplot(yield~row|block, dat, groups=block, type=c('l'),
+# xyplot(yield~row|col, dat, groups=col, type=c('l'),
 #        layout=c(1,3), main="besag.elbatan wheat yields")
 
 # RCB
-m1 <- lm(yield ~ 0 + gen + factor(block), dat)
+m1 <- lm(yield ~ 0 + gen + factor(col), dat)
 p1 <- coef(m1)[1:50]
 
 # Formerly used gam package, but as of R 3.1, Rcmd check --as-cran
@@ -61,7 +70,7 @@ p1 <- coef(m1)[1:50]
 # but it works perfectly in interactive mode !!!
 # Remove the FALSE to run the code below
 if(FALSE & require(gam)){
-  m2 <- gam(yield ~ -1 + gen + factor(block) + lo(row), data=dat)
+  m2 <- gam(yield ~ -1 + gen + factor(col) + lo(row), data=dat)
   plot.gam(m2)
 
   plot(m2, residuals=TRUE, se=TRUE,

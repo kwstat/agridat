@@ -30,7 +30,6 @@
 }
 
 \references{
-
   Christopher Bilder, Thomas Loughin.
   \emph{Analysis of Categorical Data with R}.
   

@@ -24,6 +24,7 @@
   In each block, each variety occurred once as a left-side neighbor and
   once as a right-side neighbor of every variety (including itself).
   Border plots were placed at the ends of each block.
+  Each block with 38 adjacent plots.
   Each plot was one row, 3 meters long with 50 cm spacing between rows.
   No gaps between plots.  Spacing between plants was 6.7 cm.
   Four blocks (rows) were used, each with six replicates.
@@ -32,6 +33,10 @@
 
   Kempton and Lockwood used models that adjusted yield according to the
   difference in height of neighboring plots.
+
+  Field length: 4 plots * 3m = 12m.
+
+  Field width: 38 plots * 0.5 m = 19m.
 }
 \source{
   Julian Besag and Rob Kempton (1986).
@@ -48,6 +53,12 @@
 
 data(besag.beans)
 dat = besag.beans
+
+if(require(desplot)){
+  desplot(yield ~ col*row, data=dat,
+          aspect=12/19, out1=row, out2=rep, num=gen, cex=1,
+          main="besag.beans")
+}
 
 if(require(reshape2)){
   # Add a covariate = excess height of neighbors

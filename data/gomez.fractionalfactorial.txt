@@ -1,4 +1,4 @@
-yield	rep	block	trt	x	y
+yield	rep	block	trt	col	row
 3.68	R1	B1	cd	1	8
 3.52	R1	B1	af	1	7
 3.89	R1	B1	abcd	1	6

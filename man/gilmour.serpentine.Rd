@@ -12,11 +12,11 @@
 \format{
   A data frame with 330 observations on the following 5 variables.
   \describe{
-    \item{\code{col}}{Column, numeric}
-    \item{\code{row}}{Row, numeric}
-    \item{\code{rep}}{Replicate factor, 3 levels}
-    \item{\code{gen}}{Wheat variety, 108 levels}
-    \item{\code{yield}}{Yield}
+    \item{\code{col}}{column}
+    \item{\code{row}}{row}
+    \item{\code{rep}}{replicate factor, 3 levels}
+    \item{\code{gen}}{wheat variety, 108 levels}
+    \item{\code{yield}}{yield}
   }
 }
 \details{

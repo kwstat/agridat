@@ -26,9 +26,10 @@
   Opinion: Fitting a quadratic model to this data makes no sense.
 }
 \source{
-  Seshu, D. V. and Cady, F. B. 1984. Response of rice to solar radiation
-  and temperature estimated from international yield trials.
+  Seshu, D. V. and Cady, F. B. 1984.
+  Response of rice to solar radiation and temperature estimated from international yield trials.
   \emph{Crop Science}, 24, 649-654.
+  http://doi.org/10.2135/cropsci1984.0011183X002400040006x
 }
 \references{
   Walter W. Piegorsch, A. John Bailer. (2005)

@@ -5,10 +5,10 @@
   Latin square design in wheat
 }
 \description{
-Six wheat plots were sampled by six operators and shoot heights
-measured. The operators sampled plots in six ordered sequences.
-The dependent variate was the difference between measured
-height and true height of the plot.
+  Six wheat plots were sampled by six operators and shoot heights
+  measured. The operators sampled plots in six ordered sequences.
+  The dependent variate was the difference between measured
+  height and true height of the plot.
 }
 
 \format{
@@ -31,8 +31,9 @@ data(cochran.latin)
 dat <- cochran.latin
 
 if(require(desplot)){
-desplot(diff~col*row, dat, text=operator, cex=1,
-        main="cochran.latin")
+  desplot(diff~col*row, dat,
+          text=operator, cex=1, aspect=1, # unknown aspect
+          main="cochran.latin")
 }
 
 

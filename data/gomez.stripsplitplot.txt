@@ -1,4 +1,4 @@
-yield	planting	rep	nitro	gen	x	y
+yield	planting	rep	nitro	gen	col	row
 2373	P1	R1	0	G1	1	2
 4007	P1	R1	0	G2	1	6
 2620	P1	R1	0	G3	1	8

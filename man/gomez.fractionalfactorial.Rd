@@ -12,12 +12,12 @@
 \format{
   A data frame with 64 observations on the following 6 variables.
   \describe{
-    \item{\code{yield}}{Grain yield in tons/ha}
-    \item{\code{rep}}{Replicate factor, 2 levels}
-    \item{\code{block}}{Block factor within rep, 2 levels}
-    \item{\code{trt}}{Treatment factor, levels (1) to abcdef}
-    \item{\code{x}}{Column position in the field}
-    \item{\code{y}}{Row position in the field}
+    \item{\code{yield}}{grain yield in tons/ha}
+    \item{\code{rep}}{replicate factor, 2 levels}
+    \item{\code{block}}{block factor within rep, 2 levels}
+    \item{\code{trt}}{treatment factor, levels (1) to abcdef}
+    \item{\code{col}}{column position in the field}
+    \item{\code{row}}{row position in the field}
   }
 }
 \details{
@@ -41,8 +41,9 @@ dat <- gomez.fractionalfactorial
 # trt abcdef has the highest yield
 # Gomez, Figure 4.8
 if(require(desplot)){
-desplot(yield~x*y, dat, main="gomez.fractionalfactorial - treatment & yield",
-        text=trt, shorten="none", show.key=FALSE, cex=1)
+  desplot(yield~col*row, dat,
+          text=trt, shorten="none", show.key=FALSE, cex=1,
+          main="gomez.fractionalfactorial - treatment & yield")
 }
 
 # Split treatment into individual factors

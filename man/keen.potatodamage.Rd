@@ -16,7 +16,7 @@
     \item{\code{gen}}{genotype/variety factor}
     \item{\code{rod}}{rod factor}
     \item{\code{damage}}{damage category}
-    \item{\code{count}}{a numeric vector}
+    \item{\code{count}}{count of tubers in each combination of categories}
   }
 }
 \details{

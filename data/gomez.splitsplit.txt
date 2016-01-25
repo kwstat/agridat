@@ -1,4 +1,4 @@
-rep	nitro	management	gen	yield	x	y
+rep	nitro	management	gen	yield	col	row
 R1	0	Minimum	V1	3.32	2	12
 R1	0	Minimum	V2	6.101	2	10
 R1	0	Minimum	V3	5.355	2	11

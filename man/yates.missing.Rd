@@ -25,7 +25,8 @@
   values in a matrix, using this data as an example.
 }
 \source{
-  F. Yates, 1933. The analysis of replicated experiments when the field
+  F. Yates, 1933.
+  The analysis of replicated experiments when the field
   results are incomplete. \emph{Emp. J. Exp. Agric.}, 1, 129--142.
 }
 \references{

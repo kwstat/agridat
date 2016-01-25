@@ -1,26 +1,27 @@
 
 ## Wish list / To do
 
+* Figure out best way to use jags.
 * Use Clifford's regress package
 * JAGS code for lee.potatoblight
 * JAGS code for theobald.barley
 * JAGS code for besag.elbatan
 * Check aspect where possible.
-* Added DOIs for most source documents A-N.
-* Figure out best way to use jags.
+
 
 # agridat 1.13 (unpublished)
 
 ## New data
 
 battese.survey, gartner.corn, giles.wheat, kenward.cattle, kreusler.maize,
-lessman.sorghum.uniformity, montgomery.wheat.uniformity,
-moore.polebean.uniformity, moore.bushbean.uniformity,
-moore.sweetcorn.uniformity, moore.carrots.uniformity,
-moore.springcauliflower.uniformity, moore.fallcauliflower.uniformity,
-nonnecke.corn.uniformity, nonnecke.peas.uniformity, onofri.winterwheat,
-polson.safflower.uniformity, sawyer.multi.uniformity, smith.beans1.uniformity,
-wheatley.carrot, wiedemann.safflower.uniformity
+lessman.sorghum.uniformity, masood.rice.uniformity,
+montgomery.wheat.uniformity, moore.polebean.uniformity,
+moore.bushbean.uniformity, moore.sweetcorn.uniformity,
+moore.carrots.uniformity, moore.springcauliflower.uniformity,
+moore.fallcauliflower.uniformity, nonnecke.corn.uniformity,
+nonnecke.peas.uniformity, onofri.winterwheat, polson.safflower.uniformity,
+sawyer.multi.uniformity, smith.beans1.uniformity, wheatley.carrot,
+wiedemann.safflower.uniformity
 
 ## Other
 
@@ -29,22 +30,16 @@ wheatley.carrot, wiedemann.safflower.uniformity
 * Fixed all examples to use `desplot` and `gge` packages.
 * Switch to CC-BY-SA 4.0 + file LICENSE.  Similar to `igraphdata` package.
 * Changed vignette from Rnw/pdf to Rmd/html.
-* `devtools::run_examples()` now works even without suggested packages
-installed.
+* `devtools::run_examples()` now works even without suggested packages installed.
 * Improvements to titles in Rd pages.
-* Combined wassom.brome datasets into one.
-* Changed all hyperlinks to plain text (for faster package checking, avoiding re-direct
-  errors).
+* Added DOIs for most source references.
+* Changed all hyperlinks to plain text (faster checking, avoids re-direct errors).
 
 # agridat 1.12 - Jun 2015
 
 ## New data
 
 cochran.beets, cochran.lattice, jansen.apple, jansen.carrot
-  
-## Other
-
-* Add graphics, grDevices, stats to Imports.
 
 # agridat 1.11 - Mar 2015
 

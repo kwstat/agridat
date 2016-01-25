@@ -38,6 +38,7 @@
   observations on larval insects.
   \emph{Ecology}, 21, 460--474. Table 6.
   http://doi.org/10.2307/1930285
+  http://www.jstor.org/stable/1930285
 }
 
 \examples{
@@ -52,9 +53,10 @@ with(dat, table(y,trt))
 # Visualize Beall tble 6.  Block effects may exist, but barely.
 if(require(desplot)){
 grays <- colorRampPalette(c("#d9d9d9","#252525"))
-desplot(y ~ col*row, data=dat, out1=block, out2=trt, num=trt, flip=TRUE,
-        main="beall.webworms (count of worms)",
-        col.regions=grays(9))
+desplot(y ~ col*row, data=dat,
+        col.regions=grays(9),
+        out1=block, out2=trt, num=trt, flip=TRUE,
+        main="beall.webworms (count of worms)")
 }
 
 # Following plot suggests interaction is needed

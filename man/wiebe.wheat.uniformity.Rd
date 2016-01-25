@@ -40,11 +40,14 @@
 }
 
 \references{
-  D.A. Preece, 1981, Distributions of final digits in data,
+  D.A. Preece, 1981,
+  Distributions of final digits in data,
   \emph{The Statistician}, 30, 31--60.
+  http://doi.org/10.2307/2987702
 
-  Wilkinson et al. (1983). Nearest Neighbour (NN) Analysis of Field
-  Experiments. \emph{J. R. Statist. Soc. B}, 45, 151-211.
+  Wilkinson et al. (1983).
+  Nearest Neighbour (NN) Analysis of Field Experiments.
+  \emph{J. R. Statist. Soc. B}, 45, 151-211.
 }
 
 \examples{

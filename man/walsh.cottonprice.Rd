@@ -27,8 +27,10 @@
 
 }
 \source{
-  R.M. Walsh (1944). Response to Price in Production of Cotton
-  and Cottonseed, \emph{Journal of Farm Economics}, 26, 359-372.
+  R.M. Walsh (1944).
+  Response to Price in Production of Cotton and Cottonseed,
+  \emph{Journal of Farm Economics}, 26, 359-372.
+  http://doi.org/10.2307/1232237
 }
 
 \examples{

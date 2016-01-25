@@ -22,7 +22,7 @@
 }
 \details{
   Experiment conducted as a factorial on the yields of triticale.  Fully
-  randomized.  Plots were 1.5m x 5.5m.
+  randomized.  Plots were 1.5m x 5.5m, but the orientation is not clear.
 
   Besag and Kempton show how accounting for neighbors changes
   non-significant genotype differences into significant differences.
@@ -30,7 +30,7 @@
 \source{
   Julian Besag and Rob Kempton (1986).
   Statistical Analysis of Field Experiments Using Neighbouring Plots.
-  \emph{Biometrics}, 42, 231-251.
+  \emph{Biometrics}, 42, 231-251. Table 2.
   http://doi.org/10.2307/2531047
 }
 \references{
@@ -41,9 +41,11 @@
 data(besag.triticale)
 dat <- besag.triticale
 
-require(lattice)
-# require(desplot)
-# desplot(yield ~ col*row, data=dat, main="besag.triticale")
+if(require(desplot)){
+  desplot(yield ~ col*row, data=dat,
+          aspect =1, # unknown
+          main="besag.triticale")
+}
 
 # Besag & Kempton are not perfectly clear on the model, but
 # indicate that there was no evidence of any two-way interactions.
@@ -58,6 +60,7 @@ anova(m2)
 
 # Similar, but not exact, to Besag figure 5
 dat$res <- resid(m2)
+require(lattice)
 xyplot(res ~ col|as.character(row), data=dat,
        as.table=TRUE, type="s", layout=c(1,3),
        main="besag.tritical")

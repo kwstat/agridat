@@ -253,7 +253,8 @@ dat <- gomez.stripsplitplot
 
 # Layout
 require(desplot)
-desplot(gen~x+y, dat, out1=rep, col=nitro, text=planting, cex=1,
+desplot(gen~col*row, dat,
+        out1=rep, col=nitro, text=planting, cex=1,
         main="gomez.stripsplitplot")
 ```
 

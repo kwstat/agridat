@@ -15,8 +15,8 @@ Rice strip-plot experiment
     \item{\code{rep}}{Rep}
     \item{\code{nitro}}{Nitrogen fertilizer in kg/ha}
     \item{\code{gen}}{Rice variety}
-    \item{\code{x}}{Ordinate in the field}
-    \item{\code{y}}{Ordinate in the field}
+    \item{\code{col}}{column ordinate in the field}
+    \item{\code{row}}{row ordinate in the field}
   }
 }
 
@@ -43,8 +43,9 @@ dat <- gomez.stripplot
 
 # Gomez figure 3.7
 if(require(desplot)){
-desplot(gen~x*y, data=dat, out1=rep, out2=nitro, num=nitro, cex=1,
-        main="gomez.stripplot")
+  desplot(gen ~ col*row, data=dat,
+          out1=rep, out2=nitro, num=nitro, cex=1,
+          main="gomez.stripplot")
 }
 
 # Gertheiss figure 1

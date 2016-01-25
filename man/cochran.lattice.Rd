@@ -28,6 +28,8 @@
   The data are the percentages of squares showing attack by boll weevils.
   A 'square' is the name given to a young flower bud.
 
+  The plot orientation is not clear.
+  
 }
 \source{
 
@@ -53,7 +55,8 @@ data(cochran.lattice)
 dat <- cochran.lattice
 
 if(require(desplot)){
-  desplot(y~row*col|rep, dat, text=trt, cex=2,
+  desplot(y~row*col|rep, dat,
+          text=trt, cex=1.5, aspect=1, # should be 2 or .5
           main="cochran.lattice")
 }
 
