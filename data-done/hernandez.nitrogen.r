@@ -7,15 +7,6 @@ library(kw)
 library(Hmisc)
 library(lattice)
 
-setwd("c:/x/rpack/agridat2/")
-dat <- import("hernandez.nitrogen.csv")
-str(dat)
-describe(dat)
-
-hernandez.nitrogen <- dat
-export(hernandez.nitrogen, "c:/x/rpack/agridat/data/hernandez.nitrogen.txt")
-export(hernandez.nitrogen, "c:/x/rpack/agridat/man/hernandez.nitrogen.Rd")
-
 # ----------------------------------------------------------------------------
 
 dat <- hernandez.nitrogen

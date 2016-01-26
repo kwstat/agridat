@@ -205,6 +205,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{kempton.slatehall}         \tab 25  \tab    \tab 6   \tab    \tab     \tab xy \tab asreml, lmer\cr
 \link{lasrosas.corn}             \tab     \tab    \tab 3   \tab 2  \tab 6   \tab xy,ym \tab lm\cr
 \link{lee.potatoblight}          \tab 337 \tab    \tab 4   \tab 11 \tab     \tab xy, ordinal, repeated \tab \cr
+\link{lillemo.wheat}             \tab 24 \tab  13 \tab     \tab 7  \tab     \tab qq \tab medpolish, huhn\cr
 \link{lonnquist.maize}           \tab 11  \tab    \tab     \tab    \tab     \tab diallel \tab asreml \cr
 \link{lyons.wheat}               \tab     \tab 12 \tab     \tab 4  \tab     \tab \tab \cr
 \link{mcconway.turnip}           \tab 2   \tab    \tab 4   \tab    \tab 2,4 \tab hetero \tab aov, lme\cr

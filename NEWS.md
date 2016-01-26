@@ -14,7 +14,7 @@
 ## New data
 
 battese.survey, gartner.corn, giles.wheat, kenward.cattle, kreusler.maize,
-lessman.sorghum.uniformity, masood.rice.uniformity,
+lessman.sorghum.uniformity, lillemo.wheat, masood.rice.uniformity,
 montgomery.wheat.uniformity, moore.polebean.uniformity,
 moore.bushbean.uniformity, moore.sweetcorn.uniformity,
 moore.carrots.uniformity, moore.springcauliflower.uniformity,
