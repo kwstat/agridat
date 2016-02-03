@@ -454,7 +454,9 @@ Geography:   State
 # uniformity trials
 
 R D Bose, 1935.
-Some soil-heterogeneity trials at Pusa and the size and shape of experimental plots. Indian Jour. Agr. Sci. 5 (5), 579-608.
+Some soil-heterogeneity trials at Pusa and the size and shape of experimental
+plots. 
+Indian Jour. Agr. Sci. 5 (5), 579-608.
 Not avail. Summary: http://digital.library.unt.edu/ark:/67531/metadc5082/m1/496/
 
 Moore, John Francis, 1952: A study of field plot technique with sprouting
@@ -465,3 +467,26 @@ Moore, John F and Darroch, JG, 1956.
 Field plot technique with Blue Lake pole beans, bush beans, carrots, sweet corn, spring and fall cauliflower.
 Washington Agricultural Experiment Stations, Institute of Agricultural Sciences, State College of Washington.
 Done.
+
+# ----------------------------------------------------------------------------
+# stability
+
+# done
+adugna.sorghum 28g,13l,5y
+brandle.rape 5g,9l,3y
+denis.missing 5g,26e
+digby.jointregression 10g,17l
+fan.stability 13g,10l,2y
+hildebrand.systems
+huehn.stability 20g,10e 
+lu.stability 5g,6e
+pieopho.cocksfoot 25g,7y
+williams.trees 37g,6l
+
+# todo ?
+kamidi 11g,7l
+lin.balanced 33g,12l
+lin.unbalanced 33g,18l
+
+
+

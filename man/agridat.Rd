@@ -187,6 +187,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{hernandez.nitrogen}        \tab     \tab 5  \tab 4   \tab    \tab     \tab rsm1 \tab lm, nls\cr
 \link{hildebrand.systems}        \tab     \tab 14 \tab     \tab    \tab 4   \tab \tab asreml\cr
 \link{holshouser.splitstrip}     \tab 4   \tab    \tab 4   \tab    \tab 2*4 \tab rsm1,pop \tab lmer\cr
+\link{huehn.stability}           \tab 20  \tab 10 \tab     \tab    \tab     \tab  \tab huehn\cr
 \link{hughes.grapes}             \tab     \tab    \tab 3   \tab    \tab 6   \tab binomial \tab lmer, aod, glmm\cr
 \link{hunter.corn}               \tab     \tab 12 \tab     \tab 3  \tab 1   \tab rsm1 \tab xyplot \cr
 \link{ivins.herbs}               \tab 13  \tab    \tab 6   \tab    \tab     \tab 2 traits \tab lm, friedman\cr
@@ -205,9 +206,10 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{kempton.slatehall}         \tab 25  \tab    \tab 6   \tab    \tab     \tab xy \tab asreml, lmer\cr
 \link{lasrosas.corn}             \tab     \tab    \tab 3   \tab 2  \tab 6   \tab xy,ym \tab lm\cr
 \link{lee.potatoblight}          \tab 337 \tab    \tab 4   \tab 11 \tab     \tab xy, ordinal, repeated \tab \cr
-\link{lillemo.wheat}             \tab 24 \tab  13 \tab     \tab 7  \tab     \tab qq \tab medpolish, huhn\cr
+\link{lillemo.wheat}             \tab 24 \tab  13 \tab     \tab 7  \tab     \tab qq \tab medpolish, huehn\cr
 \link{lonnquist.maize}           \tab 11  \tab    \tab     \tab    \tab     \tab diallel \tab asreml \cr
 \link{lyons.wheat}               \tab     \tab 12 \tab     \tab 4  \tab     \tab \tab \cr
+\link{lu.stability}              \tab 5   \tab 6  \tab     \tab    \tab     \tab \tab huehn\cr
 \link{mcconway.turnip}           \tab 2   \tab    \tab 4   \tab    \tab 2,4 \tab hetero \tab aov, lme\cr
 \link{mcleod.barley}             \tab     \tab 8  \tab     \tab    \tab  6  \tab \tab aggregate\cr
 \link{mead.cauliflower}          \tab     \tab    \tab     \tab 2  \tab     \tab poisson \tab glm \cr

@@ -33,6 +33,9 @@
   Ukraine. BT=Bila Tserkva, Ukraine. Gl=Glevakha, Ukraine. Bj=Beijing,
   China.
 
+  Note, Lillemo et al. did not remove genotype effects as is customary
+  when calculating Huehn's non-parametric stability statistics.
+
   In the examples below, the results do not quite match the
   results of Lillemo.  This could easily be the result of the original
   data table being rounded to 1 decimal place.  For example, environment
@@ -60,6 +63,12 @@
 data(lillemo.wheat)
 dat <- lillemo.wheat
 
+# Change factor levels to match Lillemo
+dat$env <- as.character(dat$env)
+dat$env <- factor(dat$env,
+                  levels=c("Bj03","Bj05","CA03","Ba04","Ma04",
+                           "Kh06","Gl05","BT06","Ch04","Ce04",
+                           "Ha03","Ha04","Ha05","Ha07","Aa03","Aa04","Aa05"))
 # Interesting look at different measurement scales by environment
 require(lattice)
 qqmath(~score|env, dat, group=scale,
@@ -75,10 +84,11 @@ datm <- acast(dat, gen~env, value.var='score')
 # Environment means. Matches Lillemo Table 3
 apply(datm, 2, mean)
 
-# Various transforms within envts to approximate 0-9 scale
+# Two different transforms within envts to approximate 0-9 scale
 datt <- datm
-datt[,3] <- 1.8 * datt[,3]
-datt[,c(4,6:8,11:17)] <- apply(datt[,c(4,6:8,11:17)],2,sqrt)
+  datt[,"CA03"] <- 1.8 * datt[,"CA03"]
+  ix <- c("Ba04","Kh06","Gl05","BT06","Ha03","Ha04","Ha05","Ha07","Aa03","Aa04","Aa05")
+datt[,ix] <- apply(datt[,ix],2,sqrt)
 
 # Genotype means of transformed data. Matches Lillemo table 3.
 round(rowMeans(datt),2)
@@ -104,37 +114,39 @@ ggplot(res1, aes(Var2, Var1)) +
   xlab("") + ylab("") + ggtitle("lillemo.wheat - medpolish residuals") +
   geom_text(aes(Var2, Var1, label=round(res1$value,1)), size=2.5)
 
-# Nonparametric stability statistics
-
-# Lillemo table 4, Mean of ranks across envts
-apply(apply(datm, 2, rank),1,mean)
-
-# Table 4. Huhn non-parametric S1
-huhn1 <- function(mat){
+# Nonparametric stability statistics. Lillemo Table 4.
+huehn <- function(mat){
   # Gen in rows, Env in cols  
   nenv <- ncol(mat)
+  # Corrected yield. Remove genotype effects
+  # Remove the following line to match Table 4 of Lillemo
+  mat <- sweep(mat, 1, rowMeans(mat)) + mean(mat)
   # Ranks in each environment
   rmat <- apply(mat, 2, rank)
+
+  # Mean genotype rank across envts
+  MeanRank <- apply(rmat, 1, mean)
+  
+  # Huehn S1
   gfun <- function(x){
     oo <- outer(x,x,"-")
-    sum(abs(oo))
+    sum(abs(oo)) # sum of all absolute pairwise differences
   }
-  apply(rmat, 1, gfun)/(nenv*(nenv-1))
+  S1 <- apply(rmat, 1, gfun)/(nenv*(nenv-1))
+
+  # Huehn S2
+  S2 <- apply((rmat-MeanRank)^2,1,sum)/(nenv-1)
+
+  out <- data.frame(MeanRank,S1,S2)
+  rownames(out) <- rownames(mat)
+  return(out)
 }
-round(huhn1(datm),2)
-
-# Table 4. Huhn non-parametric S2
-huhn2 <- function(mat){
-  # Gen in rows, Env in cols  
-  nenv <- ncol(mat)
-  # Ranks in each environment
-  rmat <- apply(mat, 2, rank)
-
-  mnrnk <- apply(rmat, 1, mean) # mean rank
-  apply((rmat-mnrnk)^2,1,sum)/(nenv-1)
-}
-round(huhn2(datm),2)
-
+round(huehn(datm),2) # Matches table 4
+  
+# I do not think phenability package gives correct values for S1
+# require(phenability)
+# nahu(datm)
+  
 } # dontrun
 
 }

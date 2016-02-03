@@ -11,16 +11,15 @@
 
 # agridat 1.13 (unpublished)
 
-## New data
+## New data for uniformity, stability, etc.
 
-battese.survey, gartner.corn, giles.wheat, kenward.cattle, kreusler.maize,
-lessman.sorghum.uniformity, lillemo.wheat, masood.rice.uniformity,
+lessman.sorghum.uniformity, masood.rice.uniformity,
 montgomery.wheat.uniformity, moore.polebean.uniformity,
 moore.bushbean.uniformity, moore.sweetcorn.uniformity,
 moore.carrots.uniformity, moore.springcauliflower.uniformity,
 moore.fallcauliflower.uniformity, nonnecke.corn.uniformity,
-nonnecke.peas.uniformity, onofri.winterwheat, polson.safflower.uniformity,
-sawyer.multi.uniformity, smith.beans1.uniformity, wheatley.carrot,
+nonnecke.peas.uniformity, polson.safflower.uniformity,
+sawyer.multi.uniformity, smith.beans1.uniformity,
 wiedemann.safflower.uniformity
 
 ## Other
