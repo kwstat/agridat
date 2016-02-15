@@ -49,7 +49,7 @@ dat$check <- ifelse(dat$gen=="G000", 2, 1)
 # Every fourth column is the 'check' genotype
 if(require(desplot)){
   desplot(yield ~ col*row, data=dat,
-          col=check, text=gen, cex=.75, aspect=1, # unknown aspect
+          col=check, text=gen, cex=.75, # aspect unknown
           main="burgueno.unreplicated")
 }
 

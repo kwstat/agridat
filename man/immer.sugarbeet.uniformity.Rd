@@ -57,7 +57,7 @@ dat <- immer.sugarbeet.uniformity
 # Immer numbers rows from the top
 if(require(desplot)){
   desplot(yield~col*row, data=dat,
-          aspect=110/348, tick=TRUE, flip=TRUE,
+          aspect=110/348, tick=TRUE, flip=TRUE, # true aspect
           main="immer.sugarbeet.uniformity - yield")
   desplot(sugar~col*row, data=dat,
           aspect=110/348, tick=TRUE, flip=TRUE,

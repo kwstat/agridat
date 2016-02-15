@@ -32,7 +32,7 @@ dat <- cochran.latin
 
 if(require(desplot)){
   desplot(diff~col*row, dat,
-          text=operator, cex=1, aspect=1, # unknown aspect
+          text=operator, cex=1, # aspect unknown
           main="cochran.latin")
 }
 

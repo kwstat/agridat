@@ -29,6 +29,10 @@
   5 and 6, for each set of six plots.  Each genotype was randomly
   allocated once to each pair of plots (1,6), (2,5), (3,4) across the
   three reps.  Wheel effect were not significant in _this_ trial.
+
+  Field length: 3 blocks * 12m + 2*0.5m spacing = 37m
+
+  Field width: 18m + 1m guard rows = 19m
 }
 \source{
   Durban, M., Currie, I. and R. Kempton, 2001.
@@ -50,8 +54,9 @@ dat <- durban.competition
 with(dat, table(gen,wheel))
 
 if(require(desplot)){
-desplot(yield ~ col*block, dat, out1=block, text=gen, col=wheel,
-        main="durban.competition")
+  desplot(yield ~ col*block, dat,
+          out1=block, text=gen, col=wheel, aspect=37/19, # true aspect
+          main="durban.competition")
 }
 
 

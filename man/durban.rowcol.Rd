@@ -25,12 +25,15 @@
   (east/west).
   The land sloped downward from row 16 to row 1.  Plot yields were
   converted to tonnes per hectare.
+
+  Plot dimensions are not given.
 }
 \source{
   Durban, Maria and Hackett, Christine and McNicol, James and
   Newton, Adrian and Thomas, William and Currie, Iain. 2003.
   The practical use of semiparametric models in field trials,
   \emph{Journal of Agric Biological and Envir Stats}, 8, 48-66.
+
   http://doi.org/10.1198/1085711031265
   
   Retrieved from: ftp://ftp.bioss.sari.ac.uk/pub/maria
@@ -44,7 +47,9 @@ data(durban.rowcol)
 dat <- durban.rowcol
 
 if(require(desplot)){
-desplot(yield~bed*row, dat, out1=rep, main="durban.rowcol")
+  desplot(yield~bed*row, dat,
+          out1=rep, # aspect unknown
+          main="durban.rowcol")
 }
 
 # Durban 2003 Figure 1
@@ -80,13 +85,13 @@ m1a2 <- asreml(yield~gen + lin(rowf) + lin(bedf), data=dat,
 m1a3 <- asreml(yield~gen, data=dat, random=~units, rcov=~ar1(rowf):ar1(bedf))
 
 # Figure 7
-v7a <- asreml.variogram(x=dat$bedf, y=dat$rowf, z=resid(m1a3))
+v7a <- asreml.variogram(x=dat$bedf, y=dat$rowf, z=m1a3$residuals)
 wireframe(gamma ~ x*y, v7a, aspect=c(1,.5)) # Fig 7a
 
-v7b <- asreml.variogram(x=dat$bedf, y=dat$rowf, z=resid(m1a2))
+v7b <- asreml.variogram(x=dat$bedf, y=dat$rowf, z=m1a2$residuals)
 wireframe(gamma ~ x*y, v7b, aspect=c(1,.5)) # Fig 7b
 
-v7c <- asreml.variogram(x=dat$bedf, y=dat$rowf, z=resid(m1lo))
+v7c <- asreml.variogram(x=dat$bedf, y=dat$rowf, z=m1lo$residuals)
 wireframe(gamma ~ x*y, v7c, aspect=c(1,.5)) # Fig 7c
 }
 }

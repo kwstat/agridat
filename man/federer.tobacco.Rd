@@ -64,6 +64,7 @@ anova(m1)
 if(require(desplot)){
 dat$resid <- resid(m1)
 desplot(resid ~ row * block, data=dat,
+        # aspect unknown
         main="federer.tobacco")
 }
 

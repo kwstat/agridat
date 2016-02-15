@@ -31,6 +31,7 @@
   Bayesian Analysis of Agricultural Field Experiments,
   \emph{Journal of the Royal Statistical Society: Series B (Statistical
     Methodology)},61, 691--746. Table 1.
+
   http://doi.org/10.1111/1467-9868.00201
 
   Retrieved from
@@ -52,7 +53,7 @@ dat <- besag.elbatan
 
 if(require(desplot)){
   desplot(yield~col*row, dat,
-          num=gen,
+          num=gen, # aspect unknown
           main="besag.elbatan wheat yields")
 }
 

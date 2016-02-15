@@ -24,9 +24,12 @@
   
   In 1964 an experiment was conducted with microplots to evaluate the
   effectiveness of treatments against carrot fly larvae.
+  The treatment factor is a combination of insecticide and depth.
+  
+  Hardin & Hilbe also fit a generalized binomial model.
 
   Famoye (1995) used the same data to fit a generalized binomial regression model.
-  Hardin & Hilbe also fit a generalized binomial model.
+  Results for Famoye are not shown.
 
 }
 \source{
@@ -35,8 +38,9 @@
   A method of using the proportions of undamaged carrots or parsnips to
   estimate the relative population densities of carrot fly (Psila rosae)
   larvae, and its practical applications.
-  \emph{Annals of Applied Biology}, 100, 229-244.
-  http://doi.org/10.1111/j.1744-7348.1982.tb01935.x.
+  \emph{Annals of Applied Biology}, 100, 229-244.  Table 2.
+  
+  http://doi.org/10.1111/j.1744-7348.1982.tb01935.x
 }
 \references{
 
@@ -50,7 +54,6 @@
 \examples{
 
 data(wheatley.carrot)
-
 dat <- wheatley.carrot
 
 # Observed proportions of damage
@@ -59,14 +62,18 @@ require(lattice)
 xyplot(prop~depth|insecticide, data=dat, subset=treatment!="T11",
        cex=1.5, main="wheatley.carrot", ylab="proportion damaged")
 
-# GLM of Hardin & Hilbe p. 161 (note, they used T11 as base, R uses T01)
-m1 <- glm(cbind(damaged,total-damaged) ~ rep + treatment,
+# Model for Wheatley. Deviance for treatment matches Wheatley, but other
+# deviances do not.  Why?
+# treatment:rep is the residual
+m1 <- glm(cbind(damaged,total-damaged) ~ rep + treatment + treatment:rep,
           data=dat, family=binomial("cloglog"))
-summary(m1)
+anova(m1)
 
-# Comment.  This model is rather unsatisfactory in that the depth variable
-# only comes into the model through the factor treatment, when it is very
-# clear from the scatterplot that depth should be continuous.
+# GLM of Hardin & Hilbe p. 161. By default, R uses T01 as the base,
+# but Hardin uses T11. Results match.
+m2 <- glm(cbind(damaged,total-damaged) ~ rep + C(treatment, base=11),
+          data=dat, family=binomial("cloglog"))
+summary(m2)
 
 }
 \keyword{datasets}

@@ -66,21 +66,21 @@ summary(m1)$var  # Variance components match Stroup p. 41
 #  R!variance    9.361   4.413     2.1 Pos
 
 # Narrow space predictions
-predict(m1, classify="a", average=list(rep=NULL))$predictions$pvals
+predict(m1, data=dat, classify="a", average=list(rep=NULL))$predictions$pvals
 #  a Predicted Std Err    Status
 # a1     32.88   1.082 Estimable
 # a2     34.12   1.082 Estimable
 # a3     25.75   1.082 Estimable
 
 # Intermediate space predictions
-predict(m1, classify="a", ignore=list("a:rep"), average=list(rep=NULL))$predictions$pvals
+predict(m1, data=dat, classify="a", ignore=list("a:rep"), average=list(rep=NULL))$predictions$pvals
 #  a Predicted Std Err    Status
 # a1     32.88    2.24 Estimable
 # a2     34.12    2.24 Estimable
 # a3     25.75    2.24 Estimable
 
 # Broad space predictions
-predict(m1, classify="a")$predictions$pvals
+predict(m1, data=dat, classify="a")$predictions$pvals
 #  a Predicted Std Err    Status
 # a1     32.88    4.54 Estimable
 # a2     34.12    4.54 Estimable

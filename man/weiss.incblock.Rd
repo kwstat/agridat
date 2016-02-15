@@ -30,6 +30,11 @@
   not equal, the correction for blocks adjusted their means to identical
   values. Such accuracy is not, however, claimed to be a constant
   characteristic of the design.
+
+  Field length: 252 feet
+
+  Field width: 96 feet
+  
 }
 \source{
  Weiss, Martin G. and Cox, Gertrude M. (1939).
@@ -46,8 +51,10 @@ dat <- weiss.incblock
 
 # True aspect as shown in Weiss and Cox
 if(require(desplot)){
-desplot(yield~col*row, dat, text=gen, shorten='none', cex=.8, out1=block,
-    main="weiss.incblock", xlab="Soybean yields", aspect=252/96)
+  desplot(yield~col*row, dat,
+          text=gen, shorten='none', cex=.6, out1=block,
+          aspect=252/96, # true aspect
+          main="weiss.incblock")
 }
 
 
@@ -55,7 +62,7 @@ desplot(yield~col*row, dat, text=gen, shorten='none', cex=.8, out1=block,
   # Standard inc block analysis used by Weiss and Cox
   require(asreml)
   m1 <- asreml(yield ~ gen + block , data=dat)
-  predict(m1, classify="gen")$predictions$pvals
+  predict(m1, data=dat, classify="gen")$predictions$pvals
   ## gen pred.value std.error est.stat
   ## G01     24.59    0.8312  Estimable
   ## G02     26.92    0.8312  Estimable

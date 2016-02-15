@@ -50,7 +50,7 @@ require(linprog)
 # Maximize c'x for Ax=b
 A <- rbind(c(1,1,1,1), c(25,36,27,87), c(-1,1,-1,1))
 cvec <- c(253, 443, 284, 516) # avg profit per acre
-colnames(A) <- names(cvec) <- cc(carrot,celery,cucumber,pepper)
+colnames(A) <- names(cvec) <- c("carrot","celery","cucumber","pepper")
 rownames(A) <- c('land','labor','rotation')
 bvec <- c(200,10000,0)
 const.dir <- c("<=","<=","<=")

@@ -60,8 +60,9 @@ dat <- hanks.sprinkler
 
 # The line sprinkler is vertical between subplots 6 & 7
 if(require(desplot)){
-desplot(yield~subplot*row, dat, out1=block, out2=irr, cex=1,
-        num=gen, main="hanks.sprinkler")
+  desplot(yield~subplot*row, dat,
+          out1=block, out2=irr, cex=1, # aspect unknown
+          num=gen, main="hanks.sprinkler")
 }
 
 require("lattice")

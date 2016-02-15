@@ -35,6 +35,8 @@
   The R code below provides results that are consistent with the SAS
   code of Federer & Wolfinger (2003) when both are applied to this
   version of the data.
+
+  Plot dimensions are not given.
 }
 \source{
   Federer, Walter T. 1998. Recovery of interblock, intergradient, and
@@ -57,9 +59,10 @@ dat <- federer.diagcheck
 # Show the layout as in Federer 1998.
 dat$check <- ifelse(dat$gen == "G121" | dat$gen=="G122", "C","N")
 if(require(desplot)){
-desplot(yield ~ col*row, dat, text=gen, show.key=FALSE,
-      main="federer.diagcheck",
-      shorten='no', col=check, cex=.8, col.text=c("yellow","gray"))
+  desplot(yield ~ col*row, dat,
+          text=gen, show.key=FALSE, # aspect unknown
+          shorten='no', col=check, cex=.8, col.text=c("yellow","gray"),
+          main="federer.diagcheck")
 }
 
 

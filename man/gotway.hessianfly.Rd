@@ -20,12 +20,17 @@
 }
 \details{
   The response is binomial.
+
+  Each plot was square.
+  
 }
 \source{
   C. A. Gotway and W. W. Stroup.
   A Generalized Linear Model Approach to Spatial Data Analysis and Prediction
   \emph{Journal of Agricultural, Biological, and Environmental
     Statistics}, 2, 157-178.
+
+  http://doi.org/10.2307/1400401
 }
 \references{
   The GLIMMIX procedure. http://www.ats.ucla.edu/stat/SAS/glimmix.pdf
@@ -39,8 +44,10 @@ dat <- gotway.hessianfly
 
 dat$prop <- dat$y / dat$n
 if(require(desplot)){
-desplot(prop~long*lat, dat, out1=block, text=gen, cex=1, shorten='no',
-        main="gotway.hessianfly")
+  desplot(prop~long*lat, dat,
+          aspect=1, # true aspect
+          out1=block, text=gen, cex=1, shorten='no',
+          main="gotway.hessianfly")
 }
 
 

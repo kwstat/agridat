@@ -73,7 +73,7 @@ dat <- mercer.wheat.uniformity
 
 if(require(desplot)){
   desplot(grain ~ col*row, dat,
-          aspect=216/200,
+          aspect=216/200, # true aspect
           main="mercer.wheat.uniformity - grain yield")
 }
 

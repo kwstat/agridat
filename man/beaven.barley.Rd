@@ -36,13 +36,15 @@
   Student. (1923).
   On testing varieties of cereals.
   \emph{Biometrika}, 271-293.
+  
   http://doi.org/10.1093/biomet/15.3-4.271
 
 }
 \references{
 
   Frederick D. Richey (1926).
-  The moving average as a basis for measuring correlated variation in agronomic experiments.
+  The moving average as a basis for measuring correlated
+  variation in agronomic experiments.
   \emph{Jour. Agr. Research}, 32, 1161-1175.
 
 }
@@ -59,7 +61,7 @@ tapply(dat$yield, dat$gen, mean)
 # Compare to Student 1923, diagram I,II
 if(require(desplot)){
   desplot(yield ~ col*row, data=dat,
-          aspect=15/75,
+          aspect=15/75, # true aspect
           main="beaven.barley", text=gen)
 }
 

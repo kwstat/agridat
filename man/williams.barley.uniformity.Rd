@@ -44,7 +44,7 @@ dat <- williams.barley.uniformity
 if(require(desplot)){
 
   desplot(yield ~ col*row, dat,
-          aspect= 75/36,
+          aspect= 75/36, # true aspect
           main="williams.barley.uniformity")
 }
 

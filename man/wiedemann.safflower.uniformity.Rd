@@ -72,7 +72,7 @@ sd(dat$yield)/mean(dat$yield)
 
 if(require(desplot)){
   desplot(yield~col*row, dat,
-          flip=TRUE, tick=TRUE, aspect =99/165,
+          flip=TRUE, tick=TRUE, aspect =99/165, # true aspect
           main="wiedemann.safflower.uniformity (true shape)")
 }
 

@@ -46,6 +46,7 @@
   Inter-plot competition in yield trials of potatoes
   \emph{Solanum tuberosum L.} with single-drill plots.
   \emph{Annals of Applied Biology}, 123, 367-377.
+
   http://doi.org/10.1111/j.1744-7348.1993.tb04099.x
   
   Used with permission of Iain Currie.
@@ -58,7 +59,9 @@ dat <- connolly.potato
 
 # Field plan
 if(require(desplot)){
-  desplot(yield~col*row, data=dat, out1=rep, main="connolly.potato yields")
+  desplot(yield~col*row, data=dat,
+          out1=rep, # aspect unknown
+          main="connolly.potato yields (reps not contiguous)")
 }
 
 

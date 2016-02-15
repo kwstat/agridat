@@ -11,16 +11,17 @@
 \format{
   A data frame with 1152 observations on the following 7 variables.
   \describe{
-    \item{\code{county}}{County factory, 1-6}
-    \item{\code{row}}{Row ordinate}
-    \item{\code{col}}{Column ordinate}
-    \item{\code{rep}}{Rep factor, 1-3}
-    \item{\code{block}}{Incomplete block factor, 1-8}
-    \item{\code{yield}}{Yield}
-    \item{\code{gen}}{Genotype factor, 1-64}
+    \item{\code{county}}{county, 6 levels}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
+    \item{\code{rep}}{rep, 3 levels}
+    \item{\code{block}}{incomplete block factor, 8 levels}
+    \item{\code{yield}}{yield}
+    \item{\code{gen}}{genotype factor, 1-64}
   }
 }
 \details{
+
   Multi-environment trial of 64 corn hybrids in six counties in North
   Carolina.  Each location had 3 replicates in in incomplete-block
   design with an 18x11 lattice of plots whose length-to-width ratio was
@@ -31,7 +32,7 @@
   county/block/rep to fill-out the row, sets the genotype to G01, and
   sets the yield to missing.  These missing values were added to the
   data so that asreml could more easily do AR1xAR1 analysis using
-  rectangular fields.
+  rectangular regions.
 
   Each location/panel is:
   
@@ -45,6 +46,7 @@
   Bayesian Analysis of Agricultural Field Experiments,
   \emph{Journal of the Royal Statistical Society: Series B (Statistical
     Methodology)}, 61, 691--746. Table 1.
+
   http://doi.org/10.1111/1467-9868.00201
 
   Retrieved from
@@ -105,9 +107,6 @@ m1l$sigma^2 * c(1, coef(m1l$modelStruct$varStruct, unc = F))^2
 plot(m1a$gammas[-1],
      m1l$sigma^2 * c(1, coef(m1l$modelStruct$varStruct, unc = F))^2)
 
-}
-
-\dontrun{
 
 # The following example shows how to construct a GxE biplot
 # from the FA2 model.
@@ -149,7 +148,7 @@ biplot(sco, lam, cex=.5, main="FA2 coefficient biplot")
 gvar <- lam %*% t(lam) + diag(mat[,1])
 
 # Now get predictions and make an ordinary biplot
-p3 <- predict(m3, classify="county:gen")
+p3 <- predict(m3, data=dat, classify="county:gen")
 p3 <- p3$pred$pval
 require("gge")  
 bi3 <- gge(predicted.value ~ gen*county, data=p3, scale=FALSE)

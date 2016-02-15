@@ -11,12 +11,12 @@
 \format{
   A data frame with 289 observations on the following 6 variables.
   \describe{
-    \item{\code{gen}}{Genotype factor, 28 levels}
-    \item{\code{trial}}{Trial factor, 2 levels}
-    \item{\code{env}}{Environment factor, 13 levels}
-    \item{\code{yield}}{Yield kg/ha}
-    \item{\code{year}}{Year, 2001-2005}
-    \item{\code{loc}}{Loc factor, 3 levels}
+    \item{\code{gen}}{genotype, 28 levels}
+    \item{\code{trial}}{trial, 2 levels}
+    \item{\code{env}}{environment, 13 levels}
+    \item{\code{yield}}{yield kg/ha}
+    \item{\code{year}}{year, 2001-2005}
+    \item{\code{loc}}{loc, 3 levels}
   }
 }
 \details{
@@ -36,6 +36,7 @@
   Assessment of yield stability in sorghum using
   univariate and multivariate statistical approaches, \emph{Hereditas},
   145, 28--37.
+  
   http://doi.org/10.1111/j.0018-0661.2008.2023.x
 
   Used with permission of Asfaw Adugna.
@@ -71,7 +72,6 @@ w <- rowSums(w^2, na.rm=TRUE)
 sig2 <- k*w/((k-2)*(n-1)) - sum(w)/((k-1)*(k-2)*(n-1))
 round(sig2/10000,1) # Genotypes in T1 are divided by 10000
 }
-
 
 }
 \keyword{datasets}

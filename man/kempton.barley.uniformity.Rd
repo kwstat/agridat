@@ -47,8 +47,8 @@ dat <- kempton.barley.uniformity
 
 if(require(desplot)){
   desplot(yield~col*row, dat,
-          aspect=140/98, tick=TRUE,
-          main="kempton.barley.uniformity (true aspect)")
+          aspect=140/98, tick=TRUE, # true aspect
+          main="kempton.barley.uniformity")
 }
 
 

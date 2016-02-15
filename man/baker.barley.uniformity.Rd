@@ -44,10 +44,10 @@ dat2 <- aggregate(yield ~ row*col, data=dat, FUN=mean, na.rm=TRUE)
 
 if(require(desplot)){
 desplot(yield~col*row|year, data=dat,
-        aspect = 513/827,
+        aspect = 513/827, # true aspect
         main="baker.barley.uniformity - heatmaps by year")
 desplot(yield~col*row, data=dat2,
-        aspect = 513/827,
+        aspect = 513/827, # true aspect
         main="baker.barley.uniformity - heatmap of 10-year average")
   # Note low yield in upper right, slanting to left a bit due to sandy soil
   # as shown in Baker figure 1.

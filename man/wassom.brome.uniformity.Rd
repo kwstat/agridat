@@ -58,7 +58,7 @@ dat <- wassom.brome.uniformity
 
 if(require(desplot)){
   desplot(yield~col*row|expt, dat,
-          flip=TRUE, aspect=1, # approximate
+          flip=TRUE, aspect=1, # approximate aspect
           main="wassom.brome.uniformity")
 }
 

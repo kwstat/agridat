@@ -35,8 +35,10 @@
 }
 \references{
   Tamura, R.N. and Nelson, L.A. and Naderman, G.C., (1988).
-  An investigation of the validity and usefulness of trend analysis for field plot data.
+  An investigation of the validity and usefulness of
+  trend analysis for field plot data.
   \emph{Agronomy Journal}, 80, 712-718.
+  
   http://doi.org/10.2134/agronj1988.00021962008000050003x
 }
 \examples{
@@ -47,7 +49,7 @@ dat <- cochran.crd
 # Field plan
 if(require(desplot)){
   desplot(inf~col*row, data=dat,
-          text=trt, cex=1, aspect=1, # unknown aspect
+          text=trt, cex=1, # aspect unknown
           main="cochran.crd")
 }
 

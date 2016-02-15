@@ -53,7 +53,7 @@ dat <- lessman.sorghum.uniformity
 
 if(require(desplot)){
   desplot(yield ~ col*row, dat,
-          aspect=300/160, tick=TRUE, flip=TRUE,
+          aspect=300/160, tick=TRUE, flip=TRUE, # true aspect
           main="lessman.sorghum.uniformity")
 }
 

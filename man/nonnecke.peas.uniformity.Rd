@@ -54,11 +54,11 @@ dat <- nonnecke.peas.uniformity
 
 if(require(desplot)){
   desplot(vines~col*row|block, data=dat,
-          aspect=248/90, tick=TRUE, flip=TRUE,
+          tick=TRUE, flip=TRUE, aspect=248/90, # true aspect
           main="nonnecke.peas.uniformity - vines")
 
 desplot(peas~col*row|block, data=dat,
-        aspect=248/90, tick=TRUE, flip=TRUE,
+        tick=TRUE, flip=TRUE, aspect=248/90, # true aspect
         main="nonnecke.peas.uniformity - peas")
 }
 

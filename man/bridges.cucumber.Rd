@@ -43,7 +43,7 @@ dat <- transform(dat, rowf=factor(row), colf=factor(col))
 
 if(require(desplot)){
   desplot(yield~col*row|loc, data=dat,
-          aspect=1, # unknown
+          # aspect unknown
           text=gen, cex=1,
           main="bridges.cucumber")
 }
@@ -74,7 +74,7 @@ vc(m2)
 ##            loc_Clemson!variance     46.85    27.05     1.7     pos
 ##             loc_Tifton!variance     16.11     9.299    1.7     pos
 
-predict(m2, classify='loc:gen')$predictions$pvals
+predict(m2, data=dat, classify='loc:gen')$predictions$pvals
 ##     loc      gen Predicted Std Err    Status
 ## Clemson   Dasher     45.55   5.043 Estimable
 ## Clemson Guardian     31.62   5.043 Estimable

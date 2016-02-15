@@ -54,16 +54,17 @@ dotplot(gen ~ y/n, data=dat, group=trt, auto.key=TRUE,
         main="jansen.carrot",
         xlab="Proportion of carrots infected per block", ylab="Genotype")
 
-if(FALSE & require(lme4)){
-  # 'FALSE' used here because CRAN wants < 5 seconds per example
+\dontrun{
+  # Not run because CRAN wants < 5 seconds per example.  This is close.
+  require(lme4)
   # Tentative model.  Needs improvement.
   m1 <- glmer(cbind(y,n-y) ~ gen*trt + (1|block),
               data=dat, family=binomial)
   summary(m1)
+  # Todo: Why are these results different from Jansen?
+  # Maybe he used ungrouped bernoulli data?  Too slow with 4700 obs
+  
 }
-
-# Todo: Why are these results different from Jansen?
-# Maybe he used ungrouped bernoulli data?  Too slow with 4700 obs
 
 }
 \keyword{datasets}

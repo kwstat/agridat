@@ -42,7 +42,8 @@ dat <- li.millet.uniformity
 mean(dat$yield) # matches Li et al.
 if(require(desplot)){
   desplot(yield~col*row, dat,
-          aspect=100/100, main="li.millet.uniformity")
+          aspect=100/100, # true aspect
+          main="li.millet.uniformity")
 }
 
 

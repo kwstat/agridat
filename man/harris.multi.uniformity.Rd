@@ -129,14 +129,14 @@ d2$xord <- 5 - dat$series
 # lower-yielding in 1922-1923.
 if(require(desplot)){
   desplot(yield ~ xord*plot|harv, d2,
-          aspect=536/639, flip=TRUE,
+          aspect=536/639, flip=TRUE, # true aspect
           main="harris.multi.uniformity")
 
 # Crude fertility map by averaging across years shows probable
 # sub-surface water effects
 agg <- aggregate(yield ~ xord + plot, data=d2, mean)
 desplot(yield ~ xord + plot, agg,
-        aspect=536/639,
+        aspect=536/639, # true aspect
         main="harris.multi.uniformity fertility")
 
 }

@@ -40,7 +40,7 @@ dat <- williams.cotton.uniformity
 
 if(require(desplot)){
 desplot(yield ~ col*row, dat,
-        aspect=144/24,
+        aspect=144/24, # true aspect
         main="williams.cotton.uniformity")
 }
 

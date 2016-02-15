@@ -90,9 +90,9 @@ splom(means, main="john.alpha - means for RCB, IB, Intra-block")
 require(asreml)
 m3 <- asreml(yield ~ 1 + rep, data=dat, random=~ gen + rep:block)
 sg2 <- summary(m3)$varcomp[1,'component']
-vblup <- predict(m3, classify="gen")$pred$avsed ^ 2
+vblup <- predict(m3, data=dat, classify="gen")$pred$avsed ^ 2
 m3 <- asreml(yield ~ 1 + gen + rep, data=dat, random = ~ rep:block)
-vblue <- predict(m3, classify="gen")$pred$avsed ^ 2
+vblue <- predict(m3, data=dat, classify="gen")$pred$avsed ^ 2
 # H^2 = .803
 sg2 / (sg2 + vblue/2)
 # H^2c = .809

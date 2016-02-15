@@ -93,13 +93,16 @@ dat <- thompson.cornsoy
 
 # The droughts of 1934/36 were severe in IA/MO. Less so in OH.
 require(lattice)
-xyplot(corn+soy~year|state, dat, type=c('p','l','r'),
-auto.key=list(columns=2),
-main="thompson.cornsoy", layout=c(5,1),ylab='yield')
+xyplot(corn+soy~year|state, dat,
+       type=c('p','l','r'), auto.key=list(columns=2),
+       main="thompson.cornsoy",
+       layout=c(5,1),ylab='yield')
 
 # In 1954, only Missouri suffered very hot, dry weather
-xyplot(corn~year, dat, groups=state, type=c('p','l'),
-main="thompson.cornsoy", auto.key=list(columns=5), ylab='corn yield')
+xyplot(corn~year, dat,
+       groups=state, type=c('p','l'),
+       main="thompson.cornsoy",
+       auto.key=list(columns=5), ylab='corn yield')
 
 # Rain and temperature have negative correlation in each month.
 # July is a critical month: temp and yield are negatively correlated,
@@ -107,22 +110,23 @@ main="thompson.cornsoy", auto.key=list(columns=5), ylab='corn yield')
 # splom(~dat[-1,-1], col=dat$state, cex=.5, main="thompson.cornsoy")
 
 \dontrun{
-# Plots similar to those in Venables' Exegeses paper.
+  # Plots similar to those in Venables' Exegeses paper.
 
-dat.ia <- subset(dat, state=="Iowa")
+  dat.ia <- subset(dat, state=="Iowa")
 
-require(splines)
-m2 <- aov(corn ~ ns(rain0, 3) + ns(rain7, 3) + ns(temp8, 3) + ns(year,
-3), dat.ia)
-op <- par(mfrow=c(2,2))
-termplot(m2, se=TRUE, rug=TRUE, partial=TRUE)
-par(op)
+  require(splines)
+  m2 <- aov(corn ~ ns(rain0, 3) + ns(rain7, 3) +
+              ns(temp8, 3) + ns(year,3), dat.ia)
+  op <- par(mfrow=c(2,2))
+  termplot(m2, se=TRUE, rug=TRUE, partial=TRUE)
+  par(op)
 
-require(gam)
-m1 <- gam(corn ~ lo(year) + lo(rain0,span=.8) + lo(rain7,span=.8) + lo(temp8,span=.8), data=dat.ia)
-op <- par(mfrow=c(2,2))
-plot(m1, residuals=TRUE, se=TRUE)
-par(op)
+  require(gam)
+  m1 <- gam(corn ~ s(year, k=5) + s(rain0, k=5) +
+              s(rain7, k=5) + s(temp8, k=5), data=dat.ia)
+  op <- par(mfrow=c(2,2))
+  plot(m1, residuals=TRUE, se=TRUE, cex=2)
+  par(op)
 }
 
 }

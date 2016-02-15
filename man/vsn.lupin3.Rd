@@ -44,9 +44,11 @@ dat <- within(dat, {
 })
 
 if(require(desplot)){
-desplot(yield~ col*row|site, dat, main="vsn.lupin3 - yield")
-desplot(check~ col*row|site, dat,
-        main="vsn.lupin3: check plot placement") # Site 1 & 2 used same randomization
+  desplot(yield~ col*row|site, dat,
+          # aspect unknown
+          main="vsn.lupin3 - yield")
+  desplot(check~ col*row|site, dat,
+          main="vsn.lupin3: check plot placement") # Site 1 & 2 used same randomization
 }
 
 \dontrun{

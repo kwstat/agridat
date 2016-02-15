@@ -52,7 +52,7 @@ if(require(desplot)){
 grays <- colorRampPalette(c("#d9d9d9","#252525"))
 desplot(disease~col*row, dat,
         col.regions=grays(2),
-        aspect = .3, # No idea if this is right.
+        aspect = 0.5, # aspect unknown
         main="besag.endive - Disease incidence")
 }
 

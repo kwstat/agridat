@@ -42,6 +42,7 @@ dat <- gomez.fractionalfactorial
 # Gomez, Figure 4.8
 if(require(desplot)){
   desplot(yield~col*row, dat,
+          # aspect unknown
           text=trt, shorten="none", show.key=FALSE, cex=1,
           main="gomez.fractionalfactorial - treatment & yield")
 }

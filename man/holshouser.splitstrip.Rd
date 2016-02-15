@@ -44,11 +44,13 @@ dat$pop <- factor(dat$pop)
 
 # Experiment layout and field trends
 if(require(desplot)){
-desplot(spacing ~ col*row, data=dat, out1=block, out2=cultivar,
+  desplot(spacing ~ col*row, data=dat,
+          out1=block, out2=cultivar, # unknown aspect
         col=cultivar, text=pop, cex=.8, shorten='none', col.regions=c('wheat','white'),
         main="holshouser.splitstrip experiment design")
-desplot(yield ~ col*row, data=dat, out1=block,
-        main="holshouser.splitstrip")
+  desplot(yield ~ col*row, data=dat,
+          out1=block, # unknown aspect
+          main="holshouser.splitstrip")
 }
 
 

@@ -57,9 +57,10 @@ round(datm <- acast(dat, gen~env, fun=mean, value.var='yield'),2)
 apply(datm, 1, mean)
 apply(datm, 2, mean)
 
-# Nonparametric stability stats. Match Lu 1995 table 3.
-round(huehn(datm),3)
-
+  if(require(stable)){
+    # Nonparametric stability stats. Match Lu 1995 table 3.
+    round(huehn(datm),3)
+  }
   
 # Traditional ANOVA. Match Hwu table 2
 # F value for gen,env
@@ -72,7 +73,7 @@ summary(m2)
 # Finlay Wilkinson regression coefficients
 # First, calculate env mean, merge in
 require(dplyr)
-dat2 <- dat2 %>% group_by(env) %>% mutate(loc.mean=mean(yield))
+dat2 <- dat %>% group_by(env) %>% mutate(loc.mean=mean(yield))
 m4 <- lm(yield ~ gen -1 + gen:loc.mean, data=dat2)
 coef(m4) # Match Hwu table 4
 

@@ -24,8 +24,9 @@
   nutrients and weakens the immune system, affecting the growth of the
   animal.
 
-  Two treatments A and B were applied randomly to 60 animals (30 each in
-  two groups) to control the disease.
+  Two treatments A and B were applied randomly to 60 animals
+  (30 each in two groups) to control the disease.
+  
   Each animal was weighed 11 times at two-week intervals (one week
   between the final two measurements).
 
@@ -38,14 +39,18 @@
   Kenward, Michael G. (1987).
   A Method for Comparing Profiles of Repeated Measurements.
   \emph{Applied Statistics}, 36, 296-308.  Table 1.
+  
   http://doi.org/10.2307/2347788
+  
 }
 
 \references{
   W. Zhang, C. Leng and C. Y. Tang (2015).
   A joint modelling approach for longitudinal studies
   \emph{J. R. Statist. Soc. B}, 77 (2015), 219--238.
+  
   http://doi.org/10.1111/rssb.12065
+  
 }
 
 \examples{
@@ -53,13 +58,50 @@
 data(kenward.cattle)
 dat <- kenward.cattle
 
+# Profile plots
 require(lattice)
 foo1 <- xyplot(weight~day|trt, data=dat, type='l', group=animal,
-               main="kenward.cattle")
+               xlab="Day", ylab="Animal weight", main="kenward.cattle")
 print(foo1)
 
+# Same thing with ggplot
+if(FALSE){
+  require(ggplot2)
+  f1 <-ggplot(dat, aes(day, weight, group = animal)) +
+    facet_grid(. ~ trt) + coord_cartesian(xlim=c(0,134))
+  f1 + geom_line() + xlab("Time") + ylab("Animal weight (kg)")
+}
+
+if(FALSE){
+  # lme4. Fixed treatment intercepts, treatment polynomial trend.
+  # Random deviation for each animal
+  require(lme4)
+  m1a <-lmer(weight ~ trt*poly(day, 4) + (1|animal), data=dat,
+             REML = FALSE)
+  # Change separate polynomials into common polynomial
+  m1b <-lmer(weight ~ trt + poly(day, 4) + (1|animal), data=dat,
+             REML = FALSE)
+  # Drop treatment differences
+  m1c <-lmer(weight ~ poly(day, 4) + (1|animal), data=dat,
+             REML = FALSE)
+  anova(m1a, m1b, m1c) # Significant differences between trt polynomials
+
+  # Overlay polynomial predictions on plot
+  require(latticeExtra)
+  dat$pred <- predict(m1a, re.form=NA)
+  foo1 + xyplot(pred ~ day|trt, data=dat,
+                lwd=2, col="black", type='l')
+
+  # A Kenward-Roger Approximation and Parametric Bootstrap
+  library(pbkrtest)
+  KRmodcomp(m1b, m1c) # Non-signif
+  # Model comparison of nested models using parametric bootstrap methods
+  PBmodcomp(m1b, m1c, nsim=500)
+
+}
+
 \dontrun{
-  # What model would be appropriate?  Just an idea...not final by any means.
+  # ASREML approach to model. Not final by any means.
   # Maybe a spline curve for each treatment, plus random deviations for each time
   require(asreml)
   m1 <- asreml(weight ~  1 + lin(day) +    # overall line
@@ -69,7 +111,7 @@ print(foo1)
                  trt:spl(day) +            # different spline for each treatment
                  dev(day) + trt:dev(day) ) # non-spline deviation at each time*trt
   
-  p1 <- predict(m1, classify="trt:day")
+  p1 <- predict(m1, data=dat, classify="trt:day")
   p1 <- p1$predictions$pvals
   foo2 <- xyplot(predicted.value ~ day|trt, p1, type='l', lwd=2, lty=1, col="black")
   

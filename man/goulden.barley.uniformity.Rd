@@ -11,17 +11,22 @@
 \format{
   A data frame with 400 observations on the following 3 variables.
   \describe{
-    \item{\code{row}}{Row}
-    \item{\code{col}}{Column}
-    \item{\code{yield}}{Yield, grams per plot}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
+    \item{\code{yield}}{yield, grams per plot}
   }
 }
 \details{
   Yield in grams for 400 square-yard barley plots.
+
+  Field length: 20 plots x 1m = 20m
+
+  Field width: 20 plots x 1m = 20m
 }
 \source{
   C. H. Goulden, 1939. \emph{Methods of statistical analysis}.
   Wiley. Page 18.
+  
   https://archive.org/stream/methodsofstatist031744mbp#page/n31/mode/2up
 }
 \references{
@@ -36,7 +41,7 @@ dat <- goulden.barley.uniformity
 
 if(require(desplot)){
   desplot(yield ~ col*row, data=dat,
-          aspect=1,
+          aspect=20/20, # true aspect
           main="goulden.barley.uniformity")
 }
 

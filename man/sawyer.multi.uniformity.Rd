@@ -23,6 +23,7 @@
 \details{
   An experiment conducted at Rothamsted, England, in 1925 and 1926, in
   Sawyers Field. 
+
   Wheat was planted in 1925. Swedes were planted in 1926.
 
   Row 6, column 1 was not planted in either year.
@@ -59,10 +60,10 @@ pairs(dat[,3:7],
 if(require(desplot)){
   # The field plan (p 154) shows square plots, but this is uncertain
   desplot(grain~col*row, dat,
-          flip=TRUE, aspect=1,
+          flip=TRUE, # aspect unknown
           main="sawyer.multi.uniformity - 1925 grain yield")
   desplot(rootwt~col*row, dat,
-          flip=TRUE, aspect=1,
+          flip=TRUE, # aspect unknown,
           main="sawyer.multi.uniformity - 1926 root weight of swedes")
 }
 

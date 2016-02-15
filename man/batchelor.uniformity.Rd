@@ -30,12 +30,20 @@
 
   \bold{Jonathan Apples}
 
-  The apple (Malus sylvestris) records were obtained from a 10-year old
+  "The apple records were obtained from a 10-year old
   Jonathan apple orchard located at Providence, Utah. The surface soil
   of this orchard is very uniform to all appearances except on the
   extreme eastern edge, where the percentage of gravel increases
-  slightly. The trees are planted 16 feet apart, east and west, and 30
-  feet apart north and south.
+  slightly.  The trees are planted 16 feet apart, east and west, and 30
+  feet apart north and south."
+
+  Note: The orientation of the field is not given in the paper, but all other
+  fields in the paper have north at the top, so that is assumed to be
+  true for this field as well.
+
+  Field length: 28 rows * 30 feet = 840 feet
+
+  Field width: 8 trees * 16 feet = 128 feet
 
   
   \bold{Eureka Lemon}
@@ -53,7 +61,7 @@
 
   Field width: 14 trees * 24 feet = 336 feet
 
-  Field height: 26 trees * 24 feet = 624 feet
+  Field length: 26 trees * 24 feet = 624 feet
   
   \bold{Navel 1 (Arlington)}
 
@@ -69,9 +77,9 @@
   variations, which are present in every orchard, bring uncertainty into
   the results offield experiments.
 
-  Field width: 50 trees * 22 feet = 1100 feet
+  Field length: 50 trees * 22 feet = 1100 feet
 
-  Field height: 20 trees * 22 feet = 440 feet
+  Field width: 20 trees * 22 feet = 440 feet
   
   \bold{Navel 2 (Antelope)}
 
@@ -84,7 +92,7 @@
 
   Field width: 15 trees * 22 feet = 330 feet
 
-  Field height 33 trees * 22 feet = 726 feet
+  Field length: 33 trees * 22 feet = 726 feet
   
   \bold{Valencia Orange}
 
@@ -92,6 +100,9 @@
   planted 21 feet 6 inches by 22 feet 6 inches, located at Villa Park,
   California. The yields were obtained in 1916.
 
+  Field length: 20 rows * 22 feet = 440 feet
+
+  Field width: 12 rows * 22 feet = 264 feet
   
   \bold{Walnut}
 
@@ -106,7 +117,7 @@
 
   Field width: 10 trees * 50 feet = 500 feet
 
-  Field height: 32 trees * 50 feet = 1600 feet
+  Field length: 32 trees * 50 feet = 1600 feet
   
 }
 \source{
@@ -129,37 +140,37 @@ if(require(desplot)){
 # Apple
 data(batchelor.apple.uniformity)
 desplot(yield~col*row, data=batchelor.apple.uniformity,
-        aspect=30/16,
+        aspect=840/128, tick=TRUE, # true aspect
         main="batchelor.apple.uniformity")
 
 # Lemon
 data(batchelor.lemon.uniformity)
 desplot(yield~col*row, data=batchelor.lemon.uniformity,
-        aspect=26/14,
+        aspect=624/336, # true aspect
         main="batchelor.lemon.uniformity")
 
 # Navel1 (Arlington)
   data(batchelor.navel1.uniformity)
   desplot(yield~col*row, batchelor.navel1.uniformity,
-          aspect=50/20,
+          aspect=1100/440, # true aspect
           main="batchelor.navel1.uniformity - Arlington")
 
 # Navel2 (Antelope)
 data(batchelor.navel2.uniformity)
 desplot(yield~col*row, data=batchelor.navel2.uniformity,
-        aspect=33/15,
+        aspect=726/330, # true aspect
         main="batchelor.navel2.uniformity - Antelope")
 
 # Valencia
 data(batchelor.valencia.uniformity)
 desplot(yield~col*row, data=batchelor.valencia.uniformity,
-        aspect=20/12,
+        aspect=440/264, # true aspect
         main="batchelor.valencia.uniformity")
 
 # Walnut
 data(batchelor.walnut.uniformity)
 desplot(yield~col*row, data=batchelor.walnut.uniformity,
-        aspect=32/10,
+        aspect=1600/500, # true aspect
         main="batchelor.walnut.uniformity")
 
 }

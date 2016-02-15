@@ -56,7 +56,7 @@ dat <- cochran.lattice
 
 if(require(desplot)){
   desplot(y~row*col|rep, dat,
-          text=trt, cex=1.5, aspect=1, # should be 2 or .5
+          text=trt, cex=1.5, # aspect unknown, should be 2 or .5
           main="cochran.lattice")
 }
 

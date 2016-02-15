@@ -11,17 +11,21 @@
 \format{
   A data frame with 150 observations on the following 5 variables.
   \describe{
-    \item{\code{rep}}{Rep factor, 6 levels}
-    \item{\code{row}}{Row}
-    \item{\code{col}}{Column}
-    \item{\code{gen}}{Genotype factor, 25 levels}
-    \item{\code{yield}}{Yield (grams/plot)}
+    \item{\code{rep}}{rep, 6 levels}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
+    \item{\code{gen}}{genotype, 25 levels}
+    \item{\code{yield}}{yield (grams/plot)}
   }
 }
 \details{
   The trial was a balanced lattice with 25 varieties in 6 replicates,
   10 ranges of 15 columns.  The plot size was 1.5 meters by 4 meters.
   Each row within a rep is an (incomplete) block.
+
+  Field length: 10 ranges * 4m = 40m
+
+  Field width: 15 columns * 1.5m = 22.5m
 }
 \source{
   R A Kempton and P N Fox. (1997).
@@ -29,7 +33,7 @@
   Chapman and Hall.  Page 84.
 
   Julian Besag and David Higdon. 1993.
-  Bayesian Inference for Agricultural Experiments.
+  Bayesian Inference for Agricultural Field Experiments.
   Bull. Int. Statist. Table 4.1.
 }
 
@@ -46,26 +50,27 @@
 
 data(kempton.slatehall)
 dat <- kempton.slatehall
-dat <- transform(dat, xf=factor(col), yf=factor(row))
 
 # Besag 1993 figure 4.1 (left panel)
 if(require(desplot)){
-grays <- colorRampPalette(c("#d9d9d9","#252525"))
-desplot(yield ~ col * row, dat, num=gen, out1=rep,
-        col.regions=grays,
-        main="kempton.slatehall - spring wheat yields")
+  grays <- colorRampPalette(c("#d9d9d9","#252525"))
+  desplot(yield ~ col * row, dat,
+          aspect=40/22.5, # true aspect
+          num=gen, out1=rep, col.regions=grays, # unknown aspect
+          main="kempton.slatehall - spring wheat yields")
 }
 
 
 # Incomplete block model of Gilmour et al 1995
 if(require(lme4) & require(lucid)){
-m1 <- lmer(yield ~ gen + (1|rep) + (1|rep:yf) + (1|rep:xf), data=dat)
-vc(m1)
-##    groups        name variance stddev
-##  rep:xf   (Intercept)    14810 121.7
-##  rep:yf   (Intercept)    15600 124.9
-##  rep      (Intercept)     4262  65.29
-##  Residual                 8062  89.79
+  dat <- transform(dat, xf=factor(col), yf=factor(row))
+  m1 <- lmer(yield ~ gen + (1|rep) + (1|rep:yf) + (1|rep:xf), data=dat)
+  vc(m1)
+  ##    groups        name variance stddev
+  ##  rep:xf   (Intercept)    14810 121.7
+  ##  rep:yf   (Intercept)    15600 124.9
+  ##  rep      (Intercept)     4262  65.29
+  ##  Residual                 8062  89.79
 
 }
 
@@ -82,7 +87,7 @@ vc(m2)
 ##      R!variance      8062      1340    6       pos
 
 # Table 4
-predict(m2, classify="gen")$predictions$pvals
+predict(m2, data=dat, classify="gen")$predictions$pvals
 
 }
 }

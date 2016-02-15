@@ -57,7 +57,7 @@ dat <- wiebe.wheat.uniformity
 
 if(require(desplot)){
   desplot(yield~col+row, dat,
-          aspect=125/180, flip=TRUE,
+          aspect=125/180, flip=TRUE, # true aspect
           main="wiebe.wheat.uniformity: yield") # row 1 is at south
 }
 

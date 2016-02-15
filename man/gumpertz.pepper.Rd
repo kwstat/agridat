@@ -59,20 +59,20 @@ dat <- transform(dat, row=21-row)
 if(require(desplot)){
 grays <- colorRampPalette(c("#d9d9d9","#252525"))
 desplot(disease ~ row*quadrat|field, data=dat,
-        main="gumpertz.pepper disease presence", aspect=1,
-        col.regions=c('white','black'))
+        col.regions=c('white','black'), aspect=1, # uncertain aspect
+        main="gumpertz.pepper disease presence", )
 
 # Soil water.  Gumpertz fig 1b, 2b
 desplot(water ~ row*quadrat|field, data=dat,
-        main="gumpertz.pepper soil moisture", aspect=1,
-        col.regions=grays(5),
-        at=c(5,7.5,10,12.5,15,18))
+        col.regions=grays(5), aspect=1, # uncertain aspect
+        at=c(5,7.5,10,12.5,15,18),
+        main="gumpertz.pepper soil moisture")
 
 # Leaf assay.  Gumpertz fig 1c, 2c
 desplot(leaf ~ row*quadrat|field, data=dat,
-        main="gumpertz.pepper leaf assay", aspect=1,
         col.regions=grays(6),
-        at=c(0,1,2,3,4,5,6)-.5)
+        at=c(0,1,2,3,4,5,6)-.5, aspect=1, # uncertain aspect
+        main="gumpertz.pepper leaf assay", )
 }
 
 

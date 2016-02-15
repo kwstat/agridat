@@ -26,7 +26,12 @@
   eggs. The larvae can move freely, but usually mature on the plant on
   which they hatch.
 
-  Each plot contained 25 unit areas, each 1 row by 3 feet long.
+  Each plot contained 25 unit areas, each 1 row by 3 feet long.  The row
+  width is 22 inches.  The arrangement of plots within the blocks seems
+  certain, but the arrangement of the blocks/treatments is not certain,
+  since the authors say "since the plots were 5 units long and 5 wide
+  it is only practicable to combine them into groups of 5 in one
+  direction or the other".
 
   Treatment 1 = None.  Treatment 2 = Contact spray. Treatment 3 = Lead
   arsenate. Treatment 4 = Both spray, lead arsenate.
@@ -37,8 +42,9 @@
   The fit and significance of contagious distributions when applied to
   observations on larval insects.
   \emph{Ecology}, 21, 460--474. Table 6.
+  
   http://doi.org/10.2307/1930285
-  http://www.jstor.org/stable/1930285
+
 }
 
 \examples{
@@ -48,14 +54,14 @@ dat <- beall.webworms
 
 # Match Beall table 1
 with(dat, table(y,trt))
-# histogram(~y|trt, data=dat, layout=c(1,4), as.table=TRUE)
+histogram(~y|trt, data=dat, layout=c(1,4), as.table=TRUE)
 
-# Visualize Beall tble 6.  Block effects may exist, but barely.
+# Visualize Beall table 6.  Block effects may exist, but barely.
 if(require(desplot)){
 grays <- colorRampPalette(c("#d9d9d9","#252525"))
 desplot(y ~ col*row, data=dat,
         col.regions=grays(9),
-        out1=block, out2=trt, num=trt, flip=TRUE,
+        out1=block, out2=trt, num=trt, flip=TRUE, # aspect unknown
         main="beall.webworms (count of worms)")
 }
 

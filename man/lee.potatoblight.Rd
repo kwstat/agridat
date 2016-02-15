@@ -111,10 +111,10 @@ skp <- c(rep(0,10),
          rep(0,5),1,1,1,1,1)
 
 if(require(desplot)){
-desplot(y ~ col*row|date, dat,
-        main="lee.potatoblight - maps of blight resistance",
-        ylab="Year of testing",
-        layout=c(10,11),skip=as.logical(skp))
+  desplot(y ~ col*row|date, dat,
+          ylab="Year of testing", # unknown aspect
+          layout=c(10,11),skip=as.logical(skp),
+          main="lee.potatoblight - maps of blight resistance over time")
 }
 
 

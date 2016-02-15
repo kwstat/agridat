@@ -51,10 +51,10 @@ dat <- mercer.mangold.uniformity
 
 if(require(desplot)){
   desplot(roots~col*row, data=dat,
-          aspect=145/302,
+          aspect=145/302, # true aspect
           main="mercer.mangold.uniformity - roots")
   desplot(leaves~col*row, data=dat,
-          aspect=145/302,
+          aspect=145/302, # true aspect
           main="mercer.mangold.uniformity - leaves")
 }
 

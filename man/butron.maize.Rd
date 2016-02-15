@@ -106,12 +106,13 @@ synbreed::plot.pedigree(pe, vertex.size=10, vertex.label.cex=.5, asp=.5) #
 require(asreml)
 ped.ainv <- asreml.Ainverse(ped)$ginv
 
+  if(FALSE){
 m0 <- asreml(yield ~ 1+env, random = ~ gen, data=dat)
 m1 <- asreml(yield ~ 1+env, random = ~ ped(gen), ginverse=list(gen=ped.ainv), data=dat)
 m2 <- update(m1, random = ~ id(env):ped(gen))
 m3 <- update(m2, random = ~ diag(env):ped(gen))
 m4 <- update(m3, random = ~ fa(env,1):ped(gen))
-AIC(m0,m1,m2,m3,m4)
+## AIC(m0,m1,m2,m3,m4)
 ##    df      AIC
 ## m0  2 229.4037
 ## m1  2 213.2487
@@ -119,8 +120,8 @@ AIC(m0,m1,m2,m3,m4)
 ## m3  6 296.8061
 ## m4 11 218.1568
 
-p0 <- predict(m0, classify="gen")$pred$pvals
-p4 <- predict(m4, classify="gen")$pred$pvals
+p0 <- predict(m0, data=dat, classify="gen")$pred$pvals
+p4 <- predict(m4, data=dat, classify="gen")$pred$pvals
 p4par <- p4[1:12,]   # parents
 p4 <- p4[-c(1:12),]  # hybrids
 # Careful!  Need to manually sort the predictions
@@ -135,7 +136,7 @@ plot(p0$predicted.value, p4$predicted.value,
 abline(0,1,col="lightgray")
 text(x=p0$predicted.value, y=p4$predicted.value, p0$gen, cex=.5, srt=-45)
 text(x=min(lims), y=p4par$predicted.value, p4par$gen, cex=.5)
-
+  }
 # Including the pedigree provided little benefit
 
 } # dontrun

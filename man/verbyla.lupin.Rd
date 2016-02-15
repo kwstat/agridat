@@ -31,6 +31,8 @@ Nine varieties of lupin were tested for yield response to plant density
 at 11 sites.  The target density in 1991 was 10, 20, ..., 60 plants per
 m^2, and in 1992 was 20, 30, ..., 70 plants per m^2.
 
+Plot dimensions are not given.
+
 The variety Myallie was grown only in 1992.
 
 Each site had 2 reps in 1991 and 3 reps in
@@ -87,7 +89,9 @@ dat <- verbyla.lupin
 
 # The same RCB randomization was used at all sites in each year
 if(require(desplot)){
-desplot(gen~col+row|site, data=dat, main="verbyla.lupin")
+  desplot(gen~col+row|site, data=dat,
+          # aspect unknown
+          main="verbyla.lupin")
 }
 
 # Figure 3 of Verbyla

@@ -44,7 +44,7 @@ dat <- burgueno.alpha
 
 if(require(desplot)){
   desplot(yield~col*row, dat,
-          out1=rep, out2=block, aspect=1, # unknown aspect
+          out1=rep, out2=block, # aspect unknown
           text=gen, cex=1,shorten="none",
           main='burgueno.alpha')
 }

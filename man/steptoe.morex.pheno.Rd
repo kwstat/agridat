@@ -171,7 +171,8 @@ link.map(datg)
 class(datg)[1] <- "bc"
 dati <- cross2int(datg, id="gen")
 
-# Whole genome qtl
+  # Whole genome qtl
+  assign("dat", dat, 1) # Needed for wgaim in script mode
 q1 <- wgaim(m1, dat, dati, merge.by="gen", na.method.X='include')
 link.map(q1, dati) # Visualize
 out.stat(q1, dati) # outlier statistic

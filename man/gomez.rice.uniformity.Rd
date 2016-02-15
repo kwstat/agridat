@@ -43,7 +43,7 @@ dat <- gomez.rice.uniformity
 if(require(agricolae) & require(desplot) & require(reshape2)){
   # Raw data plot
   desplot(yield ~ col*row, data=dat,
-          aspect=38/18,
+          aspect=38/18, # true aspect
           main="gomez.rice.uniformity")
 
   # 3x3 moving average.  Gomez figure 12.1

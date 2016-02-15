@@ -116,7 +116,7 @@ m2 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
 anova(m2)
 
 # case study page 4.37, year means
-predict(m2, classify="year")$predictions
+predict(m2, data=dat, classify="year")$predictions
 }
 }
 \keyword{datasets}

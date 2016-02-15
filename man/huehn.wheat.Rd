@@ -1,5 +1,5 @@
-\name{huehn.stability}
-\alias{huehn.stability}
+\name{huehn.wheat}
+\alias{huehn.wheat}
 \docType{data}
 \title{
   Multi-environment trial to illustrate stability statistics
@@ -9,7 +9,7 @@
   Multi-environment trial to illustrate stability statistics
 }
 
-\usage{data("huehn.stability")}
+\usage{data("huehn.wheat")}
 \format{
   A data frame with 200 observations on the following 3 variables.
   \describe{
@@ -46,8 +46,8 @@
 
 \examples{
 
-data(huehn.stability)
-dat <- huehn.stability
+data(huehn.wheat)
+dat <- huehn.wheat
 
 \dontrun{
   
@@ -60,6 +60,7 @@ apply(datm, 2, rank) # Ranks match Huehn table 1
 
 # Huehn 1979 did not use genotype-centered data, and his definition
 # of S2 is different from later papers.
+  if(require(stable)){
 apply(huehn(datm, corrected=FALSE), 2, round,2) # S1 matches Huehn
 ##          MeanRank   S1
 ## Jubilar      6.70 3.62
@@ -75,6 +76,7 @@ apply(huehn(datm, corrected=TRUE), 2, round,2)
 ## Caribo       10.6 6.98 0.08 34.49 0.01
 ## Cbc710       10.9 8.16 1.78 47.21 1.73
 
+  }
 }
 
 }

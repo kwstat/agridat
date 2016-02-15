@@ -50,6 +50,7 @@
   Size of Plat and Number of Replications in Field Experiments with
   Soybeans.
   \emph{Agronomy Journal}, 20, 93--108.
+
   http://doi.org/10.2134/agronj1928.00021962002000020002x
 }
 
@@ -60,7 +61,7 @@ dat1 <- odland.soyhay.uniformity
 
 if(require(desplot)){
   desplot(yield ~ col*row, dat1,
-          flip=TRUE, aspect=200/105,
+          flip=TRUE, aspect=200/105, # true aspect
           main="odland.soyhay.uniformity")
 }
 

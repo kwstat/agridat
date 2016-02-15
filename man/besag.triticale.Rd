@@ -31,6 +31,7 @@
   Julian Besag and Rob Kempton (1986).
   Statistical Analysis of Field Experiments Using Neighbouring Plots.
   \emph{Biometrics}, 42, 231-251. Table 2.
+
   http://doi.org/10.2307/2531047
 }
 \references{
@@ -43,7 +44,7 @@ dat <- besag.triticale
 
 if(require(desplot)){
   desplot(yield ~ col*row, data=dat,
-          aspect =1, # unknown
+          # aspect unknown
           main="besag.triticale")
 }
 

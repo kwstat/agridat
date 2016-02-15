@@ -63,7 +63,8 @@ dat <- transform(dat, rep=factor(rep), spacing=factor(spacing), trt=factor(trt),
 # shows the relative position of the plots and treatments. Note that the
 # 'spacing' treatments are not contiguous in some reps.
 if(require(desplot)){
-  desplot(spacing~row*pos, dat, col=stock, cex=1, num=gen,
+  desplot(spacing~row*pos, dat,
+          col=stock, cex=1, num=gen, # aspect unknown
           main="archbold.apple")
 }
 

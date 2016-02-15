@@ -56,7 +56,7 @@ dat <- nonnecke.corn.uniformity
 
 if(require(desplot)){
 desplot(yield~col*row|loc, dat,
-        aspect=96/180, flip=TRUE, tick=TRUE,
+        flip=TRUE, tick=TRUE, aspect=96/180, # true aspect
         main="nonnecke.corn.uniformity")
 }
 

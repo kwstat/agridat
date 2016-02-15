@@ -58,7 +58,7 @@ dat <- dat[order(dat$system, dat$farm),]
 m1 <- asreml(yield ~ system, data=dat, rcov = ~us(system):farm)
 
 # Means, table 5
-p1 <- predict(m1, classify="system")$predictions$pvals
+p1 <- predict(m1, data=dat, classify="system")$predictions$pvals
 ##  system pred.value std.error  est.stat
 ##     CCA      1.164    0.2816 Estimable
 ##    CCAF      2.657    0.3747 Estimable
@@ -78,7 +78,7 @@ vc(m1)[c(2,4,7,11),]
 m2 <- asreml(yield ~ system, data=dat,
              random = ~ farm,
              rcov = ~ at(system):units)
-p2 <- predict(m2, classify="system")$predictions$pvals
+p2 <- predict(m2, data=dat, classify="system")$predictions$pvals
 
 # Variances, table 6
 vc(m2)

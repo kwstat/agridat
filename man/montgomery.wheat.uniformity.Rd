@@ -47,14 +47,15 @@
 
 }
 \examples{
+
 data(montgomery.wheat.uniformity)
 dat <- montgomery.wheat.uniformity
 
 # Montgomery figure 10, page 37.
 if(require(desplot)){
-desplot(yield ~ col*row, dat, text=yield,
-        aspect=1, cex=1, shorten="none",
-        main="montgomery.wheat.uniformity - observed yield")
+  desplot(yield ~ col*row, dat,
+          cex=1, shorten="none", aspect=1, # true aspect
+          main="montgomery.wheat.uniformity - observed yield")
 }
 
 

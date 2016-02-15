@@ -45,7 +45,7 @@ dat <- burgueno.rowcol
 # Two contiguous reps in 8 rows, 16 columns
 if(require(desplot)){
   desplot(yield ~ col*row, data=dat,
-          out1=rep, aspect=1, # unknown aspect
+          out1=rep, # aspect unknown
           text=gen, shorten="none", cex=.75,
           main="burgueno.rowcol")
 }
@@ -69,7 +69,7 @@ if(require(lme4) && require(lucid)){
   m2 <- update(m2) # More iterations
 
   # Scaling of spl components has changed in asreml from old versions
-  require(lucid))
+  require(lucid)
   vc(m2) # Match Burgueno p. 42
   ##      effect component std.error z.ratio constr
   ##     spl(yf)  0.09077    0.08252   1.1      pos

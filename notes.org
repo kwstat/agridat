@@ -1,9 +1,17 @@
+
 # notes.org
+
+lib(linprog)
+lib(aod)
+lib(wgaim)
 
 Sawyer field at Rothamsted, Mentioned in McCullagh's paper. 
 http://www.era.rothamsted.ac.uk/eradoc/book/84
 page 154
 Pages 138-153 have traditional RCB experiments.
+
+Rothamsted reports
+http://www.era.rothamsted.ac.uk/eradoc/books/1
 
 Fairfield Smith data
 http://www.stat.uchicago.edu/~pmcc/reml/
@@ -201,8 +209,9 @@ http://chla.library.cornell.edu/c/chla/browse.html
 
 * Books
 
-Ag Expt Station of Nebr
-24th Annual Report 
+** Annual report - Nebraska Agricultural Experiment Station
+Vol 19-24, 1906-1911
+https://books.google.com/books?id=HBlJAAAAMAAJ
 
 
 ** Andrews and Herzberg. Data.
@@ -212,16 +221,22 @@ http://lib.stat.cmu.edu/datasets/Andrews/
 
 ** Diggle. Longitudinal Data Analysis.
 http://www.maths.lancs.ac.uk/~diggle/lda/Datasets/
-Pig weight data in SemiPar::pig.weights
+
+Pig weight data is SemiPar::pig.weights
+
 Sitka spruce geepack::spruce
-Milk protein in nlme::Milk
-xyplot(protein~Time|Diet, data=Milk, group=Cow, type='l')
 
+Milk protein data is nlme::Milk.  A thorough description of this data can be
+found in Molenberghs & Kenward, /Missing Data in Clinical Studies/, p. 377.
+Original source: A. P. Verbyla and B. R. Cullis, Modelling in Repeated
+Measures Experiments. http://www.jstor.org/stable/2347384
+require(latticeExtra)
+xyplot(protein~Time|Diet, data=Milk, group=Cow, type='l') +
+xyplot(protein~Time|Diet, data=Milk, type='smooth', lwd=2, col="black")
 
-** Federer. 
-Analysis of intercropping experiments.
-Variations on split-plot.
+** Federer. Analysis of intercropping experiments.
 
+** Federer. Variations on split-plot.
 
 ** Goulden. Methods of Statistical Analysis.
 http://archive.org/details/methodsofstatist031744mbp
@@ -238,7 +253,7 @@ http://archive.org/details/methodsofstatist031744mbp
 
 
 ** Mead. The Design of Experiments.
-Turnip spacing data.  (Not used)
+Turnip spacing data.
 https://books.google.com/books?id=CaFZPbCllrMC&pg=PA323
 
 
@@ -253,7 +268,7 @@ http://www.stat.ncsu.edu/people/arellano/courses/st524/Fall08/
 
 ** Hernandez
 http://www.soils.umn.edu/academics/classes/soil4111/hw/
-Web pages are gone, but still on Wayback. Yield monitor.  Has soils layer. 
+Available on Wayback. Yield monitor data with soils layer. 
 
 ** Jack Weiss
 
@@ -285,14 +300,9 @@ Vol 1-110
 http://journals.cambridge.org/action/displayJournal?jid=AGS
 Vol 128(1997) - 152(2014)
 
-** SAS SUGI
-\\phibred.com\jh\Stat\Conference Notes\SAS Global Forum
-22-23 25-31
-
 ** SAS Global Forum
-http://support.sas.com/resources/papers/proceedings13/
 http://support.sas.com/events/sasglobalforum/previous/online.html
- 2007 2009-2010 2012-2013
+22-31, 2007-2013
 
 
 * Journals for Data
@@ -346,12 +356,6 @@ https://books.google.com/books?hl=en&lr=&id=SqlJAAAAMAAJ&oi=fnd&pg=PA446
 No significant differences between fertilizer treatments--maybe a more
 powerful analysis could find one?
 
-Jansen 1993 - Generalized Linear Mixed Models in plant breeding thesis
-P 29. Proportions.  Carrots, 3 block, 2 trt, 16 gen.  agridat::jansen.carrots
-P 30. Proportion.  Apple. 3 Inoculum concentration, 4 blk, 3 gen. agridat::jansen.apple
-P 63. Ordinal. Carnations, 2 trt, 4 gen, 4 categories.  Part of larger data.
-P 74. Ordinal. Strawberry, 12 gen, 4 blk, 3 categories. agridat::jansen.strawberry
-
 
 Wisser 2011. http://www.pnas.org/content/108/18/7339.long?tab=ds
 Multivariate analysis of maize disease resistances suggests a pleiotropic
@@ -360,17 +364,28 @@ genetic basis and implicates a GST gene
 Yan 2002. Singular value partitioning in biplots. Agron J.
 Winter wheat, 31 gen in 8 loc. Different data from Yan's earlier papers.
 
+* Papers - Uniformity trials
+
+R D Bose, 1935.
+Some soil-heterogeneity trials at Pusa and the size and shape of experimental
+plots. 
+Indian Jour. Agr. Sci. 5 (5), 579-608.
+Not available. Summary: http://digital.library.unt.edu/ark:/67531/metadc5082/m1/496/
+
+
+Moore, John Francis, 1952: A study of field plot technique with sprouting
+broccoli. Proc Amer Soc Hort Sci: 1-474
+Not available. Summary: http://eurekamag.com/research/013/624/013624967.php
 
 
 * Jstor
 
 Bartlet 1988. Stochastic Models and Field Trials.
-Cullins 1990 A Model for the Analysis of Growth Data from Designed Experiments
+Cullis 1990 A Model for the Analysis of Growth Data from Designed Experiments
   Has growth data for infected/non-infected pigs.
 Cullis 1991. Spatial Analysis of Field Experiments-An Extension to Two Dimensions
-Freeman 1975 - Analysis of Interactions in Incomplete Two-Way Tables
 Nielsen 2004. Nonlinear Mixed-Model Regression to Analyze Herbicide Dose
-? ?. An Experimental Design Used to Estimate the Optimum Planting Date for Cotton
+?. An Experimental Design Used to Estimate the Optimum Planting Date for Cotton
   Didn't use.  Not a very commonly needed design.  Has data.
 
 
@@ -449,25 +464,6 @@ Data Item:   Corn grain Acres Harvested, Yield Bu/Ac
 Domain:      Total
 Geography:   State
 
-
-# ----------------------------------------------------------------------------
-# uniformity trials
-
-R D Bose, 1935.
-Some soil-heterogeneity trials at Pusa and the size and shape of experimental
-plots. 
-Indian Jour. Agr. Sci. 5 (5), 579-608.
-Not avail. Summary: http://digital.library.unt.edu/ark:/67531/metadc5082/m1/496/
-
-Moore, John Francis, 1952: A study of field plot technique with sprouting
-broccoli. Proc Amer Soc Hort Sci: 1-474
-Not avail. Summary: http://eurekamag.com/research/013/624/013624967.php
-
-Moore, John F and Darroch, JG, 1956.
-Field plot technique with Blue Lake pole beans, bush beans, carrots, sweet corn, spring and fall cauliflower.
-Washington Agricultural Experiment Stations, Institute of Agricultural Sciences, State College of Washington.
-Done.
-
 # ----------------------------------------------------------------------------
 # stability
 
@@ -478,7 +474,7 @@ denis.missing 5g,26e
 digby.jointregression 10g,17l
 fan.stability 13g,10l,2y
 hildebrand.systems
-huehn.stability 20g,10e 
+huehn.wheat 20g,10e 
 lu.stability 5g,6e
 pieopho.cocksfoot 25g,7y
 williams.trees 37g,6l

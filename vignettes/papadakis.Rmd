@@ -26,10 +26,10 @@ library("knitr")
 knitr::opts_chunk$set(fig.align="center", fig.width=6, fig.height=6)
 options(width=90)
 ```
-
-@papadakis1937method believed that traditional blocking in field experiments did not adequately
-represent the patchiness of soil fertility patterns and he instead proposed
-adjusting the yield of each plot by the performance of the neighboring plots.
+@papadakis1937method believed that traditional blocking in field experiments
+did not adequately represent the patchiness of soil fertility patterns and he
+instead proposed adjusting the yield of each plot by the performance of the
+neighboring plots.
   
 If there is heterogeneity in the field that is of a scale smaller than the
 block (but larger than the individual plots) then adjacent plots will be
@@ -38,8 +38,7 @@ be used to reduce the effect of spatial heterogeneity and increase the
 accuracy of the treatment effects.
   
 The Papadakis method is a nearest neighbor method that uses a residual
-covariate in the analysis. In essence, the method follows the
-following steps:
+covariate in the analysis. In essence, the method follows the following steps.
 
 1. Fit a treatment model and calculate the residuals from the model.
 

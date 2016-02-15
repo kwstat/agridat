@@ -110,14 +110,14 @@ round(summary(m1.glmm)$tTable,2)
 ## extractcucumber         0.52      0.34 17    1.56    0.14
 ## genO75:extractcucumber  0.80      0.42 17    1.88    0.08
 
-round(summary(m1.bb)$BCoef,2)
+## round(summary(m1.bb)$BCoef,2)
 ##                        Estimate Std. Error z value Pr(> |z|)
 ## (Intercept)               -0.44       0.22   -2.04      0.04
 ## genO75                    -0.10       0.27   -0.36      0.72
 ## extractcucumber            0.52       0.30    1.76      0.08
 ## genO75:extractcucumber     0.80       0.38    2.11      0.03
 
-round(summary(m1.hglm)$FixCoefMat,2)
+## round(summary(m1.hglm)$FixCoefMat,2)
 ##                                     Estimate Std. Error t-value Pr(>|t|)
 ## (Intercept)                            -0.47       0.24   -1.92     0.08
 ## I(gen == "O75")TRUE                    -0.08       0.31   -0.25     0.81

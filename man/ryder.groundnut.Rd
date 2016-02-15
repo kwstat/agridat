@@ -28,6 +28,7 @@
 \source{
   K. Ryder (1981). Field plans: why the biometrician finds them useful,
   \emph{Experimental Agriculture}, 17, 243--256.
+
   http://doi.org/10.1017/S0014479700011601
 }
 
@@ -45,14 +46,18 @@ round(dat$res1 * 596.6,0)
 
 # Visually.  Note largest positive/negative residuals are adjacent
 if(require(desplot)){
-desplot(res1 ~ col + row, dat, text=gen, main="ryder.groundnut")
+  desplot(res1 ~ col + row, dat,
+          text=gen, # aspect unknown
+          main="ryder.groundnut")
 
-# Swap the dry yields for the plots and re-analyze
-dat[dat$block=="B3" & dat$gen=="A", "dry"] <- 2.8
-dat[dat$block=="B3" & dat$gen=="B", "dry"] <- 1.4
-m2 <- lm(dry~block+gen, dat)
-dat$res2 <- resid(m2)
-desplot(res2 ~ col+row, dat, text=gen, main="ryder.groundnut")
+  # Swap the dry yields for the plots and re-analyze
+  dat[dat$block=="B3" & dat$gen=="A", "dry"] <- 2.8
+  dat[dat$block=="B3" & dat$gen=="B", "dry"] <- 1.4
+  m2 <- lm(dry~block+gen, dat)
+  dat$res2 <- resid(m2)
+  desplot(res2 ~ col+row, dat,
+          # aspect unknown
+          text=gen, main="ryder.groundnut")
 }
 
 }

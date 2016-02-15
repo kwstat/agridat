@@ -24,7 +24,7 @@
   experiment conducted at Tullibigeal, New South Wales, Australia in
   1987-88.  In each row, every 6th plot was the variety 'Kite'.  Six
   other standard varieties were randomly interspersed over the trial.
-  Each plot was 15m x 1.8m.
+  Each plot was 15m x 1.8m, "oriented with the longest side with rows".
 
   The 'weed' variable is a visual score on a 0 to 10 scale,
   0 = no weeds, 10 = 100 percent weeds.
@@ -40,6 +40,13 @@
 
   Note: The 'row' and 'col' variables are as in the VSN link below (switched
   compared to the paper by Cullis et al.)
+
+  Field length: 67 plots * 1.8 m  = 121 m 
+
+  Field width: 10 rows * 15 m = 150 m
+
+  The orientation is not certain, but the alternative orientation would
+  have a field roughly 20m x 1000m, which seems unlikely.
 }
 \source{
   Brian R. Cullis, Warwick J. Lill, John A. Fisher, Barbara J. Read and
@@ -47,6 +54,7 @@
   A New Procedure for the Analysis of Early Generation Variety Trials.
   \emph{Journal of the Royal Statistical Society. Series C (Applied
     Statistics)}, 38, 361-375.
+
   http://doi.org/10.2307/2348066
 }
 \references{
@@ -64,11 +72,11 @@ dat <- cullis.earlygen
 dat$check <- ifelse(dat$entry < 8, dat$entry, NA)
 if(require(desplot)){
   desplot(yield ~ col*row, dat,
-          col="check", cex=1, flip=TRUE,
+          col="check", cex=0.5, flip=TRUE, aspect=121/150, # true aspect
           main="cullis.earlygen (yield)")
 
 desplot(weed ~ col*row, dat,
-        flip=TRUE,
+        flip=TRUE, aspect=121/150, # true aspect
         main="cullis.earlygen (weed)")
 }
 

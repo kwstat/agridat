@@ -105,12 +105,11 @@
 
 data(stroup.nin)
 dat <- stroup.nin
-dat <- transform(dat, xf=factor(col), yf=factor(row))
 
 # Experiment layout. All "Buckskin" plots are near left side
 if(require(desplot)){
   desplot(yield~col*row, dat,
-          aspect=47.3/26.4, out1="rep", num=gen, cex=1,
+          aspect=47.3/26.4, out1="rep", num=gen, cex=1, # true aspect
           main="stroup.nin - yield heatmap (true shape)")
 }
 
@@ -149,13 +148,14 @@ require(asreml)
 # RCB analysis
 dat.rcb <- asreml(yield ~ gen, random = ~ rep, data=dat,
             na.method.X="omit")
-pred.rcb <- predict(dat.rcb,classify="gen")$predictions
+pred.rcb <- predict(dat.rcb, data=dat, classify="gen")$predictions
 
 # Two-dimensional AR1xAR1 spatial model
+dat <- transform(dat, xf=factor(col), yf=factor(row))
 dat <- dat[order(dat$xf, dat$yf),]
 dat.sp <- asreml(yield~gen, data=dat,
                  rcov=~ar1(xf):ar1(yf))
-pred.sp <- predict(dat.sp,classify="gen")$predictions
+pred.sp <- predict(dat.sp, data=dat, classify="gen")$predictions
 
 # require(lucid)
 # vc(dat.sp)

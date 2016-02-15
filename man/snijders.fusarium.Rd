@@ -57,6 +57,7 @@
 
 data(snijders.fusarium)
 dat <- snijders.fusarium
+
 aggregate(y ~ strain + year, dat, FUN=mean) # Match means in Snijders table 1
 
 dat <- transform(dat, y=y/100, year=factor(year), yrstr=factor(paste0(year,"-",strain)))
@@ -78,7 +79,7 @@ anova(m2) # Match to VanEeuwijk table 5
 \dontrun{
 
 # GLM on untransformed data using logit link, variance mu^2(1-mu)^2
-require(gnm)
+require(gnm) # for 'wedderburn' family
 m2 <- glm(y ~ yrstr + gen, data=dat, family="wedderburn")
 anova(m2) # Main effects match VanEeuwijk table 6
 
@@ -86,7 +87,7 @@ anova(m2) # Main effects match VanEeuwijk table 6
 bilin2 <- gnm(y ~ yrstr + gen + instances(Mult(yrstr, gen), 2),
               data=dat, family = wedderburn)
 # plot(bilin2,1) # Resid vs fitted plot matches VanEeuwijk figure 3c
-anova(bilin2)
+## anova(bilin2)
 ##                            Df Deviance Resid. Df Resid. Dev
 ## NULL                                         203     369.44
 ## yrstr                      11  150.847       192     218.60

@@ -20,6 +20,9 @@
 }
 \details{
   The block numbers are arbitrary, and may not match the orignal source.
+
+  Plots were 10 yards x 14 yards.  Plot orientation is not clear.
+  
 }
 \source{
   Rothamsted Experimental Station Report 1934-36.
@@ -42,8 +45,9 @@ require(lattice)
 bwplot(yield~trt, dat, main="rothamsted.brussels")
 
 if(require(desplot)){
-desplot(yield~col*row, data=dat, num=trt, out1=block, cex=1,
-        main="rothamsted.brussels")
+  desplot(yield~col*row, data=dat,
+          num=trt, out1=block, cex=1, # aspect unknown
+          main="rothamsted.brussels")
 }
 
 }

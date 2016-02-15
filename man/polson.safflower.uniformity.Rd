@@ -45,7 +45,7 @@ dat <- polson.safflower.uniformity
 
 if(require("desplot")){
   desplot(yield ~ col*row, data=dat,
-          flip=TRUE, aspect=189/110,
+          flip=TRUE, aspect=189/110, # true aspect
           main="polson.safflower.uniformity")
 }
 

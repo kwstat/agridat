@@ -60,11 +60,11 @@ dat <- garber.multi.uniformity
 
 if(require(desplot)){
   desplot(oats ~ col*row, data=dat,
-          aspect=945/436, flip=TRUE, tick=TRUE,          
+          flip=TRUE, tick=TRUE, aspect=945/436, # true aspect
           main="garber.multi.uniformity oats")
   
   desplot(wheat ~ col*row, data=dat,
-          aspect=945/436, flip=TRUE, tick=TRUE,
+          flip=TRUE, tick=TRUE, aspect=945/436, # true aspect
           main="garber.multi.uniformity wheat")
 }
 with(dat, cor(oats, wheat)) # = .37 matches Garber

@@ -70,19 +70,21 @@ if(require(reshape2)){
 
 \dontrun{
 
-  ## For bootstrapping of a biplot, see the 'bbplot' and
-  ## distfree.cr packages here:
+  ## For bootstrapping of a biplot, see the non-cran packages:
+  ## 'bbplot' and 'distfree.cr'
   ## http://statgen.ualberta.ca/index.html?open=software.html
+  ## install.packages("http://statgen.ualberta.ca/download/software/bbplot_1.0.zip")
+  ## install.packages("http://statgen.ualberta.ca/download/software/distfree.cr_1.5.zip")
 
-  require(SDMTools)
-  require(distfree.cr)
-  require(bbplot)
+  ## require(SDMTools)
+  ## require(distfree.cr)
+  ## require(bbplot)
 
-  d1 <- bbplot.boot(dat, nsample=2000) # bootstrap the data
-  plot(d1) # plot distributions of principal components
-  b1 <- bbplot(d1) # create data structures for the biplot
-  plot(b1) # create the confidence regions on the biplot
-  # this may not be working...
+  ## d1 <- bbplot.boot(dat, nsample=2000) # bootstrap the data
+  ## plot(d1) # plot distributions of principal components
+  ## b1 <- bbplot(d1) # create data structures for the biplot
+  ## plot(b1) # create the confidence regions on the biplot
+
 }
 
 }

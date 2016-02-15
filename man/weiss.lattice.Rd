@@ -44,8 +44,9 @@ data(weiss.lattice)
 dat <- weiss.lattice
 
 if(require(desplot)){
-desplot(yield~col*row|rep,dat, text=gen, aspect=3/16,
-        main="weiss.lattice", xlab="Soybean yields", shorten="none", cex=.8)
+  desplot(yield~col*row|rep,dat,
+          text=gen, shorten="none", cex=.8, aspect=3/16, # true aspect
+          main="weiss.lattice (layout uncertain)", xlab="Soybean yields")
 }
 
 dat <- transform(dat, xf=factor(col), yf=factor(row))
@@ -63,7 +64,7 @@ anova(m1) # Matches Weiss table 7
 require(asreml)
 m2 <- asreml(yield ~ rep + rep:xf + rep:yf + gen, data=dat)
 anova(m2)
-predict(m2, classify="gen")$predictions$pvals # Weiss table 6 means
+predict(m2, data=dat, classify="gen")$predictions$pvals # Weiss table 6 means
 ##  gen pred.value std.error  est.stat
 ##  G01      27.74     1.461 Estimable
 ##  G02      24.95     1.461 Estimable

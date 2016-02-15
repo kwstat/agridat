@@ -17,7 +17,6 @@
   pls = partial least squares,
   row-col = row-column design,
   ts = time series,
-  ym = yield monitor
 
 \bold{Uniformity trials with a single genotype}
 
@@ -67,6 +66,15 @@ name                                  \tab dimensions \tab other \tab model \cr
 \link{wiedemann.safflower.uniformity} \tab 54 x 33 \tab xy \tab smith \cr
 \link{williams.barley.uniformity}     \tab 48 x 15 \tab xy \tab loess \cr
 \link{williams.cotton.uniformity}     \tab 24 x 12 \tab xy \tab loess \cr
+}
+
+% ------------------------------------------------------------------------------
+
+\bold{Yield monitor}
+\tabular{llllll}{
+name                             \tab reps\tab years \tab trt \tab other \tab model \cr
+\link{gartner.corn}              \tab     \tab    \tab     \tab xy,ym \tab \cr
+\link{lasrosas.corn}             \tab 3   \tab 2  \tab 6   \tab xy,ym \tab lm\cr
 }
 
 % ------------------------------------------------------------------------------
@@ -134,6 +142,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{caribbean.maize}           \tab     \tab 17 \tab 4   \tab    \tab 3   \tab \tab \cr
 \link{carmer.density}            \tab 8   \tab    \tab     \tab    \tab 4   \tab \tab nls,nlme \cr
 \link{carlson.germination}       \tab 15  \tab    \tab     \tab    \tab 8   \tab \tab glm\cr
+\link{cochran.beets}             \tab     \tab    \tab 6   \tab    \tab 7   \tab \tab \cr
 \link{cochran.bib}               \tab 13  \tab 13 \tab     \tab    \tab     \tab bib \tab aov, lme \cr
 \link{cochran.crd}               \tab     \tab    \tab     \tab    \tab 7   \tab xy, crd\tab aov \cr
 \link{cochran.factorial}         \tab     \tab    \tab 2   \tab    \tab 4^2 \tab factorial \tab aov \cr
@@ -162,9 +171,9 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{federer.tobacco}           \tab     \tab    \tab 8   \tab    \tab 7   \tab xy \tab lm \cr
 \link{fisher.latin}              \tab     \tab    \tab 5   \tab    \tab 5   \tab xy,latin \tab lm \cr
 \link{fox.wheat}                 \tab 22  \tab 14 \tab     \tab    \tab     \tab \tab lm\cr
-\link{gartner.corn}              \tab     \tab    \tab     \tab    \tab     \tab xy,ym \tab \cr
 \link{gathmann.bt}               \tab 2   \tab    \tab 8   \tab    \tab     \tab \tab tost \cr
 \link{gauch.soy}                 \tab 7   \tab 7  \tab 4   \tab 12 \tab     \tab \tab ammi \cr
+\link{giles.wheat}               \tab 19  \tab    \tab     \tab 13 \tab     \tab 2 traits\tab gnm \cr
 \link{gilmour.serpentine}        \tab 108 \tab    \tab 3   \tab    \tab     \tab xy, serpentine\tab asreml \cr
 \link{gilmour.slatehall}         \tab 25  \tab    \tab 6   \tab    \tab     \tab xy \tab asreml \cr
 \link{gomez.fractionalfactorial} \tab     \tab    \tab 2   \tab    \tab 6   \tab xy \tab lm \cr
@@ -187,7 +196,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{hernandez.nitrogen}        \tab     \tab 5  \tab 4   \tab    \tab     \tab rsm1 \tab lm, nls\cr
 \link{hildebrand.systems}        \tab     \tab 14 \tab     \tab    \tab 4   \tab \tab asreml\cr
 \link{holshouser.splitstrip}     \tab 4   \tab    \tab 4   \tab    \tab 2*4 \tab rsm1,pop \tab lmer\cr
-\link{huehn.stability}           \tab 20  \tab 10 \tab     \tab    \tab     \tab  \tab huehn\cr
+\link{huehn.wheat}               \tab 20  \tab 10 \tab     \tab    \tab     \tab  \tab huehn\cr
 \link{hughes.grapes}             \tab     \tab    \tab 3   \tab    \tab 6   \tab binomial \tab lmer, aod, glmm\cr
 \link{hunter.corn}               \tab     \tab 12 \tab     \tab 3  \tab 1   \tab rsm1 \tab xyplot \cr
 \link{ivins.herbs}               \tab 13  \tab    \tab 6   \tab    \tab     \tab 2 traits \tab lm, friedman\cr
@@ -204,7 +213,6 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{kempton.competition}       \tab 36  \tab    \tab 3   \tab    \tab     \tab xy, competition \tab lme AR1 \cr
 \link{kempton.rowcol}            \tab 35  \tab    \tab 2   \tab    \tab     \tab xy, row-col \tab lmer \cr
 \link{kempton.slatehall}         \tab 25  \tab    \tab 6   \tab    \tab     \tab xy \tab asreml, lmer\cr
-\link{lasrosas.corn}             \tab     \tab    \tab 3   \tab 2  \tab 6   \tab xy,ym \tab lm\cr
 \link{lee.potatoblight}          \tab 337 \tab    \tab 4   \tab 11 \tab     \tab xy, ordinal, repeated \tab \cr
 \link{lillemo.wheat}             \tab 24 \tab  13 \tab     \tab 7  \tab     \tab qq \tab medpolish, huehn\cr
 \link{lonnquist.maize}           \tab 11  \tab    \tab     \tab    \tab     \tab diallel \tab asreml \cr
@@ -223,6 +231,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{pacheco.soybean}           \tab 18  \tab 11 \tab     \tab    \tab     \tab \tab ammi\cr
 \link{perry.springwheat}         \tab 28  \tab 5  \tab     \tab 4  \tab     \tab gain \tab lm,lmer,asreml\cr
 \link{piepho.cocksfoot}          \tab 25  \tab    \tab     \tab 7  \tab     \tab \tab lmer\cr
+\link{ratkowsky.onions}          \tab     \tab    \tab     \tab    \tab     \tab  \tab lm\cr
 \link{ridout.appleshoots}        \tab     \tab    \tab 30  \tab    \tab 2,4 \tab zip \tab zeroinfl\cr
 \link{rothamsted.brussels}       \tab     \tab    \tab 4   \tab    \tab 6   \tab \tab \cr
 \link{ryder.groundnut}           \tab 5   \tab    \tab 4   \tab    \tab     \tab xy, rcb \tab lm \cr
@@ -239,6 +248,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{stroup.nin}                \tab 56  \tab    \tab 4   \tab    \tab     \tab xy \tab asreml \cr
 \link{stroup.splitplot}          \tab     \tab    \tab 4   \tab    \tab     \tab \tab asreml, MCMCglmm \cr
 \link{student.barley}            \tab 2   \tab 51 \tab     \tab 6  \tab     \tab \tab lmer \cr
+\link{tai.potato}                \tab 8   \tab 3  \tab     \tab 2  \tab     \tab \tab tai \cr
 \link{talbot.potato}             \tab 9   \tab 12 \tab     \tab    \tab     \tab gen*env~gen*trt \tab pls \cr
 \link{theobald.barley}           \tab 3   \tab 5  \tab     \tab 2  \tab 5   \tab rsm1 \tab \cr
 \link{theobald.covariate}        \tab 10  \tab 7  \tab 5   \tab    \tab     \tab cov \tab jags \cr
@@ -302,7 +312,7 @@ forgotten and there was no possibility of doing anything useful as a
 result of this treatment."
 Massaging these dead data sets will not lead to any of the
 genetics being released for commercial use.
-The value of these data is:
+The value of this package is:
 1. Validating published analyses (reproducible research).
 2. Providing data for testing new analysis methods.
 3. Illustrating (and validating) the use of R.

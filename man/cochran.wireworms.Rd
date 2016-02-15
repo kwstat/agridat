@@ -43,7 +43,7 @@ dat <- cochran.wireworms
 
 if(require(desplot)){
   desplot(worms ~ col*row, data=dat,
-          text=trt, cex=1,
+          text=trt, cex=1, # aspect unknown
           main="cochran.wireworms")
 }
 

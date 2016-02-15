@@ -54,7 +54,7 @@ d4$row2 <- 25-d4$row2 # flip horizontally
 if(require(desplot)){
   grays <- colorRampPalette(c("#d9d9d9","#252525"))
   desplot(yield ~ row2*col, data=d4,
-          aspect=333/330, flip=TRUE,
+          aspect=333/330, flip=TRUE, # true aspect
           main="stephens.sorghum.uniformity",
           col.regions=grays(3),
           at=c(500,680,780,1000))

@@ -26,14 +26,27 @@
   with herbicide.  The sprayer travelled in a serpentine pattern up and
   down columns.  The trial was sown in a serpentine manner with a
   planter that seeds three rows at a time (Left, Middle, Right).
+
+  Field length 22 plots * .75 m = 16.5 m
+
+  Field width 15 columns * 6 m = 90 m
 }
 \source{
   Arthur R Gilmour and Brian R Cullis and Arunas P Verbyla, 1997.
   Accounting for natural and extraneous variation in the analysis of
-  field experiments. \emph{Journal of Agric Biol Env Statistics}, 2,
-  269-293.
+  field experiments.
+  \emph{Journal of Agric Biol Env Statistics}, 2, 269-293.
 
-  Used with permission of Arthur Gilmour.
+  Used with permission of Arthur Gilmour, in turn with permission from
+  Gil Hollamby.
+}
+
+\references{
+
+  N. W. Galwey. 2014.
+  \emph{Introduction to Mixed Modelling: Beyond Regression and Analysis
+    of Variance}. Table 10.9
+  
 }
 
 \examples{
@@ -42,9 +55,10 @@ data(gilmour.serpentine)
 dat <- gilmour.serpentine
 
 if(require(desplot)){
-desplot(yield~ col*row, data=dat, num=gen, out1=rep,
-        #aspect = 6/.75,
-        main="gilmour.serpentine")
+  desplot(yield~ col*row, data=dat,
+          num=gen, show.key=FALSE, out1=rep,
+          aspect = 16.5/90, # true aspect
+          main="gilmour.serpentine")
 }
 
 # Extreme field trend.  Blocking insufficient--needs a spline/smoother
@@ -67,7 +81,7 @@ m2 <- asreml(yield ~ gen + col, data=dat,
              rcov = ~ar1(rowf):ar1(colf))
 
 # Figure 4 shows serpentine spraying
-p2 <- predict(m2, classify="colf")$predictions$pvals
+p2 <- predict(m2, data=dat, classify="colf")$predictions$pvals
 plot(p2$predicted, type='b', xlab="column number", ylab="BLUP")
 
 # Define column code (due to serpentine spraying)
@@ -79,7 +93,7 @@ m3 <- asreml(yield ~ gen + lin(colf) + colcode, data=dat,
              rcov = ~ar1(rowf):ar1(colf))
 
 # Figure 6 shows serpentine row effects
-p3 <- predict(m3, classify="rowf")$predictions$pvals
+p3 <- predict(m3, data=dat, classify="rowf")$predictions$pvals
 plot(p3$predicted, type='l', xlab="row number", ylab="BLUP")
 text(1:22, p3$predicted, c('L','L','M','R','R','M','L','L',
 'M','R','R','M','L','L','M','R','R','M','L','L','M','R'))

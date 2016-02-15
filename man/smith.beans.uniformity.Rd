@@ -76,16 +76,16 @@ cv(smith.beans4.uniformity$yield)
 
 if(require("desplot")){
   desplot(yield ~ col*row, smith.beans1.uniformity,
-    aspect=180/45, flip=TRUE,
+    aspect=180/45, flip=TRUE, # true aspect
     main="smith.beans1.uniformity (true aspect)")
   desplot(yield ~ col*row, smith.beans2.uniformity,
-    aspect=180/45, flip=TRUE,
+    aspect=180/45, flip=TRUE, # true aspect
     main="smith.beans2.uniformity (true aspect)")
   desplot(yield ~ col*row, smith.beans3.uniformity,
-    aspect=450/80, flip=TRUE,
+    aspect=450/80, flip=TRUE, # true aspect
     main="smith.beans3.uniformity (true aspect)")
   desplot(yield ~ col*row, smith.beans4.uniformity,
-    aspect=450/80, flip=TRUE,
+    aspect=450/80, flip=TRUE, # true aspect
     main="smith.beans4.uniformity (true aspect)")
 }
 }

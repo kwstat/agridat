@@ -34,9 +34,9 @@
   Kempton and Lockwood used models that adjusted yield according to the
   difference in height of neighboring plots.
 
-  Field length: 4 plots * 3m = 12m.
+  Field length: 4 plots * 3m = 12m
 
-  Field width: 38 plots * 0.5 m = 19m.
+  Field width: 38 plots * 0.5 m = 19m
 }
 \source{
   Julian Besag and Rob Kempton (1986).
@@ -56,7 +56,7 @@ dat = besag.beans
 
 if(require(desplot)){
   desplot(yield ~ col*row, data=dat,
-          aspect=12/19, out1=row, out2=rep, num=gen, cex=1,
+          aspect=12/19, out1=row, out2=rep, num=gen, cex=1, # true aspect
           main="besag.beans")
 }
 

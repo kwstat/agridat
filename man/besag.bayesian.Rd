@@ -11,10 +11,10 @@
 \format{
   A data frame with 225 observations on the following 4 variables.
   \describe{
-    \item{\code{col}}{Column (also blocking factor)}
-    \item{\code{row}}{Row}
-    \item{\code{yield}}{Yield}
-    \item{\code{gen}}{Variety factor}
+    \item{\code{col}}{column (also blocking factor)}
+    \item{\code{row}}{row}
+    \item{\code{yield}}{yield}
+    \item{\code{gen}}{variety/genotype}
   }
 }
 \details{
@@ -53,7 +53,8 @@ xyplot(yield ~ rrow|col, dat, layout=c(1,3), type='s',
   m1 <- asreml(yield ~ -1 + gen, data=dat, random=~ar1v(rf))
 
   # Visualize trends, similar to Besag figure 2.
-  dat$res <- resid(m1)
+  #dat$res <- resid(m1)
+  dat$res <- m1$residuals
   dat$geneff <- coef(m1)$fixed[as.numeric(dat$gen)]
   dat <- transform(dat, fert=yield-geneff-res)
   xyplot(geneff ~ rrow|col, dat, layout=c(1,3), type='s',

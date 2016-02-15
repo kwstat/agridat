@@ -41,9 +41,11 @@ dat$nf <- factor(dat$nitro)
 
 if(require(desplot)){
   desplot(nf ~ col*row, dat,
+          # aspect unknown
           out1=rep, col=management, num=gen, cex=1,
           main="gomez.splitsplit")
   desplot(yield ~ col*row, dat,
+          # aspect unknown
           out1=rep, main="gomez.splitsplit")
 }
 
