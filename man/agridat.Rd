@@ -33,6 +33,7 @@ name                                  \tab dimensions \tab other \tab model \cr
 \link{gomez.rice.uniformity}          \tab 18 x 36 \tab xy \tab aov,smith \cr
 \link{goulden.barley.uniformity}      \tab 20 x 20 \tab xy \tab \cr
 \link{harris.multi.uniformity}        \tab 2 x 23 \tab xy, 23 crops \tab corrgram\cr
+\link{holtsmark.timothy.uniformity}   \tab 6 x 40 \ xy \tab \cr
 \link{immer.sugarbeet.uniformity}     \tab 10 x 60 \tab xy, 3 traits \tab \cr
 \link{kalamkar.potato.uniformity}     \tab 6 x 96 \tab xy \tab \cr
 \link{kempton.barley.uniformity}      \tab 7 x 28 \tab xy \tab \cr
@@ -82,17 +83,18 @@ name                             \tab reps\tab years \tab trt \tab other \tab mo
 \bold{Animals}
 
 \tabular{llllllll}{
-name                             \tab gen \tab loc\tab years \tab trt \tab other \tab model \cr
-\link{brandt.switchback}         \tab 10  \tab    \tab    \tab 2   \tab \tab aov \cr
-\link{diggle.cow}                \tab     \tab    \tab    \tab 4   \tab ts \tab \cr
-\link{foulley.calving}           \tab     \tab    \tab    \tab     \tab ordinal \tab polr \cr
-\link{henderson.milkfat}         \tab     \tab    \tab    \tab     \tab \tab nls,lm,glm,gam\cr
-\link{holland.arthropods}        \tab 5   \tab    \tab    \tab     \tab \tab \cr
-\link{ilri.sheep}                \tab 4   \tab    \tab 6  \tab     \tab diallel \tab lmer, asreml \cr
-\link{kenward.cattle}            \tab     \tab    \tab    \tab 2   \tab \tab asreml \cr
-\link{lucas.switchback}          \tab 12  \tab    \tab    \tab 3   \tab \tab aov \cr
-\link{patterson.switchback}      \tab 12  \tab    \tab    \tab 4   \tab \tab aov \cr
-\link{zuidhof.broiler}           \tab     \tab    \tab    \tab     \tab ts \tab \cr
+name                             \tab gen \tab years \tab trt \tab other \tab model \cr
+\link{crampton.pig}              \tab     \tab    \tab 5      \tab 2 cov\tab lm \cr
+\link{brandt.switchback}         \tab 10  \tab    \tab 2      \tab \tab aov \cr
+\link{diggle.cow}                \tab     \tab    \tab 4      \tab ts \tab \cr
+\link{foulley.calving}           \tab     \tab    \tab        \tab ordinal \tab polr \cr
+\link{henderson.milkfat}         \tab     \tab    \tab        \tab \tab nls,lm,glm,gam\cr
+\link{holland.arthropods}        \tab 5   \tab    \tab        \tab \tab \cr
+\link{ilri.sheep}                \tab 4   \tab 6  \tab        \tab diallel \tab lmer, asreml \cr
+\link{kenward.cattle}            \tab     \tab    \tab 2      \tab \tab asreml \cr
+\link{lucas.switchback}          \tab 12  \tab    \tab 3      \tab \tab aov \cr
+\link{patterson.switchback}      \tab 12  \tab    \tab 4      \tab \tab aov \cr
+\link{zuidhof.broiler}           \tab     \tab    \tab        \tab ts \tab \cr
 }
 
 % ------------------------------------------------------------------------------

@@ -11,9 +11,9 @@
 \format{
   A data frame with 360 observations on the following 5 variables.
   \describe{
-    \item{\code{plot}}{plot number, consistent across years}
     \item{\code{row}}{row}
     \item{\code{col}}{column}
+    \item{\code{plot}}{plot number, consistent across years}
     \item{\code{year}}{year. Last two digits of 1895, 1896, 1897}
     \item{\code{yield}}{yield, bushels / acre}
   }

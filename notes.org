@@ -256,6 +256,9 @@ http://archive.org/details/methodsofstatist031744mbp
 Turnip spacing data.
 https://books.google.com/books?id=CaFZPbCllrMC&pg=PA323
 
+** Ostle. Statistics in Research, 2nd.
+455 2 factors, 1 covariate
+458 1 factor, 2 covariates. agridat::crampton.pig
 
 ** Paterson. Statistical Technique In Agricultural Research.
 http://www.archive.org/details/statisticaltechn031729mbp

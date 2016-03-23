@@ -12,10 +12,10 @@
 \format{
   A data frame with 200 observations on the following 4 variables.
   \describe{
+    \item{\code{row}}{row, 1-20}
+    \item{\code{col}}{column, 1-10}
     \item{\code{roots}}{root yields, pounds}
     \item{\code{leaves}}{leaf yields, pounds}
-    \item{\code{col}}{column, 1-10}
-    \item{\code{row}}{row, 1-20}
   }
 }
 \details{

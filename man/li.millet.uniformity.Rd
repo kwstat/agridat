@@ -11,8 +11,8 @@
 \format{
   A data frame with 600 observations on the following 3 variables.
   \describe{
-    \item{\code{col}}{column}
     \item{\code{row}}{row}
+    \item{\code{col}}{column}
     \item{\code{yield}}{yield (grams)}
   }
 }

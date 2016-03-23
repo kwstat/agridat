@@ -57,6 +57,7 @@ if(require(desplot)) {
           flip=TRUE, tick=TRUE, aspect=24/12, # true aspect
           main="masood.rice.uniformity - yield heatmap")
 }
+
 \dontrun{
   require(agricolae) & require(reshape2)
   dmat <- acast(dat, row~col, value.var='yield')

@@ -11,9 +11,9 @@
 \format{
   A data frame with 648 observations on the following 3 variables.
   \describe{
-    \item{\code{yield}}{grain yield, grams/m^2}
-    \item{\code{col}}{column}
     \item{\code{row}}{row}
+    \item{\code{col}}{column}
+    \item{\code{yield}}{grain yield, grams/m^2}
   }
 }
 
