@@ -28,9 +28,9 @@ silage daily but were fed different grain mixtures. Treatment T1, then,
 consisted of feeding a grain mixture of 1 part of corn and cob meal to 1
 part of ground oats, while treatment T2 consisted of feeding a grain
 mixture of 4 parts corn and cob meal, 4 parts of ground oats and 3 parts
-of gluten feed. The three treatment periods covered 105 days-three
+of gluten feed. The three treatment periods covered 105 days -- three
 periods of 35 days each. The yields for the first 7 days of each period
-were not considered because of 1he possible effect of the transition
+were not considered because of the possible effect of the transition
 from one treatment to the other. The data, together with sums and
 differences which aid in the calculations incidental to testing, are
 given in table 2.
@@ -55,7 +55,8 @@ dat <- brandt.switchback
 #     xlab="Treatment", ylab="Milk yield")
 
 # Yield at period 2 (trt T2) is above the trend in group A,
-# below the trend (trt T1) in group B
+# below the trend (trt T1) in group B.
+# Equivalently, treatment T2 is above the trend line
 require(lattice)
 xyplot(yield~period|group, data=dat, group=cow, type=c('l','r'),
     auto.key=list(columns=5), main="brandt.switchback",

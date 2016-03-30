@@ -18,17 +18,21 @@
 }
 \details{
   The experiment involved comparing a Bt maize and a near-isogenic
-  control variety.  Species abundances were measured for
-  \emph{Thysanoptera} (thrips) and \emph{Araneida} (spiders)
-  in 8 different plots.
+  control variety.
+
+  Species abundances were measured for \emph{Thysanoptera} (thrips) and
+  \emph{Araneida} (spiders) in 8 different plots.
+
   Each response is probably a mean across repeated measurements.
 }
 \source{
+
   L. A. Hothorn, 2005.
   Evaluation of Bt-Maize Field Trials by a Proof of Safety.
   http://www.seedtest.org/upload/cms/user/presentation7Hothorn.pdf
 
   Used with permission of Achim Gathmann.
+
 }
 
 \examples{
@@ -40,47 +44,53 @@ dat <- gathmann.bt
 # EDA suggests Bt vs ISO is significant for thysan, not for aranei
 require(lattice)
 if(require(reshape2)){
-d2 <- melt(dat)
-bwdot=function(x,y,...){
-    panel.xyplot(jitter(as.numeric(x)),y,...)
-    panel.bwplot(x,y,...)
-}
+d2 <- melt(dat, id.var='gen')
 bwplot(value ~ gen|variable, d2,
-       main="gathmann.bt", ylab="Insect abundance", panel=bwdot,
+       main="gathmann.bt", ylab="Insect abundance",
+       panel=function(x,y,...){
+         panel.xyplot(jitter(as.numeric(x)),y,...)
+         panel.bwplot(x,y,...)
+       },
        scales=list(relation="free"))
 }
 
 
 \dontrun{
 
-# ----- Parametric CI.  Thysan significant, aranei not significant.
-require(equivalence)
-th0 <- with(dat, tost(thysan[1:8], thysan[9:16], epsilon=1))
-lapply(th0[c("mean.diff","ci.diff")], round, 2)
+  # ----- Parametric CI.  Thysan significant, aranei not significant.
+  require(equivalence)
 
-ar0 <- with(dat, tost(aranei[1:8], aranei[9:16], alpha=.05, epsilon=.4))
-lapply(ar0[c("mean.diff","ci.diff")], round, 2)
+  th0 <- with(dat, tost(thysan[1:8], thysan[9:16], alpha=.05, paired=FALSE))
+  lapply(th0[c("estimate","tost.interval")], round, 2)
+  # 14.28-8.72=5.56, (2.51, 8.59) # match Gathmann p. 11
 
+  ar0 <- with(dat, tost(aranei[1:8], aranei[9:16], alpha=.05, epsilon=.4))
+  lapply(ar0[c("estimate","tost.interval")], round, 2)
+  # .57-.47=.10, (-0.19, 0.40) # match Gathmann p. 11
 
-# ----- Non-parametric exact CI.  Same result.
-require(coin)
-th1 <- wilcox_test(thysan ~ gen, data=dat, conf.int=TRUE, conf.level=0.9)
-lapply(confint(th1), round, 2)
+  # ----- Non-parametric exact CI.  Same result.
+  require(coin)
 
-ar1 <- wilcox_test(aranei ~ gen, data=dat, conf.int=TRUE, conf.level=0.9)
-lapply(confint(ar1), round, 2)
+  th1 <- wilcox_test(thysan ~ gen, data=dat, conf.int=TRUE, conf.level=0.90)
+  lapply(confint(th1), round, 2)
+  # 6.36, (2.8, 9.2) # Match Gathmann p. 11
 
-
-# ----- Log-transformed exact CI. Same result.
-th2 <- wilcox_test(log(thysan) ~ gen, data=dat, alternative=c("two.sided"),
-                   conf.int=TRUE, conf.level=0.9)
-lapply(confint(th2), function(x) round(exp(x),2))
-
-# ----- Log-transform doesn't work on aranei, but asinh(x/2) does
-ar2 <- wilcox_test(asinh(aranei/2) ~ gen, data=dat,
-                   alternative=c("two.sided"),
-                   conf.int=TRUE, conf.level=0.9)
-lapply(confint(ar2), function(x) round(sinh(x)*2,1))
+  ar1 <- wilcox_test(aranei ~ gen, data=dat, conf.int=TRUE, conf.level=0.90)
+  lapply(confint(ar1), round, 2)
+  # .05 (-.2, .4)
+  
+  
+  # ----- Log-transformed exact CI. Same result.
+  th2 <- wilcox_test(log(thysan) ~ gen, data=dat, alternative=c("two.sided"),
+                     conf.int=TRUE, conf.level=0.9)
+  lapply(confint(th2), function(x) round(exp(x),2))
+  # 1.66, (1.38, 2.31) # Match Gathmann p 11
+  
+  # ----- Log-transform doesn't work on aranei, but asinh(x/2) does
+  ar2 <- wilcox_test(asinh(aranei/2) ~ gen, data=dat,
+                     alternative=c("two.sided"),
+                     conf.int=TRUE, conf.level=0.9)
+  lapply(confint(ar2), function(x) round(sinh(x)*2,1))
 
 }
 }

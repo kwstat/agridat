@@ -43,8 +43,8 @@ dat <- transform(dat, age=age/7) # Change days into weeks
 
 # Plot using left axis
 op <- par(mar=c(5,4,4,4))
-plot(bw~age, dat, xlab="Age (wk)", ylab="BW (g)",
-     main="zuidhof.broiler, cage 1",
+plot(bw~age, dat, xlab="Age (weeks)", ylab="Bodyweight (g)",
+     main="zuidhof.broiler",
      xlim=c(20,32), ylim=c(0,4000), pch=20)
 lines(targetbw~age, subset(dat, !is.na(targetbw)), col="black")
 
@@ -59,8 +59,8 @@ lines(adg~age, subset(dat, !is.na(adg)), col="red", type="s", lty=1, lwd=2)
 abline(h=c(0,52), col="red")
 with(dat, segments(age, 0, age, eggwt, col="red"))
 
-legend(20, -40, c("Body weight", "Target BW", "Feed /d", "Gain /d", "Egg wt"),
-       bty="n", cex=.65, ncol=5,
+legend(20, -40, c("Body weight", "Target BW", "Feed/day", "Gain/day", "Egg wt"),
+       bty="n", cex=.5, ncol=5,
        col=c("black","black","red","red","red"),
        lty=c(-1,1,2,1,1), lwd=c(1,1,1,2,1), pch=c(20,-1,-1,-1,-1))
 par(op)

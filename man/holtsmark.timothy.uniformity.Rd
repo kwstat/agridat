@@ -43,16 +43,18 @@
 \references{
   Theodor Roemer (1920). \emph{Der Feldversuch}.
 }
+
 \examples{
 
 data(holtsmark.timothy.uniformity)
 dat <- holtsmark.timothy.uniformity
 
-# Define 'check' plots like Holtsmark does
-dat <- transform(dat, check = ifelse((row+col) %% 3 < 1, "Y", "N"))
+# Define diagonal 'check' plots like Holtsmark does
+dat <- transform(dat,
+                 check = ifelse(floor((row+col)/3)==(row+col)/3, "C", ""))
                  
 if(require(desplot)){
-  desplot(yield ~ col*row, data=dat, flip=TRUE, col=check, cex=1.5,
+  desplot(yield ~ col*row, data=dat, flip=TRUE, text=check, show.key=FALSE,
           aspect=30/200, # true aspect
           main="holtsmark.timothy.uniformity")
 }
@@ -60,4 +62,5 @@ if(require(desplot)){
 sd(dat$yield) # 2.92 matches Holtsmark p. 348
 
 }
+
 \keyword{datasets}

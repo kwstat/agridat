@@ -54,6 +54,8 @@ dat <- beall.webworms
 
 # Match Beall table 1
 with(dat, table(y,trt))
+
+require(lattice)
 histogram(~y|trt, data=dat, layout=c(1,4), as.table=TRUE)
 
 # Visualize Beall table 6.  Block effects may exist, but barely.

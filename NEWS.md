@@ -11,14 +11,14 @@
 
 ## New data for uniformity trials
 
-holtsmark.timothy.uniformity,
+draper.safflower.uniformity, holtsmark.timothy.uniformity,
 lessman.sorghum.uniformity, masood.rice.uniformity,
 montgomery.wheat.uniformity, moore.polebean.uniformity,
 moore.bushbean.uniformity, moore.sweetcorn.uniformity,
 moore.carrots.uniformity, moore.springcauliflower.uniformity,
 moore.fallcauliflower.uniformity, nonnecke.corn.uniformity,
 nonnecke.peas.uniformity, polson.safflower.uniformity,
-sawyer.multi.uniformity, smith.beans1-4.uniformity,
+sawyer.multi.uniformity, smith.beans.uniformity,
 wiedemann.safflower.uniformity
 
 ## New data for stability, misc

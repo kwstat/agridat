@@ -1,10 +1,6 @@
 
 # notes.org
 
-lib(linprog)
-lib(aod)
-lib(wgaim)
-
 Sawyer field at Rothamsted, Mentioned in McCullagh's paper. 
 http://www.era.rothamsted.ac.uk/eradoc/book/84
 page 154
@@ -308,7 +304,7 @@ http://support.sas.com/events/sasglobalforum/previous/online.html
 22-31, 2007-2013
 
 
-* Journals for Data
+* Journals - Data
 
 Ag Data Commons
 https://data.nal.usda.gov/about-ag-data-commons
@@ -364,8 +360,10 @@ Wisser 2011. http://www.pnas.org/content/108/18/7339.long?tab=ds
 Multivariate analysis of maize disease resistances suggests a pleiotropic
 genetic basis and implicates a GST gene
 
+
 Yan 2002. Singular value partitioning in biplots. Agron J.
 Winter wheat, 31 gen in 8 loc. Different data from Yan's earlier papers.
+
 
 * Papers - Uniformity trials
 

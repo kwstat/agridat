@@ -29,11 +29,12 @@ name                                  \tab dimensions \tab other \tab model \cr
 \link{batchelor.navel2.uniformity}    \tab 15 x 33 \tab xy \tab \cr
 \link{batchelor.valencia.uniformity}  \tab 12 x 20 \tab xy \tab \cr
 \link{batchelor.walnut.uniformity}    \tab 10 x 28 \tab xy \tab \cr
+\link{draper.safflower.uniformity}    \tab 18 x 16 \tab xy, 2 expt \tab smith\cr
 \link{garber.multi.uniformity}        \tab 45 x 6 \tab xy, 2 years/crops \tab \cr
 \link{gomez.rice.uniformity}          \tab 18 x 36 \tab xy \tab aov,smith \cr
 \link{goulden.barley.uniformity}      \tab 20 x 20 \tab xy \tab \cr
 \link{harris.multi.uniformity}        \tab 2 x 23 \tab xy, 23 crops \tab corrgram\cr
-\link{holtsmark.timothy.uniformity}   \tab 6 x 40 \ xy \tab \cr
+\link{holtsmark.timothy.uniformity}   \tab 6 x 40 \tab xy \tab \cr
 \link{immer.sugarbeet.uniformity}     \tab 10 x 60 \tab xy, 3 traits \tab \cr
 \link{kalamkar.potato.uniformity}     \tab 6 x 96 \tab xy \tab \cr
 \link{kempton.barley.uniformity}      \tab 7 x 28 \tab xy \tab \cr
@@ -56,10 +57,7 @@ name                                  \tab dimensions \tab other \tab model \cr
 \link{odland.soyhay.uniformity}       \tab 28 x 55 \tab xy \tab \cr
 \link{polson.safflower.uniformity}    \tab 52 x 33 \tab xy \tab smith\cr
 \link{sawyer.multi.uniformity}        \tab 8 x 6   \tab xy, 2 year \tab \cr
-\link{smith.beans1.uniformity}        \tab 18 x 12 \tab xy \tab \cr
-\link{smith.beans2.uniformity}        \tab 18 x 12 \tab xy \tab \cr
-\link{smith.beans3.uniformity}        \tab 16 x 15 \tab xy \tab \cr
-\link{smith.beans4.uniformity}        \tab 16 x 15 \tab xy \tab \cr
+\link{smith.beans.uniformity}         \tab 18x12, 16x15 \tab xy, 2 yr, 2 crops \tab \cr
 \link{smith.corn.uniformity}          \tab 6 x 20 \tab xy, 3 years \tab rgl \cr
 \link{stephens.sorghum.uniformity}    \tab 100 x 20 \tab xy \tab \cr
 \link{wassom.brome.uniformity}        \tab 36 x 36 \tab xy, 3 expts \tab \cr

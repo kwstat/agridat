@@ -1,8 +1,5 @@
 \name{smith.beans.uniformity}
-\alias{smith.beans1.uniformity}
-\alias{smith.beans2.uniformity}
-\alias{smith.beans3.uniformity}
-\alias{smith.beans4.uniformity}
+\alias{smith.beans.uniformity}
 \docType{data}
 \title{
   Uniformity trials of beans, 2 species in 2 years
@@ -10,10 +7,11 @@
 \description{
   Uniformity trials of beans at California, 1954-1955, 2 species in 2 years
 }
-\usage{data("smith.beans1.uniformity")}
+\usage{data("smith.beans.uniformity")}
 \format{
-  A data frame with 216 observations on the following 3 variables.
+  A data frame with 912 observations on the following 4 variables.
   \describe{
+    \item{\code{expt}}{experiment}
     \item{\code{row}}{row}
     \item{\code{col}}{column}
     \item{\code{yield}}{yield, kg}
@@ -35,7 +33,7 @@
 
   \bold{1954}
   
-  beans1: Red Kidney, beans2: Standard Pink
+  Experiment 1: Red Kidney. Experiment 2: Standard Pink
 
   Field width: 18 plots * 30 inches = 45 ft
   
@@ -43,15 +41,15 @@
 
   \bold{1955}
   
-  beans3: Red Kidney, beans4: Standard Pink
+  Experiment 3: Red Kidney. Experiment 4: Standard Pink
 
   Field width: 16 plots * 2 rows * 30 in = 80 ft
 
   Field height: 15 plots * 30 ft = 450 ft
-  
+
 }
 \source{
-  
+
   Francis L. Smith, 1958.
   Effects of plot size, plot shape, and number of replications on the
   efficacy of bean yield trials.
@@ -62,32 +60,35 @@
 \references{
   None.
 }
+
 \examples{
-data(smith.beans1.uniformity)
-data(smith.beans2.uniformity)
-data(smith.beans3.uniformity)
-data(smith.beans4.uniformity)
+data(smith.beans.uniformity)
+
+dat1 <- subset(smith.beans.uniformity, expt=="E1")
+dat2 <- subset(smith.beans.uniformity, expt=="E2")
+dat3 <- subset(smith.beans.uniformity, expt=="E3")
+dat4 <- subset(smith.beans.uniformity, expt=="E4")
 
 cv <- function(x) { sd(x)/mean(x) }
-cv(smith.beans1.uniformity$yield)
-cv(smith.beans2.uniformity$yield) # Does not match Smith. Checked all values by hand.
-cv(smith.beans3.uniformity$yield)
-cv(smith.beans4.uniformity$yield)
+cv(dat1$yield)
+cv(dat2$yield) # Does not match Smith. Checked all values by hand.
+cv(dat3$yield)
+cv(dat4$yield)
 
 if(require("desplot")){
-  desplot(yield ~ col*row, smith.beans1.uniformity,
+  desplot(yield ~ col*row, dat1, 
     aspect=180/45, flip=TRUE, # true aspect
-    main="smith.beans1.uniformity (true aspect)")
-  desplot(yield ~ col*row, smith.beans2.uniformity,
+    main="smith.beans.uniformity, expt 1 (true aspect)")
+  desplot(yield ~ col*row, dat2, 
     aspect=180/45, flip=TRUE, # true aspect
-    main="smith.beans2.uniformity (true aspect)")
-  desplot(yield ~ col*row, smith.beans3.uniformity,
+    main="smith.beans.uniformity, expt 2 (true aspect)")
+  desplot(yield ~ col*row, dat3, 
     aspect=450/80, flip=TRUE, # true aspect
-    main="smith.beans3.uniformity (true aspect)")
-  desplot(yield ~ col*row, smith.beans4.uniformity,
+    main="smith.beans.uniformity, expt 3 (true aspect)")
+  desplot(yield ~ col*row, dat4, 
     aspect=450/80, flip=TRUE, # true aspect
-    main="smith.beans4.uniformity (true aspect)")
-}
+    main="smith.beans.uniformity expt 4, (true aspect)")
 }
 
+}
 \keyword{datasets}

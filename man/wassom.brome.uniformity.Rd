@@ -21,6 +21,7 @@
 
   Experiments were conducted at Ames, Iowa.  The response variable is
   forage yield in pounds of green weight.
+
   Optimum plot size was estimated to be about 3.5 x 7.5 feet.
 
   Wassom and Kalton used two different methods to estimate optimum plot
@@ -45,10 +46,12 @@
   Field length: 36 plots
 }
 \source{
+
   Wassom and R.R. Kalton. (1953).
   Estimations of Optimum Plot Size Using Data from Bromegrass Uniformity
   Trials. Agricultural Experiment Station, Iowa State College, Bulletin 396.
   http://lib.dr.iastate.edu/ag_researchbulletins/32/
+
 }
 
 \examples{
