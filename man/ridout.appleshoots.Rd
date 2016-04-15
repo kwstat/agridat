@@ -7,7 +7,7 @@
 \description{
   Root counts for propagated columnar apple shoots.
 }
-\usage{data(ridout.appleshoots)}
+\usage{data("ridout.appleshoots")}
 \format{
   A data frame with 270 observations on the following 4 variables.
   \describe{

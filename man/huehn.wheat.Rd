@@ -2,7 +2,7 @@
 \alias{huehn.wheat}
 \docType{data}
 \title{
-  Multi-environment trial to illustrate stability statistics
+  Multi-environment trial of wheat to illustrate stability statistics
 }
 
 \description{

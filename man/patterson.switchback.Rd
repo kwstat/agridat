@@ -7,7 +7,7 @@
 \description{
   A switchback trial in dairy cattle
 }
-\usage{data(patterson.switchback)}
+\usage{data("patterson.switchback")}
 \format{
   A data frame with 36 observations on the following 4 variables.
   \describe{

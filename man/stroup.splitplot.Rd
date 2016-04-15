@@ -17,10 +17,10 @@
 
 \format{
   \describe{
-    \item{\code{y}}{a numeric vector}
-    \item{\code{rep}}{Factor with 4 levels}
-    \item{\code{b}}{Factor with 2 levels}
-    \item{\code{a}}{Factor with 3 levels}
+    \item{\code{y}}{simulated response}
+    \item{\code{rep}}{replicate, 4 levels}
+    \item{\code{b}}{sub-plot, 2 levels}
+    \item{\code{a}}{whole-plot, 3 levels}
   }
 }
 

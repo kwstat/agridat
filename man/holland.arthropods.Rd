@@ -7,7 +7,7 @@
 \description{
   Counts of arthropods in a grid-sampled wheat field
 }
-\usage{data(holland.arthropods)}
+\usage{data("holland.arthropods")}
 \format{
   A data frame with 63 observations on the following 8 variables.
   \describe{

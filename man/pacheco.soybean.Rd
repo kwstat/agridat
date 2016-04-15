@@ -2,7 +2,7 @@
 \alias{pacheco.soybean}
 \docType{data}
 \title{
-  Soybean yields in Brazil.
+  Multi-environment trial of soybean in Brazil.
 }
 \description{
   Yields of 18 soybean genotypes at 11 environments in Brazil.

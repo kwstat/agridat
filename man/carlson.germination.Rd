@@ -7,7 +7,7 @@
 \description{
   Germination of alfalfa seeds at various salt concentrations
 }
-\usage{data(carlson.germination)}
+\usage{data("carlson.germination")}
 \format{
   A data frame with 120 observations on the following 3 variables.
   \describe{

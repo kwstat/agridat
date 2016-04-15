@@ -2,7 +2,7 @@
 \alias{lu.stability}
 \docType{data}
 \title{
-  Multi-environment trial to illustrate stability statistics
+  Multi-environment trial of maize, to illustrate stability statistics
 }
 \description{
   Multi-environment trial to illustrate stability statistics

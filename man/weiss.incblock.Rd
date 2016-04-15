@@ -7,7 +7,7 @@
 \description{
   Soybean balanced incomplete block experiment
 }
-\usage{data(weiss.incblock)}
+\usage{data("weiss.incblock")}
 \format{
   A data frame with 186 observations on the following 5 variables.
   \describe{

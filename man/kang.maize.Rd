@@ -2,12 +2,12 @@
 \alias{kang.maize}
 \docType{data}
 \title{
-  Maize yields at 4 locs in 3 years in Louisianna.
+  Multi-environment trial of maize in Louisianna at 4 locs in 3 years
 }
 \description{
   Maize yields at 4 locs in 3 years in Louisianna.
 }
-\usage{data(kang.maize)}
+\usage{data("kang.maize")}
 \format{
   \describe{
     \item{\code{gen}}{genotype factor, 17 levels}

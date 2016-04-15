@@ -2,7 +2,7 @@
 \alias{tai.potato}
 \docType{data}
 \title{
-  Multi-environment trial of potato tuber yields
+  Multi-environment trial of potato
 }
 \description{
   Multi-environment trial of potato tuber yields

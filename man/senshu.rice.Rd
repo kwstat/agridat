@@ -2,7 +2,7 @@
 \alias{senshu.rice}
 \docType{data}
 \title{
-  Response of rice to solar radiation and temperature
+  Multi-environment trial of rice, with solar radiation and temperature
 }
 \description{
   Response of rice to solar radiation and temperature

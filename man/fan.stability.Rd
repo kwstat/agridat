@@ -2,7 +2,7 @@
 \alias{fan.stability}
 \docType{data}
 \title{
-  Maize hybrids grown in China
+  Multi-environment trial of maize hybrids in China
 }
 \description{
   Yield of 13 hybrids, grown in 10 locations across 2 years.  Conducted

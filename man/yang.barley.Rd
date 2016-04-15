@@ -2,12 +2,12 @@
 \alias{yang.barley}
 \docType{data}
 \title{
-  Yield of 6 barley varieties at 18 locations in Alberta.
+  Multi-environment trial of barley in Alberta, 6 varieties at 18 locations in Alberta.
 }
 \description{
   Yield of 6 barley varieties at 18 locations in Alberta.
 }
-\usage{data(yang.barley)}
+\usage{data("yang.barley")}
 \format{
   A data frame with 108 observations on the following 3 variables.
   \describe{

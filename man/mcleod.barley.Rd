@@ -2,7 +2,7 @@
 \alias{mcleod.barley}
 \docType{data}
 \title{
-  Yield and yield components for barley
+  Multi-environment trial of barley in South Canterbury with yield and yield components
 }
 \description{
   Yield and yield components for barley with different seeding rates.

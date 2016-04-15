@@ -11,9 +11,9 @@
 
 \format{
   \describe{
-    \item{\code{env}}{Environment factor, 26 levels}
-    \item{\code{gen}}{Genotype factor, 5 levels}
-    \item{\code{yield}}{Yield}
+    \item{\code{env}}{environment, 26 levels}
+    \item{\code{gen}}{genotype factor, 5 levels}
+    \item{\code{yield}}{yield}
   }
 }
 

@@ -7,7 +7,7 @@
 \description{
   Lattice experiment in soybeans.
 }
-\usage{data(weiss.lattice)}
+\usage{data("weiss.lattice")}
 \format{
   A data frame with 196 observations on the following 5 variables.
   \describe{

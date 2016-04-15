@@ -2,7 +2,7 @@
 ## Wish list / To do
 
 * Example for tai.potato
-* Figure out best way to use jags.
+* Figure out best way to use jags
 * JAGS code for lee.potatoblight
 * JAGS code for theobald.barley
 * JAGS code for besag.elbatan
@@ -17,8 +17,8 @@ montgomery.wheat.uniformity, moore.polebean.uniformity,
 moore.bushbean.uniformity, moore.sweetcorn.uniformity,
 moore.carrots.uniformity, moore.springcauliflower.uniformity,
 moore.fallcauliflower.uniformity, nonnecke.corn.uniformity,
-nonnecke.peas.uniformity, polson.safflower.uniformity,
-sawyer.multi.uniformity, smith.beans.uniformity,
+nonnecke.peas.uniformity, parker.orange.uniformity,
+polson.safflower.uniformity, sawyer.multi.uniformity, smith.beans.uniformity,
 wiedemann.safflower.uniformity
 
 ## New data for stability, misc

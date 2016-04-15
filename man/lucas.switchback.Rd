@@ -7,7 +7,7 @@
 \description{
   Switchback trial in dairy with three treatments
 }
-\usage{data(lucas.switchback)}
+\usage{data("lucas.switchback")}
 \format{
   A data frame with 36 observations on the following 5 variables.
   \describe{

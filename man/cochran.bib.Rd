@@ -2,7 +2,7 @@
 \alias{cochran.bib}
 \docType{data}
 \title{
-  Balanced incomplete block design in corn
+  Multi-environment trial of corn, balanced incomplete block design
 }
 \description{
   Balanced incomplete block design in corn

@@ -2,7 +2,7 @@
 \alias{bridges.cucumber}
 \docType{data}
 \title{
-  Cucumber yields in latin square design.
+  Multi-environment trial of cucumbers in a latin square design
 }
 \description{
   Cucumber yields in latin square design at two locs.

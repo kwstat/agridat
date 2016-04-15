@@ -7,7 +7,7 @@
 \description{
    Factorial experiment in beans
 }
-\usage{data(cochran.factorial)}
+\usage{data("cochran.factorial")}
 \format{
   A data frame with 32 observations on the following 4 variables.
   \describe{

@@ -2,7 +2,7 @@
 \alias{verbyla.lupin}
 \docType{data}
 \title{
-Lupin yields for different varieties and locations, at many densities
+  Multi-environment trial of lupin, multiple varieties and densities
 }
 \description{
   Yield of 9 varieties of lupin at different planting densities across

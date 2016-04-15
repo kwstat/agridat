@@ -2,12 +2,12 @@
 \alias{lonnquist.maize}
 \docType{data}
 \title{
-  Half diallel of maize
+  Multi-environment trial of maize, half diallel
 }
 \description{
   Half diallel of maize
 }
-\usage{data(lonnquist.maize)}
+\usage{data("lonnquist.maize")}
 \format{
   A data frame with 78 observations on the following 3 variables.
   \describe{

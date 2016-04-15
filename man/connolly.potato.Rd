@@ -7,7 +7,7 @@
 \description{
   Potato yields in single-drill plots
 }
-\usage{data(connolly.potato)}
+\usage{data("connolly.potato")}
 \format{
   A data frame with 80 observations on the following 6 variables.
   \describe{

@@ -2,7 +2,7 @@
 \alias{blackman.wheat}
 \docType{data}
 \title{
-  Yield for conventional and semi-dwarf wheat varieties
+  Multi-environment trial of conventional and semi-dwarf wheat varieties
 }
 \description{
   Yield for conventional and semi-dwarf wheat varieties at 7 locs with

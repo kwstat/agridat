@@ -7,7 +7,7 @@
 \description{
   Counts of webworms in a beet field, with insecticide treatments.
 }
-\usage{data(beall.webworms)}
+\usage{data("beall.webworms")}
 \format{
   A data frame with 1300 observations on the following 7 variables.
   \describe{

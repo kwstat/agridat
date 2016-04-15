@@ -2,7 +2,7 @@
 \alias{engelstad.nitro}
 \docType{data}
 \title{
-  Corn yield response to nitrogen fertilizer
+  Multi-environment trial of corn with nitrogen fertilizer
 }
 \description{
   Corn yield response to nitrogen fertilizer for a single variety of

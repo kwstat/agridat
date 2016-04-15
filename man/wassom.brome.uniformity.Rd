@@ -7,7 +7,7 @@
 \description{
   Uniformity trials of bromegrass at Ames, Iowa, 1950-1951.
 }
-\usage{data(wassom.brome.uniformity)}
+\usage{data("wassom.brome.uniformity")}
 \format{
   A data frame with 1296 observations on the following 3 variables.
   \describe{

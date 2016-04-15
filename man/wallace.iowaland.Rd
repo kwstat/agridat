@@ -7,7 +7,7 @@
 \description{
   Iowa farmland values by county in 1925
 }
-\usage{data(wallace.iowaland)}
+\usage{data("wallace.iowaland")}
 \format{
   A data frame with 99 observations on the following 10 variables.
   \describe{

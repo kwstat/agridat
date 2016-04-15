@@ -7,7 +7,7 @@
 \description{
   Uniformity trial of potatoes at Saskatchewan, Canada, 1929.
 }
-\usage{data(kalamkar.potato.uniformity)}
+\usage{data("kalamkar.potato.uniformity")}
 \format{
   A data frame with 576 observations on the following 3 variables.
   \describe{

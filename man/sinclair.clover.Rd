@@ -7,7 +7,7 @@
 \description{
   Clover yields in a factorial fertilizer experiment
 }
-\usage{data(sinclair.clover)}
+\usage{data("sinclair.clover")}
 \format{
   A data frame with 25 observations on the following 3 variables.
   \describe{

@@ -2,12 +2,12 @@
 \alias{perry.springwheat}
 \docType{data}
 \title{
-  Yields of wheat cultivars introduced 1860-1982.
+  Multi-environment trial of wheat cultivars introduced 1860-1982.
 }
 \description{
   Yields of wheat cultivars introduced 1860-1982.  Grown in 20 environments.
 }
-\usage{data(perry.springwheat)}
+\usage{data("perry.springwheat")}
 \format{
   A data frame with 560 observations on the following 6 variables.
   \describe{

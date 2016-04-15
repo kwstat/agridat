@@ -2,7 +2,7 @@
 \alias{hernandez.nitrogen}
 \docType{data}
 \title{
-  Corn response to nitrogen fertilizer at 5 sites.
+  Multi-environment trial of corn with nitrogen fertilizer at 5 sites.
 }
 \description{
   Corn response to nitrogen fertilizer at 5 sites.

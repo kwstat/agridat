@@ -2,7 +2,7 @@
 \alias{talbot.potato}
 \docType{data}
 \title{
-  Potato yields and trait scores at 12 UK locations
+  Multi-environment trial of potato in UK, yields and trait scores at 12 locations
 }
 \description{
   Yield and 14 trait scores for each of 9 potato varieties at 12

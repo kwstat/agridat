@@ -7,7 +7,7 @@
 \description{
   Switchback trial of milk yield for two feed mixtures in cattle
 }
-\usage{data(brandt.switchback)}
+\usage{data("brandt.switchback")}
 \format{
   A data frame with 30 observations on the following 5 variables.
   \describe{

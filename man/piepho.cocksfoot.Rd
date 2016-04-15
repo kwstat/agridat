@@ -7,7 +7,7 @@
 \description{
   Heading dates for cock's foot on 25 varieties in 7 years
 }
-\usage{data(piepho.cocksfoot)}
+\usage{data("piepho.cocksfoot")}
 \format{
   A data frame with 111 observations on the following 3 variables.
   \describe{

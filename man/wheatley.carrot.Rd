@@ -14,7 +14,7 @@
   \describe{
     \item{\code{treatment}}{treatment factor, 11 levels}
     \item{\code{insecticide}}{insecticide factor}
-    \item{\code{depth}}{a numeric vector}
+    \item{\code{depth}}{depth}
     \item{\code{rep}}{block}
     \item{\code{damaged}}{number of damaged palnts}
     \item{\code{total}}{total number of plants}
@@ -26,7 +26,7 @@
   effectiveness of treatments against carrot fly larvae.
   The treatment factor is a combination of insecticide and depth.
   
-  Hardin & Hilbe also fit a generalized binomial model.
+  Hardin & Hilbe used this data to fit a generalized binomial model.
 
   Famoye (1995) used the same data to fit a generalized binomial regression model.
   Results for Famoye are not shown.

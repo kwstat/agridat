@@ -2,10 +2,10 @@
 \alias{ars.earlywhitecorn96}
 \docType{data}
 \title{
-Early white food corn performance tests
+    Multi-environment trial of early white food corn
 }
 \description{
-Early white food corn performance tests of 60 white hybrids.
+  Multi-environment trial of early white food corn for 60 white hybrids.
 }
 
 \format{

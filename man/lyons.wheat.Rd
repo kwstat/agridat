@@ -2,7 +2,7 @@
 \alias{lyons.wheat}
 \docType{data}
 \title{
-  Yield of winter wheat at 12 sites in 4 years.
+  Multi-environment trial of winter wheat at 12 sites in 4 years.
 }
 \description{
   Yield of winter wheat at 12 sites in 4 years.

@@ -2,7 +2,7 @@
 \alias{brandle.rape}
 \docType{data}
 \title{
-  Three-way table of rape seed yields
+  Multi-environment trial of rape
 }
 \description{
   Rape seed yields for 5 genotypes, 3 years, 9 locations.

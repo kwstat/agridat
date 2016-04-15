@@ -2,7 +2,7 @@
 \alias{theobald.covariate}
 \docType{data}
 \title{
-  Corn silage yields for Year * Loc * Variety with covariate
+  Multi-environment trial of corn silage, Year * Loc * Variety with covariate
 }
 \description{
   Corn silage yields for maize in 5 years at 7 districts for 10 hybrids.

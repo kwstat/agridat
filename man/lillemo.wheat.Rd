@@ -2,7 +2,7 @@
 \alias{lillemo.wheat}
 \docType{data}
 \title{
-  Resistance of wheat to powdery mildew
+  Multi-environment trial of wheat susceptibile to powdery mildew
 }
 \description{
   Resistance of wheat to powdery mildew

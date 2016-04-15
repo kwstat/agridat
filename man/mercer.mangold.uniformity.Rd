@@ -8,7 +8,7 @@
   Uniformity trial of mangolds at Rothamsted Experiment Station,
   England, 1910.
 }
-\usage{data(mercer.mangold.uniformity)}
+\usage{data("mercer.mangold.uniformity")}
 \format{
   A data frame with 200 observations on the following 4 variables.
   \describe{

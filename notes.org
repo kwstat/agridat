@@ -1,5 +1,5 @@
 
-# notes.org
+#+title: notes.org
 
 Sawyer field at Rothamsted, Mentioned in McCullagh's paper. 
 http://www.era.rothamsted.ac.uk/eradoc/book/84
@@ -198,6 +198,9 @@ http://repository.cimmyt.org/xmlui/handle/10883/4290
 Core Historical Literature of Agriculture
 http://chla.library.cornell.edu/c/chla/browse.html
 
+Die Landwirtschaftlichen Versuchs-Stations
+http://catalog.hathitrust.org/Record/000549685
+
 # ----------------------------------------------------------------------------
 # ----------------------------------------------------------------------------
 
@@ -371,12 +374,15 @@ R D Bose, 1935.
 Some soil-heterogeneity trials at Pusa and the size and shape of experimental
 plots. 
 Indian Jour. Agr. Sci. 5 (5), 579-608.
-Not available. Summary: http://digital.library.unt.edu/ark:/67531/metadc5082/m1/496/
+Source document not available. 
+Summary of paper here: http://digital.library.unt.edu/ark:/67531/metadc5082/m1/496/
 
 
-Moore, John Francis, 1952: A study of field plot technique with sprouting
-broccoli. Proc Amer Soc Hort Sci: 1-474
-Not available. Summary: http://eurekamag.com/research/013/624/013624967.php
+Moore, John Francis, 1952: 
+A study of field plot technique with sprouting broccoli. 
+Proc Amer Soc Hort Sci: 1-474.
+Source not available. 
+Summary: http://eurekamag.com/research/013/624/013624967.php
 
 
 * Jstor

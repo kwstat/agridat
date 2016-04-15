@@ -55,6 +55,7 @@ name                                  \tab dimensions \tab other \tab model \cr
 \link{nonnecke.peas.uniformity}       \tab 15 x 18 \tab xy, 2 traits \tab \cr
 \link{odland.soybean.uniformity}      \tab 25 x 42 \tab xy \tab \cr
 \link{odland.soyhay.uniformity}       \tab 28 x 55 \tab xy \tab \cr
+\link{parker.orange.uniformity}       \tab 10 x 27 \tab xy, 6 yr \tab \cr
 \link{polson.safflower.uniformity}    \tab 52 x 33 \tab xy \tab smith\cr
 \link{sawyer.multi.uniformity}        \tab 8 x 6   \tab xy, 2 year \tab \cr
 \link{smith.beans.uniformity}         \tab 18x12, 16x15 \tab xy, 2 yr, 2 crops \tab \cr
@@ -128,7 +129,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{besag.beans}               \tab 6   \tab    \tab 4*6 \tab    \tab     \tab xy \tab lm,competition \cr
 \link{besag.elbatan}             \tab 50  \tab    \tab 3   \tab    \tab     \tab xy \tab lm, gam \cr
 \link{besag.endive}              \tab     \tab    \tab     \tab    \tab     \tab xy,binary \tab autologistic \cr
-\link{besag.met}                 \tab 64  \tab 6  \tab 3   \tab    \tab     \tab xy, incblock\tab asreml, lme \cr
+\link{besag.corn}                \tab 64  \tab 6  \tab 3   \tab    \tab     \tab xy, incblock\tab asreml, lme \cr
 \link{besag.triticale}           \tab 3   \tab    \tab     \tab    \tab 2,2,3 \tab xy \tab lm, asreml \cr
 \link{bliss.borers}              \tab     \tab    \tab     \tab    \tab 4   \tab \tab glm \cr
 \link{blackman.wheat}            \tab 12  \tab 7  \tab     \tab    \tab 2   \tab \tab biplot \cr
@@ -188,7 +189,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{gotway.hessianfly}         \tab 16  \tab    \tab 4   \tab    \tab     \tab xy \tab lmer \cr
 \link{goulden.latin}             \tab     \tab    \tab 5   \tab    \tab 5   \tab xy, latin \tab lm \cr
 \link{graybill.heteroskedastic}  \tab 4   \tab 13 \tab     \tab    \tab     \tab hetero \tab \cr
-\link{gumpertz.pepper}           \tab     \tab 2  \tab     \tab    \tab     \tab xy \tab glm\cr
+\link{gumpertz.pepper}           \tab     \tab    \tab     \tab    \tab     \tab xy \tab glm\cr
 \link{hanks.sprinkler}           \tab 3   \tab    \tab 3   \tab    \tab     \tab xy \tab asreml\cr
 \link{hayman.tobacco}            \tab 8   \tab    \tab 2   \tab 2  \tab     \tab diallel\tab asreml\cr
 \link{hazell.vegetables}         \tab 4   \tab    \tab     \tab 6  \tab     \tab \tab linprog\cr

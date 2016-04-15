@@ -5,7 +5,7 @@
   Multi-environment trial of corn
 }
 \description{
-  The data is the average yield (kg/acre) of 20 genotypes of corn at 7
+  The data is the yield (kg/acre) of 20 genotypes of corn at 7
   locations.
 }
 

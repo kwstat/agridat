@@ -6,7 +6,8 @@
 }
 \description{
   
-  The yield of oats from a split-plot field trial.
+  The yield of oats from a split-plot field trial conducted at
+  Rothamsted in 1931.
 
   Varieties were applied to the main plots.
 
@@ -16,34 +17,46 @@
   
   Field length: 18 rows * 28.4 links = 511 links
 
-  Field width: 4 plots * 44 links = 176 links
+  Field width: 4 plots * 44 links = 176 links.
+
+  The 'block' numbers in this data are as given in the Rothamsted Report.  
+  The 'grain' and 'straw' values are the actual pounds per sub-plot as
+  shown in the Rothamsted Report.  Each sub-plot is 1/80 acre, and a
+  'hundredweight (cwt)' is 112 pounds, so converting from sub-plot
+  weight to hundredweight/acre needs a conversion factor of 80/112.
+  
+  The 'yield' values are the values as they appeared in the paper by
+  Yates, who used 1/4-pounds as the units (i.e. he multiplied the
+  original weight by 4) for simpler calculations.
+  
 }
 
 \format{
   \describe{
-    \item{\code{block}}{block, 6 levels}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
+    \item{\code{yield}}{yield in 1/4 lbs per sub-plot, each 1/80 acre.}
     \item{\code{nitro}}{nitrogen treatment in hundredweight per acre}
     \item{\code{gen}}{genotype, 3 levels}
-    \item{\code{yield}}{yield in 1/4 lbs per sub-plot, each 1/80 acre.}
-    \item{\code{col}}{column}
-    \item{\code{row}}{row}
+    \item{\code{block}}{block, 6 levels}
+    \item{\code{grain}}{grain weight in lbs per sub-plot}
+    \item{\code{straw}}{straw weight in lbs per sub-plot}
   }
 }
 
 \source{
-  
-  Yates, Frank (1935) Complex experiments,
-  \emph{Journal of the Royal Statistical Society Suppl}
-  2, 181-247. Figure 2.
-  
-  http://doi.org/10.2307/2983638
-  
+
+  Report for 1931. Rothamsted Experiment Station. Page 143.
+  http://www.era.rothamsted.ac.uk/eradoc/article/ResReport1931-141-159
+    
 }
 
 \references{
-  
-  Venables, W. N. and Ripley, B. D. (2002)
-  \emph{Modern Applied Statistics with S}. Fourth edition. Springer.
+
+  Yates, Frank (1935) Complex experiments,
+  \emph{Journal of the Royal Statistical Society Suppl}
+  2, 181-247. Figure 2.
+  http://doi.org/10.2307/2983638
   
 }
 
@@ -52,9 +65,16 @@
 data(yates.oats)
 dat <- yates.oats
 
+## # Means match Rothamsted report p. 144
+## require(dplyr)
+## dat %>% group_by(nitro,gen) %>%
+##   summarize(grain=mean(grain)*80/112,
+##             straw=mean(straw)*80/112)
+
 if(require(desplot)){
+  # Experiment design & yield heatmap
   desplot(yield ~ col*row, dat,
-          out1=block, text=gen, col=nitro,
+          out1=block, num=nitro, col=gen,
           cex=1, aspect=511/176, # true aspect
           main="yates.oats")
 }
@@ -67,8 +87,8 @@ xyplot(yield ~ col|factor(nitro), dat,
        type = c('p', 'r'), xlab='col', as.table = TRUE,
        main="yates.oats")
 
-# Typical split-plot analysis
 if(require(lme4)){
+  # Typical split-plot analysis. Non-significant gen differences
   m3 <- lmer(yield ~ nitro * gen + (1|block/gen), data=dat)
   # Residuals still show structure
   xyplot(resid(m3) ~ dat$col, xlab='col', type=c('p','smooth'),
@@ -83,6 +103,7 @@ if(require(lme4)){
   ##    df      AIC
   ## m3  9 581.2372
   ## m4 10 557.9424 # Substantially better
+
 }
 
 \dontrun{

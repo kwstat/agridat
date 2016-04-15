@@ -2,7 +2,7 @@
 \alias{minnesota.barley.yield}
 \docType{data}
 \title{
-  Yields of barley at 6 sites in Minnesota 1927-1936.
+  Multi-environment trial of barley in Minnesoty at 6 sites in 1927-1936.
 }
 \description{
   This is an expanded version of the barley data that is often

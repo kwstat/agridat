@@ -2,12 +2,12 @@
 \alias{cornelius.maize}
 \docType{data}
 \title{
-  Maize yields for 9 cultivars at 20 locations.
+  Multi-environment trial of maize for 9 cultivars at 20 locations.
 }
 \description{
   Maize yields for 9 cultivars at 20 locations.
 }
-\usage{data(cornelius.maize)}
+\usage{data("cornelius.maize")}
 \format{
   A data frame with 180 observations on the following 3 variables.
   \describe{

@@ -2,7 +2,7 @@
 \alias{steel.soybean}
 \docType{data}
 \title{
-  Soybean yields in North Carolina
+  Multi-environment trial of soybean in North Carolina
 }
 \description{
   Soybean yields in a multi-environment trial in North Carolina.

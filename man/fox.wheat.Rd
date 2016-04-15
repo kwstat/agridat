@@ -2,12 +2,12 @@
 \alias{fox.wheat}
 \docType{data}
 \title{
-  Wheat yields of 22 varieties at 14 sites in Australia
+  Multi-environment trial of wheat for 22 varieties at 14 sites in Australia
 }
 \description{
   Wheat yields of 22 varieties at 14 sites in Australia
 }
-\usage{data(fox.wheat)}
+\usage{data("fox.wheat")}
 \format{
   A data frame with 308 observations on the following 4 variables.
   \describe{

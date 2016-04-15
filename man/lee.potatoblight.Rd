@@ -7,7 +7,7 @@
 \description{
   Repeated measurements of resistance to potato blight.
 }
-\usage{data(lee.potatoblight)}
+\usage{data("lee.potatoblight")}
 \format{
   A data frame with 14570 observations on the following 7 variables.
   \describe{

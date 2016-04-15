@@ -7,7 +7,7 @@
 \description{
   Herbicide control of larkspur
 }
-\usage{data(turner.herbicide)}
+\usage{data("turner.herbicide")}
 \format{
   A data frame with 12 observations on the following 4 variables.
   \describe{

@@ -2,7 +2,7 @@
 \alias{wedderburn.barley}
 \docType{data}
 \title{
-  Percent of barley leaves affected by leaf blotch
+  Multi-environment trial of barley, percent of leaves affected by leaf blotch
 }
 \description{
   Percent of leaf area affected by leaf blotch on 10 varieties of barley

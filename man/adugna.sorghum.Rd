@@ -2,10 +2,10 @@
 \alias{adugna.sorghum}
 \docType{data}
 \title{
-  Sorghum yields at 3 locations across 5 years
+  Multi-environment trial of sorghum at 3 locations across 5 years
 }
 \description{
-  Sorghum yields at 3 locations across 5 years
+    Multi-environment trial of sorghum at 3 locations across 5 years
 }
 
 \format{

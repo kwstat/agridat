@@ -2,7 +2,7 @@
 \alias{crossa.wheat}
 \docType{data}
 \title{
-  Wheat yields for 18 genotypes at 25 locations
+  Multi-environment trial of wheat for 18 genotypes at 25 locations
 }
 \description{
   Wheat yields for 18 genotypes at 25 locations

@@ -7,7 +7,7 @@
 \description{
   Yields of 8 barley varities in 1913.
 }
-\usage{data(beaven.barley)}
+\usage{data("beaven.barley")}
 \format{
   A data frame with 160 observations on the following 4 variables.
   \describe{

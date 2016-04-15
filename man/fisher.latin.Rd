@@ -7,7 +7,7 @@
 \description{
   Latin square experiment on mangolds.  Used by R. A. Fisher.
 }
-\usage{data(fisher.latin)}
+\usage{data("fisher.latin")}
 \format{
   A data frame with 25 observations on the following 4 variables.
   \describe{

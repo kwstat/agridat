@@ -14,11 +14,11 @@
     \item{\code{block}}{block factor, 4 levels}
     \item{\code{plot}}{plot number}
     \item{\code{cultivar}}{cultivar factor, 4 levels}
-    \item{\code{spacing}}{row spacing, numeric}
-    \item{\code{pop}}{population, numeric (thousand per acre)}
-    \item{\code{yield}}{yield, a numeric vector}
-    \item{\code{row}}{row number}
-    \item{\code{col}}{column number}
+    \item{\code{spacing}}{row spacing}
+    \item{\code{pop}}{population (thousand per acre)}
+    \item{\code{yield}}{yield}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
   }
 }
 \details{

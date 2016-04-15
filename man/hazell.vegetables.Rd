@@ -7,7 +7,7 @@
 \description{
   Gross profit for four vegetable crops in six years
 }
-\usage{data(hazell.vegetables)}
+\usage{data("hazell.vegetables")}
 \format{
   A data frame with 6 observations on the following 5 variables.
   \describe{

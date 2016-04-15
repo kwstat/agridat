@@ -2,7 +2,7 @@
 \alias{gauch.soy}
 \docType{data}
 \title{
-New York soybean yields, 1977 to 1988
+  Multi-environment trial of soybeans in New York, 1977 to 1988
 }
 \description{
   New York soybean yields, 1977 to 1988, for 7 genotypes in 55 environments.

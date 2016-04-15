@@ -2,7 +2,7 @@
 \alias{australia.soybean}
 \docType{data}
 \title{
-  Australia soybeans
+  Multi-environment trial of soybean in Australia
 }
 \description{
   Yield and other traits of 58 varieties of soybeans, grown in four
@@ -27,16 +27,17 @@
   }
 }
 \details{
-Measurement are available from four locations in Queensland, Australia in two
-consecutive years 1970, 1971.
 
-The 58 different genotypes of soybeans consisted of 43 lines (40
-local Australian selections from a cross, their two parents, and one other
-which was used a parent in earlier trials) and 15 other lines of which 12 were
-from the US.
+  Measurement are available from four locations in Queensland, Australia in two
+  consecutive years 1970, 1971.
 
-Lines 1-40 were local Australian selections from Mamloxi (CPI 172) and
-Avoyelles (CPI 15939).
+  The 58 different genotypes of soybeans consisted of 43 lines (40 local
+  Australian selections from a cross, their two parents, and one other
+  which was used a parent in earlier trials) and 15 other lines of which
+  12 were from the US.
+
+  Lines 1-40 were local Australian selections from Mamloxi (CPI 172) and
+  Avoyelles (CPI 15939).
 
 \tabular{ll}{
 No. \tab Line \cr

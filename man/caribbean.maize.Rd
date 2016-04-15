@@ -2,7 +2,7 @@
 \alias{caribbean.maize}
 \docType{data}
 \title{
-  Maize fertilization trial on Antigua and St. Vincent
+  Multi-environment trial of maize with fertilization
 }
 \description{
   Maize fertilization trial on Antigua and St. Vincent.

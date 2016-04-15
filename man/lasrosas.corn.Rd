@@ -7,7 +7,7 @@
 \description{
   Yield monitor data for a corn field in Argentina with variable nitrogen.
 }
-\usage{data(lasrosas.corn)}
+\usage{data("lasrosas.corn")}
 \format{
   A data frame with 3443 observations on the following 8 variables.
   \describe{

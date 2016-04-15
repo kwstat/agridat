@@ -2,7 +2,7 @@
 \alias{hunter.corn}
 \docType{data}
 \title{
-  Corn yield response to nitrogen
+  Multi-environment trial of corn with nitrogen fertilizere
 }
 \description{
   Corn yield response to nitrogen

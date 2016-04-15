@@ -2,12 +2,12 @@
 \alias{kang.peanut}
 \docType{data}
 \title{
-  Peanut yields for 10 genotypes in 15 environments
+  Multi-environment trial of peanuts for 10 genotypes in 15 environments
 }
 \description{
   Peanut yields for 10 genotypes in 15 environments
 }
-\usage{data(kang.peanut)}
+\usage{data("kang.peanut")}
 \format{
   A data frame with 590 observations on the following 4 variables.
   \describe{

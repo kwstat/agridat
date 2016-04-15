@@ -2,7 +2,7 @@
 \alias{denis.ryegrass}
 \docType{data}
 \title{
-  Plant strength of perennial ryegrass in France
+  Multi-environment trial of perennial ryegrass in France
 }
 \description{
   Plant strength of perennial ryegrass in France for 21 genotypes at 7

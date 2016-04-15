@@ -2,7 +2,7 @@
 \alias{graybill.heteroskedastic}
 \docType{data}
 \title{
-  Wheat varieties with heteroskedastic yields
+  Multi-environment trial of wheat varieties with heteroskedastic yields
 }
 \description{
   Wheat varieties with heteroskedastic yields

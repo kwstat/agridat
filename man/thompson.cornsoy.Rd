@@ -2,7 +2,7 @@
 \alias{thompson.cornsoy}
 \docType{data}
 \title{
-  Corn & Soybean Yields, 1930-1962, with temperature and precipitation
+  Multi-environment trial of corn & soybean, 1930-1962, with temperature and precipitation
 }
 \description{
   Average yield of corn and soybeans in five U.S. states

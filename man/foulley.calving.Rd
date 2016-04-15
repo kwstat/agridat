@@ -7,7 +7,7 @@
 \description{
   Calving difficulty by calf sex and age of dam
 }
-\usage{data(foulley.calving)}
+\usage{data("foulley.calving")}
 \format{
   A data frame with 54 observations on the following 4 variables.
   \describe{

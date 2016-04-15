@@ -2,7 +2,7 @@
 \alias{ortiz.tomato}
 \docType{data}
 \title{
-  Tomato weight/yield and environmental covariates in Latin America
+  Multi-environment trial of tomato in Latin America, weight/yield and environmental covariates
 }
 \description{
   Tomato weight/yield and environmental covariates in Latin America

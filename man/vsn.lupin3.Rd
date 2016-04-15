@@ -2,7 +2,7 @@
 \alias{vsn.lupin3}
 \docType{data}
 \title{
-  Early generation lupin trial with 3 sites
+  Multi-environment trial of lupin, early generation trial
 }
 \description{
   Early generation lupin trial with 3 sites, 330 test lines, 6 check lines.
@@ -11,11 +11,11 @@
 \format{
   A data frame with 1236 observations on the following 5 variables.
   \describe{
-    \item{\code{site}}{a factor with levels \code{S1} \code{S2} \code{S3}}
-    \item{\code{col}}{a numeric vector}
-    \item{\code{row}}{a numeric vector}
-    \item{\code{gen}}{a numeric vector}
-    \item{\code{yield}}{a numeric vector}
+    \item{\code{site}}{site, levels \code{S1} \code{S2} \code{S3}}
+    \item{\code{col}}{column}
+    \item{\code{row}}{row}
+    \item{\code{gen}}{genotype}
+    \item{\code{yield}}{yield}
   }
 }
 \details{

@@ -2,12 +2,12 @@
 \alias{theobald.barley}
 \docType{data}
 \title{
-  Multi-environment trial of barley with multiple years, fertilizer levels
+  Multi-environment trial of barley, multiple years & fertilizer levels
 }
 \description{
   Barley yields at multiple locs, years, fertilizer levels
 }
-\usage{data(theobald.barley)}
+\usage{data("theobald.barley")}
 \format{
   A data frame with 105 observations on the following 5 variables.
   \describe{

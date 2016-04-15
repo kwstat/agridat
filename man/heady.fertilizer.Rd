@@ -7,7 +7,7 @@
 \description{
   Yield of corn, alfalfa, clover with two fertilizers
 }
-\usage{data(heady.fertilizer)}
+\usage{data("heady.fertilizer")}
 \format{
   A data frame with 81 observations on the following 3 variables.
   \describe{

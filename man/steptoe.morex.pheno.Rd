@@ -3,7 +3,7 @@
 \alias{steptoe.morex.geno}
 \docType{data}
 \title{
-  Phenotypic and genotypic data for a barley population of Steptoe x Morex
+  Multi-environment trial of barley, phenotypic and genotypic data for a population of Steptoe x Morex
 }
 \description{
     Phenotypic and genotypic data for a barley population of Steptoe x

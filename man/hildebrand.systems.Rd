@@ -2,7 +2,7 @@
 \alias{hildebrand.systems}
 \docType{data}
 \title{
-  Maize yields for four cropping systems
+  Multi-environment trial of maize for four cropping systems
 }
 \description{
   Maize yields for four cropping systems at 14 on-farm trials.
