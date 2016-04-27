@@ -87,6 +87,7 @@ name                             \tab gen \tab years \tab trt \tab other \tab mo
 \link{brandt.switchback}         \tab 10  \tab    \tab 2      \tab \tab aov \cr
 \link{diggle.cow}                \tab     \tab    \tab 4      \tab ts \tab \cr
 \link{foulley.calving}           \tab     \tab    \tab        \tab ordinal \tab polr \cr
+\link{goulden.eggs}              \tab     \tab    \tab        \tab controlchart \tab \cr
 \link{henderson.milkfat}         \tab     \tab    \tab        \tab \tab nls,lm,glm,gam\cr
 \link{holland.arthropods}        \tab 5   \tab    \tab        \tab \tab \cr
 \link{ilri.sheep}                \tab 4   \tab 6  \tab        \tab diallel \tab lmer, asreml \cr
@@ -156,7 +157,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{corsten.interaction}       \tab 20  \tab 7  \tab     \tab    \tab     \tab \tab \cr
 \link{crossa.wheat}              \tab 18  \tab 25 \tab     \tab    \tab     \tab \tab ammi \cr
 \link{crowder.seeds}             \tab 2   \tab    \tab 21  \tab    \tab 2   \tab \tab glm,jags \cr
-\link{cox.stripsplit}            \tab     \tab    \tab  4  \tab    \tab 3,4,2 \tab \tab aov \cr
+\link{cox.stripsplit}            \tab     \tab    \tab  4  \tab    \tab 3,4,2 \tab split-block \tab aov \cr
 \link{cullis.earlygen}           \tab 532 \tab    \tab     \tab    \tab     \tab xy \tab asreml \cr
 \link{darwin.maize}              \tab     \tab    \tab 12  \tab    \tab 2   \tab \tab t.test \cr
 \link{denis.missing}             \tab 5   \tab 26 \tab     \tab    \tab     \tab \tab lme \cr

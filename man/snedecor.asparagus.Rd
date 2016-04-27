@@ -21,6 +21,11 @@
   Planted in 1927.  Cutting began in 1929.  Yield is the weight of
   asparagus cuttings up to Jun 1 in each plot.  Some plots received continued
   cuttings until Jun 15, Jul 1, and Jul 15.
+
+  In the past, repeated-measurement experiments like this were sometimes
+  analyzed as if they were a split-plot experiment.  This violates some
+  indpendence assumptions.
+  
 }
 \source{
   Snedecor and Cochran, 1989. \emph{Statistical Methods}.

@@ -19,10 +19,12 @@
   }
 }
 \details{
-Four different fertilizer treatments are laid out in vertical
-strips, which are then split into subplots with different levels of
-calcium. Soil type is stripped across the split-plot experiment, and the
-entire experiment is then replicated three times.
+  Four different fertilizer treatments are laid out in vertical
+  strips, which are then split into subplots with different levels of
+  calcium. Soil type is stripped across the split-plot experiment, and the
+  entire experiment is then replicated three times.
+
+  Sometimes called a split-block design.
 }
 \source{
   Comes from the notes of Gertrude Cox and A. Rotti.

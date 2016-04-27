@@ -170,7 +170,7 @@ http://lib.dr.iastate.edu/ag_researchbulletins/34
 26. Cox: Analysis of Lattice and Triple Lattice.
     Two expts. Covariate? Skipped this...confusing layout.
 29. Homeyer. Punched..Analyzing Lattice Experiments Including Lattice Squares .
-32. Wassom. Bromegrass Uniformity Trial. (done)
+32. Wassom. Bromegrass Uniformity Trial. agridat::wassom.bromegrass.uniformity
 33. Heady. Crop Response Surfaces and Economic Optima in Fertilizer
 34. Schwab. Research on Irrigation of Corn and Soybeans At Conesville.
     Multi-year, stand, nitro.  No complex analysis.
@@ -242,7 +242,7 @@ http://archive.org/details/methodsofstatist031744mbp
 173 Inc block
 189 Inc block
 205 Latin square
-255 Covariates in feeding trial
+255 Covariates in feeding trial (done) agridat::crampton.pig
 
 
 ** Griffith. A Casebook for Spatial Statistical Data Analysis

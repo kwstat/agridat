@@ -36,6 +36,8 @@
 }
 \references{
   Bernard Ostle. \emph{Statistics in Research}
+
+  Goulen. \emph{Methods of Statistical Analysis, 1st ed}. Page 256-259.
 }
 \examples{
 

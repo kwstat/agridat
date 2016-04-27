@@ -17,6 +17,8 @@ code {border: 1px solid #e0e0e0; padding: 0 5px;}
 pre > code { border: 0; }
 </style>
 
+## Abstract
+
 This document lists additional sources of agricultural data.
 
 ## Books
@@ -29,15 +31,24 @@ See also http://www.ethstat.org.et/esa_publications.html, Volume 19
 Peter Diggle. _Longitudinal Data Analysis_.
 http://www.maths.lancs.ac.uk/~diggle/lda/Datasets/
 
-Pig weight data is in the package `SemiPar::pig.weights`.
+The Pig weight data is in the package `SemiPar::pig.weights`.
 
 The Sitka spruce data is in `geepack::spruce`.
 
 The Milk protein data is in `nlme::Milk`.
 
-Goulden, _Methods of Statistical Analysis_.
-http://archive.org/details/methodsofstatist031744mbp
-Has some interesting incomplete-block experiments.
+Cyril H. Goulden, _Methods of Statistical Analysis_. Second edition.
+First edition: http://archive.org/details/methodsofstatist031744mbp
+18 Uniformity trial. `agridat::goulden.barley.uniformity`
+153 Split-split plot with factorial sub-plot treatment <-- todo
+194 Incomplete block
+197 Inc block
+205 Latin square
+208 Inc block
+
+Second edition: http://krishikosh.egranth.ac.in/handle/1/2034118
+216 Latin square. `agridat::goulden.latin`
+423 Control chart with egg weights. `agridat::goulden.eggs`
 
 ## Papers
 

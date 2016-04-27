@@ -19,19 +19,19 @@
 \details{
   Yield in grams for 400 square-yard barley plots.
 
-  Field length: 20 plots x 1m = 20m
+  Field length: 20 plots x 1 yd = 20 yd
 
-  Field width: 20 plots x 1m = 20m
+  Field width: 20 plots x 1 yd = 20 yd
 }
 \source{
-  C. H. Goulden, 1939. \emph{Methods of statistical analysis}.
-  Wiley. Page 18.
+  C. H. Goulden, (1939).
+  \emph{Methods of statistical analysis}, 1st ed. Page 18.
   
-  https://archive.org/stream/methodsofstatist031744mbp#page/n31/mode/2up
+  https://archive.org/stream/methodsofstatist031744mbp
 }
 \references{
   See LeClerg, Leonard, Clark. \emph{Field Plot Technique}.
-  https://archive.org/stream/fieldplottechniq00leon#page/38/mode/2up
+  https://archive.org/stream/fieldplottechniq00leon
 }
 
 \examples{

@@ -18,15 +18,16 @@ moore.bushbean.uniformity, moore.sweetcorn.uniformity,
 moore.carrots.uniformity, moore.springcauliflower.uniformity,
 moore.fallcauliflower.uniformity, nonnecke.corn.uniformity,
 nonnecke.peas.uniformity, parker.orange.uniformity,
-polson.safflower.uniformity, sawyer.multi.uniformity, smith.beans.uniformity,
-wiedemann.safflower.uniformity
+polson.safflower.uniformity, sawyer.multi.uniformity,
+smith.beans.uniformity, wiedemann.safflower.uniformity
 
 ## New data for stability, misc
 
 lu.stability
 
-crampton.pig, battese.survey, gartner.corn, giles.wheat, huehn.wheat, kenward.cattle,
-kreusler.maize, lillemo.wheat, onofri.winterwheat, tai.potato, wheatley.carrot
+crampton.pig, battese.survey, gartner.corn, giles.wheat, goulden.eggs,
+huehn.wheat, kenward.cattle, kreusler.maize, lillemo.wheat,
+onofri.winterwheat, tai.potato, wheatley.carrot
 
 ## Other
 
