@@ -20,20 +20,23 @@
 }
 \details{
 
-  Orobanche aegyptiaca (commonly known as Egyptian broomrape) is a
-  parasitic plant family.  The plants have no chlorophyll and grow on
-  the roots of other plants.  The seeds remain dormant in soil until
-  certain compounds from living plants stimulate germination.
+  Egyptian broomrape, \emph{orobanche aegyptiaca} is a parasitic plant
+  family.  The plants have no chlorophyll and grow on the roots of other
+  plants.  The seeds remain dormant in soil until certain compounds from
+  living plants stimulate germination.
   
-  Two genotypes were studied in the experiment, \emph{O. aegyptiaca 73} and
-  \emph{O. aegyptiaca 75}.  The seeds were brushed with one of two extracts
-  prepared from either a bean plant or cucmber plant.
+  Two genotypes were studied in the experiment, \emph{O. aegyptiaca 73}
+  and \emph{O. aegyptiaca 75}.  The seeds were brushed with one of two
+  extracts prepared from either a bean plant or cucmber plant.
 
-  The experimental design was a 2x2 factorial, each with 5 or 6 reps of plates.
+  The experimental design was a 2x2 factorial, each with 5 or 6 reps of
+  plates.
+  
 }
 \source{
 
-  Crowder, M.J., 1978. Beta-binomial anova for proportions.
+  Crowder, M.J., 1978.
+  Beta-binomial anova for proportions.
   \emph{Appl. Statist.}, 27, 34-37.
   http://doi.org/10.2307/2346223
 

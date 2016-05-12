@@ -61,8 +61,8 @@ mosaicplot(dtab,
 
 if(require(MASS) & require(vcd)){
   # Friendly suggests a minimal model is [MF][C]
-  m1 <- loglm( ~ 1*2 + 3, dtab)
-  mosaic(m1)
+  # m1 <- loglm( ~ 1*2 + 3, dtab) # Fails, only with devtools
+  # mosaic(m1)
 }
 
 }

@@ -2,10 +2,10 @@
 \alias{hayman.tobacco}
 \docType{data}
 \title{
-  Two reps of full diallel cross of Aztec tobacco
+  Diallel cross of Aztec tobacco
 }
 \description{
-  Two reps of full diallel cross of Aztec tobacco
+  Diallel cross of Aztec tobacco in 2 reps
 }
 
 \format{
@@ -19,8 +19,8 @@
   }
 }
 \details{
-  The hayman.tobacco data was collected in 1951 (Hayman 1954a) and
-  1952 (Hayman 1954b).
+  
+  Data was collected in 1951 (Hayman 1954a) and 1952 (Hayman 1954b).
 
   In each year there were 8 varieties of Aztec tobacca (Nicotiana
   rustica L.).
@@ -130,7 +130,8 @@ vr1 <- apply(mn1, 1, var)
 vr2 <- apply(mn2, 1, var)
 wr1 <- apply(mn1, 1, cov, diag(mn1))
 wr2 <- apply(mn2, 1, cov, diag(mn2))
-
+# Remove row names to prevent a mild warning
+rownames(mn1) <- rownames(mn2) <- NULL
 summ <- data.frame(rbind(mn1,mn2))
 summ$block <- rep(c('B1','B2'), each=8)
 summ$vr <- c(vr1,vr2)

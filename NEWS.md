@@ -26,17 +26,18 @@ smith.beans.uniformity, wiedemann.safflower.uniformity
 lu.stability
 
 crampton.pig, battese.survey, gartner.corn, giles.wheat, goulden.eggs,
-huehn.wheat, kenward.cattle, kreusler.maize, lillemo.wheat,
-onofri.winterwheat, tai.potato, wheatley.carrot
+goulden.splitsplit, huehn.wheat, kenward.cattle, kreusler.maize,
+lillemo.wheat, little.splitblock, onofri.winterwheat, tai.potato,
+wheatley.carrot
 
 ## Other
 
+* Changed extensions in inst/files from .bug to .jag .
 * Moved `desplot` function to package `desplot`.
 * Moved `gge` function to package `gge`.
-* Examples now use `desplot` and `gge` packages.
 * Switch to CC-BY-SA 4.0 + file LICENSE.  Similar to `igraphdata` package.
 * Changed vignette from Rnw/pdf to Rmd/html.
-* Improvements to titles in Rd pages.
+* Titles in Rd pages are more consistent.
 * Added DOIs for most source references.
 * Changed all hyperlinks to plain text (faster checking, avoids re-direct errors).
 * Checked aspect of field plot heatmaps where possible.

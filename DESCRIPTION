@@ -1,17 +1,16 @@
 Package: agridat
 Title: Agricultural Datasets
 Version: 1.13
-Date: 2015-06-28
+Date: 2016-05-03
 Authors@R: person("Kevin","Wright", email="kw.stat@gmail.com", role=c("aut","cre"))
 Type: Package
 Description: Datasets from books, papers, and websites related to agriculture.
-    Example graphics and analyses are included. Data come frome small-plot trials,
+    Example graphics and analyses are included. Data come from small-plot trials,
     multi-environment trials, uniformity trials, yield monitors, and more.
 Imports:    
 Suggests:
     AER,
     agricolae (>= 1.2),
-    agrifun,
     betareg,
     car,
     coin,

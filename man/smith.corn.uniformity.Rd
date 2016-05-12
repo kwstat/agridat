@@ -123,7 +123,8 @@ desplot(yield~col*row|year, dat, layout=c(1,3),
 \dontrun{
 require(rgl)
 # A few odd pairs of outliers in column 6
-plot3d(dat$col, dat$row, dat$yield, col=dat$year)
+plot3d(dat$col, dat$row, dat$yield, col=dat$year,
+       xlab="col",ylab="row",zlab="yield")
 }
 }
 

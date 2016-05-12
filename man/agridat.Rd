@@ -189,6 +189,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{gomez.stripsplitplot}      \tab 6   \tab    \tab 3   \tab    \tab     \tab xy, nitro\tab aov \cr
 \link{gotway.hessianfly}         \tab 16  \tab    \tab 4   \tab    \tab     \tab xy \tab lmer \cr
 \link{goulden.latin}             \tab     \tab    \tab 5   \tab    \tab 5   \tab xy, latin \tab lm \cr
+\link{goulden.splitsplit}        \tab 2   \tab    \tab 4   \tab    \tab 2*5 \tab xy, split \tab aov \cr
 \link{graybill.heteroskedastic}  \tab 4   \tab 13 \tab     \tab    \tab     \tab hetero \tab \cr
 \link{gumpertz.pepper}           \tab     \tab    \tab     \tab    \tab     \tab xy \tab glm\cr
 \link{hanks.sprinkler}           \tab 3   \tab    \tab 3   \tab    \tab     \tab xy \tab asreml\cr
@@ -216,7 +217,8 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{kempton.rowcol}            \tab 35  \tab    \tab 2   \tab    \tab     \tab xy, row-col \tab lmer \cr
 \link{kempton.slatehall}         \tab 25  \tab    \tab 6   \tab    \tab     \tab xy \tab asreml, lmer\cr
 \link{lee.potatoblight}          \tab 337 \tab    \tab 4   \tab 11 \tab     \tab xy, ordinal, repeated \tab \cr
-\link{lillemo.wheat}             \tab 24 \tab  13 \tab     \tab 7  \tab     \tab qq \tab medpolish, huehn\cr
+\link{lillemo.wheat}             \tab 24  \tab 13 \tab     \tab 7  \tab     \tab qq \tab medpolish, huehn\cr
+\link{little.splitblock}         \tab     \tab    \tab 4   \tab    \tab 4,5 \tab xy, split-block\tab aov\cr
 \link{lonnquist.maize}           \tab 11  \tab    \tab     \tab    \tab     \tab diallel \tab asreml \cr
 \link{lyons.wheat}               \tab     \tab 12 \tab     \tab 4  \tab     \tab \tab \cr
 \link{lu.stability}              \tab 5   \tab 6  \tab     \tab    \tab     \tab \tab huehn\cr

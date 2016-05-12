@@ -1,23 +1,23 @@
+#+title: agridat notes
 
-#+title: notes.org
+This document lists notes about data sources searched and additional sources of agricultural data.
+
+
+Rothamsted reports
+http://www.era.rothamsted.ac.uk/eradoc/books/1
 
 Sawyer field at Rothamsted, Mentioned in McCullagh's paper. 
 http://www.era.rothamsted.ac.uk/eradoc/book/84
 page 154
 Pages 138-153 have traditional RCB experiments.
 
-Rothamsted reports
-http://www.era.rothamsted.ac.uk/eradoc/books/1
-
 Fairfield Smith data
 http://www.stat.uchicago.edu/~pmcc/reml/
-
-* Meta
 
 ** Summary of meta-analyses
 http://www6.versailles-grignon.inra.fr/agronomie/Meta-analysis-in-agronomy/References
 
-* QTL
+** QTL
 
 QTL analysis using Integrated Breeding Platform.
 https://www.integratedbreeding.net/165/training/bms-user-manual/qtl-analysis
@@ -79,7 +79,6 @@ http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0131414#pone-01
 CC-BY. Partial code, data.
 
 
-
 Perez
 Comparison Between Linear and Non-parametric Regression Models for
 Genome-Enabled Prediction in Wheat
@@ -88,15 +87,9 @@ Data:
 http://www.g3journal.org/content/suppl/2012/12/05/2.12.1595.DC1
 All content has CC license
 
-Lamb 1997. Uniformity. Spatial and Temporal Stability of Corn Grain Yields
-
 VanEeuwijk 
 Multiplicative Models	for	Interaction	in Three-Way ANOVA,	with Applications	to
 Plant	Breeding Three-way data
-
-* Books
-
-** Hill et al. Quantitative and Ecological Aspects of Plant Breeding.
 
 * Other
 
@@ -128,39 +121,39 @@ https://passel.unl.edu/pages/informationmodule.php?idinformationmodule=113044727
 
 * Journals
 
-Agronomy Journal
+** Agronomy Journal
 Skimmed Vol 1
 
-Biometrics. Skimmed 1947-2000
+** Biometrics. Skimmed 1947-2000
 http://www.jstor.org/action/showPublication?journalCode=biometrics
 
-Field Crops Research. 
+** Field Crops Research. 
 http://www.sciencedirect.com/science/journal/03784290/157
 Vol 1-40
 
-IASRI newsletters
+** IASRI newsletters
 http://www.iasri.res.in/NewsLetters/nl.HTM
 
-JABES
+** JABES
 Vol 6.
 
-Journal of the Indian Society of Agricultural Statistics
+** Journal of the Indian Society of Agricultural Statistics
 http://www.isas.org.in/jsp/onlinejournal.jsp
 Skimmed: Vol 50-56
 
-JRSSA
+** JRSSA
 
-JRSSB 1940-1997
+** JRSSB 1940-1997
 http://www.jstor.org/action/showPublication?journalCode=jroyastatsocise4
 Datasets 1998-2015
 http://onlinelibrary.wiley.com/journal/10.1111/(ISSN)1467-9868/homepage/seriesb_datasets.htm
 http://onlinelibrary.wiley.com/journal/10.1111/%28ISSN%291467-985X/homepage/datasets_all_series.htm
 
-JRSSC Applied Statistics datasets
+** JRSSC Applied Statistics datasets
 http://onlinelibrary.wiley.com/journal/10.1111/%28ISSN%291467-985X/homepage/datasets_all_series.htm
 1998-2015
 
-The American Statistician
+** The American Statistician
 Vol 1-13
 
 -----
@@ -170,7 +163,7 @@ http://lib.dr.iastate.edu/ag_researchbulletins/34
 26. Cox: Analysis of Lattice and Triple Lattice.
     Two expts. Covariate? Skipped this...confusing layout.
 29. Homeyer. Punched..Analyzing Lattice Experiments Including Lattice Squares .
-32. Wassom. Bromegrass Uniformity Trial. agridat::wassom.bromegrass.uniformity
+32. Wassom. Bromegrass Uniformity Trial: agridat::wassom.bromegrass.uniformity
 33. Heady. Crop Response Surfaces and Economic Optima in Fertilizer
 34. Schwab. Research on Irrigation of Corn and Soybeans At Conesville.
     Multi-year, stand, nitro.  No complex analysis.
@@ -195,18 +188,20 @@ http://repository.cimmyt.org/xmlui/handle/10883/1380
 http://repository.cimmyt.org/xmlui/handle/10883/4128
 http://repository.cimmyt.org/xmlui/handle/10883/4290
 
-Core Historical Literature of Agriculture
-http://chla.library.cornell.edu/c/chla/browse.html
 
 Die Landwirtschaftlichen Versuchs-Stations
 http://catalog.hathitrust.org/Record/000549685
 
-# ----------------------------------------------------------------------------
-# ----------------------------------------------------------------------------
+* ----------------------------------------------------------------------------
+
 
 * Done
 
 * Books
+
+** CIMMYT trials. 1982.
+http://pdf.usaid.gov/pdf_docs/PNAAQ389.pdf
+
 
 ** Annual report - Nebraska Agricultural Experiment Station
 Vol 19-24, 1906-1911
@@ -218,14 +213,20 @@ http://www.stat.duke.edu/courses/Spring01/sta114/data/andrews.html
 http://lib.stat.cmu.edu/datasets/Andrews/
 
 
-** Diggle. Longitudinal Data Analysis.
+** D. Bayisa (2010). _Application of Spatial Mixed Model in Agricultural Field Experiment_.
+Master thesis. Department of Statistics, Addis Ababa University.
+At least one dataset from wheat, RCB, with field coordinates.
+See also http://www.ethstat.org.et/esa_publications.html, Volume 19
+
+
+** Peter Diggle. Longitudinal Data Analysis.
 http://www.maths.lancs.ac.uk/~diggle/lda/Datasets/
 
-Pig weight data is SemiPar::pig.weights
+Pig weight data: SemiPar::pig.weights
 
-Sitka spruce geepack::spruce
+Sitka spruce data: geepack::spruce
 
-Milk protein data is nlme::Milk.  A thorough description of this data can be
+Milk protein data: nlme::Milk.  A thorough description of this data can be
 found in Molenberghs & Kenward, /Missing Data in Clinical Studies/, p. 377.
 Original source: A. P. Verbyla and B. R. Cullis, Modelling in Repeated
 Measures Experiments. http://www.jstor.org/stable/2347384
@@ -237,13 +238,20 @@ xyplot(protein~Time|Diet, data=Milk, type='smooth', lwd=2, col="black")
 
 ** Federer. Variations on split-plot.
 
-** Goulden. Methods of Statistical Analysis.
-http://archive.org/details/methodsofstatist031744mbp
-173 Inc block
-189 Inc block
-205 Latin square
-255 Covariates in feeding trial (done) agridat::crampton.pig
+** Cyril H. Goulden, Methods of Statistical Analysis
 
+First edition: http://archive.org/details/methodsofstatist031744mbp
+18 Uniformity trial: agridat::goulden.barley.uniformity
+153 Split-split plot with factorial sub-plot treatment: agridat::goulden.splitsplit
+194 Incomplete block
+197 Inc block
+205 Latin square
+208 Inc block
+255 Covariates in feeding trial: agridat::crampton.pig
+
+Second edition: http://krishikosh.egranth.ac.in/handle/1/2034118
+216 Latin square: agridat::goulden.latin
+423 Control chart with egg weights: agridat::goulden.eggs
 
 ** Griffith. A Casebook for Spatial Statistical Data Analysis
 
@@ -251,13 +259,23 @@ http://archive.org/details/methodsofstatist031744mbp
 ** Hand. A Handbook of Small data sets.
 
 
+** Little & Hills. Agricultural Experimentation
+79 Latin square
+89 Split-plot
+103 Split-split
+117 Split-block: agridat::little.splitblock
+126 Repeated harvests
+
+
 ** Mead. The Design of Experiments.
 Turnip spacing data.
 https://books.google.com/books?id=CaFZPbCllrMC&pg=PA323
 
+
 ** Ostle. Statistics in Research, 2nd.
 455 2 factors, 1 covariate
-458 1 factor, 2 covariates. agridat::crampton.pig
+458 1 factor, 2 covariates: agridat::crampton.pig
+
 
 ** Paterson. Statistical Technique In Agricultural Research.
 http://www.archive.org/details/statisticaltechn031729mbp
@@ -309,48 +327,43 @@ http://support.sas.com/events/sasglobalforum/previous/online.html
 
 * Journals - Data
 
-Ag Data Commons
+** Ag Data Commons
 https://data.nal.usda.gov/about-ag-data-commons
 
-DataDryad
+** DataDryad
 http://datadryad.org/
 
-Data In Brief
+** Data In Brief
 http://www.sciencedirect.com/science/journal/23523409
 
-Nature Scientific Data
+** Nature Scientific Data
 http://www.nature.com/sdata/
 
-Open Data Journal for Agricultural Research
+** Open Data Journal for Agricultural Research
 http://library.wur.nl/ojs/index.php/odjar/
 
 
 * Papers
 
-Walt Federer
+Baker 1953. Strawberry uniformity yield trials. _Biometrics_,
+Vol. 9, No. 3 (Sep., 1953), pp. 412-421.
+http://doi.org/10.2307/3001713
+Two uniformity trials with yield per plant for 200, 500 plants.  CVs fairly
+high and correlation between neighboring plants very low.
+
+
+Matthew A. Cleveland, John M. Hickey, Selma Forni. (2012).
+A Common Dataset for Genomic Analysis of Livestock Populations.
+_G3_, Vol 2.
+http://doi.org/10.1534/g3.111.001453
+The supplemental information for this paper contains data for 3534 pigs with
+high-density genotypes (50000 SNPs), and a pedigree including parents and
+grandparents of the animals.
+
+
+Walt Federer.
 http://ecommons.library.cornell.edu/browse?type=author&value=Federer%2C+Walter+T.
 May need to browse to Federer.
-
-
-Klumper 2015. A Meta-Analysis of the Impacts of Genetically Modified Crops
-http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0111629
-Nice meta-analysis dataset.  CC-BY.  No standard-errors in published data.
-
-
-Patterson 1959 - Analysis of non-replicated crop rotation
-Too esoteric.
-
-
-Payne 2013 - Design and Analysis of Long-Term Rotation Experiments.
-https://dl.sciencesocieties.org/publications/aj/abstracts/107/2/772
-Open access, but closed copyright.
-The data and R code appeared in the original paper.
-
-
-Arier Chi-Lun Lee, 2009. Random Effects Models for Ordinal Data
-Paper: https://researchspace.auckland.ac.nz/handle/2292/4544
-Data: https://researchspace.auckland.ac.nz/handle/2292/5240
-Data licensed via http://opendatacommons.org/licenses/dbcl/1.0/
 
 
 Hedrick. Twenty years of fertilizers in an apple orchard.
@@ -359,13 +372,49 @@ No significant differences between fertilizer treatments--maybe a more
 powerful analysis could find one?
 
 
+Kenward, Michael G. (1987).  A Method for Comparing Profiles of Repeated
+Measurements.  _Applied Statistics_, 36, 296-308.
+An ante-dependence model is fit to repeated measures of cattle weight.
+Data available here:
+https://faculty.biostat.ucla.edu/robweiss/filedepot_download/87/495
+
+
+Klumper 2015. A Meta-Analysis of the Impacts of Genetically Modified Crops
+http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0111629
+Nice meta-analysis dataset.  CC-BY.  No standard-errors in published data.
+
+
+Lamb 1997. Spatial and Temporal Stability of Corn Grain Yields.
+Multi-year uniformity data with relative yields in each year on same plots.
+
+
+Arier Chi-Lun Lee, 2009. Random Effects Models for Ordinal Data
+Paper: https://researchspace.auckland.ac.nz/handle/2292/4544
+Data: https://researchspace.auckland.ac.nz/handle/2292/5240
+Data licensed via http://opendatacommons.org/licenses/dbcl/1.0/
+
+
+Patterson 1959.
+Analysis of non-replicated crop rotation
+The design of this experiment seems esoteric.
+
+
+Roger Payne (2015). The Design and Analysis of Long-Term Rotation Experiments.
+_Agronomy Journal_, 107, 772-784.
+http://doi.org/10.2134/agronj2012.0411
+Open access, but closed copyright.
+The data and R code appeared in the original paper.
+
+
 Wisser 2011. http://www.pnas.org/content/108/18/7339.long?tab=ds
 Multivariate analysis of maize disease resistances suggests a pleiotropic
 genetic basis and implicates a GST gene
 
 
-Yan 2002. Singular value partitioning in biplots. Agron J.
-Winter wheat, 31 gen in 8 loc. Different data from Yan's earlier papers.
+Yan 2002. Singular value partitioning in biplots. 
+Agron J.
+Winter wheat, 31 gen in 8 loc. 
+This data is different from Yan's earlier papers.
 
 
 * Papers - Uniformity trials
@@ -385,84 +434,105 @@ Source not available.
 Summary: http://eurekamag.com/research/013/624/013624967.php
 
 
-* Jstor
-
-Bartlet 1988. Stochastic Models and Field Trials.
-Cullis 1990 A Model for the Analysis of Growth Data from Designed Experiments
-  Has growth data for infected/non-infected pigs.
-Cullis 1991. Spatial Analysis of Field Experiments-An Extension to Two Dimensions
-Nielsen 2004. Nonlinear Mixed-Model Regression to Analyze Herbicide Dose
-?. An Experimental Design Used to Estimate the Optimum Planting Date for Cotton
-  Didn't use.  Not a very commonly needed design.  Has data.
-
-
 * R packages
 
-** biotools
-Path analysis for distance matrices
+** agricolae 
+Has assorted data and functions for analysis.
 
-** BGLR
-Has A matrix (but no pedigree) for 499 genotypes at 4 locs.
+** BGLR Bayesian Generalized Linear Regression.
+Has an A matrix (but no pedigree) for 499 genotypes at 4 locations.
 
-** BLR 
-Has a 599 genotype, 4 mega-environment data.  Also "A" matrix
+** BLR Bayesian Linear Regression.
+Has an A matrix (but no pedigree) for 499 genotypes at 4 locations.
 
 ** BSagri
 Safety assessment in agriculture trials
 
-** cropcc
+** cropcc Climate change on crops
 https://r-forge.r-project.org/projects/cropcc/
-Climate change on crops
 
 ** drc
-Has nice herbicide dose response curves.
+Has nice herbicide dose response curves and germination data for
+mungbean, rice, wheat.
 
-** missMDA The referenced source for 'geno' data does NOT contain the data.
+** FW Finlay-Wilkinson regression
+https://github.com/lian0090/FW/ 
+Has phenotype data and marker data for 599 wheat lines in 4 environments.
 
-** nlraa
+** lmtest::ChickEgg 
+Time series of annual chicken and egg production in the United States 1930-1983.
+
+** lsmeans::feedlot 
+Used to demonstrate an unbalanced analysis-of-covariance.
+
+** missMDA 
+The referenced source for 'geno' data does NOT contain the data.
+
+** nlraa Non-linear models in agriculture.
 http://r-forge.r-project.org/R/?group_id=1599
 Miguez.  R package: Non-linear models in agriculture.  Not a meta-analysis.
    
+** nlme
+Datasets for growth of Orange trees and Soybean plants.
+
 ** plantbreeding  
 https://r-forge.r-project.org/projects/plantbreeding/
 data: fulldial
 linetester
-Data: peanut data from Kang is same as agridat::kang.peanut
+Data: peanut data: agridat::kang.peanut
+
+** SDaA Survey Data and Analysis
+This package has county-level data from the United States Census of
+Agriculture, along with a vignette to illustrate survey sampling analyses.
 
 ** SemiPar
-onions data is same as agridat::ratkowski.onions
+onions: agridat::ratkowski.onions
 
 ** SMPracticals
 Data: barley
 
+** spdep 
+Has a vignette 'The Problem of Spatial Autocorrelation: forty years
+on' that examines agriculture in Irish counties.
+See also the data ade4::irishdata. 
+
+** SoyNAM Soybean nested association mapping 
+Dataset with phenotype data 3 yr,
+9 locations, 18 environments, 60 thousand observations for height, maturity,
+lodging, moisture, protein, oil, fiber, seed size. There are 5000+ strains,
+40 families.
 
 * Web sites
 
 ** ARS oat trials
 http://www.ars.usda.gov/Main/docs.htm?docid=8419&page=4
 
+** Electronic Rothamsted Archive
+http://www.era.rothamsted.ac.uk/index.php
+
+** Electronic Rothamsted Documents Archive
+http://www.era.rothamsted.ac.uk/eradoc/collections.php
 
 ** Germplasm Enhancement of Maize (ISU)
 http://www.public.iastate.edu/~usda-gem/index.htm
 
-
 ** Google datasets search engine
 https://cse.google.com/cse/publicurl?cx=002720237717066476899:v2wv26idk7m
-
 
 ** ILRI
 http://www.ilri.org/biometrics/CS/
 Nice dialel example with data.  Dorpa, Red Maasi sheep.
 
-
 ** IRRI
-STAR, PBTools, CropStat (successor to ILREML)
+STAR, PBTools, CropStat (successor to ILREML).
 The STAR user guide has well-documented data (even using 2 from agridat), but
 the PBTools user guide does not document the data.
 
+** Statistical Analysis of Agricultural Experiments with R
+http://rstats4ag.org/
 
-** NASS 
-http://www.nass.usda.gov/Data_and_Statistics/index.asp
+** USDA National Agricultural Statistics Service
+http://www.nass.usda.gov
 http://quickstats.nass.usda.gov/
 Group:       Field Crops
 Commodity:   Corn
@@ -471,10 +541,10 @@ Data Item:   Corn grain Acres Harvested, Yield Bu/Ac
 Domain:      Total
 Geography:   State
 
-# ----------------------------------------------------------------------------
-# stability
+* ----------------------------------------------------------------------------
+* stability
 
-# done
+* done
 adugna.sorghum 28g,13l,5y
 brandle.rape 5g,9l,3y
 denis.missing 5g,26e
@@ -486,7 +556,7 @@ lu.stability 5g,6e
 pieopho.cocksfoot 25g,7y
 williams.trees 37g,6l
 
-# todo ?
+* todo ?
 kamidi 11g,7l
 lin.balanced 33g,12l
 lin.unbalanced 33g,18l

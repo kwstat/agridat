@@ -75,8 +75,8 @@ mean(c(coef(m1)[21], coef(m1)[21]+coef(m1)[22:40]))
   dat$y <- dat$yield / 100
 
   require(lme4)
-  # Use || for uncorrelated int/slope
-  m2 <- lmer(y ~ 1 + yor + (1+yor||env), data=dat)
+  # Use || for uncorrelated int/slope.  Bad model.  See below.
+  # m2 <- lmer(y ~ 1 + yor + (1+yor||env), data=dat)
   ## Warning messages:
   ## 1: In checkConv(attr(opt, "derivs"), opt$par, ctrl = control$checkConv,  :
   ##   Model failed to converge with max|grad| = 0.55842 (tol = 0.002, component 1)
@@ -85,30 +85,13 @@ mean(c(coef(m1)[21], coef(m1)[21]+coef(m1)[22:40]))
   ##  - Rescale variables?;Model is nearly unidentifiable: large eigenvalue ratio
   ##  - Rescale variables?
 
-  # Results from lme4 look dangerous.  Try asreml.  No problem.
-  require(asreml)
-  m2a <- asreml(y ~ 1 + yor, data=dat, random = ~ env + env:yor)
-
-  # Compare the two packages
-
-  require(lucid)
-  vc(m2)
-  ##      grp        var1 var2     vcov    sdcor
-  ##      env (Intercept) <NA> 1.311    1.145
-  ##    env.1         yor <NA> 0.000006 0.002465
-  ## Residual        <NA> <NA> 4.179    2.044
-
-  vc(m2a)
-  ##          effect component  std.error z.ratio      con
-  ##     env!env.var  0.000106 0.00000653    16   Boundary
-  ## env:yor!env.var  0.000006 0.00000203     3.1 Positive
-  ##      R!variance  4.181    0.2581        16   Positive
-
   # Looks like lme4 is having trouble with variance of intercepts
   # There is nothing special about 1800 years, so change the
   # intercept -- 'correct' yor by subtracting 1800 and try again.
   dat$yorc <- dat$yor - 1800
   m3 <- lmer(y ~ 1 + yorc + (1+yorc||env), data=dat)
+  
+  require(asreml)
   m3a <- asreml(y ~ 1 + yorc, data=dat, random = ~ env + env:yorc)
 
   vc(m3)
