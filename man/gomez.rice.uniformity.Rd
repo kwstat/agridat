@@ -62,7 +62,9 @@ if(require(agricolae) & require(desplot) & require(reshape2)){
           main="gomez.rice.uniformity smoothed")
   
   # Gomez table 12.4
-  tab <- index.smith(dmat, col="red")$uniformity
+  tab <- index.smith(dmat,
+                     main="gomez.rice.uniformity",
+                     col="red")$uniformity
   tab <- data.frame(tab)
   
   # Gomez figure 12.2

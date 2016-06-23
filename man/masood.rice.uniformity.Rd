@@ -61,7 +61,9 @@ if(require(desplot)) {
 \dontrun{
   require(agricolae) & require(reshape2)
   dmat <- acast(dat, row~col, value.var='yield')
-  index.smith(dmat) # CVs match Table 3
+  index.smith(dmat,
+              main="masood.rice.uniformity",
+              col="red") # CVs match Table 3
 }
   
 

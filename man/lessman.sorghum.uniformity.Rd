@@ -65,7 +65,9 @@ sd(dat$yield)/mean(dat$yield) # CV 9.2%
 
 if(require(reshape2) & require(agricolae)){
   dmat <- acast(dat, row~col, value.var='yield')
-  index.smith(dmat) # Similar to Lessman Table 1
+  index.smith(dmat,
+              main="lessman.sorghum.uniformity",
+              col="red") # Similar to Lessman Table 1
   # Lessman said that varying the width of plots did not have an appreciable
   # effect on CV, and optimal row length was 3.2 basic plots, about 15-20
 }

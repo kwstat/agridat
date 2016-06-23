@@ -88,11 +88,16 @@ if(require(agricolae) & require(reshape2)){
   dat5 <- subset(dat5, row>1 & row<20)
   dat5 <- subset(dat5, col<15)
 
-  s4 <- index.smith(acast(dat4, row~col, value.var='yield'))$uni
+  s4 <- index.smith(acast(dat4, row~col, value.var='yield'),
+                    main="draper.safflower.uniformity (four foot)",
+                    col="red")$uni
   s4 # match Draper table 2, p 22
   
-  s5 <- index.smith(acast(dat5, row~col, value.var='yield'))$uni
-  s5 # match Draper table 1, p 21
+  ## s5 <- index.smith(acast(dat5, row~col, value.var='yield'),
+  ##                   main="draper.safflower.uniformity (five foot)",
+  ##                   col="red")$uni
+  ## s5 # match Draper table 1, p 21
+
 }
 
 }

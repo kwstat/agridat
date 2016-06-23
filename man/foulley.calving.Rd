@@ -21,9 +21,9 @@
   These data are calving difficulty scores for purebred US Simmental
   cows.
 
-  The raw data show that the greatest calving difficulty is for male
-  calves with young dams.
-  Differences between male/female calving decreased with age of the dam.
+  The raw data show that the greatest calving difficulty is for young
+  dams with male calves.
+  Differences between male/female calves decreased with age of the dam.
 
   The goodness of fit can be improved by using a scaling effect for age
   of dam.

@@ -57,7 +57,7 @@ if(require(desplot)){
 
 # final counts are strongly related to initial counts
 require(lattice)
-xyplot(final~initial|dose, data=dat, group=fumigant,
+xyplot(final~initial|factor(dose), data=dat, group=fumigant,
        main="cochran.eelworms", xlab="Initial worm count",
        ylab="Final worm count", auto.key=list(columns=5))
 

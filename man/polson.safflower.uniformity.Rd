@@ -55,6 +55,7 @@ if(require(agricolae) & require(reshape2)){
   tab <- index.smith(dmat, col="red",
                      main="polson.safflower.uniformity - Smith Index",
                      xlab="Plot size in number of basic plots")
+  
   # Polson p. 25 said CV decreased from 14.3 to 4.5
   # for increase from 1 unit to 90 units.  Close match.
   tab <- data.frame(tab$uniformity)

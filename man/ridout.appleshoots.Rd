@@ -71,7 +71,7 @@ foo.obs <- histogram(~roots|photo*bap, dat, breaks=0:18-0.5, type="density",
                      xlab="Number of roots for photoperiod 8, 16",
                      ylab="Density for BAP levels",
                      main="ridout.appleshoots")
-if(require(latticeExtra)) useOuterStrips(foo.obs)
+if(require(latticeExtra)) useOuterStrips(foo.obs) else print(foo.obs)
 
 # Ordinary (non-ZIP) Poisson GLM
 m1 <- glm(roots ~ bap + photo + bap:photo, data=dat,
@@ -116,7 +116,7 @@ d2$xpos <- as.numeric(as.character(d2$variable))
 foo.poi <- xyplot(value~xpos|photo*bap, d2, col="black", pch=20, cex=1.5)
 
 # Plot data and model
-foo.obs <- update(foo.obs, main="ridout.appleshoots: observed (bars) & predicted")
+foo.obs <- update(foo.obs, main="ridout.appleshoots: observed (bars) & predicted (dots)")
 useOuterStrips(foo.obs + foo.poi)
 }
   

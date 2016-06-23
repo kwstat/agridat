@@ -51,8 +51,8 @@ dat$pred <- predict(m1, type="response")
 require(lattice)
 if(require(latticeExtra)){
 xyplot(leaves~degdays, data=dat, groups=year, type=c('p'),
-       auto.key=TRUE, main="mead.cauliflower",
-       xlab="degree days", ylab="number of leaves (by year)", ) +
+       auto.key=list(columns=2), main="mead.cauliflower - observed (symbol) & fitted (line)",
+       xlab="degree days", ylab="Number of leaves", ) +
   xyplot(pred~degdays, data=dat, groups=year, type=c('l'), col="black")
 }
 

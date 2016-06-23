@@ -1,5 +1,5 @@
 
-## Wish list / To do
+## To do?
 
 * Example for tai.potato
 * Figure out best way to use jags
@@ -11,15 +11,16 @@
 
 ## New data for uniformity trials
 
-draper.safflower.uniformity, holtsmark.timothy.uniformity,
-lessman.sorghum.uniformity, masood.rice.uniformity,
-montgomery.wheat.uniformity, moore.polebean.uniformity,
-moore.bushbean.uniformity, moore.sweetcorn.uniformity,
-moore.carrots.uniformity, moore.springcauliflower.uniformity,
-moore.fallcauliflower.uniformity, nonnecke.corn.uniformity,
-nonnecke.peas.uniformity, parker.orange.uniformity,
-polson.safflower.uniformity, sawyer.multi.uniformity,
-smith.beans.uniformity, wiedemann.safflower.uniformity
+christidis.wheat.uniformity, draper.safflower.uniformity,
+holtsmark.timothy.uniformity, kiesselbach.oats.uniformity,
+lessman.sorghum.uniformity,
+masood.rice.uniformity, montgomery.wheat.uniformity,
+moore.polebean.uniformity, moore.bushbean.uniformity,
+moore.sweetcorn.uniformity, moore.carrots.uniformity,
+moore.springcauliflower.uniformity, moore.fallcauliflower.uniformity,
+nonnecke.corn.uniformity, nonnecke.peas.uniformity, parker.orange.uniformity,
+polson.safflower.uniformity, sawyer.multi.uniformity, smith.beans.uniformity,
+wiedemann.safflower.uniformity
 
 ## New data for stability, misc
 
@@ -27,8 +28,8 @@ lu.stability
 
 crampton.pig, battese.survey, gartner.corn, giles.wheat, goulden.eggs,
 goulden.splitsplit, huehn.wheat, kenward.cattle, kreusler.maize,
-lillemo.wheat, little.splitblock, onofri.winterwheat, tai.potato,
-wheatley.carrot
+lillemo.wheat, little.splitblock, omer.sorghum, onofri.winterwheat,
+tai.potato, wheatley.carrot
 
 ## Other
 
@@ -43,6 +44,7 @@ wheatley.carrot
 * Checked aspect of field plot heatmaps where possible.
 * `devtools::run_examples()` now works even without suggested packages installed.
 * Fixed `dontrun` sections to work with  `devtools::run_examples(run=FALSE)`
+* Renamed besag.met to besag.corn.
 
 # agridat 1.12 - Jun 2015
 

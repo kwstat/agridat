@@ -54,8 +54,8 @@ require(lattice)
 # These views emphasize differences between locations
 dotplot(gen~yield, dat, group=loc, auto.key=list(columns=3),
         main="ars.earlywhitecorn96")
-dotplot(gen~stalklodge, dat, group=loc, auto.key=list(columns=3),
-        main="ars.earlywhitecorn96")
+## dotplot(gen~stalklodge, dat, group=loc, auto.key=list(columns=3),
+##         main="ars.earlywhitecorn96")
 splom(~dat[,3:9], group=dat$loc, auto.key=list(columns=3))
 
 # MANOVA

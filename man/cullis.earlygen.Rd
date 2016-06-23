@@ -75,13 +75,17 @@ if(require(desplot)){
           col="check", cex=0.5, flip=TRUE, aspect=121/150, # true aspect
           main="cullis.earlygen (yield)")
 
-desplot(weed ~ col*row, dat,
-        flip=TRUE, aspect=121/150, # true aspect
-        main="cullis.earlygen (weed)")
+  grays <- colorRampPalette(c("white","#252525"))
+  desplot(weed ~ col*row, dat,
+          col.regions=grays(7),
+          flip=TRUE, aspect=121/150, # true aspect
+          main="cullis.earlygen (weed)")
 }
 
 require(lattice)
-bwplot(yield ~ weed, dat, horizontal=FALSE, main="cullis.earlygen")
+bwplot(yield ~ as.character(weed), dat,
+       horizontal=FALSE,
+       xlab="Weed score", main="cullis.earlygen")
 
 \dontrun{
 require(asreml)

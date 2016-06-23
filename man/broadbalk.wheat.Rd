@@ -73,7 +73,9 @@ xyplot(grain~straw|plot, dat, type=c('p','smooth'), as.table=TRUE,
 # See the treatment descriptions to understand the patterns
 redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
 levelplot(grain~year*plot, dat, main="broadbalk.wheat: Grain", col.regions=redblue)
-levelplot(straw~year*plot, dat, main="broadbalk.wheat: Straw", col.regions=redblue)
+\dontrun{
+  levelplot(straw~year*plot, dat, main="broadbalk.wheat: Straw", col.regions=redblue)
+}
 
 }
 \keyword{datasets}

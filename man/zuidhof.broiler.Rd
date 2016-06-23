@@ -52,9 +52,9 @@ lines(targetbw~age, subset(dat, !is.na(targetbw)), col="black")
 par(new=TRUE)
 plot(adfi~age, subset(dat, !is.na(adfi)),
      xlab="", ylab="", xlim=c(20,32), xaxt="n",yaxt="n",
-     ylim=c(-50,175), col="red", type="s", lty=2)
-axis(4, at=c(-50,-25,0,25,50,75,100,125,150,175), col="red")
-mtext("Weight (g)", side=4, line=2)
+     ylim=c(-50,175), type="s", lty=2)
+axis(4, at=c(-50,-25,0,25,50,75,100,125,150,175), col="red", col.axis="red")
+mtext("Weight (g)", side=4, line=2, col="red")
 lines(adg~age, subset(dat, !is.na(adg)), col="red", type="s", lty=1, lwd=2)
 abline(h=c(0,52), col="red")
 with(dat, segments(age, 0, age, eggwt, col="red"))

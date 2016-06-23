@@ -21,7 +21,7 @@
 
   Eight races of barley were grown on a regular pattern of plots.
 
-  These data were prepared from Richey (1926) because the copy was
+  These data were prepared from Richey (1926) because the text was
   cleaner.
 
   Each plot was planted 40 inches on a side, but only the middle square
@@ -29,7 +29,7 @@
 
   Field length: 5 plots * 3 feet = 15 feet
 
-  Field width: 25 plots * 3 feet = 75 feet.
+  Field width: 32 plots * 3 feet = 96 feet.
 }
 \source{
 
@@ -61,8 +61,8 @@ tapply(dat$yield, dat$gen, mean)
 # Compare to Student 1923, diagram I,II
 if(require(desplot)){
   desplot(yield ~ col*row, data=dat,
-          aspect=15/75, # true aspect
-          main="beaven.barley", text=gen)
+          aspect=15/96, # true aspect
+          main="beaven.barley - variety trial", text=gen)
 }
 
 }

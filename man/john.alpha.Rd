@@ -33,7 +33,7 @@
 }
 
 \references{
-  Piepho, H.P. and M{\"o}hring, J. (2007),
+  Piepho, H.P. and Mohring, J. (2007),
   Computing heritability and selection response from unbalanced
   plant breeding trials,
   \emph{Genetics}, 177, 1881-1888.
@@ -72,7 +72,7 @@ vc(m2)
 means <- data.frame(rcb=coef(m0)[1:24],
                     ib=coef(m1)[1:24],
                     intra=fixef(m2)[1:24])
-## head(means)
+head(means)
 ##             rcb       ib    intra
 ## genG01 5.201233 5.268742 5.146433
 ## genG02 4.552933 4.665389 4.517265
@@ -86,17 +86,35 @@ splom(means, main="john.alpha - means for RCB, IB, Intra-block")
 }
 
 \dontrun{
-# Heritability calculation of Piepho & Mohring, Example 1
-require(asreml)
-m3 <- asreml(yield ~ 1 + rep, data=dat, random=~ gen + rep:block)
-sg2 <- summary(m3)$varcomp[1,'component']
-vblup <- predict(m3, data=dat, classify="gen")$pred$avsed ^ 2
-m3 <- asreml(yield ~ 1 + gen + rep, data=dat, random = ~ rep:block)
-vblue <- predict(m3, data=dat, classify="gen")$pred$avsed ^ 2
-# H^2 = .803
-sg2 / (sg2 + vblue/2)
-# H^2c = .809
-1-(vblup / 2 / sg2)
+  # Heritability calculation of Piepho & Mohring, Example 1
+  require(asreml)
+  m3 <- asreml(yield ~ 1 + rep, data=dat, random=~ gen + rep:block)
+  sg2 <- summary(m3)$varcomp['gen!gen.var','component'] # .142902
+
+  # Average variance of a difference of two adjusted means (BLUP)
+  p3 <- predict(m3, data=dat, classify="gen", sed=TRUE)
+  # Matrix of pair-wise SED values, squared
+  vdiff <- p3$predictions$sed^2
+  # Average variance of two DIFFERENT means (using lower triangular of vdiff)
+  vblup <- mean(vdiff[lower.tri(vdiff)]) # .05455038
+  
+  # Note that without sed=TRUE, asreml reports square root of the average variance
+  # of a difference between the variety means, so the following gives the same value
+  # predict(m3, data=dat, classify="gen")$pred$avsed ^ 2 # .05455038
+
+  # Average variance of a difference of two adjusted means (BLUE)
+  m4 <- asreml(yield ~ 1 + gen + rep, data=dat, random = ~ rep:block)
+  p4 <- predict(m4, data=dat, classify="gen", sed=TRUE)
+  vdiff <- p4$predictions$sed^2
+  vblue <- mean(vdiff[lower.tri(vdiff)]) # .07010875
+  # Again, could use predict(m4, data=dat, classify="gen")$pred$avsed ^ 2
+  
+  # H^2 Ad-hoc measure of heritability
+  sg2 / (sg2 + vblue/2) # .803
+  
+  # H^2c Similar measure proposed by Cullis.
+  1-(vblup / 2 / sg2) # .809
 }
+
 }
 \keyword{datasets}

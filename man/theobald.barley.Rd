@@ -47,7 +47,7 @@ dat <- transform(dat, income=100*yield - 400*nitro/1000)
 
 require(lattice)
 xyplot(income~nitro|env, dat, groups=gen, type='b',
-       auto.key=TRUE, main="theobald.barley")
+       auto.key=list(columns=3), main="theobald.barley")
 
 }
 \keyword{datasets}

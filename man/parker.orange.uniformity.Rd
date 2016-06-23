@@ -96,7 +96,8 @@ round(100*tapply(dat$yield, dat$year, cv),2)
 if(require(reshape2) & require(corrgram)){
   dat2 <- acast(dat, row+col ~ year, value.var = 'yield')
   round(cor(dat2, use = "pair"),3)
-  corrgram(dat2, lower = panel.pts, upper = panel.conf)
+  corrgram(dat2, lower = panel.pts, upper = panel.conf,
+           main="parker.orange.uniformity")
 }
 
 # Fertility index. Mean across years (ignoring 1921). Parker table 16
@@ -107,7 +108,7 @@ round(acast(dat3, row ~ col, value.var = 'yield'),0)
 if(require(desplot)){
   desplot(yield ~ col*row, data = dat3,
           flip = TRUE, aspect = 27*48/(10*200), # true aspect
-          main = "parker.orange.uniformity")
+          main = "parker.orange.uniformity - mean across years")
 }
 
 }

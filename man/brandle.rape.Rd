@@ -39,7 +39,7 @@ data(brandle.rape)
 dat <- brandle.rape
 
 require(lattice)
-dotplot(gen~yield|loc, dat, group=year, auto.key=TRUE,
+dotplot(gen~yield|loc, dat, group=year, auto.key=list(columns=3),
         main="brandle.rape, yields per location", ylab="Genotype")
 
 # Matches table 4 of Brandle

@@ -57,6 +57,7 @@
 }
 \examples{
 
+data(goulden.splitsplit)
 dat <- goulden.splitsplit
 
 if(require(desplot)) {

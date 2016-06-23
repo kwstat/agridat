@@ -38,11 +38,11 @@
 
 }
 \source{
+  
   Beall, Geoffrey (1940).
   The fit and significance of contagious distributions when applied to
   observations on larval insects.
-  \emph{Ecology}, 21, 460--474. Table 6.
-  
+  \emph{Ecology}, 21, 460-474. Table 6.
   http://doi.org/10.2307/1930285
 
 }
@@ -56,13 +56,14 @@ dat <- beall.webworms
 with(dat, table(y,trt))
 
 require(lattice)
-histogram(~y|trt, data=dat, layout=c(1,4), as.table=TRUE)
+histogram(~y|trt, data=dat, layout=c(1,4), as.table=TRUE,
+          main="beall.webworms")
 
 # Visualize Beall table 6.  Block effects may exist, but barely.
 if(require(desplot)){
-grays <- colorRampPalette(c("#d9d9d9","#252525"))
+grays <- colorRampPalette(c("white","#252525"))
 desplot(y ~ col*row, data=dat,
-        col.regions=grays(9),
+        col.regions=grays(10),
         out1=block, out2=trt, num=trt, flip=TRUE, # aspect unknown
         main="beall.webworms (count of worms)")
 }
@@ -73,6 +74,7 @@ desplot(y ~ col*row, data=dat,
 # Just a simple model here...
 m1 <- glm(y ~ block+spray*lead, data=dat, family="poisson")
 summary(m1)
+anova(m1)
 
 }
 \keyword{datasets}

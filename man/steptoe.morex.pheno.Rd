@@ -154,7 +154,7 @@ t(t(round(tapply(dat$yield, dat$env, FUN=mean),2)))
 if(require(qtl)){
   data(steptoe.morex.geno)
   datg <- steptoe.morex.geno
-  plot.map(datg)  # or just use plot()
+  plot.map(datg, main="steptoe.morex.pheno")  # or just use plot()
 }
 
 \dontrun{

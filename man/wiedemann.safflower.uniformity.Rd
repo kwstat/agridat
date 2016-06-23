@@ -79,7 +79,9 @@ if(require(desplot)){
 \dontrun{
   require(agricolae)
   dmat <- acast(dat, row~col, value.var='yield')
-  index.smith(dmat)
+  index.smith(dmat,
+              main="wiedemann.safflower.uniformity",
+              col="red")
 }
 
 }

@@ -91,14 +91,15 @@ dat <- verbyla.lupin
 if(require(desplot)){
   desplot(gen~col+row|site, data=dat,
           # aspect unknown
-          main="verbyla.lupin")
+          main="verbyla.lupin - experiment design")
 }
 
 # Figure 3 of Verbyla
 require(lattice)
 foo <- xyplot(yield ~ rate|loc*gen, data=dat, subset=year==92,
               type=c('p','smooth'), cex=.5,
-              main="verbyla.lupin: 1992", xlab="Seed rate (plants/m^2)",
+              main="verbyla.lupin: 1992 yield response curves",
+              xlab="Seed rate (plants/m^2)",
               ylab="Yield (tons/ha)",
               strip=strip.custom(par.strip.text=list(cex=.7)))
 

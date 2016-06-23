@@ -18,7 +18,7 @@
   }
 }
 \details{
-  Plots were approximately 22cm by 13cm.  Layout of the experiment was a
+  Plots were approximately 22 cm by 13 cm.  Layout of the experiment was a
   latin square.  The number of wireworms in each plot was counted,
   following soil fumigation the previous year.
 }

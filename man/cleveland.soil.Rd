@@ -44,11 +44,11 @@ dat <- cleveland.soil
 ##           main="cleveland")
 
 # 2D loess plot. Cleveland fig 4.68
-sg1 <- expand.grid(easting = seq(.15, 1.410, by = .015),
-                        northing = seq(.150, 3.645, by = .015))
+sg1 <- expand.grid(easting = seq(.15, 1.410, by = .02),
+                   northing = seq(.150, 3.645, by = .02))
 fit1 <- with(dat,
-                predict(loess(resistivity~easting*northing, span = 0.25,
-                        degree = 2), sg1))
+             predict(loess(resistivity~easting*northing, span = 0.25,
+                           degree = 2), sg1))
 require(lattice)
 redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
 levelplot(fit1 ~ sg1$easting * sg1$northing,

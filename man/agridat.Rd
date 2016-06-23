@@ -29,6 +29,7 @@ name                                  \tab dimensions \tab other \tab model \cr
 \link{batchelor.navel2.uniformity}    \tab 15 x 33 \tab xy \tab \cr
 \link{batchelor.valencia.uniformity}  \tab 12 x 20 \tab xy \tab \cr
 \link{batchelor.walnut.uniformity}    \tab 10 x 28 \tab xy \tab \cr
+\link{christidis.wheat.uniformity}    \tab 12 x 24 \tab xy \tab \cr
 \link{draper.safflower.uniformity}    \tab 18 x 16 \tab xy, 2 expt \tab smith\cr
 \link{garber.multi.uniformity}        \tab 45 x 6 \tab xy, 2 years/crops \tab \cr
 \link{gomez.rice.uniformity}          \tab 18 x 36 \tab xy \tab aov,smith \cr
@@ -37,6 +38,7 @@ name                                  \tab dimensions \tab other \tab model \cr
 \link{holtsmark.timothy.uniformity}   \tab 6 x 40 \tab xy \tab \cr
 \link{immer.sugarbeet.uniformity}     \tab 10 x 60 \tab xy, 3 traits \tab \cr
 \link{kalamkar.potato.uniformity}     \tab 6 x 96 \tab xy \tab \cr
+\link{kiesselbach.oats.uniformity}    \tab 3 x 69 \tab xy \tab \cr
 \link{kempton.barley.uniformity}      \tab 7 x 28 \tab xy \tab \cr
 \link{lessman.sorghum.uniformity}     \tab 46 x 60 \tab xy \tab \cr
 \link{li.millet.uniformity}           \tab 6 x 100 \tab xy \tab \cr
@@ -230,6 +232,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{mead.strawberry}           \tab 8   \tab    \tab 4   \tab    \tab     \tab \tab \cr
 \link{minnesota.barley.weather}  \tab     \tab 6  \tab     \tab 10 \tab     \tab \tab \cr
 \link{minnesota.barley.yield}    \tab 22  \tab 6  \tab     \tab 10 \tab     \tab \tab dotplot\cr
+\link{omer.sorghum}              \tab 18  \tab 2  \tab 4   \tab 3  \tab     \tab \tab jags\cr
 \link{onofri.winterwheat}        \tab 8   \tab    \tab 3   \tab 7  \tab     \tab \tab ammi\cr
 \link{ortiz.tomato}              \tab 15  \tab 18 \tab     \tab    \tab 16   \tab env*gen~env*cov \tab pls \cr
 \link{pacheco.soybean}           \tab 18  \tab 11 \tab     \tab    \tab     \tab \tab ammi\cr
@@ -323,10 +326,10 @@ The value of this package is:
 
 White and van Evert (2008) present some guidelines for publication of data.
 
-Some of the examples use the \code{asreml} package since it is the _only_
-R tool for fitting mixed models with complex variance structures to
-large datasets, and almost the only option (even for small datasets) for
-modelling AR1xAR1 residual variance structures.
+Some of the examples use the \code{asreml} package since it is the
+_only_ R tool for fitting mixed models with complex variance structures
+to large datasets, and essentially the only option (even for small
+datasets) for modelling AR1xAR1 residual variance structures.
 Commercial use of \code{asreml} requires a license:
 http://www.vsni.co.uk/downloads/asreml.
 
