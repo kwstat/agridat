@@ -57,6 +57,7 @@
 data(giles.wheat)
 dat <- giles.wheat
 dat <- transform(dat, gen=factor(gen))
+dat <- transform(dat, env=factor(env))
 dat1 <- subset(dat, !is.na(straw))
 dat2 <- subset(dat, !is.na(emergence))
 

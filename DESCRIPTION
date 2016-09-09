@@ -12,10 +12,12 @@ Suggests:
     AER,
     agricolae (>= 1.2),
     betareg,
+    broom,
     car,
     coin,
     corrgram,
     desplot,
+    dplyr,
     effects,
     equivalence,
     FrF2,
@@ -46,6 +48,7 @@ Suggests:
     qicharts,
     qtl,
     sp,
+    SpATS,
     survival,
     vcd
 License: CC BY-SA 4.0 + file LICENSE

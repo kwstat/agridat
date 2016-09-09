@@ -22,7 +22,7 @@
   There were four spray treatments: 0 (none), 1 (early), 2 (late), R
   (repeated).
 
-  Each treatment occurs once between each f the 9 ordered pairs of the
+  Each treatment occurs once between each of the 9 ordered pairs of the
   other treatments.
 
   The first and last plot are not assigned to a block.

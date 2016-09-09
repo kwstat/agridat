@@ -51,7 +51,7 @@ spplot(d1, zcol = "nitro", cuts=8, cex = 1.6,
        col.regions =  bpy.colors(8), key.space = "right")
 
 # Variogram
-v1 <- variogram(nitro~1, data=d1)
+v1 <- gstat::variogram(nitro~1, data=d1)
 plot(v1, main="waynick.soil - Davis field - nitrogen") # Maybe hasn't reached sill
 }
 

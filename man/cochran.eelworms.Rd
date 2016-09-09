@@ -58,7 +58,8 @@ if(require(desplot)){
 # final counts are strongly related to initial counts
 require(lattice)
 xyplot(final~initial|factor(dose), data=dat, group=fumigant,
-       main="cochran.eelworms", xlab="Initial worm count",
+       main="cochran.eelworms - by dose (panel) & fumigant",
+       xlab="Initial worm count",
        ylab="Final worm count", auto.key=list(columns=5))
 
 # One approach...log transform, use 'initial' as covariate, create 9 treatments

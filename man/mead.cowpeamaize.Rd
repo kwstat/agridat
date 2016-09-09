@@ -29,9 +29,9 @@
   http://repository.cimmyt.org/xmlui/handle/10883/868
 }
 \references{
-  Roger Mead, 1992.
-  Statistical Methods in Agriculture and Experimental Biology, 2nd ed.
-  Chapman and Hall.  Page 364.
+  Roger Mead, Robert N Curnow, Anne M Hasted. 2002.
+  Statistical Methods in Agriculture and Experimental Biology, 3rd ed.
+  Chapman and Hall.  Page 390.
 }
 
 \examples{

@@ -29,13 +29,13 @@
   and the proximity to the town (site) for the barley data.
 
   \tabular{lll}{
-    site\tab station name\tab station\cr
-    Morris\tab MORRIS WC EXPERIMENTAL STATION\tab USC00215638\cr
-    StPaul\tab MINNEAPOLIS WEATHER BUREAU DOWNTOWN\tab USC00215433\cr
-    Crookston\tab CROOKSTON NW EXPERIMENTAL STATION\tab USC00211891\cr
-    GrandRapids\tab GRAND RAPIDS FRS LAB\tab USC00213303\cr
-    Waseca\tab  WASECA EXPERIMENTAL STATION\tab USC00218692\cr
-    Duluth\tab  SUPERIOR\tab USC00478349\cr
+    site       \tab station name \tab station\cr
+    Morris     \tab MORRIS WC EXPERIMENTAL STATION \tab USC00215638\cr
+    StPaul     \tab MINNEAPOLIS WEATHER BUREAU DOWNTOWN \tab USC00215433\cr
+    Crookston  \tab CROOKSTON NW EXPERIMENTAL STATION \tab USC00211891\cr
+    GrandRapids\tab GRAND RAPIDS FRS LAB \tab USC00213303\cr
+    Waseca     \tab WASECA EXPERIMENTAL STATION \tab USC00218692\cr
+    Duluth     \tab SUPERIOR \tab USC00478349\cr
   }
 
   'cdd' are cooling degree days, which is the number of degree days with

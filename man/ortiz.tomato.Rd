@@ -1,59 +1,83 @@
 \name{ortiz.tomato}
 \alias{ortiz.tomato}
+\alias{ortiz.tomato.covs}
+\alias{ortiz.tomato.yield}
 \docType{data}
 \title{
   Multi-environment trial of tomato in Latin America, weight/yield and environmental covariates
 }
 \description{
-  Tomato weight/yield and environmental covariates in Latin America
+  Multi-environment trial of tomato in Latin America, weight/yield and environmental covariates
+}
+
+\usage{
+  data("ortiz.tomato.covs")
+  data("ortiz.tomato.yield")
 }
 
 \format{
-  A list of three matrices, \code{yield}, \code{weight}, and \code{covs}.
-  See details below.
+
+  The \code{ortiz.tomato.covs} data frame has 18 observations on the following 18 variables.
+  \describe{
+    \item{\code{env}}{environment}
+    \item{\code{Day}}{Degree days (base 10)}
+    \item{\code{Dha}}{Days to harvest}
+    \item{\code{Driv}}{Drivings (0/1)}
+    \item{\code{ExK}}{Extra potassium (kg / ha)}
+    \item{\code{ExN}}{Extra nitrogen (kg / ha)}
+    \item{\code{ExP}}{Extra phosphorous (kg / ha)}
+    \item{\code{Irr}}{Irrigation (0/1)}
+    \item{\code{K  }}{Potassium (me/100 g)}
+    \item{\code{Lat}}{Latitude}
+    \item{\code{Long}}{Longitude}
+    \item{\code{MeT}}{Mean temperature (C)}
+    \item{\code{MnT}}{Min temperature (C)}
+    \item{\code{MxT}}{Max temperature (C)}
+    \item{\code{OM }}{Organic matter (percent)}
+    \item{\code{P  }}{Phosphorous (ppm)}
+    \item{\code{pH }}{Soil pH}
+    \item{\code{Prec}}{Precipitation (mm)}
+    \item{\code{Tri}}{Trimming (0/1)}
+  }
+  
+  The \code{ortiz.tomato.yield} data frame has 270 observations on the following 4 variables.
+  \describe{
+    \item{\code{env}}{environment}
+    \item{\code{gen}}{genotype}
+    \item{\code{yield}}{marketable fruit yield t/ha}
+    \item{\code{weight}}{fruit weight, g}
+  }
+
 }
+
 \details{
 
-  The \code{yield} matrix contains average marketable fruit yield (t /
-  ha) for 8 open-pollinated and 7 hybrid tomatos in 18 environments.
-  The \code{weight} matrix contains average fruit weight (g).
-
-  The environment locations and codes are:
-  Estanzuela, Guatemala (E04), Baja Verapaz, Guatemala, (E05),
-  Cogutepeque, El Salvador (E06), San Andres, El Salvador (E07),
-  Comayagua, Honduras (E11), Valle de Sabaco, Nicaragua (E14),
-  San Antonio de Belen, Costa Rica (E15),
-  San Cristobal, Dominican Republic (E20),
-  Constanza, Dominican Republic (E21), Palmira, Colombia (E27),
-  La Molina, Peru (E40), Santiago, Chile (E41),
-  Chillan, Chile (E42), Curacavi, Chile (E43), Colina, Chile (44),
-  Belem, Brazil (E50), Caacupe, Paraguay (E51),
-  Centeno, Trinidad Tobago (E53).
-
-  The \code{covs} matrix contains 16 environmental covariates.
+  The environment locations are:
   \tabular{ll}{
-  Lat  \tab Latitude \cr
-  Long \tab Longitude \cr
-  MxT  \tab Max temperature (C) \cr
-  MnT  \tab Min temperature (C) \cr
-  MeT  \tab Mean temperature (C) \cr
-  Prec \tab Precipitation (mm) \cr
-  Day  \tab Degree days (base 10) \cr
-  pH   \tab Soil pH \cr
-  OM   \tab Organic matter (percent) \cr
-  P    \tab Phosphorous (ppm) \cr
-  K    \tab Potassium (me/100 g) \cr
-  ExN  \tab Extra nitrogen (kg / ha) \cr
-  ExP  \tab Extra phosphorous (kg / ha) \cr
-  ExK  \tab Extra potassium (kg / ha) \cr
-  Trim \tab Trimming (0/1) \cr
-  Driv \tab Drivings (0/1) \cr
-  Irr  \tab Irrigation (0/1) \cr
-  Dha  \tab Days to harvest \cr
-}
+    E04 \tab Estanzuela, Guatemala \cr
+    E05 \tab Baja Verapaz, Guatemala \cr
+    E06 \tab Cogutepeque, El Salvador \cr
+    E07 \tab San Andres, El Salvador \cr
+    E11 \tab Comayagua, Honduras \cr
+    E14 \tab Valle de Sabaco, Nicaragua \cr
+    E15 \tab San Antonio de Belen, Costa Rica \cr
+    E20 \tab San Cristobal, Dominican Republic \cr
+    E21 \tab Constanza, Dominican Republic \cr
+    E27 \tab Palmira, Colombia \cr
+    E40 \tab La Molina, Peru \cr
+    E41 \tab Santiago, Chile \cr
+    E42 \tab Chillan, Chile \cr
+    E43 \tab Curacavi, Chile \cr
+    E44 \tab Colina, Chile \cr
+    E50 \tab Belem, Brazil \cr
+    E51 \tab Caacupe, Paraguay \cr
+    E53 \tab Centeno, Trinidad Tobago\cr
+  }
+  
 }
 
 \source{
+  
   Rodomiro Ortiz and Jose Crossa and Mateo Vargas and Juan Izquierdo, 2007.
   Studying the Effect of Environmental Variables On the Genotype x
   Environment Interaction of Tomato. \emph{Euphytica}, 153, 119--134.
@@ -61,28 +85,32 @@
   
   Used with permission of Rodomiro Ortiz.
 }
+
 \examples{
 
-data(ortiz.tomato)
+data(ortiz.tomato.covs)
+data(ortiz.tomato.yield)
+
+if(require(pls) & require(reshape2))
 # Double-centered yield matrix
-Y <- ortiz.tomato$yield
+Y <- acast(ortiz.tomato.yield, env ~ gen, value.var='yield')
 Y <- sweep(Y, 1, rowMeans(Y, na.rm=TRUE))
 Y <- sweep(Y, 2, colMeans(Y, na.rm=TRUE))
 
 # Standardized covariates
-X <- ortiz.tomato$covs
+X <- ortiz.tomato.covs
+rownames(X) <- X$env
 X <- X[,c("MxT", "MnT", "MeT", "Prec", "Day", "pH", "OM", "P", "K",
           "ExN", "ExP", "ExK", "Trim", "Driv", "Irr", "Dha")]
 X <- scale(X)
 
 # Now, PLS relating the two matrices.
 # Note: plsr deletes observations with missing values
-if(require(pls)){
+
 m1 <- plsr(Y~X)
 # Inner-product relationships similar to Ortiz figure 1.
 biplot(m1, which="x", var.axes=TRUE, main="ortiz.tomato - env*cov biplot")
 #biplot(m1, which="y", var.axes=TRUE)
 }
 
-}
 \keyword{datasets}

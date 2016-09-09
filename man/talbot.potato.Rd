@@ -1,5 +1,8 @@
 \name{talbot.potato}
 \alias{talbot.potato}
+\alias{talbot.potato.traits}
+\alias{talbot.potato.yield}
+
 \docType{data}
 \title{
   Multi-environment trial of potato in UK, yields and trait scores at 12 locations
@@ -9,15 +12,35 @@
   locations in UK.
 }
 
-\format{
-  A list of two matrices, \code{yield} and \code{char}.
-  See details below.
+\usage{
+data("talbot.potato.traits")
+data("talbot.potato.yield")
 }
+
+\format{
+
+  The \code{talbot.potato.yield} dataframe has 126 observations on the following 3 variables.
+  \describe{
+    \item{\code{gen}}{genotype/variety}
+    \item{\code{trait}}{trait}
+    \item{\code{score}}{trait score, 1-9}
+  }
+
+  The \code{talbot.potato.yield} dataframe has 108 observations on the following 3 variables.
+  \describe{
+    \item{\code{gen}}{genotype/variety}
+    \item{\code{loc}}{location/center}
+    \item{\code{yield}}{yield, t/ha}
+  }
+
+}
+
 \details{
-  The \code{yield} matrix contains mean tuber yields (t/ha) of 9 varieties
-  of potato at 12 centers
-  in the United Kingdom over five years 1983-1987.
-  The following abbreviations are used for the centers.
+  
+  The \code{talbot.potato.yield} dataframe contains mean tuber yields
+  (t/ha) of 9 varieties of potato at 12 centers in the United Kingdom
+  over five years 1983-1987.  The following abbreviations are used for
+  the centers.
 
   \tabular{ll}{
     BU \tab Bush \cr
@@ -34,9 +57,8 @@
     TE \tab Terrington \cr
   }
 
-  The \code{char} matrix contains the scores of 14 traits on
-  each of the 9 varities.
 }
+
 \source{
   Mike Talbot and A V Wheelwright, 1989,
   The analysis of genotype x analysis interactions by partial
@@ -48,18 +70,21 @@
 
 \examples{
 
-data(talbot.potato)
+if(require(pls) & require(reshape2)){
 
-if(require(pls)){
+  data(talbot.potato.traits)
+  datt <- talbot.potato.traits
+  data(talbot.potato.yield)
+  daty <- talbot.potato.yield
 
-  char <- talbot.potato$char
-  yield <- talbot.potato$yield
-
+  datt <- acast(datt, gen ~ trait, value.var='score')
+  daty <- acast(daty, gen ~ loc, value.var='yield')  
+  
   # Transform columns to zero mean and unit variance
-  char <- scale(char)
-  yield <- scale(yield)
+  datt <- scale(datt)
+  daty <- scale(daty)
 
-  m1 <- plsr(yield ~ char, ncomp=3)
+  m1 <- plsr(daty ~ datt, ncomp=3)
   summary(m1)
 
   # Loadings factor 1

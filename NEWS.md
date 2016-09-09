@@ -13,12 +13,12 @@
 
 christidis.wheat.uniformity, draper.safflower.uniformity,
 holtsmark.timothy.uniformity, kiesselbach.oats.uniformity,
-lessman.sorghum.uniformity,
-masood.rice.uniformity, montgomery.wheat.uniformity,
-moore.polebean.uniformity, moore.bushbean.uniformity,
-moore.sweetcorn.uniformity, moore.carrots.uniformity,
-moore.springcauliflower.uniformity, moore.fallcauliflower.uniformity,
-nonnecke.corn.uniformity, nonnecke.peas.uniformity, parker.orange.uniformity,
+lessman.sorghum.uniformity, masood.rice.uniformity,
+montgomery.wheat.uniformity, moore.polebean.uniformity,
+moore.bushbean.uniformity, moore.sweetcorn.uniformity,
+moore.carrots.uniformity, moore.springcauliflower.uniformity,
+moore.fallcauliflower.uniformity, nonnecke.corn.uniformity,
+nonnecke.peas.uniformity, parker.orange.uniformity,
 polson.safflower.uniformity, sawyer.multi.uniformity, smith.beans.uniformity,
 wiedemann.safflower.uniformity
 
@@ -28,23 +28,25 @@ lu.stability
 
 crampton.pig, battese.survey, gartner.corn, giles.wheat, goulden.eggs,
 goulden.splitsplit, huehn.wheat, kenward.cattle, kreusler.maize,
-lillemo.wheat, little.splitblock, omer.sorghum, onofri.winterwheat,
+lillemo.wheat, little.splitblock, mead.lambs, omer.sorghum, onofri.winterwheat,
 tai.potato, wheatley.carrot
 
 ## Other
 
-* Changed extensions in inst/files from .bug to .jag .
+* The following data objects have been un-listed and reshaped into 'tidy' dataframes: aastveit.barley, box.cork, ortiz.tomato, talbot.potato, vargas.txe, vargas.wheat1, vargas.wheat2
 * Moved `desplot` function to package `desplot`.
 * Moved `gge` function to package `gge`.
-* Switch to CC-BY-SA 4.0 + file LICENSE.  Similar to `igraphdata` package.
+* Changed license to CC-BY-SA 4.0 + file LICENSE.  Similar to `igraphdata` package.
 * Changed vignette from Rnw/pdf to Rmd/html.
 * Titles in Rd pages are more consistent.
 * Added DOIs for most source references.
-* Changed all hyperlinks to plain text (faster checking, avoids re-direct errors).
-* Checked aspect of field plot heatmaps where possible.
+* Checked aspect ratio of field plot heatmaps where possible.
 * `devtools::run_examples()` now works even without suggested packages installed.
 * Fixed `dontrun` sections to work with  `devtools::run_examples(run=FALSE)`
 * Renamed besag.met to besag.corn.
+* Changed extensions in inst/files from .bug to .jag .
+* Changed all hyperlinks to plain text (faster checking, avoids re-direct errors).
+* Removed most quote marks from data/*.txt files.
 
 # agridat 1.12 - Jun 2015
 
@@ -61,7 +63,7 @@ burgueno.unreplicated, steptoe.morex.pheno
 
 ## Other
 
-* Removed (after adding) **asreml** package from Suggests (due to CRAN check problems).
+* Removed **asreml** package from Suggests (due to CRAN check problems).
 
 # agridat 1.10 - Nov 2014
 
@@ -161,8 +163,8 @@ aastveit.barley, gathmann.bt, kempton.competition, wedderburn.barley
 
 # agridat 1.0 - Apr 2011
 
-## First release to CRAN.
+## First release to CRAN
 
 # agridat 0.0 - Oct 2010
 
-## Development begins.
+## Development begins

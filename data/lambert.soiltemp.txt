@@ -1,4 +1,4 @@
-"month"	"depth"	"temp"
+month	depth	temp
 1	0.25	-84
 2	0.25	-90
 3	0.25	-29

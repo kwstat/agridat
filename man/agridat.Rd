@@ -95,6 +95,7 @@ name                             \tab gen \tab years \tab trt \tab other \tab mo
 \link{ilri.sheep}                \tab 4   \tab 6  \tab        \tab diallel \tab lmer, asreml \cr
 \link{kenward.cattle}            \tab     \tab    \tab 2      \tab \tab asreml \cr
 \link{lucas.switchback}          \tab 12  \tab    \tab 3      \tab \tab aov \cr
+\link{mead.lambs}                \tab 3   \tab    \tab 3      \tab \tab glm \cr
 \link{patterson.switchback}      \tab 12  \tab    \tab 4      \tab \tab aov \cr
 \link{zuidhof.broiler}           \tab     \tab    \tab        \tab ts \tab \cr
 }
@@ -346,8 +347,8 @@ In dataframes, 'block', 'rep', and similar terms are almost always coded
 like B1, B2, B3 instead of 1, 2, 3.  This causes R to treat the data as
 a factor instead of a numeric covariate (which is a good thing).
 
-Most data are presented as data frames.  In a few cases, the data are
-lists of matrices.
+Almost all of the data are presented as 'tidy' dataframes with
+'observations' in rows and 'variables' in columns.
 
 Although using \code{data()} is not necessary to access the data files,
 the example sections do include the use of \code{data()} because

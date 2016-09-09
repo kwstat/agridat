@@ -40,7 +40,9 @@ data(sinclair.clover)
 dat <- sinclair.clover
 
 require(lattice)
-xyplot(yield~P|factor(S), dat, layout=c(5,1), main="sinclair.clover")
+xyplot(yield~P|factor(S), dat, layout=c(5,1),
+       main="sinclair.clover - Yield by sulfur levels",
+       xlab="Phosphorous")
 
 # Dodds fits a two-dimensional Mitscherlich-like model:
 # z = a*(1+b*{(s+t*x)/(x+1)}^y) * (1+d*{(th+r*y)/(y+1)}^x)

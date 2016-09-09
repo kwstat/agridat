@@ -1,4 +1,4 @@
-"row"	"col"	"yield"	"ears"
+row	col	yield	ears
 1	1	17.5	28
 1	10	20.8	35
 1	11	15.6	28

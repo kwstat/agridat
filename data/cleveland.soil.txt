@@ -1,4 +1,4 @@
-"northing"	"easting"	"resistivity"	"is.ns"	"track"
+northing	easting	resistivity	is.ns	track
 0.0180	0.0160	34.15	F	1
 0.0178	0.0252	34.81	F	1
 0.0176	0.0345	35.65	F	1

@@ -1,4 +1,4 @@
-"yield"	"potassium"
+yield	potassium
 53.5	26
 64.8	28
 63	30

@@ -1,4 +1,4 @@
-"day"	"weight"
+day	weight
 1	55
 1	53
 1	56

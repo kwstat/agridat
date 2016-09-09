@@ -1,4 +1,4 @@
-"row"	"col"	"oats"	"wheat"
+row	col	oats	wheat
 1	1	1923	15.1
 1	2	2066	17
 1	3	1943	18.5

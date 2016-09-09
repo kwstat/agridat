@@ -1,4 +1,4 @@
-"row"	"col"	"yield"	"heads"
+row	col	yield	heads
 1	1	15.44	7
 1	10	24	11
 1	11	17.67	8

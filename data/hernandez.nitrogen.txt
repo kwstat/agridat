@@ -1,137 +1,137 @@
-"site"	"loc"	"rep"	"nitro"	"yield"
-"S1"	"Faribault"	"R1"	0	3.69685
-"S1"	"Faribault"	"R2"	0	3.87813
-"S1"	"Faribault"	"R3"	0	4.3887
-"S1"	"Faribault"	"R4"	0	4.63939
-"S1"	"Faribault"	"R1"	33.6	6.89875
-"S1"	"Faribault"	"R2"	33.6	8.75996
-"S1"	"Faribault"	"R3"	33.6	7.46756
-"S1"	"Faribault"	"R4"	33.6	8.95516
-"S1"	"Faribault"	"R1"	67.2	9.36908
-"S1"	"Faribault"	"R2"	67.2	10.44372
-"S1"	"Faribault"	"R3"	67.2	9.79979
-"S1"	"Faribault"	"R4"	67.2	11.76688
-"S1"	"Faribault"	"R1"	100.8	11.52171
-"S1"	"Faribault"	"R2"	100.8	12.93871
-"S1"	"Faribault"	"R3"	100.8	12.19903
-"S1"	"Faribault"	"R4"	100.8	11.29143
-"S1"	"Faribault"	"R1"	134.4	11.49601
-"S1"	"Faribault"	"R2"	134.4	12.18194
-"S1"	"Faribault"	"R3"	134.4	10.68301
-"S1"	"Faribault"	"R4"	134.4	11.16419
-"S1"	"Faribault"	"R1"	168	11.82695
-"S1"	"Faribault"	"R2"	168	10.34894
-"S1"	"Faribault"	"R3"	168	11.6115
-"S1"	"Faribault"	"R4"	168	9.6552
-"S1"	"Faribault"	"R1"	201.6	11.06685
-"S1"	"Faribault"	"R2"	201.6	11.69019
-"S1"	"Faribault"	"R3"	201.6	11.15171
-"S1"	"Faribault"	"R4"	201.6	9.92762
-"S2"	"Fillmore"	"R1"	0	7.7329
-"S2"	"Fillmore"	"R2"	0	7.46494
-"S2"	"Fillmore"	"R3"	0	8.77967
-"S2"	"Fillmore"	"R4"	0	9.94829
-"S2"	"Fillmore"	"R1"	33.6	9.41234
-"S2"	"Fillmore"	"R2"	33.6	9.79008
-"S2"	"Fillmore"	"R3"	33.6	9.75283
-"S2"	"Fillmore"	"R4"	33.6	10.0119
-"S2"	"Fillmore"	"R1"	67.2	11.75149
-"S2"	"Fillmore"	"R2"	67.2	11.29327
-"S2"	"Fillmore"	"R3"	67.2	11.60648
-"S2"	"Fillmore"	"R4"	67.2	12.00863
-"S2"	"Fillmore"	"R1"	100.8	11.82745
-"S2"	"Fillmore"	"R2"	100.8	10.96489
-"S2"	"Fillmore"	"R3"	100.8	13.4863
-"S2"	"Fillmore"	"R4"	100.8	12.58118
-"S2"	"Fillmore"	"R1"	134.4	12.19454
-"S2"	"Fillmore"	"R2"	134.4	11.06118
-"S2"	"Fillmore"	"R3"	134.4	13.00357
-"S2"	"Fillmore"	"R4"	134.4	13.81372
-"S2"	"Fillmore"	"R1"	168	12.54293
-"S2"	"Fillmore"	"R2"	168	12.87315
-"S2"	"Fillmore"	"R3"	168	12.89871
-"S2"	"Fillmore"	"R4"	168	12.98387
-"S2"	"Fillmore"	"R1"	201.6	11.6726
-"S2"	"Fillmore"	"R2"	201.6	13.40049
-"S2"	"Fillmore"	"R3"	201.6	12.49748
-"S2"	"Fillmore"	"R4"	201.6	14.22622
-"S3"	"Waseca 1"	"R1"	0	9.49895
-"S3"	"Waseca 1"	"R2"	0	10.05715
-"S3"	"Waseca 1"	"R3"	0	8.02693
-"S3"	"Waseca 1"	"R4"	0	6.64823
-"S3"	"Waseca 1"	"R1"	33.6	10.01547
-"S3"	"Waseca 1"	"R2"	33.6	11.03366
-"S3"	"Waseca 1"	"R3"	33.6	9.46628
-"S3"	"Waseca 1"	"R4"	33.6	9.32441
-"S3"	"Waseca 1"	"R1"	67.2	13.31705
-"S3"	"Waseca 1"	"R2"	67.2	11.12489
-"S3"	"Waseca 1"	"R3"	67.2	11.61903
-"S3"	"Waseca 1"	"R4"	67.2	11.34992
-"S3"	"Waseca 1"	"R1"	100.8	12.24312
-"S3"	"Waseca 1"	"R2"	100.8	12.69853
-"S3"	"Waseca 1"	"R3"	100.8	11.52182
-"S3"	"Waseca 1"	"R4"	100.8	13.06231
-"S3"	"Waseca 1"	"R1"	134.4	12.91645
-"S3"	"Waseca 1"	"R2"	134.4	14.81064
-"S3"	"Waseca 1"	"R3"	134.4	12.0732
-"S3"	"Waseca 1"	"R4"	134.4	14.28763
-"S3"	"Waseca 1"	"R1"	168	13.45332
-"S3"	"Waseca 1"	"R2"	168	13.13365
-"S3"	"Waseca 1"	"R3"	168	12.46342
-"S3"	"Waseca 1"	"R4"	168	13.24165
-"S3"	"Waseca 1"	"R1"	201.6	13.12083
-"S3"	"Waseca 1"	"R2"	201.6	12.92146
-"S3"	"Waseca 1"	"R3"	201.6	12.26074
-"S3"	"Waseca 1"	"R4"	201.6	13.16386
-"S4"	"Waseca 2"	"R1"	0	8.99305
-"S4"	"Waseca 2"	"R2"	0	6.18319
-"S4"	"Waseca 2"	"R3"	0	7.40692
-"S4"	"Waseca 2"	"R4"	0	7.99818
-"S4"	"Waseca 2"	"R1"	44.8	10.01808
-"S4"	"Waseca 2"	"R2"	44.8	9.26216
-"S4"	"Waseca 2"	"R3"	44.8	8.95023
-"S4"	"Waseca 2"	"R4"	44.8	8.36781
-"S4"	"Waseca 2"	"R1"	89.6	12.76988
-"S4"	"Waseca 2"	"R2"	89.6	11.02779
-"S4"	"Waseca 2"	"R3"	89.6	10.38532
-"S4"	"Waseca 2"	"R4"	89.6	11.79613
-"S4"	"Waseca 2"	"R1"	134.4	13.79509
-"S4"	"Waseca 2"	"R2"	134.4	12.09953
-"S4"	"Waseca 2"	"R3"	134.4	12.89488
-"S4"	"Waseca 2"	"R4"	134.4	12.90437
-"S4"	"Waseca 2"	"R1"	179.2	12.00433
-"S4"	"Waseca 2"	"R2"	179.2	14.58811
-"S4"	"Waseca 2"	"R3"	179.2	14.06451
-"S4"	"Waseca 2"	"R4"	179.2	13.63861
-"S4"	"Waseca 2"	"R1"	224	11.17929
-"S4"	"Waseca 2"	"R2"	224	11.55223
-"S4"	"Waseca 2"	"R3"	224	15.22115
-"S4"	"Waseca 2"	"R4"	224	13.41232
-"S4"	"Waseca 2"	"R1"	268.8	13.34167
-"S4"	"Waseca 2"	"R2"	268.8	13.23181
-"S4"	"Waseca 2"	"R3"	268.8	14.3524
-"S4"	"Waseca 2"	"R4"	268.8	12.92312
-"S5"	"Olmstead"	"R1"	0	8.91634
-"S5"	"Olmstead"	"R2"	0	8.17685
-"S5"	"Olmstead"	"R3"	0	9.245
-"S5"	"Olmstead"	"R4"	0	8.8249
-"S5"	"Olmstead"	"R1"	33.6	10.98147
-"S5"	"Olmstead"	"R2"	33.6	9.84763
-"S5"	"Olmstead"	"R3"	33.6	10.05861
-"S5"	"Olmstead"	"R4"	33.6	9.81029
-"S5"	"Olmstead"	"R1"	67.2	12.48481
-"S5"	"Olmstead"	"R2"	67.2	10.77839
-"S5"	"Olmstead"	"R3"	67.2	13.4251
-"S5"	"Olmstead"	"R4"	67.2	10.51968
-"S5"	"Olmstead"	"R1"	100.8	14.24289
-"S5"	"Olmstead"	"R2"	100.8	14.39509
-"S5"	"Olmstead"	"R3"	100.8	12.92164
-"S5"	"Olmstead"	"R4"	100.8	13.26923
-"S5"	"Olmstead"	"R1"	134.4	15.42649
-"S5"	"Olmstead"	"R2"	134.4	13.56748
-"S5"	"Olmstead"	"R3"	134.4	15.07575
-"S5"	"Olmstead"	"R4"	134.4	14.17512
-"S5"	"Olmstead"	"R1"	168	14.96135
-"S5"	"Olmstead"	"R2"	168	14.57867
-"S5"	"Olmstead"	"R3"	168	14.40876
-"S5"	"Olmstead"	"R4"	168	14.7425
+site	loc	rep	nitro	yield
+S1	Faribault	R1	0	3.69685
+S1	Faribault	R2	0	3.87813
+S1	Faribault	R3	0	4.3887
+S1	Faribault	R4	0	4.63939
+S1	Faribault	R1	33.6	6.89875
+S1	Faribault	R2	33.6	8.75996
+S1	Faribault	R3	33.6	7.46756
+S1	Faribault	R4	33.6	8.95516
+S1	Faribault	R1	67.2	9.36908
+S1	Faribault	R2	67.2	10.44372
+S1	Faribault	R3	67.2	9.79979
+S1	Faribault	R4	67.2	11.76688
+S1	Faribault	R1	100.8	11.52171
+S1	Faribault	R2	100.8	12.93871
+S1	Faribault	R3	100.8	12.19903
+S1	Faribault	R4	100.8	11.29143
+S1	Faribault	R1	134.4	11.49601
+S1	Faribault	R2	134.4	12.18194
+S1	Faribault	R3	134.4	10.68301
+S1	Faribault	R4	134.4	11.16419
+S1	Faribault	R1	168	11.82695
+S1	Faribault	R2	168	10.34894
+S1	Faribault	R3	168	11.6115
+S1	Faribault	R4	168	9.6552
+S1	Faribault	R1	201.6	11.06685
+S1	Faribault	R2	201.6	11.69019
+S1	Faribault	R3	201.6	11.15171
+S1	Faribault	R4	201.6	9.92762
+S2	Fillmore	R1	0	7.7329
+S2	Fillmore	R2	0	7.46494
+S2	Fillmore	R3	0	8.77967
+S2	Fillmore	R4	0	9.94829
+S2	Fillmore	R1	33.6	9.41234
+S2	Fillmore	R2	33.6	9.79008
+S2	Fillmore	R3	33.6	9.75283
+S2	Fillmore	R4	33.6	10.0119
+S2	Fillmore	R1	67.2	11.75149
+S2	Fillmore	R2	67.2	11.29327
+S2	Fillmore	R3	67.2	11.60648
+S2	Fillmore	R4	67.2	12.00863
+S2	Fillmore	R1	100.8	11.82745
+S2	Fillmore	R2	100.8	10.96489
+S2	Fillmore	R3	100.8	13.4863
+S2	Fillmore	R4	100.8	12.58118
+S2	Fillmore	R1	134.4	12.19454
+S2	Fillmore	R2	134.4	11.06118
+S2	Fillmore	R3	134.4	13.00357
+S2	Fillmore	R4	134.4	13.81372
+S2	Fillmore	R1	168	12.54293
+S2	Fillmore	R2	168	12.87315
+S2	Fillmore	R3	168	12.89871
+S2	Fillmore	R4	168	12.98387
+S2	Fillmore	R1	201.6	11.6726
+S2	Fillmore	R2	201.6	13.40049
+S2	Fillmore	R3	201.6	12.49748
+S2	Fillmore	R4	201.6	14.22622
+S3	Waseca1	R1	0	9.49895
+S3	Waseca1	R2	0	10.05715
+S3	Waseca1	R3	0	8.02693
+S3	Waseca1	R4	0	6.64823
+S3	Waseca1	R1	33.6	10.01547
+S3	Waseca1	R2	33.6	11.03366
+S3	Waseca1	R3	33.6	9.46628
+S3	Waseca1	R4	33.6	9.32441
+S3	Waseca1	R1	67.2	13.31705
+S3	Waseca1	R2	67.2	11.12489
+S3	Waseca1	R3	67.2	11.61903
+S3	Waseca1	R4	67.2	11.34992
+S3	Waseca1	R1	100.8	12.24312
+S3	Waseca1	R2	100.8	12.69853
+S3	Waseca1	R3	100.8	11.52182
+S3	Waseca1	R4	100.8	13.06231
+S3	Waseca1	R1	134.4	12.91645
+S3	Waseca1	R2	134.4	14.81064
+S3	Waseca1	R3	134.4	12.0732
+S3	Waseca1	R4	134.4	14.28763
+S3	Waseca1	R1	168	13.45332
+S3	Waseca1	R2	168	13.13365
+S3	Waseca1	R3	168	12.46342
+S3	Waseca1	R4	168	13.24165
+S3	Waseca1	R1	201.6	13.12083
+S3	Waseca1	R2	201.6	12.92146
+S3	Waseca1	R3	201.6	12.26074
+S3	Waseca1	R4	201.6	13.16386
+S4	Waseca2	R1	0	8.99305
+S4	Waseca2	R2	0	6.18319
+S4	Waseca2	R3	0	7.40692
+S4	Waseca2	R4	0	7.99818
+S4	Waseca2	R1	44.8	10.01808
+S4	Waseca2	R2	44.8	9.26216
+S4	Waseca2	R3	44.8	8.95023
+S4	Waseca2	R4	44.8	8.36781
+S4	Waseca2	R1	89.6	12.76988
+S4	Waseca2	R2	89.6	11.02779
+S4	Waseca2	R3	89.6	10.38532
+S4	Waseca2	R4	89.6	11.79613
+S4	Waseca2	R1	134.4	13.79509
+S4	Waseca2	R2	134.4	12.09953
+S4	Waseca2	R3	134.4	12.89488
+S4	Waseca2	R4	134.4	12.90437
+S4	Waseca2	R1	179.2	12.00433
+S4	Waseca2	R2	179.2	14.58811
+S4	Waseca2	R3	179.2	14.06451
+S4	Waseca2	R4	179.2	13.63861
+S4	Waseca2	R1	224	11.17929
+S4	Waseca2	R2	224	11.55223
+S4	Waseca2	R3	224	15.22115
+S4	Waseca2	R4	224	13.41232
+S4	Waseca2	R1	268.8	13.34167
+S4	Waseca2	R2	268.8	13.23181
+S4	Waseca2	R3	268.8	14.3524
+S4	Waseca2	R4	268.8	12.92312
+S5	Olmstead	R1	0	8.91634
+S5	Olmstead	R2	0	8.17685
+S5	Olmstead	R3	0	9.245
+S5	Olmstead	R4	0	8.8249
+S5	Olmstead	R1	33.6	10.98147
+S5	Olmstead	R2	33.6	9.84763
+S5	Olmstead	R3	33.6	10.05861
+S5	Olmstead	R4	33.6	9.81029
+S5	Olmstead	R1	67.2	12.48481
+S5	Olmstead	R2	67.2	10.77839
+S5	Olmstead	R3	67.2	13.4251
+S5	Olmstead	R4	67.2	10.51968
+S5	Olmstead	R1	100.8	14.24289
+S5	Olmstead	R2	100.8	14.39509
+S5	Olmstead	R3	100.8	12.92164
+S5	Olmstead	R4	100.8	13.26923
+S5	Olmstead	R1	134.4	15.42649
+S5	Olmstead	R2	134.4	13.56748
+S5	Olmstead	R3	134.4	15.07575
+S5	Olmstead	R4	134.4	14.17512
+S5	Olmstead	R1	168	14.96135
+S5	Olmstead	R2	168	14.57867
+S5	Olmstead	R3	168	14.40876
+S5	Olmstead	R4	168	14.7425

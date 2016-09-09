@@ -79,6 +79,7 @@
 }
 
 \references{
+
   Littell, R.C. and Milliken, G.A. and Stroup, W.W. and Wolfinger,
   R.D. 1996. \emph{SAS system for mixed models}, SAS Institute, Cary, NC.
 
@@ -96,6 +97,7 @@
   http://doi.org/10.1198/108571102780
   
 }
+
 \seealso{
   Identical data (except for the missing values) are available
   in the \code{nlme} package as \code{\link[nlme]{Wheat2}}.
@@ -113,6 +115,7 @@ if(require(desplot)){
           main="stroup.nin - yield heatmap (true shape)")
 }
 
+# ----- nlme -----
 
 require(nlme)
 # Random RCB model
@@ -142,35 +145,62 @@ plot(eff$ranblock, eff$corLin, xlim=c(13,37), ylim=c(13,37),
 text(eff$ranblock, eff$corLin, rownames(eff), cex=0.5)
 abline(0,1)
 
+# ----- SpATS -----
+
+if(require(SpATS)){
+
+  dat <- transform(dat, yf = as.factor(row), xf = as.factor(col))
+  
+  sp1 <- SpATS(response = "yield",
+               spatial = ~ SAP(col, row, nseg = c(10,20), degree = 3, pord = 2),
+               genotype = "gen",
+               #fixed = ~ colcode + rowcode,
+               random = ~ yf + xf,
+               data = dat,
+               control = list(tolerance = 1e-03))
+  plot(sp1)
+
+  eff <- cbind(eff, spats=predict(sp1, which="gen")$predicted.values)
+  plot(eff$ranblock, eff$spats, xlim=c(13,37), ylim=c(13,37),
+       main="stroup.nin - Gen estimates (intercepts differ)",
+       xlab="RCB (random block)", ylab="SpATS",type='n')
+  text(eff$ranblock, eff$spats, rownames(eff), cex=0.5)
+  abline(0,1)
+  
+}
+
+# ----- asreml -----
+
 \dontrun{
-require(asreml)
 
-# RCB analysis
-dat.rcb <- asreml(yield ~ gen, random = ~ rep, data=dat,
-            na.method.X="omit")
-pred.rcb <- predict(dat.rcb, data=dat, classify="gen")$predictions
+  require(asreml)
 
-# Two-dimensional AR1xAR1 spatial model
-dat <- transform(dat, xf=factor(col), yf=factor(row))
-dat <- dat[order(dat$xf, dat$yf),]
-dat.sp <- asreml(yield~gen, data=dat,
-                 rcov=~ar1(xf):ar1(yf))
-pred.sp <- predict(dat.sp, data=dat, classify="gen")$predictions
+  # RCB analysis
+  dat.rcb <- asreml(yield ~ gen, random = ~ rep, data=dat,
+                    na.method.X="omit")
+  pred.rcb <- predict(dat.rcb, data=dat, classify="gen")$predictions
 
-# require(lucid)
-# vc(dat.sp)
-##     effect component std.error z.ratio constr
-## R!variance   48.7      7.155       6.8    pos
-##   R!xf.cor    0.6555   0.05638    12      unc
-##   R!yf.cor    0.4375   0.0806      5.4    unc
+  # Two-dimensional AR1xAR1 spatial model
+  dat <- transform(dat, xf=factor(col), yf=factor(row))
+  dat <- dat[order(dat$xf, dat$yf),]
+  dat.sp <- asreml(yield~gen, data=dat,
+                   rcov=~ar1(xf):ar1(yf))
+  pred.sp <- predict(dat.sp, data=dat, classify="gen")$predictions
 
-# Compare the estimates from the two methods
-plot(pred.rcb$pvals[,2],pred.sp$pvals[,2], xlim=c(16,37), ylim=c(16,37),
-  xlab="RCB",ylab="AR1xAR1",type='n')
-title("stroup.nin: Comparison of predicted values")
-text(pred.rcb$pvals[,2],pred.sp$pvals[,2],
-     as.character(pred.rcb$pvals[,1]),cex=0.5)
-abline(0,1)
+  require(lucid)
+  vc(dat.sp)
+  ##     effect component std.error z.ratio constr
+  ## R!variance   48.7      7.155       6.8    pos
+  ##   R!xf.cor    0.6555   0.05638    12      unc
+  ##   R!yf.cor    0.4375   0.0806      5.4    unc
+
+  # Compare the estimates from the two methods
+  plot(pred.rcb$pvals[,2], pred.sp$pvals[,2], xlim=c(13,37), ylim=c(13,37),
+       xlab="RCB",ylab="AR1xAR1",type='n')
+  title("stroup.nin: Comparison of predicted values")
+  text(pred.rcb$pvals[,2],pred.sp$pvals[,2],
+       as.character(pred.rcb$pvals[,1]),cex=0.5)
+  abline(0,1)
 
 }
 

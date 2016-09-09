@@ -2,7 +2,7 @@
 \alias{ilri.sheep}
 \docType{data}
 \title{
-Birth weight and weaning weight of Dorper x Red Maasi lambs
+  Birth weight and weaning weight of Dorper x Red Maasi lambs
 }
 \description{
   Birth weight and weaning weight of 882 lambs from a partial diallel
@@ -26,7 +26,9 @@ Birth weight and weaning weight of Dorper x Red Maasi lambs
     \item{\code{ramgen}}{Ram genotype: D, R}
   }
 }
+
 \details{
+  
   Red Maasai sheep in East Africa are perceived to be resistant to
   certain parasites.  ILRI decided in 1990 to investigate the degree of
   resistance exhibited by this Red Maasai breed and initiated a study in

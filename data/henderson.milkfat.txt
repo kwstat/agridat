@@ -1,4 +1,4 @@
-"week"	"yield"
+week	yield
 1	0.31
 2	0.39
 3	0.5

@@ -1,49 +1,49 @@
-"loc"	"year"	"yield"
-"Cambridge"	1970	46.81
-"Cockle Park"	1970	46.49
-"Harpers Adams"	1970	44.03
-"Headley Hall"	1970	52.24
-"Morely"	1970	36.55
-"Myerscough"	1970	34.88
-"Rosemaund"	1970	56.14
-"Seale-Hayne"	1970	45.67
-"Sparsholt"	1970	42.97
-"Sutton Bonington"	1970	54.44
-"Terrington"	1970	54.95
-"Wye"	1970	48.94
-"Cambridge"	1971	39.4
-"Cockle Park"	1971	34.07
-"Harpers Adams"	1971	42.03
-"Headley Hall"	1971	36.19
-"Morely"	1971	43.06
-"Myerscough"	1971	49.72
-"Rosemaund"	1971	47.67
-"Seale-Hayne"	1971	27.3
-"Sparsholt"	1971	46.87
-"Sutton Bonington"	1971	49.34
-"Terrington"	1971	52.05
-"Wye"	1971	48.63
-"Cambridge"	1972	55.64
-"Cockle Park"	1972	45.06
-"Harpers Adams"	1972	40.32
-"Headley Hall"	1972	47.03
-"Morely"	1972	38.07
-"Myerscough"	1972	40.86
-"Rosemaund"	1972	43.48
-"Seale-Hayne"	1972	45.48
-"Sparsholt"	1972	38.78
-"Sutton Bonington"	1972	24.48
-"Terrington"	1972	50.91
-"Wye"	1972	31.69
-"Cambridge"	1973	32.61
-"Cockle Park"	1973	41.02
-"Harpers Adams"	1973	50.23
-"Headley Hall"	1973	34.56
-"Morely"	1973	43.17
-"Myerscough"	1973	50.08
-"Rosemaund"	1973	38.99
-"Seale-Hayne"	1973	50.32
-"Sparsholt"	1973	47.49
-"Sutton Bonington"	1973	46.94
-"Terrington"	1973	39.13
-"Wye"	1973	59.72
+loc	year	yield
+Cambridge	1970	46.81
+CocklePark	1970	46.49
+HarpersAdams	1970	44.03
+HeadleyHall	1970	52.24
+Morely	1970	36.55
+Myerscough	1970	34.88
+Rosemaund	1970	56.14
+Seale-Hayne	1970	45.67
+Sparsholt	1970	42.97
+SuttonBonington	1970	54.44
+Terrington	1970	54.95
+Wye	1970	48.94
+Cambridge	1971	39.4
+CocklePark	1971	34.07
+HarpersAdams	1971	42.03
+HeadleyHall	1971	36.19
+Morely	1971	43.06
+Myerscough	1971	49.72
+Rosemaund	1971	47.67
+Seale-Hayne	1971	27.3
+Sparsholt	1971	46.87
+SuttonBonington	1971	49.34
+Terrington	1971	52.05
+Wye	1971	48.63
+Cambridge	1972	55.64
+CocklePark	1972	45.06
+HarpersAdams	1972	40.32
+HeadleyHall	1972	47.03
+Morely	1972	38.07
+Myerscough	1972	40.86
+Rosemaund	1972	43.48
+Seale-Hayne	1972	45.48
+Sparsholt	1972	38.78
+SuttonBonington	1972	24.48
+Terrington	1972	50.91
+Wye	1972	31.69
+Cambridge	1973	32.61
+CocklePark	1973	41.02
+HarpersAdams	1973	50.23
+HeadleyHall	1973	34.56
+Morely	1973	43.17
+Myerscough	1973	50.08
+Rosemaund	1973	38.99
+Seale-Hayne	1973	50.32
+Sparsholt	1973	47.49
+SuttonBonington	1973	46.94
+Terrington	1973	39.13
+Wye	1973	59.72

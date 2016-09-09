@@ -5,7 +5,7 @@
   Leaves for cauliflower plants at different times
 }
 \description{
-  Leaves for cauliflower plants at different times
+  Leaves for cauliflower plants at different times in two years.
 }
 
 \format{
@@ -29,7 +29,7 @@
 \source{
   Roger Mead, Robert N Curnow, Anne M Hasted. 2002.
   Statistical Methods in Agriculture and Experimental Biology, 3rd ed.
-  Chapman and Hall.
+  Chapman and Hall. Page 251.
 }
 \references{
   Mick O'Neill. Regression & Generalized Linear (Mixed) Models.
@@ -47,6 +47,7 @@ m1 <- glm(leaves ~ degdays + year, data=dat, family=poisson)
 coef(m1)
 ## (Intercept)     degdays    year1957
 ##  3.49492453  0.08512651  0.21688760
+
 dat$pred <- predict(m1, type="response")
 require(lattice)
 if(require(latticeExtra)){
