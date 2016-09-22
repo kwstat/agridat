@@ -26,8 +26,8 @@ wiedemann.safflower.uniformity
 
 lu.stability
 
-crampton.pig, battese.survey, gartner.corn, giles.wheat, goulden.eggs,
-goulden.splitsplit, huehn.wheat, kenward.cattle, kreusler.maize,
+becker.chicken, crampton.pig, battese.survey, gartner.corn, giles.wheat, goulden.eggs,
+goulden.splitsplit, hanover.whitepine, huehn.wheat, kenward.cattle, kreusler.maize,
 lillemo.wheat, little.splitblock, mead.lambs, omer.sorghum, onofri.winterwheat,
 tai.potato, wheatley.carrot
 

@@ -85,6 +85,7 @@ name                             \tab reps\tab years \tab trt \tab other \tab mo
 
 \tabular{llllllll}{
 name                             \tab gen \tab years \tab trt \tab other \tab model \cr
+\link{becker.chicken}            \tab 5,12 \tab    \tab       \tab heritability \tab lmer \cr
 \link{crampton.pig}              \tab     \tab    \tab 5      \tab 2 cov\tab lm \cr
 \link{brandt.switchback}         \tab 10  \tab    \tab 2      \tab \tab aov \cr
 \link{diggle.cow}                \tab     \tab    \tab 4      \tab ts \tab \cr
@@ -108,6 +109,7 @@ name                             \tab gen \tab years \tab trt \tab other \tab mo
 name                             \tab gen \tab loc\tab reps\tab years \tab trt \tab other \tab model \cr
 \link{box.cork}                  \tab     \tab    \tab     \tab    \tab     \tab repeated \tab radial, asreml \cr
 \link{harris.wateruse}           \tab 2   \tab    \tab     \tab    \tab 2   \tab repeated \tab asreml,lme \cr
+\link{hanover.whitepine}         \tab 7*4 \tab    \tab 4   \tab    \tab     \tab heritability \tab lmer \cr
 \link{lavoranti.eucalyptus}      \tab 70  \tab 7  \tab     \tab    \tab     \tab  \tab svd \cr
 \link{pearce.apple}              \tab     \tab    \tab 4   \tab    \tab 6   \tab cov \tab lm,lmer \cr
 \link{williams.trees}            \tab 37  \tab 6  \tab     \tab    \tab 2   \tab \tab \cr

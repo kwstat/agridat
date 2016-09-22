@@ -1,0 +1,99 @@
+\name{hanover.whitepine}
+\alias{hanover.whitepine}
+\docType{data}
+\title{
+  Mating crosses of white pine trees
+}
+\description{
+  Mating crosses of white pine trees
+}
+\usage{data("hanover.whitepine")}
+\format{
+  A data frame with 112 observations on the following 4 variables.
+  \describe{
+    \item{\code{rep}}{replicate}
+    \item{\code{female}}{female parent}
+    \item{\code{male}}{male parent}
+    \item{\code{length}}{epicotyl length, cm}
+  }
+}
+\details{
+  
+  Four male (pollen parent) White Pine trees were mated to seven female
+  trees and 2654 progeny were grown in four replications, one plot per
+  mating in each replication.  Parent trees were sourced from Idaho,
+  USA.  The data are plot means of epicotyl length.
+  
+  Becker (1984) used these data to demonstrate the calculation of
+  heritability.
+
+}
+\source{
+  
+  Hanover, James W and Barnes, Burton V. (1962).
+  Heritability of height growth in year-old western white pine.
+  \emph{Proc Forest Genet Workshop}. 22, 71--76.
+
+  Data prepared electronically by Kevin Wright from:
+  
+  Walter A. Becker (1984).
+  \emph{Manual of Quantitative Genetics}, 4th ed. Page 83.
+}
+
+\references{
+  
+  None.
+  
+}
+\examples{
+
+data(hanover.whitepine)
+dat <- hanover.whitepine
+
+if(require(lattice)){
+  # Relatively high male-female interaction in growth comared
+  # to additive gene action. Response is more consistent within
+  # male progeny than female progeny.
+  # with(dat, interaction.plot(female, male, length))
+  # with(dat, interaction.plot(male, female, length))
+  bwplot(length ~ male|female, data=dat,
+         main="hanover.whitepine - length for male:female crosses",
+         xlab="Male parent", ylab="Epicotyl length")
+}
+
+# Progeny sums match Becker p 83
+sum(dat$length) # 380.58
+aggregate(length ~  female + male, data=dat, FUN=sum)
+
+# Sum of squares matches Becker p 85
+m1 <- aov(length ~ rep + male + female + male:female, data=dat)
+anova(m1)
+
+# Variance components match Becker p. 85
+if(require(lme4)){
+  m2 <- lmer(length ~ (1|rep) + (1|male) + (1|female) + (1|male:female), data=dat)
+  as.data.frame(VarCorr(m2))
+}
+##           grp        var1 var2       vcov     sdcor
+## 1 male:female (Intercept) <NA> 0.13685044 0.3699330
+## 2      female (Intercept) <NA> 0.02094474 0.1447230
+## 3        male (Intercept) <NA> 0.12036063 0.3469303
+## 4         rep (Intercept) <NA> 0.01453027 0.1205415
+## 5    Residual        <NA> <NA> 0.20042510 0.4476886
+
+# Becker used this value for variability between individuals, within plot
+s2w <- 1.109
+
+# Calculating heritability for individual trees
+s2m <- .120
+s2f <- .0209
+s2mf <- .137
+vp <- s2m + s2f + s2mf + s2w  # variability of phenotypes = 1.3869
+4*s2m / vp # heritability male 0.346
+4*s2f / vp # heritability female 0.06
+2*(s2m+s2f)/vp # heritability male+female .203
+# As shown in the boxplot, heritability is stronger through the
+# males than through the females.
+
+}
+\keyword{datasets}

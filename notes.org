@@ -617,6 +617,9 @@ Dataset with phenotype data 3 yr,
 lodging, moisture, protein, oil, fiber, seed size. There are 5000+ strains,
 40 families.
 
+** st4gi Stat for genetic improvement
+https://github.com/reyzaguirre/st4gi
+
 
 * Web sites
 

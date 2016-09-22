@@ -43,14 +43,20 @@ if(require(dplyr)){
 }
 
 # Models
-m1 <- glm(y ~ F + B + F:B, 
-          data=dat, family=poisson(link=log))
+m1 <- glm(y ~ F + B + F:B,
+          data=dat,
+          family=poisson(link=log))
 m2 <- update(m1, y ~ F + B + F:B + L)
 m3 <- update(m1, y ~ F + B + F:B + L + B:L)
 m4 <- update(m1, y ~ F + B + F:B + L + F:L)
 m5 <- update(m1, y ~ F + B + F:B + L + B:L + F:L)
 
 AIC(m1, m2, m3, m4, m5) # Model 4 has best AIC
+
+# Change contrasts for Miroslav
+m4 <- update(m4,
+             contrasts=list(F=contr.sum,B=contr.sum,L=contr.sum))
+summary(m4)
 
 # Match deviance table from Mead
 if(require(broom)){
