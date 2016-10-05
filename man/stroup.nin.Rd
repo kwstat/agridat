@@ -169,12 +169,36 @@ if(require(SpATS)){
   
 }
 
+# ----- sommer -----
+
+\dontrun{
+
+if(require(sommer)){
+
+  # sommer will not fit a model without a random term, so add 'rep'
+  # Variance comps are somewhat different from asreml.  Why?
+  # The yates.oats analysis gives the same results in sommer and asreml
+
+  so1 <- mmer2(yield ~ gen, random = ~  rep,
+               rcov = ~ ar1(col):ar1(row),
+               data = dat) # method="NR"
+  summary(so1)$w # Variance components
+
+  ##            VarComp  VarCompSE     Zratio
+  ## rep      0.2818859 2.07600060  0.1357831
+  ## R.cor.1  0.5570662 0.05159899 10.7960697
+  ## R.cor.2  0.3768664 0.06096311  6.1818772
+  ## Error   46.7470273 5.60886684  8.3344869
+}
+}
+
+
 # ----- asreml -----
 
 \dontrun{
 
   require(asreml)
-
+ 
   # RCB analysis
   dat.rcb <- asreml(yield ~ gen, random = ~ rep, data=dat,
                     na.method.X="omit")
@@ -184,7 +208,8 @@ if(require(SpATS)){
   dat <- transform(dat, xf=factor(col), yf=factor(row))
   dat <- dat[order(dat$xf, dat$yf),]
   dat.sp <- asreml(yield~gen, data=dat,
-                   rcov=~ar1(xf):ar1(yf))
+                   rcov=~ar1(xf):ar1(yf),
+                   na.method.X='ignore')
   pred.sp <- predict(dat.sp, data=dat, classify="gen")$predictions
 
   require(lucid)
@@ -201,7 +226,7 @@ if(require(SpATS)){
   text(pred.rcb$pvals[,2],pred.sp$pvals[,2],
        as.character(pred.rcb$pvals[,1]),cex=0.5)
   abline(0,1)
-
+ 
 }
 
 }

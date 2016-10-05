@@ -27,7 +27,7 @@
 }
 
 \source{
-  John JA, Williams ER. (1995)
+  J. A. John & E. R. Williams (1995).
   \emph{Cyclic and computer generated designs},
   Chapman and Hall, London.  Page 146.
 }
@@ -80,6 +80,7 @@ head(means)
 ## genG04 4.439400 4.728175 4.528828
 ## genG05 5.103100 5.225708 5.075944
 ## genG06 4.749067 4.618234 4.575394
+
 require(lattice)
 splom(means, main="john.alpha - means for RCB, IB, Intra-block")
 
@@ -92,6 +93,7 @@ splom(means, main="john.alpha - means for RCB, IB, Intra-block")
   sg2 <- summary(m3)$varcomp['gen!gen.var','component'] # .142902
 
   # Average variance of a difference of two adjusted means (BLUP)
+  
   p3 <- predict(m3, data=dat, classify="gen", sed=TRUE)
   # Matrix of pair-wise SED values, squared
   vdiff <- p3$predictions$sed^2
@@ -114,6 +116,36 @@ splom(means, main="john.alpha - means for RCB, IB, Intra-block")
   
   # H^2c Similar measure proposed by Cullis.
   1-(vblup / 2 / sg2) # .809
+}
+
+\dontrun{
+
+  # Illustrate how to do the same calculations with lme4
+
+  require(lme4)
+  
+  cov2sed <- function(x){
+  # Convert var-cov matrix to SED matrix
+  # sed[i,j] = sqrt( x[i,i] + x[j,j]- 2*x[i,j] )
+  n <- nrow(x)
+  vars <- diag(x)
+  sed <- sqrt( matrix(vars, n, n, byrow=TRUE) +
+                 matrix(vars, n, n, byrow=FALSE) - 2*x )
+  diag(sed) <- 0
+  return(sed)
+  }
+
+  # Same as asreml model m4
+  m5 <- lmer(yield ~ 0 + gen + rep + (1|rep:block), dat)
+  
+  require(lsmeans)
+  ls5 <- lsmeans(m5, "gen")
+  con <- ls5@linfct # contrast matrix
+  sed5 <- cov2sed(con %*% vcov(m5) %*% t(con)) # SED between genotypes
+  
+  # Average variance of difference between genotypes
+  mean(sed5[upper.tri(sed5)]^2) # .07010875 matches 'vblue' above
+  
 }
 
 }
