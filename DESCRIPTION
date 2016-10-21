@@ -39,6 +39,7 @@ Suggests:
     MCMCglmm,
     mgcv,
     nlme,
+    nullabor,
     ordinal,
     pbkrtest,
     pls,

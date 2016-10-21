@@ -75,6 +75,7 @@ xyplot(yield ~ year , data = dat, group=nitro, type='o',
   }
 
   # Separate fit for each year.  Overfitting with 3x19=57 params.
+  require(nlme)
   m2.lis <- nlsList(yield ~ SSasymp(nitro,max,int,lograte) | year, data=dat)
   plot(intervals(m2.lis),layout = c(3,1)) # lograte might be same for each year
 }

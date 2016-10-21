@@ -19,12 +19,17 @@
   }
 }
 \details{
+  
   Conducted at Clemson University in 1985.  four cucumber cultivars
   were grown in a latin square design at Clemson, SC, and Tifton, GA.
 
   Separate variances are modeled each location.
 
   Plot dimensions are not given.
+
+  Bridges (1989) used this data to illustrate fitting a heterogeneous
+  mixed model.
+  
 }
 \source{
   William Bridges, 1989. Analysis of a plant breeding experiment with
@@ -84,6 +89,27 @@ predict(m2, data=dat, classify='loc:gen')$predictions$pvals
 ##  Tifton Guardian     38.72   3.894 Estimable
 ##  Tifton Poinsett     33.01   3.894 Estimable
 ##  Tifton   Sprint     39.18   3.894 Estimable
+
+# Is a heterogeneous model justified? Maybe not.
+m1$loglik
+## -67.35585
+m2$loglik
+## -66.35621
+
 }
+
+# Graphical inference test for heterogenous variances
+if(require(nullabor)) {
+  # Create a lineup of datasets
+  fun <- null_permute("loc")
+  dat20 <- lineup(fun, dat, n=20, pos=9)
+
+  # Now plot
+  library(lattice)
+  bwplot(yield ~ loc|factor(.sample), dat20,
+         main="bridges.cucumber - graphical inference")
+}
+  
+
 }
 

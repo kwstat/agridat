@@ -192,6 +192,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{gomez.splitsplit}          \tab 3   \tab    \tab 3   \tab    \tab     \tab xy, nitro, mgmt \tab aov, lmer \cr
 \link{gomez.stripplot}           \tab 6   \tab    \tab 3   \tab    \tab     \tab xy, nitro \tab aov \cr
 \link{gomez.stripsplitplot}      \tab 6   \tab    \tab 3   \tab    \tab     \tab xy, nitro\tab aov \cr
+\link{gomez.wetdry}              \tab     \tab    \tab 3   \tab 2  \tab 5   \tab nitro\tab lmer \cr
 \link{gotway.hessianfly}         \tab 16  \tab    \tab 4   \tab    \tab     \tab xy \tab lmer \cr
 \link{goulden.latin}             \tab     \tab    \tab 5   \tab    \tab 5   \tab xy, latin \tab lm \cr
 \link{goulden.splitsplit}        \tab 2   \tab    \tab 4   \tab    \tab 2*5 \tab xy, split \tab aov \cr

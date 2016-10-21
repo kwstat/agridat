@@ -7,7 +7,7 @@
 * JAGS code for theobald.barley
 * JAGS code for besag.elbatan
 
-# agridat 1.13 (unpublished)
+# agridat 1.13 - unpublished
 
 ## New data for uniformity trials
 
@@ -26,7 +26,8 @@ wiedemann.safflower.uniformity
 
 lu.stability
 
-becker.chicken, crampton.pig, battese.survey, gartner.corn, giles.wheat, goulden.eggs,
+becker.chicken, crampton.pig, battese.survey, gartner.corn, giles.wheat,
+gomez.wetdry, goulden.eggs,
 goulden.splitsplit, hanover.whitepine, huehn.wheat, kenward.cattle, kreusler.maize,
 lillemo.wheat, little.splitblock, mead.lambs, omer.sorghum, onofri.winterwheat,
 tai.potato, wheatley.carrot
@@ -63,7 +64,7 @@ burgueno.unreplicated, steptoe.morex.pheno
 
 ## Other
 
-* Removed **asreml** package from Suggests (due to CRAN check problems).
+* Removed `asreml` package from Suggests (due to CRAN check problems).
 
 # agridat 1.10 - Nov 2014
 
