@@ -11,8 +11,9 @@
 
 \format{
   \describe{
-    \item{\code{gen}}{Genotype factor, 9 varieties}
-    \item{\code{site}}{Site factor, 11 levels}
+    \item{\code{gen}}{genotype, 9 varieties}
+    \item{\code{site}}{site, 11 levels}
+    \item{\code{rep}}{rep, 2-3 levels}
     \item{\code{rate}}{seeding rate in plants/m^2}
     \item{\code{row}}{row}
     \item{\code{col}}{column}
@@ -21,43 +22,44 @@
     \item{\code{lincol}}{centered column position as a numeric variate (col-3.5)}
     \item{\code{linrate}}{linear effect of seedrate, scaled (seedrate-41.92958)/10}
     \item{\code{yield}}{yield in tons/hectare}
-    \item{\code{year}}{year}
-    \item{\code{loc}}{Location factor}
+    \item{\code{year}}{year, 1991-1992}
+    \item{\code{loc}}{location}
   }
 }
 
 \details{
-Nine varieties of lupin were tested for yield response to plant density
-at 11 sites.  The target density in 1991 was 10, 20, ..., 60 plants per
-m^2, and in 1992 was 20, 30, ..., 70 plants per m^2.
+  Nine varieties of lupin were tested for yield response to plant density
+  at 11 sites.  The target density in 1991 was 10, 20, ..., 60 plants per
+  m^2, and in 1992 was 20, 30, ..., 70 plants per m^2.
 
-Plot dimensions are not given.
-
-The variety Myallie was grown only in 1992.
-
-Each site had 2 reps in 1991 and 3 reps in
-1992.  Each rep was laid out as an RCB design; one randomization was
-used for all sites in 1991 and one (different) randomization was used
-for all sites in 1992.  (This was confirmed with the principal
-investigator.)
-
-In 1991 at the Mt. Barker location, the data for columns
-5 and 6 was discarded due to problems with weeds.
-
-Variety 'Myallie' was called '84L:439' in Verbyla 1997.
-
-The year of release for the varieties is
-\tabular{ll}{
-Unicrop \tab 1973\cr
-Illyarrie \tab 1979\cr
-Yandee \tab 1980\cr
-Danja \tab 1986\cr
-Gungurru \tab 1988\cr
-Yorrel \tab 1989\cr
-Warrah \tab 1989\cr
-Merrit \tab 1991\cr
-Myallie \tab 1995\cr
-}
+  Plot dimensions are not given.
+  
+  The variety Myallie was grown only in 1992.
+  
+  Each site had 2 reps in 1991 and 3 reps in
+  1992.  Each rep was laid out as a factorial RCB design; one randomization was
+  used for all sites in 1991 and one (different) randomization was used
+  for all sites in 1992.  (This was confirmed with the principal
+  investigator.)
+  
+  In 1991 at the Mt. Barker location, the data for columns
+  5 and 6 was discarded due to problems with weeds.
+  
+  Variety 'Myallie' was called '84L:439' in Verbyla 1997.
+  
+  The year of release for the varieties is
+  
+  \tabular{ll}{
+    Unicrop \tab 1973\cr
+    Illyarrie \tab 1979\cr
+    Yandee \tab 1980\cr
+    Danja \tab 1986\cr
+    Gungurru \tab 1988\cr
+    Yorrel \tab 1989\cr
+    Warrah \tab 1989\cr
+    Merrit \tab 1991\cr
+    Myallie \tab 1995\cr
+  }
 }
 
 \source{
@@ -73,9 +75,11 @@ Myallie \tab 1995\cr
   and Sue J. Welham, (1997).
   The analysis of designed experiments and longitudinal data by using
   smoothing splines.
-  University of Adelaide, Department of Statistics, Research Report 97/4.
+  University of Adelaide, Department of Statistics, Research Report
+  97/4.
+  http://http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.56.808
   
-  Retrieved Oct 2010 from http://www.blackwellpublishers.co.uk/rss.
+  Data retrieved Oct 2010 from http://www.blackwellpublishers.co.uk/rss.
   (No longer available).
 
   Used with permission of Blackwell Publishing.
@@ -90,6 +94,7 @@ dat <- verbyla.lupin
 # The same RCB randomization was used at all sites in each year
 if(require(desplot)){
   desplot(gen~col+row|site, data=dat,
+          out1=rep, num=rate,
           # aspect unknown
           main="verbyla.lupin - experiment design")
 }
@@ -107,89 +112,93 @@ if (require(latticeExtra)) { # for useOuterStrips
   useOuterStrips(foo,
                  strip=strip.custom(par.strip.text=list(cex=.7)),
                  strip.left=strip.custom(par.strip.text=list(cex=.7)))
-} else {
-  print(foo)
 }
+
+# ----------------------------------------------------------------------------
 
 \dontrun{
   
-# We try to reproduce the analysis of Verbyla 1999.
-# May not be exactly the same, but is pretty close.
+  # We try to reproduce the analysis of Verbyla 1999.
+  # May not be exactly the same, but is pretty close.
+  
+  # Check nlevels for size of random-coefficient structures
+  length(with(dat, table(gen)))      # 9 varieties for RC1
+  length(with(dat, table(gen,site))) # 99 site:gen combinations for RC2
+  
+  # Make row and col into factors
+  dat <- transform(dat, colf=factor(col), rowf=factor(row))
+  # sort for asreml
+  dat <- dat[order(dat$site, dat$rowf, dat$colf),]
+  
+  # Make site names more useful for plots
+  dat <- transform(dat, site=factor(paste0(year,".",substring(loc,1,4))))
+  
+  # Initial model from top of Verbyla table 9.
+  require(asreml4)
 
-# Check nlevels for size of random-coefficient structures
-length(with(dat, table(gen)))      # 9 varieties for RC1
-length(with(dat, table(gen,site))) # 99 site:gen combinations for RC2
+  # FIXME asreml4 This is not working in asreml4
+  
+##   m0 <- asreml(yield ~ 1
+##                + site
+##                + linrate
+##                + site:linrate,
+##                data = dat,
+##                random = ~ spl(rate)
+##                + dev(rate)
+##                + site:spl(rate)
+##                + site:dev(rate)
+##                + str(~gen+gen:linrate, ~us(2):id(9)) # RC1
+##                + gen:spl(rate)
+##                + gen:dev(rate)
+##                + str(~site:gen+site:gen:linrate, ~us(2):id(99)) # RC2
+##                + site:gen:spl(rate)
+##                + site:gen:dev(rate),
+##                residual = ~ dsum( ~ ar1(rowf):ar1(colf)|site) # Spatial AR1 x AR1
+##              )
+## m0 <- update(m0)
+## m0 <- update(m0) # to get convergence
 
-# Make row and col into factors
-dat <- transform(dat, colf=factor(col), rowf=factor(row))
-# sort for asreml
-dat <- dat[order(dat$site, dat$rowf, dat$colf),]
+## # Variograms match Verbyla 1999 figure 7 (scale slightly different)
+## plot(varioGram(m0), xlim=c(1:19), zlim=c(0,2),
+##      main="verbyla.lupin - variogram by site")
+  
+##   # Sequence of models in Verbyla 1999 table 10
+## m1 <- update(m0, fixed= ~ .
+##              + at(site, c(2,5,6,8,9,10)):lincol
+##              + at(site, c(3,5,7,8)):linrow
+##              + at(site, c(2,3,5,7,8,9,11)):serp
+##              , random = ~ .
+##              + at(site, c(3,6,7,9)):rowf
+##              + at(site, c(1,2,3,9,10)):colf
+##              + at(site, c(5,7,8,10)):units)
+## m1 <- update(m1)
 
-# Make site names more useful for plots
-dat <- transform(dat, site=factor(paste0(year,".",substring(loc,1,4))))
+## m2 <- update(m1,
+##              random = ~ .
+##              - site:gen:spl(rate) - site:gen:dev(rate))
 
-# Initial model from top of Verbyla table 9.
-m0 <- asreml(yield ~ 1
-             + site
-             + linrate
-             + site:linrate,
-             data = dat,
-             random = ~ spl(rate)
-             + dev(rate)
-             + site:spl(rate)
-             + site:dev(rate)
-             + str(~gen+gen:linrate, ~us(2):id(9)) # RC1
-             + gen:spl(rate)
-             + gen:dev(rate)
-             + str(~site:gen+site:gen:linrate, ~us(2):id(99)) # RC2
-             + site:gen:spl(rate)
-             + site:gen:dev(rate),
-             rcov = ~at(site):ar1(rowf):ar1(colf) # Spatial AR1 x AR1
-             )
-m0 <- update(m0)
-m0 <- update(m0) # to get convergence
-
-# Variograms match Verbyla 1999 figure 7 (scale slightly different)
-plot(variogram(m0), xlim=c(1:19), zlim=c(0,2),
-     main="verbyla.lupin - variogram by site")
-
-# Sequence of models in Verbyla 1999 table 10
-m1 <- update(m0, fixed= ~ .
-             + at(site, c(2,5,6,8,9,10)):lincol
-             + at(site, c(3,5,7,8)):linrow
-             + at(site, c(2,3,5,7,8,9,11)):serp
-             , random = ~ .
-             + at(site, c(3,6,7,9)):rowf
-             + at(site, c(1,2,3,9,10)):colf
-             + at(site, c(5,7,8,10)):units)
-m1 <- update(m1)
-
-m2 <- update(m1,
-             random = ~ .
-             - site:gen:spl(rate) - site:gen:dev(rate))
-
-m3 <- update(m2,
-             random = ~ .
-             - site:dev(rate) - gen:dev(rate))
+## m3 <- update(m2,
+##              random = ~ .
+##              - site:dev(rate) - gen:dev(rate))
              
-m4 <- update(m3,
-             random = ~ .
-             - dev(rate))
+## m4 <- update(m3,
+##              random = ~ .
+##              - dev(rate))
 
-m5 <- update(m4,
-             random = ~ .
-             - at(site, c(5,7,8,10)):units + at(site, c(5,7,8)):units)
+## m5 <- update(m4,
+##              random = ~ .
+##              - at(site, c(5,7,8,10)):units + at(site, c(5,7,8)):units)
 
-# Variance components are a pretty good match to Verbyla 1997, table 15
-require(lucid)
-vc(m5)
-.001004/sqrt(.005446*.0003662) # .711 correlation for RC1
-.00175/sqrt(.01881*.000167) # .987 correlation for RC2
+## # Variance components are a pretty good match to Verbyla 1997, table 15
+## require(lucid)
+## vc(m5)
+## .001004/sqrt(.005446*.0003662) # .711 correlation for RC1
+## .00175/sqrt(.01881*.000167) # .987 correlation for RC2
 
-# Matches Verbyla 1999 figure 5
-plot(variogram(m5),
-     main="verbyla.lupin - final model variograms",
-     xlim=c(1:19), zlim=c(0,1.5))
+## # Matches Verbyla 1999 figure 5
+## plot(varioGram(m5),
+##      main="verbyla.lupin - final model variograms",
+##      xlim=c(1:19), zlim=c(0,1.5))
 
 }
 

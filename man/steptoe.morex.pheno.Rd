@@ -146,9 +146,13 @@ dat <- steptoe.morex.pheno
   levelplot(yield~env*gen, data=dat, scales=list(x=list(rot=90)), main="yield")
 }
 
+# ----------------------------------------------------------------------------
+
 # Calculate avg yield for each loc as in Romagosa 1996, table 3
 t(t(round(tapply(dat$yield, dat$env, FUN=mean),2)))
 # SKo92,SKg92 means in table 3 are switched.  Who is right, him or me?
+
+# ----------------------------------------------------------------------------
 
 # Draw marker map
 if(require(qtl)){
@@ -157,31 +161,66 @@ if(require(qtl)){
   plot.map(datg, main="steptoe.morex.pheno")  # or just use plot()
 }
 
+# ----------------------------------------------------------------------------
+
+\dontrun{
+  ## # This is a very rudimentary example.
+
+  ## # Fit a simple multi-environment mixed model
+  ## require(asreml)
+  ## m1 <- asreml(yield ~ env, data=dat, random=~gen)
+  
+  ## require(wgaim)
+  ## plotMissing(datg)
+  ## link.map(datg)
+  ## # Create an interval object for wgaim
+  ## class(datg)[1] <- "bc"
+  ## dati <- cross2int(datg, id="gen")
+  
+  ## # Whole genome qtl
+  ## assign("dat", dat, 1) # Needed for wgaim in script mode
+  ## q1 <- wgaim(m1, dat, dati, merge.by="gen", na.method.X='include')
+  ## link.map(q1, dati) # Visualize
+  ## out.stat(q1, dati) # outlier statistic
+  ## summary(q1, dati)  # Table of important intervals
+  ## # Chrom Left Marker dist(cM) Right Marker dist(cM)   Size Pvalue % Var
+  ## #     3      ABG399     52.6       BCD828     56.1  0.254  0.000  45.0
+  ## #     5      MWG912      148      ABG387A    151.2  0.092  0.001   5.9
+  ## #     6     ABC169B     64.8       CDO497     67.5 -0.089  0.001   5.6
+
+}
+
+# ----------------------------------------------------------------------------
+
 \dontrun{
   # This is a very rudimentary example.
 
-# Fit a simple multi-environment mixed model
-require(asreml)
-m1 <- asreml(yield ~ env, data=dat, random=~gen)
-
-require(wgaim)
-plotMissing(datg)
-link.map(datg)
-# Create an interval object for wgaim
-class(datg)[1] <- "bc"
-dati <- cross2int(datg, id="gen")
-
+  # Fit a simple multi-environment mixed model
+  require(asreml4)
+  ## FIXME asreml4 does not like 'env'
+  m1 <- asreml(yield ~ env, data=dat, random=~gen)
+  
+  require(wgaim)
+  plotMissing(datg)
+  link.map(datg)
+  # Create an interval object for wgaim
+  class(datg)[1] <- "bc"
+  dati <- cross2int(datg, id="gen")
+  
   # Whole genome qtl
   assign("dat", dat, 1) # Needed for wgaim in script mode
-q1 <- wgaim(m1, dat, dati, merge.by="gen", na.method.X='include')
-link.map(q1, dati) # Visualize
-out.stat(q1, dati) # outlier statistic
-summary(q1, dati)  # Table of important intervals
-# Chrom Left Marker dist(cM) Right Marker dist(cM)   Size Pvalue % Var
-#     3      ABG399     52.6       BCD828     56.1  0.254  0.000  45.0
-#     5      MWG912      148      ABG387A    151.2  0.092  0.001   5.9
-#     6     ABC169B     64.8       CDO497     67.5 -0.089  0.001   5.6
+  q1 <- wgaim(m1, dat, dati, merge.by="gen", na.method.X='include')
+  link.map(q1, dati) # Visualize
+  out.stat(q1, dati) # outlier statistic
+  summary(q1, dati)  # Table of important intervals
+  # Chrom Left Marker dist(cM) Right Marker dist(cM)   Size Pvalue % Var
+  #     3      ABG399     52.6       BCD828     56.1  0.254  0.000  45.0
+  #     5      MWG912      148      ABG387A    151.2  0.092  0.001   5.9
+  #     6     ABC169B     64.8       CDO497     67.5 -0.089  0.001   5.6
 
 }
+
+# ----------------------------------------------------------------------------
+
 }
 \keyword{datasets}

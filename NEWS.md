@@ -1,4 +1,6 @@
 
+Need to release desplot before agridat
+
 ## To do?
 
 * Example for tai.potato
@@ -6,6 +8,11 @@
 * JAGS code for lee.potatoblight
 * JAGS code for theobald.barley
 * JAGS code for besag.elbatan
+
+## asreml4 todo
+hanks.sprinkler
+harris.wateruse
+* john.alpha onward
 
 # agridat 1.13 - unpublished
 
@@ -34,20 +41,33 @@ tai.potato, wheatley.carrot
 
 ## Other
 
-* The following data objects have been un-listed and reshaped into 'tidy' dataframes: aastveit.barley, box.cork, ortiz.tomato, talbot.potato, vargas.txe, vargas.wheat1, vargas.wheat2
-* Moved `desplot` function to package `desplot`.
-* Moved `gge` function to package `gge`.
-* Changed license to CC-BY-SA 4.0 + file LICENSE.  Similar to `igraphdata` package.
-* Changed vignette from Rnw/pdf to Rmd/html.
-* Titles in Rd pages are more consistent.
-* Added DOIs for most source references.
-* Checked aspect ratio of field plot heatmaps where possible.
-* `devtools::run_examples()` now works even without suggested packages installed.
-* Fixed `dontrun` sections to work with  `devtools::run_examples(run=FALSE)`
-* Renamed besag.met to besag.corn.
-* Changed extensions in inst/files from .bug to .jag .
-* Changed all hyperlinks to plain text (faster checking, avoids re-direct errors).
-* Removed most quote marks from data/*.txt files.
+These data objects have been change from lists into tidy dataframes: aastveit.barley, box.cork, ortiz.tomato, talbot.potato, vargas.txe, vargas.wheat1, vargas.wheat2
+
+Moved `desplot` function to package `desplot`.
+
+Moved `gge` function to package `gge`.
+
+Changed license to GPL-3 + file LICENSE.
+
+Changed vignette from Rnw to Rmd.
+
+Titles in Rd pages are more consistent.
+
+Added DOIs for most source references.
+
+Checked aspect ratio of field plot heatmaps where possible.
+
+`devtools::run_examples()` now works even without suggested packages installed.
+
+Fixed `dontrun` sections to work with  `devtools::run_examples(run=FALSE)`
+
+Renamed besag.met to besag.corn.
+
+Changed extensions in inst/files from .bug to .jag .
+
+Changed all hyperlinks to plain text (faster checking, avoids re-direct errors).
+
+Removed most quote marks from data/*.txt files.
 
 # agridat 1.12 - Jun 2015
 
@@ -64,7 +84,7 @@ burgueno.unreplicated, steptoe.morex.pheno
 
 ## Other
 
-* Removed `asreml` package from Suggests (due to CRAN check problems).
+Removed `asreml` package from Suggests (due to CRAN check problems).
 
 # agridat 1.10 - Nov 2014
 
@@ -74,8 +94,9 @@ beaven.barley, perry.springwheat, ridout.appleshoots
 
 ## Other
 
-* Move packages from Depends to Imports.
-* JAGS example added to welch.bermudagrass.
+Move packages from Depends to Imports.
+
+JAGS example added to welch.bermudagrass.
 
 # agridat 1.9 - Jul 2014
 
@@ -97,8 +118,9 @@ weiss.incblock, weiss.lattice, yang.barley
 
 ## Other
 
-* Use `if(require(lme4))` in examples.  Ripley request.
-* All data (almost) now have an example graphic.
+Use `if(require(lme4))` in examples.  Ripley request.
+
+All data (almost) now have an example graphic.
 
 # agridat 1.8 - Sep 2013
 

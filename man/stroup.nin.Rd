@@ -145,6 +145,7 @@ plot(eff$ranblock, eff$corLin, xlim=c(13,37), ylim=c(13,37),
 text(eff$ranblock, eff$corLin, rownames(eff), cex=0.5)
 abline(0,1)
 
+# ----------------------------------------------------------------------------
 # ----- SpATS -----
 
 if(require(SpATS)){
@@ -169,6 +170,7 @@ if(require(SpATS)){
   
 }
 
+# ----------------------------------------------------------------------------
 # ----- sommer -----
 
 \dontrun{
@@ -192,25 +194,58 @@ if(require(sommer)){
 }
 }
 
-
-# ----- asreml -----
+# ----------------------------------------------------------------------------
 
 \dontrun{
+  ## require(asreml)
+ 
+  ## # RCB analysis
+  ## dat.rcb <- asreml(yield ~ gen, random = ~ rep, data=dat,
+  ##                   na.method.X="omit")
+  ## pred.rcb <- predict(dat.rcb, data=dat, classify="gen")$predictions
 
-  require(asreml)
+  ## # Two-dimensional AR1xAR1 spatial model
+  ## dat <- transform(dat, xf=factor(col), yf=factor(row))
+  ## dat <- dat[order(dat$xf, dat$yf),]
+  ## dat.sp <- asreml(yield~gen, data=dat,
+  ##                  rcov=~ar1(xf):ar1(yf),
+  ##                  na.method.X='ignore')
+  ## pred.sp <- predict(dat.sp, data=dat, classify="gen")$predictions
+
+  ## require(lucid)
+  ## vc(dat.sp)
+  ## ##     effect component std.error z.ratio constr
+  ## ## R!variance   48.7      7.155       6.8    pos
+  ## ##   R!xf.cor    0.6555   0.05638    12      unc
+  ## ##   R!yf.cor    0.4375   0.0806      5.4    unc
+
+  ## # Compare the estimates from the two methods
+  ## plot(pred.rcb$pvals[,2], pred.sp$pvals[,2], xlim=c(13,37), ylim=c(13,37),
+  ##      xlab="RCB",ylab="AR1xAR1",type='n')
+  ## title("stroup.nin: Comparison of predicted values")
+  ## text(pred.rcb$pvals[,2],pred.sp$pvals[,2],
+  ##      as.character(pred.rcb$pvals[,1]),cex=0.5)
+  ## abline(0,1)
+ 
+}
+
+# ----------------------------------------------------------------------------
+
+\dontrun{
+  require(asreml4)
  
   # RCB analysis
   dat.rcb <- asreml(yield ~ gen, random = ~ rep, data=dat,
-                    na.method.X="omit")
-  pred.rcb <- predict(dat.rcb, data=dat, classify="gen")$predictions
+                    na.action=na.method(x="omit"))
+  pred.rcb <- predict(dat.rcb, data=dat, classify="gen")
 
   # Two-dimensional AR1xAR1 spatial model
   dat <- transform(dat, xf=factor(col), yf=factor(row))
   dat <- dat[order(dat$xf, dat$yf),]
   dat.sp <- asreml(yield~gen, data=dat,
-                   rcov=~ar1(xf):ar1(yf),
-                   na.method.X='ignore')
-  pred.sp <- predict(dat.sp, data=dat, classify="gen")$predictions
+                   residual = ~ar1(xf):ar1(yf),
+                   na.action=na.method(x="omit"))
+  pred.sp <- predict(dat.sp, data=dat, classify="gen")
 
   require(lucid)
   vc(dat.sp)
@@ -221,13 +256,15 @@ if(require(sommer)){
 
   # Compare the estimates from the two methods
   plot(pred.rcb$pvals[,2], pred.sp$pvals[,2], xlim=c(13,37), ylim=c(13,37),
-       xlab="RCB",ylab="AR1xAR1",type='n')
+       xlab="RCB", ylab="AR1xAR1", type='n')
   title("stroup.nin: Comparison of predicted values")
   text(pred.rcb$pvals[,2],pred.sp$pvals[,2],
        as.character(pred.rcb$pvals[,1]),cex=0.5)
   abline(0,1)
  
 }
+
+# ----------------------------------------------------------------------------
 
 }
 

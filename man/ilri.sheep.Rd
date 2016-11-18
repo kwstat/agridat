@@ -95,30 +95,53 @@ summary(lm1)
 anova(lm1)
 
 if(require(lme4)){
-lme1 <- lmer(weanwt ~ year + sex + weanage + dl + dq + ewegen + ramgen +
-             (1|ewe) + (1|ram), data=dat)
-print(lme1, corr=FALSE)
-lme2 <- lmer(weanwt ~ year + sex + weanage + dl + dq + ewegen + ramgen +
-             (1|ewe), data=dat)
-lme3 <- lmer(weanwt ~ year + sex + weanage + dl + dq + ewegen + ramgen +
-             (1|ram), data=dat)
-anova(lme1, lme2,  lme3)
+  lme1 <- lmer(weanwt ~ year + sex + weanage + dl + dq + ewegen + ramgen +
+                 (1|ewe) + (1|ram), data=dat)
+  print(lme1, corr=FALSE)
+  lme2 <- lmer(weanwt ~ year + sex + weanage + dl + dq + ewegen + ramgen +
+                 (1|ewe), data=dat)
+  lme3 <- lmer(weanwt ~ year + sex + weanage + dl + dq + ewegen + ramgen +
+                 (1|ram), data=dat)
+  anova(lme1, lme2,  lme3)
 }
+
+# ----------------------------------------------------------------------------
 
 \dontrun{
-require(asreml)
-# case study page 4.20
-m1 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
-             data=dat)
-anova(m1)
-
-# case study page 4.26
-m2 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
-             random = ~ ram + ewe, data=dat)
-anova(m2)
-
-# case study page 4.37, year means
-predict(m2, data=dat, classify="year")$predictions
+  ## require(asreml)
+  ## # case study page 4.20
+  ## m1 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
+  ##              data=dat)
+  ## anova(m1)
+  
+  ## # case study page 4.26
+  ## m2 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
+  ##              random = ~ ram + ewe, data=dat)
+  ## anova(m2)
+  
+  ## # case study page 4.37, year means
+  ## predict(m2, data=dat, classify="year")$predictions
+  
 }
+
+# ----------------------------------------------------------------------------
+
+\dontrun{
+  require(asreml4)
+  # case study page 4.20
+  m1 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
+               data=dat)
+  wald(m1)
+  
+  # case study page 4.26
+  m2 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
+               random = ~ ram + ewe, data=dat)
+  wald(m2)
+  
+  # case study page 4.37, year means
+  predict(m2, data=dat, classify="year")
+  
+}
+
 }
 \keyword{datasets}

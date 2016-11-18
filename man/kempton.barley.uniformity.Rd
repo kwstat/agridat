@@ -51,26 +51,51 @@ if(require(desplot)){
           main="kempton.barley.uniformity")
 }
 
+# ----------------------------------------------------------------------------
 
 \dontrun{
 
-# Kempton estimated auto-regression coefficients b1=0.10, b2=0.91
+  ## # Kempton estimated auto-regression coefficients b1=0.10, b2=0.91
 
-dat <- transform(dat, xf = factor(col), yf=factor(row))
-require(asreml)
-m1 <- asreml(yield ~ 1, data=dat, rcov=~ar1(xf):ar1(yf))
-
-require(lucid)
-vc(m1)
-##      effect component std.error z.ratio constr
-##  R!variance    0.1044   0.022       4.7    pos
-##    R!xf.cor    0.2458   0.07484     3.3  uncon
-##    R!yf.cor    0.8186   0.03822    21    uncon
-
-# asreml estimates auto-regression correlations of 0.25, 0.82
-# Kempton estimated auto-regression coefficients b1=0.10, b2=0.91
+  ## dat <- transform(dat, xf = factor(col), yf=factor(row))
+  ## require(asreml)
+  ## m1 <- asreml(yield ~ 1, data=dat, rcov=~ar1(xf):ar1(yf))
+  
+  ## require(lucid)
+  ## vc(m1)
+  ## ##      effect component std.error z.ratio constr
+  ## ##  R!variance    0.1044   0.022       4.7    pos
+  ## ##    R!xf.cor    0.2458   0.07484     3.3  uncon
+  ## ##    R!yf.cor    0.8186   0.03822    21    uncon
+  
+  ## # asreml estimates auto-regression correlations of 0.25, 0.82
+  ## # Kempton estimated auto-regression coefficients b1=0.10, b2=0.91
 
 }
+
+# ----------------------------------------------------------------------------
+
+\dontrun{
+
+  # Kempton estimated auto-regression coefficients b1=0.10, b2=0.91
+  
+  dat <- transform(dat, xf = factor(col), yf=factor(row))
+  require(asreml4)
+  m1 <- asreml(yield ~ 1, data=dat, residual = ~ar1(xf):ar1(yf))
+  
+  require(lucid)
+  vc(m1)
+  ##       effect component std.error z.ratio bound %ch
+  ##     xf:yf(R)    0.1044   0.022       4.7     P   0
+  ## xf:yf!xf!cor    0.2458   0.07484     3.3     U   0
+  ## xf:yf!yf!cor    0.8186   0.03822    21       U   0
+
+  # asreml estimates auto-regression correlations of 0.25, 0.82
+  # Kempton estimated auto-regression coefficients b1=0.10, b2=0.91
+
+}
+
+# ----------------------------------------------------------------------------
 
 # Kempton defines 4 blocks, randomly assigns variety codes 1-49 in each block, fits
 # RCB model, computes mean squares for variety and residual.  Repeat 40 times.
@@ -84,6 +109,8 @@ fitfun <- function(dat){
 }
 set.seed(251)
 out <- replicate(50, fitfun(dat))
-rowMeans(out)
+rowMeans(out) # 826 1079
+
+# ----------------------------------------------------------------------------
 
 }

@@ -52,7 +52,7 @@ Suggests:
     SpATS,
     survival,
     vcd
-License: CC BY-SA 4.0 + file LICENSE
+License: GPL-3 + file LICENSE
 LazyData: yes
 URL: https://github.com/kwstat/agridat
 BugReports: https://github.com/kwstat/agridat/issues

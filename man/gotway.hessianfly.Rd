@@ -37,7 +37,7 @@
 }
 \examples{
 
-## Could the spaMM package be useful here...????
+## FIXME Could the spaMM package be useful here...????
 
 data(gotway.hessianfly)
 dat <- gotway.hessianfly
@@ -50,6 +50,7 @@ if(require(desplot)){
           main="gotway.hessianfly")
 }
 
+# ----------------------------------------------------------------------------
 
 # Block random.  See Glimmix manual, output 1.18.
 # Note: (Different parameterization)
@@ -59,13 +60,24 @@ if(require(lme4)){
 ## coef(l2)
 }
 
+# ----------------------------------------------------------------------------
+
 \dontrun{
-require('asreml')
+## require(asreml)
+## a2 <- asreml(prop ~ gen, data=dat, random=~block,
+##              family=asreml.binomial(),
+##              weights=n)
+## coef(a2)
+}
+
+# ----------------------------------------------------------------------------
+
+\dontrun{
+require(asreml4)
 a2 <- asreml(prop ~ gen, data=dat, random=~block,
-             family=asreml.binomial(),
+             family=asr_binomial(),
              weights=n)
 coef(a2)
-
 }
 
 }

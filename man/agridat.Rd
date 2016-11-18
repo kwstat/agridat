@@ -15,6 +15,7 @@
   Abbreviations in the 'other' column include:
   xy = coordinates,
   pls = partial least squares,
+  rsm = response surface methodology,
   row-col = row-column design,
   ts = time series,
 
@@ -267,7 +268,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{vargas.wheat1}             \tab 7   \tab    \tab     \tab 6  \tab     \tab gen*yr~gen*trt, yr*gen~yr*cov\tab pls \cr
 \link{vargas.wheat2}             \tab 8   \tab 7  \tab     \tab    \tab     \tab env*gen~env*cov \tab pls \cr
 \link{vargas.txe}                \tab     \tab    \tab     \tab 10 \tab 24  \tab yr*trt~yr*cov \tab pls \cr
-\link{verbyla.lupin}             \tab 9   \tab 8  \tab     \tab 2  \tab     \tab rsm1, xy, density\tab asreml\cr
+\link{verbyla.lupin}             \tab 9   \tab 8  \tab 2-3 \tab 2  \tab     \tab rsm1, xy, density\tab asreml\cr
 \link{vold.longterm}             \tab     \tab    \tab     \tab 19 \tab 4   \tab rsm1 \tab nls,nlme \cr
 \link{vsn.lupin3}                \tab 336 \tab 3  \tab     \tab    \tab     \tab xy \tab asreml\cr
 \link{wedderburn.barley}         \tab 10  \tab 9  \tab     \tab    \tab     \tab percent \tab glm/gnm \cr
@@ -316,11 +317,9 @@ name                       \tab model \cr
 \link{waynick.soil}        \tab spatial, nitro/carbon \cr
 }
 
-Box (1957) said, "I had hoped that we had seen the end of the obscene
-tribal habit practiced by statisticians of continually exhuming and
-massaging dead data sets after their purpose in life has long since been
-forgotten and there was no possibility of doing anything useful as a
-result of this treatment."
+Box (1957) said,
+"I had hoped that we had seen the end of the obscene tribal habit practiced by statisticians of continually exhuming and massaging dead data sets after their purpose in life has long since been forgotten and there was no possibility of doing anything useful as a result of this treatment."
+
 Massaging these dead data sets will not lead to any of the
 genetics being released for commercial use.
 The value of this package is:
@@ -332,10 +331,9 @@ White and van Evert (2008) present some guidelines for publication of data.
 
 Some of the examples use the \code{asreml} package since it is the
 _only_ R tool for fitting mixed models with complex variance structures
-to large datasets, and essentially the only option (even for small
-datasets) for modelling AR1xAR1 residual variance structures.
-Commercial use of \code{asreml} requires a license:
-http://www.vsni.co.uk/downloads/asreml.
+to large datasets, and the best option for modelling AR1xAR1 residual
+variance structures.  Commercial use of \code{asreml} requires a
+license: http://www.vsni.co.uk/downloads/asreml.
 
 \bold{Comments on the package structure}
 

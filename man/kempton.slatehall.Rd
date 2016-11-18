@@ -60,6 +60,7 @@ if(require(desplot)){
           main="kempton.slatehall - spring wheat yields")
 }
 
+# ----------------------------------------------------------------------------
 
 # Incomplete block model of Gilmour et al 1995
 if(require(lme4) & require(lucid)){
@@ -74,21 +75,52 @@ if(require(lme4) & require(lucid)){
 
 }
 
+# ----------------------------------------------------------------------------
+
 \dontrun{
-# Incomplete block model of Gilmour et al 1995
-require(asreml)
-m2 <- asreml(yield ~ gen, random = ~ rep/(xf+yf), data=dat)
+## # Incomplete block model of Gilmour et al 1995
+## require(asreml)
+## m2 <- asreml(yield ~ gen, random = ~ rep/(xf+yf), data=dat)
 
-vc(m2)
-##          effect component std.error z.ratio constr
-##     rep!rep.var      4262      6890    0.62    pos
-##  rep:xf!rep.var     14810      4865    3       pos
-##  rep:yf!rep.var     15600      5091    3.1     pos
-##      R!variance      8062      1340    6       pos
+## vc(m2)
+## ##          effect component std.error z.ratio constr
+## ##     rep!rep.var      4262      6890    0.62    pos
+## ##  rep:xf!rep.var     14810      4865    3       pos
+## ##  rep:yf!rep.var     15600      5091    3.1     pos
+## ##      R!variance      8062      1340    6       pos
 
-# Table 4
-predict(m2, data=dat, classify="gen")$predictions$pvals
+## # Table 4
+## predict(m2, data=dat, classify="gen")$predictions$pvals
 
 }
+
+# ----------------------------------------------------------------------------
+
+\dontrun{
+  # Incomplete block model of Gilmour et al 1995
+  require(asreml4)
+  require(lucid)
+  m2 <- asreml(yield ~ gen, random = ~ rep/(xf+yf), data=dat)
+
+  vc(m2)
+  ##   effect component std.error z.ratio bound %ch
+  ##      rep      4262      6890    0.62     P   0
+  ##   rep:yf     15600      5091    3.1      P   0
+  ##   rep:xf     14810      4865    3        P   0
+  ## units(R)      8062      1340    6        P   0
+
+  # Table 4
+  predict(m2, data=dat, classify="gen")$pvals
+  ##    gen predicted.value std.error    status
+  ## 1  G01            1280      60.2 Estimable
+  ## 2  G02            1550      60.2 Estimable
+  ## 3  G03            1420      60.2 Estimable
+  ## 4  G04            1450      60.2 Estimable
+  ## 5  G05            1530      60.2 Estimable
+
+}
+
+# ----------------------------------------------------------------------------
+
 }
 \keyword{datasets}

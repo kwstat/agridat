@@ -81,7 +81,7 @@ if(require(latticeExtra)){
 # "Poissonness"-type plot
 if(require(vcd)) {
   dat2 <- droplevels(subset(dat, treat=='T2'))
-  distplot(dat2$borers, type = "nbinomial",
+  vcd::distplot(dat2$borers, type = "nbinomial",
            main="bliss.borers neg binomialness plot")
   # Better way is a rootogram
   g1 <- goodfit(dat2$borers, "nbinomial")

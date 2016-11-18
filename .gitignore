@@ -1,5 +1,5 @@
 # Emacs backup files
-*.~*~
+*~
 \#*\#
 # Emacs backups of hidden files, like ".gitignore.~3~"
 .*.~*~

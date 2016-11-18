@@ -62,9 +62,80 @@ if(require(lme4) && require(lucid)){
   
 }
 
-\dontrun{
+dat <- transform(dat, xf=factor(col), yf=factor(row))
+dat <- dat[order(dat$xf, dat$yf),]                 
 
-  require(asreml)
+# ----------------------------------------------------------------------------
+
+\dontrun{
+  ## require(asreml)
+
+  ## # Sequence of models on page 36
+  
+  ## m1 <- asreml(yield ~  gen, data=dat)
+  ## m1$loglik # -232.13
+  
+  ## m2 <- asreml(yield ~  gen, data=dat,
+  ##              random = ~ rep)
+  ## m2$loglik # -223.48
+
+  ## # Inc Block model
+  ## m3 <- asreml(yield ~  gen, data=dat,
+  ##              random = ~ rep/block)
+  ## m3$loglik # -221.42
+  ## m3$coef$fixed # Matches solution on p. 27
+
+  ## # AR1xAR1 model
+  ## m4 <- asreml(yield ~ 1 + gen, data=dat,
+  ##              rcov = ~ar1(xf):ar1(yf))
+  ## m4$loglik # -221.47
+  ## plot(variogram(m4), main="burgueno.alpha") # Figure 1
+  
+  ## m5 <- asreml(yield ~ 1 + gen, data=dat,
+  ##              random= ~ yf, rcov = ~ar1(xf):ar1(yf))
+  ## m5$loglik # -220.07
+
+  ## m6 <- asreml(yield ~ 1 + gen + pol(yf,-2), data=dat,
+  ##              rcov = ~ar1(xf):ar1(yf))
+  ## m6$loglik # -204.64 vs. 203.69
+  
+  ## m7 <- asreml(yield ~ 1 + gen + lin(yf), data=dat,
+  ##              random= ~ spl(yf), rcov = ~ar1(xf):ar1(yf))
+  ## m7$loglik # -212.51
+  
+  ## m8 <- asreml(yield ~ 1 + gen + lin(yf), data=dat,
+  ##              random= ~ spl(yf))
+  ## m8$loglik # -213.91
+
+  ## # Polynomial model with predictions
+  ## m9 <- asreml(yield ~ 1 + gen + pol(yf,-2) + pol(xf,-2), data=dat,
+  ##              random= ~ spl(yf),  rcov = ~ar1(xf):ar1(yf))
+  ## m9$loglik # -191.44 vs -189.61
+  ## p9 <- predict(m9, classify="gen:xf:yf", levels=list(xf=1,yf=1)) 
+  ## p9$predictions
+  
+  ## m10 <- asreml(yield ~ 1 + gen + lin(yf)+lin(xf), data=dat,
+  ##               rcov = ~ar1(xf):ar1(yf))
+  ## m10$loglik # -211.56
+  
+  ## m11 <- asreml(yield ~ 1 + gen + lin(yf)+lin(xf), data=dat,
+  ##               random= ~ spl(yf), rcov = ~ar1(xf):ar1(yf))
+  ## m11$loglik # -208.90
+  
+  ## m12 <- asreml(yield ~ 1 + gen + lin(yf)+lin(xf), data=dat,
+  ##               random= ~ spl(yf)+spl(xf), rcov = ~ar1(xf):ar1(yf))
+  ## m12$loglik # -206.82
+  
+  ## m13 <- asreml(yield ~ 1 + gen + lin(yf)+lin(xf), data=dat,
+  ##               random= ~ spl(yf)+spl(xf))
+  ## m13$loglik # -207.52
+
+}
+
+# ----------------------------------------------------------------------------
+
+\dontrun{
+  require(asreml4)
 
   # Sequence of models on page 36
   
@@ -83,20 +154,20 @@ if(require(lme4) && require(lucid)){
 
   # AR1xAR1 model
   m4 <- asreml(yield ~ 1 + gen, data=dat,
-               rcov = ~ar1(xf):ar1(yf))
+               resid = ~ar1(xf):ar1(yf))
   m4$loglik # -221.47
-  plot(variogram(m4), main="burgueno.alpha") # Figure 1
+  plot(varioGram(m4), main="burgueno.alpha") # Figure 1
   
   m5 <- asreml(yield ~ 1 + gen, data=dat,
-               random= ~ yf, rcov = ~ar1(xf):ar1(yf))
+               random= ~ yf, resid = ~ar1(xf):ar1(yf))
   m5$loglik # -220.07
 
   m6 <- asreml(yield ~ 1 + gen + pol(yf,-2), data=dat,
-               rcov = ~ar1(xf):ar1(yf))
+               resid = ~ar1(xf):ar1(yf))
   m6$loglik # -204.64 vs. 203.69
   
   m7 <- asreml(yield ~ 1 + gen + lin(yf), data=dat,
-               random= ~ spl(yf), rcov = ~ar1(xf):ar1(yf))
+               random= ~ spl(yf), resid = ~ar1(xf):ar1(yf))
   m7$loglik # -212.51
   
   m8 <- asreml(yield ~ 1 + gen + lin(yf), data=dat,
@@ -105,21 +176,25 @@ if(require(lme4) && require(lucid)){
 
   # Polynomial model with predictions
   m9 <- asreml(yield ~ 1 + gen + pol(yf,-2) + pol(xf,-2), data=dat,
-               random= ~ spl(yf),  rcov = ~ar1(xf):ar1(yf))
+               random= ~ spl(yf),
+               resid = ~ar1(xf):ar1(yf))
+  m9 <- update(m9)
   m9$loglik # -191.44 vs -189.61
   p9 <- predict(m9, classify="gen:xf:yf", levels=list(xf=1,yf=1)) 
-  p9$predictions
+  p9
   
   m10 <- asreml(yield ~ 1 + gen + lin(yf)+lin(xf), data=dat,
-                rcov = ~ar1(xf):ar1(yf))
+                resid = ~ar1(xf):ar1(yf))
   m10$loglik # -211.56
   
   m11 <- asreml(yield ~ 1 + gen + lin(yf)+lin(xf), data=dat,
-                random= ~ spl(yf), rcov = ~ar1(xf):ar1(yf))
+                random= ~ spl(yf),
+                resid = ~ar1(xf):ar1(yf))
   m11$loglik # -208.90
   
   m12 <- asreml(yield ~ 1 + gen + lin(yf)+lin(xf), data=dat,
-                random= ~ spl(yf)+spl(xf), rcov = ~ar1(xf):ar1(yf))
+                random= ~ spl(yf)+spl(xf),
+                resid = ~ar1(xf):ar1(yf))
   m12$loglik # -206.82
   
   m13 <- asreml(yield ~ 1 + gen + lin(yf)+lin(xf), data=dat,

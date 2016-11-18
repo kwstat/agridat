@@ -29,6 +29,7 @@
 }
 
 \source{
+
   J Burgueno, A Cadena, J Crossa, M Banziger, A Gilmour, B Cullis. 2000.
   \emph{User's guide for spatial analysis of field variety trials using
     ASREML}.  CIMMYT.
@@ -53,20 +54,59 @@ if(require(desplot)){
           main="burgueno.unreplicated")
 }
 
+# ----------------------------------------------------------------------------
 
 \dontrun{
-  require(asreml)
+  ## require(asreml)
+  ## require(lucid)
+
+  ## # AR1 x AR1 with random genotypes
+  ## dat <- transform(dat, xf=factor(col), yf=factor(row))
+  ## dat <- dat[order(dat$xf,dat$yf),]
+  ## m2 <- asreml(yield ~ 1, data=dat, random = ~ gen,
+  ##              rcov = ~ ar1(xf):ar1(yf))
+  ## vc(m2)
+  ## # Note the strong saw-tooth pattern in the variogram.  Seems to
+  ## # be column effects.
+  ## plot(variogram(m2), xlim=c(0,15), ylim=c(0,9), zlim=c(0,0.5),
+  ##      main="burgueno.unreplicated - AR1xAR1")
+  ## # library(lattice) # Show how odd columns are high
+  ## # bwplot(resid(m2) ~ col, data=dat, horizontal=FALSE)
+
+  ## # Define an even/odd column factor as fixed effect
+  ## # dat$oddcol <- factor(dat$col %% 2)
+  ## # The modulus operator throws a bug, so do it the hard way.
+  ## dat$oddcol <- factor(dat$col - floor(dat$col / 2) *2 )
+
+  ## m3 <- update(m2, yield ~ 1 + oddcol)
+  ## m3$loglik # Matches Burgueno table 3, line 3
+  ## plot(variogram(m3), xlim=c(0,15), ylim=c(0,9), zlim=c(0,0.5),
+  ##      main="burgueno.unreplicated - AR1xAR1 + Even/Odd")
+  ## # Much better-looking variogram
+
+}
+
+# ----------------------------------------------------------------------------
+
+\dontrun{
+  require(asreml4)
   require(lucid)
 
   # AR1 x AR1 with random genotypes
   dat <- transform(dat, xf=factor(col), yf=factor(row))
   dat <- dat[order(dat$xf,dat$yf),]
   m2 <- asreml(yield ~ 1, data=dat, random = ~ gen,
-               rcov = ~ ar1(xf):ar1(yf))
+               resid = ~ ar1(xf):ar1(yf))
   vc(m2)
+  ##       effect component std.error z.ratio bound %ch
+  ##          gen    0.9122   0.127       7.2     P 0  
+  ##     xf:yf(R)    0.4993   0.05601     8.9     P 0  
+  ## xf:yf!xf!cor   -0.2431   0.09156    -2.7     U 0  
+  ## xf:yf!yf!cor    0.1255   0.07057     1.8     U 0.1
+
   # Note the strong saw-tooth pattern in the variogram.  Seems to
   # be column effects.
-  plot(variogram(m2), xlim=c(0,15), ylim=c(0,9), zlim=c(0,0.5),
+  plot(varioGram(m2), xlim=c(0,15), ylim=c(0,9), zlim=c(0,0.5),
        main="burgueno.unreplicated - AR1xAR1")
   # library(lattice) # Show how odd columns are high
   # bwplot(resid(m2) ~ col, data=dat, horizontal=FALSE)
@@ -78,7 +118,8 @@ if(require(desplot)){
 
   m3 <- update(m2, yield ~ 1 + oddcol)
   m3$loglik # Matches Burgueno table 3, line 3
-  plot(variogram(m3), xlim=c(0,15), ylim=c(0,9), zlim=c(0,0.5),
+  
+  plot(varioGram(m3), xlim=c(0,15), ylim=c(0,9), zlim=c(0,0.5),
        main="burgueno.unreplicated - AR1xAR1 + Even/Odd")
   # Much better-looking variogram
 

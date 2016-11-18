@@ -65,34 +65,69 @@ panel=function(x,y,...) panel.smooth(x,y,span=.75,...))
 title("durban.rowcol")
 
 \dontrun{
-# Figure 5 - field trend
-require(gam)
-m1lo <- gam(yield ~ gen + lo(row, span=10/16) + lo(bed, span=9/34), data=dat)
-new1 <- expand.grid(row=unique(dat$row),bed=unique(dat$bed))
-new1 <- cbind(new1, gen="G001")
-p1lo <- predict(m1lo, new=new1)
-wireframe(p1lo~row+bed, new1, aspect=c(1,.5), main="Field trend") # Figure 5
-
-require(asreml)
-dat <- transform(dat, rowf=factor(row), bedf=factor(bed))
-dat <- dat[order(dat$rowf, dat$bedf),]
-
-m1a1 <- asreml(yield~gen + lin(rowf) + lin(bedf), data=dat,
-               random=~spl(rowf) + spl(bedf) + units,
-               family=asreml.gaussian(dispersion=1))
-m1a2 <- asreml(yield~gen + lin(rowf) + lin(bedf), data=dat,
-               random=~spl(rowf) + spl(bedf) + units, rcov=~ar1(rowf):ar1(bedf))
-m1a3 <- asreml(yield~gen, data=dat, random=~units, rcov=~ar1(rowf):ar1(bedf))
-
-# Figure 7
-v7a <- asreml.variogram(x=dat$bedf, y=dat$rowf, z=m1a3$residuals)
-wireframe(gamma ~ x*y, v7a, aspect=c(1,.5)) # Fig 7a
-
-v7b <- asreml.variogram(x=dat$bedf, y=dat$rowf, z=m1a2$residuals)
-wireframe(gamma ~ x*y, v7b, aspect=c(1,.5)) # Fig 7b
-
-v7c <- asreml.variogram(x=dat$bedf, y=dat$rowf, z=m1lo$residuals)
-wireframe(gamma ~ x*y, v7c, aspect=c(1,.5)) # Fig 7c
+  # Figure 5 - field trend
+  require(gam)
+  m1lo <- gam(yield ~ gen + lo(row, span=10/16) + lo(bed, span=9/34), data=dat)
+  new1 <- expand.grid(row=unique(dat$row),bed=unique(dat$bed))
+  new1 <- cbind(new1, gen="G001")
+  p1lo <- predict(m1lo, new=new1)
+  wireframe(p1lo~row+bed, new1, aspect=c(1,.5), main="Field trend") # Figure 5
 }
+
+# ----------------------------------------------------------------------------
+
+\dontrun{
+  ## require(asreml)
+  ## dat <- transform(dat, rowf=factor(row), bedf=factor(bed))
+  ## dat <- dat[order(dat$rowf, dat$bedf),]
+
+  ## m1a1 <- asreml(yield~gen + lin(rowf) + lin(bedf), data=dat,
+  ##                random=~spl(rowf) + spl(bedf) + units,
+  ##                family=asreml.gaussian(dispersion=1))
+  ## m1a2 <- asreml(yield~gen + lin(rowf) + lin(bedf), data=dat,
+  ##                random=~spl(rowf) + spl(bedf) + units, rcov=~ar1(rowf):ar1(bedf))
+  ## m1a3 <- asreml(yield~gen, data=dat, random=~units, rcov=~ar1(rowf):ar1(bedf))
+
+  ## # Figure 7
+  ## v7a <- asreml.variogram(x=dat$bedf, y=dat$rowf, z=m1a3$residuals)
+  ## wireframe(gamma ~ x*y, v7a, aspect=c(1,.5)) # Fig 7a
+  
+  ## v7b <- asreml.variogram(x=dat$bedf, y=dat$rowf, z=m1a2$residuals)
+  ## wireframe(gamma ~ x*y, v7b, aspect=c(1,.5)) # Fig 7b
+  
+  ## v7c <- asreml.variogram(x=dat$bedf, y=dat$rowf, z=m1lo$residuals)
+  ## wireframe(gamma ~ x*y, v7c, aspect=c(1,.5)) # Fig 7c
+
+}
+
+# ----------------------------------------------------------------------------
+
+\dontrun{
+  require(asreml4)
+  dat <- transform(dat, rowf=factor(row), bedf=factor(bed))
+  dat <- dat[order(dat$rowf, dat$bedf),]
+
+  m1a1 <- asreml(yield~gen + lin(rowf) + lin(bedf), data=dat,
+                 random=~spl(rowf) + spl(bedf) + units,
+                 family=asr_gaussian(dispersion=1))
+  m1a2 <- asreml(yield~gen + lin(rowf) + lin(bedf), data=dat,
+                 random=~spl(rowf) + spl(bedf) + units,
+                 resid = ~ar1(rowf):ar1(bedf))
+  m1a2 <- update(m1a2)
+  m1a3 <- asreml(yield~gen, data=dat, random=~units,
+                 resid = ~ar1(rowf):ar1(bedf))
+
+  # Figure 7
+  v7a <- asr_varioGram(x=dat$bedf, y=dat$rowf, z=m1a3$residuals)
+  wireframe(gamma ~ x*y, v7a, aspect=c(1,.5)) # Fig 7a
+  
+  v7b <- asr_varioGram(x=dat$bedf, y=dat$rowf, z=m1a2$residuals)
+  wireframe(gamma ~ x*y, v7b, aspect=c(1,.5)) # Fig 7b
+  
+  v7c <- asr_varioGram(x=dat$bedf, y=dat$rowf, z=m1lo$residuals)
+  wireframe(gamma ~ x*y, v7c, aspect=c(1,.5)) # Fig 7c
+
+}
+
 }
 
