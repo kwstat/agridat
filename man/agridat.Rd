@@ -186,8 +186,12 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{gilmour.slatehall}         \tab 25  \tab    \tab 6   \tab    \tab     \tab xy \tab asreml \cr
 \link{gomez.fractionalfactorial} \tab     \tab    \tab 2   \tab    \tab 6   \tab xy \tab lm \cr
 \link{gomez.groupsplit}          \tab 45  \tab    \tab 3   \tab    \tab 2   \tab xy, 3 gen groups \tab aov \cr
+\link{gomez.heteroskedastic}     \tab 35  \tab    \tab 3   \tab    \tab     \tab hetero \tab \cr
 \link{gomez.multilocsplitplot}   \tab 2   \tab 3  \tab 3   \tab    \tab     \tab rsm1,nitro \tab aov, lmer \cr
 \link{gomez.nitrogen}            \tab     \tab    \tab 4   \tab    \tab 8   \tab \tab aov, contrasts \cr
+\link{gomez.nonnormal1}          \tab     \tab    \tab 4   \tab    \tab 9   \tab log10 \tab lm \cr
+\link{gomez.nonnormal2}          \tab 14  \tab    \tab 3   \tab    \tab     \tab sqrt \tab lm \cr
+\link{gomez.nonnormal3}          \tab 12  \tab    \tab 3   \tab    \tab     \tab arcsin \tab lm \cr
 \link{gomez.seedrate}            \tab     \tab    \tab 4   \tab    \tab 6   \tab rate \tab lm\cr
 \link{gomez.splitplot.subsample} \tab     \tab    \tab 3   \tab    \tab 8,4 \tab subsample \tab aov \cr
 \link{gomez.splitsplit}          \tab 3   \tab    \tab 3   \tab    \tab     \tab xy, nitro, mgmt \tab aov, lmer \cr

@@ -34,6 +34,7 @@
 
 \examples{
 
+data("mead.lambs")
 dat <- mead.lambs
 names(dat) <- c('F','B','L','y') # for compactness
 
@@ -74,7 +75,7 @@ if(require(broom)){
 
 # Using MASS::loglm
 if(require(MASS)){
-  m4b <- loglm(y ~ F + B + F:B + L + F:L, data = dat)
+  m4b <- MASS::loglm(y ~ F + B + F:B + L + F:L, data = dat)
   # Table of farm * class interactions. Match Mead p. 360
   round(coef(m4b)$F.L,2)
   fitted(m4b)

@@ -26,14 +26,15 @@ moore.bushbean.uniformity, moore.sweetcorn.uniformity,
 moore.carrots.uniformity, moore.springcauliflower.uniformity,
 moore.fallcauliflower.uniformity, nonnecke.corn.uniformity,
 nonnecke.peas.uniformity, parker.orange.uniformity,
-polson.safflower.uniformity, sawyer.multi.uniformity, smith.beans.uniformity,
-wiedemann.safflower.uniformity
+polson.safflower.uniformity, sawyer.multi.uniformity,
+smith.beans.uniformity, wiedemann.safflower.uniformity
 
 ## New data for stability, misc
 
 lu.stability
 
 becker.chicken, crampton.pig, battese.survey, gartner.corn, giles.wheat,
+gomez.heteroskedastic, gomez.nonnormal1, gomez.nonnormal2, gomez.nonnormal3,
 gomez.wetdry, goulden.eggs,
 goulden.splitsplit, hanover.whitepine, huehn.wheat, kenward.cattle, kreusler.maize,
 lillemo.wheat, little.splitblock, mead.lambs, omer.sorghum, onofri.winterwheat,
@@ -41,7 +42,9 @@ tai.potato, wheatley.carrot
 
 ## Other
 
-These data objects have been change from lists into tidy dataframes: aastveit.barley, box.cork, ortiz.tomato, talbot.potato, vargas.txe, vargas.wheat1, vargas.wheat2
+These data objects have been change from lists into tidy dataframes:
+`aastveit.barley`, `box.cork`, `ortiz.tomato`, `talbot.potato`, `vargas.txe`,
+`vargas.wheat1`, `vargas.wheat2`
 
 Moved `desplot` function to package `desplot`.
 
