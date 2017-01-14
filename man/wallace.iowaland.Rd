@@ -58,7 +58,7 @@ summary(m1) # estimates similar to Wallace, top of p. 389
 # Choropleth map
 require(maps)
 data(county.fips)
-dat <- transform(dat, polnm = paste0('iowa,',county))
+dat <- transform(dat, polnm = paste0('iowa,',county)) # polnm example: iowa,adair
 
 if(require("latticeExtra")){ # for mapplot
   redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))

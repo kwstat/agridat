@@ -22,13 +22,15 @@
   The data was used to explore variability between varieties.
 }
 \source{
-  F. A. Graybill, 1954. Variance heterogeneity in a randomized
-  block design, \emph{Biometrics}, 10, 516-520.
+  F. A. Graybill, 1954.
+  Variance heterogeneity in a randomized block design,
+  \emph{Biometrics}, 10, 516-520.
 }
 \references{
   Hans-Pieter Piepho, 1994.
-  Missing observations in the analysis of stability, \emph{Heredity},
-  72, 141--145.
+  Missing observations in the analysis of stability.
+  \emph{Heredity}, 72, 141--145.
+  http://doi.org/10.1038/hdy.1994.20
 }
 
 \examples{
@@ -54,6 +56,30 @@ sig2 <- k*w/((k-2)*(n-1)) - sum(w)/((k-1)*(k-2)*(n-1))
 ## sig2
 ##     G1     G2     G3     G4
 ## 145.98 -14.14  75.15  18.25
+
+var.shukla <- function(x,N){
+  # Estimate variance of shukla stability statistics
+  # Piepho 1994 equation (5)
+  K <- length(x) # num genotypes
+  S <- outer(x,x)
+  S1 <- diag(S)
+  S2 <- rowSums(S) - S1
+  S[!upper.tri(S)] <- 0 # Make S upper triangular
+  # The ith element of S3 is the sum of the upper triangular elements of S,
+  # excluding the ith row and ith column
+  S3 <- sum(S) - rowSums(S) - colSums(S)
+  var.si2 <- 2*S1/(N-1) + 4/( (N-1)*(K-1)^2 ) * ( S2 + S3/(K-2)^2 )
+  return(var.si2)
+}
+
+# Set negative estimates to zero
+sig2[sig2<0] <- 0
+
+# Variance of shukla stat. Match Piepho 1994, table 5, example 1
+var.shukla(sig2,13)
+##        G1        G2        G3        G4 
+## 4069.3296  138.9424 1423.0797  306.5270 
+
 }
 
 

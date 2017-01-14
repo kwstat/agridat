@@ -5,12 +5,14 @@
   Datasets from agricultural experiments
 }
 \description{
-  This package contains datasets from published papers and books
-  relating to agriculture including field crops, tree crops, animal
-  studies, and a few others.
+  This package contains datasets from publications relating to agriculture,
+  including field crops, tree crops, animal studies, and a few others.
 }
 
 \details{
+
+  If you use these data, please cite the agridat package and the
+  original source of the data.
 
   Abbreviations in the 'other' column include:
   xy = coordinates,
@@ -45,6 +47,7 @@ name                                  \tab dimensions \tab other \tab model \cr
 \link{li.millet.uniformity}           \tab 6 x 100 \tab xy \tab \cr
 \link{lyon.potato.uniformity}         \tab 34 x 6 \tab xy \tab \cr
 \link{masood.rice.uniformity}         \tab 12 x 24 \tab xy \tab \cr
+\link{mcclelland.corn.uniformity}     \tab 2 x 219 \tab xy \tab \cr
 \link{mercer.mangold.uniformity}      \tab 10 x 20 \tab xy \tab \cr
 \link{mercer.wheat.uniformity}        \tab 25 x 20 \tab xy, 2 traits \tab spplot \cr
 \link{montgomery.wheat.uniformity}    \tab 14 x 16 \tab xy \tab lm \cr
@@ -64,6 +67,7 @@ name                                  \tab dimensions \tab other \tab model \cr
 \link{smith.beans.uniformity}         \tab 18x12, 16x15 \tab xy, 2 yr, 2 crops \tab \cr
 \link{smith.corn.uniformity}          \tab 6 x 20 \tab xy, 3 years \tab rgl \cr
 \link{stephens.sorghum.uniformity}    \tab 100 x 20 \tab xy \tab \cr
+\link{stickler.sorghum.uniformity}    \tab 20 x 20 \tab xy, 4 expts \tab \cr
 \link{wassom.brome.uniformity}        \tab 36 x 36 \tab xy, 3 expts \tab \cr
 \link{wiebe.wheat.uniformity}         \tab 12 x 125 \tab xy \tab medianpolish, loess \cr
 \link{wiedemann.safflower.uniformity} \tab 54 x 33 \tab xy \tab smith \cr
@@ -257,7 +261,6 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{sinclair.clover}           \tab     \tab    \tab     \tab    \tab 5,5 \tab rsm2,mitzerlich \tab nls,rgl \cr
 \link{snedecor.asparagus}        \tab     \tab    \tab 4   \tab 4  \tab 4   \tab \tab split-plot, antedependence \cr
 \link{snijders.fusarium}         \tab 17  \tab    \tab     \tab 3  \tab 4   \tab percent \tab glm/gnm,ammi \cr
-\link{steel.soybean}             \tab 12  \tab 3  \tab 3   \tab    \tab     \tab \tab \cr
 \link{steptoe.morex.pheno}       \tab 152 \tab 16 \tab     \tab    \tab     \tab 10 traits \tab \cr
 \link{steptoe.morex.geno}        \tab 150 \tab    \tab     \tab    \tab     \tab 223 markers, qtl \tab \cr
 \link{streibig.competition}      \tab 2   \tab    \tab 3   \tab    \tab     \tab \tab glm \cr
@@ -360,7 +363,7 @@ the example sections do include the use of \code{data()} because
 \code{devtools::run_examples()} needs it.
 
 A large part of these data appear in electronic form here for the first
-time.  A great deal of effort has gone into preparing the data in
+time.  A great deal of effort and care has gone into preparing the data in
 electronic format, but mistakes are possible.  Please file a bug report.
 
 }
@@ -371,9 +374,6 @@ electronic format, but mistakes are possible.  Please file a bug report.
 
   The author is grateful to the many people who granted permission to
   include their data in this package.
-
-  If you use these data, please cite the agridat package and the
-  original source of the data.
 }
 
 \references{

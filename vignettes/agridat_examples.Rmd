@@ -69,7 +69,7 @@ skp <- c(rep(0,10),
          rep(0,5),1,1,1,1,1)
 require(desplot)
 desplot(y ~ col*row|date, dat,
-        main="lee.potatoblight",
+        main="lee.potatoblight", #col.regions=RedGrayBlue,
         between=list(y=.3), strip.cex =.6,
         layout=c(10,11), skip=as.logical(skp))
 ```

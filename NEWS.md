@@ -21,13 +21,13 @@ harris.wateruse
 christidis.wheat.uniformity, draper.safflower.uniformity,
 holtsmark.timothy.uniformity, kiesselbach.oats.uniformity,
 lessman.sorghum.uniformity, masood.rice.uniformity,
-montgomery.wheat.uniformity, moore.polebean.uniformity,
-moore.bushbean.uniformity, moore.sweetcorn.uniformity,
-moore.carrots.uniformity, moore.springcauliflower.uniformity,
-moore.fallcauliflower.uniformity, nonnecke.corn.uniformity,
-nonnecke.peas.uniformity, parker.orange.uniformity,
-polson.safflower.uniformity, sawyer.multi.uniformity,
-smith.beans.uniformity, wiedemann.safflower.uniformity
+mcclelland.corn.uniformity, montgomery.wheat.uniformity,
+moore.polebean.uniformity, moore.bushbean.uniformity,
+moore.sweetcorn.uniformity, moore.carrots.uniformity,
+moore.springcauliflower.uniformity, moore.fallcauliflower.uniformity,
+nonnecke.corn.uniformity, nonnecke.peas.uniformity, parker.orange.uniformity,
+polson.safflower.uniformity, sawyer.multi.uniformity, smith.beans.uniformity,
+stickler.sorghum.uniformity, wiedemann.safflower.uniformity
 
 ## New data for stability, misc
 
@@ -35,16 +35,15 @@ lu.stability
 
 becker.chicken, crampton.pig, battese.survey, gartner.corn, giles.wheat,
 gomez.heteroskedastic, gomez.nonnormal1, gomez.nonnormal2, gomez.nonnormal3,
-gomez.wetdry, goulden.eggs,
-goulden.splitsplit, hanover.whitepine, huehn.wheat, kenward.cattle, kreusler.maize,
-lillemo.wheat, little.splitblock, mead.lambs, omer.sorghum, onofri.winterwheat,
-tai.potato, wheatley.carrot
+gomez.wetdry, goulden.eggs, goulden.splitsplit, hanover.whitepine,
+huehn.wheat, kenward.cattle, kreusler.maize, lillemo.wheat, little.splitblock,
+mead.lambs, omer.sorghum, onofri.winterwheat, tai.potato, wheatley.carrot
 
-## Other
+## Other notes
 
 These data objects have been change from lists into tidy dataframes:
-`aastveit.barley`, `box.cork`, `ortiz.tomato`, `talbot.potato`, `vargas.txe`,
-`vargas.wheat1`, `vargas.wheat2`
+aastveit.barley, box.cork, ortiz.tomato, talbot.potato, vargas.txe,
+vargas.wheat1, vargas.wheat2
 
 Moved `desplot` function to package `desplot`.
 
@@ -56,8 +55,6 @@ Changed vignette from Rnw to Rmd.
 
 Titles in Rd pages are more consistent.
 
-Added DOIs for most source references.
-
 Checked aspect ratio of field plot heatmaps where possible.
 
 `devtools::run_examples()` now works even without suggested packages installed.
@@ -68,9 +65,11 @@ Renamed besag.met to besag.corn.
 
 Changed extensions in inst/files from .bug to .jag .
 
-Changed all hyperlinks to plain text (faster checking, avoids re-direct errors).
+Added DOIs for most source references.
 
 Removed most quote marks from data/*.txt files.
+
+Changed all hyperlinks to plain text (faster checking, avoids re-direct errors).
 
 # agridat 1.12 - Jun 2015
 
@@ -169,17 +168,17 @@ streibig.competition, zuidhof.broiler
 
 archbold.apple, blackman.wheat, cochran.crd, cochran.latin, darwin.maize,
 denis.ryegrass, digby.jointregression, engelstad.nitro, federer.diagcheck,
-gilmour.slatehall, john.alpha, ilra.sheep, kempton.slatehall,
-ryder.groundnut, steel.soybean, vsn.lupin3
+gilmour.slatehall, john.alpha, ilra.sheep, kempton.slatehall, ryder.groundnut,
+vsn.lupin3
 
 # agridat 1.3 - Sep 2011
 
 ## New data
 
 bridges.cucumber, cox.stripsplit, diggle.cow, eden.potato, gauch.soy,
-graybill.heteroskedastic, hildebrand.systems,
-hanks.sprinkler, mcconway.turnip, pearl.kernels,
-williams.barley.uniformity, williams.cotton.uniformity
+graybill.heteroskedastic, hildebrand.systems, hanks.sprinkler,
+mcconway.turnip, pearl.kernels, williams.barley.uniformity,
+williams.cotton.uniformity
 
 # agridat 1.2 - Jun 2011
 
@@ -190,6 +189,23 @@ aastveit.barley, gathmann.bt, kempton.competition, wedderburn.barley
 # agridat 1.0 - Apr 2011
 
 ## First release to CRAN
+
+## New data
+
+allcroft.lodging, australia.soybean, batchelor.apple.uniformity,
+batchelor.lemon.uniformity, batchelor.navel1.uniformity,
+batchelor.navel2.uniformity, batchelor.valencia.uniformity,
+batchelor.walnut.uniformity, besag.elbatan, besag.met, cochran.bib,
+corsten.interaction, crowder.germination, denis.missing, durban.competition,
+durban.rowcol, durban.splitplot, federer.tobacco, gilmour.serpentine,
+gomez.fractionalfactorial, gomez.groupsplit, gomez.multilocsplitplot,
+gomez.splitsplit, gomez.stripplot, gomez.stripsplitplot,
+gomez.rice.uniformity, hughes.grapes, kempton.rowcol,
+kempton.barley.uniformity, mead.strawberry, mercer.wheat.uniformity,
+rothamsted.brussels, shafii.rapeseed, smith.uniformity3, stroup.nin,
+stroup.splitplot, student.barley, talbot.potato, theobald.covariate,
+thompson.cornsoy, vargas.wheat1, vargas.wheat2, verbyla.lupin, williams.trees,
+wiebe.wheat.uniformity, yan.winterwheat, yates.missing, yates.oats,
 
 # agridat 0.0 - Oct 2010
 

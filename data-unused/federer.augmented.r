@@ -1,7 +1,7 @@
 # AugmentedSplitBlock.r
-# Time-stamp: <01 Dec 2005 17:05:43 x:/Stat/Augmented/AugmentedSplitBlock.r>
+# Time-stamp: <01 Dec 2016 12:43:45 c:/x/rpack/agridat/data-unused/federer.augmented.r>
 
-This data is from:
+This simulated data is from:
 
 Federer, Walter T.
 Augmented Split-Block Experiment Design

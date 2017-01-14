@@ -77,7 +77,7 @@ if(require(desplot)){
 
   grays <- colorRampPalette(c("white","#252525"))
   desplot(weed ~ col*row, dat,
-          col.regions=grays(7)[-1],
+          at=0:6-0.5, col.regions=grays(7)[-1],
           flip=TRUE, aspect=121/150, # true aspect
           main="cullis.earlygen (weed)")
 }

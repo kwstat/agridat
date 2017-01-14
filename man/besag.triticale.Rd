@@ -64,7 +64,7 @@ dat$res <- resid(m2)
 require(lattice)
 xyplot(res ~ col|as.character(row), data=dat,
        as.table=TRUE, type="s", layout=c(1,3),
-       main="besag.tritical")
+       main="besag.triticale")
 
 # ----------------------------------------------------------------------------
 

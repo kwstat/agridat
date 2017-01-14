@@ -64,6 +64,7 @@ if(require(desplot)){
 grays <- colorRampPalette(c("white","#252525"))
 desplot(y ~ col*row, data=dat,
         col.regions=grays(10),
+        at=0:10-0.5,
         out1=block, out2=trt, num=trt, flip=TRUE, # aspect unknown
         main="beall.webworms (count of worms)")
 }

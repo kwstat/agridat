@@ -7,8 +7,9 @@
 # \emph{Agronomy Journal}, 3, 140--150.
 # \url{https://www.crops.org/publications/aj/pdfs/17/3/AJ0170030140}.
 
-# Note: The heatmap shows that the field is hardly 'uniform'.  The paper is
-# difficult to understand in places.  Decided not to use this data.
+# Note: The heatmap shows that the field is hardly 'uniform'.
+# The paper is difficult to understand in places.
+# Decided not to use this data.
 
 
 library(agridat)

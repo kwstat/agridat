@@ -1,6 +1,8 @@
 # sharma.met.r
 # Time-stamp: c:/x/rpack/agridat2/sharma.met.r
 
+# Simulated data to illustrate Finlay-Wilkinson computation
+
 library(asreml)
 library(kw)
 library(Hmisc)

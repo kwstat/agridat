@@ -18,6 +18,9 @@
   }
 }
 \details{
+
+  Uninteresting data. Removed from agridat.
+  
   The experiment was planted as an RCB with 3 blocks at each location.
 }
 \source{

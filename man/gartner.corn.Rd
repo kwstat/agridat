@@ -56,8 +56,8 @@
 }
 
 \examples{
-data(gartner.corn)
 
+data(gartner.corn)
 dat <- gartner.corn
 
 # Calculate yield

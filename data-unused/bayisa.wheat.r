@@ -1,6 +1,8 @@
 # bayisa.wheat.r
 # Time-stamp: c:/x/rpack/agridat/data-unused/bayisa.wheat.r
 
+I think the thesis below has 3 uniformity experiments, one of which is here.
+
 Source:
 Bayisa, D. (2010).
 Application of Spatial Mixed Model in Agricultural Field Experiment.

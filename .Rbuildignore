@@ -11,3 +11,5 @@ data-raw
 data-unused
 figure
 notes.org
+^.*\.Rproj$
+^\.Rproj\.user$
