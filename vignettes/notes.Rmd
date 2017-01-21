@@ -1,13 +1,13 @@
 
 ---
-title: ""
+title: "Additional agricultural data"
 author: "Kevin Wright"
 date: "`r Sys.Date()`"
 output:
   html_document:
     highlight: tango
 vignette: >
-  % \VignetteIndexEntry{}
+  % \VignetteIndexEntry{Additional agricultural data}
   % \VignetteEncoding{UTF-8}
   % \VignetteEngine{knitr::rmarkdown}
 ---

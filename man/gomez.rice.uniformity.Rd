@@ -5,7 +5,7 @@
   Uniformity trial of rice
 }
 \description{
-  Uniformity trial of rice
+  Uniformity trial of rice in Philippines.
 }
 
 \format{

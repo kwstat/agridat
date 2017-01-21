@@ -5,7 +5,7 @@
   Uniformity trial of wheat
 }
 \description{
-  Uniformity trial of wheat in 1931.
+  Uniformity trial of wheat at Cambridge, UK in 1931.
 }
 \usage{data("christidis.wheat.uniformity")}
 \format{
@@ -31,7 +31,7 @@ Field width: 12 units * 7.5 feet = 90 feet
   
   Christidis, Basil G (1931).
   The importance of the shape of plots in field experimentation.
-  \emph{The Journal of Agricultural Science}, 21, 14-37. Table VI.
+  \emph{The Journal of Agricultural Science}, 21, 14-37. Table VI, p. 28.
   http://dx.doi.org/10.1017/S0021859600007942
 
 }

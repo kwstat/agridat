@@ -5,7 +5,7 @@
   Uniformity trial of corn
 }
 \description{
-  Uniformity trial of corn
+  Uniformity trial of corn at Arkansas Experiment Station, 1925.
 }
 \usage{data("mcclelland.corn.uniformity")}
 \format{

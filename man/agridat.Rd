@@ -41,6 +41,7 @@ name                                  \tab dimensions \tab other \tab model \cr
 \link{holtsmark.timothy.uniformity}   \tab 6 x 40 \tab xy \tab \cr
 \link{immer.sugarbeet.uniformity}     \tab 10 x 60 \tab xy, 3 traits \tab \cr
 \link{kalamkar.potato.uniformity}     \tab 6 x 96 \tab xy \tab \cr
+\link{kalamkar.wheat.uniformity}      \tab 16 x 80 \tab xy, 2 traits \tab \cr
 \link{kiesselbach.oats.uniformity}    \tab 3 x 69 \tab xy \tab \cr
 \link{kempton.barley.uniformity}      \tab 7 x 28 \tab xy \tab \cr
 \link{lessman.sorghum.uniformity}     \tab 46 x 60 \tab xy \tab \cr
@@ -67,7 +68,7 @@ name                                  \tab dimensions \tab other \tab model \cr
 \link{smith.beans.uniformity}         \tab 18x12, 16x15 \tab xy, 2 yr, 2 crops \tab \cr
 \link{smith.corn.uniformity}          \tab 6 x 20 \tab xy, 3 years \tab rgl \cr
 \link{stephens.sorghum.uniformity}    \tab 100 x 20 \tab xy \tab \cr
-\link{stickler.sorghum.uniformity}    \tab 20 x 20 \tab xy, 4 expts \tab \cr
+\link{stickler.sorghum.uniformity}    \tab 20 x 20 \tab xy, 4 expts, 2 years \tab \cr
 \link{wassom.brome.uniformity}        \tab 36 x 36 \tab xy, 3 expts \tab \cr
 \link{wiebe.wheat.uniformity}         \tab 12 x 125 \tab xy \tab medianpolish, loess \cr
 \link{wiedemann.safflower.uniformity} \tab 54 x 33 \tab xy \tab smith \cr

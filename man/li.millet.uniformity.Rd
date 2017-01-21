@@ -5,7 +5,7 @@
   Uniformity trial of millet
 }
 \description{
-  Uniformity trial of millet at China.
+  Uniformity trial of millet at China in 1934.
 }
 
 \format{
@@ -17,6 +17,9 @@
   }
 }
 \details{
+
+  Crop date estimated to be 1934.
+  
   Field was 100 ft x 100 ft.  Plots were 15 feet long by 1 foot wide.
 
   Field width: 100 feet

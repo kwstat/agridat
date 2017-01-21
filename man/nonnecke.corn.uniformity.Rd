@@ -5,7 +5,7 @@
   Uniformity trial of sweet corn
 }
 \description{
-  Uniformity trials of sweet corn in Alberta, 1956
+  Uniformity trials of sweet corn in Alberta, 1956.
 }
 \usage{data("nonnecke.corn.uniformity")}
 \format{

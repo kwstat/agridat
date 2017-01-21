@@ -5,7 +5,7 @@
   Uniformity trial of rice
 }
 \description{
-  Uniformity trial of rice
+  Uniformity trial of rice at Lahore, Punjab, circa 2011.
 }
 \usage{data("masood.rice.uniformity")}
 \format{

@@ -19,13 +19,14 @@ harris.wateruse
 ## New data for uniformity trials
 
 christidis.wheat.uniformity, draper.safflower.uniformity,
-holtsmark.timothy.uniformity, kiesselbach.oats.uniformity,
-lessman.sorghum.uniformity, masood.rice.uniformity,
-mcclelland.corn.uniformity, montgomery.wheat.uniformity,
-moore.polebean.uniformity, moore.bushbean.uniformity,
-moore.sweetcorn.uniformity, moore.carrots.uniformity,
-moore.springcauliflower.uniformity, moore.fallcauliflower.uniformity,
-nonnecke.corn.uniformity, nonnecke.peas.uniformity, parker.orange.uniformity,
+holtsmark.timothy.uniformity, kalamkar.wheat.uniformity,
+kiesselbach.oats.uniformity, lessman.sorghum.uniformity,
+masood.rice.uniformity, mcclelland.corn.uniformity,
+montgomery.wheat.uniformity, moore.polebean.uniformity,
+moore.bushbean.uniformity, moore.sweetcorn.uniformity,
+moore.carrots.uniformity, moore.springcauliflower.uniformity,
+moore.fallcauliflower.uniformity, nonnecke.corn.uniformity,
+nonnecke.peas.uniformity, parker.orange.uniformity,
 polson.safflower.uniformity, sawyer.multi.uniformity, smith.beans.uniformity,
 stickler.sorghum.uniformity, wiedemann.safflower.uniformity
 

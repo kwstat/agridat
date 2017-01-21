@@ -5,8 +5,7 @@
   Uniformity trials of barley, 10 years on same ground
 }
 \description{
-  Uniformity trials of barley, at University Farm, Davis, California,
-  1925-1935, 10 years on same ground.
+  Uniformity trials of barley at Davis, California, 1925-1935, 10 years on same ground.
 }
 
 \format{

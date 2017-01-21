@@ -5,7 +5,7 @@
   Uniformity trial of oats
 }
 \description{
-  Uniformity trial of oats in 1916.
+  Uniformity trial of oats at Nebraska in 1916.
 }
 \usage{data("kiesselbach.oats.uniformity")}
 \format{
@@ -19,8 +19,10 @@
 \details{
 
   Experiment conducted in 1916.  Crop was Kerson oats. Each plot covered 1/30th acre.
-  Oats were drilled in plats 66 inches wide by 16 rods long. The drill was 66 inches wide.  Plats were separated by a space of 16 inches between outside drill rows.
-
+  Oats were drilled in plats 66 inches wide by 16 rods long. The drill
+  was 66 inches wide.  Plats were separated by a space of 16 inches
+  between outside drill rows.
+  
   The source document includes three photographs of the field.
   
   1 acre = 43560 sq feet

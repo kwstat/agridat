@@ -13,7 +13,7 @@
 }
 \description{
   Uniformity trials of pole beans, bush beans, sweet corn, carrots,
-  spring and fall cauliflower
+  spring and fall cauliflower at Washington, 1952-1955.
 }
 
 \format{

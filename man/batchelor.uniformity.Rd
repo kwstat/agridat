@@ -10,7 +10,8 @@
   Uniformity trials of apples, lemons, oranges, and walnuts
 }
 \description{
-  Uniformity trials of apples, lemons, oranges, and walnuts.
+  Uniformity trials of apples, lemons, oranges, and walnuts, in
+  California & Utah, 1915-1918.
 }
 
 \format{

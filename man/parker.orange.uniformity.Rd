@@ -5,7 +5,7 @@
   Uniformity trial of oranges
 }
 \description{
-  Uniformity trial  of oranges in 1921-1927
+  Uniformity trial  of oranges at Riverside, CA, 1921-1927.
 }
 \usage{data("parker.orange.uniformity")}
 \format{

@@ -7,7 +7,7 @@
 }
 \description{
   Uniformity trials of soy hay and soybeans at Virginia Experiment
-  Station 1925-1926.
+  Station, 1925-1926.
 }
 
 \format{
