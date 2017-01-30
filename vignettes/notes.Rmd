@@ -191,6 +191,16 @@ https://books.google.com/books?id=CaFZPbCllrMC&pg=PA323
 458 1 factor, 2 covariates: agridat::crampton.pig
 ```
 
+### Paterson, D. Statistical Technique in Agricultural Research
+```
+84 Distribution of purple/white starchy/sweet seeds from 11 ears
+190 Sugar cane MET: 2 year, 5 block, 5 variety
+199 Tea MET: 3 year, 2^2 factorial fertilizer
+206 Grass: 4 rep, 2 gen, 4 cutting treatments
+211 Cotton: 4 dates, 3 spacings, 3 irrigation, 2 nitro. agridat::gregory.cotton
+```
+
+
 ### Rayner. A First Course In Biometry For Agriculture Students
 ```
 19/456. 2x2x4 Factorial, 2 rep
@@ -232,6 +242,16 @@ Many datasets
 https://data.nal.usda.gov/about-ag-data-commons
 
 
+### CyVerse Data Commons
+http://datacommons.cyverse.org/
+http://datacommons.cyverse.org/browse/iplant/home/shared/commons_repo/curated
+
+#### CyVerse: Genomes by environment dataset now publicly accessible
+http://www.cyverse.org/news/genomes-environment-dataset-now-publicly-accessible
+http://datacommons.cyverse.org/browse/iplant/home/shared/commons_repo/curated/Carolyn_Lawrence_Dill_G2F_Nov_2016
+Very large GxE data here. Currently 2014, but more years planned. Hybrid & inbred phenotype data, weather data, genomic data.  Very nice.
+
+
 ### DataDryad
 http://datadryad.org/
 
@@ -247,6 +267,8 @@ http://www.nature.com/sdata/
 ### Open Data Journal for Agricultural Research
 http://library.wur.nl/ojs/index.php/odjar/
 
+### Plant Genomics and Phenomics Research Data Repository
+http://edal.ipk-gatersleben.de/repos/pgp/
 
 
 # Papers
@@ -270,6 +292,10 @@ Daillant-Spinnler (1996). Relationships between perceived sensory properties and
 Food Quality and Preference, 7(2), 113-126.
 http://dx.doi.org/10.1016/0950-3293(95)00043-7
 Note: The data are available in ClustVarLV package.
+
+
+Gregory, Crowther & Lambert (1932). The interrelation of factors controlling the production of cotton under irrigation in the Sudan.
+Jour Agric Sci ?? 22 ? p. 617.
 
 
 Hedrick (1920).
@@ -304,6 +330,13 @@ http://doi.org/10.2134/agronj2012.0411
 Note: The data and R code appeared in the paper. Free access, but closed copyright.
 
 
+Snedecor, George and E. S. Haber (1946).
+Statistical Methods For an Incomplete Experiment on a Perennial Crop.
+Biometrics Bulletin, 2, 61-67.
+http://doi.org/10.2307/3001959
+Harvest of asparagus over 10 years, three cutting dates per year, 6 blocks.
+
+
 Technow, Frank, et al. (2014).
 Genome Properties and Prospects of Genomic Prediction of Hybrid Performance in a Breeding Program of Maize.
 http://doi.org/10.1534/genetics.114.165860
@@ -327,6 +360,7 @@ Note: Winter wheat, 31 gen in 8 loc. This data is different from Yan's earlier p
 
 
 # Papers - Uniformity trials
+
 
 Baker, G.A. (1953).
 Strawberry uniformity yield trials.

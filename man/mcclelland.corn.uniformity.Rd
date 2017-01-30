@@ -47,10 +47,9 @@
 data(mcclelland.corn.uniformity)
 dat <- mcclelland.corn.uniformity
 
-# McClelland table 3, first row, gives 11.2% error
-# for 432 vales.  The data has 438 values, so maybe he omitted 3 rows?
-# Probable error = 0.5 * IQR. Relative to mean.
-0.5 * IQR(dat$yield)/mean(dat$yield)  # 9.5%
+# McClelland table 3, first row, gives 11.2% error for 432 vales.
+# Probable error = 0.67449 * sd(). Relative to mean.
+0.67449 * sd(dat$yield)/mean(dat$yield) # 11.2%
 
 if(require(desplot)){
   desplot(yield ~ col*row, dat,

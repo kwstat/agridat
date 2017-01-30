@@ -207,6 +207,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{goulden.latin}             \tab     \tab    \tab 5   \tab    \tab 5   \tab xy, latin \tab lm \cr
 \link{goulden.splitsplit}        \tab 2   \tab    \tab 4   \tab    \tab 2*5 \tab xy, split \tab aov \cr
 \link{graybill.heteroskedastic}  \tab 4   \tab 13 \tab     \tab    \tab     \tab hetero \tab \cr
+\link{gregory.cotton}            \tab     \tab    \tab     \tab 2  \tab 4*3*2*2 \tab polar \tab \cr
 \link{gumpertz.pepper}           \tab     \tab    \tab     \tab    \tab     \tab xy \tab glm\cr
 \link{hanks.sprinkler}           \tab 3   \tab    \tab 3   \tab    \tab     \tab xy \tab asreml\cr
 \link{hayman.tobacco}            \tab 8   \tab    \tab 2   \tab 2  \tab     \tab diallel\tab asreml\cr
