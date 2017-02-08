@@ -101,6 +101,7 @@ if(require(ordinal)){
   m2 <- clm(score ~ sex*age, data=dat, weights=count, link='probit')
   summary(m2) # same as polr model
   predict(m2) # probability of each category
+  detach("package:ordinal") # to avoid VarCorr clash with lme4
 }
 
 }

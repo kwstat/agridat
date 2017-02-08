@@ -11,10 +11,10 @@
 \format{
   A data frame with 80 observations on the following 3 variables.
   \describe{
-    \item{\code{trt}}{Treatment factor with levels \code{0} \code{K}
+    \item{\code{trt}}{treatment factor with levels \code{0} \code{K}
       \code{N} \code{P} \code{NK} \code{KP} \code{NP} \code{NKP} }
-    \item{\code{block}}{Block factor, 10 levels}
-    \item{\code{y}}{Numeric, infection intensity}
+    \item{\code{block}}{block, 10 levels}
+    \item{\code{y}}{infection intensity}
   }
 }
 \details{
@@ -26,8 +26,9 @@
 }
 \source{
   F. Yates, 1933.
-  The analysis of replicated experiments when the field
-  results are incomplete. \emph{Emp. J. Exp. Agric.}, 1, 129--142.
+  The analysis of replicated experiments when the field results are
+  incomplete. 
+  \emph{Emp. J. Exp. Agric.}, 1, 129--142.
 }
 \references{
   Steel & Torrie, 1980, Principles and Procedures of Statistics,

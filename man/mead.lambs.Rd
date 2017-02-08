@@ -53,6 +53,12 @@ m4 <- update(m1, y ~ F + B + F:B + L + F:L)
 m5 <- update(m1, y ~ F + B + F:B + L + B:L + F:L)
 
 AIC(m1, m2, m3, m4, m5) # Model 4 has best AIC
+##    df      AIC
+## m1  9 852.9800
+## m2 12 306.5457
+## m3 18 303.5781
+## m4 18 206.1520
+## m5 24 213.8873
 
 # Change contrasts for Miroslav
 m4 <- update(m4,
@@ -75,7 +81,8 @@ if(require(broom)){
 
 # Using MASS::loglm
 if(require(MASS)){
-  m4b <- MASS::loglm(y ~ F + B + F:B + L + F:L, data = dat)
+  # Note: without 'fitted=TRUE', devtools::run_examples has an error
+  m4b <- MASS::loglm(y ~ F + B + F:B + L + F:L, data = dat, fitted=TRUE)
   # Table of farm * class interactions. Match Mead p. 360
   round(coef(m4b)$F.L,2)
   fitted(m4b)

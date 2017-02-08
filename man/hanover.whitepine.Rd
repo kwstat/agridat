@@ -70,16 +70,17 @@ m1 <- aov(length ~ rep + male + female + male:female, data=dat)
 anova(m1)
 
 # Variance components match Becker p. 85
-if(require(lme4)){
+if(require(lme4) & require(lucid)){
   m2 <- lmer(length ~ (1|rep) + (1|male) + (1|female) + (1|male:female), data=dat)
-  as.data.frame(VarCorr(m2))
+  #as.data.frame(lme4::VarCorr(m2))
+  vc(m2)
 }
-##           grp        var1 var2       vcov     sdcor
-## 1 male:female (Intercept) <NA> 0.13685044 0.3699330
-## 2      female (Intercept) <NA> 0.02094474 0.1447230
-## 3        male (Intercept) <NA> 0.12036063 0.3469303
-## 4         rep (Intercept) <NA> 0.01453027 0.1205415
-## 5    Residual        <NA> <NA> 0.20042510 0.4476886
+##         grp        var1 var2    vcov  sdcor
+## male:female (Intercept) <NA> 0.1369  0.3699
+##      female (Intercept) <NA> 0.02094 0.1447
+##        male (Intercept) <NA> 0.1204  0.3469
+##         rep (Intercept) <NA> 0.01453 0.1205
+##    Residual        <NA> <NA> 0.2004  0.4477
 
 # Becker used this value for variability between individuals, within plot
 s2w <- 1.109

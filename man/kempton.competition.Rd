@@ -12,11 +12,11 @@
 \format{
   A data frame with 108 observations on the following 5 variables.
   \describe{
-    \item{\code{gen}}{Genotype factor, 36 levels}
-    \item{\code{rep}}{Rep factor, 3 levels}
-    \item{\code{row}}{Row}
-    \item{\code{col}}{Column}
-    \item{\code{yield}}{Yield in kg/plot}
+    \item{\code{gen}}{genotype, 36 levels}
+    \item{\code{rep}}{rep, 3 levels}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
+    \item{\code{yield}}{yield, kg/plot}
   }
 }
 \details{
@@ -24,6 +24,7 @@
   alongside replicate boundaries, but yields of these plots are not
   included.
 }
+
 \source{
   R Kempton, 1982.
   Adjustment for competition between varieties in plant breeding trials,

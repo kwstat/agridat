@@ -12,14 +12,14 @@
 \format{
   A data frame with 120 observations on the following 10 variables.
   \describe{
-    \item{\code{rep}}{Block factor, 5 levels}
-    \item{\code{row}}{Row}
-    \item{\code{pos}}{Position within each row}
-    \item{\code{spacing}}{Spacing between trees, 6,10,14 feet}
-    \item{\code{stock}}{Rootstock factor, 4 levels}
-    \item{\code{gen}}{Genotype factor, 2 levels}
-    \item{\code{yield}}{Yield total in kg/tree from 1975-1979}
-    \item{\code{trt}}{Treatment code}
+    \item{\code{rep}}{block, 5 levels}
+    \item{\code{row}}{row}
+    \item{\code{pos}}{position within each row}
+    \item{\code{spacing}}{spacing between trees, 6,10,14 feet}
+    \item{\code{stock}}{rootstock, 4 levels}
+    \item{\code{gen}}{genotype, 2 levels}
+    \item{\code{yield}}{yield total, kg/tree from 1975-1979}
+    \item{\code{trt}}{treatment code}
   }
 }
 

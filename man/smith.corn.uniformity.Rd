@@ -20,8 +20,9 @@
 }
 \details{
   The data values are from Smith (1910) and the field map is from Harris (1920).
-
-  The following (edited) text is from Smith (1910).
+  Each plot was 1/10 acre, but the dimensions are not given.
+  
+  The following text is abridged from Smith (1910).
 
   How much variability may we reasonably expect in land that is
   apparently uniform? Some data among the records of the soil plots at
@@ -94,13 +95,13 @@
   periods of time.
 }
 \source{
-  Smith, L.H. 1910. Plot arrangement for variety experiment with corn.
-  \emph{Agronomy Journal}, 1, 84--89.
+  Smith, L.H. 1910. Plot arrangement for variety experiments with corn.
+  \emph{Agronomy Journal}, 1, 84--89. Table 1.
   http://books.google.com/books?id=mQT0AAAAMAAJ&pg=PA84
 
   Harris, J.A. 1920. Practical universality of field heterogeneity as a factor
   influencing plot yields. \emph{Journal of Agricultural Research},
-  19, 279--314.
+  19, 279--314. Page 296-297.
   http://books.google.com/books?id=jyEXAAAAYAAJ&pg=PA279
 }
 
@@ -111,7 +112,8 @@ dat <- smith.corn.uniformity
 
 dat = transform(dat, year=factor(year))
 if(require(desplot)){
-desplot(yield~col*row|year, dat, layout=c(1,3),
+  desplot(yield~col*row|year, dat, layout=c(1,3),
+          col.regions=colorRampPalette(gray(1:100/100)),
         main="smith.corn.uniformity: yield across years 1895-1987")
 }
 

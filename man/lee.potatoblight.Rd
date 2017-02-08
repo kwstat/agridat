@@ -2,7 +2,7 @@
 \alias{lee.potatoblight}
 \docType{data}
 \title{
-  Repeated measurements of resistance to potato blight.
+  Repeated measurements of resistance to potato blight
 }
 \description{
   Repeated measurements of resistance to potato blight.
@@ -13,8 +13,8 @@
   \describe{
     \item{\code{year}}{planting year}
     \item{\code{gen}}{genotype / cultivar factor}
-    \item{\code{col}}{column ordinate}
-    \item{\code{row}}{row ordinate}
+    \item{\code{col}}{column}
+    \item{\code{row}}{row}
     \item{\code{rep}}{replicate block (numeric)}
     \item{\code{date}}{date for data collection}
     \item{\code{y}}{score 1-9 for blight resistance}
@@ -43,7 +43,8 @@ In 1997, 18 plots were lost due to flooding. In 2001, by the end of the
 season most plants were nearly dead.
 
 Note, in plant-breeding, it is common to use a "breeder code" for each genotype,
-which after several years of testing is changed to a registered variety name.
+which after several years of testing is changed to a registered
+commercial variety name.
 For this R package, the Potato Pedigree Database,
 http://www.plantbreeding.wur.nl/potatopedigree/reverselookup.php,
 was used to change breeder codes (in early testing) to the variety names
@@ -118,7 +119,7 @@ if(require(desplot)){
 }
 
 
-# 1983 only.  I.Hardy succumbs quickly
+# 1983 only.  I.Hardy succumbs to blight quickly
 require("lattice")
 xyplot(y ~ date|gen, dat, subset=year==1983, group=rep,
        xlab="Date", ylab="Blight resistance score",
