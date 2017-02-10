@@ -11,8 +11,8 @@
 \format{
   A data frame with 2506 observations on the following 3 variables.
   \describe{
-    \item{\code{col}}{column ordinate}
-    \item{\code{row}}{row ordinate}
+    \item{\code{col}}{column}
+    \item{\code{row}}{row}
     \item{\code{disease}}{plant is diseased, Y=yes,N=no}
   }
 }

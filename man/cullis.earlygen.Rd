@@ -12,8 +12,8 @@
   A data frame with 670 observations on the following 5 variables.
   \describe{
     \item{\code{gen}}{genotype factor}
-    \item{\code{row}}{row ordinate}
-    \item{\code{col}}{column ordinate}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
     \item{\code{entry}}{entry (genotype) number}
     \item{\code{yield}}{yield of each plot, kg/ha}
     \item{\code{weed}}{weed score}

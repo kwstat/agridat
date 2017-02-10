@@ -11,8 +11,8 @@
 \format{
   A data frame with 270 observations on the following 7 variables.
   \describe{
-    \item{\code{col}}{column ordinate}
-    \item{\code{row}}{row ordinate}
+    \item{\code{col}}{column}
+    \item{\code{row}}{row}
     \item{\code{rep}}{replicate factor, 3 levels}
     \item{\code{fert}}{fertilizer factor, 2 levels}
     \item{\code{gen}}{genotype factor, 45 levels}

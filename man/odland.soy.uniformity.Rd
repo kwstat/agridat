@@ -13,8 +13,8 @@
 \format{
   Data frames with 3 variables.
   \describe{
-    \item{\code{row}}{row ordinate}
-    \item{\code{col}}{column ordinate}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
     \item{\code{yield}}{yield: hay in tons, beans in bushels}
   }
 }

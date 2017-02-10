@@ -126,7 +126,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \bold{Field and horticulture crops}
 
 \tabular{llllllll}{
-name                             \tab gen \tab loc\tab reps\tab years \tab trt \tab other \tab model \cr
+name                               \tab gen \tab loc\tab reps\tab years \tab trt \tab other \tab model \cr
 
 \link{adugna.sorghum}              \tab 28  \tab 13 \tab     \tab 5  \tab       \tab \tab \cr
 \link{aastveit.barley}             \tab 15  \tab    \tab     \tab 9  \tab       \tab yr*gen~yr*trt\tab pls \cr
@@ -180,6 +180,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{durban.rowcol}               \tab 272 \tab    \tab 2   \tab    \tab       \tab xy \tab lm, gam, asreml \cr
 \link{durban.splitplot}            \tab 70  \tab    \tab 4   \tab    \tab 2     \tab xy \tab lm, gam, asreml \cr
 \link{eden.potato}                 \tab     \tab    \tab 4   \tab 3  \tab 4-12  \tab xy, rcb, latin \tab aov \cr
+\link{eden.nonnormal}              \tab     \tab    \tab 4   \tab    \tab 4     \tab \tab aov \cr
 \link{engelstad.nitro}             \tab     \tab 2  \tab     \tab 5  \tab 6     \tab rsm1 \tab nls quadratic plateau \cr
 \link{fan.stability}               \tab 13  \tab 10 \tab     \tab 2  \tab       \tab 3-way \tab stability \cr
 \link{federer.diagcheck}           \tab 122 \tab    \tab     \tab    \tab       \tab xy \tab lm, lmer, asreml \cr

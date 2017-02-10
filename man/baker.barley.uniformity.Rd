@@ -14,7 +14,7 @@
     \item{\code{row}}{row}
     \item{\code{col}}{column}
     \item{\code{year}}{year}
-    \item{\code{yield}}{yield, pound/acre}
+    \item{\code{yield}}{yield, pounds/acre}
   }
 }
 \details{

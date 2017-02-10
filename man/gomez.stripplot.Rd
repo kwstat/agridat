@@ -15,8 +15,8 @@ Rice strip-plot experiment
     \item{\code{rep}}{Rep}
     \item{\code{nitro}}{Nitrogen fertilizer in kg/ha}
     \item{\code{gen}}{Rice variety}
-    \item{\code{col}}{column ordinate in the field}
-    \item{\code{row}}{row ordinate in the field}
+    \item{\code{col}}{column}
+    \item{\code{row}}{row}
   }
 }
 

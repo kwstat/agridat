@@ -12,13 +12,13 @@
 \format{
   A data frame with 108 observations on the following 7 variables.
   \describe{
-    \item{\code{block}}{Block factor}
-    \item{\code{row}}{Row ordinate}
-    \item{\code{subplot}}{Column ordinate}
-    \item{\code{gen}}{Genotype factor, 3 levels}
-    \item{\code{yield}}{Yield (tons/ha)}
-    \item{\code{irr}}{Irrigation level, 1..6}
-    \item{\code{dir}}{Factor for direction from sprinkler, N/S}
+    \item{\code{block}}{block}
+    \item{\code{row}}{row}
+    \item{\code{subplot}}{column}
+    \item{\code{gen}}{genotype, 3 levels}
+    \item{\code{yield}}{yield (tons/ha)}
+    \item{\code{irr}}{irrigation level, 1..6}
+    \item{\code{dir}}{direction from sprinkler, N/S}
   }
 }
 \details{

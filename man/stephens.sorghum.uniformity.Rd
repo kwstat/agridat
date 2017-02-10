@@ -11,8 +11,8 @@
 \format{
   A data frame with 2000 observations on the following 3 variables.
   \describe{
-    \item{\code{row}}{row ordinate}
-    \item{\code{col}}{column / rod ordinate}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column / rod}
     \item{\code{yield}}{yield, ounces}
   }
 }

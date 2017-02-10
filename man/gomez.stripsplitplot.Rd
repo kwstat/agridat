@@ -12,13 +12,13 @@ Rice strip-split-plot experiment
 
 \format{
   \describe{
-    \item{\code{yield}}{Grain yield in kg/ha}
-    \item{\code{planting}}{Planting factor, P1=broadcast, P2=transplanted}
-    \item{\code{rep}}{Rep factor, 3 levels}
-    \item{\code{nitro}}{Nitrogen fertilizer in kg/ha}
-    \item{\code{gen}}{Genotype factor, G1 to G6}
-    \item{\code{col}}{column ordinate in the field}
-    \item{\code{row}}{row ordinate in the field}
+    \item{\code{yield}}{grain yield in kg/ha}
+    \item{\code{planting}}{planting factor, P1=broadcast, P2=transplanted}
+    \item{\code{rep}}{rep, 3 levels}
+    \item{\code{nitro}}{nitrogen fertilizer, kg/ha}
+    \item{\code{gen}}{genotype, G1 to G6}
+    \item{\code{col}}{column}
+    \item{\code{row}}{row}
   }
 }
 \details{

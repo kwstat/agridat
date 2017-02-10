@@ -12,8 +12,8 @@
     \item{gen}{genotype factor, 56 levels}
     \item{rep}{replicate factor, 4 levels}
     \item{yield}{yield, bu/ac}
-    \item{col}{column ordinate}
-    \item{row}{row ordinate}
+    \item{col}{column}
+    \item{row}{row}
   }
 }
 

@@ -14,8 +14,8 @@
   \describe{
     \item{\code{rep}}{rep factor, 3 levels}
     \item{\code{block}}{block factor, 12 levels}
-    \item{\code{row}}{row ordinate}
-    \item{\code{col}}{column ordinate}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
     \item{\code{gen}}{genotype factor, 16 levels}
     \item{\code{yield}}{yield, numeric}
   }
