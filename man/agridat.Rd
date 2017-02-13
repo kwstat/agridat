@@ -94,6 +94,7 @@ name                             \tab gen  \tab years \tab trt \tab other \tab m
 \link{becker.chicken}            \tab 5,12 \tab    \tab       \tab heritability \tab lmer \cr
 \link{crampton.pig}              \tab      \tab    \tab 5      \tab 2 cov\tab lm \cr
 \link{brandt.switchback}         \tab 10   \tab    \tab 2      \tab \tab aov \cr
+\link{depalluel.sheep}           \tab 4    \tab    \tab 4      \tab latin \tab \cr
 \link{diggle.cow}                \tab      \tab    \tab 4      \tab ts \tab \cr
 \link{foulley.calving}           \tab      \tab    \tab        \tab ordinal \tab polr \cr
 \link{goulden.eggs}              \tab      \tab    \tab        \tab controlchart \tab \cr

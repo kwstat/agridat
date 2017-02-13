@@ -35,12 +35,12 @@ stickler.sorghum.uniformity, wiedemann.safflower.uniformity
 lu.stability
 
 becker.chicken, chinloy.fractionalfactorial, crampton.pig, battese.survey,
-christidis.competition, eden.nonnormal, gartner.corn, giles.wheat,
-gomez.heteroskedastic, gomez.nonnormal1, gomez.nonnormal2, gomez.nonnormal3,
-gomez.wetdry, goulden.eggs, goulden.splitsplit, gregory.cotton,
-hanover.whitepine, huehn.wheat, kenward.cattle, kreusler.maize, lillemo.wheat,
-little.splitblock, mead.lambs, omer.sorghum, onofri.winterwheat, tai.potato,
-wheatley.carrot
+christidis.competition, depalluel.sheep. eden.nonnormal, gartner.corn,
+giles.wheat, gomez.heteroskedastic, gomez.nonnormal1, gomez.nonnormal2,
+gomez.nonnormal3, gomez.wetdry, goulden.eggs, goulden.splitsplit,
+gregory.cotton, hanover.whitepine, huehn.wheat, kenward.cattle,
+kreusler.maize, lillemo.wheat, little.splitblock, mead.lambs, omer.sorghum,
+onofri.winterwheat, tai.potato, wheatley.carrot
 
 ## Other notes
 
