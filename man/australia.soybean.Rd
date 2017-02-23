@@ -13,17 +13,17 @@
 \format{
   A data frame with 464 observations on the following 10 variables.
   \describe{
-    \item{\code{env}}{Factor with 8 levels, first character of location
+    \item{\code{env}}{environment, 8 levels, first character of location
       and last two characters of year}
-    \item{\code{loc}}{Four locations: Brookstead, Lawes, Nambour, RedlandBay}
-    \item{\code{year}}{Year: 1970 or 1971}
-    \item{\code{gen}}{Genotype factor of soybeans, 1-58}
-    \item{\code{yield}}{Yield, metric tons / hectare}
-    \item{\code{height}}{Height, in meters}
-    \item{\code{lodging}}{Lodging}
-    \item{\code{size}}{Seed size in millimeters}
-    \item{\code{protein}}{Protein in percentage}
-    \item{\code{oil}}{Oil, in percentage}
+    \item{\code{loc}}{location}
+    \item{\code{year}}{year}
+    \item{\code{gen}}{genotype of soybeans, 1-58}
+    \item{\code{yield}}{yield, metric tons / hectare}
+    \item{\code{height}}{height (meters)}
+    \item{\code{lodging}}{lodging}
+    \item{\code{size}}{seed size, (millimeters)}
+    \item{\code{protein}}{protein (percentage)}
+    \item{\code{oil}}{oil (percentage)}
   }
 }
 \details{

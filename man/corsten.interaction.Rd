@@ -12,9 +12,9 @@
 \format{
   A data frame with 140 observations on the following 3 variables.
   \describe{
-    \item{\code{gen}}{Genotype factor with 20 levels }
-    \item{\code{loc}}{Location factor with 7 levels }
-    \item{\code{yield}}{yield in kg/acre}
+    \item{\code{gen}}{genotype, 20 levels }
+    \item{\code{loc}}{location, 7 levels }
+    \item{\code{yield}}{yield, kg/acre}
   }
 }
 \details{

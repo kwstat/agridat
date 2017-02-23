@@ -55,7 +55,7 @@ dat <- transform(dat, thoppers=asin(sqrt(thoppers/100))/(pi/2)*90)
 # QQ plots for raw/transformed data
 if(require(reshape2) & require(lattice))
   qqmath( ~ value|variable, data=melt(dat),
-         main="gomez.nonnormal3: raw/transformed",
+         main="gomez.nonnormal3 - raw/transformed QQ plot",
          scales=list(relation="free"))
 
 m1 <- lm(thoppers ~ gen, data=dat)

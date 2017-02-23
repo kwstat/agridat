@@ -12,11 +12,11 @@
 \format{
   A data frame with 168 observations on the following 5 variables.
   \describe{
-    \item{\code{gen}}{Genotype factor}
-    \item{\code{loc}}{Loc factor}
-    \item{\code{nitro}}{Nitrogen fertilizer factor, low/high}
-    \item{\code{yield}}{Yield (g/m^2)}
-    \item{\code{type}}{Type factor, conventional/semi-dwarf}
+    \item{\code{gen}}{genotype}
+    \item{\code{loc}}{location}
+    \item{\code{nitro}}{nitrogen fertilizer, low/high}
+    \item{\code{yield}}{yield (g/m^2)}
+    \item{\code{type}}{type factor, conventional/semi-dwarf}
   }
 }
 \details{

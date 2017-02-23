@@ -1,7 +1,9 @@
 \name{ratkowsky.onions}
 
 \alias{ratkowsky.onions}
-\title{Onion yields for different densities at two locations}
+\title{
+  Onion yields for different densities at two locations
+}
 
 \description{
   Onion yields for different densities at two locations
@@ -11,7 +13,7 @@
   \describe{
     \item{density}{planting density (plants per square meter)}
     \item{yield}{yield (g / plant)}
-    \item{loc}{loc factor, Purnong Landing, or Virginia}
+    \item{loc}{location, Purnong Landing or Virginia}
   }
 }
 \details{

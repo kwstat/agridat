@@ -14,10 +14,10 @@
     \item{\code{row}}{row}
     \item{\code{col}}{column}
     \item{\code{y}}{count of webworms}
-    \item{\code{block}}{block factor}
-    \item{\code{trt}}{treatment factor}
-    \item{\code{spray}}{spray treatment Yes/No}
-    \item{\code{lead}}{lead treatment Yes/No}
+    \item{\code{block}}{block}
+    \item{\code{trt}}{treatment}
+    \item{\code{spray}}{spray treatment yes/no}
+    \item{\code{lead}}{lead treatment yes/no}
   }
 }
 \details{

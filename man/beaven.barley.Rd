@@ -13,7 +13,7 @@
   \describe{
     \item{\code{row}}{row}
     \item{\code{col}}{column}
-    \item{\code{gen}}{genotype factor}
+    \item{\code{gen}}{genotype}
     \item{\code{yield}}{yield (grams)}
   }
 }

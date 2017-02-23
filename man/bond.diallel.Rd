@@ -11,17 +11,17 @@
 \format{
   A data frame with 36 observations on the following 3 variables.
   \describe{
-    \item{\code{female}}{Female parent factor}
-    \item{\code{male}}{Male parent factor}
-    \item{\code{yield}}{Yield, grams/plot}
-    \item{\code{stems}}{Stems per plot}
-    \item{\code{nodes}}{Podded nodes per stem}
-    \item{\code{pods}}{Pods per podded node}
-    \item{\code{seeds}}{Seeds per pod}
-    \item{\code{weight}}{Weight (g) per 100 seeds}
-    \item{\code{height}}{Height (cm) in April}
-    \item{\code{width}}{Width (cm) in April}
-    \item{\code{flower}}{Mean flowering date in May}
+    \item{\code{female}}{female parent}
+    \item{\code{male}}{male parent}
+    \item{\code{yield}}{yield, grams/plot}
+    \item{\code{stems}}{stems per plot}
+    \item{\code{nodes}}{podded nodes per stem}
+    \item{\code{pods}}{pods per podded node}
+    \item{\code{seeds}}{seeds per pod}
+    \item{\code{weight}}{weight (g) per 100 seeds}
+    \item{\code{height}}{height (cm) in April}
+    \item{\code{width}}{width (cm) in April}
+    \item{\code{flower}}{mean flowering date in May}
   }
 }
 \details{

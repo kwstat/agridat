@@ -5,7 +5,7 @@
   Split-plot barley variety trial with fungicide treatments
 }
 \description{
-    Split-plot barley variety trial with fungicide treatments.
+  Split-plot barley variety trial with fungicide treatments.
 }
 
 \format{

@@ -13,9 +13,9 @@
 \format{
   A data frame with 108 observations on the following 5 variables.
   \describe{
-    \item{\code{loc}}{location factor, 3 levels}
+    \item{\code{loc}}{location, 3 levels}
     \item{\code{nitro}}{nitrogen in kg/ha}
-    \item{\code{rep}}{replicate factor, 3 levels}
+    \item{\code{rep}}{replicate, 3 levels}
     \item{\code{gen}}{genotype, 2 levels}
     \item{\code{yield}}{yield, kg/ha}
   }

@@ -44,7 +44,8 @@ dat <- gomez.wetdry
 require(lattice)
 foo1 <- xyplot(yield ~ nitrogen|season, data=dat, 
                group=rep,type='l',auto.key=list(columns=3),
-               main="gomez.wetdry")
+               ylab="yield in each season",
+               main="gomez.wetdry raw data & model")
 
 # Yang & Juskiw fit a quadratic model with linear and quadratic
 # contrasts using non-equal intervals of nitrogen levels.

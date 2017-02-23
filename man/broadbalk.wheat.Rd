@@ -12,7 +12,7 @@
   A data frame with 1258 observations on the following 4 variables.
   \describe{
     \item{\code{year}}{year}
-    \item{\code{plot}}{plot factor}
+    \item{\code{plot}}{plot}
     \item{\code{grain}}{grain yield, tonnes}
     \item{\code{straw}}{straw yield, tonnes}
   }

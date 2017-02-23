@@ -11,34 +11,36 @@
 \format{
   A data frame with 30 observations on the following 5 variables.
   \describe{
-    \item{\code{group}}{group factor, A,B}
-    \item{\code{cow}}{cow factor, 10 levels}
-    \item{\code{trt}}{treatment factor, 2 levels}
-    \item{\code{period}}{period factor, 3 levels}
+    \item{\code{group}}{group: A,B}
+    \item{\code{cow}}{cow, 10 levels}
+    \item{\code{trt}}{treatment, 2 levels}
+    \item{\code{period}}{period, 3 levels}
     \item{\code{yield}}{milk yield, pounds}
   }
 }
 \details{
-In this experiment, 10 cows were selected from the Iowa State College
-Holstein-Friesian herd and divided into two equal groups. Care was taken
-to have the groups as nearly equal as possible with regard to milk
-production, stage of gestation, body weight, condition and age. These
-cows were each given 10 pounds of timothy hay and 30 pounds of corn
-silage daily but were fed different grain mixtures. Treatment T1, then,
-consisted of feeding a grain mixture of 1 part of corn and cob meal to 1
-part of ground oats, while treatment T2 consisted of feeding a grain
-mixture of 4 parts corn and cob meal, 4 parts of ground oats and 3 parts
-of gluten feed. The three treatment periods covered 105 days -- three
-periods of 35 days each. The yields for the first 7 days of each period
-were not considered because of the possible effect of the transition
-from one treatment to the other. The data, together with sums and
-differences which aid in the calculations incidental to testing, are
-given in table 2.
+  
+  In this experiment, 10 cows were selected from the Iowa State College
+  Holstein-Friesian herd and divided into two equal groups. Care was
+  taken to have the groups as nearly equal as possible with regard to
+  milk production, stage of gestation, body weight, condition and
+  age. These cows were each given 10 pounds of timothy hay and 30 pounds
+  of corn silage daily but were fed different grain mixtures. Treatment
+  T1, then, consisted of feeding a grain mixture of 1 part of corn and
+  cob meal to 1 part of ground oats, while treatment T2 consisted of
+  feeding a grain mixture of 4 parts corn and cob meal, 4 parts of
+  ground oats and 3 parts of gluten feed. The three treatment periods
+  covered 105 days -- three periods of 35 days each. The yields for the
+  first 7 days of each period were not considered because of the
+  possible effect of the transition from one treatment to the other. The
+  data, together with sums and differences which aid in the calculations
+  incidental to testing, are given in table 2.
 
-It seems safe to conclude that the inclusion of gluten feed in the grain
-mixture fed in a timothy hay ration to Holstein-Friesian cows increased
-the production of milk. The average increase was 21.7 pounds per cow for
-a 28-day period.
+  It seems safe to conclude that the inclusion of gluten feed in the
+  grain mixture fed in a timothy hay ration to Holstein-Friesian cows
+  increased the production of milk. The average increase was 21.7 pounds
+  per cow for a 28-day period.
+
 }
 \source{
   A.E. Brandt (1938). Tests of Significance in Reversal or Switchback Trials

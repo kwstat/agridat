@@ -11,8 +11,8 @@
 \format{
   A data frame with 480 observations on the following 6 variables.
   \describe{
-    \item{\code{tree}}{tree factor, 10 levels}
-    \item{\code{apple}}{apple factor, 24 levels}
+    \item{\code{tree}}{tree, 10 levels}
+    \item{\code{apple}}{apple, 24 levels}
     \item{\code{size}}{size of apple}
     \item{\code{appleid}}{unique id number for each apple}
     \item{\code{time}}{time period, 1-6 = (week/2)}

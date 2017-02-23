@@ -11,13 +11,13 @@
 \format{
   A data frame with 1152 observations on the following 7 variables.
   \describe{
-    \item{\code{county}}{county, 6 levels}
+    \item{\code{county}}{county}
     \item{\code{row}}{row}
     \item{\code{col}}{column}
-    \item{\code{rep}}{rep, 3 levels}
-    \item{\code{block}}{incomplete block factor, 8 levels}
+    \item{\code{rep}}{rep}
+    \item{\code{block}}{incomplete block}
     \item{\code{yield}}{yield}
-    \item{\code{gen}}{genotype factor, 1-64}
+    \item{\code{gen}}{genotype, 1-64}
   }
 }
 \details{

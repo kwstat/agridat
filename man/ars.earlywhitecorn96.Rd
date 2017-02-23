@@ -11,8 +11,8 @@
 \format{
   A data frame with 540 observations on the following 9 variables.
   \describe{
-    \item{\code{loc}}{loc factor, 9 levels}
-    \item{\code{gen}}{gen factor, 60 levels}
+    \item{\code{loc}}{location, 9 levels}
+    \item{\code{gen}}{gen, 60 levels}
     \item{\code{yield}}{yield, bu/ac}
     \item{\code{stand}}{stand, percent}
     \item{\code{rootlodge}}{root lodging, percent}

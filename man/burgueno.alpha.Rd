@@ -12,11 +12,11 @@
 \format{
   A data frame with 48 observations on the following 6 variables.
   \describe{
-    \item{\code{rep}}{rep factor, 3 levels}
-    \item{\code{block}}{block factor, 12 levels}
+    \item{\code{rep}}{rep, 3 levels}
+    \item{\code{block}}{block, 12 levels}
     \item{\code{row}}{row}
     \item{\code{col}}{column}
-    \item{\code{gen}}{genotype factor, 16 levels}
+    \item{\code{gen}}{genotype, 16 levels}
     \item{\code{yield}}{yield, numeric}
   }
 }

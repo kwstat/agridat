@@ -14,7 +14,7 @@
 \format{
   A data frame with 434 observations on the following 4 variables.
   \describe{
-    \item{\code{gen}}{genotype factor, 281 levels}
+    \item{\code{gen}}{genotype, 281 levels}
     \item{\code{col}}{column}
     \item{\code{row}}{row}
     \item{\code{yield}}{yield, tons/ha}

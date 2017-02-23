@@ -11,8 +11,8 @@
 \format{
   A data frame with 450 observations on the following 3 variables.
   \describe{
-    \item{\code{loc}}{location factor}
-    \item{\code{gen}}{genotype factor}
+    \item{\code{loc}}{location}
+    \item{\code{gen}}{genotype}
     \item{\code{yield}}{grain yield, tons/ha}
   }
 }

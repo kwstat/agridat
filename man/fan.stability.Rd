@@ -12,10 +12,10 @@
 \format{
   A data frame with 260 observations on the following 5 variables.
   \describe{
-    \item{\code{gen}}{genotype factor}
+    \item{\code{gen}}{genotype}
     \item{\code{maturity}}{maturity, days}
     \item{\code{year}}{year}
-    \item{\code{loc}}{location factor}
+    \item{\code{loc}}{location}
     \item{\code{yield}}{yield, Mg/ha}
   }
 }
@@ -25,10 +25,9 @@
   These data were used to conduct a stability analysis of yield.
 }
 \source{
-  Fan, X.M. and Kang, M.S. and Chen, H. and Zhang, Y. and Tan, J. and
-  Xu, C. (2007). Yield stability of maize hybrids evaluated in
-  multi-environment trials in Yunnan, China. \emph{Agronomy Journal},
-  99, 220-228.
+  Fan, X.M. and Kang, M.S. and Chen, H. and Zhang, Y. and Tan, J. and Xu, C. (2007).
+  Yield stability of maize hybrids evaluated in multi-environment trials in Yunnan, China.
+  \emph{Agronomy Journal}, 99, 220-228.
   https://doi.org/10.2134/agronj2006.0144
 
   Used with permission of Manjit Kang.

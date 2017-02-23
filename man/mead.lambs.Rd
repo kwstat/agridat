@@ -18,7 +18,7 @@
   }
 }
 \details{
-  The data are counts of ewes in different lambing classes.
+  The data 'y' are counts of ewes in different lambing classes.
   The classes are number of live lambs per birth for 0, 1, 2, 3+ lambs.
   
 }
@@ -36,8 +36,13 @@
 
 data("mead.lambs")
 dat <- mead.lambs
-names(dat) <- c('F','B','L','y') # for compactness
 
+# farm 1 has more ewes in lambclass 3
+d2 <- xtabs(y ~ farm+breed+lambclass, data=dat)
+mosaicplot(d2, color=c("lemonchiffon1","moccasin","lightsalmon1","indianred"),
+           xlab="farm/lambclass", ylab="breed", main="mead.lambs")
+
+names(dat) <- c('F','B','L','y') # for compactness
 # Match totals in Mead example 14.6
 if(require(dplyr)){
   dat %>% group_by(F,B) %>% summarize(y=sum(y))

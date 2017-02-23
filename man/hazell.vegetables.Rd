@@ -2,10 +2,10 @@
 \alias{hazell.vegetables}
 \docType{data}
 \title{
-  Gross profit for four vegetable crops in six years
+  Gross profit for 4 vegetable crops in 6 years
 }
 \description{
-  Gross profit for four vegetable crops in six years
+  Gross profit for 4 vegetable crops in 6 years
 }
 \usage{data("hazell.vegetables")}
 \format{
@@ -22,6 +22,8 @@
   The values in the table are gross profits (loss) in dollars per acre.
   The criteria in the example below are (1) total acres < 200, (2) total
   labor < 10000, (3) crop rotation.
+
+  The example shows how to use linear programming to maximize expected profit.
 }
 
 \source{
@@ -38,56 +40,85 @@
 
 \examples{
 
-data(hazell.vegetables)
+data("hazell.vegetables")
 dat <- hazell.vegetables
+
+## require(lattice)
+## xyplot(carrot+celery+cucumber+pepper ~ year,dat, type='b', auto.key=list(columns=4),
+##        panel.hline=0)
+
+# optimal strategy calculated below 
+dat2 <- apply(dat[,-1], 1, function(x) x*c(0, 27.5, 100, 72.5))/1000
+colnames(dat2) <- rownames(dat)
+barplot(dat2, legend.text=c("     0 carrot", "27.5 celery", " 100 cucumber", "72.5 pepper"),
+        xlim=c(0,7), ylim=c(-5,120),
+        col=c('orange','green','forestgreen','red'),
+        xlab="year", ylab="Gross profit, $1000",
+        main="hazell.vegetables - retrospective profit from optimal strategy",
+        args.legend=list(title="acres, crop"))
 
 \dontrun{
 
-require(linprog)
-# colMeans(dat[ , -1])
-# 252.8333 442.6667 283.8333 515.8333
+  require(linprog)
+  # colMeans(dat[ , -1])
+  # 252.8333 442.6667 283.8333 515.8333
+ 
+  # cvec = avg across-years profit per acre for each crop
+  cvec <- c(253, 443, 284, 516)
+  
+  # Maximize c'x for Ax=b
+  A <- rbind(c(1,1,1,1), c(25,36,27,87), c(-1,1,-1,1))
+  colnames(A) <- names(cvec) <- c("carrot","celery","cucumber","pepper")
+  rownames(A) <- c('land','labor','rotation')
 
-# Maximize c'x for Ax=b
-A <- rbind(c(1,1,1,1), c(25,36,27,87), c(-1,1,-1,1))
-cvec <- c(253, 443, 284, 516) # avg profit per acre
-colnames(A) <- names(cvec) <- c("carrot","celery","cucumber","pepper")
-rownames(A) <- c('land','labor','rotation')
-bvec <- c(200,10000,0)
-const.dir <- c("<=","<=","<=")
+  # bvec criteria = (1) total acres < 200, (2) total labor < 10000,
+  # (3) crop rotation.
 
-m1 <- solveLP(cvec, bvec, A, maximum=TRUE, const.dir=const.dir, lpSolve=TRUE)
-# m1$solution # optimal number of acres for each crop
-#   carrot    celery  cucumber    pepper
-#  0.00000  27.45098 100.00000  72.54902
+  bvec <- c(200,10000,0)
+  const.dir <- c("<=","<=","<=")
 
-# Average income for this plan
-## sum(cvec * m1$solution)
-## [1] 77996.08
+  m1 <- solveLP(cvec, bvec, A, maximum=TRUE, const.dir=const.dir, lpSolve=TRUE)
+  # m1$solution # optimal number of acres for each crop
+  #   carrot    celery  cucumber    pepper
+  #  0.00000  27.45098 100.00000  72.54902
+  
+  # Average income for this plan
+  ## sum(cvec * m1$solution)
+  ## [1] 77996.08
 
-# Year-to-year income for this plan
-## as.matrix(dat[,-1]) %*% m1$solution
-##           [,1]
-## [1,]  80492.16
-## [2,]  80431.37
-## [3,]  81884.31
-## [4,] 106868.63
-## [5,]  37558.82
-## [6,]  80513.73
+  # Year-to-year income for this plan
+  ## as.matrix(dat[,-1]) %*% m1$solution
+  ##           [,1]
+  ## [1,]  80492.16
+  ## [2,]  80431.37
+  ## [3,]  81884.31
+  ## [4,] 106868.63
+  ## [5,]  37558.82
+  ## [6,]  80513.73
 
-# Brute-force search for optimum allocation that minimizes year-to-year
-# income variability.
+  # optimum allocation that minimizes year-to-year income variability.
+  # brute-force search
 
-# For generality, assume we have unequal probabilities for each year.
-probs <- c(.15, .20, .20, .15, .15, .15)
-# Randomly allocate crops to 200 acres, 100,000 times
-mat <- matrix(runif(4*100000), ncol=4)
-mat <- 200*sweep(mat, 1, rowSums(mat), "/")
-profit <- mat %*% t(dat[,-1]) # Each row is profit for each of the six years
-ix <- apply(profit, 1, function(x) cov.wt(as.data.frame(x), wt=probs)$cov)
-ix <- which.max(ix)
-mat[ix,] # Optimal planting allocation that minimizes the weighted variance
-## carrot celery cucumber pepper
-## 71.67002 27.90306 84.69966 15.72726
+  # For generality, assume we have unequal probabilities for each year.
+  probs <- c(.15, .20, .20, .15, .15, .15)
+  # Randomly allocate crops to 200 acres, 100,000 times
+  #set.seed(1)
+  mat <- matrix(runif(4*100000), ncol=4)
+  mat <- 200*sweep(mat, 1, rowSums(mat), "/")
+  # each row is one strategy, showing profit for each of the six yearx
+  profit <- mat %*% t(dat[,-1]) # Each row is profit for each of the six years
+  # calculate weighted variance using year probabilities
+  wtvar <- apply(profit, 1, function(x) cov.wt(as.data.frame(x), wt=probs)$cov)
+  # five best planting allocations that minimizes the weighted variance
+  ix <- order(wtvar)[1:5]
+  mat[ix,]
+  ## carrot celery cucumber pepper
+  ##          [,1]     [,2]     [,3]     [,4]
+  ## [1,] 71.26439 28.09259 85.04644 15.59657
+  ## [2,] 72.04428 27.53299 84.29760 16.12512
+  ## [3,] 72.16332 27.35147 84.16669 16.31853
+  ## [4,] 72.14622 29.24590 84.12452 14.48335
+  ## [5,] 68.95226 27.39246 88.61828 15.03700
 
 }
 

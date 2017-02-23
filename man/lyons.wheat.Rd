@@ -11,7 +11,7 @@
 \format{
   A data frame with 48 observations on the following 3 variables.
   \describe{
-    \item{\code{loc}}{loc factor, 12 levels}
+    \item{\code{loc}}{location, 12 levels}
     \item{\code{year}}{year, numeric}
     \item{\code{yield}}{yield (kg)}
   }

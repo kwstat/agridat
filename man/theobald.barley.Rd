@@ -12,8 +12,8 @@
   A data frame with 105 observations on the following 5 variables.
   \describe{
     \item{\code{yield}}{yield, tonnes/ha}
-    \item{\code{gen}}{genotype factor}
-    \item{\code{loc}}{loc factor, 5 levels}
+    \item{\code{gen}}{genotype}
+    \item{\code{loc}}{location, 5 levels}
     \item{\code{nitro}}{nitrogen kg/ha}
     \item{\code{year}}{year, 2 levels}
   }

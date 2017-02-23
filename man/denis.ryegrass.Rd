@@ -12,9 +12,9 @@
 \format{
   A data frame with 147 observations on the following 3 variables.
   \describe{
-    \item{\code{gen}}{Genotype factor, 21 levels}
-    \item{\code{loc}}{Location factor, 7 levels}
-    \item{\code{strength}}{Average plant strength * 100}
+    \item{\code{gen}}{genotype, 21 levels}
+    \item{\code{loc}}{location, 7 levels}
+    \item{\code{strength}}{average plant strength * 100}
   }
 }
 \details{
@@ -43,7 +43,14 @@
 
 data(denis.ryegrass)
 dat <- denis.ryegrass
-anova(aov(strength ~ gen + loc, dat))
+
+# biplots (without ellipses) similar to Denis figure 1 
+if(require(gge)){
+  m1 <- gge(strength ~ gen*loc, dat, scale=FALSE)
+  biplot(m1, title="denis.ryegrass biplot")
+}
+
+# anova(aov(strength ~ gen + loc, dat))
 
 }
 \keyword{datasets}

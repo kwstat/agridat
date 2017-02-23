@@ -42,7 +42,7 @@ dat <- transform(dat, twhite = sqrt(white+.5))
 # QQ plots for raw/transformed data
 if(require(reshape2) & require(lattice))
   qqmath( ~ value|variable, data=melt(dat),
-         main="gomez.nonnormal2: raw/transformed",
+         main="gomez.nonnormal2 - raw/transformed QQ plot",
          scales=list(relation="free"))
 
 # Gomez anova table 7.21

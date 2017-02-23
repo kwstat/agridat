@@ -5,7 +5,7 @@
   RCB in rice with heteroskedastic varieties
 }
 \description{
-  RCB in rice with heteroskedastic varieties
+  RCB in rice with heteroskedastic varieties, 35 genotypes, 3 reps
 }
 \usage{data("gomez.heteroskedastic")}
 \format{
@@ -42,6 +42,11 @@ dat <- gomez.heteroskedastic
 
 # Fix the outlier as reported by Gomez p. 311
 dat[dat$gen=="G17" & dat$rep=="R2","yield"] <- 7.58
+
+if(require(lattice)){
+  bwplot(gen ~ yield, dat, group=as.numeric(dat$group),
+         ylab="genotype", main="gomez.heterogeneous")
+}
 
 # Match Gomez table 7.28
 m1 <- lm(yield ~ rep + gen, data=dat)

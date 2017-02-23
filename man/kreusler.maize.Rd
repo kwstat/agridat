@@ -11,22 +11,22 @@
 \format{
   A data frame with 165 observations on the following 17 variables.
   \describe{
-    \item{\code{gen}}{Genotype}
-    \item{\code{year}}{Year}
-    \item{\code{date}}{Calendar date}
-    \item{\code{raindays}}{Number of days of rain per week (zahl der regenstage)}
-    \item{\code{rain}}{Rain amount (mm)}
-    \item{\code{temp}}{Temperature mean (deg C) (temperatur mittel)}
-    \item{\code{parentseed}}{Weight of parent seed (g) (alte korner)}
-    \item{\code{roots}}{Weight of roots (g) (wurzel)}
-    \item{\code{leaves}}{Weight of leaves (g) (blatter)}
-    \item{\code{stem}}{Weight of stem (g) (stengel)}
-    \item{\code{tassel}}{Weight of tassel (g) (blutenstande)}
-    \item{\code{grain}}{Weight of grain (korner)}
-    \item{\code{plantweight}}{Weight of entire plant (ganze pflanze)}
-    \item{\code{plantheight}}{Plant height (cm) (Mittlere Hohe der Pflanzen)}
-    \item{\code{leafcount}}{Number of leaves (Anzahl der Blatter)}
-    \item{\code{leafarea}}{Leaf area (cm^2) (Flachenmaass der blatter)}
+    \item{\code{gen}}{genotype}
+    \item{\code{year}}{year}
+    \item{\code{date}}{calendar date}
+    \item{\code{raindays}}{number of days of rain per week (zahl der regenstage)}
+    \item{\code{rain}}{rain amount (mm)}
+    \item{\code{temp}}{temperature mean (deg C) (temperatur mittel)}
+    \item{\code{parentseed}}{weight of parent seed (g) (alte korner)}
+    \item{\code{roots}}{weight of roots (g) (wurzel)}
+    \item{\code{leaves}}{weight of leaves (g) (blatter)}
+    \item{\code{stem}}{weight of stem (g) (stengel)}
+    \item{\code{tassel}}{weight of tassel (g) (blutenstande)}
+    \item{\code{grain}}{weight of grain (korner)}
+    \item{\code{plantweight}}{weight of entire plant (ganze pflanze)}
+    \item{\code{plantheight}}{plant height (cm) (mittlere hohe der pflanzen)}
+    \item{\code{leafcount}}{number of leaves (anzahl der blatter)}
+    \item{\code{leafarea}}{leaf area (cm^2) (flachenmaass der blatter)}
   }
 }
 \details{

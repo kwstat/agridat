@@ -49,6 +49,13 @@
 data(huehn.wheat)
 dat <- huehn.wheat
 
+# Nassar & Huehn, p. 51 "there is no evidence for differences in stability
+# among the 20 varieties".
+if(require(gge)){
+  m1 <- gge(yield ~ gen*env, dat)
+  biplot(m1, title="huehn.wheat")
+}
+
 \dontrun{
   
 require(reshape2)

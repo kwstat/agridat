@@ -11,8 +11,8 @@
 \format{
   A data frame with 32 observations on the following 5 variables.
   \describe{
-    \item{\code{loc}}{loc factor}
-    \item{\code{gen}}{genotype/cultivar factor}
+    \item{\code{loc}}{location}
+    \item{\code{gen}}{genotype/cultivar}
     \item{\code{row}}{row}
     \item{\code{col}}{column}
     \item{\code{yield}}{weight of marketable fruit per plot}

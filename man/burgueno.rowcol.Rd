@@ -11,10 +11,10 @@
 \format{
   A data frame with 128 observations on the following 5 variables.
   \describe{
-    \item{\code{rep}}{rep factor, 2 levels}
+    \item{\code{rep}}{rep, 2 levels}
     \item{\code{row}}{row}
     \item{\code{col}}{column}
-    \item{\code{gen}}{genotype factor, 64 levels}
+    \item{\code{gen}}{genotype, 64 levels}
     \item{\code{yield}}{yield, tons/ha}
   }
 }

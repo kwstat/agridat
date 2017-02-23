@@ -26,8 +26,7 @@
 }
 \source{
   F. Yates, 1933.
-  The analysis of replicated experiments when the field results are
-  incomplete. 
+  The analysis of replicated experiments when the field results are incomplete. 
   \emph{Emp. J. Exp. Agric.}, 1, 129--142.
 }
 \references{
@@ -39,6 +38,11 @@
 
 data(yates.missing)
 dat <- yates.missing
+
+require(lattice)
+bwplot(y ~ trt, data=dat,
+       xlab="Treatment", ylab="Infection intensity",
+       main="yates.missing")
 
 if(require(reshape2)){
 mat0 <- acast(dat[, c('trt','block','y')], trt~block,

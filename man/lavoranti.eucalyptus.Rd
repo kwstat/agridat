@@ -11,10 +11,10 @@
 \format{
   A data frame with 490 observations on the following 4 variables.
   \describe{
-    \item{\code{gen}}{Genotype (progeny) factor}
-    \item{\code{origin}}{Origin of progeny}
-    \item{\code{loc}}{Location factor}
-    \item{\code{height}}{Height, meters}
+    \item{\code{gen}}{genotype (progeny) factor}
+    \item{\code{origin}}{origin of progeny}
+    \item{\code{loc}}{location}
+    \item{\code{height}}{height, meters}
   }
 }
 \details{

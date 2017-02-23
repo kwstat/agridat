@@ -11,9 +11,9 @@
 \format{
   A data frame with 52 observations on the following 3 variables.
   \describe{
-    \item{\code{loc}}{Location/block factor, 13 levels}
-    \item{\code{gen}}{Genotype/line factor, 13 levels}
-    \item{\code{yield}}{Yield, pounds/plot}
+    \item{\code{loc}}{location/block, 13 levels}
+    \item{\code{gen}}{genotype/line, 13 levels}
+    \item{\code{yield}}{yield, pounds/plot}
   }
 }
 \details{

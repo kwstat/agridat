@@ -13,7 +13,7 @@
   \describe{
     \item{\code{nitro}}{nitrogen fertilizer, pound/acre}
     \item{\code{year}}{year}
-    \item{\code{loc}}{location factor}
+    \item{\code{loc}}{location}
     \item{\code{yield}}{yield, bu/ac}
   }
 }

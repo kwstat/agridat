@@ -11,11 +11,11 @@
 \format{
   A data frame with 136 observations on the following 5 variables.
   \describe{
-    \item{\code{site}}{Site factor, 5 levels}
-    \item{\code{loc}}{Location name}
-    \item{\code{rep}}{Rep factor, 4 levels}
-    \item{\code{nitro}}{Nitrogen, kg/ha}
-    \item{\code{yield}}{Yield, Mg/ha}
+    \item{\code{site}}{site factor, 5 levels}
+    \item{\code{loc}}{location name}
+    \item{\code{rep}}{rep, 4 levels}
+    \item{\code{nitro}}{nitrogen, kg/ha}
+    \item{\code{yield}}{yield, Mg/ha}
   }
 }
 \details{

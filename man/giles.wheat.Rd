@@ -13,7 +13,7 @@
   A data frame with 247 observations on the following 4 variables.
   \describe{
     \item{\code{gen}}{genotype. Note, this is numeric!}
-    \item{\code{env}}{environment factor}
+    \item{\code{env}}{environment}
     \item{\code{straw}}{straw length}
     \item{\code{emergence}}{ear emergence, Julian date}
   }
@@ -38,8 +38,7 @@
 \source{
 
   R. Giles (1990).
-  Utilization of unreplicated observations of agvan
-  ronomic characters in a wheat germplasm collection.
+  Utilization of unreplicated observations of agronomic characters in a wheat germplasm collection.
   In: \emph{Wheat Genetic Resources. Meeting Diverse Needs}.
   Wiley, Chichester, U.K., pp.113-130.
   
@@ -61,9 +60,17 @@ dat <- transform(dat, env=factor(env))
 dat1 <- subset(dat, !is.na(straw))
 dat2 <- subset(dat, !is.na(emergence))
 
-
-# Traits are weakly related
+# Traits are not related
 # with(dat, plot(straw~emergence))
+
+# Show unbalancedness of data
+if(require(lattice) & require(reshape2)){
+  redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
+  levelplot(acast(dat, gen ~ env, value.var='emergence'),
+            col.regions=redblue,
+            xlab="genotype", ylab="year",
+            main="giles.wheat - straw length")
+}
 
 # Analysis of straw length
 

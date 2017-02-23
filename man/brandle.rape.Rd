@@ -11,9 +11,9 @@
 \format{
   A data frame with 135 observations on the following 4 variables.
   \describe{
-    \item{\code{gen}}{genotype factor, 5 levels}
+    \item{\code{gen}}{genotype}
     \item{\code{year}}{year, numeric}
-    \item{\code{loc}}{loc factor, 9 levels}
+    \item{\code{loc}}{location, 9 levels}
     \item{\code{yield}}{yield, kg/ha}
   }
 }

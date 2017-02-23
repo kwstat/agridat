@@ -16,16 +16,19 @@
     \item{\code{env}}{environment, 13 levels}
     \item{\code{yield}}{yield kg/ha}
     \item{\code{year}}{year, 2001-2005}
-    \item{\code{loc}}{loc, 3 levels}
+    \item{\code{loc}}{location, 3 levels}
   }
 }
 \details{
   Sorghum yields at 3 locations across 5 years.
   The trials were carried out at three locations in dry, hot lowlands of
   Ethiopia:
-  Melkassa (39 deg 21 min E, 8 deg 24 min N),
-  Mieso (39 deg 22 min E, 8 deg 41 min N) and
-  Kobo (39 deg 37 min E, 12 deg 09 min N).
+  
+  Melkassa (39 deg 21 min E, 8 deg 24 min N)
+  
+  Mieso (39 deg 22 min E, 8 deg 41 min N)
+  
+  Kobo (39 deg 37 min E, 12 deg 09 min N)
 
   Trial 1 was 14 hybrids and one open-pollinated variety.
 
@@ -34,9 +37,8 @@
 \source{
   Asfaw Adugna (2008).
   Assessment of yield stability in sorghum using
-  univariate and multivariate statistical approaches, \emph{Hereditas},
-  145, 28--37.
-  
+  univariate and multivariate statistical approaches.
+  \emph{Hereditas}, 145, 28--37.  
   http://doi.org/10.1111/j.0018-0661.2008.2023.x
 
   Used with permission of Asfaw Adugna.

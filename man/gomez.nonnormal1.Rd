@@ -17,11 +17,11 @@
   }
 }
 \details{
+  
   Nine treatments (including the control, T9) were used on four
   replicates.  The number of living insect larvae were recorded.
 
-  The data show signs of non-normality, and a log transform was used by
-  Gomez.
+  The data show signs of non-normality, and a log transform was used by Gomez.
   
 }
 \source{
@@ -39,11 +39,11 @@ data(gomez.nonnormal1)
 dat <- gomez.nonnormal1
 
 # Gomez figure 7.3
-if(require(dplyr)) {
+if(FALSE & require(dplyr)) {
   dat2 <- dat %>% group_by(trt)
   dat2 <- summarize(dat2, mn=mean(larvae), rng=diff(range(larvae)))
   plot(rng ~ mn, data=dat2,
-       xlab="mean number of larvae", ylab="range",
+       xlab="mean number of larvae", ylab="range of number of larvae",
        main="gomez.nonnormal1")
 }
 
@@ -54,7 +54,7 @@ dat <- transform(dat, tlarvae=log10(larvae+1))
 # QQ plots for raw/transformed data
 if(require(reshape2) & require(lattice))
   qqmath( ~ value|variable, data=melt(dat),
-         main="gomez.nonnormal1: raw/transformed",
+         main="gomez.nonnormal1 - raw/transformed QQ plot",
          scales=list(relation="free"))
 
 # Gomez table 7.16

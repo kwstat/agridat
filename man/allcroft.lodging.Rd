@@ -11,8 +11,8 @@
 \format{
   A data frame with 224 observations on the following 3 variables.
   \describe{
-    \item{\code{env}}{environment factor, 1-7}
-    \item{\code{gen}}{genotype factor, 1-32}
+    \item{\code{env}}{environment, 1-7}
+    \item{\code{gen}}{genotype, 1-32}
     \item{\code{y}}{percent lodged}
   }
 }
@@ -30,7 +30,7 @@
 
 \examples{
 
-data(allcroft.lodging)
+data("allcroft.lodging")
 dat <- allcroft.lodging
 
 # Transformation

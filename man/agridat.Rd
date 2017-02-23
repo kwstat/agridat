@@ -129,6 +129,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \tabular{llllllll}{
 name                               \tab gen \tab loc\tab reps\tab years \tab trt \tab other \tab model \cr
 
+\link{acorsi.grayleafspot}         \tab 36  \tab 9 \tab      \tab 5  \tab       \tab nonnormal \tab gnm,ammi \cr
 \link{adugna.sorghum}              \tab 28  \tab 13 \tab     \tab 5  \tab       \tab \tab \cr
 \link{aastveit.barley}             \tab 15  \tab    \tab     \tab 9  \tab       \tab yr*gen~yr*trt\tab pls \cr
 \link{allcroft.lodging}            \tab 32  \tab 7  \tab     \tab    \tab       \tab percent \tab tobit \cr

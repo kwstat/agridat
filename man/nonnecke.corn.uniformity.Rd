@@ -11,7 +11,7 @@
 \format{
   A data frame:
   \describe{
-    \item{\code{loc}}{location factor}
+    \item{\code{loc}}{location}
     \item{\code{row}}{row}
     \item{\code{col}}{column}
     \item{\code{yield}}{yield of marketable ears, pounds}

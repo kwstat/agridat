@@ -41,6 +41,12 @@ None.
 data(omer.sorghum)
 dat <- omer.sorghum
 
+# gge biplot
+if(require(gge)){
+  m0 <- gge(yield ~  gen* env, data=dat)
+  biplot(m0, title="omer.sorghum")
+}
+
 # REML approach
 if(require(lme4) & require(lucid)) {
   

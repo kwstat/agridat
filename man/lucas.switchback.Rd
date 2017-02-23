@@ -48,6 +48,10 @@ dat <- lucas.switchback
 # Create a numeric period variable
 dat$per <- as.numeric(substring(dat$period,2))
 
+require(lattice)
+xyplot(yield ~ period|block, data=dat, group=cow, type=c('l','r'),
+       auto.key=list(columns=6),
+       main="lucas.switchback - (actually uniformity data)")
 
 # Need to use 'terms' to preserve the order of the model terms
 # Really, cow(block), per:cow(block), period(block)

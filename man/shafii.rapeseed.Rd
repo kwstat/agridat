@@ -11,11 +11,11 @@
 \format{
   A data frame with 648 observations on the following 5 variables.
   \describe{
-    \item{\code{year}}{Year, numeric: 87, 88, 89}
-    \item{\code{loc}}{Location factor, 14 levels}
-    \item{\code{rep}}{Rep factor, 3 levels}
-    \item{\code{gen}}{Genotype factor, 6 levels}
-    \item{\code{yield}}{Yield, kg/ha}
+    \item{\code{year}}{year, numeric: 87, 88, 89}
+    \item{\code{loc}}{location, 14 levels}
+    \item{\code{rep}}{rep, 3 levels}
+    \item{\code{gen}}{genotype, 6 levels}
+    \item{\code{yield}}{yield, kg/ha}
   }
 }
 \details{

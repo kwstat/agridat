@@ -12,7 +12,7 @@
   A data frame with 48 observations on the following 3 variables.
   \describe{
     \item{\code{borers}}{number of borers per hill}
-    \item{\code{treat}}{treatment factor, 4 levels}
+    \item{\code{treat}}{treatment factor}
     \item{\code{freq}}{frequency of the borer count}
   }
 }

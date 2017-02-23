@@ -11,13 +11,13 @@
 \format{
   A data frame with 40 observations on the following 7 variables.
   \describe{
-    \item{\code{country}}{Country factor}
-    \item{\code{loc}}{Location name}
-    \item{\code{year}}{Year of planting, last two digits}
-    \item{\code{month}}{Month of planting}
-    \item{\code{rad}}{Solar radiation}
-    \item{\code{mint}}{Minimum temperature}
-    \item{\code{yield}}{Yield t/ha}
+    \item{\code{country}}{country}
+    \item{\code{loc}}{location}
+    \item{\code{year}}{year of planting, last two digits}
+    \item{\code{month}}{month of planting}
+    \item{\code{rad}}{solar radiation}
+    \item{\code{mint}}{minimum temperature}
+    \item{\code{yield}}{yield t/ha}
   }
 }
 \details{

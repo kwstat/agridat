@@ -21,32 +21,32 @@ data("aastveit.barley.height")
   The 'aastveit.barley.covs' dataframe has 9 observations on the following 20 variables.
   \describe{
     \item{\code{year}}{year}
-    \item{\code{R1}}{Avg rainfall (mm/day) in period 1}
-    \item{\code{R2}}{Avg rainfall (mm/day) in period 2}
-    \item{\code{R3}}{Avg rainfall (mm/day) in period 3}
-    \item{\code{R4}}{Avg rainfall (mm/day) in period 4}
-    \item{\code{R5}}{Avg rainfall (mm/day) in period 5}
-    \item{\code{R6}}{Avg rainfall (mm/day) in period 6}
-    \item{\code{S1}}{Daily solar radiation (ca/cm^2) in period 1}
-    \item{\code{S2}}{Daily solar radiation (ca/cm^2) in period 2}
-    \item{\code{S3}}{Daily solar radiation (ca/cm^2) in period 3}
-    \item{\code{S4}}{Daily solar radiation (ca/cm^2) in period 4}
-    \item{\code{S5}}{Daily solar radiation (ca/cm^2) in period 5}
-    \item{\code{S6}}{Daily solar radiation (ca/cm^2) in period 6}
-    \item{\code{ST}}{Sowing date}
-    \item{\code{T1}}{Avg temp (deg Celsius) in period 1}
-    \item{\code{T2}}{Avg temp (deg Celsius) in period 2}
-    \item{\code{T3}}{Avg temp (deg Celsius) in period 3}
-    \item{\code{T4}}{Avg temp (deg Celsius) in period 4}
-    \item{\code{T5}}{Avg temp (deg Celsius) in period 5}
-    \item{\code{T6}}{Avg temp (deg Celsius) in period 6}
+    \item{\code{R1}}{avg rainfall (mm/day) in period 1}
+    \item{\code{R2}}{avg rainfall (mm/day) in period 2}
+    \item{\code{R3}}{avg rainfall (mm/day) in period 3}
+    \item{\code{R4}}{avg rainfall (mm/day) in period 4}
+    \item{\code{R5}}{avg rainfall (mm/day) in period 5}
+    \item{\code{R6}}{avg rainfall (mm/day) in period 6}
+    \item{\code{S1}}{daily solar radiation (ca/cm^2) in period 1}
+    \item{\code{S2}}{daily solar radiation (ca/cm^2) in period 2}
+    \item{\code{S3}}{daily solar radiation (ca/cm^2) in period 3}
+    \item{\code{S4}}{daily solar radiation (ca/cm^2) in period 4}
+    \item{\code{S5}}{daily solar radiation (ca/cm^2) in period 5}
+    \item{\code{S6}}{daily solar radiation (ca/cm^2) in period 6}
+    \item{\code{ST}}{sowing date}
+    \item{\code{T1}}{avg temp (deg Celsius) in period 1}
+    \item{\code{T2}}{avg temp (deg Celsius) in period 2}
+    \item{\code{T3}}{avg temp (deg Celsius) in period 3}
+    \item{\code{T4}}{avg temp (deg Celsius) in period 4}
+    \item{\code{T5}}{avg temp (deg Celsius) in period 5}
+    \item{\code{T6}}{avg temp (deg Celsius) in period 6}
     \item{\code{value}}{value of the covariate}
   }
 
   The 'aastveit.barley.height' dataframe has 135 observations on the
   following 3 variables.
   \describe{
-    \item{\code{year}}{year}
+    \item{\code{year}}{year, 9 }
     \item{\code{gen}}{genotype, 15 levels}
     \item{\code{height}}{height (cm)}
   }
@@ -59,6 +59,10 @@ data("aastveit.barley.height")
 
   The \code{height} dataframe contains average plant height (cm) of 15 varieties
   of barley in each of 9 years.
+
+  The growth season of each year was divided into eight periods from
+  sowing to harvest.  Because the plant stop growing about 20 days after
+  ear emergence, only the first 6 periods are included here.
 
 }
 
@@ -73,7 +77,7 @@ data("aastveit.barley.height")
 \references{
   J. Chadoeuf and J. B. Denis (1991).
   Asymptotic variances for the multiplicative interaction model.
-  \emph{J. App. Stat.} 18, 331--353.
+  \emph{J. App. Stat.} 18, 331-353.
   http://doi.org/10.1080/02664769100000032
 }
 \examples{
@@ -88,7 +92,7 @@ if(require(reshape2) & require(pls)){
   Z <- acast(aastveit.barley.height, year ~ gen, value.var="height")
   Z <- sweep(Z, 1, rowMeans(Z))
   Z <- sweep(Z, 2, colMeans(Z)) # Double-centered
-  sum(Z^2)*4 # Total SS
+  sum(Z^2)*4 # Total SS = 10165
   sv <- svd(Z)$d
   round(100 * sv^2/sum(sv^2),1) # Prop of variance each axis
   # Aastveit Figure 1.  PCA of height
@@ -100,18 +104,51 @@ if(require(reshape2) & require(pls)){
   U$year <- NULL
   U <- scale(U) # Standardized covariates
   sv <- svd(U)$d
-  round(100 * sv^2/sum(sv^2),1) # Prop variance each axis
+  round(100 * sv^2/sum(sv^2),1) # Proportion of variance on each axis
 
   \dontrun{
   # Now, PLS relating the two matrices
   m1 <- plsr(Z~U)
   loadings(m1)
-  # Aastveit Fig 2a (genotypes), not rotated as they did
+  # Aastveit Fig 2a (genotypes), but rotated differently
   biplot(m1, which="y", var.axes=TRUE)
   # Fig 2b, 2c (not rotated)
   biplot(m1, which="x", var.axes=TRUE)
   }
 
+}
+
+\dontrun{
+  # Adapted from section 7.4 of Turner & Firth,
+  # "Generalized nonlinear models in R: An overview of the gnm package"
+  # who in turn reproduce the analysis of Chadoeuf & Denis (1991),
+  # "Asymptotic variances for the multiplicative interaction model"
+
+  require(agridat)
+  require(gnm)
+  data("aastveit.barley.height")
+  dath <- aastveit.barley.height
+  dath$year = factor(dath$year)
+
+  set.seed(1)
+  m2 <- gnm(height ~ year + gen + Mult(year, gen), data = dath)
+  # Turner: "To obtain parameterization of equation 1, in which sig_k is the
+  # singular value for component k, the row and column scores must be constrained
+  # so that the scores sum to zero and the squared scores sum to one.
+  # These contrasts can be obtained using getContrasts"
+  gamma <- getContrasts(m2, pickCoef(m2, "[.]y"),
+                        ref = "mean", scaleWeights = "unit")
+  delta <- getContrasts(m2, pickCoef(m2, "[.]g"),
+                        ref = "mean", scaleWeights = "unit")
+  # estimate & std err
+  gamma <- gamma$qvframe
+  delta <- delta$qvframe
+  # change sign of estimate
+  gamma[,1] <- -1 * gamma[,1]
+  delta[,1] <- -1 * delta[,1]
+  # conf limits based on asymptotic normality, Chadoeuf table 8, p. 350, 
+  round(cbind(gamma[,1], gamma[, 1] + (gamma[, 2]) %o% c(-1.96, 1.96)) ,3)  
+  round(cbind(delta[,1], delta[, 1] + (delta[, 2]) %o% c(-1.96, 1.96)) ,3)
 }
 
 }

@@ -10,12 +10,12 @@
 \usage{data("kang.maize")}
 \format{
   \describe{
-    \item{\code{gen}}{genotype factor, 17 levels}
-    \item{\code{env}}{environment factor, 12 levels}
+    \item{\code{gen}}{genotype, 17 levels}
+    \item{\code{env}}{environment, 12 levels}
     \item{\code{yield}}{yield, tonnes/ha}
-    \item{\code{}}{environment factor, 13 levels}
+    \item{\code{}}{environment, 13 levels}
     \item{\code{year}}{year, 85-87}
-    \item{\code{loc}}{loc factor, 4 levels}
+    \item{\code{loc}}{location, 4 levels}
   }
 }
 \details{

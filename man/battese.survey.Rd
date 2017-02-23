@@ -11,15 +11,15 @@
 \format{
   A data frame with 37 observations on the following 9 variables.
   \describe{
-    \item{\code{county}}{County name}
-    \item{\code{segment}}{Sample segment number (within county)}
-    \item{\code{countysegs}}{Number of segments in county}
-    \item{\code{cornhect}}{Hectares of corn in segment}
-    \item{\code{soyhect}}{Hectares of soy}
-    \item{\code{cornpix}}{Pixels of corn in segment}
-    \item{\code{soypix}}{Pixels of soy}
-    \item{\code{cornmean}}{County mean of corn pixels per segment}
-    \item{\code{soymean}}{County mean of soy pixels per segment}
+    \item{\code{county}}{county name}
+    \item{\code{segment}}{sample segment number (within county)}
+    \item{\code{countysegs}}{number of segments in county}
+    \item{\code{cornhect}}{hectares of corn in segment}
+    \item{\code{soyhect}}{hectares of soy}
+    \item{\code{cornpix}}{pixels of corn in segment}
+    \item{\code{soypix}}{pixels of soy}
+    \item{\code{cornmean}}{county mean of corn pixels per segment}
+    \item{\code{soymean}}{county mean of soy pixels per segment}
   }
 }
 \details{

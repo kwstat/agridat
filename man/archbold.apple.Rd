@@ -83,8 +83,5 @@ vc(m1)  # Variances/means on page 59
 }
 
 
-## require(HH)
-## interaction2wt(yield~spacing+stock+gen, dat)
-
 }
 \keyword{datasets}
