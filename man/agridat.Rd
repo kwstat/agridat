@@ -129,7 +129,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \tabular{llllllll}{
 name                               \tab gen \tab loc\tab reps\tab years \tab trt \tab other \tab model \cr
 
-\link{acorsi.grayleafspot}         \tab 36  \tab 9 \tab      \tab 5  \tab       \tab nonnormal \tab gnm,ammi \cr
+\link{acorsi.grayleafspot}         \tab 36  \tab 9 \tab  2   \tab 5  \tab       \tab nonnormal \tab gnm,ammi \cr
 \link{adugna.sorghum}              \tab 28  \tab 13 \tab     \tab 5  \tab       \tab \tab \cr
 \link{aastveit.barley}             \tab 15  \tab    \tab     \tab 9  \tab       \tab yr*gen~yr*trt\tab pls \cr
 \link{allcroft.lodging}            \tab 32  \tab 7  \tab     \tab    \tab       \tab percent \tab tobit \cr
@@ -187,6 +187,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{fan.stability}               \tab 13  \tab 10 \tab     \tab 2  \tab       \tab 3-way \tab stability \cr
 \link{federer.diagcheck}           \tab 122 \tab    \tab     \tab    \tab       \tab xy \tab lm, lmer, asreml \cr
 \link{federer.tobacco}             \tab     \tab    \tab 8   \tab    \tab 7     \tab xy \tab lm \cr
+\link{fisher.barley}               \tab 5   \tab 6  \tab     \tab 2  \tab       \tab  \tab  \cr
 \link{fisher.latin}                \tab     \tab    \tab 5   \tab    \tab 5     \tab xy,latin \tab lm \cr
 \link{fox.wheat}                   \tab 22  \tab 14 \tab     \tab    \tab       \tab \tab lm\cr
 \link{gathmann.bt}                 \tab 2   \tab    \tab 8   \tab    \tab       \tab \tab tost \cr

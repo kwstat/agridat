@@ -1,5 +1,5 @@
 # acorsi.r
-# Time-stamp: <23 Feb 2017 16:21:01 c:/x/rpack/agridat/data-raw/acorsi.r>
+# Time-stamp: <26 Feb 2017 17:58:47 c:/x/rpack/agridat/data-done/acorsi.r>
 
 library(asreml)
 library(dplyr)
@@ -9,16 +9,11 @@ library(readxl)
 library(readr)
 library(reshape2)
 library(tibble)
-
+library(magrittr)
 
 setwd("c:/x/rpack/agridat/data-raw/")
-dat <- read_excel("acorsi.grayleafspot.xlsx")
-
-rn <- dat[,1]
-dat <- as.matrix(dat[,-1])
-rownames(dat) <- rn[[1]]
-dat <- melt(dat)
-names(dat) <- c('gen','env','y')
+dat <- read_csv("acorsi.greyleafspot.csv")
+dat %<>% mutate(gen=factor(gen),env=factor(env),rep=factor(rep))
 
 acorsi.grayleafspot <- dat
 # ----------------------------------------------------------------------------
@@ -44,14 +39,15 @@ dontrun{
   
   # model 2, GAMMI model. See section 7.4 of Turner
   # "Generalized nonlinear models in R: An overview of the gnm package"
-  set.seed(2)
-  m1 <- gnm(y ~ gen + env, data=dat, family=wedderburn)
-  deviance(m1) # 380
+  set.seed(1)
+  m1 <- gnm(y ~ gen + env + env:rep, data=dat, family=wedderburn)
+  deviance(m1) # 1121
   m20 <- residSVD(m1, gen, env, 2)
-  m2 <- update(m1, y ~ gen + env + Mult(gen, env, inst=1) + Mult(gen, env, inst=2), data=dat,
+  m2 <- update(m1, y ~ gen + env + env:rep + Mult(gen, env, inst=1) + Mult(gen, env, inst=2), data=dat,
                start=c(coef(m1), m20[,1], m20[,2]))
-  deviance(m2) # 10^18 nonsense
-  
+  deviance(m2) # 434
+  res2 <- residSVD(m2,gen,env,2)
+  biplot(res2[1:36,], res2[37:45,])
   # Turner makes a biplot like this. Why?
   pred2 <- matrix(m2$predictors, 36, 9) # 36 gen, 9 env
   svd2 <- svd(pred2)

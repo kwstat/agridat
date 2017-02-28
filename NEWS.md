@@ -32,7 +32,11 @@ nonnecke.peas.uniformity, parker.orange.uniformity,
 polson.safflower.uniformity, sawyer.multi.uniformity, smith.beans.uniformity,
 stickler.sorghum.uniformity, wiedemann.safflower.uniformity
 
-## New data for stability, misc
+## New data for stability
+
+fisher.barley, tai.potato
+
+## Other data
 
 lu.stability
 
@@ -42,8 +46,8 @@ depalluel.sheep. eden.nonnormal, gartner.corn, giles.wheat,
 gomez.heteroskedastic, gomez.nonnormal1, gomez.nonnormal2, gomez.nonnormal3,
 gomez.wetdry, goulden.eggs, goulden.splitsplit, gregory.cotton,
 hanover.whitepine, huehn.wheat, kenward.cattle, kreusler.maize, lillemo.wheat,
-little.splitblock, mead.lambs, omer.sorghum, onofri.winterwheat, tai.potato,
-wheatley.carrot
+little.splitblock, mead.lambs, omer.sorghum, onofri.winterwheat, 
+wheatley.carrot, 
 
 ## Other notes
 

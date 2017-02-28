@@ -13,14 +13,15 @@
   \describe{
     \item{\code{gen}}{genotype, 36 levels}
     \item{\code{env}}{environment, 9 levels}
+    \item{\code{rep}}{replicate, 2 levels}
     \item{\code{y}}{grey leaf spot severity}
   }
 }
 \details{
-  The response variable is the mean of two reps, of the percentage of
-  leaf area affected by gray leaf spot within each rep.
+  The response variable is the percentage of leaf area affected by gray
+  leaf spot within each experimental unit (plot).
   
-  Acorsi et al use this data to illustrate the fitting of a generalized
+  Acorsi et al. use this data to illustrate the fitting of a generalized
   AMMI model with non-normal data.
 }
 \source{
@@ -32,16 +33,17 @@
   \emph{Journal of Agricultural Science}.
   http://doi.org/10.1017/S0021859616001015
 
-  Used with permission of Marlon Coan.
+  Electronic data and R code kindly provided by Marlon Coan.
 }
 \references{
   None
 }
 \examples{
+
 data(acorsi.grayleafspot)
 dat <- acorsi.grayleafspot
 
-# Acorsi figure 2
+# Acorsi figure 2. Note: Acorsi used cell means
 op <- par(mfrow=c(2,1), mar=c(5,4,3,2))
 boxplot(y ~ env, dat, las=2,
         xlab="environment", ylab="GLS severity")
@@ -51,33 +53,65 @@ boxplot(y ~ gen, dat, las=2,
 par(op)
 
 \dontrun{
-  # try to reproduce the results of Acorsi, but this does not converge, perhaps
-  # because this data is based on means in acorsi, instead of the raw data for
-  # the individual reps?  Or maybe the model syntax is wrong?  FIXME.
-  require(gnm)
-
-  # model 0, link logit. Acorsi fig 3
-  m0 <- gnm(y ~ gen+env,
-            data=dat, family=quasibinomial())
-  # plot(m0, which=1)
-  # plot(m0, which=2)
   
-  # model 2, GAMMI model. See section 7.4 of Turner
+  # GLM models
+  
+  # glm main-effects model with logit u(1-u) and wedderburn u^2(1-u)^2
+  # variance functions
+  # glm1 <- glm(y~ env/rep + gen + env, data=dat, family=quasibinomial)
+  # glm2 <- glm(y~ env/rep + gen + env, data=dat, family=wedderburn)
+  # plot(glm2, which=1); plot(glm2, which=2)
+  
+  # GAMMI models of Acorsi. See also section 7.4 of Turner
   # "Generalized nonlinear models in R: An overview of the gnm package"
-  set.seed(2)
-  m1 <- gnm(y ~ gen + env, data=dat, family=wedderburn)
-  deviance(m1) # 380
-  m20 <- residSVD(m1, gen, env, 2)
-  m2 <- update(m1, y ~ gen + env + Mult(gen, env, inst=1) + Mult(gen, env, inst=2), data=dat,
-               start=c(coef(m1), m20[,1], m20[,2]))
-  deviance(m2) # 10^18 nonsense convergence
   
-  # Turner makes a biplot like this. Why?
-  pred2 <- matrix(m2$predictors, 36, 9) # 36 gen, 9 env
-  svd2 <- svd(pred2)
-  A <- sweep(svd2$v, 2, sqrt(svd2$d), "*")[, 1:2]
-  B <- sweep(svd2$u, 2, sqrt(svd2$d), "*")[, 1:2]
-  biplot(A,B)
+  # full gnm model with wedderburn, seems to work
+  set.seed(1)
+  gnm1 <- gnm(y ~  env/rep + env + gen + instances(Mult(env,gen),2),
+              data=dat,
+              family=wedderburn, iterMax =800)
+  deviance(gnm1) # 433.8548
+  summary(gnm1)
+  anova(gnm1, test ="F")  # anodev, Acorsi table 4
+  ##                          Df Deviance Resid. Df Resid. Dev       F    Pr(>F)    
+  ## NULL                                       647     3355.5                      
+  ## env                       8  1045.09       639     2310.4 68.4696 < 2.2e-16 ***
+  ## env:rep                   9    12.33       630     2298.1  0.7183    0.6923    
+  ## gen                      35  1176.23       595     1121.9 17.6142 < 2.2e-16 ***
+  ## Mult(env, gen, inst = 1) 42   375.94       553      745.9  4.6915 < 2.2e-16 ***
+  ## Mult(env, gen, inst = 2) 40   312.06       513      433.9  4.0889 3.712e-14 ***
+
+
+  # maybe better, start simple and build up the model
+  gnm2a <- gnm(y ~  env/rep + env + gen,
+               data=dat,
+               family=wedderburn, iterMax =800)
+
+  # add first interaction term
+  res2a <- residSVD(gnm2a, env, gen, 2)
+  gnm2b <- update(gnm2a, . ~ . + Mult(env,gen,inst=1),
+                  start = c(coef(gnm2a), res2a[, 1]))
+  deviance(gnm2b) # 692.19
+
+  # add second interaction term
+  res2b <- residSVD(gnm2b, env, gen, 2)
+  gnm2c <- update(gnm2b, . ~ . + Mult(env,gen,inst=1) + Mult(env,gen,inst=2),
+                  start = c(coef(gnm2a), res2a[, 1], res2b[,1]))
+  deviance(gnm2c) # 433.8548
+  # anova(gnm2c) # weird error message
+
+  # note, to build the ammi biplot, use the first column of res2a to get
+  # axis 1, and the FIRST column of res2b to get axis 2. Slightly confusing
+  emat <- cbind(res2a[1:9, 1], res2b[1:9, 1])
+  rownames(emat) <- gsub("fac1.", "", rownames(emat))
+  
+  gmat <- cbind(res2a[10:45, 1], res2b[10:45, 1])
+  rownames(gmat) <- gsub("fac2.", "", rownames(gmat))
+
+  # match Acorsi figure 4
+  biplot(gmat, emat, xlim=c(-2.2, 2.2), ylim=c(-2.2, 2.2), expand=2, cex=0.5,
+         xlab="Axis 1", ylab="Axis 2", main="acorsi.grayleafspot - GAMMI biplot")
+
 }
 
 }
