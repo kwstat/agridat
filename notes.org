@@ -32,13 +32,15 @@ Oakey, Cullis, Thompson http://www.g3journal.org/content/6/5/1313/suppl/DC1
 ** Statistical Analysis of Agricultural Experiments with R
 http://rstats4ag.org/
 
-Rothamsted Annual Reports http://www.era.rothamsted.ac.uk/eradoc/books/1 
-Done: 1908-1926 
-Most annual reports have a section on Classical Experiments.
-
-Sawyer field at Rothamsted, Mentioned in McCullagh's paper.  http://www.era.rothamsted.ac.uk/eradoc/book/84 
-Pages 138-153 have traditional RCB experiments.
-Pages 154-155 are uniformity experiments: agridat::sawyer.multi.uniformity
+** Rothamsted Annual Reports  
+http://www.era.rothamsted.ac.uk/eradoc/books/1
+Most of the annual reports have a section on Classical Experiments, often featuring RCB or Latin Square experiments.
+Done: 
+1908-1926 
+1926-1927. agridat::sawyer.multi.uniformity 
+1927-1928. agridat::sawyer.multi.uniformity
+1929
+---
 
 
 Jose Crossa papers http://repository.cimmyt.org/xmlui/handle/10883/1/browse?value=Crossa,%20J.&type=author 

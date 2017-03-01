@@ -176,11 +176,17 @@ if(require(SpATS)){
 \dontrun{
 
 if(require(sommer)){
+  
+  data(stroup.nin)
+  dat <- stroup.nin
 
   # sommer will not fit a model without a random term, so add 'rep'
   # Variance comps are somewhat different from asreml.  Why?
   # The yates.oats analysis gives the same results in sommer and asreml
 
+  # Seems broken 2.28.2017
+  
+  dat = transform(dat, row=factor(row), col=factor(col))
   so1 <- mmer2(yield ~ gen, random = ~  rep,
                rcov = ~ ar1(col):ar1(row),
                data = dat) # method="NR"

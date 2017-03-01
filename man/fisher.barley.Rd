@@ -2,10 +2,10 @@
 \alias{fisher.barley}
 \docType{data}
 \title{
-  Multi-environment trial of 5 barley varieties, 6 locations, 2 yeas
+  Multi-environment trial of 5 barley varieties, 6 locations, 2 years
 }
 \description{
-  Multi-environment trial of 5 barley varieties, 6 locations, 2 yeas
+  Multi-environment trial of 5 barley varieties, 6 locations, 2 years
 }
 \usage{data("fisher.barley")}
 \format{
@@ -64,9 +64,9 @@ if(require(dplyr) & require(lattice)) {
 
 \dontrun{
 
+  # calculate stability according to the sum-of-squares approach used by
+  # Shukla (1972), eqn 11. match to Shukla, Table 4, M.S. column
   require(dplyr)
-  # calculate stability according to Shukla (1972), eqn 11
-  # matches Shukla, Table 4, M.S. column
   dat2 <- dat
   dat2 <- dat2 %>% group_by(gen,env) %>% summarize(yield=sum(yield))
   dat2 <- dat2 %>% group_by(env) %>% mutate(envmn=mean(yield))
@@ -92,26 +92,33 @@ if(require(dplyr) & require(lattice)) {
   library(asreml)
   dat2 <- dat2[order(dat2$gen),]
 
-  # R-side
-  m.sv <- asreml(yield ~ gen, data=dat2,
+  # G-side
+  m1g <- asreml(yield ~ gen, data=dat,
+                  random = ~ env + diag(gen):units,
+                  family=asreml.gaussian(dispersion=1.0))
+  m1g <- update(m1g)
+  summary(m1g)$varcomp[-1,1:2]/6
+  ##                                     gamma   component
+  ## gen:units!gen.Manchuria.var  33.8318944  33.8318944
+  ## gen:units!gen.Peatland.var   70.4838297  70.4838297
+  ## gen:units!gen.Svansota.var   25.2558315  25.2558315
+  ## gen:units!gen.Trebi.var     231.6923935 231.6923935
+  ## gen:units!gen.Velvet.var     13.9189381  13.9189381
+  ## R!variance                    0.1666667   0.1666667
+
+  # R-side estimates = G-side estimate + 0.1666 (resid variance)
+  m1r <- asreml(yield ~ gen, data=dat,
                  random = ~ env,
                  rcov = ~ at(gen):units)
-  m.sv <- update(m.sv)
-  summary(m.sv)$varcomp
-  ##   summary(m.sv)$varcomp[-1,1:2]/6
+  m1r <- update(m1r)
+  summary(m1r)$varcomp[-1,1:2]/6
   ##                            gamma component
   ## gen_Manchuria!variance  34.03643  34.03643
   ## gen_Peatland!variance   70.72723  70.72723
   ## gen_Svansota!variance   25.38494  25.38494
   ## gen_Trebi!variance     231.84662 231.84662
   ## gen_Velvet!variance     14.05591  14.05591
-
-  # G-side
-  m.sv2 <- asreml(yield ~ gen, data=dat,
-                  random = ~ env + diag(gen):units,
-                  family=asreml.gaussian(dispersion=1.0))
-  m.sv2 <- update(m.sv2)
-  summary(m.sv2)$varcomp[-1,1:2]/6
+  
 }
 
 }

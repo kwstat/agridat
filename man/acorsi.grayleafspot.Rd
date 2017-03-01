@@ -18,6 +18,9 @@
   }
 }
 \details{
+  Experiments conducted in 9 environments in Brazil in 2010-11.  Each
+  location had an RCB with 2 reps.
+  
   The response variable is the percentage of leaf area affected by gray
   leaf spot within each experimental unit (plot).
   
@@ -26,8 +29,7 @@
 }
 \source{
   C. R. L. Acorsi, T. A. Guedes, M. M. D. Coan, R. J. B. Pinto,
-  C. A. Scapim, C. A. P. Pacheco, P. E. O. Guimaraes,
-  C. R. Casela. (2016).
+  C. A. Scapim, C. A. P. Pacheco, P. E. O. Guimaraes, C. R. Casela. (2016).
   Applying the generalized additive main effects and multiplicative
   interaction model to analysis of maize genotypes resistant to grey leaf spot.
   \emph{Journal of Agricultural Science}.
