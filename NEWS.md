@@ -46,8 +46,8 @@ depalluel.sheep. eden.nonnormal, gartner.corn, giles.wheat,
 gomez.heteroskedastic, gomez.nonnormal1, gomez.nonnormal2, gomez.nonnormal3,
 gomez.wetdry, goulden.eggs, goulden.splitsplit, gregory.cotton,
 hanover.whitepine, huehn.wheat, kenward.cattle, kreusler.maize, lillemo.wheat,
-little.splitblock, mead.lambs, omer.sorghum, onofri.winterwheat, 
-wheatley.carrot, 
+little.splitblock, mead.lambs, omer.sorghum, onofri.winterwheat,
+vaneeuwijk.nematodes, wheatley.carrot,
 
 ## Other notes
 

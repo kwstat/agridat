@@ -1,3 +1,4 @@
+
 \name{acorsi.grayleafspot}
 \alias{acorsi.grayleafspot}
 \docType{data}
@@ -51,7 +52,7 @@ boxplot(y ~ env, dat, las=2,
         xlab="environment", ylab="GLS severity")
 title("acorsi.grayleafspot")
 boxplot(y ~ gen, dat, las=2,
-        xlab="environment", ylab="GLS severity")
+        xlab="genotype", ylab="GLS severity")
 par(op)
 
 \dontrun{
