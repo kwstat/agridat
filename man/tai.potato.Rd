@@ -43,8 +43,12 @@
 }
 \examples{
 data(tai.potato)
+dat = tai.potato
 
-# Need to add tai() example
+# fixme - need to add tai() example
+
+# note, st4gi::tai assumes there are replications in the data
+# https://github.com/reyzaguirre/st4gi/blob/master/R/tai.R
 
 }
 \keyword{datasets}

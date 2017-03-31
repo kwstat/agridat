@@ -68,6 +68,8 @@ m1 <- lm(yield ~ env + yor + env:yor, data=dat)
 mean(c(coef(m1)[21], coef(m1)[21]+coef(m1)[22:40]))
 ## [1] 5.496781
 
+# ----------------------------------------------------------------------------
+
 \dontrun{
   # Now a mixed-effects model.  Fixed overall int/slope.  Random env int/slope.
 
@@ -91,27 +93,26 @@ mean(c(coef(m1)[21], coef(m1)[21]+coef(m1)[22:40]))
   dat$yorc <- dat$yor - 1800
   m3 <- lmer(y ~ 1 + yorc + (1+yorc||env), data=dat)
   
-  require(asreml4)
-  ## FIXME asreml4 does not like 'env'
-  #m3a <- asreml(y ~ 1 + yorc, data=dat, random = ~ env + env:yorc)
+  # Now lme4 succeeds.  Rate of gain is 100*0.0549 = 5.49
+  fixef(m3)
+  ## (Intercept)        yorc
+  ##  5.87492444  0.05494464
 
-  #vc(m3)
+  # asreml3
+  require(asreml)
+  m3a <- asreml(y ~ 1 + yorc, data=dat, random = ~ env + env:yorc)
+
+  vc(m3)
   ##      grp        var1 var2     vcov   sdcor
   ##      env (Intercept) <NA> 11.61    3.407
   ##    env.1        yorc <NA>  0.00063 0.02511
   ## Residual        <NA> <NA>  3.551   1.884
 
-  #vc(m3a)
+  vc(m3a)
   ##           effect component std.error z.ratio      con
   ##      env!env.var  11.61     4.385        2.6 Positive
   ## env:yorc!env.var   0.00063  0.000236     2.7 Positive
   ##       R!variance   3.551    0.2231      16   Positive
-
-  # Now lme4 succeeds.  Rate of gain is 100*0.0549 = 5.49
-
-  #fixef(m3)
-  ## (Intercept)        yorc
-  ##  5.87492444  0.05494464
 
 }
 

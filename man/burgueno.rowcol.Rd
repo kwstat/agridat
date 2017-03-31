@@ -66,51 +66,52 @@ if(require(lme4) && require(lucid)){
 # ----------------------------------------------------------------------------
 
 \dontrun{
-  ## require(asreml)
-  ## # AR1 x AR1 with linear row/col effects, random spline row/col
-  ## dat <- transform(dat, xf=factor(col), yf=factor(row))
-  ## dat <- dat[order(dat$xf,dat$yf),]
-  ## m2 <- asreml(yield ~ gen + lin(yf) + lin(xf), data=dat,
-  ##              random = ~ spl(yf) + spl(xf),
-  ##              rcov = ~ ar1(xf):ar1(yf))
-  ## m2 <- update(m2) # More iterations
+  # asreml3
+  require(asreml)
+  # AR1 x AR1 with linear row/col effects, random spline row/col
+  dat <- transform(dat, xf=factor(col), yf=factor(row))
+  dat <- dat[order(dat$xf,dat$yf),]
+  m2 <- asreml(yield ~ gen + lin(yf) + lin(xf), data=dat,
+               random = ~ spl(yf) + spl(xf),
+               rcov = ~ ar1(xf):ar1(yf))
+  m2 <- update(m2) # More iterations
 
-  ## # Scaling of spl components has changed in asreml from old versions
-  ## require(lucid)
-  ## vc(m2) # Match Burgueno p. 42
-  ## ##      effect component std.error z.ratio constr
-  ## ##     spl(yf)  0.09077    0.08252   1.1      pos
-  ## ##     spl(xf)  0.08108    0.0821    0.99     pos
-  ## ##  R!variance  0.1482     0.03119   4.8      pos
-  ## ##    R!xf.cor  0.1152     0.2269    0.51   uncon
-  ## ##    R!yf.cor  0.009436   0.2414    0.039  uncon
-  ## ##   plot(variogram(m2), main="burgueno.rowcol")
+  # Scaling of spl components has changed in asreml from old versions
+  require(lucid)
+  vc(m2) # Match Burgueno p. 42
+  ##      effect component std.error z.ratio constr
+  ##     spl(yf)  0.09077    0.08252   1.1      pos
+  ##     spl(xf)  0.08108    0.0821    0.99     pos
+  ##  R!variance  0.1482     0.03119   4.8      pos
+  ##    R!xf.cor  0.1152     0.2269    0.51   uncon
+  ##    R!yf.cor  0.009436   0.2414    0.039  uncon
+  ##   plot(variogram(m2), main="burgueno.rowcol")
 
 }
 
 # ----------------------------------------------------------------------------
 
 \dontrun{
-  require(asreml4)
-  # AR1 x AR1 with linear row/col effects, random spline row/col
-  dat <- transform(dat, xf=factor(col), yf=factor(row))
-  dat <- dat[order(dat$xf,dat$yf),]
-  m2 <- asreml(yield ~ gen + lin(yf) + lin(xf), data=dat,
-               random = ~ spl(yf) + spl(xf),
-               resid = ~ ar1(xf):ar1(yf))
-  m2 <- update(m2) # More iterations
+  ## require(asreml4)
+  ## # AR1 x AR1 with linear row/col effects, random spline row/col
+  ## dat <- transform(dat, xf=factor(col), yf=factor(row))
+  ## dat <- dat[order(dat$xf,dat$yf),]
+  ## m2 <- asreml(yield ~ gen + lin(yf) + lin(xf), data=dat,
+  ##              random = ~ spl(yf) + spl(xf),
+  ##              resid = ~ ar1(xf):ar1(yf))
+  ## m2 <- update(m2) # More iterations
 
-  # Scaling of spl components has changed in asreml from old versions
-  require(lucid)
-  vc(m2) # Match Burgueno p. 42
-  ##       effect component std.error z.ratio bound %ch
-  ##      spl(yf)  0.09077    0.08252   1.1       P 0  
-  ##      spl(xf)  0.08107    0.08209   0.99      P 0  
-  ##     xf:yf(R)  0.1482     0.03119   4.8       P 0  
-  ## xf:yf!xf!cor  0.1152     0.2269    0.51      U 0.1
-  ## xf:yf!yf!cor  0.009467   0.2414    0.039     U 0.9
+  ## # Scaling of spl components has changed in asreml from old versions
+  ## require(lucid)
+  ## vc(m2) # Match Burgueno p. 42
+  ## ##       effect component std.error z.ratio bound %ch
+  ## ##      spl(yf)  0.09077    0.08252   1.1       P 0  
+  ## ##      spl(xf)  0.08107    0.08209   0.99      P 0  
+  ## ##     xf:yf(R)  0.1482     0.03119   4.8       P 0  
+  ## ## xf:yf!xf!cor  0.1152     0.2269    0.51      U 0.1
+  ## ## xf:yf!yf!cor  0.009467   0.2414    0.039     U 0.9
 
-  plot(varioGram(m2), main="burgueno.rowcol")
+  ## plot(varioGram(m2), main="burgueno.rowcol")
 
 }
 

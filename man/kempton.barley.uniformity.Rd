@@ -55,22 +55,22 @@ if(require(desplot)){
 
 \dontrun{
 
-  ## # Kempton estimated auto-regression coefficients b1=0.10, b2=0.91
+  # Kempton estimated auto-regression coefficients b1=0.10, b2=0.91
 
-  ## dat <- transform(dat, xf = factor(col), yf=factor(row))
-  ## require(asreml)
-  ## m1 <- asreml(yield ~ 1, data=dat, rcov=~ar1(xf):ar1(yf))
+  dat <- transform(dat, xf = factor(col), yf=factor(row))
+  # asreml3
+  require(asreml)
+  m1 <- asreml(yield ~ 1, data=dat, rcov=~ar1(xf):ar1(yf))
   
-  ## require(lucid)
-  ## vc(m1)
-  ## ##      effect component std.error z.ratio constr
-  ## ##  R!variance    0.1044   0.022       4.7    pos
-  ## ##    R!xf.cor    0.2458   0.07484     3.3  uncon
-  ## ##    R!yf.cor    0.8186   0.03822    21    uncon
+  require(lucid)
+  vc(m1)
+  ##      effect component std.error z.ratio constr
+  ##  R!variance    0.1044   0.022       4.7    pos
+  ##    R!xf.cor    0.2458   0.07484     3.3  uncon
+  ##    R!yf.cor    0.8186   0.03822    21    uncon
   
-  ## # asreml estimates auto-regression correlations of 0.25, 0.82
-  ## # Kempton estimated auto-regression coefficients b1=0.10, b2=0.91
-
+  # asreml estimates auto-regression correlations of 0.25, 0.82
+  # Kempton estimated auto-regression coefficients b1=0.10, b2=0.91
 }
 
 # ----------------------------------------------------------------------------
@@ -79,19 +79,19 @@ if(require(desplot)){
 
   # Kempton estimated auto-regression coefficients b1=0.10, b2=0.91
   
-  dat <- transform(dat, xf = factor(col), yf=factor(row))
-  require(asreml4)
-  m1 <- asreml(yield ~ 1, data=dat, residual = ~ar1(xf):ar1(yf))
+  ## dat <- transform(dat, xf = factor(col), yf=factor(row))
+  ## require(asreml4)
+  ## m1 <- asreml(yield ~ 1, data=dat, residual = ~ar1(xf):ar1(yf))
   
-  require(lucid)
-  vc(m1)
-  ##       effect component std.error z.ratio bound %ch
-  ##     xf:yf(R)    0.1044   0.022       4.7     P   0
-  ## xf:yf!xf!cor    0.2458   0.07484     3.3     U   0
-  ## xf:yf!yf!cor    0.8186   0.03822    21       U   0
+  ## require(lucid)
+  ## vc(m1)
+  ## ##       effect component std.error z.ratio bound %ch
+  ## ##     xf:yf(R)    0.1044   0.022       4.7     P   0
+  ## ## xf:yf!xf!cor    0.2458   0.07484     3.3     U   0
+  ## ## xf:yf!yf!cor    0.8186   0.03822    21       U   0
 
-  # asreml estimates auto-regression correlations of 0.25, 0.82
-  # Kempton estimated auto-regression coefficients b1=0.10, b2=0.91
+  ## # asreml estimates auto-regression correlations of 0.25, 0.82
+  ## # Kempton estimated auto-regression coefficients b1=0.10, b2=0.91
 
 }
 

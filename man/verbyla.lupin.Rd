@@ -134,8 +134,7 @@ if (require(latticeExtra)) { # for useOuterStrips
   dat <- transform(dat, site=factor(paste0(year,".",substring(loc,1,4))))
   
   # Initial model from top of Verbyla table 9.
-  require(asreml4)
-
+#  require(asreml4)
   # FIXME asreml4 This is not working in asreml4
   
 ##   m0 <- asreml(yield ~ 1

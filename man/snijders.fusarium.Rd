@@ -107,7 +107,7 @@ y12 <- cbind(y1,y2)
 rownames(y12) <- substring(rownames(y12), 31)
 g12[,1] <- -1 * g12[,1]
 y12[,1] <- -1 * y12[,1]
-# AMMI biplot.  Inner-products of points projected onto
+# GAMMI biplot.  Inner-products of points projected onto
 # arrows match VanEeuwijk figure 4.  Slight rotation of graph is ignorable.
 biplot(y12, g12, cex=.75, main="snijders.fusarium") # Arrows to genotypes.
 

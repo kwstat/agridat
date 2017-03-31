@@ -76,76 +76,78 @@ qqmath(~score|env, dat, group=scale,
        auto.key=list(columns=4),
        main="lillemo.wheat - QQ plots by environment")
 
+# ----------------------------------------------------------------------------
+
 \dontrun{
-# Change data to matrix format
-require(reshape2)
-datm <- acast(dat, gen~env, value.var='score')
-
-# Environment means. Matches Lillemo Table 3
-apply(datm, 2, mean)
-
-# Two different transforms within envts to approximate 0-9 scale
-datt <- datm
+  # Change data to matrix format
+  require(reshape2)
+  datm <- acast(dat, gen~env, value.var='score')
+  
+  # Environment means. Matches Lillemo Table 3
+  apply(datm, 2, mean)
+  
+  # Two different transforms within envts to approximate 0-9 scale
+  datt <- datm
   datt[,"CA03"] <- 1.8 * datt[,"CA03"]
   ix <- c("Ba04","Kh06","Gl05","BT06","Ha03","Ha04","Ha05","Ha07","Aa03","Aa04","Aa05")
-datt[,ix] <- apply(datt[,ix],2,sqrt)
+  datt[,ix] <- apply(datt[,ix],2,sqrt)
 
-# Genotype means of transformed data. Matches Lillemo table 3.
-round(rowMeans(datt),2)
+  # Genotype means of transformed data. Matches Lillemo table 3.
+  round(rowMeans(datt),2)
 
-# Biplot of transformed data like Lillemo Fig 2
-require(gge)
-biplot(gge(datt, scale=FALSE), title="lillemo.wheat")
-
-# Median polish of transformed table
-m1 <-medpolish(datt)
-# Half-normal prob plot like Fig 1
-require(faraway)
-halfnorm(abs(as.vector(m1$resid)))
-
-# Plot matrix of median-polish residuals
-library(reshape2)
-res1 <-as.matrix(m1$residuals)
-res1 <- melt(res1)
-library(ggplot2)
-ggplot(res1, aes(Var2, Var1)) +
-  geom_tile(aes(fill = value)) +
-  scale_fill_gradient2(low="yellow", high="red", mid="white", midpoint=0) +
-  xlab("") + ylab("") + ggtitle("lillemo.wheat - medpolish residuals") +
-  geom_text(aes(Var2, Var1, label=round(res1$value,1)), size=2.5)
-
-# Nonparametric stability statistics. Lillemo Table 4.
-huehn <- function(mat){
-  # Gen in rows, Env in cols  
-  nenv <- ncol(mat)
-  # Corrected yield. Remove genotype effects
-  # Remove the following line to match Table 4 of Lillemo
-  mat <- sweep(mat, 1, rowMeans(mat)) + mean(mat)
-  # Ranks in each environment
-  rmat <- apply(mat, 2, rank)
-
-  # Mean genotype rank across envts
-  MeanRank <- apply(rmat, 1, mean)
+  # Biplot of transformed data like Lillemo Fig 2
+  require(gge)
+  biplot(gge(datt, scale=FALSE), title="lillemo.wheat")
   
-  # Huehn S1
-  gfun <- function(x){
-    oo <- outer(x,x,"-")
-    sum(abs(oo)) # sum of all absolute pairwise differences
+  # Median polish of transformed table
+  m1 <- medpolish(datt)
+  # Half-normal prob plot like Fig 1
+  # require(faraway)
+  # halfnorm(abs(as.vector(m1$resid)))
+
+  # Plot matrix of median-polish residuals
+  library(reshape2)
+  res1 <-as.matrix(m1$residuals)
+  res1 <- melt(res1)
+  library(ggplot2)
+  ggplot(res1, aes(Var2, Var1)) +
+    geom_tile(aes(fill = value)) +
+    scale_fill_gradient2(low="yellow", high="red", mid="white", midpoint=0) +
+    xlab("") + ylab("") + ggtitle("lillemo.wheat - medpolish residuals") +
+    geom_text(aes(Var2, Var1, label=round(res1$value,1)), size=2.5)
+
+  # Nonparametric stability statistics. Lillemo Table 4.
+  huehn <- function(mat){
+    # Gen in rows, Env in cols  
+    nenv <- ncol(mat)
+    # Corrected yield. Remove genotype effects
+    # Remove the following line to match Table 4 of Lillemo
+    mat <- sweep(mat, 1, rowMeans(mat)) + mean(mat)
+    # Ranks in each environment
+    rmat <- apply(mat, 2, rank)
+    
+    # Mean genotype rank across envts
+    MeanRank <- apply(rmat, 1, mean)
+    
+    # Huehn S1
+    gfun <- function(x){
+      oo <- outer(x,x,"-")
+      sum(abs(oo)) # sum of all absolute pairwise differences
+    }
+    S1 <- apply(rmat, 1, gfun)/(nenv*(nenv-1))
+    
+    # Huehn S2
+    S2 <- apply((rmat-MeanRank)^2,1,sum)/(nenv-1)
+    
+    out <- data.frame(MeanRank,S1,S2)
+    rownames(out) <- rownames(mat)
+    return(out)
   }
-  S1 <- apply(rmat, 1, gfun)/(nenv*(nenv-1))
-
-  # Huehn S2
-  S2 <- apply((rmat-MeanRank)^2,1,sum)/(nenv-1)
-
-  out <- data.frame(MeanRank,S1,S2)
-  rownames(out) <- rownames(mat)
-  return(out)
-}
-round(huehn(datm),2) # Matches table 4
+  round(huehn(datm),2) # Matches table 4
   
-# I do not think phenability package gives correct values for S1
-# require(phenability)
-# nahu(datm)
+  # I do not think phenability package gives correct values for S1
+  # require(phenability)
+  # nahu(datm)
   
 } # dontrun
 

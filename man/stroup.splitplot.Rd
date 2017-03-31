@@ -45,44 +45,47 @@
 data(stroup.splitplot)
 dat <- stroup.splitplot
 
+# ----------------------------------------------------------------------------
+
 \dontrun{
 
-# ---- lme4 -----
-require(lme4)
-m0 <- lmer(y~ -1 + a + b + a:b + (1|rep) + (1|a:rep), data=dat)
-# No predict function
-
-# ----- nlme -----
-require(nlme)
-m0 <- lme(y ~ -1 + a + b + a:b, data=dat, random = ~ 1|rep/a)
-
+  # ---- lme4 -----
+  require(lme4)
+  m0 <- lmer(y~ -1 + a + b + a:b + (1|rep) + (1|a:rep), data=dat)
+  # No predict function
+  
+  # ----- nlme -----
+  require(nlme)
+  m0 <- lme(y ~ -1 + a + b + a:b, data=dat, random = ~ 1|rep/a)
+  
   # ----- ASREML model -----
-  require(asreml4)
+  require(asreml)
   m1 <- asreml(y~ -1 + a + b + a:b, random=~ rep + a:rep, data=dat)
-
+  
   library(lucid)
   vc(m1) # Variance components match Stroup p. 41
   ##   effect component std.error z.ratio bound %ch
   ##      rep    62.4      56.54      1.1     P   0
   ##    a:rep    15.38     11.79      1.3     P   0
   ## units(R)     9.361     4.413     2.1     P   0
-
+  
   # Narrow space predictions
-  predict(m1, data=dat, classify="a", average=list(rep=NULL))$pvals
+  predict(m1, data=dat, classify="a", average=list(rep=NULL))$predictions$pvals
   #  a Predicted Std Err    Status
   # a1     32.88   1.082 Estimable
   # a2     34.12   1.082 Estimable
   # a3     25.75   1.082 Estimable
 
   # Intermediate space predictions
-  predict(m1, data=dat, classify="a", ignore=list("a:rep"), average=list(rep=NULL))$pvals
+  predict(m1, data=dat, classify="a", ignore=list("a:rep"),
+          average=list(rep=NULL))$predictions$pvals
   #  a Predicted Std Err    Status
   # a1     32.88    2.24 Estimable
   # a2     34.12    2.24 Estimable
   # a3     25.75    2.24 Estimable
 
   # Broad space predictions
-  predict(m1, data=dat, classify="a")$pvals
+  predict(m1, data=dat, classify="a")$predictions$pvals
   #  a Predicted Std Err    Status
   # a1     32.88    4.54 Estimable
   # a2     34.12    4.54 Estimable

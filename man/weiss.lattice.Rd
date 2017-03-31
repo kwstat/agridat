@@ -60,18 +60,20 @@ anova(m1) # Matches Weiss table 7
 ## gen       48 1029.87  21.456  3.3327 2.652e-07 ***
 ## Residuals 96  618.05   6.438
 
+# ----------------------------------------------------------------------------
+
 \dontrun{
-require(asreml)
-m2 <- asreml(yield ~ rep + rep:xf + rep:yf + gen, data=dat)
-anova(m2)
-predict(m2, data=dat, classify="gen")$predictions$pvals # Weiss table 6 means
-##  gen pred.value std.error  est.stat
-##  G01      27.74     1.461 Estimable
-##  G02      24.95     1.461 Estimable
-##  G03      24.38     1.461 Estimable
-##  G04      28.05     1.461 Estimable
-##  G05      19.6      1.461 Estimable
-##  G06      23.79     1.461 Estimable
+  require(asreml)
+  m2 <- asreml(yield ~ rep + rep:xf + rep:yf + gen, data=dat)
+  anova(m2)
+  predict(m2, data=dat, classify="gen")$predictions$pvals # Weiss table 6 means
+  ##  gen pred.value std.error  est.stat
+  ##  G01      27.74     1.461 Estimable
+  ##  G02      24.95     1.461 Estimable
+  ##  G03      24.38     1.461 Estimable
+  ##  G04      28.05     1.461 Estimable
+  ##  G05      19.6      1.461 Estimable
+  ##  G06      23.79     1.461 Estimable
 }
 
 }

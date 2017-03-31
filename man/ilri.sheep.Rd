@@ -108,39 +108,38 @@ if(require(lme4)){
 # ----------------------------------------------------------------------------
 
 \dontrun{
-  ## require(asreml)
-  ## # case study page 4.20
-  ## m1 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
-  ##              data=dat)
-  ## anova(m1)
+  # asreml3
+  require(asreml)
+  # case study page 4.20
+  m1 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
+               data=dat)
+  anova(m1)
   
-  ## # case study page 4.26
-  ## m2 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
-  ##              random = ~ ram + ewe, data=dat)
-  ## anova(m2)
+  # case study page 4.26
+  m2 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
+               random = ~ ram + ewe, data=dat)
+  anova(m2)
   
-  ## # case study page 4.37, year means
-  ## predict(m2, data=dat, classify="year")$predictions
-  
+  # case study page 4.37, year means
+  predict(m2, data=dat, classify="year")$predictions  
 }
 
 # ----------------------------------------------------------------------------
 
 \dontrun{
-  require(asreml4)
-  # case study page 4.20
-  m1 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
-               data=dat)
-  wald(m1)
+  ## require(asreml4)
+  ## # case study page 4.20
+  ## m1 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
+  ##              data=dat)
+  ## wald(m1)
   
-  # case study page 4.26
-  m2 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
-               random = ~ ram + ewe, data=dat)
-  wald(m2)
+  ## # case study page 4.26
+  ## m2 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
+  ##              random = ~ ram + ewe, data=dat)
+  ## wald(m2)
   
-  # case study page 4.37, year means
-  predict(m2, data=dat, classify="year")
-  
+  ## # case study page 4.37, year means
+  ## predict(m2, data=dat, classify="year")  
 }
 
 }

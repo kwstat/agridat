@@ -69,36 +69,13 @@ if(require(reshape2)){
 # ----------------------------------------------------------------------------
 
 \dontrun{
-  ## # Mohring 2011 used 6 varieties to calculate GCA & SCA
-  ## # Matches Table 3, column 2
-  ## d2 <- subset(dat, p1 %in% c("M","H","G","B","K","K2") &
-  ##                     p2 %in% c("M","H","G","B","K","K2"))
-  ## d2 <- droplevels(d2)
-  ## require(asreml)
-  ## m2 <- asreml(yield~ 1, data=d2, random = ~ p1 + and(p2))
-  ## require(lucid)
-  ## vc(m2)
-  ## ##     effect component std.error z.ratio      con
-  ## ##  p1!p1.var     3.865     3.774     1   Positive
-  ## ## R!variance    15.93      5.817     2.7 Positive
-  
-  
-  ## # Calculate GCA effects
-  ## m3 <- asreml(yield~ p1 + and(p2), data=d2)
-  ## coef(m3)$fixed-1.462
-  ## # Matches Gardner 1966, Table 5, Griffing method
-
-}
-
-# ----------------------------------------------------------------------------
-
-\dontrun{
   # Mohring 2011 used 6 varieties to calculate GCA & SCA
   # Matches Table 3, column 2
   d2 <- subset(dat, p1 %in% c("M","H","G","B","K","K2") &
                       p2 %in% c("M","H","G","B","K","K2"))
   d2 <- droplevels(d2)
-  require(asreml4)
+  # asreml4
+  require(asreml)
   m2 <- asreml(yield~ 1, data=d2, random = ~ p1 + and(p2))
   require(lucid)
   vc(m2)
@@ -111,7 +88,29 @@ if(require(reshape2)){
   m3 <- asreml(yield~ p1 + and(p2), data=d2)
   coef(m3)$fixed-1.462
   # Matches Gardner 1966, Table 5, Griffing method
+}
 
+# ----------------------------------------------------------------------------
+
+\dontrun{
+  # Mohring 2011 used 6 varieties to calculate GCA & SCA
+  # Matches Table 3, column 2
+  ## d2 <- subset(dat, p1 %in% c("M","H","G","B","K","K2") &
+  ##                     p2 %in% c("M","H","G","B","K","K2"))
+  ## d2 <- droplevels(d2)
+  ## require(asreml4)
+  ## m2 <- asreml(yield~ 1, data=d2, random = ~ p1 + and(p2))
+  ## require(lucid)
+  ## vc(m2)
+  ## ##     effect component std.error z.ratio      con
+  ## ##  p1!p1.var     3.865     3.774     1   Positive
+  ## ## R!variance    15.93      5.817     2.7 Positive
+  
+  
+  ## # Calculate GCA effects
+  ## m3 <- asreml(yield~ p1 + and(p2), data=d2)
+  ## coef(m3)$fixed-1.462
+  ## # Matches Gardner 1966, Table 5, Griffing method
 }
 
 # ----------------------------------------------------------------------------

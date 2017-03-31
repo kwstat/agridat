@@ -69,25 +69,8 @@ xyplot(res ~ col|as.character(row), data=dat,
 # ----------------------------------------------------------------------------
 
 \dontrun{
-  ## require(asreml)
-
-  ## # Besag uses an adjustment based on neighboring plots.
-  ## # This analysis fits the standard AR1xAR1 residual model
-
-  ## dat <- dat[order(dat$xf, dat$yf), ]
-  ## m3 <- asreml(yield ~ gen + rate + nitro + regulator +
-  ##                gen:rate + gen:nitro + gen:regulator +
-  ##                rate:nitro + rate:regulator +
-  ##                nitro:regulator + yf, data=dat,
-  ##              rcov = ~ ar1(xf):ar1(yf))
-  ## anova(m3) # Strongly significant gen, rate, regulator
-
-}
-
-# ----------------------------------------------------------------------------
-
-\dontrun{
-  require(asreml4)
+  # asreml3
+  require(asreml)
 
   # Besag uses an adjustment based on neighboring plots.
   # This analysis fits the standard AR1xAR1 residual model
@@ -97,22 +80,40 @@ xyplot(res ~ col|as.character(row), data=dat,
                  gen:rate + gen:nitro + gen:regulator +
                  rate:nitro + rate:regulator +
                  nitro:regulator + yf, data=dat,
-               resid = ~ ar1(xf):ar1(yf))
-  wald(m3) # Strongly significant gen, rate, regulator
-  ##                 Df Sum of Sq Wald statistic Pr(Chisq)    
-  ## (Intercept)      1   1288255        103.971 < 2.2e-16 ***
-  ## gen              2    903262         72.899 < 2.2e-16 ***
-  ## rate             1    104774          8.456  0.003638 ** 
-  ## nitro            1       282          0.023  0.880139    
-  ## regulator        2    231403         18.676 8.802e-05 ***
-  ## yf               2      3788          0.306  0.858263    
-  ## gen:rate         2      1364          0.110  0.946461    
-  ## gen:nitro        2     30822          2.488  0.288289    
-  ## gen:regulator    4     37269          3.008  0.556507    
-  ## rate:nitro       1      1488          0.120  0.728954    
-  ## rate:regulator   2     49296          3.979  0.136795    
-  ## nitro:regulator  2     41019          3.311  0.191042    
-  ## residual (MS)          12391                             
+               rcov = ~ ar1(xf):ar1(yf))
+  anova(m3) # Strongly significant gen, rate, regulator
+
+}
+
+# ----------------------------------------------------------------------------
+
+\dontrun{
+  ## require(asreml4)
+
+  ## # Besag uses an adjustment based on neighboring plots.
+  ## # This analysis fits the standard AR1xAR1 residual model
+
+  ## dat <- dat[order(dat$xf, dat$yf), ]
+  ## m3 <- asreml(yield ~ gen + rate + nitro + regulator +
+  ##                gen:rate + gen:nitro + gen:regulator +
+  ##                rate:nitro + rate:regulator +
+  ##                nitro:regulator + yf, data=dat,
+  ##              resid = ~ ar1(xf):ar1(yf))
+  ## wald(m3) # Strongly significant gen, rate, regulator
+  ## ##                 Df Sum of Sq Wald statistic Pr(Chisq)    
+  ## ## (Intercept)      1   1288255        103.971 < 2.2e-16 ***
+  ## ## gen              2    903262         72.899 < 2.2e-16 ***
+  ## ## rate             1    104774          8.456  0.003638 ** 
+  ## ## nitro            1       282          0.023  0.880139    
+  ## ## regulator        2    231403         18.676 8.802e-05 ***
+  ## ## yf               2      3788          0.306  0.858263    
+  ## ## gen:rate         2      1364          0.110  0.946461    
+  ## ## gen:nitro        2     30822          2.488  0.288289    
+  ## ## gen:regulator    4     37269          3.008  0.556507    
+  ## ## rate:nitro       1      1488          0.120  0.728954    
+  ## ## rate:regulator   2     49296          3.979  0.136795    
+  ## ## nitro:regulator  2     41019          3.311  0.191042    
+  ## ## residual (MS)          12391                             
 
 }
 

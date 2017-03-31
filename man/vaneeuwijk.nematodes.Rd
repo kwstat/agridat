@@ -18,6 +18,7 @@
     \item{\code{y}}{number of cysts}
   }
 }
+
 \details{
   The number of cysts on 11 potato genotypes for 5 potato cyst nematode
   populations belonging to the species \emph{Globodera pallida}.  This
@@ -34,6 +35,7 @@
   \emph{Biometrics}, 51, 1017-1032.
   http://doi.org/10.2307/2533001
 }
+
 \references{
   Arntzen, F.K. & van Eeuwijk (1992).
   Variation in resistance level of potato genotypes and virulence level of
@@ -41,6 +43,7 @@
   \emph{Euphytica}, 62, 135-143.
   http://doi.org/10.1007/BF00037939
 }
+
 \examples{
 data(vaneeuwijk.nematodes)
 dat <- vaneeuwijk.nematodes
@@ -57,54 +60,58 @@ par(op)
 \dontrun{
   # normal distribution
   lm1 <- lm(y ~ gen + pop, data=dat)
-
+  
   # poisson distribution
   glm1 <- glm(y ~ gen+pop,data=dat,family=quasipoisson(link=log))
   anova(glm1)
-
-  if(require(gnm)){
-
-    # main-effects non-interaction model
-    gnm0 <- gnm(y ~ pop + gen, data=dat,
-                family=quasipoisson(link=log))
-    # one interaction
-    gnm1 <- gnm(y ~ pop + gen + Mult(pop,gen,inst=1), data=dat,
-                family=quasipoisson(link=log))
-    # two interactions
-    gnm2 <- gnm(y ~ pop + gen + Mult(pop,gen,inst=1) + Mult(pop,gen,inst=2),
-                data=dat,
-                family=quasipoisson(link=log))
-    # match vaneeuwijk table 2
-    anova(gnm2)
-    ##                          Df Deviance Resid. Df Resid. Dev
-    ## NULL                                        54     8947.4
-    ## pop                       4    690.6        50     8256.8
-    ## gen                      10   7111.4        40     1145.4
-    ## Mult(pop, gen, inst = 1) 13    716.0        27      429.4
-    ## Mult(pop, gen, inst = 2) 11    351.1        16       78.3
-
-    # compare residual qq plots from models
-    op <- par(mfrow=c(2,2))
-    plot(lm1, which=2, main="LM")
-    plot(glm1, which=2, main="GLM")
-    plot(gnm0, which=2, main="GNM, no interaction")
-    plot(gnm2, which=2, main="GNM, 2 interactions")
-    par(op)
-
-    # extract interaction-term coefficients, make a biplot
-    pops <- pickCoef(m2, "[.]pop")
-    gens <- pickCoef(m2, "[.]gen")
-    coefs <- coef(m2)
-    A <- matrix(coefs[pops], nc = 2)
-    B <- matrix(coefs[gens], nc = 2)
-    A2=scale(A)
-    B2=scale(B)
-    rownames(A2) <- levels(dat$pop)
-    rownames(B2) <- levels(dat$gen)
-    # near-match with vaneeuwijk figure 1
-    biplot(A2,B2, expand=2.5,xlim=c(-2,2),ylim=c(-2,2), main="vaneeuwijk.nematodes - GAMMI biplot")
-
+  
+  require(gnm)
+  
+  # main-effects non-interaction model
+  gnm0 <- gnm(y ~ pop + gen, data=dat,
+              family=quasipoisson(link=log))
+  # one interaction
+  gnm1 <- gnm(y ~ pop + gen + Mult(pop,gen,inst=1), data=dat,
+              family=quasipoisson(link=log))
+  # two interactions
+  gnm2 <- gnm(y ~ pop + gen + Mult(pop,gen,inst=1) + Mult(pop,gen,inst=2),
+              data=dat,
+              family=quasipoisson(link=log))
+    
+  # anova(gnm0, gnm1, gnm2, test="F")
+  # only 2, not 3 axes needed
+    
+  # match vaneeuwijk table 2
+  anova(gnm2)
+  ##                          Df Deviance Resid. Df Resid. Dev
+  ## NULL                                        54     8947.4
+  ## pop                       4    690.6        50     8256.8
+  ## gen                      10   7111.4        40     1145.4
+  ## Mult(pop, gen, inst = 1) 13    716.0        27      429.4
+  ## Mult(pop, gen, inst = 2) 11    351.1        16       78.3
+  
+  # compare residual qq plots from models
+  op <- par(mfrow=c(2,2))
+  plot(lm1, which=2, main="LM")
+  plot(glm1, which=2, main="GLM")
+  plot(gnm0, which=2, main="GNM, no interaction")
+  plot(gnm2, which=2, main="GNM, 2 interactions")
+  par(op)
+    
+  # extract interaction-term coefficients, make a biplot
+  pops <- pickCoef(m2, "[.]pop")
+  gens <- pickCoef(m2, "[.]gen")
+  coefs <- coef(m2)
+  A <- matrix(coefs[pops], nc = 2)
+  B <- matrix(coefs[gens], nc = 2)
+  A2=scale(A)
+  B2=scale(B)
+  rownames(A2) <- levels(dat$pop)
+  rownames(B2) <- levels(dat$gen)
+  # near-match with vaneeuwijk figure 1
+  biplot(A2,B2, expand=2.5,xlim=c(-2,2),ylim=c(-2,2),
+         main="vaneeuwijk.nematodes - GAMMI biplot")
+  
 }
-
 }
 \keyword{datasets}

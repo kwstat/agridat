@@ -63,21 +63,22 @@ if(require(lme4)){
 # ----------------------------------------------------------------------------
 
 \dontrun{
-## require(asreml)
-## a2 <- asreml(prop ~ gen, data=dat, random=~block,
-##              family=asreml.binomial(),
-##              weights=n)
-## coef(a2)
+  # asreml3
+  require(asreml)
+  a2 <- asreml(prop ~ gen, data=dat, random=~block,
+               family=asreml.binomial(),
+               weights=n)
+  coef(a2)
 }
 
 # ----------------------------------------------------------------------------
 
 \dontrun{
-require(asreml4)
-a2 <- asreml(prop ~ gen, data=dat, random=~block,
-             family=asr_binomial(),
-             weights=n)
-coef(a2)
+  ## require(asreml4)
+  ## a2 <- asreml(prop ~ gen, data=dat, random=~block,
+  ##              family=asr_binomial(),
+  ##              weights=n)
+  ## coef(a2)
 }
 
 }

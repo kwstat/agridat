@@ -106,6 +106,8 @@ if(require(lme4)){
 
 }
 
+# ----------------------------------------------------------------------------
+
 \dontrun{
 
   # Marginal predictions from lsmeans package and asreml::predict
@@ -131,6 +133,8 @@ if(require(lme4)){
 
 }
 
+# ----------------------------------------------------------------------------
+
 \dontrun{
 
   # Demonstrate use of regress package, compare to lme
@@ -150,14 +154,13 @@ if(require(lme4)){
   if(is.element("package:ordinal", search())) detach(package:ordinal)
   
   m7 <- lme(yield ~ nitrof + gen, random = ~ 1|block/gen, data=dat)
-  VarCorr(m7)
+  lme4::VarCorr(m7)
   ##             Variance     StdDev  
   ## block =     pdLogChol(1)         
   ## (Intercept) 214.4716     14.64485
   ## gen =       pdLogChol(1)         
   ## (Intercept) 109.6929     10.47344
   ## Residual    162.5591     12.74987
-
 }
 
 }

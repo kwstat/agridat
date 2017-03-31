@@ -134,6 +134,10 @@ lme3 <- lme(yield ~ 0 + gen, data=dat,
             na.action=na.omit)
 
 AIC(lme1,lme2,lme3) # lme2 is lowest
+##      df      AIC
+## lme1 58 1333.702
+## lme2 59 1189.135
+## lme3 59 1216.704
 
 # Compare the estimates from the two methods
 eff = data.frame(ranblock=fixef(lme1), corLin = coef(lme2),
@@ -146,112 +150,53 @@ text(eff$ranblock, eff$corLin, rownames(eff), cex=0.5)
 abline(0,1)
 
 # ----------------------------------------------------------------------------
-# ----- SpATS -----
 
-if(require(SpATS)){
-
-  dat <- transform(dat, yf = as.factor(row), xf = as.factor(col))
-  
-  sp1 <- SpATS(response = "yield",
-               spatial = ~ SAP(col, row, nseg = c(10,20), degree = 3, pord = 2),
-               genotype = "gen",
-               #fixed = ~ colcode + rowcode,
-               random = ~ yf + xf,
-               data = dat,
-               control = list(tolerance = 1e-03))
-  plot(sp1)
-
-  eff <- cbind(eff, spats=predict(sp1, which="gen")$predicted.values)
-  plot(eff$ranblock, eff$spats, xlim=c(13,37), ylim=c(13,37),
-       main="stroup.nin - Gen estimates (intercepts differ)",
-       xlab="RCB (random block)", ylab="SpATS",type='n')
-  text(eff$ranblock, eff$spats, rownames(eff), cex=0.5)
-  abline(0,1)
-  
-}
+# Note, the 'sommer' package has dropped support for ar1
 
 # ----------------------------------------------------------------------------
-# ----- sommer -----
 
 \dontrun{
-
-if(require(sommer)){
+  if(require(SpATS)){
+    
+    dat <- transform(dat, yf = as.factor(row), xf = as.factor(col))
+    
+    sp1 <- SpATS(response = "yield",
+                 spatial = ~ SAP(col, row, nseg = c(10,20), degree = 3, pord = 2),
+                 genotype = "gen",
+                 #fixed = ~ colcode + rowcode,
+                 random = ~ yf + xf,
+                 data = dat,
+                 control = list(tolerance = 1e-03))
+    plot(sp1)
+    
+    eff <- cbind(eff, spats=predict(sp1, which="gen")$predicted.values)
+    plot(eff$ranblock, eff$spats, xlim=c(13,37), ylim=c(13,37),
+         main="stroup.nin - Gen estimates (intercepts differ)",
+         xlab="RCB (random block)", ylab="SpATS",type='n')
+    text(eff$ranblock, eff$spats, rownames(eff), cex=0.5)
+    abline(0,1)
+  }
   
-  data(stroup.nin)
-  dat <- stroup.nin
-
-  # sommer will not fit a model without a random term, so add 'rep'
-  # Variance comps are somewhat different from asreml.  Why?
-  # The yates.oats analysis gives the same results in sommer and asreml
-
-  # Seems broken 2.28.2017
-  
-  dat = transform(dat, row=factor(row), col=factor(col))
-  so1 <- mmer2(yield ~ gen, random = ~  rep,
-               rcov = ~ ar1(col):ar1(row),
-               data = dat) # method="NR"
-  summary(so1)$w # Variance components
-
-  ##            VarComp  VarCompSE     Zratio
-  ## rep      0.2818859 2.07600060  0.1357831
-  ## R.cor.1  0.5570662 0.05159899 10.7960697
-  ## R.cor.2  0.3768664 0.06096311  6.1818772
-  ## Error   46.7470273 5.60886684  8.3344869
-}
 }
 
 # ----------------------------------------------------------------------------
 
 \dontrun{
-  ## require(asreml)
- 
-  ## # RCB analysis
-  ## dat.rcb <- asreml(yield ~ gen, random = ~ rep, data=dat,
-  ##                   na.method.X="omit")
-  ## pred.rcb <- predict(dat.rcb, data=dat, classify="gen")$predictions
-
-  ## # Two-dimensional AR1xAR1 spatial model
-  ## dat <- transform(dat, xf=factor(col), yf=factor(row))
-  ## dat <- dat[order(dat$xf, dat$yf),]
-  ## dat.sp <- asreml(yield~gen, data=dat,
-  ##                  rcov=~ar1(xf):ar1(yf),
-  ##                  na.method.X='ignore')
-  ## pred.sp <- predict(dat.sp, data=dat, classify="gen")$predictions
-
-  ## require(lucid)
-  ## vc(dat.sp)
-  ## ##     effect component std.error z.ratio constr
-  ## ## R!variance   48.7      7.155       6.8    pos
-  ## ##   R!xf.cor    0.6555   0.05638    12      unc
-  ## ##   R!yf.cor    0.4375   0.0806      5.4    unc
-
-  ## # Compare the estimates from the two methods
-  ## plot(pred.rcb$pvals[,2], pred.sp$pvals[,2], xlim=c(13,37), ylim=c(13,37),
-  ##      xlab="RCB",ylab="AR1xAR1",type='n')
-  ## title("stroup.nin: Comparison of predicted values")
-  ## text(pred.rcb$pvals[,2],pred.sp$pvals[,2],
-  ##      as.character(pred.rcb$pvals[,1]),cex=0.5)
-  ## abline(0,1)
- 
-}
-
-# ----------------------------------------------------------------------------
-
-\dontrun{
-  require(asreml4)
+  # asreml3
+  require(asreml)
  
   # RCB analysis
   dat.rcb <- asreml(yield ~ gen, random = ~ rep, data=dat,
-                    na.action=na.method(x="omit"))
-  pred.rcb <- predict(dat.rcb, data=dat, classify="gen")
+                    na.method.X="omit")
+  pred.rcb <- predict(dat.rcb, data=dat, classify="gen")$predictions
 
   # Two-dimensional AR1xAR1 spatial model
   dat <- transform(dat, xf=factor(col), yf=factor(row))
   dat <- dat[order(dat$xf, dat$yf),]
   dat.sp <- asreml(yield~gen, data=dat,
-                   residual = ~ar1(xf):ar1(yf),
-                   na.action=na.method(x="omit"))
-  pred.sp <- predict(dat.sp, data=dat, classify="gen")
+                   rcov=~ar1(xf):ar1(yf),
+                   na.method.X='ignore')
+  pred.sp <- predict(dat.sp, data=dat, classify="gen")$predictions
 
   require(lucid)
   vc(dat.sp)
@@ -262,12 +207,45 @@ if(require(sommer)){
 
   # Compare the estimates from the two methods
   plot(pred.rcb$pvals[,2], pred.sp$pvals[,2], xlim=c(13,37), ylim=c(13,37),
-       xlab="RCB", ylab="AR1xAR1", type='n')
+       xlab="RCB",ylab="AR1xAR1",type='n')
   title("stroup.nin: Comparison of predicted values")
   text(pred.rcb$pvals[,2],pred.sp$pvals[,2],
        as.character(pred.rcb$pvals[,1]),cex=0.5)
-  abline(0,1)
+  abline(0,1) 
+}
+
+# ----------------------------------------------------------------------------
+
+\dontrun{
+  ## require(asreml4)
  
+  ## # RCB analysis
+  ## dat.rcb <- asreml(yield ~ gen, random = ~ rep, data=dat,
+  ##                   na.action=na.method(x="omit"))
+  ## pred.rcb <- predict(dat.rcb, data=dat, classify="gen")
+
+  ## # Two-dimensional AR1xAR1 spatial model
+  ## dat <- transform(dat, xf=factor(col), yf=factor(row))
+  ## dat <- dat[order(dat$xf, dat$yf),]
+  ## dat.sp <- asreml(yield~gen, data=dat,
+  ##                  residual = ~ar1(xf):ar1(yf),
+  ##                  na.action=na.method(x="omit"))
+  ## pred.sp <- predict(dat.sp, data=dat, classify="gen")
+
+  ## require(lucid)
+  ## vc(dat.sp)
+  ## ##     effect component std.error z.ratio constr
+  ## ## R!variance   48.7      7.155       6.8    pos
+  ## ##   R!xf.cor    0.6555   0.05638    12      unc
+  ## ##   R!yf.cor    0.4375   0.0806      5.4    unc
+
+  ## # Compare the estimates from the two methods
+  ## plot(pred.rcb$pvals[,2], pred.sp$pvals[,2], xlim=c(13,37), ylim=c(13,37),
+  ##      xlab="RCB", ylab="AR1xAR1", type='n')
+  ## title("stroup.nin: Comparison of predicted values")
+  ## text(pred.rcb$pvals[,2],pred.sp$pvals[,2],
+  ##      as.character(pred.rcb$pvals[,1]),cex=0.5)
+  ## abline(0,1) 
 }
 
 # ----------------------------------------------------------------------------

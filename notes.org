@@ -8,7 +8,10 @@ Plant-level data for distinctness, uniformity and stability testing.  Most publi
 This page mentions an R version for DUS: http://www.bioss.ac.uk/knowledge/software.html
 
 
+
 * stability
+
+http://cucurbitbreeding.com/todd-wehner/publications/software-sas-r-project/
 
 * done
 adugna.sorghum 28g,13l,5y

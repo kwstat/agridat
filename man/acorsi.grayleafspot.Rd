@@ -69,13 +69,14 @@ par(op)
   # "Generalized nonlinear models in R: An overview of the gnm package"
   
   # full gnm model with wedderburn, seems to work
+  require(gnm)
   set.seed(1)
   gnm1 <- gnm(y ~  env/rep + env + gen + instances(Mult(env,gen),2),
               data=dat,
               family=wedderburn, iterMax =800)
   deviance(gnm1) # 433.8548
-  summary(gnm1)
-  anova(gnm1, test ="F")  # anodev, Acorsi table 4
+  # summary(gnm1)
+  # anova(gnm1, test ="F")  # anodev, Acorsi table 4
   ##                          Df Deviance Resid. Df Resid. Dev       F    Pr(>F)    
   ## NULL                                       647     3355.5                      
   ## env                       8  1045.09       639     2310.4 68.4696 < 2.2e-16 ***
@@ -113,8 +114,8 @@ par(op)
 
   # match Acorsi figure 4
   biplot(gmat, emat, xlim=c(-2.2, 2.2), ylim=c(-2.2, 2.2), expand=2, cex=0.5,
-         xlab="Axis 1", ylab="Axis 2", main="acorsi.grayleafspot - GAMMI biplot")
-
+         xlab="Axis 1", ylab="Axis 2",
+         main="acorsi.grayleafspot - GAMMI biplot")
 }
 
 }

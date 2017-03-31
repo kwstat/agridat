@@ -83,17 +83,51 @@ xyplot(yield~subplot|block, dat, type=c('b'), group=gen,
 ## random block block*dir block*irr;
 ## repeated / type=toep(4) sub=block*gen r;
 
+# ----------------------------------------------------------------------------
+
 \dontrun{
-  ## require(asreml)
+  # asreml3
+  require(asreml)
+  
+  dat <- transform(dat, subf=factor(subplot),
+                   irrf=factor(irr))
+  dat <- dat[order(dat$block, dat$gen, dat$subplot),]
+  
+  m1 <- asreml(yield ~ gen + dir + irrf + gen:dir + gen:irrf + dir:irrf,
+               data=dat,
+               random= ~ block + block:dir + block:irrf,
+               rcov= ~ block:gen:corb(subf, k=3))
+
+  require(lucid)
+  vc(m1)
+  ##                effect component std.error z.ratio constr
+  ##       block!block.var  0.2194     0.2393     0.92    pos
+  ##   block:dir!block.var  0.01768    0.03154    0.56    pos
+  ##  block:irrf!block.var  0.03539    0.03617    0.98    pos
+  ##            R!variance  0.285      0.05086    5.6     pos
+  ##                R!cor1  0.02802    0.1143     0.25  uncon
+  ##                R!cor2  0.005095   0.1278     0.04  uncon
+  ##                R!cor3 -0.3246     0.0905    -3.6   uncon
+  
+  ## # convert asreml correlations to SAS covariances
+  ## round(.2850 * c(1, .02802, .005095, -.3246),4) # res var * (cor1, cor2, cor3)
+  ## [1]  0.2850  0.0080  0.0015 -0.0925
+}
+
+# ----------------------------------------------------------------------------
+
+\dontrun{
+  ## require(asreml4)
   
   ## dat <- transform(dat, subf=factor(subplot),
   ##                  irrf=factor(irr))
   ## dat <- dat[order(dat$block, dat$gen, dat$subplot),]
-  
+
+  ## # FIXME asreml4
   ## m1 <- asreml(yield ~ gen + dir + irrf + gen:dir + gen:irrf + dir:irrf,
   ##              data=dat,
   ##              random= ~ block + block:dir + block:irrf,
-  ##              rcov= ~ block:gen:corb(subf, k=3))
+  ##              resid = ~ block:gen:corb(subf, b=3))
 
   ## require(lucid)
   ## vc(m1)
@@ -110,40 +144,7 @@ xyplot(yield~subplot|block, dat, type=c('b'), group=gen,
   ## ## round(.2850 * c(1, .02802, .005095, -.3246),4) # res var * (cor1, cor2, cor3)
   ## ## [1]  0.2850  0.0080  0.0015 -0.0925
 
-}
-
-# ----------------------------------------------------------------------------
-
-\dontrun{
-
-  require(asreml4)
-  
-  dat <- transform(dat, subf=factor(subplot),
-                   irrf=factor(irr))
-  dat <- dat[order(dat$block, dat$gen, dat$subplot),]
-
-  # FIXME asreml4
-  m1 <- asreml(yield ~ gen + dir + irrf + gen:dir + gen:irrf + dir:irrf,
-               data=dat,
-               random= ~ block + block:dir + block:irrf,
-               resid = ~ block:gen:corb(subf, b=3))
-
-  require(lucid)
-  vc(m1)
-  ##                effect component std.error z.ratio constr
-  ##       block!block.var  0.2194     0.2393     0.92    pos
-  ##   block:dir!block.var  0.01768    0.03154    0.56    pos
-  ##  block:irrf!block.var  0.03539    0.03617    0.98    pos
-  ##            R!variance  0.285      0.05086    5.6     pos
-  ##                R!cor1  0.02802    0.1143     0.25  uncon
-  ##                R!cor2  0.005095   0.1278     0.04  uncon
-  ##                R!cor3 -0.3246     0.0905    -3.6   uncon
-  
-  ## # convert asreml correlations to SAS covariances
-  ## round(.2850 * c(1, .02802, .005095, -.3246),4) # res var * (cor1, cor2, cor3)
-  ## [1]  0.2850  0.0080  0.0015 -0.0925
-
-  detach(package:asreml4)
+  ## detach(package:asreml4)
 }
 
 }

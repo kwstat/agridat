@@ -21,15 +21,19 @@
   }
 }
 \details{
+  
   These data come from a study of downy mildew on grapes.  The
   experiment was conducted at Wooster, Ohio, on the experimental farm of
   the Ohio Agricultural Research and Development Center, Ohio State
-  University.  There were 3 blocks with 6 treatments.  Treatment 1 is
+  University.
+
+  There were 3 blocks with 6 treatments.  Treatment 1 is
   the unsprayed control.  On 30 Sep 1990, disease incidence was
   measured.  For each plot, 5 randomly chosen shoots on each of the 3
   vines were observed.  The canopy was closed and shoots could be
   intertwined.  On each shoot, the total number of leaves and the number
   of infected leaves were recorded.
+  
 }
 \source{
   Hughes, G. and Madden, LV. 1995.
@@ -43,8 +47,9 @@
 \references{
   Hans-Pieter Piepho. 1999.
   Analysing disease incidence data from designed experiments by
-  generalized linear mixed models. \emph{Plant Pathology}, 48, 668--684.
-  10.1046/j.1365-3059.1999.00383.x
+  generalized linear mixed models.
+  \emph{Plant Pathology}, 48, 668--684.
+  http://doi.org/10.1046/j.1365-3059.1999.00383.x
 }
 
 \examples{
@@ -66,30 +71,33 @@ if(require(latticeExtra)){
 tapply(dat$rate, dat$trt, mean) # trt 1 does not match Piepho
 tapply(dat$rate, dat$trt, max)
 
+# ----------------------------------------------------------------------------
+
 \dontrun{
-# Piepho model 3.  Binomial data.  May not be exactly the same model
+  # Piepho model 3.  Binomial data.  May not be exactly the same model
+  
+  # Use the binomial count data with lme4
+  require(lme4)
+  m1 <- glmer(cbind(diseased, total-diseased) ~ trt + block + (1|plot/vine),
+              data=dat, family=binomial)
+  m1
 
-# Use the binomial count data with lme4
-require(lme4)
-m1 <- glmer(cbind(diseased, total-diseased) ~ trt + block + (1|plot/vine),
-           data=dat, family=binomial)
-m1
-
-# Switch from binomial counts to bernoulli data
-require(aod)
-bdat <- splitbin(cbind(diseased, total-diseased) ~ block+trt+plot+vine+shoot,
-                 data=dat)$tab
-names(bdat)[2] <- 'y'
-
-# Using lme4
-m2 <- glmer(y ~ trt + block + (1|plot/vine), data=bdat, family=binomial)
-m2
-
-# Now using MASS:::glmmPQL
-require(MASS)
-m3 <- glmmPQL(y ~ trt + block, data=bdat,
-              random=~1|plot/vine, family=binomial)
-m3
+  # Switch from binomial counts to bernoulli data
+  require(aod)
+  bdat <- splitbin(cbind(diseased, total-diseased) ~ block+trt+plot+vine+shoot,
+                   data=dat)$tab
+  names(bdat)[2] <- 'y'
+  
+  # Using lme4
+  m2 <- glmer(y ~ trt + block + (1|plot/vine), data=bdat, family=binomial)
+  m2
+  
+  # Now using MASS:::glmmPQL
+  require(MASS)
+  m3 <- glmmPQL(y ~ trt + block, data=bdat,
+                random=~1|plot/vine, family=binomial)
+  m3
 }
+
 }
 

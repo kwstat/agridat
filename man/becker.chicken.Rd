@@ -55,9 +55,9 @@ sum(dat$weight)
 aggregate(weight ~  male + female, dat, FUN=sum)
 
 # Variance components
-if(require(lme4)){
+if(require(lme4) & require(lucid)){
   m1 <- lmer(weight ~  (1|male) + (1|female), data=dat)
-  as.data.frame(VarCorr(m1))
+  as.data.frame(lme4::VarCorr(m1))
        ## grp        var1 var2      vcov    sdcor
 ## 1   female (Intercept) <NA> 1095.6296 33.10030
 ## 2     male (Intercept) <NA>  776.7543 27.87031

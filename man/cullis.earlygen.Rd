@@ -90,71 +90,13 @@ bwplot(yield ~ as.character(weed), dat,
 # ----------------------------------------------------------------------------
 
 \dontrun{
-  ## require(asreml)
-  ## # Start with the standard AR1xAR1 analysis
-  ## dat <- transform(dat, xf=factor(col), yf=factor(row))
-  ## dat <- dat[order(dat$xf, dat$yf),]
-  ## m2 <- asreml(yield ~ weed, data=dat, random= ~gen,
-  ##              rcov = ~ ar1(xf):ar1(yf))
-  
-  ## # Variogram suggests a polynomial trend
-  ## m3 <- update(m2, fixed= yield~weed+pol(col,-1))
-  
-  ## # Now add a nugget variance
-  ## m4 <- update(m3, random= ~ gen + units)
-  
-  ## require(lucid)
-  ## vc(m4)
-  ## ##           effect component std.error z.ratio constr
-  ## ##      gen!gen.var  73770    10420         7.1    pos
-  ## ##  units!units.var  30440     8074         3.8    pos
-  ## ##       R!variance  54720    10630         5.1    pos
-  ## ##         R!xf.cor      0.38     0.115     3.3  uncon
-  ## ##         R!yf.cor      0.84     0.045    19    uncon
-  
-  ## # Predictions from models m3 and m4 are non-estimable.  Why?
-  ## # Use model m2 for predictions
-  ## predict(m2)$pred
-  ## ##         gen predicted.value standard.error est.status
-  ## ## 1    Banks         2723.534       93.14633  Estimable
-  ## ## 2    Eno008        2981.057      162.85053  Estimable
-  ## ## 3    Eno009        2978.009      161.56930  Estimable
-  ## ## 4    Eno010        2821.399      153.96697  Estimable
-  ## ## 5    Eno011        2991.610      161.53308  Estimable
-  ## ## 6    Eno012        2771.148      162.21897  Estimable
-
-  ## # Compare AR1 with Moving Grid
-  ## require(mvngGrAd)
-  ## shape <- list(c(1),
-  ##               c(1),
-  ##               c(1:4),
-  ##               c(1:4))
-  ## # sketchGrid(10,10,20,20,shapeCross=shape, layers=1, excludeCenter=TRUE)
-  ## m5 <- movingGrid(rows=dat$row, columns=dat$col, obs=dat$yield,
-  ##                  shapeCross=shape, layers=NULL)
-  ## dat$mg <- fitted(m5)
-  ## dat$ar1 <- fitted(m2)
-  ## head(dat[ , c('yield','ar1','mg')])
-  ## ##    yield      ar1       mg
-  ## ## 1   2652 2467.980 2531.998
-  ## ## 11  3394 3071.681 3052.160
-  ## ## 21  3148 2826.188 2807.031
-  ## ## 31  3426 3026.985 3183.649
-  ## ## 41  3555 3070.102 3195.910
-  ## ## 51  3453 3006.352 3510.511
-  ## pairs(dat[ , c('yield','ar1','mg')])
-  
-}
-
-# ----------------------------------------------------------------------------
-
-\dontrun{
-  require(asreml4)
+  # asreml3
+  require(asreml)
   # Start with the standard AR1xAR1 analysis
   dat <- transform(dat, xf=factor(col), yf=factor(row))
   dat <- dat[order(dat$xf, dat$yf),]
   m2 <- asreml(yield ~ weed, data=dat, random= ~gen,
-               resid = ~ ar1(xf):ar1(yf))
+               rcov = ~ ar1(xf):ar1(yf))
   
   # Variogram suggests a polynomial trend
   m3 <- update(m2, fixed= yield~weed+pol(col,-1))
@@ -164,23 +106,23 @@ bwplot(yield ~ as.character(weed), dat,
   
   require(lucid)
   vc(m4)
-  ##       effect component std.error z.ratio bound %ch
-  ##          gen  73780    10420         7.1     P 0  
-  ##        units  30440     8073         3.8     P 0.1
-  ##     xf:yf(R)  54730    10630         5.1     P 0  
-  ## xf:yf!xf!cor      0.38     0.115     3.3     U 0  
-  ## xf:yf!yf!cor      0.84     0.045    19       U 0  
+  ##           effect component std.error z.ratio constr
+  ##      gen!gen.var  73770    10420         7.1    pos
+  ##  units!units.var  30440     8074         3.8    pos
+  ##       R!variance  54720    10630         5.1    pos
+  ##         R!xf.cor      0.38     0.115     3.3  uncon
+  ##         R!yf.cor      0.84     0.045    19    uncon
   
   # Predictions from models m3 and m4 are non-estimable.  Why?
   # Use model m2 for predictions
-  predict(m2, classify="gen")$pvals
-  ##         gen predicted.value std.error    status
-  ## 1     Banks        2723.534  93.14719 Estimable
-  ## 2    Eno008        2981.056 162.85241 Estimable
-  ## 3    Eno009        2978.008 161.57129 Estimable
-  ## 4    Eno010        2821.399 153.96943 Estimable
-  ## 5    Eno011        2991.612 161.53507 Estimable
-  
+  predict(m2)$pred
+  ##         gen predicted.value standard.error est.status
+  ## 1    Banks         2723.534       93.14633  Estimable
+  ## 2    Eno008        2981.057      162.85053  Estimable
+  ## 3    Eno009        2978.009      161.56930  Estimable
+  ## 4    Eno010        2821.399      153.96697  Estimable
+  ## 5    Eno011        2991.610      161.53308  Estimable
+  ## 6    Eno012        2771.148      162.21897  Estimable
 
   # Compare AR1 with Moving Grid
   require(mvngGrAd)
@@ -202,6 +144,65 @@ bwplot(yield ~ as.character(weed), dat,
   ## 41  3555 3070.102 3195.910
   ## 51  3453 3006.352 3510.511
   pairs(dat[ , c('yield','ar1','mg')])
+  
+}
+
+# ----------------------------------------------------------------------------
+
+\dontrun{
+  ## require(asreml4)
+  ## # Start with the standard AR1xAR1 analysis
+  ## dat <- transform(dat, xf=factor(col), yf=factor(row))
+  ## dat <- dat[order(dat$xf, dat$yf),]
+  ## m2 <- asreml(yield ~ weed, data=dat, random= ~gen,
+  ##              resid = ~ ar1(xf):ar1(yf))
+  
+  ## # Variogram suggests a polynomial trend
+  ## m3 <- update(m2, fixed= yield~weed+pol(col,-1))
+  
+  ## # Now add a nugget variance
+  ## m4 <- update(m3, random= ~ gen + units)
+  
+  ## require(lucid)
+  ## vc(m4)
+  ## ##       effect component std.error z.ratio bound %ch
+  ## ##          gen  73780    10420         7.1     P 0  
+  ## ##        units  30440     8073         3.8     P 0.1
+  ## ##     xf:yf(R)  54730    10630         5.1     P 0  
+  ## ## xf:yf!xf!cor      0.38     0.115     3.3     U 0  
+  ## ## xf:yf!yf!cor      0.84     0.045    19       U 0  
+  
+  ## # Predictions from models m3 and m4 are non-estimable.  Why?
+  ## # Use model m2 for predictions
+  ## predict(m2, classify="gen")$pvals
+  ## ##         gen predicted.value std.error    status
+  ## ## 1     Banks        2723.534  93.14719 Estimable
+  ## ## 2    Eno008        2981.056 162.85241 Estimable
+  ## ## 3    Eno009        2978.008 161.57129 Estimable
+  ## ## 4    Eno010        2821.399 153.96943 Estimable
+  ## ## 5    Eno011        2991.612 161.53507 Estimable
+  
+
+  ## # Compare AR1 with Moving Grid
+  ## require(mvngGrAd)
+  ## shape <- list(c(1),
+  ##               c(1),
+  ##               c(1:4),
+  ##               c(1:4))
+  ## # sketchGrid(10,10,20,20,shapeCross=shape, layers=1, excludeCenter=TRUE)
+  ## m5 <- movingGrid(rows=dat$row, columns=dat$col, obs=dat$yield,
+  ##                  shapeCross=shape, layers=NULL)
+  ## dat$mg <- fitted(m5)
+  ## dat$ar1 <- fitted(m2)
+  ## head(dat[ , c('yield','ar1','mg')])
+  ## ##    yield      ar1       mg
+  ## ## 1   2652 2467.980 2531.998
+  ## ## 11  3394 3071.681 3052.160
+  ## ## 21  3148 2826.188 2807.031
+  ## ## 31  3426 3026.985 3183.649
+  ## ## 41  3555 3070.102 3195.910
+  ## ## 51  3453 3006.352 3510.511
+  ## pairs(dat[ , c('yield','ar1','mg')])
 
 }
 

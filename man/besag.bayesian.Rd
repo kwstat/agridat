@@ -49,46 +49,20 @@ require("lattice")
 xyplot(yield ~ rrow|col, dat, layout=c(1,3), type='s',
        main="besag.bayesian")
 
-\dontrun{
-  ## require(asreml)
-  
-  ## # Use asreml to fit a model with AR1 gradient in rows
-  
-  ## dat <- transform(dat, cf=factor(col), rf=factor(rrow))
-  ## m1 <- asreml(yield ~ -1 + gen, data=dat, random=~ar1v(rf))
-  ## m1 <- update(m1)
-  
-  ## # Visualize trends, similar to Besag figure 2.
-  ## dat$res <- m1$residuals
-  ## dat$geneff <- coef(m1)$fixed[as.numeric(dat$gen)]
-  ## dat <- transform(dat, fert=yield-geneff-res)
-  ## xyplot(geneff ~ rrow|col, dat, layout=c(1,3), type='s',
-  ##        main="Variety effects", ylim=c(5,15 ))
-  ## xyplot(fert ~ rrow|col, dat, layout=c(1,3), type='s',
-  ##        main="Fertility", ylim=c(-2,2))
-  ## xyplot(res ~ rrow|col, dat, layout=c(1,3), type='s',
-  ##        main="Residuals", ylim=c(-4,4))
-  
-}
-
 # ----------------------------------------------------------------------------
 
-\dontrun{  
-  require(asreml4)
+\dontrun{
+  # asreml3
+  require(asreml)
   
   # Use asreml to fit a model with AR1 gradient in rows
   
   dat <- transform(dat, cf=factor(col), rf=factor(rrow))
   m1 <- asreml(yield ~ -1 + gen, data=dat, random=~ar1v(rf))
   m1 <- update(m1)
-  m1 <- update(m1)
-  m1 <- update(m1)
-  m1 <- update(m1)
-  m1 <- update(m1)
-  m1 <- update(m1)
   
   # Visualize trends, similar to Besag figure 2.
-  dat$res <- resid(m1)
+  dat$res <- m1$residuals
   dat$geneff <- coef(m1)$fixed[as.numeric(dat$gen)]
   dat <- transform(dat, fert=yield-geneff-res)
   xyplot(geneff ~ rrow|col, dat, layout=c(1,3), type='s',
@@ -97,6 +71,35 @@ xyplot(yield ~ rrow|col, dat, layout=c(1,3), type='s',
          main="Fertility", ylim=c(-2,2))
   xyplot(res ~ rrow|col, dat, layout=c(1,3), type='s',
          main="Residuals", ylim=c(-4,4))
+  
+}
+
+# ----------------------------------------------------------------------------
+
+\dontrun{  
+  ## require(asreml4)
+  
+  ## # Use asreml to fit a model with AR1 gradient in rows
+  
+  ## dat <- transform(dat, cf=factor(col), rf=factor(rrow))
+  ## m1 <- asreml(yield ~ -1 + gen, data=dat, random=~ar1v(rf))
+  ## m1 <- update(m1)
+  ## m1 <- update(m1)
+  ## m1 <- update(m1)
+  ## m1 <- update(m1)
+  ## m1 <- update(m1)
+  ## m1 <- update(m1)
+  
+  ## # Visualize trends, similar to Besag figure 2.
+  ## dat$res <- resid(m1)
+  ## dat$geneff <- coef(m1)$fixed[as.numeric(dat$gen)]
+  ## dat <- transform(dat, fert=yield-geneff-res)
+  ## xyplot(geneff ~ rrow|col, dat, layout=c(1,3), type='s',
+  ##        main="Variety effects", ylim=c(5,15 ))
+  ## xyplot(fert ~ rrow|col, dat, layout=c(1,3), type='s',
+  ##        main="Fertility", ylim=c(-2,2))
+  ## xyplot(res ~ rrow|col, dat, layout=c(1,3), type='s',
+  ##        main="Residuals", ylim=c(-4,4))
 
 }
 

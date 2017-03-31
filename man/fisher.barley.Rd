@@ -27,11 +27,15 @@
 }
 \source{
   
-  R. Fisher (1935).
+  Ronald Fisher (1935).
   \emph{The Design of Experiments}.
   
 }
 \references{
+
+  George Fernandez (1991).
+  Analysis of Genotype x Environment Interaction by Stability Estimates.
+  \emph{Hort Science}, 26, 947-950.
 
   F. Yates & W. G. Cochran (1938).
   The Analysis of Groups of Experiments.
@@ -62,10 +66,13 @@ if(require(dplyr) & require(lattice)) {
          auto.key=list(columns=3))
 }
 
+# ----------------------------------------------------------------------------
+
 \dontrun{
 
   # calculate stability according to the sum-of-squares approach used by
   # Shukla (1972), eqn 11. match to Shukla, Table 4, M.S. column
+  # also matches fernandez, table 3, stabvar column
   require(dplyr)
   dat2 <- dat
   dat2 <- dat2 %>% group_by(gen,env) %>% summarize(yield=sum(yield))
@@ -78,7 +85,7 @@ if(require(dplyr) & require(lattice)) {
   dat2 <- dat2 %>% group_by(gen) %>% mutate(ss=sum((yield-genmn-envmn+grandmn)^2))
   # divide by 6 to scale down to plot-level
   dat2 <- dat2 %>% mutate( sig2i = 1/((s-1)*(t-1)*(t-2)) * (t*(t-1)*ss-cf)/6)
-  dat2[!duplicated(dat2$gen),c('gen','sig2i')]        gen     sig2i
+  dat2[!duplicated(dat2$gen),c('gen','sig2i')]    
   ##       <chr>     <dbl>
   ## 1 Manchuria  25.87912
   ## 2  Peatland  75.68001
@@ -87,29 +94,32 @@ if(require(dplyr) & require(lattice)) {
   ## 5    Velvet  22.73051
 }
 
+# ----------------------------------------------------------------------------
+
 \dontrun{
-  # mixed model approach gives similar results
+  # mixed model approach gives similar results (but not identical)
+  # asreml3
   library(asreml)
   dat2 <- dat2[order(dat2$gen),]
 
   # G-side
-  m1g <- asreml(yield ~ gen, data=dat,
-                  random = ~ env + diag(gen):units,
+  m1g <- asreml(yield ~ gen, data=dat2,
+                  random = ~ env + at(gen):units,
                   family=asreml.gaussian(dispersion=1.0))
   m1g <- update(m1g)
   summary(m1g)$varcomp[-1,1:2]/6
-  ##                                     gamma   component
-  ## gen:units!gen.Manchuria.var  33.8318944  33.8318944
-  ## gen:units!gen.Peatland.var   70.4838297  70.4838297
-  ## gen:units!gen.Svansota.var   25.2558315  25.2558315
-  ## gen:units!gen.Trebi.var     231.6923935 231.6923935
-  ## gen:units!gen.Velvet.var     13.9189381  13.9189381
-  ## R!variance                    0.1666667   0.1666667
+  ##                                          gamma   component
+  ## at(gen, Manchuria):units!units.var  33.8318944  33.8318944
+  ## at(gen, Peatland):units!units.var   70.4838297  70.4838297
+  ## at(gen, Svansota):units!units.var   25.2558315  25.2558315
+  ## at(gen, Trebi):units!units.var     231.6923935 231.6923935
+  ## at(gen, Velvet):units!units.var     13.9189381  13.9189381
+  ## R!variance                           0.1666667   0.1666667
 
   # R-side estimates = G-side estimate + 0.1666 (resid variance)
-  m1r <- asreml(yield ~ gen, data=dat,
+  m1r <- asreml(yield ~ gen, data=dat2,
                  random = ~ env,
-                 rcov = ~ at(gen):units)
+                 rcov = ~ at(gen):units) # or diag(gen):units
   m1r <- update(m1r)
   summary(m1r)$varcomp[-1,1:2]/6
   ##                            gamma component

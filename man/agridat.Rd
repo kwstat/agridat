@@ -98,6 +98,7 @@ name                             \tab gen  \tab years \tab trt \tab other \tab m
 \link{diggle.cow}                \tab      \tab    \tab 4      \tab ts \tab \cr
 \link{foulley.calving}           \tab      \tab    \tab        \tab ordinal \tab polr \cr
 \link{goulden.eggs}              \tab      \tab    \tab        \tab controlchart \tab \cr
+\link{harvey.lsmeans}            \tab 3,3  \tab    \tab        \tab \tab lm\cr
 \link{henderson.milkfat}         \tab      \tab    \tab        \tab \tab nls,lm,glm,gam\cr
 \link{holland.arthropods}        \tab 5    \tab    \tab        \tab \tab \cr
 \link{ilri.sheep}                \tab 4    \tab 6  \tab        \tab diallel \tab lmer, asreml \cr
@@ -268,7 +269,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{shafii.rapeseed}             \tab 6   \tab 14 \tab 3   \tab 3  \tab       \tab \tab biplot \cr
 \link{sinclair.clover}             \tab     \tab    \tab     \tab    \tab 5,5   \tab rsm2,mitzerlich \tab nls,rgl \cr
 \link{snedecor.asparagus}          \tab     \tab    \tab 4   \tab 4  \tab 4     \tab \tab split-plot, antedependence \cr
-\link{snijders.fusarium}           \tab 17  \tab    \tab     \tab 3  \tab 4     \tab percent \tab glm/gnm,ammi \cr
+\link{snijders.fusarium}           \tab 17  \tab    \tab     \tab 3  \tab 4     \tab percent \tab glm/gnm,gammi \cr
 \link{steptoe.morex.pheno}         \tab 152 \tab 16 \tab     \tab    \tab       \tab 10 traits \tab \cr
 \link{steptoe.morex.geno}          \tab 150 \tab    \tab     \tab    \tab       \tab 223 markers, qtl \tab \cr
 \link{streibig.competition}        \tab 2   \tab    \tab 3   \tab    \tab       \tab \tab glm \cr
