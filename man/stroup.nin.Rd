@@ -217,8 +217,16 @@ abline(0,1)
 # ----------------------------------------------------------------------------
 
 \dontrun{
+  
   ## require(asreml4)
- 
+  ## data(stroup.nin)
+  ## dat <- stroup.nin
+
+  ## # Note, ASREML4 stand-alone might not need a completely-filled rectangle
+  ## # of plots to perform AR1xAR1 analysis.  It might be able to fill in missing
+  ## # combinations of rows/columns. The R version asreml4 still seems to require
+  ## # rectangles.
+
   ## # RCB analysis
   ## dat.rcb <- asreml(yield ~ gen, random = ~ rep, data=dat,
   ##                   na.action=na.method(x="omit"))
@@ -226,7 +234,7 @@ abline(0,1)
 
   ## # Two-dimensional AR1xAR1 spatial model
   ## dat <- transform(dat, xf=factor(col), yf=factor(row))
-  ## dat <- dat[order(dat$xf, dat$yf),]
+  ## #dat <- dat[order(dat$xf, dat$yf),]
   ## dat.sp <- asreml(yield~gen, data=dat,
   ##                  residual = ~ar1(xf):ar1(yf),
   ##                  na.action=na.method(x="omit"))
@@ -245,7 +253,8 @@ abline(0,1)
   ## title("stroup.nin: Comparison of predicted values")
   ## text(pred.rcb$pvals[,2],pred.sp$pvals[,2],
   ##      as.character(pred.rcb$pvals[,1]),cex=0.5)
-  ## abline(0,1) 
+  ## abline(0,1)
+  
 }
 
 # ----------------------------------------------------------------------------

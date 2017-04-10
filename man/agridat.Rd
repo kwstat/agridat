@@ -171,6 +171,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{connolly.potato}             \tab 20  \tab    \tab 4   \tab    \tab       \tab xy, competition \tab lm \cr
 \link{cornelius.maize}             \tab 9   \tab 20 \tab     \tab    \tab       \tab \tab svd\cr
 \link{corsten.interaction}         \tab 20  \tab 7  \tab     \tab    \tab       \tab \tab \cr
+\link{cramer.cucumber}             \tab     \tab    \tab 8   \tab    \tab       \tab \tab pathcoef \cr
 \link{crossa.wheat}                \tab 18  \tab 25 \tab     \tab    \tab       \tab \tab ammi \cr
 \link{crowder.seeds}               \tab 2   \tab    \tab 21  \tab    \tab 2     \tab \tab glm,jags \cr
 \link{cox.stripsplit}              \tab     \tab    \tab  4  \tab    \tab 3,4,2 \tab split-block \tab aov \cr

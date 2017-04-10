@@ -2,6 +2,18 @@
 
 This document lists notes about data sources searched and additional sources of agricultural data.  Although this is an .org file, the formatting is best viewed in plain text mode.
 
+---
+Henry Wallace archive at Univ Iowa Library
+http://www.lib.uiowa.edu/sc/location-and-hours/
+Henry Wallace research papers
+http://aspace.lib.uiowa.edu/repositories/2/archival_objects/400608
+500 Ear experiment. Might be the data for "What is in the corn judge's mind" paper
+http://aspace.lib.uiowa.edu/repositories/2/archival_objects/400615
+---
+
+rpathanalysis
+http://cucurbitbreeding.com/todd-wehner/publications/software-sas-r-project/
+
 * wanted
 
 Plant-level data for distinctness, uniformity and stability testing.  Most published data is for plot-means.
@@ -11,7 +23,6 @@ This page mentions an R version for DUS: http://www.bioss.ac.uk/knowledge/softwa
 
 * stability
 
-http://cucurbitbreeding.com/todd-wehner/publications/software-sas-r-project/
 
 * done
 adugna.sorghum 28g,13l,5y
@@ -32,8 +43,6 @@ lin.unbalanced 33g,18l
 
 Oakey, Cullis, Thompson http://www.g3journal.org/content/6/5/1313/suppl/DC1
 
-** Statistical Analysis of Agricultural Experiments with R
-http://rstats4ag.org/
 
 ** Rothamsted Annual Reports  
 http://www.era.rothamsted.ac.uk/eradoc/books/1

@@ -1,5 +1,6 @@
 
 Need to release desplot before agridat?  I think I took care of this.
+Release before mixed models paper?
 
 ## To do?
 
@@ -41,7 +42,7 @@ fisher.barley, tai.potato
 lu.stability
 
 acorsi.grayleafspot, becker.chicken, chinloy.fractionalfactorial,
-crampton.pig, battese.survey, christidis.competition,
+cramer.cucumber, crampton.pig, battese.survey, christidis.competition,
 depalluel.sheep. eden.nonnormal, gartner.corn, giles.wheat,
 gomez.heteroskedastic, gomez.nonnormal1, gomez.nonnormal2, gomez.nonnormal3,
 gomez.wetdry, goulden.eggs, goulden.splitsplit, gregory.cotton,
