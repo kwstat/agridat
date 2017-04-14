@@ -111,7 +111,7 @@ dat$doy <- as.numeric(strftime(dat$date2, format="\%j"))
 # Hunt & Evans Fig 2a
 library(lattice)
 xyplot(log10(plantweight)~doy|factor(year), data=dat, group=gen,
-       type=c('p','smooth'), span=.4,
+       type=c('p','smooth'), span=.4, as.table=TRUE, 
        xlab="Day of year", main="kreusler.maize - growth of maize",
        auto.key=list(columns=5))
 
@@ -119,17 +119,17 @@ xyplot(log10(plantweight)~doy|factor(year), data=dat, group=gen,
 
 # Hunt & Evans Fig 2b
 xyplot(log10(plantweight)~doy|gen, data=dat, group=factor(year),
-       type=c('p','smooth'), span=.5,
+       type=c('p','smooth'), span=.5, as.table=TRUE, 
        xlab="Day of year",
        auto.key=list(columns=4))
 # Hunt & Evans Fig 3a
 xyplot(log10(leafarea)~doy|factor(year), data=dat, group=gen,
-       type=c('p','smooth'), span=.5,
+       type=c('p','smooth'), span=.5, as.table=TRUE, 
        xlab="Day of year",
        auto.key=list(columns=5))
 # Hunt & Evans Fig 3a
 xyplot(log10(leafarea)~doy|gen, data=dat, group=factor(year),
-       type=c('p','smooth'), span=.5,
+       type=c('p','smooth'), span=.5, as.table=TRUE, 
        xlab="Day of year",
        auto.key=list(columns=4))
 

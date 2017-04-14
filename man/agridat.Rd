@@ -282,6 +282,8 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{theobald.barley}             \tab 3   \tab 5  \tab     \tab 2  \tab 5     \tab rsm1 \tab \cr
 \link{theobald.covariate}          \tab 10  \tab 7  \tab 5   \tab    \tab       \tab cov \tab jags \cr
 \link{thompson.cornsoy}            \tab     \tab 5  \tab     \tab 33 \tab       \tab repeated measures \tab aov \cr
+\link{vaneeuwijk.fusarium}         \tab 20  \tab    \tab     \tab 4  \tab 7     \tab 3-way \tab aov \cr
+\link{vaneeuwijk.drymatter}        \tab 6   \tab 4  \tab     \tab 7  \tab       \tab 3-way \tab aov,lmer \cr
 \link{vaneeuwijk.nematodes}        \tab 11  \tab    \tab     \tab    \tab       \tab nonnormal,poisson \tab gnm, gammi \cr
 \link{vargas.wheat1}               \tab 7   \tab    \tab     \tab 6  \tab       \tab gen*yr~gen*trt, yr*gen~yr*cov\tab pls \cr
 \link{vargas.wheat2}               \tab 8   \tab 7  \tab     \tab    \tab       \tab env*gen~env*cov \tab pls \cr

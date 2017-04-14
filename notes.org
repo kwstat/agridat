@@ -43,15 +43,24 @@ lin.unbalanced 33g,18l
 
 Oakey, Cullis, Thompson http://www.g3journal.org/content/6/5/1313/suppl/DC1
 
+---
 
 ** Rothamsted Annual Reports  
 http://www.era.rothamsted.ac.uk/eradoc/books/1
-Most of the annual reports have a section on Classical Experiments, often featuring RCB or Latin Square experiments.
-Done: 
+Most of the annual reports have a section on Classical Experiments.
+'''
+Year.Page
 1908-1926 
 1926-1927. agridat::sawyer.multi.uniformity 
 1927-1928. agridat::sawyer.multi.uniformity
-1929
+1929-1930
+1931.143 agridat::yates.oats
+1932
+1933
+1934.215-222 Sugar beet multi-environment trial with 3^3 fertilizer treatments at each site Roots, SugarPercent, SugarWeight, PlantNumber, Tops, Purity.
+1935
+
+'''
 ---
 
 
@@ -80,9 +89,13 @@ http://www.innovativegis.com/basis/pfprimer/Appendix_D/Appendix_D.htm http://www
 
 * Papers
 
-Biplot/StdErr/VanEeuwijk 1993 - Incorporating env info Biplot/Bartkowiak GxE table GE folder: Crossa 1997
+Biplot/StdErr/
+VanEeuwijk 1993 - Incorporating env info Biplot
+Bartkowiak GxE table GE folder: Crossa 1997
 
-Stability folder Fan 2007 - Yield stability of maize GxE / Flores 1998 Flores 1998 - bean & pea yields, Flores 2012, Flores 2013
+Stability folder 
+Fan 2007 - Yield stability of maize GxE 
+Flores 1998 Flores 1998 - bean & pea yields, Flores 2012, Flores 2013
 
 Jode Edwards Data analyzed in this report were obtained from the Iowa State University Oat Variety Trial for the years 1997 to 2003.
 
@@ -98,11 +111,6 @@ A Bayesian Shrinkage Approach for AMMI Models http://journals.plos.org/plosone/a
 
 ** Perez
 Comparison Between Linear and Non-parametric Regression Models for Genome-Enabled Prediction in Wheat https://www.scienceopen.com/document/vid/4017fb51-381c-4374-93aa-608423df4004;jsessionid=0TLjjSbaooSUk1y3JKd4nUeb.master:so-app1-prd Data: http://www.g3journal.org/content/suppl/2012/12/05/2.12.1595.DC1 All content has CC license
-
-** VanEeuwijk 1998.
-van Eeuwijk, Fred A. and Pieter M. Kroonenberg (1998).
-Multiplicative Models for Interaction in Three-Way ANOVA, with Applications to Plant Breeding
-Biometrics, 54, 1315-1333. http://doi.org/10.2307/2533660
 
 
 * Other
@@ -155,13 +163,8 @@ http://pdf.usaid.gov/pdf_docs/PNAAQ389.pdf
 ** Annual report - Nebraska Agricultural Experiment Station
 Vol 19-24, 1906-1911 https://books.google.com/books?id=HBlJAAAAMAAJ
 
-** Paterson. 1939. Statistical Technique In Agricultural Research.
-http://www.archive.org/details/statisticaltechn031729mbp
-
-
 
 * Classes
-
 
 
 ** Hernandez
@@ -187,44 +190,6 @@ http://newprairiepress.org/agstatconference/ 1989-2014
 ** Computers and Electronics in Agriculture.
 http://www.sciencedirect.com/science/journal/01681699/103 Vol 1-110
 
-
-** Iowa State Agricultural Research Bulletins
-http://lib.dr.iastate.edu/ag_researchbulletins/
-
-Vol 26/ 281. Cox: Analysis of Lattice and Triple Lattice.  
-Page 11: Lattice, 81 hybs, 4 reps 
-Page 24: Triple lattice, 81 hybs, 6 reps
-
-Vol 29/347. Homeyer. Punched Card and Calculating Machine Methods for Analyzing Lattice Experiments Including Lattice Squares and the Cubic Lattice.  
-Page 37: Triple lattice (9 blocks * 9 hybrids) with 6 reps.  
-Page 60: Simple lattice, 8 blocks * 8 hybrids, 4 reps.  
-Page 76: Balanced lattice, 25 hybrids 
-Page 87: Lattice square with (k+1)/2 reps, 121 hybrids, 6 rep 
-Page 109: Lattice square with k+1 reps, 7 blocks * 7 hyb, 8 reps 
-Page 126: Cubic lattice, 16 blocks * 4 plots = 64 varieties, 9 reps, cotton
-
-Vol 32/396. Wassom. Bromegrass Uniformity Trial: agridat::wassom.bromegrass.uniformity
-
-Vol 33/424. Heady. Crop Response Surfaces and Economic Optima in Fertilizer agridat::heady.fertilizer
-
-Vol 34/358. Schwab. Research on Irrigation of Corn and Soybeans At Conesville.  
-Page 257. 2 year, 2 loc, 4 rep, 2 nitro. Stand & yield.  Nice graph of soil moisture deficit (fig 9)
-
-Vol. 34/463. Doll. Fertilizer Production Functions for Corn and Oats.  
-Table 1, 1954 Clarion Loam.  N,P,K.  
-Table 14, 1955 McPaul Silt Loam.  N,P.  
-Table 25, 1955 corn.  K,P,N.  
-Table 31, 1956 oats, K,P,N.  Trends difficult to establish.
-
-Vol 34/472. Pesek. Production Surfaces and Economic Optima For Corn Yields.  Same data published in SSA journal?
-
-Vol 34/488. Walker. Application of Game Theory Models to Decisions.
-
-Vol 35/494. North Central Regional Potassium Studies with Alfalfa.  
-Page 176. Two years, several locs per state, multiple states, multiple fertilizer levels, multiple cuttings. Soil test attributes.  
-Page 183. Yield and %K.
-
-Vol 35/503. North Central Regional Potassium Studies with Corn.
 
 
 ** Journal of Agricultural Science
