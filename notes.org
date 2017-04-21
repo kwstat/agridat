@@ -3,6 +3,21 @@
 This document lists notes about data sources searched and additional sources of agricultural data.  Although this is an .org file, the formatting is best viewed in plain text mode.
 
 ---
+Iowa State Univ Library Special Collections
+
+Field plot techniques for sweet potatoes obtained from uniformity trial data
+Helen Elizabeth Conners. 1951
+C O 1951 Conners
+
+Field plot techniques for estimating onion yields 
+Robert LeRoy Plaisted. 1954 
+C O 1954 Plaisted
+
+Plot technique for field evaluation of three characters in the lima bean
+Michael Holle. 1960
+C O 1960 Holle
+
+---
 Henry Wallace archive at Univ Iowa Library
 http://www.lib.uiowa.edu/sc/location-and-hours/
 Henry Wallace research papers

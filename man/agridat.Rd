@@ -11,7 +11,7 @@
 
 \details{
 
-  If you use these data, please cite the agridat package and the
+  If you use these data, please cite both the agridat package and the
   original source of the data.
 
   Abbreviations in the 'other' column include:
@@ -144,7 +144,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{besag.beans}                 \tab 6   \tab    \tab 4*6 \tab    \tab       \tab xy \tab lm,competition \cr
 \link{besag.elbatan}               \tab 50  \tab    \tab 3   \tab    \tab       \tab xy \tab lm, gam \cr
 \link{besag.endive}                \tab     \tab    \tab     \tab    \tab       \tab xy,binary \tab autologistic \cr
-\link{besag.corn}                  \tab 64  \tab 6  \tab 3   \tab    \tab       \tab xy, incblock\tab asreml, lme \cr
+\link{besag.met}                   \tab 64  \tab 6  \tab 3   \tab    \tab       \tab xy, incblock\tab asreml, lme \cr
 \link{besag.triticale}             \tab 3   \tab    \tab     \tab    \tab 2,2,3 \tab xy \tab lm, asreml \cr
 \link{bliss.borers}                \tab     \tab    \tab     \tab    \tab 4     \tab \tab glm \cr
 \link{blackman.wheat}              \tab 12  \tab 7  \tab     \tab    \tab 2     \tab \tab biplot \cr
@@ -337,13 +337,15 @@ name                       \tab model \cr
 \link{waynick.soil}        \tab spatial, nitro/carbon \cr
 }
 
+\bold{Comments of the package purpose}
+
 Box (1957) said,
 "I had hoped that we had seen the end of the obscene tribal habit practiced by statisticians of continually exhuming and massaging dead data sets after their purpose in life has long since been forgotten and there was no possibility of doing anything useful as a result of this treatment."
 
 Massaging these dead data sets will not lead to any of the
 genetics being released for commercial use.
 The value of this package is:
-1. Validating published analyses (reproducible research).
+1. Validating published analyses.
 2. Providing data for testing new analysis methods.
 3. Illustrating (and validating) the use of R.
 
@@ -357,12 +359,22 @@ license: http://www.vsni.co.uk/downloads/asreml.
 
 \bold{Comments on the package structure}
 
+A large portion of these datasets appear in electronic form here for the
+first time.
+
+A tremendous amount of effort has been given to the curating process of
+identifying datasets, extracting the data from source materials,
+checking data values, and documenting the data.  In effect, to make the
+data somewhat 'computable' (Wolfram 2017).
+
 The original sources for these data use several different words to refer
 to genotypes including \emph{accession}, \emph{breed}, \emph{cultivar},
 \emph{genotype}, \emph{hybrid}, \emph{line}, \emph{progeny},
 \emph{stock}, \emph{type}, and \emph{variety}.  For consistency, these
-datasets mostly use \code{gen} (genotype).  Also for consistency
-\code{row} and \code{col} are usually used for the coordinates.
+datasets mostly use \code{gen} (genotype).
+
+Also for consistency \code{row} and \code{col} are usually used for the
+field coordinates.
 
 In dataframes, 'block', 'rep', and similar terms are almost always coded
 like B1, B2, B3 instead of 1, 2, 3.  This causes R to treat the data as
@@ -375,9 +387,7 @@ Although using \code{data()} is not necessary to access the data files,
 the example sections do include the use of \code{data()} because
 \code{devtools::run_examples()} needs it.
 
-A large part of these data appear in electronic form here for the first
-time.  A great deal of effort and care has gone into preparing the data in
-electronic format, but mistakes are possible.  Please file a bug report.
+Please report any bugs to the package author or at the package github site.
 
 }
 
@@ -387,6 +397,7 @@ electronic format, but mistakes are possible.  Please file a bug report.
 
   The author is grateful to the many people who granted permission to
   include their data in this package.
+  
 }
 
 \references{
@@ -398,6 +409,10 @@ electronic format, but mistakes are possible.  Please file a bug report.
   Publishing Agronomic Data.
   \emph{Agron J.} 100, 1396-1400.
   http://doi.org/10.2134/agronj2008.0080F
+
+  Stephen Wolfram (2017).
+  \emph{Launching the Wolfram Data Repository: Data Publishing that Really Works}.
+  http://blog.stephenwolfram.com/2017/04/launching-the-wolfram-data-repository-data-publishing-that-really-works/
 
 }
 

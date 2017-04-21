@@ -1,5 +1,5 @@
 # hanover.whitepine.r
-# Time-stamp: <21 Sep 2016 17:30:40 c:/x/rpack/agridat/data-done/hanover.whitepine.r>
+# Time-stamp: <20 Apr 2017 15:54:50 c:/x/rpack/agridat/data-done/hanover.whitepine.r>
 
 library(asreml)
 library(dplyr)

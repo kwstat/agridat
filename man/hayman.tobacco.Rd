@@ -22,8 +22,7 @@
   
   Data was collected in 1951 (Hayman 1954a) and 1952 (Hayman 1954b).
 
-  In each year there were 8 varieties of Aztec tobacca (Nicotiana
-  rustica L.).
+  In each year there were 8 varieties of Aztec tobacco, \emph{Nicotiana rustica L.}.
 
   Each cross/self was represented by 10 progeny, in two plots of 5
   plants each.  The data are the mean flowering time per plot.
@@ -63,7 +62,7 @@
 
   C. Clark Cockerham and B. S. Weir. (1977).
   Quadratic analyses of reciprocal crosses.
-  \emph{Biometrics} 33, 187-203.  Same data in appendix C.
+  \emph{Biometrics} 33, 187-203.  Appendix C.
 }
 
 \examples{

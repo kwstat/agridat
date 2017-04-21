@@ -1,5 +1,5 @@
-\name{besag.corn}
-\alias{besag.corn}
+\name{besag.met}
+\alias{besag.met}
 \docType{data}
 \title{
   Multi-environment trial of corn laid out in incomplete-blocks
@@ -57,14 +57,14 @@
 
 \examples{
 
-data(besag.corn)
-dat <- besag.corn
+data(besag.met)
+dat <- besag.met
 
 if(require(desplot)){
   desplot(yield ~ col*row|county, dat,
           aspect=36/11, # true aspect
           out1=rep, out2=block,
-          main="besag.corn")
+          main="besag.met")
 }
 
 # Average reps
@@ -120,7 +120,7 @@ datm <- aggregate(yield ~ county + gen, data=dat, FUN=mean)
   # The following example shows how to construct a GxE biplot
   # from the FA2 model.
 
-  dat <- besag.corn
+  dat <- besag.met
   dat <- transform(dat, xf=factor(col), yf=factor(row))
   dat <- dat[order(dat$county, dat$xf, dat$yf), ]
   
@@ -197,7 +197,7 @@ datm <- aggregate(yield ~ county + gen, data=dat, FUN=mean)
  ##  # The following example shows how to construct a GxE biplot
  ##  # from the FA2 model.
 
- ##  dat <- besag.corn
+ ##  dat <- besag.met
  ##  dat <- transform(dat, xf=factor(col), yf=factor(row))
  ##  dat <- dat[order(dat$county, dat$xf, dat$yf), ]
 

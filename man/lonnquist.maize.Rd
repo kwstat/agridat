@@ -17,11 +17,14 @@
   }
 }
 \details{
+
   Twelve hybrids were selfed/crossed in a half-diallel design planted in
   3 reps at 2 locations in 2 years.  The data here are means adjusted
   for block effects.
+
 }
 \source{
+  
   J. H. Lonnquist, C. O. Gardner. (1961)
   Heterosis in Intervarietal Crosses in Maize and Its Implication in
   Breeding Procedures.

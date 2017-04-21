@@ -71,8 +71,6 @@ Checked aspect ratio of field plot heatmaps where possible.
 
 Fixed `dontrun` sections to work with  `devtools::run_examples(run=FALSE)`
 
-Renamed besag.met to besag.corn.
-
 Changed extensions in inst/files from .bug to .jag .
 
 Added DOIs for most source references.
@@ -80,6 +78,8 @@ Added DOIs for most source references.
 Removed most quote marks from data/*.txt files.
 
 Changed all hyperlinks to plain text (faster checking, avoids re-direct errors).
+
+The `nass.*` files now have state names with correct spaces.
 
 # agridat 1.12 - Jun 2015
 

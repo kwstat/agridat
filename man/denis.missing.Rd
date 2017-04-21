@@ -35,7 +35,7 @@
 data(denis.missing)
 dat <- denis.missing
 
-# View missingness structure
+# view missingness structure
 if(require(reshape2)){
   acast(dat, env~gen, value.var='yield')
 }
@@ -47,7 +47,7 @@ levelplot(yield ~ gen*env, data=dat,
           col.regions=redblue,
           main="denis.missing - incidence heatmap")
 
-# Stability variance (Table 3 in Piepho)
+# stability variance (Table 3 in Piepho)
 require("nlme")
 m1 <- lme(yield ~ -1 + gen, data=dat, random= ~ 1|env,
           weights = varIdent(form= ~ 1|gen),
@@ -56,5 +56,8 @@ svar <- m1$sigma^2 * c(1, coef(m1$modelStruct$varStruct, unc = FALSE))^2
 round(svar, 2)
 ##          G5    G3    G1    G2
 ## 39.25 22.95 54.36 12.17 23.77
+
+# m2 <- asreml(yield ~ gen, random = ~ env + at(gen):env, data=dat)
+
 }
 
