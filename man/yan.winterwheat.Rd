@@ -50,13 +50,6 @@
 data(yan.winterwheat)
 dat <- yan.winterwheat
 
-## require("reshape2")
-## mat <- melt(dat, id.var=c('gen','env'))
-## mat <- acast(mat, gen~env)
-## mat.sc <- scale(mat)
-## Environment-standardized GGE biplot
-## biplot(princomp(mat.sc), main="yan.winterwheat - GGE biplot")
-
 if(require(gge)){
 m1 <- gge(yield ~ gen*env, data=dat)
 biplot(m1, flip=c(1,1), hull=TRUE,
