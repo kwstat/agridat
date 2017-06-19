@@ -53,7 +53,7 @@ dat <- yan.winterwheat
 if(require(gge)){
 m1 <- gge(yield ~ gen*env, data=dat)
 biplot(m1, flip=c(1,1), hull=TRUE,
-       title="yan.winterwheat - GGE biplot")
+       main="yan.winterwheat - GGE biplot")
 }
 
 }

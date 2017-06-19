@@ -13,7 +13,6 @@ vignette: >
 
 # Books
 
-
 ### D. F. Andrews and A. M. Herzberg (1985). _Data_. 
 http://www.stat.duke.edu/courses/Spring01/sta114/data/andrews.html
 ```
@@ -66,6 +65,10 @@ Milk protein data: nlme::Milk.  A thorough description of this data can be found
 491 Latin square with covariate
 ```
 
+
+### Finney 1972. _An Introduction to Statistical Science in Agriculture_.
+
+
 ### Galwey, N.W. (2014). _Introduction to Mixed Modelling_, 2nd ed.
 http://www.wiley.com/WileyCDA/WileyTitle/productCd-1119945496.html
 ```
@@ -82,7 +85,6 @@ http://www.wiley.com/WileyCDA/WileyTitle/productCd-1119945496.html
 
 
 ### Kwanchai A. Gomez & Gomez (1984). _Statistical Procedures for Agricultural Research_.
-
 Extensive collection of datasets.
 
 
@@ -324,7 +326,7 @@ Note: The data are available in ClustVarLV package.
 
 
 Gregory, Crowther & Lambert (1932). The interrelation of factors controlling the production of cotton under irrigation in the Sudan.
-Jour Agric Sci ?? 22 ? p. 617.
+Jour Agric Sci, 22, p. 617.
 
 
 Hedrick (1920).
@@ -398,12 +400,23 @@ http://doi.org/10.2307/3001713
 Note: Two small uniformity trials with yield per plant for 200, 500 plants.  CVs fairly high and correlation between neighboring plants very low.
 
 
+Edmund B. Lambert (1934).
+Size and arrangement of plots for yield tests with cultivated mushrooms.
+Journal of Agricultural Research, Vol 48, 971-980.
+Note: Uniformity trial at three locations for mushrooms in growth houses.
+https://naldc.nal.usda.gov/naldc/download.xhtml?id=IND43968493
+
+
 Moore, John Francis (1952).
 A study of field plot technique with sprouting broccoli.  Proc Amer Soc Hort Sci: 1-474.
 Note: This paper is not available, but a summary can be found here: http://eurekamag.com/research/013/624/013624967.php
 
 
 # R packages
+
+
+### aml Adaptive Mixed LASSO
+Has 'wheat' data with genetic and phenotypic data for wheat.
 
 
 ### agricolae 
@@ -490,7 +503,12 @@ http://www.genetics.org/content/197/4/1343.supplemental
 
 ### spdep
 Has a vignette 'The Problem of Spatial Autocorrelation: forty years on' that examines agriculture in Irish counties.
-See also the data ade4::irishdata. 
+See also the data ade4::irishdata.
+
+
+### spuRs
+Data: spuRs::trees has data for 107 trees that were cut into cross sections with the volume calculated at roughly 10-year increments.  This is a subset of the much-larger original data from Guttenberg: 
+https://archive.org/stream/wachstumundertra00gutt
 
 
 ### SoyNAM Soybean nested association mapping 
@@ -566,4 +584,3 @@ Domain:      Total
 Geography:   State
 See agridat::nass.corn, nass.wheat, etc.
 
-Finney 1953. An Introduction to Statistical Science in Agriculture

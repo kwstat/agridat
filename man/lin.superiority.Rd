@@ -39,6 +39,12 @@ A Superiority Measure Of Cultivar Performance For Cultivar x Location Data.
 \emph{Canadian Journal of Plant Science}, 68, 193-198.
 http://doi.org/10.4141/cjps88-018
 
+Mohammed Ali Hussein, Asmund Bjornstad, and A. H. Aastveit (2000).
+SASG x ESTAB: A SAS Program for Computing Genotype x Environment
+Stability Statistics.
+\emph{Agronomy Journal}, 92; 454-459.
+http://doi.org/10.2134/agronj2000.923454x
+
 }
 \examples{
 

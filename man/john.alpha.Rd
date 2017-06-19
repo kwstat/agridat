@@ -22,7 +22,7 @@
 \details{
   
   A spring oats trial grown in Craibstone, near Aberdeen.
-  There were 24 varities in 3 replicates, each consisting
+  There were 24 varieties in 3 replicates, each consisting
   of 6 incomplete blocks of 4 plots.  Planted in a resolvable
   alpha design.  The plots were laid out in a single line.
   

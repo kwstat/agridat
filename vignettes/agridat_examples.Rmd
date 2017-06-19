@@ -408,7 +408,7 @@ c("KN","NB","PA","BJ","IL","TC", "JM","PI","AS","ID","SC","SS",
 require(gge)
 m4 <- gge(yield~gen*loc, dat2, env.group=eg, scale=FALSE)
 # plot(m4)
-biplot(m4, lab.env=TRUE, title="crossa.wheat")
+biplot(m4, lab.env=TRUE, main="crossa.wheat")
 ```
 
 @laffont2013genotype developed a variation of the GGE (genotype plus

@@ -53,7 +53,7 @@ dat <- huehn.wheat
 # among the 20 varieties".
 if(require(gge)){
   m1 <- gge(yield ~ gen*env, dat)
-  biplot(m1, title="huehn.wheat")
+  biplot(m1, main="huehn.wheat")
 }
 
 \dontrun{

@@ -41,7 +41,7 @@ The plants were selected by eye as representative, with the number of
 plants chosen decreasing during the growing season.  For example, the
 dry-weight data was based on the following number of plants:
 
-In 1875 the number sampled begain at 20 and dropped to 10.
+In 1875 the number sampled began at 20 and dropped to 10.
 
 In 1876 the number sampled began at 45 and dropped to 24.
 

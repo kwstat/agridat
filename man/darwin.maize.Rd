@@ -57,7 +57,7 @@
   http://darwin-online.org.uk/converted/published/1881_Worms_F1357/1876_CrossandSelfFertilisation_F1249/1876_CrossandSelfFertilisation_F1249.html
 }
 \references{
-  R. A. Fisher, (1935) \emph{Design of Experiments},  Oliver and Boyd. Page 30.
+  R. A. Fisher, (1935) \emph{The Design of Experiments},  Oliver and Boyd. Page 30.
 }
 
 \examples{

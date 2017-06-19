@@ -106,7 +106,7 @@ dat2$eg <- ifelse(is.element(dat2$loc,
 library(gge)
 # Specify env.group as column in data frame
 m2 <- gge(yield~gen*loc, dat2, env.group=eg, scale=FALSE)
-biplot(m2, title="crossa.wheat - GGB biplot")
+biplot(m2, main="crossa.wheat - GGB biplot")
 
 }
 \keyword{datasets}

@@ -1,6 +1,25 @@
 #+title: agridat notes
 
+---
+
+Hansen 1914 Aarslov Tidsskrift for landbrugets planteavl
+http://dca.au.dk/publikationer/historiske/planteavl/ Bind 21 has 1914, page 553.
+
+Eden & Maskell say":
+One of the trials, comprising 35 plots, extended over the years 1907-11 and included oats, rye, barley, roots, barley.
+Hansen's analysis:
+Oats and rye 1907 and 1908 show marked positive correlation
+rye and barley 1908 and 1909 no correlation of significance
+barley and roots 1909 and 1910 no correlation
+roots and barley 1910 and 1911 a significant correlation
+rye and roots 1908 and 1910 satisfactory
+
+---
+
 This document lists notes about data sources searched and additional sources of agricultural data.  Although this is an .org file, the formatting is best viewed in plain text mode.
+
+https://babel.hathitrust.org/cgi/pt?id=wu.89031116783;view=1up;seq=3
+https://babel.hathitrust.org/cgi/pt?id=uc1.$b34460;view=1up;seq=14
 
 ---
 Iowa State Univ Library Special Collections
@@ -64,17 +83,26 @@ Oakey, Cullis, Thompson http://www.g3journal.org/content/6/5/1313/suppl/DC1
 http://www.era.rothamsted.ac.uk/eradoc/books/1
 Most of the annual reports have a section on Classical Experiments.
 '''
-Year.Page
+Year,page
 1908-1926 
-1926-1927. agridat::sawyer.multi.uniformity 
-1927-1928. agridat::sawyer.multi.uniformity
+1926-1927 agridat::sawyer.multi.uniformity 
+1927-1928 agridat::sawyer.multi.uniformity
 1929-1930
-1931.143 agridat::yates.oats
+1931,143 agridat::yates.oats
 1932
 1933
-1934.215-222 Sugar beet multi-environment trial with 3^3 fertilizer treatments at each site Roots, SugarPercent, SugarWeight, PlantNumber, Tops, Purity.
+1934,215-222 Sugar beet multi-environment trial with 3^3 fertilizer treatments at each site Roots, SugarPercent, SugarWeight, PlantNumber, Tops, Purity.
 1935
-
+1936,241 Similar to the 1934 experiment, but only gives the main effects, not the actual data.
+1937
+1938
+1939
+1946 few results
+1947
+1948
+1949
+1950
+1951 1952 1953
 '''
 ---
 

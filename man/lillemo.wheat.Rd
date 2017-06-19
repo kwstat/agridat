@@ -12,7 +12,7 @@
   A data frame with 408 observations on the following 4 variables.
   \describe{
     \item{\code{gen}}{genotype, 24 levels}
-    \item{\code{env}}{envionrment, 13 levels}
+    \item{\code{env}}{environrment, 13 levels}
     \item{\code{score}}{score}
     \item{\code{scale}}{scale used for score}
   }
@@ -97,7 +97,7 @@ qqmath(~score|env, dat, group=scale,
 
   # Biplot of transformed data like Lillemo Fig 2
   require(gge)
-  biplot(gge(datt, scale=FALSE), title="lillemo.wheat")
+  biplot(gge(datt, scale=FALSE), main="lillemo.wheat")
   
   # Median polish of transformed table
   m1 <- medpolish(datt)

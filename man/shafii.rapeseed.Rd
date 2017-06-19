@@ -35,7 +35,7 @@
   Analysis of Genotype-by-Environment Interaction Using the
   Additive Main Effects and Multiplicative Interaction Model
   and Stability Estimates, \emph{Journal of Agricultural Biological
-    Enironmental Statistics}, 3, 335--345.
+    Environmental Statistics}, 3, 335--345.
   http://doi.org/10.2307/1400587
 
   Electronic version from:

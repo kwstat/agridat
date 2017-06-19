@@ -75,6 +75,7 @@ wedder <- list(varfun=function(mu) (mu*(1-mu))^2,
                mustart <- pmax(0.001, pmin(0.99,y)) }),
              name="(mu(1-mu))^2")
 m2 <- glm(y ~ gen + site, data=dat, family=quasi(link="logit", variance=wedder))
+#plot(m2)
 
 \dontrun{
 # Alternatively, the 'gnm' package has the 'wedderburn' family.

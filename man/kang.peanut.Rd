@@ -50,7 +50,7 @@ round(acast(dat, env~gen, value.var='yield', fun=mean),2)
 # GGE biplot of Kang, p. 82.
 if(require(gge)){
   m1 <- gge(yield~gen*env, data=dat, scale=FALSE)
-  biplot(m1, flip=c(1,1), title="kang.peanut - GGE biplot")
+  biplot(m1, flip=c(1,1), main="kang.peanut - GGE biplot")
 }
 
 }

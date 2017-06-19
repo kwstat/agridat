@@ -2,10 +2,10 @@
 \alias{gotway.hessianfly}
 \docType{data}
 \title{
-  Hessian fly damage to wheat varities
+  Hessian fly damage to wheat varieties
 }
 \description{
-  Hessian fly damage to wheat varities
+  Hessian fly damage to wheat varieties
 }
 
 \format{

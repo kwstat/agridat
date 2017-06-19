@@ -25,7 +25,7 @@
   plus 4 gaps of 4 feet).  Weiss shows a figure of the field (that was
   later doubled in dize via using two rows per plot).
 
-  Note that only 30 varities were tested.  Varieties 7 and 14 are the
+  Note that only 30 varieties were tested.  Varieties 7 and 14 are the
   same variety (Mukden).  Although total yields of these varieties were
   not equal, the correction for blocks adjusted their means to identical
   values. Such accuracy is not, however, claimed to be a constant

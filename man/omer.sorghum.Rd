@@ -44,7 +44,7 @@ dat <- omer.sorghum
 # gge biplot
 if(require(gge)){
   m0 <- gge(yield ~  gen* env, data=dat)
-  biplot(m0, title="omer.sorghum")
+  biplot(m0, main="omer.sorghum")
 }
 
 # REML approach

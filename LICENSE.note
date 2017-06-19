@@ -1,9 +1,9 @@
-The 'agridat' package is released under the following license:
-GNU General Public License 3
-https://www.gnu.org/licenses/gpl-3.0.en.html
+The 'agridat' package is released under the CC BY-SA 4.0 license.
 
-Some datasets in this package have explicit licenses summarized below.
+A few datasets have explicit licenses that are summarized below.
 See the respective dataset help files for full details.
+
+-----
 
 broadbalk.wheat - No license. Credit to StatLib.
 
@@ -13,13 +13,13 @@ cleveland.soil - No license. Credit to StatLib.
 
 gartner.corn - Creative Commons BY-SA 3.0.
 
-ilri.sheep - Creative Commons BY-NC-SA 3.0 Unported. 
+ilri.sheep - Creative Commons BY-NC-SA 3.0. 
 
 lasrosas.corn - No license. Credit to ASU GeoDa Center.
 
 lee.potatoblight - Database Contents License 1.0.
 
----
+-----
 
 Other notes.
 
@@ -35,5 +35,4 @@ Data produced from work of the United States government
 (including the U.S. Department of Agriculture) are not subject to copyright.
 \url{http://en.wikipedia.org/wiki/Copyright_status_of_work_by_the_U.S._government}
 
-Creative Commons licenses apply to the \emph{structure} of a database, but not to the factual data.
-\url{https://wiki.creativecommons.org/wiki/Data}
+Creative Commons licenses can apply to the \emph{structure} of a database, but not to the factual data. \url{https://wiki.creativecommons.org/wiki/Data}

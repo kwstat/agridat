@@ -2,10 +2,10 @@
 \alias{beaven.barley}
 \docType{data}
 \title{
-  Yields of 8 barley varities in 1913 as used by Student.
+  Yields of 8 barley varieties in 1913 as used by Student.
 }
 \description{
-  Yields of 8 barley varities in 1913.
+  Yields of 8 barley varieties in 1913.
 }
 \usage{data("beaven.barley")}
 \format{

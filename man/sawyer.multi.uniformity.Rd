@@ -40,10 +40,19 @@
   Note the summaries statistics at the bottom of the page in each report
   are calibrated to ACRES.
 
-  The field is 8 plots wide, 6 plots long.  The plots are drawn in the
-  source documents as squares .098 acres each, but the plot dimensions
-  are not actually given.
+  Field width: 8 plots * 1 chain each
+  Field length: 6 plots * 1 chain each
   
+  The field is 8 plots wide, 6 plots long.  The plots are drawn in the
+  source documents as squares .098 acres each.
+
+  Eden & Maskell (page 165) say the field was clover, and ploughed in
+  the autumn of 1924. The field was laid out uniformly in lands of one
+  chain width and each plot width made to coincide with the land width
+  from ridge to ridge. The length of each plot was also one chain and
+  from the point of view of yield data the trial comprised 47 plots in
+  8x6 except that the run of the hedge only allowed a rank of five plots
+  at one of the ends.
 }
 \source{
   Rothamsted Experimental Station, Report 1925-26.
@@ -55,6 +64,12 @@
   http://www.era.rothamsted.ac.uk/eradoc/article/ResReport1927-28-131-175
 }
 \references{
+  Eden, T. and E. J. Maskell. (1928).
+  The influence of soil heterogeneity on the growth and yield of
+  successive crops.
+  Jour of Agricultural Science, 18, 163-185.
+  https://archive.org/stream/in.ernet.dli.2015.25895/2015.25895.Journal-Of-Agricultural-Science-Vol-xviii-1928#page/n175
+  
   McCullagh, P. and Clifford, D., (2006).
   Evidence for conformal invariance of crop yields,
   \emph{Proceedings of the Royal Society A: Mathematical, Physical and
@@ -74,27 +89,32 @@ data("sawyer.multi.uniformity")
 dat <- sawyer.multi.uniformity
 
 if(require(desplot)){
-  # The field plan shows square plots, but this is unlikely
+  # The field plan shows square plots
   desplot(grain~col*row, subset(dat, year==1925),
-          main="sawyer.multi.uniformity - 1925 wheat grain yield")
+          main="sawyer.multi.uniformity - 1925 wheat grain yield",
+          aspect=(6)/(8)) # true aspect
   desplot(rootwt~col*row, subset(dat, year==1926),
-          main="sawyer.multi.uniformity - 1926 root weight of swedes")
+          main="sawyer.multi.uniformity - 1926 root weight of swedes",
+          aspect=(6)/(8))
   desplot(grain~col*row, subset(dat, year==1927),
-          main="sawyer.multi.uniformity - 1927 oats grain yield")
+          main="sawyer.multi.uniformity - 1927 oats grain yield",
+          aspect=(6)/(8))
 }
 
-# This plot shows the outlier in the wheat data reported by Mackenzie.
-# require(lattice)
-# xyplot(grain ~ straw, data=subset(dat, year==1925))
-
-# round(cor(dat[,7:9], use="pair"),2) # Matches McCullagh p 2121
-##        leafwt rootwt rootct
-## leafwt   1.00   0.66   0.47
-## rootwt   0.66   1.00   0.43
-## rootct   0.47   0.43   1.00
-
-## pairs(dat[,7:9],
-##       main="sawyer.multi.uniformity")
+\dontrun{
+  # This plot shows the outlier in the wheat data reported by Mackenzie.
+  require(lattice)
+  xyplot(grain ~ straw, data=subset(dat, year==1925))
+  
+  round(cor(dat[,7:9], use="pair"),2) # Matches McCullagh p 2121
+  ##        leafwt rootwt rootct
+  ## leafwt   1.00   0.66   0.47
+  ## rootwt   0.66   1.00   0.43
+  ## rootct   0.47   0.43   1.00
+  
+  ## pairs(dat[,7:9],
+  ##       main="sawyer.multi.uniformity")
+}
 
 }
 \keyword{datasets}

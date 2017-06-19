@@ -40,8 +40,10 @@ name                                      \tab dimensions \tab other \tab model 
 \link{harris.multi.uniformity}            \tab 2 x 23 \tab xy, 23 crops \tab corrgram\cr
 \link{holtsmark.timothy.uniformity}       \tab 6 x 40 \tab xy \tab \cr
 \link{immer.sugarbeet.uniformity}         \tab 10 x 60 \tab xy, 3 traits \tab \cr
+\link{iyer.wheat.uniformity}              \tab 25 x 80 \tab xy \tab \cr
 \link{kalamkar.potato.uniformity}         \tab 6 x 96 \tab xy \tab \cr
 \link{kalamkar.wheat.uniformity}          \tab 16 x 80 \tab xy, 2 traits \tab \cr
+\link{khin.rice.uniformity}               \tab 30 x 36 \tab xy \tab \cr
 \link{kiesselbach.oats.uniformity}        \tab 3 x 69 \tab xy \tab \cr
 \link{kempton.barley.uniformity}          \tab 7 x 28 \tab xy \tab \cr
 \link{lessman.sorghum.uniformity}         \tab 46 x 60 \tab xy \tab \cr

@@ -16,7 +16,7 @@
     \item{\code{insecticide}}{insecticide factor}
     \item{\code{depth}}{depth}
     \item{\code{rep}}{block}
-    \item{\code{damaged}}{number of damaged palnts}
+    \item{\code{damaged}}{number of damaged plants}
     \item{\code{total}}{total number of plants}
   }
 }

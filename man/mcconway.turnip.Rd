@@ -25,7 +25,7 @@
   were combinations of two varieties, two planting dates, and
   four densities.
 
-  Lee et al (2008) proposed an anlysis using mixed models with changing
+  Lee et al (2008) proposed an analysis using mixed models with changing
   treatment variances.
 
   Piepho (2009) proposed an ordinary ANOVA using transformed data.

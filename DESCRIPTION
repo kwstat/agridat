@@ -1,7 +1,7 @@
 Package: agridat
 Title: Agricultural Datasets
 Version: 1.13
-Date: 2017-04-13
+Date: 2017-05-13
 Authors@R: person("Kevin","Wright", email="kw.stat@gmail.com", role=c("aut","cre"))
 Type: Package
 Description: Datasets from books, papers, and websites related to agriculture.
@@ -51,7 +51,7 @@ Suggests:
     SpATS,
     survival,
     vcd
-License: GPL-3 + file LICENSE
+License: CC BY-SA 4.0
 LazyData: yes
 URL: https://github.com/kwstat/agridat
 BugReports: https://github.com/kwstat/agridat/issues

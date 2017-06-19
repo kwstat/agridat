@@ -19,7 +19,7 @@
 \details{
   Eight single-cross hybrids were in the experiment--Hy2xOh7 and WF9xC103 were
   included because it was believed they had optimum yields at relatively
-  high and low popultions.  Planted in 1963.  Plots were thinned to
+  high and low populations.  Planted in 1963.  Plots were thinned to
   2, 4, 6, 8 plants per hill, giving densities 8, 16, 24, 32 thousand
   plants per acre.  Hills were in rows 40 inches apart.
   One hill = 1/4000 acre.
