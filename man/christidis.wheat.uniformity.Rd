@@ -44,7 +44,7 @@ Field width: 12 units * 7.5 feet = 90 feet
 data(christidis.wheat.uniformity)
 dat <- christidis.wheat.uniformity
 
-# sum(dat$yield) # Match Christidis
+# sum(dat$yield) # Matches Christidis
 
 if(require(desplot)){
   desplot(yield ~  col*row, data=dat,

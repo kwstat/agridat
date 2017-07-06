@@ -79,13 +79,21 @@ been corrected.
   Used with permission of Kaye Basford, Pieter Kroonenberg.
 }
 \references{
+  
   K E Basford. 1982. The Use of Multidimensional Scaling in Analysing
   Multi-Attribute Genotype Response Across Environments,
   \emph{Aust J Agric Res}, 33, 473--480.
 
   Kroonenberg, P. M., & Basford, K. E. B. (1989). An investigation of
   multi-attribute genotype response across environments using three-mode
-  principal component analysis. \emph{Euphytica}, 44, 109--123.
+  principal component analysis.
+  \emph{Euphytica}, 44, 109--123.
+
+  Marcin Kozak (2010).
+  Use of parallel coordinate plots in multi-response selection of
+  interesting genotypes.
+  \emph{Communications in Biometry and Crop Science}, 5, 83-95.
+
 }
 \examples{
 
@@ -99,14 +107,27 @@ dm <- melt(dat, id.var=c('env', 'year','loc','gen'))
 dmat <- acast(dm, gen~variable, fun=mean)
 dmat <- scale(dmat)
 biplot(princomp(dmat), main="australia.soybean trait x gen biplot", cex=.75)
-
-# Figure 1 of Kozak 2010, lines 44-58
-# dmat2 <- dmat[44:58,]
-# require("lattice")
-# parallelplot(dmat2[,c(2:6,1)], main="australia.soybean", horiz=FALSE)
-
 }
 
+# Figure 1 of Kozak 2010, lines 44-58
+\dontrun{
+  require(agridat); require(reshape2) ; require(lattice); require(latticeExtra)
+  dat <- australia.soybean
+  dat <- melt(dat, id.var=c('env', 'year','loc','gen'))
+  dat <- acast(dat, gen~variable, fun=mean)
+  dat <- scale(dat)
+  dat <- as.data.frame(dat)[,c(2:6,1)]
+  dat$gen <- rownames(dat)
+  # data for the graphic by Kozak
+  dat2 <- dat[44:58,]
+  dat3 <- subset(dat2, gen %in% c("G48","G49","G50","G51"))
+  
+  parallelplot( ~ dat3[,1:6]|dat3$gen, main="australia.soybean",
+               as.table=TRUE, horiz=FALSE) +
+    parallelplot( ~ dat2[,1:6], horiz=FALSE, col="gray80") +
+    parallelplot( ~ dat3[,1:6]|dat3$gen,
+                 as.table=TRUE, horiz=FALSE, lwd=2)
+}
 
 }
 

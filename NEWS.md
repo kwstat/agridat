@@ -25,7 +25,7 @@ harris.wateruse
 christidis.wheat.uniformity, draper.safflower.uniformity,
 holtsmark.timothy.uniformity, iyer.wheat.uniformity,
 kalamkar.wheat.uniformity, khin.rice.uniformity, kiesselbach.oats.uniformity,
-lessman.sorghum.uniformity, masood.rice.uniformity,
+lessman.sorghum.uniformity, love.cotton.uniformity, masood.rice.uniformity,
 mcclelland.corn.uniformity, montgomery.wheat.uniformity,
 moore.polebean.uniformity, moore.bushbean.uniformity,
 moore.sweetcorn.uniformity, moore.carrots.uniformity,
@@ -63,7 +63,7 @@ Moved `desplot` function to package `desplot`.
 
 Moved `gge` function to package `gge`.
 
-Changed license to CC BY-SA 4.0 + file LICENSE (similar to igraphdata).
+Changed license to CC BY-SA 4.0, file LICENSE.note (similar to igraphdata).
 
 Titles in Rd pages are more consistent.
 

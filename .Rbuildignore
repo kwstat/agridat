@@ -11,5 +11,6 @@ data-raw
 data-unused
 figure
 notes.org
+notes.Rmd
 ^.*\.Rproj$
 ^\.Rproj\.user$

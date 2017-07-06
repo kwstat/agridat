@@ -1,4 +1,6 @@
-#+title: agridat notes
+# agridat notes
+
+This document lists notes about data sources searched and additional sources of agricultural data.  Although this is an .Rmd file, the formatting is best viewed in plain text mode.
 
 ---
 
@@ -15,11 +17,15 @@ roots and barley 1910 and 1911 a significant correlation
 rye and roots 1908 and 1910 satisfactory
 
 ---
-
-This document lists notes about data sources searched and additional sources of agricultural data.  Although this is an .org file, the formatting is best viewed in plain text mode.
+Two trials, modest size, page 230
+https://archive.org/stream/in.ernet.dli.2015.25282/2015.25282.The-Empire-Journal-Of-Experimental-Agriculture-Vol-v-1937#page/n235/mode/2up/search/uniformity
+---
 
 https://babel.hathitrust.org/cgi/pt?id=wu.89031116783;view=1up;seq=3
 https://babel.hathitrust.org/cgi/pt?id=uc1.$b34460;view=1up;seq=14
+
+---
+http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0157166
 
 ---
 Iowa State Univ Library Special Collections
@@ -48,17 +54,17 @@ http://aspace.lib.uiowa.edu/repositories/2/archival_objects/400615
 rpathanalysis
 http://cucurbitbreeding.com/todd-wehner/publications/software-sas-r-project/
 
-* wanted
+# wanted
 
 Plant-level data for distinctness, uniformity and stability testing.  Most published data is for plot-means.
 This page mentions an R version for DUS: http://www.bioss.ac.uk/knowledge/software.html
 
 
 
-* stability
+# stability
 
 
-* done
+# done
 adugna.sorghum 28g,13l,5y
 brandle.rape 5g,9l,3y
 denis.missing 5g,26e
@@ -70,7 +76,7 @@ lu.stability 5g,6e
 pieopho.cocksfoot 25g,7y
 williams.trees 37g,6l
 
-* todo ?
+# todo ?
 kamidi 11g,7l 
 lin.balanced 33g,12l 
 lin.unbalanced 33g,18l
@@ -79,7 +85,7 @@ Oakey, Cullis, Thompson http://www.g3journal.org/content/6/5/1313/suppl/DC1
 
 ---
 
-** Rothamsted Annual Reports  
+## Rothamsted Annual Reports  
 http://www.era.rothamsted.ac.uk/eradoc/books/1
 Most of the annual reports have a section on Classical Experiments.
 '''
@@ -130,7 +136,7 @@ http://www.innovativegis.com/basis/Books/AnalyzingPAdata/Default.htm http://www.
 
 http://www.innovativegis.com/basis/pfprimer/Appendix_D/Appendix_D.htm http://www.innovativegis.com/basis/pfprimer/Topic4/Topic4.htm
 
-* Papers
+# Papers
 
 Biplot/StdErr/
 VanEeuwijk 1993 - Incorporating env info Biplot
@@ -143,20 +149,20 @@ Flores 1998 Flores 1998 - bean & pea yields, Flores 2012, Flores 2013
 Jode Edwards Data analyzed in this report were obtained from the Iowa State University Oat Variety Trial for the years 1997 to 2003.
 
 
-** Malosetti 2013
+## Malosetti 2013
 F2 data.  
 Folder: GE http://www.frontiersin.org/Plant_Physiology/10.3389/fphys.2013.00044/abstract CC license:
 
 
-** da Silva
+## da Silva
 A Bayesian Shrinkage Approach for AMMI Models http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0131414#pone-0131414-t001 CC-BY. Partial code, data.
 
 
-** Perez
+## Perez
 Comparison Between Linear and Non-parametric Regression Models for Genome-Enabled Prediction in Wheat https://www.scienceopen.com/document/vid/4017fb51-381c-4374-93aa-608423df4004;jsessionid=0TLjjSbaooSUk1y3JKd4nUeb.master:so-app1-prd Data: http://www.g3journal.org/content/suppl/2012/12/05/2.12.1595.DC1 All content has CC license
 
 
-* Other
+# Other
 Many interesting pages.  Non-open license...?  Lecture and data http://articles.extension.org/plant_breeding_genomics http://articles.extension.org/pages/68660/plant-breeding-and-genomics-learning-lessons http://articles.extension.org/pages/60430/introduction-to-the-augmented-experimental-design-webinar http://articles.extension.org/pages/61006/estimating-heritability-and-blups-for-traits-using-tomato-phenotypic-data <--- http://articles.extension.org/pages/68019/genomic-relationships-and-gblup http://pbgworks.org/node/1440
 
 
@@ -165,56 +171,56 @@ Jennifer Kling Lattice Design.  Data at bottom.
 
 
 
-* Journals
+# Journals
 
-** Agronomy Journal
+## Agronomy Journal
 Skimmed Vol 1
 
-** Biometrics. Skimmed 1947-2006
+## Biometrics. Skimmed 1947-2006
 http://www.jstor.org/action/showPublication?journalCode=biometrics
 
-** Field Crops Research. 
+## Field Crops Research. 
 http://www.sciencedirect.com/science/journal/03784290/157 Vol 1-40
 
-** IASRI newsletters
+## IASRI newsletters
 http://www.iasri.res.in/NewsLetters/nl.HTM
 
-** JABES
+## JABES
 Vol 6.
 
-** Journal of the Indian Society of Agricultural Statistics
+## Journal of the Indian Society of Agricultural Statistics
 http://www.isas.org.in/jsp/onlinejournal.jsp Skimmed: Vol 50-56
 
-** JRSSA
+## JRSSA
 
-** JRSSB 1940-1997
+## JRSSB 1940-1997
 http://www.jstor.org/action/showPublication?journalCode=jroyastatsocise4 Datasets 1998-2015 http://onlinelibrary.wiley.com/journal/10.1111/(ISSN)1467-9868/homepage/seriesb_datasets.htm http://onlinelibrary.wiley.com/journal/10.1111/%28ISSN%291467-985X/homepage/datasets_all_series.htm
 
-** JRSSC Applied Statistics datasets
+## JRSSC Applied Statistics datasets
 http://onlinelibrary.wiley.com/journal/10.1111/%28ISSN%291467-985X/homepage/datasets_all_series.htm 1998-2015
 
-** The American Statistician
+## The American Statistician
 Vol 1-13
 
-* ----------------------------------------------------------------------------
+# ----------------------------------------------------------------------------
 
-* Books
+# Books
 
-** Maize International Testing 1982. CIMMYT.
+## Maize International Testing 1982. CIMMYT.
 http://pdf.usaid.gov/pdf_docs/PNAAQ389.pdf
 
-** Annual report - Nebraska Agricultural Experiment Station
+## Annual report - Nebraska Agricultural Experiment Station
 Vol 19-24, 1906-1911 https://books.google.com/books?id=HBlJAAAAMAAJ
 
 
-* Classes
+# Classes
 
 
-** Hernandez
+## Hernandez
 http://www.soils.umn.edu/academics/classes/soil4111/hw/ Available on Wayback. Yield monitor data with soils layer.
 
 
-** Jack Weiss
+## Jack Weiss
 Ecol 563 Stat Meth in Ecology 
 http://www.unc.edu/courses/2010fall/ecol/563/001/ 
 Env Studies 562 Stat for Envt Science 
@@ -223,27 +229,27 @@ Ecol 145
 http://www.unc.edu/courses/2006spring/ecol/145/001/docs/lectures.htm
 
 
-* Journals / Proceedings
+# Journals / Proceedings
 
 
-** Applied Statistics in Agriculture
+## Applied Statistics in Agriculture
 http://newprairiepress.org/agstatconference/ 1989-2014
 
 
-** Computers and Electronics in Agriculture.
+## Computers and Electronics in Agriculture.
 http://www.sciencedirect.com/science/journal/01681699/103 Vol 1-110
 
 
 
-** Journal of Agricultural Science
+## Journal of Agricultural Science
 https://www.cambridge.org/core/journals/journal-of-agricultural-science/all-issues
 1900-2016
 
-** Experimental Agriculture
+## Experimental Agriculture
 https://www.cambridge.org/core/journals/experimental-agriculture
 1965-2016
 
-** SAS Global Forum
+## SAS Global Forum
 http://support.sas.com/events/sasglobalforum/previous/online.html 22-31, 2007-2013
 
 

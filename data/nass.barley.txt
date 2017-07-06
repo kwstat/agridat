@@ -15,7 +15,7 @@ year	state	acres	yield
 1866	"New York"	280000	25
 1866	"Ohio"	90000	24.5
 1866	"Pennsylvania"	30000	18.5
-1866	"Rhodeisland"	1000	24
+1866	"Rhode Island"	1000	24
 1866	"Tennessee"	4000	23
 1866	"Texas"	3000	16
 1866	"Vermont"	4000	29
@@ -37,7 +37,7 @@ year	state	acres	yield
 1867	"New York"	270000	21.5
 1867	"Ohio"	90000	27
 1867	"Pennsylvania"	28000	19
-1867	"Rhodeisland"	1000	21.5
+1867	"Rhode Island"	1000	21.5
 1867	"Tennessee"	4000	19
 1867	"Texas"	2000	20
 1867	"Vermont"	5000	23.5
@@ -59,7 +59,7 @@ year	state	acres	yield
 1868	"New York"	275000	21.5
 1868	"Ohio"	50000	23.5
 1868	"Pennsylvania"	28000	18.5
-1868	"Rhodeisland"	1000	18.5
+1868	"Rhode Island"	1000	18.5
 1868	"Tennessee"	4000	18
 1868	"Texas"	2000	22
 1868	"Vermont"	5000	26
@@ -82,7 +82,7 @@ year	state	acres	yield
 1869	"Ohio"	70000	25.5
 1869	"Oregon"	6000	35
 1869	"Pennsylvania"	28000	19
-1869	"Rhodeisland"	1000	24.3
+1869	"Rhode Island"	1000	24.3
 1869	"Tennessee"	4000	19
 1869	"Texas"	2000	22
 1869	"Vermont"	5000	25
@@ -106,7 +106,7 @@ year	state	acres	yield
 1870	"Ohio"	80000	24.5
 1870	"Oregon"	7000	30.5
 1870	"Pennsylvania"	26000	18
-1870	"Rhodeisland"	1000	23
+1870	"Rhode Island"	1000	23
 1870	"Tennessee"	4000	18.5
 1870	"Texas"	2000	20.5
 1870	"Vermont"	5000	23.5
@@ -130,7 +130,7 @@ year	state	acres	yield
 1871	"Ohio"	80000	26
 1871	"Oregon"	8000	28.5
 1871	"Pennsylvania"	24000	18.5
-1871	"Rhodeisland"	1000	23
+1871	"Rhode Island"	1000	23
 1871	"Tennessee"	4000	18
 1871	"Texas"	2000	20.5
 1871	"Vermont"	6000	23
@@ -154,7 +154,7 @@ year	state	acres	yield
 1872	"Ohio"	75000	25
 1872	"Oregon"	11000	30.5
 1872	"Pennsylvania"	23000	18
-1872	"Rhodeisland"	1000	22
+1872	"Rhode Island"	1000	22
 1872	"Tennessee"	4000	19
 1872	"Texas"	3000	25
 1872	"Vermont"	6000	26
@@ -178,7 +178,7 @@ year	state	acres	yield
 1873	"Ohio"	55000	26.5
 1873	"Oregon"	15000	33
 1873	"Pennsylvania"	21000	17.5
-1873	"Rhodeisland"	1000	21.5
+1873	"Rhode Island"	1000	21.5
 1873	"Tennessee"	4000	18
 1873	"Texas"	3000	23
 1873	"Vermont"	7000	18
@@ -202,7 +202,7 @@ year	state	acres	yield
 1874	"Ohio"	45000	27
 1874	"Oregon"	17000	29
 1874	"Pennsylvania"	20000	16.5
-1874	"Rhodeisland"	1000	21.5
+1874	"Rhode Island"	1000	21.5
 1874	"Tennessee"	3000	20
 1874	"Texas"	4000	20
 1874	"Vermont"	7000	28
@@ -226,7 +226,7 @@ year	state	acres	yield
 1875	"Ohio"	45000	24
 1875	"Oregon"	20000	29
 1875	"Pennsylvania"	20000	18
-1875	"Rhodeisland"	1000	21
+1875	"Rhode Island"	1000	21
 1875	"Tennessee"	3000	17.5
 1875	"Texas"	4000	26
 1875	"Vermont"	8000	29.5
@@ -250,7 +250,7 @@ year	state	acres	yield
 1876	"Ohio"	55000	27
 1876	"Oregon"	21000	28
 1876	"Pennsylvania"	20000	18
-1876	"Rhodeisland"	1000	20.5
+1876	"Rhode Island"	1000	20.5
 1876	"Tennessee"	3000	17
 1876	"Texas"	5000	22
 1876	"Vermont"	9000	26
@@ -274,7 +274,7 @@ year	state	acres	yield
 1877	"Ohio"	60000	29
 1877	"Oregon"	25000	35
 1877	"Pennsylvania"	21000	18.5
-1877	"Rhodeisland"	1000	19
+1877	"Rhode Island"	1000	19
 1877	"Tennessee"	3000	18
 1877	"Texas"	5000	23
 1877	"Vermont"	10000	27.5
@@ -298,7 +298,7 @@ year	state	acres	yield
 1878	"Ohio"	40000	30
 1878	"Oregon"	27000	25
 1878	"Pennsylvania"	22000	18.5
-1878	"Rhodeisland"	1000	23
+1878	"Rhode Island"	1000	23
 1878	"Tennessee"	3000	20
 1878	"Texas"	6000	21.5
 1878	"Vermont"	11000	25.5
@@ -323,7 +323,7 @@ year	state	acres	yield
 1879	"Ohio"	57000	29.7
 1879	"Oregon"	29000	31.4
 1879	"Pennsylvania"	24000	18.6
-1879	"Rhodeisland"	1000	24.9
+1879	"Rhode Island"	1000	24.9
 1879	"Tennessee"	3000	11.5
 1879	"Texas"	6000	13.2
 1879	"Vermont"	11000	25.4
@@ -349,7 +349,7 @@ year	state	acres	yield
 1880	"Ohio"	75000	30.5
 1880	"Oregon"	29000	29
 1880	"Pennsylvania"	23000	19
-1880	"Rhodeisland"	1000	26
+1880	"Rhode Island"	1000	26
 1880	"Tennessee"	3000	15.5
 1880	"Texas"	6000	19.5
 1880	"Vermont"	12000	26
@@ -375,7 +375,7 @@ year	state	acres	yield
 1881	"Ohio"	70000	29
 1881	"Oregon"	29000	33
 1881	"Pennsylvania"	22000	19.5
-1881	"Rhodeisland"	1000	23
+1881	"Rhode Island"	1000	23
 1881	"Tennessee"	3000	17.5
 1881	"Texas"	5000	20
 1881	"Vermont"	13000	27
@@ -406,7 +406,7 @@ year	state	acres	yield
 1882	"Ohio"	75000	27.5
 1882	"Oregon"	30000	29.5
 1882	"Pennsylvania"	21000	20.5
-1882	"Rhodeisland"	1000	21.5
+1882	"Rhode Island"	1000	21.5
 1882	"South Dakota"	13000	22.5
 1882	"Tennessee"	3000	19.5
 1882	"Texas"	5000	19
@@ -440,7 +440,7 @@ year	state	acres	yield
 1883	"Ohio"	60000	22
 1883	"Oregon"	33000	27.5
 1883	"Pennsylvania"	21000	21
-1883	"Rhodeisland"	1000	23
+1883	"Rhode Island"	1000	23
 1883	"South Dakota"	15000	21.5
 1883	"Tennessee"	4000	17
 1883	"Texas"	5000	17
@@ -474,7 +474,7 @@ year	state	acres	yield
 1884	"Ohio"	40000	30.5
 1884	"Oregon"	34000	30.5
 1884	"Pennsylvania"	20000	22
-1884	"Rhodeisland"	1000	21.5
+1884	"Rhode Island"	1000	21.5
 1884	"South Dakota"	50000	20.5
 1884	"Tennessee"	4000	16.5
 1884	"Texas"	5000	16
@@ -508,7 +508,7 @@ year	state	acres	yield
 1885	"Ohio"	30000	24
 1885	"Oregon"	35000	29.5
 1885	"Pennsylvania"	20000	22.5
-1885	"Rhodeisland"	1000	22.5
+1885	"Rhode Island"	1000	22.5
 1885	"South Dakota"	55000	22
 1885	"Tennessee"	4000	15
 1885	"Texas"	5000	16
@@ -542,7 +542,7 @@ year	state	acres	yield
 1886	"Ohio"	35000	29.5
 1886	"Oregon"	35000	26
 1886	"Pennsylvania"	21000	23
-1886	"Rhodeisland"	1000	23
+1886	"Rhode Island"	1000	23
 1886	"South Dakota"	68000	14.5
 1886	"Tennessee"	4000	13.5
 1886	"Texas"	4000	13.5
@@ -576,7 +576,7 @@ year	state	acres	yield
 1887	"Ohio"	40000	28.5
 1887	"Oregon"	36000	29
 1887	"Pennsylvania"	21000	22
-1887	"Rhodeisland"	1000	22.5
+1887	"Rhode Island"	1000	22.5
 1887	"South Dakota"	82000	18
 1887	"Tennessee"	4000	14
 1887	"Texas"	4000	13
@@ -610,7 +610,7 @@ year	state	acres	yield
 1888	"Ohio"	25000	22.5
 1888	"Oregon"	39000	29
 1888	"Pennsylvania"	21000	24
-1888	"Rhodeisland"	1000	22.5
+1888	"Rhode Island"	1000	22.5
 1888	"South Dakota"	96000	19
 1888	"Tennessee"	4000	13
 1888	"Texas"	3000	12
@@ -645,7 +645,7 @@ year	state	acres	yield
 1889	"Ohio"	40000	28.6
 1889	"Oregon"	38000	23.2
 1889	"Pennsylvania"	21000	23.6
-1889	"Rhodeisland"	1000	22.1
+1889	"Rhode Island"	1000	22.1
 1889	"South Dakota"	127000	9.3
 1889	"Tennessee"	4000	17.8
 1889	"Texas"	3000	17.3

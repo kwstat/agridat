@@ -35,7 +35,7 @@ year	state	acres	yield
 1909	"Oklahoma"	1030000	1.03
 1909	"Oregon"	929000	1.53
 1909	"Pennsylvania"	3007000	1.08
-1909	"Rhodeisland"	59000	1.2
+1909	"Rhode Island"	59000	1.2
 1909	"South Carolina"	202000	0.89
 1909	"South Dakota"	3404000	1.05
 1909	"Tennessee"	1023000	1.01
@@ -83,7 +83,7 @@ year	state	acres	yield
 1910	"Oklahoma"	1042000	0.9
 1910	"Oregon"	958000	1.58
 1910	"Pennsylvania"	3089000	1.35
-1910	"Rhodeisland"	59000	1.29
+1910	"Rhode Island"	59000	1.29
 1910	"South Carolina"	217000	0.9
 1910	"South Dakota"	3394000	0.54
 1910	"Tennessee"	1081000	1
@@ -131,7 +131,7 @@ year	state	acres	yield
 1911	"Oklahoma"	942000	0.77
 1911	"Oregon"	1003000	1.59
 1911	"Pennsylvania"	3039000	1
-1911	"Rhodeisland"	56000	1.09
+1911	"Rhode Island"	56000	1.09
 1911	"South Carolina"	218000	0.75
 1911	"South Dakota"	3374000	0.46
 1911	"Tennessee"	1e+06	0.7
@@ -179,7 +179,7 @@ year	state	acres	yield
 1912	"Oklahoma"	997000	1.15
 1912	"Oregon"	1055000	1.67
 1912	"Pennsylvania"	3089000	1.4
-1912	"Rhodeisland"	55000	1.2
+1912	"Rhode Island"	55000	1.2
 1912	"South Carolina"	232000	0.85
 1912	"South Dakota"	3609000	0.89
 1912	"Tennessee"	1004000	0.95
@@ -227,7 +227,7 @@ year	state	acres	yield
 1913	"Oklahoma"	1031000	1.04
 1913	"Oregon"	1060000	1.6
 1913	"Pennsylvania"	3040000	1.3
-1913	"Rhodeisland"	55000	1.25
+1913	"Rhode Island"	55000	1.25
 1913	"South Carolina"	246000	0.9
 1913	"South Dakota"	3602000	0.77
 1913	"Tennessee"	1015000	0.9
@@ -275,7 +275,7 @@ year	state	acres	yield
 1914	"Oklahoma"	1002000	1
 1914	"Oregon"	1120000	1.51
 1914	"Pennsylvania"	3015000	1.3
-1914	"Rhodeisland"	54000	1.09
+1914	"Rhode Island"	54000	1.09
 1914	"South Carolina"	251000	0.8
 1914	"South Dakota"	3784000	0.95
 1914	"Tennessee"	893000	0.89
@@ -323,7 +323,7 @@ year	state	acres	yield
 1915	"Oklahoma"	1108000	1.52
 1915	"Oregon"	1120000	1.67
 1915	"Pennsylvania"	2941000	1.2
-1915	"Rhodeisland"	53000	1.19
+1915	"Rhode Island"	53000	1.19
 1915	"South Carolina"	277000	0.95
 1915	"South Dakota"	4150000	1.06
 1915	"Tennessee"	1067000	1.09
@@ -371,7 +371,7 @@ year	state	acres	yield
 1916	"Oklahoma"	1116000	1.21
 1916	"Oregon"	1150000	1.76
 1916	"Pennsylvania"	3043000	1.5
-1916	"Rhodeisland"	47000	1.3
+1916	"Rhode Island"	47000	1.3
 1916	"South Carolina"	290000	0.95
 1916	"South Dakota"	4404000	1.01
 1916	"Tennessee"	1173000	1.04
@@ -419,7 +419,7 @@ year	state	acres	yield
 1917	"Oklahoma"	1082000	1.03
 1917	"Oregon"	1182000	1.66
 1917	"Pennsylvania"	2968000	1.3
-1917	"Rhodeisland"	46000	1.39
+1917	"Rhode Island"	46000	1.39
 1917	"South Carolina"	301000	0.85
 1917	"South Dakota"	4444000	0.79
 1917	"Tennessee"	1113000	0.9
@@ -467,7 +467,7 @@ year	state	acres	yield
 1918	"Oklahoma"	1099000	0.93
 1918	"Oregon"	1157000	1.57
 1918	"Pennsylvania"	2919000	1.3
-1918	"Rhodeisland"	45000	1.24
+1918	"Rhode Island"	45000	1.24
 1918	"South Carolina"	316000	0.85
 1918	"South Dakota"	4536000	0.92
 1918	"Tennessee"	1267000	1.04
@@ -515,7 +515,7 @@ year	state	acres	yield
 1919	"Oklahoma"	1206000	1.41
 1919	"Oregon"	1177000	1.65
 1919	"Pennsylvania"	2902000	1.25
-1919	"Rhodeisland"	46000	1.33
+1919	"Rhode Island"	46000	1.33
 1919	"South Carolina"	341000	0.87
 1919	"South Dakota"	4557000	0.88
 1919	"Tennessee"	1382000	1.07
@@ -563,7 +563,7 @@ year	state	acres	yield
 1920	"Oklahoma"	1148000	1.52
 1920	"Oregon"	1156000	1.64
 1920	"Pennsylvania"	2960000	1.2
-1920	"Rhodeisland"	44000	1.14
+1920	"Rhode Island"	44000	1.14
 1920	"South Carolina"	323000	0.93
 1920	"South Dakota"	4424000	0.98
 1920	"Tennessee"	1391000	1.08
@@ -611,7 +611,7 @@ year	state	acres	yield
 1921	"Oklahoma"	1102000	1.47
 1921	"Oregon"	1175000	1.73
 1921	"Pennsylvania"	2989000	1.06
-1921	"Rhodeisland"	44000	1.11
+1921	"Rhode Island"	44000	1.11
 1921	"South Carolina"	329000	0.81
 1921	"South Dakota"	4204000	0.75
 1921	"Tennessee"	1351000	1.04
@@ -659,7 +659,7 @@ year	state	acres	yield
 1922	"Oklahoma"	1074000	1.41
 1922	"Oregon"	1126000	1.59
 1922	"Pennsylvania"	3018000	1.4
-1922	"Rhodeisland"	42000	1.12
+1922	"Rhode Island"	42000	1.12
 1922	"South Carolina"	359000	0.93
 1922	"South Dakota"	4350000	0.89
 1922	"Tennessee"	1402000	1.1
@@ -707,7 +707,7 @@ year	state	acres	yield
 1923	"Oklahoma"	1073000	1.35
 1923	"Oregon"	1125000	1.78
 1923	"Pennsylvania"	3019000	1.01
-1923	"Rhodeisland"	40000	1.1
+1923	"Rhode Island"	40000	1.1
 1923	"South Carolina"	317000	0.78
 1923	"South Dakota"	4180000	0.83
 1923	"Tennessee"	1362000	1
@@ -755,7 +755,7 @@ year	state	acres	yield
 1924	"Oklahoma"	1063000	1.24
 1924	"Oregon"	1122000	1.32
 1924	"Pennsylvania"	3120000	1.44
-1924	"Rhodeisland"	44000	1.14
+1924	"Rhode Island"	44000	1.14
 1924	"South Carolina"	342000	0.51
 1924	"South Dakota"	4028000	0.77
 1924	"Tennessee"	1425000	0.99
@@ -803,7 +803,7 @@ year	state	acres	yield
 1925	"Oklahoma"	889000	0.9
 1925	"Oregon"	1176000	1.55
 1925	"Pennsylvania"	2973000	1.21
-1925	"Rhodeisland"	41000	1.2
+1925	"Rhode Island"	41000	1.2
 1925	"South Carolina"	2e+05	0.25
 1925	"South Dakota"	4051000	0.68
 1925	"Tennessee"	1227000	0.73
@@ -851,7 +851,7 @@ year	state	acres	yield
 1926	"Oklahoma"	1023000	1.18
 1926	"Oregon"	1148000	1.47
 1926	"Pennsylvania"	2850000	1.07
-1926	"Rhodeisland"	42000	1.19
+1926	"Rhode Island"	42000	1.19
 1926	"South Carolina"	212000	0.75
 1926	"South Dakota"	3523000	0.58
 1926	"Tennessee"	1338000	0.96
@@ -899,7 +899,7 @@ year	state	acres	yield
 1927	"Oklahoma"	930000	1.36
 1927	"Oregon"	1142000	1.75
 1927	"Pennsylvania"	2912000	1.4
-1927	"Rhodeisland"	43000	1.21
+1927	"Rhode Island"	43000	1.21
 1927	"South Carolina"	309000	0.69
 1927	"South Dakota"	3865000	1
 1927	"Tennessee"	1347000	0.96
@@ -947,7 +947,7 @@ year	state	acres	yield
 1928	"Oklahoma"	855000	1.32
 1928	"Oregon"	1122000	1.68
 1928	"Pennsylvania"	2700000	1.36
-1928	"Rhodeisland"	40000	1.32
+1928	"Rhode Island"	40000	1.32
 1928	"South Carolina"	298000	0.75
 1928	"South Dakota"	3130000	0.75
 1928	"Tennessee"	1258000	0.97
@@ -995,7 +995,7 @@ year	state	acres	yield
 1929	"Oklahoma"	965000	1.23
 1929	"Oregon"	1107000	1.61
 1929	"Pennsylvania"	2570000	1.26
-1929	"Rhodeisland"	38000	1.29
+1929	"Rhode Island"	38000	1.29
 1929	"South Carolina"	282000	0.69
 1929	"South Dakota"	3486000	0.76
 1929	"Tennessee"	1359000	0.98
@@ -1043,7 +1043,7 @@ year	state	acres	yield
 1930	"Oklahoma"	945000	0.97
 1930	"Oregon"	1126000	1.68
 1930	"Pennsylvania"	2500000	1.11
-1930	"Rhodeisland"	37000	1.19
+1930	"Rhode Island"	37000	1.19
 1930	"South Carolina"	309000	0.66
 1930	"South Dakota"	3640000	0.69
 1930	"Tennessee"	1338000	0.63
@@ -1091,7 +1091,7 @@ year	state	acres	yield
 1931	"Oklahoma"	1065000	1.02
 1931	"Oregon"	1113000	1.48
 1931	"Pennsylvania"	2503000	1.2
-1931	"Rhodeisland"	37000	1.27
+1931	"Rhode Island"	37000	1.27
 1931	"South Carolina"	377000	0.68
 1931	"South Dakota"	3057000	0.53
 1931	"Tennessee"	1460000	0.91
@@ -1139,7 +1139,7 @@ year	state	acres	yield
 1932	"Oklahoma"	1201000	1.16
 1932	"Oregon"	1200000	1.61
 1932	"Pennsylvania"	2475000	1.08
-1932	"Rhodeisland"	39000	1.21
+1932	"Rhode Island"	39000	1.21
 1932	"South Carolina"	533000	0.72
 1932	"South Dakota"	3445000	0.78
 1932	"Tennessee"	1665000	0.87
@@ -1187,7 +1187,7 @@ year	state	acres	yield
 1933	"Oklahoma"	1082000	1
 1933	"Oregon"	1142000	1.57
 1933	"Pennsylvania"	2435000	1.24
-1933	"Rhodeisland"	40000	1.2
+1933	"Rhode Island"	40000	1.2
 1933	"South Carolina"	507000	0.69
 1933	"South Dakota"	2389000	0.51
 1933	"Tennessee"	1561000	0.99
@@ -1235,7 +1235,7 @@ year	state	acres	yield
 1934	"Oklahoma"	1050000	0.82
 1934	"Oregon"	1128000	1.61
 1934	"Pennsylvania"	2488000	1.07
-1934	"Rhodeisland"	41000	1.27
+1934	"Rhode Island"	41000	1.27
 1934	"South Carolina"	596000	0.62
 1934	"South Dakota"	1407000	0.5
 1934	"Tennessee"	1799000	0.88
@@ -1283,7 +1283,7 @@ year	state	acres	yield
 1935	"Oklahoma"	1063000	1.25
 1935	"Oregon"	1149000	1.46
 1935	"Pennsylvania"	2461000	1.34
-1935	"Rhodeisland"	41000	1.24
+1935	"Rhode Island"	41000	1.24
 1935	"South Carolina"	591000	0.66
 1935	"South Dakota"	2679000	0.81
 1935	"Tennessee"	1862000	1.06
@@ -1331,7 +1331,7 @@ year	state	acres	yield
 1936	"Oklahoma"	992000	0.75
 1936	"Oregon"	1108000	1.68
 1936	"Pennsylvania"	2438000	1.02
-1936	"Rhodeisland"	39000	1.1
+1936	"Rhode Island"	39000	1.1
 1936	"South Carolina"	591000	0.67
 1936	"South Dakota"	2123000	0.53
 1936	"Tennessee"	1796000	0.76
@@ -1379,7 +1379,7 @@ year	state	acres	yield
 1937	"Oklahoma"	1003000	1.06
 1937	"Oregon"	1094000	1.61
 1937	"Pennsylvania"	2400000	1.37
-1937	"Rhodeisland"	37000	1.41
+1937	"Rhode Island"	37000	1.41
 1937	"South Carolina"	557000	0.78
 1937	"South Dakota"	2817000	0.68
 1937	"Tennessee"	1852000	1.09
@@ -1427,7 +1427,7 @@ year	state	acres	yield
 1938	"Oklahoma"	1031000	1.27
 1938	"Oregon"	1113000	1.65
 1938	"Pennsylvania"	2288000	1.45
-1938	"Rhodeisland"	36000	1.36
+1938	"Rhode Island"	36000	1.36
 1938	"South Carolina"	506000	0.72
 1938	"South Dakota"	2680000	0.7
 1938	"Tennessee"	1915000	1.22
@@ -1475,7 +1475,7 @@ year	state	acres	yield
 1939	"Oklahoma"	1091000	1.08
 1939	"Oregon"	1076000	1.73
 1939	"Pennsylvania"	2281000	1.22
-1939	"Rhodeisland"	36000	1.42
+1939	"Rhode Island"	36000	1.42
 1939	"South Carolina"	575000	0.79
 1939	"South Dakota"	2515000	0.71
 1939	"Tennessee"	1883000	1.12
@@ -1523,7 +1523,7 @@ year	state	acres	yield
 1940	"Oklahoma"	1222000	1.22
 1940	"Oregon"	1087000	1.73
 1940	"Pennsylvania"	2348000	1.45
-1940	"Rhodeisland"	35000	1.4
+1940	"Rhode Island"	35000	1.4
 1940	"South Carolina"	629000	0.69
 1940	"South Dakota"	2528000	0.68
 1940	"Tennessee"	1902000	1.07
@@ -1571,7 +1571,7 @@ year	state	acres	yield
 1941	"Oklahoma"	1173000	1.34
 1941	"Oregon"	1045000	1.87
 1941	"Pennsylvania"	2343000	1.24
-1941	"Rhodeisland"	35000	1.17
+1941	"Rhode Island"	35000	1.17
 1941	"South Carolina"	618000	0.75
 1941	"South Dakota"	2895000	0.72
 1941	"Tennessee"	1920000	1.14
@@ -1619,7 +1619,7 @@ year	state	acres	yield
 1942	"Oklahoma"	1338000	1.27
 1942	"Oregon"	1079000	1.82
 1942	"Pennsylvania"	2399000	1.48
-1942	"Rhodeisland"	36000	1.39
+1942	"Rhode Island"	36000	1.39
 1942	"South Carolina"	766000	0.74
 1942	"South Dakota"	2916000	1.07
 1942	"Tennessee"	1929000	1.2
@@ -1667,7 +1667,7 @@ year	state	acres	yield
 1943	"Oklahoma"	1403000	1
 1943	"Oregon"	1164000	1.76
 1943	"Pennsylvania"	2523000	1.52
-1943	"Rhodeisland"	36000	1.33
+1943	"Rhode Island"	36000	1.33
 1943	"South Carolina"	620000	0.68
 1943	"South Dakota"	3201000	0.87
 1943	"Tennessee"	1997000	1.09
@@ -1715,7 +1715,7 @@ year	state	acres	yield
 1944	"Oklahoma"	1296000	1.29
 1944	"Oregon"	1156000	1.73
 1944	"Pennsylvania"	2564000	1.4
-1944	"Rhodeisland"	36000	1.14
+1944	"Rhode Island"	36000	1.14
 1944	"South Carolina"	543000	0.74
 1944	"South Dakota"	3685000	0.99
 1944	"Tennessee"	1769000	0.94
@@ -1763,7 +1763,7 @@ year	state	acres	yield
 1945	"Oklahoma"	1326000	1.33
 1945	"Oregon"	1158000	1.7
 1945	"Pennsylvania"	2539000	1.51
-1945	"Rhodeisland"	37000	1.46
+1945	"Rhode Island"	37000	1.46
 1945	"South Carolina"	554000	0.84
 1945	"South Dakota"	3616000	0.92
 1945	"Tennessee"	1978000	1.24
@@ -1811,7 +1811,7 @@ year	state	acres	yield
 1946	"Oklahoma"	1355000	1.13
 1946	"Oregon"	1062000	1.73
 1946	"Pennsylvania"	2525000	1.5
-1946	"Rhodeisland"	34000	1.44
+1946	"Rhode Island"	34000	1.44
 1946	"South Carolina"	507000	0.87
 1946	"South Dakota"	3478000	0.8
 1946	"Tennessee"	1802000	1.22
@@ -1859,7 +1859,7 @@ year	state	acres	yield
 1947	"Oklahoma"	1580000	1.19
 1947	"Oregon"	1078000	1.69
 1947	"Pennsylvania"	2339000	1.5
-1947	"Rhodeisland"	32000	1.59
+1947	"Rhode Island"	32000	1.59
 1947	"South Carolina"	485000	0.78
 1947	"South Dakota"	3875000	0.85
 1947	"Tennessee"	1812000	1.17
@@ -1907,7 +1907,7 @@ year	state	acres	yield
 1948	"Oklahoma"	1490000	1.33
 1948	"Oregon"	1061000	1.74
 1948	"Pennsylvania"	2194000	1.46
-1948	"Rhodeisland"	29000	1.59
+1948	"Rhode Island"	29000	1.59
 1948	"South Carolina"	509000	0.88
 1948	"South Dakota"	4126000	0.84
 1948	"Tennessee"	1691000	1.11
@@ -1955,7 +1955,7 @@ year	state	acres	yield
 1949	"Oklahoma"	1394000	1.34
 1949	"Oregon"	970000	1.58
 1949	"Pennsylvania"	2202000	1.45
-1949	"Rhodeisland"	28000	1.57
+1949	"Rhode Island"	28000	1.57
 1949	"South Carolina"	755000	0.91
 1949	"South Dakota"	4412000	0.68
 1949	"Tennessee"	1799000	1.25
@@ -2003,7 +2003,7 @@ year	state	acres	yield
 1950	"Oklahoma"	1446000	1.32
 1950	"Oregon"	1020000	1.69
 1950	"Pennsylvania"	2286000	1.49
-1950	"Rhodeisland"	27000	1.7
+1950	"Rhode Island"	27000	1.7
 1950	"South Carolina"	617000	0.82
 1950	"South Dakota"	4738000	0.7
 1950	"Tennessee"	1571000	1.25
@@ -2051,7 +2051,7 @@ year	state	acres	yield
 1951	"Oklahoma"	1505000	1.2
 1951	"Oregon"	991000	1.64
 1951	"Pennsylvania"	2259000	1.6
-1951	"Rhodeisland"	25000	1.84
+1951	"Rhode Island"	25000	1.84
 1951	"South Carolina"	625000	0.83
 1951	"South Dakota"	4733000	0.92
 1951	"Tennessee"	1626000	1.04
@@ -2099,7 +2099,7 @@ year	state	acres	yield
 1952	"Oklahoma"	1431000	1.09
 1952	"Oregon"	1006000	1.85
 1952	"Pennsylvania"	2204000	1.55
-1952	"Rhodeisland"	25000	1.8
+1952	"Rhode Island"	25000	1.8
 1952	"South Carolina"	670000	0.9
 1952	"South Dakota"	4941000	0.79
 1952	"Tennessee"	1492000	0.89
@@ -2147,7 +2147,7 @@ year	state	acres	yield
 1953	"Oklahoma"	1557000	1.19
 1953	"Oregon"	1028000	1.92
 1953	"Pennsylvania"	2173000	1.57
-1953	"Rhodeisland"	23000	1.91
+1953	"Rhode Island"	23000	1.91
 1953	"South Carolina"	594000	0.84
 1953	"South Dakota"	5173000	0.99
 1953	"Tennessee"	1618000	1.06
@@ -2195,7 +2195,7 @@ year	state	acres	yield
 1954	"Oklahoma"	1581000	1.02
 1954	"Oregon"	1003000	1.81
 1954	"Pennsylvania"	2158000	1.6
-1954	"Rhodeisland"	22000	1.82
+1954	"Rhode Island"	22000	1.82
 1954	"South Carolina"	592000	0.74
 1954	"South Dakota"	5290000	0.94
 1954	"Tennessee"	1431000	0.96
@@ -2243,7 +2243,7 @@ year	state	acres	yield
 1955	"Oklahoma"	1785000	1.17
 1955	"Oregon"	1034000	1.72
 1955	"Pennsylvania"	2200000	1.51
-1955	"Rhodeisland"	21000	1.81
+1955	"Rhode Island"	21000	1.81
 1955	"South Carolina"	608000	0.99
 1955	"South Dakota"	5307000	0.75
 1955	"Tennessee"	1576000	1.21
@@ -2291,7 +2291,7 @@ year	state	acres	yield
 1956	"Oklahoma"	1397000	0.88
 1956	"Oregon"	1042000	1.92
 1956	"Pennsylvania"	2179000	1.6
-1956	"Rhodeisland"	21000	1.81
+1956	"Rhode Island"	21000	1.81
 1956	"South Carolina"	467000	0.96
 1956	"South Dakota"	5964000	0.77
 1956	"Tennessee"	1463000	1.17
@@ -2339,7 +2339,7 @@ year	state	acres	yield
 1957	"Oklahoma"	1423000	1.25
 1957	"Oregon"	1014000	1.94
 1957	"Pennsylvania"	2161000	1.42
-1957	"Rhodeisland"	20000	1.4
+1957	"Rhode Island"	20000	1.4
 1957	"South Carolina"	416000	0.98
 1957	"South Dakota"	5722000	1.21
 1957	"Tennessee"	1389000	1.23
@@ -2387,7 +2387,7 @@ year	state	acres	yield
 1958	"Oklahoma"	1311000	1.53
 1958	"Oregon"	953000	1.91
 1958	"Pennsylvania"	2159000	1.79
-1958	"Rhodeisland"	21000	1.9
+1958	"Rhode Island"	21000	1.9
 1958	"South Carolina"	434000	1.09
 1958	"South Dakota"	5140000	1.01
 1958	"Tennessee"	1550000	1.32
@@ -2435,7 +2435,7 @@ year	state	acres	yield
 1959	"Oklahoma"	1243000	1.5
 1959	"Oregon"	938000	1.91
 1959	"Pennsylvania"	2125000	1.83
-1959	"Rhodeisland"	21000	1.86
+1959	"Rhode Island"	21000	1.86
 1959	"South Carolina"	362000	1.12
 1959	"South Dakota"	4754000	0.71
 1959	"Tennessee"	1301000	1.36
@@ -2484,7 +2484,7 @@ year	state	acres	yield
 1960	"Oklahoma"	1344000	1.59
 1960	"Oregon"	1029000	1.91
 1960	"Pennsylvania"	2087000	1.91
-1960	"Rhodeisland"	21000	2
+1960	"Rhode Island"	21000	2
 1960	"South Carolina"	319000	1.13
 1960	"South Dakota"	4871000	1.03
 1960	"Tennessee"	1330000	1.29
@@ -2533,7 +2533,7 @@ year	state	acres	yield
 1961	"Oklahoma"	1378000	1.59
 1961	"Oregon"	991000	1.98
 1961	"Pennsylvania"	2099000	1.97
-1961	"Rhodeisland"	20000	2
+1961	"Rhode Island"	20000	2
 1961	"South Carolina"	3e+05	1.31
 1961	"South Dakota"	4360000	0.92
 1961	"Tennessee"	1329000	1.38
@@ -2582,7 +2582,7 @@ year	state	acres	yield
 1962	"Oklahoma"	1470000	1.57
 1962	"Oregon"	1021000	1.93
 1962	"Pennsylvania"	2059000	1.32
-1962	"Rhodeisland"	21000	1.86
+1962	"Rhode Island"	21000	1.86
 1962	"South Carolina"	273000	1.22
 1962	"South Dakota"	4804000	1.36
 1962	"Tennessee"	1248000	1.26
@@ -2631,7 +2631,7 @@ year	state	acres	yield
 1963	"Oklahoma"	1502000	1.36
 1963	"Oregon"	1044000	2.01
 1963	"Pennsylvania"	2116000	1.64
-1963	"Rhodeisland"	19000	1.68
+1963	"Rhode Island"	19000	1.68
 1963	"South Carolina"	302000	1.24
 1963	"South Dakota"	4369000	1.18
 1963	"Tennessee"	1368000	1.45
@@ -2680,7 +2680,7 @@ year	state	acres	yield
 1964	"Oklahoma"	1657000	1.53
 1964	"Oregon"	1115000	1.95
 1964	"Pennsylvania"	2129000	1.65
-1964	"Rhodeisland"	17000	1.47
+1964	"Rhode Island"	17000	1.47
 1964	"South Carolina"	288000	1.43
 1964	"South Dakota"	4717000	1
 1964	"Tennessee"	1317000	1.44
@@ -2729,7 +2729,7 @@ year	state	acres	yield
 1965	"Oklahoma"	1648000	1.66
 1965	"Oregon"	1050000	2.08
 1965	"Pennsylvania"	2074000	1.71
-1965	"Rhodeisland"	16000	1.56
+1965	"Rhode Island"	16000	1.56
 1965	"South Carolina"	257000	1.84
 1965	"South Dakota"	4746000	1.14
 1965	"Tennessee"	1365000	1.47
@@ -2778,7 +2778,7 @@ year	state	acres	yield
 1966	"Oklahoma"	1602000	1.58
 1966	"Oregon"	1066000	2.01
 1966	"Pennsylvania"	2073000	1.65
-1966	"Rhodeisland"	14000	1.86
+1966	"Rhode Island"	14000	1.86
 1966	"South Carolina"	234000	1.92
 1966	"South Dakota"	4615000	0.99
 1966	"Tennessee"	1156000	1.54
@@ -2827,7 +2827,7 @@ year	state	acres	yield
 1967	"Oklahoma"	1572000	1.91
 1967	"Oregon"	1079000	2.11
 1967	"Pennsylvania"	2049000	1.97
-1967	"Rhodeisland"	13000	1.92
+1967	"Rhode Island"	13000	1.92
 1967	"South Carolina"	227000	2
 1967	"South Dakota"	4488000	1.09
 1967	"Tennessee"	1077000	1.58
@@ -2876,7 +2876,7 @@ year	state	acres	yield
 1968	"Oklahoma"	1496000	1.96
 1968	"Oregon"	966000	2.11
 1968	"Pennsylvania"	1970000	2.07
-1968	"Rhodeisland"	11000	2
+1968	"Rhode Island"	11000	2
 1968	"South Carolina"	226000	1.96
 1968	"South Dakota"	4425000	1.16
 1968	"Tennessee"	1110000	1.43
@@ -2925,7 +2925,7 @@ year	state	acres	yield
 1969	"Oklahoma"	1562000	1.92
 1969	"Oregon"	1015000	2.26
 1969	"Pennsylvania"	1969000	2.11
-1969	"Rhodeisland"	10000	2
+1969	"Rhode Island"	10000	2
 1969	"South Carolina"	226000	1.97
 1969	"South Dakota"	4312000	1.28
 1969	"Tennessee"	1090000	1.51
@@ -2974,7 +2974,7 @@ year	state	acres	yield
 1970	"Oklahoma"	1655000	1.67
 1970	"Oregon"	1017000	2.22
 1970	"Pennsylvania"	2069000	2.18
-1970	"Rhodeisland"	9000	2.11
+1970	"Rhode Island"	9000	2.11
 1970	"South Carolina"	222000	2.07
 1970	"South Dakota"	4590000	1.28
 1970	"Tennessee"	1105000	1.55
@@ -3023,7 +3023,7 @@ year	state	acres	yield
 1971	"Oklahoma"	1765000	1.79
 1971	"Oregon"	1050000	2.18
 1971	"Pennsylvania"	2033000	2.14
-1971	"Rhodeisland"	9000	1.89
+1971	"Rhode Island"	9000	1.89
 1971	"South Carolina"	222000	2
 1971	"South Dakota"	4716000	1.21
 1971	"Tennessee"	1174000	1.51
@@ -3072,7 +3072,7 @@ year	state	acres	yield
 1972	"Oklahoma"	1605000	1.75
 1972	"Oregon"	1050000	2.17
 1972	"Pennsylvania"	1955000	1.92
-1972	"Rhodeisland"	9000	1.89
+1972	"Rhode Island"	9000	1.89
 1972	"South Carolina"	220000	2
 1972	"South Dakota"	4680000	1.55
 1972	"Tennessee"	1142000	1.56
@@ -3121,7 +3121,7 @@ year	state	acres	yield
 1973	"Oklahoma"	1630000	2.23
 1973	"Oregon"	1037000	2.21
 1973	"Pennsylvania"	1912000	2.26
-1973	"Rhodeisland"	9000	2
+1973	"Rhode Island"	9000	2
 1973	"South Carolina"	215000	2.05
 1973	"South Dakota"	4650000	1.2
 1973	"Tennessee"	1224000	1.51
@@ -3170,7 +3170,7 @@ year	state	acres	yield
 1974	"Oklahoma"	1460000	1.87
 1974	"Oregon"	1040000	2.33
 1974	"Pennsylvania"	1882000	2.22
-1974	"Rhodeisland"	9000	1.89
+1974	"Rhode Island"	9000	1.89
 1974	"South Carolina"	2e+05	1.9
 1974	"South Dakota"	4760000	1.09
 1974	"Tennessee"	1193000	1.52
@@ -3219,7 +3219,7 @@ year	state	acres	yield
 1975	"Oklahoma"	1610000	2.03
 1975	"Oregon"	1040000	2.43
 1975	"Pennsylvania"	1900000	2.25
-1975	"Rhodeisland"	10000	1.9
+1975	"Rhode Island"	10000	1.9
 1975	"South Carolina"	210000	2.2
 1975	"South Dakota"	4710000	1.21
 1975	"Tennessee"	1200000	1.52
@@ -3268,7 +3268,7 @@ year	state	acres	yield
 1976	"Oklahoma"	1610000	1.83
 1976	"Oregon"	1050000	2.38
 1976	"Pennsylvania"	1870000	2.19
-1976	"Rhodeisland"	11000	1.91
+1976	"Rhode Island"	11000	1.91
 1976	"South Carolina"	215000	2
 1976	"South Dakota"	4300000	0.66
 1976	"Tennessee"	1210000	1.52
@@ -3317,7 +3317,7 @@ year	state	acres	yield
 1977	"Oklahoma"	1775000	1.98
 1977	"Oregon"	1025000	2.47
 1977	"Pennsylvania"	1915000	2.03
-1977	"Rhodeisland"	11000	1.73
+1977	"Rhode Island"	11000	1.73
 1977	"South Carolina"	220000	1.8
 1977	"South Dakota"	4340000	1.41
 1977	"Tennessee"	1225000	1.49
@@ -3366,7 +3366,7 @@ year	state	acres	yield
 1978	"Oklahoma"	1740000	1.81
 1978	"Oregon"	1075000	2.58
 1978	"Pennsylvania"	1935000	2.23
-1978	"Rhodeisland"	11000	2
+1978	"Rhode Island"	11000	2
 1978	"South Carolina"	222000	2
 1978	"South Dakota"	4300000	1.92
 1978	"Tennessee"	1250000	1.53
@@ -3415,7 +3415,7 @@ year	state	acres	yield
 1979	"Oklahoma"	1960000	2.08
 1979	"Oregon"	1060000	2.42
 1979	"Pennsylvania"	1960000	2.19
-1979	"Rhodeisland"	11000	2
+1979	"Rhode Island"	11000	2
 1979	"South Carolina"	215000	2.1
 1979	"South Dakota"	4300000	1.78
 1979	"Tennessee"	1240000	1.63
@@ -3464,7 +3464,7 @@ year	state	acres	yield
 1980	"Oklahoma"	1570000	1.47
 1980	"Oregon"	1070000	2.78
 1980	"Pennsylvania"	1950000	2.14
-1980	"Rhodeisland"	11000	1.64
+1980	"Rhode Island"	11000	1.64
 1980	"South Carolina"	208000	1.7
 1980	"South Dakota"	4160000	1.31
 1980	"Tennessee"	1185000	1.49
@@ -3513,7 +3513,7 @@ year	state	acres	yield
 1981	"Oklahoma"	1790000	1.96
 1981	"Oregon"	1060000	2.72
 1981	"Pennsylvania"	1950000	2.33
-1981	"Rhodeisland"	12000	1.83
+1981	"Rhode Island"	12000	1.83
 1981	"South Carolina"	218000	1.9
 1981	"South Dakota"	4140000	1.36
 1981	"Tennessee"	1270000	1.64
@@ -3562,7 +3562,7 @@ year	state	acres	yield
 1982	"Oklahoma"	1720000	2.04
 1982	"Oregon"	1070000	2.77
 1982	"Pennsylvania"	2e+06	2.42
-1982	"Rhodeisland"	11000	2.09
+1982	"Rhode Island"	11000	2.09
 1982	"South Carolina"	220000	2.2
 1982	"South Dakota"	4150000	1.83
 1982	"Tennessee"	1330000	1.65
@@ -3611,7 +3611,7 @@ year	state	acres	yield
 1983	"Oklahoma"	1940000	1.92
 1983	"Oregon"	1110000	2.81
 1983	"Pennsylvania"	1970000	2.35
-1983	"Rhodeisland"	11000	2.27
+1983	"Rhode Island"	11000	2.27
 1983	"South Carolina"	215000	1.8
 1983	"South Dakota"	4040000	1.88
 1983	"Tennessee"	1330000	1.5
@@ -3660,7 +3660,7 @@ year	state	acres	yield
 1984	"Oklahoma"	2040000	1.82
 1984	"Oregon"	1105000	2.82
 1984	"Pennsylvania"	1980000	2.57
-1984	"Rhodeisland"	10000	2.3
+1984	"Rhode Island"	10000	2.3
 1984	"South Carolina"	230000	2.3
 1984	"South Dakota"	4310000	1.88
 1984	"Tennessee"	1450000	1.74
@@ -3709,7 +3709,7 @@ year	state	acres	yield
 1985	"Oklahoma"	2200000	2.26
 1985	"Oregon"	1080000	2.77
 1985	"Pennsylvania"	1990000	2.66
-1985	"Rhodeisland"	10000	2.1
+1985	"Rhode Island"	10000	2.1
 1985	"South Carolina"	205000	2.4
 1985	"South Dakota"	3500000	1.38
 1985	"Tennessee"	1600000	1.93
@@ -3758,7 +3758,7 @@ year	state	acres	yield
 1986	"Oklahoma"	1980000	2.09
 1986	"Oregon"	1110000	2.82
 1986	"Pennsylvania"	1990000	2.56
-1986	"Rhodeisland"	9000	2.56
+1986	"Rhode Island"	9000	2.56
 1986	"South Carolina"	205000	1.6
 1986	"South Dakota"	4700000	1.99
 1986	"Tennessee"	1400000	1.54
@@ -3807,7 +3807,7 @@ year	state	acres	yield
 1987	"Oklahoma"	2210000	1.92
 1987	"Oregon"	1050000	2.68
 1987	"Pennsylvania"	1980000	2.57
-1987	"Rhodeisland"	8000	2.38
+1987	"Rhode Island"	8000	2.38
 1987	"South Carolina"	235000	2
 1987	"South Dakota"	3850000	1.8
 1987	"Tennessee"	1590000	1.7
@@ -3856,7 +3856,7 @@ year	state	acres	yield
 1988	"Oklahoma"	2310000	1.7
 1988	"Oregon"	1035000	2.56
 1988	"Pennsylvania"	1960000	2.33
-1988	"Rhodeisland"	9000	2.33
+1988	"Rhode Island"	9000	2.33
 1988	"South Carolina"	240000	2.1
 1988	"South Dakota"	3800000	0.97
 1988	"Tennessee"	1610000	1.45
@@ -3905,7 +3905,7 @@ year	state	acres	yield
 1989	"Oklahoma"	2400000	2.13
 1989	"Oregon"	1050000	2.75
 1989	"Pennsylvania"	1930000	2.44
-1989	"Rhodeisland"	8000	2.5
+1989	"Rhode Island"	8000	2.5
 1989	"South Carolina"	235000	2.4
 1989	"South Dakota"	3800000	1.06
 1989	"Tennessee"	1700000	2.06
@@ -3954,7 +3954,7 @@ year	state	acres	yield
 1990	"Oklahoma"	2130000	1.84
 1990	"Oregon"	1020000	2.77
 1990	"Pennsylvania"	1900000	2.48
-1990	"Rhodeisland"	9000	2.22
+1990	"Rhode Island"	9000	2.22
 1990	"South Carolina"	240000	1.9
 1990	"South Dakota"	4e+06	1.52
 1990	"Tennessee"	1500000	2.17
@@ -4003,7 +4003,7 @@ year	state	acres	yield
 1991	"Oklahoma"	2300000	1.9
 1991	"Oregon"	1075000	2.75
 1991	"Pennsylvania"	1890000	2.13
-1991	"Rhodeisland"	7000	2.29
+1991	"Rhode Island"	7000	2.29
 1991	"South Carolina"	260000	2.6
 1991	"South Dakota"	4350000	1.79
 1991	"Tennessee"	1650000	1.98
@@ -4052,7 +4052,7 @@ year	state	acres	yield
 1992	"Oklahoma"	2250000	2.11
 1992	"Oregon"	925000	2.64
 1992	"Pennsylvania"	1890000	2.51
-1992	"Rhodeisland"	9000	2.22
+1992	"Rhode Island"	9000	2.22
 1992	"South Carolina"	225000	2
 1992	"South Dakota"	4e+06	1.7
 1992	"Tennessee"	1600000	2.17
@@ -4101,7 +4101,7 @@ year	state	acres	yield
 1993	"Oklahoma"	2130000	1.99
 1993	"Oregon"	1040000	2.95
 1993	"Pennsylvania"	1880000	2.31
-1993	"Rhodeisland"	9000	1.67
+1993	"Rhode Island"	9000	1.67
 1993	"South Carolina"	230000	1.8
 1993	"South Dakota"	4e+06	2.05
 1993	"Tennessee"	1700000	2.05
@@ -4150,7 +4150,7 @@ year	state	acres	yield
 1994	"Oklahoma"	2220000	1.89
 1994	"Oregon"	1010000	2.81
 1994	"Pennsylvania"	1920000	2.36
-1994	"Rhodeisland"	8000	2.25
+1994	"Rhode Island"	8000	2.25
 1994	"South Carolina"	250000	2.6
 1994	"South Dakota"	4100000	1.79
 1994	"Tennessee"	1700000	2.23
@@ -4199,7 +4199,7 @@ year	state	acres	yield
 1995	"Oklahoma"	2170000	1.87
 1995	"Oregon"	1100000	3
 1995	"Pennsylvania"	1910000	2.31
-1995	"Rhodeisland"	7000	2
+1995	"Rhode Island"	7000	2
 1995	"South Carolina"	3e+05	2.4
 1995	"South Dakota"	4300000	2.1
 1995	"Tennessee"	1750000	2.24
@@ -4248,7 +4248,7 @@ year	state	acres	yield
 1996	"Oklahoma"	2660000	1.86
 1996	"Oregon"	1070000	3.03
 1996	"Pennsylvania"	1880000	2.44
-1996	"Rhodeisland"	8000	2.38
+1996	"Rhode Island"	8000	2.38
 1996	"South Carolina"	280000	2
 1996	"South Dakota"	4300000	1.91
 1996	"Tennessee"	1790000	2.13
@@ -4297,7 +4297,7 @@ year	state	acres	yield
 1997	"Oklahoma"	2560000	2
 1997	"Oregon"	1035000	3.16
 1997	"Pennsylvania"	1870000	2.2
-1997	"Rhodeisland"	8000	2
+1997	"Rhode Island"	8000	2
 1997	"South Carolina"	3e+05	2.1
 1997	"South Dakota"	4100000	1.9
 1997	"Tennessee"	1740000	2.13
@@ -4346,7 +4346,7 @@ year	state	acres	yield
 1998	"Oklahoma"	2250000	1.5
 1998	"Oregon"	970000	3.48
 1998	"Pennsylvania"	1850000	2.12
-1998	"Rhodeisland"	10000	2.2
+1998	"Rhode Island"	10000	2.2
 1998	"South Carolina"	320000	2
 1998	"South Dakota"	4e+06	2.04
 1998	"Tennessee"	1785000	2.22
@@ -4395,7 +4395,7 @@ year	state	acres	yield
 1999	"Oklahoma"	2560000	1.95
 1999	"Oregon"	1100000	2.92
 1999	"Pennsylvania"	1900000	1.77
-1999	"Rhodeisland"	9000	1.89
+1999	"Rhode Island"	9000	1.89
 1999	"South Carolina"	3e+05	2.1
 1999	"South Dakota"	4e+06	2.36
 1999	"Tennessee"	1880000	2.02
@@ -4444,7 +4444,7 @@ year	state	acres	yield
 2000	"Oklahoma"	2430000	1.92
 2000	"Oregon"	1080000	2.79
 2000	"Pennsylvania"	1800000	2.46
-2000	"Rhodeisland"	10000	2.2
+2000	"Rhode Island"	10000	2.2
 2000	"South Carolina"	3e+05	2.4
 2000	"South Dakota"	4050000	1.83
 2000	"Tennessee"	2035000	2.33
@@ -4493,7 +4493,7 @@ year	state	acres	yield
 2001	"Oklahoma"	2410000	1.59
 2001	"Oregon"	1025000	2.98
 2001	"Pennsylvania"	1650000	2.08
-2001	"Rhodeisland"	9000	1.78
+2001	"Rhode Island"	9000	1.78
 2001	"South Carolina"	320000	2
 2001	"South Dakota"	4700000	1.95
 2001	"Tennessee"	2035000	2.23
@@ -4542,7 +4542,7 @@ year	state	acres	yield
 2002	"Oklahoma"	3150000	1.9
 2002	"Oregon"	1115000	3.13
 2002	"Pennsylvania"	1730000	1.99
-2002	"Rhodeisland"	8000	2.13
+2002	"Rhode Island"	8000	2.13
 2002	"South Carolina"	340000	1.9
 2002	"South Dakota"	3850000	1.25
 2002	"Tennessee"	1980000	2.12
@@ -4591,7 +4591,7 @@ year	state	acres	yield
 2003	"Oklahoma"	2810000	1.89
 2003	"Oregon"	1100000	3.25
 2003	"Pennsylvania"	1650000	2.47
-2003	"Rhodeisland"	9000	2.11
+2003	"Rhode Island"	9000	2.11
 2003	"South Carolina"	340000	2.6
 2003	"South Dakota"	4300000	1.68
 2003	"Tennessee"	2030000	2.33
@@ -4640,7 +4640,7 @@ year	state	acres	yield
 2004	"Oklahoma"	3060000	1.95
 2004	"Oregon"	1130000	3.21
 2004	"Pennsylvania"	1700000	2.53
-2004	"Rhodeisland"	9000	2.22
+2004	"Rhode Island"	9000	2.22
 2004	"South Carolina"	330000	2.4
 2004	"South Dakota"	3900000	1.76
 2004	"Tennessee"	1935000	2.52
@@ -4689,7 +4689,7 @@ year	state	acres	yield
 2005	"Oklahoma"	2920000	1.74
 2005	"Oregon"	1e+06	3.14
 2005	"Pennsylvania"	1600000	2.12
-2005	"Rhodeisland"	9000	2.22
+2005	"Rhode Island"	9000	2.22
 2005	"South Carolina"	290000	2.7
 2005	"South Dakota"	4e+06	1.89
 2005	"Tennessee"	1885000	2.32
@@ -4738,7 +4738,7 @@ year	state	acres	yield
 2006	"Oklahoma"	3160000	1.13
 2006	"Oregon"	1050000	3.1
 2006	"Pennsylvania"	1750000	2.93
-2006	"Rhodeisland"	7000	2.43
+2006	"Rhode Island"	7000	2.43
 2006	"South Carolina"	360000	1.9
 2006	"South Dakota"	3100000	1.35
 2006	"Tennessee"	1830000	2.32
@@ -4787,7 +4787,7 @@ year	state	acres	yield
 2007	"Oklahoma"	3140000	2.18
 2007	"Oregon"	1010000	2.91
 2007	"Pennsylvania"	1800000	2.33
-2007	"Rhodeisland"	8000	1.88
+2007	"Rhode Island"	8000	1.88
 2007	"South Carolina"	330000	1.7
 2007	"South Dakota"	3750000	1.94
 2007	"Tennessee"	1775000	1.51
@@ -4836,7 +4836,7 @@ year	state	acres	yield
 2008	"Oklahoma"	2910000	1.9
 2008	"Oregon"	1025000	2.88
 2008	"Pennsylvania"	1750000	2.18
-2008	"Rhodeisland"	7000	2
+2008	"Rhode Island"	7000	2
 2008	"South Carolina"	330000	1.9
 2008	"South Dakota"	3850000	2.04
 2008	"Tennessee"	1870000	2.11
@@ -4885,7 +4885,7 @@ year	state	acres	yield
 2009	"Oklahoma"	3220000	1.64
 2009	"Oregon"	1030000	3.15
 2009	"Pennsylvania"	1550000	2.36
-2009	"Rhodeisland"	7000	2
+2009	"Rhode Island"	7000	2
 2009	"South Carolina"	350000	2.4
 2009	"South Dakota"	3800000	2.06
 2009	"Tennessee"	1915000	2.21
@@ -4934,7 +4934,7 @@ year	state	acres	yield
 2010	"Oklahoma"	3210000	1.85
 2010	"Oregon"	1045000	2.97
 2010	"Pennsylvania"	1500000	2.27
-2010	"Rhodeisland"	8000	2
+2010	"Rhode Island"	8000	2
 2010	"South Carolina"	360000	2
 2010	"South Dakota"	3600000	2.04
 2010	"Tennessee"	1965000	2.11
@@ -4983,7 +4983,7 @@ year	state	acres	yield
 2011	"Oklahoma"	2500000	0.93
 2011	"Oregon"	1030000	3.22
 2011	"Pennsylvania"	1450000	2.41
-2011	"Rhodeisland"	9000	2
+2011	"Rhode Island"	9000	2
 2011	"South Carolina"	3e+05	2.1
 2011	"South Dakota"	3550000	2.43
 2011	"Tennessee"	1880000	2.11
@@ -5031,7 +5031,7 @@ year	state	acres	yield
 2012	"Oklahoma"	2900000	NA
 2012	"Oregon"	1100000	NA
 2012	"Pennsylvania"	1400000	NA
-2012	"Rhodeisland"	8000	NA
+2012	"Rhode Island"	8000	NA
 2012	"South Carolina"	290000	NA
 2012	"South Dakota"	3500000	NA
 2012	"Tennessee"	1790000	NA

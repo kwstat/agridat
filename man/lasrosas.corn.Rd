@@ -32,8 +32,8 @@
   Data collected using yield monitor, for harvests in 1999 and 2001.
 
   The points within each long strip have been averaged so that the
-  distance between points within a strip is the same as the distance
-  between strips (9.8 meters).
+  distance between points _within_ a strip is the same as the distance
+  _between_ strips (9.8 meters).
 
   The topographic factor a factor with levels W = West slope, HT =
   Hilltop, E = East slope, LO = Low East.
@@ -80,7 +80,7 @@
 
   Anselin, L., R. Bongiovanni, J. Lowenberg-DeBoer (2004).
   A spatial econometric approach to the economics of site-specific
-  Nitrogen management in corn production.
+  nitrogen management in corn production.
   \emph{American Journal of Agricultural Economics}, 86, 675--687.
 
   Lambert, Lowenberg-Deboer, Bongiovanni (2004).
@@ -99,7 +99,7 @@ dat <- lasrosas.corn
 require(lattice)
 if(require(latticeExtra)){  # for panel.levelplot.points
   redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
-  levelplot(yield ~ long*lat|factor(year), data=dat,
+  levelplot(yield ~ long*lat|factor(year), data=dat, 
             main="lasrosas.corn grain yield", xlab="Longitude", ylab="Latitude",
             scales=list(alternating=FALSE),
             prepanel = prepanel.default.xyplot,

@@ -63,6 +63,7 @@
   Lawes Agricultural Trust, p. 153.  
   http://www.era.rothamsted.ac.uk/eradoc/article/ResReport1927-28-131-175
 }
+
 \references{
   Eden, T. and E. J. Maskell. (1928).
   The influence of soil heterogeneity on the growth and yield of
@@ -81,8 +82,8 @@
   Rothamsted.
   \emph{Journal of Agricultural Science}, 16, 275-279.
   https://doi.org/10.1017/S0021859600018256
-  
 }
+
 \examples{
 
 data("sawyer.multi.uniformity")

@@ -48,6 +48,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{kempton.barley.uniformity}          \tab 7 x 28 \tab xy \tab \cr
 \link{lessman.sorghum.uniformity}         \tab 46 x 60 \tab xy \tab \cr
 \link{li.millet.uniformity}               \tab 6 x 100 \tab xy \tab \cr
+\link{love.cotton.uniformity}             \tab 16 x 10 \tab xy \tab \cr
 \link{lyon.potato.uniformity}             \tab 34 x 6 \tab xy \tab \cr
 \link{masood.rice.uniformity}             \tab 12 x 24 \tab xy \tab \cr
 \link{mcclelland.corn.uniformity}         \tab 2 x 219 \tab xy \tab \cr
