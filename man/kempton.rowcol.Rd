@@ -41,21 +41,23 @@ if(require(desplot)){
 }
 
 
-# Model with rep, row, col as random.  Kempton, page 62.
-# Use "-1" so that the vcov matrix doesn't include intercept
-if(require(lme4)){
-m1 <- lmer(yield ~ -1 + gen + rep + (1|rep:rowf) + (1|rep:colf), data=dat)
-
-# Variance components match Kempton.
-print(m1, corr=FALSE)
-
-# Standard error of difference for genotypes.  Kempton page 62, bottom.
-covs <- as.matrix(vcov(m1)[1:35, 1:35])
-vars <- diag(covs)
-vdiff <- outer(vars, vars, "+") - 2 * covs
-sed <- sqrt(vdiff[upper.tri(vdiff)])
-min(sed) # Minimum SED
-mean(sed) # Average SED
-max(sed) # Maximum SED
+\dontrun{
+  # Model with rep, row, col as random.  Kempton, page 62.
+  # Use "-1" so that the vcov matrix doesn't include intercept
+  require(lme4)
+  m1 <- lmer(yield ~ -1 + gen + rep + (1|rep:rowf) + (1|rep:colf), data=dat)
+  
+  # Variance components match Kempton.
+  print(m1, corr=FALSE)
+  
+  # Standard error of difference for genotypes.  Kempton page 62, bottom.
+  covs <- as.matrix(vcov(m1)[1:35, 1:35])
+  vars <- diag(covs)
+  vdiff <- outer(vars, vars, "+") - 2 * covs
+  sed <- sqrt(vdiff[upper.tri(vdiff)])
+  min(sed) # Minimum SED
+  mean(sed) # Average SED
+  max(sed) # Maximum SED
 }
+
 }

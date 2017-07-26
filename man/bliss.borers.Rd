@@ -72,7 +72,7 @@ if(require(latticeExtra)){
   xx <- 0:26
   yy <- dnbinom(0:26, mu=3.17, size=1.47)*120 # estimates are from glm.nb
   histogram(~borers, dd, type='count', subset=treat=='T2',
-            main="bliss.borers trt T2 observed and expected",
+            main="bliss.borers - trt T2 observed and expected",
             breaks=0:27-.5) +
               xyplot(yy~xx, col='navy', type='b')
 }
@@ -84,7 +84,7 @@ if(require(vcd)) {
   vcd::distplot(dat2$borers, type = "nbinomial",
            main="bliss.borers neg binomialness plot")
   # Better way is a rootogram
-  g1 <- goodfit(dat2$borers, "nbinomial")
+  g1 <- vcd::goodfit(dat2$borers, "nbinomial")
   plot(g1, main="bliss.borers - Treatment 2")
 }
 

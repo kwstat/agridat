@@ -51,16 +51,12 @@ dat <- lu.stability
   
 # GxE means. Match Lu 1995 table 1
 require(reshape2)
-round(datm <- acast(dat, gen~env, fun=mean, value.var='yield'),2)
-
+datm <- acast(dat, gen~env, fun=mean, value.var='yield')
+round(datm, 2)
 # Gen/Env means. Match Lu 1995 table 3
 apply(datm, 1, mean)
 apply(datm, 2, mean)
 
-  if(require(stable)){
-    # Nonparametric stability stats. Match Lu 1995 table 3.
-    round(huehn(datm),3)
-  }
   
 # Traditional ANOVA. Match Hwu table 2
 # F value for gen,env
@@ -73,7 +69,8 @@ summary(m2)
 # Finlay Wilkinson regression coefficients
 # First, calculate env mean, merge in
 require(dplyr)
-dat2 <- dat %>% group_by(env) %>% mutate(loc.mean=mean(yield))
+  dat2 <- group_by(dat, env)
+  dat2 <- mutate(dat2, loc.mean=mean(yield))
 m4 <- lm(yield ~ gen -1 + gen:loc.mean, data=dat2)
 coef(m4) # Match Hwu table 4
 
@@ -85,7 +82,8 @@ anova(m6, m6b) # Non-significant difference
 
 # Table 7 - Shukla stability
 # First, environment means
-emn <- dat2 %>% group_by(env) %>% summarize(ymn=mean(yield))
+  emn <- group_by(dat2, env)
+  emn <- summarize(emn, ymn=mean(yield))
 # Regress GxE terms on envt means
 getab = (model.tables(m2,"effects")$tables)$'gen:env'
 getab

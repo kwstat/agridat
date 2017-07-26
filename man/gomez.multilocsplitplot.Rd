@@ -48,19 +48,20 @@ t1 <- terms(yield ~ loc * nf * gen + Error(loc:rep:nf),
 m1 <- aov(t1, data=dat)
 summary(m1)
 
-# F values are somewhat similar to Gomez Table 8.21
-if(require(lme4)){
-m2 <- lmer(yield ~ loc*nf*gen + (1|loc/rep/nf), dat)
-anova(m2)
-## Analysis of Variance Table
-##            Df   Sum Sq  Mean Sq F value
-## loc         2   117942    58971  0.1525
-## nf          5 72841432 14568286 37.6777
-## gen         1  7557570  7557570 19.5460
-## loc:nf     10 10137188  1013719  2.6218
-## loc:gen     2  4270469  2135235  5.5223
-## nf:gen      5  1501767   300353  0.7768
-## loc:nf:gen 10  1502273   150227  0.3885
+\dontrun{
+  # F values are somewhat similar to Gomez Table 8.21
+  require(lme4)
+  m2 <- lmer(yield ~ loc*nf*gen + (1|loc/rep/nf), dat)
+  anova(m2)
+  ## Analysis of Variance Table
+  ##            Df   Sum Sq  Mean Sq F value
+  ## loc         2   117942    58971  0.1525
+  ## nf          5 72841432 14568286 37.6777
+  ## gen         1  7557570  7557570 19.5460
+  ## loc:nf     10 10137188  1013719  2.6218
+  ## loc:gen     2  4270469  2135235  5.5223
+  ## nf:gen      5  1501767   300353  0.7768
+  ## loc:nf:gen 10  1502273   150227  0.3885
 }
 
 }

@@ -34,6 +34,7 @@
   Change-over designs.
   \emph{Technical Bulletin 147}, North Carolina Agricultural Experimental Station.
 }
+
 \references{
   Lowry, S.R. 1989.
   Statistical design and analysis of dairy nutrition experiments to

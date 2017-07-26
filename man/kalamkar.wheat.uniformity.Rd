@@ -41,12 +41,14 @@
   Kalamkar suggested using four parallel half-meter rows as a sampling unit.
 
 }
+
 \source{
   Kalamkar, R. J (1932).
   A Study in Sampling Technique with Wheat.
   The Journal of Agricultural Science, Vol.22(4), pp.783-796.
   https://doi.org/10.1017/S0021859600054599
 }
+
 \references{
   None.
 }
@@ -60,12 +62,12 @@ sum(dat$yield)
 sum(dat$ears)
 
 if(require(desplot)){
-  desplot(yield ~ col*row, dat,
-          flip=TRUE, aspect=(80*0.5)/(16*1.64042), # true aspect
-          main="kalamkar.wheat.uniformity - yield")
   desplot(ears ~ col*row, dat,
           flip=TRUE, aspect=(80*0.5)/(16*1.64042), # true aspect
           main="kalamkar.wheat.uniformity - ears")
+  desplot(yield ~ col*row, dat,
+          flip=TRUE, aspect=(80*0.5)/(16*1.64042), # true aspect
+          main="kalamkar.wheat.uniformity - yield")
 }
 
 # Show the negative correlation between rows

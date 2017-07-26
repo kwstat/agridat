@@ -24,27 +24,24 @@
   The named cultivars Bruce, Conquest, Laurier, Leger are checks, while
   the other cultivars were tests.
 }
-\source{
-  
-C. S. Lin, M. R. Binns (1985).
-Procedural approach for assessing cultivar-location data: Pairwise genotype-environment interactions of test cultivars with checks
-\emph{Canadian Journal of Plant Science}, 1985, 65(4): 1065-1071. Table 1.
-http://doi.org/10.4141/cjps85-136
-
+\source{  
+  C. S. Lin, M. R. Binns (1985).
+  Procedural approach for assessing cultivar-location data: Pairwise genotype-environment interactions of test cultivars with checks
+  \emph{Canadian Journal of Plant Science}, 1985, 65(4): 1065-1071. Table 1.
+  http://doi.org/10.4141/cjps85-136
 }
+
 \references{
-
-C. S. Lin, M. R. Binns (1988).
-A Superiority Measure Of Cultivar Performance For Cultivar x Location Data.
-\emph{Canadian Journal of Plant Science}, 68, 193-198.
-http://doi.org/10.4141/cjps88-018
-
-Mohammed Ali Hussein, Asmund Bjornstad, and A. H. Aastveit (2000).
-SASG x ESTAB: A SAS Program for Computing Genotype x Environment
-Stability Statistics.
-\emph{Agronomy Journal}, 92; 454-459.
-http://doi.org/10.2134/agronj2000.923454x
-
+  C. S. Lin, M. R. Binns (1988).
+  A Superiority Measure Of Cultivar Performance For Cultivar x Location Data.
+  \emph{Canadian Journal of Plant Science}, 68, 193-198.
+  http://doi.org/10.4141/cjps88-018
+  
+  Mohammed Ali Hussein, Asmund Bjornstad, and A. H. Aastveit (2000).
+  SASG x ESTAB: A SAS Program for Computing Genotype x Environment
+  Stability Statistics.
+  \emph{Agronomy Journal}, 92; 454-459.
+  http://doi.org/10.2134/agronj2000.923454x
 }
 \examples{
 

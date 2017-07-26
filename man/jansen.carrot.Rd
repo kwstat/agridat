@@ -32,7 +32,6 @@
 
 }
 \source{
-
   J. Jansen & J.A. Hoekstra (1993).
   The analysis of proportions in agricultural experiments by a
   generalized linear mixed model. 
@@ -40,7 +39,6 @@
   http://doi.org/10.1111/j.1467-9574.1993.tb01414.x
 
   Used with permission of J. Jansen. Electronic version supplied by Miroslav Zoric.
-
 }
 \references{
   None.
@@ -62,8 +60,7 @@ dotplot(gen ~ y/n, data=dat, group=trt, auto.key=TRUE,
               data=dat, family=binomial)
   summary(m1)
   # Todo: Why are these results different from Jansen?
-  # Maybe he used ungrouped bernoulli data?  Too slow with 4700 obs
-  
+  # Maybe he used ungrouped bernoulli data?  Too slow with 4700 obs  
 }
 
 }

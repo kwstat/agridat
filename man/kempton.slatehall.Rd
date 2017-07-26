@@ -38,12 +38,10 @@
 }
 
 \references{
-
   Gilmour, Arthur R and Robin Thompson and Brian R Cullis. (1994).
   Average Information REML: An Efficient Algorithm for Variance
   Parameter Estimation in Linear Mixed Models, \emph{Biometrics},
   51, 1440-1450.
-
 }
 
 \examples{
@@ -62,8 +60,10 @@ if(require(desplot)){
 
 # ----------------------------------------------------------------------------
 
-# Incomplete block model of Gilmour et al 1995
-if(require(lme4) & require(lucid)){
+\dontrun{
+  # Incomplete block model of Gilmour et al 1995
+  require(lme4)
+  require(lucid)
   dat <- transform(dat, xf=factor(col), yf=factor(row))
   m1 <- lmer(yield ~ gen + (1|rep) + (1|rep:yf) + (1|rep:xf), data=dat)
   vc(m1)
@@ -72,7 +72,6 @@ if(require(lme4) & require(lucid)){
   ##  rep:yf   (Intercept)    15600 124.9
   ##  rep      (Intercept)     4262  65.29
   ##  Residual                 8062  89.79
-
 }
 
 # ----------------------------------------------------------------------------

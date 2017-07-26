@@ -36,7 +36,6 @@
 
 }
 \source{
-
   J. Jansen, 1990.
   On the statistical analysis of ordinal data when extravariation is present.
   \emph{Applied Statistics}, 39, 75-84, Table 1.

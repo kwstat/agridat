@@ -42,6 +42,7 @@
   \emph{J. Hered}, 90, 260-262
   https://doi.org/10.1093/jhered/90.1.260
 }
+
 \examples{
 data(cramer.cucumber)
 dat <- cramer.cucumber
@@ -77,7 +78,8 @@ splom(dat[3:9], main="cramer.cucumber - traits by cycle", group=dat$cycle,
   # slopes for dep0 ~ indep
   X <- as.matrix(sdat[,indep])
   Y <- as.matrix(sdat[,c(dep0)])
-  estdep <- solve(t(X)%*%X) %*% t(X) %*% Y
+  # estdep <- solve(t(X) %*% X) %*% t(X) %*% Y
+  estdep <- solve(crossprod(X), crossprod(X,Y))
   estdep
   ## branchesperplant 0.7160269
   ## nodesperbranch   0.3415537
@@ -87,7 +89,8 @@ splom(dat[3:9], main="cramer.cucumber - traits by cycle", group=dat$cycle,
   # slopes for dep ~ dep0
   X <- as.matrix(sdat[,dep0])
   Y <- as.matrix(sdat[,c(dep)])
-  estind2 <- solve(t(X)%*%X) %*% t(X) %*% Y
+  # estind2 <- solve(t(X) %*% X) %*% t(X) %*% Y
+  estind2 <- solve(crossprod(X), crossprod(X,Y))
   estind2
   ##  marketable earlyperplant
   ##     0.97196     0.8828393

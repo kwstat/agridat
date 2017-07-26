@@ -54,10 +54,11 @@ if(require(desplot)){
 
 # Block random.  See Glimmix manual, output 1.18.
 # Note: (Different parameterization)
-if(require(lme4)){
-## l2 <- glmer(cbind(y, n-y) ~ gen + (1|block), data=dat, family=binomial,
-##    control=glmerControl(check.nlev.gtr.1="ignore"))
-## coef(l2)
+\dontrun{
+  ## require(lme4)
+  ## l2 <- glmer(cbind(y, n-y) ~ gen + (1|block), data=dat, family=binomial,
+  ##    control=glmerControl(check.nlev.gtr.1="ignore"))
+  ## coef(l2)
 }
 
 # ----------------------------------------------------------------------------

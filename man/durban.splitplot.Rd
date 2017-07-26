@@ -11,12 +11,12 @@
 \format{
   A data frame with 560 observations on the following 6 variables.
   \describe{
-    \item{\code{yield}}{Yield, tonnes/ha}
-    \item{\code{block}}{Block factor, 4 levels}
-    \item{\code{gen}}{Genotype factor, 70 levels}
-    \item{\code{fung}}{Fungicide factor, 2 levels}
-    \item{\code{row}}{Row}
-    \item{\code{bed}}{Bed (column)}
+    \item{\code{yield}}{yield, tonnes/ha}
+    \item{\code{block}}{block, 4 levels}
+    \item{\code{gen}}{genotype, 70 levels}
+    \item{\code{fung}}{fungicide, 2 levels}
+    \item{\code{row}}{row}
+    \item{\code{bed}}{bed (column)}
   }
 }
 \details{
@@ -42,12 +42,19 @@
 data(durban.splitplot)
 dat <- durban.splitplot
 
+if(require(desplot)){
+  desplot(yield~bed*row, dat,
+          out1=block, out2=fung, num=gen, # aspect unknown
+          main="durban.splitplot")
+}
+
+
 # Durban 2003, Figure 2
 m20 <- lm(yield~gen*fung, data=dat)
 dat$resid <- m20$resid
-require(lattice)
-# xyplot(resid~row, dat, type=c('p','smooth'), main="durban.splitplot")
-# xyplot(resid~bed, dat, type=c('p','smooth'), main="durban.splitplot")
+## require(lattice)
+## xyplot(resid~row, dat, type=c('p','smooth'), main="durban.splitplot")
+## xyplot(resid~bed, dat, type=c('p','smooth'), main="durban.splitplot")
 
 # Figure 4 doesn't quite match due to different break points
 coplot(resid~bed|row, data=dat, number=8, cex=.5,
@@ -58,8 +65,10 @@ title("durban.splitplot")
 
 \dontrun{
   # Figure 6 - field trend
-  require(gam)
-  m2lo <- gam(yield ~ gen*fung + lo(row, bed, span=.082), data=dat)
+  # note, Durban used gam package like this
+  # m2lo <- gam(yield ~ gen*fung + lo(row, bed, span=.082), data=dat)
+  require(mgcv)
+  m2lo <- gam(yield ~ gen*fung + s(row, bed,k=45), data=dat)
   new2 <- expand.grid(row=unique(dat$row), bed=unique(dat$bed))
   new2 <- cbind(new2, gen="G01", fung="F1")
   p2lo <- predict(m2lo, newdata=new2)

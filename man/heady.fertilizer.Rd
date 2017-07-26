@@ -11,7 +11,7 @@
 \format{
   A data frame with 81 observations on the following 3 variables.
   \describe{
-    \item{\code{crop}}{crop factor}
+    \item{\code{crop}}{crop}
     \item{\code{rep}}{replicate (not block)}
     \item{\code{P}}{phosphorous, pounds/acre}
     \item{\code{K}}{potassium, pounds/acre}
@@ -93,11 +93,12 @@ m4 <- lm(yield ~ N + P + sqrt(N) + sqrt(P) + sqrt(N*P), data=d4)
 summary(m4)
 
 \dontrun{
-require(rgl)
-with(d1, plot3d(N,P,yield))
-with(d2, plot3d(K,P,yield))
-with(d3, plot3d(K,P,yield))
-with(d4, plot3d(N,P,yield)) # Mostly linear in both N and P
+  require(rgl)
+  with(d1, plot3d(N,P,yield))
+  with(d2, plot3d(K,P,yield))
+  with(d3, plot3d(K,P,yield))
+  with(d4, plot3d(N,P,yield)) # Mostly linear in both N and P
+  rgl.close()
 }
 
 }

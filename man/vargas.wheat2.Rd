@@ -64,8 +64,7 @@ data("vargas.wheat2.yield")
 
 }
 
-\source{
-  
+\source{  
   Mateo Vargas and Jose Crossa and Ken Sayre and Matthew Renolds and
   Martha E Ramirez and Mike Talbot, 1998.
   Interpreting Genotype x Environment Interaction in Wheat by

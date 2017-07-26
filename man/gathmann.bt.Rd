@@ -11,9 +11,9 @@
 \format{
   A data frame with 16 observations on the following 3 variables.
   \describe{
-    \item{\code{gen}}{Maize type factor, \code{Bt} \code{ISO}}
-    \item{\code{thysan}}{Numeric}
-    \item{\code{aranei}}{Numeric}
+    \item{\code{gen}}{genotype/maize, \code{Bt} \code{ISO}}
+    \item{\code{thysan}}{thysan abundance}
+    \item{\code{aranei}}{aranei abundance}
   }
 }
 \details{

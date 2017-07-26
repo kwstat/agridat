@@ -44,6 +44,7 @@ dat <- gomez.nitrogen
 # Note the depletion of nitrogen over time (stage)
 if(require(HH)){
   interaction2wt(nitro ~ rep/trt + trt*stage, data=dat,
+                 x.between=0, y.between=0,
                  main="gomez.nitrogen")
   
   # Just the fertilizer profiles

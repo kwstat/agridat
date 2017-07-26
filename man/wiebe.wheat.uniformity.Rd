@@ -11,9 +11,9 @@
 \format{
   A data frame with 1500 observations on the following 3 variables.
   \describe{
-    \item{\code{row}}{Row}
-    \item{\code{col}}{Column (series)}
-    \item{\code{yield}}{Yield in grams per plot}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column (series)}
+    \item{\code{yield}}{yield in grams per plot}
   }
 }
 

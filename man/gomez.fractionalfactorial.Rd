@@ -72,7 +72,8 @@ anova(m0)
 m1 <- lm(yield ~ rep * block + (a+b+c+d+e+f)^3, dat)
 anova(m1)
 
-if(require(FrF2)){
+\dontrun{
+  require(FrF2)
   aliases(m1)
   MEPlot(m1, select=3:8,
          main="gomez.fractionalfactorial - main effects plot")

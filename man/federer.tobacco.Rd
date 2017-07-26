@@ -11,10 +11,10 @@
 \format{
   A data frame with 56 observations on the following 4 variables.
   \describe{
-    \item{\code{row}}{Row}
-    \item{\code{block}}{Block, numeric}
-    \item{\code{dose}}{Radiation dose, roentgens}
-    \item{\code{height}}{Height of 20 plants, cm}
+    \item{\code{row}}{row}
+    \item{\code{block}}{block, numeric}
+    \item{\code{dose}}{radiation dose, roentgens}
+    \item{\code{height}}{height of 20 plants, cm}
   }
 }
 \details{

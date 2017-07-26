@@ -48,11 +48,11 @@ dat <- besag.endive
 
 # Incidence map.  Figure 2 of Friel and Pettitt
 if(require(desplot)){
-grays <- colorRampPalette(c("#d9d9d9","#252525"))
-desplot(disease~col*row, dat,
-        col.regions=grays(2),
-        aspect = 0.5, # aspect unknown
-        main="besag.endive - Disease incidence")
+  grays <- colorRampPalette(c("#d9d9d9","#252525"))
+  desplot(disease~col*row, dat,
+          col.regions=grays(2),
+          aspect = 0.5, # aspect unknown
+          main="besag.endive - Disease incidence")
 }
 
 # ----------------------------------------------------------------------------

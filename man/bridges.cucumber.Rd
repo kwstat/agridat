@@ -55,12 +55,13 @@ if(require(desplot)){
 
 # ----------------------------------------------------------------------------
 
-# Graphical inference test for heterogenous variances
-if(require(nullabor)) {
+\dontrun{
+  # Graphical inference test for heterogenous variances
+  require(nullabor)
   # Create a lineup of datasets
   fun <- null_permute("loc")
   dat20 <- lineup(fun, dat, n=20, pos=9)
-
+  
   # Now plot
   library(lattice)
   bwplot(yield ~ loc|factor(.sample), dat20,

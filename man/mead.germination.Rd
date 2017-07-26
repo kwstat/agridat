@@ -11,16 +11,17 @@
 \format{
   A data frame with 64 observations on the following 5 variables.
   \describe{
-    \item{\code{temp}}{Temperature regime}
-    \item{\code{rep}}{Replication factor (not blocking)}
-    \item{\code{conc}}{Chemical concentration}
-    \item{\code{germ}}{Number of seeds germinating}
-    \item{\code{seeds}}{Number of seeds tested = 50}
+    \item{\code{temp}}{temperature regimen}
+    \item{\code{rep}}{replication factor (not blocking)}
+    \item{\code{conc}}{chemical concentration}
+    \item{\code{germ}}{number of seeds germinating}
+    \item{\code{seeds}}{number of seeds tested = 50}
   }
 }
 \details{
   The rep factor is NOT a blocking factor.
 }
+
 \source{
   Roger Mead, Robert N Curnow, Anne M Hasted. 2002.
   Statistical Methods in Agriculture and Experimental Biology, 3rd ed.
@@ -28,6 +29,7 @@
 
   Used with permission of Roger Mead, Robert Curnow, and Anne Hasted.
 }
+
 \references{
   Schabenberger, O. and Pierce, F.J., 2002.
   \emph{Contemporary statistical models for the plant and soil sciences},

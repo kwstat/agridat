@@ -27,6 +27,7 @@
   
   Field length: 100 plots * 40 in = 333 feet
 }
+
 \source{
   Stephens, Joseph C. 1928.
   Experimental methods and the probable error in field experiments with sorghum.

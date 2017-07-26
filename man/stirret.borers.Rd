@@ -12,8 +12,8 @@
 \format{
   A data frame with 60 observations on the following 4 variables.
   \describe{
-    \item{\code{block}}{block factor, 15 levels}
-    \item{\code{trt}}{treatment factor, 4 levels}
+    \item{\code{block}}{block, 15 levels}
+    \item{\code{trt}}{treatment, 4 levels}
     \item{\code{count1}}{count of borers on August 18}
     \item{\code{count2}}{count of borers on October 19}
   }

@@ -28,14 +28,17 @@
   http://rmc.library.cornell.edu/EAD/htmldocs/RMA00890.html
   Cotton - Plot Technic Study 1930-1932. Box 3, Folder 34
 }
+
 \source{
   Harry Love (1936).
   \emph{Application of Statistical Methods to Agricultural Research}.
   The Commercial Press, Shanghai.
 }
+
 \references{
   None.
 }
+
 \examples{
 data(love.cotton.uniformity)
 

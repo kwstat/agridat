@@ -54,7 +54,6 @@
   A New Procedure for the Analysis of Early Generation Variety Trials.
   \emph{Journal of the Royal Statistical Society. Series C (Applied
     Statistics)}, 38, 361-375.
-
   http://doi.org/10.2307/2348066
 }
 \references{

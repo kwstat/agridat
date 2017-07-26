@@ -38,19 +38,15 @@
 \source{
   Kenward, Michael G. (1987).
   A Method for Comparing Profiles of Repeated Measurements.
-  \emph{Applied Statistics}, 36, 296-308.  Table 1.
-  
+  \emph{Applied Statistics}, 36, 296-308.  Table 1.  
   http://doi.org/10.2307/2347788
-  
 }
 
 \references{
   W. Zhang, C. Leng and C. Y. Tang (2015).
   A joint modelling approach for longitudinal studies
   \emph{J. R. Statist. Soc. B}, 77 (2015), 219--238.
-  
   http://doi.org/10.1111/rssb.12065
-  
 }
 
 \examples{
@@ -63,16 +59,6 @@ require(lattice)
 foo1 <- xyplot(weight~day|trt, data=dat, type='l', group=animal,
                xlab="Day", ylab="Animal weight", main="kenward.cattle")
 print(foo1)
-
-# ----------------------------------------------------------------------------
-
-# Same thing with ggplot
-if(FALSE){
-  require(ggplot2)
-  f1 <-ggplot(dat, aes(day, weight, group = animal)) +
-    facet_grid(. ~ trt) + coord_cartesian(xlim=c(0,134))
-  f1 + geom_line() + xlab("Time") + ylab("Animal weight (kg)")
-}
 
 # ----------------------------------------------------------------------------
 

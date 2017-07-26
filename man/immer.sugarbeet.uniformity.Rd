@@ -42,6 +42,7 @@
   Immer found that aggregating the data from one row to two
   resulted in a dramatic reduction in the standard error (for yield).
 }
+
 \source{
   F. R. Immer. 1932.
   Size and shape of plot in relation to field experiments with sugar beets.
@@ -66,6 +67,8 @@ if(require(desplot)){
           aspect=110/348, tick=TRUE, flip=TRUE,
           main="immer.sugarbeet.uniformity - purity")
 }
+
 pairs(dat[,c('yield','sugar','purity')], main="immer.sugarbeet.uniformity")
+
 }
 \keyword{datasets}

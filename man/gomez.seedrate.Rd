@@ -20,7 +20,7 @@
   Rice yield at six different densities in an RCB design.
 }
 \source{
-  Gomez, K.A. and Gomez, A.A.. 1984,
+  Gomez, K.A. and Gomez, A.A. 1984,
   \emph{Statistical Procedures for Agricultural Research}.
   Wiley-Interscience. Page 26.
 

@@ -11,11 +11,11 @@
 \format{
   A data frame with 72 observations on the following 5 variables.
   \describe{
-    \item{\code{plot}}{Plot number}
-    \item{\code{rep}}{Replicate factor}
-    \item{\code{block}}{Incomplete block factor}
-    \item{\code{gen}}{Genotype (variety) factor}
-    \item{\code{yield}}{Dry matter yield (tonnes/ha)}
+    \item{\code{plot}}{plot number}
+    \item{\code{rep}}{replicate}
+    \item{\code{block}}{incomplete block}
+    \item{\code{gen}}{genotype (variety)}
+    \item{\code{yield}}{dry matter yield (tonnes/ha)}
   }
 }
 
@@ -28,22 +28,18 @@
   
 }
 
-\source{
-  
+\source{  
   J. A. John & E. R. Williams (1995).
   \emph{Cyclic and computer generated designs},
   Chapman and Hall, London.  Page 146.
-  
 }
 
 \references{
-  
   Piepho, H.P. and Mohring, J. (2007),
   Computing heritability and selection response from unbalanced
   plant breeding trials,
   \emph{Genetics}, 177, 1881-1888.
   http://doi.org/10.1534/genetics.107.074229
-  
 }
 
 \examples{
@@ -189,8 +185,11 @@ splom(means, main="john.alpha - means for RCB, IB, Intra-block")
   con <- ls5blue@linfct[,1:24] # contrast matrix for genotypes
   # The 'con' matrix is identity diagonal, so we don't need to multiply,
   # but do so for a generic approach
-  sed5blue <- cov2sed(con %*% vcov(m5blue)[1:24,1:24] %*% t(con))
+  # sed5blue <- cov2sed(con %*% vcov(m5blue)[1:24,1:24] %*% t(con))
+  tmp <- tcrossprod( crossprod(t(con), vcov(m5blue)[1:24,1:24]), con)
+  sed5blue <- cov2sed(tmp)
 
+  
   # vblue Average variance of difference between genotypes
   vblue <- mean(sed5blue[upper.tri(sed5blue)]^2) # .07010875 matches 'vblue' from asreml
 

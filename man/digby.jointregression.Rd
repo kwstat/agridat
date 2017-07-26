@@ -11,9 +11,9 @@
 \format{
   A data frame with 134 observations on the following 3 variables.
   \describe{
-    \item{\code{gen}}{Genotype factor, 10 levels}
-    \item{\code{env}}{Environment factor, 17 levels}
-    \item{\code{yield}}{Yield (t/ha)}
+    \item{\code{gen}}{genotype, 10 levels}
+    \item{\code{env}}{environment, 17 levels}
+    \item{\code{yield}}{yield (t/ha)}
   }
 }
 \details{

@@ -11,22 +11,25 @@
 \format{
   A data frame with 25 observations on the following 6 variables.
   \describe{
-    \item{\code{year}}{Year}
-    \item{\code{area}}{Area affected, hectares}
-    \item{\code{blight}}{Blight detected, 0/1 numeric}
-    \item{\code{rain.am}}{Number of rainy days in April and May}
-    \item{\code{rain.ja}}{Number of rainy days in July and August}
-    \item{\code{precip.m}}{Precipitation in May when temp > 5C, milimeters}
+    \item{\code{year}}{year}
+    \item{\code{area}}{area affected, hectares}
+    \item{\code{blight}}{blight detected, 0/1 numeric}
+    \item{\code{rain.am}}{number of rainy days in April and May}
+    \item{\code{rain.ja}}{number of rainy days in July and August}
+    \item{\code{precip.m}}{precipitation in May when temp > 5C, milimeters}
   }
 }
 \details{
   The variable 'blight detected' is 1 if 'area' > 0.
 }
+
 \source{
   Johnson, D.A. and Alldredge, J.R. and Vakoch, D.L. (1996).
   Potato late blight forecasting models for the semiarid environment of
   south-central Washington. \emph{Phytopathology}, 86, 480--484.
+  http://doi.org/10.1094/Phyto-86-480
 }
+
 \references{
   Vinayanand Kandala,
   \emph{Logistic Regression}

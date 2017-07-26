@@ -12,14 +12,14 @@
 \format{
   A data frame with 719 observations on the following 8 variables.
   \describe{
-    \item{\code{site}}{Site factor, 6 levels}
-    \item{\code{year}}{Year, 1927-1936, numeric}
-    \item{\code{mo}}{Month, 1-12, numeric}
-    \item{\code{cdd}}{Monthly cooling degree days, Fahrenheit}
-    \item{\code{hdd}}{Monthly heating degree days, Fahrenheit}
-    \item{\code{precip}}{Monthly precipitation, inches}
-    \item{\code{min}}{Monthly average daily minimum temp, Fahrenheit}
-    \item{\code{max}}{Monthly average daily maximum temp, Fahrenheit}
+    \item{\code{site}}{site, 6 levels}
+    \item{\code{year}}{year, 1927-1936}
+    \item{\code{mo}}{month, 1-12, numeric}
+    \item{\code{cdd}}{monthly cooling degree days, Fahrenheit}
+    \item{\code{hdd}}{monthly heating degree days, Fahrenheit}
+    \item{\code{precip}}{monthly precipitation, inches}
+    \item{\code{min}}{monthly average daily minimum temp, Fahrenheit}
+    \item{\code{max}}{monthly average daily maximum temp, Fahrenheit}
   }
 }
 \details{

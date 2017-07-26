@@ -105,17 +105,6 @@ qqmath(~score|env, dat, group=scale,
   # require(faraway)
   # halfnorm(abs(as.vector(m1$resid)))
 
-  # Plot matrix of median-polish residuals
-  library(reshape2)
-  res1 <-as.matrix(m1$residuals)
-  res1 <- melt(res1)
-  library(ggplot2)
-  ggplot(res1, aes(Var2, Var1)) +
-    geom_tile(aes(fill = value)) +
-    scale_fill_gradient2(low="yellow", high="red", mid="white", midpoint=0) +
-    xlab("") + ylab("") + ggtitle("lillemo.wheat - medpolish residuals") +
-    geom_text(aes(Var2, Var1, label=round(res1$value,1)), size=2.5)
-
   # Nonparametric stability statistics. Lillemo Table 4.
   huehn <- function(mat){
     # Gen in rows, Env in cols  

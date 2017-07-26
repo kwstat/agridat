@@ -18,9 +18,9 @@
 \format{
   A data frame with 162 observations on the following 3 variables.
   \describe{
-    \item{\code{gen}}{Genotype factor}
-    \item{\code{env}}{Environment factor}
-    \item{\code{yield}}{Yield in metric tons per hectare}
+    \item{\code{gen}}{genotype}
+    \item{\code{env}}{environment}
+    \item{\code{yield}}{yield in metric tons per hectare}
   }
 }
 

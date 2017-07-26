@@ -26,18 +26,18 @@
   heritability.
   
 }
-\source{
-  
+
+\source{  
   Walter A. Becker (1984).
   \emph{Manual of Quantitative Genetics}, 4th ed. Page 83.
 
   Prepared in electronic form by Kevin Wright.
-  
 }
 
 \references{
   None.
 }
+
 \examples{
 
 data(becker.chicken)
@@ -50,27 +50,31 @@ if(require(lattice)){
           auto.key=list(columns=5))
 }
 
-# Sums match Becker
-sum(dat$weight)
-aggregate(weight ~  male + female, dat, FUN=sum)
+\dontrun{
+  # Sums match Becker
+  sum(dat$weight)
+  aggregate(weight ~  male + female, dat, FUN=sum)
 
-# Variance components
-if(require(lme4) & require(lucid)){
+  # Variance components
+  require(lme4)
+  require(lucid)
   m1 <- lmer(weight ~  (1|male) + (1|female), data=dat)
   as.data.frame(lme4::VarCorr(m1))
-       ## grp        var1 var2      vcov    sdcor
-## 1   female (Intercept) <NA> 1095.6296 33.10030
-## 2     male (Intercept) <NA>  776.7543 27.87031
-## 3 Residual        <NA> <NA> 5524.4000 74.32631
+  ## grp        var1 var2      vcov    sdcor
+  ## 1   female (Intercept) <NA> 1095.6296 33.10030
+  ## 2     male (Intercept) <NA>  776.7543 27.87031
+  ## 3 Residual        <NA> <NA> 5524.4000 74.32631
+
+  # Calculate heritabilities
+  s2m <- 776  # variability for males
+  s2f <- 1095 # variability for females
+  s2w <- 5524 # variability within crosses
+  vp <- s2m + s2f + s2w # 7395
+  4*s2m/vp # .42 male heritability
+  4*s2f/vp # .59 female heritability
+
 }
 
-# Calculate heritabilities
-s2m <- 776  # variability for males
-s2f <- 1095 # variability for females
-s2w <- 5524 # variability within crosses
-vp <- s2m + s2f + s2w # 7395
-4*s2m/vp # .42 male heritability
-4*s2f/vp # .59 female heritability
-
 }
+
 \keyword{datasets}

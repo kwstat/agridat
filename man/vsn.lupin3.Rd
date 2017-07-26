@@ -22,6 +22,7 @@
   An early-stage multi-environment trial, with 6 check lines and 300
   test lines.  The 6 check lines were replicated in each environment.
 }
+
 \source{
   Multi-Environment Trials - Lupins.
   http://www.vsni.co.uk/software/asreml/htmlhelp/asreml/xlupin.htm

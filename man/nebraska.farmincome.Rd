@@ -11,10 +11,10 @@
 \format{
   A data frame with 93 observations on the following 4 variables.
   \describe{
-    \item{\code{county}}{County factor}
-    \item{\code{crop}}{Crop income, thousand dollars}
-    \item{\code{animal}}{Livestock and poultry income, thousand dollars}
-    \item{\code{area}}{Area of each county, square miles}
+    \item{\code{county}}{county}
+    \item{\code{crop}}{crop income, thousand dollars}
+    \item{\code{animal}}{livestock and poultry income, thousand dollars}
+    \item{\code{area}}{area of each county, square miles}
   }
 }
 \details{

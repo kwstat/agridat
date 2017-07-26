@@ -50,6 +50,7 @@ if(require(desplot)){
 }
 
 # Gertheiss figure 1
+# library(lattice)
 # dotplot(factor(nitro) ~ yield|gen, data=dat)
 
 # Gomez table 3.12

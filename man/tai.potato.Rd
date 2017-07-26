@@ -28,22 +28,26 @@
   the average stability area.  The highest yielding genotype F6032 had
   an unstable performance.
 }
+
 \source{
   G.C.C. Tai, 1971.
   Genotypic stability analysis and its application to potato regional trials.
   Crop Sci 11, 184-190.  Table 2, p. 187.
   http://doi.org/10.2135/cropsci1971.0011183X001100020006x
 }
-\references{
 
+\references{
   George Fernandez (1991).
   Analysis of Genotype x Environment Interaction by Stability Estimates.
   \emph{Hort Science}, 26, 947-950.
-
 }
+
 \examples{
 data(tai.potato)
 dat = tai.potato
+
+require(lattice)
+dotplot(variety ~ yield|env, dat, main="tai.potato")
 
 # fixme - need to add tai() example
 

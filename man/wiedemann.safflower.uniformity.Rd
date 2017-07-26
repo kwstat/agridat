@@ -60,6 +60,7 @@ of labor.  Today the analysis takes only a second.
   All Graduate Theses and Dissertations. Paper 3600. Table 5.
   http://digitalcommons.usu.edu/etd/3600
 }
+
 \references{
 None.
 }
@@ -77,7 +78,7 @@ if(require(desplot)){
 }
 
 \dontrun{
-  require(agricolae)
+  require(agricolae) ; require(reshape2)
   dmat <- acast(dat, row~col, value.var='yield')
   index.smith(dmat,
               main="wiedemann.safflower.uniformity",

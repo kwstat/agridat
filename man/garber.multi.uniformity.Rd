@@ -62,7 +62,9 @@ if(require(desplot)){
   desplot(oats ~ col*row, data=dat,
           flip=TRUE, tick=TRUE, aspect=945/436, # true aspect
           main="garber.multi.uniformity oats")
-  
+}
+
+if(require(desplot)){
   desplot(wheat ~ col*row, data=dat,
           flip=TRUE, tick=TRUE, aspect=945/436, # true aspect
           main="garber.multi.uniformity wheat")

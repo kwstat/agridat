@@ -12,8 +12,8 @@
 \format{
   A data frame with 200 observations on the following 4 variables.
   \describe{
-    \item{\code{row}}{row, 1-20}
-    \item{\code{col}}{column, 1-10}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
     \item{\code{roots}}{root yields, pounds}
     \item{\code{leaves}}{leaf yields, pounds}
   }
@@ -50,12 +50,14 @@ data(mercer.mangold.uniformity)
 dat <- mercer.mangold.uniformity
 
 if(require(desplot)){
-  desplot(roots~col*row, data=dat,
-          aspect=145/302, # true aspect
-          main="mercer.mangold.uniformity - roots")
   desplot(leaves~col*row, data=dat,
           aspect=145/302, # true aspect
           main="mercer.mangold.uniformity - leaves")
+}
+if(require(desplot)){
+  desplot(roots~col*row, data=dat,
+          aspect=145/302, # true aspect
+          main="mercer.mangold.uniformity - roots")
 }
 
 \dontrun{

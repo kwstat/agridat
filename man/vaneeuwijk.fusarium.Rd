@@ -32,14 +32,12 @@
   
 }
 \source{
-
   van Eeuwijk, Fred A. and Pieter M. Kroonenberg (1998).
   Multiplicative Models for Interaction in Three-Way ANOVA, with Applications to Plant Breeding
   \emph{Biometrics}, 54, 1315-1333.
   http://doi.org/10.2307/2533660
   
   Used with permission of Fred van Eeuwijk.
-
 }
 
 \references{
@@ -65,6 +63,7 @@ if(require(HH)){
   position(dat$year) <- c(3,9,14,19)
   position(dat$strain) <- c(2,5,8,11,14,17,20)
   HH::interaction2wt(logity ~ gen+year+strain,dat,rot=c(90,0),
+                     x.between=0, y.between=0,
                      main="vaneeuwijk.fusarium")
 }
 

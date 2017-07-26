@@ -72,14 +72,18 @@ if(require(lattice)){
          main="christidis.competition")
 }
 
-if(FALSE & require(lattice) & require(mgcv)){
+\dontrun{
+  require(lattice)
+  require(mgcv)
+  if(is.element("package:gam", search())) detach("package:gam")
   # Simple non-competition model to remove main effects
   m1 <- gam(yield ~ gen + s(col), data=dat)
   p1 <- as.data.frame(predict(m1, type="terms"))
   names(p1) <- c('geneff','coleff')
   dat2 <- cbind(dat, p1)
   dat2 <- transform(dat2, res=yield-geneff-coleff)
-  xyplot(res ~  col, data=dat2, group=gen)
+  xyplot(res ~  col, data=dat2, group=gen,
+         main="christidis.competition - residuals")
 }
 
 }

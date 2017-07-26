@@ -19,15 +19,15 @@
   \describe{
     \item{\code{gen}}{genotype factor with parents Steptoe and Morex,
       and 150 crosses SM1, SM2, ..., SM200. Not all 200 numbers were used.}
-    \item{\code{env}}{environment factor, 16 levels}
-    \item{\code{amylase}}{Alpha Amylase (20 Deg Units)}
-    \item{\code{diapow}}{Diastatic Power (Deg Units)}
-    \item{\code{hddate}}{Heading Date (Julian Days)}
-    \item{\code{lodging}}{Lodging (percent)}
-    \item{\code{malt}}{Malt Extract (percent)}
-    \item{\code{height}}{Plant Height (Centimeters)}
-    \item{\code{protein}}{Grain Protein (percent)}
-    \item{\code{yield}}{Grain Yield (Mt/Ha)}
+    \item{\code{env}}{environment, 16 levels}
+    \item{\code{amylase}}{alpha amylase (20 Deg Units)}
+    \item{\code{diapow}}{diastatic power (degree units)}
+    \item{\code{hddate}}{heading date (julian days)}
+    \item{\code{lodging}}{lodging (percent)}
+    \item{\code{malt}}{malt extract (percent)}
+    \item{\code{height}}{plant height (centimeters)}
+    \item{\code{protein}}{grain protein (percent)}
+    \item{\code{yield}}{grain yield (Mt/Ha)}
   }
 
   \code{steptoe.morex.geno} is a \code{cross} object from the

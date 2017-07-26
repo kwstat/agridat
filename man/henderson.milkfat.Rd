@@ -12,7 +12,7 @@
   A data frame with 35 observations on the following 2 variables.
   \describe{
     \item{\code{week}}{week, numeric}
-    \item{\code{yield}}{Yield, kg/day}
+    \item{\code{yield}}{yield, kg/day}
   }
 }
 \source{
@@ -71,7 +71,7 @@ with(pdat, {
 })
 
 legend("topright",
-  c("nls", "lm, log-transformed", "glm, log-link",
+  c("obs", "lm, log-transformed", "glm, log-link",
     "gam, log-transformed", "gam, log-link"),
   lty = c("solid", "dotted", "dashed", "dashed", "solid"),
   col = c("black", "red", "red", "blue", "blue"),

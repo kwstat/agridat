@@ -17,14 +17,14 @@
 \format{
   A data frame with 4949 observations on the following 8 variables.
   \describe{
-    \item{\code{long}}{Longitude}
-    \item{\code{lat}}{Latitude}
-    \item{\code{mass}}{Grain mass flow per second, pounds}
+    \item{\code{long}}{longitude}
+    \item{\code{lat}}{latitude}
+    \item{\code{mass}}{grain mass flow per second, pounds}
     \item{\code{time}}{GPS time, in seconds}
-    \item{\code{seconds}}{Seconds elapsed for each datum}
-    \item{\code{dist}}{Distance traveled for each datum, in inches}
-    \item{\code{moist}}{Grain moisture, percent}
-    \item{\code{elev}}{Elevation, feet}
+    \item{\code{seconds}}{seconds elapsed for each datum}
+    \item{\code{dist}}{distance traveled for each datum, in inches}
+    \item{\code{moist}}{grain moisture, percent}
+    \item{\code{elev}}{elevation, feet}
   }
 }
 
@@ -122,14 +122,15 @@ densityplot(~yield|mu, dat, layout=c(1,5),
 }
 
 \dontrun{
-# Draw a 3D surface.  Clearly shows the low drainage area
-library(rgl)
-dat <- transform(dat, x=long-min(long), y=lat-min(lat), z=elev-min(elev))
-clear3d()
-points3d(dat$x, dat$y, dat$z/50000,
-         col=redblue(ncols)[dat$yldbin])
-axes3d()
-title3d(xlab='x',ylab='y',zlab='elev')
+  # Draw a 3D surface.  Clearly shows the low drainage area
+  library(rgl)
+  dat <- transform(dat, x=long-min(long), y=lat-min(lat), z=elev-min(elev))
+  clear3d()
+  points3d(dat$x, dat$y, dat$z/50000,
+           col=redblue(ncols)[dat$yldbin])
+  axes3d()
+  title3d(xlab='x',ylab='y',zlab='elev')
+  rgl.close()
 }
 
 }

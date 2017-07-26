@@ -10,9 +10,9 @@
 
 \format{
   \describe{
-    \item{\code{gen}}{Genotype factor, 18 levels}
-    \item{\code{env}}{Environment factor, 11 levels}
-    \item{\code{yield}}{Yield, kg/ha}
+    \item{\code{gen}}{genotype, 18 levels}
+    \item{\code{env}}{environment, 11 levels}
+    \item{\code{yield}}{yield, kg/ha}
   }
 }
 \details{
@@ -22,9 +22,8 @@
 \source{
   R M Pacheco, J B Duarte, R Vencovsky, J B Pinheiro, A B Oliveira,
   (2005). Use of supplementary genotypes in AMMI analysis.
-  http://doi.org/10.1007/s00122-004-1822-6
-  
   \emph{Theor Appl Genet}, 110, 812-818.
+  http://doi.org/10.1007/s00122-004-1822-6
 
   Used with permission of Robert Pacheco.
 }

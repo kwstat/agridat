@@ -15,11 +15,11 @@ Rice split-split plot experiment
 \format{
   A data frame with 135 observations on the following 7 variables.
   \describe{
-    \item{\code{rep}}{Blocking factor, 3 levels}
-    \item{\code{nitro}}{Nitrogen fertilizer, in kilograms/hectare}
-    \item{\code{management}}{Plot management}
-    \item{\code{gen}}{Variety of rice}
-    \item{\code{yield}}{Yield of rice}
+    \item{\code{rep}}{block, 3 levels}
+    \item{\code{nitro}}{nitrogen fertilizer, in kilograms/hectare}
+    \item{\code{management}}{plot management}
+    \item{\code{gen}}{genotype/variety of rice}
+    \item{\code{yield}}{yield}
     \item{\code{col}}{column position in the field}
     \item{\code{row}}{row position in the field}
   }
@@ -53,6 +53,7 @@ if(require(HH)){
 position(dat$nf) <- c(0,50,80,110,140)
 interaction2wt(yield~rep+nf+management+gen, data=dat,
                main="gomez.splitsplit",
+               x.between=0, y.between=0,
                relation=list(x="free", y="same"),
                rot=c(90,0), xlab="",
                par.strip.text.input=list(cex=.7))

@@ -39,17 +39,21 @@
   \emph{Journal of Agric Science}, 23, 6-17.
   https://doi.org/10.1017/S0021859600052862
 }
+
 \references{
   Kenneth J. Berry, Paul W. Mielke, Jr., Janis E. Johnston
   \emph{Permutation Statistical Methods: An Integrated Approach}.
 }
+
 \examples{
+
 data(eden.nonnormal)
 dat <- eden.nonnormal
 mean(dat$height) # 55.23 matches Eden table 1
 
 # Eden figure 2
 if(require(dplyr) & require(lattice)){
+  # Blocks had different means, so substract block mean from each datum
   dat <- group_by(dat, block)
   dat <- mutate(dat, blkmn=mean(height))
   dat <- transform(dat, dev=height-blkmn)
@@ -61,6 +65,8 @@ if(require(dplyr) & require(lattice)){
 
 \dontrun{
 
+  # calculate skewness, permutation 
+  
   library(dplyr)
   library(lattice)
   library(latticeExtra)
@@ -80,20 +86,33 @@ if(require(dplyr) & require(lattice)){
     return(k3)
   }
   # Negative values indicate data are skewed left
-  dat %>% group_by(block) %>%
-    summarize(s1=sum(height),s2=sum(height^2), mean2=var(height), k3=skew(height))
+  dat <- group_by(dat, block)
+  summarize(dat, s1=sum(height),s2=sum(height^2), mean2=var(height), k3=skew(height))
+  ##   block     s1       s2     mean2         k3
+  ##   <int>  <dbl>    <dbl>     <dbl>      <dbl>
+  ## 1     1 1682.0  95929.5 242.56048 -1268.5210
+  ## 2     2 1858.0 111661.5 121.97984 -1751.9919
+  ## 3     3 1809.5 108966.8 214.36064 -3172.5284
+  ## 4     4 1912.0 121748.5 242.14516 -2548.2194
+  ## 5     5 1722.0  99026.5 205.20565  -559.0629
+  ## 6     6 1339.0  63077.0 227.36190  -801.2740
+  ## 7     7 1963.0 123052.5  84.99093  -713.2595
+  ## 8     8 1854.0 112366.0 159.67339 -1061.9919
 
-  # Another way to view skewness with qq plot
+  # Another way to view skewness with qq plot. Panel 3 most skewed.
   qqmath( ~ dev|factor(block), data=dat,
+         as.table=TRUE,
+         ylab="Deviations from block means",
          panel = function(x, ...) {
            panel.qqmathline(x, ...)
            panel.qqmath(x, ...)
          })
 
+  # Now, permutation test.
   # Eden: "By a process of amalgamation the eight sets of 32 observations were
   # reduced to eight sets of four and the data treated as a potential
   # layout for a 32-plot trial".
-  dat2 <- transform(dat, grp = (1:32+7)%/%8)
+  dat2 <- transform(dat, grp = rep(1:4, each=8))
   dat2 <- aggregate(height ~ grp+block, dat2, sum)
   dat2$trt <- rep(letters[1:4], 8)
   dat2$block <- factor(dat2$block)

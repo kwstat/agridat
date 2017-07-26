@@ -47,7 +47,7 @@ var(dat$yield, na.rm=TRUE)
 dat$rrow <- 76 - dat$row
 require("lattice")
 xyplot(yield ~ rrow|col, dat, layout=c(1,3), type='s',
-       main="besag.bayesian")
+       xlab="row", ylab="yield", main="besag.bayesian")
 
 # ----------------------------------------------------------------------------
 

@@ -11,11 +11,11 @@
 \format{
   A data frame with 256 observations on the following 5 variables.
   \describe{
-    \item{\code{year}}{Year, 1990-1994}
-    \item{\code{env}}{Environment/District, 1-7}
-    \item{\code{gen}}{Genotype factor, 1-10}
-    \item{\code{yield}}{Dry-matter silage yield for corn}
-    \item{\code{chu}}{Corn heat units, thousand degrees Celsius}
+    \item{\code{year}}{year, 1990-1994}
+    \item{\code{env}}{environment/district, 1-7}
+    \item{\code{gen}}{genotype, 1-10}
+    \item{\code{yield}}{dry-matter silage yield for corn}
+    \item{\code{chu}}{corn heat units, thousand degrees Celsius}
   }
 }
 \details{
@@ -44,11 +44,12 @@ xyplot(yield ~ chu|gen, dat, type=c('p','smooth'),
        xlab =  "chu = corn heat units",
        main="theobald.covariate - yield vs heat")
 
-# REML estimates (Means) in table 3 of Theobald 2002
-if(require(lme4)){
-dat <- transform(dat, year=factor(year))
-m0 <- lmer(yield ~ -1 + gen + (1|year/env) + (1|gen:year), data=dat)
-round(fixef(m0),2)
+\dontrun{
+  # REML estimates (Means) in table 3 of Theobald 2002
+  require(lme4)
+  dat <- transform(dat, year=factor(year))
+  m0 <- lmer(yield ~ -1 + gen + (1|year/env) + (1|gen:year), data=dat)
+  round(fixef(m0),2)
 }
 
 \dontrun{

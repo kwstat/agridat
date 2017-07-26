@@ -12,9 +12,9 @@
 \format{
   A data frame with 84 observations on the following 3 variables.
   \describe{
-    \item{\code{month}}{Month as a number}
-    \item{\code{depth}}{Depth in soil (feet)}
-    \item{\code{temp}}{Temperature (the units are "du Crest")}
+    \item{\code{month}}{month}
+    \item{\code{depth}}{depth in soil (feet)}
+    \item{\code{temp}}{temperature (the units are "du Crest")}
   }
 }
 \details{
@@ -36,6 +36,7 @@
   the formula for converting the temperature does not make sense and the
   data in Table 1 do not directly match the corresponding figure.
 }
+
 \source{
   Johann Heinrich Lambert (1779), \emph{Pyrometrie}.  Page 358.
   http://books.google.com/books?id=G5I_AAAAcAAJ&pg=PA358

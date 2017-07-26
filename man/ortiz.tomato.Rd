@@ -20,24 +20,24 @@
   The \code{ortiz.tomato.covs} data frame has 18 observations on the following 18 variables.
   \describe{
     \item{\code{env}}{environment}
-    \item{\code{Day}}{Degree days (base 10)}
-    \item{\code{Dha}}{Days to harvest}
-    \item{\code{Driv}}{Drivings (0/1)}
-    \item{\code{ExK}}{Extra potassium (kg / ha)}
-    \item{\code{ExN}}{Extra nitrogen (kg / ha)}
-    \item{\code{ExP}}{Extra phosphorous (kg / ha)}
-    \item{\code{Irr}}{Irrigation (0/1)}
-    \item{\code{K  }}{Potassium (me/100 g)}
-    \item{\code{Lat}}{Latitude}
-    \item{\code{Long}}{Longitude}
-    \item{\code{MeT}}{Mean temperature (C)}
-    \item{\code{MnT}}{Min temperature (C)}
-    \item{\code{MxT}}{Max temperature (C)}
-    \item{\code{OM }}{Organic matter (percent)}
-    \item{\code{P  }}{Phosphorous (ppm)}
-    \item{\code{pH }}{Soil pH}
-    \item{\code{Prec}}{Precipitation (mm)}
-    \item{\code{Tri}}{Trimming (0/1)}
+    \item{\code{Day}}{degree days (base 10)}
+    \item{\code{Dha}}{days to harvest}
+    \item{\code{Driv}}{drivings (0/1)}
+    \item{\code{ExK}}{extra potassium (kg / ha)}
+    \item{\code{ExN}}{extra nitrogen (kg / ha)}
+    \item{\code{ExP}}{extra phosphorous (kg / ha)}
+    \item{\code{Irr}}{irrigation (0/1)}
+    \item{\code{K  }}{potassium (me/100 g)}
+    \item{\code{Lat}}{latitude}
+    \item{\code{Long}}{longitude}
+    \item{\code{MeT}}{mean temperature (C)}
+    \item{\code{MnT}}{min temperature (C)}
+    \item{\code{MxT}}{max temperature (C)}
+    \item{\code{OM }}{organic matter (percent)}
+    \item{\code{P  }}{phosphorous (ppm)}
+    \item{\code{pH }}{soil pH}
+    \item{\code{Prec}}{precipitation (mm)}
+    \item{\code{Tri}}{trimming (0/1)}
   }
   
   The \code{ortiz.tomato.yield} data frame has 270 observations on the following 4 variables.

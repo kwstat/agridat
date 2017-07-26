@@ -26,6 +26,7 @@
   Six cows were started together in block 1, then three cows in block 2
   and three cows in block 3.
 }
+
 \source{
   Lucas, HL. 1956.
   Switchback trials for more than two treatments.

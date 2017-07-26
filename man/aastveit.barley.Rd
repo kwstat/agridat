@@ -147,8 +147,10 @@ if(require(reshape2) & require(pls)){
   gamma[,1] <- -1 * gamma[,1]
   delta[,1] <- -1 * delta[,1]
   # conf limits based on asymptotic normality, Chadoeuf table 8, p. 350, 
-  round(cbind(gamma[,1], gamma[, 1] + (gamma[, 2]) %o% c(-1.96, 1.96)) ,3)  
-  round(cbind(delta[,1], delta[, 1] + (delta[, 2]) %o% c(-1.96, 1.96)) ,3)
+  round(cbind(gamma[,1], gamma[, 1] +
+                           outer(gamma[, 2], c(-1.96, 1.96))) ,3)  
+  round(cbind(delta[,1], delta[, 1] +
+                           outer(delta[, 2], c(-1.96, 1.96))) ,3)
 }
 
 }

@@ -43,11 +43,14 @@
 data("hazell.vegetables")
 dat <- hazell.vegetables
 
-## require(lattice)
-## xyplot(carrot+celery+cucumber+pepper ~ year,dat, type='b', auto.key=list(columns=4),
-##        panel.hline=0)
+if(FALSE & require(lattice)) {
+  xyplot(carrot+celery+cucumber+pepper ~ year,dat,
+         ylab="yearly profit by crop",
+         type='b', auto.key=list(columns=4),
+         panel.hline=0)
+}
 
-# optimal strategy calculated below 
+# optimal strategy for planting crops (calculated below)
 dat2 <- apply(dat[,-1], 1, function(x) x*c(0, 27.5, 100, 72.5))/1000
 colnames(dat2) <- rownames(dat)
 barplot(dat2, legend.text=c("     0 carrot", "27.5 celery", " 100 cucumber", "72.5 pepper"),
@@ -105,8 +108,9 @@ barplot(dat2, legend.text=c("     0 carrot", "27.5 celery", " 100 cucumber", "72
   #set.seed(1)
   mat <- matrix(runif(4*100000), ncol=4)
   mat <- 200*sweep(mat, 1, rowSums(mat), "/")
-  # each row is one strategy, showing profit for each of the six yearx
-  profit <- mat %*% t(dat[,-1]) # Each row is profit for each of the six years
+  # each row is one strategy, showing profit for each of the six years
+  # profit <- mat %*% t(dat[,-1]) # Each row is profit, columns are years
+  profit <- tcrossprod(mat, as.matrix(dat[,-1])) # Each row is profit, columns are years
   # calculate weighted variance using year probabilities
   wtvar <- apply(profit, 1, function(x) cov.wt(as.data.frame(x), wt=probs)$cov)
   # five best planting allocations that minimizes the weighted variance

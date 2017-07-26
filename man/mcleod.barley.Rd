@@ -29,12 +29,14 @@
   Values are the average of 6 blocks.  In 1974 there was a
   severe drought.  The other years had favorable growing conditions.
 }
+
 \source{
   C. C. McLeod (1982).
   Effects of rates of seeding on barley sown for grain.
   \emph{New Zealand Journal of Experimental Agriculture}, 10, 133-136.
   http://doi.org/10.1080/03015521.1982.10427857.
 }
+
 \references{
   Maindonald (1992).
 }

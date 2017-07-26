@@ -11,8 +11,8 @@
 \format{
   A data frame with 432 observations on the following 4 variables.
   \describe{
-    \item{\code{env}}{environment factor}
-    \item{\code{rep}}{replication factor}
+    \item{\code{env}}{environment}
+    \item{\code{rep}}{replication}
     \item{\code{gen}}{genotype factor}
     \item{\code{yield}}{yield, kg/ha}
   }
@@ -23,13 +23,11 @@
   
 }
 \source{
-
   Siraj Osman Omer, Abdel Wahab Hassan Abdalla, Mohammed Hamza Mohammed, Murari Singh (2015).
   Bayesian estimation of genotype-by-environment interaction in sorghum variety trials 
   \emph{Communications in Biometry and Crop Science}, 10 (2), 82-95.
 
   Electronic data provided by Siraj Osman Omer.
-
 }
 
 \references{
@@ -47,8 +45,10 @@ if(require(gge)){
   biplot(m0, main="omer.sorghum")
 }
 
-# REML approach
-if(require(lme4) & require(lucid)) {
+\dontrun{
+  # REML approach
+  require(lme4)
+  require(lucid)
   
   # 1 loc, 2 years. Match Omer table 1.
   m1 <- lmer(yield ~ 1 + env + (1|env:rep) + (1|gen) + (1|gen:env),
@@ -80,10 +80,6 @@ if(require(lme4) & require(lucid)) {
   ##       gen (Intercept) <NA>  1169  34.2 
   ##  Residual        <NA> <NA> 24660 157
   
-}
-
-\dontrun{
-  # JAGS version
 }
 
 }

@@ -57,7 +57,8 @@ if(require(lattice) & require(reshape2)){
 # ----------------------------------------------------------------------------
 
 \dontrun{
-  if(require(plotrix) & require(reshape2)){  
+  require(plotrix)
+  require(reshape2)
   ## Each tree is one line
   dat2 <- acast(dat, tree ~ dir, value.var='y')
   radial.plot(dat2, start=pi/2, rp.type='p', clockwise=TRUE,
@@ -66,7 +67,6 @@ if(require(lattice) & require(reshape2)){
               line.col=rep(c("royalblue","red","#009900","dark orange",
                              "#999999","#a6761d","deep pink"),
                            length=nrow(dat2)))
-  }
 }
 
 # ----------------------------------------------------------------------------

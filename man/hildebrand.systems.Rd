@@ -11,10 +11,10 @@
 \format{
   A data frame with 56 observations on the following 4 variables.
   \describe{
-    \item{\code{village}}{Village factor, 2 levels}
-    \item{\code{farm}}{Farm factor, 14 levels}
-    \item{\code{system}}{Cropping system factor, levels \code{LM} \code{LMF} \code{CCA} \code{CCAF}}
-    \item{\code{yield}}{Yield, t/ha}
+    \item{\code{village}}{village, 2 levels}
+    \item{\code{farm}}{farm, 14 levels}
+    \item{\code{system}}{cropping system}
+    \item{\code{yield}}{yield, t/ha}
   }
 }
 \details{

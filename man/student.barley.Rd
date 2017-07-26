@@ -12,13 +12,13 @@
 \format{
   A data frame with 102 observations on the following 7 variables.
   \describe{
-    \item{\code{year}}{Year (numeric), 1901-1906}
-    \item{\code{farmer}}{Factor of the farmer name}
-    \item{\code{place}}{Factor of the nearest town}
-    \item{\code{district}}{Factor of the geographical area}
-    \item{\code{gen}}{Genotype factor, \code{Archer} and \code{Goldthorpe}}
-    \item{\code{yield}}{Yield of the plot in 'stones' per acre (1 stone = 14 pounds)}
-    \item{\code{income}}{Income per acre in shillings, based on yield and quality}
+    \item{\code{year}}{year, 1901-1906}
+    \item{\code{farmer}}{farmer name}
+    \item{\code{place}}{place (nearest town)}
+    \item{\code{district}}{district, geographical area}
+    \item{\code{gen}}{genotype, \code{Archer} and \code{Goldthorpe}}
+    \item{\code{yield}}{yield, 'stones' per acre (1 stone = 14 pounds)}
+    \item{\code{income}}{income per acre in shillings, based on yield and quality}
   }
 }
 \details{
@@ -45,12 +45,14 @@
   be reproduced exactly, perhaps due to rounding or the conversion
   factor that was used.
 }
+
 \source{
   Student. 1923.
   On Testing Varieties of Cereals.
   \emph{Biometrika}, 15, 271--293.
   http://doi.org/10.1093/biomet/15.3-4.271
 }
+
 \references{
   R A Kempton and P N Fox, 1997.
   \emph{Statistical Methods for Plant Variety Evaluation}.
@@ -95,11 +97,12 @@ cor(d2$Archer,d2$Goldthorpe)
 }
 
 
-# Kempton Table 9.6b
-if(require(lme4)){
-m2 <- lmer(yield~1 + (1|loc) + (1|year) +
-            (1|loc:year) + (1|gen:loc) + (1|gen:year), data=dat,
-          control=lmerControl(check.nobs.vs.rankZ="ignore"))
+\dontrun{
+  # Kempton Table 9.6b
+  require(lme4)
+  m2 <- lmer(yield~1 + (1|loc) + (1|year) +
+               (1|loc:year) + (1|gen:loc) + (1|gen:year), data=dat,
+             control=lmerControl(check.nobs.vs.rankZ="ignore"))
 }
 
 }

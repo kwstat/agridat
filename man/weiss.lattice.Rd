@@ -30,6 +30,7 @@ On the other hand, the analysis by Weiss uses 24 degrees of freedom
 4*(7-1) to fit a separate effect for each column in each
 rep (instead of across reps).
 }
+
 \source{
  Weiss, Martin G. and Cox, Gertrude M. (1939).
  Balanced Incomplete Block and Lattice Square Designs for Testing Yield

@@ -32,8 +32,8 @@
   Results for Famoye are not shown.
 
 }
-\source{
-  
+
+\source{  
   G A Wheatley & H Freeman. (1982).
   A method of using the proportions of undamaged carrots or parsnips to
   estimate the relative population densities of carrot fly (Psila rosae)
@@ -42,6 +42,7 @@
   
   http://doi.org/10.1111/j.1744-7348.1982.tb01935.x
 }
+
 \references{
 
   James William Hardin, Joseph M. Hilbe.

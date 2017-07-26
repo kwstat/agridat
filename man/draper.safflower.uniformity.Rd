@@ -76,18 +76,23 @@ if(require(desplot)){
   desplot(yield~col*row, dat4,
           flip=TRUE, tick=TRUE, aspect=72/53, # true aspect
           main="draper.safflower.uniformity (four foot)")
+}
+
+if(require(desplot)){
   desplot(yield~col*row, dat5,
           flip=TRUE, tick=TRUE, aspect=90/46, # true aspect
           main="draper.safflower.uniformity (five foot)")
 }
 
-if(require(agricolae) & require(reshape2)){
+\dontrun{
+  require(agricolae)
+  require(reshape2)
   # Remove border plots at either end and right side
   dat4 <- subset(dat4, row>1 & row<20)
   dat4 <- subset(dat4, col<17)
   dat5 <- subset(dat5, row>1 & row<20)
   dat5 <- subset(dat5, col<15)
-
+  
   s4 <- index.smith(acast(dat4, row~col, value.var='yield'),
                     main="draper.safflower.uniformity (four foot)",
                     col="red")$uni
@@ -97,7 +102,7 @@ if(require(agricolae) & require(reshape2)){
   ##                   main="draper.safflower.uniformity (five foot)",
   ##                   col="red")$uni
   ## s5 # match Draper table 1, p 21
-
+  
 }
 
 }

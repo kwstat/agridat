@@ -36,18 +36,21 @@
   Field length: 18 plots * 5 ft/plot = 90 feet
 
 }
+
 \source{
   Ib Libner Nonnecke. 1958.
   Yield variability of sweet corn and canning peas as affected by plot size and shape.
   Thesis at Oregon State College.
   http://hdl.handle.net/1957/23367
 }
+
 \references{
   I. L. Nonnecke, 1960.
   The precision of field experiments with vegetable crops as influenced by plot and block size and shape: II. Canning peas.
   Canadian Journal of Plant Science, 40(2): 396-404.
   http://doi.org/10.4141/cjps60-053
 }
+
 \examples{
 data(nonnecke.peas.uniformity)
 dat <- nonnecke.peas.uniformity
@@ -56,13 +59,13 @@ if(require(desplot)){
   desplot(vines~col*row|block, data=dat,
           tick=TRUE, flip=TRUE, aspect=248/90, # true aspect
           main="nonnecke.peas.uniformity - vines")
-
-desplot(peas~col*row|block, data=dat,
-        tick=TRUE, flip=TRUE, aspect=248/90, # true aspect
-        main="nonnecke.peas.uniformity - peas")
+  desplot(peas~col*row|block, data=dat,
+          tick=TRUE, flip=TRUE, aspect=248/90, # true aspect
+          main="nonnecke.peas.uniformity - peas")
 }
 
 \dontrun{
+  require(lattice)
   xyplot(peas~vines|block,dat,
          xlab="vine weight", ylab="shelled pea weight",
          main="nonnecke.peas.uniformity")

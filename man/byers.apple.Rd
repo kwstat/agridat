@@ -45,9 +45,11 @@ xyplot(diameter ~ time | factor(appleid), data=dat, type=c('p','l'),
        strip=strip.custom(par.strip.text=list(cex=.7)),
        main="byers.apple")
 
-# Overall fixed linear trend, plus random intercept/slope deviations
-# for each apple.  Observations within each apple are correlated.
-if(require(nlme) & require(lucid)){
+\dontrun{
+  # Overall fixed linear trend, plus random intercept/slope deviations
+  # for each apple.  Observations within each apple are correlated.
+  require(nlme)
+  require(lucid)
   m1 <- lme(diameter ~ 1 + time, data=dat,
             random = ~ time|appleid, method='ML',
             cor = corAR1(0, form=~ time|appleid),
@@ -57,7 +59,6 @@ if(require(nlme) & require(lucid)){
   ##  (Intercept) 0.007354   0.08575    NA
   ##         time 0.00003632 0.006027 0.83
   ##     Residual 0.0004555  0.02134    NA
-
 }
 
 }

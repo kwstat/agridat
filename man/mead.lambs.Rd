@@ -22,6 +22,7 @@
   The classes are number of live lambs per birth for 0, 1, 2, 3+ lambs.
   
 }
+
 \source{
   Roger Mead, Robert N Curnow, Anne M Hasted. 2002.
   Statistical Methods in Agriculture and Experimental Biology, 3rd ed.
@@ -29,12 +30,12 @@
 }
 
 \references{
-  None.
+  None
 }
 
 \examples{
 
-data("mead.lambs")
+data(mead.lambs)
 dat <- mead.lambs
 
 # farm 1 has more ewes in lambclass 3
@@ -45,7 +46,19 @@ mosaicplot(d2, color=c("lemonchiffon1","moccasin","lightsalmon1","indianred"),
 names(dat) <- c('F','B','L','y') # for compactness
 # Match totals in Mead example 14.6
 if(require(dplyr)){
-  dat %>% group_by(F,B) %>% summarize(y=sum(y))
+  dat <- group_by(dat, F,B)
+  summarize(dat, y=sum(y))
+  ##          F      B     y
+  ##   <fctr> <fctr> <int>
+  ## 1     F1      A   150
+  ## 2     F1      B    46
+  ## 3     F1      C    78
+  ## 4     F2      A    72
+  ## 5     F2      B    79
+  ## 6     F2      C    28
+  ## 7     F3      A   224
+  ## 8     F3      B   129
+  ## 9     F3      C    34
 }
 
 # Models

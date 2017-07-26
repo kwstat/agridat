@@ -22,11 +22,13 @@
   Dec 1992 to Mar 1994.  Yields reported are the total dry matter across
   all cuttings.
 }
+
 \source{
   Sinclair AG, Risk WH, Smith LC, Morrison JD & Dodds KG (1994)
   Sulphur and phosphorus in balanced pasture nutrition.
   \emph{Proc N Z Grass Assoc}, 56, 13-16.
 }
+
 \references{
   Dodds, KG and Sinclair, AG and Morrison, JD. (1995).
   A bivariate response surface for growth data.
@@ -92,7 +94,8 @@ axes3d()
 title3d("sinclair.clover - yield","", xlab="Phosphorous/10",
         ylab="Sulfur/10", zlab="", line=3, cex=1.5)
 view3d(userMatrix=matrix(c(.7,.2,-.7,0, -.7,.2,-.6,0, 0,.9,.3,0, 0,0,0,1),ncol=4))
-# snapshot3d(file, "png")
+  # snapshot3d(file, "png")
+  rgl.close()
 }
 
 }

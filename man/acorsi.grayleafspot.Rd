@@ -1,4 +1,3 @@
-
 \name{acorsi.grayleafspot}
 \alias{acorsi.grayleafspot}
 \docType{data}

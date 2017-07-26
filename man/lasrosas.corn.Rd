@@ -62,15 +62,15 @@
   position was NOT significant in 2001.
 
 }
-\source{
 
+\source{
   The Las Rosas data files were obtained from
   https://geodacenter.asu.edu/sdata
   and converted from ESRI shape files to a flat data.frame.
 
   Used with permission of the ASU GeoDa Center.
-
 }
+
 \references{
 
   Bongiovanni and Lowenberg-DeBoer (2000).

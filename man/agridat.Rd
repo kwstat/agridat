@@ -32,6 +32,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{batchelor.navel2.uniformity}        \tab 15 x 33 \tab xy \tab \cr
 \link{batchelor.valencia.uniformity}      \tab 12 x 20 \tab xy \tab \cr
 \link{batchelor.walnut.uniformity}        \tab 10 x 28 \tab xy \tab \cr
+\link{bradley.multi.uniformity}           \tab 10 x 11 \tab xy \tab \cr
 \link{christidis.wheat.uniformity}        \tab 12 x 24 \tab xy \tab \cr
 \link{draper.safflower.uniformity}        \tab 18 x 16 \tab xy, 2 expt \tab smith\cr
 \link{garber.multi.uniformity}            \tab 45 x 6 \tab xy, 2 years/crops \tab \cr
@@ -41,11 +42,13 @@ name                                      \tab dimensions \tab other \tab model 
 \link{holtsmark.timothy.uniformity}       \tab 6 x 40 \tab xy \tab \cr
 \link{immer.sugarbeet.uniformity}         \tab 10 x 60 \tab xy, 3 traits \tab \cr
 \link{iyer.wheat.uniformity}              \tab 25 x 80 \tab xy \tab \cr
+\link{kadam.millet.uniformity}            \tab 8 x 20 \tab xy, 2 expts \tab \cr
 \link{kalamkar.potato.uniformity}         \tab 6 x 96 \tab xy \tab \cr
 \link{kalamkar.wheat.uniformity}          \tab 16 x 80 \tab xy, 2 traits \tab \cr
+\link{kempton.barley.uniformity}          \tab 7 x 28 \tab xy \tab \cr
 \link{khin.rice.uniformity}               \tab 30 x 36 \tab xy \tab \cr
 \link{kiesselbach.oats.uniformity}        \tab 3 x 69 \tab xy \tab \cr
-\link{kempton.barley.uniformity}          \tab 7 x 28 \tab xy \tab \cr
+\link{kristensen.barley.uniformity}       \tab 22 x 11 \tab xy \tab \cr
 \link{lessman.sorghum.uniformity}         \tab 46 x 60 \tab xy \tab \cr
 \link{li.millet.uniformity}               \tab 6 x 100 \tab xy \tab \cr
 \link{love.cotton.uniformity}             \tab 16 x 10 \tab xy \tab \cr
@@ -109,6 +112,7 @@ name                             \tab gen  \tab years \tab trt \tab other \tab m
 \link{lucas.switchback}          \tab 12   \tab    \tab 3      \tab \tab aov \cr
 \link{mead.lambs}                \tab 3    \tab    \tab 3      \tab \tab glm \cr
 \link{patterson.switchback}      \tab 12   \tab    \tab 4      \tab \tab aov \cr
+\link{urquhart.feedlot}          \tab 11   \tab    \tab 3      \tab  \tab lm \cr
 \link{zuidhof.broiler}           \tab      \tab    \tab        \tab ts \tab \cr
 }
 

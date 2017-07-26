@@ -24,11 +24,13 @@
   Yates (1933) presents an iterative algorithm to estimate missing
   values in a matrix, using this data as an example.
 }
+
 \source{
   F. Yates, 1933.
   The analysis of replicated experiments when the field results are incomplete. 
   \emph{Emp. J. Exp. Agric.}, 1, 129--142.
 }
+
 \references{
   Steel & Torrie, 1980, Principles and Procedures of Statistics,
   2nd Edition, page 212.
@@ -61,7 +63,8 @@ mat1 <- acast(dat[, c('trt','block','pred')], trt~block,
 # Another method to estimate missing values via PCA
 require("pcaMethods") # From Bioconductor, not CRAN
 m2 <- pca(mat0, method="nipals", center=FALSE, nPcs=3)
-mat2 <- m2@scores %*% t(m2@loadings)
+# mat2 <- m2@scores %*% t(m2@loadings)
+mat2 <- tcrossprod(m2@scores, m2@loadings)
 
 # Compare
 ord <- c("0","N","K","P","NK","NP","KP","NKP")

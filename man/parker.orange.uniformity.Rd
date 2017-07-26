@@ -57,13 +57,12 @@
 
 }
 \source{
-
   E. R. Parker & L. D. Batchelor. (1932).
   Variation in the Yields of Fruit Trees in Relation to the Planning of Future Experiments.
   \emph{Hilgardia}, 7(2), 81-161. Tables 3-9.
   http://doi.org/10.3733/hilg.v07n02p081
-
 }
+
 \references{
   Batchelor, L. D. (Leon Dexter), b. 1884; Parker, E. R. (Edwin Robert), 1896-1952; McBride, Robert, d. 1927. (1928)
   Studies preliminary to the establishment of a series of fertilizer trials in a bearing citrus grove. Vol B451. Berkeley, Cal. : Agricultural Experiment Station

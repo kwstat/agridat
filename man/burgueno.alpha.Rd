@@ -51,25 +51,26 @@ if(require(desplot)){
 }
 
 
-if(require(lme4) && require(lucid)){
+\dontrun{
+  require(lme4)
+  require(lucid)
   # Inc block model
   m0 <- lmer(yield ~ gen + (1|rep/block), data=dat)
   vc(m0) # Matches Burgueno p. 26
   ##        grp        var1 var2   vcov sdcor
   ##  block:rep (Intercept) <NA>  86900 294.8
   ##        rep (Intercept) <NA> 200900 448.2
-  ##   Residual        <NA> <NA> 133200 365
-  
+  ##   Residual        <NA> <NA> 133200 365  
 }
-
-dat <- transform(dat, xf=factor(col), yf=factor(row))
-dat <- dat[order(dat$xf, dat$yf),]                 
 
 # ----------------------------------------------------------------------------
 
 \dontrun{
   # asreml3
   require(asreml)
+
+  dat <- transform(dat, xf=factor(col), yf=factor(row))
+  dat <- dat[order(dat$xf, dat$yf),]                 
 
   # Sequence of models on page 36
   
@@ -137,6 +138,9 @@ dat <- dat[order(dat$xf, dat$yf),]
 
 \dontrun{
   ## require(asreml4)
+
+  ## dat <- transform(dat, xf=factor(col), yf=factor(row))
+  ## dat <- dat[order(dat$xf, dat$yf),]                 
 
   ## # Sequence of models on page 36
   

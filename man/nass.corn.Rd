@@ -28,10 +28,10 @@
 }
 \format{
   \describe{
-    \item{\code{year}}{Year, numeric}
-    \item{\code{state}}{State factor}
-    \item{\code{acres}}{Acres harvested}
-    \item{\code{yield}}{Average yield}
+    \item{\code{year}}{year}
+    \item{\code{state}}{state factor}
+    \item{\code{acres}}{acres harvested}
+    \item{\code{yield}}{average yield}
   }
 }
 \details{
@@ -43,6 +43,7 @@
   Each crop is in a separate dataset: nass.barley, nass.corn, nass.cotton,
   nass.hay, nass.sorghum, nass.wheat, nass.rice, nass.soybean.
 }
+
 \source{
   United States Department of Agriculture,
   National Agricultural Statistics Service.

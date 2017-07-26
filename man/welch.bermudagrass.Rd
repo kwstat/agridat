@@ -23,6 +23,7 @@
   years and 3 replications.  In most cases, the yield increased with
   additions of the fertilizer nutrients.
 }
+
 \source{
   Welch, Louis Frederick and Adams, William Eugenius and Carmon,
   JL. 1963. Yield response surfaces, isoquants, and economic fertilizer

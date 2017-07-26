@@ -50,8 +50,10 @@ if(require(desplot)){
           main="burgueno.rowcol")
 }
 
-if(require(lme4) && require(lucid)){
-
+\dontrun{
+  require(lme4)
+  require(lucid)
+  
   # Random rep, row and col within rep
   m1 <- lmer(yield ~ gen + (1|rep) + (1|rep:row) + (1|rep:col), data=dat)
   vc(m1) # Match components of Burgueno p. 40
@@ -59,8 +61,7 @@ if(require(lme4) && require(lucid)){
   ##  rep:col (Intercept) <NA> 0.2189 0.4679
   ##  rep:row (Intercept) <NA> 0.1646 0.4057
   ##      rep (Intercept) <NA> 0.1916 0.4378
-  ## Residual        <NA> <NA> 0.1796 0.4238
-  
+  ## Residual        <NA> <NA> 0.1796 0.4238  
 }
 
 # ----------------------------------------------------------------------------

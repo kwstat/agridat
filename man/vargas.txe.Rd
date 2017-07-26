@@ -22,7 +22,7 @@ data("vargas.txe.yield")
   The 'vargas.txe.covs' data has 10 years of measurements on 28
   environmental covariates:
   \describe{
-    \item{\code{year}}{Year}
+    \item{\code{year}}{year}
     \item{\code{MTD}}{mean maximum temperature in December}
     \item{\code{MTJ}}{mean maximum temperature in January}
     \item{\code{MTF}}{mean maximum temperature in February}

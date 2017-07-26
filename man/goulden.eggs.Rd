@@ -28,7 +28,6 @@
 \source{
   Cyrus H. Goulden (1952).
   \emph{Methods of Statistical Analysis}, 2nd ed. Page 425.
-
   http://krishikosh.egranth.ac.in/handle/1/2034118
 }
 \references{

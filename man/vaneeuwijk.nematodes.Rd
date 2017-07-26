@@ -29,6 +29,7 @@
   model.
   
 }
+
 \source{
   Fred A. van Eeuwijk, (1995).
   Multiplicative Interaction in Generalized Linear Models.
@@ -99,9 +100,9 @@ par(op)
   par(op)
     
   # extract interaction-term coefficients, make a biplot
-  pops <- pickCoef(m2, "[.]pop")
-  gens <- pickCoef(m2, "[.]gen")
-  coefs <- coef(m2)
+  pops <- pickCoef(gnm2, "[.]pop")
+  gens <- pickCoef(gnm2, "[.]gen")
+  coefs <- coef(gnm2)
   A <- matrix(coefs[pops], nc = 2)
   B <- matrix(coefs[gens], nc = 2)
   A2=scale(A)

@@ -69,16 +69,17 @@ dat <- darwin.maize
 require(lattice)
 bwplot(height~type, dat, main="darwin.maize")
 
-if(require(reshape2)){
-dm <- melt(dat)
-d2 <- dcast(dm, pot+pair~type)
-d2$diff <- d2$cross-d2$self
-t.test(d2$diff)
-## 	One Sample t-test
-## t = 2.148, df = 14, p-value = 0.0497
-## alternative hypothesis: true mean is not equal to 0
-## 95 percent confidence interval:
-##  0.003899165 5.229434169
+\dontrun{
+  require(reshape2)
+  dm <- melt(dat)
+  d2 <- dcast(dm, pot+pair~type)
+  d2$diff <- d2$cross-d2$self
+  t.test(d2$diff)
+  ## 	One Sample t-test
+  ## t = 2.148, df = 14, p-value = 0.0497
+  ## alternative hypothesis: true mean is not equal to 0
+  ## 95 percent confidence interval:
+  ##  0.003899165 5.229434169
 }
 
 

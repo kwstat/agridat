@@ -41,25 +41,25 @@ data("vargas.wheat1.traits")
 
   The \code{vargas.wheat1.traits} dataframe has 126 observations on the following 19 variables.
   \describe{
-    \item{\code{year}}{Year, 1990-1995}
-    \item{\code{rep}}{Replicate factor, 3 levels}
-    \item{\code{gen}}{Genotype factor, 7 levels}
-    \item{\code{yield}}{Yield, kg/ha}
-    \item{\code{ANT}}{Anthesis, days after emergence}
-    \item{\code{MAT}}{Maturity, days after emergence}
-    \item{\code{GFI}}{Grainfill, MAT-ANT}
-    \item{\code{PLH}}{Plant height, cm}
-    \item{\code{BIO}}{Biomass above ground, kg/ha}
-    \item{\code{HID}}{Harvest index}
-    \item{\code{STW}}{Straw yield, kg/ha}
-    \item{\code{NSM}}{Spikes / m^2}
-    \item{\code{NGM}}{Grains / m^2}
-    \item{\code{NGS}}{Grains per spike}
-    \item{\code{TKW}}{Thousand kernel weight, g}
-    \item{\code{WTI}}{Weight per tiller, g}
-    \item{\code{SGW}}{Spike grain weight, g}
-    \item{\code{VGR}}{Vegetative growth rate, kg/ha/day, STW/ANT}
-    \item{\code{KGR}}{Kernel growth rate, mg/kernel/day}
+    \item{\code{year}}{year, 1990-1995}
+    \item{\code{rep}}{replicate, 3 levels}
+    \item{\code{gen}}{genotype, 7 levels}
+    \item{\code{yield}}{yield, kg/ha}
+    \item{\code{ANT}}{anthesis, days after emergence}
+    \item{\code{MAT}}{maturity, days after emergence}
+    \item{\code{GFI}}{grainfill, MAT-ANT}
+    \item{\code{PLH}}{plant height, cm}
+    \item{\code{BIO}}{biomass above ground, kg/ha}
+    \item{\code{HID}}{harvest index}
+    \item{\code{STW}}{straw yield, kg/ha}
+    \item{\code{NSM}}{spikes / m^2}
+    \item{\code{NGM}}{grains / m^2}
+    \item{\code{NGS}}{grains per spike}
+    \item{\code{TKW}}{thousand kernel weight, g}
+    \item{\code{WTI}}{weight per tiller, g}
+    \item{\code{SGW}}{spike grain weight, g}
+    \item{\code{VGR}}{vegetative growth rate, kg/ha/day, STW/ANT}
+    \item{\code{KGR}}{kernel growth rate, mg/kernel/day}
 
   }
 
@@ -72,7 +72,6 @@ data("vargas.wheat1.traits")
 }
 
 \source{
-
   Mateo Vargas and Jose Crossa and Ken Sayre and Matthew Renolds and
   Martha E Ramirez and Mike Talbot, 1998.
   Interpreting Genotype x Environment Interaction in Wheat by
@@ -80,7 +79,6 @@ data("vargas.wheat1.traits")
   http://doi.org/10.2135/cropsci1998.0011183X003800030010x
   
   Data provided by Jose Crossa.
-  
 }
 
 \examples{

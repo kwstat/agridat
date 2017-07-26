@@ -85,7 +85,7 @@ coef(m21) # These match Gumpertz et al table 4, model 1
 ## (Intercept)       water        leaf
 ##  -9.1019623   0.7059993   0.4603931
 dat2$res21 <- resid(m21)
-if(require(desplot)){
+if(FALSE & require(desplot)){
   desplot(res21 ~ row*quadrat, data=dat2,
           main="gumpertz.pepper field 2, model 1 residuals")
   # Still shows obvious trends.  Gumpertz et al add spatial covariates for

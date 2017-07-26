@@ -27,6 +27,7 @@
 
   The first and last plot are not assigned to a block.
 }
+
 \source{
   Norman Draper and Irwin Guttman (1980).
   Incorporating Overlap Effects from Neighboring Units into Response
@@ -34,6 +35,7 @@
   \emph{Appl Statist}, 29, 128--134.
   http://doi.org/10.2307/2986297
 }
+
 \references{
   Maria Durban, Christine Hackett, Iain Currie.
   Blocks, Trend and Interference in Field Trials.

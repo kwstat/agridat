@@ -1,7 +1,7 @@
 
-Need to release desplot before agridat?  I think I took care of this.
 Release before mixed models paper?
-Fix vignette after gge update
+
+Note: R_MAX_NUM_DLLS=150
 
 ## To do?
 
@@ -13,34 +13,29 @@ Fix vignette after gge update
 * JAGS code for theobald.barley
 * JAGS code for besag.elbatan
 
-## asreml4 todo
-hanks.sprinkler
-harris.wateruse
-* john.alpha onward
-
 # agridat 1.13 - unpublished
 
-## New data for uniformity trials
+## New datasets for uniformity trials
 
-christidis.wheat.uniformity, draper.safflower.uniformity,
-holtsmark.timothy.uniformity, iyer.wheat.uniformity,
-kalamkar.wheat.uniformity, khin.rice.uniformity, kiesselbach.oats.uniformity,
-lessman.sorghum.uniformity, love.cotton.uniformity, masood.rice.uniformity,
-mcclelland.corn.uniformity, montgomery.wheat.uniformity,
-moore.polebean.uniformity, moore.bushbean.uniformity,
-moore.sweetcorn.uniformity, moore.carrots.uniformity,
-moore.springcauliflower.uniformity, moore.fallcauliflower.uniformity,
-nonnecke.corn.uniformity, nonnecke.peas.uniformity, parker.orange.uniformity,
+bradley.multi.uniformity, christidis.wheat.uniformity,
+draper.safflower.uniformity, holtsmark.timothy.uniformity,
+iyer.wheat.uniformity, kadam.millet.uniformity, kalamkar.wheat.uniformity,
+khin.rice.uniformity, kiesselbach.oats.uniformity,
+kristensen.barley.uniformity, lessman.sorghum.uniformity,
+love.cotton.uniformity, masood.rice.uniformity, mcclelland.corn.uniformity,
+montgomery.wheat.uniformity, moore.polebean.uniformity,
+moore.bushbean.uniformity, moore.sweetcorn.uniformity,
+moore.carrots.uniformity, moore.springcauliflower.uniformity,
+moore.fallcauliflower.uniformity, nonnecke.corn.uniformity,
+nonnecke.peas.uniformity, parker.orange.uniformity,
 polson.safflower.uniformity, sawyer.multi.uniformity, smith.beans.uniformity,
 stickler.sorghum.uniformity, wiedemann.safflower.uniformity
 
-## New data for stability
+## New datasets for stability
 
-fisher.barley, tai.potato
+fisher.barley, lu.stability, tai.potato
 
-## Other data
-
-lu.stability
+## New datasets
 
 acorsi.grayleafspot, becker.chicken, chinloy.fractionalfactorial,
 cramer.cucumber, crampton.pig, battese.survey, christidis.competition,
@@ -50,7 +45,7 @@ gomez.wetdry, goulden.eggs, goulden.splitsplit, gregory.cotton,
 hanover.whitepine, harvey.lsmeans, huehn.wheat, kenward.cattle,
 kreusler.maize, lillemo.wheat, lin.superiority, lin.unbalanced,
 little.splitblock, mead.lambs, omer.sorghum, onofri.winterwheat,
-vaneeuwijk.fusarium, vaneeuwijk.nematodes, vaneeuwijk.drymatter,
+urquhart.feedlot, vaneeuwijk.fusarium, vaneeuwijk.nematodes, vaneeuwijk.drymatter,
 wheatley.carrot
 
 ## Other notes
@@ -84,6 +79,8 @@ Changed all hyperlinks to plain text (faster checking, avoids re-direct errors).
 The `nass.*` files now have state names with correct spaces.
 
 Added package logo on github.
+
+Replaced use of `gam` package in examples, in favor of `mgcv` package.
 
 # agridat 1.12 - Jun 2015
 

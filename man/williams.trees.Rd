@@ -24,6 +24,7 @@
   column in the data is actually \emph{seedlot}, as some tree species
   have multiple seed lots.  The trees are mostly acacia and eucalyptus.
 }
+
 \source{
   Williams, ER and Luangviriyasaeng, V. 1989.
   Statistical analysis of tree species trial and seedlot:site
@@ -34,6 +35,7 @@
 
   Used with permission of Emlyn Williams.
 }
+
 \references{
   E. R. Williams and A. C. Matheson and C. E Harwood,
   \emph{Experimental Design and Analysis for Tree Improvement},

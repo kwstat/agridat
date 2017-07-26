@@ -69,6 +69,7 @@ levelplot(fit1 ~ sg1$easting * sg1$northing,
                  seq(.150, 3.645, by = .02),
                  fit1/100, alpha=0.9, col=rep("wheat", length(fit1)),
                  front="fill", back="fill")
+  rgl.close()
 }
 }
 \keyword{datasets}

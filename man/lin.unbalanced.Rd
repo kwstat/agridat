@@ -23,6 +23,7 @@
   The named cultivars Bruce, Conquest, Laurier, Leger are checks, while
   the other cultivars were tests.
 }
+
 \source{
   C. S. Lin, M. R. Binns (1988).
   A Method for Assessing Regional Trial Data When The Test Cultivars Are
@@ -30,6 +31,7 @@
   \emph{Canadian Journal of Plant Science}, 68(4): 1103-1110.
   http://doi.org/10.4141/cjps88-130
 }
+
 \references{
   None
 }

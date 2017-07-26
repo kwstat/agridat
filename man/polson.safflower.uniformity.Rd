@@ -30,12 +30,14 @@
 
   Field length: 33 sections * 5ft + 2 borders * 12 ft = 189 ft
 }
+
 \source{
   David Polson. 1964.
   Estimation of Optimum Size, Shape, and Replicate
   Number of Safflower Plots for Yield Trials. Table 6.
   http://digitalcommons.usu.edu/etd/2979
 }
+
 \references{
   None.
 }

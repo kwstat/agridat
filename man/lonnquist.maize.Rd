@@ -23,16 +23,15 @@
   for block effects.
 
 }
+
 \source{
-  
   J. H. Lonnquist, C. O. Gardner. (1961)
   Heterosis in Intervarietal Crosses in Maize and Its Implication in
   Breeding Procedures.
   \emph{Crop Science}, 1, 179-183.  Table 1.
-
 }
-\references{
 
+\references{
   Mohring, Melchinger, Piepho. (2011).
   REML-Based Diallel Analysis.
   \emph{Crop Science}, 51, 470-478.
@@ -42,7 +41,6 @@
   Analysis and Interpretation of the Variety Cross Diallel and Related
   Populations. \emph{Biometrics}, 22, 439-452.
   http://doi.org/10.2307/2528181
-
 }
 
 \examples{
@@ -74,8 +72,8 @@ if(require(reshape2)){
 \dontrun{
   # Mohring 2011 used 6 varieties to calculate GCA & SCA
   # Matches Table 3, column 2
-  d2 <- subset(dat, p1 %in% c("M","H","G","B","K","K2") &
-                      p2 %in% c("M","H","G","B","K","K2"))
+  d2 <- subset(dat, is.element(p1, c("M","H","G","B","K","K2")) &
+                      is.element(p2, c("M","H","G","B","K","K2")))
   d2 <- droplevels(d2)
   # asreml4
   require(asreml)

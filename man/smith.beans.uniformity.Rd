@@ -48,15 +48,15 @@
   Field height: 15 plots * 30 ft = 450 ft
 
 }
-\source{
 
+\source{
   Francis L. Smith, 1958.
   Effects of plot size, plot shape, and number of replications on the
   efficacy of bean yield trials.
   \emph{Hilgardia}, 28, 43-63.
-  http://doi.org/10.3733/hilg.v28n02p043
-  
+  http://doi.org/10.3733/hilg.v28n02p043  
 }
+
 \references{
   None.
 }
@@ -77,17 +77,23 @@ cv(dat4$yield)
 
 if(require("desplot")){
   desplot(yield ~ col*row, dat1, 
-    aspect=180/45, flip=TRUE, # true aspect
-    main="smith.beans.uniformity, expt 1 (true aspect)")
+          aspect=180/45, flip=TRUE, # true aspect
+          main="smith.beans.uniformity, expt 1 (true aspect)")
+}
+if(require("desplot")){
   desplot(yield ~ col*row, dat2, 
-    aspect=180/45, flip=TRUE, # true aspect
-    main="smith.beans.uniformity, expt 2 (true aspect)")
+          aspect=180/45, flip=TRUE, # true aspect
+          main="smith.beans.uniformity, expt 2 (true aspect)")
+}
+if(require("desplot")){
   desplot(yield ~ col*row, dat3, 
-    aspect=450/80, flip=TRUE, # true aspect
-    main="smith.beans.uniformity, expt 3 (true aspect)")
+          aspect=450/80, flip=TRUE, # true aspect
+          main="smith.beans.uniformity, expt 3 (true aspect)")
+}
+if(require("desplot")){
   desplot(yield ~ col*row, dat4, 
-    aspect=450/80, flip=TRUE, # true aspect
-    main="smith.beans.uniformity expt 4, (true aspect)")
+          aspect=450/80, flip=TRUE, # true aspect
+          main="smith.beans.uniformity expt 4, (true aspect)")
 }
 
 }

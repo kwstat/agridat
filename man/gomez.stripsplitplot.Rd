@@ -56,7 +56,9 @@ summary(m1)
 # an artifact that blocking will remove, or may need to be modeled.
 # Note the outside values in the high-nitro boxplot.
 require("HH")
-interaction2wt(yield ~ nitro + gen + planting + row, dat, x.relation="free")
+  interaction2wt(yield ~ nitro + gen + planting + row, dat,
+                 x.between=0, y.between=0,
+                 x.relation="free")
 }
 }
 

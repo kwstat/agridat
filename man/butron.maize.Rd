@@ -73,29 +73,29 @@ if(require(reshape2)){
 
 # ----------------------------------------------------------------------------
 
-# Here we see if including pedigree information is helpful for a multi-environment model
-# Including the pedigree provided little benefit
-
-# Create the pedigree
-ped <- dat[, c('gen','male','female')]
-ped <- ped[!duplicated(ped),] # remove duplicates
-unip <- unique(c(ped$male, ped$female)) # Unique parents
-unip <- unip[!is.na(unip)]
-# We have to define parents at the TOP of the pedigree
-ped <- rbind(data.frame(gen=c("Dent","Flint"), # genetic groups
-                        male=c(0,0),
-                        female=c(0,0)),
-             data.frame(gen=c("A509","A637","A661","CM105","EP28",
-                          "EP31","EP42","F7","PB60","Z77016"),
-                        male=rep(c('Dent','Flint'),each=5),
-                        female=rep(c('Dent','Flint'),each=5)),
-             ped)
-ped[is.na(ped$male),'male'] <- 0
-ped[is.na(ped$female),'female'] <- 0
-
-# ----------------------------------------------------------------------------
-
 \dontrun{
+  
+  # Here we see if including pedigree information is helpful for a
+  # multi-environment model
+  # Including the pedigree provided little benefit
+
+  # Create the pedigree
+  ped <- dat[, c('gen','male','female')]
+  ped <- ped[!duplicated(ped),] # remove duplicates
+  unip <- unique(c(ped$male, ped$female)) # Unique parents
+  unip <- unip[!is.na(unip)]
+  # We have to define parents at the TOP of the pedigree
+  ped <- rbind(data.frame(gen=c("Dent","Flint"), # genetic groups
+                          male=c(0,0),
+                          female=c(0,0)),
+               data.frame(gen=c("A509","A637","A661","CM105","EP28",
+                                "EP31","EP42","F7","PB60","Z77016"),
+                          male=rep(c('Dent','Flint'),each=5),
+                          female=rep(c('Dent','Flint'),each=5)),
+               ped)
+  ped[is.na(ped$male),'male'] <- 0
+  ped[is.na(ped$female),'female'] <- 0
+
   # View the pedigree.  Can't use kinship2 ... plants can be both male/female
   # Not the best view...too much overplotting
   require(synbreed)
@@ -181,7 +181,7 @@ ped[is.na(ped$female),'female'] <- 0
 ##   text(x=p0$predicted.value, y=p4$predicted.value, p0$gen, cex=.5, srt=-45)
 ##   text(x=min(lims), y=p4par$predicted.value, p4par$gen, cex=.5)
 ##   # Including the pedigree provided little benefit
-} # if(FALSE)
+## } # if(FALSE)
 
 } # dontrun
 

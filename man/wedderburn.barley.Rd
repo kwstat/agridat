@@ -22,6 +22,7 @@
   Incidence of \emph{Rhynchosporium secalis} (leaf blotch) on the leaves of
   10 varieties of barley grown at 9 sites in 1965.
 }
+
 \source{
   Wedderburn, R W M (1974).
   Quasilikelihood functions, generalized linear models and the

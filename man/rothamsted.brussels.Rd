@@ -11,11 +11,11 @@
 \format{
   A data frame with 48 observations on the following 5 variables.
   \describe{
-    \item{\code{row}}{Row}
-    \item{\code{col}}{Column}
-    \item{\code{yield}}{Yield of saleable sprouts, pounds}
-    \item{\code{trt}}{Treatment factor, 9 levels}
-    \item{\code{block}}{Block factor, 4 levels}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
+    \item{\code{yield}}{yield of saleable sprouts, pounds}
+    \item{\code{trt}}{treatment, 9 levels}
+    \item{\code{block}}{block, 4 levels}
   }
 }
 \details{
@@ -24,11 +24,13 @@
   Plots were 10 yards x 14 yards.  Plot orientation is not clear.
   
 }
+
 \source{
   Rothamsted Experimental Station Report 1934-36.
   Brussels sprouts: effect of sulphate of ammonia, poultry manure, soot
   and rape dust, pp. 191-192. Harpenden: Lawes Agricultural Trust.
 }
+
 \references{
   McCullagh, P. and Clifford, D., (2006).
   Evidence for conformal invariance of crop yields,

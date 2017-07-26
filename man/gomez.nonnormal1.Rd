@@ -39,13 +39,13 @@ data(gomez.nonnormal1)
 dat <- gomez.nonnormal1
 
 # Gomez figure 7.3
-if(FALSE & require(dplyr)) {
-  dat2 <- dat %>% group_by(trt)
-  dat2 <- summarize(dat2, mn=mean(larvae), rng=diff(range(larvae)))
-  plot(rng ~ mn, data=dat2,
-       xlab="mean number of larvae", ylab="range of number of larvae",
-       main="gomez.nonnormal1")
-}
+## require(dplyr)
+## dat2 <- dat %>% group_by(trt)
+## dat2 <- summarize(dat2, mn=mean(larvae), rng=diff(range(larvae)))
+## plot(rng ~ mn, data=dat2,
+##      xlab="mean number of larvae", ylab="range of number of larvae",
+##      main="gomez.nonnormal1")
+
 
 # Because some of the original values are less than 10,
 # the transform used is log10(x+1) instead of log10(x).

@@ -50,7 +50,8 @@ dotplot(yield ~ trt|year, data=dat,
         xlab="Cutting treatment", main="snedecor.asparagus")
 
 # Split-plot
-if(require(lme4)){
+\dontrun{
+  require(lme4)
   m1 <- lmer(yield ~ trt + year + trt:year + (1|block) + (1|block:trt), data=dat)
 }
 
@@ -105,7 +106,8 @@ if(require(lme4)){
   U <- diag(4)
   U[1,2] <- vv[4,2] ; U[2,3] <- vv[6,2] ; U[3,4] <- vv[8,2]
   Dinv <- diag(c(vv[3,2], vv[5,2], vv[7,2], vv[9,2]))
-  solve(U %*% Dinv %*% t(U)) # same as 'covmat' above
+  # solve(U %*% Dinv %*% t(U)) # same as 'covmat' above
+  solve(crossprod(t(U), tcrossprod(Dinv, U)) )
   ##          [,1]      [,2]      [,3]      [,4]
   ## [1,] 428.4310  307.1478  349.8152  237.2453
   ## [2,] 307.1478 1083.9717 1234.5516  837.2751
@@ -164,7 +166,8 @@ if(require(lme4)){
   ## U <- diag(4)
   ## U[1,2] <- vv[4,2] ; U[2,3] <- vv[6,2] ; U[3,4] <- vv[8,2]
   ## Dinv <- diag(c(vv[3,2], vv[5,2], vv[7,2], vv[9,2]))
-  ## solve(U %*% Dinv %*% t(U)) # same as 'covmat' above
+  ## # solve(U %*% Dinv %*% t(U)) # same as 'covmat' above
+  ## solve(crossprod(t(U), tcrossprod(Dinv, U)) )
   ## ##          [,1]      [,2]      [,3]      [,4]
   ## ## [1,] 428.4310  307.1478  349.8152  237.2453
   ## ## [2,] 307.1478 1083.9717 1234.5516  837.2751

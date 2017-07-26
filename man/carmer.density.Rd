@@ -11,9 +11,9 @@
 \format{
   A data frame with 32 observations on the following 3 variables.
   \describe{
-    \item{\code{gen}}{Hybrid factor, 8 levels}
-    \item{\code{pop}}{Population (plants)}
-    \item{\code{yield}}{Yield, pounds per hill}
+    \item{\code{gen}}{genotype/hybrid, 8 levels}
+    \item{\code{pop}}{population (plants)}
+    \item{\code{yield}}{yield, pounds per hill}
   }
 }
 \details{
@@ -39,9 +39,6 @@ dat <- carmer.density
 dat$gen <- factor(dat$gen, levels=c('Hy2x0h7','WF9xC103','R61x187-2',
                              'WF9x38-11','WF9xB14','C103xB14',
                              '0h43xB37','WF9xH60'))
-# xyplot(yield~pop|gen, dat, pch=16, as.table=TRUE,
-#        main="carmer.density")
-
 
 # Separate analysis for each hybrid
 # Model: y = x * a * k^x.  Table 1 of Carmer and Jackobs.

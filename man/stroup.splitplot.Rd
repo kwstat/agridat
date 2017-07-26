@@ -32,6 +32,7 @@
 
   Used with permission of Walt Stroup.
 }
+
 \references{
   Wolfinger, R.D. and Kass, R.E., 2000.
   Nonconjugate Bayesian analysis of variance component models,
@@ -141,7 +142,8 @@ rownames(cm) <-   c("a1", "a2", "a3", "b2", "a2:b2", "a3:b2",
                     "a2r3", "a2r4", "a3r1", "a3r2",  "a3r3", "a3r4")
 colnames(cm) <- c("A1n","A1i","A1b", "A1-A2n", "A1-A2ib")
 print(cm)
-post2 <- as.mcmc(m2$Sol \%*\% cm)
+# post2 <- as.mcmc(m2$Sol %*% cm)
+post2 <- as.mcmc(crossprod(t(m2$Sol), cm))
 
 # Following table has columns for A1 estimate (narrow, intermediate, broad)
 # A1-A2 estimate (narrow and intermediat/broad).

@@ -36,12 +36,13 @@
   Field width: 96 feet
   
 }
+
 \source{
- Weiss, Martin G. and Cox, Gertrude M. (1939).
- Balanced Incomplete Block and Lattice Square Designs for Testing Yield
- Differences Among Large Numbers of Soybean Varieties.
- \emph{Agricultural Research Bulletins, Nos. 251-259}.
- http://lib.dr.iastate.edu/ag_researchbulletins/24/
+  Weiss, Martin G. and Cox, Gertrude M. (1939).
+  Balanced Incomplete Block and Lattice Square Designs for Testing Yield
+  Differences Among Large Numbers of Soybean Varieties.
+  \emph{Agricultural Research Bulletins, Nos. 251-259}.
+  http://lib.dr.iastate.edu/ag_researchbulletins/24/
 }
 
 \examples{

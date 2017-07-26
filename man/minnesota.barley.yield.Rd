@@ -12,10 +12,10 @@
 \format{
   A data frame with 647 observations on the following 4 variables.
   \describe{
-    \item{\code{yield}}{Yield in bu/ac}
-    \item{\code{gen}}{Genotype (variety) factor}
-    \item{\code{year}}{Numeric}
-    \item{\code{site}}{Site factor, 6 levels}
+    \item{\code{yield}}{yield in bu/ac}
+    \item{\code{gen}}{genotype (variety) factor}
+    \item{\code{year}}{year}
+    \item{\code{site}}{site factor, 6 levels}
   }
 }
 \details{
@@ -87,6 +87,7 @@
   No38'.
 
 }
+
 \source{
   H V Harlan and P R Cowan and Lucille Reinbach. (1935).
   \emph{Yields of barley varieties in the United States and Canada, 1927-1931}.
@@ -98,6 +99,7 @@
   United States Dept of Agriculture.
   http://books.google.com/books?id=OUfxLocnpKkC&pg=PA19
 }
+
 \references{
   Immer, R. F. and H. K. Hayes and LeRoy Powers. (1934).
   Statistical Determination of Barley Varietal Adaptation.

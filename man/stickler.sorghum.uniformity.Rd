@@ -37,13 +37,13 @@
   Field length = 20 units * 5 ft = 100 feet.
     
 }
-\source{
-  
+
+\source{  
   F. C. Stickler (1960).
   Estimates of Optimum Plot Size from Grain Sorghum Uniformity Trial Data.
   Technical bulletin, Kansas Agricultural Experiment Station.
-  
 }
+
 \references{
   None.
 }
@@ -60,7 +60,9 @@ desplot(yield ~ col*row|expt, data=dat1,
         xlab="row",ylab="range",
         flip=TRUE, tick=TRUE, aspect=(20*10)/(20*14/12), # true aspect
         main="stickler.sorghum.uniformity: expt E1")
-desplot(yield ~ col*row|expt, data=dat2,
+}
+if(require(desplot)){
+  desplot(yield ~ col*row|expt, data=dat2,
         xlab="row",ylab="range",
         flip=TRUE, tick=TRUE, aspect=(20*5)/(20*44/12), # true aspect
         main="stickler.sorghum.uniformity: expt E2,E3,E4")

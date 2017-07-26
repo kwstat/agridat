@@ -35,7 +35,7 @@
   \describe{
     \item{\code{row}}{row}
     \item{\code{col}}{column}
-    \item{\code{yield}}{yield in 1/4 lbs per sub-plot, each 1/80 acre.}
+    \item{\code{yield}}{yield in 1/4 lbs per sub-plot, each 1/80 acre}
     \item{\code{nitro}}{nitrogen treatment in hundredweight per acre}
     \item{\code{gen}}{genotype, 3 levels}
     \item{\code{block}}{block, 6 levels}
@@ -45,19 +45,15 @@
 }
 
 \source{
-
   Report for 1931. Rothamsted Experiment Station. Page 143.
   http://www.era.rothamsted.ac.uk/eradoc/article/ResReport1931-141-159
-    
 }
 
 \references{
-
   Yates, Frank (1935) Complex experiments,
   \emph{Journal of the Royal Statistical Society Suppl}
   2, 181-247. Figure 2.
   http://doi.org/10.2307/2983638
-  
 }
 
 \examples{
@@ -87,23 +83,23 @@ xyplot(yield ~ col|factor(nitro), dat,
        type = c('p', 'r'), xlab='col', as.table = TRUE,
        main="yates.oats")
 
-if(require(lme4)){
+\dontrun{
+  require(lme4)
   # Typical split-plot analysis. Non-significant gen differences
   m3 <- lmer(yield ~ nitro * gen + (1|block/gen), data=dat)
   # Residuals still show structure
   xyplot(resid(m3) ~ dat$col, xlab='col', type=c('p','smooth'),
          main="yates.oats")
-
+  
   # Add a linear trend for column
   m4 <- lmer(yield ~ col + nitro * gen + (1|block/gen), data=dat)
   # xyplot(resid(m4) ~ dat$col, type=c('p','smooth'), xlab='col')
-
+  
   ## Compare fits
   AIC(m3,m4)
   ##    df      AIC
   ## m3  9 581.2372
   ## m4 10 557.9424 # Substantially better
-
 }
 
 # ----------------------------------------------------------------------------
@@ -115,6 +111,7 @@ if(require(lme4)){
   # --- nlme ---
   require(nlme)
   require(lsmeans)
+  # create unbalance
   dat2 <- yates.oats[-c(1,2,3,5,8,13,21,34,55),]
   m5l <- lme(yield ~ factor(nitro) + gen, random = ~1 | block/gen,
              data = dat2)
@@ -128,7 +125,7 @@ if(require(lme4)){
   vc(m5l)
   vc(m5a)
 
-  lsmeans(m5l, "gen")
+  lsmeans::lsmeans(m5l, "gen")
   predict(m5a, data=dat, classify="gen")$predictions$pvals
 
 }

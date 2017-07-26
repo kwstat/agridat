@@ -11,10 +11,10 @@
 \format{
   A data frame with 180 observations on the following 4 variables.
   \describe{
-    \item{\code{row}}{Row}
-    \item{\code{col}}{Column}
-    \item{\code{gen}}{Genotype factor, 120 levels}
-    \item{\code{yield}}{Yield}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
+    \item{\code{gen}}{genotype, 120 levels}
+    \item{\code{yield}}{yield}
   }
 }
 \details{

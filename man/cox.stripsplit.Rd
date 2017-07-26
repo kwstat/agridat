@@ -11,11 +11,11 @@
 \format{
   A data frame with 96 observations on the following 5 variables.
   \describe{
-    \item{\code{rep}}{Rep factor, 4 levels}
-    \item{\code{soil}}{Soil factor, 3 levels}
-    \item{\code{fert}}{Fertilizer factor, 4 levels}
-    \item{\code{calcium}}{Calcium factor, 2 levels}
-    \item{\code{yield}}{Yield of winter barley}
+    \item{\code{rep}}{replicate, 4 levels}
+    \item{\code{soil}}{soil, 3 levels}
+    \item{\code{fert}}{fertilizer, 4 levels}
+    \item{\code{calcium}}{calcium, 2 levels}
+    \item{\code{yield}}{yield of winter barley}
   }
 }
 \details{
@@ -47,6 +47,7 @@ aggregate(yield ~ calcium, data=dat, mean)
 
 if(require(HH)) {
   interaction2wt(yield ~ rep + soil + fert + calcium, dat,
+                 x.between=0, y.between=0,
                  main="cox.stripsplit")
 }
 

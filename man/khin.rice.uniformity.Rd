@@ -21,6 +21,7 @@
   Station, Burma, in 1947-48.  Basic plots were 3 feet square.
 
   Field width: 30 plots * 3 feet.
+  
   Field length: 36 plots * 3 feet.
 
 }

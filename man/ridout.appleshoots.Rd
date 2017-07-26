@@ -11,9 +11,9 @@
 \format{
   A data frame with 270 observations on the following 4 variables.
   \describe{
-    \item{\code{roots}}{Number of roots per shoot}
-    \item{\code{trtn}}{Number of shoots per treatment combination}
-    \item{\code{photo}}{Photoperiod, 8 or 16}
+    \item{\code{roots}}{number of roots per shoot}
+    \item{\code{trtn}}{number of shoots per treatment combination}
+    \item{\code{photo}}{photoperiod, 8 or 16}
     \item{\code{bap}}{BAP concentration, numeric}
   }
 }
@@ -33,21 +33,19 @@
   perhaps not for columnar varieties.
 
 }
-\source{
 
+\source{
   Ridout, M. S., Hinde, J. P., and Demetrio, C. G. B. (1998).
   Models for Count Data with Many Zeros.
   \emph{Proceedings of the 19th International Biometric Conference},
   179-192.
 
   Used with permission of Martin Ridout.
-
 }
-\references{
 
+\references{
   SAS. Fitting Zero-Inflated Count Data Models by Using PROC GENMOD.
   support.sas.com/rnd/app/examples/stat/GENMODZIP/roots.pdf
-
 }
 
 \examples{

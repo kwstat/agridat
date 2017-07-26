@@ -36,17 +36,15 @@
   Accounting for natural and extraneous variation in the analysis of
   field experiments.
   \emph{Journal of Agric Biol Env Statistics}, 2, 269-293.
-
+  
   Used with permission of Arthur Gilmour, in turn with permission from
   Gil Hollamby.
 }
 
 \references{
-
   N. W. Galwey. 2014.
   \emph{Introduction to Mixed Modelling: Beyond Regression and Analysis
-    of Variance}. Table 10.9
-  
+    of Variance}. Table 10.9 
 }
 
 \examples{

@@ -11,10 +11,10 @@
 \format{
   A data frame with 78 observations on the following 4 variables.
   \describe{
-    \item{\code{block}}{Block factor, 6 levels}
-    \item{\code{gen}}{Genotype factor, 13 levels}
-    \item{\code{nettle}}{Percent ground cover of nettles}
-    \item{\code{herb}}{Percent ground cover of herbage species}
+    \item{\code{block}}{block, 6 levels}
+    \item{\code{gen}}{genotype, 13 levels}
+    \item{\code{nettle}}{percent ground cover of nettles}
+    \item{\code{herb}}{percent ground cover of herbage species}
   }
 }
 

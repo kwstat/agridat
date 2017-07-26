@@ -29,8 +29,7 @@
   Surface & Pearl (1916) give a simple method for adjusting yield due to
   fertility effects.
 }
-\source{
-  
+\source{  
   E. G. Montgomery (1913).
   Experiments in wheat breeding: Experimental Error In The Nursery and
   Variation in Nitrogen and Yield.
@@ -59,18 +58,19 @@ if(require(desplot)){
 }
 
 
-# Surface & Pearl adjust yield for fertility effects.
-# They calculate smoothed yield as (row sum)*(column sum)/(total)
-# and subtract this from the overall mean to get 'deviation'.
-# We can do the same thing using a linear model with rows and columns
-# as factors, then predict yield to get the smooth trend.
-# Corrected yield = observed - deviation = observed - (smooth-mean)
+\dontrun{
+  # Surface & Pearl adjust yield for fertility effects.
+  # They calculate smoothed yield as (row sum)*(column sum)/(total)
+  # and subtract this from the overall mean to get 'deviation'.
+  # We can do the same thing using a linear model with rows and columns
+  # as factors, then predict yield to get the smooth trend.
+  # Corrected yield = observed - deviation = observed - (smooth-mean)
+  
+  m1 <- lm(yield ~ factor(col) + factor(row), data=dat)
+  dev1 <- predict(m1) - mean(dat$yield)
+  # Corrected.  Similar (but not exact) to Surface, fig 2.
+  dat$correct <- round(dat$yield - dev1,0)
 
-m1 <- lm(yield ~ factor(col) + factor(row), data=dat)
-dev1 <- predict(m1) - mean(dat$yield)
-# Corrected.  Similar (but not exact) to Surface, fig 2.
-dat$correct <- round(dat$yield - dev1,0)
-if(FALSE){
   require(desplot)
   desplot(yield ~ col*row, dat, main="observed")
   desplot(correct ~ col*row, dat, text=correct,
@@ -80,5 +80,6 @@ if(FALSE){
   plot(correct~yield,dat, xlim=c(350,1000), ylim=c(350,1000))
   abline(0,1)
 }
+
 }
 \keyword{datasets}

@@ -35,7 +35,6 @@
 }
 
 \source{
-
   MW Perry and MF D'Antuono. (1989).
   Yield improvement and associated characteristics of some Australian
   spring wheat cultivars introduced between 1860 and 1982.
@@ -43,7 +42,6 @@
   http://www.publish.csiro.au/nid/43/issue/1237.htm
 
   Used with permission of Mario D'Antuono and CSIRO Publishing.
-
 }
 
 \examples{
@@ -102,6 +100,7 @@ mean(c(coef(m1)[21], coef(m1)[21]+coef(m1)[22:40]))
   require(asreml)
   m3a <- asreml(y ~ 1 + yorc, data=dat, random = ~ env + env:yorc)
 
+  require(lucid)
   vc(m3)
   ##      grp        var1 var2     vcov   sdcor
   ##      env (Intercept) <NA> 11.61    3.407

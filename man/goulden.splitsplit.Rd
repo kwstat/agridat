@@ -47,8 +47,7 @@
 
 \source{
   C. H. Goulden, (1939).
-  \emph{Methods of statistical analysis}, 1st ed. Page 18.
-  
+  \emph{Methods of statistical analysis}, 1st ed. Page 18. 
   https://archive.org/stream/methodsofstatist031744mbp
 
 }

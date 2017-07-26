@@ -50,7 +50,5 @@ if(require(gge)){
   biplot(m1, main="denis.ryegrass biplot")
 }
 
-# anova(aov(strength ~ gen + loc, dat))
-
 }
 \keyword{datasets}

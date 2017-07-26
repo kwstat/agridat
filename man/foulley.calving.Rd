@@ -62,44 +62,41 @@ barchart(d2, par.settings=thm, main="foulley.calving",
          auto.key=list(columns=3, text=c("Easy","Assited","Difficult")))
 }
 
-
 ## Ordinal multinomial model
-
-
-
-## Note 1.0196-.3244 = 0.6952 matches Foulley's '2-3' threshold estimate
-
-## Coefficients:
-##                     Value Std. Error t value
-## sexF            -0.500605    0.01518 -32.982
-## age2.0-2.5      -0.234609    0.01350 -17.383
-## age2.5-3.0      -0.758325    0.01803 -42.059
-## age3.0-3.5      -1.037794    0.01649 -62.920
-## age3.5-4.0      -1.218294    0.02218 -54.926
-## age4.0-4.5      -1.271138    0.01960 -64.856
-## age4.5-5.0      -1.374209    0.02589 -53.080
-## age5.0-8.0      -1.416112    0.01529 -92.589
-## age8.0+         -1.454782    0.02088 -69.680
-## sexF:age2.0-2.5 -0.003035    0.01933  -0.157
-## sexF:age2.5-3.0  0.076677    0.02611   2.937
-## sexF:age3.0-3.5  0.080657    0.02464   3.274
-## sexF:age3.5-4.0  0.135774    0.03293   4.124
-## sexF:age4.0-4.5  0.124303    0.02982   4.169
-## sexF:age4.5-5.0  0.198897    0.03831   5.192
-## sexF:age5.0-8.0  0.135524    0.02280   5.943
-## sexF:age8.0+     0.131033    0.03185   4.114
-
-## Intercepts:
-##       Value    Std. Error t value
-## S1|S2   0.3244   0.0107    30.2148
-## S2|S3   1.0196   0.0111    91.9371
-
-## Residual Deviance: 216176.90
-## AIC: 216214.90
-
-if(require(ordinal)){
+\dontrun{
+  require(ordinal)
   m2 <- clm(score ~ sex*age, data=dat, weights=count, link='probit')
-  summary(m2) # same as polr model
+  summary(m2)
+
+  ##   Coefficients:
+  ##                  Estimate Std. Error z value Pr(>|z|)    
+  ## sexM             0.500605   0.015178  32.982  < 2e-16 ***
+  ## age2.0-2.5      -0.237643   0.013846 -17.163  < 2e-16 ***
+  ## age2.5-3.0      -0.681648   0.018894 -36.077  < 2e-16 ***
+  ## age3.0-3.5      -0.957138   0.018322 -52.241  < 2e-16 ***
+  ## age3.5-4.0      -1.082520   0.024356 -44.446  < 2e-16 ***
+  ## age4.0-4.5      -1.146834   0.022496 -50.981  < 2e-16 ***
+  ## age4.5-5.0      -1.175312   0.028257 -41.594  < 2e-16 ***
+  ## age5.0-8.0      -1.280587   0.016948 -75.559  < 2e-16 ***
+  ## age8.0+         -1.323749   0.024079 -54.974  < 2e-16 ***
+  ## sexM:age2.0-2.5  0.003035   0.019333   0.157  0.87527    
+  ## sexM:age2.5-3.0 -0.076677   0.026106  -2.937  0.00331 ** 
+  ## sexM:age3.0-3.5 -0.080657   0.024635  -3.274  0.00106 ** 
+  ## sexM:age3.5-4.0 -0.135774   0.032927  -4.124 3.73e-05 ***
+  ## sexM:age4.0-4.5 -0.124303   0.029819  -4.169 3.07e-05 ***
+  ## sexM:age4.5-5.0 -0.198897   0.038309  -5.192 2.08e-07 ***
+  ## sexM:age5.0-8.0 -0.135524   0.022804  -5.943 2.80e-09 ***
+  ## sexM:age8.0+    -0.131033   0.031852  -4.114 3.89e-05 ***
+  ## ---
+  ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+  
+  ## Threshold coefficients:
+  ##       Estimate Std. Error z value
+  ## S1|S2  0.82504    0.01083   76.15
+  ## S2|S3  1.52017    0.01138  133.62
+
+  ## Note 1.52017 - 0.82504 = 0.695 matches Foulley's '2-3' threshold estimate
+  
   predict(m2) # probability of each category
   detach("package:ordinal") # to avoid VarCorr clash with lme4
 }

@@ -27,21 +27,18 @@
 }
 
 \source{
-
   Manfred Huehn (1979).
   Beitrage zur Erfassung der phanotypischen Stabilitat I.
   Vorschlag einiger auf Ranginformationen beruhenden Stabilitatsparameter. 
   \emph{EDV in Medizin und Biologie}, 10 (4), 112-117.  Table 1.
   http://nbn-resolving.de/urn:nbn:de:bsz:15-qucosa-145979
-
 }
-\references{
 
+\references{
   Nassar, R and Huehn, M. (1987).
   Studies on estimation of phenotypic stability: Tests of significance
   for nonparametric measures of phenotypic stability.
-  \emph{Biometrics}, 43, 45-53.
-  
+  \emph{Biometrics}, 43, 45-53. 
 }
 
 \examples{

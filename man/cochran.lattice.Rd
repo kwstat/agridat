@@ -60,8 +60,9 @@ if(require(desplot)){
           main="cochran.lattice")
 }
 
-# Random rep,row,column model often used by Federer
-if(require(lme4)){
+\dontrun{
+  # Random rep,row,column model often used by Federer
+  require(lme4)
   dat <- transform(dat, rowf=factor(row), colf=factor(col))
   m1 <-  lmer(y ~ trt + (1|rep) + (1|rep:row) + (1|rep:col), data=dat)
   summary(m1)

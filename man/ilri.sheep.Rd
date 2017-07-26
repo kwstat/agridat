@@ -12,18 +12,18 @@
 \format{
   A data frame with 882 observations on the following 12 variables.
   \describe{
-    \item{\code{year}}{Year of lamb birth, 1991-1996}
-    \item{\code{lamb}}{Lamb id}
-    \item{\code{sex}}{Sex of lamb, M=Male/F=Female}
-    \item{\code{gen}}{Genotype of lamb, DD, DR, RD, RR}
-    \item{\code{birthwt}}{Weight of lamb at birth, kg}
-    \item{\code{weanwt}}{Weight of lamb at weaning, kg}
-    \item{\code{weanage}}{Age of lamb at weaning, days}
-    \item{\code{ewe}}{Ewe id}
-    \item{\code{ewegen}}{Ewe genotype: D, R}
-    \item{\code{damage}}{Ewe (dam) age in years}
-    \item{\code{ram}}{Ram id}
-    \item{\code{ramgen}}{Ram genotype: D, R}
+    \item{\code{year}}{year of lamb birth, 1991-1996}
+    \item{\code{lamb}}{lamb id}
+    \item{\code{sex}}{sex of lamb, M=Male/F=Female}
+    \item{\code{gen}}{genotype, DD, DR, RD, RR}
+    \item{\code{birthwt}}{weight of lamb at birth, kg}
+    \item{\code{weanwt}}{weight of lamb at weaning, kg}
+    \item{\code{weanage}}{age of lamb at weaning, days}
+    \item{\code{ewe}}{ewe id}
+    \item{\code{ewegen}}{ewe genotype: D, R}
+    \item{\code{damage}}{ewe (dam) age in years}
+    \item{\code{ram}}{ram id}
+    \item{\code{ramgen}}{ram genotype: D, R}
   }
 }
 
@@ -45,8 +45,8 @@
 
   Records are missing in 182 of the lambs, mostly because of earlier death.
 }
-\source{
-  
+
+\source{ 
   Case Study 4: Mixed model analysis for the estimation of components of genetic
   variation in lamb weaning weight. International Livestock Research Institute.
   http://www.ilri.org/biometrics/CS/case\%20study\%204/case\%20study\%204.1.htm
@@ -54,6 +54,7 @@
 
   Licensed with Creative Commons BY-NC-SA 3.0 Unported license.  
 }
+
 \references{
   Baker, RL and Nagda, S. and Rodriguez-Zas, SL and Southey, BR and
   Audho, JO and Aduda, EO and Thorpe, W. 2003. Resistance and resilience
@@ -80,8 +81,8 @@ dat <- subset(dat, !is.na(weanage))
 
 # EDA
 require(lattice)
-bwplot(weanwt ~ year, dat, main="ilri.sheep", xlab="year", ylab="Wean weight",
-       panel=panel.violin) # Year effect
+## bwplot(weanwt ~ year, dat, main="ilri.sheep", xlab="year", ylab="Wean weight",
+##        panel=panel.violin) # Year effect
 bwplot(weanwt ~ factor(dl), dat,
        main="ilri.sheep", xlab="Dam age", ylab="Wean weight") # Dam age effect
 # bwplot(weanwt ~ gen, dat,
@@ -94,7 +95,10 @@ lm1 <- lm(weanwt ~ year + sex + weanage + dl + dq + ewegen + ramgen, data=dat)
 summary(lm1)
 anova(lm1)
 
-if(require(lme4)){
+# ----------------------------------------------------------------------------
+
+\dontrun{
+  require(lme4)
   lme1 <- lmer(weanwt ~ year + sex + weanage + dl + dq + ewegen + ramgen +
                  (1|ewe) + (1|ram), data=dat)
   print(lme1, corr=FALSE)

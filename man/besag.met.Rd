@@ -80,7 +80,7 @@ datm <- aggregate(yield ~ county + gen, data=dat, FUN=mean)
   require(nlme)
   m1l <- lme(yield ~ -1 + gen, data=datm, random=~1|county,
              weights = varIdent(form=~ 1|gen))
-  m1l$sigma^2 * c(1, coef(m1l$modelStruct$varStruct, unc = F))^2
+  m1l$sigma^2 * c(1, coef(m1l$modelStruct$varStruct, unc = FALSE))^2
   ##           G02    G03    G04    G05    G06    G07    G08
   ##  91.90 210.75  63.03 112.05  28.39 237.36  72.72  42.97
   ## ... etc ...
@@ -114,7 +114,7 @@ datm <- aggregate(yield ~ county + gen, data=dat, FUN=mean)
 
   # We get the same results from asreml & lme
   plot(m1a$gammas[-1],
-       m1l$sigma^2 * c(1, coef(m1l$modelStruct$varStruct, unc = F))^2)
+       m1l$sigma^2 * c(1, coef(m1l$modelStruct$varStruct, unc = FALSE))^2)
 
 
   # The following example shows how to construct a GxE biplot
@@ -193,7 +193,7 @@ datm <- aggregate(yield ~ county + gen, data=dat, FUN=mean)
   
  ##  # We get the same results from asreml & lme
  ##  plot(m1$vparameters[-1],
- ##     m1l$sigma^2 * c(1, coef(m1l$modelStruct$varStruct, unc = F))^2)
+ ##     m1l$sigma^2 * c(1, coef(m1l$modelStruct$varStruct, unc = FALSE))^2)
 
  ##  # The following example shows how to construct a GxE biplot
  ##  # from the FA2 model.

@@ -39,8 +39,7 @@
   D Archbold and G. R. Brown and P. L. Cornelius. (1987).
   Rootstock and in-row spacing effects on growth and yield of spur-type
   delicious and Golden delicious apple.
-  \emph{Journal of the American Society for Horticultural Science},
-  112, 219-222.
+  \emph{Journal of the American Society for Horticultural Science}, 112, 219-222.
 }
 \references{
   Cornelius, PL and Archbold, DD, 1989.
@@ -69,17 +68,19 @@ if(require(desplot)){
 }
 
 
-if(require("lme4") & require("lucid")){
-
-m1 <- lmer(yield ~ -1 + trt + (1|rep/mp/sp), dat)
-
-vc(m1)  # Variances/means on page 59
-##         grp        var1 var2   vcov sdcor
-## sp:(mp:rep) (Intercept) <NA>  193.3 13.9
-##      mp:rep (Intercept) <NA>  203.8 14.28
-##         rep (Intercept) <NA>  197.3 14.05
-##    Residual        <NA> <NA> 1015   31.86
-
+\dontrun{
+  require("lme4")
+  require("lucid")
+  
+  m1 <- lmer(yield ~ -1 + trt + (1|rep/mp/sp), dat)
+  
+  vc(m1)  # Variances/means on Cornelius, page 59
+  ##         grp        var1 var2   vcov sdcor
+  ## sp:(mp:rep) (Intercept) <NA>  193.3 13.9
+  ##      mp:rep (Intercept) <NA>  203.8 14.28
+  ##         rep (Intercept) <NA>  197.3 14.05
+  ##    Residual        <NA> <NA> 1015   31.86
+  
 }
 
 

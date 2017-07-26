@@ -13,15 +13,15 @@
 \format{
   A data frame with 225 observations on the following 9 variables.
   \describe{
-    \item{\code{year}}{Factor for year/type}
-    \item{\code{yield}}{Yield in pounds per plot}
-    \item{\code{block}}{Block factor}
-    \item{\code{row}}{Row}
-    \item{\code{col}}{Column}
-    \item{\code{trt}}{Treatment factor}
-    \item{\code{nitro}}{Nitrogen fertilizer, cwt/acre}
-    \item{\code{potash}}{Potash fertilizer, cwt/acre}
-    \item{\code{ptype}}{Potash type}
+    \item{\code{year}}{year/type factor}
+    \item{\code{yield}}{yield, pounds per plot}
+    \item{\code{block}}{block}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
+    \item{\code{trt}}{treatment factor}
+    \item{\code{nitro}}{nitrogen fertilizer, cwt/acre}
+    \item{\code{potash}}{potash fertilizer, cwt/acre}
+    \item{\code{ptype}}{potash type}
   }
 }
 \details{

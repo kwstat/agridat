@@ -31,7 +31,6 @@
   Julian Besag and Rob Kempton (1986).
   Statistical Analysis of Field Experiments Using Neighbouring Plots.
   \emph{Biometrics}, 42, 231-251. Table 2.
-
   http://doi.org/10.2307/2531047
 }
 \references{
@@ -48,23 +47,25 @@ if(require(desplot)){
           main="besag.triticale")
 }
 
-# Besag & Kempton are not perfectly clear on the model, but
-# indicate that there was no evidence of any two-way interactions.
-# A reduced, main-effect model had genotype effects that were
-# "close to significant" at the five percent level.
-# The model below has p-value of gen at .04, so must be slightly
-# different than their model.
-dat <- transform(dat, rate=factor(rate), nitro=factor(nitro))
-dat <- transform(dat, xf=factor(col), yf=factor(row))
-m2 <- lm(yield ~ gen + rate + nitro + regulator + yf, data=dat)
-anova(m2)
-
-# Similar, but not exact, to Besag figure 5
-dat$res <- resid(m2)
-require(lattice)
-xyplot(res ~ col|as.character(row), data=dat,
-       as.table=TRUE, type="s", layout=c(1,3),
-       main="besag.triticale")
+\dontrun{
+  # Besag & Kempton are not perfectly clear on the model, but
+  # indicate that there was no evidence of any two-way interactions.
+  # A reduced, main-effect model had genotype effects that were
+  # "close to significant" at the five percent level.
+  # The model below has p-value of gen at .04, so must be slightly
+  # different than their model.
+  dat <- transform(dat, rate=factor(rate), nitro=factor(nitro))
+  dat <- transform(dat, xf=factor(col), yf=factor(row))
+  m2 <- lm(yield ~ gen + rate + nitro + regulator + yf, data=dat)
+  anova(m2)
+  
+  # Similar, but not exact, to Besag figure 5
+  dat$res <- resid(m2)
+  require(lattice)
+  xyplot(res ~ col|as.character(row), data=dat,
+         as.table=TRUE, type="s", layout=c(1,3),
+         main="besag.triticale")
+}
 
 # ----------------------------------------------------------------------------
 

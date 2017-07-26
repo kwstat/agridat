@@ -36,12 +36,10 @@
 }
 
 \source{
-
   R. Giles (1990).
   Utilization of unreplicated observations of agronomic characters in a wheat germplasm collection.
   In: \emph{Wheat Genetic Resources. Meeting Diverse Needs}.
   Wiley, Chichester, U.K., pp.113-130.
-  
 }
 \references{
   

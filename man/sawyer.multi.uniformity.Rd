@@ -54,6 +54,7 @@
   8x6 except that the run of the hedge only allowed a rank of five plots
   at one of the ends.
 }
+
 \source{
   Rothamsted Experimental Station, Report 1925-26.
   Lawes Agricultural Trust, p. 154-155.
@@ -94,16 +95,20 @@ if(require(desplot)){
   desplot(grain~col*row, subset(dat, year==1925),
           main="sawyer.multi.uniformity - 1925 wheat grain yield",
           aspect=(6)/(8)) # true aspect
+}
+if(require(desplot)){
   desplot(rootwt~col*row, subset(dat, year==1926),
           main="sawyer.multi.uniformity - 1926 root weight of swedes",
           aspect=(6)/(8))
+}
+if(require(desplot)){
   desplot(grain~col*row, subset(dat, year==1927),
           main="sawyer.multi.uniformity - 1927 oats grain yield",
           aspect=(6)/(8))
 }
 
 \dontrun{
-  # This plot shows the outlier in the wheat data reported by Mackenzie.
+  # This plot shows the "outlier" in the wheat data reported by Mackenzie.
   require(lattice)
   xyplot(grain ~ straw, data=subset(dat, year==1925))
   

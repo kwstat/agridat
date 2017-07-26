@@ -75,16 +75,21 @@ if(require(dplyr) & require(lattice)) {
   # also matches fernandez, table 3, stabvar column
   require(dplyr)
   dat2 <- dat
-  dat2 <- dat2 %>% group_by(gen,env) %>% summarize(yield=sum(yield))
-  dat2 <- dat2 %>% group_by(env) %>% mutate(envmn=mean(yield))
-  dat2 <- dat2 %>% group_by(gen) %>% mutate(genmn=mean(yield))
-  dat2 <- dat2 %>% group_by() %>% mutate(grandmn=mean(yield))
+  dat2 <- group_by(dat2, gen,env)
+  dat2 <- summarize(dat2, yield=sum(yield)) # means across years
+  dat2 <- group_by(dat2, env)
+  dat2 <- mutate(dat2, envmn=mean(yield)) # env means
+  dat2 <- group_by(dat2, gen)
+  dat2 <- mutate(dat2, genmn=mean(yield)) # gen means
+  dat2 <- ungroup(dat2)
+  dat2 <- mutate(dat2, grandmn=mean(yield)) # grand mean
   # correction factor overall
-  dat2 <- dat2 %>% mutate(cf = sum((yield - genmn - envmn + grandmn)^2))
+  dat2 <- mutate(dat2, cf = sum((yield - genmn - envmn + grandmn)^2))
   t=5; s=6 # t genotypes, s environments
-  dat2 <- dat2 %>% group_by(gen) %>% mutate(ss=sum((yield-genmn-envmn+grandmn)^2))
+  dat2 <- group_by(dat2, gen)
+  dat2 <- mutate(dat2, ss=sum((yield-genmn-envmn+grandmn)^2))
   # divide by 6 to scale down to plot-level
-  dat2 <- dat2 %>% mutate( sig2i = 1/((s-1)*(t-1)*(t-2)) * (t*(t-1)*ss-cf)/6)
+  dat2 <- mutate(dat2, sig2i = 1/((s-1)*(t-1)*(t-2)) * (t*(t-1)*ss-cf)/6)
   dat2[!duplicated(dat2$gen),c('gen','sig2i')]    
   ##       <chr>     <dbl>
   ## 1 Manchuria  25.87912

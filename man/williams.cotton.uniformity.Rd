@@ -26,6 +26,7 @@
   Field length: 12 plots * 12 m = 144 m
   
 }
+
 \source{
   Williams, ER and Luckett, DJ. 1988.
   The use of uniformity data in the design and analysis of cotton and barley variety trials.

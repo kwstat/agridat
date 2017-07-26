@@ -35,6 +35,7 @@
   of infected leaves were recorded.
   
 }
+
 \source{
   Hughes, G. and Madden, LV. 1995.
   Some methods allowing for aggregated patterns of disease incidence in
@@ -44,6 +45,7 @@
 
   Used with permission of Larry Madden.
 }
+
 \references{
   Hans-Pieter Piepho. 1999.
   Analysing disease incidence data from designed experiments by

@@ -9,8 +9,8 @@
 
 \format{
   \describe{
-    \item{gen}{genotype factor, 56 levels}
-    \item{rep}{replicate factor, 4 levels}
+    \item{gen}{genotype, 56 levels}
+    \item{rep}{replicate, 4 levels}
     \item{yield}{yield, bu/ac}
     \item{col}{column}
     \item{row}{row}

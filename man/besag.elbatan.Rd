@@ -57,29 +57,31 @@ if(require(desplot)){
           main="besag.elbatan wheat yields")
 }
 
-# Besag figure 1
-# xyplot(yield~row|col, dat, groups=col, type=c('l'),
-#        layout=c(1,3), main="besag.elbatan wheat yields")
+\dontrun{
+  # Besag figure 1
+  library(lattice)
+  xyplot(yield~row|col, dat, type=c('l'),
+         layout=c(1,3), main="besag.elbatan wheat yields")
+}
 
 # RCB
 m1 <- lm(yield ~ 0 + gen + factor(col), dat)
 p1 <- coef(m1)[1:50]
 
-# Formerly used gam package, but as of R 3.1, Rcmd check --as-cran
-# is complaining
-# Calls: plot.gam ... model.matrix.gam -> predict -> predict.gam -> array
-# but it works perfectly in interactive mode !!!
-# Remove the FALSE to run the code below
-if(FALSE & require(gam)){
-  m2 <- gam(yield ~ -1 + gen + factor(col) + lo(row), data=dat)
-  plot.gam(m2)
-
-  plot(m2, residuals=TRUE, se=TRUE,
-       terms="lo(row)", main="besag.elbatan")
+\dontrun{
+  # Formerly used gam package, but as of R 3.1, Rcmd check --as-cran
+  # is complaining
+  # Calls: plot.gam ... model.matrix.gam -> predict -> predict.gam -> array
+  # but it works perfectly in interactive mode !!!
+  # Remove the FALSE to run the code below
+  if(is.element("gam", search())) detach(package:gam)
+  library(mgcv)
+  m2 <- mgcv::gam(yield ~ -1 + gen + factor(col) + s(row), data=dat)
+  plot(m2, residuals=TRUE, main="besag.elbatan")
   pred <- cbind(dat, predict(m2, dat, type="terms"))
   # Need to correct for the average loess effect, which is like
   # an overall intercept term.
-  adjlo <-  mean(pred$"lo(row)")
+  adjlo <-  mean(pred$"s(row)")
   p2 <- coef(m2)[1:50] + adjlo
 
   # Compare estimates

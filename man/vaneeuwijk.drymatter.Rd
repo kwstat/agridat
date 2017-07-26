@@ -29,15 +29,13 @@
   Kroonenberg, Basford, and Ebskamp (1995).
   
 }
-\source{
-  
+\source{  
   van Eeuwijk, Fred A. and Pieter M. Kroonenberg (1998).
   Multiplicative Models for Interaction in Three-Way ANOVA, with Applications to Plant Breeding
   \emph{Biometrics}, 54, 1315-1333.
   http://doi.org/10.2307/2533660
   
   Used with permission of Fred van Eeuwijk.
-  
 }
 
 \references{
@@ -66,6 +64,7 @@ dat <- transform(dat, env=factor(paste(year,site)))
 
 if(require(HH)){
   HH::interaction2wt(y ~ year+site+variety,dat,rot=c(90,0),
+                     x.between=0, y.between=0,
                      main="vaneeuwijk.drymatter")
 }
 

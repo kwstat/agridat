@@ -29,7 +29,6 @@
   
 }
 \source{
-
   J. Jansen & J.A. Hoekstra (1993).
   The analysis of proportions in agricultural experiments by a
   generalized linear mixed model. 
@@ -37,8 +36,8 @@
   http://doi.org/10.1111/j.1467-9574.1993.tb01414.x
 
   Used with permission of J. Jansen. Electronic version supplied by Miroslav Zoric.
-
 }
+
 \references{
   None.
 }
@@ -51,7 +50,8 @@ dotplot(gen ~ y/n|block, data=dat, group=inoculum, auto.key=TRUE,
         main="jansen.apple",
         xlab="Proportion infected per block/inoculum", ylab="Genotype")
 
-if(require(lme4)){
+\dontrun{
+  require(lme4)
   # Tentative model.  Needs improvement.
   m1 <- glmer(cbind(y,n-y) ~ gen + factor(inoculum) + (1|block),
               data=dat, family=binomial)

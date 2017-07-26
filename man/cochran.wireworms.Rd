@@ -11,10 +11,10 @@
 \format{
   A data frame with 25 observations on the following 4 variables.
   \describe{
-    \item{\code{row}}{Row}
-    \item{\code{col}}{Column}
-    \item{\code{trt}}{Fumigant treatment, 5 levels}
-    \item{\code{worms}}{Count of wireworms per plot}
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
+    \item{\code{trt}}{fumigant treatment, 5 levels}
+    \item{\code{worms}}{count of wireworms per plot}
   }
 }
 \details{

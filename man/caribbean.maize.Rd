@@ -11,13 +11,13 @@
 \format{
   A data frame with 612 observations on the following 7 variables.
   \describe{
-    \item{\code{isle}}{Island factor, 2 levels}
-    \item{\code{site}}{Site factor}
-    \item{\code{block}}{Block, factor}
-    \item{\code{plot}}{Plot, numeric}
-    \item{\code{trt}}{Treatment factor}
-    \item{\code{ears}}{Number of ears harvested}
-    \item{\code{yield}}{Yield in kilograms}
+    \item{\code{isle}}{island, 2 levels}
+    \item{\code{site}}{site}
+    \item{\code{block}}{block}
+    \item{\code{plot}}{plot, numeric}
+    \item{\code{trt}}{treatment factor}
+    \item{\code{ears}}{number of ears harvested}
+    \item{\code{yield}}{yield in kilograms}
   }
 }
 \details{

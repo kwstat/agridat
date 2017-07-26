@@ -24,6 +24,7 @@
   near Oakley.  The Davis field is silty clay loam, the Oakley field is
   blow sand.
 }
+
 \source{
   Waynick, Dean, and Sharp, Leslie. (1918).
   Variability in soils and its significance to past and future soil investigations, I-II.

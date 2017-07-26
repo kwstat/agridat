@@ -13,6 +13,16 @@ vignette: >
 
 # Books
 
+### Die Landwirtschaftlichen Versuchs-Stations
+http://catalog.hathitrust.org/Record/000549685
+
+Full view of research station reports 1859-1920. In German.
+
+
+### S. J. Welham et al. (2015). _Statistical Methods In Biology_.
+The online-supplements contain many small datasets for the examples and exercises.
+
+
 ### D. F. Andrews and A. M. Herzberg (1985). _Data_. 
 http://www.stat.duke.edu/courses/Spring01/sta114/data/andrews.html
 ```
@@ -30,6 +40,7 @@ See also http://www.ethstat.org.et/esa_publications.html, Volume 19
 
 
 ### M. N. Das & Narayan C. Giri (1987). _Design and Analysis of Experiments_.
+
 ```
 31 Wool from 24 ewes, 6 cuttings
 116 NPK factorial, 3 years
@@ -53,6 +64,7 @@ Milk protein data: nlme::Milk.  A thorough description of this data can be found
 
 
 ### Federer, Walt (1955). _Experimental Design_.
+
 ```
 192 3x3 factorial 
 204 3x2 factorial 
@@ -67,7 +79,7 @@ Milk protein data: nlme::Milk.  A thorough description of this data can be found
 
 
 ### Finney 1972. _An Introduction to Statistical Science in Agriculture_.
-
+Not reviewed.
 
 ### Galwey, N.W. (2014). _Introduction to Mixed Modelling_, 2nd ed.
 http://www.wiley.com/WileyCDA/WileyTitle/productCd-1119945496.html
@@ -105,10 +117,17 @@ Second edition: http://krishikosh.egranth.ac.in/handle/1/2034118
 ```
 
 
+### Harry Love (1936). _Applications of Statistical Methods to Agricultural Research_.
+
+```
+379 MET 4 year, 2 field, 5 block, 5 gen
+```
+
 ### Kang, Manjit (2003). _Handbook of Formulas and Software for Plant Geneticists and Breeders_
 
 
 ### Kuehl, Robert. _Design of Experiments_, 2nd ed.
+
 ```
 357 alfalfa quadruple lattice
 358 alpha design
@@ -133,6 +152,7 @@ Many small datasets, including these:
 
 
 ### Thomas M Little & F. Jackson Hills (1978). _Agricultural Experimentation_.
+
 ```
 79 Latin square 
 89 Split-plot 
@@ -143,6 +163,7 @@ Many small datasets, including these:
 
 
 ### Roger Mead, Robert N. Curnow, Anne M. Hasted (2002). _Statistical Methods in Agriculture and Experimental Biology_, 3rd ed.
+
 ```
 10 weekly milk yields
 24 carrot weight
@@ -191,6 +212,7 @@ https://archive.org/details/statisticaltechn031729mbp
 
 
 ### Arthur Asquith Rayner (1969). _A First Course In Biometry For Agriculture Students_.
+
 ```
 19/456. 2x2x4 Factorial, 2 rep
 19/466. 2x4 factorial, layout, plot size, kale (from Rothamsted)
@@ -206,6 +228,7 @@ https://archive.org/details/statisticaltechn031729mbp
 
 
 ### Robert G. D. Steel & James Hiram Torrie. _Principles and Procedures of Statistics_, 2nd ed.
+
 ```
 154 Mint plant growth, 2-way + pot + plant
 244 Trivariate data
@@ -304,118 +327,158 @@ Vol 35/503. North Central Regional Potassium Studies with Corn.
 
 # Papers
 
-Barrero, Ivan D. et al. (2013).
+**Barrero, Ivan D. et al**. (2013).
 A multi-environment trial analysis shows slight grain yield improvement in Texas commercial maize.
-Field Crops Research, 149, Pages 167–176.
+Field Crops Research, 149, Pages 167-176.
 http://doi.org/10.1016/j.fcr.2013.04.017
+
 Note: This is a large (14500 records), multi-year, multi-location, 10-trait data. Sent a note encouraging the authors to formally publish the data.
 Source: http://maizeandgenetics.tamu.edu/CTP/CTP.html
 
 
-Cleveland, M.A. and John M. Hickey, Selma Forni (2012).
+**Cleveland, M.A. and John M. Hickey, Selma Forni** (2012).
 A Common Dataset for Genomic Analysis of Livestock Populations.
-G3, Vol 2.
+G3, 2, 429-435.
 http://doi.org/10.1534/g3.111.001453
+
 Note: The supplemental information for this paper contains data for 3534 pigs with high-density genotypes (50000 SNPs), and a pedigree including parents and grandparents of the animals.
 
 
-Daillant-Spinnler (1996). Relationships between perceived sensory properties and major preference directions of 12 variaties of apples from the southern hemisphere.
+**Daillant-Spinnler** (1996). Relationships between perceived sensory properties and major preference directions of 12 variaties of apples from the southern hemisphere.
 Food Quality and Preference, 7(2), 113-126.
 http://dx.doi.org/10.1016/0950-3293(95)00043-7
+
 Note: The data are available in ClustVarLV package.
 
 
-Gregory, Crowther & Lambert (1932). The interrelation of factors controlling the production of cotton under irrigation in the Sudan.
+**Gregory, Crowther & Lambert** (1932). The interrelation of factors controlling the production of cotton under irrigation in the Sudan.
 Jour Agric Sci, 22, p. 617.
 
 
-Hedrick (1920).
+**Hedrick** (1920).
 Twenty years of fertilizers in an apple orchard.
 https://books.google.com/books?hl=en&lr=&id=SqlJAAAAMAAJ&oi=fnd&pg=PA446
 Note: No significant differences between fertilizer treatments.
 
 
-Kenward, Michael G. (1987).
+**Roger W. Hexem, Earl O.Heady, Metin Caglar** (1974)
+A compendium of experimental data for corn, wheat, cotton and sugar beets grown at selected sites in the western United States and alternative production functions fitted to these data.
+Technical report: Center for Agricultural and Rural Development, Iowa State University.
+https://babel.hathitrust.org/cgi/pt?id=wu.89031116783;view=1up;seq=3
+
+The technical report provides data from experiments on corn, wheat, cotton & sugar beets, each crop tested at several locations over two years, with a factorial structure on irrigation and nitrogen treatments, with replications.  Three polynomial functions were fit to the data for each location (quadratic, square root, three-halves).
+
+
+**Kenward, Michael G.** (1987).
 A Method for Comparing Profiles of Repeated Measurements.
 Applied Statistics, 36, 296-308.
+
 Note: An ante-dependence model is fit to repeated measures of cattle weight.  Data available here: https://faculty.biostat.ucla.edu/robweiss/filedepot_download/87/495
 
 
-Klumper & Qaim (2015).
+**Klumper & Qaim** (2015).
 A Meta-Analysis of the Impacts of Genetically Modified Crops.
 http://doi.org/10.1371/journal.pone.0111629
+
 Note: Nice meta-analysis dataset.  Published data only include differences, not standard-errors.
-Also see the comments on PLOS article for some peculiarities in the data.
+See the comments on PLOS article for some peculiarities in the data.
 
 
-Lado, B. et al. (2013). 
-Increased Genomic Prediction Accuracy in Wheat Breeding Through Spatial Adjustment of Field Trial Data.  G3.
+**Lado, B. et al.** (2013). 
+*Increased Genomic Prediction Accuracy in Wheat Breeding Through Spatial Adjustment of Field Trial Data*.  G3, 3, 2105-2114.
 http://doi.org/10.1534/g3.113.007807
+
 Note: Has a large haplotype data (83 MB) and two-year phenotype data with multiple traits.
 
 
-Payne, Roger (2015). 
+**Payne, Roger** (2015). 
 The Design and Analysis of Long-Term Rotation Experiments.
 Agronomy Journal, 107, 772-784.
 http://doi.org/10.2134/agronj2012.0411
+
 Note: The data and R code appeared in the paper. Free access, but closed copyright.
 
 
-Snedecor, George and E. S. Haber (1946).
+**Snedecor, George and E. S. Haber** (1946).
 Statistical Methods For an Incomplete Experiment on a Perennial Crop.
 Biometrics Bulletin, 2, 61-67.
 http://doi.org/10.2307/3001959
+
 Harvest of asparagus over 10 years, three cutting dates per year, 6 blocks.
 
 
-Technow, Frank, et al. (2014).
+**Technow, Frank, et al.** (2014).
 Genome Properties and Prospects of Genomic Prediction of Hybrid Performance in a Breeding Program of Maize.
+August 1, 2014 vol. 197 no. 4 1343-1355.
 http://doi.org/10.1534/genetics.114.165860
+
 Note: Genotype and phenotype data appears in the sommer package.
 
 
-Tian, Ting (2015).
+**Tian, Ting** (2015).
 Application of Multiple Imputation for Missing Values in Three-Way Three-Mode Multi-Environment Trial Data.
 http://doi.org/10.1371/journal.pone.0144370
+
 Note: Uses agridat::australia.soybean data and one other real dataset with 4 traits that are not identified.  All data and code available.
 
 
-Wisser (2011). 
+**Randall J. Wisser et al.** (2011). 
 Multivariate analysis of maize disease resistances suggests a pleiotropic genetic basis and implicates a GST gene. PNAS.  http://doi.org/10.1073/pnas.1011739108
+
 Note: Supplement contains genotype data, but no phenotype data.
 
 
-Yan, Weikei (2002).
+**Yan, Weikei** (2002).
 Singular value partitioning in biplots.  Agron Journal.
+
 Note: Winter wheat, 31 gen in 8 loc. This data is different from Yan's earlier papers.
 
 
 # Papers - Uniformity trials
 
 
-Baker, G.A. (1953).
+**Baker, G.A.** (1953).
 Strawberry uniformity yield trials.
 Biometrics, Vol. 9, No. 3, pp. 412-421.
 http://doi.org/10.2307/3001713 
+
 Note: Two small uniformity trials with yield per plant for 200, 500 plants.  CVs fairly high and correlation between neighboring plants very low.
 
 
-Edmund B. Lambert (1934).
+**Niels Anton Hansen**, 1914.
+Prøvedyrkning paa Forsøgsstationen ved Aarslev.
+_Tidsskrift for landbrugets planteavl_.
+http://dca.au.dk/publikationer/historiske/planteavl/ 
+Bind 21, page 553. In Danish.
+
+See comments by Eden & Maskell found here:
+https://archive.org/stream/in.ernet.dli.2015.25895/2015.25895.Journal-Of-Agricultural-Science-Vol-xviii-1928#page/n175
+Page 165: "One of the trials, comprising 35 plots, extended over the years 1907-11 and included oats, rye, barley, roots, barley."
+Oats and rye 1907 and 1908 show marked positive correlation.
+rye and barley 1908 and 1909 no correlation of significance.
+barley and roots 1909 and 1910 no correlation.
+roots and barley 1910 and 1911 a significant correlation.
+rye and roots 1908 and 1910 satisfactory.
+
+
+**Edmund B. Lambert** (1934).
 Size and arrangement of plots for yield tests with cultivated mushrooms.
 Journal of Agricultural Research, Vol 48, 971-980.
+
 Note: Uniformity trial at three locations for mushrooms in growth houses.
 https://naldc.nal.usda.gov/naldc/download.xhtml?id=IND43968493
 
 
-Moore, John Francis (1952).
+**Moore, John Francis** (1952).
 A study of field plot technique with sprouting broccoli.  Proc Amer Soc Hort Sci: 1-474.
+
 Note: This paper is not available, but a summary can be found here: http://eurekamag.com/research/013/624/013624967.php
 
 
 # R packages
 
 
-### aml Adaptive Mixed LASSO
+### aml - Adaptive Mixed LASSO
 Has 'wheat' data with genetic and phenotypic data for wheat.
 
 
@@ -423,11 +486,11 @@ Has 'wheat' data with genetic and phenotypic data for wheat.
 Has assorted data and functions for analysis of agricultural data.
 
 
-### BGLR Bayesian Generalized Linear Regression.
+### BGLR - Bayesian Generalized Linear Regression.
 Has an A matrix (but no pedigree) for 499 genotypes at 4 locations.
 
 
-### BLR Bayesian Linear Regression.
+### BLR - Bayesian Linear Regression.
 Has an A matrix (but no pedigree) for 499 genotypes at 4 locations.
 
 
@@ -439,24 +502,20 @@ Safety assessment in agriculture trials
 The apples_sh data has sensory attributes and preference scores for 12 apple varieties.
 
 
-### cropcc Climate change on crops
+### cropcc - Climate change on crops
 https://r-forge.r-project.org/projects/cropcc/
 
 
-### drc
+### drc - Dose response curves
 Has nice herbicide dose response curves and germination data for mungbean, rice, wheat.
 
 
-### FW Finlay-Wilkinson regression
+### FW - Finlay-Wilkinson regression
 https://github.com/lian0090/FW/ Has phenotype data and marker data for 599 wheat lines in 4 environments.
 
 
 ### lmtest
 Data lmtest::ChickEgg is a time series of annual chicken and egg production in the United States 1930-1983.
-
-
-### lsmeans 
-Data: lsmeans::feedlot is used to demonstrate an unbalanced analysis-of-covariance.
 
 
 ### missMDA 
@@ -480,7 +539,7 @@ Data: linetester
 Data: peanut same as agridat::kang.peanut
 ```
 
-### SDaA Survey Data and Analysis
+### SDaA - Survey Data and Analysis
 This package has county-level data from the United States Census of Agriculture, along with a vignette to illustrate survey sampling analyses.
 
 
@@ -488,7 +547,7 @@ This package has county-level data from the United States Census of Agriculture,
 Data: SemiPar::onions is same as agridat::ratkowski.onions
 
 
-### sommer Solving mixed model equations in R
+### sommer - Solving mixed model equations in R
 Data: h2. Modest-sized GxE experiment in potato Data: cornHybrid. Yield/PLTHT for 100 hybrids from 20 inbred * 20 inbred, 4 locs. Phenotype and relationship matrix.
 
 Data: wheatLines  CIMMYT wheat data for 599 lines. Phenotype and relationship data.
@@ -511,12 +570,12 @@ Data: spuRs::trees has data for 107 trees that were cut into cross sections with
 https://archive.org/stream/wachstumundertra00gutt
 
 
-### SoyNAM Soybean nested association mapping 
+### SoyNAM - Soybean nested association mapping 
 Dataset with phenotype data 3 yr, 9 locations, 18 environments, 60 thousand observations for height, maturity,
 lodging, moisture, protein, oil, fiber, seed size. There are 5000+ strains, 40 families.
 
 
-### st4gi Stat for genetic improvement
+### st4gi - Stat for genetic improvement
 https://github.com/reyzaguirre/st4gi
 
 

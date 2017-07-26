@@ -36,12 +36,14 @@
   counted at or near harvest.  The number counted was seldom less than 200
   and sometimes more than 400 per row.
 }
+
 \source{
   S.C. Salmon, 1938.
   Generalized standard errors for evaluating bunt experiments with wheat.
   \emph{Agronomy Journal}, 30, 647--663.  Table 1.
   http://doi.org/10.2134/agronj1938.00021962003000080003x
 }
+
 \references{
   Salmon says the data came from:
 

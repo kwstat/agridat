@@ -12,14 +12,14 @@
 \format{
   A data frame with 135 observations on the following 8 variables.
   \describe{
-    \item{\code{pot}}{Pot number}
-    \item{\code{bseeds}}{Barley seeds sown}
-    \item{\code{sseeds}}{Sinapis seeds sown}
-    \item{\code{block}}{Block factor}
-    \item{\code{bfwt}}{Barley fresh weight}
-    \item{\code{sfwt}}{Sinapis fresh weight}
-    \item{\code{bdwt}}{Barley dry weight}
-    \item{\code{sdwt}}{Sinapis dry weight}
+    \item{\code{pot}}{pot number}
+    \item{\code{bseeds}}{barley seeds sown}
+    \item{\code{sseeds}}{sinapis seeds sown}
+    \item{\code{block}}{block}
+    \item{\code{bfwt}}{barley fresh weight}
+    \item{\code{sfwt}}{sinapis fresh weight}
+    \item{\code{bdwt}}{barley dry weight}
+    \item{\code{sdwt}}{sinapis dry weight}
   }
 }
 \details{
@@ -27,12 +27,14 @@
   harvested (not included here) that sometimes is greater than the
   number of seeds planted.
 }
+
 \source{
   Peter McCullagh, John A. Nelder.
   \emph{Generalized Linear Models}, page 318-320.
 
   Used with permission of Jens Streibig.
 }
+
 \references{
   Oliver Schabenberger and Francis J Pierce. 2002.
   \emph{Contemporary Statistical Models for the Plant and Soil Sciences},

@@ -66,7 +66,6 @@ following:
 
 }
 \source{
-  
   Lee, Arier Chi-Lun (2009). Random effects models for ordinal data.
   Ph.D. thesis, The University of Auckland.
   https://researchspace.auckland.ac.nz/handle/2292/4544.

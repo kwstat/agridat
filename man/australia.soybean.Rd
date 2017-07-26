@@ -112,6 +112,7 @@ biplot(princomp(dmat), main="australia.soybean trait x gen biplot", cex=.75)
 # Figure 1 of Kozak 2010, lines 44-58
 \dontrun{
   require(agridat); require(reshape2) ; require(lattice); require(latticeExtra)
+  data(australia.soybean)
   dat <- australia.soybean
   dat <- melt(dat, id.var=c('env', 'year','loc','gen'))
   dat <- acast(dat, gen~variable, fun=mean)
@@ -120,7 +121,7 @@ biplot(princomp(dmat), main="australia.soybean trait x gen biplot", cex=.75)
   dat$gen <- rownames(dat)
   # data for the graphic by Kozak
   dat2 <- dat[44:58,]
-  dat3 <- subset(dat2, gen %in% c("G48","G49","G50","G51"))
+  dat3 <- subset(dat2, is.element(gen, c("G48","G49","G50","G51")))
   
   parallelplot( ~ dat3[,1:6]|dat3$gen, main="australia.soybean",
                as.table=TRUE, horiz=FALSE) +

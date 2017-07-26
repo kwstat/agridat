@@ -13,18 +13,18 @@
 
 \format{
   \describe{
-    \item{\code{state}}{State}
-    \item{\code{year}}{Year (numeric) 1930-1962}
-    \item{\code{rain0}}{Pre-season precipitation in inches}
-    \item{\code{temp5}}{May temperature, Fahrenheit}
-    \item{\code{rain6}}{June rain, inches}
-    \item{\code{temp6}}{June temp}
-    \item{\code{rain7}}{July rain}
-    \item{\code{temp7}}{July temp}
-    \item{\code{rain8}}{August rain}
-    \item{\code{temp8}}{August temp}
-    \item{\code{corn}}{Corn yield, bu/acre}
-    \item{\code{soy}}{Soybean yield, bu/acre}
+    \item{\code{state}}{state}
+    \item{\code{year}}{year, 1930-1962}
+    \item{\code{rain0}}{pre-season precipitation in inches}
+    \item{\code{temp5}}{may temperature, Fahrenheit}
+    \item{\code{rain6}}{june rain, inches}
+    \item{\code{temp6}}{june temp}
+    \item{\code{rain7}}{july rain}
+    \item{\code{temp7}}{july temp}
+    \item{\code{rain8}}{august rain}
+    \item{\code{temp8}}{august temp}
+    \item{\code{corn}}{corn yield, bu/acre}
+    \item{\code{soy}}{soybean yield, bu/acre}
   }
 }
 \details{
@@ -76,11 +76,13 @@
 
   1955 yields were reduced due to dry weather in late July and August.
 }
+
 \source{
   Thompson, L.M., 1963. \emph{Weather and technology in the production
     of corn and soybeans}. CAED Report 17. The Center for Agriculture
   and Economic Development, Iowa State University, Ames, Iowa.
 }
+
 \references{
   Draper, N. R. and Smith, H. (1981).  \emph{Applied Regression Analysis},
   second ed., Wiley, New York.
@@ -99,10 +101,10 @@ xyplot(corn+soy~year|state, dat,
        layout=c(5,1),ylab='yield')
 
 # In 1954, only Missouri suffered very hot, dry weather
-xyplot(corn~year, dat,
-       groups=state, type=c('p','l'),
-       main="thompson.cornsoy",
-       auto.key=list(columns=5), ylab='corn yield')
+## xyplot(corn~year, dat,
+##        groups=state, type=c('p','l'),
+##        main="thompson.cornsoy",
+##        auto.key=list(columns=5), ylab='corn yield')
 
 # Rain and temperature have negative correlation in each month.
 # July is a critical month: temp and yield are negatively correlated,
@@ -121,11 +123,12 @@ xyplot(corn~year, dat,
   termplot(m2, se=TRUE, rug=TRUE, partial=TRUE)
   par(op)
 
-  require(gam)
+  # do NOT use gam package
+  require(mgcv)
   m1 <- gam(corn ~ s(year, k=5) + s(rain0, k=5) +
               s(rain7, k=5) + s(temp8, k=5), data=dat.ia)
   op <- par(mfrow=c(2,2))
-  plot(m1, residuals=TRUE, se=TRUE, cex=2)
+  plot.gam(m1, residuals=TRUE, se=TRUE, cex=2)
   par(op)
 }
 

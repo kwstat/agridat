@@ -94,6 +94,7 @@
   involving the average of liberal numbers and extending over long
   periods of time.
 }
+
 \source{
   Smith, L.H. 1910. Plot arrangement for variety experiments with corn.
   \emph{Agronomy Journal}, 1, 84--89. Table 1.
@@ -114,19 +115,22 @@ dat = transform(dat, year=factor(year))
 if(require(desplot)){
   desplot(yield~col*row|year, dat, layout=c(1,3),
           col.regions=colorRampPalette(gray(1:100/100)),
-        main="smith.corn.uniformity: yield across years 1895-1987")
+          main="smith.corn.uniformity: yield across years 1895-1987")
 }
 
-# Outliers are obvious
-# require(lattice)
-# xyplot(yield~row|factor(col), dat, groups=year,
-# auto.key=list(columns=3), main="smith.corn.uniformity")
+## # Outliers are obvious
+## require(lattice)
+## xyplot(yield~row|factor(col), dat, groups=year,
+##        auto.key=list(columns=3), main="smith.corn.uniformity")
+
 
 \dontrun{
-require(rgl)
-# A few odd pairs of outliers in column 6
-plot3d(dat$col, dat$row, dat$yield, col=dat$year,
-       xlab="col",ylab="row",zlab="yield")
+  require(rgl)
+  # A few odd pairs of outliers in column 6
+  plot3d(dat$col, dat$row, dat$yield, col=dat$year,
+         xlab="col",ylab="row",zlab="yield")
+  rgl.close()
 }
+
 }
 

@@ -11,10 +11,10 @@
 \format{
   A data frame with 1454 observations on the following 4 variables.
   \describe{
-    \item{\code{yield}}{Yield kg/ha}
-    \item{\code{rep}}{Repeated measurement}
-    \item{\code{gen}}{Genotype factor, 7 levels}
-    \item{\code{env}}{Environment factor, 55 levels}
+    \item{\code{yield}}{yield, kg/ha}
+    \item{\code{rep}}{repeated measurement}
+    \item{\code{gen}}{genotype, 7 levels}
+    \item{\code{env}}{environment, 55 levels}
   }
 }
 \details{
