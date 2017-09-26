@@ -68,7 +68,15 @@ cn <- CateNelson(dat)
 ix <- which.max(cn$r2)
 with(dat, plot(y~x, ylim=c(0,110), xlab="Potassium", ylab="Yield"))
 title("cate.potassium - Cate-Nelson analysis")
-abline(v=dat$x[ix], col='wheat')
+abline(v=dat$x[ix], col="skyblue")
+abline(h=(dat$y[ix] + dat$y[ix+1])/2, col="skyblue")
+
+\dontrun{
+  # another approach with similar results
+  # https://joe.org/joe/2013october/tt1.php
+  require("rcompanion")
+  cateNelson(dat$x, dat$y)
+}
 
 }
 \keyword{datasets}

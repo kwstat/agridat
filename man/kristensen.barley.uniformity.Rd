@@ -34,7 +34,7 @@
 
 \source{
   R. K. Kristensen (1925). 
-  Anlæg og Opgørelse af Markforsøg.
+  Anlaeg og Opgoerelse af Markforsoeg.
   \emph{Tidsskrift for landbrugets planteavl}, Vol 31, 464. Fig 1, pg. 467.
   http://dca.au.dk/publikationer/historiske/planteavl/ 
 }

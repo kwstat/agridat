@@ -34,6 +34,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{batchelor.walnut.uniformity}        \tab 10 x 28 \tab xy \tab \cr
 \link{bradley.multi.uniformity}           \tab 10 x 11 \tab xy \tab \cr
 \link{christidis.wheat.uniformity}        \tab 12 x 24 \tab xy \tab \cr
+\link{day.wheat.uniformity}               \tab 31 x 100 \tab xy \tab \cr
 \link{draper.safflower.uniformity}        \tab 18 x 16 \tab xy, 2 expt \tab smith\cr
 \link{garber.multi.uniformity}            \tab 45 x 6 \tab xy, 2 years/crops \tab \cr
 \link{gomez.rice.uniformity}              \tab 18 x 36 \tab xy \tab aov,smith \cr
@@ -277,6 +278,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{salmon.bunt}                 \tab 10  \tab    \tab 2   \tab    \tab 20    \tab \tab betareg \cr
 \link{senshu.rice}                 \tab     \tab 40 \tab     \tab    \tab       \tab \tab lm,Fieller \cr
 \link{shafii.rapeseed}             \tab 6   \tab 14 \tab 3   \tab 3  \tab       \tab \tab biplot \cr
+\link{silva.cotton}                \tab     \tab    \tab 5   \tab    \tab 5     \tab 5 traits \tab glm,poisson \cr
 \link{sinclair.clover}             \tab     \tab    \tab     \tab    \tab 5,5   \tab rsm2,mitzerlich \tab nls,rgl \cr
 \link{snedecor.asparagus}          \tab     \tab    \tab 4   \tab 4  \tab 4     \tab \tab split-plot, antedependence \cr
 \link{snijders.fusarium}           \tab 17  \tab    \tab     \tab 3  \tab 4     \tab percent \tab glm/gnm,gammi \cr
@@ -342,6 +344,7 @@ name                       \tab model \cr
 \link{pearl.kernels}       \tab chisq \cr
 \link{stirret.borers}      \tab lm, 4 trt \cr
 \link{turner.herbicide}    \tab glm, 4 trt \cr
+\link{usgs.herbicides}     \tab non-detect \cr
 \link{wallace.iowaland}    \tab lm, choropleth \cr
 \link{waynick.soil}        \tab spatial, nitro/carbon \cr
 }

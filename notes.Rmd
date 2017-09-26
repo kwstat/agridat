@@ -3,28 +3,14 @@
 This document lists notes about data sources searched and additional sources of agricultural data.  Although this is an .Rmd file, the formatting is best viewed in plain text mode.
 
 ---
-Iowa State Univ Library Special Collections
 
-Field plot techniques for sweet potatoes obtained from uniformity trial data
-Helen Elizabeth Conners. 1951
-C O 1951 Conners
 
-Field plot techniques for estimating onion yields 
-Robert LeRoy Plaisted. 1954 
-C O 1954 Plaisted
-
-Plot technique for field evaluation of three characters in the lima bean
-Michael Holle. 1960
-C O 1960 Holle
-
-The effect of plot shape on experimental error ... / by Howard Lewis Taylor.
- C O 1951 Taylor, H
- 
-Agricultural field experiments : design and analysis / Roger G. Petersen.
-Petersen, Roger G., 1924- c1994
-Available at Parks Library PARKS General Collection (S540 F5 P47 1994 )
 
 ---
+
+Montgomery. 
+https://books.google.com/books?id=M-5BAQAAMAAJ&pg=RA4-PA164&dq=%22montgomery%22+%22Variation+in+yield+and+methods+of+arranging+plats+to+secure+comparative+results%22&hl=en&sa=X&ved=0ahUKEwiZuuqk7rPVAhVn7oMKHZsKA3MQ6AEILzAB#v=onepage&q=%22montgomery%22%20%22Variation%20in%20yield%20and%20methods%20of%20arranging%20plats%20to%20secure%20comparative%20results%22&f=false
+page 165
 
 Assessing the Spatial Variability of Alfalfa Yield Using Satellite Imagery and Ground-Based Data
 http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0157166
@@ -72,34 +58,6 @@ Oakey, Cullis, Thompson http://www.g3journal.org/content/6/5/1313/suppl/DC1
 
 ---
 
-## Rothamsted Annual Reports  
-http://www.era.rothamsted.ac.uk/eradoc/books/1
-Most of the annual reports have a section on Classical Experiments.
-'''
-Year,page
-1908-1926 
-1926-1927 agridat::sawyer.multi.uniformity 
-1927-1928 agridat::sawyer.multi.uniformity
-1929-1930
-1931,143 agridat::yates.oats
-1932
-1933
-1934,215-222 Sugar beet multi-environment trial with 3^3 fertilizer treatments at each site Roots, SugarPercent, SugarWeight, PlantNumber, Tops, Purity.
-1935
-1936,241 Similar to the 1934 experiment, but only gives the main effects, not the actual data.
-1937
-1938
-1939
-1946 few results
-1947
-1948
-1949
-1950
-1951 1952 1953
-'''
----
-
-
 Jose Crossa papers http://repository.cimmyt.org/xmlui/handle/10883/1/browse?value=Crossa,%20J.&type=author 
 Meta-r http://repository.cimmyt.org/xmlui/handle/10883/4130 
 Data http://repository.cimmyt.org/xmlui/handle/10883/4036 
@@ -145,7 +103,8 @@ A Bayesian Shrinkage Approach for AMMI Models http://journals.plos.org/plosone/a
 
 
 ## Perez
-Comparison Between Linear and Non-parametric Regression Models for Genome-Enabled Prediction in Wheat https://www.scienceopen.com/document/vid/4017fb51-381c-4374-93aa-608423df4004;jsessionid=0TLjjSbaooSUk1y3JKd4nUeb.master:so-app1-prd Data: http://www.g3journal.org/content/suppl/2012/12/05/2.12.1595.DC1 All content has CC license
+Comparison Between Linear and Non-parametric Regression Models for Genome-Enabled Prediction in Wheat https://www.scienceopen.com/document/vid/4017fb51-381c-4374-93aa-608423df4004;jsessionid=0TLjjSbaooSUk1y3JKd4nUeb.master:so-app1-prd 
+Data: http://www.g3journal.org/content/suppl/2012/12/05/2.12.1595.DC1 All content has CC license
 
 
 # Other
@@ -158,40 +117,52 @@ Jennifer Kling Lattice Design.  Data at bottom.
  http://articles.extension.org/pages/60430/introduction-to-the-augmented-experimental-design-webinar http://cropandsoil.oregonstate.edu/system/files/u534/Lattice_seminar.pdf https://passel.unl.edu/pages/informationmodule.php?idinformationmodule=1130447275 https://passel.unl.edu/pages/informationmodule.php?idinformationmodule=1130447276 https://passel.unl.edu/pages/informationmodule.php?idinformationmodule=1130447273
 
 
+# Items below have been reviewed for data sources
 
 # Journals
 
 ## Agronomy Journal
 Skimmed Vol 1
 
+
 ## The American Statistician
 Vol 1-13
+
 
 ## Biometrics. Skimmed 1947-2006
 http://www.jstor.org/action/showPublication?journalCode=biometrics
 
+
 ## The Empire Journal of Experimental Agriculture
-archive.org  Vol 3-5, 23-24 26
+http://archive.org  Vol 3-5, 23-24 26
+
 
 ## Field Crops Research. 
 http://www.sciencedirect.com/science/journal/03784290/157 Vol 1-40
 
+
 ## IASRI newsletters
 http://www.iasri.res.in/NewsLetters/nl.HTM
+
 
 ## JABES
 Vol 6.
 
+
 ## Journal of the Indian Society of Agricultural Statistics
 http://www.isas.org.in/jsp/onlinejournal.jsp Skimmed: Vol 50-56
 
+
 ## JRSSA
+
 
 ## JRSSB 1940-1997
 http://www.jstor.org/action/showPublication?journalCode=jroyastatsocise4 Datasets 1998-2015 http://onlinelibrary.wiley.com/journal/10.1111/(ISSN)1467-9868/homepage/seriesb_datasets.htm http://onlinelibrary.wiley.com/journal/10.1111/%28ISSN%291467-985X/homepage/datasets_all_series.htm
 
+
 ## JRSSC Applied Statistics datasets
 http://onlinelibrary.wiley.com/journal/10.1111/%28ISSN%291467-985X/homepage/datasets_all_series.htm 1998-2015
+
 
 ## Tidsskrift for Planteavl 1895-1992
 http://dca.au.dk/publikationer/historiske/planteavl/
@@ -202,15 +173,35 @@ http://dca.au.dk/publikationer/historiske/planteavl/
 ## Maize International Testing 1982. CIMMYT.
 http://pdf.usaid.gov/pdf_docs/PNAAQ389.pdf
 
-## Annual report - Nebraska Agricultural Experiment Station
+
+## Nebraska Agricultural Experiment Station Annual Report
 Vol 19-24, 1906-1911 https://books.google.com/books?id=HBlJAAAAMAAJ
 
+
+## Iowa State University Library Special Collections
+
+Helen Elizabeth Conners (1951).
+Field plot techniques for sweet potatoes obtained from uniformity trial data. Master's Thesis.
+No data given.
+
+Robert LeRoy Plaisted (1954).
+Field plot techniques for estimating onion yields. Master's Thesis.
+No data given.
+
+Michael Holle. 1960.
+Plot technique for field evaluation of three characters in the lima bean. Master's Thesis.
+No data given.
+
+Howard Lewis Taylor (1951).
+The effect of plot shape on experimental error. Master's Thesis.
+No data given. Used data from a corn uniformity trial, oats uniformity, and the data of Fairfield Smith. Smaller experimental errors were found for long narrow plots.
 
 # Classes
 
 
 ## Hernandez
-http://www.soils.umn.edu/academics/classes/soil4111/hw/ Available on Wayback. Yield monitor data with soils layer.
+http://www.soils.umn.edu/academics/classes/soil4111/hw/ 
+Available on Wayback. Yield monitor data for two fields with soils layer.
 
 
 ## Jack Weiss
@@ -233,7 +224,6 @@ http://newprairiepress.org/agstatconference/ 1989-2014
 http://www.sciencedirect.com/science/journal/01681699/103 Vol 1-110
 
 
-
 ## Journal of Agricultural Science
 https://www.cambridge.org/core/journals/journal-of-agricultural-science/all-issues
 1900-2016
@@ -246,5 +236,3 @@ https://www.cambridge.org/core/journals/experimental-agriculture
 
 ## SAS Global Forum
 http://support.sas.com/events/sasglobalforum/previous/online.html 22-31, 2007-2013
-
-

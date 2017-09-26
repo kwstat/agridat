@@ -17,7 +17,7 @@ Note: R_MAX_NUM_DLLS=150
 
 ## New datasets for uniformity trials
 
-bradley.multi.uniformity, christidis.wheat.uniformity,
+bradley.multi.uniformity, christidis.wheat.uniformity, day.wheat.uniformity,
 draper.safflower.uniformity, holtsmark.timothy.uniformity,
 iyer.wheat.uniformity, kadam.millet.uniformity, kalamkar.wheat.uniformity,
 khin.rice.uniformity, kiesselbach.oats.uniformity,
@@ -44,9 +44,9 @@ gomez.heteroskedastic, gomez.nonnormal1, gomez.nonnormal2, gomez.nonnormal3,
 gomez.wetdry, goulden.eggs, goulden.splitsplit, gregory.cotton,
 hanover.whitepine, harvey.lsmeans, huehn.wheat, kenward.cattle,
 kreusler.maize, lillemo.wheat, lin.superiority, lin.unbalanced,
-little.splitblock, mead.lambs, omer.sorghum, onofri.winterwheat,
-urquhart.feedlot, vaneeuwijk.fusarium, vaneeuwijk.nematodes, vaneeuwijk.drymatter,
-wheatley.carrot
+little.splitblock, mead.lambs, omer.sorghum, onofri.winterwheat, silva.cotton,
+urquhart.feedlot, usgs.herbicides, vaneeuwijk.fusarium, vaneeuwijk.nematodes,
+vaneeuwijk.drymatter, wheatley.carrot
 
 ## Other notes
 
@@ -74,7 +74,7 @@ Added DOIs for most source references.
 
 Removed most quote marks from data/*.txt files.
 
-Changed all hyperlinks to plain text (faster checking, avoids re-direct errors).
+Changed all hyperlinks to plain text (for faster checking, avoids re-direct errors).
 
 The `nass.*` files now have state names with correct spaces.
 

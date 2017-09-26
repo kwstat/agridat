@@ -31,14 +31,14 @@ One surprising discovery of this project is that often only 10-20 lines of R cod
 
 ## Setup
 
-```{r setup, results="hide"}
+```{r setup, eval=FALSE, results="hide"}
 library("knitr")
 opts_chunk$set(fig.align="center", fig.width=6, fig.height=6)
 options(width=90)
 ```
 This exhibit of agricultural data uses the following packages.
 
-```{r packs, message=FALSE}
+```{r packs, eval=FALSE, message=FALSE}
 library("agridat")
 library("desplot")
 library("gge")
@@ -54,7 +54,8 @@ library("reshape2")
 
 ## Potato blight incidence over space and time
 
-```{r lee1, fig.height=7.5}
+```{r lee1, eval=FALSE, fig.height=7.5}
+data(lee.potatoblight)
 dat <- lee.potatoblight
 # Note the progression to lower scores as time passes in each year
 skp <- c(rep(0,10),
@@ -84,7 +85,7 @@ Would you include field spatial trends in a model for these data?
 
 -----
 
-```{r lee2}
+```{r lee2, eval=FALSE}
 # 1983 only.  I.Hardy succumbs quickly
 dat <- lee.potatoblight
 dat$dd <- as.Date(dat$date)
@@ -111,7 +112,8 @@ Does this view show differences between blocks?
 
 ## An informative prior
 
-```{r harrison, fig.height=6}
+```{r harrison, eval=FALSE, fig.height=6}
+data(harrison.priors)
 d1 <- subset(harrison.priors, substance=="daidzein")
 d1 <- d1[ , c("source","number","min","max")]
 out <- data.frame(source=vector("character"),
@@ -170,7 +172,8 @@ prior?
 
 ## Data densities for a binomial GLM
 
-```{r mead}
+```{r mead, eval=FALSE}
+data(mead.germination)
 dat <- mead.germination
 # dat <- transform(dat, concf=factor(conc))
 
@@ -238,7 +241,8 @@ binomial density?
 
 ## Verification of experiment layout
 
-```{r gomez}
+```{r gomez, eval=FALSE}
+data(gomez.stripsplitplot)
 dat <- gomez.stripsplitplot
 
 # Layout
@@ -260,7 +264,8 @@ How is the design different from a ''split-split-plot'' design?
 
 ## Visualizing main effects, two-way interactions
 
-```{r gomez2}
+```{r gomez2, eval=FALSE}
+data(gomez.splitsplit)
 dat <- gomez.splitsplit
 dat$nitrogen <- factor(dat$nitro)
 require(HH)
@@ -269,6 +274,7 @@ require(HH)
 #position(dat$nitrogen) <- c(0,50,80,110,140)
 interaction2wt(yield~rep+nitrogen+management+gen, data=dat,
                main="gomez.splitsplit",
+               x.between=0, y.between=0,
                relation=list(x="free", y="same"),
                rot=c(90,0), xlab="",
                par.strip.text.input=list(cex=.8))
@@ -310,7 +316,8 @@ How would you decide the optimal fertilizer levels?
 
 ## Mosaic plot of potato damage from harvesting
 
-```{r keen, fig.width=7, fig.height=7.5}
+```{r keen, eval=FALSE, fig.width=7, fig.height=7.5}
+data(keen.potatodamage)
 dat <- keen.potatodamage
 
 # Energy E1, Rod R4, Weight W1 have higher proportions of severe damage
@@ -335,7 +342,9 @@ Which style of lifting rods cause the least/most damage to potatoes?
 
 ## Yield vs covariate for lattice::barley
 
-```{r wright}
+```{r wright, eval=FALSE}
+data(minnesota.barley.yield)
+data(minnesota.barley.weather)
 dat <- minnesota.barley.yield
 datw <- minnesota.barley.weather
 
@@ -398,9 +407,10 @@ Does barley yield better in cooler or warmer weather?
 
 ## GGE biplot
 
-```{r crossa, message=FALSE}
+```{r crossa, eval=FALSE, message=FALSE}
 
 # Specify env.group as column in data frame
+data(crossa.wheat)
 dat2 <- crossa.wheat
 dat2$eg <- ifelse(is.element(dat2$loc,
 c("KN","NB","PA","BJ","IL","TC", "JM","PI","AS","ID","SC","SS",
@@ -424,11 +434,12 @@ Which genotypes are best to each mega-environment?
 
 ## Nebraska farming income choropleth
 
-```{r nebr1}
+```{r nebr1, eval=FALSE}
 library("maps")
 library("mapproj")
 library("latticeExtra")
 
+data(nebraska.farmincome)
 dat <- nebraska.farmincome
 dat$stco <- paste0('nebraska,', dat$county)
 dat <- transform(dat, crop=crop/1000, animal=animal/1000)
@@ -457,7 +468,7 @@ spatial patterns in the data?
 
 -----
 
-```{r nebr2}
+```{r nebr2, eval=FALSE}
 
 # Now scale to income/mile^2
 dat <- transform(dat, crop.rate=crop/area, animal.rate=animal/area)
@@ -492,8 +503,9 @@ Where are farm incomes highest?  Why?
 
 ## Las Rosas yield monitor
 
-```{r lasrosas,fig.height=7.5}
+```{r lasrosas, eval=FALSE, fig.height=7.5}
 
+data(lasrosas.corn)
 dat <- lasrosas.corn
 library("latticeExtra")
 
@@ -573,7 +585,8 @@ Which year showed greater spatial variation in yield?
 
 ## Time series of corn yields by state
 
-```{r nass, fig.height=8}
+```{r nass, eval=FALSE, fig.height=8}
+data(nass.corn)
 dat <- nass.corn
 dat$acres <- dat$acres/1000000
 

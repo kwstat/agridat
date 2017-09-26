@@ -37,6 +37,7 @@ Suggests:
     MASS,
     MCMCglmm,
     mgcv,
+    NADA,
     nlme,
     nullabor,
     ordinal,

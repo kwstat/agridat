@@ -17,6 +17,8 @@
   }
 }
 \details{
+
+  Experiments were conducted by the Nebraska Experiment Station.
   
   A field was sown to Turkey winter wheat in the fall of 1908.  The
   drill, 5.5 feet wide, was driven across the first series of 14 blocks,
@@ -28,12 +30,17 @@
 
   Surface & Pearl (1916) give a simple method for adjusting yield due to
   fertility effects.
+
+  Field length: 14 blocks
+
+  Field width: 16 
+  
 }
 \source{  
   E. G. Montgomery (1913).
-  Experiments in wheat breeding: Experimental Error In The Nursery and
+  Experiments in Wheat Breeding: Experimental Error In The Nursery and
   Variation in Nitrogen and Yield.
-  U.S. Dept of Agriculture, Bureau of Plant Industry, Bulletin 269.
+  U.S. Dept of Agriculture, Bureau of Plant Industry, Bulletin 269. Page 33-.
   Figure 10, page 37.
   http://doi.org/10.5962/bhl.title.43602
 }
@@ -43,8 +50,8 @@
   A method of correcting for soil heterogeneity in variety tests.
   \emph{Journal of Agricultural Research}, 5, 22, 1039-1050.
   Figure 2.
-
 }
+
 \examples{
 
 data(montgomery.wheat.uniformity)

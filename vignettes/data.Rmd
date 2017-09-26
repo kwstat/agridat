@@ -56,11 +56,11 @@ See also http://www.ethstat.org.et/esa_publications.html, Volume 19
 ### Peter Diggle, Patrick Heagerty, Kung-Yee Liang, Scott Zeger. _Analysis of Longitudinal Data_.
 http://faculty.washington.edu/heagerty/Books/AnalysisLongitudinal/datasets.html
 
-Pig weight data: SemiPar::pig.weights
+Pig weight data is found in SemiPar::pig.weights
 
-Sitka spruce data: geepack::spruce
+Sitka spruce data is found in: geepack::spruce
 
-Milk protein data: nlme::Milk.  A thorough description of this data can be found in Molenberghs & Kenward, /Missing Data in Clinical Studies/, p. 377.  Original source: A. P. Verbyla and B. R. Cullis, Modelling in Repeated Measures Experiments. http://www.jstor.org/stable/2347384 
+Milk protein data is found in: nlme::Milk.  A thorough description of this data can be found in Molenberghs & Kenward, /Missing Data in Clinical Studies/, p. 377.  Original source: A. P. Verbyla and B. R. Cullis, Modelling in Repeated Measures Experiments. http://www.jstor.org/stable/2347384 
 
 
 ### Federer, Walt (1955). _Experimental Design_.
@@ -81,6 +81,7 @@ Milk protein data: nlme::Milk.  A thorough description of this data can be found
 ### Finney 1972. _An Introduction to Statistical Science in Agriculture_.
 Not reviewed.
 
+
 ### Galwey, N.W. (2014). _Introduction to Mixed Modelling_, 2nd ed.
 http://www.wiley.com/WileyCDA/WileyTitle/productCd-1119945496.html
 ```
@@ -92,7 +93,7 @@ http://www.wiley.com/WileyCDA/WileyTitle/productCd-1119945496.html
 290 wheat anoxia, McDonald
 291 wool fibers
 370 alphalpha design (row-column inc block)
-434 hollamby wheat trial
+434 hollamby wheat trial, layout
 ```
 
 
@@ -138,7 +139,7 @@ Second edition: http://krishikosh.egranth.ac.in/handle/1/2034118
 
 
 ### Erwin LeClerg, Warren Leonard, Andrew Clark (1962). _Field Plot Technique_
-Many small datasets, including these:
+Many small datasets.
 ```
 27 uniformity agridat::goulden.barley
 213 split-plot
@@ -243,6 +244,11 @@ https://archive.org/details/statisticaltechn031729mbp
 
 ### Oliver Schabenberger and Francis J. Pierce. _Contemporary Statistical Models for the Plant and Soil Sciences_.
 Many datasets
+
+
+### Pesticides in the Nation's Streams and Ground Water, 1992-2001
+Extensive data for detection of pesticides in water samples.  See Appendix 5 and Appendix 6 of the supporting info.
+https://water.usgs.gov/nawqa/pnsp/pubs/circ1291/supporting_info.php
 
 
 # Journals - Data
@@ -522,6 +528,10 @@ Data lmtest::ChickEgg is a time series of annual chicken and egg production in t
 The referenced source for 'geno' data does NOT contain the data.
 
 
+### NADA
+The 'Atra' and 'Recon' datasets contain measurements of Atrazine in water samples.
+
+
 ### nlraa
 Miguez. Non-linear models in agriculture.
 http://r-forge.r-project.org/R/?group_id=1599
@@ -586,15 +596,29 @@ https://github.com/reyzaguirre/st4gi
 http://www.ars.usda.gov/Main/docs.htm?docid=8419&page=4
 
 
-### Electronic Rothamsted Archive
+### Rothamsted Electronic Archive
 http://www.era.rothamsted.ac.uk/index.php
 Data from Broadbalk and other long-term experiments.
 
 
-### Electronic Rothamsted Documents Archive
+### Rothamsted Documents Archive
 http://www.era.rothamsted.ac.uk/eradoc/collections.php
-Annual reports from Rothamsted 1908-1987. Many have data.
-
+Annual reports from Rothamsted 1908-1987. Many have data, especially in the early years (before WWII) there are data given for the 'Classical Experiments'.
+```
+Year, page
+1908-1926 
+1926-1927 agridat::sawyer.multi.uniformity 
+1927-1928 agridat::sawyer.multi.uniformity
+1929-1930
+1931,143 agridat::yates.oats
+1932
+1933
+1934,215-222 Sugar beet multi-environment trial with 3^3 fertilizer treatments at each site Roots, SugarPercent, SugarWeight, PlantNumber, Tops, Purity.
+1935
+1936,241 Similar to the 1934 experiment, but only gives the main effects, not the actual data.
+1937-1939
+1946-1953
+```
 
 ### Germplasm Enhancement of Maize (ISU)
 http://www.public.iastate.edu/~usda-gem/index.htm
