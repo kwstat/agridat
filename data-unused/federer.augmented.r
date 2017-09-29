@@ -1,5 +1,5 @@
-# AugmentedSplitBlock.r
-# Time-stamp: <01 Dec 2016 12:43:45 c:/x/rpack/agridat/data-unused/federer.augmented.r>
+# federer.augmented.r
+# Time-stamp: <13 Sep 2017 14:07:08 c:/x/rpack/agridat/data-unused/federer.augmented.r>
 
 This simulated data is from:
 
@@ -17,22 +17,26 @@ A9 B9            14                            34
 A8 B9            15                            45
 
 
-dat <- read.csv("AugmentedSplitBlock.csv")
-dat$newa <- ifelse(dat$a<-9, 1, 0)
-dat$an <- ifelse(dat$newa==1,99,dat$a)
+dat <- read.csv("federer.augmented.csv")
+dat$newa <- ifelse(dat$a < -9, 1, 0)
+dat$an <- ifelse(dat$newa==1, 99, dat$a)
 dat$newb <- ifelse(dat$b<=6, 1, 0)
-dat$bn <- ifelse(dat$newb==1,999,dat$b)
-dat <- makeFactors(dat,c("rep","a","b","bn","an"))
+dat$bn <- ifelse(dat$newb==1, 999, dat$b)
+dat <- transform(dat,
+                 rep=factor(rep), a=factor(a), b=factor(b),
+                 bn=factor(bn), an=factor(an))
 
 # GLM anova table
 dat.aov <- aov(y~rep*a*b,data=dat)
 # GLM anova table
 dat.aov <- aov(y~rep*an*bn,data=dat)
 
-dat$anewa <- with(dat,interaction(a,newa,sep=":"))
-dat$bnewb <- with(dat,interaction(b,newb,sep=":"))
+# this does not seem right
+
+dat$anewa <- with(dat, interaction(a, newa, sep=":"))
+dat$bnewb <- with(dat, interaction(b, newb, sep=":"))
 library(lme4)
-# This crashes r.  Doug Bates says the new version of lme4 works okay.
+
 dat$newaf <- factor(dat$newa)
 dat$newbf <- factor(dat$newb)
 dat.lme <- lmer(y~an + bn+ an:bn+(1|rep) + (1|a:newaf) + (1|b:newbf),data=dat)
@@ -42,23 +46,20 @@ dat.lme <- lmer(y~an + bn+ an:bn+(1|rep) + (1|bnewb),data=dat)
 dat.lme <- lmer(y~an + bn+ an:bn+(1|rep) + (1|anewa) + (1|bnewb),data=dat)
 
 
-# SAMM is very easy to use and has very close agreement with SAS.
-library(samm)
-dat.samm <- samm(y~an+bn+an:bn, data=dat, random=~rep+a:newa+b:newb)
+# asreml is very easy to use and has very close agreement with SAS.
+library(asreml)
+dat.asreml <- asreml(y~an+bn+an:bn, data=dat, random=~rep+a:newa+b:newb)
 
 # Least squares means
-predict(dat.samm, classify=list("an","bn","an:bn"))$predictions
-
-# Covariance parameter estimates
-VarCorr.samm(dat.samm)
+predict(dat.asreml, classify=list("an","bn","an:bn"))$predictions
 
 # Fixed effects.  Different from SAS, probably due to parameterization
 # differences between R and SAS
-coef(dat.samm)$fix
+coef(dat.asreml)$fix
 
 # Random effects
-summary(dat.samm)$coef.random
+summary(dat.asreml)$coef.random
 
 # Tests of fixed effects.  Slightly different from SAS
-# (samm uses Wald tests)
-anova(dat.samm)
+# (asreml uses Wald tests)
+anova(dat.asreml)

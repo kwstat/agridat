@@ -128,10 +128,11 @@ datm <- aggregate(yield ~ county + gen, data=dat, FUN=mean)
   m1 <- asreml(yield ~ county, data=dat,
                random = ~ gen:county,
                rcov = ~ at(county):ar1(xf):ar1(yf))
-  # Add FA1
-  m2 <- update(m1, random=~gen:fa(county,1))
+  # Add FA1.
+  # For ASExtras:::summary.fa, use fa(county,1):gen, NOT gen:fa(county,1)
+  m2 <- update(m1, random=~fa(county,1):gen)
   # FA2
-  m3 <- update(m2, random=~gen:fa(county,2))
+  m3 <- update(m2, random=~fa(county,2):gen)
   
   # Use the loadings to make a biplot
   vars <- vc(m3)
@@ -144,8 +145,8 @@ datm <- aggregate(yield ~ county + gen, data=dat, FUN=mean)
   colnames(lam) <- c("load1", "load2")
   
   co3 <- coef(m3)$random # Scores are the GxE coefficients
-  ix1 <- grepl("_Comp1$", rownames(co3))
-  ix2 <- grepl("_Comp2$", rownames(co3))
+  ix1 <- grepl("_Comp1:gen", rownames(co3))
+  ix2 <- grepl("_Comp2:gen", rownames(co3))
   sco <- matrix(c(co3[ix1], co3[ix2]), ncol=2, byrow=FALSE)
   sco <- sco %*% rot # Rotate the scores
   dimnames(sco) <- list(levels(dat$gen) , c('load1','load2'))
@@ -165,6 +166,23 @@ datm <- aggregate(yield ~ county + gen, data=dat, FUN=mean)
   # Very similar to the coefficient biplot
   biplot(bi3, stand=FALSE, # what does 'stand' do?
          main="SVD biplot of FA2 predictions")
+
+  # latent factor plots and more
+  if(FALSE) {
+    library(ASExtras)
+    ASExtras:::summary.fa(m3, g.list=c("G01","G02","G03","G04","G05","G06","G07","G08")) 
+    out <- ASExtras:::summary.fa(m3,uniplot=0,blups=1,regplot=1,addedplot=0,heatmap=0) 
+    loads <- as.data.frame(out$gammas$`fa(county, 2):gen`$`rotated loads`)
+    loads$county <- rownames(loads)
+    
+    regdat <- out$blups$`fa(county, 2):gen`$blups.inmet
+    regdat <- merge(regdat, loads)
+    
+    library(latticeExtra)
+    xyplot(blup ~ fac_1|gen, data=regdat, as.table=TRUE)+
+      xyplot(regblup ~ fac_1|gen, data=regdat,
+             as.table=TRUE, type='r')
+    }
 
 }
 

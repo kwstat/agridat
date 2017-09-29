@@ -5,16 +5,6 @@ This document lists notes about data sources searched and additional sources of 
 ---
 
 
-
----
-
-Montgomery. 
-https://books.google.com/books?id=M-5BAQAAMAAJ&pg=RA4-PA164&dq=%22montgomery%22+%22Variation+in+yield+and+methods+of+arranging+plats+to+secure+comparative+results%22&hl=en&sa=X&ved=0ahUKEwiZuuqk7rPVAhVn7oMKHZsKA3MQ6AEILzAB#v=onepage&q=%22montgomery%22%20%22Variation%20in%20yield%20and%20methods%20of%20arranging%20plats%20to%20secure%20comparative%20results%22&f=false
-page 165
-
-Assessing the Spatial Variability of Alfalfa Yield Using Satellite Imagery and Ground-Based Data
-http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0157166
-
 ---
 Henry Wallace archive at Univ Iowa Library
 http://www.lib.uiowa.edu/sc/location-and-hours/
@@ -176,6 +166,7 @@ http://pdf.usaid.gov/pdf_docs/PNAAQ389.pdf
 
 ## Nebraska Agricultural Experiment Station Annual Report
 Vol 19-24, 1906-1911 https://books.google.com/books?id=HBlJAAAAMAAJ
+Vol 25, 1912 https://books.google.com/books?id=M-5BAQAAMAAJ
 
 
 ## Iowa State University Library Special Collections

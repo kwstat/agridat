@@ -367,6 +367,13 @@ https://books.google.com/books?hl=en&lr=&id=SqlJAAAAMAAJ&oi=fnd&pg=PA446
 Note: No significant differences between fertilizer treatments.
 
 
+**Kayad et al**. (2016).
+Assessing the Spatial Variability of Alfalfa Yield Using Satellite Imagery and Ground-Based Data. 
+\emph{PLOS One}.
+https://doi.org/10.1371/journal.pone.0157166
+Supporting information contains yield monitor data for 4 hay harvests on a center-pivot field.
+
+
 **Roger W. Hexem, Earl O.Heady, Metin Caglar** (1974)
 A compendium of experimental data for corn, wheat, cotton and sugar beets grown at selected sites in the western United States and alternative production functions fitted to these data.
 Technical report: Center for Agricultural and Rural Development, Iowa State University.
