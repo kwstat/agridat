@@ -58,7 +58,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{mcclelland.corn.uniformity}         \tab 2 x 219 \tab xy \tab \cr
 \link{mercer.mangold.uniformity}          \tab 10 x 20 \tab xy \tab \cr
 \link{mercer.wheat.uniformity}            \tab 25 x 20 \tab xy, 2 traits \tab spplot \cr
-\link{montgomery.wheat.uniformity}        \tab 14 x 16 \tab xy \tab lm \cr
+\link{montgomery.wheat.uniformity}        \tab 14 x 16 \tab xy, 2 years \tab lm \cr
 \link{moore.polebean.uniformity}          \tab 12 x 12 \tab xy \tab \cr
 \link{moore.bushbean.uniformity}          \tab 24 x 24 \tab xy \tab \cr
 \link{moore.sweetcorn.uniformity}         \tab 24 x 12 \tab xy \tab \cr
@@ -272,6 +272,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{perry.springwheat}           \tab 28  \tab 5  \tab     \tab 4  \tab       \tab gain \tab lm,lmer,asreml\cr
 \link{piepho.cocksfoot}            \tab 25  \tab    \tab     \tab 7  \tab       \tab \tab lmer\cr
 \link{ratkowsky.onions}            \tab     \tab    \tab     \tab    \tab       \tab  \tab lm\cr
+\link{reid.grasses}                \tab 4   \tab    \tab     \tab 3  \tab 21    \tab \tab nlme SSfpl \cr
 \link{ridout.appleshoots}          \tab     \tab    \tab 30  \tab    \tab 2,4   \tab zip \tab zeroinfl\cr
 \link{rothamsted.brussels}         \tab     \tab    \tab 4   \tab    \tab 6     \tab \tab \cr
 \link{ryder.groundnut}             \tab 5   \tab    \tab 4   \tab    \tab       \tab xy, rcb \tab lm \cr

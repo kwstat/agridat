@@ -44,9 +44,9 @@ gomez.heteroskedastic, gomez.nonnormal1, gomez.nonnormal2, gomez.nonnormal3,
 gomez.wetdry, goulden.eggs, goulden.splitsplit, gregory.cotton,
 hanover.whitepine, harvey.lsmeans, huehn.wheat, kenward.cattle,
 kreusler.maize, lillemo.wheat, lin.superiority, lin.unbalanced,
-little.splitblock, mead.lambs, omer.sorghum, onofri.winterwheat, silva.cotton,
-urquhart.feedlot, usgs.herbicides, vaneeuwijk.fusarium, vaneeuwijk.nematodes,
-vaneeuwijk.drymatter, wheatley.carrot
+little.splitblock, mead.lambs, omer.sorghum, onofri.winterwheat, reid.grasses,
+silva.cotton, urquhart.feedlot, usgs.herbicides, vaneeuwijk.fusarium,
+vaneeuwijk.nematodes, vaneeuwijk.drymatter, wheatley.carrot
 
 ## Other notes
 

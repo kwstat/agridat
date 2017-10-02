@@ -4,14 +4,17 @@ This document lists notes about data sources searched and additional sources of 
 
 ---
 
+QTL analysis using Integrated Breeding Platform.  https://www.integratedbreeding.net/165/training/bms-user-manual/qtl-analysis CC-BY-SA license
 
 ---
+
 Henry Wallace archive at Univ Iowa Library
 http://www.lib.uiowa.edu/sc/location-and-hours/
 Henry Wallace research papers
 http://aspace.lib.uiowa.edu/repositories/2/archival_objects/400608
 500 Ear experiment. Might be the data for "What is in the corn judge's mind" paper
 http://aspace.lib.uiowa.edu/repositories/2/archival_objects/400615
+
 ---
 
 rpathanalysis
@@ -44,7 +47,9 @@ kamidi 11g,7l
 lin.balanced 33g,12l 
 lin.unbalanced 33g,18l
 
-Oakey, Cullis, Thompson http://www.g3journal.org/content/6/5/1313/suppl/DC1
+Oakey, Cullis, Thompson
+http://www.g3journal.org/content/early/2016/03/10/g3.116.027524
+http://www.g3journal.org/content/6/5/1313/suppl/DC1
 
 ---
 
@@ -58,8 +63,6 @@ http://repository.cimmyt.org/xmlui/handle/10883/4128 http://repository.cimmyt.or
 ---
 
 Review of meta-analyses in agronomy http://www6.versailles-grignon.inra.fr/agronomie/Meta-analysis-in-agronomy/References
-
-QTL analysis using Integrated Breeding Platform.  https://www.integratedbreeding.net/165/training/bms-user-manual/qtl-analysis CC-BY-SA license
 
 Richard Plant http://www.plantsciences.ucdavis.edu/plant/qgislabs.htm CC-SA license
 
@@ -101,10 +104,6 @@ Data: http://www.g3journal.org/content/suppl/2012/12/05/2.12.1595.DC1 All conten
 Many interesting pages.  Non-open license...?  Lecture and data http://articles.extension.org/plant_breeding_genomics http://articles.extension.org/pages/68660/plant-breeding-and-genomics-learning-lessons http://articles.extension.org/pages/60430/introduction-to-the-augmented-experimental-design-webinar http://articles.extension.org/pages/61006/estimating-heritability-and-blups-for-traits-using-tomato-phenotypic-data <---
 http://articles.extension.org/pages/68019/genomic-relationships-and-gblup
 http://pbgworks.org/node/1440
-
-
-Jennifer Kling Lattice Design.  Data at bottom.
- http://articles.extension.org/pages/60430/introduction-to-the-augmented-experimental-design-webinar http://cropandsoil.oregonstate.edu/system/files/u534/Lattice_seminar.pdf https://passel.unl.edu/pages/informationmodule.php?idinformationmodule=1130447275 https://passel.unl.edu/pages/informationmodule.php?idinformationmodule=1130447276 https://passel.unl.edu/pages/informationmodule.php?idinformationmodule=1130447273
 
 
 # Items below have been reviewed for data sources

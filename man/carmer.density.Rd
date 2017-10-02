@@ -72,7 +72,8 @@ round(out, 3)
 # Fit an overall fixed-effect with random deviations for each hybrid.
 require(nlme)
 m1 <- nlme(yield ~ pop * a * k^pop,
-           fixed = a + k ~ 1, random = a+k ~ 1|gen,
+           fixed = a + k ~ 1,
+           random = a + k ~ 1|gen,
            data=dat, start=c(a=10,k=1))
 # summary(m1) # Random effect for 'a' probably not needed
 
