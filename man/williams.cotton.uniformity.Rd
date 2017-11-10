@@ -50,10 +50,11 @@ desplot(yield ~ col*row, dat,
 dat$fit <- fitted(loess(yield~col*row, dat, span=.5))
 require("lattice")
 contourplot(fit~col*row, data=dat,
-            region=TRUE, cuts=6,
+            aspect=144/24,
+            region=TRUE, cuts=6, col.regions=RedGrayBlue,
             main="williams.cotton.uniformity")
-wireframe(fit~col*row, data=dat, zlim=c(100, 250),
-          main="williams.cotton.uniformity")
+# wireframe(fit~col*row, data=dat, zlim=c(100, 250),
+#           main="williams.cotton.uniformity")
 
 # Williams table 1
 anova(aov(yield ~ factor(row) + factor(col), dat))

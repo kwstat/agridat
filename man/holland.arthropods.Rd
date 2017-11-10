@@ -58,18 +58,20 @@ if(require(reshape2) & require(lattice)){
 }
 
 
-# individual species
-require(lattice)
-grays <- colorRampPalette(c("#d9d9d9","#252525"))
-contourplot(linyphiidae ~ col*row, dat, at=c(0,40,80,120,160,200), region=TRUE,
-            col.regions=grays(5),
-            main="holland.arthropods - linyphiidae counts in winter wheat")
-contourplot(n.brevicollis ~ col*row, dat, region=TRUE)
-contourplot(linyphiidae~ col*row, dat, region=TRUE)
-contourplot(collembola ~ col*row, dat, region=TRUE)
-contourplot(carabidae ~ col*row, dat, region=TRUE)
-contourplot(lycosidae ~ col*row, dat, region=TRUE)
-contourplot(weedcover ~ col*row, dat, region=TRUE)
+\dontrun{
+  # individual species
+  require(lattice)
+  grays <- colorRampPalette(c("#d9d9d9","#252525"))
+  contourplot(linyphiidae ~ col*row, dat, at=c(0,40,80,120,160,200), region=TRUE,
+              col.regions=grays(5),
+              main="holland.arthropods - linyphiidae counts in winter wheat")
+  contourplot(n.brevicollis ~ col*row, dat, region=TRUE)
+  contourplot(linyphiidae~ col*row, dat, region=TRUE)
+  contourplot(collembola ~ col*row, dat, region=TRUE)
+  contourplot(carabidae ~ col*row, dat, region=TRUE)
+  contourplot(lycosidae ~ col*row, dat, region=TRUE)
+  contourplot(weedcover ~ col*row, dat, region=TRUE)
+}
 
 }
 

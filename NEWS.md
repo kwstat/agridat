@@ -43,7 +43,7 @@ depalluel.sheep. eden.nonnormal, gartner.corn, giles.wheat,
 gomez.heteroskedastic, gomez.nonnormal1, gomez.nonnormal2, gomez.nonnormal3,
 gomez.wetdry, goulden.eggs, goulden.splitsplit, gregory.cotton,
 hanover.whitepine, harvey.lsmeans, huehn.wheat, kenward.cattle,
-kreusler.maize, lillemo.wheat, lin.superiority, lin.unbalanced,
+kreusler.maize, lehner.soybeanmold, lillemo.wheat, lin.superiority, lin.unbalanced,
 little.splitblock, mead.lambs, omer.sorghum, onofri.winterwheat, reid.grasses,
 silva.cotton, urquhart.feedlot, usgs.herbicides, vaneeuwijk.fusarium,
 vaneeuwijk.nematodes, vaneeuwijk.drymatter, wheatley.carrot
@@ -81,6 +81,8 @@ The `nass.*` files now have state names with correct spaces.
 Added package logo on github.
 
 Replaced use of `gam` package in examples, in favor of `mgcv` package.
+
+The `crossa.wheat` data now includes location groups and genotype groups.
 
 # agridat 1.12 - Jun 2015
 

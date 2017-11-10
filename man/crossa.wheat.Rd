@@ -12,7 +12,9 @@
   A data frame with 450 observations on the following 3 variables.
   \describe{
     \item{\code{loc}}{location}
+    \item{\code{locgroup}}{location group: Grp1-Grp2}
     \item{\code{gen}}{genotype}
+    \item{\code{gengroup}}{genotype group: W1, W2, W3}
     \item{\code{yield}}{grain yield, tons/ha}
   }
 }
@@ -20,6 +22,9 @@
   Grain yield from the 8th Elite Selection Wheat Yield Trial to evaluate
   18 bread wheat genotypes at 25 locations in 15 countries.
 
+  Cross et al. used this data to cluster loctions into 2
+  mega-environments and clustered genotypes into 3 wheat clusters.
+  
   Locations
   \tabular{lllrr}{
     Code \tab Country \tab Location \tab Latitude (N) \tab Elevation (m) \cr
@@ -92,10 +97,12 @@ if(require(agricolae)){
          col= "brown", lwd=1.8,length=0.1)
 }
 
-# GGB example ...
+# GGB example
 library(agridat)
 data(crossa.wheat)
 dat2 <- crossa.wheat
+
+# FIXME: The loc grouping is now in the data
 
 # Define mega-environment groups of locations
 dat2$eg <- ifelse(is.element(dat2$loc,

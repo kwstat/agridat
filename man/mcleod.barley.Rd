@@ -63,15 +63,13 @@ signif(d1,3)
 # grains/head, weight/1000 grains are all decreasing as planting
 # rate increases, the total yield is still increasing.
 # But, income peaks around seed rate of 100.
-if(require(reshape2)){
-d2 <- melt(d1, id.var='rate')
-require(lattice)
-xyplot(value~rate|variable, data=d2,
-       scales=list(y=list(relation="free")), type='b',
-       xlab="Nitrogen rate", ylab="Trait value",
-       main="mcleod.barley - nitrogen response curves")
-}
 
+require(lattice)
+xyplot(yield +income +surviving +grains +weight +plants +tillers +heads ~ rate,
+       data=d1, outer=TRUE, type=c('p','l'),
+       scales=list(y=list(relation="free")),
+       xlab="Nitrogen rate", ylab="Trait value",
+       main="mcleod.barley - nitrogen response curves"  )
 
 }
 \keyword{datasets}

@@ -66,7 +66,7 @@ xyplot(grain~straw, data=dat, main="day.wheat.uniformity", type=c('p','r'))
 \dontrun{
   
   if(require(desplot)){
-    desplot(grain~col*row, data=dat,
+    desplot(straw~col*row, data=dat,
             flip=TRUE, aspect=(100*8)/(155*12), # true aspect
             main="day.wheat.uniformity - straw yield")
   }

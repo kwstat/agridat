@@ -250,6 +250,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{kempton.rowcol}              \tab 35  \tab    \tab 2   \tab    \tab       \tab xy, row-col \tab lmer \cr
 \link{kempton.slatehall}           \tab 25  \tab    \tab 6   \tab    \tab       \tab xy \tab asreml, lmer\cr
 \link{lee.potatoblight}            \tab 337 \tab    \tab 4   \tab 11 \tab       \tab xy, ordinal, repeated \tab \cr
+\link{lehner.soybeanmold}          \tab     \tab 35 \tab     \tab 4  \tab 11    \tab \tab metafor, lmer \cr
 \link{lillemo.wheat}               \tab 24  \tab 13 \tab     \tab 7  \tab       \tab qq \tab medpolish, huehn\cr
 \link{lin.superiority}             \tab 33  \tab 12 \tab     \tab    \tab       \tab \tab superiority \cr
 \link{lin.unbalanced}              \tab 33  \tab 18 \tab     \tab    \tab       \tab \tab superiority \cr
