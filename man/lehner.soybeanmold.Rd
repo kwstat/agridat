@@ -19,7 +19,7 @@
     \item{\code{trt}}{treatment number}
     \item{\code{yield}}{crop yield, kg/ha}
     \item{\code{mold}}{white mold incidence, percent}
-    \item{\code{sclerotia}{weight of sclerotia g/ha}
+    \item{\code{sclerotia}}{weight of sclerotia g/ha}
   }
 }
 \details{
@@ -79,7 +79,7 @@ if(require(latticeExtra) & require(metafor)){
                     yi = 1/2 * log((1 + ri)/(1 - ri)),
                     vi = 1/(ni - 3))
   # Overall correlation across studies
-  overall <- metafor::rma.uni(yi, vi, method="ML", data=cors)
+  overall <- rma.uni(yi, vi, method="ML", data=cors) # metafor package
   # back transform
   overall <- predict(overall, transf=transf.ztor)
   

@@ -106,12 +106,13 @@ name                             \tab gen  \tab years \tab trt \tab other \tab m
 \link{foulley.calving}           \tab      \tab    \tab        \tab ordinal \tab polr \cr
 \link{goulden.eggs}              \tab      \tab    \tab        \tab controlchart \tab \cr
 \link{harvey.lsmeans}            \tab 3,3  \tab    \tab        \tab \tab lm\cr
+\link{harville.lamb}             \tab 5    \tab    \tab        \tab \tab lmer\cr
 \link{henderson.milkfat}         \tab      \tab    \tab        \tab \tab nls,lm,glm,gam\cr
 \link{holland.arthropods}        \tab 5    \tab    \tab        \tab \tab \cr
 \link{ilri.sheep}                \tab 4    \tab 6  \tab        \tab diallel \tab lmer, asreml \cr
 \link{kenward.cattle}            \tab      \tab    \tab 2      \tab \tab asreml \cr
 \link{lucas.switchback}          \tab 12   \tab    \tab 3      \tab \tab aov \cr
-\link{mead.lambs}                \tab 3    \tab    \tab 3      \tab \tab glm \cr
+\link{mead.lamb}                 \tab 3    \tab    \tab 3      \tab \tab glm \cr
 \link{patterson.switchback}      \tab 12   \tab    \tab 4      \tab \tab aov \cr
 \link{urquhart.feedlot}          \tab 11   \tab    \tab 3      \tab  \tab lm \cr
 \link{zuidhof.broiler}           \tab      \tab    \tab        \tab ts \tab \cr

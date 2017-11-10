@@ -36,6 +36,7 @@ Suggests:
     maps,
     MASS,
     MCMCglmm,
+    metafor,
     mgcv,
     NADA,
     nlme,

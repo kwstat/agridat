@@ -1,5 +1,5 @@
-\name{mead.lambs}
-\alias{mead.lambs}
+\name{mead.lamb}
+\alias{mead.lamb}
 \docType{data}
 \title{
   Number of lambs born to 3 breeds on 3 farms
@@ -7,7 +7,7 @@
 \description{
   Number of lambs born to 3 breeds on 3 farms
 }
-\usage{data("mead.lambs")}
+\usage{data("mead.lamb")}
 \format{
   A data frame with 36 observations on the following 4 variables.
   \describe{
@@ -35,13 +35,13 @@
 
 \examples{
 
-data(mead.lambs)
-dat <- mead.lambs
+data(mead.lamb)
+dat <- mead.lamb
 
 # farm 1 has more ewes in lambclass 3
 d2 <- xtabs(y ~ farm+breed+lambclass, data=dat)
 mosaicplot(d2, color=c("lemonchiffon1","moccasin","lightsalmon1","indianred"),
-           xlab="farm/lambclass", ylab="breed", main="mead.lambs")
+           xlab="farm/lambclass", ylab="breed", main="mead.lamb")
 
 names(dat) <- c('F','B','L','y') # for compactness
 # Match totals in Mead example 14.6
