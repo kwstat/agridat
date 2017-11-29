@@ -4,7 +4,7 @@
 [![CRAN_Downloads](https://cranlogs.r-pkg.org/badges/agridat)](https://cranlogs.r-pkg.org/badges/agridat)
 [![Research software impact](http://depsy.org/api/package/cran/agridat/badge.svg)](http://depsy.org/package/r/agridat)
 
-The `agridat` package provides an extensive (and growing) collection of datasets from agricultural experiments.
+The `agridat` package provides an extensive collection of datasets from agricultural experiments.
 
 The datasets come from books, papers, and websites related to agriculture.
 Example graphics and analyses are included. Data come from small-plot trials,
@@ -29,6 +29,10 @@ devtools::install_github("kwstat/agridat")
 ## Vignettes
 
 [Graphical Gems in the agridat Package](https://rawgit.com/kwstat/agridat/master/vignettes/agridat_examples.html)
+
+[Additional sources of agricultural data](https://rawgit.com/kwstat/agridat/master/vignettes/data.html)
+
+[Using Papadakis covariates for nearest neighbor analysis](https://rawgit.com/kwstat/agridat/master/vignettes/papadakis.html)
 
 ## Usage
 
