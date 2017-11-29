@@ -1,19 +1,17 @@
 
-Release before mixed models paper?
-
-Note: R_MAX_NUM_DLLS=150
-
 ## To do?
 
-* Example graphic for tai.potato
-* Need yang.barley graphic
-
+* Need graphic for tai.potato
+* Need graphic for yang.barley
 * Figure out best way to use jags
 * JAGS code for lee.potatoblight
 * JAGS code for theobald.barley
 * JAGS code for besag.elbatan
+* Keep (small) pdf vignetts for CRAN, (large) html vignettes for Git.
+* Release before mixed models paper?
+* Note: R_MAX_NUM_DLLS=150
 
-# agridat 1.13 - unpublished
+# agridat 1.13 - Nov 2017
 
 ## New datasets for uniformity trials
 
@@ -51,13 +49,13 @@ vaneeuwijk.drymatter, wheatley.carrot
 
 ## Other notes
 
-These data objects have been changed from lists of matrices into tidy
+The following data objects have been changed from lists of 2 matrices into tidy
 dataframes: aastveit.barley, box.cork, ortiz.tomato, talbot.potato,
 vargas.txe, vargas.wheat1, vargas.wheat2
 
-Moved `desplot` function to package `desplot`.
+Moved `desplot()` function to package `desplot`.
 
-Moved `gge` function to package `gge`.
+Moved `gge()` function to package `gge`.
 
 Changed license to CC BY-SA 4.0, file LICENSE.note (similar to igraphdata).
 
@@ -73,19 +71,15 @@ Changed extensions in inst/files from .bug to .jag .
 
 Added DOIs for most source references.
 
-Removed most quote marks from data/*.txt files.
-
 Changed all hyperlinks to plain text (for faster checking, avoids re-direct errors).
 
-The `nass.*` files now have state names with correct spaces.
-
-Added package logo on github.
+The `nass.*` datasets now have state names with correct spaces. e.g. NewYork to New York.
 
 Replaced use of `gam` package in examples, in favor of `mgcv` package.
 
-The `crossa.wheat` data now includes location groups and genotype groups.
+The mead.lambs data is renamed to mead.lamb for consistency.
 
-The `mead.lambs` data is renamed to `mead.lamb` for consistency.
+Added package logo on github.
 
 # agridat 1.12 - Jun 2015
 

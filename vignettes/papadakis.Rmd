@@ -2,13 +2,14 @@
 title: "Using Papadakis covariates for nearest neighbor analysis"
 author: "Kevin Wright"
 date: "`r Sys.Date()`"
-bibliography: agridat.bib
 output:
+  pdf_document: default
   html_document:
     highlight: tango
-vignette: >
-  % \VignetteIndexEntry{Using Papadakis covariates for nearest neighbor analysis}
-  % \VignetteEncoding{UTF-8}
+bibliography: agridat.bib
+vignette: |
+  % \VignetteIndexEntry{Using Papadakis covariates for nearest neighbor analysis} 
+  % \VignetteEncoding{UTF-8} 
   % \VignetteEngine{knitr::rmarkdown}
 ---
 <style type="text/css">
@@ -21,9 +22,8 @@ pre > code { border: 0; }
 
 # R setup
 
-```{r setup, message=FALSE}
-library("knitr")
-knitr::opts_chunk$set(fig.align="center", fig.width=6, fig.height=6)
+```{r setup, message=FALSE, echo=FALSE}
+knitr::opts_chunk$set(fig.width=6, fig.height=6)
 options(width=90)
 ```
 @papadakis1937method believed that traditional blocking in field experiments

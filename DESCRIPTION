@@ -1,13 +1,13 @@
 Package: agridat
 Title: Agricultural Datasets
 Version: 1.13
-Date: 2017-05-13
+Date: 2017-11-29
 Authors@R: person("Kevin","Wright", email="kw.stat@gmail.com", role=c("aut","cre"))
 Type: Package
 Description: Datasets from books, papers, and websites related to agriculture.
     Example graphics and analyses are included. Data come from small-plot trials,
     multi-environment trials, uniformity trials, yield monitors, and more.
-Suggests:
+Suggests: 
     AER,
     agricolae,
     betareg,
@@ -52,7 +52,8 @@ Suggests:
     sp,
     SpATS,
     survival,
-    vcd
+    vcd,
+    testthat
 License: CC BY-SA 4.0
 LazyData: yes
 URL: https://github.com/kwstat/agridat

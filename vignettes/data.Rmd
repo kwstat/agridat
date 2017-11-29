@@ -3,11 +3,12 @@ title: "Additional sources of agricultural data"
 author: "Kevin Wright"
 date: "`r Sys.Date()`"
 output:
+  pdf_document: default
   html_document:
     highlight: tango
-vignette: >
-  % \VignetteIndexEntry{Additional agricultural data}
-  % \VignetteEncoding{UTF-8}
+vignette: |
+  % \VignetteIndexEntry{Additional agricultural data} 
+  % \VignetteEncoding{UTF-8} 
   % \VignetteEngine{knitr::rmarkdown}
 ---
 
@@ -98,7 +99,7 @@ http://www.wiley.com/WileyCDA/WileyTitle/productCd-1119945496.html
 
 
 ### Kwanchai A. Gomez & Gomez (1984). _Statistical Procedures for Agricultural Research_.
-Extensive collection of datasets.
+Extensive collection of datasets from rice experiments.
 
 
 ### Cyril H. Goulden, _Methods of Statistical Analysis_.
@@ -141,7 +142,7 @@ Second edition: http://krishikosh.egranth.ac.in/handle/1/2034118
 ### Erwin LeClerg, Warren Leonard, Andrew Clark (1962). _Field Plot Technique_
 Many small datasets.
 ```
-27 uniformity agridat::goulden.barley
+27 uniformity agridat::goulden.barley.uniformity
 213 split-plot
 234 immer multi-environment
 260 lattice pinto-bean
@@ -259,13 +260,18 @@ https://data.nal.usda.gov/about-ag-data-commons
 
 
 ### CyVerse Data Commons
+
 http://datacommons.cyverse.org/
+
 http://datacommons.cyverse.org/browse/iplant/home/shared/commons_repo/curated
 
 
 ### CyVerse: Genomes by environment dataset now publicly accessible
+
 http://www.cyverse.org/news/genomes-environment-dataset-now-publicly-accessible
+
 http://datacommons.cyverse.org/browse/iplant/home/shared/commons_repo/curated/Carolyn_Lawrence_Dill_G2F_Nov_2016
+
 Very large GxE data here. Currently 2014, but more years planned. Hybrid & inbred phenotype data, weather data, genomic data.  Very nice.
 
 
@@ -298,7 +304,8 @@ Vol 26/ 281. Cox: Analysis of Lattice and Triple Lattice.
 Page 11: Lattice, 81 hybs, 4 reps 
 Page 24: Triple lattice, 81 hybs, 6 reps
 
-Vol 29/347. Homeyer. Punched Card and Calculating Machine Methods for Analyzing Lattice Experiments Including Lattice Squares and the Cubic Lattice.
+Vol 29/347. Homeyer. Punched Card and Calculating Machine Methods for Analyzing 
+  Lattice Experiments Including Lattice Squares and the Cubic Lattice.
 Page 37: Triple lattice (9 blocks * 9 hybrids) with 6 reps.
 Page 60: Simple lattice, 8 blocks * 8 hybrids, 4 reps.
 Page 76: Balanced lattice, 25 hybrids 
@@ -308,10 +315,12 @@ Page 126: Cubic lattice, 16 blocks * 4 plots = 64 varieties, 9 reps, cotton
 
 Vol 32/396. Wassom. Bromegrass Uniformity Trial: agridat::wassom.bromegrass.uniformity
 
-Vol 33/424. Heady. Crop Response Surfaces and Economic Optima in Fertilizer agridat::heady.fertilizer
+Vol 33/424. Heady. Crop Response Surfaces and Economic Optima in 
+  Fertilizer agridat::heady.fertilizer
 
 Vol 34/358. Schwab. Research on Irrigation of Corn and Soybeans At Conesville.
-Page 257. 2 year, 2 loc, 4 rep, 2 nitro. Stand & yield.  Nice graph of soil moisture deficit (fig 9)
+Page 257. 2 year, 2 loc, 4 rep, 2 nitro. Stand & yield.  
+  Nice graph of soil moisture deficit (fig 9)
 
 Vol. 34/463. Doll. Fertilizer Production Functions for Corn and Oats.
 Table 1, 1954 Clarion Loam.  N,P,K.
@@ -319,12 +328,14 @@ Table 14, 1955 McPaul Silt Loam.  N,P.
 Table 25, 1955 corn.  K,P,N.
 Table 31, 1956 oats, K,P,N.  Trends difficult to establish.
 
-Vol 34/472. Pesek. Production Surfaces and Economic Optima For Corn Yields.  Same data published in SSA journal?
+Vol 34/472. Pesek. Production Surfaces and Economic Optima For Corn Yields.  
+  Same data published in SSA journal?
 
 Vol 34/488. Walker. Application of Game Theory Models to Decisions.
 
 Vol 35/494. North Central Regional Potassium Studies with Alfalfa.
-Page 176. Two years, several locs per state, multiple states, multiple fertilizer levels, multiple cuttings. Soil test attributes.
+Page 176. Two years, several locs per state, multiple states, multiple fertilizer 
+  levels, multiple cuttings. Soil test attributes.
 Page 183. Yield and %K.
 
 Vol 35/503. North Central Regional Potassium Studies with Corn.
@@ -444,7 +455,7 @@ Note: Supplement contains genotype data, but no phenotype data.
 **Yan, Weikei** (2002).
 Singular value partitioning in biplots.  Agron Journal.
 
-Note: Winter wheat, 31 gen in 8 loc. This data is different from Yan's earlier papers.
+Note: Winter wheat, 31 gen in 8 loc. This data is different from Yan's earlier papers. Unfortunately, the data given in the paper are missing two rows. 
 
 
 # Papers - Uniformity trials
@@ -610,7 +621,8 @@ Data from Broadbalk and other long-term experiments.
 
 ### Rothamsted Documents Archive
 http://www.era.rothamsted.ac.uk/eradoc/collections.php
-Annual reports from Rothamsted 1908-1987. Many have data, especially in the early years (before WWII) there are data given for the 'Classical Experiments'.
+Annual reports from Rothamsted 1908-1987. Many have data, especially in the 
+early years (before WWII) there are data given for the 'Classical Experiments'.
 ```
 Year, page
 1908-1926 
@@ -620,9 +632,11 @@ Year, page
 1931,143 agridat::yates.oats
 1932
 1933
-1934,215-222 Sugar beet multi-environment trial with 3^3 fertilizer treatments at each site Roots, SugarPercent, SugarWeight, PlantNumber, Tops, Purity.
+1934,215-222 Sugar beet multi-environment trial with 3^3 fertilizer 
+  treatments at each site Roots, SugarPercent, SugarWeight, PlantNumber, Tops, Purity.
 1935
-1936,241 Similar to the 1934 experiment, but only gives the main effects, not the actual data.
+1936,241 Similar to the 1934 experiment, but only gives the main effects, 
+  not the actual data.
 1937-1939
 1946-1953
 ```

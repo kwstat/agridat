@@ -14,7 +14,7 @@ Key features:
 
 * Thorough documentation.
 
-* Examples for each dataset.
+* Examples for (almost) every dataset.
 
 ## Installation
 
@@ -26,7 +26,9 @@ install.packages("agridat")
 install.packages("devtools")
 devtools::install_github("kwstat/agridat")
 ```
+## Vignettes
+
+[Graphical Gems in the agridat Package](https://rawgit.com/kwstat/agridat/master/vignettes/agridat_examples.html)
+
 ## Usage
 
-Vignette:
-[Graphical Gems in the agridat Package](https://rawgit.com/kwstat/agridat/master/vignettes/agridat_examples.html)

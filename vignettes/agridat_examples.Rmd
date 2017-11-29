@@ -3,12 +3,13 @@ title: "Graphical Gems in the agridat Package"
 author: "Kevin Wright"
 date: "`r Sys.Date()`"
 output:
+  pdf_document: default
   html_document:
     highlight: tango
 bibliography: agridat.bib
-vignette: >
+vignette: |
   %\VignetteIndexEntry{Graphical Gems in the agridat Package}
-  %\VignetteEncoding{UTF-8}
+  %\VignetteEncoding{UTF-8} 
   %\VignetteEngine{knitr::rmarkdown}
 ---
 <style type="text/css">
@@ -19,7 +20,8 @@ code {border: 1px solid #e0e0e0; padding: 0 5px;}
 pre > code { border: 0; }
 </style>
 
-## Abstract
+
+# Abstract
 
 The `agridat` package is an extensive collection of data sets that have
 been previously published in books and journals, primarily from agricultural
@@ -27,18 +29,18 @@ experiments.
 
 This vignette presents graphical views of a few of the datasets in this package.
 
-One surprising discovery of this project is that often only 10-20 lines of R code are needed to reproduce the original statistical analyses published in association with the data.
 
-## Setup
+# Setup
 
-```{r setup, eval=FALSE, results="hide"}
-library("knitr")
-opts_chunk$set(fig.align="center", fig.width=6, fig.height=6)
+```{r setup, results="hide", echo=FALSE}
+knitr::opts_chunk$set(echo=FALSE)
+#knitr::opts_chunk$set(fig.align="center", fig.width=6, fig.height=6, dpi=36)
+# chunk option dpi=72 is the default resolution
 options(width=90)
 ```
 This exhibit of agricultural data uses the following packages.
 
-```{r packs, eval=FALSE, message=FALSE}
+```{r packs, eval=TRUE, message=FALSE, echo=TRUE}
 library("agridat")
 library("desplot")
 library("gge")
@@ -50,11 +52,9 @@ library("maps")
 library("reshape2")
 ```
 
------
+# Potato blight incidence over space and time
 
-## Potato blight incidence over space and time
-
-```{r lee1, eval=FALSE, fig.height=7.5}
+```{r lee1, eval=TRUE, fig.height=7.5}
 data(lee.potatoblight)
 dat <- lee.potatoblight
 # Note the progression to lower scores as time passes in each year
@@ -83,9 +83,8 @@ map on the given date, with a separate row of panels for each year.
 
 Would you include field spatial trends in a model for these data?
 
------
 
-```{r lee2, eval=FALSE}
+```{r lee2, eval=TRUE}
 # 1983 only.  I.Hardy succumbs quickly
 dat <- lee.potatoblight
 dat$dd <- as.Date(dat$date)
@@ -108,11 +107,11 @@ steadily, and '064.1' resists blight until near the end of the season.
 
 Does this view show differences between blocks?
 
------
 
-## An informative prior
 
-```{r harrison, eval=FALSE, fig.height=6}
+# An informative prior
+
+```{r harrison, eval=TRUE, fig.height=6}
 data(harrison.priors)
 d1 <- subset(harrison.priors, substance=="daidzein")
 d1 <- d1[ , c("source","number","min","max")]
@@ -127,7 +126,8 @@ for(ii in 1:nrow(d1)){
   out <- rbind(out, data.frame(source=d1[ii,'source'], vals=vals))
 }
 out <- droplevels(out) # Extra levels exist in d1
-foo0 <- dotplot(source ~ vals, out, main="harrison.priors", xlab="Daidzein level",
+foo0 <- dotplot(source ~ vals, out, 
+                main="harrison.priors", xlab="Daidzein level",
                 panel=function(x,y,...){
                   panel.dotplot(x,y,...)
                   #browser()
@@ -168,11 +168,11 @@ The common prior is shown by the density at the top of the dotplot.
 Do you think it is better to use a non-informative prior, or this informative
 prior?
 
------
 
-## Data densities for a binomial GLM
 
-```{r mead, eval=FALSE}
+# Data densities for a binomial GLM
+
+```{r mead, eval=TRUE}
 data(mead.germination)
 dat <- mead.germination
 # dat <- transform(dat, concf=factor(conc))
@@ -232,16 +232,16 @@ temperatures (T1-T4) and four chemical concentrations.  For each of the 4*4=16
 treatments, 50 seeds were tested in each of four reps.  In the graphic, each
 point is one rep. The blue line is a fitted curve from a GLM with Temperature
 as a factor and log concentration as a covariate.  The gray lines show the
-central 95\% of the binomial density at that position.
+central 95 percent of the binomial density at that position.
 
 Does this display help you understand the logit link and changing shape of the
 binomial density?
 
------
 
-## Verification of experiment layout
 
-```{r gomez, eval=FALSE}
+# Verification of experiment layout
+
+```{r gomez, eval=TRUE}
 data(gomez.stripsplitplot)
 dat <- gomez.stripsplitplot
 
@@ -255,16 +255,15 @@ desplot(gen~col*row, dat,
 @gomez1984statistical provide data for an experiment with 3 reps, 6
 genotypes, 3 levels of nitrogen and 2 planting dates.  The experiment layout
 is putatively a ''split strip-plot''.  To verify the design, the
-`agridat` package contains a function `desplot()` for plotting the
-designs of field experiments, which is used in the graphic below.
+`desplot` package is used for plotting the design of field experiments.
 
 How is the design different from a ''split-split-plot'' design?
 
------
 
-## Visualizing main effects, two-way interactions
 
-```{r gomez2, eval=FALSE}
+# Visualizing main effects, two-way interactions
+
+```{r gomez2, eval=TRUE}
 data(gomez.splitsplit)
 dat <- gomez.splitsplit
 dat$nitrogen <- factor(dat$nitro)
@@ -282,7 +281,7 @@ interaction2wt(yield~rep+nitrogen+management+gen, data=dat,
 
 @heiberger2004statistical provide an interesting way to use lattice
 graphics to visualize the main effects (using boxplots) and interactions
-(using interaction plots) in data.  Below, rice yield is plotted
+(using interaction plots) in data.  Rice yield is plotted
 versus replication, nitrogen, management type, and genotype variety.
 Box plots show minor differences between reps, increaing yield due to
 nitrogen, high yield from intensive management, and large differences between
@@ -290,13 +289,12 @@ varieties.
 
 Do you think interaction plots show interaction (lack of parallelism)?
 
------
 
-## 3D yield response to fertilizers
+
+# 3D yield response to fertilizers
 
 \includegraphics[width=0.9\textwidth]{sinclair-clover}
 
-![3D view of response surface.](sinclair-clover.png)
 
 @sinclair1994sulphur examined clover yields as a function of sulfur and
 phosphorous fertilizer in a factorial-treatment experiment.
@@ -312,11 +310,11 @@ drawn by the `rgl` package).
 
 How would you decide the optimal fertilizer levels?
 
------
 
-## Mosaic plot of potato damage from harvesting
 
-```{r keen, eval=FALSE, fig.width=7, fig.height=7.5}
+# Mosaic plot of potato damage from harvesting
+
+```{r keen, eval=TRUE, fig.width=7, fig.height=7.5}
 data(keen.potatodamage)
 dat <- keen.potatodamage
 
@@ -324,10 +322,12 @@ dat <- keen.potatodamage
 # Rod 8 has the least damage
 d2 <- xtabs(count~energy+rod+gen+weight+damage, data=dat)
 mosaicplot(d2, color=c("lemonchiffon1","moccasin","lightsalmon1","indianred"),
-           xlab="Energy / Genotype", ylab="Rod / Weight", main="keen.potatodamage",
+           xlab="Energy / Genotype", ylab="Rod / Weight",
+           main="keen.potatodamage",
            off=c(3,10,10,8,0),border="gray50")
 
 ```
+
 @keen1997analysis looked at damage to potatoes caused by lifting rods
 during harvest. In this experiment, eight
 types of lifting rods were compared.  Two energy levels, six
@@ -338,11 +338,11 @@ are shown in a mosaic plot.
 
 Which style of lifting rods cause the least/most damage to potatoes?
 
------
 
-## Yield vs covariate for lattice::barley
 
-```{r wright, eval=FALSE}
+# Yield vs covariate for lattice::barley
+
+```{r wright, eval=TRUE}
 data(minnesota.barley.yield)
 data(minnesota.barley.weather)
 dat <- minnesota.barley.yield
@@ -403,11 +403,11 @@ location.
 
 Does barley yield better in cooler or warmer weather?
 
------
 
-## GGE biplot
 
-```{r crossa, eval=FALSE, message=FALSE}
+# GGE biplot
+
+```{r crossa, eval=TRUE, message=FALSE}
 
 # Specify env.group as column in data frame
 data(crossa.wheat)
@@ -423,18 +423,18 @@ biplot(m4, lab.env=TRUE, main="crossa.wheat")
 
 @laffont2013genotype developed a variation of the GGE (genotype plus
 genotype-by-environment) biplot to include auxiliary information about a
-block/group of environments.  In the example below, each location is
+block/group of environments.  Each location is
 classified into one of two mega-environments (colored).  The mosaic plots
 partition variation simultaneously by principal component axis and source
 (genotype, genotype-by-block, residual).
 
 Which genotypes are best to each mega-environment?
 
------
 
-## Nebraska farming income choropleth
 
-```{r nebr1, eval=FALSE}
+# Nebraska farming income choropleth
+
+```{r nebr1, eval=TRUE}
 library("maps")
 library("mapproj")
 library("latticeExtra")
@@ -466,9 +466,9 @@ clearly distinguish missing values.
 How does the outlier county (Butler) in northeast Nebraska limit interpration of
 spatial patterns in the data?
 
------
 
-```{r nebr2, eval=FALSE}
+
+```{r nebr2, eval=TRUE}
 
 # Now scale to income/mile^2
 dat <- transform(dat, crop.rate=crop/area, animal.rate=animal/area)
@@ -499,11 +499,11 @@ Counties with missing data are white, which is easily distinguished from gray.
 
 Where are farm incomes highest?  Why?
 
------
 
-## Las Rosas yield monitor
 
-```{r lasrosas, eval=FALSE, fig.height=7.5}
+# Las Rosas yield monitor
+
+```{r lasrosas, eval=TRUE, fig.height=7.5}
 
 data(lasrosas.corn)
 dat <- lasrosas.corn
@@ -574,18 +574,18 @@ plot(foo2, split = c(1, 2, 1, 2), newpage = FALSE)
 
 @anselin2004spatial and @lambert2004comparison looked at yield monitor data
 collected from a corn field in Argentina in 1999 and 2001, to see how yield
-was affected by field topography and nitrogen fertilizer.  The figures below
+was affected by field topography and nitrogen fertilizer.  The figures here
 show heatmaps for the yield each year, and also the experiment design (colors
 are reps, shades of color are nitrogen level, plotting character is
 topography).
 
 Which year showed greater spatial variation in yield?
 
------
 
-## Time series of corn yields by state
 
-```{r nass, eval=FALSE, fig.height=8}
+# Time series of corn yields by state
+
+```{r nass, eval=TRUE, fig.height=8}
 data(nass.corn)
 dat <- nass.corn
 dat$acres <- dat$acres/1000000
@@ -606,17 +606,11 @@ xyplot(acres ~ year|state, dat, type='l', as.table=TRUE,
 ```
 
 The National Agricultural Statistics Service tracks the total number of acres
-planted to corn (and other crops) for each state in the U.S.  The plot below
-shows large changes over the past century in corn acreage for selected states.
+planted to corn (and other crops) for each state in the U.S.  There are large changes over the past century in corn acreage for selected states.
 
 Which states were in the corn belt in 1925?
+
 Which states were in the corn belt in 2000?
 
------
 
-## Session information
-```{r session}
-sessionInfo()
-```
-
-## References
+# References

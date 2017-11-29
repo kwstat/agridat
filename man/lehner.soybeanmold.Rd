@@ -26,16 +26,16 @@
   Data are the mean of 4 reps.
 
   Original source (Portuguese)
-  http://ainfo.cnptia.embrapa.br/digital/bitstream/item/101371/1/Ensaios-cooperativos-de-controle-quimico-de-mofo-branco-na-cultura-da-soja-safras-2009-a-2012.pdf
+  \url{http://ainfo.cnptia.embrapa.br/digital/bitstream/item/101371/1/Ensaios-cooperativos-de-controle-quimico-de-mofo-branco-na-cultura-da-soja-safras-2009-a-2012.pdf}
 
   Data included here via GPL3 license.
 }
 \source{
   Lehner, M. S., Pethybridge, S. J., Meyer, M. C., & Del Ponte,
-  E. M. (2016). 
+  E. M. (2016).
   Meta-analytic modelling of the incidence-yield and
   incidence-sclerotial production relationships in soybean white mould
-  epidemics. 
+  epidemics.
   \emph{Plant Pathology}. doi:10.1111/ppa.12590
 }
 \references{
@@ -82,7 +82,7 @@ if(require(latticeExtra) & require(metafor)){
   overall <- rma.uni(yi, vi, method="ML", data=cors) # metafor package
   # back transform
   overall <- predict(overall, transf=transf.ztor)
-  
+
   # weight and size for forest plot
   wi    <- 1/sqrt(cors$vi)
   size  <- 0.5 + 3.0 * (wi - min(wi))/(max(wi) - min(wi))
@@ -92,9 +92,11 @@ if(require(latticeExtra) & require(metafor)){
           draw.bands=FALSE, level=size, centers=ri, cex=size,
           col.regions=colorRampPalette(c("gray85", "dodgerblue4")),
           main="White mold vs. soybean yield",
-          xlab="Study correlation, confidence, and study weight (blues)\n Overall (black)", ylab="Study ID") +
+          xlab=paste("Study correlation, confidence, and study weight (blues)\n",
+                     "Overall (black)"),
+          ylab="Study ID") +
     layer(panel.abline(v=overall$pred, lwd=2)) +
-    layer(panel.abline(v=c(overall$cr.lb, overall$cr.ub), lty=2, col="gray")) 
+    layer(panel.abline(v=c(overall$cr.lb, overall$cr.ub), lty=2, col="gray"))
 }
 
 # Meta-analyses are typically used when the original data is not available.
