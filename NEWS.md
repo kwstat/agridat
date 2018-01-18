@@ -11,6 +11,20 @@
 * Release before mixed models paper?
 * Note: R_MAX_NUM_DLLS=150
 
+# agridat 1.14 - unpublished
+
+## New data
+
+bose.multi.uniformity,
+christidis.cotton.uniformity
+robinson.peanut.uniformity
+
+## Other
+
+* nonnecke.corn.uniformity is now nonnecke.sweetcorn.uniformity
+
+* moore.carrots.uniformity is now moore.carrot.uniformity
+
 # agridat 1.13 - Nov 2017
 
 ## New datasets for uniformity trials
@@ -23,7 +37,7 @@ kristensen.barley.uniformity, lessman.sorghum.uniformity,
 love.cotton.uniformity, masood.rice.uniformity, mcclelland.corn.uniformity,
 montgomery.wheat.uniformity, moore.polebean.uniformity,
 moore.bushbean.uniformity, moore.sweetcorn.uniformity,
-moore.carrots.uniformity, moore.springcauliflower.uniformity,
+moore.carrot.uniformity, moore.springcauliflower.uniformity,
 moore.fallcauliflower.uniformity, nonnecke.corn.uniformity,
 nonnecke.peas.uniformity, parker.orange.uniformity,
 polson.safflower.uniformity, sawyer.multi.uniformity, smith.beans.uniformity,

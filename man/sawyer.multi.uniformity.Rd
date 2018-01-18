@@ -24,8 +24,7 @@
 }
 \details{
   
-  An experiment conducted at Rothamsted, England, in 1925-1927, in
-  Sawyers Field.
+  An experiment conducted at Rothamsted, England, in 1925-1927, in Sawyers Field.
 
   Row 6, column 1 was not planted in any year.
   
@@ -41,6 +40,7 @@
   are calibrated to ACRES.
 
   Field width: 8 plots * 1 chain each
+  
   Field length: 6 plots * 1 chain each
   
   The field is 8 plots wide, 6 plots long.  The plots are drawn in the

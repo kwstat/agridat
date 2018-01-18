@@ -45,11 +45,16 @@
   yields all ended in '.3'.  We used -59.7 as the centered yield value
   and added the mean of 1883.7 to all centered yields to obtain absolute
   yields.
+
+  Note: Another paper by these authors,
+  "A Method of Laying Out Experimental Plats", contains a third year of
+  data, with each crop expressed as a percentage.
+  https://archive.org/details/in.ernet.dli.2015.229753?q=method+of+laying+out+experiment+plats
 }
 \source{
   Garber, RJ and Mcllvaine, TC and Hoover, MM. 1926.
   A study of soil heterogeneity in experiment plots.
-  \emph{Jour. Agr. Res}, 33, 255-268.
+  \emph{Jour. Agr. Res}, 33, 255-268. Table 3.
   http://naldc.nal.usda.gov/download/IND43967148/PDF
 }
 

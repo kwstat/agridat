@@ -32,7 +32,9 @@ name                                      \tab dimensions \tab other \tab model 
 \link{batchelor.navel2.uniformity}        \tab 15 x 33 \tab xy \tab \cr
 \link{batchelor.valencia.uniformity}      \tab 12 x 20 \tab xy \tab \cr
 \link{batchelor.walnut.uniformity}        \tab 10 x 28 \tab xy \tab \cr
+\link{bose.multi.uniformity}              \tab 15 x 26 \tab xy, 3 years \tab \cr
 \link{bradley.multi.uniformity}           \tab 10 x 11 \tab xy \tab \cr
+\link{christidis.cotton.uniformity}       \tab 16 x 16 \tab xy, 4 blocks \tab \cr
 \link{christidis.wheat.uniformity}        \tab 12 x 24 \tab xy \tab \cr
 \link{day.wheat.uniformity}               \tab 31 x 100 \tab xy \tab \cr
 \link{draper.safflower.uniformity}        \tab 18 x 16 \tab xy, 2 expt \tab smith\cr
@@ -62,15 +64,16 @@ name                                      \tab dimensions \tab other \tab model 
 \link{moore.polebean.uniformity}          \tab 12 x 12 \tab xy \tab \cr
 \link{moore.bushbean.uniformity}          \tab 24 x 24 \tab xy \tab \cr
 \link{moore.sweetcorn.uniformity}         \tab 24 x 12 \tab xy \tab \cr
-\link{moore.carrots.uniformity}           \tab 24 x 12 \tab xy \tab \cr
+\link{moore.carrot.uniformity}            \tab 24 x 12 \tab xy \tab \cr
 \link{moore.springcauliflower.uniformity} \tab 12 x 20 \tab xy \tab \cr
 \link{moore.fallcauliflower.uniformity}   \tab 12 x 20 \tab xy \tab \cr
-\link{nonnecke.corn.uniformity}           \tab 32 x 18 \tab xy, 3 loc \tab \cr
+\link{nonnecke.sweetcorn.uniformity}      \tab 32 x 18 \tab xy, 3 loc \tab \cr
 \link{nonnecke.peas.uniformity}           \tab 15 x 18 \tab xy, 2 traits \tab \cr
 \link{odland.soybean.uniformity}          \tab 25 x 42 \tab xy \tab \cr
 \link{odland.soyhay.uniformity}           \tab 28 x 55 \tab xy \tab \cr
 \link{parker.orange.uniformity}           \tab 10 x 27 \tab xy, 6 yr \tab \cr
 \link{polson.safflower.uniformity}        \tab 52 x 33 \tab xy \tab smith\cr
+\link{robinson.peanut.uniformity}         \tab 16 x 36 \tab xy \tab \cr
 \link{sawyer.multi.uniformity}            \tab 8 x 6   \tab xy, 3 year \tab \cr
 \link{smith.beans.uniformity}             \tab 18x12, 16x15 \tab xy, 2 yr, 2 crops \tab \cr
 \link{smith.corn.uniformity}              \tab 6 x 20 \tab xy, 3 years \tab rgl \cr

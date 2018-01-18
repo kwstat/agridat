@@ -2,7 +2,7 @@
 \alias{moore.polebean.uniformity}
 \alias{moore.bushbean.uniformity}
 \alias{moore.sweetcorn.uniformity}
-\alias{moore.carrots.uniformity}
+\alias{moore.carrot.uniformity}
 \alias{moore.springcauliflower.uniformity}
 \alias{moore.fallcauliflower.uniformity}
 
@@ -60,7 +60,7 @@
   
   Field length: 12 ranges x 10 feet = 120 feet.
 
-  \bold{Carrots}.
+  \bold{Carrot}.
 
   Conducted 1952. Table 30.
 
@@ -133,12 +133,12 @@ if(require(desplot)){
 }
 
 if(require(desplot)){
-  # Carrots
-  data(moore.carrots.uniformity)
-  cv(moore.carrots.uniformity$yield) # 33.4. Moore says 27.6
-  desplot(yield~col*row, moore.carrots.uniformity,
+  # Carrot
+  data(moore.carrot.uniformity)
+  cv(moore.carrot.uniformity$yield) # 33.4. Moore says 27.6
+  desplot(yield~col*row, moore.carrot.uniformity,
           flip=TRUE, tick=TRUE, aspect=60/36, # true aspect
-          main="moore.carrots.uniformity - yield")
+          main="moore.carrot.uniformity - yield")
 }
 
 if(require(desplot)){

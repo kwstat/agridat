@@ -88,6 +88,7 @@ if(require(latticeExtra) & require(metafor)){
   size  <- 0.5 + 3.0 * (wi - min(wi))/(max(wi) - min(wi))
 
   # now the forest plot
+  # must use latticeExtra::layer in case ggplot2 is also loaded
   segplot(factor(study) ~ conf.low+conf.high, data=cors,
           draw.bands=FALSE, level=size, centers=ri, cex=size,
           col.regions=colorRampPalette(c("gray85", "dodgerblue4")),
@@ -95,8 +96,9 @@ if(require(latticeExtra) & require(metafor)){
           xlab=paste("Study correlation, confidence, and study weight (blues)\n",
                      "Overall (black)"),
           ylab="Study ID") +
-    layer(panel.abline(v=overall$pred, lwd=2)) +
-    layer(panel.abline(v=c(overall$cr.lb, overall$cr.ub), lty=2, col="gray"))
+    latticeExtra::layer(panel.abline(v=overall$pred, lwd=2)) +
+    latticeExtra::layer(panel.abline(v=c(overall$cr.lb, overall$cr.ub), lty=2, col="gray"))
+
 }
 
 # Meta-analyses are typically used when the original data is not available.

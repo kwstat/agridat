@@ -1,5 +1,38 @@
 # agridat notes
 
+Kulkarni, R. K., Bose, S. S., and Mahalanobis, P. C.  (1936).
+The influence of shape and size of plots on the effective precision of field experiments with sorghum. 
+Indian J. Agric. Sci., 6, 460-474. Appendix 1, page 172.
+https://archive.org/details/in.ernet.dli.2015.271737
+
+Wynne Sayer, M. Vaidyanathan and S. Subrammonia Iyer (1936).
+Ideal size and shape of sugar-cane experimental plots based upon tonnage experiments with Co 205 and Co 213 conducted in 
+Pusa.
+Indian J. Agric. Sci., 1936, 6, 684-714. Appendex, page 712.
+https://archive.org/details/in.ernet.dli.2015.271737
+
+Wynne Sayer and Krishna Iyer.  (1936).
+On some of the factors that influence the error of field experiments with special reference to sugar cane.
+Indian J. Agric. Sci., 1936, 6, 917-929. Appendix, page 927.
+https://archive.org/details/in.ernet.dli.2015.271737
+
+---> Not found 1.8.2018
+Lander, P. E. et al. (1938).
+"Soil Uniformity Trials in the Punjab I."
+Ind. J.Agr. Sci. 8:271-307.
+
+R. Narain and A. Singh, (1940).
+A Note on the Shape of Blocks in Field Experiments.
+Ind. J. Agr. Sci., 10, 844-853. Page 845.
+https://archive.org/stream/in.ernet.dli.2015.271745
+
+Ansary, M. A. A., and G. K. Sant (1943).
+A Study of Soil Heterogeneity in Relation to Size and Shape of Plots in a Wheat Field at Raya (Muhra District).
+Ind. J. Agr. Sci. 13:652-658.
+https://archive.org/details/in.ernet.dli.2015.271748?q=%22A+Study+of+Soil+Heterogeneity+in+Relation%22
+
+# ----------------------------------------------------------------------------
+
 This document lists notes about data sources searched and additional sources of agricultural data.  Although this is an .Rmd file, the formatting is best viewed in plain text mode.
 
 ---

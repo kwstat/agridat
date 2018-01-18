@@ -14,3 +14,4 @@ notes.org
 notes.Rmd
 ^.*\.Rproj$
 ^\.Rproj\.user$
+tests/testthat/Rplots.pdf

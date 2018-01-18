@@ -36,3 +36,7 @@ devtools::install_github("kwstat/agridat")
 
 ## Usage
 
+```R
+library(agridat)
+?agridat # list all datasets with keywords
+```

@@ -247,6 +247,11 @@ https://archive.org/details/statisticaltechn031729mbp
 Many datasets
 
 
+### Harald Martens & Magni Martens. _Multivariate Analysis of Quality_
+https://www.wiley.com/legacy/wileychi/chemometrics/datasets.html
+The 'NIR' data has NIR spectra measurements of wheat for the purpose of understanding protein quality.
+
+
 ### Pesticides in the Nation's Streams and Ground Water, 1992-2001
 Extensive data for detection of pesticides in water samples.  See Appendix 5 and Appendix 6 of the supporting info.
 https://water.usgs.gov/nawqa/pnsp/pubs/circ1291/supporting_info.php
@@ -675,6 +680,12 @@ Potato and Tomato genotype and phenotype data.
 ### Statistical Analysis of Agricultural Experiments with R
 http://rstats4ag.org/
 Datasets for mixed models, ancova, dose response curves, competition.
+
+
+### Terra-Ref
+http://terraref.org/
+Sensor observations, plant phenotypes, derived traits, genetic and genomic data.
+Beta version until Nov 2018.
 
 
 ### USDA National Agricultural Statistics Service
