@@ -52,8 +52,10 @@ name                                      \tab dimensions \tab other \tab model 
 \link{khin.rice.uniformity}               \tab 30 x 36 \tab xy \tab \cr
 \link{kiesselbach.oats.uniformity}        \tab 3 x 69 \tab xy \tab \cr
 \link{kristensen.barley.uniformity}       \tab 22 x 11 \tab xy \tab \cr
+\link{kulkarni.sorghum.uniformity}        \tab 4 x 40 \tab xy, 3 years \tab \cr
 \link{lessman.sorghum.uniformity}         \tab 46 x 60 \tab xy \tab \cr
 \link{li.millet.uniformity}               \tab 6 x 100 \tab xy \tab \cr
+\link{lord.rice.uniformity}               \tab 5 x 14 \tab xy, 8 fields \tab \cr
 \link{love.cotton.uniformity}             \tab 16 x 10 \tab xy \tab \cr
 \link{lyon.potato.uniformity}             \tab 34 x 6 \tab xy \tab \cr
 \link{masood.rice.uniformity}             \tab 12 x 24 \tab xy \tab \cr
@@ -75,7 +77,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{polson.safflower.uniformity}        \tab 52 x 33 \tab xy \tab smith\cr
 \link{robinson.peanut.uniformity}         \tab 16 x 36 \tab xy \tab \cr
 \link{sawyer.multi.uniformity}            \tab 8 x 6   \tab xy, 3 year \tab \cr
-\link{smith.beans.uniformity}             \tab 18x12, 16x15 \tab xy, 2 yr, 2 crops \tab \cr
+\link{smith.beans.uniformity}             \tab 18 x 12, 16 x 15 \tab xy, 2 yr, 2 crops \tab \cr
 \link{smith.corn.uniformity}              \tab 6 x 20 \tab xy, 3 years \tab rgl \cr
 \link{stephens.sorghum.uniformity}        \tab 100 x 20 \tab xy \tab \cr
 \link{stickler.sorghum.uniformity}        \tab 20 x 20 \tab xy, 4 expts, 2 years \tab \cr

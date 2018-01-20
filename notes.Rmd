@@ -1,10 +1,5 @@
 # agridat notes
 
-Kulkarni, R. K., Bose, S. S., and Mahalanobis, P. C.  (1936).
-The influence of shape and size of plots on the effective precision of field experiments with sorghum. 
-Indian J. Agric. Sci., 6, 460-474. Appendix 1, page 172.
-https://archive.org/details/in.ernet.dli.2015.271737
-
 Wynne Sayer, M. Vaidyanathan and S. Subrammonia Iyer (1936).
 Ideal size and shape of sugar-cane experimental plots based upon tonnage experiments with Co 205 and Co 213 conducted in 
 Pusa.

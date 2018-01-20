@@ -1,4 +1,3 @@
-
 # yan.winterwheat2.R
 
 # Source: Yan 2002 - Singular Value Partitioning In Biplots, Table 1.

@@ -1,20 +1,21 @@
 # federer.augmented.r
-# Time-stamp: <13 Sep 2017 14:07:08 c:/x/rpack/agridat/data-unused/federer.augmented.r>
+# Time-stamp: <18 Jan 2018 19:51:11 c:/x/rpack/agridat/data-unused/federer.augmented.r>
 
-This simulated data is from:
+## Source:
+## Federer, Walter T.
+## Augmented Split-Block Experiment Design
+## Agronomy Journal, Vol 97, page 578--586, 2005.
 
-Federer, Walter T.
-Augmented Split-Block Experiment Design
-Agronomy Journal, Vol 97, page 578--586, 2005.
+## This is simulated data.
 
-Note that using the values in Table 6 does NOT give
-the results shown in the paper.  To match the output as shown in the paper,
-make the following changes:
+## Note that using the values in Table 6 does NOT give
+## the results shown in the paper.  To match the output as shown in the paper,
+## make the following changes:
 
-Table position   PDF from Agronomy Journ       Datalines from SAS program
-A9 B8            15                            25
-A9 B9            14                            34
-A8 B9            15                            45
+## Table position   PDF from Agronomy Journ       Datalines from SAS program
+## A9 B8            15                            25
+## A9 B9            14                            34
+## A8 B9            15                            45
 
 
 dat <- read.csv("federer.augmented.csv")

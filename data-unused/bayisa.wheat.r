@@ -1,15 +1,15 @@
-# bayisa.wheat.r
-# Time-stamp: c:/x/rpack/agridat/data-unused/bayisa.wheat.r
+# bayisa.wheat.R
+# Time-stamp: <18 Jan 2018 19:50:22 c:/x/rpack/agridat/data-unused/bayisa.wheat.r>
 
-I think the thesis below has 3 uniformity experiments, one of which is here.
+# Source:
+# Bayisa, D. (2010).
+# Application of Spatial Mixed Model in Agricultural Field Experiment.
+# Master thesis. Department of Statistics, Addis Ababa University.
 
-Source:
-Bayisa, D. (2010).
-Application of Spatial Mixed Model in Agricultural Field Experiment.
-Master thesis. Department of Statistics, Addis Ababa University.
+# Electronic version from Johannes Forkman document
+# "Exercise: Agricultural field experiment with spatial correlation"
 
-Electronic version from Johannes Forkman document
-"Exercise: Agricultural field experiment with spatial correlation"
+# This thesis gives data for 1 uniformity experiment. A couple other experiments were also analyzed.
 
 library(asreml)
 library(kw)

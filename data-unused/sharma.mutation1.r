@@ -1,6 +1,8 @@
 # sharma.mutation1.r
 # Time-stamp: c:/x/rpack/agridat2/sharma.mutation1.r
 
+# Source: Biometry book by Sharma
+
 library(asreml)
 library(kw)
 library(Hmisc)

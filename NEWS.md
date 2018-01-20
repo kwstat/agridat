@@ -17,7 +17,8 @@
 
 bose.multi.uniformity,
 christidis.cotton.uniformity
-robinson.peanut.uniformity
+kulkarni.sorghum.uniformity,
+lord.rice.uniformity, robinson.peanut.uniformity
 
 ## Other
 

@@ -1,5 +1,5 @@
 # mead.milletsorghum.r
-# Time-stamp: c:/x/rpack/agridat2/mead.milletsorghum.r
+# Time-stamp: <18 Jan 2018 19:51:56 c:/x/rpack/agridat/data-unused/mead.milletsorghum.r>
 
 # This data is from the book by Mead, "Statistical Methods in Agriculture".
 # Possible original sources:

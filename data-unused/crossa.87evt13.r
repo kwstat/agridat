@@ -1,6 +1,7 @@
 # crossa.87evt13.r
 # Time-stamp: c:/x/rpack/agridat2/crossa.87evt13.r
 
+# Source:
 # Crossa 1997
 # Sites Regression and Shifted Multiplicative Model Clustering
 

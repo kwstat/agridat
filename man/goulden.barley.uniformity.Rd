@@ -19,9 +19,9 @@
 \details{
   Yield in grams for 400 square-yard barley plots.
 
-  Field length: 20 plots x 1 yd = 20 yd
+  Field length: 20 plots x 3 feet = 60 feet
 
-  Field width: 20 plots x 1 yd = 20 yd
+  Field width: 20 plots x 3 feet = 60 feet
 }
 \source{
   C. H. Goulden, (1939).
