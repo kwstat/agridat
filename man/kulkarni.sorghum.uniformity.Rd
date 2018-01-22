@@ -2,7 +2,7 @@
 \alias{kulkarni.sorghum.uniformity}
 \docType{data}
 \title{
-  Uniformity trial of sorghum.
+  Uniformity trial of sorghum
 }
 \description{
   Uniformity trial of sorghum in India, 3 years on the same plots

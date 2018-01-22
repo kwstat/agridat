@@ -2,7 +2,7 @@
 \alias{iyer.wheat.uniformity}
 \docType{data}
 \title{
-  Uniformity trials of wheat in India.
+  Uniformity trials of wheat in India
 }
 \description{
   Uniformity trials of wheat in India.

@@ -2,7 +2,7 @@
 \alias{sawyer.multi.uniformity}
 \docType{data}
 \title{
-  Uniformity trials of wheat, swedes, oats, 3 years on the same land.
+  Uniformity trials of wheat, swedes, oats, 3 years on the same land
 }
 \description{
   Uniformity trials of wheat, swedes, oats at Rothamsted, England, 1925-1927.

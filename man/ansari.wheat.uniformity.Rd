@@ -1,0 +1,65 @@
+\name{ansari.wheat.uniformity}
+\alias{ansari.wheat.uniformity}
+\docType{data}
+\title{
+  A uniformity trial of wheat
+}
+\description{
+  A uniformity trial of wheat in India in 1940.
+}
+\usage{data("ansari.wheat.uniformity")}
+\format{
+  A data frame with 768 observations on the following 3 variables.
+  \describe{
+    \item{\code{row}}{row}
+    \item{\code{col}}{column}
+    \item{\code{yield}}{yield of grain per plot, in half ounces}
+  }
+}
+\details{
+
+  An experiment was conducted at the Government Research Farm, Raya
+  (Muttra District), during the rainy season of 1939-40. 
+
+  Wheat was sown over an area of 180 ft. x 243 ft. with 324 rows on a
+  field of average fertility. It had wheat during 1938-39 rabi and was
+  fallow during 1939-40 kharif. The seed was sown behind desi plough in
+  rows 9 in. apart, the length of each row being 180 ft.
+
+  At the time of harvest, 18 rows on both sides and 10 ft. at the end of
+  the field were discarded to eliminate border effects and an area of
+  160 ft. x 216 ft. with 288 rows was harvested in small units, each
+  being 2 ft. 3 in. broad with three rows 20 ft. long. There were 96
+  units across the rows and eight units along the rows. The total number
+  of unit plots thus obtained was 768. The yield of grain for each unit
+  plot was weighed and recorded separately and is given in the appendix.
+
+  Field length: 8 plots * 20 feet = 160 feet.
+
+  Field width: 96 plots * 2.25 feet = 216 feet.
+
+  Comment: There seems to be a strong cyclical patern to the fertility gradient.
+  
+}
+\source{
+  Ansari, M. A. A., and G. K. Sant (1943).
+  A Study of Soil Heterogeneity in Relation to Size and Shape of Plots in a Wheat Field at Raya (Muhra District).
+  Ind. J. Agr. Sci, 13, 652-658.
+  https://archive.org/details/in.ernet.dli.2015.271748
+}
+\references{
+  None
+}
+\examples{
+data(ansari.wheat.uniformity)
+dat <- ansari.wheat.uniformity
+
+# match Ansari figure 3
+if(require(desplot)){
+  desplot(yield ~ col*row, dat,
+          flip=TRUE, aspect=216/160, # true aspect
+          main="ansari.wheat.uniformity") 
+}
+
+}
+\keyword{datasets}

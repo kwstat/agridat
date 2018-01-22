@@ -25,6 +25,7 @@
 
 \tabular{llll}{
 name                                      \tab dimensions \tab other \tab model \cr
+\link{ansari.wheat.uniformity}            \tab 96 x 8 \tab xy \tab \cr
 \link{baker.barley.uniformity}            \tab 3 x 19 \tab xy, 10 years \tab \cr
 \link{batchelor.apple.uniformity}         \tab 8 x 28 \tab xy \tab \cr
 \link{batchelor.lemon.uniformity}         \tab 14 x 16 \tab xy \tab \cr
