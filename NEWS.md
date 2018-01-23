@@ -16,7 +16,8 @@
 ## New data
 
 ansari.wheat.uniformity, bose.multi.uniformity,
-christidis.cotton.uniformity, kulkarni.sorghum.uniformity,
+christidis.cotton.uniformity, hutchinson.cotton.uniformity,
+kulkarni.sorghum.uniformity,
 lord.rice.uniformity, robinson.peanut.uniformity
 
 ## Other

@@ -44,6 +44,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{goulden.barley.uniformity}          \tab 20 x 20 \tab xy \tab \cr
 \link{harris.multi.uniformity}            \tab 2 x 23 \tab xy, 23 crops \tab corrgram\cr
 \link{holtsmark.timothy.uniformity}       \tab 6 x 40 \tab xy \tab \cr
+\link{hutchinson.cotton.uniformity}       \tab 32 x 40 \tab xy \tab \cr
 \link{immer.sugarbeet.uniformity}         \tab 10 x 60 \tab xy, 3 traits \tab \cr
 \link{iyer.wheat.uniformity}              \tab 25 x 80 \tab xy \tab \cr
 \link{kadam.millet.uniformity}            \tab 8 x 20 \tab xy, 2 expts \tab \cr

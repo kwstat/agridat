@@ -164,6 +164,11 @@ Many small datasets.
 ```
 
 
+### Harald Martens & Magni Martens. _Multivariate Analysis of Quality_
+https://www.wiley.com/legacy/wileychi/chemometrics/datasets.html
+The 'NIR' data has NIR spectra measurements of wheat for the purpose of understanding protein quality.
+
+
 ### Roger Mead, Robert N. Curnow, Anne M. Hasted (2002). _Statistical Methods in Agriculture and Experimental Biology_, 3rd ed.
 
 ```
@@ -202,6 +207,14 @@ https://archive.org/details/secondeditionsta001000mbp
 ```
 
 
+### V. G. Panse and P. V. Sukhatme (1957). _Statistical Methods for Agricultural Workers_.
+http://krishikosh.egranth.ac.in/bitstream/1/2049376/1/44688.pdf
+
+```
+3 Length and number of grains per ear of wheat
+138 Uniformity trial
+```
+
 ### D. D. Paterson (1939). _Statistical Technique in Agricultural Research_.
 https://archive.org/details/statisticaltechn031729mbp
 ```
@@ -226,6 +239,13 @@ https://archive.org/details/statisticaltechn031729mbp
 22/537. 2x2x2x2 factorial, 2 rep, wheat, layout
 ```
 
+### F.S.F. Shaw (1936). _A Handbook of Statistics For Use in Plant Breeding and Agricultural Problems_
+https://archive.org/details/in.ernet.dli.2015.176662
+```
+95 4 variety RCB, 25 rep, diagonal layout
+```
+
+
 ### G. W. Snedecor & W. G. Cochran. _Statistical Methods_.
 
 
@@ -245,11 +265,6 @@ https://archive.org/details/statisticaltechn031729mbp
 
 ### Oliver Schabenberger and Francis J. Pierce. _Contemporary Statistical Models for the Plant and Soil Sciences_.
 Many datasets
-
-
-### Harald Martens & Magni Martens. _Multivariate Analysis of Quality_
-https://www.wiley.com/legacy/wileychi/chemometrics/datasets.html
-The 'NIR' data has NIR spectra measurements of wheat for the purpose of understanding protein quality.
 
 
 ### Pesticides in the Nation's Streams and Ground Water, 1992-2001
