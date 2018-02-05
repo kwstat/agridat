@@ -33,8 +33,9 @@
 
 \source{
   David Polson. 1964.
-  Estimation of Optimum Size, Shape, and Replicate
-  Number of Safflower Plots for Yield Trials. Table 6.
+  Estimation of Optimum Size, Shape, and Replicate Number of Safflower Plots for Yield Trials.
+  Utah State University, All Graduate Theses and Dissertations, 2979.
+  Table 6.
   http://digitalcommons.usu.edu/etd/2979
 }
 

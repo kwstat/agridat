@@ -19,9 +19,10 @@
 \details{
   Yield in grams for 400 square-yard barley plots.
 
+  Field width: 20 plots x 3 feet = 60 feet
+
   Field length: 20 plots x 3 feet = 60 feet
 
-  Field width: 20 plots x 3 feet = 60 feet
 }
 \source{
   C. H. Goulden, (1939).
@@ -33,7 +34,7 @@
   Erwin LeClerg, Warren Leonard, Andrew Clark (1962).
   \emph{Field Plot Technique}, 2nd ed. Page 27.
 
-  Alternatively, page 39 in 1939 edition:
+  Alternatively, page 39 in 1939 edition of "Field Plot Technique".
   https://archive.org/stream/fieldplottechniq00leon
 }
 

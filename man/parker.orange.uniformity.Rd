@@ -33,9 +33,9 @@
   tree. Including guard trees at the row ends, each row plot was 10
   trees * 20 feet = 200 feet long.
 
-  Field length (north-south) 27 plots * 48 feet =  1296 feet.
-
   Field width (west-east) 10 plots * 200 feet =  2000 feet.
+
+  Field length (north-south) 27 plots * 48 feet =  1296 feet.
 
   An investigation into the variability between plots included
   systematic soil surveys, soil moisture, soil nitrates, and inspection
@@ -51,9 +51,6 @@
 
   Table 25 has mean top volume per tree for each plot in 1926.  Table 26
   has mean area of trunk cross section.
-
-  Data were extracted from the source document by OCR and all values
-  were checked by hand.
 
 }
 \source{

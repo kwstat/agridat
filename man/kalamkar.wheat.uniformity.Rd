@@ -24,9 +24,9 @@
   Plot 18 of the Four Course Rotation Experiment, Great Hoos, at
   Rothamsted, UK was used.  Sown with Yeoman II wheat.
 
-  Field length: 80 rows * 6 inches apart = 40 feet.
-
   Field width = 16 segments * 0.5 meters = 8 meters.
+
+  Field length: 80 rows * 6 inches apart = 40 feet.
 
   The grain yield and number of ears for each half-meter length were
   recorded. This is quite a small field, only 1/40 acre in size.
@@ -40,6 +40,10 @@
 
   Kalamkar suggested using four parallel half-meter rows as a sampling unit.
 
+  Note, the Rothamsted report for 1931, page 57, says:
+  During the year three workers (F. R. Immer, S. H. Justensen and
+  R. J. Kalamkar) have taken up the question of the most efficient use
+  of land in experiments in which an edge row must be discarded... 
 }
 
 \source{

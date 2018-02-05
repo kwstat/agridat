@@ -25,6 +25,10 @@
   Orientation of the plots dimensions is not clear from the text, but
   the aspect used in the example below aligns well with Kristensen
   figure 1.
+
+  Field width: 22 plots * 8.79 m
+
+  Field length: 11 plots * 6.24 m
   
   Notes from Kristensen: Fig 5 is a 3x3 moving average, Fig 6 is
   deviation from the trend, Fig 7 is the field average added to the
@@ -35,7 +39,8 @@
 \source{
   R. K. Kristensen (1925). 
   Anlaeg og Opgoerelse af Markforsoeg.
-  \emph{Tidsskrift for landbrugets planteavl}, Vol 31, 464. Fig 1, pg. 467.
+  \emph{Tidsskrift for landbrugets planteavl}, Vol 31, 464.
+  Fig 1, pg. 467.
   http://dca.au.dk/publikationer/historiske/planteavl/ 
 }
 

@@ -3,7 +3,7 @@
 
 # multiple sheets combined into one
 
-lib(readxl)
+libs(dplyr,readxl,reshape2)
 
 setwd("c:/x/rpack/agridat/data-done/")
 
@@ -11,6 +11,8 @@ d1 <- read_excel("kristensen.barley.uniformity.xlsx",1, col_names=FALSE)
 d2 <- read_excel("kristensen.barley.uniformity.xlsx",2, col_names=FALSE)
 d3 <- read_excel("kristensen.barley.uniformity.xlsx",3, col_names=FALSE)
 d4 <- read_excel("kristensen.barley.uniformity.xlsx",4, col_names=FALSE)
+
+d1 %<>% as.matrix %>% setNames(., 1:ncol(d1)) %>% melt %>% rename(col=Var1,row=Var2,yield=value)
 d1 <- as.matrix(d1)
 d2 <- as.matrix(d2)
 d3 <- as.matrix(d3)

@@ -25,16 +25,16 @@
 
   In 1933:
   
-  Field length: 10 plots * 33 feet
-  
   Field width: 8 plots * 16.5 feet
+  
+  Field length: 10 plots * 33 feet
   
   In 1934:
   
-  Field length: 20 plots * 16.5 feet
-  
   Field width: 8 plots * 16.5 feet
 
+  Field length: 20 plots * 16.5 feet
+  
 }
 \source{
   B. S. Kadam and S. M. Patel. (1937).

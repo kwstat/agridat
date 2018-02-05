@@ -39,12 +39,13 @@
   Note the summaries statistics at the bottom of the page in each report
   are calibrated to ACRES.
 
-  Field width: 8 plots * 1 chain each
+  Field width: 8 plots * 22 feet = 528 feet
   
-  Field length: 6 plots * 1 chain each
+  Field length: 6 plots * 22 feet = 396 feet
   
   The field is 8 plots wide, 6 plots long.  The plots are drawn in the
-  source documents as squares .098 acres each.
+  source documents as squares .098 acres each (1 chain = 66 feet on each
+  side).
 
   Eden & Maskell (page 165) say the field was clover, and ploughed in
   the autumn of 1924. The field was laid out uniformly in lands of one

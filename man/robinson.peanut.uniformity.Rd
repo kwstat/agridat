@@ -22,7 +22,7 @@
   
   A block of 36 rows 3 feet wide and 200 feet long were harvested in 12.5 foot lengths.
 
-  Field length: 200 feet
+  Field length: 36 plots * 12.5 feet = 200 feet
   
   Field width: 16 plots * 3 feet = 48 feet
   

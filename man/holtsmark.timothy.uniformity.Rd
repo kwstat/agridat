@@ -18,11 +18,9 @@
 }
 \details{
 
-  Each plot was 5m x 5m = 1/4 are.
-  
-  Field length: 6 plots * 5 m = 30 m
-
   Field width: 40 plots * 5 m = 200 m.
+
+  Field length: 6 plots * 5 m = 30 m
 
   Holtsmark & Larsen used this trial to compare standard deviations of
   different sized plots (combined from smaller plots).

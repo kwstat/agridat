@@ -5,7 +5,7 @@
   Uniformity trial of sorghum
 }
 \description{
-  Uniformity trial of sorghum in India, 3 years on the same plots
+  Uniformity trial of sorghum in India, 3 years on the same plots 1930-1932.
 }
 \usage{data("kulkarni.sorghum.uniformity")}
 \format{
@@ -18,7 +18,8 @@
   }
 }
 \details{
-  The experiment was conducted in the Sholapur district in India for three consecutive years in1930-1932.
+  The experiment was conducted in the Sholapur district in India for
+  three consecutive years in 1930-1932.
 
   One acre of land (290 ft x 150 ft) was chosen in the midst of a bigger area
   (plot 13 on the Mohol Plot) for sowing to sorghum. It was harvested in plots of 1/160 acre
@@ -28,9 +29,9 @@
   yields of the 160 plots are available for three consecutive harvests. The original
   data are given in Appendix I.
   
-  Field length: 40 plots * 3.75 feet = 150 feet
-  
   Field width: 4 plots * 72.5 feet = 290 feet
+  
+  Field length: 40 plots * 3.75 feet = 150 feet
   
   Conclusions: "Thus, highly narrow strips of plots (length much greater than breadth) lead
   to greater precision than plots of same area but much wider and not so narrow."

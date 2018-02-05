@@ -34,9 +34,9 @@
   of unit plots thus obtained was 768. The yield of grain for each unit
   plot was weighed and recorded separately and is given in the appendix.
 
-  Field length: 8 plots * 20 feet = 160 feet.
-
   Field width: 96 plots * 2.25 feet = 216 feet.
+
+  Field length: 8 plots * 20 feet = 160 feet.
 
   Comment: There seems to be a strong cyclical patern to the fertility gradient.
   

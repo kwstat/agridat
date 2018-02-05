@@ -23,6 +23,7 @@
   ft all around the net area.
 
   Field width: 80 plots * 5 feet = 400 feet
+
   Field length: 25 rows * 5 feet = 125 feet
 
   In a second paper, Iyer used this data to compare random vs. balanced

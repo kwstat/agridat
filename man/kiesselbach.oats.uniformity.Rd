@@ -29,13 +29,12 @@
   
   1/30 acre = 1452 sq feet = 16 rods * 16.5 ft/rod * 5.5 ft
 
-  Field length: 69 plats * 5.5 ft + 68 gaps * 1.33 feet = 469 feet
-
   Field width: 3 plats * 16 rods/plat * 16.5 ft/rod = 792 feet
+
+  Field length: 69 plats * 5.5 ft + 68 gaps * 1.33 feet = 469 feet
 
 }
 \source{
-
   Kiesselbach, Theodore A. (1917).
   Studies Concerning the Elimination of Experimental Error in Comparative Crop Tests.
   University of Nebraska Agricultural Experiment Station Research Bulletin No. 13.

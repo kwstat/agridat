@@ -15,10 +15,10 @@
 
 ## New data
 
-ansari.wheat.uniformity, bose.multi.uniformity,
+ansari.wheat.uniformity, bancroft.peanut.uniformity, bose.multi.uniformity,
 christidis.cotton.uniformity, hutchinson.cotton.uniformity,
-kulkarni.sorghum.uniformity,
-lord.rice.uniformity, robinson.peanut.uniformity
+kulkarni.sorghum.uniformity, lord.rice.uniformity, narain.sorghum.unifomity,
+robinson.peanut.uniformity
 
 ## Other
 

@@ -20,6 +20,7 @@
 }
 \details{
   Grown in 1910.
+  
   Each plot was 3 drills, each drill being 2.4 feet wide.
   Plots were 1/200 acres, 7.2 feet by 30.25 feet long
   The "length of the plots runs with the horizontal lines of figures [in

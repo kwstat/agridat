@@ -16,11 +16,10 @@ Lander, P. E. et al. (1938).
 "Soil Uniformity Trials in the Punjab I."
 Ind. J.Agr. Sci. 8:271-307.
 
-R. Narain and A. Singh, (1940).
-A Note on the Shape of Blocks in Field Experiments.
-Ind. J. Agr. Sci., 10, 844-853. Page 845.
-https://archive.org/stream/in.ernet.dli.2015.271745
 
+
+Genetic gain data example
+http://www.scielo.br/scielo.php?script=sci_arttext&pid=S1415-47571998000400024
 
 # ----------------------------------------------------------------------------
 

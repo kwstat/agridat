@@ -20,9 +20,9 @@
   
   A uniformity trial of Paymaster corn in 1925 at the Arkansas Experimental Station.
 
-  Field length = 219 rows * 44 inches / 12 inches/ft = 803 ft.
-
   Field width = 66ft * 2 = 132 feet.
+
+  Field length = 219 rows * 44 inches / 12 inches/ft = 803 ft.
 
   Note: In the source document, table 2, first 'west' column and
   second-to-last row (page 822), the value 1.40 is assumed to be a

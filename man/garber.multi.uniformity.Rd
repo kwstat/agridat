@@ -6,7 +6,7 @@
 }
 \description{
   Uniformity trials of oat hay and wheat grain, at West Virginia
-  Agricultural Experiment Station, 1923-1924.
+  Agricultural Experiment Station, 1923-1924, on the same land.
 }
 
 \format{
@@ -30,8 +30,9 @@
 
   Field length: 45 plots * 21 feet/plot = 945 feet
   
-  In 1923 the field was planted to oats and harvested as hay.  In 1924
-  the field was planted to wheat and harvested for grain.
+  In 1923 the field was planted to oats and harvested as hay.
+
+  In 1924 the field was planted to wheat and harvested for grain.
 
   Garber: "Plots 211 to 214, and 261 to 264, [note, these are rows
   11-14, columns 5-6] inclusive, were eliminated from this study because
@@ -47,14 +48,14 @@
   yields.
 
   Note: Another paper by these authors,
-  "A Method of Laying Out Experimental Plats", contains a third year of
-  data, with each crop expressed as a percentage.
+  "A Method of Laying Out Experimental Plats", contains three additional
+  years of uniformity trials, with each crop expressed as a percentage.
   https://archive.org/details/in.ernet.dli.2015.229753?q=method+of+laying+out+experiment+plats
 }
 \source{
   Garber, RJ and Mcllvaine, TC and Hoover, MM. 1926.
   A study of soil heterogeneity in experiment plots.
-  \emph{Jour. Agr. Res}, 33, 255-268. Table 3.
+  \emph{Jour. Agr. Res}, 33, 255-268. Tables 3, 5.
   http://naldc.nal.usda.gov/download/IND43967148/PDF
 }
 

@@ -27,17 +27,17 @@ Uniformity trial of wheat in 1903 in Missouri.
   harvested in June, in 5-foot segments. The gross weight and the grain
   weight was measured, the straw weight was calculated by subtraction. 
 
-  Field length: 100 rows, 8 inches apart = 66.66 feet
-
   Field width: 31 series * 5 feet = 155 feet
+
+  Field length: 100 rows, 8 inches apart = 66.66 feet
 
 }
 
 \source{
   James Westbay Day (1916).
   The relation of size, shape, and number of replications of plats to
-  probable error in field experimentation. Dissertation, University of
-  Missouri. Table 1, page 22.
+  probable error in field experimentation.
+  Dissertation, University of Missouri. Table 1, page 22.
   https://hdl.handle.net/10355/56391
 }
 

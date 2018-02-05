@@ -33,19 +33,21 @@
 
   \bold{1954}
   
-  Experiment 1: Red Kidney. Experiment 2: Standard Pink
+  Experiment 1: Red Kidney.
+  Experiment 2: Standard Pink
 
   Field width: 18 plots * 30 inches = 45 ft
   
-  Field height: 12 plots * 15 ft = 180 ft
+  Field length: 12 plots * 15 ft = 180 ft
 
   \bold{1955}
   
-  Experiment 3: Red Kidney. Experiment 4: Standard Pink
+  Experiment 3: Red Kidney.
+  Experiment 4: Standard Pink
 
   Field width: 16 plots * 2 rows * 30 in = 80 ft
 
-  Field height: 15 plots * 30 ft = 450 ft
+  Field length: 15 plots * 30 ft = 450 ft
 
 }
 

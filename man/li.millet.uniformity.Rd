@@ -22,9 +22,9 @@
   
   Field was 100 ft x 100 ft.  Plots were 15 feet long by 1 foot wide.
 
-  Field width: 100 feet
+  Field width: 100 plots * 1 foot = 100 feet
 
-  Field length: 100 feet
+  Field length: 6 plots * 15 feet = 100 feet
 
   Li found the most efficient use of land was obtained with plats 15
   feet long and two rowss wide.  Also satisfactory would be one row 30

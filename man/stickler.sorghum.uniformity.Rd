@@ -6,7 +6,7 @@
 }
 
 \description{
-  Uniformity trial of sorghum in at Manhattan, Kansas, 1958
+  Uniformity trial of sorghum in at Manhattan, Kansas, 1958-1959.
 }
 
 \usage{data("stickler.sorghum.uniformity")}

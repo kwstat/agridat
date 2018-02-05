@@ -36,7 +36,7 @@ Table 58.1: agridat::caribbean.maize
 
 ### D. Bayisa (2010). _Application of Spatial Mixed Model in Agricultural Field Experiment_.
 Master thesis. Department of Statistics, Addis Ababa University.
-At least one dataset from wheat, RCB, with field coordinates.
+One dataset from wheat, RCB, with field coordinates.
 See also http://www.ethstat.org.et/esa_publications.html, Volume 19
 
 
@@ -209,10 +209,10 @@ https://archive.org/details/secondeditionsta001000mbp
 
 ### V. G. Panse and P. V. Sukhatme (1957). _Statistical Methods for Agricultural Workers_.
 http://krishikosh.egranth.ac.in/bitstream/1/2049376/1/44688.pdf
-
 ```
 3 Length and number of grains per ear of wheat
-138 Uniformity trial
+138 Uniformity trial agridat::hutchinson.cotton.uniformity
+
 ```
 
 ### D. D. Paterson (1939). _Statistical Technique in Agricultural Research_.
@@ -227,7 +227,6 @@ https://archive.org/details/statisticaltechn031729mbp
 
 
 ### Arthur Asquith Rayner (1969). _A First Course In Biometry For Agriculture Students_.
-
 ```
 19/456. 2x2x4 Factorial, 2 rep
 19/466. 2x4 factorial, layout, plot size, kale (from Rothamsted)
@@ -250,7 +249,6 @@ https://archive.org/details/in.ernet.dli.2015.176662
 
 
 ### Robert G. D. Steel & James Hiram Torrie. _Principles and Procedures of Statistics_, 2nd ed.
-
 ```
 154 Mint plant growth, 2-way + pot + plant
 244 Trivariate data
@@ -493,7 +491,7 @@ Note: Two small uniformity trials with yield per plant for 200, 500 plants.  CVs
 Prøvedyrkning paa Forsøgsstationen ved Aarslev.
 _Tidsskrift for landbrugets planteavl_.
 http://dca.au.dk/publikationer/historiske/planteavl/ 
-Bind 21, page 553. In Danish.
+Bind 21, page 553. In Danish. Page 557 might be the table referred to by Eden, except there are 30 plots, not 35. Yields appear to be given as percents.
 
 See comments by Eden & Maskell found here:
 https://archive.org/stream/in.ernet.dli.2015.25895/2015.25895.Journal-Of-Agricultural-Science-Vol-xviii-1928#page/n175

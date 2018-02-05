@@ -21,19 +21,17 @@
 Two blocks, 24 rows each. In block A, each 90-foot row was divided into
 12 units, each unit 7.5 feet long. Rows were 8 inches wide.
 
-Field length: 24 rows * 8 inches = 16 feet
-
 Field width: 12 units * 7.5 feet = 90 feet
+
+Field length: 24 rows * 8 inches = 16 feet
 
 }
 
 \source{
-  
   Christidis, Basil G (1931).
   The importance of the shape of plots in field experimentation.
   \emph{The Journal of Agricultural Science}, 21, 14-37. Table VI, p. 28.
   http://dx.doi.org/10.1017/S0021859600007942
-
 }
 \references{
   None

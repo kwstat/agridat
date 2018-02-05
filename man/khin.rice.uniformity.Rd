@@ -29,8 +29,8 @@
   Khin, San. 1950.
   Investigation into the relative costs of rice experiments based on the
   efficiency of designs.
-  Dissertation: Imperial College of Tropical Agriculture
-  (ICTA). Appendix XV.
+  Dissertation: Imperial College of Tropical Agriculture (ICTA).
+  Appendix XV.
   http://hdl.handle.net/2139/42422
 }
 \references{
