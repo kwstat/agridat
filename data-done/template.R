@@ -12,6 +12,10 @@ d2 <- read_excel("kristensen.barley.uniformity.xlsx",2, col_names=FALSE)
 d3 <- read_excel("kristensen.barley.uniformity.xlsx",3, col_names=FALSE)
 d4 <- read_excel("kristensen.barley.uniformity.xlsx",4, col_names=FALSE)
 
+dat <- dat %>% as.matrix %>%
+  `rownames<-`(1:nrow(dat)) %>% `colnames<-`(1:ncol(dat)) %>%
+  melt %>% rename(row=Var1,col=Var2,yield=value)
+
 d1 %<>% as.matrix %>% setNames(., 1:ncol(d1)) %>% melt %>% rename(col=Var1,row=Var2,yield=value)
 d1 <- as.matrix(d1)
 d2 <- as.matrix(d2)
