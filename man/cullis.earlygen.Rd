@@ -41,9 +41,9 @@
   Note: The 'row' and 'col' variables are as in the VSN link below (switched
   compared to the paper by Cullis et al.)
 
-  Field length: 67 plots * 1.8 m  = 121 m 
-
   Field width: 10 rows * 15 m = 150 m
+
+  Field length: 67 plots * 1.8 m  = 121 m 
 
   The orientation is not certain, but the alternative orientation would
   have a field roughly 20m x 1000m, which seems unlikely.

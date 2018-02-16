@@ -32,6 +32,13 @@ Rice split-split plot experiment
 
   Used with permission of Kwanchai Gomez.
 }
+\references{
+  H. P. Piepho, R. N. Edmondson. (2018).
+  A tutorial on the statistical analysis of factorial experiments
+  with qualitative and quantitative treatment factor levels.
+  Jour Agronomy and Crop Science, 8, 1-27.
+  https://doi.org/10.1111/jac.12267
+}
 
 \examples{
 

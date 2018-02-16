@@ -26,9 +26,9 @@
   Each row within a rep is an incomplete block.
   The plot size was 1.5 meters by 4 meters.
   
-  Field length: 15 plots x 1.5 meters = 22.5 m
-  
   Field width: 10 plots x 4 m = 40 m
+  
+  Field length: 15 plots x 1.5 meters = 22.5 m
   
 }
 \source{

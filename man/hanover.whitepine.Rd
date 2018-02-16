@@ -33,16 +33,12 @@
   Heritability of height growth in year-old western white pine.
   \emph{Proc Forest Genet Workshop}. 22, 71--76.
 
-  Data prepared electronically by Kevin Wright from:
-  
   Walter A. Becker (1984).
   \emph{Manual of Quantitative Genetics}, 4th ed. Page 83.
 }
 
-\references{
-  
-  None.
-  
+\references{  
+  None  
 }
 \examples{
 

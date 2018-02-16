@@ -30,9 +30,9 @@
   allocated once to each pair of plots (1,6), (2,5), (3,4) across the
   three reps.  Wheel effect were not significant in _this_ trial.
 
-  Field length: 3 blocks * 12m + 2*0.5m spacing = 37m
-
   Field width: 18m + 1m guard rows = 19m
+  
+  Field length: 3 blocks * 12m + 2*0.5m spacing = 37m
 }
 \source{
   Durban, M., Currie, I. and R. Kempton, 2001.

@@ -22,8 +22,8 @@
 \source{
   P L Cornelius and J Crossa and M S Seyedsadr. (1996).
   Statistical Tests and Estimators of Multiplicative Models for
-  Genotype-by-Environment Interaction.  Book:
-  \emph{Genotype-by-Environment Interaction}. Pages 199-234.
+  Genotype-by-Environment Interaction.
+  Book: \emph{Genotype-by-Environment Interaction}. Pages 199-234.
 }
 \references{
   Forkman, Johannes and Piepho, Hans-Peter. (2014).

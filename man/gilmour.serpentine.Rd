@@ -27,9 +27,9 @@
   down columns.  The trial was sown in a serpentine manner with a
   planter that seeds three rows at a time (Left, Middle, Right).
 
-  Field length 22 plots * .75 m = 16.5 m
-
   Field width 15 columns * 6 m = 90 m
+
+  Field length 22 plots * .75 m = 16.5 m
 }
 \source{
   Arthur R Gilmour and Brian R Cullis and Arunas P Verbyla, 1997.

@@ -8,7 +8,6 @@ output:
     highlight: tango
 vignette: |
   % \VignetteIndexEntry{Additional agricultural data} 
-  % \VignetteEncoding{UTF-8} 
   % \VignetteEngine{knitr::rmarkdown}
 ---
 
@@ -21,21 +20,24 @@ Full view of research station reports 1859-1920. In German.
 
 
 ### S. J. Welham et al. (2015). _Statistical Methods In Biology_.
+
 The online-supplements contain many small datasets for the examples and exercises.
 
 
 ### D. F. Andrews and A. M. Herzberg (1985). _Data_. 
 http://www.stat.duke.edu/courses/Spring01/sta114/data/andrews.html
+
 ```
-Table 2.1: agridat::darwin.maize 
-Table 5.1: agridat::broadbalk.wheat 
-Table 6.1: agridat::mercer.wheat.uniformity 
-Table 6.2: agridat::wiebe.wheat.uniformity 
+Table 2.1:  agridat::darwin.maize 
+Table 5.1:  agridat::broadbalk.wheat 
+Table 6.1:  agridat::mercer.wheat.uniformity 
+Table 6.2:  agridat::wiebe.wheat.uniformity 
 Table 58.1: agridat::caribbean.maize
 ```
 
 ### D. Bayisa (2010). _Application of Spatial Mixed Model in Agricultural Field Experiment_.
 Master thesis. Department of Statistics, Addis Ababa University.
+
 One dataset from wheat, RCB, with field coordinates.
 See also http://www.ethstat.org.et/esa_publications.html, Volume 19
 
@@ -61,7 +63,8 @@ Pig weight data is found in SemiPar::pig.weights
 
 Sitka spruce data is found in: geepack::spruce
 
-Milk protein data is found in: nlme::Milk.  A thorough description of this data can be found in Molenberghs & Kenward, /Missing Data in Clinical Studies/, p. 377.  Original source: A. P. Verbyla and B. R. Cullis, Modelling in Repeated Measures Experiments. http://www.jstor.org/stable/2347384 
+Milk protein data is found in: nlme::Milk.  A thorough description of this data can be found in Molenberghs & Kenward, _Missing Data in Clinical Studies_, p. 377.  
+Original source: A. P. Verbyla and B. R. Cullis, Modelling in Repeated Measures Experiments. http://www.jstor.org/stable/2347384 
 
 
 ### Federer, Walt (1955). _Experimental Design_.
@@ -80,13 +83,15 @@ Milk protein data is found in: nlme::Milk.  A thorough description of this data 
 
 
 ### Finney 1972. _An Introduction to Statistical Science in Agriculture_.
+
 Not reviewed.
 
 
 ### Galwey, N.W. (2014). _Introduction to Mixed Modelling_, 2nd ed.
 http://www.wiley.com/WileyCDA/WileyTitle/productCd-1119945496.html
+
 ```
-83 agridat::yates.oats
+83  agridat::yates.oats
 104 doubled-haploid barley
 135 wheat/rye competition, heritability
 190 chickpea flowering in families
@@ -99,19 +104,23 @@ http://www.wiley.com/WileyCDA/WileyTitle/productCd-1119945496.html
 
 
 ### Kwanchai A. Gomez & Gomez (1984). _Statistical Procedures for Agricultural Research_.
+
 Extensive collection of datasets from rice experiments.
 
 
 ### Cyril H. Goulden, _Methods of Statistical Analysis_.
 First edition: http://archive.org/details/methodsofstatist031744mbp 
+
 ```
 18 Uniformity trial: agridat::goulden.barley.uniformity 
 153 Split-split plot with factorial sub-plot treatment: agridat::goulden.splitsplit 
 194 Incomplete block 
 197 Inc block 
 205 Latin square 
-208 Inc block 255 Covariates in feeding trial: agridat::crampton.pig
+208 Inc block 
+255 Covariates in feeding trial: agridat::crampton.pig
 ```
+
 Second edition: http://krishikosh.egranth.ac.in/handle/1/2034118
 ```
 216 Latin square: agridat::goulden.latin 
@@ -140,6 +149,7 @@ Second edition: http://krishikosh.egranth.ac.in/handle/1/2034118
 
 
 ### Erwin LeClerg, Warren Leonard, Andrew Clark (1962). _Field Plot Technique_
+
 Many small datasets.
 ```
 27 uniformity agridat::goulden.barley.uniformity
@@ -166,6 +176,7 @@ Many small datasets.
 
 ### Harald Martens & Magni Martens. _Multivariate Analysis of Quality_
 https://www.wiley.com/legacy/wileychi/chemometrics/datasets.html
+
 The 'NIR' data has NIR spectra measurements of wheat for the purpose of understanding protein quality.
 
 
@@ -177,46 +188,61 @@ The 'NIR' data has NIR spectra measurements of wheat for the purpose of understa
 96 cabbage fertilizer
 143 intercropping cowpea maize
 177 honeybee repellent non-normal
-251 cauliflower poisson agridat::mead.cauliflower
+251 cauliflower poisson - agridat::mead.cauliflower
 273 rhubarb RCB covariate
 296 onion density
 316 lambs
 341 germination
-350 germination factorial agridat::mead.germination
+350 germination factorial - agridat::mead.germination
 352 poppy
-359 lamb loglinear agridat::mead.lambs
+359 lamb loglinear - agridat::mead.lambs
 375 rats
 386 intercrop
-390 intercrop cowpea maize agridat::mead.cowpeamaize
+390 intercrop cowpea maize - agridat::mead.cowpeamaize
 404 apple characteristics (incomplete)
 ```
 
 
 ### Roger Mead (1988). _The Design of Experiments_
 https://books.google.com/books?id=CaFZPbCllrMC&pg=PA323
+
 ```
-323 Turnip spacing data
+323 Turnip spacing data  agridat::mead.turnip
 ```
 
 
 ### Bernard Ostle (1963). _Statistics in Research_, 2nd ed.
 https://archive.org/details/secondeditionsta001000mbp
+
 ```
 455 2 factors, 1 covariate
-458 1 factor, 2 covariates: agridat::crampton.pig
+458 1 factor, 2 covariates - agridat::crampton.pig
 ```
 
 
 ### V. G. Panse and P. V. Sukhatme (1957). _Statistical Methods for Agricultural Workers_.
 http://krishikosh.egranth.ac.in/bitstream/1/2049376/1/44688.pdf
+
 ```
 3 Length and number of grains per ear of wheat
 138 Uniformity trial agridat::hutchinson.cotton.uniformity
+154 RCB 8 blocks
+167 two factorial, 6 rep trial
+178 2^4 factorial, 8 blocks, partial confounding
+192 3^3 factorial, 3 reps/9 blocks, partial confounding
+200 split-plot, 6 rep
+212 strip-plot, 6 rep
+219 cotton variety trial, yield & stand counts
+256 8x8 simpple lattice, 4 reps
+282 5 varieties at 6 locations
+295 5 N levels at 5 locations
+332 4 regions, 9 villages each, 3 treatments
 
 ```
 
 ### D. D. Paterson (1939). _Statistical Technique in Agricultural Research_.
 https://archive.org/details/statisticaltechn031729mbp
+
 ```
 84 Distribution of purple/white starchy/sweet seeds from 11 ears
 190 Sugar cane MET: 2 year, 5 block, 5 variety
@@ -227,6 +253,7 @@ https://archive.org/details/statisticaltechn031729mbp
 
 
 ### Arthur Asquith Rayner (1969). _A First Course In Biometry For Agriculture Students_.
+
 ```
 19/456. 2x2x4 Factorial, 2 rep
 19/466. 2x4 factorial, layout, plot size, kale (from Rothamsted)
@@ -240,6 +267,7 @@ https://archive.org/details/statisticaltechn031729mbp
 
 ### F.S.F. Shaw (1936). _A Handbook of Statistics For Use in Plant Breeding and Agricultural Problems_
 https://archive.org/details/in.ernet.dli.2015.176662
+
 ```
 95 4 variety RCB, 25 rep, diagonal layout
 ```
@@ -247,8 +275,10 @@ https://archive.org/details/in.ernet.dli.2015.176662
 
 ### G. W. Snedecor & W. G. Cochran. _Statistical Methods_.
 
+Not yet reviewed.
 
 ### Robert G. D. Steel & James Hiram Torrie. _Principles and Procedures of Statistics_, 2nd ed.
+
 ```
 154 Mint plant growth, 2-way + pot + plant
 244 Trivariate data
@@ -262,6 +292,7 @@ https://archive.org/details/in.ernet.dli.2015.176662
 ```
 
 ### Oliver Schabenberger and Francis J. Pierce. _Contemporary Statistical Models for the Plant and Soil Sciences_.
+
 Many datasets
 
 
@@ -296,6 +327,9 @@ Very large GxE data here. Currently 2014, but more years planned. Hybrid & inbre
 ### DataDryad
 http://datadryad.org/
 
+Data from: MycoDB, a global database of plant response to mycorrhizal fungi
+http://datadryad.org/resource/doi%3A10.5061/dryad.723m1
+
 
 ### Data In Brief
 http://www.sciencedirect.com/science/journal/23523409
@@ -311,6 +345,10 @@ http://library.wur.nl/ojs/index.php/odjar/
 
 ### Plant Genomics and Phenomics Research Data Repository
 http://edal.ipk-gatersleben.de/repos/pgp/
+
+
+### Wolfram Data Repository 
+https://datarepository.wolframcloud.com/
 
 
 # Journals - Bulletins
@@ -519,13 +557,17 @@ Note: This paper is not available, but a summary can be found here: http://eurek
 
 # R packages
 
+### agriTutorial
 
-### aml - Adaptive Mixed LASSO
-Has 'wheat' data with genetic and phenotypic data for wheat.
+Five datasets used to illustrate analyses.
 
 
 ### agricolae 
 Has assorted data and functions for analysis of agricultural data.
+
+
+### aml - Adaptive Mixed LASSO
+Has 'wheat' data with genetic and phenotypic data for wheat.
 
 
 ### BGLR - Bayesian Generalized Linear Regression.
@@ -627,6 +669,11 @@ https://github.com/reyzaguirre/st4gi
 
 # Web sites
 
+### Ideals
+
+Data File : Raw data from each ear analyzed each year of the Illinois long-term selection experiment for oil and protein in corn (1896-2004)
+https://www.ideals.illinois.edu/handle/2142/3528
+
 
 ### ARS oat trials
 http://www.ars.usda.gov/Main/docs.htm?docid=8419&page=4
@@ -639,6 +686,7 @@ Data from Broadbalk and other long-term experiments.
 
 ### Rothamsted Documents Archive
 http://www.era.rothamsted.ac.uk/eradoc/collections.php
+
 Annual reports from Rothamsted 1908-1987. Many have data, especially in the 
 early years (before WWII) there are data given for the 'Classical Experiments'.
 ```
@@ -661,6 +709,7 @@ Year, page
 
 ### Germplasm Enhancement of Maize (ISU)
 http://www.public.iastate.edu/~usda-gem/index.htm
+
 Data from trials at multiple locations. Yield, mst, pltht, lodging. No field plans.
 
 
@@ -674,12 +723,14 @@ http://vt.cropsci.illinois.edu/corn.html
 
 ### ILRI International Livestock Research Institute
 http://www.ilri.org/biometrics/CS/
+
 Case study 4 is a nice dialel example with sheep data.
 Available as agridat::ilri.sheep
 
 
 ### IRRI Biometrics and Breeding Informatics
 http://bbi.irri.org/products
+
 STAR, PBTools, CropStat.
 The STAR user guide has well-documented data (even using 2 from agridat), but
 the PBTools user guide does not document the data.
@@ -687,16 +738,19 @@ the PBTools user guide does not document the data.
 
 ### SolCAP Solanaceae Coordinated Agricultural Project
 http://www.solcap.msu.edu/
+
 Potato and Tomato genotype and phenotype data.
 
 
 ### Statistical Analysis of Agricultural Experiments with R
 http://rstats4ag.org/
+
 Datasets for mixed models, ancova, dose response curves, competition.
 
 
 ### Terra-Ref
 http://terraref.org/
+
 Sensor observations, plant phenotypes, derived traits, genetic and genomic data.
 Beta version until Nov 2018.
 
@@ -704,6 +758,7 @@ Beta version until Nov 2018.
 ### USDA National Agricultural Statistics Service
 http://www.nass.usda.gov
 http://quickstats.nass.usda.gov/
+
 Group:       Field Crops
 Commodity:   Corn
 Category:    Area Harvested, Yield

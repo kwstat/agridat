@@ -30,12 +30,10 @@
 \source{  
   Walter A. Becker (1984).
   \emph{Manual of Quantitative Genetics}, 4th ed. Page 83.
-
-  Prepared in electronic form by Kevin Wright.
 }
 
 \references{
-  None.
+  None
 }
 
 \examples{

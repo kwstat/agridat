@@ -18,7 +18,7 @@
 }
 \details{
   
-  A uniformity trial of Paymaster corn in 1925 at the Arkansas Experimental Station.
+  A uniformity trial of corn in 1925 at the Arkansas Experimental Station.
 
   Field width = 66ft * 2 = 132 feet.
 
@@ -35,11 +35,9 @@
   Some determinations of plat variability.
   Agronomy Journal, 18, 819-823.
   http://doi.org/10.2134/agronj1926.00021962001800090009x
-
-  Converted from paper to electronic format by Kevin Wright
 }
 \references{
-  None.
+  None
 }
 \examples{
 data(mcclelland.corn.uniformity)

@@ -44,9 +44,9 @@
   arranged in nine columns of nine, a 2-yard space separating plots
   along the rows and two guard rows separating plots across the rows.
   
-  Field length: 18 yards * 9 plots + 2 yards * 8 gaps = 178 yards
-
   Field width: 6 yards * 9 plots + 4 yards * 8 gaps = 86 yards
+
+  Field length: 18 yards * 9 plots + 2 yards * 8 gaps = 178 yards
 
 }
 \source{

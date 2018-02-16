@@ -28,10 +28,10 @@
   orientation of the plots is not clear from the paper, but the data in
   Littel et al are given in meters and make the orientation clear.
 
-  Field width: 22 plots * 1.2 m = 26.4 m
-
   Field length: 11 plots * 4.3 m = 47.3 m
   
+  Field width: 22 plots * 1.2 m = 26.4 m
+
   All plots with missing data are coded as being gen = "Lancer".
   (For ASREML, missing plots need to be included for spatial analysis and the
   level of 'gen' needs to be one that is already in the data.)

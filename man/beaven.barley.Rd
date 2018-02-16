@@ -27,9 +27,9 @@
   Each plot was planted 40 inches on a side, but only the middle square
   36 inches on a side was harvested.
 
-  Field length: 5 plots * 3 feet = 15 feet
+  Field width: 32 plots * 3 feet = 96 feet
 
-  Field width: 32 plots * 3 feet = 96 feet.
+  Field length: 5 plots * 3 feet = 15 feet
 }
 \source{
 

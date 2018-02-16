@@ -15,9 +15,9 @@
 
   Each plot is 1/80 acre = 28.4 links * 44 links.
   
-  Field length: 18 rows * 28.4 links = 511 links
-
   Field width: 4 plots * 44 links = 176 links.
+
+  Field length: 18 rows * 28.4 links = 511 links
 
   The 'block' numbers in this data are as given in the Rothamsted Report.  
   The 'grain' and 'straw' values are the actual pounds per sub-plot as

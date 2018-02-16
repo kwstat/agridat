@@ -31,10 +31,10 @@
   values. Such accuracy is not, however, claimed to be a constant
   characteristic of the design.
 
-  Field length: 252 feet
-
   Field width: 96 feet
   
+  Field length: 252 feet
+
 }
 
 \source{

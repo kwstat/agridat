@@ -20,6 +20,8 @@ christidis.cotton.uniformity, hutchinson.cotton.uniformity,
 igue.sugarcane.uniformity, kulkarni.sorghum.uniformity, lord.rice.uniformity,
 narain.sorghum.unifomity, robinson.peanut.uniformity
 
+mead.turnip
+
 ## Other
 
 * nonnecke.corn.uniformity is now nonnecke.sweetcorn.uniformity

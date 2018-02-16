@@ -23,9 +23,9 @@
   10 ranges of 15 columns.  The plot size was 1.5 meters by 4 meters.
   Each row within a rep is an (incomplete) block.
 
-  Field length: 10 ranges * 4m = 40m
-
   Field width: 15 columns * 1.5m = 22.5m
+
+  Field length: 10 ranges * 4m = 40m
 }
 \source{
   R A Kempton and P N Fox. (1997).
