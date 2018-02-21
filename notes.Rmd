@@ -1,22 +1,13 @@
 # agridat notes
 
-Wynne Sayer, M. Vaidyanathan and S. Subrammonia Iyer (1936).
-Ideal size and shape of sugar-cane experimental plots based upon tonnage experiments with Co 205 and Co 213 conducted in 
-Pusa.
-Indian J. Agric. Sci., 1936, 6, 684-714. Appendex, page 712.
-https://archive.org/details/in.ernet.dli.2015.271737
-
-Wynne Sayer and Krishna Iyer.  (1936).
-On some of the factors that influence the error of field experiments with special reference to sugar cane.
-Indian J. Agric. Sci., 1936, 6, 917-929. Appendix, page 927.
-https://archive.org/details/in.ernet.dli.2015.271737
-
 ---> Not found 1.8.2018
 Lander, P. E. et al. (1938).
 "Soil Uniformity Trials in the Punjab I."
 Ind. J. Agr. Sci. 8:271-307.
 
 
+Meta analysis example
+https://www.nature.com/articles/s41598-018-21284-2#Sec18
 
 Genetic gain data example
 http://www.scielo.br/scielo.php?script=sci_arttext&pid=S1415-47571998000400024

@@ -18,7 +18,8 @@
 ansari.wheat.uniformity, bancroft.peanut.uniformity, bose.multi.uniformity,
 christidis.cotton.uniformity, hutchinson.cotton.uniformity,
 igue.sugarcane.uniformity, kulkarni.sorghum.uniformity, lord.rice.uniformity,
-narain.sorghum.unifomity, robinson.peanut.uniformity
+narain.sorghum.unifomity, robinson.peanut.uniformity,
+sayer.sugarcane.uniformity
 
 mead.turnip
 

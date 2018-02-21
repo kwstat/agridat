@@ -82,6 +82,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{polson.safflower.uniformity}        \tab 52 x 33 \tab xy \tab smith\cr
 \link{robinson.peanut.uniformity}         \tab 16 x 36 \tab xy \tab \cr
 \link{sawyer.multi.uniformity}            \tab 8 x 6   \tab xy, 3 year \tab \cr
+\link{sayer.sugarcane.uniformity}         \tab 8 x 136, 8 x 121 \tab xy, 2 year \tab \cr
 \link{smith.beans.uniformity}             \tab 18 x 12, 16 x 15 \tab xy, 2 yr, 2 crops \tab \cr
 \link{smith.corn.uniformity}              \tab 6 x 20 \tab xy, 3 years \tab rgl \cr
 \link{stephens.sorghum.uniformity}        \tab 100 x 20 \tab xy \tab \cr

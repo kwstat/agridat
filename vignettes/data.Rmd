@@ -400,6 +400,12 @@ Vol 35/503. North Central Regional Potassium Studies with Corn.
 
 # Papers
 
+**Alencar Xavier, Diego Jarquin, Reka Howard, Vishnu Ramasubramanian, James E. Specht, George L. Graef, William D. Beavis, Brian W. Diers, Qijian Song, Perry B. Cregan, Randall Nelson, Rouf Mian, J. Grover Shannon, Leah McHale, Dechun Wang, William Schapaugh, Aaron J. Lorenz, Shizhong Xu, William M. Muir and Katy M. Rainey**.
+Genome-Wide Analysis of Grain Yield Stability and Environmental Interactions in a Multiparental Soybean Population,
+http://www.g3journal.org/content/8/2/519
+
+Data are in the SoyNAM and NAM packages.
+
 **Barrero, Ivan D. et al**. (2013).
 A multi-environment trial analysis shows slight grain yield improvement in Texas commercial maize.
 Field Crops Research, 149, Pages 167-176.
@@ -563,26 +569,32 @@ Five datasets used to illustrate analyses.
 
 
 ### agricolae 
+
 Has assorted data and functions for analysis of agricultural data.
 
 
 ### aml - Adaptive Mixed LASSO
+
 Has 'wheat' data with genetic and phenotypic data for wheat.
 
 
 ### BGLR - Bayesian Generalized Linear Regression.
+
 Has an A matrix (but no pedigree) for 499 genotypes at 4 locations.
 
 
 ### BLR - Bayesian Linear Regression.
+
 Has an A matrix (but no pedigree) for 499 genotypes at 4 locations.
 
 
 ### BSagri
+
 Safety assessment in agriculture trials
 
 
 ### ClustVarLV
+
 The apples_sh data has sensory attributes and preference scores for 12 apple varieties.
 
 
@@ -591,31 +603,38 @@ https://r-forge.r-project.org/projects/cropcc/
 
 
 ### drc - Dose response curves
+
 Has nice herbicide dose response curves and germination data for mungbean, rice, wheat.
 
 
 ### FW - Finlay-Wilkinson regression
+
 https://github.com/lian0090/FW/ Has phenotype data and marker data for 599 wheat lines in 4 environments.
 
 
 ### lmtest
+
 Data lmtest::ChickEgg is a time series of annual chicken and egg production in the United States 1930-1983.
 
 
 ### missMDA 
+
 The referenced source for 'geno' data does NOT contain the data.
 
 
 ### NADA
+
 The 'Atra' and 'Recon' datasets contain measurements of Atrazine in water samples.
 
 
 ### nlraa
+
 Miguez. Non-linear models in agriculture.
 http://r-forge.r-project.org/R/?group_id=1599
 
    
 ### nlme
+
 Datasets for growth of Orange trees and Soybean plants.  Soybean data is from the book "Nonlinear Models for Repeated Measurement Data".
 
 
@@ -628,14 +647,17 @@ Data: peanut same as agridat::kang.peanut
 ```
 
 ### SDaA - Survey Data and Analysis
+
 This package has county-level data from the United States Census of Agriculture, along with a vignette to illustrate survey sampling analyses.
 
 
 ### SemiPar
+
 Data: SemiPar::onions is same as agridat::ratkowski.onions
 
 
 ### sommer - Solving mixed model equations in R
+
 Data: h2. Modest-sized GxE experiment in potato Data: cornHybrid. Yield/PLTHT for 100 hybrids from 20 inbred * 20 inbred, 4 locs. Phenotype and relationship matrix.
 
 Data: wheatLines  CIMMYT wheat data for 599 lines. Phenotype and relationship data.
@@ -649,21 +671,26 @@ http://www.genetics.org/content/197/4/1343.supplemental
 
 
 ### spdep
+
 Has a vignette 'The Problem of Spatial Autocorrelation: forty years on' that examines agriculture in Irish counties.
 See also the data ade4::irishdata.
 
 
 ### spuRs
+
 Data: spuRs::trees has data for 107 trees that were cut into cross sections with the volume calculated at roughly 10-year increments.  This is a subset of the much-larger original data from Guttenberg: 
 https://archive.org/stream/wachstumundertra00gutt
 
 
 ### SoyNAM - Soybean nested association mapping 
+
 Dataset with phenotype data 3 yr, 9 locations, 18 environments, 60 thousand observations for height, maturity,
 lodging, moisture, protein, oil, fiber, seed size. There are 5000+ strains, 40 families.
 
+Data formatted for the analysis of the NAM package is available with the following command: SoyNAM::ENV().
 
 ### st4gi - Stat for genetic improvement
+
 https://github.com/reyzaguirre/st4gi
 
 
