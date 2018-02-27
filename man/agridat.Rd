@@ -57,6 +57,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{kiesselbach.oats.uniformity}        \tab 3 x 69 \tab xy \tab \cr
 \link{kristensen.barley.uniformity}       \tab 22 x 11 \tab xy \tab \cr
 \link{kulkarni.sorghum.uniformity}        \tab 4 x 40 \tab xy, 3 years \tab \cr
+\link{lander.multi.uniformity}            \tab 5 x 39 \tab xy, 4 years \tab \cr
 \link{lessman.sorghum.uniformity}         \tab 46 x 60 \tab xy \tab \cr
 \link{li.millet.uniformity}               \tab 6 x 100 \tab xy \tab \cr
 \link{lord.rice.uniformity}               \tab 5 x 14 \tab xy, 8 fields \tab \cr
