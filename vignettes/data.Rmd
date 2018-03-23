@@ -9,6 +9,7 @@ output:
 vignette: |
   % \VignetteIndexEntry{Additional agricultural data} 
   % \VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
 # Books
@@ -793,4 +794,24 @@ Data Item:   Corn grain Acres Harvested, Yield Bu/Ac
 Domain:      Total
 Geography:   State
 See agridat::nass.corn, nass.wheat, etc.
+
+# Other
+
+## Rothamsted Library 
+http://www.rothamsted.ac.uk/library/visitor-access
+
+Box of uniformity trial data
+```
+STATS17  WG Cochran   
+ 
+Uniformity trial data. 
+Genstat data. Data received since publication of the catalogue.  1935-1943. 
+Uniformity trial data.  1930-1936. 
+Uniformity trials.  1936-1938. 
+Uniformity trials.  R data.  1936-1937. 
+O. V. S. Heath.  Cotton uniformity trial data.  1934-1935. 
+Data.  Yields of grain per foot length.  1934. 
+Catalogue of field uniformity trial data.  N. d. 
+Demandt.  1931. One box 
+```
 

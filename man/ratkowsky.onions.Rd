@@ -1,10 +1,8 @@
 \name{ratkowsky.onions}
-
 \alias{ratkowsky.onions}
 \title{
   Onion yields for different densities at two locations
 }
-
 \description{
   Onion yields for different densities at two locations
 }
@@ -29,7 +27,6 @@
   \emph{Semiparametric Regression}. Cambridge University Press.
   http://stat.tamu.edu/~carroll/semiregbook/
 }
-
 \examples{
 
 data(ratkowsky.onions)

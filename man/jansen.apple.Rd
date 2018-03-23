@@ -46,9 +46,11 @@ data(jansen.apple)
 dat <- jansen.apple
 
 require(lattice)
-dotplot(gen ~ y/n|block, data=dat, group=inoculum, auto.key=TRUE,
-        main="jansen.apple",
-        xlab="Proportion infected per block/inoculum", ylab="Genotype")
+xyplot(inoculum ~ y/n|gen, data=dat, group=block,
+       layout=c(3,1),
+       main="jansen.apple",
+       xlab="Proportion infected per block/inoculum",
+       ylab="Inoculum level")
 
 \dontrun{
   require(lme4)

@@ -21,8 +21,6 @@ pre > code { border: 0; }
 </style>
 
 
-# Abstract
-
 The `agridat` package is an extensive collection of data sets that have
 been previously published in books and journals, primarily from agricultural
 experiments.
