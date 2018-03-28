@@ -136,14 +136,23 @@ dat <- steptoe.morex.pheno
 \dontrun{
   # Visualize GxE of traits
   require(lattice)
-  levelplot(amylase~env*gen, data=dat, scales=list(x=list(rot=90)), main="amylase")
-  levelplot(diapow~env*gen, data=dat, scales=list(x=list(rot=90)), main="diapow")
-  levelplot(hddate~env*gen, data=dat, scales=list(x=list(rot=90)), main="hddate")
-  levelplot(lodging~env*gen, data=dat, scales=list(x=list(rot=90)), main="lodging")
-  levelplot(malt~env*gen, data=dat, scales=list(x=list(rot=90)), main="malt")
-  levelplot(height~env*gen, data=dat, scales=list(x=list(rot=90)), main="height")
-  levelplot(protein~env*gen, data=dat, scales=list(x=list(rot=90)), main="protein")
-  levelplot(yield~env*gen, data=dat, scales=list(x=list(rot=90)), main="yield")
+  redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
+  levelplot(amylase~env*gen, data=dat, col.regions=redblue,
+            scales=list(x=list(rot=90)), main="amylase")
+  levelplot(diapow~env*gen, data=dat, col.regions=redblue,
+            scales=list(x=list(rot=90)), main="diapow")
+  levelplot(hddate~env*gen, data=dat, col.regions=redblue,
+            scales=list(x=list(rot=90)), main="hddate")
+  levelplot(lodging~env*gen, data=dat, col.regions=redblue,
+            scales=list(x=list(rot=90)), main="lodging")
+  levelplot(malt~env*gen, data=dat, col.regions=redblue,
+            scales=list(x=list(rot=90)), main="malt")
+  levelplot(height~env*gen, data=dat, col.regions=redblue,
+            scales=list(x=list(rot=90)), main="height")
+  levelplot(protein~env*gen, data=dat, col.regions=redblue,
+            scales=list(x=list(rot=90)), main="protein")
+  levelplot(yield~env*gen, data=dat, col.regions=redblue,
+            scales=list(x=list(rot=90)), main="yield")
 }
 
 # ----------------------------------------------------------------------------

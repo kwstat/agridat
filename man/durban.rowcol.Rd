@@ -59,9 +59,11 @@ dat$resid <- m10$resid
 ## xyplot(resid~bed, dat, type=c('p','smooth'), main="durban.rowcol")
 
 # Figure 3
-coplot(resid~bed|factor(row), data=dat, cex=.5,
-       panel=function(x,y,...) panel.smooth(x,y,span=.75,...))
-title("durban.rowcol")
+if(require(lattice)){
+  xyplot(resid ~ bed|factor(row), data=dat,
+         main="durban.rowcol",
+         type=c('p','smooth'))
+}
 
 # ----------------------------------------------------------------------------
 
@@ -74,6 +76,7 @@ title("durban.rowcol")
   new1 <- expand.grid(row=unique(dat$row),bed=unique(dat$bed))
   new1 <- cbind(new1, gen="G001")
   p1lo <- predict(m1lo, newdata=new1)
+  require(lattice)
   wireframe(p1lo~row+bed, new1, aspect=c(1,.5), main="Field trend") # Figure 5
 }
 
@@ -94,6 +97,7 @@ title("durban.rowcol")
                  random=~spl(rowf) + spl(bedf) + units, rcov=~ar1(rowf):ar1(bedf))
   m1a3 <- asreml(yield~gen, data=dat, random=~units, rcov=~ar1(rowf):ar1(bedf))
 
+  require(lattice)
   v7a <- asreml.variogram(x=dat$bedf, y=dat$rowf, z=m1a3$residuals)
   wireframe(gamma ~ x*y, v7a, aspect=c(1,.5)) # Fig 7a
   
@@ -123,6 +127,7 @@ title("durban.rowcol")
   ##                resid = ~ar1(rowf):ar1(bedf))
 
   ## # Figure 7
+  ## require(lattice)
   ## v7a <- asr_varioGram(x=dat$bedf, y=dat$rowf, z=m1a3$residuals)
   ## wireframe(gamma ~ x*y, v7a, aspect=c(1,.5)) # Fig 7a
   

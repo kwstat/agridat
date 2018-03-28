@@ -556,12 +556,6 @@ Note: Uniformity trial at three locations for mushrooms in growth houses.
 https://naldc.nal.usda.gov/naldc/download.xhtml?id=IND43968493
 
 
-**Moore, John Francis** (1952).
-A study of field plot technique with sprouting broccoli.  Proc Amer Soc Hort Sci: 1-474.
-
-Note: This paper is not available, but a summary can be found here: http://eurekamag.com/research/013/624/013624967.php
-
-
 # R packages
 
 ### agriTutorial

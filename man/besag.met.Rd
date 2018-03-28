@@ -162,7 +162,7 @@ datm <- aggregate(yield ~ county + gen, data=dat, FUN=mean)
   p3 <- p3$pred$pval
   require("gge")  
   bi3 <- gge(predicted.value ~ gen*county, data=p3, scale=FALSE)
-  dev.new()
+  if(interactive()) dev.new()
   # Very similar to the coefficient biplot
   biplot(bi3, stand=FALSE, # what does 'stand' do?
          main="SVD biplot of FA2 predictions")
@@ -258,7 +258,7 @@ datm <- aggregate(yield ~ county + gen, data=dat, FUN=mean)
  ##  p3 <- p3$pvals
  ##  require("gge")  
  ##  bi3 <- gge(predicted.value ~ gen*county, data=p3, scale=FALSE)
- ##  dev.new()
+ ##  if(interactive()) dev.new()
  ##  # Very similar to the coefficient biplot
  ##  biplot(bi3, stand=FALSE, main="SVD biplot of FA2 predictions")
 

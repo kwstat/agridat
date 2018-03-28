@@ -75,7 +75,7 @@ abline(h=(dat$y[ix] + dat$y[ix+1])/2, col="skyblue")
   # another approach with similar results
   # https://joe.org/joe/2013october/tt1.php
   require("rcompanion")
-  cateNelson(dat$x, dat$y)
+  cateNelson(dat$x, dat$y, plotit=0)
 }
 
 }

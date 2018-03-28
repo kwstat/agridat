@@ -55,8 +55,7 @@
   Notes by Bradley.
 
   The edges of the field tended to be slightly higher yielding. Thought
-  to be "due to the heavier cultivation which the edges recieve"
-  (p. 18).
+  to be due to the heavier cultivation which the edges recieve (p. 18).
 
   The plot in row 9, col 7 (9G in Bradley) is higher yielding than its
   neighbors, thought to be the site of a saman tree dug up and burned
@@ -74,6 +73,14 @@
   A study of the variation in productivity over a number of fixed plots in field 2.
   Dissertation: The University of the West Indies. Appendix 1a, 1b, 1c, 1d.
   http://hdl.handle.net/2139/41264
+
+  The data are repeated in:
+  C. E. Wilson. (
+  Study of the plots laid out on field II with a view to obtaining
+  plot-fertility data for use in future experiments on these plots,
+  season 1940-41.
+  Dissertation: The University of the West Indies.  Page 36-39.
+  http://uwispace.sta.uwi.edu/dspace/handle/2139/43658
 }
 \references{
   None

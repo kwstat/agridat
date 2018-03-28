@@ -100,7 +100,7 @@ if(require(reshape2)){
   # Not the best view...too much overplotting
   require(synbreed)
   pe <- with(ped[1:57,], create.pedigree(gen, male, female, gener=NULL))
-  windows(9,6)
+  # windows(9,6)
   synbreed::plot.pedigree(pe, vertex.size=10, vertex.label.cex=.5, asp=.5) #
 }
 

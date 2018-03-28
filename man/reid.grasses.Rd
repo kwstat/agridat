@@ -12,11 +12,11 @@
 \format{
   A data frame with 210 observations on the following 5 variables.
   \describe{
-    \item{\code{nitro}}{a numeric vector}
-    \item{\code{year}}{a character vector}
-    \item{\code{gen}}{a character vector}
-    \item{\code{drymatter}}{a numeric vector}
-    \item{\code{protein}}{a numeric vector}
+    \item{\code{nitro}}{nitrogen, 21 numeric levels}
+    \item{\code{year}}{Y1, Y2, or Y3}
+    \item{\code{gen}}{genotype}
+    \item{\code{drymatter}}{dry matter content}
+    \item{\code{protein}}{protein content}
   }
 }
 \details{
@@ -43,8 +43,9 @@ dat <- reid.grasses
 
 if(require(latticeExtra)){
   foo <- xyplot(drymatter + protein ~ nitro|year, dat, group=gen,
+                auto.key=list(columns=4),
                 as.table=TRUE, type=c('p','l'),
-                main="reid.grasses",
+                main="reid.grasses",ylab="drymatter/protein trait value",
                 scales=list(y=list(relation="free")))
   combineLimits(foo)
 }
@@ -71,14 +72,15 @@ if(require(latticeExtra)){
   
   # without 'random', all effects are included in 'random'
   m1 <- nlme(drymatter ~ SSfpl(nitro, A, B, xmid,scale),
-             data= dat3,
+             data= dat2,
              fixed= A + B + xmid + scale ~ 1,
              # random = B ~ 1|indiv, # to make only B random
              random = A + B + xmid + scale ~ 1|indiv,
              start=inits)
   fixef(m1)
   summary(m1)
-  plot(augPred(m1, level=0:1)) # only works with groupedData object
+  plot(augPred(m1, level=0:1),
+       main="reid.grasses - observed/predicted data",) # only works with groupedData object
   
 }
 

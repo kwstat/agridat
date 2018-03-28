@@ -57,9 +57,11 @@ dat$resid <- m20$resid
 ## xyplot(resid~bed, dat, type=c('p','smooth'), main="durban.splitplot")
 
 # Figure 4 doesn't quite match due to different break points
-coplot(resid~bed|row, data=dat, number=8, cex=.5,
-       panel=function(x,y,...) panel.smooth(x,y,span=.4,...))
-title("durban.splitplot")
+if(require(lattice)){
+  xyplot(resid ~ bed|factor(row), data=dat,
+         main="durban.splitplot",
+         type=c('p','smooth'))
+}
 
 # ----------------------------------------------------------------------------
 
@@ -72,6 +74,7 @@ title("durban.splitplot")
   new2 <- expand.grid(row=unique(dat$row), bed=unique(dat$bed))
   new2 <- cbind(new2, gen="G01", fung="F1")
   p2lo <- predict(m2lo, newdata=new2)
+  require(lattice)
   wireframe(p2lo~row+bed, new2, aspect=c(1,.5), main="Field trend")
 }
 

@@ -27,7 +27,8 @@
 name                                      \tab dimensions \tab other \tab model \cr
 \link{ansari.wheat.uniformity}            \tab 96 x 8 \tab xy \tab \cr
 \link{baker.barley.uniformity}            \tab 3 x 19 \tab xy, 10 years \tab \cr
-\link{bancroft.peanut.uniformity}        \tab 6 x 18 \tab xy, 2 blocks \tab \cr
+\link{baker.wheat.uniformity}             \tab 12 x 12 \tab xy \tab \cr
+\link{bancroft.peanut.uniformity}         \tab 6 x 18 \tab xy, 2 blocks \tab \cr
 \link{batchelor.apple.uniformity}         \tab 8 x 28 \tab xy \tab \cr
 \link{batchelor.lemon.uniformity}         \tab 14 x 16 \tab xy \tab \cr
 \link{batchelor.navel1.uniformity}        \tab 20 x 50 \tab xy \tab \cr
@@ -40,6 +41,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{christidis.wheat.uniformity}        \tab 12 x 24 \tab xy \tab \cr
 \link{day.wheat.uniformity}               \tab 31 x 100 \tab xy \tab \cr
 \link{draper.safflower.uniformity}        \tab 18 x 16 \tab xy, 2 expt \tab smith\cr
+\link{eden.tea.uniformity}                \tab 12 x 12 \tab xy \tab \cr
 \link{garber.multi.uniformity}            \tab 45 x 6 \tab xy, 2 years/crops \tab \cr
 \link{gomez.rice.uniformity}              \tab 18 x 36 \tab xy \tab aov,smith \cr
 \link{goulden.barley.uniformity}          \tab 20 x 20 \tab xy \tab \cr

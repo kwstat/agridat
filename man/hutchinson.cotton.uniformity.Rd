@@ -2,10 +2,10 @@
 \alias{hutchinson.cotton.uniformity}
 \docType{data}
 \title{
-  A uniformity trial of cotton
+  Uniformity trial of cotton
 }
 \description{
-  A uniformity trial of cotton in India in 1934.
+  Uniformity trial of cotton in India in 1934.
 }
 \usage{data("hutchinson.cotton.uniformity")}
 \format{

@@ -2,10 +2,10 @@
 \alias{bancroft.peanut.uniformity}
 \docType{data}
 \title{
-  A uniformity trial of peanuts
+  Uniformity trial of peanuts
 }
 \description{
-  A uniformity trial of peanuts in Alabama, 1946.
+  Uniformity trial of peanuts in Alabama, 1946.
 }
 \usage{data("bancroft.peanut.uniformity")}
 \format{

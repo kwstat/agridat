@@ -39,7 +39,7 @@
 \source{
   R. K. Kristensen (1925). 
   Anlaeg og Opgoerelse af Markforsoeg.
-  \emph{Tidsskrift for landbrugets planteavl}, Vol 31, 464.
+  \emph{Tidsskrift for landbrugets planteavl}, Vol 31, 464-494.
   Fig 1, pg. 467.
   http://dca.au.dk/publikationer/historiske/planteavl/ 
 }

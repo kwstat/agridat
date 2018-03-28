@@ -5,7 +5,7 @@
   Uniformity trial of sorghum
 }
 \description{
-  A uniformity trial of sorghum in Pakistan, 1936.
+  Uniformity trial of sorghum in Pakistan, 1936.
 }
 \usage{data("narain.sorghum.uniformity")}
 \format{

@@ -15,12 +15,12 @@
 
 ## New data
 
-ansari.wheat.uniformity, bancroft.peanut.uniformity, bose.multi.uniformity,
-christidis.cotton.uniformity, hutchinson.cotton.uniformity,
-igue.sugarcane.uniformity, kulkarni.sorghum.uniformity,
-lander.multi.uniformity, lord.rice.uniformity, magistad.pineapple.uniformity,
-narain.sorghum.unifomity, robinson.peanut.uniformity,
-sayer.sugarcane.uniformity
+ansari.wheat.uniformity, baker.wheat.uniformity, bancroft.peanut.uniformity,
+bose.multi.uniformity, christidis.cotton.uniformity, eden.tea.uniformity,
+hutchinson.cotton.uniformity, igue.sugarcane.uniformity,
+kulkarni.sorghum.uniformity, lander.multi.uniformity, lord.rice.uniformity,
+magistad.pineapple.uniformity, narain.sorghum.unifomity,
+robinson.peanut.uniformity, sayer.sugarcane.uniformity
 
 mead.turnip
 

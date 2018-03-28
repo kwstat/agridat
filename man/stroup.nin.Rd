@@ -171,7 +171,7 @@ abline(0,1)
     
     eff <- cbind(eff, spats=predict(sp1, which="gen")$predicted.values)
     plot(eff$ranblock, eff$spats, xlim=c(13,37), ylim=c(13,37),
-         main="stroup.nin - Gen estimates (intercepts differ)",
+         main="stroup.nin - Gen estimates",
          xlab="RCB (random block)", ylab="SpATS",type='n')
     text(eff$ranblock, eff$spats, rownames(eff), cex=0.5)
     abline(0,1)

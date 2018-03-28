@@ -18,13 +18,16 @@
   }
 }
 \details{
+  
   Ten years of uniformity trials were sown on the same ground.  Baker
-  (1952) shows a map of the field.
+  (1952) shows a map of the field, which gravel subsoil extended from
+  the upper right corner diagonally lower-left. This results in lower
+  yields as seen on the 10-year average map.
 
   Field width: 19 plots = 827 ft
 
   Field length: 3 plots * 161 ft + 2 alleys * 15 feet = 513 ft
-  
+
 }
 \source{
   Baker, GA and Huberty, MR and Veihmeyer, FJ.  (1952)

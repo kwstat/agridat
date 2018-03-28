@@ -186,7 +186,8 @@ med <- summary(c2, quantiles=.5)$quantiles
 fit <- data.frame(med, hpd)
 
 if(require(latticeExtra)){
-  obs <- dotplot(1:21 ~ germ/n, dat, ylab="plate",
+  obs <- dotplot(1:21 ~ germ/n, dat,
+                 main="crowder.seeds", ylab="plate",
                  col=as.numeric(dat$gen), pch=substring(dat$extract,1))
   obs + segplot(1:21 ~ lower + upper, data=fit, centers=med)
 }
