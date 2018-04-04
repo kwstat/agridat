@@ -26,7 +26,8 @@
 
 }
 \source{
-  Toshio Igue, Ademar Espironelo. (1991).
+  Toshio Igue, Ademar Espironelo, Heitor Cantarella, Erseni Joao Nelli. (1991).
+  Tamanho e forma de parcela experimental para cana-de-acucar (Plot size and shape for sugar cane experiments).
   Bragantia, 50, 163-180. Appendix, page 169-170.
   http://dx.doi.org/10.1590/S0006-87051991000100016
 }

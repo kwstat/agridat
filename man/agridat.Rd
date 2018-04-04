@@ -77,6 +77,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{moore.carrot.uniformity}            \tab 24 x 12 \tab xy \tab \cr
 \link{moore.springcauliflower.uniformity} \tab 12 x 20 \tab xy \tab \cr
 \link{moore.fallcauliflower.uniformity}   \tab 12 x 20 \tab xy \tab \cr
+\link{nagai.strawberry.uniformity}        \tab 18 x 24 \ tab xy \tab \cr
 \link{narain.sorghum.uniformity}          \tab 10 x 16 \tab xy \tab \cr
 \link{nonnecke.peas.uniformity}           \tab 15 x 18 \tab xy, 2 traits \tab \cr
 \link{nonnecke.sweetcorn.uniformity}      \tab 32 x 18 \tab xy, 3 loc \tab \cr

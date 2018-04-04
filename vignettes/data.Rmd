@@ -3,7 +3,6 @@ title: "Additional sources of agricultural data"
 author: "Kevin Wright"
 date: "`r Sys.Date()`"
 output:
-  pdf_document: default
   html_document:
     highlight: tango
 vignette: |
@@ -40,7 +39,6 @@ Table 58.1: agridat::caribbean.maize
 Master thesis. Department of Statistics, Addis Ababa University.
 
 One dataset from wheat, RCB, with field coordinates.
-See also http://www.ethstat.org.et/esa_publications.html, Volume 19
 
 
 ### M. N. Das & Narayan C. Giri (1987). _Design and Analysis of Experiments_.
@@ -331,9 +329,6 @@ http://datadryad.org/
 Data from: MycoDB, a global database of plant response to mycorrhizal fungi
 http://datadryad.org/resource/doi%3A10.5061/dryad.723m1
 
-
-### Data In Brief
-http://www.sciencedirect.com/science/journal/23523409
 
 
 ### Nature Scientific Data
