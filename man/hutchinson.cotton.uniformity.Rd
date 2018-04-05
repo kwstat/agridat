@@ -47,19 +47,21 @@
   Indian J. Agric. Sci., 5, 523-38.
 }
 \examples{
-data(hutchinson.cotton.uniformity)
-dat <- hutchinson.cotton.uniformity
-
-# match the CV of Panse
-# sd(dat$yield)/mean(dat$yield) * 100
-# 32.1
-
-# match the fertility map of Hutchinson, fig 1
-if(require(desplot)){
+\dontrun{
+  
+  data(hutchinson.cotton.uniformity)
+  dat <- hutchinson.cotton.uniformity
+  
+  # match the CV of Panse
+  # sd(dat$yield)/mean(dat$yield) * 100
+  # 32.1
+  
+  # match the fertility map of Hutchinson, fig 1
+  require(desplot)
   desplot(yield ~ col*row, dat,
           flip=TRUE, aspect=207/150, # true aspect
           main="hutchinson.cotton.uniformity")
-}
 
+}  
 }
 \keyword{datasets}

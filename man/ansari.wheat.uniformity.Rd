@@ -53,17 +53,17 @@
   None
 }
 \examples{
-data(ansari.wheat.uniformity)
-dat <- ansari.wheat.uniformity
-
 \dontrun{
-  # match Ansari figure 3
-  if(require(desplot)){
-    desplot(yield ~ col*row, dat,
-            flip=TRUE, aspect=216/160, # true aspect
-            main="ansari.wheat.uniformity") 
-  }
-}
+  
+  data(ansari.wheat.uniformity)
+  dat <- ansari.wheat.uniformity
 
+  # match Ansari figure 3
+  require(desplot)
+  desplot(yield ~ col*row, dat,
+          flip=TRUE, aspect=216/160, # true aspect
+          main="ansari.wheat.uniformity") 
+
+}
 }
 \keyword{datasets}

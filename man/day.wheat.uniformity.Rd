@@ -49,35 +49,33 @@ Uniformity trial of wheat in 1903 in Missouri.
   http://doi.org/10.2134/agronj1920.00021962001200030002x
 }
 \examples{
-data(day.wheat.uniformity)
-dat <- day.wheat.uniformity
+\dontrun{
+  
+  data(day.wheat.uniformity)
+  dat <- day.wheat.uniformity
 
-if(require(desplot)){
+  require(desplot)
   desplot(grain~col*row, data=dat,
           flip=TRUE, aspect=(100*8)/(155*12), # true aspect
           main="day.wheat.uniformity - grain yield")
-}
-
-# similar to Day table IV
-require(lattice)
-xyplot(grain~straw, data=dat, main="day.wheat.uniformity", type=c('p','r'))
-# cor(dat$grain, dat$straw) # .9498 # Day calculated 0.9416
-
-\dontrun{
   
-  if(require(desplot)){
-    desplot(straw~col*row, data=dat,
-            flip=TRUE, aspect=(100*8)/(155*12), # true aspect
-            main="day.wheat.uniformity - straw yield")
-  }
-
+  # similar to Day table IV
+  require(lattice)
+  xyplot(grain~straw, data=dat, main="day.wheat.uniformity", type=c('p','r'))
+  # cor(dat$grain, dat$straw) # .9498 # Day calculated 0.9416
+  
+  require(desplot)
+  desplot(straw~col*row, data=dat,
+          flip=TRUE, aspect=(100*8)/(155*12), # true aspect
+          main="day.wheat.uniformity - straw yield")
+  
   # Day fig 2
   coldat <- aggregate(grain~col, dat, sum) 
   xyplot(grain ~ col, coldat, type='l', ylim=c(2500,6500))
   dat$rowgroup <- round((dat$row +1)/3,0)
   rowdat <- aggregate(grain~rowgroup, dat, sum) 
   xyplot(grain ~ rowgroup, rowdat, type='l', ylim=c(2500,6500))
-}
 
+}  
 }
 \keyword{datasets}

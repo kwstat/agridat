@@ -54,7 +54,7 @@ dat <- besag.elbatan
 if(require(desplot)){
   desplot(yield~col*row, dat,
           num=gen, # aspect unknown
-          main="besag.elbatan wheat yields")
+          main="besag.elbatan - wheat yields")
 }
 
 \dontrun{

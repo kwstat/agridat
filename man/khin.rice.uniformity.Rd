@@ -37,14 +37,16 @@
  None.
 }
 \examples{
-data(khin.rice.uniformity)
-dat <- khin.rice.uniformity
+\dontrun{
+  
+  data(khin.rice.uniformity)
+  dat <- khin.rice.uniformity
 
-if(require(desplot)){
+  require(desplot)
   desplot(yield ~ col*row, data=dat, flip=TRUE,
           main="khin.rice.uniformity",
           aspect=(36*3)/(30*3)) # true aspect
+  
 }
-
 }
 \keyword{datasets}

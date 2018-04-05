@@ -60,22 +60,22 @@
 }
 
 \examples{
+\dontrun{
+  
+  data(garber.multi.uniformity)
+  dat <- garber.multi.uniformity
 
-data(garber.multi.uniformity)
-dat <- garber.multi.uniformity
-
-if(require(desplot)){
+  require(desplot)
   desplot(oats ~ col*row, data=dat,
           flip=TRUE, tick=TRUE, aspect=945/436, # true aspect
           main="garber.multi.uniformity oats")
-}
 
-if(require(desplot)){
   desplot(wheat ~ col*row, data=dat,
           flip=TRUE, tick=TRUE, aspect=945/436, # true aspect
           main="garber.multi.uniformity wheat")
-}
-with(dat, cor(oats, wheat)) # = .37 matches Garber
 
+  with(dat, cor(oats, wheat)) # = .37 matches Garber
+
+}  
 }
 \keyword{datasets}

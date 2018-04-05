@@ -49,16 +49,17 @@
 }
 
 \examples{
+\dontrun{
+  
+  # Corn 1
+  data(nonnecke.sweetcorn.uniformity)
+  dat <- nonnecke.sweetcorn.uniformity
 
-# Corn 1
-data(nonnecke.sweetcorn.uniformity)
-dat <- nonnecke.sweetcorn.uniformity
-
-if(require(desplot)){
-desplot(yield~col*row|loc, dat,
-        flip=TRUE, tick=TRUE, aspect=96/180, # true aspect
-        main="nonnecke.sweetcorn.uniformity")
+  require(desplot)
+  desplot(yield~col*row|loc, dat,
+          flip=TRUE, tick=TRUE, aspect=96/180, # true aspect
+          main="nonnecke.sweetcorn.uniformity")
+    
 }
-
 }
 \keyword{datasets}

@@ -64,39 +64,37 @@
 }
 
 \examples{
-data(smith.beans.uniformity)
+\dontrun{
+  
+  data(smith.beans.uniformity)
+  dat1 <- subset(smith.beans.uniformity, expt=="E1")
+  dat2 <- subset(smith.beans.uniformity, expt=="E2")
+  dat3 <- subset(smith.beans.uniformity, expt=="E3")
+  dat4 <- subset(smith.beans.uniformity, expt=="E4")
 
-dat1 <- subset(smith.beans.uniformity, expt=="E1")
-dat2 <- subset(smith.beans.uniformity, expt=="E2")
-dat3 <- subset(smith.beans.uniformity, expt=="E3")
-dat4 <- subset(smith.beans.uniformity, expt=="E4")
+  cv <- function(x) { sd(x)/mean(x) }
+  cv(dat1$yield)
+  cv(dat2$yield) # Does not match Smith. Checked all values by hand.
+  cv(dat3$yield)
+  cv(dat4$yield)
 
-cv <- function(x) { sd(x)/mean(x) }
-cv(dat1$yield)
-cv(dat2$yield) # Does not match Smith. Checked all values by hand.
-cv(dat3$yield)
-cv(dat4$yield)
-
-if(require("desplot")){
+  require("desplot")
   desplot(yield ~ col*row, dat1, 
           aspect=180/45, flip=TRUE, # true aspect
           main="smith.beans.uniformity, expt 1 (true aspect)")
-}
-if(require("desplot")){
+
   desplot(yield ~ col*row, dat2, 
           aspect=180/45, flip=TRUE, # true aspect
           main="smith.beans.uniformity, expt 2 (true aspect)")
-}
-if(require("desplot")){
+
   desplot(yield ~ col*row, dat3, 
           aspect=450/80, flip=TRUE, # true aspect
           main="smith.beans.uniformity, expt 3 (true aspect)")
-}
-if(require("desplot")){
+
   desplot(yield ~ col*row, dat4, 
           aspect=450/80, flip=TRUE, # true aspect
           main="smith.beans.uniformity expt 4, (true aspect)")
+  
 }
-
 }
 \keyword{datasets}

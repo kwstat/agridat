@@ -38,17 +38,18 @@ Field length: 24 rows * 8 inches = 16 feet
 }
 
 \examples{
-
-data(christidis.wheat.uniformity)
-dat <- christidis.wheat.uniformity
-
-# sum(dat$yield) # Matches Christidis
-
-if(require(desplot)){
+\dontrun{
+  
+  data(christidis.wheat.uniformity)
+  dat <- christidis.wheat.uniformity
+  
+  # sum(dat$yield) # Matches Christidis
+  
+  require(desplot)
   desplot(yield ~  col*row, data=dat,
           flip=TRUE, aspect=16/90, # true aspect
           main="christidis.wheat.uniformity")
-}
 
+}
 }
 \keyword{datasets}

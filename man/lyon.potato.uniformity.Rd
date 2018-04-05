@@ -44,20 +44,21 @@
 }
 
 \examples{
+\dontrun{
+  
+  data(lyon.potato.uniformity)
+  dat <- lyon.potato.uniformity
 
-data(lyon.potato.uniformity)
-dat <- lyon.potato.uniformity
-
-# Yield per square foot, assuming 72 foot rows
-sum(dat$yield)/(72*96) # 0.67 # seems about right
-# Yield per square foot, assuming 72 foot plots
-sum(dat$yield)/(6*72*96) # 0.11
-
-if(require(desplot)){
+  # Yield per square foot, assuming 72 foot rows
+  sum(dat$yield)/(72*96) # 0.67 # seems about right
+  # Yield per square foot, assuming 72 foot plots
+  sum(dat$yield)/(6*72*96) # 0.11
+  
+  require(desplot)
   desplot(yield ~ col*row, dat,
           tick=TRUE, flip=TRUE, aspect=96/72, # true aspect
           main="lyon.potato.uniformity")
+  
 }
-
 }
 \keyword{datasets}

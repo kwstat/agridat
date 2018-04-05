@@ -43,16 +43,18 @@
   None.
 }
 \examples{
-data(polson.safflower.uniformity)
-dat <- polson.safflower.uniformity
+\dontrun{
 
-if(require("desplot")){
+  data(polson.safflower.uniformity)
+  dat <- polson.safflower.uniformity
+  
+  require(desplot)
   desplot(yield ~ col*row, data=dat,
           flip=TRUE, aspect=189/110, # true aspect
           main="polson.safflower.uniformity")
-}
 
-if(require(agricolae) & require(reshape2)){
+  require(agricolae)
+  require(reshape2)
   dmat <- acast(dat, row~col, value.var="yield")
   # Similar to Polson fig 4.
   tab <- index.smith(dmat, col="red",

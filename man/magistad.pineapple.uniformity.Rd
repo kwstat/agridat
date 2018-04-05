@@ -71,33 +71,39 @@ Total area: 2400*48/43560=2.64 acres
   None
 }
 \examples{
-data(magistad.pineapple.uniformity)
-dat <- magistad.pineapple.uniformity
+\dontrun{
 
-# match table page 641
-## dat %>% group_by(field) %>%
-##   summarize(number=mean(number),
-##             weight=mean(weight)) %>% as.data.frame
-##   field   number   weight
-## 1     1 596.4062 2499.922
-## 2    19 171.1667 2100.250
-## 3    21 171.1600 2056.800
-## 4    82 220.7500 1264.500
+  data(magistad.pineapple.uniformity)
+  dat <- magistad.pineapple.uniformity
 
-if(require(desplot)){
-  desplot(weight ~ col*row, subset(dat, field==1),
+  # match table page 641
+  ## dat %>% group_by(field) %>%
+  ##   summarize(number=mean(number),
+  ##             weight=mean(weight)) %>% as.data.frame
+  ##   field   number   weight
+  ## 1     1 596.4062 2499.922
+  ## 2    19 171.1667 2100.250
+  ## 3    21 171.1600 2056.800
+  ## 4    82 220.7500 1264.500
+  
+  require(desplot)
+  desplot(weight ~ col*row, dat,
+          subset=field==1,
           aspect=2400/48,
           main="magistad.pineapple.uniformity - field 1")          
-  desplot(weight ~ col*row, subset(dat, field==19),
+  desplot(weight ~ col*row, dat,
+          subset=field==19,
           aspect=300/39,
           main="magistad.pineapple.uniformity - field 19")
-  desplot(weight ~ col*row, subset(dat, field==82),
+  desplot(weight ~ col*row, dat,
+          subset=field==82,
           aspect=228/192,
           main="magistad.pineapple.uniformity - field 82")          
-  desplot(weight ~ col*row, subset(dat, field==21),
+  desplot(weight ~ col*row, dat,
+          subset=field==21,
           aspect=300/112.5,
-          main="magistad.pineapple.uniformity - field 21")          
+          main="magistad.pineapple.uniformity - field 21")
+  
 }
-
 }
 \keyword{datasets}

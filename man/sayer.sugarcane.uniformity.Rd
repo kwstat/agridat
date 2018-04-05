@@ -59,32 +59,33 @@ Field length: 121 rows * 3 feet = 363 feet
   None
 }
 \examples{
-data(sayer.sugarcane.uniformity)
+\dontrun{
+  
+  data(sayer.sugarcane.uniformity)
+  dat33 <- subset(sayer.sugarcane.uniformity, year==1933)
+  dat34 <- subset(sayer.sugarcane.uniformity, year==1934)
+  
+  b1 <- subset(dat33, row<31)
+  b2 <- subset(dat33, row > 30 & row < 61)
+  b3 <- subset(dat33, row > 60 & row < 91)
+  b4 <- subset(dat33, row > 105 & row < 136)
+  mean(b1$yield) # 340.7 vs Sayer 340.8
+  mean(b2$yield) # 338.2 vs Sayer 338.6
+  mean(b3$yield) # 331.3 vs Sayer 330.2
+  mean(b4$yield) # 295.4 vs Sayer 295.0
 
-dat33 <- subset(sayer.sugarcane.uniformity, year==1933)
-dat34 <- subset(sayer.sugarcane.uniformity, year==1934)
-
-b1 <- subset(dat33, row<31)
-b2 <- subset(dat33, row > 30 & row < 61)
-b3 <- subset(dat33, row > 60 & row < 91)
-b4 <- subset(dat33, row > 105 & row < 136)
-mean(b1$yield) # 340.7 vs Sayer 340.8
-mean(b2$yield) # 338.2 vs Sayer 338.6
-mean(b3$yield) # 331.3 vs Sayer 330.2
-mean(b4$yield) # 295.4 vs Sayer 295.0
-
-mean(dat34$yield) # 270.83 vs Sayer 270.83
-
-if(require(desplot)){
+  mean(dat34$yield) # 270.83 vs Sayer 270.83
+  
+  require(desplot)
+  
   desplot(yield ~ col*row, dat33,
           flip=TRUE, aspect=408/480, # true aspect
           main="sayer.sugarcane.uniformity 1933")
-}
-if(require(desplot)){
+
   desplot(yield ~ col*row, dat34,
           flip=TRUE, aspect=363/480, # true aspect
           main="sayer.sugarcane.uniformity 1934")
+  
 }
-
 }
 \keyword{datasets}

@@ -46,25 +46,24 @@
 }
 
 \examples{
-
-data(mercer.mangold.uniformity)
-dat <- mercer.mangold.uniformity
-
-if(require(desplot)){
+\dontrun{
+  
+  data(mercer.mangold.uniformity)
+  dat <- mercer.mangold.uniformity
+  
+  require(desplot)
   desplot(leaves~col*row, data=dat,
           aspect=145/302, # true aspect
           main="mercer.mangold.uniformity - leaves")
-}
-if(require(desplot)){
+
+  require(desplot)
   desplot(roots~col*row, data=dat,
           aspect=145/302, # true aspect
           main="mercer.mangold.uniformity - roots")
-}
 
-\dontrun{
   require(lattice)
   xyplot(roots~leaves, data=dat)
+  
 }
-
 }
 \keyword{datasets}

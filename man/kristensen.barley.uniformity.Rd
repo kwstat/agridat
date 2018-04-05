@@ -53,14 +53,16 @@
 }
 
 \examples{
-data(kristensen.barley.uniformity)
-dat <- kristensen.barley.uniformity
+\dontrun{
 
-if(require(desplot)){
+  data(kristensen.barley.uniformity)
+  dat <- kristensen.barley.uniformity
+
+  require(desplot)
   desplot(yield ~ col*row, dat,
           flip=TRUE, aspect=(11*6.24)/(22*8.79),
           main="kristensen.barley.uniformity")
+  
 }
-
 }
 \keyword{datasets}

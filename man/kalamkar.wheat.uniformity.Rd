@@ -57,34 +57,36 @@
   None.
 }
 \examples{
-data(kalamkar.wheat.uniformity)
-dat <- kalamkar.wheat.uniformity
-plot(yield ~ ears, dat, main="kalamkar.wheat.uniformity")
-
-# totals match Kalamkar
-sum(dat$yield)
-sum(dat$ears)
-
-if(require(desplot)){
+\dontrun{
+  
+  data(kalamkar.wheat.uniformity)
+  dat <- kalamkar.wheat.uniformity
+  plot(yield ~ ears, dat, main="kalamkar.wheat.uniformity")
+  
+  # totals match Kalamkar
+  sum(dat$yield)
+  sum(dat$ears)
+  
+  require(desplot)
   desplot(ears ~ col*row, dat,
           flip=TRUE, aspect=(80*0.5)/(16*1.64042), # true aspect
           main="kalamkar.wheat.uniformity - ears")
   desplot(yield ~ col*row, dat,
           flip=TRUE, aspect=(80*0.5)/(16*1.64042), # true aspect
           main="kalamkar.wheat.uniformity - yield")
+
+  # Show the negative correlation between rows
+  ## require(asreml)
+  ## require(lucid)
+  ## dat <- dat %>% mutate(rowf=factor(row), colf=factor(col)) %>%
+  ##   arrange(rowf,colf)
+  ## m1=asreml(yield ~ 1, data=dat, rcov= ~ ar1(rowf):ar1(colf))
+  ## vc(m1)
+  ##  ##     effect component std.error z.ratio constr
+  ##  ## R!variance  81.54      3.527      23        P
+  ##  ## R!rowf.cor  -0.09465   0.0277     -3.4      U
+  ##  ## R!colf.cor   0.2977    0.02628    11        U
+  
 }
-
-# Show the negative correlation between rows
-## require(asreml)
-## require(lucid)
-## dat <- dat %>% mutate(rowf=factor(row), colf=factor(col)) %>%
-##   arrange(rowf,colf)
-## m1=asreml(yield ~ 1, data=dat, rcov= ~ ar1(rowf):ar1(colf))
-## vc(m1)
-##  ##     effect component std.error z.ratio constr
-##  ## R!variance  81.54      3.527      23        P
-##  ## R!rowf.cor  -0.09465   0.0277     -3.4      U
-##  ## R!colf.cor   0.2977    0.02628    11        U
-
 }
 \keyword{datasets}

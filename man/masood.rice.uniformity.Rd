@@ -49,23 +49,23 @@
   http://doi.org/10.5829/idosi.aejsr.2012.7.6.1926
 }
 \examples{
-data(masood.rice.uniformity)
-dat <- masood.rice.uniformity
+\dontrun{
 
-if(require(desplot)) {
+  data(masood.rice.uniformity)
+  dat <- masood.rice.uniformity
+  
+  require(desplot)
   desplot(yield ~ col*row, data=dat,
           flip=TRUE, tick=TRUE, aspect=24/12, # true aspect
           main="masood.rice.uniformity - yield heatmap")
-}
 
-\dontrun{
-  require(agricolae) & require(reshape2)
+  require(agricolae)
+  require(reshape2)
   dmat <- acast(dat, row~col, value.var='yield')
   index.smith(dmat,
               main="masood.rice.uniformity",
               col="red") # CVs match Table 3
-}
   
-
+}
 }
 \keyword{datasets}

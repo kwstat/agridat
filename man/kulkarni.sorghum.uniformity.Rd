@@ -49,25 +49,27 @@
   None.
 }
 \examples{
-data(kulkarni.sorghum.uniformity)
-dat <- kulkarni.sorghum.uniformity
+\dontrun{
 
-# match means on page 462
-# tapply(dat$yield, dat$year, mean)
-#     1930     1931     1932 
-# 116.2875  67.2250 126.3688 
+  data(kulkarni.sorghum.uniformity)
+  dat <- kulkarni.sorghum.uniformity
+  
+  # match means on page 462
+  # tapply(dat$yield, dat$year, mean)
+  #     1930     1931     1932 
+  # 116.2875  67.2250 126.3688 
 
-if(require(reshape2) & require(lattice)){
+  require(reshape2)
+  require(lattice)
   dmat <- acast(dat, row+col ~ year, value.var="yield")
   splom(dmat, main="kulkarni.sorghum.uniformity")
   cor(dmat)
-}
 
-if(require(desplot)){
+  require(desplot)
   desplot(yield ~ col*row|year, dat,
           flip=TRUE, aspect=150/290,
           main="kulkarni.sorghum.uniformity")
+  
 }
-
 }
 \keyword{datasets}

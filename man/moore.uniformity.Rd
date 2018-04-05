@@ -98,27 +98,26 @@
   None.
 }
 \examples{
-cv <- function(x) sd(x)/mean(x)
+\dontrun{
+  
+  cv <- function(x) sd(x)/mean(x)
 
-if(require(desplot)){
+  require(desplot)
+  
   # Pole Bean
   data(moore.polebean.uniformity)
   cv(moore.polebean.uniformity$yield) # 8.00. Moore says 6.73.
   desplot(yield~col*row, moore.polebean.uniformity,
           flip=TRUE, tick=TRUE, aspect=120/60, # true aspect
           main="moore.polebean.uniformity - yield")
-}
 
-if(require(desplot)){
   # Bush bean
   data(moore.bushbean.uniformity)
   cv(moore.bushbean.uniformity$yield) # 12.1. Moore says 10.8
   desplot(yield~col*row, moore.bushbean.uniformity,
           flip=TRUE, tick=TRUE, aspect=120/72, # true aspect
           main="moore.bushbean.uniformity - yield")
-}
 
-if(require(desplot)){
   # Sweet corn
   data(moore.sweetcorn.uniformity)
   cv(moore.sweetcorn.uniformity$yield) # 17.5. Moore says 13.6
@@ -130,18 +129,16 @@ if(require(desplot)){
   ##         main="moore.sweetcorn.uniformity - ears")
   ## library(lattice)
   ## xyplot(yield ~ ears, moore.sweetcorn.uniformity)
-}
-
-if(require(desplot)){
+  
+  require(desplot)
   # Carrot
   data(moore.carrot.uniformity)
   cv(moore.carrot.uniformity$yield) # 33.4. Moore says 27.6
   desplot(yield~col*row, moore.carrot.uniformity,
           flip=TRUE, tick=TRUE, aspect=60/36, # true aspect
           main="moore.carrot.uniformity - yield")
-}
 
-if(require(desplot)){
+  require(desplot)
   # Spring cauliflower
   data(moore.springcauliflower.uniformity)
   cv(moore.springcauliflower.uniformity$yield) # 21. Moore says 19.5
@@ -153,9 +150,8 @@ if(require(desplot)){
   ##         main="moore.springcauliflower.uniformity - heads")
   ## library(lattice)
   ## xyplot(yield ~ heads, moore.springcauliflower.uniformity)
-}
 
-if(require(desplot)){
+  require(desplot)
   # Fall cauliflower
   data(moore.fallcauliflower.uniformity)
   cv(moore.fallcauliflower.uniformity$yield) # 17.7. Moore says 17.0
@@ -167,7 +163,7 @@ if(require(desplot)){
   ##         main="moore.fallcauliflower.uniformity - heads")
   ## library(lattice)
   ## xyplot(yield ~ heads, moore.fallcauliflower.uniformity)
+  
 }
-
 }
 \keyword{datasets}

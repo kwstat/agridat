@@ -54,15 +54,16 @@
 }
 
 \examples{
+\dontrun{
+  
+  data(wassom.brome.uniformity)
+  dat <- wassom.brome.uniformity
 
-data(wassom.brome.uniformity)
-dat <- wassom.brome.uniformity
-
-if(require(desplot)){
+  require(desplot)
   desplot(yield~col*row|expt, dat,
           flip=TRUE, aspect=1, # approximate aspect
           main="wassom.brome.uniformity")
+  
 }
-
 }
 \keyword{datasets}

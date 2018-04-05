@@ -18,7 +18,8 @@
   }
 }
 \details{
-  Two crops of peanuts were grown in North Carolina in 1939 and 1940. A different field was used each year.
+  Two crops of peanuts were grown in North Carolina in 1939 and 1940.
+  A different field was used each year.
   
   A block of 36 rows 3 feet wide and 200 feet long were harvested in 12.5 foot lengths.
 
@@ -40,19 +41,21 @@
   None
 }
 \examples{
-data(robinson.peanut.uniformity)
-dat <- robinson.peanut.uniformity
+\dontrun{
 
-# Mean yield per year. Robinson has 703.9, 787.3
-# tapply(dat$yield, dat$year, mean)
-#     1939     1940 
-# 703.7847 787.8125 
+  data(robinson.peanut.uniformity)
+  dat <- robinson.peanut.uniformity
 
-if(require(desplot)){
+  # Mean yield per year. Robinson has 703.9, 787.3
+  # tapply(dat$yield, dat$year, mean)
+  #     1939     1940 
+  # 703.7847 787.8125 
+  
+  require(desplot)
   desplot(yield ~ col*row|year, dat,
           flip=TRUE, tick=TRUE, aspect=200/48,
           main="robinson.peanut.uniformity")
+  
 }
-
 }
 \keyword{datasets}

@@ -66,23 +66,21 @@
 }
 
 \examples{
-data("draper.safflower.uniformity")
-dat4 <- subset(draper.safflower.uniformity, expt=="E4")
-dat5 <- subset(draper.safflower.uniformity, expt=="E5")
+\dontrun{
+  
+  data("draper.safflower.uniformity")
+  dat4 <- subset(draper.safflower.uniformity, expt=="E4")
+  dat5 <- subset(draper.safflower.uniformity, expt=="E5")
 
-if(require(desplot)){
+  require(desplot)
   desplot(yield~col*row, dat4,
           flip=TRUE, tick=TRUE, aspect=72/53, # true aspect
           main="draper.safflower.uniformity (four foot)")
-}
 
-if(require(desplot)){
   desplot(yield~col*row, dat5,
           flip=TRUE, tick=TRUE, aspect=90/46, # true aspect
           main="draper.safflower.uniformity (five foot)")
-}
 
-\dontrun{
   require(agricolae)
   require(reshape2)
   # Remove border plots at either end and right side
@@ -102,6 +100,5 @@ if(require(desplot)){
   ## s5 # match Draper table 1, p 21
   
 }
-
 }
 \keyword{datasets}

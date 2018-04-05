@@ -42,24 +42,22 @@
   None
 }
 \examples{
-
 \dontrun{
-data(eden.tea.uniformity)
-dat <- eden.tea.uniformity
-
-# sum(dat$yield) # 140050.6 matches total yield in appendix A
-# mean(dat$yield) # 972.574 match page 5554
-
-m1 <- aov(yield ~ factor(entry) + factor(row) + factor(col), data=dat)
-summary(m1)
-
-if(require(desplot)){
+  
+  data(eden.tea.uniformity)
+  dat <- eden.tea.uniformity
+  
+  # sum(dat$yield) # 140050.6 matches total yield in appendix A
+  # mean(dat$yield) # 972.574 match page 5554
+  
+  m1 <- aov(yield ~ factor(entry) + factor(row) + factor(col), data=dat)
+  summary(m1)
+  
+  require(desplot)
   desplot(yield ~ col*row, dat,
           aspect=1,
           main="eden.tea.uniformity")
+  
 }
-
-}
-
 }
 \keyword{datasets}

@@ -51,12 +51,13 @@
 }
 
 \examples{
+\dontrun{
+  
+  data(immer.sugarbeet.uniformity)
+  dat <- immer.sugarbeet.uniformity
 
-data(immer.sugarbeet.uniformity)
-dat <- immer.sugarbeet.uniformity
-
-# Immer numbers rows from the top
-if(require(desplot)){
+  # Immer numbers rows from the top
+  require(desplot)
   desplot(yield~col*row, data=dat,
           aspect=110/348, tick=TRUE, flip=TRUE, # true aspect
           main="immer.sugarbeet.uniformity - yield")
@@ -66,9 +67,10 @@ if(require(desplot)){
   desplot(purity~col*row, data=dat,
           aspect=110/348, tick=TRUE, flip=TRUE,
           main="immer.sugarbeet.uniformity - purity")
-}
+  
+  pairs(dat[,c('yield','sugar','purity')],
+        main="immer.sugarbeet.uniformity")
 
-pairs(dat[,c('yield','sugar','purity')], main="immer.sugarbeet.uniformity")
-
+} 
 }
 \keyword{datasets}

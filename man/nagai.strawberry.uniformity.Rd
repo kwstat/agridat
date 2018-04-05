@@ -37,21 +37,19 @@ Field width: 24 columns * 6 plants * 0.3 m = 43.2 m.
   None
 }
 \examples{
-
 \dontrun{
-data(nagai.strawberry.uniformity)
-dat <- nagai.strawberry.uniformity
-
-# CV matches Nagai
-# with(dat, sd(yield)/mean(yield))
-# 23.42
-
-if(require(desplot)){
+  
+  data(nagai.strawberry.uniformity)
+  dat <- nagai.strawberry.uniformity
+  
+  # CV matches Nagai
+  # with(dat, sd(yield)/mean(yield))
+  # 23.42
+  
+  require(desplot)
   desplot(yield ~ col*row, dat,
           flip=TRUE, aspect=(5.4)/(43.2), # true aspect
           main="nagai.strawberry.uniformity")
-}
-
 }
 }
 \keyword{datasets}

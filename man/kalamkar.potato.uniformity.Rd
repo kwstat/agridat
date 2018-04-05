@@ -35,16 +35,17 @@
 }
 
 \examples{
+\dontrun{
+  
+  data(kalamkar.potato.uniformity)
+  dat <- kalamkar.potato.uniformity
 
-data(kalamkar.potato.uniformity)
-dat <- kalamkar.potato.uniformity
-
-# Similar to figure 1 of Kalamkar
-if(require(desplot)){
+  # Similar to figure 1 of Kalamkar
+  require(desplot)
   desplot(yield~col*row, data=dat,
           flip=TRUE, tick=TRUE, aspect=288/132, # true aspect
           main="kalamkar.potato.uniformity")
+  
 }
-
 }
 \keyword{datasets}

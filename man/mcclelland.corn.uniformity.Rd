@@ -40,19 +40,21 @@
   None
 }
 \examples{
-data(mcclelland.corn.uniformity)
-dat <- mcclelland.corn.uniformity
+\dontrun{
 
-# McClelland table 3, first row, gives 11.2% error for 432 vales.
-# Probable error = 0.67449 * sd(). Relative to mean.
-0.67449 * sd(dat$yield)/mean(dat$yield) # 11.2%
-
-if(require(desplot)){
+  data(mcclelland.corn.uniformity)
+  dat <- mcclelland.corn.uniformity
+  
+  # McClelland table 3, first row, gives 11.2% error for 432 vales.
+  # Probable error = 0.67449 * sd(). Relative to mean.
+  0.67449 * sd(dat$yield)/mean(dat$yield) # 11.2%
+  
+  require(desplot)
   desplot(yield ~ col*row, dat,
           flip=TRUE,
           aspect=(219*44/12)/132, # true aspect, 219 rows * 44 inches x 132 feet
           main="mcclelland.corn.uniformity")
+  
 }
-
 }
 \keyword{datasets}

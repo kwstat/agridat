@@ -38,15 +38,17 @@
   None
 }
 \examples{
-data(narain.sorghum.uniformity)
-dat <- narain.sorghum.uniformity
+\dontrun{
 
-# Narain figure 1
-if(require(desplot)){
+  data(narain.sorghum.uniformity)
+  dat <- narain.sorghum.uniformity
+  
+  # Narain figure 1
+  require(desplot)
   desplot(yield ~ col*row, dat,
           flip=TRUE, aspect=(16*36)/(10*30.25),
           main="narain.sorghum.uniformity")
-  }
-
+  
+}
 }
 \keyword{datasets}

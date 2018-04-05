@@ -36,23 +36,24 @@
 }
 
 \examples{
+\dontrun{
+  
+  data(stephens.sorghum.uniformity)
+  dat <- stephens.sorghum.uniformity
 
-data(stephens.sorghum.uniformity)
-dat <- stephens.sorghum.uniformity
-
-dat <- subset(dat, row>2 & row<99) # omit outer two rows
-# mean(dat$yield) # 180.27
-# range(dat$yield) # 75,302 matches Stephens
-
-# densityplot(~dat$yield) # Stephens figure 3
-
-# Aggregate 4 side-by-side rows.
-d4 <- dat
-d4$row2 <- ceiling((d4$row-2)/4)
-d4 <- aggregate(yield ~ row2+col, data=d4, FUN=sum)
-d4$row2 <- 25-d4$row2 # flip horizontally
-
-if(require(desplot)){
+  dat <- subset(dat, row>2 & row<99) # omit outer two rows
+  # mean(dat$yield) # 180.27
+  # range(dat$yield) # 75,302 matches Stephens
+  
+  # densityplot(~dat$yield) # Stephens figure 3
+  
+  # Aggregate 4 side-by-side rows.
+  d4 <- dat
+  d4$row2 <- ceiling((d4$row-2)/4)
+  d4 <- aggregate(yield ~ row2+col, data=d4, FUN=sum)
+  d4$row2 <- 25-d4$row2 # flip horizontally
+  
+  require(desplot)
   grays <- colorRampPalette(c("#d9d9d9","#252525"))
   desplot(yield ~ row2*col, data=d4,
           aspect=333/330, flip=TRUE, # true aspect
@@ -60,7 +61,7 @@ if(require(desplot)){
           col.regions=grays(3),
           at=c(500,680,780,1000))
   # Similar to Stephens Figure 7.  North at top.  East at right.
+  
 }
-
 }
 \keyword{datasets}

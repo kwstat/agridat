@@ -135,54 +135,44 @@
   http://doi.org/10.1098/rspa.2006.1667
 }
 \examples{
-
-if(require(desplot)){
+\dontrun{
+  
+  require(desplot)
   # Apple
   data(batchelor.apple.uniformity)
   desplot(yield~col*row, data=batchelor.apple.uniformity,
           aspect=840/128, tick=TRUE, # true aspect
           main="batchelor.apple.uniformity")
-}
 
-if(require(desplot)){
   # Lemon
   data(batchelor.lemon.uniformity)
   desplot(yield~col*row, data=batchelor.lemon.uniformity,
           aspect=624/336, # true aspect
           main="batchelor.lemon.uniformity")
-}
 
-if(require(desplot)){
   # Navel1 (Arlington)
   data(batchelor.navel1.uniformity)
   desplot(yield~col*row, batchelor.navel1.uniformity,
           aspect=1100/440, # true aspect
           main="batchelor.navel1.uniformity - Arlington")
-}
 
-if(require(desplot)){
   # Navel2 (Antelope)
   data(batchelor.navel2.uniformity)
   desplot(yield~col*row, data=batchelor.navel2.uniformity,
           aspect=726/330, # true aspect
           main="batchelor.navel2.uniformity - Antelope")
-}
 
-if(require(desplot)){
   # Valencia
   data(batchelor.valencia.uniformity)
   desplot(yield~col*row, data=batchelor.valencia.uniformity,
           aspect=440/264, # true aspect
           main="batchelor.valencia.uniformity")
-}
 
-if(require(desplot)){
   # Walnut
   data(batchelor.walnut.uniformity)
   desplot(yield~col*row, data=batchelor.walnut.uniformity,
           aspect=1600/500, # true aspect
           main="batchelor.walnut.uniformity")
-}
 
 }
-
+}

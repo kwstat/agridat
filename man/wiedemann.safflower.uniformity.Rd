@@ -65,25 +65,26 @@ of labor.  Today the analysis takes only a second.
 None.
 }
 \examples{
-data(wiedemann.safflower.uniformity)
-dat <- wiedemann.safflower.uniformity
+\dontrun{
 
-# CV of entire field = 39%, matches Wiedemann p. 16
-sd(dat$yield)/mean(dat$yield)
+  data(wiedemann.safflower.uniformity)
+  dat <- wiedemann.safflower.uniformity
 
-if(require(desplot)){
+  # CV of entire field = 39%, matches Wiedemann p. 16
+  sd(dat$yield)/mean(dat$yield)
+
+  require(desplot)
   desplot(yield~col*row, dat,
           flip=TRUE, tick=TRUE, aspect =99/165, # true aspect
           main="wiedemann.safflower.uniformity (true shape)")
-}
 
-\dontrun{
-  require(agricolae) ; require(reshape2)
+  require(agricolae)
+  require(reshape2)
   dmat <- acast(dat, row~col, value.var='yield')
   index.smith(dmat,
               main="wiedemann.safflower.uniformity",
               col="red")
+  
 }
-
 }
 \keyword{datasets}

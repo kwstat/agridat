@@ -72,23 +72,22 @@
 }
 
 \examples{
+\dontrun{
+  
+  data(montgomery.wheat.uniformity)
+  dat <- montgomery.wheat.uniformity
+  dat09 <- subset(dat, year==1909)
+  dat11 <- subset(dat, year==1911)
 
-data(montgomery.wheat.uniformity)
-dat <- montgomery.wheat.uniformity
-dat09 <- subset(dat, year==1909)
-dat11 <- subset(dat, year==1911)
-
-# Match the figures of Montgomery 1912 Fig 3, p. 178
-if(require(desplot)){
+  # Match the figures of Montgomery 1912 Fig 3, p. 178
+  require(desplot)
   desplot(yield ~ col*row, dat09,
           aspect=1, # true aspect
           main="montgomery.wheat.uniformity - 1909 yield")
   desplot(yield ~ col*row, subset(dat, year==1911),
           aspect=1, # true aspect
           main="montgomery.wheat.uniformity - 1911 yield")
-}
 
-\dontrun{
   # Surface & Pearl adjust 1909 yield for fertility effects.
   # They calculate smoothed yield as (row sum)*(column sum)/(total)
   # and subtract this from the overall mean to get 'deviation'.
@@ -111,7 +110,7 @@ if(require(desplot)){
   # Corrected yields are slightly shrunk toward overall mean
   plot(correct~yield,dat09, xlim=c(350,1000), ylim=c(350,1000))
   abline(0,1)
+  
 }
-
 }
 \keyword{datasets}

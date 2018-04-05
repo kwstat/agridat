@@ -48,16 +48,18 @@
   None.
 }
 \examples{
+\dontrun{
+  
+  data(kiesselbach.oats.uniformity)
+  dat <- kiesselbach.oats.uniformity
+  
+  range(dat$yield) # 56.7 92.8 match Kiesselbach p 64.
 
-data(kiesselbach.oats.uniformity)
-dat <- kiesselbach.oats.uniformity
-range(dat$yield) # 56.7 92.8 match Kiesselbach p 64.
-
-if(require(desplot)){
+  require(desplot)
   desplot(yield ~ col*row, dat,
           tick=TRUE, flip=TRUE, aspect=792/469, # true aspect
           main="kiesselbach.oats.uniformity")
+  
 }
-
 }
 \keyword{datasets}

@@ -10,6 +10,7 @@
 * Keep (small) pdf vignetts for CRAN, (large) html vignettes for Git.
 * Release before mixed models paper?
 * Note: R_MAX_NUM_DLLS=150
+* Rcmd check --runj-dontrun before release
 
 # agridat 1.14 - unpublished
 
@@ -27,13 +28,13 @@ mead.turnip
 
 ## Other
 
-* nonnecke.corn.uniformity is now nonnecke.sweetcorn.uniformity
+* nonnecke.corn.uniformity is renamed nonnecke.sweetcorn.uniformity
 
-* moore.carrots.uniformity is now moore.carrot.uniformity
+* moore.carrots.uniformity is renamed moore.carrot.uniformity
 
 # agridat 1.13 - Nov 2017
 
-## New datasets for uniformity trials
+## New data for uniformity trials
 
 bradley.multi.uniformity, christidis.wheat.uniformity, day.wheat.uniformity,
 draper.safflower.uniformity, holtsmark.timothy.uniformity,
@@ -49,11 +50,11 @@ nonnecke.peas.uniformity, parker.orange.uniformity,
 polson.safflower.uniformity, sawyer.multi.uniformity, smith.beans.uniformity,
 stickler.sorghum.uniformity, wiedemann.safflower.uniformity
 
-## New datasets for stability
+## New data for stability
 
 fisher.barley, lu.stability, tai.potato
 
-## New datasets
+## New data
 
 acorsi.grayleafspot, becker.chicken, chinloy.fractionalfactorial,
 cramer.cucumber, crampton.pig, battese.survey, christidis.competition,
