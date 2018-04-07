@@ -1,6 +1,8 @@
 
 ## To do?
 
+Add CV function?
+
 * Need graphic for tai.potato
 * Need graphic for yang.barley
 * Figure out best way to use jags
@@ -10,19 +12,19 @@
 * Keep (small) pdf vignetts for CRAN, (large) html vignettes for Git.
 * Release before mixed models paper?
 * Note: R_MAX_NUM_DLLS=150
-* Rcmd check --runj-dontrun before release
+* Rcmd check --run-dontrun before release
 
 # agridat 1.14 - unpublished
 
 ## New data
 
 ansari.wheat.uniformity, baker.wheat.uniformity, bancroft.peanut.uniformity,
-bose.multi.uniformity, christidis.cotton.uniformity, eden.tea.uniformity,
-hutchinson.cotton.uniformity, igue.sugarcane.uniformity,
-kulkarni.sorghum.uniformity, lander.multi.uniformity, lord.rice.uniformity,
-magistad.pineapple.uniformity, nagai.strawberry.uniformity,
-narain.sorghum.unifomity, robinson.peanut.uniformity,
-sayer.sugarcane.uniformity
+bose.multi.uniformity, christidis.cotton.uniformity,
+correa.soybean.uniformity, eden.tea.uniformity, hutchinson.cotton.uniformity,
+igue.sugarcane.uniformity, kulkarni.sorghum.uniformity,
+lander.multi.uniformity, lord.rice.uniformity, magistad.pineapple.uniformity,
+nagai.strawberry.uniformity, narain.sorghum.unifomity,
+robinson.peanut.uniformity, sayer.sugarcane.uniformity
 
 mead.turnip
 

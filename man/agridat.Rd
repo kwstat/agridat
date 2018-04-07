@@ -39,6 +39,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{bradley.multi.uniformity}           \tab 10 x 11 \tab xy \tab \cr
 \link{christidis.cotton.uniformity}       \tab 16 x 16 \tab xy, 4 blocks \tab \cr
 \link{christidis.wheat.uniformity}        \tab 12 x 24 \tab xy \tab \cr
+\link{correa.soybean.uniformity}          \tab 24 x 48 \tab xy \tab \cr
 \link{day.wheat.uniformity}               \tab 31 x 100 \tab xy \tab \cr
 \link{draper.safflower.uniformity}        \tab 18 x 16 \tab xy, 2 expt \tab smith\cr
 \link{eden.tea.uniformity}                \tab 12 x 12 \tab xy \tab \cr
