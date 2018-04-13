@@ -1,7 +1,6 @@
 Package: agridat
 Title: Agricultural Datasets
 Version: 1.14
-Date: 2017-11-29
 Authors@R: person("Kevin","Wright", email="kw.stat@gmail.com",
                   comment=c(ORCID = "0000-0002-0617-8673"),
                   role=c("aut","cre"))
