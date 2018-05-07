@@ -565,7 +565,7 @@ Has assorted data and functions for analysis of agricultural data.
 
 ### aml - Adaptive Mixed LASSO
 
-Has 'wheat' data with genetic and phenotypic data for wheat.
+Data `aml::wheat` genetic and phenotypic data for wheat.
 
 
 ### BGLR - Bayesian Generalized Linear Regression.
@@ -585,7 +585,7 @@ Safety assessment in agriculture trials
 
 ### ClustVarLV
 
-The apples_sh data has sensory attributes and preference scores for 12 apple varieties.
+Data `apples_sh` sensory attributes and preference scores for 12 apple varieties.
 
 
 ### cropcc - Climate change on crops
@@ -602,19 +602,18 @@ Has nice herbicide dose response curves and germination data for mungbean, rice,
 https://github.com/lian0090/FW/ Has phenotype data and marker data for 599 wheat lines in 4 environments.
 
 
+### gRbase 
+
+Data `gRbase::carcass`: thickness of meat and fat on slaughter pigs
+
 ### lmtest
 
-Data lmtest::ChickEgg is a time series of annual chicken and egg production in the United States 1930-1983.
-
-
-### missMDA 
-
-The referenced source for 'geno' data does NOT contain the data.
+Data `lmtest::ChickEgg` time series of annual chicken and egg production in the United States 1930-1983.
 
 
 ### NADA
 
-The 'Atra' and 'Recon' datasets contain measurements of Atrazine in water samples.
+Data `Atra` and `Recon` contain measurements of Atrazine in water samples.
 
 
 ### nlraa
@@ -625,7 +624,9 @@ http://r-forge.r-project.org/R/?group_id=1599
    
 ### nlme
 
-Datasets for growth of Orange trees and Soybean plants.  Soybean data is from the book "Nonlinear Models for Repeated Measurement Data".
+`nlme::Orange`: Growth of orange trees
+
+`nlme::Soybean`: Growth of soybean plants. From the book "Nonlinear Models for Repeated Measurement Data".
 
 
 ### plantbreeding
@@ -643,7 +644,7 @@ This package has county-level data from the United States Census of Agriculture,
 
 ### SemiPar
 
-Data: SemiPar::onions is same as agridat::ratkowski.onions
+Data: `SemiPar::onions` is same as `agridat::ratkowski.onions`
 
 
 ### sommer - Solving mixed model equations in R
@@ -663,12 +664,12 @@ http://www.genetics.org/content/197/4/1343.supplemental
 ### spdep
 
 Has a vignette 'The Problem of Spatial Autocorrelation: forty years on' that examines agriculture in Irish counties.
-See also the data ade4::irishdata.
+See also the data `ade4::irishdata`.
 
 
 ### spuRs
 
-Data: spuRs::trees has data for 107 trees that were cut into cross sections with the volume calculated at roughly 10-year increments.  This is a subset of the much-larger original data from Guttenberg: 
+Data: `spuRs::trees` has data for 107 trees that were cut into cross sections with the volume calculated at roughly 10-year increments.  This is a subset of the much-larger original data from Guttenberg: 
 https://archive.org/stream/wachstumundertra00gutt
 
 

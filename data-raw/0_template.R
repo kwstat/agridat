@@ -1,5 +1,5 @@
 # 0_template.R
-# Time-stamp: <03 Apr 2018 17:50:46 c:/x/rpack/agridat/data-raw/0_template.R>
+# Time-stamp: <07 May 2018 14:24:16 c:/x/rpack/agridat/data-raw/0_template.R>
 
 libs(desplot,dplyr,kw,lattice,magrittr,readxl,readr,reshape2,tibble)
 
@@ -12,9 +12,14 @@ dat <- read_excel("nagai.strawberry.uniformity.xlsx","Sheet1", col_names=FALSE)
 
 dat %<>% as.matrix %>% `colnames<-`(1:ncol(dat)) %>% melt %>% rename(row=Var1,col=Var2,yield=value)
 
-desplot(yield ~ col*row, dat, main=NULL)
+require(desplot)
+desplot(yield ~ col*row, dat,
+        main="nagai.strawberry.uniformity",
+        flip=TRUE, aspect=1)
 
 nagai.strawberry.uniformity <- dat
+
+agex(nagai.strawberry.uniformity)
 
 # ----------------------------------------------------------------------------
 

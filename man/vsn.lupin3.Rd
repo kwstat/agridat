@@ -46,6 +46,7 @@ dat <- within(dat, {
 
 if(require(desplot)){
   desplot(yield~ col*row|site, dat,
+          # midpoint="midrange",
           # aspect unknown
           main="vsn.lupin3 - yield")
   desplot(check~ col*row|site, dat,

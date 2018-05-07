@@ -22,7 +22,7 @@
 
   Each block consisted of 20 rows, 1 meter apart and 66 meters long. Two
   rows on each side and 1 meter on each end were removed for
-  borderrs. Each row was divided into 4 meter-lengths and harvested
+  borderr. Each row was divided into 4 meter-lengths and harvested
   separately.  There were 4 blocks, oriented at 0, 30, 60, 90 degrees.
 
   Each block contained 16 rows, each 64 meters long.
@@ -35,7 +35,7 @@
 \source{
   Christidis, B. G., 1939.
   Variability of Plots of Various Shapes as Affected by Plot Orientation.
-  Emp. J. of Exp. Agr. 7: 330-342. Table 1.
+  Empire Journal of Experimental Agriculture 7: 330-342. Table 1.
 }
 \references{
   None

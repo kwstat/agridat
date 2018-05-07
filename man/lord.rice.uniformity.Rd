@@ -27,7 +27,7 @@
   Fields 10-14 were on one side of a drain, and fields 26-28 on the
   other side.
 
-  Each field was surrounded by a bund. Plots next to the buns had higher
+  Each field was surrounded by a bund. Plots next to the bunds had higher
   yields.
   
   Field width: 5 plots * 10 feet = 50 feet
