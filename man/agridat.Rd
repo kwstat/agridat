@@ -93,6 +93,8 @@ name                                      \tab dimensions \tab other \tab model 
 \link{smith.corn.uniformity}              \tab 6 x 20 \tab xy, 3 years \tab rgl \cr
 \link{stephens.sorghum.uniformity}        \tab 100 x 20 \tab xy \tab \cr
 \link{stickler.sorghum.uniformity}        \tab 20 x 20 \tab xy, 4 expts, 2 years \tab \cr
+\link{strickland.apple.uniformity}        \tab 11 x 18 \tab xy \tab \cr
+\link{strickland.grape.uniformity}        \tab 5 x 31 \tab xy \tab \cr
 \link{strickland.peach.uniformity}        \tab 8 x 18 \tab xy \tab \cr
 \link{strickland.tomato.uniformity}       \tab 30 x 6 \tab xy \tab \cr
 \link{wassom.brome.uniformity}            \tab 36 x 36 \tab xy, 3 expts \tab \cr

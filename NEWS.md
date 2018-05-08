@@ -24,7 +24,9 @@ correa.soybean.uniformity, eden.tea.uniformity, hutchinson.cotton.uniformity,
 igue.sugarcane.uniformity, kulkarni.sorghum.uniformity,
 lander.multi.uniformity, lord.rice.uniformity, magistad.pineapple.uniformity,
 nagai.strawberry.uniformity, narain.sorghum.unifomity,
-robinson.peanut.uniformity, sayer.sugarcane.uniformity
+robinson.peanut.uniformity, sayer.sugarcane.uniformity,
+strickland.apple.uniformity, strickland.grape.uniformity, strickland.peach.uniformity, 
+strickland.tomato.uniformity, 
 
 mead.turnip
 
