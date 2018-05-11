@@ -1,5 +1,5 @@
 # 0_template.R
-# Time-stamp: <07 May 2018 14:24:16 c:/x/rpack/agridat/data-raw/0_template.R>
+# Time-stamp: <10 May 2018 19:50:45 c:/x/rpack/agridat/data-raw/0_template.R>
 
 libs(desplot,dplyr,kw,lattice,magrittr,readxl,readr,reshape2,tibble)
 
@@ -14,8 +14,8 @@ dat %<>% as.matrix %>% `colnames<-`(1:ncol(dat)) %>% melt %>% rename(row=Var1,co
 
 require(desplot)
 desplot(yield ~ col*row, dat,
-        main="nagai.strawberry.uniformity",
-        flip=TRUE, aspect=1)
+        flip=TRUE, aspect=1,
+        main="nagai.strawberry.uniformity")
 
 nagai.strawberry.uniformity <- dat
 

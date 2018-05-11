@@ -20,12 +20,13 @@ Add CV function?
 
 ansari.wheat.uniformity, baker.wheat.uniformity, bancroft.peanut.uniformity,
 bose.multi.uniformity, christidis.cotton.uniformity,
-correa.soybean.uniformity, eden.tea.uniformity, hutchinson.cotton.uniformity,
-igue.sugarcane.uniformity, kulkarni.sorghum.uniformity,
-lander.multi.uniformity, lord.rice.uniformity, magistad.pineapple.uniformity,
-nagai.strawberry.uniformity, narain.sorghum.unifomity,
-robinson.peanut.uniformity, sayer.sugarcane.uniformity,
-strickland.apple.uniformity, strickland.grape.uniformity, strickland.peach.uniformity, 
+correa.soybean.uniformity, davies.pasture.uniformity,
+eden.tea.uniformity, hutchinson.cotton.uniformity, igue.sugarcane.uniformity,
+kulkarni.sorghum.uniformity, lander.multi.uniformity, lord.rice.uniformity,
+magistad.pineapple.uniformity, nagai.strawberry.uniformity,
+narain.sorghum.unifomity, robinson.peanut.uniformity,
+sayer.sugarcane.uniformity, strickland.apple.uniformity,
+strickland.grape.uniformity, strickland.peach.uniformity, 
 strickland.tomato.uniformity, 
 
 mead.turnip
