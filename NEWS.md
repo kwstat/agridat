@@ -16,6 +16,10 @@ Add CV function?
 
 # agridat 1.14 - unpublished
 
+## Other
+
+Moved `gge` examples into `dontrun` sections to simplify revdep checks for `gge` package.
+
 ## New data
 
 ansari.wheat.uniformity, baker.wheat.uniformity, bancroft.peanut.uniformity,

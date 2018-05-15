@@ -40,15 +40,16 @@
 }
 
 \examples{
+\dontrun{
 
 data(denis.ryegrass)
 dat <- denis.ryegrass
 
-# biplots (without ellipses) similar to Denis figure 1 
-if(require(gge)){
-  m1 <- gge(strength ~ gen*loc, dat, scale=FALSE)
-  biplot(m1, main="denis.ryegrass biplot")
-}
+# biplots (without ellipses) similar to Denis figure 1
+require(gge)
+m1 <- gge(strength ~ gen*loc, dat, scale=FALSE)
+biplot(m1, main="denis.ryegrass biplot")
 
+}
 }
 \keyword{datasets}

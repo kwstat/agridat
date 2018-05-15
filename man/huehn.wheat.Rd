@@ -23,13 +23,13 @@
   Yields for a winter-wheat trial of 20 genotypes at 10 environments.
 
   Note: Huehn 1979 does not use genotype-centered data when calculating
-  stability statistics.  
+  stability statistics.
 }
 
 \source{
   Manfred Huehn (1979).
   Beitrage zur Erfassung der phanotypischen Stabilitat I.
-  Vorschlag einiger auf Ranginformationen beruhenden Stabilitatsparameter. 
+  Vorschlag einiger auf Ranginformationen beruhenden Stabilitatsparameter.
   \emph{EDV in Medizin und Biologie}, 10 (4), 112-117.  Table 1.
   http://nbn-resolving.de/urn:nbn:de:bsz:15-qucosa-145979
 }
@@ -38,23 +38,21 @@
   Nassar, R and Huehn, M. (1987).
   Studies on estimation of phenotypic stability: Tests of significance
   for nonparametric measures of phenotypic stability.
-  \emph{Biometrics}, 43, 45-53. 
+  \emph{Biometrics}, 43, 45-53.
 }
 
 \examples{
+\dontrun{
 
 data(huehn.wheat)
 dat <- huehn.wheat
 
 # Nassar & Huehn, p. 51 "there is no evidence for differences in stability
 # among the 20 varieties".
-if(require(gge)){
-  m1 <- gge(yield ~ gen*env, dat)
-  biplot(m1, main="huehn.wheat")
-}
+require(gge)
+m1 <- gge(yield ~ gen*env, dat)
+biplot(m1, main="huehn.wheat")
 
-\dontrun{
-  
 require(reshape2)
 datm <- acast(dat, gen~env, value.var='yield')
 
@@ -64,7 +62,7 @@ apply(datm, 2, rank) # Ranks match Huehn table 1
 
 # Huehn 1979 did not use genotype-centered data, and his definition
 # of S2 is different from later papers.
-  if(require(stable)){
+if(require(stable)){
 apply(huehn(datm, corrected=FALSE), 2, round,2) # S1 matches Huehn
 ##          MeanRank   S1
 ## Jubilar      6.70 3.62
@@ -79,9 +77,8 @@ apply(huehn(datm, corrected=TRUE), 2, round,2)
 ## Diplomat     11.0 6.31 0.09 27.78 0.27
 ## Caribo       10.6 6.98 0.08 34.49 0.01
 ## Cbc710       10.9 8.16 1.78 47.21 1.73
-
-  }
 }
 
+}
 }
 \keyword{datasets}

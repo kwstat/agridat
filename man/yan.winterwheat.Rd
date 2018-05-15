@@ -37,23 +37,24 @@
 }
 
 \references{
-  
+
   Weikai Yan and Manjit S. Kang and Baoluo Ma and Sheila Woods, 2007,
   GGE Biplot vs. AMMI Analysis of Genotype-by-Environment Data,
   \emph{Crop Science}, 2007, 47, 641--653.
   http://doi.org/10.2135/cropsci2006.06.0374
-  
+
 }
 
 \examples{
+\dontrun{
 
 data(yan.winterwheat)
 dat <- yan.winterwheat
 
-if(require(gge)){
+require(gge)
 m1 <- gge(yield ~ gen*env, data=dat)
 biplot(m1, flip=c(1,1), hull=TRUE,
        main="yan.winterwheat - GGE biplot")
-}
 
+}
 }

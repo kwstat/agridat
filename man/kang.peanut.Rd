@@ -37,21 +37,20 @@
 }
 
 \examples{
+\dontrun{
 
 data(kang.peanut)
 dat <- kang.peanut
 
 # Table 5.1 of Kang et al. (Chapter 5 of Saxton)
-if(require(reshape2)){
+require(reshape2)
 round(acast(dat, env~gen, value.var='yield', fun=mean),2)
-}
-
 
 # GGE biplot of Kang, p. 82.
-if(require(gge)){
-  m1 <- gge(yield~gen*env, data=dat, scale=FALSE)
-  biplot(m1, flip=c(1,1), main="kang.peanut - GGE biplot")
-}
+require(gge)
+m1 <- gge(yield~gen*env, data=dat, scale=FALSE)
+biplot(m1, flip=c(1,1), main="kang.peanut - GGE biplot")
 
+}
 }
 \keyword{datasets}

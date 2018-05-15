@@ -24,7 +24,7 @@
 
   Cross et al. used this data to cluster loctions into 2
   mega-environments and clustered genotypes into 3 wheat clusters.
-  
+
   Locations
   \tabular{lllrr}{
     Code \tab Country \tab Location \tab Latitude (N) \tab Elevation (m) \cr
@@ -73,47 +73,40 @@
 }
 
 \examples{
+\dontrun{
 
 data(crossa.wheat)
 dat <- crossa.wheat
 
 # AMMI biplot.  Fig 3 of Crossa et al.
-if(require(agricolae)){
-  m1 <- with(dat, AMMI(E=loc, G=gen, R=1, Y=yield))
-  b1 <- m1$biplot[,1:4]
-  b1$PC1 <- -1 * b1$PC1 # Flip vertical
-  plot(b1$yield, b1$PC1, cex=0.0,
-       text(b1$yield, b1$PC1, cex=.5, labels=row.names(b1),col="brown"),
-       main="crossa.wheat AMMI biplot", xlab="Average yield", ylab="PC1", frame=TRUE)
-  mn <- mean(b1$yield)
-  abline(h=0, v=mn, col='wheat')
+require(agricolae)
+m1 <- with(dat, AMMI(E=loc, G=gen, R=1, Y=yield))
+b1 <- m1$biplot[,1:4]
+b1$PC1 <- -1 * b1$PC1 # Flip vertical
+plot(b1$yield, b1$PC1, cex=0.0,
+     text(b1$yield, b1$PC1, cex=.5, labels=row.names(b1),col="brown"),
+     main="crossa.wheat AMMI biplot",
+     xlab="Average yield", ylab="PC1", frame=TRUE)
+mn <- mean(b1$yield)
+abline(h=0, v=mn, col='wheat')
 
-  g1 <- subset(b1,type=="GEN")
-  text(g1$yield, g1$PC1, rownames(g1), col="darkgreen", cex=.5)
+g1 <- subset(b1,type=="GEN")
+text(g1$yield, g1$PC1, rownames(g1), col="darkgreen", cex=.5)
 
-  e1 <- subset(b1,type=="ENV")
-  arrows(mn, 0,
-         0.95*(e1$yield - mn) + mn, 0.95*e1$PC1,
-         col= "brown", lwd=1.8,length=0.1)
-}
+e1 <- subset(b1,type=="ENV")
+arrows(mn, 0,
+       0.95*(e1$yield - mn) + mn, 0.95*e1$PC1,
+       col= "brown", lwd=1.8,length=0.1)
 
 # GGB example
 library(agridat)
 data(crossa.wheat)
 dat2 <- crossa.wheat
-
-# FIXME: The loc grouping is now in the data
-
-# Define mega-environment groups of locations
-dat2$eg <- ifelse(is.element(dat2$loc,
-                             c("KN","NB","PA","BJ","IL","TC",
-                               "JM","PI","AS","ID","SC","SS",
-                               "SJ","MS","MG","MM")), "Grp1", "Grp2")
-
 library(gge)
 # Specify env.group as column in data frame
-m2 <- gge(yield~gen*loc, dat2, env.group=eg, scale=FALSE)
+m2 <- gge(yield~gen*loc, dat2, env.group=locgroup, scale=FALSE)
 biplot(m2, main="crossa.wheat - GGB biplot")
 
+}
 }
 \keyword{datasets}
