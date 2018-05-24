@@ -9,7 +9,6 @@ Add CV function?
 * JAGS code for lee.potatoblight
 * JAGS code for theobald.barley
 * JAGS code for besag.elbatan
-* Keep (small) pdf vignetts for CRAN, (large) html vignettes for Git.
 * Release before mixed models paper?
 * Note: R_MAX_NUM_DLLS=150
 * Rcmd check --run-dontrun before release

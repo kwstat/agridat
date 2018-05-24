@@ -3,7 +3,7 @@ title: "Using Papadakis covariates for nearest neighbor analysis"
 author: "Kevin Wright"
 date: "`r Sys.Date()`"
 output:
-  pdf_document: default
+  rmarkdown::html_vignette: default
   html_document:
     highlight: tango
 bibliography: agridat.bib

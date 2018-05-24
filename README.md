@@ -30,9 +30,9 @@ devtools::install_github("kwstat/agridat")
 
 [Graphical Gems in the agridat Package](https://rawgit.com/kwstat/agridat/master/vignettes/agridat_examples.html)
 
-[Additional sources of agricultural data](https://rawgit.com/kwstat/agridat/master/vignettes/data.html)
+[Additional sources of agricultural data](https://rawgit.com/kwstat/agridat/master/vignettes/agridat_data.html)
 
-[Using Papadakis covariates for nearest neighbor analysis](https://rawgit.com/kwstat/agridat/master/vignettes/papadakis.html)
+[Using Papadakis covariates for nearest neighbor analysis](https://rawgit.com/kwstat/agridat/master/vignettes/agridat_papadakis.html)
 
 ## Usage
 

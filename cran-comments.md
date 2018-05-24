@@ -13,13 +13,9 @@ Possibly mis-spelled words in DESCRIPTION:
   Datasets (2:21, 7:14)
   multi (9:5)
 
-## Downstream dependencies
-
-None
-
 ## License change
 
-Changed license to: CC BY-SA 4.0 + file LICENSE.note (similar to igraphdata).
+Changed license to: CC BY-SA 4.0 + file LICENSE.note (similar to igraphdata package).
 
 The contents of the LICENSE.note file:
 
