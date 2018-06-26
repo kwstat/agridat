@@ -598,6 +598,12 @@ https://r-forge.r-project.org/projects/cropcc/
 Has nice herbicide dose response curves and germination data for mungbean, rice, wheat.
 
 
+### ephiphy
+
+Includes 10 historical datasets for plant disease epidemics.
+https://github.com/chgigot/epiphy
+
+
 ### FW - Finlay-Wilkinson regression
 
 https://github.com/lian0090/FW/ Has phenotype data and marker data for 599 wheat lines in 4 environments.

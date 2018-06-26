@@ -53,6 +53,7 @@
 
 \examples{
 
+library(agridat)
 data(harvey.lsmeans)
 dat = harvey.lsmeans
 
@@ -62,7 +63,9 @@ dotplot(adg ~ sire|line,dat,
 
 \dontrun{
   # Model suggested by Harvey on page 103
-  m0 <- lm(adg ~ 1 + line + sire + damage + line:damage + weanage + weight, data=dat)
+  m0 <- lm(adg ~ 1 + line + sire + damage + line:damage + weanage +
+           weight, data=dat)
+
   # Due to contrast settings, it can be hard to compare model coefficients to Harvey,
   # but note the slopes of the continuous covariates match Harvey p. 107, where his
   # b is weanage, d is weight
@@ -71,8 +74,8 @@ dotplot(adg ~ sire|line,dat,
   #  -0.008154879  0.001970446
   
   # A quick attempt to reproduce table 4 of Harvey, p. 109. Not right.
-  # require(lsmeans)
-  # lsmeans(m0,c('line','sire','damage'))
+  # require(emmeans)
+  # emmeans(m0,c('line','sire','damage'))
 }
 
 }

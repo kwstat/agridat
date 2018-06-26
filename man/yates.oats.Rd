@@ -58,6 +58,7 @@
 
 \examples{
 
+library(agridat)
 data(yates.oats)
 dat <- yates.oats
 
@@ -106,11 +107,11 @@ xyplot(yield ~ col|factor(nitro), dat,
 
 \dontrun{
 
-  # Marginal predictions from lsmeans package and asreml::predict
+  # Marginal predictions from emmeans package and asreml::predict
 
   # --- nlme ---
   require(nlme)
-  require(lsmeans)
+  require(emmeans)
   # create unbalance
   dat2 <- yates.oats[-c(1,2,3,5,8,13,21,34,55),]
   m5l <- lme(yield ~ factor(nitro) + gen, random = ~1 | block/gen,
@@ -125,7 +126,7 @@ xyplot(yield ~ col|factor(nitro), dat,
   vc(m5l)
   vc(m5a)
 
-  lsmeans::lsmeans(m5l, "gen")
+  emmeans::emmeans(m5l, "gen")
   predict(m5a, data=dat, classify="gen")$predictions$pvals
 
 }

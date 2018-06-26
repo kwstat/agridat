@@ -17,7 +17,7 @@ Add CV function?
 
 ## Other
 
-Moved `gge` examples into `dontrun` sections to simplify revdep checks for `gge` package.
+Moved examples that use `gge` into `dontrun` sections to simplify revdep checks for `gge` package.
 
 ## New data
 
@@ -32,7 +32,7 @@ sayer.sugarcane.uniformity, strickland.apple.uniformity,
 strickland.grape.uniformity, strickland.peach.uniformity, 
 strickland.tomato.uniformity, 
 
-mead.turnip
+dasilva.maize, mead.turnip
 
 ## Other
 

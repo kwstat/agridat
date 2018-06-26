@@ -207,6 +207,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{crowder.seeds}               \tab 2   \tab    \tab 21  \tab    \tab 2     \tab \tab glm,jags \cr
 \link{cox.stripsplit}              \tab     \tab    \tab  4  \tab    \tab 3,4,2 \tab split-block \tab aov \cr
 \link{cullis.earlygen}             \tab 532 \tab    \tab     \tab    \tab       \tab xy \tab asreml \cr
+\link{dasilva.maize}               \tab 55  \tab 9  \tab 3   \tab    \tab       \tab \tab \cr
 \link{darwin.maize}                \tab     \tab    \tab 12  \tab    \tab 2     \tab \tab t.test \cr
 \link{denis.missing}               \tab 5   \tab 26 \tab     \tab    \tab       \tab \tab lme \cr
 \link{denis.ryegrass}              \tab 21  \tab 7  \tab     \tab    \tab       \tab \tab aov \cr

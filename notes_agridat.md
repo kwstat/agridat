@@ -1,4 +1,7 @@
-# agridat notes
+% agridat notes
+
+Do NOT use Roxygen to document data, because it will complain about data/*.txt files with error messages like:
+Error: 'uscrime' is not an exported object from 'namespace:agridat'
 
 ---> Not found 1.8.2018
 Lander, P. E. et al. (1938).

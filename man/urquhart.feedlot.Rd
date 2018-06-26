@@ -53,7 +53,7 @@
   Biometrics, 34, 696-705.
   http://doi.org/10.2307/2530391
 
-  Also available in the 'lsmeans' package as the 'feedlot' data.
+  Also available in the 'emmeans' package as the 'feedlot' data.
 }
 \examples{
 

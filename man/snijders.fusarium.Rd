@@ -14,7 +14,7 @@
     \item{\code{gen}}{wheat genotype}
     \item{\code{strain}}{fusarium strain}
     \item{\code{year}}{year}
-    \item{\code{y}}{Percent infected}
+    \item{\code{y}}{percent infected}
   }
 }
 \details{
@@ -22,7 +22,7 @@
   The data are the percent of leaf area affected by Fusarium head blight,
   averaged over 4-5 reps, for 17 winter wheat genotypes.
 
-  VanEeuwijk fit a generalized ammi-2 model to this data.  It is a
+  Van Eeuwijk fit a generalized ammi-2 model to this data.  It is a
   generalized model in the sense that a link function is used, and is a
   non-linear AMMI model in that there are main effects for variety and
   year-strain, but additional multiplicative effects for the

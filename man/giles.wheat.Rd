@@ -51,6 +51,7 @@
 }
 \examples{
 
+library(agridat)
 data(giles.wheat)
 dat <- giles.wheat
 dat <- transform(dat, gen=factor(gen))
@@ -70,33 +71,34 @@ if(require(lattice) & require(reshape2)){
             main="giles.wheat - straw length")
 }
 
+\dontrun{
+
 # Analysis of straw length
 
-if(require(lsmeans) & require(gnm)){
+require(emmeans)
+require(gnm)
 
 # Mean across years. Matches Piepho Table 7 'Simple'
 m1 = lm(straw ~ gen, data=dat1)
-lsmeans(m1, 'gen')
+emmeans(m1, 'gen')
 
 # Simple two-way model.  NOT the bi-additive model of Piepho.
 m2 = lm(straw ~ gen + env, data=dat1)
-lsmeans(m2, 'gen')
+emmeans(m2, 'gen')
 
 # Bi-additive model. Matches Piepho Table 6, rows (c)
 library(gnm)
 m3 <- gnm(straw ~ env + Mult(gen,env), data=dat1)
 cbind(adjusted=round(fitted(m3),0), dat1) 
 
-}
-
 # Analysis of Ear emergence
 
-if(require(lsmeans)){
+require(emmeans)
   
 # Simple two-way model. 
 m4 = lm(emergence ~ 1 + gen + env, data=dat2)
-lsmeans(m4, c('gen','env')) # Matches Piepho Table 9. rpws (c)
-lsmeans(m4, 'gen') # Match Piepho table 10, Least Squares column
+emmeans(m4, c('gen','env')) # Matches Piepho Table 9. rpws (c)
+emmeans(m4, 'gen') # Match Piepho table 10, Least Squares column
 
 }
 

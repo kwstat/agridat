@@ -44,6 +44,7 @@
 
 \examples{
 
+library(agridat)
 data(john.alpha)
 dat <- john.alpha
 
@@ -180,8 +181,8 @@ splom(means, main="john.alpha - means for RCB, IB, Intra-block")
   # Same as asreml model m4. Note 'gen' must be first term
   m5blue <- lmer(yield ~ 0 + gen + rep + (1|rep:block), dat)
   
-  require(lsmeans)
-  ls5blue <- lsmeans(m5blue, "gen")
+  require(emmeans)
+  ls5blue <- emmeans(m5blue, "gen")
   con <- ls5blue@linfct[,1:24] # contrast matrix for genotypes
   # The 'con' matrix is identity diagonal, so we don't need to multiply,
   # but do so for a generic approach
