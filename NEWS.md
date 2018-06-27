@@ -12,12 +12,13 @@ Add CV function?
 * Release before mixed models paper?
 * Note: R_MAX_NUM_DLLS=150
 * Rcmd check --run-dontrun before release
+  run_examples(run=FALSE, start="butron.maize")
 
 # agridat 1.14 - unpublished
 
 ## Other
 
-Moved examples that use `gge` into `dontrun` sections to simplify revdep checks for `gge` package.
+Switch from `lsmeans` to `emmeans` in examples.
 
 ## New data
 

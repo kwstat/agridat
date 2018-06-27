@@ -42,6 +42,7 @@
 \examples{
 \dontrun{
 
+library(agridat)
 data(denis.ryegrass)
 dat <- denis.ryegrass
 

@@ -138,7 +138,6 @@ qqmath(~score|env, dat, group=scale,
   # require(phenability)
   # nahu(datm)
   
-} # dontrun
-
+}
 }
 \keyword{datasets}

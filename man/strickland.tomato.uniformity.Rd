@@ -38,7 +38,8 @@
 \examples{
 \dontrun{
   data(strickland.tomato.uniformity)
-  
+  dat <- strickland.tomato.uniformity
+
   mean(dat$yield)
   sd(dat$yield)
 

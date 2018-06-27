@@ -403,16 +403,13 @@ Does barley yield better in cooler or warmer weather?
 
 # GGE biplot
 
-```{r crossa, eval=TRUE, message=FALSE}
+```{r crossa, eval=FALSE, message=FALSE}
 
 # Specify env.group as column in data frame
 data(crossa.wheat)
 dat2 <- crossa.wheat
-dat2$eg <- ifelse(is.element(dat2$loc,
-c("KN","NB","PA","BJ","IL","TC", "JM","PI","AS","ID","SC","SS",
-"SJ","MS","MG","MM")), "Grp1", "Grp2")
 require(gge)
-m4 <- gge(yield~gen*loc, dat2, env.group=eg, scale=FALSE)
+m4 <- gge(yield~gen*loc, dat2, env.group=locgroup, scale=FALSE)
 # plot(m4)
 biplot(m4, lab.env=TRUE, main="crossa.wheat")
 ```

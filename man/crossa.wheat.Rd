@@ -75,6 +75,7 @@
 \examples{
 \dontrun{
 
+library(agridat)
 data(crossa.wheat)
 dat <- crossa.wheat
 

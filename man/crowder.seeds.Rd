@@ -57,6 +57,7 @@
 
 \examples{
 
+library(agridat)
 data(crowder.seeds)
 dat <- crowder.seeds
 m1.glm <- m1.glmm <- m1.bb <- m1.hglm <- NA

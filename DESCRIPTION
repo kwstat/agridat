@@ -23,6 +23,7 @@ Suggests:
     emmeans,
     FrF2,
     gam,
+    gge,
     ggplot2,
     gnm,
     gstat,

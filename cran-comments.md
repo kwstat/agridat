@@ -1,3 +1,49 @@
+# agridat 1.14
+
+## Test environments
+
+* local: R 3.5.0 on Windows 7
+* win-builder: R-release
+* win-builder: R-devel
+
+## Results from Rcmd check
+
+```
+Found the following (possibly) invalid URLs:
+  URL: http://
+    From: inst/doc/agridat_data.html
+    Status: Error
+    Message: libcurl error code 3:
+      	Bad URL
+  URL: https://www.ideals.illinois.edu/handle/2142/3528
+    From: inst/doc/agridat_data.html
+    Status: 503
+    Message: Service Unavailable
+```
+
+This URL claims to be temporarily down for maintenance.
+
+## Results from devtools check(), build(), check_built()
+
+R CMD check results
+0 errors | 0 warnings | 0 notes
+
+## Downstream dependencies
+
+devtools::revdep_check() had no failures.
+
+## Thanks to CRAN
+
+Thank you to the following people for help with the following issues.
+
+Ver 1.9: Brian Ripley suggesting `if(require(lme4))` in examples.
+
+Ver 1.8: Brian Ripley fixing a bug caused by another package.
+
+Ver 1.1: Kurt Hornik version numbering.
+
+
+
 # agridat 1.13
 
 ## Test environments
@@ -17,27 +63,3 @@ Possibly mis-spelled words in DESCRIPTION:
 
 Changed license to: CC BY-SA 4.0 + file LICENSE.note (similar to igraphdata package).
 
-The contents of the LICENSE.note file:
-
-The 'agridat' package is released under the CC BY-SA 4.0 license.
-
-A few datasets have explicit licenses that are summarized below.
-See the respective dataset help files for full details.
-
------
-
-broadbalk.wheat - No license. Credit to StatLib.
-
-caribbean.maize - No license. Credit to StatLib.
-
-cleveland.soil - No license. Credit to StatLib.
-
-gartner.corn - Creative Commons BY-SA 3.0.
-
-ilri.sheep - Creative Commons BY-NC-SA 3.0. 
-
-lasrosas.corn - No license. Credit to ASU GeoDa Center.
-
-lee.potatoblight - Database Contents License 1.0.
-
-lehner.soybeanmold - GPL 3.

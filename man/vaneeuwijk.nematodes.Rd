@@ -27,7 +27,7 @@
 
   Van Eeuwijk used this data to illustrate fitting a generalized linear
   model.
-  
+
 }
 
 \source{
@@ -46,6 +46,8 @@
 }
 
 \examples{
+
+library(agridat)
 data(vaneeuwijk.nematodes)
 dat <- vaneeuwijk.nematodes
 
@@ -61,13 +63,13 @@ par(op)
 \dontrun{
   # normal distribution
   lm1 <- lm(y ~ gen + pop, data=dat)
-  
+
   # poisson distribution
   glm1 <- glm(y ~ gen+pop,data=dat,family=quasipoisson(link=log))
   anova(glm1)
-  
+
   require(gnm)
-  
+
   # main-effects non-interaction model
   gnm0 <- gnm(y ~ pop + gen, data=dat,
               family=quasipoisson(link=log))
@@ -78,10 +80,10 @@ par(op)
   gnm2 <- gnm(y ~ pop + gen + Mult(pop,gen,inst=1) + Mult(pop,gen,inst=2),
               data=dat,
               family=quasipoisson(link=log))
-    
+
   # anova(gnm0, gnm1, gnm2, test="F")
   # only 2, not 3 axes needed
-    
+
   # match vaneeuwijk table 2
   anova(gnm2)
   ##                          Df Deviance Resid. Df Resid. Dev
@@ -90,7 +92,7 @@ par(op)
   ## gen                      10   7111.4        40     1145.4
   ## Mult(pop, gen, inst = 1) 13    716.0        27      429.4
   ## Mult(pop, gen, inst = 2) 11    351.1        16       78.3
-  
+
   # compare residual qq plots from models
   op <- par(mfrow=c(2,2))
   plot(lm1, which=2, main="LM")
@@ -98,7 +100,7 @@ par(op)
   plot(gnm0, which=2, main="GNM, no interaction")
   plot(gnm2, which=2, main="GNM, 2 interactions")
   par(op)
-    
+
   # extract interaction-term coefficients, make a biplot
   pops <- pickCoef(gnm2, "[.]pop")
   gens <- pickCoef(gnm2, "[.]gen")
@@ -112,7 +114,7 @@ par(op)
   # near-match with vaneeuwijk figure 1
   biplot(A2,B2, expand=2.5,xlim=c(-2,2),ylim=c(-2,2),
          main="vaneeuwijk.nematodes - GAMMI biplot")
-  
+
 }
 }
 \keyword{datasets}

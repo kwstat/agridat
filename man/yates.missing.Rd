@@ -27,7 +27,7 @@
 
 \source{
   F. Yates, 1933.
-  The analysis of replicated experiments when the field results are incomplete. 
+  The analysis of replicated experiments when the field results are incomplete.
   \emph{Emp. J. Exp. Agric.}, 1, 129--142.
 }
 
@@ -61,10 +61,10 @@ mat1 <- acast(dat[, c('trt','block','pred')], trt~block,
 
 \dontrun{
 # Another method to estimate missing values via PCA
-require("pcaMethods") # From Bioconductor, not CRAN
-m2 <- pca(mat0, method="nipals", center=FALSE, nPcs=3)
-# mat2 <- m2@scores %*% t(m2@loadings)
-mat2 <- tcrossprod(m2@scores, m2@loadings)
+require("nipals")
+m2 <- nipals(mat0, center=FALSE, ncomp=3, fitted=TRUE)
+# mat2 <- m2$scores %*% t(m2$loadings)
+mat2 <- m2$fitted
 
 # Compare
 ord <- c("0","N","K","P","NK","NP","KP","NKP")
