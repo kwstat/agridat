@@ -768,7 +768,7 @@ Potato and Tomato genotype and phenotype data.
 
 
 ### Statistical Analysis of Agricultural Experiments with R
-See: rstats4ag.org (no http:// because of firewall problems).
+See: rstats4ag.org (no http because of firewall problems).
 
 Datasets for mixed models, ancova, dose response curves, competition.
 

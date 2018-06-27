@@ -14,24 +14,12 @@ Add CV function?
 * Rcmd check --run-dontrun before release
   run_examples(run=FALSE, start="butron.maize")
 
-# agridat 1.14 - unpublished
 
-## Other
-
-Switch from `lsmeans` to `emmeans` in examples.
+# agridat 1.15 - Jun 2018
 
 ## New data
 
-ansari.wheat.uniformity, baker.wheat.uniformity, bancroft.peanut.uniformity,
-bose.multi.uniformity, christidis.cotton.uniformity,
-correa.soybean.uniformity, davies.pasture.uniformity,
-eden.tea.uniformity, hutchinson.cotton.uniformity, igue.sugarcane.uniformity,
-kulkarni.sorghum.uniformity, lander.multi.uniformity, lord.rice.uniformity,
-magistad.pineapple.uniformity, nagai.strawberry.uniformity,
-narain.sorghum.unifomity, robinson.peanut.uniformity,
-sayer.sugarcane.uniformity, strickland.apple.uniformity,
-strickland.grape.uniformity, strickland.peach.uniformity, 
-strickland.tomato.uniformity, 
+ansari.wheat.uniformity, baker.wheat.uniformity, bancroft.peanut.uniformity, bose.multi.uniformity, christidis.cotton.uniformity, correa.soybean.uniformity, davies.pasture.uniformity, eden.tea.uniformity, hutchinson.cotton.uniformity, igue.sugarcane.uniformity, kulkarni.sorghum.uniformity, lander.multi.uniformity, lord.rice.uniformity, magistad.pineapple.uniformity, nagai.strawberry.uniformity, narain.sorghum.unifomity, robinson.peanut.uniformity, sayer.sugarcane.uniformity, strickland.apple.uniformity, strickland.grape.uniformity, strickland.peach.uniformity, strickland.tomato.uniformity
 
 dasilva.maize, mead.turnip
 
@@ -40,6 +28,9 @@ dasilva.maize, mead.turnip
 * nonnecke.corn.uniformity is renamed nonnecke.sweetcorn.uniformity
 
 * moore.carrots.uniformity is renamed moore.carrot.uniformity
+
+* Switch from `lsmeans` to `emmeans` in examples.
+
 
 # agridat 1.13 - Nov 2017
 

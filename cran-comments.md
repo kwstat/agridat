@@ -1,4 +1,4 @@
-# agridat 1.14
+# agridat 1.15
 
 ## Test environments
 
@@ -8,20 +8,8 @@
 
 ## Results from Rcmd check
 
-```
-Found the following (possibly) invalid URLs:
-  URL: http://
-    From: inst/doc/agridat_data.html
-    Status: Error
-    Message: libcurl error code 3:
-      	Bad URL
-  URL: https://www.ideals.illinois.edu/handle/2142/3528
-    From: inst/doc/agridat_data.html
-    Status: 503
-    Message: Service Unavailable
-```
-
-This URL claims to be temporarily down for maintenance.
+Status: OK
+R version 3.5.0 (2018-04-23)
 
 ## Results from devtools check(), build(), check_built()
 
