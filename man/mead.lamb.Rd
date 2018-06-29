@@ -35,6 +35,7 @@
 
 \examples{
 
+library(agridat)
 data(mead.lamb)
 dat <- mead.lamb
 
@@ -62,8 +63,7 @@ if(require(dplyr)){
 }
 
 # Models
-m1 <- glm(y ~ F + B + F:B,
-          data=dat,
+m1 <- glm(y ~ F + B + F:B, data=dat,
           family=poisson(link=log))
 m2 <- update(m1, y ~ F + B + F:B + L)
 m3 <- update(m1, y ~ F + B + F:B + L + B:L)
@@ -86,19 +86,20 @@ summary(m4)
 # Match deviance table from Mead
 if(require(broom)){
   all <- do.call(rbind, lapply(list(m1, m2, m3, m4, m5), broom::glance))
-  rownames(all) <- unlist(lapply(list(m1, m2, m3, m4, m5),
+  all$model <- unlist(lapply(list(m1, m2, m3, m4, m5),
                                  function(x) as.character(formula(x)[3])))
-  all[,c('deviance','df.residual')]
-  ##                              deviance df.residual
-  ## F + B + F:B                 683.67257          27
-  ## F + B + L + F:B             131.23828          24
-  ## F + B + L + F:B + B:L       116.27069          18
-  ## F + B + L + F:B + F:L        18.84460          18
-  ## F + B + L + F:B + B:L + F:L  14.57987          12
+  all[,c('model','deviance','df.residual')]
+  ##                         model  deviance df.residual
+  ## 1                 F + B + F:B 683.67257          27
+  ## 2             F + B + L + F:B 131.23828          24
+  ## 3       F + B + L + F:B + B:L 116.27069          18
+  ## 4       F + B + L + F:B + F:L  18.84460          18
+  ## 5 F + B + L + F:B + B:L + F:L  14.57987          12
 }
 
-# Using MASS::loglm
-if(require(MASS)){
+\dontrun{
+  # Using MASS::loglm
+  library(MASS)
   # Note: without 'fitted=TRUE', devtools::run_examples has an error
   m4b <- MASS::loglm(y ~ F + B + F:B + L + F:L, data = dat, fitted=TRUE)
   # Table of farm * class interactions. Match Mead p. 360
@@ -110,6 +111,5 @@ if(require(MASS)){
   # formula = ~ F + B + F:B + L + F:L,
   # residual_type="rstandard", keep_aspect=FALSE)
 }
-
 }
 \keyword{datasets}
