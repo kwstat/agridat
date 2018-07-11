@@ -1,8 +1,7 @@
 
 ## To do?
 
-Add CV function?
-
+* Add CV function?
 * Need graphic for tai.potato
 * Need graphic for yang.barley
 * Figure out best way to use jags
@@ -14,6 +13,15 @@ Add CV function?
 * Rcmd check --run-dontrun before release
   run_examples(run=FALSE, start="butron.maize")
 
+# agridat 1.17 - Unpublished
+
+## New data
+
+hartman.tomato.uniformity
+
+# agridat 1.16 - Jul 2018
+
+Minor release to make a small change for the next release of the 'broom' package.
 
 # agridat 1.15 - Jun 2018
 

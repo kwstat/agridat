@@ -48,6 +48,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{gomez.rice.uniformity}              \tab 18 x 36 \tab xy \tab aov,smith \cr
 \link{goulden.barley.uniformity}          \tab 20 x 20 \tab xy \tab \cr
 \link{harris.multi.uniformity}            \tab 2 x 23 \tab xy, 23 crops \tab corrgram\cr
+\link{hartman.tomato.uniformity}          \tab 12 x 32 \tab xy \tab \cr
 \link{holtsmark.timothy.uniformity}       \tab 6 x 40 \tab xy \tab \cr
 \link{hutchinson.cotton.uniformity}       \tab 32 x 40 \tab xy \tab \cr
 \link{igue.sugarcane.uniformity}          \tab 36 x 42 \tab xy \tab \cr

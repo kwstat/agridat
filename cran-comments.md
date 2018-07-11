@@ -1,3 +1,39 @@
+# agridat 1.16
+
+Sorry for the short release cycle.  This is a tiny update making a small change requested by the maintainers of the 'broom' package to support the next version of 'broom'.
+
+## Test environments
+
+* local: R 3.5.0 on Windows 7
+* win-builder: R-release
+* win-builder: R-devel
+
+## Results from Rcmd check
+
+Status: OK
+R version 3.5.0 (2018-04-23)
+
+## Results from devtools build(), check_built()
+
+R CMD check results
+0 errors | 0 warnings | 0 notes
+
+## Downstream dependencies
+
+devtools::revdep_check() had no failures.
+
+## Thanks to CRAN
+
+Thank you to the following people for help with the following issues.
+
+Ver 1.9: Brian Ripley suggesting `if(require(lme4))` in examples.
+
+Ver 1.8: Brian Ripley fixing a bug caused by another package.
+
+Ver 1.1: Kurt Hornik version numbering.
+
+
+
 # agridat 1.15
 
 ## Test environments
