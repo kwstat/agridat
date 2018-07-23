@@ -17,7 +17,7 @@
 
 ## New data
 
-hartman.tomato.uniformity
+hartman.tomato.uniformity, pederson.lettuce.repeated
 
 # agridat 1.16 - Jul 2018
 
