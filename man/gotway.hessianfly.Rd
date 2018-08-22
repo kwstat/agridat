@@ -22,7 +22,7 @@
   The response is binomial.
 
   Each plot was square.
-  
+
 }
 \source{
   C. A. Gotway and W. W. Stroup.
@@ -37,8 +37,6 @@
 }
 \examples{
 
-## FIXME Could the spaMM package be useful here...????
-
 data(gotway.hessianfly)
 dat <- gotway.hessianfly
 
@@ -52,24 +50,34 @@ if(require(desplot)){
 
 # ----------------------------------------------------------------------------
 
+# spaMM package example
+# require(spaMM)
+# m1 = HLCor(cbind(y, n-y) ~ 1 + gen + (1|block) + Matern(1|long+lat),
+#            data=dat, family=binomial(), ranPars=list(nu=0.5, rho=1/.7))
+# summary(m1)
+# fixef(m1)
+# filled.mapMM(m1)
+
+# ----------------------------------------------------------------------------
+
 # Block random.  See Glimmix manual, output 1.18.
 # Note: (Different parameterization)
 \dontrun{
-  ## require(lme4)
-  ## l2 <- glmer(cbind(y, n-y) ~ gen + (1|block), data=dat, family=binomial,
-  ##    control=glmerControl(check.nlev.gtr.1="ignore"))
-  ## coef(l2)
+  # require(lme4)
+  # l2 <- glmer(cbind(y, n-y) ~ gen + (1|block), data=dat, family=binomial,
+  #   control=glmerControl(check.nlev.gtr.1="ignore"))
+  # coef(l2)
 }
 
 # ----------------------------------------------------------------------------
 
 \dontrun{
   # asreml3
-  require(asreml)
-  a2 <- asreml(prop ~ gen, data=dat, random=~block,
-               family=asreml.binomial(),
-               weights=n)
-  coef(a2)
+  # require(asreml)
+  # a2 <- asreml(prop ~ gen, data=dat, random=~block,
+  #              family=asreml.binomial(),
+  #              weights=n)
+  # coef(a2)
 }
 
 # ----------------------------------------------------------------------------

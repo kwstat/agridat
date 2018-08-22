@@ -17,7 +17,7 @@
 
 ## New data
 
-hartman.tomato.uniformity, pederson.lettuce.repeated
+hartman.tomato.uniformity, paez.coffee.uniformity, pederson.lettuce.repeated, rothamsted.oats
 
 # agridat 1.16 - Jul 2018
 
@@ -67,10 +67,7 @@ fisher.barley, lu.stability, tai.potato
 acorsi.grayleafspot, becker.chicken, chinloy.fractionalfactorial,
 cramer.cucumber, crampton.pig, battese.survey, christidis.competition,
 depalluel.sheep. eden.nonnormal, gartner.corn, giles.wheat,
-gomez.heteroskedastic, gomez.nonnormal1, gomez.nonnormal2, gomez.nonnormal3,
-gomez.wetdry, goulden.eggs, goulden.splitsplit, gregory.cotton,
-hanover.whitepine, harvey.lsmeans, harville.lamb, huehn.wheat, kenward.cattle,
-kreusler.maize, lehner.soybeanmold, lillemo.wheat, lin.superiority,
+gomez.heteroskedastic, gomez.nonnormal1, gomez.nonnormal2, gomez.nonnormal3, gomez.wetdry, goulden.eggs, goulden.splitsplit, gregory.cotton, hanover.whitepine, harvey.lsmeans, harville.lamb, huehn.wheat, kenward.cattle, kreusler.maize, lehner.soybeanmold, lillemo.wheat, lin.superiority,
 lin.unbalanced, little.splitblock, mead.lambs, omer.sorghum,
 onofri.winterwheat, reid.grasses, silva.cotton, urquhart.feedlot,
 usgs.herbicides, vaneeuwijk.fusarium, vaneeuwijk.nematodes,
@@ -179,8 +176,7 @@ hayman.tobacco, holshouser.splitstrip, pearce.apple, waynick.soil
 ## New data
 
 crossa.wheat, garber.multi.uniformity, gomez.nitrogen,
-harris.multi.uniformity, hughes.grapes, li.millet.uniformity, odland.soybean.uniformity,
-odland.soyhay.uniformity, ratkowsky.onions, stephens.sorghum.uniformity
+harris.multi.uniformity, hughes.grapes, li.millet.uniformity, odland.soybean.uniformity, odland.soyhay.uniformity, ratkowsky.onions, stephens.sorghum.uniformity
 
 # agridat 1.5 - Apr 2013
 

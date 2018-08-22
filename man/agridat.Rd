@@ -87,6 +87,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{odland.soybean.uniformity}          \tab 25 x 42 \tab xy \tab \cr
 \link{odland.soyhay.uniformity}           \tab 28 x 55 \tab xy \tab \cr
 \link{parker.orange.uniformity}           \tab 10 x 27 \tab xy, 6 yr \tab \cr
+\link{paez.coffee.uniformity}             \tab 32 x 36 \tab xy, 5 yr \tab \cr
 \link{polson.safflower.uniformity}        \tab 52 x 33 \tab xy \tab smith\cr
 \link{robinson.peanut.uniformity}         \tab 16 x 36 \tab xy \tab \cr
 \link{sawyer.multi.uniformity}            \tab 8 x 6   \tab xy, 3 year \tab \cr
@@ -303,6 +304,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{reid.grasses}                \tab 4   \tab    \tab     \tab 3  \tab 21    \tab \tab nlme SSfpl \cr
 \link{ridout.appleshoots}          \tab     \tab    \tab 30  \tab    \tab 2,4   \tab zip \tab zeroinfl\cr
 \link{rothamsted.brussels}         \tab     \tab    \tab 4   \tab    \tab 6     \tab \tab \cr
+\link{rothamsted.oats}             \tab     \tab    \tab 8   \tab    \tab 9     \tab rcb \tab \cr
 \link{ryder.groundnut}             \tab 5   \tab    \tab 4   \tab    \tab       \tab xy, rcb \tab lm \cr
 \link{salmon.bunt}                 \tab 10  \tab    \tab 2   \tab    \tab 20    \tab \tab betareg \cr
 \link{senshu.rice}                 \tab     \tab 40 \tab     \tab    \tab       \tab \tab lm,Fieller \cr

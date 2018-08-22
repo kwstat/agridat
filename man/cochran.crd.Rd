@@ -20,7 +20,7 @@
 \details{
   The experiment was conducted to investigate the effect of sulfur on
   controlling scab disease in potatoes. There were seven treatments.
-  Control, plus spring and fall application of 300, 600, 1200 lbs/acre of
+  Control, plus spring and fall application of 300, 600, 1200 pounds/acre of
   sulfur.  The response variable was infection as a percent of the surface
   area covered with scab.  A completely randomized design was used with 8
   replications of the control and 4 replications of the other treatments.

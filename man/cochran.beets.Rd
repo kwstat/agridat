@@ -13,7 +13,7 @@
   \describe{
     \item{\code{fert}}{fertilizer treatment}
     \item{\code{block}}{block}
-    \item{\code{yield}}{yield (tons/acres)}
+    \item{\code{yield}}{yield, tons/acres}
     \item{\code{plants}}{number of plants per plot}
   }
 }

@@ -424,7 +424,8 @@ Note: The supplemental information for this paper contains data for 3534 pigs wi
 Food Quality and Preference, 7(2), 113-126.
 http://dx.doi.org/10.1016/0950-3293(95)00043-7
 
-Note: The data are available in ClustVarLV package.
+Note: Data in `ClustVarLV::apples_sh$pref` and `ClustVarLV::apples_sh$senso`
+12 apple varieties, 43 traits, 60 consumers
 
 
 **Gregory, Crowther & Lambert** (1932). The interrelation of factors controlling the production of cotton under irrigation in the Sudan.
@@ -634,6 +635,11 @@ http://r-forge.r-project.org/R/?group_id=1599
 `nlme::Orange`: Growth of orange trees
 
 `nlme::Soybean`: Growth of soybean plants. From the book "Nonlinear Models for Repeated Measurement Data".
+
+
+### pbkrtest
+
+`pbkrtest::beets` Yield and percent sugar in split-plot experiment.
 
 
 ### plantbreeding

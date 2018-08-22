@@ -3,6 +3,15 @@
 Do NOT use Roxygen to document data, because it will complain about data/*.txt files with error messages like:
 Error: 'uscrime' is not an exported object from 'namespace:agridat'
 
+
+## Genomes To Fields project has 
+public data for 500 genotypes in multiple environments.
+    www.genomes2fields.org
+https://www.genomes2fields.org/publications/
+https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-018-3508-1    http://datacommons.cyverse.org/browse/iplant/home/shared/commons_repo/curated/Carolyn_Lawrence_Dill_G2F_Nov_2016_V.3
+    
+
+
 ---> Not found 1.8.2018
 Lander, P. E. et al. (1938).
 "Soil Uniformity Trials in the Punjab I."

@@ -49,7 +49,8 @@
   McCullagh, P. and Clifford, D., (2006).
   Evidence for conformal invariance of crop yields,
   \emph{Proceedings of the Royal Society A: Mathematical, Physical and
-  Engineering Science}, 462, 2119--2143.
+    Engineering Science}, 462, 2119--2143.
+  http://doi.org/10.1098/rspa.2006.1667 
 }
 
 \examples{
@@ -110,7 +111,7 @@ if(require(desplot)){
 anova(m7 <- aov(yield~trt+block+ptype + ptype:potash, d7))
 if(require(reshape2)){
 me7 <- melt(d7, measure.vars='yield')
-acast(me7, potash~nitro, fun=mean) * 40/2240 # English ton = 2240 lbs
+acast(me7, potash~nitro, fun=mean) * 40/2240 # English ton = 2240 pounds
 acast(me7, potash~ptype, fun=mean) * 40/2240
 }
 

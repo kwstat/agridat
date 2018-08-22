@@ -35,12 +35,12 @@
   \describe{
     \item{\code{row}}{row}
     \item{\code{col}}{column}
-    \item{\code{yield}}{yield in 1/4 lbs per sub-plot, each 1/80 acre}
+    \item{\code{yield}}{yield in 1/4 pounds per sub-plot, each 1/80 acre}
     \item{\code{nitro}}{nitrogen treatment in hundredweight per acre}
     \item{\code{gen}}{genotype, 3 levels}
     \item{\code{block}}{block, 6 levels}
-    \item{\code{grain}}{grain weight in lbs per sub-plot}
-    \item{\code{straw}}{straw weight in lbs per sub-plot}
+    \item{\code{grain}}{grain weight in pounds per sub-plot}
+    \item{\code{straw}}{straw weight in pounds per sub-plot}
   }
 }
 

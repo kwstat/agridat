@@ -17,7 +17,7 @@
     \item{\code{row}}{row}
     \item{\code{col}}{column}
     \item{\code{gen}}{genotype, 16 levels}
-    \item{\code{yield}}{yield, numeric}
+    \item{\code{yield}}{yield}
   }
 }
 \details{
