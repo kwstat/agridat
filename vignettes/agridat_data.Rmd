@@ -59,11 +59,11 @@ One dataset from wheat, RCB, with field coordinates.
 ### Peter Diggle, Patrick Heagerty, Kung-Yee Liang, Scott Zeger. _Analysis of Longitudinal Data_.
 http://faculty.washington.edu/heagerty/Books/AnalysisLongitudinal/datasets.html
 
-Pig weight data is found in SemiPar::pig.weights
+Pig weight data is found in `SemiPar::pig.weights`
 
-Sitka spruce data is found in: geepack::spruce
+Sitka spruce data is found in: `geepack::spruce`
 
-Milk protein data is found in: nlme::Milk.  A thorough description of this data can be found in Molenberghs & Kenward, _Missing Data in Clinical Studies_, p. 377.  
+Milk protein data is found in: `nlme::Milk`.  A thorough description of this data can be found in Molenberghs & Kenward, _Missing Data in Clinical Studies_, p. 377.  
 Original source: A. P. Verbyla and B. R. Cullis, Modelling in Repeated Measures Experiments. http://www.jstor.org/stable/2347384 
 
 
@@ -503,7 +503,7 @@ Note: Genotype and phenotype data appears in the sommer package.
 Application of Multiple Imputation for Missing Values in Three-Way Three-Mode Multi-Environment Trial Data.
 http://doi.org/10.1371/journal.pone.0144370
 
-Note: Uses agridat::australia.soybean data and one other real dataset with 4 traits that are not identified.  All data and code available.
+Note: Uses `agridat::australia.soybean` data and one other real dataset with 4 traits that are not identified.  All data and code available.
 
 
 **Randall J. Wisser et al.** (2011). 
@@ -668,7 +668,7 @@ Data: wheatLines  CIMMYT wheat data for 599 lines. Phenotype and relationship da
 
 Data: RICE
 
-Data: FDdata taken from agridat::bond.diallel
+Data: FDdata taken from `agridat::bond.diallel`
 
 Data: Technow_data. AF=Additive Flint. AD=Additive Dent. MF=Marker Flint. MD=Marker Dent. pheno=phenotype data for 1254 hybrids (GY=yield, GM=moisture).  This data is from Technow et al:
 http://www.genetics.org/content/197/4/1343.supplemental
@@ -691,7 +691,7 @@ https://archive.org/stream/wachstumundertra00gutt
 Dataset with phenotype data 3 yr, 9 locations, 18 environments, 60 thousand observations for height, maturity,
 lodging, moisture, protein, oil, fiber, seed size. There are 5000+ strains, 40 families.
 
-Data formatted for the analysis of the NAM package is available with the following command: SoyNAM::ENV().
+Data formatted for the analysis of the NAM package is available with the following command: `SoyNAM::ENV()`.
 
 ### st4gi - Stat for genetic improvement
 
@@ -744,7 +744,11 @@ http://www.public.iastate.edu/~usda-gem/index.htm
 Data from trials at multiple locations. Yield, mst, pltht, lodging. No field plans.
 
 
-### Google datasets search engine
+### Google dataset search
+https://toolbox.google.com/datasetsearch
+
+
+### Google datasets search engine (outdated)
 https://cse.google.com/cse/publicurl?cx=002720237717066476899:v2wv26idk7m
 
 
@@ -756,7 +760,7 @@ http://vt.cropsci.illinois.edu/corn.html
 http://www.ilri.org/biometrics/CS/
 
 Case study 4 is a nice dialel example with sheep data.
-Available as agridat::ilri.sheep
+Available as `agridat::ilri.sheep`
 
 
 ### IRRI Biometrics and Breeding Informatics
@@ -774,7 +778,7 @@ Potato and Tomato genotype and phenotype data.
 
 
 ### Statistical Analysis of Agricultural Experiments with R
-See: rstats4ag.org (no http because of firewall problems).
+See: rstats4ag.org (no http included here because of firewall problems).
 
 Datasets for mixed models, ancova, dose response curves, competition.
 
@@ -796,7 +800,7 @@ Category:    Area Harvested, Yield
 Data Item:   Corn grain Acres Harvested, Yield Bu/Ac
 Domain:      Total
 Geography:   State
-See agridat::nass.corn, nass.wheat, etc.
+See `agridat::nass.corn`, nass.wheat, etc.
 
 # Other
 

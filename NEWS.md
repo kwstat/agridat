@@ -17,7 +17,7 @@
 
 ## New data
 
-hartman.tomato.uniformity, paez.coffee.uniformity, pederson.lettuce.repeated, rothamsted.oats
+hartman.tomato.uniformity, lehmann.millet.uniformity, paez.coffee.uniformity, pederson.lettuce.repeated, rothamsted.oats
 
 # agridat 1.16 - Jul 2018
 

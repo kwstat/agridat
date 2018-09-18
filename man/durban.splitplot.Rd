@@ -50,7 +50,7 @@ if(require(desplot)){
 
 
 # Durban 2003, Figure 2
-m20 <- lm(yield~gen*fung, data=dat)
+m20 <- lm(yield~gen + fung + gen:fung, data=dat)
 dat$resid <- m20$resid
 ## require(lattice)
 ## xyplot(resid~row, dat, type=c('p','smooth'), main="durban.splitplot")

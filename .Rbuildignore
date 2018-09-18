@@ -1,27 +1,26 @@
-# ----- Misc -----
-notes_agridat.md
+# .Rbuildignore
+
+# Do not put "LICENSE" below.  R needs to see that file.
 
 # ----- Git -----
-.gitignore
-LICENSE
+^.gitignore$
 
 # ----- devtools -----
-^revdep
+^revdep$
 
 # ----- R -----
-.RData
-.Rhistory
-cran-comments.md
-cran_comments.md
-README.md
-NEWS.md
-data-done
-data-raw
-data-unused
-figure
-notes.Rmd
-Rplots.pdf
-debug.log
+^\.RData$
+^\.Rhistory$
+^cran-comments\.md$
+^README\.md$
+^$NEWS\.md$
+^notes.*\.md$
+^data-done$
+^data-raw$
+^data-unused$
+^figure$
+^Rplots\.pdf$
+^debug\.log$
 
 # ----- RStudio -----
 ^.*\.Rproj$
@@ -33,5 +32,5 @@ debug.log
 ^tests/testthat/.*\.html$
 
 # ----- Travis -----
-.travis\.yml
+^.travis\.yml
 
