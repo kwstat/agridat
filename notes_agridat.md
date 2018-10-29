@@ -1,5 +1,19 @@
 % agridat notes
 
+## To do?
+
+* Add CV function?
+* Need graphic for tai.potato
+* Need graphic for yang.barley
+* Figure out best way to use jags
+* JAGS code for lee.potatoblight
+* JAGS code for theobald.barley
+* JAGS code for besag.elbatan
+* Note: R_MAX_NUM_DLLS=150
+* Rcmd check --run-dontrun before release
+  run_examples(run=FALSE, start="butron.maize")
+
+
 Do NOT use Roxygen to document data, because it will complain about data/*.txt files with error messages like:
 Error: 'uscrime' is not an exported object from 'namespace:agridat'
 
