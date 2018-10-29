@@ -8,7 +8,7 @@
   Leaves for cauliflower plants at different times in two years.
 }
 
-\format{
+\code{format}{
   A data frame with 14 observations on the following 4 variables.
   \describe{
     \item{\code{year}}{year factor}
@@ -38,6 +38,7 @@
 
 \examples{
 
+library(agridat)
 data(mead.cauliflower)
 dat <- mead.cauliflower
 
@@ -52,7 +53,8 @@ dat$pred <- predict(m1, type="response")
 require(lattice)
 if(require(latticeExtra)){
 xyplot(leaves~degdays, data=dat, groups=year, type=c('p'),
-       auto.key=list(columns=2), main="mead.cauliflower - observed (symbol) & fitted (line)",
+       auto.key=list(columns=2),
+       main="mead.cauliflower - observed (symbol) & fitted (line)",
        xlab="degree days", ylab="Number of leaves", ) +
   xyplot(pred~degdays, data=dat, groups=year, type=c('l'), col="black")
 }

@@ -59,8 +59,8 @@ xyplot(yield ~ mold|study, dat, type=c('p','r'),
        main="lehner.soybeanmold")
 # xyplot(sclerotia ~ mold|study, dat, type=c('p','r'))
 
-# Example meta-analysis. Could use metafor package to construct the forest
-# plot, but it is easier with lattice and ggplot is slow/clumsy
+# meta-analysis. Could use metafor package to construct the forest plot,
+# but latticeExtra is easy; ggplot is slow/clumsy
 if(require(latticeExtra) & require(metafor)){
   # calculate correlation & confidence for each loc
   cors <- split(dat, dat$study)
