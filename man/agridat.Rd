@@ -300,7 +300,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{pacheco.soybean}             \tab 18  \tab 11 \tab     \tab    \tab       \tab \tab ammi\cr
 \link{pederson.lettuce.repeated}   \tab     \tab    \tab 18  \tab    \tab 3     \tab \tab nlme\cr
 \link{perry.springwheat}           \tab 28  \tab 5  \tab     \tab 4  \tab       \tab gain \tab lm,lmer,asreml\cr
-\link{piepho.cocksfoot}            \tab 25  \tab    \tab     \tab 7  \tab       \tab \tab lmer\cr
+\link{piepho.cocksfoot}            \tab 25  \tab    \tab     \tab 7  \tab       \tab \tab mumm\cr
 \link{ratkowsky.onions}            \tab     \tab    \tab     \tab    \tab       \tab  \tab lm\cr
 \link{reid.grasses}                \tab 4   \tab    \tab     \tab 3  \tab 21    \tab \tab nlme SSfpl \cr
 \link{ridout.appleshoots}          \tab     \tab    \tab 30  \tab    \tab 2,4   \tab zip \tab zeroinfl\cr
