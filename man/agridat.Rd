@@ -152,6 +152,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{box.cork}                  \tab     \tab    \tab     \tab    \tab     \tab repeated \tab radial, asreml \cr
 \link{harris.wateruse}           \tab 2   \tab    \tab     \tab    \tab 2   \tab repeated \tab asreml,lme \cr
 \link{hanover.whitepine}         \tab 7*4 \tab    \tab 4   \tab    \tab     \tab heritability \tab lmer \cr
+\link{johnson.douglasfir}        \tab     \tab    \tab     \tab    \tab     \tab xy \tab \cr
 \link{lavoranti.eucalyptus}      \tab 70  \tab 7  \tab     \tab    \tab     \tab  \tab svd \cr
 \link{pearce.apple}              \tab     \tab    \tab 4   \tab    \tab 6   \tab cov \tab lm,lmer \cr
 \link{williams.trees}            \tab 37  \tab 6  \tab     \tab    \tab 2   \tab \tab \cr
