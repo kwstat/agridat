@@ -180,6 +180,13 @@ abline(0,1)
 }
 
 # ----------------------------------------------------------------------------
+# TMB = Template Model Builder could do this.  See the ar1xar1 example:
+# https://github.com/kaskr/adcomp/tree/master/TMB/inst/examples
+# This example uses dpois() in the cpp file to model a Poisson response
+# with separable AR1xAR1.  I think this example could be used for the
+# stroup.nin data, changing dpois() to something Normal.
+
+# ----------------------------------------------------------------------------
 
 \dontrun{
   # asreml3

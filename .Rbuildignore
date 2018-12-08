@@ -11,7 +11,7 @@
 # ----- R -----
 ^\.RData$
 ^\.Rhistory$
-^cran-comments\.md$
+^cran_comments\.md$
 ^README\.md$
 ^$NEWS\.md$
 ^notes.*\.md$

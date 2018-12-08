@@ -266,3 +266,14 @@ https://www.cambridge.org/core/journals/experimental-agriculture
 
 ## SAS Global Forum
 http://support.sas.com/events/sasglobalforum/previous/online.html 22-31, 2007-2013
+
+------------------------------------------------------------------------------
+
+# Uniformity trials
+
+## Checked
+Sands 1954. A Determination ot Optimum Plot Size for Estimating Mean Number of Bolls. 
+Stickler 1960. Estimates of optimum plot size from grain sorghum uniformity trial data. 
+
+## Not found
+bonazzi 1933 errors in field experimentation with ratoon cane

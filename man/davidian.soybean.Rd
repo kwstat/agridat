@@ -19,18 +19,20 @@
   }
 }
 \details{
-This experiment compared the growth patterns of two genotypes of soybean
-varieties: F=Forrest (commercial variety) and P=Plant Introduction
-number 416937 (experimental variety).
+  This experiment compared the growth patterns of two genotypes of soybean
+  varieties: F=Forrest (commercial variety) and P=Plant Introduction
+  number 416937 (experimental variety).
 
-Data were collected in 3 consecutive years.
+  Data were collected in 3 consecutive years.
 
-At the start of each growing season, 16 plots were seeded (8 for each
-variety). Data were collected approximately weekly. At each timepoint,
-six plants were randomly selected from each plot. The leaves from these
-6 plants were weighed, and average leaf weight per plant was
-reported. (We assume that the data collection is destructive and
-different plants are sampled at each date). 
+  At the start of each growing season, 16 plots were seeded (8 for each
+  variety). Data were collected approximately weekly. At each timepoint,
+  six plants were randomly selected from each plot. The leaves from these
+  6 plants were weighed, and average leaf weight per plant was
+  reported. (We assume that the data collection is destructive and
+  different plants are sampled at each date).
+
+  Note: this data is the same as the "nlme::Soybean" data.
 }
 \source{
   Marie Davidian and D. M. Giltinan, (1995).
@@ -43,7 +45,7 @@ different plants are sampled at each date).
 \references{
   Pinheiro, J. C. and Bates, D. M. (2000).
   \emph{Mixed-Effects Models in S and S-PLUS}.
-  Springer, New York. (Appendix A.27)
+  Springer, New York.
 }
 \examples{
 data(davidian.soybean)

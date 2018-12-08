@@ -8,7 +8,7 @@
   Leaves for cauliflower plants at different times in two years.
 }
 
-\code{format}{
+\format{
   A data frame with 14 observations on the following 4 variables.
   \describe{
     \item{\code{year}}{year factor}
@@ -18,7 +18,7 @@
 }
 \details{
   Numbers of leaves for 10 cauliflower plants in each of two years, and
-  temperature degree-days above 32F, divided by 100.)
+  temperature degree-days above 32F, divided by 100.
 
   The year is 1956-57 or 1957-58.
 

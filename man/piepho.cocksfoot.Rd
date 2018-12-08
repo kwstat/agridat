@@ -41,7 +41,8 @@ dat <- piepho.cocksfoot
 dat$year <- factor(dat$year)
 
 require(lattice)
-densityplot(~date|year, data=dat, main="piepho.cocksfoot - heading date") # Gaussian, not gamma distn
+# Gaussian, not gamma distn
+densityplot(~date|year, data=dat, main="piepho.cocksfoot - heading date")
 
 \dontrun{
 require(mumm) # The mumm package can reproduce Piepho's results
