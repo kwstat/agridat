@@ -289,14 +289,11 @@ Do you think interaction plots show interaction (lack of parallelism)?
 
 # 3D yield response to fertilizers
 
+Note: This image was created by manual manipulation of an `rgl` device.  The manual manipulation makes this non-reproducible in an `Rmd` file.  See the example for the `sinclair.clover` data for the code.
+
 \includegraphics[width=0.9\textwidth]{sinclair-clover}
 
-
-@sinclair1994sulphur examined clover yields as a function of sulfur and
-phosphorous fertilizer in a factorial-treatment experiment.
-@dodds1996bivariate modeled the yield
-response using a Mitzerlisch-like equation that allows interacting curvature
-in two dimensions $x$ and $y$:
+@sinclair1994sulphur examined clover yields as a function of sulfur and phosphorous fertilizer in a factorial-treatment experiment.  @dodds1996bivariate modeled the yield response using a Mitzerlisch-like equation that allows interacting curvature in two dimensions$x$ and $y$:
 $$
 yield = \alpha * \left( 1 + \beta *\left(\frac{\sigma + \tau*x}{x+1}\right)^y\right) *
 \left( 1+\delta*\left(\frac{\theta + \rho *y}{y+1}\right)^x \right)
