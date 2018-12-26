@@ -222,6 +222,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{durban.splitplot}            \tab 70  \tab    \tab 4   \tab    \tab 2     \tab xy \tab lm, gam, asreml \cr
 \link{eden.potato}                 \tab     \tab    \tab 4   \tab 3  \tab 4-12  \tab xy, rcb, latin \tab aov \cr
 \link{eden.nonnormal}              \tab     \tab    \tab 4   \tab    \tab 4     \tab \tab aov \cr
+\link{edwards.oats}                \tab 80  \tab 5  \tab 3   \tab 7  \tab       \tab \tab \cr
 \link{engelstad.nitro}             \tab     \tab 2  \tab     \tab 5  \tab 6     \tab rsm1 \tab nls quadratic plateau \cr
 \link{fan.stability}               \tab 13  \tab 10 \tab     \tab 2  \tab       \tab 3-way \tab stability \cr
 \link{federer.diagcheck}           \tab 122 \tab    \tab     \tab    \tab       \tab xy \tab lm, lmer, asreml \cr
