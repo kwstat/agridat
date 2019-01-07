@@ -1,18 +1,16 @@
-# crossa.87evt13.r
-# Time-stamp: c:/x/rpack/agridat2/crossa.87evt13.r
+# crossa.87evt13.R
 
-# Source:
-# Crossa 1997
+# Source: Crossa 1997
 # Sites Regression and Shifted Multiplicative Model Clustering
 
 # Site codes are listed in Crossa et al 1993,
 # A shifted multiplicative model cluster analysis for grouping envts
 
 # The data in the Excel file are the site means.
-# Crossa used the rep-level data (4 reps per site)
+# Crossa used the rep-level data (4 reps per site).
+# Decided not to use.
 
-library(lattice)
-library(rio)
+libs(gge,lattice,rio)
 
 setwd("c:/x/rpack/agridat/data-unused/")
 mat <- import("crossa.87evt13.csv")

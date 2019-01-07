@@ -95,7 +95,8 @@ title3d("sinclair.clover - yield","", xlab="Phosphorous/10",
         ylab="Sulfur/10", zlab="", line=3, cex=1.5)
 view3d(userMatrix=matrix(c(.7,.2,-.7,0, -.7,.2,-.6,0, 0,.9,.3,0, 0,0,0,1),ncol=4))
   # snapshot3d(file, "png")
-  rgl.close()
+
+rgl.close()
 }
 
 }

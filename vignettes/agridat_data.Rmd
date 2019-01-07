@@ -559,7 +559,13 @@ Note: Uniformity trial at three locations for mushrooms in growth houses.
 https://naldc.nal.usda.gov/naldc/download.xhtml?id=IND43968493
 
 
-# R packages
+# R packages on CRAN, Github
+
+
+### agriCensData
+https://github.com/OnofriAndreaPG/agriCensData
+
+Three datasets with censored observations for the paper "Analyzing interval-censored data in agricultural research: A review with examples and software tips".
 
 ### agriTutorial
 

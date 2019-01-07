@@ -1,12 +1,14 @@
-# sokal.pea.r
-# Time-stamp: <18 Jan 2018 19:56:58 c:/x/rpack/agridat/data-unused/sokal.pea.r>
+# sokal.pea.R
+# Time-stamp: <02 Jan 2019 09:45:21 c:/x/rpack/agridat/data-unused/sokal.pea.R>
 
-# Pea example
-# Problem: heterogeneous treatment variances
-# Data source: Sokal R.R., Rohlf F.J (1994). Biometry: The Principles and Practices of Statistics in Biological Research. Third Edition. W. H. Freeman
+# Source: Sokal R.R., Rohlf F.J (1994). Biometry: The Principles and
+# Practices of Statistics in Biological Research. Third Edition.
 # page 218
 
 # Provided by Miroslav Zoric
+
+# Pea example
+# Problem: heterogeneous treatment variances
 
 dat <- data.frame(
   sugar = c("1","1","1","1","1","1","1","1","1","1","2","2","2","2","2","2","2","2","2","2","3","3","3","3","3","3","3","3","3","3","4","4","4","4","4","4","4","4","4","4","5","5","5","5","5","5","5","5","5","5"),

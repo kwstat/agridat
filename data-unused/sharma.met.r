@@ -3,7 +3,8 @@
 
 # Source: Biometry book by Sharma.
 
-# Simulated data to illustrate Finlay-Wilkinson computation
+# Simulated data to illustrate Finlay-Wilkinson computation.
+# Since this is simulated data, it is not used in agridat.
 
 library(asreml)
 library(kw)

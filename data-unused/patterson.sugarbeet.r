@@ -1,8 +1,6 @@
-# patterson.sugarbeet.r
-# Time-stamp: c:/x/rpack/agridat2/patterson.sugarbeet.r
+# patterson.sugarbeet.R
 
-# Source:
-# Book: Statistical Methods for Plant Variety Evaluation, table 9.13
+# Source: Statistical Methods for Plant Variety Evaluation, table 9.13
 # Chapter: Analysis of series of variety trials
 
 # I could match _some_ of the adjusted means in the book, but

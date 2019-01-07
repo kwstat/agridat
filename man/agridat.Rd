@@ -106,6 +106,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{wiedemann.safflower.uniformity}     \tab 54 x 33 \tab xy \tab smith \cr
 \link{williams.barley.uniformity}         \tab 48 x 15 \tab xy \tab loess \cr
 \link{williams.cotton.uniformity}         \tab 24 x 12 \tab xy \tab loess \cr
+\link{wyatt.multi.uniformity}             \tab 43 x 3 \tab xy \tab \cr
 }
 
 % ------------------------------------------------------------------------------

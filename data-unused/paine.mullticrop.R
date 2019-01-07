@@ -1,11 +1,15 @@
 # paine.multicrop.R
 
-Source:
-P. Paine (1940).
-An examination of field 3 with a view to determining its fertility trend by a study of a sequence of crop yields and soil conditions from a number of contiguous and fixed plots, Seson 1939-1940. Dissertation. The University of the West Indies.
-http://hdl.handle.net/2139/43045
+# Source: P. Paine (1940).
+# An examination of field 3 with a view to determining its fertility trend
+# by a study of a sequence of crop yields and soil conditions from a number
+# of contiguous and fixed plots, Seson 1939-1940.
+# Dissertation. The University of the West Indies.
+# http://hdl.handle.net/2139/43045
 
-Decided not to use this data because the heatmap of Woolly Pyrol 1 yields that I createed does not quite match the heatmap given in Appendix I.  Especially the leftmost plots in the 4th and 5th row.
+# Decided not to use this data because the heatmap of Woolly Pyrol 1 yields
+# that I createed does not quite match the heatmap given in Appendix I.
+# Especially the leftmost plots in the 4th and 5th row.
 
 Experiments on Field III (formerly St. Augustine Estates), Trinidad.
 Plot size 33 feet by 33 feet = 1/40 acre. Discard areas between plots running North and south are 4 feet wide, with a central discard area of 10 feet. Discards running East and West are 7 feet with one in the middle of 14 feet. Planted Jun 1939. Harvested Aug 1939 on 3 days.

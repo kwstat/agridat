@@ -1,16 +1,13 @@
 # temesgeri.R
-# Time-stamp: <18 Jan 2018 19:58:22 c:/x/rpack/agridat/data-unused/temesgeri.r>
+# Time-stamp: <02 Jan 2019 09:41:10 c:/x/rpack/agridat/data-unused/temesgeri.stability.R>
 
-# Data from:
-# Temesgeri at al 2015.
+# Source: Temesgeri at al 2015.
 # Yield stability and relationships among stability
 # parameters in faba bean (Vicia faba L.) genotypes
 
 # These are the means of four reps.  The rep-level data would
 # have been needed to compute the stability statistics like
-# Tai's alpha/lambda.
-
-# Decided not to use.
+# Tai's alpha/lambda. Decided not to use.
 
 library(asreml)
 library(kw)

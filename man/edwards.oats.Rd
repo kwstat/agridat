@@ -58,7 +58,7 @@ if(require(reshape2)){
                      main="edwards.oats", aspect="m")
 }
 
-dontrun{
+\dontrun{
 # Calculate BLUEs of gen/env effects
 m1 <- lm(yield ~ gen+ eid, dat)
 

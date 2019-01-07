@@ -1,11 +1,12 @@
-% agridat notes
+1% agridat notes
 
-## To do?
+## To do
 
 * Add CV function?
 * Need graphic for tai.potato
 * Need graphic for yang.barley
 * Figure out best way to use jags
+* JAGS code for edwards.oats
 * JAGS code for lee.potatoblight
 * JAGS code for theobald.barley
 * JAGS code for besag.elbatan
@@ -26,11 +27,6 @@ https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-018-3508-1    http
     
 
 
----> Not found 1.8.2018
-Lander, P. E. et al. (1938).
-"Soil Uniformity Trials in the Punjab I."
-Ind. J. Agr. Sci. 8:271-307.
-
 
 Meta analysis example
 https://www.nature.com/articles/s41598-018-21284-2#Sec18
@@ -40,7 +36,7 @@ http://www.scielo.br/scielo.php?script=sci_arttext&pid=S1415-47571998000400024
 
 # ----------------------------------------------------------------------------
 
-This document lists notes about data sources searched and additional sources of agricultural data.  Although this is an .Rmd file, the formatting is best viewed in plain text mode.
+This document lists notes about data sources searched and additional sources of agricultural data.  Although this is an .md file, the formatting is best viewed in plain text mode.
 
 ---
 
@@ -141,7 +137,8 @@ Data: http://www.g3journal.org/content/suppl/2012/12/05/2.12.1595.DC1 All conten
 
 
 # Other
-Many interesting pages.  Non-open license...?  Lecture and data http://articles.extension.org/plant_breeding_genomics http://articles.extension.org/pages/68660/plant-breeding-and-genomics-learning-lessons http://articles.extension.org/pages/60430/introduction-to-the-augmented-experimental-design-webinar http://articles.extension.org/pages/61006/estimating-heritability-and-blups-for-traits-using-tomato-phenotypic-data <---
+Many interesting pages.  Non-open license...?  
+Lecture and data http://articles.extension.org/plant_breeding_genomics http://articles.extension.org/pages/68660/plant-breeding-and-genomics-learning-lessons http://articles.extension.org/pages/60430/introduction-to-the-augmented-experimental-design-webinar http://articles.extension.org/pages/61006/estimating-heritability-and-blups-for-traits-using-tomato-phenotypic-data <---
 http://articles.extension.org/pages/68019/genomic-relationships-and-gblup
 http://pbgworks.org/node/1440
 

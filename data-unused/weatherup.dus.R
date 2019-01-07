@@ -1,7 +1,6 @@
 # weatherup.R
 
-# Source:
-# Weatherup 1980, Statistical procedures for distinctness,
+# Source: Weatherup 1980, Statistical procedures for distinctness,
 # uniformtiy and stability variety trials.
 
 # This is the variety-means data.  Really need plant-level data to

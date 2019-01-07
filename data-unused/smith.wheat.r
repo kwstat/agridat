@@ -1,31 +1,28 @@
-# smith.wheat.r
+# smith.wheat.R
+
+# Source: Fairfield Smith (1938). An Empirical Law Describing
+# Hetrogeneity in the Yields of Agricultural Crops.
+# Journal of Agricultural Science (1938).
+# Data below are from 
+# http://www.stat.uchicago.edu/~pmcc/reml/
 
 # This uniformity trial is quite small...15 feet by 36 feet!
 # Although Smith's paper is part of the core literature of uniformity
 # trials, because the field is so small and a plot of the field is difficult
 # to match to Smith's paper, this data is not used in the agridat package.
 
-# The code/data below are from 
-# http://www.stat.uchicago.edu/~pmcc/reml/
-
-# Fairfield Smith (1938) wheat yields on 1080 plots
-# Journal of Agricultural Science (1938): Data unpublished
-#
-# According to FS, copies of the data were lodged at the
-# Museum of Natural History, London
-# and in the library of the CSIRO Dept of Botany at Canberra in 1938.
-# Attempts were made in 2003 to retrieve these, but the library staff
-# were unable to trace either copy.
-# Fortunately the experiment was included in Cochran's (1937, JRSS) catalogue
-# of uniformity trials and the data were kept in the library at Rothamsted.
-# This electronic version was obtained from the Rothamsted Library in November 2003.
-# The Rothamsted electronic copy was made in Fall 2003, from the original,
-# which was in such a fragile state that it was deemed unsuitabe for photocopying.
-# It is not identical to the data analyzed by FS:
-# the summary statistics published by FS suggest a few typos.
-#   Peter McCullagh
-#   David Clifford
-#   Chicago, December 2003
+# Peter McCullagh & David Clifford wrote:
+# According to FS, copies of the data were lodged at the Museum of Natural
+# History, London and in the library of the CSIRO Dept of Botany at Canberra
+# in 1938.  Attempts were made in 2003 to retrieve these, but the library
+# staff were unable to trace either copy.  Fortunately the experiment was
+# included in Cochran's (1937, JRSS) catalogue of uniformity trials and the
+# data were kept in the library at Rothamsted.  This electronic version was
+# obtained from the Rothamsted Library in November 2003.  The Rothamsted
+# electronic copy was made in Fall 2003, from the original, which was in such
+# a fragile state that it was deemed unsuitabe for photocopying.  It is not
+# identical to the data analyzed by FS: the summary statistics published by FS
+# suggest a few typos.
 
 metre <- 1.0
 inch <- 2.54/100 * metre

@@ -42,6 +42,7 @@ if(require(reshape2)){
                      main="edwards.oats", aspect="m")
 }
 
+# Calculate BLUEs of gen/env effects
 m1 <- lm(yield ~ gen+ eid, dat)
 
 gg <- coef(m1)[2:80]
@@ -54,12 +55,18 @@ names(ee) <- str_replace(names(ee), "eid", "")
 ee <- c(0,ee)
 names(ee)[1] <- "1"
 
+# Subtract gen/env coefs from yield values
 dat2 <- dat
 dat2$gencoef <- lookup(dat2$gen, names(gg), gg)
 dat2$envcoef <- lookup(dat2$eid, names(ee), ee)
 dat2 <- mutate(dat2, y = yield - gencoef - envcoef)
 
-dat2 %>% group_by(gen, eid) %>% summarize(vv = var(y)) %>% dotplot(vv ~ eid, dat)
+# Calculate variance for each gen*env. Shape of the graph is vaguely similar to
+# Fig 2 of Edwards et al (2006), who used a Bayesian model
+library(dplyr)
+dat2 <- group_by(dat2, gen, eid)
+dat2sum <- summarize(dat2, stddev = sd(y))
+bwplot(stddev ~ eid, dat2sum)
 
 # ----------------------------------------------------------------------------
 
