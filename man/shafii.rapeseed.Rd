@@ -41,7 +41,7 @@
   Electronic version from:
   http://www.uiweb.uidaho.edu/ag/statprog/ammi/yld.data
 
-  Used with permission of Benjamin Price.
+  Used with permission of Bill Price.
 }
 \references{
   None.
@@ -94,4 +94,3 @@ biplot(prcomp(dmat), main="shafii.rapeseed - AMMI biplot")
 trellis.par.set(op) # Unset graphics changes
 
 }
-
