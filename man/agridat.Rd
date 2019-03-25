@@ -166,7 +166,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \tabular{llllllll}{
 name                               \tab gen \tab loc\tab reps\tab years \tab trt \tab other \tab model \cr
 
-\link{acorsi.grayleafspot}         \tab 36  \tab 9 \tab  2   \tab 5  \tab       \tab nonnormal \tab gnm,ammi \cr
+\link{acorsi.grayleafspot}         \tab 36  \tab 9  \tab  2  \tab 5  \tab       \tab nonnormal \tab gnm,ammi \cr
 \link{adugna.sorghum}              \tab 28  \tab 13 \tab     \tab 5  \tab       \tab \tab \cr
 \link{aastveit.barley}             \tab 15  \tab    \tab     \tab 9  \tab       \tab yr*gen~yr*trt\tab pls \cr
 \link{allcroft.lodging}            \tab 32  \tab 7  \tab     \tab    \tab       \tab percent \tab tobit \cr
@@ -314,6 +314,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{salmon.bunt}                 \tab 10  \tab    \tab 2   \tab    \tab 20    \tab \tab betareg \cr
 \link{senshu.rice}                 \tab     \tab 40 \tab     \tab    \tab       \tab \tab lm,Fieller \cr
 \link{shafii.rapeseed}             \tab 6   \tab 14 \tab 3   \tab 3  \tab       \tab \tab biplot \cr
+\link{shaw.oats}                   \tab 13  \tab 2  \tab 5   \tab 3  \tab       \tab \tab aov \cr
 \link{silva.cotton}                \tab     \tab    \tab 5   \tab    \tab 5     \tab 5 traits \tab glm,poisson \cr
 \link{sinclair.clover}             \tab     \tab    \tab     \tab    \tab 5,5   \tab rsm2,mitzerlich \tab nls,rgl \cr
 \link{snedecor.asparagus}          \tab     \tab    \tab 4   \tab 4  \tab 4     \tab \tab split-plot, antedependence \cr
@@ -335,7 +336,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{vargas.wheat1}               \tab 7   \tab    \tab     \tab 6  \tab       \tab gen*yr~gen*trt, yr*gen~yr*cov\tab pls \cr
 \link{vargas.wheat2}               \tab 8   \tab 7  \tab     \tab    \tab       \tab env*gen~env*cov \tab pls \cr
 \link{vargas.txe}                  \tab     \tab    \tab     \tab 10 \tab 24    \tab yr*trt~yr*cov \tab pls \cr
-\link{verbyla.lupin}               \tab 9   \tab 8  \tab 2-3 \tab 2  \tab       \tab rsm1, xy, density\tab asreml\cr
+\link{verbyla.lupin}               \tab 9   \tab 8  \tab 2-3 \tab 2  \tab 7     \tab rsm1, xy, density\tab asreml\cr
 \link{vold.longterm}               \tab     \tab    \tab     \tab 19 \tab 4     \tab rsm1 \tab nls,nlme \cr
 \link{vsn.lupin3}                  \tab 336 \tab 3  \tab     \tab    \tab       \tab xy \tab asreml\cr
 \link{wedderburn.barley}           \tab 10  \tab 9  \tab     \tab    \tab       \tab percent \tab glm/gnm \cr
@@ -385,55 +386,49 @@ name                       \tab model \cr
 \link{waynick.soil}        \tab spatial, nitro/carbon \cr
 }
 
+Summaries:
+
+Multi-environment trials with multi-genotype,loc,rep,year:
+\tabular{llllllll}{
+\link{brandle.rape}                \tab 5   \tab 9  \tab 4   \tab 3  \tab       \tab \tab lmer \cr
+\link{edwards.oats}                \tab 80  \tab 5  \tab 3   \tab 7  \tab       \tab \tab \cr
+\link{gauch.soy}                   \tab 7   \tab 7  \tab 4   \tab 12 \tab       \tab \tab ammi \cr
+\link{omer.sorghum}                \tab 18  \tab 2  \tab 4   \tab 3  \tab       \tab \tab jags\cr
+\link{shafii.rapeseed}             \tab 6   \tab 14 \tab 3   \tab 3  \tab       \tab \tab biplot \cr
+\link{shaw.oats}                   \tab 13  \tab 2  \tab 5   \tab 3  \tab       \tab \tab aov \cr
+\link{verbyla.lupin}               \tab 9   \tab 8  \tab 2-3 \tab 2  \tab 7     \tab rsm1, xy, density\tab asreml\cr
+}
+
 \bold{Comments of the package purpose}
 
 Box (1957) said,
 "I had hoped that we had seen the end of the obscene tribal habit practiced by statisticians of continually exhuming and massaging dead data sets after their purpose in life has long since been forgotten and there was no possibility of doing anything useful as a result of this treatment."
 
-Massaging these dead data sets will not lead to any of the
-genetics being released for commercial use.
+Massaging these dead data sets will not lead to any of the genetics being released for commercial use.
 The value of this package is:
 1. Validating published analyses.
 2. Providing data for testing new analysis methods.
-3. Illustrating (and validating) the use of R.
+3. Illustrating (and validating) the use of R packages.
 
 White and van Evert (2008) present some guidelines for publication of data.
 
-Some of the examples use the \code{asreml} package since it is the
-_only_ R tool for fitting mixed models with complex variance structures
-to large datasets, and the best option for modelling AR1xAR1 residual
-variance structures.  Commercial use of \code{asreml} requires a
-license: http://www.vsni.co.uk/downloads/asreml.
+Some of the examples use the \code{asreml} package since it is the _only_ R tool for fitting mixed models with complex variance structures to large datasets, and the best option for modelling AR1xAR1 residual variance structures.  Commercial use of \code{asreml} requires a license: http://www.vsni.co.uk/downloads/asreml.
 
 \bold{Comments on the package structure}
 
-A large portion of these datasets appear in electronic form here for the
-first time.
+A large portion of these datasets appear in electronic form here for the first time.
 
-A tremendous amount of effort has been given to the curating process of
-identifying datasets, extracting the data from source materials,
-checking data values, and documenting the data.  In effect, to make the
-data somewhat 'computable' (Wolfram 2017).
+A tremendous amount of effort has been given to the curating process of identifying datasets, extracting the data from source materials, checking data values, and documenting the data.  In effect, to make the data somewhat 'computable' (Wolfram 2017).
 
-The original sources for these data use several different words to refer
-to genotypes including \emph{accession}, \emph{breed}, \emph{cultivar},
-\emph{genotype}, \emph{hybrid}, \emph{line}, \emph{progeny},
-\emph{stock}, \emph{type}, and \emph{variety}.  For consistency, these
-datasets mostly use \code{gen} (genotype).
+The original sources for these data use several different words to refer to genotypes including \emph{accession}, \emph{breed}, \emph{cultivar}, \emph{genotype}, \emph{hybrid}, \emph{line}, \emph{progeny}, \emph{stock}, \emph{type}, and \emph{variety}.  For consistency, these datasets mostly use \code{gen} (genotype).
 
-Also for consistency \code{row} and \code{col} are usually used for the
-field coordinates.
+Also for consistency \code{row} and \code{col} are usually used for the field coordinates.
 
-In dataframes, 'block', 'rep', and similar terms are almost always coded
-like B1, B2, B3 instead of 1, 2, 3.  This causes R to treat the data as
-a factor instead of a numeric covariate (which is a good thing).
+In dataframes, 'block', 'rep', and similar terms are almost always coded like B1, B2, B3 instead of 1, 2, 3.  This causes R to treat the data as a factor instead of a numeric covariate (which is a good thing).
 
-Almost all of the data are presented as 'tidy' dataframes with
-'observations' in rows and 'variables' in columns.
+Almost all of the data are presented as 'tidy' dataframes with 'observations' in rows and 'variables' in columns.
 
-Although using \code{data()} is not necessary to access the data files,
-the example sections do include the use of \code{data()} because
-\code{devtools::run_examples()} needs it.
+Although using \code{data()} is not necessary to access the data files, the example sections do include the use of \code{data()} because \code{devtools::run_examples()} needs it.
 
 Please report any bugs to the package author or at the package github site.
 
@@ -443,8 +438,7 @@ Please report any bugs to the package author or at the package github site.
 
   Kevin Wright
 
-  The author is grateful to the many people who granted permission to
-  include their data in this package.
+  The author is grateful to the many people who granted permission to include their data in this package.
   
 }
 
