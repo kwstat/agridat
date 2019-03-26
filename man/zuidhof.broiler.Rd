@@ -2,10 +2,10 @@
 \alias{zuidhof.broiler}
 \docType{data}
 \title{
-  Daily weight, feed, egg measurements for a broiler
+  Daily weight, feed, egg measurements for a broiler chicken
 }
 \description{
-  Daily weight, feed, egg measurements for a broiler
+  Daily weight, feed, egg measurements for a broiler chicken
 }
 
 \format{

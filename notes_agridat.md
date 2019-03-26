@@ -1,7 +1,8 @@
-1% agridat notes
+% agridat notes
 
 ## To do
 
+* Interactive datatable https://github.com/rstudio/DT
 * Add CV function?
 * Need graphic for tai.potato
 * Need graphic for yang.barley
@@ -119,8 +120,6 @@ Stability folder
 Fan 2007 - Yield stability of maize GxE 
 Flores 1998 Flores 1998 - bean & pea yields, Flores 2012, Flores 2013
 
-Jode Edwards Data analyzed in this report were obtained from the Iowa State University Oat Variety Trial for the years 1997 to 2003.
-
 
 ## Malosetti 2013
 F2 data.
@@ -137,7 +136,7 @@ Data: http://www.g3journal.org/content/suppl/2012/12/05/2.12.1595.DC1 All conten
 
 
 # Other
-Many interesting pages.  Non-open license...?  
+Many interesting pages.  Non-open license...?
 Lecture and data http://articles.extension.org/plant_breeding_genomics http://articles.extension.org/pages/68660/plant-breeding-and-genomics-learning-lessons http://articles.extension.org/pages/60430/introduction-to-the-augmented-experimental-design-webinar http://articles.extension.org/pages/61006/estimating-heritability-and-blups-for-traits-using-tomato-phenotypic-data <---
 http://articles.extension.org/pages/68019/genomic-relationships-and-gblup
 http://pbgworks.org/node/1440
@@ -170,10 +169,31 @@ http://www.sciencedirect.com/science/journal/03784290/157 Vol 1-40
 ## IASRI newsletters
 http://www.iasri.res.in/NewsLetters/nl.HTM
 
+## Indian Journal of Agricultural Science
+```
+Vol 1. 309
+Vol 2. 53 694
+Vol 3. 544 5 varieties, 2 blocks, 4 reps/block
+Vol 4. 
+Vol 5. 579. Multi-year uniformity trial. agridat::bose.multi.uniformity
+Vol 6. Pg 85 has 4-way factorial with whole-plot date, but non-contiguous sub-plots.
+Vol 9.
+Vol 10.
+Vol 11. 
+Vol 12. 240. Wheat uniformity trial. agridat::iyer.wheat.uniformity
+Vol 14. 315 
+Vol 16.
+Vol 17.
+Vol 19.
+```
 
 ## JABES
 Vol 6.
 
+
+## Journal of the American Society of Agronomy
+
+Vol 23.
 
 ## Journal of the Indian Society of Agricultural Statistics
 http://www.isas.org.in/jsp/onlinejournal.jsp Skimmed: Vol 50-56

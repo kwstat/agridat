@@ -186,7 +186,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{blackman.wheat}              \tab 12  \tab 7  \tab     \tab    \tab 2     \tab \tab biplot \cr
 \link{bond.diallel}                \tab 6*6 \tab    \tab     \tab    \tab 9     \tab diallel \tab \cr
 \link{bridges.cucumber}            \tab 4   \tab 2  \tab 4   \tab    \tab       \tab xy, latin, hetero\tab asreml \cr
-\link{brandle.rape}                \tab 5   \tab 9  \tab 4   \tab 3  \tab       \tab \tab lmer \cr
+\link{brandle.rape}                \tab 5   \tab 9  \tab     \tab 3  \tab       \tab \tab lmer \cr
 \link{burgueno.alpha}              \tab 15  \tab    \tab 3   \tab    \tab       \tab xy, alpha \tab asreml,lmer \cr
 \link{burgueno.rowcol}             \tab 64  \tab    \tab 2   \tab    \tab       \tab xy, row-col \tab asreml,lmer \cr
 \link{burgueno.unreplicated}       \tab 280 \tab    \tab     \tab    \tab       \tab xy \tab asreml \cr
@@ -298,7 +298,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{mead.turnip}                 \tab     \tab    \tab 3   \tab    \tab 5,4   \tab \tab aov \cr
 \link{minnesota.barley.weather}    \tab     \tab 6  \tab     \tab 10 \tab       \tab \tab \cr
 \link{minnesota.barley.yield}      \tab 22  \tab 6  \tab     \tab 10 \tab       \tab \tab dotplot\cr
-\link{omer.sorghum}                \tab 18  \tab 2  \tab 4   \tab 3  \tab       \tab \tab jags\cr
+\link{omer.sorghum}                \tab 18  \tab 6  \tab 4   \tab    \tab       \tab \tab jags\cr
 \link{onofri.winterwheat}          \tab 8   \tab    \tab 3   \tab 7  \tab       \tab \tab ammi\cr
 \link{ortiz.tomato}                \tab 15  \tab 18 \tab     \tab    \tab 16     \tab env*gen~env*cov \tab pls \cr
 \link{pacheco.soybean}             \tab 18  \tab 11 \tab     \tab    \tab       \tab \tab ammi\cr
@@ -336,7 +336,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{vargas.wheat1}               \tab 7   \tab    \tab     \tab 6  \tab       \tab gen*yr~gen*trt, yr*gen~yr*cov\tab pls \cr
 \link{vargas.wheat2}               \tab 8   \tab 7  \tab     \tab    \tab       \tab env*gen~env*cov \tab pls \cr
 \link{vargas.txe}                  \tab     \tab    \tab     \tab 10 \tab 24    \tab yr*trt~yr*cov \tab pls \cr
-\link{verbyla.lupin}               \tab 9   \tab 8  \tab 2-3 \tab 2  \tab 7     \tab rsm1, xy, density\tab asreml\cr
+\link{verbyla.lupin}               \tab 9   \tab 8  \tab 3   \tab 2  \tab 7     \tab rsm1, xy, density\tab asreml\cr
 \link{vold.longterm}               \tab     \tab    \tab     \tab 19 \tab 4     \tab rsm1 \tab nls,nlme \cr
 \link{vsn.lupin3}                  \tab 336 \tab 3  \tab     \tab    \tab       \tab xy \tab asreml\cr
 \link{wedderburn.barley}           \tab 10  \tab 9  \tab     \tab    \tab       \tab percent \tab glm/gnm \cr
@@ -390,13 +390,12 @@ Summaries:
 
 Multi-environment trials with multi-genotype,loc,rep,year:
 \tabular{llllllll}{
-\link{brandle.rape}                \tab 5   \tab 9  \tab 4   \tab 3  \tab       \tab \tab lmer \cr
+name                               \tab gen \tab loc\tab reps\tab years \tab trt \tab other \tab model \cr
 \link{edwards.oats}                \tab 80  \tab 5  \tab 3   \tab 7  \tab       \tab \tab \cr
 \link{gauch.soy}                   \tab 7   \tab 7  \tab 4   \tab 12 \tab       \tab \tab ammi \cr
-\link{omer.sorghum}                \tab 18  \tab 2  \tab 4   \tab 3  \tab       \tab \tab jags\cr
 \link{shafii.rapeseed}             \tab 6   \tab 14 \tab 3   \tab 3  \tab       \tab \tab biplot \cr
 \link{shaw.oats}                   \tab 13  \tab 2  \tab 5   \tab 3  \tab       \tab \tab aov \cr
-\link{verbyla.lupin}               \tab 9   \tab 8  \tab 2-3 \tab 2  \tab 7     \tab rsm1, xy, density\tab asreml\cr
+\link{verbyla.lupin}               \tab 9   \tab 8  \tab 3   \tab 2  \tab 7     \tab rsm1, xy, density\tab asreml\cr
 }
 
 \bold{Comments of the package purpose}

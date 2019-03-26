@@ -14,15 +14,10 @@ vignette: |
 
 # Books
 
-### Die Landwirtschaftlichen Versuchs-Stations
+### _Die Landwirtschaftlichen Versuchs-Stations_
 http://catalog.hathitrust.org/Record/000549685
 
 Full view of research station reports 1859-1920. In German.
-
-
-### S. J. Welham et al. (2015). _Statistical Methods In Biology_.
-
-The online-supplements contain many small datasets for the examples and exercises.
 
 
 ### D. F. Andrews and A. M. Herzberg (1985). _Data_. 
@@ -65,7 +60,7 @@ Pig weight data is found in `SemiPar::pig.weights`
 
 Sitka spruce data is found in: `geepack::spruce`
 
-Milk protein data is found in: `nlme::Milk`.  A thorough description of this data can be found in Molenberghs & Kenward, _Missing Data in Clinical Studies_, p. 377.  
+Milk protein data is found in: `nlme::Milk`.  A thorough description of this data can be found in Molenberghs & Kenward, _Missing Data in Clinical Studies_, p. 377.
 Original source: A. P. Verbyla and B. R. Cullis, Modelling in Repeated Measures Experiments. http://www.jstor.org/stable/2347384 
 
 
@@ -273,13 +268,31 @@ https://archive.org/details/statisticaltechn031729mbp
 https://archive.org/details/in.ernet.dli.2015.176662
 
 ```
-95 variety RCB, 5 gen, 25 rep, diagonal layout
+5 - Length of ear head and number of grains per ear, 400 ears.
+95 - variety RCB, 5 gen, 25 rep, diagonal layout
+107 - Latin square, 8 entries.
+117 - Factorial: 8 blocks, 3 varieties, 5 treatments, 2 infections
+126 - Multi-environment trial, 3 year, 13 varieties, 2 loc, 5 blocks  agridat::shaw.oats
+
 ```
 
 
 ### G. W. Snedecor & W. G. Cochran. _Statistical Methods_.
 
-Not yet reviewed.
+```
+168 regression
+352 3x3 factorial, 4 blocks
+359 2x2x2 factorial, 8 blocks, daily pig gain
+362 2x3x4 factorial, 2 blocks, daily pig gain
+371 3x4 split-plot, 3 var, 4 date, 6 blocks
+374 2x3x3 split-split-plot, irrig, stand, fert, block
+378 4x4 split-plot, 4 block, 4 year, 4 cuttings asparagus
+384 regression with 2 predictors
+428 covariates, 6 varieties, 4 blocks, yield vs stand
+440 pig gain vs initial weight, 4 treatments, 40 pigs
+454 protein vs yield for wheat, 91 plots, quadratic regression
+
+```
 
 ### Robert G. D. Steel & James Hiram Torrie. _Principles and Procedures of Statistics_, 2nd ed.
 
@@ -298,6 +311,11 @@ Not yet reviewed.
 ### Oliver Schabenberger and Francis J. Pierce. _Contemporary Statistical Models for the Plant and Soil Sciences_.
 
 Many datasets
+
+
+### S. J. Welham et al. (2015). _Statistical Methods In Biology_.
+
+The online-supplements contain many small datasets for the examples and exercises.
 
 
 ### Pesticides in the Nation's Streams and Ground Water, 1992-2001
@@ -403,7 +421,7 @@ Vol 35/503. North Central Regional Potassium Studies with Corn.
 
 # Papers
 
-**Alencar Xavier, Diego Jarquin, Reka Howard, Vishnu Ramasubramanian, James E. Specht, George L. Graef, William D. Beavis, Brian W. Diers, Qijian Song, Perry B. Cregan, Randall Nelson, Rouf Mian, J. Grover Shannon, Leah McHale, Dechun Wang, William Schapaugh, Aaron J. Lorenz, Shizhong Xu, William M. Muir and Katy M. Rainey**.
+**Xavier, Alencar et al.**.
 Genome-Wide Analysis of Grain Yield Stability and Environmental Interactions in a Multiparental Soybean Population,
 http://www.g3journal.org/content/8/2/519
 
@@ -414,7 +432,7 @@ A multi-environment trial analysis shows slight grain yield improvement in Texas
 Field Crops Research, 149, Pages 167-176.
 http://doi.org/10.1016/j.fcr.2013.04.017
 
-Note: This is a large (14500 records), multi-year, multi-location, 10-trait data. Sent a note encouraging the authors to formally publish the data.
+This is a large (14500 records), multi-year, multi-location, 10-trait data. Sent a note encouraging the authors to formally publish the data.
 Source: http://maizeandgenetics.tamu.edu/CTP/CTP.html
 
 
@@ -423,14 +441,14 @@ A Common Dataset for Genomic Analysis of Livestock Populations.
 G3, 2, 429-435.
 http://doi.org/10.1534/g3.111.001453
 
-Note: The supplemental information for this paper contains data for 3534 pigs with high-density genotypes (50000 SNPs), and a pedigree including parents and grandparents of the animals.
+The supplemental information for this paper contains data for 3534 pigs with high-density genotypes (50000 SNPs), and a pedigree including parents and grandparents of the animals.
 
 
 **Daillant-Spinnler** (1996). Relationships between perceived sensory properties and major preference directions of 12 variaties of apples from the southern hemisphere.
 Food Quality and Preference, 7(2), 113-126.
 http://dx.doi.org/10.1016/0950-3293(95)00043-7
 
-Note: Data in `ClustVarLV::apples_sh$pref` and `ClustVarLV::apples_sh$senso`
+The data are in `ClustVarLV::apples_sh$pref` and `ClustVarLV::apples_sh$senso`
 12 apple varieties, 43 traits, 60 consumers
 
 
@@ -441,14 +459,31 @@ Jour Agric Sci, 22, p. 617.
 **Hedrick** (1920).
 Twenty years of fertilizers in an apple orchard.
 https://books.google.com/books?hl=en&lr=&id=SqlJAAAAMAAJ&oi=fnd&pg=PA446
-Note: No significant differences between fertilizer treatments.
+
+The authors found no significant differences between fertilizer treatments.
 
 
 **Kayad et al**. (2016).
 Assessing the Spatial Variability of Alfalfa Yield Using Satellite Imagery and Ground-Based Data. 
 \emph{PLOS One}.
 https://doi.org/10.1371/journal.pone.0157166
+
 Supporting information contains yield monitor data for 4 hay harvests on a center-pivot field.
+
+
+**Meehan & Gratton** (2016).
+A Landscape View of Agricultural Insecticide Use across the Conterminous US from 1997 through 2012.
+PLOS ONE, https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0166724
+
+Supplemental material contains county-level data for each of 4 years. Complete R-INLA code for analysis.
+
+
+**Monteverde et al**
+Integrating Molecular Markers and Environmental Covariates To Interpret Genotype by Environment Interaction in Rice (Oryza sativa L.) Grown in Subtropical Areas
+https://doi.org/10.1534/g3.119.400064 
+https://gsajournals.figshare.com/articles/Supplemental_Material_for_Monteverde_et_al_2019/7685636
+
+Supplemental information contains phenotypic data and markers and environmental covariates for PLS analysis.
 
 
 **Roger W. Hexem, Earl O.Heady, Metin Caglar** (1974)
@@ -463,14 +498,14 @@ The technical report provides data from experiments on corn, wheat, cotton & sug
 A Method for Comparing Profiles of Repeated Measurements.
 Applied Statistics, 36, 296-308.
 
-Note: An ante-dependence model is fit to repeated measures of cattle weight.  Data available here: https://faculty.biostat.ucla.edu/robweiss/filedepot_download/87/495
+An ante-dependence model is fit to repeated measures of cattle weight.  Data available here: https://faculty.biostat.ucla.edu/robweiss/filedepot_download/87/495
 
 
 **Klumper & Qaim** (2015).
 A Meta-Analysis of the Impacts of Genetically Modified Crops.
 http://doi.org/10.1371/journal.pone.0111629
 
-Note: Nice meta-analysis dataset.  Published data only include differences, not standard-errors.
+Nice meta-analysis dataset.  Published data only include differences, not standard-errors.
 See the comments on PLOS article for some peculiarities in the data.
 
 
@@ -478,7 +513,7 @@ See the comments on PLOS article for some peculiarities in the data.
 *Increased Genomic Prediction Accuracy in Wheat Breeding Through Spatial Adjustment of Field Trial Data*.  G3, 3, 2105-2114.
 http://doi.org/10.1534/g3.113.007807
 
-Note: Has a large haplotype data (83 MB) and two-year phenotype data with multiple traits.
+Has a large haplotype dataset (83 MB) and two-year phenotype data with multiple traits.
 
 
 **Payne, Roger** (2015). 
@@ -486,7 +521,7 @@ The Design and Analysis of Long-Term Rotation Experiments.
 Agronomy Journal, 107, 772-784.
 http://doi.org/10.2134/agronj2012.0411
 
-Note: The data and R code appeared in the paper. Free access, but closed copyright.
+The data and R code appeared in the paper. Free access, but closed copyright.
 
 
 **Snedecor, George and E. S. Haber** (1946).
@@ -502,26 +537,34 @@ Genome Properties and Prospects of Genomic Prediction of Hybrid Performance in a
 August 1, 2014 vol. 197 no. 4 1343-1355.
 http://doi.org/10.1534/genetics.114.165860
 
-Note: Genotype and phenotype data appears in the sommer package.
+Genotype and phenotype data appears in the sommer package.
 
 
 **Tian, Ting** (2015).
 Application of Multiple Imputation for Missing Values in Three-Way Three-Mode Multi-Environment Trial Data.
 http://doi.org/10.1371/journal.pone.0144370
 
-Note: Uses `agridat::australia.soybean` data and one other real dataset with 4 traits that are not identified.  All data and code available.
+Uses `agridat::australia.soybean` data and one other real dataset with 4 traits that are not identified.  All data and code available.
 
 
 **Randall J. Wisser et al.** (2011). 
 Multivariate analysis of maize disease resistances suggests a pleiotropic genetic basis and implicates a GST gene. PNAS.  http://doi.org/10.1073/pnas.1011739108
 
-Note: Supplement contains genotype data, but no phenotype data.
+The supplement contains genotype data, but no phenotype data.
+
+
+**Rife et al.** (2018)
+Genomic analysis and prediction within a US public collaborative winter wheat regional testing nursery.
+https://doi.org/10.5061/dryad.q968v83
+
+Large phenotypic dataset with 691 wheat lines, 33 years, 670 environments, 3-4 reps, 120000 datapoints. No genotypic data is included.
+
 
 
 **Yan, Weikei** (2002).
 Singular value partitioning in biplots.  Agron Journal.
 
-Note: Winter wheat, 31 gen in 8 loc. This data is different from Yan's earlier papers. Unfortunately, the data given in the paper are missing two rows. 
+Winter wheat, 31 gen in 8 loc. This data is different from Yan's earlier papers. Unfortunately, the data given in the paper are missing two rows. 
 
 
 # Papers - Uniformity trials
@@ -731,7 +774,6 @@ https://www.ideals.illinois.edu/handle/2142/3528
 Data File : Raw data from each ear analyzed each year of the Illinois long-term selection experiment for oil and protein in corn (1896-2004)
 
 
-
 ### Rothamsted Electronic Archive
 http://www.era.rothamsted.ac.uk/index.php
 Data from Broadbalk and other long-term experiments.
@@ -772,6 +814,14 @@ https://toolbox.google.com/datasetsearch
 
 ### Google datasets search engine (outdated)
 https://cse.google.com/cse/publicurl?cx=002720237717066476899:v2wv26idk7m
+
+
+### Grain genes
+
+1. https://wheat.pw.usda.gov/ggpages/HxT/
+The Harrington x TR306 Barley Mapping Population. The genotype and phenotype data comes from Mapmaker, but seems to be in a slightly non-standard format; 145 DH lines, 217 markers, 25 env, 1 rep.
+
+2. https://wheat.pw.usda.gov/ggpages/SxM. This data is agridat::steptoe.morex.
 
 
 ### Illinois Corn Hybrid Variety Trials

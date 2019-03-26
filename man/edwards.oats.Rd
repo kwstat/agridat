@@ -2,7 +2,7 @@
 \alias{edwards.oats}
 \docType{data}
 \title{
-  Multi-environment trial of oats in 5 locations, 7 years.
+  Multi-environment trial of oats in United States, 5 locations, 7 years.
 }
 \description{
   Multi-environment trial of oats in 5 locations, 7 years, with 3

@@ -5,7 +5,8 @@
   Multi-environment trial of oats in India
 }
 \description{
-  Multi-environment trial of oats in India
+  Multi-environment trial of oats in India, 13 genotypes, 3 year, 2 loc,
+  5 reps
 }
 \usage{data("shaw.oats")}
 \format{

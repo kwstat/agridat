@@ -2,10 +2,10 @@
 \alias{shafii.rapeseed}
 \docType{data}
 \title{
-  Multi-environment trial of rapeseed
+  Multi-environment trial of rapeseed in U.S.
 }
 \description{
-  Rapeseed yield multi-environment trial, 3 years
+  Rapeseed yield multi-environment trial, 6 genotypes, 3 years, 14 loc, 3 rep
 }
 
 \format{
@@ -70,15 +70,11 @@ dat$locyr <- reorder(dat$locyr, dat$yield, mean)
 
 require(lattice)
 # This picture tells most of the story
-# Now change symbols
-op <- tpg <- trellis.par.get()
-tpg$superpose.symbol$pch <- c('7','8','9')
-trellis.par.set(tpg)
 dotplot(loc~yield|gen,group=year,data=dat,
         auto.key=list(columns=3),
+        par.settings=list(superpose.symbol=list(pch = c('7','8','9'))),
         main="shafii.rapeseed",ylab="Location")
-#dotplot(loc~yield|gen,group=year,data=datm,auto.key=TRUE,
-#        main="shafii.rapeseed")
+
 
 # AMMI biplot.  Remove gen and locyr effects.
 m1.lm <- lm(yield ~ gen + locyr, data=datm)
@@ -91,6 +87,5 @@ dmat <- acast(dm, gen~locyr)
 biplot(prcomp(dmat), main="shafii.rapeseed - AMMI biplot")
 }
 
-trellis.par.set(op) # Unset graphics changes
 
 }

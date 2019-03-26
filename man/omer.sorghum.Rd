@@ -2,10 +2,10 @@
 \alias{omer.sorghum}
 \docType{data}
 \title{
-  Yield of sorghum in 3 years, 2 locations
+  Yield of sorghum in 6 environments
 }
 \description{
-  Yield of sorghum in 3 years, 2 locations
+  Yield of sorghum in 6 environments
 }
 \usage{data("omer.sorghum")}
 \format{
@@ -19,8 +19,9 @@
 }
 \details{
   Trials were conducted in Sudan, 3 years at 2 locations, 4 reps in RCBD
-  at each location.
-
+  at each location. The year and location have been combined to form 6
+  environments. Only environments are given in the data, not the
+  individual year and location.
 }
 \source{
   Siraj Osman Omer, Abdel Wahab Hassan Abdalla, Mohammed Hamza Mohammed, Murari Singh (2015).
@@ -32,10 +33,6 @@
 
 \references{
 None.
-}
-
-\examples{
-\dontrun{
 
 data(omer.sorghum)
 dat <- omer.sorghum

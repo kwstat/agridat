@@ -92,10 +92,8 @@ mec <- subset(me, variable!="yield")
 names(mec) <- c('site','year','covar','x')
 mecy <- merge(mec, mey)
 mecy$yr <- factor(mecy$year)
-oldpar <- tpg <- trellis.par.get()
-tpg$superpose.symbol$pch <- substring(levels(mecy$yr),4) # Last digit of year
-trellis.par.set(tpg)
 foo <- xyplot(y~x|covar*site, data=mecy, groups=yr, cex=1, ylim=c(5,65),
+              par.settings=list(superpose.symbol=list(pch=substring(levels(mecy$yr),4))),
               xlab="", ylab="yield", main="minnesota.barley",
               panel=function(x,y,...) {
                 panel.lmline(x,y,..., col="gray")

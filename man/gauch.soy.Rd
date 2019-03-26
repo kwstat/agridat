@@ -5,7 +5,8 @@
   Multi-environment trial of soybeans in New York, 1977 to 1988
 }
 \description{
-  New York soybean yields, 1977 to 1988, for 7 genotypes in 55 environments.
+  New York soybean yields, 1977 to 1988, for 7 genotypes, 55
+  environments (9 loc, 12 years), 2-3 reps.
 }
 
 \format{
@@ -54,7 +55,9 @@
 
 data(gauch.soy)
 dat <- gauch.soy
-
+dat <- transform(dat,
+                 year = substring(env, 2),
+                 loc = substring(env, 1, 1))
 # AMMI biplot
 if(require(agricolae)){
   # Figure 1 of Zobel et al 1988, means vs PC1 score

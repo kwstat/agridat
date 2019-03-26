@@ -77,8 +77,8 @@ http://wheat.pw.usda.gov/ggpages/SxM/smbasev2.map
 The data for these markers on the 150 lines is
 http://wheat.pw.usda.gov/ggpages/SxM/smbasev2.mrk
 
-These were hand-assembled (e.g. marker distances were
-cumulated to marker positions) into a .csv file which was then imported into
+These were hand-assembled (e.g. marker distances were cumulated to
+marker positions) into a .csv file which was then imported into
 R using \code{qtl::read.cross}.  The class was manually changed from
 c('bc','cross') to c('dh','cross').
 
@@ -90,9 +90,6 @@ http://wheat.pw.usda.gov/ggpages/SxM/pedigrees.html
 }
 
 \source{
-  The phenotypic, genotypic, pedigree, etc information can be found from
-  various pages found at the following site:
-
   The Steptoe x Morex Barley Mapping Population.
   Map: Version 2, August 1, 1995
   http://wheat.pw.usda.gov/ggpages/SxM.  Accessed Jan 2015.
@@ -101,7 +98,7 @@ http://wheat.pw.usda.gov/ggpages/SxM/pedigrees.html
 }
 
 \references{
-
+  
   P.M. Hayes, B.H. Liu, S.J. Knapp, F. Chen, B. Jones, T. Blake,
   J. Franckowiak, D. Rasmusson, M. Sorrells, S.E. Ullrich, and others. 1993.
   Quantitative trait locus effects and environmental interaction in a sample of
@@ -227,7 +224,6 @@ if(require(qtl)){
 
 }
 
-# ----------------------------------------------------------------------------
 
 }
 \keyword{datasets}

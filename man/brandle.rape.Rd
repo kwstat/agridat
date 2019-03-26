@@ -2,7 +2,7 @@
 \alias{brandle.rape}
 \docType{data}
 \title{
-  Multi-environment trial of rape
+  Multi-environment trial of rape in Manitoba
 }
 \description{
   Rape seed yields for 5 genotypes, 3 years, 9 locations.
