@@ -3,7 +3,7 @@
 
 # multiple sheets combined into one
 
-libs(dplyr,readxl,reshape2)
+libs(dplyr,readxl,reshape2,tidyverse)
 
 setwd("c:/x/rpack/agridat/data-done/")
 

@@ -33,6 +33,8 @@
 
 \references{
 None.
+}
+\examples{
 
 data(omer.sorghum)
 dat <- omer.sorghum
@@ -71,6 +73,5 @@ vc(m3)
 ##       gen (Intercept) <NA>  1169  34.2
 ##  Residual        <NA> <NA> 24660 157
 
-}
 }
 \keyword{datasets}

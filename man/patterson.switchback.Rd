@@ -30,7 +30,7 @@
 }
 
 \source{
-  Patterson, HD and Lucas, HL. 1962.
+  Patterson, H.D. and Lucas, H.L. 1962.
   Change-over designs.
   \emph{Technical Bulletin 147}, North Carolina Agricultural Experimental Station.
 }
