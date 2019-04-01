@@ -47,7 +47,7 @@
   
   # McClelland table 3, first row, gives 11.2% error for 432 vales.
   # Probable error = 0.67449 * sd(). Relative to mean.
-  0.67449 * sd(dat$yield)/mean(dat$yield) # 11.2%
+  # 0.67449 * sd(dat$yield)/mean(dat$yield) # 11.2%
   
   require(desplot)
   desplot(yield ~ col*row, dat,
