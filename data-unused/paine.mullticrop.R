@@ -8,7 +8,7 @@
 # http://hdl.handle.net/2139/43045
 
 # Decided not to use this data because the heatmap of Woolly Pyrol 1 yields
-# that I createed does not quite match the heatmap given in Appendix I.
+# that I created does not quite match the heatmap given in Appendix I.
 # Especially the leftmost plots in the 4th and 5th row.
 
 Experiments on Field III (formerly St. Augustine Estates), Trinidad.

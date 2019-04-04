@@ -1,8 +1,8 @@
 \name{moore.uniformity}
-\alias{moore.polebean.uniformity}
 \alias{moore.bushbean.uniformity}
-\alias{moore.sweetcorn.uniformity}
 \alias{moore.carrot.uniformity}
+\alias{moore.polebean.uniformity}
+\alias{moore.sweetcorn.uniformity}
 \alias{moore.springcauliflower.uniformity}
 \alias{moore.fallcauliflower.uniformity}
 
@@ -37,8 +37,8 @@
 
   \bold{Blue Lake Pole Beans}.
 
-  Conducted 1952. Seven pickings were made at
-  about 5-day intervals.  Table 26.
+  Conducted 1952. Seven pickings were made at about 5-day intervals.
+  Table 26.
 
   Field width: 12 rows x 5 feet = 60 feet.
 

@@ -50,7 +50,7 @@
   sapply(split(dat$yield, dat$block), mean)*16
   
   require(desplot)
-  dat$yld <- dat$yield/4*1000 # re-scale to match Fig 1
+  dat$yld <- dat$yield/4*1000 # re-scale to match Christidis fig 1
   desplot(yld ~ col*row|block, data=dat,
           flip=TRUE, aspect=(16)/(64),
           main="christidis.cotton.uniformity")

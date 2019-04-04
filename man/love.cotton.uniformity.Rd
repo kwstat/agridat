@@ -30,9 +30,10 @@
 }
 
 \source{
-  Harry Love (1936).
+  Harry Love (1937).
   \emph{Application of Statistical Methods to Agricultural Research}.
-  The Commercial Press, Shanghai.
+  The Commercial Press, Shanghai. Page 411.
+  https://archive.org/details/in.ernet.dli.2015.233346/page/n421
 }
 
 \references{

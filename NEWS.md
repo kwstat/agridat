@@ -2,7 +2,7 @@
 
 ## New data
 
-davidian.soybean, edwards.oats, hartman.tomato.uniformity, johnson.douglasfir, laycock.tea.uniformity, lehmann.millet.uniformity, paez.coffee.uniformity, pederson.lettuce.repeated, rothamsted.oats, shaw.oats, wyatt.multi.uniformity
+davidian.soybean, edwards.oats, hartman.tomato.uniformity, johnson.douglasfir, kerr.sugarcane.uniformity, laycock.tea.uniformity, lehmann.millet.uniformity, paez.coffee.uniformity, pederson.lettuce.repeated, rothamsted.oats, shaw.oats, wyatt.multi.uniformity
 
 # agridat 1.16 - Jul 2018
 

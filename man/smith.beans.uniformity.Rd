@@ -20,6 +20,7 @@
 \details{
   
   Trials were conducted in California.
+  
   In 1955 plots were twice as wide and twice as long as in 1954. 
   Red Kidney is a bush variety bean, Standard Pink is a viny variety.
 

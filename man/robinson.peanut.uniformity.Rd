@@ -27,9 +27,13 @@
   
   Field width: 16 plots * 3 feet = 48 feet
   
-  Widening the plot was not as effective as increasing the plot length in order to reduce error. This agrees with the results of other uniformity studies.
+  Widening the plot was not as effective as increasing the plot length
+  in order to reduce error. This agrees with the results of other
+  uniformity studies.
   
-  Assuming 30 percent of the total cost of an experiment is proportional to the size of the plots used, the optimum plot size is approximately 3.2 units.
+  Assuming 30 percent of the total cost of an experiment is proportional
+  to the size of the plots used, the optimum plot size is approximately
+  3.2 units.
 
 }
 \source{

@@ -2,6 +2,8 @@
 
 ## To do
 
+* Add Baker 1953 Strawberry data
+* UNL Library: Love, " 	Experimental methods in agricultural research". East Campus library: Call: S541 .L6 .
 * Interactive datatable https://github.com/rstudio/DT
 * Add CV function?
 * Need graphic for tai.potato
@@ -13,7 +15,7 @@
 * JAGS code for besag.elbatan
 * Note: R_MAX_NUM_DLLS=150
 * Rcmd check --run-dontrun before release
-  run_examples(run=FALSE, start="butron.maize")
+  devtools::run_examples(run=FALSE, start="butron.maize")
 
 
 Do NOT use Roxygen to document data, because it will complain about data/*.txt files with error messages like:
@@ -31,9 +33,6 @@ https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-018-3508-1    http
 
 Meta analysis example
 https://www.nature.com/articles/s41598-018-21284-2#Sec18
-
-Genetic gain data example
-http://www.scielo.br/scielo.php?script=sci_arttext&pid=S1415-47571998000400024
 
 # ----------------------------------------------------------------------------
 
@@ -264,11 +263,13 @@ http://www.unc.edu/courses/2006spring/ecol/145/001/docs/lectures.htm
 
 
 ## Applied Statistics in Agriculture
-http://newprairiepress.org/agstatconference/ 1989-2014
+http://newprairiepress.org/agstatconference/ 
+1989-2014
 
 
 ## Computers and Electronics in Agriculture.
-http://www.sciencedirect.com/science/journal/01681699/103 Vol 1-110
+http://www.sciencedirect.com/science/journal/01681699/103 
+Vol 1-110
 
 
 ## Journal of Agricultural Science
@@ -282,7 +283,8 @@ https://www.cambridge.org/core/journals/experimental-agriculture
 
 
 ## SAS Global Forum
-http://support.sas.com/events/sasglobalforum/previous/online.html 22-31, 2007-2013
+http://support.sas.com/events/sasglobalforum/previous/online.html 
+22-31, 2007-2013
 
 ------------------------------------------------------------------------------
 
