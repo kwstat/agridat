@@ -2,10 +2,10 @@
 \alias{gomez.seedrate}
 \docType{data}
 \title{
-  Rice yield at six different densities
+  RCB experiment of rice, 6 densities
 }
 \description{
-  Rice yield at six different densities
+  RCB experiment of rice, 6 densities
 }
 
 \format{

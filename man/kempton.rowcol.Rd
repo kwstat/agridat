@@ -2,11 +2,10 @@
 \alias{kempton.rowcol}
 \docType{data}
 \title{
-  Wheat row-column experiment
+  Row-column experiment of wheat
 }
 \description{
-  Wheat yields of 35 genotypes, 2 reps, planted in a row-column
-  design. Two plots are missing.
+    Row-column experiment of wheat, 35 genotypes, 2 reps.
 }
 
 \format{

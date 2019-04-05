@@ -2,10 +2,10 @@
 \alias{durban.splitplot}
 \docType{data}
 \title{
-  Split-plot barley variety trial with fungicide treatments
+  Split-plot experiment of barley with fungicide treatments
 }
 \description{
-  Split-plot barley variety trial with fungicide treatments.
+  Split-plot experiment of barley with fungicide treatments
 }
 
 \format{

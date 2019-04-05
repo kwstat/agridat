@@ -2,7 +2,7 @@
 \alias{hughes.grapes}
 \docType{data}
 \title{
-  Disease incidence on grape leaves in RCB experiment
+  RCB experiment of grape, disease incidence
 }
 \description{
   Disease incidence on grape leaves in RCB experiment with 6 different

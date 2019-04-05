@@ -2,10 +2,10 @@
 \alias{besag.bayesian}
 \docType{data}
 \title{
-  Spring barley in United Kingdom
+  RCB experiment of spring barley in United Kingdom
 }
 \description{
-  An experiment with 75 varieties of barley, planted in 3 reps.
+  RCB experiment of spring barley in United Kingdom
 }
 
 \format{

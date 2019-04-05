@@ -2,11 +2,10 @@
 \alias{mcconway.turnip}
 \docType{data}
 \title{
-  Yields of turnips grown for winter fodder
+  RCB experiment of turnips
 }
 \description{
-  Yields of turnips grown for winter fodder with two treatments for
-  planting date and density, planted as RCB.
+  RCB experiment of turnips, 2 treatments for planting date and density
 }
 
 \format{

@@ -2,11 +2,11 @@
 \alias{blackman.wheat}
 \docType{data}
 \title{
-  Multi-environment trial of conventional and semi-dwarf wheat varieties
+  Multi-environment trial of wheat, conventional and semi-dwarf varieties
 }
 \description{
-  Yield for conventional and semi-dwarf wheat varieties at 7 locs with
-  low/high fertilizer levels.
+  Multi-environment trial of wheat, conventional and semi-dwarf
+  varieties, 7 locs with low/high fertilizer levels.
 }
 
 \format{

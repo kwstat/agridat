@@ -2,10 +2,10 @@
 \alias{jansen.strawberry}
 \docType{data}
 \title{
-  Ordered disease ratings on strawberry crosses.
+  Ordered disease ratings of strawberry crosses.
 }
 \description{
-  Ordered disease ratings on strawberry crosses.
+  Ordered disease ratings of strawberry crosses.
 }
 \usage{data("jansen.strawberry")}
 \format{

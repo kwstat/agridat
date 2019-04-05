@@ -2,10 +2,10 @@
 \alias{cox.stripsplit}
 \docType{data}
 \title{
-  Strip-split plot of barley with fertilizer, calcium, and soil factors.
+  Strip-split-plot of barley with fertilizer, calcium, and soil factors.
 }
 \description{
-  Strip-split plot of barley with fertilizer, calcium, and soil factors.
+  Strip-split-plot of barley with fertilizer, calcium, and soil factors.
 }
 
 \format{

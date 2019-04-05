@@ -2,7 +2,7 @@
 \alias{stroup.splitplot}
 \docType{data}
 \title{
-  Simulated split-plot experiment
+  Split-plot experiment of simulated data
 }
 \description{
   A simulated dataset of a very simple split-plot experiment, used to

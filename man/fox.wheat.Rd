@@ -2,7 +2,7 @@
 \alias{fox.wheat}
 \docType{data}
 \title{
-  Multi-environment trial of wheat for 22 varieties at 14 sites in Australia
+  Multi-environment trial of wheat, 22 varieties at 14 sites in Australia
 }
 \description{
   Wheat yields of 22 varieties at 14 sites in Australia

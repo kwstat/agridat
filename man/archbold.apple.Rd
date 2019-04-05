@@ -2,10 +2,10 @@
 \alias{archbold.apple}
 \docType{data}
 \title{
-  Split-split plot experiment on apple trees
+  Split-split plot experiment of apple trees
 }
 \description{
-  Split-split plot experiment on apple trees with different spacing,
+  Split-split plot experiment of apple trees with different spacing,
   root stock, and cultivars.
 }
 

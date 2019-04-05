@@ -2,10 +2,10 @@
 \alias{holshouser.splitstrip}
 \docType{data}
 \title{
-  Split strip plot on soybeans
+  Split-strip-plot of soybeans
 }
 \description{
-  Split strip plot on soybeans
+  Split-strip-plot of soybeans
 }
 
 \format{

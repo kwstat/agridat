@@ -2,10 +2,10 @@
 \alias{gomez.splitplot.subsample}
 \docType{data}
 \title{
-  Height of rice in a split-plot experiment with subsamples
+  Split-plot experiment of rice, with subsamples
 }
 \description{
-  Height of rice in a split-plot experiment with subsamples
+  Split-plot experiment of rice, with subsamples
 }
 
 \format{

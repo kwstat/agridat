@@ -2,10 +2,10 @@
 \alias{gomez.nonnormal2}
 \docType{data}
 \title{
-  RCB trial of rice measuring white heads
+  RCB experiment of rice, measuring white heads
 }
 \description{
-  RCB trial of rice measuring white heads
+  RCB experiment of rice, measuring white heads
 }
 \usage{data("gomez.nonnormal2")}
 \format{

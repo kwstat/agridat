@@ -2,7 +2,7 @@
 \alias{gomez.stripplot}
 \docType{data}
 \title{
-Rice strip-plot experiment
+  Strip-plot experiment of rice
 }
 \description{
   A strip-plot experiment with three reps, variety as the horizontal

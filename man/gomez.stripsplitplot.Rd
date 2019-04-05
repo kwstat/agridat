@@ -2,7 +2,7 @@
 \alias{gomez.stripsplitplot}
 \docType{data}
 \title{
-Rice strip-split-plot experiment
+  Strip-split-plot experiment of rice
 }
 \description{
   A strip-split-plot experiment with three reps, genotype as the horizontal

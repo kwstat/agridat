@@ -2,10 +2,10 @@
 \alias{piepho.cocksfoot}
 \docType{data}
 \title{
-  Heading dates for cock's foot on 25 varieties in 7 years
+  Multi-environment trial of cock's foot, heading dates for 25 varieties in 7 years
 }
 \description{
-  Heading dates for cock's foot on 25 varieties in 7 years
+  Multi-environment trial of cock's foot, heading dates for 25 varieties in 7 yearsyears
 }
 \usage{data("piepho.cocksfoot")}
 \format{

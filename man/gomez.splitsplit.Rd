@@ -2,7 +2,7 @@
 \alias{gomez.splitsplit}
 \docType{data}
 \title{
-Rice split-split plot experiment
+  Split-split-plot experiment of rice
 }
 
 \description{

@@ -2,11 +2,11 @@
 \alias{besag.elbatan}
 \docType{data}
 \title{
-  RCB experiment of 50 varieties of wheat in 3 blocks with strong
+  RCB experiment of wheat, 50 varieties in 3 blocks with strong
   spatial trend.
 }
 \description{
-  RCB experiment of 50 varieties of wheat in 3 blocks with strong
+  RCB experiment of wheat, 50 varieties in 3 blocks with strong
   spatial trend.
 }
 

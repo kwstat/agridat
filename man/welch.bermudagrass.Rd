@@ -2,10 +2,10 @@
 \alias{welch.bermudagrass}
 \docType{data}
 \title{
-  Yield of bermuda grass with N, P, K fertilizers
+  Factorial experiment of bermuda grass, N, P, K fertilizers
 }
 \description{
-  Yield of bermuda grass with N, P, K fertilizers
+  Factorial experiment of bermuda grass, N, P, K fertilizers
 }
 
 \format{

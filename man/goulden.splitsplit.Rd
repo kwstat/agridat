@@ -2,10 +2,10 @@
 \alias{goulden.splitsplit}
 \docType{data}
 \title{
-  Split-split plot experiment of wheat
+  Split-split-plot experiment of wheat
 }
 \description{
-  Split-split plot experiment of wheat
+  Split-split-plot experiment of wheat
 }
 \usage{data("goulden.splitsplit")}
 \format{

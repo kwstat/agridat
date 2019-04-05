@@ -431,7 +431,8 @@ Almost all of the data are presented as 'tidy' dataframes with 'observations' in
 
 Although using \code{data()} is not necessary to access the data files, the example sections do include the use of \code{data()} because \code{devtools::run_examples()} needs it.
 
-Please report any bugs to the package author or at the package github site.
+Please report any bugs to the package author or at the package github
+site: \url{https://github.com/kwstat/agridat/issues}.
 
 }
 
@@ -445,7 +446,7 @@ Please report any bugs to the package author or at the package github site.
 
 \references{
 
-  G. E. P. Box (1957), Integration of Techniques in Process Development,
+  G. E. P. Box (1957). Integration of Techniques in Process Development,
   \emph{Transactions of the American Society for Quality Control}.
 
   J. White and Frits van Evert. (2008).

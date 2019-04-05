@@ -2,10 +2,10 @@
 \alias{durban.rowcol}
 \docType{data}
 \title{
-  Row column design of a spring barley trial with many varieties
+  Row-column experiment of spring barley, many varieties
 }
 \description{
-  Row column design of a spring barley trial with many varieties
+  Row-column experiment of spring barley, many varieties
 }
 
 \format{

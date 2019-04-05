@@ -2,10 +2,10 @@
 \alias{mead.cowpeamaize}
 \docType{data}
 \title{
-  Maize/Cowpea intercropping experiment
+  Intercropping experiment of maize/cowpea
 }
 \description{
-  Maize/Cowpea Intercropping experiment with multiple nitrogen treatments.
+  Intercropping experiment of maize/cowpea, multiple nitrogen treatments.
 }
 
 \format{

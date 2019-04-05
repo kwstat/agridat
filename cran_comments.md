@@ -1,6 +1,6 @@
 # agridat 1.16
 
-Sorry for the short release cycle.  This is a tiny update making a small change requested by the maintainers of the 'broom' package to support the next version of 'broom'.
+This is a tiny update making a small change requested by the maintainers of the 'broom' package to support the next version of 'broom'.
 
 ## Test environments
 

@@ -2,10 +2,10 @@
 \alias{federer.tobacco}
 \docType{data}
 \title{
-  Height of tobacco plants exposed to radiation
+  RCB of tobacco, height plants exposed to radiation
 }
 \description{
-  Height of tobacco plants exposed to radiation
+  RCB of tobacco, height plants exposed to radiation
 }
 
 \format{

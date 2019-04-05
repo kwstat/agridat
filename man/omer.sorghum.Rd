@@ -2,10 +2,10 @@
 \alias{omer.sorghum}
 \docType{data}
 \title{
-  Yield of sorghum in 6 environments
+  Multi-environment trial of sorghum, 6 environments
 }
 \description{
-  Yield of sorghum in 6 environments
+  Multi-environment trial of sorghum, 6 environments
 }
 \usage{data("omer.sorghum")}
 \format{

@@ -2,10 +2,10 @@
 \alias{rothamsted.oats}
 \docType{data}
 \title{
-  Yield of oats (straw and grain), RCB with 9 fertilizer treatments
+  RCB experiment of oats, straw and grain, 9 fertilizer treatments
 }
 \description{
-  Yield of oats (straw and grain), RCB with 9 fertilizer treatments
+  RCB experiment of oats, straw and grain, 9 fertilizer treatments
 }
 \usage{data("rothamsted.oats")}
 \format{

@@ -2,10 +2,10 @@
 \alias{besag.met}
 \docType{data}
 \title{
-  Multi-environment trial of corn laid out in incomplete-blocks
+  Multi-environment trial of corn, incomplete-block design
 }
 \description{
-  Multi-environment trial of corn laid out in incomplete-blocks at each location.
+  Multi-environment trial of corn, incomplete-block designlocation.
 }
 
 \format{

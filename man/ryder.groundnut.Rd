@@ -2,10 +2,10 @@
 \alias{ryder.groundnut}
 \docType{data}
 \title{
-  Wet and dry groundnut yields
+  RCB experiment of groundut, wet and dry yields
 }
 \description{
-    Wet and dry groundnut yields with a possible data error.
+  RCB experiment of groundut, wet and dry yields
 }
 
 \format{

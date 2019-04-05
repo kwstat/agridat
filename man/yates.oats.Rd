@@ -2,7 +2,7 @@
 \alias{yates.oats}
 \docType{data}
 \title{
-  Yield of oats in a split-plot experiment
+  Split-plot experiment of oats
 }
 \description{
   

@@ -2,10 +2,10 @@
 \alias{rothamsted.brussels}
 \docType{data}
 \title{
-  Yield of brussels sprouts, RCB with 9 fertilizer treatments
+  RCB experiment of brussels sprouts, 9 fertilizer treatments
 }
 \description{
-  Yield of brussels sprouts, RCB with 9 fertilizer treatments
+  RCB experiment of brussels sprouts, 9 fertilizer treatments
 }
 
 \format{

@@ -2,10 +2,10 @@
 \alias{mead.strawberry}
 \docType{data}
 \title{
-  Strawberry yields in RCB experiment
+  RCB experiment of strawberry
 }
 \description{
-  Strawberry yields in RCB experiment
+  RCB experiment of strawberry
 }
 
 \format{

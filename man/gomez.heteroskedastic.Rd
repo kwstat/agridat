@@ -2,10 +2,10 @@
 \alias{gomez.heteroskedastic}
 \docType{data}
 \title{
-  RCB in rice with heteroskedastic varieties
+  RCB experiment of rice, heteroskedastic varieties
 }
 \description{
-  RCB in rice with heteroskedastic varieties, 35 genotypes, 3 reps
+  RCB experiment of rice, heteroskedastic varieties
 }
 \usage{data("gomez.heteroskedastic")}
 \format{

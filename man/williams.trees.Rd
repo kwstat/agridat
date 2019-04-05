@@ -2,10 +2,10 @@
 \alias{williams.trees}
 \docType{data}
 \title{
-  Height / Survival of 37 tree species at six sites in Thailand
+  Multi-environment trial of trees, height / survival of 37 species at 6 sites in Thailand
 }
 \description{
-  Height / Survival of 37 tree species at six sites in Thailand
+  Multi-environment trial of trees, height / survival of 37 species at 6 sites in Thailand
 }
 
 \format{

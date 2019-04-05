@@ -2,10 +2,10 @@
 \alias{gomez.nonnormal3}
 \docType{data}
 \title{
-  RCB of 12 rice varieties with leafhopper survival
+  RCB experiment of rice, 12 varieties with leafhopper survival
 }
 \description{
-  RCB of 12 rice varieties with leafhopper survival
+  RCB experiment of rice, 12 varieties with leafhopper survival
 }
 \usage{data("gomez.nonnormal3")}
 \format{

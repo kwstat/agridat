@@ -2,10 +2,10 @@
 \alias{vaneeuwijk.drymatter}
 \docType{data}
 \title{
-  Dry matter content for Dutch maize varieties in multiple years/sites
+  Multi-environment trial of maize, dry matter content
 }
 \description{
-  Dry matter content for Dutch maize varieties in multiple years/sites
+  Multi-environment trial of maize, dry matter content
 }
 \usage{data("vaneeuwijk.drymatter")}
 \format{

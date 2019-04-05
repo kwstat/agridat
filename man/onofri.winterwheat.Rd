@@ -2,10 +2,10 @@
 \alias{onofri.winterwheat}
 \docType{data}
 \title{
-  Yield of winter wheat varieties across 7 years.
+  Multi-environment trial of winter wheat, 7 years
 }
 \description{
-  Yield of 8 durum winter wheat varieties across 7 years with 3 reps.
+  Multi-environment trial of winter wheat, 7 years, 8 gen
 }
 \usage{data("onofri.winterwheat")}
 \format{
