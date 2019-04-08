@@ -1,5 +1,5 @@
-\name{hutchinson.cotton.uniformity}
-\alias{hutchinson.cotton.uniformity}
+\name{panse.cotton.uniformity}
+\alias{panse.cotton.uniformity}
 \docType{data}
 \title{
   Uniformity trial of cotton
@@ -7,7 +7,7 @@
 \description{
   Uniformity trial of cotton in India in 1934.
 }
-\usage{data("hutchinson.cotton.uniformity")}
+\usage{data("panse.cotton.uniformity")}
 \format{
   A data frame with 1280 observations on the following 3 variables.
   \describe{
@@ -36,21 +36,29 @@
   instead of across the rows.
 }
 \source{
-  V.G. Panse and P.V. Sukhatme. 
+  V. G. Panse (1941).
+  Studies in the technique of field experiments. V. Size and shape of
+  blocks and arrangements of plots in cotton trials. 
+  \emph{The Indian Journal Of Agricultural Science}, 11, 850-867
+  https://archive.org/details/in.ernet.dli.2015.271747/page/n955
+
+  V.G. Panse and P.V. Sukhatme. (1954).
   Statistical Methods for Agricultural Workers.
   First edition page 137. Fourth edition, page 131.
   http://krishikosh.egranth.ac.in/bitstream/1/2049376/1/44688.pdf
 }
 \references{
   Hutchinson, J. B. and V. G. Panse (1936).
-  Studies in the technique of field experiments. 
-  Indian J. Agric. Sci., 5, 523-38.
+  Studies in the technique of field experiments. I. Size, shape and
+  arrangement of plots in cotton trials. 
+  Indian J. Agric. Sci., 5, 523-538.
+  https://archive.org/details/in.ernet.dli.2015.271739/page/n599
 }
 \examples{
 \dontrun{
   
-  data(hutchinson.cotton.uniformity)
-  dat <- hutchinson.cotton.uniformity
+  data(panse.cotton.uniformity)
+  dat <- panse.cotton.uniformity
   
   # match the CV of Panse
   # sd(dat$yield)/mean(dat$yield) * 100
@@ -60,7 +68,7 @@
   require(desplot)
   desplot(yield ~ col*row, dat,
           flip=TRUE, aspect=207/150, # true aspect
-          main="hutchinson.cotton.uniformity")
+          main="panse.cotton.uniformity")
 
 }  
 }

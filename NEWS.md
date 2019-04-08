@@ -4,6 +4,10 @@
 
 davidian.soybean, edwards.oats, hartman.tomato.uniformity, johnson.douglasfir, kerr.sugarcane.uniformity, laycock.tea.uniformity, lehmann.millet.uniformity, paez.coffee.uniformity, pederson.lettuce.repeated, rothamsted.oats, shaw.oats, wyatt.multi.uniformity
 
+## Other
+
+* Re-named hutchinson.cotton.uniformity to panse.cotton.uniformity.
+
 # agridat 1.16 - Jul 2018
 
 Minor release to make a small change for the next release of the 'broom' package.

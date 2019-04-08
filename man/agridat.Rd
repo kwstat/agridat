@@ -50,7 +50,6 @@ name                                      \tab dimensions \tab other \tab model 
 \link{harris.multi.uniformity}            \tab 2 x 23 \tab xy, 23 crops \tab corrgram\cr
 \link{hartman.tomato.uniformity}          \tab 12 x 32 \tab xy \tab \cr
 \link{holtsmark.timothy.uniformity}       \tab 6 x 40 \tab xy \tab \cr
-\link{hutchinson.cotton.uniformity}       \tab 32 x 40 \tab xy \tab \cr
 \link{igue.sugarcane.uniformity}          \tab 36 x 42 \tab xy \tab \cr
 \link{immer.sugarbeet.uniformity}         \tab 10 x 60 \tab xy, 3 traits \tab \cr
 \link{iyer.wheat.uniformity}              \tab 25 x 80 \tab xy \tab \cr
@@ -89,6 +88,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{nonnecke.sweetcorn.uniformity}      \tab 32 x 18 \tab xy, 3 loc \tab \cr
 \link{odland.soybean.uniformity}          \tab 25 x 42 \tab xy \tab \cr
 \link{odland.soyhay.uniformity}           \tab 28 x 55 \tab xy \tab \cr
+\link{panse.cotton.uniformity}            \tab 32 x 40 \tab xy \tab \cr
 \link{parker.orange.uniformity}           \tab 10 x 27 \tab xy, 6 yr \tab \cr
 \link{paez.coffee.uniformity}             \tab 32 x 36 \tab xy, 5 yr \tab \cr
 \link{polson.safflower.uniformity}        \tab 52 x 33 \tab xy \tab smith\cr

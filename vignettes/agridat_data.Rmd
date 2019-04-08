@@ -224,7 +224,7 @@ http://krishikosh.egranth.ac.in/bitstream/1/2049376/1/44688.pdf
 
 ```
   3 Length and number of grains per ear of wheat
-138 Uniformity trial - agridat::hutchinson.cotton.uniformity
+138 Uniformity trial - agridat::panse.cotton.uniformity
 154 RCB 8 blocks
 167 two factorial, 6 rep trial
 178 2^4 factorial, 8 blocks, partial confounding
