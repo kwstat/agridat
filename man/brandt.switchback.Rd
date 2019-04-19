@@ -2,10 +2,10 @@
 \alias{brandt.switchback}
 \docType{data}
 \title{
-  Switchback trial of milk yield for two feed mixtures in cattle
+  Switchback experiment on dairy cattle, milk yield for two treatments
 }
 \description{
-  Switchback trial of milk yield for two feed mixtures in cattle
+  Switchback experiment on dairy cattle, milk yield for two treatments
 }
 \usage{data("brandt.switchback")}
 \format{

@@ -1,11 +1,12 @@
+
 \name{lucas.switchback}
 \alias{lucas.switchback}
 \docType{data}
 \title{
-  Switchback trial in dairy with three treatments
+  Switchback experiment on dairy cattle, milk yield for 3 treatments
 }
 \description{
-  Switchback trial in dairy with three treatments
+  Switchback experiment on dairy cattle, milk yield for 3 treatments
 }
 \usage{data("lucas.switchback")}
 \format{
@@ -19,9 +20,9 @@
   }
 }
 \details{
-  Lucas says "because no data from feeding trials employing
-  the present designs are yet available, uniformity data
-  will be used".
+  
+  Lucas says
+  "because no data from feeding trials employing the present designs are yet available, uniformity data will be used".
 
   Six cows were started together in block 1, then three cows in block 2
   and three cows in block 3.

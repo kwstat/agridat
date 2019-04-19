@@ -41,11 +41,6 @@
   blocks and arrangements of plots in cotton trials. 
   \emph{The Indian Journal Of Agricultural Science}, 11, 850-867
   https://archive.org/details/in.ernet.dli.2015.271747/page/n955
-
-  V.G. Panse and P.V. Sukhatme. (1954).
-  Statistical Methods for Agricultural Workers.
-  First edition page 137. Fourth edition, page 131.
-  http://krishikosh.egranth.ac.in/bitstream/1/2049376/1/44688.pdf
 }
 \references{
   Hutchinson, J. B. and V. G. Panse (1936).
@@ -53,6 +48,11 @@
   arrangement of plots in cotton trials. 
   Indian J. Agric. Sci., 5, 523-538.
   https://archive.org/details/in.ernet.dli.2015.271739/page/n599
+
+  V.G. Panse and P.V. Sukhatme. (1954).
+  Statistical Methods for Agricultural Workers.
+  First edition page 137. Fourth edition, page 131.
+  http://krishikosh.egranth.ac.in/bitstream/1/2049376/1/44688.pdf
 }
 \examples{
 \dontrun{
@@ -60,7 +60,7 @@
   data(panse.cotton.uniformity)
   dat <- panse.cotton.uniformity
   
-  # match the CV of Panse
+  # match the CV of Panse 1954
   # sd(dat$yield)/mean(dat$yield) * 100
   # 32.1
   

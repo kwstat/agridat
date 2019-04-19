@@ -2,10 +2,10 @@
 \alias{patterson.switchback}
 \docType{data}
 \title{
-  A switchback trial in dairy cattle
+  Switchback experiment on dairy cattle, milk yield for 4 treatments
 }
 \description{
-  A switchback trial in dairy cattle
+  Switchback experiment on dairy cattle, milk yield for 4 treatments
 }
 \usage{data("patterson.switchback")}
 \format{
@@ -39,8 +39,7 @@
   Lowry, S.R. 1989.
   Statistical design and analysis of dairy nutrition experiments to
   improve detection of milk response differences.
-  \emph{Proceedings of the Conference on Applied Statistics in
-    Agriculture}, 1989.
+  \emph{Proceedings of the Conference on Applied Statistics in Agriculture}, 1989.
   http://newprairiepress.org/agstatconference/1989/proceedings/7/
 }
 
