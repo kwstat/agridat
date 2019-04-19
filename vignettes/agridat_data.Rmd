@@ -570,14 +570,6 @@ Winter wheat, 31 gen in 8 loc. This data is different from Yan's earlier papers.
 # Papers - Uniformity trials
 
 
-**Baker, G.A.** (1953).
-Strawberry uniformity yield trials.
-Biometrics, Vol. 9, No. 3, pp. 412-421.
-http://doi.org/10.2307/3001713 
-
-Note: Two small uniformity trials with yield per plant for 200, 500 plants.  CVs fairly high and correlation between neighboring plants very low.
-
-
 **Niels Anton Hansen**, 1914.
 Prøvedyrkning paa Forsøgsstationen ved Aarslev.
 _Tidsskrift for landbrugets planteavl_.

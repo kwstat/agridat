@@ -2,7 +2,7 @@
 
 ## New data
 
-davidian.soybean, edwards.oats, hartman.tomato.uniformity, johnson.douglasfir, kerr.sugarcane.uniformity, laycock.tea.uniformity, lehmann.millet.uniformity, paez.coffee.uniformity, pederson.lettuce.repeated, rothamsted.oats, shaw.oats, wyatt.multi.uniformity
+baker.strawberry.uniformity, davidian.soybean, edwards.oats, hartman.tomato.uniformity, johnson.douglasfir, kerr.sugarcane.uniformity, laycock.tea.uniformity, lehmann.millet.uniformity, linder.wheat, paez.coffee.uniformity, pederson.lettuce.repeated, rothamsted.oats, shaw.oats, wyatt.multi.uniformity
 
 ## Other
 
@@ -10,7 +10,7 @@ davidian.soybean, edwards.oats, hartman.tomato.uniformity, johnson.douglasfir, k
 
 # agridat 1.16 - Jul 2018
 
-Minor release to make a small change for the next release of the 'broom' package.
+Minor release to make a small change for the next release of the `broom` package.
 
 # agridat 1.15 - Jun 2018
 

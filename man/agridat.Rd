@@ -27,6 +27,7 @@
 name                                      \tab dimensions \tab other \tab model \cr
 \link{ansari.wheat.uniformity}            \tab 96 x 8 \tab xy \tab \cr
 \link{baker.barley.uniformity}            \tab 3 x 19 \tab xy, 10 years \tab \cr
+\link{baker.strawberry.uniformity}        \tab 10 x 50 \tab xy \tab \cr
 \link{baker.wheat.uniformity}             \tab 12 x 12 \tab xy \tab \cr
 \link{bancroft.peanut.uniformity}         \tab 6 x 18 \tab xy, 2 blocks \tab \cr
 \link{batchelor.apple.uniformity}         \tab 8 x 28 \tab xy \tab \cr
@@ -287,6 +288,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{lillemo.wheat}               \tab 24  \tab 13 \tab     \tab 7  \tab       \tab qq \tab medpolish, huehn\cr
 \link{lin.superiority}             \tab 33  \tab 12 \tab     \tab    \tab       \tab \tab superiority \cr
 \link{lin.unbalanced}              \tab 33  \tab 18 \tab     \tab    \tab       \tab \tab superiority \cr
+\link{linder.wheat}                \tab  9  \tab  7 \tab  4  \tab    \tab       \tab \tab gge\cr
 \link{little.splitblock}           \tab     \tab    \tab 4   \tab    \tab 4,5   \tab xy, split-block\tab aov\cr
 \link{lonnquist.maize}             \tab 11  \tab    \tab     \tab    \tab       \tab diallel \tab asreml \cr
 \link{lyons.wheat}                 \tab     \tab 12 \tab     \tab 4  \tab       \tab \tab \cr

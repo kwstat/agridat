@@ -1,8 +1,8 @@
+
 % agridat notes
 
 ## To do
 
-* Add Baker 1953 Strawberry data
 * UNL Library: Love, " 	Experimental methods in agricultural research". East Campus library: Call: S541 .L6 .
 * Interactive datatable https://github.com/rstudio/DT
 * Add CV function?
