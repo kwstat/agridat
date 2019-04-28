@@ -28,28 +28,42 @@
   table 5, it appears that environment E13 was grown in 1998.
   (5 loc * (4-1) = 15, but the table has 14, and 98-99 had only 3 reps
   instead of 4 reps.)
-}
-\source{
+
   Data from National Institute of Agricultural Technology, Argentina.
 }
+\source{
+  M. S. Kang, M. Balzarini, and J. L. L. Guerra
+  (2004). Genotype-by-environment
+  interaction". In: A. Saxton (2004). "Genetic Analysis of Complex
+  Traits Using SAS".
+}
 \references{
-  A. Saxton (2004). Genetic Analysis of Complex Traits Using SAS.
+  Johannes Forkman, Julie Josse, Hans-Peter Piepho (2019).
+  Hypothesis Tests for Principal Component Analysis When Variables are Standardized.
+  \emph{JABES} https://doi.org/10.1007/s13253-019-00355-5
 }
 
 \examples{
 \dontrun{
 
+require(agridat)
 data(kang.peanut)
 dat <- kang.peanut
 
 # Table 5.1 of Kang et al. (Chapter 5 of Saxton)
 require(reshape2)
-round(acast(dat, env~gen, value.var='yield', fun=mean),2)
+Y0 <- acast(dat, env~gen, value.var='yield', fun=mean)
+round(Y0,2)
 
 # GGE biplot of Kang, p. 82.
 require(gge)
 m1 <- gge(yield~gen*env, data=dat, scale=FALSE)
 biplot(m1, flip=c(1,1), main="kang.peanut - GGE biplot")
+
+# Forkman 2019, fig 2
+# m2 <- gge(yield~gen*env, data=dat, scale=TRUE)
+# biplot(m2, main="kang.peanut - GGE biplot")
+# biplot(m2, comps=3:4, main="kang.peanut - GGE biplot")
 
 }
 }

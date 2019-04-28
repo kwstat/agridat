@@ -36,9 +36,17 @@
   \emph{Australian Journal of Agricultural Research}, 39, 339-350.
   http://doi.org/10.1071/AR9880339
 }
-
+\references{
+  María Xosé Rodríguez-Álvarez, Martin P.Boer, Fred A. van Eeuwijk, Paul
+  H.C.Eilersd (2018).
+  Correcting for spatial heterogeneity in plant breeding experiments
+  with P-splines.
+  \emph{Spatial Statistics}, 23, 52-71.
+  https://doi.org/10.1016/j.spasta.2017.10.003  
+}
 \examples{
 
+library(agridat)
 data(williams.barley.uniformity)
 dat <- williams.barley.uniformity
 
