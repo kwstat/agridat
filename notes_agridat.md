@@ -21,7 +21,6 @@
 Do NOT use Roxygen to document data, because it will complain about data/*.txt files with error messages like:
 Error: 'uscrime' is not an exported object from 'namespace:agridat'
 
-
 ## Genomes To Fields project has 
 public data for 500 genotypes in multiple environments.
     www.genomes2fields.org

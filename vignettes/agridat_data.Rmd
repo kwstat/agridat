@@ -37,6 +37,7 @@ Master thesis. Department of Statistics, Addis Ababa University.
 One dataset from wheat, RCB, with field coordinates.
 
 
+
 ### M. N. Das & Narayan C. Giri (1987). _Design and Analysis of Experiments_.
 
 ```
@@ -208,6 +209,15 @@ https://books.google.com/books?id=CaFZPbCllrMC&pg=PA323
 ```
 323 Turnip spacing data - agridat::mead.turnip
 ```
+
+### Leonard C. Onyiah (2008).
+_Design and Analysis of Experiments: Classical and Regression Approaches with SAS_.
+https://books.google.com/books?id=_P3LBQAAQBAJ&pg=PA334
+
+```
+334 Two examples of 5x5 Graeco-Latin squares in cassava and maize
+```
+
 
 
 ### Bernard Ostle (1963). _Statistics in Research_, 2nd ed.

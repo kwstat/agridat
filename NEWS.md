@@ -2,7 +2,7 @@
 
 ## New data
 
-baker.strawberry.uniformity, davidian.soybean, edwards.oats, hartman.tomato.uniformity, johnson.douglasfir, kerr.sugarcane.uniformity, laycock.tea.uniformity, lehmann.millet.uniformity, linder.wheat, paez.coffee.uniformity, pederson.lettuce.repeated, rothamsted.oats, shaw.oats, wyatt.multi.uniformity
+baker.strawberry.uniformity, davidian.soybean, devries.pine, edwards.oats, hartman.tomato.uniformity, johnson.douglasfir, kerr.sugarcane.uniformity, laycock.tea.uniformity, lehmann.millet.uniformity, linder.wheat, paez.coffee.uniformity, pederson.lettuce.repeated, rothamsted.oats, shaw.oats, wyatt.multi.uniformity
 
 ## Other
 
@@ -10,7 +10,7 @@ baker.strawberry.uniformity, davidian.soybean, edwards.oats, hartman.tomato.unif
 
 # agridat 1.16 - Jul 2018
 
-Minor release to make a small change for the next release of the `broom` package.
+* Minor release to make a small change for the next release of the `broom` package.
 
 # agridat 1.15 - Jun 2018
 
@@ -45,35 +45,35 @@ acorsi.grayleafspot, becker.chicken, chinloy.fractionalfactorial, cramer.cucumbe
 
 ## Other notes
 
-The following data objects have been changed from lists of 2 matrices into tidy dataframes: aastveit.barley, box.cork, ortiz.tomato, talbot.potato, vargas.txe, vargas.wheat1, vargas.wheat2
+* The following data objects have been changed from lists of 2 matrices into tidy dataframes: aastveit.barley, box.cork, ortiz.tomato, talbot.potato, vargas.txe, vargas.wheat1, vargas.wheat2
 
-Moved `desplot()` function to package `desplot`.
+* Moved `desplot()` function to package `desplot`.
 
-Moved `gge()` function to package `gge`.
+* Moved `gge()` function to package `gge`.
 
-Changed license to CC BY-SA 4.0, file LICENSE.note (similar to igraphdata).
+* Changed license to CC BY-SA 4.0, file LICENSE.note (similar to igraphdata).
 
-Titles in Rd pages are more consistent.
+* Titles in Rd pages are more consistent.
 
-Checked aspect ratio of field plot heatmaps where possible.
+* Checked aspect ratio of field plot heatmaps where possible.
 
-`devtools::run_examples()` now works even without suggested packages installed.
+* `devtools::run_examples()` now works even without suggested packages installed.
 
-Fixed `dontrun` sections to work with  `devtools::run_examples(run=FALSE)`
+* Fixed `dontrun` sections to work with  `devtools::run_examples(run=FALSE)`
 
-Changed extensions in inst/files from .bug to .jag .
+* Changed extensions in inst/files from .bug to .jag .
 
-Added DOIs for most source references.
+* Added DOIs for most source references.
 
-Changed all hyperlinks to plain text (for faster checking, avoids re-direct errors).
+* Changed all hyperlinks to plain text (for faster checking, avoids re-direct errors).
 
-The `nass.*` datasets now have state names with correct spaces. e.g. NewYork to New York.
+* The `nass.*` datasets now have state names with correct spaces. e.g. NewYork to New York.
 
-Replaced use of `gam` package in examples, in favor of `mgcv` package.
+* Replaced use of `gam` package in examples, in favor of `mgcv` package.
 
-The mead.lambs data is renamed to mead.lamb for consistency.
+* The mead.lambs data is renamed to `mead.lamb` for consistency.
 
-Added package logo on github.
+* Added package logo on github.
 
 # agridat 1.12 - Jun 2015
 
@@ -89,7 +89,7 @@ besag.beans, besag.triticale, burgeuno.alpha, burgueno.rowcol, burgueno.unreplic
 
 ## Other
 
-Removed `asreml` package from Suggests (due to CRAN check problems).
+* Removed `asreml` package from Suggests (due to CRAN check problems).
 
 # agridat 1.10 - Nov 2014
 
@@ -99,7 +99,7 @@ beaven.barley, perry.springwheat, ridout.appleshoots
 
 ## Other
 
-Move packages from Depends to Imports.
+* Move packages from Depends to Imports.
 
 # agridat 1.9 - Jul 2014
 
@@ -109,9 +109,9 @@ beall.webworms, besag.endive, brandt.switchback, butron.maize, carlson.germinati
 
 ## Other
 
-Use `if(require(lme4))` in examples.  B.Ripley request.
+* Use `if(require(lme4))` in examples.  B.Ripley request.
 
-All data (almost) now have an example graphic.
+* All data (almost) now have an example graphic.
 
 # agridat 1.8 - Sep 2013
 
@@ -129,8 +129,7 @@ baker.barley.uniformity, bliss.borers, bond.diallel, harris.wateruse, hayman.tob
 
 ## New data
 
-crossa.wheat, garber.multi.uniformity, gomez.nitrogen,
-harris.multi.uniformity, hughes.grapes, li.millet.uniformity, odland.soybean.uniformity, odland.soyhay.uniformity, ratkowsky.onions, stephens.sorghum.uniformity
+crossa.wheat, garber.multi.uniformity, gomez.nitrogen, harris.multi.uniformity, hughes.grapes, li.millet.uniformity, odland.soybean.uniformity, odland.soyhay.uniformity, ratkowsky.onions, stephens.sorghum.uniformity
 
 # agridat 1.5 - Apr 2013
 
@@ -166,4 +165,4 @@ allcroft.lodging, australia.soybean, batchelor.apple.uniformity, batchelor.lemon
 
 # agridat 0.0 - Oct 2010
 
-## Development begins
+* Development begins

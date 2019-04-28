@@ -154,6 +154,7 @@ name                             \tab gen  \tab years \tab trt \tab other \tab m
 \tabular{llllllll}{
 name                             \tab gen \tab loc\tab reps\tab years \tab trt \tab other \tab model \cr
 \link{box.cork}                  \tab     \tab    \tab     \tab    \tab     \tab repeated \tab radial, asreml \cr
+\link{devries.pine}              \tab     \tab    \tab 4   \tab    \tab 3,3 \tab xy,graeco \tab aov \cr
 \link{harris.wateruse}           \tab 2   \tab    \tab     \tab    \tab 2   \tab repeated \tab asreml,lme \cr
 \link{hanover.whitepine}         \tab 7*4 \tab    \tab 4   \tab    \tab     \tab heritability \tab lmer \cr
 \link{johnson.douglasfir}        \tab     \tab    \tab     \tab    \tab     \tab xy \tab \cr
