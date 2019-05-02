@@ -97,6 +97,16 @@ summary(m1.glmm)
 #                 random=~1|plate, family=binomial(), rand.family=Beta(),
 #                 fix.disp=1)
 
+# ----- INLA package. See: https://haakonbakka.bitbucket.io/btopic102.html
+# require(INLA)
+# gen,extract are fixed. plate is a random effect
+# Priors for hyper parameters. See: inla.doc("pc.prec")
+# hyper1 = list(theta = list(prior="pc.prec", param=c(1,0.01)))
+# m1.inla = inla(germ ~ gen*extract + f(plate, model="iid", hyper=hyper1),
+#                data=crowder.seeds, 
+#                family="binomial", Ntrials=n, 
+#                control.family=list(control.link=list(model="logit")))
+
 \dontrun{
 # Compare coefficients
 
@@ -127,6 +137,14 @@ round(summary(m1.glmm)$tTable,2)
 ## I(gen == "O75")TRUE                    -0.08       0.31   -0.25     0.81
 ## extractcucumber                         0.51       0.33    1.53     0.16
 ## I(gen == "O75")TRUE:extractcucumber     0.83       0.43    1.92     0.08
+
+## round(m1.inla$summary.fixed,2)
+##                         mean   sd 0.025quant 0.5quant 0.975quant  mode kld
+## (Intercept)            -0.46 0.24      -0.94    -0.45      -0.01 -0.45   0
+## genO75                 -0.09 0.30      -0.67    -0.10       0.52 -0.11   0
+## extractcucumber         0.53 0.32      -0.12     0.53       1.17  0.53   0
+## genO75:extractcucumber  0.82 0.42       0.01     0.82       1.66  0.81   0
+
 }
 
 \dontrun{

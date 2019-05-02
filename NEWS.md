@@ -7,6 +7,7 @@ baker.strawberry.uniformity, davidian.soybean, devries.pine, edwards.oats, hartm
 ## Other
 
 * Re-named hutchinson.cotton.uniformity to panse.cotton.uniformity.
+* Added INLA example to crowder.seeds.
 
 # agridat 1.16 - Jul 2018
 
