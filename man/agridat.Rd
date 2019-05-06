@@ -178,7 +178,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{ars.earlywhitecorn96}        \tab 60  \tab 9  \tab     \tab    \tab       \tab 6 traits \tab dotplot \cr
 \link{australia.soybean}           \tab 58  \tab 4  \tab     \tab 2  \tab       \tab 4-way, 6 traits \tab biplot \cr
 \link{battese.survey}              \tab     \tab 12 \tab 1-5 \tab    \tab 2     \tab \tab lmer \cr
-\link{beall.webworms}              \tab     \tab    \tab 15  \tab    \tab 2,2   \tab xy \tab glm poisson\cr
+\link{beall.webworms}              \tab     \tab    \tab 15  \tab    \tab 2,2   \tab xy, split-block \tab glm poisson,nb\cr
 \link{beaven.barley}               \tab  8  \tab    \tab 20  \tab    \tab       \tab xy \tab \cr
 \link{besag.bayesian}              \tab 75  \tab    \tab 3   \tab    \tab       \tab xy \tab asreml \cr
 \link{besag.beans}                 \tab 6   \tab    \tab 4*6 \tab    \tab       \tab xy \tab lm,competition \cr

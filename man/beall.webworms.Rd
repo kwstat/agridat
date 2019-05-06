@@ -37,45 +37,65 @@
   arsenate. Treatment 4 = Both spray, lead arsenate.
 
 }
-\source{
-  
+\source{ 
   Beall, Geoffrey (1940).
   The fit and significance of contagious distributions when applied to
   observations on larval insects.
   \emph{Ecology}, 21, 460-474. Table 6.
   http://doi.org/10.2307/1930285
+}
 
+\references{
+  Michal Kosma et al. (2019).
+  Over-dispersed count data in crop and agronomy research.
+  \emph{Journal of Agronomy and Crop Science}.
+  http://doi.org/10.1111/jac.12333
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(beall.webworms)
 dat <- beall.webworms
 
 # Match Beall table 1
-with(dat, table(y,trt))
+# with(dat, table(y,trt))
 
 require(lattice)
 histogram(~y|trt, data=dat, layout=c(1,4), as.table=TRUE,
           main="beall.webworms")
 
 # Visualize Beall table 6.  Block effects may exist, but barely.
-if(require(desplot)){
-  grays <- colorRampPalette(c("white","#252525"))
-  desplot(y ~ col*row, data=dat,
-          col.regions=grays(10),
-          at=0:10-0.5,
-          out1=block, out2=trt, num=trt, flip=TRUE, # aspect unknown
-          main="beall.webworms (count of worms)")
-}
+require(desplot)
+grays <- colorRampPalette(c("white","#252525"))
+desplot(y ~ col*row, data=dat,
+        col.regions=grays(10),
+        at=0:10-0.5,
+        out1=block, out2=trt, num=trt, flip=TRUE, # aspect unknown
+        main="beall.webworms (count of worms)")
 
 # Following plot suggests interaction is needed
 # with(dat, interaction.plot(spray, lead, y))
 
-# Just a simple model here...
-m1 <- glm(y ~ block+spray*lead, data=dat, family="poisson")
-summary(m1)
-anova(m1)
+# Try the models of Kosma et al, Table 1.
 
+# Poisson model
+m1 <- glm(y ~ block + spray*lead, data=dat, family="poisson")
+logLik(m1) # -1497.719 (df=16)
+
+# Negative binomial model
+# require(MASS)
+# m2 <- glm.nb(y ~ block + spray*lead, data=dat)
+# logLik(m2) # -1478.341 (df=17)
+
+# # Conway=Maxwell-Poisson model (takes several minutes)
+# require(spaMM)
+# # estimate nu parameter
+# m3 <- fitme(y ~ block + spray*lead, data=dat, family = COMPoisson())
+# logLik(m3) # -1475.999 
+# # Kosma logLik(m3)=-1717 seems too big. Typo? Different model?
+
+}
 }
 \keyword{datasets}
