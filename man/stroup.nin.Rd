@@ -224,8 +224,9 @@ abline(0,1)
 # ----------------------------------------------------------------------------
 
 \dontrun{
-  
-  ## require(asreml4)
+  # asreml4
+
+  ## require(agridat)
   ## data(stroup.nin)
   ## dat <- stroup.nin
 
@@ -233,6 +234,8 @@ abline(0,1)
   ## # of plots to perform AR1xAR1 analysis.  It might be able to fill in missing
   ## # combinations of rows/columns. The R version asreml4 still seems to require
   ## # rectangles.
+
+  ## require(asreml)
 
   ## # RCB analysis
   ## dat.rcb <- asreml(yield ~ gen, random = ~ rep, data=dat,

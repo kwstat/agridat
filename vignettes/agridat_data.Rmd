@@ -613,6 +613,7 @@ https://github.com/OnofriAndreaPG/agriCensData
 Three datasets with censored observations for the paper "Analyzing interval-censored data in agricultural research: A review with examples and software tips".
 
 ### agriTutorial
+https://myaseen208.github.io/agriTutorial/
 
 Five datasets used to illustrate analyses.
 
@@ -666,6 +667,12 @@ Contains 10 historical datasets for plant disease epidemics.
 https://github.com/lian0090/FW/ 
 
 Has phenotype data and marker data for 599 wheat lines in 4 environments.
+
+
+### ggenealogy
+https://www.jstatsoft.org/article/view/v089i13
+
+Data `sbGeneal` contains a soybean pedigree with 230 varieties.
 
 
 ### gRbase 
