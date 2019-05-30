@@ -693,7 +693,7 @@ Data `Atra` and `Recon` contain measurements of Atrazine in water samples.
 http://r-forge.r-project.org/R/?group_id=1599
 
 Miguez. Non-linear models in agriculture.
-
+`nlraa::sm` = `agridat::miguez.biomass`
 
    
 ### nlme
@@ -726,6 +726,11 @@ This package has county-level data from the United States Census of Agriculture,
 Data: `SemiPar::onions` is same as agridat::ratkowski.onions
 
 
+### soilDB
+https://ncss-tech.github.io/AQP/soilDB/soilDB-Intro.html
+Soil database interface.
+
+
 ### sommer - Solving mixed model equations in R
 
 Data: h2. Modest-sized GxE experiment in potato Data: cornHybrid. Yield/PLTHT for 100 hybrids from 20 inbred * 20 inbred, 4 locs. Phenotype and relationship matrix.
@@ -740,6 +745,14 @@ Data: Technow_data. AF=Additive Flint. AD=Additive Dent. MF=Marker Flint. MD=Mar
 http://www.genetics.org/content/197/4/1343.supplemental
 
 
+### SoyNAM - Soybean nested association mapping 
+
+Dataset with phenotype data 3 yr, 9 locations, 18 environments, 60 thousand observations for height, maturity,
+lodging, moisture, protein, oil, fiber, seed size. There are 5000+ strains, 40 families.
+
+Data formatted for the analysis of the NAM package is available with the following command: `SoyNAM::ENV()`.
+
+
 ### spdep
 
 Has a vignette 'The Problem of Spatial Autocorrelation: forty years on' that examines agriculture in Irish counties.
@@ -751,13 +764,6 @@ See also the data `ade4::irishdata`.
 Data: `spuRs::trees` has data for 107 trees that were cut into cross sections with the volume calculated at roughly 10-year increments.  This is a subset of the much-larger original data from Guttenberg: 
 https://archive.org/stream/wachstumundertra00gutt
 
-
-### SoyNAM - Soybean nested association mapping 
-
-Dataset with phenotype data 3 yr, 9 locations, 18 environments, 60 thousand observations for height, maturity,
-lodging, moisture, protein, oil, fiber, seed size. There are 5000+ strains, 40 families.
-
-Data formatted for the analysis of the NAM package is available with the following command: `SoyNAM::ENV()`.
 
 ### st4gi - Stat for genetic improvement
 https://github.com/reyzaguirre/st4gi

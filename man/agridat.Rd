@@ -301,6 +301,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{mead.germination}            \tab     \tab    \tab 4   \tab    \tab 4,4   \tab binomial\tab glm\cr
 \link{mead.strawberry}             \tab 8   \tab    \tab 4   \tab    \tab       \tab \tab \cr
 \link{mead.turnip}                 \tab     \tab    \tab 3   \tab    \tab 5,4   \tab \tab aov \cr
+\link{miguez.biomass}              \tab 3   \tab    \tab 4   \tab    \tab       \tab \tab \cr
 \link{minnesota.barley.weather}    \tab     \tab 6  \tab     \tab 10 \tab       \tab \tab \cr
 \link{minnesota.barley.yield}      \tab 22  \tab 6  \tab     \tab 10 \tab       \tab \tab dotplot\cr
 \link{omer.sorghum}                \tab 18  \tab 6  \tab 4   \tab    \tab       \tab \tab jags\cr
