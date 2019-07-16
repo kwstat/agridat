@@ -28,9 +28,15 @@
   \emph{Empire Journal of Experimental Agriculture}, 6, 157--175.
 }
 \references{
+  Ron Snee (1980). Graphical Display of Means.
+  \emph{The American Statistician}, 34, 195-199.
+  https://www.jstor.org/stable/2684060 
+  http://doi.org/10.1080/00031305.1980.10483028
+  
   W. Cochran (1940). The analysis of variance when experimental errors
   follow the Poisson or binomial laws.
   \emph{The Annals of Mathematical Statistics}, 11, 335-347.
+  https://www.jstor.org/stable/2235680 
 
   G W Snedecor and W G Cochran, 1980. \emph{Statistical Methods},
   Iowa State University Press.  Page 288.
