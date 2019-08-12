@@ -1,3 +1,32 @@
+# agridat 1.17
+
+Ordinary periodic release (about one year since previous release).
+
+## Test environments
+
+* local: R 3.6.1 on Windows 7
+* win-builder: R-release
+* win-builder: R-devel
+
+## Results from local devtools build(), check_built()
+
+R CMD check results
+0 errors | 0 warnings | 0 notes
+
+## Results from Rcmd check
+
+Status: OK
+
+## CRAN Package check
+
+https://cran.r-project.org/web/checks/check_results_kw.stat_at_gmail.com.html
+The error on this page appears to be a spurious error on one specific flavor.
+
+## Downstream dependencies
+
+devtools::revdep_check() had no failures.
+
+
 # agridat 1.16
 
 This is a tiny update making a small change requested by the maintainers of the 'broom' package to support the next version of 'broom'.

@@ -59,7 +59,7 @@ mosaicplot(d2, color=c("lemonchiffon1","moccasin","lightsalmon1","indianred"),
            xlab="Energy / Genotype", ylab="Rod / Weight", main="keen.potatodamage")
 
 \dontrun{
-  # Not run because it CRAN prefers examples faster than 5 seconds.
+  # Not run because CRAN prefers examples less than 5 seconds.
   require(ordinal)
   # Note, the clmm2 function can have only 1 random term.  Results are
   # similar to Keen & Engle, but necessarily different (they had multiple

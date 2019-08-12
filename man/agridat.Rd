@@ -127,7 +127,8 @@ name                             \tab reps\tab years \tab trt \tab other \tab mo
 
 \tabular{llllllll}{
 name                             \tab gen  \tab years \tab trt \tab other \tab model \cr
-\link{becker.chicken}            \tab 5,12 \tab    \tab       \tab heritability \tab lmer \cr
+\link{alwan.lamb}                \tab 34   \tab 2  \tab        \tab ordinal \tab clmm \cr
+\link{becker.chicken}            \tab 5,12 \tab    \tab        \tab heritability \tab lmer \cr
 \link{crampton.pig}              \tab      \tab    \tab 5      \tab 2 cov\tab lm \cr
 \link{brandt.switchback}         \tab 10   \tab    \tab 2      \tab \tab aov \cr
 \link{depalluel.sheep}           \tab 4    \tab    \tab 4      \tab latin \tab \cr
@@ -280,7 +281,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{kang.maize}                  \tab 17  \tab 4  \tab     \tab 3  \tab 2,4   \tab \tab \cr
 \link{kang.peanut}                 \tab 10  \tab 15 \tab 4   \tab    \tab       \tab \tab gge \cr
 \link{karcher.turfgrass}           \tab     \tab    \tab 4   \tab    \tab 2,4   \tab ordinal \tab polr \cr
-\link{keen.potatodamage}           \tab 6   \tab    \tab 4   \tab    \tab 2,3,8 \tab ordinal \tab mosaicplot \cr
+\link{keen.potatodamage}           \tab 6   \tab    \tab 4   \tab    \tab 2,3,8 \tab ordinal \tab mosaicplot,clmm \cr
 \link{kempton.competition}         \tab 36  \tab    \tab 3   \tab    \tab       \tab xy, competition \tab lme AR1 \cr
 \link{kempton.rowcol}              \tab 35  \tab    \tab 2   \tab    \tab       \tab xy, row-col \tab lmer \cr
 \link{kempton.slatehall}           \tab 25  \tab    \tab 6   \tab    \tab       \tab xy \tab asreml, lmer\cr

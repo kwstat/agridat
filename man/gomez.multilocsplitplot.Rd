@@ -5,7 +5,7 @@
   Multi-environment trial of rice, split-plot design
 }
 \description{
-  Grain yield was measured at 3 locations with 3 reps per location.
+  Grain yield was measured at 3 locations with 2 reps per location.
   Within each rep, the main plot was 6 nitrogen fertilizer treatments
   and the sub plot was 2 rice varieties.
 }
@@ -15,7 +15,7 @@
   \describe{
     \item{\code{loc}}{location, 3 levels}
     \item{\code{nitro}}{nitrogen in kg/ha}
-    \item{\code{rep}}{replicate, 3 levels}
+    \item{\code{rep}}{replicate, 2 levels}
     \item{\code{gen}}{genotype, 2 levels}
     \item{\code{yield}}{yield, kg/ha}
   }

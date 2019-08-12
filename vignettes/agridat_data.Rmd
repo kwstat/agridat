@@ -508,7 +508,7 @@ The technical report provides data from experiments on corn, wheat, cotton & sug
 A Method for Comparing Profiles of Repeated Measurements.
 Applied Statistics, 36, 296-308.
 
-An ante-dependence model is fit to repeated measures of cattle weight.  Data available here: https://faculty.biostat.ucla.edu/robweiss/filedepot_download/87/495
+An ante-dependence model is fit to repeated measures of cattle weight.
 
 
 **Klumper & Qaim** (2015).
@@ -818,7 +818,8 @@ Year, page
 ```
 
 ### Germplasm Enhancement of Maize (ISU)
-http://www.public.iastate.edu/~usda-gem/index.htm
+https://usda-gem.public.iastate.edu/
+
 
 Data from trials at multiple locations. Yield, mst, pltht, lodging. No field plans.
 

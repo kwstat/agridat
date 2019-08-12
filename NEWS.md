@@ -1,8 +1,8 @@
-# agridat 1.17 - Unpublished
+# agridat 1.17 - Aug 2019
 
 ## New data
 
-baker.strawberry.uniformity, davidian.soybean, devries.pine, edwards.oats, hartman.tomato.uniformity, johnson.douglasfir, kerr.sugarcane.uniformity, laycock.tea.uniformity, lehmann.millet.uniformity, linder.wheat, miguez.biomass, paez.coffee.uniformity, pederson.lettuce.repeated, rothamsted.oats, shaw.oats, wyatt.multi.uniformity
+alwan.lamb, baker.strawberry.uniformity, davidian.soybean, devries.pine, edwards.oats, hartman.tomato.uniformity, johnson.douglasfir, kerr.sugarcane.uniformity, laycock.tea.uniformity, lehmann.millet.uniformity, linder.wheat, miguez.biomass, paez.coffee.uniformity, pederson.lettuce.repeated, rothamsted.oats, shaw.oats, wyatt.multi.uniformity
 
 ## Other
 

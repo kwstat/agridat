@@ -1,4 +1,4 @@
-# agridat <img src="figure/agridat_logo_150.png" align="right" />
+# agridat <img src="man/figures/agridat_logo_150.png" align="right" />
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/agridat)](https://cran.r-project.org/package=agridat)
 [![CRAN_Downloads](https://cranlogs.r-pkg.org/badges/agridat)](https://cranlogs.r-pkg.org/badges/agridat)

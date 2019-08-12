@@ -52,7 +52,6 @@
   V.G. Panse and P.V. Sukhatme. (1954).
   Statistical Methods for Agricultural Workers.
   First edition page 137. Fourth edition, page 131.
-  http://krishikosh.egranth.ac.in/bitstream/1/2049376/1/44688.pdf
 }
 \examples{
 \dontrun{

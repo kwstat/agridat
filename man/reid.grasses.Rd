@@ -80,7 +80,7 @@ if(require(latticeExtra)){
   fixef(m1)
   summary(m1)
   plot(augPred(m1, level=0:1),
-       main="reid.grasses - observed/predicted data",) # only works with groupedData object
+       main="reid.grasses - observed/predicted data") # only works with groupedData object
   
 }
 

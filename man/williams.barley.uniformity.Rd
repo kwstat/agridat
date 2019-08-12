@@ -27,7 +27,7 @@
   Field width: 48 plots * .75 m = 36 m
 
   Field length: 15 plots * 5 m = 75 m
-  
+
 }
 
 \source{
@@ -37,12 +37,12 @@
   http://doi.org/10.1071/AR9880339
 }
 \references{
-  María Xosé Rodríguez-Álvarez, Martin P.Boer, Fred A. van Eeuwijk, Paul
-  H.C.Eilersd (2018).
+  Maria Xose Rodriguez-Alvarez, Martin P. Boer, Fred A. van Eeuwijk, Paul
+  H. C. Eilersd (2018).
   Correcting for spatial heterogeneity in plant breeding experiments
   with P-splines.
   \emph{Spatial Statistics}, 23, 52-71.
-  https://doi.org/10.1016/j.spasta.2017.10.003  
+  https://doi.org/10.1016/j.spasta.2017.10.003
 }
 \examples{
 

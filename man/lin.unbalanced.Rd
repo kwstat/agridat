@@ -21,7 +21,8 @@
   Yield of six-row barley from the 1986 Eastern Cooperative trial
 
   The named cultivars Bruce, Laurier, Leger are checks, while the other cultivars were tests. Cultivar names use the following codes.
-  "A" is for Atlantic-Quebec. "O" is for "Ontario". "S" is second-year. "T" is third-year.
+  "A" is for Atlantic-Quebec. "O" is for "Ontario".
+  "S" is second-year. "T" is third-year.
 }
 
 \source{
