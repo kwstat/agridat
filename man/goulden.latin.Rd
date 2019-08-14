@@ -34,7 +34,7 @@
 }
 
 \examples{
-
+library(agridat)
 data(goulden.latin)
 dat <- goulden.latin
 

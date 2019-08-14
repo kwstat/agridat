@@ -33,6 +33,7 @@
   None.
 }
 \examples{
+library(agridat)
 data(goulden.eggs)
 dat <- goulden.eggs
 

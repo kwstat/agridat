@@ -5,7 +5,6 @@
 
 * UNL Library: Love, " 	Experimental methods in agricultural research". East Campus library: Call: S541 .L6 .
 * Interactive datatable https://github.com/rstudio/DT
-* Add CV function?
 * Need graphic for tai.potato
 * Need graphic for yang.barley
 * Figure out best way to use jags
@@ -25,17 +24,22 @@ Error: 'uscrime' is not an exported object from 'namespace:agridat'
 public data for 500 genotypes in multiple environments.
     www.genomes2fields.org
 https://www.genomes2fields.org/publications/
-https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-018-3508-1    http://datacommons.cyverse.org/browse/iplant/home/shared/commons_repo/curated/Carolyn_Lawrence_Dill_G2F_Nov_2016_V.3
+https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-018-3508-1  
+http://datacommons.cyverse.org/browse/iplant/home/shared/commons_repo/curated/Carolyn_Lawrence_Dill_G2F_Nov_2016_V.3
     
 
 
 
 Meta analysis example
+Elisa Pellegrino, Stefano Bedini, Marco Nuti & Laura Ercoli (2018).
+Impact of genetically engineered maize on agronomic, environmental and toxicological traits: a meta-analysis of 21 years of field data.
+Scientific Reports, 8, Article 3113.
 https://www.nature.com/articles/s41598-018-21284-2#Sec18
 
 # ----------------------------------------------------------------------------
 
-This document lists notes about data sources searched and additional sources of agricultural data.  Although this is an .md file, the formatting is best viewed in plain text mode.
+This document lists notes about data sources searched and additional sources of agricultural data.  
+Although this is an .md file, the formatting is best viewed in plain text mode.
 
 ---
 
@@ -124,10 +128,6 @@ F2 data.
 Folder: GE http://www.frontiersin.org/Plant_Physiology/10.3389/fphys.2013.00044/abstract CC license:
 
 
-## da Silva
-A Bayesian Shrinkage Approach for AMMI Models http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0131414#pone-0131414-t001 CC-BY. Partial code, data.
-
-
 ## Perez
 Comparison Between Linear and Non-parametric Regression Models for Genome-Enabled Prediction in Wheat https://www.scienceopen.com/document/vid/4017fb51-381c-4374-93aa-608423df4004;jsessionid=0TLjjSbaooSUk1y3JKd4nUeb.master:so-app1-prd 
 Data: http://www.g3journal.org/content/suppl/2012/12/05/2.12.1595.DC1 All content has CC license
@@ -213,10 +213,6 @@ http://dca.au.dk/publikationer/historiske/planteavl/
 
 
 # Books
-
-## Maize International Testing 1982. CIMMYT.
-http://pdf.usaid.gov/pdf_docs/PNAAQ389.pdf
-
 
 ## Nebraska Agricultural Experiment Station Annual Report
 Vol 19-24, 1906-1911 https://books.google.com/books?id=HBlJAAAAMAAJ

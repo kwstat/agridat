@@ -12,6 +12,7 @@
 ^\.RData$
 ^\.Rhistory$
 ^cran_comments\.md$
+^docs$
 ^README\.md$
 ^$NEWS\.md$
 ^notes.*\.md$

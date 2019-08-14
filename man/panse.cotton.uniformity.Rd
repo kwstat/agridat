@@ -55,19 +55,20 @@
 }
 \examples{
 \dontrun{
+
+library(agridat)
+data(panse.cotton.uniformity)
+dat <- panse.cotton.uniformity
   
-  data(panse.cotton.uniformity)
-  dat <- panse.cotton.uniformity
+# match the CV of Panse 1954
+# sd(dat$yield)/mean(dat$yield) * 100
+# 32.1
   
-  # match the CV of Panse 1954
-  # sd(dat$yield)/mean(dat$yield) * 100
-  # 32.1
-  
-  # match the fertility map of Hutchinson, fig 1
-  require(desplot)
-  desplot(yield ~ col*row, dat,
-          flip=TRUE, aspect=207/150, # true aspect
-          main="panse.cotton.uniformity")
+# match the fertility map of Hutchinson, fig 1
+require(desplot)
+desplot(yield ~ col*row, dat,
+        flip=TRUE, aspect=207/150, # true aspect
+        main="panse.cotton.uniformity")
 
 }  
 }

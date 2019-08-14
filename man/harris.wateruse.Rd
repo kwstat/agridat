@@ -35,7 +35,7 @@
 }
 
 \examples{
-
+library(agridat)
 data(harris.wateruse)
 dat <- harris.wateruse
 
@@ -106,15 +106,15 @@ vc(m1l)
 
 # Once the overall quadratic trend has been removed, there is not
 # too much evidence for consecutive observations being correlated
-d22r <- subset(d22, !is.na(water))
-d22r$res <- resid(m1n)
-xyplot(res ~ day|tree,d22r,
-       as.table=TRUE, type=c('p','smooth'),
-       ylab="residual",
-       main="harris.wateruse - Residuals of individual trees")
-op <- par(mfrow=c(4,3))
-tapply(d22r$res, d22r$tree, acf)
-par(op)
+## d22r <- subset(d22, !is.na(water))
+## d22r$res <- resid(m1n)
+## xyplot(res ~ day|tree,d22r,
+##        as.table=TRUE, type=c('p','smooth'),
+##        ylab="residual",
+##        main="harris.wateruse - Residuals of individual trees")
+## op <- par(mfrow=c(4,3))
+## tapply(d22r$res, d22r$tree, acf)
+## par(op)
 
 # ----- Model 2, add correlation of consecutive measurements
 

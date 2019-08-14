@@ -2,10 +2,10 @@
 \alias{alwan.lamb}
 \docType{data}
 \title{
-  Number of lambs for each sire, classified by foot shape
+  For the 34 sheep sires, the number of lambs in each of 5 foot shape classes.
 }
 \description{
-  Number of lambs for each sire, classified by foot shape.
+  For the 34 sheep sires, the number of lambs in each of 5 foot shape classes.
 }
 \usage{data("alwan.lamb")}
 \format{
@@ -51,12 +51,14 @@
   Example 38.11 Maximum Likelihood in Proportional Odds Model with Random Effects
   https://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.htm
 }
+
 \examples{
 library(agridat)
 data(alwan.lamb)
 dat <- alwan.lamb
 
 # merge LF1 LF2 LF3 class counts, and combine M/F
+dat$shape <- as.character(dat$shape)
 dat$shape <- ifelse(dat$shape=="LF2", "LF3", dat$shape)
 dat$shape <- ifelse(dat$shape=="LF1", "LF3", dat$shape)
 dat <- aggregate(count ~ year+breed+sire0+sire+shape+yr+b1+b2+b3, dat, FUN=sum)

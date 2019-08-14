@@ -820,16 +820,11 @@ Year, page
 ### Germplasm Enhancement of Maize (ISU)
 https://usda-gem.public.iastate.edu/
 
-
 Data from trials at multiple locations. Yield, mst, pltht, lodging. No field plans.
 
 
 ### Google dataset search
 https://toolbox.google.com/datasetsearch
-
-
-### Google datasets search engine (outdated)
-https://cse.google.com/cse/publicurl?cx=002720237717066476899:v2wv26idk7m
 
 
 ### Grain genes
