@@ -87,6 +87,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{narain.sorghum.uniformity}          \tab 10 x 16 \tab xy \tab \cr
 \link{nonnecke.peas.uniformity}           \tab 15 x 18 \tab xy, 2 traits \tab \cr
 \link{nonnecke.sweetcorn.uniformity}      \tab 32 x 18 \tab xy, 3 loc \tab \cr
+\link{obsi.potato.uniformity}             \tab 63 x 26, 49 x 19 \tab xy \tab \cr
 \link{odland.soybean.uniformity}          \tab 25 x 42 \tab xy \tab \cr
 \link{odland.soyhay.uniformity}           \tab 28 x 55 \tab xy \tab \cr
 \link{panse.cotton.uniformity}            \tab 32 x 40 \tab xy \tab \cr
