@@ -12,7 +12,7 @@
   A data frame with 1485 observations on the following 4 variables.
   \describe{
     \item{\code{env}}{environment}
-    \item{\code{rep}}{replicate block}
+    \item{\code{rep}}{replicate block, 3 per env}
     \item{\code{gen}}{genotype}
     \item{\code{yield}}{yield (tons/hectare)}
   }
@@ -22,10 +22,21 @@
   environments.
 
   NOTE! The environment codes in the supplemental data file of da Silva
-  2015 do not match the environment codes of the paper.
-  There appears to have been a shift in the environment number and one
-  environment has a complete mismatch in mean yield.
-  See the example below.
+  2015 do not quite match the environment codes of the paper, but are
+  mostly off by 1.
+
+  DaSilva Table 1 has a footnote "Machado et al 2007". This reference
+  appears to be:
+
+  Machado et al.
+  Estabilidade de producao de hibridos simples e duplos de milhooriundos
+  de um mesmo conjunto genico.
+  Bragantia, 67, no 3. www.scielo.br/pdf/brag/v67n3/a10v67n3.pdf
+
+  In DaSilva Table 1, the mean of E1 is 10.803.  This appears to be a
+  copy of the mean from row 1 of Table 1 in Machado. Using the
+  supplemental data from this paper, the correct mean is 8.685448.
+  
 }
 \source{
   A Bayesian Shrinkage Approach for AMMI Models.
@@ -44,8 +55,9 @@
   Genet. Mol. Res. 14.
 }
 \examples{
+library(agridat)
 data(dasilva.maize)
-dat = dasilva.maize
+dat <- dasilva.maize
 
 # Try to match Table 1 of da Silva 2015.
 # aggregate(yield ~ env, data=dat, FUN=mean)
@@ -63,6 +75,17 @@ dat = dasilva.maize
 # Unable to match CVs in Table 2, but who knows what they used
 # for residual variance.
 # aggregate(yield ~ env, data=dat, FUN=function(x) 100*sd(x)/mean(x))
+
+# Match DaSilva supplement 2, ANOVA
+# m1 <- aov(yield ~ env + gen + rep:env + gen:env, dat)
+# anova(m1)
+## Response: yield
+##            Df Sum Sq Mean Sq  F value    Pr(>F)    
+## env         8 8994.2 1124.28 964.1083 < 2.2e-16 ***
+## gen        54  593.5   10.99   9.4247 < 2.2e-16 ***
+## env:rep    18   57.5    3.19   2.7390 0.0001274 ***
+## env:gen   432  938.1    2.17   1.8622 1.825e-15 ***
+## Residuals 972 1133.5    1.17                       
 
 }
 \keyword{datasets}
