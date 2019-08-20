@@ -2,12 +2,17 @@
 
 ## New data
 
-alwan.lamb, baker.strawberry.uniformity, davidian.soybean, devries.pine, edwards.oats, hartman.tomato.uniformity, johnson.douglasfir, kerr.sugarcane.uniformity, laycock.tea.uniformity, lehmann.millet.uniformity, linder.wheat, miguez.biomass, obsi.potato.uniformity, paez.coffee.uniformity, pederson.lettuce.repeated, rothamsted.oats, shaw.oats, wyatt.multi.uniformity
+alwan.lamb, baker.strawberry.uniformity, davidian.soybean, devries.pine, edwards.oats, hartman.tomato.uniformity, johnson.douglasfir, kayad.alfalfa, kerr.sugarcane.uniformity, laycock.tea.uniformity, lehmann.millet.uniformity, linder.wheat, miguez.biomass, obsi.potato.uniformity, paez.coffee.uniformity, pederson.lettuce.repeated, rothamsted.oats, shaw.oats, wyatt.multi.uniformity
 
 ## Other
 
 * Re-named hutchinson.cotton.uniformity to panse.cotton.uniformity.
+
 * Added INLA example to crowder.seeds.
+
+* Wrapped most examples with dontrun.
+
+* Change `library` and `require` to `pacman::p_load`.
 
 # agridat 1.16 - Jul 2018
 
@@ -24,9 +29,7 @@ dasilva.maize, mead.turnip
 ## Other
 
 * nonnecke.corn.uniformity is renamed nonnecke.sweetcorn.uniformity
-
 * moore.carrots.uniformity is renamed moore.carrot.uniformity
-
 * Switch from `lsmeans` to `emmeans` in examples.
 
 

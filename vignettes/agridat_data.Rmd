@@ -37,7 +37,6 @@ Master thesis. Department of Statistics, Addis Ababa University.
 One dataset from wheat, RCB, with field coordinates.
 
 
-
 ### M. N. Das & Narayan C. Giri (1987). _Design and Analysis of Experiments_.
 
 ```
@@ -338,7 +337,7 @@ https://water.usgs.gov/nawqa/pnsp/pubs/circ1291/supporting_info.php
 
 ### Ag Data Commons
 https://data.nal.usda.gov/about-ag-data-commons
-
+https://data.nal.usda.gov/search/type/dataset
 
 ### CyVerse Data Commons
 
@@ -346,14 +345,6 @@ http://datacommons.cyverse.org/
 
 http://datacommons.cyverse.org/browse/iplant/home/shared/commons_repo/curated
 
-
-### CyVerse: Genomes by environment dataset now publicly accessible
-
-http://www.cyverse.org/news/genomes-environment-dataset-now-publicly-accessible
-
-http://datacommons.cyverse.org/browse/iplant/home/shared/commons_repo/curated/Carolyn_Lawrence_Dill_G2F_Nov_2016
-
-Very large GxE data here. Currently only data for 2014, but more years are planned. Hybrid & inbred phenotype data, weather data, genomic data.  Very nice.
 
 
 ### DataDryad
@@ -406,7 +397,7 @@ Vol 33/424. Heady. Crop Response Surfaces and Economic Optima in
   Fertilizer - agridat::heady.fertilizer
 
 Vol 34/358. Schwab. Research on Irrigation of Corn and Soybeans At Conesville.
-Page 257. 2 year, 2 loc, 4 rep, 2 nitro. Stand & yield.  
+Page 257. 2 year, 2 loc, 4 rep, 2 nitro. Stand & yield.
   Nice graph of soil moisture deficit (fig 9)
 
 Vol. 34/463. Doll. Fertilizer Production Functions for Corn and Oats.
@@ -415,7 +406,7 @@ Table 14, 1955 McPaul Silt Loam.  N,P.
 Table 25, 1955 corn.  K,P,N.
 Table 31, 1956 oats, K,P,N.  Trends difficult to establish.
 
-Vol 34/472. Pesek. Production Surfaces and Economic Optima For Corn Yields.  
+Vol 34/472. Pesek. Production Surfaces and Economic Optima For Corn Yields.
   Same data published in SSA journal?
 
 Vol 34/488. Walker. Application of Game Theory Models to Decisions.
@@ -472,13 +463,6 @@ https://books.google.com/books?hl=en&lr=&id=SqlJAAAAMAAJ&oi=fnd&pg=PA446
 
 The authors found no significant differences between fertilizer treatments.
 
-
-**Kayad et al**. (2016).
-Assessing the Spatial Variability of Alfalfa Yield Using Satellite Imagery and Ground-Based Data. 
-\emph{PLOS One}.
-https://doi.org/10.1371/journal.pone.0157166
-
-Supporting information contains yield monitor data for 4 hay harvests on a center-pivot field.
 
 
 **Meehan & Gratton** (2016).
@@ -584,7 +568,8 @@ Winter wheat, 31 gen in 8 loc. This data is different from Yan's earlier papers.
 Prøvedyrkning paa Forsøgsstationen ved Aarslev.
 _Tidsskrift for landbrugets planteavl_.
 http://dca.au.dk/publikationer/historiske/planteavl/ 
-Bind 21, page 553. In Danish. Page 557 might be the table referred to by Eden, except there are 30 plots, not 35. Yields appear to be given as percents.
+Bind 21, page 553. In Danish. 
+Page 557 might be the table referred to by Eden, except there are 30 plots, not 35. Yields appear to be given as percents.
 
 See comments by Eden & Maskell found here:
 https://archive.org/stream/in.ernet.dli.2015.25895/2015.25895.Journal-Of-Agricultural-Science-Vol-xviii-1928#page/n175
@@ -784,9 +769,70 @@ Biofuel Ecophysiological Traits and Yields Database
 https://data.cimmyt.org/dataverse/cimmytdatadvn
 
 
+
+### Genomes To Fields (G2F) 
+https://www.genomes2fields.org/publications/
+
+http://datacommons.cyverse.org/browse/iplant/home/shared/commons_repo/curated/Carolyn_Lawrence_Dill_G2F_Nov_2016_V.3
+    
+Very large GxE data here for 2014 and 2015. Hybrid & inbred phenotype data, weather data, genomic data.  Very nice.
+
+
+### Germplasm Enhancement of Maize (ISU)
+https://usda-gem.public.iastate.edu/
+
+Data from trials at multiple locations. Yield, mst, pltht, lodging. No field plans.
+
+
+### Google dataset search
+https://toolbox.google.com/datasetsearch
+
+
+### Grain genes
+
+1. https://wheat.pw.usda.gov/ggpages/HxT/
+The Harrington x TR306 Barley Mapping Population. The genotype and phenotype data comes from Mapmaker, but seems to be in a slightly non-standard format; 145 DH lines, 217 markers, 25 env, 1 rep.
+
+2. https://wheat.pw.usda.gov/ggpages/SxM. This data is agridat::steptoe.morex.
+
+
+
 ### Ideals
 https://www.ideals.illinois.edu/handle/2142/3528
 Data File : Raw data from each ear analyzed each year of the Illinois long-term selection experiment for oil and protein in corn (1896-2004)
+
+
+### Illinois Corn Hybrid Variety Trials
+http://vt.cropsci.illinois.edu/corn.html
+
+
+### ILRI International Livestock Research Institute
+http://www.ilri.org/biometrics/CS/
+
+Case study 4 is a nice dialel example with sheep data.
+Available as agridat::ilri.sheep
+
+
+### IRRI Biometrics and Breeding Informatics
+http://bbi.irri.org/products
+
+STAR, PBTools, CropStat.
+The STAR user guide has well-documented data (even using 2 from agridat), but
+the PBTools user guide does not document the data.
+
+
+### MapCalc
+http://www.innovativegis.com/basis/ Joseph Berry.
+
+Contains data for a center-pivot field, 3 years of harvest data, multiple nutrient data, clay, sand, and silt. All data layers have been gridded to the same set of coordinates.
+
+Analyzing Precision Ag Data workshop: http://www.innovativegis.com/basis/Books/AnalyzingPAdata/Default.htm
+
+Workbook here: http://www.innovativegis.com/basis/Books/AnalyzingPAdata/PA_download/Default.htm
+http://www.innovativegis.com/basis/Books/AnalyzingPAdata/PA_download/Support_materials/Default.htm
+
+Case Study in Precision Farming: http://www.innovativegis.com/basis/pfprimer/Appendix_D/Appendix_D.htm 
+
 
 
 ### Rothamsted Electronic Archive
@@ -816,43 +862,6 @@ Year, page
 1937-1939
 1946-1953
 ```
-
-### Germplasm Enhancement of Maize (ISU)
-https://usda-gem.public.iastate.edu/
-
-Data from trials at multiple locations. Yield, mst, pltht, lodging. No field plans.
-
-
-### Google dataset search
-https://toolbox.google.com/datasetsearch
-
-
-### Grain genes
-
-1. https://wheat.pw.usda.gov/ggpages/HxT/
-The Harrington x TR306 Barley Mapping Population. The genotype and phenotype data comes from Mapmaker, but seems to be in a slightly non-standard format; 145 DH lines, 217 markers, 25 env, 1 rep.
-
-2. https://wheat.pw.usda.gov/ggpages/SxM. This data is agridat::steptoe.morex.
-
-
-### Illinois Corn Hybrid Variety Trials
-http://vt.cropsci.illinois.edu/corn.html
-
-
-### ILRI International Livestock Research Institute
-http://www.ilri.org/biometrics/CS/
-
-Case study 4 is a nice dialel example with sheep data.
-Available as agridat::ilri.sheep
-
-
-### IRRI Biometrics and Breeding Informatics
-http://bbi.irri.org/products
-
-STAR, PBTools, CropStat.
-The STAR user guide has well-documented data (even using 2 from agridat), but
-the PBTools user guide does not document the data.
-
 
 ### SolCAP Solanaceae Coordinated Agricultural Project
 http://www.solcap.msu.edu/

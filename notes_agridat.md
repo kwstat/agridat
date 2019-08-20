@@ -3,8 +3,6 @@
 
 ## To do
 
-* UNL Library: Love, " 	Experimental methods in agricultural research". East Campus library: Call: S541 .L6 .
-* Interactive datatable https://github.com/rstudio/DT
 * Need graphic for tai.potato
 * Need graphic for yang.barley
 * Figure out best way to use jags
@@ -15,37 +13,16 @@
 * Note: R_MAX_NUM_DLLS=150
 * Rcmd check --run-dontrun before release
   devtools::run_examples(run=FALSE, start="butron.maize")
-
+  build_site(lazy=TRUE, run=TRUE)
 
 Do NOT use Roxygen to document data, because it will complain about data/*.txt files with error messages like:
 Error: 'uscrime' is not an exported object from 'namespace:agridat'
 
-## Genomes To Fields project has 
-public data for 500 genotypes in multiple environments.
-    www.genomes2fields.org
-https://www.genomes2fields.org/publications/
-https://bmcresnotes.biomedcentral.com/articles/10.1186/s13104-018-3508-1  
-http://datacommons.cyverse.org/browse/iplant/home/shared/commons_repo/curated/Carolyn_Lawrence_Dill_G2F_Nov_2016_V.3
-    
-
-
-
-Meta analysis example
-Elisa Pellegrino, Stefano Bedini, Marco Nuti & Laura Ercoli (2018).
-Impact of genetically engineered maize on agronomic, environmental and toxicological traits: a meta-analysis of 21 years of field data.
-Scientific Reports, 8, Article 3113.
-https://www.nature.com/articles/s41598-018-21284-2#Sec18
-
-# ----------------------------------------------------------------------------
-
-This document lists notes about data sources searched and additional sources of agricultural data.  
+This document lists notes about data sources searched and additional sources of agricultural data.
 Although this is an .md file, the formatting is best viewed in plain text mode.
 
 ---
 
-QTL analysis using Integrated Breeding Platform.  https://www.integratedbreeding.net/165/training/bms-user-manual/qtl-analysis CC-BY-SA license
-
----
 
 Henry Wallace archive at Univ Iowa Library
 http://www.lib.uiowa.edu/sc/location-and-hours/
@@ -54,10 +31,10 @@ http://aspace.lib.uiowa.edu/repositories/2/archival_objects/400608
 500 Ear experiment. Might be the data for "What is in the corn judge's mind" paper
 http://aspace.lib.uiowa.edu/repositories/2/archival_objects/400615
 
----
 
 rpathanalysis
 http://cucurbitbreeding.com/todd-wehner/publications/software-sas-r-project/
+
 
 # wanted
 
@@ -86,9 +63,13 @@ kamidi 11g,7l
 lin.balanced 33g,12l 
 lin.unbalanced 33g,18l
 
-Oakey, Cullis, Thompson
-http://www.g3journal.org/content/early/2016/03/10/g3.116.027524
-http://www.g3journal.org/content/6/5/1313/suppl/DC1
+Meta analysis example
+Elisa Pellegrino, Stefano Bedini, Marco Nuti & Laura Ercoli (2018).
+Impact of genetically engineered maize on agronomic, environmental and toxicological traits: a meta-analysis of 21 years of field data.
+Scientific Reports, 8, Article 3113.
+https://www.nature.com/articles/s41598-018-21284-2#Sec18
+
+
 
 ---
 
@@ -105,12 +86,7 @@ Review of meta-analyses in agronomy http://www6.versailles-grignon.inra.fr/agron
 
 Richard Plant http://www.plantsciences.ucdavis.edu/plant/qgislabs.htm CC-SA license
 
-MapCalc http://www.innovativegis.com/basis/ Joseph Berry.  Looks interesting, free for education.  Center pivot data.
 
-Analyzing Precision Ag Data <-- interesting workshop 
-http://www.innovativegis.com/basis/Books/AnalyzingPAdata/Default.htm http://www.innovativegis.com/basis/Books/AnalyzingPAdata/PA_download/Support_materials/Default.htm http://www.innovativegis.com/basis/Books/AnalyzingPAdata/PA_download/Default.htm
-
-http://www.innovativegis.com/basis/pfprimer/Appendix_D/Appendix_D.htm http://www.innovativegis.com/basis/pfprimer/Topic4/Topic4.htm
 
 # Papers
 
@@ -128,15 +104,36 @@ F2 data.
 Folder: GE http://www.frontiersin.org/Plant_Physiology/10.3389/fphys.2013.00044/abstract CC license:
 
 
+## Oakey, Cullis, Thompson
+https://www.g3journal.org/content/6/5/1313
+http://www.g3journal.org/content/6/5/1313/suppl/DC1
+
+
 ## Perez
 Comparison Between Linear and Non-parametric Regression Models for Genome-Enabled Prediction in Wheat https://www.scienceopen.com/document/vid/4017fb51-381c-4374-93aa-608423df4004;jsessionid=0TLjjSbaooSUk1y3JKd4nUeb.master:so-app1-prd 
 Data: http://www.g3journal.org/content/suppl/2012/12/05/2.12.1595.DC1 All content has CC license
 
+## Carley et al (2018).
+Genetic Covariance of Environments in the Potato National Chip Processing Trial
+https://dl.sciencesocieties.org/publications/cs/articles/59/1/107
+
+## Endelman et al (2018)
+Genetic Variance Partitioning and Genome-Wide Prediction with Allele Dosage Information in Autotetraploid Potato
+https://www.genetics.org/content/209/1/77
+
 
 # Other
-Many interesting pages.  Non-open license...?
-Lecture and data http://articles.extension.org/plant_breeding_genomics http://articles.extension.org/pages/68660/plant-breeding-and-genomics-learning-lessons http://articles.extension.org/pages/60430/introduction-to-the-augmented-experimental-design-webinar http://articles.extension.org/pages/61006/estimating-heritability-and-blups-for-traits-using-tomato-phenotypic-data <---
-http://articles.extension.org/pages/68019/genomic-relationships-and-gblup
+
+# Extension
+http://articles.extension.org/plant_breeding_genomics 
+Many interesting pages.  License is not clear, but developed with help of USDA.
+
+1. http://articles.extension.org/pages/68660/plant-breeding-and-genomics-learning-lessons 
+2. http://articles.extension.org/pages/60430/introduction-to-the-augmented-experimental-design-webinar 
+3. http://articles.extension.org/pages/61006/estimating-heritability-and-blups-for-traits-using-tomato-phenotypic-data
+4. http://articles.extension.org/pages/68019/genomic-relationships-and-gblup  <--- review this
+
+Introduction to the rrBLUP Package in R for Genomewide Selection Webinar
 http://pbgworks.org/node/1440
 
 
