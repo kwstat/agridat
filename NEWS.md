@@ -12,7 +12,9 @@ alwan.lamb, baker.strawberry.uniformity, davidian.soybean, devries.pine, edwards
 
 * Wrapped most examples with dontrun.
 
-* Change `library` and `require` to `pacman::p_load`.
+* Change `library` and `require` to `libs`, which is basically `pacman::p_load`.
+
+* Website built with `pkgdown`.
 
 # agridat 1.16 - Jul 2018
 
