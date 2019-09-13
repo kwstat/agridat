@@ -60,26 +60,26 @@ Bodyweight of cows in a 2-by-2 factorial experiment
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(diggle.cow)
 dat <- diggle.cow
 
 # Figure 1 of Verbyla 1999
-require(lattice)
-if(require(latticeExtra)){
-  useOuterStrips(xyplot(weight ~ day|iron*infect, dat, group=animal,
-                        type='b', cex=.5, 
-                        main="diggle.cow"))
-}
+libs(latticeExtra)
+useOuterStrips(xyplot(weight ~ day|iron*infect, dat, group=animal,
+                      type='b', cex=.5, 
+                      main="diggle.cow"))
 
 # Scaling
 dat <- transform(dat, time = (day-122)/10)
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
+if(0){
   # asreml3
-  require(asreml)
+  libs(asreml)
   
   # Smooth for each animal.  No treatment effects. Similar to SAS Output 38.6.9
 
@@ -97,9 +97,9 @@ dat <- transform(dat, time = (day-122)/10)
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
-  ## require(asreml4)
-  ## require(latticeExtra)
+if(0){
+  ## libs(asreml4)
+  ## libs(latticeExtra)
   
   ## # Smooth for each animal.  No treatment effects. Similar to SAS Output 38.6.9
 
@@ -114,5 +114,6 @@ dat <- transform(dat, time = (day-122)/10)
   ## print(foo1+foo2)
 }
 
+}
 }
 \keyword{datasets}

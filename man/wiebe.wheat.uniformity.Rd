@@ -51,15 +51,16 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(wiebe.wheat.uniformity)
 dat <- wiebe.wheat.uniformity
 
-if(require(desplot)){
-  desplot(yield~col+row, dat,
-          aspect=125/180, flip=TRUE, # true aspect
-          main="wiebe.wheat.uniformity: yield") # row 1 is at south
-}
+libs(desplot)
+desplot(yield~col+row, dat,
+        aspect=125/180, flip=TRUE, # true aspect
+        main="wiebe.wheat.uniformity: yield") # row 1 is at south
 
 
 # Preece (1981) found the last digits have an interesting distribution
@@ -81,10 +82,11 @@ table(dat$col, dig) # Table 3 of Preece
 rowm <- tapply(dat$yield, dat$row, mean)
 acf(rowm, main="wiebe.wheat.uniformity row means")
 # Plot the row mean against the planter row unit 1-8
-require("lattice")
+libs("lattice")
 xyplot(rowm~rep(1:8, length=125),
        main="wiebe.wheat.uniformity",
        xlab="Planter row unit", ylab="Row mean yield")
 
+}
 }
 \keyword{datasets}

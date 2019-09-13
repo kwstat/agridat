@@ -28,11 +28,14 @@
   Martin J. Zuidhof and Robert A. Renema and Frank E. Robinson, (2008).
   Understanding Multiple, Repeated Animal Measurements with the Help of
   PROC GPLOT.  SAS Global Forum 2008, Paper 250-2008.
+  https://support.sas.com/resources/papers/proceedings/pdfs/sgf2008/250-2008.pdf
 
   Used with permission of Martin Zuidhof.
 }
 
 \examples{
+
+library(agridat)
 
 data(zuidhof.broiler)
 dat <- zuidhof.broiler

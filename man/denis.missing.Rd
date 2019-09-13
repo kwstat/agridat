@@ -31,24 +31,25 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(denis.missing)
 dat <- denis.missing
 
 # view missingness structure
-if(require(reshape2)){
-  acast(dat, env~gen, value.var='yield')
-}
+libs(reshape2)
+acast(dat, env~gen, value.var='yield')
 
 
-require(lattice)
+libs(lattice)
 redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
 levelplot(yield ~ gen*env, data=dat,
           col.regions=redblue,
           main="denis.missing - incidence heatmap")
 
 # stability variance (Table 3 in Piepho)
-require("nlme")
+libs(nlme)
 m1 <- lme(yield ~ -1 + gen, data=dat, random= ~ 1|env,
           weights = varIdent(form= ~ 1|gen),
           na.action=na.omit)
@@ -59,5 +60,6 @@ round(svar, 2)
 
 # m2 <- asreml(yield ~ gen, random = ~ env + at(gen):env, data=dat)
 
+}
 }
 

@@ -44,10 +44,12 @@
 
 \examples{
 
+library(agridat)
+
 data(williams.trees)
 dat <- williams.trees
 
-require(lattice)
+libs(lattice)
 xyplot(survival~height|env,dat, main="williams.trees", xlab="Height",
 ylab="Percent surviving")
 }

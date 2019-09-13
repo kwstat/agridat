@@ -42,6 +42,8 @@
   None
 }
 \examples{
+
+library(agridat)
 data(wyatt.multi.uniformity)
 dat <- wyatt.multi.uniformity
 
@@ -57,13 +59,13 @@ dat <- wyatt.multi.uniformity
 # cor(reshape2::acast(dat, row+col ~ crop, value.var="yield"), use="pair")
 
 # Fig 3
-require(lattice)
+libs(lattice)
 xyplot(yield ~ col|factor(row), dat, group=crop,
        main="wyatt.multi.uniformity",
        type='l', layout=c(1,3), auto.key=TRUE )                
 
 \dontrun{
-require(desplot)
+libs(desplot)
 desplot(yield ~ col*row, dat, subset=crop=="oats",
         aspect=(440)/(1591), # true aspect
         main="wyatt.multi.uniformity - 1925 oats")

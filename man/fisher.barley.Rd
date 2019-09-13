@@ -50,30 +50,32 @@
   
 }
 \examples{
+\dontrun{
+
+library(agridat)
 data(fisher.barley)
 dat <- fisher.barley
 
-if(require(dplyr) & require(lattice)) {
-  # Yates 1938 figure 1. Regression on env mean
-  # Sum years within loc
-  dat2 <- aggregate(yield ~ gen + env, data=dat, FUN=sum)
-  # Avg within env
-  emn <- aggregate(yield ~ env, data=dat2, FUN=mean)
-  dat2$envmn <- emn$yield[match(dat2$env, emn$env)]
-  xyplot(yield ~ envmn, dat2, group=gen, type=c('p','r'),
-         main="fisher.barley - stability regression",
-         xlab="Environment total", ylab="Variety mean",
-         auto.key=list(columns=3))
-}
+libs(dplyr,lattice)
+# Yates 1938 figure 1. Regression on env mean
+# Sum years within loc
+dat2 <- aggregate(yield ~ gen + env, data=dat, FUN=sum)
+# Avg within env
+emn <- aggregate(yield ~ env, data=dat2, FUN=mean)
+dat2$envmn <- emn$yield[match(dat2$env, emn$env)]
+xyplot(yield ~ envmn, dat2, group=gen, type=c('p','r'),
+       main="fisher.barley - stability regression",
+       xlab="Environment total", ylab="Variety mean",
+       auto.key=list(columns=3))
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
+if(0){
 
   # calculate stability according to the sum-of-squares approach used by
   # Shukla (1972), eqn 11. match to Shukla, Table 4, M.S. column
   # also matches fernandez, table 3, stabvar column
-  require(dplyr)
+  libs(dplyr)
   dat2 <- dat
   dat2 <- group_by(dat2, gen,env)
   dat2 <- summarize(dat2, yield=sum(yield)) # means across years
@@ -101,10 +103,10 @@ if(require(dplyr) & require(lattice)) {
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
+if(0){
   # mixed model approach gives similar results (but not identical)
   # asreml3
-  library(asreml)
+  libs(asreml)
   dat2 <- dat2[order(dat2$gen),]
 
   # G-side
@@ -136,5 +138,6 @@ if(require(dplyr) & require(lattice)) {
   
 }
 
+}
 }
 \keyword{datasets}

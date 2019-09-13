@@ -47,6 +47,8 @@
 \examples{
 \dontrun{
 
+library(agridat)
+
   data(robinson.peanut.uniformity)
   dat <- robinson.peanut.uniformity
 
@@ -55,7 +57,7 @@
   #     1939     1940 
   # 703.7847 787.8125 
   
-  require(desplot)
+  libs(desplot)
   desplot(yield ~ col*row|year, dat,
           flip=TRUE, tick=TRUE, aspect=200/48,
           main="robinson.peanut.uniformity")

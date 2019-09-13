@@ -44,23 +44,24 @@
 \examples{
 \dontrun{
 
+library(agridat)
 data(kerr.sugarcane.uniformity)
 dat <- kerr.sugarcane.uniformity
 
 # match Kerr figure 4
-require(desplot)
+libs(desplot)
 desplot(yield ~ col*row|trial, dat,
         flip=TRUE, aspect=1, # true aspect
         main="kerr.sugarcane.uniformity")
 
 # CV matches Kerr table 2, page 768
 # aggregate(yield ~ trial, dat, FUN= function(x) round(100*sd(x)/mean(x),2))
-%%   trial yield
-%% 1    T1  7.95
-%% 2    T2  9.30
-%% 3    T3 10.37
-%% 4    T4 13.76
-}
+##   trial yield
+## 1    T1  7.95
+## 2    T2  9.30
+## 3    T3 10.37
+## 4    T4 13.76
 
+}
 }
 \keyword{datasets}

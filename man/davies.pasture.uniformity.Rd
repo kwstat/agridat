@@ -43,6 +43,8 @@ Uniformity trial of pasture in Australia.
 \examples{
 \dontrun{
 
+library(agridat)
+
   data(davies.pasture.uniformity)
   dat <- davies.pasture.uniformity
   
@@ -50,10 +52,10 @@ Uniformity trial of pasture in Australia.
   # mean(dat$yield) # 227.77, Davies has 221.7
   # sd(dat$yield)/mean(dat$yield) # 33.9, Davies has 32.5
 
-  # require(lattice)
+  # libs(lattice)
   # qqmath( ~ yield, dat) # clearly non-normal, skewed right
 
-  require(desplot)
+  libs(desplot)
   desplot(yield ~ col*row, dat,
           flip=TRUE, aspect=(40*5)/(19*10), # true aspect
           main="davies.pasture.uniformity") 

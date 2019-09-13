@@ -34,6 +34,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 data(mead.lamb)
@@ -46,21 +47,21 @@ mosaicplot(d2, color=c("lemonchiffon1","moccasin","lightsalmon1","indianred"),
 
 names(dat) <- c('F','B','L','y') # for compactness
 # Match totals in Mead example 14.6
-if(require(dplyr)){
-  dat <- group_by(dat, F,B)
-  summarize(dat, y=sum(y))
-  ##          F      B     y
-  ##   <fctr> <fctr> <int>
-  ## 1     F1      A   150
-  ## 2     F1      B    46
-  ## 3     F1      C    78
-  ## 4     F2      A    72
-  ## 5     F2      B    79
-  ## 6     F2      C    28
-  ## 7     F3      A   224
-  ## 8     F3      B   129
-  ## 9     F3      C    34
-}
+libs(dplyr)
+dat <- group_by(dat, F,B)
+summarize(dat, y=sum(y))
+##          F      B     y
+##   <fctr> <fctr> <int>
+## 1     F1      A   150
+## 2     F1      B    46
+## 3     F1      C    78
+## 4     F2      A    72
+## 5     F2      B    79
+## 6     F2      C    28
+## 7     F3      A   224
+## 8     F3      B   129
+## 9     F3      C    34
+
 
 # Models
 m1 <- glm(y ~ F + B + F:B, data=dat,
@@ -84,32 +85,34 @@ m4 <- update(m4,
 summary(m4)
 
 # Match deviance table from Mead
-if(require(broom)){
-  all <- do.call(rbind, lapply(list(m1, m2, m3, m4, m5), broom::glance))
-  all$model <- unlist(lapply(list(m1, m2, m3, m4, m5),
-                                 function(x) as.character(formula(x)[3])))
-  all[,c('model','deviance','df.residual')]
-  ##                         model  deviance df.residual
-  ## 1                 F + B + F:B 683.67257          27
-  ## 2             F + B + L + F:B 131.23828          24
-  ## 3       F + B + L + F:B + B:L 116.27069          18
-  ## 4       F + B + L + F:B + F:L  18.84460          18
-  ## 5 F + B + L + F:B + B:L + F:L  14.57987          12
-}
+libs(broom)
+all <- do.call(rbind, lapply(list(m1, m2, m3, m4, m5), broom::glance))
+all$model <- unlist(lapply(list(m1, m2, m3, m4, m5),
+                               function(x) as.character(formula(x)[3])))
+all[,c('model','deviance','df.residual')]
+##                         model  deviance df.residual
+## 1                 F + B + F:B 683.67257          27
+## 2             F + B + L + F:B 131.23828          24
+## 3       F + B + L + F:B + B:L 116.27069          18
+## 4       F + B + L + F:B + F:L  18.84460          18
+## 5 F + B + L + F:B + B:L + F:L  14.57987          12
 
-\dontrun{
+
+if(0){
   # Using MASS::loglm
-  library(MASS)
+  libs(MASS)
   # Note: without 'fitted=TRUE', devtools::run_examples has an error
   m4b <- MASS::loglm(y ~ F + B + F:B + L + F:L, data = dat, fitted=TRUE)
   # Table of farm * class interactions. Match Mead p. 360
   round(coef(m4b)$F.L,2)
   fitted(m4b)
   resid(m4b)
-  # require(vcd)
+  # libs(vcd)
   # mosaic(m4b, shade=TRUE,
   # formula = ~ F + B + F:B + L + F:L,
   # residual_type="rstandard", keep_aspect=FALSE)
+}
+
 }
 }
 \keyword{datasets}

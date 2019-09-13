@@ -37,6 +37,8 @@
 
 \examples{
 \dontrun{
+
+library(agridat)
   
   data(stephens.sorghum.uniformity)
   dat <- stephens.sorghum.uniformity
@@ -53,7 +55,7 @@
   d4 <- aggregate(yield ~ row2+col, data=d4, FUN=sum)
   d4$row2 <- 25-d4$row2 # flip horizontally
   
-  require(desplot)
+  libs(desplot)
   grays <- colorRampPalette(c("#d9d9d9","#252525"))
   desplot(yield ~ row2*col, data=d4,
           aspect=333/330, flip=TRUE, # true aspect

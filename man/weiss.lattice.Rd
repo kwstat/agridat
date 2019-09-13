@@ -40,15 +40,17 @@ rep (instead of across reps).
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(weiss.lattice)
 dat <- weiss.lattice
 
-if(require(desplot)){
-  desplot(yield~col*row|rep,dat,
-          text=gen, shorten="none", cex=.8, aspect=3/16, # true aspect
-          main="weiss.lattice (layout uncertain)", xlab="Soybean yields")
-}
+libs(desplot)
+desplot(yield~col*row|rep,dat,
+        text=gen, shorten="none", cex=.8, aspect=3/16, # true aspect
+        main="weiss.lattice (layout uncertain)", xlab="Soybean yields")
+
 
 dat <- transform(dat, xf=factor(col), yf=factor(row))
 m1 <- lm(terms(yield ~ rep + rep:xf + rep:yf + gen, keep.order=TRUE), data=dat)
@@ -63,19 +65,18 @@ anova(m1) # Matches Weiss table 7
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
-  require(asreml)
-  m2 <- asreml(yield ~ rep + rep:xf + rep:yf + gen, data=dat)
-  anova(m2)
-  predict(m2, data=dat, classify="gen")$predictions$pvals # Weiss table 6 means
-  ##  gen pred.value std.error  est.stat
-  ##  G01      27.74     1.461 Estimable
-  ##  G02      24.95     1.461 Estimable
-  ##  G03      24.38     1.461 Estimable
-  ##  G04      28.05     1.461 Estimable
-  ##  G05      19.6      1.461 Estimable
-  ##  G06      23.79     1.461 Estimable
-}
+libs(asreml)
+m2 <- asreml(yield ~ rep + rep:xf + rep:yf + gen, data=dat)
+anova(m2)
+predict(m2, data=dat, classify="gen")$predictions$pvals # Weiss table 6 means
+##  gen pred.value std.error  est.stat
+##  G01      27.74     1.461 Estimable
+##  G02      24.95     1.461 Estimable
+##  G03      24.38     1.461 Estimable
+##  G04      28.05     1.461 Estimable
+##  G05      19.6      1.461 Estimable
+##  G06      23.79     1.461 Estimable
 
+}
 }
 \keyword{datasets}

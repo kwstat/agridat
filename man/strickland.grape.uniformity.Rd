@@ -35,10 +35,12 @@
 \examples{
 \dontrun{
 
+library(agridat)
+
 data(strickland.grape.uniformity)
 dat <- strickland.grape.uniformity
 
-  require(desplot)
+  libs(desplot)
   desplot(yield ~ col*row, dat,
           main="strickland.grape.uniformity",
           flip=TRUE, aspect=(31*8)/(5*10) )

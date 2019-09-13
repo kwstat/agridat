@@ -42,49 +42,43 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(kempton.barley.uniformity)
 dat <- kempton.barley.uniformity
 
-if(require(desplot)){
-  desplot(yield~col*row, dat,
-          aspect=140/98, tick=TRUE, # true aspect
-          main="kempton.barley.uniformity")
-}
+libs(desplot)
+desplot(yield~col*row, dat,
+        aspect=140/98, tick=TRUE, # true aspect
+        main="kempton.barley.uniformity")
 
-# ----------------------------------------------------------------------------
 
-\dontrun{
+# Kempton estimated auto-regression coefficients b1=0.10, b2=0.91
 
-  # Kempton estimated auto-regression coefficients b1=0.10, b2=0.91
+dat <- transform(dat, xf = factor(col), yf=factor(row))
+# asreml3
+libs(asreml)
+m1 <- asreml(yield ~ 1, data=dat, rcov=~ar1(xf):ar1(yf))
 
-  dat <- transform(dat, xf = factor(col), yf=factor(row))
-  # asreml3
-  require(asreml)
-  m1 <- asreml(yield ~ 1, data=dat, rcov=~ar1(xf):ar1(yf))
-  
-  require(lucid)
-  vc(m1)
-  ##      effect component std.error z.ratio constr
-  ##  R!variance    0.1044   0.022       4.7    pos
-  ##    R!xf.cor    0.2458   0.07484     3.3  uncon
-  ##    R!yf.cor    0.8186   0.03822    21    uncon
-  
-  # asreml estimates auto-regression correlations of 0.25, 0.82
-  # Kempton estimated auto-regression coefficients b1=0.10, b2=0.91
-}
+libs(lucid)
+vc(m1)
+##      effect component std.error z.ratio constr
+##  R!variance    0.1044   0.022       4.7    pos
+##    R!xf.cor    0.2458   0.07484     3.3  uncon
+##    R!yf.cor    0.8186   0.03822    21    uncon
 
-# ----------------------------------------------------------------------------
+# asreml estimates auto-regression correlations of 0.25, 0.82
+# Kempton estimated auto-regression coefficients b1=0.10, b2=0.91
 
-\dontrun{
-
+if(0){
   # Kempton estimated auto-regression coefficients b1=0.10, b2=0.91
   
   ## dat <- transform(dat, xf = factor(col), yf=factor(row))
-  ## require(asreml4)
+  ## libs(asreml4)
   ## m1 <- asreml(yield ~ 1, data=dat, residual = ~ar1(xf):ar1(yf))
   
-  ## require(lucid)
+  ## libs(lucid)
   ## vc(m1)
   ## ##       effect component std.error z.ratio bound %ch
   ## ##     xf:yf(R)    0.1044   0.022       4.7     P   0
@@ -112,6 +106,6 @@ set.seed(251)
 out <- replicate(50, fitfun(dat))
 rowMeans(out) # 826 1079
 
-# ----------------------------------------------------------------------------
 
+}
 }

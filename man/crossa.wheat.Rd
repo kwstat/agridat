@@ -80,7 +80,7 @@ data(crossa.wheat)
 dat <- crossa.wheat
 
 # AMMI biplot.  Fig 3 of Crossa et al.
-require(agricolae)
+libs(agricolae)
 m1 <- with(dat, AMMI(E=loc, G=gen, R=1, Y=yield))
 b1 <- m1$biplot[,1:4]
 b1$PC1 <- -1 * b1$PC1 # Flip vertical
@@ -103,7 +103,7 @@ arrows(mn, 0,
 library(agridat)
 data(crossa.wheat)
 dat2 <- crossa.wheat
-library(gge)
+libs(gge)
 # Specify env.group as column in data frame
 m2 <- gge(yield~gen*loc, dat2, env.group=locgroup, scale=FALSE)
 biplot(m2, main="crossa.wheat - GGB biplot")

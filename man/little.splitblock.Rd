@@ -40,7 +40,9 @@
   None.
 }
 \examples{
+\dontrun{
 
+library(agridat)
 data(little.splitblock)
 dat <- little.splitblock
 
@@ -50,18 +52,18 @@ dat <- little.splitblock
 ## with(dat, tapply(yield,row,sum))
 
 # Layout shown by Little figure 10.2
-if(require(desplot)){
-  desplot(yield ~ col*row, data=dat,
-          out1=block, out2=col, col=nitro, cex=1, num=harvest,
-          main="little.splitblock")
-}
+libs(desplot)
+desplot(yield ~ col*row, data=dat,
+        out1=block, out2=col, col=nitro, cex=1, num=harvest,
+        main="little.splitblock")
+
 
 # Convert continuous traits to factors
 dat <- transform(dat, R=factor(row), C=factor(block),
                  H=factor(harvest), N=factor(nitro))
 
-if(FALSE){
-  library(lattice)
+if(0){
+  libs(lattice)
   xyplot(yield ~ nitro|H,dat)
   xyplot(yield ~ harvest|N,dat)
 }
@@ -71,5 +73,6 @@ m1 <- aov(yield ~ R + C + N + H + N:H +
             Error(R:C:N + C:H + C:N:H), data=dat)
 summary(m1)
 
+}
 }
 \keyword{datasets}

@@ -47,6 +47,8 @@
 
 \examples{
 
+library(agridat)
+
 data(karcher.turfgrass)
 dat <- karcher.turfgrass
 
@@ -60,7 +62,7 @@ mosaicplot(xtabs(count ~ manage + rating + nitro, dat),
            main="karcher.turfgrass - turfgrass ratings")
 
 # Multinomial logistic model.  Probit Ordered Logistic Regression.
-require(MASS)
+libs(MASS)
 m1 <- polr(rating ~ nitro*manage + week, dat, weights=count, Hess=TRUE, method='logistic')
 summary(m1)
 

@@ -31,11 +31,13 @@
 
 \examples{
 
+library(agridat)
+
 data(cleveland.soil)
 dat <- cleveland.soil
 
 # Similar to Cleveland fig 4.64
-## require(latticeExtra)
+## libs(latticeExtra)
 ## redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
 ## levelplot(resistivity ~ easting + northing, data = dat,
 ##           col.regions=redblue,
@@ -48,7 +50,7 @@ sg1 <- expand.grid(easting = seq(.15, 1.410, by = .02),
                    northing = seq(.150, 3.645, by = .02))
 lo1 <- loess(resistivity~easting*northing, data=dat, span = 0.1, degree = 2)
 fit1 <- predict(lo1, sg1)
-require(lattice)
+libs(lattice)
 redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
 levelplot(fit1 ~ sg1$easting * sg1$northing,
           col.regions=redblue,
@@ -60,7 +62,7 @@ levelplot(fit1 ~ sg1$easting * sg1$northing,
 
 \dontrun{
   # 3D loess plot with data overlaid
-  require(rgl)
+  libs(rgl)
   bg3d(color = "white")
   clear3d()
   points3d(dat$easting, dat$northing, dat$resistivity / 100,

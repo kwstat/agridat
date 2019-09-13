@@ -4,21 +4,12 @@ author: "Kevin Wright"
 date: "`r Sys.Date()`"
 output:
   rmarkdown::html_vignette: default
-  html_document:
-    highlight: tango
 bibliography: agridat.bib
-vignette: |
-  % \VignetteIndexEntry{Using Papadakis covariates for nearest neighbor analysis} 
-  % \VignetteEncoding{UTF-8} 
-  % \VignetteEngine{knitr::rmarkdown}
+vignette: >
+  %\VignetteIndexEntry{Using Papadakis covariates for nearest neighbor analysis} 
+  %\VignetteEncoding{UTF-8} 
+  %\VignetteEngine{knitr::rmarkdown}
 ---
-<style type="text/css">
-body, td { font-size: 14pt; color: #000; padding:1em; }
-code, pre, #ws, #message { font-size: 12pt;
-  color: #000; background-color: #f5f5f5; }
-code {border: 1px solid #e0e0e0; padding: 0 5px;}
-pre > code { border: 0; }
-</style>
 
 # R setup
 
@@ -178,5 +169,6 @@ abline(0,1)
 The variety 'Buckskin' has a large adjustment when using the Papadakis
 method.  This makes sense, because Buckskin ended up in the high-yielding part
 of each of the four reps.
+
 
 # References

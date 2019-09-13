@@ -43,6 +43,8 @@
 }
 
 \examples{
+
+library(agridat)
 data(onofri.winterwheat)
 dat <- onofri.winterwheat
 dat <- transform(dat, year=factor(dat$year))
@@ -51,7 +53,7 @@ m1 <- aov(yield ~ year + block:year + gen + gen:year, dat)
 anova(m1) # Matches Onofri figure 1
 
 \dontrun{
-  require(agricolae)
+  libs(agricolae)
   m2 <- AMMI(dat$year, dat$gen, dat$block, dat$yield)
   plot(m2)
   title("onofri.winterwheat - AMMI biplot")

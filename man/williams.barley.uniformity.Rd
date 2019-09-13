@@ -45,20 +45,20 @@
   https://doi.org/10.1016/j.spasta.2017.10.003
 }
 \examples{
+\dontrun{
 
 library(agridat)
 data(williams.barley.uniformity)
 dat <- williams.barley.uniformity
 
-if(require(desplot)){
-  desplot(yield ~ col*row, dat,
-          aspect= 75/36, # true aspect
-          main="williams.barley.uniformity")
-}
+libs(desplot)
+desplot(yield ~ col*row, dat,
+        aspect= 75/36, # true aspect
+        main="williams.barley.uniformity")
 
 
 # Smoothed contour/persp plot like Williams Fig 1b, 2b
-require("lattice")
+libs(lattice)
 dat$fit <- fitted(loess(yield~col*row, dat, span=.1))
 contourplot(fit~col*row, data=dat,
             aspect=75/36, region=TRUE, col.regions=RedGrayBlue,
@@ -69,5 +69,6 @@ wireframe(fit~col*row, data=dat, zlim=c(100, 350),
 # Williams table 1
 anova(aov(yield ~ factor(row) + factor(col), dat))
 
+}
 }
 \keyword{datasets}

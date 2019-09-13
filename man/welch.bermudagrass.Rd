@@ -43,18 +43,20 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(welch.bermudagrass)
 dat <- welch.bermudagrass
 # Welch uses 100-pound units of n,p,k.
 dat <- transform(dat, n=n/100, p=p/100, k=k/100)
 
-if(require(latticeExtra)){
-  useOuterStrips(xyplot(yield~n|factor(p)*factor(k), data=dat, type='b',
-                        main="welch.bermudagrass: yield for each P*K",
-                        xlab="Nitro for each Phosphorous level",
-                        ylab="Yield for each Potassim level"))
-}
+libs(latticeExtra)
+useOuterStrips(xyplot(yield~n|factor(p)*factor(k), data=dat, type='b',
+                      main="welch.bermudagrass: yield for each P*K",
+                      xlab="Nitro for each Phosphorous level",
+                      ylab="Yield for each Potassim level"))
+
 
 # Fit a quadratic model
 m1 <- lm(yield ~ n + p + k + I(n^2) + I(p^2) + I(k^2) + n:p + n:k + p:k + n:p:k, data=dat)
@@ -91,7 +93,7 @@ d4[which.max(d4$income),] # Optimum at 300 lb N, 71 lb P, 148 lb K
 
 
 # ----- JAGS -----
-\dontrun{
+if(0){
   # Congdon (2007) p. 124, provides a Bayesian model based on a GLM
   # by McCullagh & Nelder.  We use JAGS and simplify the code.
   # y ~ gamma with shape = nu, scale = nu * eps_i
@@ -99,7 +101,7 @@ d4[which.max(d4$income),] # Optimum at 300 lb N, 71 lb P, 148 lb K
   # N,P,K are added fertilizer amounts, a1,a2,a3 are background
   # nutrient levels and b1,b2,b3 are growth parameters.
 
-  require(rjags)
+  libs(rjags)
 
   mod.bug =
   "model {
@@ -134,7 +136,7 @@ d4[which.max(d4$income),] # Optimum at 300 lb N, 71 lb P, 148 lb K
 
   # Results nearly identical go Congdon
   print(summary(c1)$statistics[,1:2],dig=1)
-  # require(lucid)
+  # libs(lucid)
   # print(vc(c1),3)
   ##       Mean     SD
   ## a1  44.85  4.123
@@ -148,6 +150,8 @@ d4[which.max(d4$income),] # Optimum at 300 lb N, 71 lb P, 148 lb K
   d2 <- coda.samples(j1, "yhat", n.iter=10000)
   dat$yhat <- summary(d2)$statistics[,1]
   with(dat, plot(yield, yield-yhat))
+}
+
 }
 }
 \keyword{datasets}

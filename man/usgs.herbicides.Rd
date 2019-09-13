@@ -58,12 +58,14 @@ Sample types: CR = concurrent replicate sample, FB = field blank, LD = laborator
 }
 
 \examples{
-data(usgs.herbicides)
-dat <- usgs.herbicides
-
 \dontrun{
+  
+  library(agridat)
+  data(usgs.herbicides)
+  dat <- usgs.herbicides
+  
 
-  require("NADA")
+  libs(NADA)
   # create censored data for one trait
   dat$y <- as.numeric(dat$atrazine)
   dat$ycen <- is.na(dat$y)
@@ -78,9 +80,8 @@ dat <- usgs.herbicides
   # with(dat, boxplot(y))
   pp <- with(dat, ros(obs=y, censored=ycen, forwardT="log")) # default lognormal
   plot(pp)
-}
 
-if(require("NADA")){
+
   plotfun <- function(vv){
     dat$y <- as.numeric(dat[[vv]])
     dat$ycen <- is.na(dat$y)
@@ -94,7 +95,7 @@ if(require("NADA")){
               "dimethenamid", "flufenacet")
   for(vv in vnames) plotfun(vv)
   par(op)
+  
 }
-
 }
 \keyword{datasets}

@@ -46,17 +46,17 @@
 \examples{
 \dontrun{
 
-require(agridat)
+library(agridat)
 data(kang.peanut)
 dat <- kang.peanut
 
 # Table 5.1 of Kang et al. (Chapter 5 of Saxton)
-require(reshape2)
+libs(reshape2)
 Y0 <- acast(dat, env~gen, value.var='yield', fun=mean)
 round(Y0,2)
 
 # GGE biplot of Kang, p. 82.
-require(gge)
+libs(gge)
 m1 <- gge(yield~gen*env, data=dat, scale=FALSE)
 biplot(m1, flip=c(1,1), main="kang.peanut - GGE biplot")
 

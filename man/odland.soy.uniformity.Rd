@@ -55,8 +55,10 @@
 
 \examples{
 \dontrun{
+
+library(agridat)
   
-  require(desplot)
+  libs(desplot)
 
   data(odland.soyhay.uniformity)
   dat1 <- odland.soyhay.uniformity

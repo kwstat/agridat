@@ -53,20 +53,22 @@
 }
 
 \examples{
+\dontrun{
+
+library(agridat)
 
 data(connolly.potato)
 dat <- connolly.potato
 
 # Field plan
-if(require(desplot)){
-  desplot(yield~col*row, data=dat,
-          out1=rep, # aspect unknown
-          main="connolly.potato yields (reps not contiguous)")
-}
+libs(desplot)
+desplot(yield~col*row, data=dat,
+        out1=rep, # aspect unknown
+        main="connolly.potato yields (reps not contiguous)")
 
 
 # Later maturities are higher yielding
-require(lattice)
+libs(lattice)
 bwplot(yield~matur, dat, main="connolly.potato yield by maturity")
 
 # Observed raw means. Matches Connolly table 2.
@@ -74,7 +76,7 @@ mn <- aggregate(yield~gen, data=dat, FUN=mean)
 mn[rev(order(mn$yield)),]
 
 # Create a covariate which is the average of neighboring plot yields
-if(require(reshape2)){
+libs(reshape2)
 mat <- acast(dat, row~col, value.var='yield')
 mat2 <- matrix(NA, nrow=4, ncol=20)
 mat2[,2:19] <- (mat[ , 1:18] + mat[ , 3:20])/2
@@ -105,8 +107,7 @@ xyplot(yadj~cov, data=dat, type=c('p','r'),
        main="connolly.potato",
        xlab="Avg yield of nearest neighbors",
        ylab="Yield, adjusted for variety and block effects")
+
 }
-
-
 }
 \keyword{datasets}

@@ -51,16 +51,18 @@
 \examples{
 \dontrun{
 
+library(agridat)
+
   data(masood.rice.uniformity)
   dat <- masood.rice.uniformity
   
-  require(desplot)
+  libs(desplot)
   desplot(yield ~ col*row, data=dat,
           flip=TRUE, tick=TRUE, aspect=24/12, # true aspect
           main="masood.rice.uniformity - yield heatmap")
 
-  require(agricolae)
-  require(reshape2)
+  libs(agricolae)
+  libs(reshape2)
   dmat <- acast(dat, row~col, value.var='yield')
   index.smith(dmat,
               main="masood.rice.uniformity",

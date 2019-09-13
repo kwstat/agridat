@@ -40,6 +40,8 @@
 
 \examples{
 
+library(agridat)
+
 data(senshu.rice)
 dat <- senshu.rice
 

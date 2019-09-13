@@ -41,43 +41,42 @@
 }
 
 \examples{
+\dontrun{
+
+library(agridat)
 
 data(bridges.cucumber)
 dat <- bridges.cucumber
 dat <- transform(dat, rowf=factor(row), colf=factor(col))
 
-if(require(desplot)){
-  desplot(yield~col*row|loc, data=dat,
-          # aspect unknown
-          text=gen, cex=1,
-          main="bridges.cucumber")
-}
+libs(desplot)
+desplot(yield~col*row|loc, data=dat,
+        # aspect unknown
+        text=gen, cex=1,
+        main="bridges.cucumber")
+
+
+# Graphical inference test for heterogenous variances
+libs(nullabor)
+# Create a lineup of datasets
+fun <- null_permute("loc")
+dat20 <- lineup(fun, dat, n=20, pos=9)
+
+# Now plot
+libs(lattice)
+bwplot(yield ~ loc|factor(.sample), dat20,
+       main="bridges.cucumber - graphical inference")
+
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
-  # Graphical inference test for heterogenous variances
-  require(nullabor)
-  # Create a lineup of datasets
-  fun <- null_permute("loc")
-  dat20 <- lineup(fun, dat, n=20, pos=9)
-  
-  # Now plot
-  library(lattice)
-  bwplot(yield ~ loc|factor(.sample), dat20,
-         main="bridges.cucumber - graphical inference")
-}
-
-# ----------------------------------------------------------------------------
-
-\dontrun{
   # asreml3
-  require(asreml)
+  libs(asreml)
   ## Random row/col/resid. Same as Bridges 1989, p. 147
   m1 <- asreml(yield ~ 1 + gen + loc + loc:gen,
                random = ~ rowf:loc + colf:loc, data=dat)
 
-  require(lucid)
+  libs(lucid)
   vc(m1)
   ##             effect component std.error z.ratio constr
   ##  rowf:loc!rowf.var     31.62     23.02     1.4    pos
@@ -114,17 +113,13 @@ if(require(desplot)){
   m2$loglik
   ## -66.35621
   
-}
 
-# ----------------------------------------------------------------------------
-
-\dontrun{
-  ## require(asreml4)
+  ## libs(asreml4)
   ## ## Random row/col/resid. Same as Bridges 1989, p. 147
   ## m1 <- asreml(yield ~ 1 + gen + loc + loc:gen,
   ##              random = ~ rowf:loc + colf:loc, data=dat)
 
-  ## require(lucid)
+  ## libs(lucid)
   ## vc(m1)
   ## ##   effect component std.error z.ratio bound %ch
   ## ## rowf:loc     31.62     23.02     1.4     P   0
@@ -162,6 +157,5 @@ if(require(desplot)){
   ## ## -66.35621
 
 }
-
 }
 

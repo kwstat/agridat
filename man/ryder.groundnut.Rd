@@ -34,7 +34,9 @@
 }
 
 \examples{
-
+\dontrun{
+  
+library(agridat)
 data(ryder.groundnut)
 dat <- ryder.groundnut
 
@@ -45,15 +47,15 @@ dat$res1 <- resid(m1)
 # Table 3 of Ryder.  Scale up from kg/plot to kg/ha
 round(dat$res1 * 596.6,0)
 
-# Visually.  Note largest positive/negative residuals are adjacent
-if(require(desplot)){
+  # Visually.  Note largest positive/negative residuals are adjacent
+  libs(desplot)
   desplot(res1 ~ col + row, dat,
           text=gen, # aspect unknown
           main="ryder.groundnut - residuals")
-}
 
-\dontrun{
-  require(desplot)
+
+if(0){
+  libs(desplot)
   # Swap the dry yields for two plots and re-analyze
   dat[dat$block=="B3" & dat$gen=="A", "dry"] <- 2.8
   dat[dat$block=="B3" & dat$gen=="B", "dry"] <- 1.4
@@ -64,5 +66,6 @@ if(require(desplot)){
           text=gen, main="ryder.groundnut")
 }
 
+}
 }
 \keyword{datasets}

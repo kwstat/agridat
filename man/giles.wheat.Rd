@@ -50,6 +50,7 @@
   
 }
 \examples{
+\dontrun{
 
 library(agridat)
 data(giles.wheat)
@@ -63,20 +64,18 @@ dat2 <- subset(dat, !is.na(emergence))
 # with(dat, plot(straw~emergence))
 
 # Show unbalancedness of data
-if(require(lattice) & require(reshape2)){
-  redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
-  levelplot(acast(dat, gen ~ env, value.var='emergence'),
-            col.regions=redblue,
-            xlab="genotype", ylab="year",
-            main="giles.wheat - straw length")
-}
+libs(lattice, reshape2)
+redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
+levelplot(acast(dat, gen ~ env, value.var='emergence'),
+          col.regions=redblue,
+          xlab="genotype", ylab="year",
+          main="giles.wheat - straw length")
 
-\dontrun{
 
-# Analysis of straw length
 
-require(emmeans)
-require(gnm)
+# ----- Analysis of straw length -----
+
+libs(emmeans)
 
 # Mean across years. Matches Piepho Table 7 'Simple'
 m1 = lm(straw ~ gen, data=dat1)
@@ -87,20 +86,17 @@ m2 = lm(straw ~ gen + env, data=dat1)
 emmeans(m2, 'gen')
 
 # Bi-additive model. Matches Piepho Table 6, rows (c)
-library(gnm)
+libs(gnm)
 m3 <- gnm(straw ~ env + Mult(gen,env), data=dat1)
 cbind(adjusted=round(fitted(m3),0), dat1) 
 
-# Analysis of Ear emergence
+# ----- Analysis of Ear emergence -----
 
-require(emmeans)
-  
 # Simple two-way model. 
 m4 = lm(emergence ~ 1 + gen + env, data=dat2)
 emmeans(m4, c('gen','env')) # Matches Piepho Table 9. rpws (c)
 emmeans(m4, 'gen') # Match Piepho table 10, Least Squares column
 
 }
-
 }
 \keyword{datasets}

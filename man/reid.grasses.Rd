@@ -38,21 +38,23 @@
   None
 }
 \examples{
+\dontrun{
+  
+library(agridat)
 data(reid.grasses)
 dat <- reid.grasses
 
-if(require(latticeExtra)){
+  libs(latticeExtra)
   foo <- xyplot(drymatter + protein ~ nitro|year, dat, group=gen,
                 auto.key=list(columns=4),
                 as.table=TRUE, type=c('p','l'),
                 main="reid.grasses",ylab="drymatter/protein trait value",
                 scales=list(y=list(relation="free")))
   combineLimits(foo)
-}
 
-\dontrun{
+
   
-  library(nlme)
+  libs(nlme)
   dat2 <- dat
   dat2$indiv <- paste(dat$year, dat$gen) # individual year+genotype curves
   
@@ -83,6 +85,5 @@ if(require(latticeExtra)){
        main="reid.grasses - observed/predicted data") # only works with groupedData object
   
 }
-
 }
 \keyword{datasets}

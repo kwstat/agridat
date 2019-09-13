@@ -32,10 +32,12 @@
   None.
 }
 \examples{
+
+library(agridat)
 data(linder.wheat)
 dat <- linder.wheat
 \dontrun{
-require(gge)
+libs(gge)
 dat <- transform(dat, eb=paste0(env,block))
 m1 <- gge(yield~gen*eb, dat, env.group=env)
 biplot(m1, main="linder.wheat")

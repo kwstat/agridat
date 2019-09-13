@@ -34,6 +34,8 @@ https://doi.org/10.1093/jof/50.1.17
 None
 }
 \examples{
+
+library(agridat)
 data(johnson.douglasfir)
 dat <- johnson.douglasfir
 
@@ -43,7 +45,7 @@ mean(dat$volume) * 400
 # 91124 
 
 \dontrun{
-require(lattice)
+libs(lattice)
 levelplot(volume ~ col*row, dat, main="johnson.douglasfir", aspect=1)
 histogram( ~ volume, data=dat, main="johnson.douglasfir")
 }

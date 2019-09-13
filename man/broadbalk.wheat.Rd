@@ -61,10 +61,11 @@
 }
 \examples{
 
+library(agridat)
 data(broadbalk.wheat)
 dat <- broadbalk.wheat
 
-require(lattice)
+libs(lattice)
 ## xyplot(grain~straw|plot, dat, type=c('p','smooth'), as.table=TRUE,
 ##        main="broadbalk.wheat")
 xyplot(grain~year|plot, dat, type=c('p','smooth'), as.table=TRUE,

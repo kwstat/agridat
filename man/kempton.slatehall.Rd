@@ -45,41 +45,41 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(kempton.slatehall)
 dat <- kempton.slatehall
 
 # Besag 1993 figure 4.1 (left panel)
-if(require(desplot)){
-  grays <- colorRampPalette(c("#d9d9d9","#252525"))
-  desplot(yield ~ col * row, dat,
-          aspect=40/22.5, # true aspect
-          num=gen, out1=rep, col.regions=grays, # unknown aspect
-          main="kempton.slatehall - spring wheat yields")
-}
+libs(desplot)
+grays <- colorRampPalette(c("#d9d9d9","#252525"))
+desplot(yield ~ col * row, dat,
+        aspect=40/22.5, # true aspect
+        num=gen, out1=rep, col.regions=grays, # unknown aspect
+        main="kempton.slatehall - spring wheat yields")
+
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
-  # Incomplete block model of Gilmour et al 1995
-  require(lme4)
-  require(lucid)
-  dat <- transform(dat, xf=factor(col), yf=factor(row))
-  m1 <- lmer(yield ~ gen + (1|rep) + (1|rep:yf) + (1|rep:xf), data=dat)
-  vc(m1)
-  ##    groups        name variance stddev
-  ##  rep:xf   (Intercept)    14810 121.7
-  ##  rep:yf   (Intercept)    15600 124.9
-  ##  rep      (Intercept)     4262  65.29
-  ##  Residual                 8062  89.79
-}
+# Incomplete block model of Gilmour et al 1995
+libs(lme4, lucid)
+dat <- transform(dat, xf=factor(col), yf=factor(row))
+m1 <- lmer(yield ~ gen + (1|rep) + (1|rep:yf) + (1|rep:xf), data=dat)
+vc(m1)
+##    groups        name variance stddev
+##  rep:xf   (Intercept)    14810 121.7
+##  rep:yf   (Intercept)    15600 124.9
+##  rep      (Intercept)     4262  65.29
+##  Residual                 8062  89.79
+
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
+if(0){
   # Incomplete block model of Gilmour et al 1995
   # asreml3
-  require(asreml)
+  libs(asreml)
   m2 <- asreml(yield ~ gen, random = ~ rep/(xf+yf), data=dat)
   
   vc(m2)
@@ -95,10 +95,10 @@ if(require(desplot)){
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
+if(0){
   # Incomplete block model of Gilmour et al 1995
-  ## require(asreml4)
-  ## require(lucid)
+  ## libs(asreml4)
+  ## libs(lucid)
   ## m2 <- asreml(yield ~ gen, random = ~ rep/(xf+yf), data=dat)
 
   ## vc(m2)
@@ -118,7 +118,6 @@ if(require(desplot)){
   ## ## 5  G05            1530      60.2 Estimable
 }
 
-# ----------------------------------------------------------------------------
 
 }
-\keyword{datasets}
+}

@@ -37,26 +37,28 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(gomez.stripplot)
 dat <- gomez.stripplot
 
 # Gomez figure 3.7
-if(require(desplot)){
-  desplot(gen ~ col*row, data=dat,
-          # aspect unknown
-          out1=rep, out2=nitro, num=nitro, cex=1,
-          main="gomez.stripplot")
-}
+libs(desplot)
+desplot(gen ~ col*row, data=dat,
+        # aspect unknown
+        out1=rep, out2=nitro, num=nitro, cex=1,
+        main="gomez.stripplot")
+
 
 # Gertheiss figure 1
 # library(lattice)
 # dotplot(factor(nitro) ~ yield|gen, data=dat)
 
 # Gomez table 3.12
-tapply(dat$yield, dat$rep, sum)
-tapply(dat$yield, dat$gen, sum)
-tapply(dat$yield, dat$nitro, sum)
+# tapply(dat$yield, dat$rep, sum)
+# tapply(dat$yield, dat$gen, sum)
+# tapply(dat$yield, dat$nitro, sum)
 
 # Gomez table 3.15.  Anova table for strip-plot
 dat <- transform(dat, nf=factor(nitro))
@@ -87,7 +89,7 @@ summary(m1)
 
 
 # More compact view
-## library(agricolae)
+## libs(agricolae)
 ## with(dat, strip.plot(rep, nf, gen, yield))
 
 ## Analysis of Variance Table
@@ -103,7 +105,7 @@ summary(m1)
 
 
 # Mixed-model version
-## library(lme4)
+## libs(lme4)
 ## m3 <- lmer(yield ~ gen * nf + (1|rep) + (1|rep:nf) + (1|rep:gen), data=dat)
 ## anova(m3)
 
@@ -114,4 +116,4 @@ summary(m1)
 ## gen:nf 10 23877979  2387798  5.8006
 
 }
-
+}

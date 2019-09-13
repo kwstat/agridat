@@ -40,18 +40,19 @@
 
 \examples{
 \dontrun{
-  
-  data(goulden.barley.uniformity)
-  dat <- goulden.barley.uniformity
 
-  require(desplot)
-  desplot(yield ~ col*row, data=dat,
-          aspect=20/20, # true aspect
-          main="goulden.barley.uniformity")
+library(agridat)
+data(goulden.barley.uniformity)
+dat <- goulden.barley.uniformity
 
-  # Left skewed distribution. See LeClerg, Leonard, Clark
-  hist(dat$yield, main="goulden.barley.uniformity",
-       breaks=c(21,40,59,78,97,116,135,154,173,192,211,230,249)+.5)
+libs(desplot)
+desplot(yield ~ col*row, data=dat,
+        aspect=20/20, # true aspect
+        main="goulden.barley.uniformity")
+
+# Left skewed distribution. See LeClerg, Leonard, Clark
+hist(dat$yield, main="goulden.barley.uniformity",
+     breaks=c(21,40,59,78,97,116,135,154,173,192,211,230,249)+.5)
 
 }  
 }

@@ -42,23 +42,25 @@
   None.
 }
 \examples{
+\dontrun{
+
+library(agridat)
 data(jansen.apple)
 dat <- jansen.apple
 
-require(lattice)
+libs(lattice)
 xyplot(inoculum ~ y/n|gen, data=dat, group=block,
        layout=c(3,1),
        main="jansen.apple",
        xlab="Proportion infected per block/inoculum",
        ylab="Inoculum level")
 
-\dontrun{
-  require(lme4)
-  # Tentative model.  Needs improvement.
-  m1 <- glmer(cbind(y,n-y) ~ gen + factor(inoculum) + (1|block),
-              data=dat, family=binomial)
-  summary(m1)
-}
+## libs(lme4)
+## # Tentative model.  Needs improvement.
+## m1 <- glmer(cbind(y,n-y) ~ gen + factor(inoculum) + (1|block),
+##             data=dat, family=binomial)
+## summary(m1)
 
+}
 }
 \keyword{datasets}

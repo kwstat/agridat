@@ -34,6 +34,9 @@
   https://doi.org/10.1111/jac.12267
 }
 \examples{
+\dontrun{
+
+library(agridat)
 data(mead.turnip)
 dat <- mead.turnip
 
@@ -44,11 +47,12 @@ m1 <- aov(yield ~ block + ratef + widthf + ratef:widthf, data=dat)
 anova(m1) # table 12.10 in Mead
 
 # Similar to Piepho fig 10
-if(require(lattice)) {
-  xyplot(yield ~ log(spacing)|ratef, data=dat,
-         auto.key=list(columns=5),
-         main="mead.turnip - log(yield) for each density",
-         group=ratef)
+libs(lattice)
+xyplot(yield ~ log(spacing)|ratef, data=dat,
+       auto.key=list(columns=5),
+       main="mead.turnip - log(yield) for each density",
+       group=ratef)
+
 }
 }
 \keyword{datasets}

@@ -49,13 +49,15 @@
 }
 \examples{
 \dontrun{
+
+library(agridat)
   
   data(kiesselbach.oats.uniformity)
   dat <- kiesselbach.oats.uniformity
   
   range(dat$yield) # 56.7 92.8 match Kiesselbach p 64.
 
-  require(desplot)
+  libs(desplot)
   desplot(yield ~ col*row, dat,
           tick=TRUE, flip=TRUE, aspect=792/469, # true aspect
           main="kiesselbach.oats.uniformity")

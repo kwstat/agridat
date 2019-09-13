@@ -46,22 +46,23 @@
 }
 \examples{
 \dontrun{
+
+library(agridat)
+data(bancroft.peanut.uniformity)
+dat <- bancroft.peanut.uniformity
   
-  data(bancroft.peanut.uniformity)
-  dat <- bancroft.peanut.uniformity
+# match means Bancroft page 3
+## dat %>% group_by(block) %>% summarize(mn=mean(yield))
+## # A tibble: 2 x 2
+##   block    mn
+##   <chr> <dbl>
+## 1 B1     2.46
+## 2 B2     2.05
   
-  # match means Bancroft page 3
-  ## dat %>% group_by(block) %>% summarize(mn=mean(yield))
-  ## # A tibble: 2 x 2
-  ##   block    mn
-  ##   <chr> <dbl>
-  ## 1 B1     2.46
-  ## 2 B2     2.05
-  
-  require(desplot)
-  desplot(yield ~ col*row|block, dat,
-          flip=TRUE, aspect=(18*3)/(6*16.66), # true aspect
-          main="bancroft.peanut.uniformity")
+libs(desplot)
+desplot(yield ~ col*row|block, dat,
+        flip=TRUE, aspect=(18*3)/(6*16.66), # true aspect
+        main="bancroft.peanut.uniformity")
 
 }  
 }

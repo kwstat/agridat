@@ -37,13 +37,15 @@
 }
 \examples{
 \dontrun{
+
+library(agridat)
   data(strickland.tomato.uniformity)
   dat <- strickland.tomato.uniformity
 
   mean(dat$yield)
   sd(dat$yield)
 
-  require(desplot)
+  libs(desplot)
   desplot(yield ~ col*row, dat,
           main="strickland.tomato.uniformity",
           flip=TRUE, aspect=(6*12)/(30*4))

@@ -37,6 +37,7 @@
 
 \examples{
 
+library(agridat)
 data(besag.bayesian)
 dat <- besag.bayesian
 
@@ -45,7 +46,7 @@ var(dat$yield, na.rm=TRUE)
 
 # Besag Fig 2. Reverse row numbers to match Besag, Davison
 dat$rrow <- 76 - dat$row
-require("lattice")
+libs("lattice")
 xyplot(yield ~ rrow|col, dat, layout=c(1,3), type='s',
        xlab="row", ylab="yield", main="besag.bayesian")
 
@@ -53,7 +54,7 @@ xyplot(yield ~ rrow|col, dat, layout=c(1,3), type='s',
 
 \dontrun{
   # asreml3
-  require(asreml)
+  libs(asreml)
   
   # Use asreml to fit a model with AR1 gradient in rows
   
@@ -77,7 +78,7 @@ xyplot(yield ~ rrow|col, dat, layout=c(1,3), type='s',
 # ----------------------------------------------------------------------------
 
 \dontrun{  
-  ## require(asreml4)
+  ## libs(asreml4)
   
   ## # Use asreml to fit a model with AR1 gradient in rows
   

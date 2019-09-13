@@ -40,12 +40,14 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(wallace.iowaland)
 dat <- wallace.iowaland
 
 # Interesting trends involving latitude
-require(lattice)
+libs(lattice)
 splom(~dat[,-c(1:2)], type=c('p','smooth'), lwd=2, main="wallace.iowaland")
 
 # Means. Similar to Wallace table 1
@@ -58,19 +60,19 @@ m1 <- lm(fedval ~ yield + corn + grain + untillable, dat)
 summary(m1) # estimates similar to Wallace, top of p. 389
 
 # Choropleth map
-require(maps)
+libs(maps)
 data(county.fips)
 dat <- transform(dat, polnm = paste0('iowa,',county)) # polnm example: iowa,adair
 
-if(require("latticeExtra")){ # for mapplot
-  redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
-  mapplot(polnm~fedval , data=dat, colramp=redblue,
-          main="wallace.iowaland - Federal land values",
-          xlab="Land value, dollars per acre",
-          scales=list(draw=FALSE),
-          map=map('county', 'iowa', plot=FALSE,
-            fill=TRUE, projection="mercator"))
-}
+libs("latticeExtra") # for mapplot
+redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
+mapplot(polnm~fedval , data=dat, colramp=redblue,
+        main="wallace.iowaland - Federal land values",
+        xlab="Land value, dollars per acre",
+        scales=list(draw=FALSE),
+        map=map('county', 'iowa', plot=FALSE,
+          fill=TRUE, projection="mercator"))
 
+}
 }
 \keyword{datasets}

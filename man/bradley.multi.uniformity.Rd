@@ -86,39 +86,35 @@
   None
 }
 \examples{
+\dontrun{
 
+library(agridat)
 data(bradley.multi.uniformity)
+dat <- bradley.multi.uniformity
 
 # figures similar to Bradley, pages 11-15
+libs(desplot)
+desplot(yield ~ col*row, dat, subset=season==1,
+        flip=TRUE, aspect=433/366, # true aspect (omits roadways)
+        main="bradley.multi.uniformity - season 1, woolly pyrol")
+
+desplot(yield ~ col*row, dat, subset=season==2,
+        flip=TRUE, aspect=433/366, # true aspect (omits roadways)
+        main="bradley.multi.uniformity - season 2, woolly pyrol")
+
+desplot(yield ~ col*row, dat, subset=season==3,
+        flip=TRUE, aspect=433/366, # true aspect (omits roadways)
+        main="bradley.multi.uniformity - season 3, maize")
+
+
+desplot(yield ~ col*row, dat, subset=season==4,
+        flip=TRUE, aspect=433/366, # true aspect (omits roadways)
+        main="bradley.multi.uniformity - season 4, yams")
+
 dat1 <- subset(bradley.multi.uniformity, season==1)
-if(require(desplot)){
-  desplot(yield ~ col*row, dat1,
-          flip=TRUE, aspect=433/366, # true aspect (omits roadways)
-          main="bradley.multi.uniformity - season 1, woolly pyrol")
-}
-
 dat2 <- subset(bradley.multi.uniformity, season==2)
-if(require(desplot)){
-  desplot(yield ~ col*row, dat2,
-          flip=TRUE, aspect=433/366, # true aspect (omits roadways)
-          main="bradley.multi.uniformity - season 2, woolly pyrol")
-}
-
 dat3 <- subset(bradley.multi.uniformity, season==3)
-if(require(desplot)){
-  desplot(yield ~ col*row, dat3,
-          flip=TRUE, aspect=433/366, # true aspect (omits roadways)
-          main="bradley.multi.uniformity - season 3, maize")
-}
-
 dat4 <- subset(bradley.multi.uniformity, season==4)
-if(require(desplot)){
-  desplot(yield ~ col*row, dat4,
-          flip=TRUE, aspect=433/366, # true aspect (omits roadways)
-          main="bradley.multi.uniformity - season 4, yams")
-}
-
-\dontrun{
   # to combine plots across seasons, each yield value was converted to percent
   # of maximum yield in that season. Same as Bradley, page 17.
   dat1$percent <- dat1$yield / max(dat1$yield) * 100
@@ -132,13 +128,12 @@ if(require(desplot)){
   dat4 <- dat4[order(dat4$col, dat4$row),]
   dat14 <- dat1[,c('row','col')]
   dat14$fertility <- dat1$percent + dat2$percent + dat3$percent + dat4$percent
-  if(require(desplot)){
-    desplot(fertility ~ col*row, dat14,
-            tick=TRUE, flip=TRUE, aspect=433/366, # true aspect (omits roadways)
-            main="bradley.multi.uniformity - fertility")
-  }
+
+  libs(desplot)
+  desplot(fertility ~ col*row, dat14,
+          tick=TRUE, flip=TRUE, aspect=433/366, # true aspect (omits roadways)
+          main="bradley.multi.uniformity - fertility")
 
 }
-
 }
 \keyword{datasets}

@@ -49,6 +49,8 @@
 }
 \examples{
 \dontrun{
+
+library(agridat)
   
   data(stickler.sorghum.uniformity)
   dat <- stickler.sorghum.uniformity
@@ -56,7 +58,7 @@
   dat1 <- subset(dat, expt=="E1")
   dat2 <- subset(dat, expt!="E1")
   
-  require(desplot)
+  libs(desplot)
   desplot(yield ~ col*row|expt, data=dat,
           subset=expt=="E1",
           #cex=1,text=yield, shorten="none",

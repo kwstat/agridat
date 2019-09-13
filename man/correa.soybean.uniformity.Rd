@@ -36,12 +36,14 @@
 \examples{
 \dontrun{
 
-  data(correa.soybean.uniformity)
-  dat <- correa.soybean.uniformity
+library(agridat)
+data(correa.soybean.uniformity)
+dat <- correa.soybean.uniformity
 
-  desplot(yield ~ col*row, dat,
-          flip=TRUE, aspect=28.8/14.4, 
-          main="correa.soybean.uniformity")
+libs(desplot)
+desplot(yield ~ col*row, dat,
+        flip=TRUE, aspect=28.8/14.4, 
+        main="correa.soybean.uniformity")
   
 }
 }

@@ -62,15 +62,17 @@
 
 \examples{
 
+library(agridat)
+
 data(darwin.maize)
 dat <- darwin.maize
 
 # Compare self-pollination with cross-pollination
-require(lattice)
+libs(lattice)
 bwplot(height~type, dat, main="darwin.maize")
 
 \dontrun{
-  require(reshape2)
+  libs(reshape2)
   dm <- melt(dat)
   d2 <- dcast(dm, pot+pair~type)
   d2$diff <- d2$cross-d2$self

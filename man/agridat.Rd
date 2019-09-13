@@ -83,7 +83,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{moore.carrot.uniformity}            \tab 24 x 12 \tab xy \tab \cr
 \link{moore.springcauliflower.uniformity} \tab 12 x 20 \tab xy \tab \cr
 \link{moore.fallcauliflower.uniformity}   \tab 12 x 20 \tab xy \tab \cr
-\link{nagai.strawberry.uniformity}        \tab 18 x 24 \ tab xy \tab \cr
+\link{nagai.strawberry.uniformity}        \tab 18 x 24 \tab xy \tab \cr
 \link{narain.sorghum.uniformity}          \tab 10 x 16 \tab xy \tab \cr
 \link{nonnecke.peas.uniformity}           \tab 15 x 18 \tab xy, 2 traits \tab \cr
 \link{nonnecke.sweetcorn.uniformity}      \tab 32 x 18 \tab xy, 3 loc \tab \cr
@@ -118,15 +118,16 @@ name                                      \tab dimensions \tab other \tab model 
 \bold{Yield monitor}
 \tabular{llllll}{
 name                             \tab reps\tab years \tab trt \tab other \tab model \cr
-\link{gartner.corn}              \tab     \tab    \tab     \tab xy,ym \tab \cr
-\link{lasrosas.corn}             \tab 3   \tab 2  \tab 6   \tab xy,ym \tab lm\cr
+\link{gartner.corn}              \tab     \tab       \tab     \tab xy,ym \tab \cr
+\link{lasrosas.corn}             \tab 3   \tab 2     \tab 6   \tab xy,ym \tab lm \cr
+\link{kayad.alfalfa}             \tab     \tab 4     \tab     \tab xy,ym \tab \cr
 }
 
 % ------------------------------------------------------------------------------
 
 \bold{Animals}
 
-\tabular{llllllll}{
+\tabular{llllll}{
 name                             \tab gen  \tab years \tab trt \tab other \tab model \cr
 \link{alwan.lamb}                \tab 34   \tab 2  \tab        \tab ordinal \tab clmm \cr
 \link{becker.chicken}            \tab 5,12 \tab    \tab        \tab heritability \tab lmer \cr
@@ -146,7 +147,7 @@ name                             \tab gen  \tab years \tab trt \tab other \tab m
 \link{mead.lamb}                 \tab 3    \tab    \tab 3      \tab \tab glm \cr
 \link{patterson.switchback}      \tab 12   \tab    \tab 4      \tab \tab aov \cr
 \link{urquhart.feedlot}          \tab 11   \tab    \tab 3      \tab  \tab lm \cr
-\link{zuidhof.broiler}           \tab      \tab    \tab        \tab ts \tab \cr
+\link{zuidhof.broiler}           \tab      \tab    \tab        \tab ts \tab
 }
 
 % ------------------------------------------------------------------------------
@@ -162,7 +163,7 @@ name                             \tab gen \tab loc\tab reps\tab years \tab trt \
 \link{johnson.douglasfir}        \tab     \tab    \tab     \tab    \tab     \tab xy \tab \cr
 \link{lavoranti.eucalyptus}      \tab 70  \tab 7  \tab     \tab    \tab     \tab  \tab svd \cr
 \link{pearce.apple}              \tab     \tab    \tab 4   \tab    \tab 6   \tab cov \tab lm,lmer \cr
-\link{williams.trees}            \tab 37  \tab 6  \tab     \tab    \tab 2   \tab \tab \cr
+\link{williams.trees}            \tab 37  \tab 6  \tab     \tab    \tab 2   \tab \tab
 }
 
 % ------------------------------------------------------------------------------
@@ -355,7 +356,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{yan.winterwheat}             \tab 18  \tab 9  \tab     \tab    \tab       \tab \tab gge,biplot \cr
 \link{yang.barley}                 \tab 6   \tab 18 \tab     \tab    \tab       \tab \tab biplot \cr
 \link{yates.missing}               \tab     \tab    \tab 10  \tab    \tab 3^2   \tab factorial \tab lm, pca \cr
-\link{yates.oats}                  \tab 3   \tab    \tab 6   \tab    \tab       \tab xy,split,nitro\tab lmer \cr
+\link{yates.oats}                  \tab 3   \tab    \tab 6   \tab    \tab       \tab xy,split,nitro\tab lmer
 }
 
 \bold{Time series}
@@ -374,7 +375,7 @@ name                             \tab years \tab trt \tab other \tab model \cr
 \link{nass.wheat}                \tab 146 \tab    \tab \tab \cr
 \link{nass.rice}                 \tab 117 \tab    \tab \tab \cr
 \link{nass.soybean}              \tab 88  \tab    \tab \tab \cr
-\link{walsh.cottonprice}         \tab 34  \tab    \tab \tab cor\cr
+\link{walsh.cottonprice}         \tab 34  \tab    \tab \tab cor
 
 }
 
@@ -391,7 +392,7 @@ name                       \tab model \cr
 \link{turner.herbicide}    \tab glm, 4 trt \cr
 \link{usgs.herbicides}     \tab non-detect \cr
 \link{wallace.iowaland}    \tab lm, choropleth \cr
-\link{waynick.soil}        \tab spatial, nitro/carbon \cr
+\link{waynick.soil}        \tab spatial, nitro/carbon
 }
 
 Summaries:
@@ -403,7 +404,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{gauch.soy}                   \tab 7   \tab 7  \tab 4   \tab 12 \tab       \tab \tab ammi \cr
 \link{shafii.rapeseed}             \tab 6   \tab 14 \tab 3   \tab 3  \tab       \tab \tab biplot \cr
 \link{shaw.oats}                   \tab 13  \tab 2  \tab 5   \tab 3  \tab       \tab \tab aov \cr
-\link{verbyla.lupin}               \tab 9   \tab 8  \tab 3   \tab 2  \tab 7     \tab rsm1, xy, density\tab asreml\cr
+\link{verbyla.lupin}               \tab 9   \tab 8  \tab 3   \tab 2  \tab 7     \tab rsm1, xy, density\tab asreml
 }
 
 \bold{Comments of the package purpose}
@@ -436,9 +437,6 @@ In dataframes, 'block', 'rep', and similar terms are almost always coded like B1
 Almost all of the data are presented as 'tidy' dataframes with 'observations' in rows and 'variables' in columns.
 
 Although using \code{data()} is not necessary to access the data files, the example sections do include the use of \code{data()} because \code{devtools::run_examples()} needs it.
-
-Please report any bugs to the package author or at the package github
-site: \url{https://github.com/kwstat/agridat/issues}.
 
 }
 

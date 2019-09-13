@@ -53,7 +53,9 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(harrison.priors)
 dat <- harrison.priors
 
@@ -87,16 +89,16 @@ d1a <- d1
 d1a$source <- as.character(d1a$source)
 d1a[19,'source'] <- "(All)" # Add a blank row for the densitystrip
 d1
-if(require(latticeExtra)){
-  # Plot the range for each source, a density curve (with arbitary
-  # vertical scale) for the common prior distribution, and a density
-  # strip by stacking the individual bands and using transparency
-  segplot(factor(source) ~ min+max, d1a,
-          main="harrison.priors",xlab="daidzein level",ylab="source") +
-    xyplot(5000*dlnorm(xvals, mlog, slog)~xvals, type='l') +
-    segplot(factor(rep(1,18)) ~ min+max, d1, 4, level=d1$number,
-            col.regions="gray20", alpha=.1)
-}
+libs(latticeExtra)
+# Plot the range for each source, a density curve (with arbitary
+# vertical scale) for the common prior distribution, and a density
+# strip by stacking the individual bands and using transparency
+segplot(factor(source) ~ min+max, d1a,
+        main="harrison.priors",xlab="daidzein level",ylab="source") +
+  xyplot(5000*dlnorm(xvals, mlog, slog)~xvals, type='l') +
+  segplot(factor(rep(1,18)) ~ min+max, d1, 4, level=d1$number,
+          col.regions="gray20", alpha=.1)
 
+}
 }
 \keyword{datasets}

@@ -68,19 +68,21 @@ None.
 \examples{
 \dontrun{
 
+library(agridat)
+
   data(wiedemann.safflower.uniformity)
   dat <- wiedemann.safflower.uniformity
 
   # CV of entire field = 39%, matches Wiedemann p. 16
   sd(dat$yield)/mean(dat$yield)
 
-  require(desplot)
+  libs(desplot)
   desplot(yield~col*row, dat,
           flip=TRUE, tick=TRUE, aspect =99/165, # true aspect
           main="wiedemann.safflower.uniformity (true shape)")
 
-  require(agricolae)
-  require(reshape2)
+  libs(agricolae)
+  libs(reshape2)
   dmat <- acast(dat, row~col, value.var='yield')
   agricolae::index.smith(dmat,
               main="wiedemann.safflower.uniformity",

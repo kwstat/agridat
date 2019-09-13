@@ -35,3 +35,5 @@
 # ----- Travis -----
 ^.travis\.yml
 
+^_pkgdown\.yml$
+^pkgdown$

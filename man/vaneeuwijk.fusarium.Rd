@@ -53,21 +53,22 @@
 }
 
 \examples{
+\dontrun{
+  
+  library(agridat)
+  data(vaneeuwijk.fusarium)
+  dat <- vaneeuwijk.fusarium
+  dat <- transform(dat, year=factor(year))
+  dat <- transform(dat, logity=log((y/100)/(1-y/100)))
 
-data(vaneeuwijk.fusarium)
-dat <- vaneeuwijk.fusarium
-dat <- transform(dat, year=factor(year))
-dat <- transform(dat, logity=log((y/100)/(1-y/100)))
-
-if(require(HH)){
+  libs(HH)
   position(dat$year) <- c(3,9,14,19)
   position(dat$strain) <- c(2,5,8,11,14,17,20)
   HH::interaction2wt(logity ~ gen+year+strain,dat,rot=c(90,0),
                      x.between=0, y.between=0,
                      main="vaneeuwijk.fusarium")
-}
 
-\dontrun{
+
   # anova on logit scale. Near match to VanEeuwijk table 6
   m1 <- aov(logity ~ gen*strain*year, data=dat)
   anova(m1)
@@ -79,8 +80,8 @@ if(require(HH)){
   ## gen:strain      114  34.03   0.299               
   ## gen:year         57 140.94   2.473               
   ## strain:year      18 236.95  13.164               
-  ## gen:strain:year 342  93.15   0.272               
+  ## gen:strain:year 342  93.15   0.272
+  
 }
-
 }
 \keyword{datasets}

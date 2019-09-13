@@ -39,6 +39,8 @@
 
 \examples{
 
+library(agridat)
+
 data(digby.jointregression)
 dat <- digby.jointregression
 
@@ -90,7 +92,7 @@ while(!done){
 
 }
 
-require(lattice)
+libs(lattice)
 xyplot(yield ~ theta|gen, data=dat, xlab="theta (environment effect)",
        main="digby.jointregression - stability plot")
 
@@ -109,7 +111,7 @@ round(thetas,3)+1.164-.515 # Adjust intercept to match
 # -0.576  1.568 -0.779 -0.692  0.836 -1.080  0.649
 
 # How to use gnm package for this?
-# require(gnm)
+# libs(gnm)
 # m3 <- gnm(yield ~ gen + Mult(gen,env), data=dat) # slopes negated
 
 }

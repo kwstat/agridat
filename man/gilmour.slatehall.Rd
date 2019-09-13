@@ -45,22 +45,23 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(gilmour.slatehall)
 dat <- gilmour.slatehall
 
-if(require(desplot)){
-  desplot(yield ~ col * row, dat,
-          aspect=22.5/40, num=gen, out1=rep, cex=1,
-          main="gilmour.slatehall")
-}
+libs(desplot)
+desplot(yield ~ col * row, dat,
+        aspect=22.5/40, num=gen, out1=rep, cex=1,
+        main="gilmour.slatehall")
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
+if(0){
   # Model 4 of Gilmour et al 1997
   # asreml3
-  require(asreml)
+  libs(asreml)
   dat <- transform(dat, xf=factor(col), yf=factor(row))
   dat <- dat[order(dat$xf, dat$yf), ]
   m4 <- asreml(yield ~ gen + lin(row), data=dat,
@@ -69,7 +70,7 @@ if(require(desplot)){
   coef(m4)$fixed[1] # linear row
   # [1] 31.72252 # (sign switch due to row ordering)
   
-  require(lucid)
+  libs(lucid)
   vc(m4)
   ##      effect component std.error z.ratio constr
   ##    dev(row) 20290     10260         2      pos
@@ -83,9 +84,9 @@ if(require(desplot)){
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
+if(0){
   # Model 4 of Gilmour et al 1997
-  ## require(asreml4)
+  ## libs(asreml4)
   ## dat <- transform(dat, xf=factor(col), yf=factor(row))
   ## dat <- dat[order(dat$xf, dat$yf), ]
   ## m4 <- asreml(yield ~ gen + lin(row), data=dat,
@@ -94,7 +95,7 @@ if(require(desplot)){
   ## coef(m4)$fixed[1] # linear row
   ## # [1] 31.72252 # (sign switch due to row ordering)
 
-  ## require(lucid)
+  ## libs(lucid)
   ## vc(m4)
   ## ##       effect component std.error z.ratio bound %ch
   ## ##     dev(col)  2519      1959         1.3     P   0
@@ -106,5 +107,6 @@ if(require(desplot)){
   ## plot(varioGram(m4))
 }
 
+}
 }
 \keyword{datasets}

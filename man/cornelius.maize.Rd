@@ -33,22 +33,24 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(cornelius.maize)
 dat <- cornelius.maize
+
 # dotplot(gen~yield|env,dat) # We cannot compare genotype yields easily
 # Subtract environment mean from each observation
-if(require(reshape2)){
+libs(reshape2)
 mat <- acast(dat, gen~env)
 mat <- scale(mat, scale=FALSE)
 dat2 <- melt(mat)
 names(dat2) <- c('gen','env','yield')
-require(lattice)
+libs(lattice)
 bwplot(yield ~ gen, dat2,
        main="cornelius.maize - environment centered yields")
-}
 
-\dontrun{
+if(0){
 # This reproduces the analysis of Forkman and Piepho.
 
 test.pc <- function(Y0, type="AMMI", n.boot=10000, maxpc=6) {
@@ -93,7 +95,7 @@ test.pc <- function(Y0, type="AMMI", n.boot=10000, maxpc=6) {
 dat <- cornelius.maize
 
 # Convert to matrix format
-require(reshape2)
+libs(reshape2)
 dat <- acast(dat, env~gen, value.var='yield')
 
 ## R> test.pc(dat,"AMMI")
@@ -104,4 +106,5 @@ dat <- acast(dat, env~gen, value.var='yield')
 
 }
 }
-\keyword{datasets}
+}
+

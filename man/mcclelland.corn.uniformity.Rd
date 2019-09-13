@@ -42,6 +42,8 @@
 \examples{
 \dontrun{
 
+library(agridat)
+
   data(mcclelland.corn.uniformity)
   dat <- mcclelland.corn.uniformity
   
@@ -49,7 +51,7 @@
   # Probable error = 0.67449 * sd(). Relative to mean.
   # 0.67449 * sd(dat$yield)/mean(dat$yield) # 11.2%
   
-  require(desplot)
+  libs(desplot)
   desplot(yield ~ col*row, dat,
           flip=TRUE,
           aspect=(219*44/12)/132, # true aspect, 219 rows * 44 inches x 132 feet

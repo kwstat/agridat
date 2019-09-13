@@ -39,30 +39,29 @@
 }
 
 \examples{
-
-data("hazell.vegetables")
-dat <- hazell.vegetables
-
-if(FALSE & require(lattice)) {
+\dontrun{
+  
+  library(agridat)
+  data(hazell.vegetables)
+  dat <- hazell.vegetables
+  
+  libs(lattice)
   xyplot(carrot+celery+cucumber+pepper ~ year,dat,
          ylab="yearly profit by crop",
          type='b', auto.key=list(columns=4),
          panel.hline=0)
-}
 
-# optimal strategy for planting crops (calculated below)
-dat2 <- apply(dat[,-1], 1, function(x) x*c(0, 27.5, 100, 72.5))/1000
-colnames(dat2) <- rownames(dat)
-barplot(dat2, legend.text=c("     0 carrot", "27.5 celery", " 100 cucumber", "72.5 pepper"),
-        xlim=c(0,7), ylim=c(-5,120),
-        col=c('orange','green','forestgreen','red'),
-        xlab="year", ylab="Gross profit, $1000",
-        main="hazell.vegetables - retrospective profit from optimal strategy",
-        args.legend=list(title="acres, crop"))
+  # optimal strategy for planting crops (calculated below)
+  dat2 <- apply(dat[,-1], 1, function(x) x*c(0, 27.5, 100, 72.5))/1000
+  colnames(dat2) <- rownames(dat)
+  barplot(dat2, legend.text=c("     0 carrot", "27.5 celery", " 100 cucumber", "72.5 pepper"),
+          xlim=c(0,7), ylim=c(-5,120),
+          col=c('orange','green','forestgreen','red'),
+          xlab="year", ylab="Gross profit, $1000",
+          main="hazell.vegetables - retrospective profit from optimal strategy",
+          args.legend=list(title="acres, crop"))
 
-\dontrun{
-
-  require(linprog)
+  libs(linprog)
   # colMeans(dat[ , -1])
   # 252.8333 442.6667 283.8333 515.8333
  
@@ -125,6 +124,5 @@ barplot(dat2, legend.text=c("     0 carrot", "27.5 celery", " 100 cucumber", "72
   ## [5,] 68.95226 27.39246 88.61828 15.03700
 
 }
-
 }
 \keyword{datasets}

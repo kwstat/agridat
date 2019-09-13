@@ -73,6 +73,8 @@ Total area: 2400*48/43560=2.64 acres
 \examples{
 \dontrun{
 
+library(agridat)
+
   data(magistad.pineapple.uniformity)
   dat <- magistad.pineapple.uniformity
 
@@ -86,7 +88,7 @@ Total area: 2400*48/43560=2.64 acres
   ## 3    21 171.1600 2056.800
   ## 4    82 220.7500 1264.500
   
-  require(desplot)
+  libs(desplot)
   desplot(weight ~ col*row, dat,
           subset=field==1,
           aspect=2400/48,

@@ -48,10 +48,12 @@
 \examples{
 \dontrun{
 
+library(agridat)
+
 data(yan.winterwheat)
 dat <- yan.winterwheat
 
-require(gge)
+libs(gge)
 m1 <- gge(yield ~ gen*env, data=dat)
 biplot(m1, flip=c(1,1), hull=TRUE,
        main="yan.winterwheat - GGE biplot")

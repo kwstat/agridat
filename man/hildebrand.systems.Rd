@@ -42,11 +42,12 @@
 
 \examples{
 
+library(agridat)
 data(hildebrand.systems)
 dat <- hildebrand.systems
 
 # Piepho 1998 Fig 1
-require(lattice)
+libs(lattice)
 dotplot(yield ~ system, dat, groups=village, auto.key=TRUE,
         main="hildebrand.systems", xlab="cropping system by village")
 
@@ -72,7 +73,7 @@ pnorm((mu1-mu2)/sqrt(s11+s22-2*s12))
 
 \dontrun{
   # asreml3
-  require(asreml)
+  libs(asreml)
   # Environmental variance model, unstructured correlations
   
   dat <- dat[order(dat$system, dat$farm),]
@@ -87,7 +88,7 @@ pnorm((mu1-mu2)/sqrt(s11+s22-2*s12))
   ##     LMF      2.7      0.2561 Estimable
   
   # Variances, table 5
-  require(lucid)
+  libs(lucid)
   vc(m1)[c(2,4,7,11),]
   ##              effect component std.error z.ratio constr
   ##    R!system.CCA:CCA    1.11      0.4354     2.5    pos
@@ -114,7 +115,7 @@ pnorm((mu1-mu2)/sqrt(s11+s22-2*s12))
 # ----------------------------------------------------------------------------
 
 \dontrun{
-  ## require(asreml4)
+  ## libs(asreml4)
   ## # Environmental variance model, unstructured correlations
   
   ## dat <- dat[order(dat$system, dat$farm),]
@@ -130,7 +131,7 @@ pnorm((mu1-mu2)/sqrt(s11+s22-2*s12))
   ## ##     LMF      2.7      0.2561 Estimable
   
   ## # Variances, table 5
-  ## require(lucid)
+  ## libs(lucid)
   ## vc(m1)[c(2,4,7,11),]
   ## ##              effect component std.error z.ratio constr
   ## ##    R!system.CCA:CCA    1.11      0.4354     2.5    pos

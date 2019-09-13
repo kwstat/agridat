@@ -44,7 +44,9 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(holtsmark.timothy.uniformity)
 dat <- holtsmark.timothy.uniformity
 
@@ -52,14 +54,13 @@ dat <- holtsmark.timothy.uniformity
 dat <- transform(dat,
                  check = ifelse(floor((row+col)/3)==(row+col)/3, "C", ""))
                  
-if(require(desplot)){
-  desplot(yield ~ col*row, data=dat, flip=TRUE, text=check, show.key=FALSE,
-          aspect=30/200, # true aspect
-          main="holtsmark.timothy.uniformity")
+libs(desplot)
+desplot(yield ~ col*row, data=dat, flip=TRUE, text=check, show.key=FALSE,
+        aspect=30/200, # true aspect
+        main="holtsmark.timothy.uniformity")
+
+# sd(dat$yield) # 2.92 matches Holtsmark p. 348
+
 }
-
-sd(dat$yield) # 2.92 matches Holtsmark p. 348
-
 }
-
 \keyword{datasets}

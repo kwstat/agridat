@@ -37,6 +37,8 @@
 
 \examples{
 
+library(agridat)
+
 data(johnson.blight)
 dat <- johnson.blight
 
@@ -82,7 +84,7 @@ summary(m2)
 ## Residual deviance: 14.078  on 21  degrees of freedom
 ## AIC: 22.078
 
-require(lattice)
+libs(lattice)
 splom(dat[,c('blight','rain.am','rain.ja','precip.m')],
       main="johnson.blight - indicator of blight")
 

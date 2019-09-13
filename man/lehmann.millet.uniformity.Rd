@@ -37,11 +37,13 @@ The season of 1906 was abnormally wet compared with 1905 and 1907. [9th report]
   None
 }
 \examples{
+
+library(agridat)
 data(lehmann.millet.uniformity)
 dat <- lehmann.millet.uniformity
 
 \dontrun{
-  require(desplot)
+  libs(desplot)
   dat$year = factor(dat$year)
   desplot(yield ~ range*plot|year, dat, aspect=(22*50)/(6*200),
           main="lehmann.millet.uniformity",
@@ -50,7 +52,7 @@ dat <- lehmann.millet.uniformity
           main="lehmann.millet.uniformity",
           flip=TRUE, tick=TRUE)
   
-  require(dplyr)
+  libs(dplyr)
   group_by(dat, year) %>% summarize(yield=mean(yield, na.rm=TRUE))
 }
 }

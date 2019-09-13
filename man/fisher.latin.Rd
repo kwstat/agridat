@@ -38,6 +38,8 @@
 
 \examples{
 
+library(agridat)
+
 data(fisher.latin)
 dat <- fisher.latin
 

@@ -55,11 +55,13 @@
 
 \examples{
 \dontrun{
+
+library(agridat)
   
   data(wassom.brome.uniformity)
   dat <- wassom.brome.uniformity
 
-  require(desplot)
+  libs(desplot)
   desplot(yield~col*row|expt, dat,
           flip=TRUE, aspect=1, # approximate aspect
           main="wassom.brome.uniformity")

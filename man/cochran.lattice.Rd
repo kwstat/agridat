@@ -50,23 +50,24 @@
 
 }
 \examples{
+\dontrun{
 
+library(agridat)
 data(cochran.lattice)
 dat <- cochran.lattice
 
-if(require(desplot)){
-  desplot(y~row*col|rep, dat,
-          text=trt, # aspect unknown, should be 2 or .5
-          main="cochran.lattice")
-}
+libs(desplot)
+desplot(y~row*col|rep, dat,
+        text=trt, # aspect unknown, should be 2 or .5
+         main="cochran.lattice")
 
-\dontrun{
-  # Random rep,row,column model often used by Federer
-  require(lme4)
-  dat <- transform(dat, rowf=factor(row), colf=factor(col))
-  m1 <-  lmer(y ~ trt + (1|rep) + (1|rep:row) + (1|rep:col), data=dat)
-  summary(m1)
-}
 
+# Random rep,row,column model often used by Federer
+libs(lme4)
+dat <- transform(dat, rowf=factor(row), colf=factor(col))
+m1 <-  lmer(y ~ trt + (1|rep) + (1|rep:row) + (1|rep:col), data=dat)
+summary(m1)
+
+}
 }
 \keyword{datasets}

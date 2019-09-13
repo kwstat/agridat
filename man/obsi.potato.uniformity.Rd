@@ -43,7 +43,7 @@ library(agridat)
 data(obsi.potato.uniformity)
 dat <- obsi.potato.uniformity
 
-# library(dplyr)
+# libs(dplyr)
 # dat <- group_by(dat, loc)
 # summarize(dat, yield=mean(yield))
 ##   loc   yield
@@ -52,7 +52,7 @@ dat <- obsi.potato.uniformity
 ## 2 L2     5.31 # Obsi says 5.36
 
 \dontrun{
-require(desplot)
+libs(desplot)
 desplot(yield ~ col*row, dat, subset=loc=="L1",
   main="obsi.potato.uniformity - loc L1",
   flip=TRUE, tick=TRUE)

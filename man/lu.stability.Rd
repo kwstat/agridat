@@ -44,13 +44,15 @@
 }
 \examples{
 
+library(agridat)
+
 data(lu.stability)
 dat <- lu.stability
 
 \dontrun{
   
 # GxE means. Match Lu 1995 table 1
-require(reshape2)
+libs(reshape2)
 datm <- acast(dat, gen~env, fun=mean, value.var='yield')
 round(datm, 2)
 # Gen/Env means. Match Lu 1995 table 3
@@ -68,7 +70,7 @@ summary(m2)
 
 # Finlay Wilkinson regression coefficients
 # First, calculate env mean, merge in
-require(dplyr)
+libs(dplyr)
   dat2 <- group_by(dat, env)
   dat2 <- mutate(dat2, loc.mean=mean(yield))
 m4 <- lm(yield ~ gen -1 + gen:loc.mean, data=dat2)

@@ -68,7 +68,7 @@ par(op)
   glm1 <- glm(y ~ gen+pop,data=dat,family=quasipoisson(link=log))
   anova(glm1)
 
-  require(gnm)
+  libs(gnm)
 
   # main-effects non-interaction model
   gnm0 <- gnm(y ~ pop + gen, data=dat,

@@ -33,7 +33,9 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(carmer.density)
 dat <- carmer.density
 dat$gen <- factor(dat$gen, levels=c('Hy2x0h7','WF9xC103','R61x187-2',
@@ -70,7 +72,7 @@ round(out, 3)
 
 
 # Fit an overall fixed-effect with random deviations for each hybrid.
-require(nlme)
+libs(nlme)
 m1 <- nlme(yield ~ pop * a * k^pop,
            fixed = a + k ~ 1,
            random = a + k ~ 1|gen,
@@ -78,20 +80,20 @@ m1 <- nlme(yield ~ pop * a * k^pop,
 # summary(m1) # Random effect for 'a' probably not needed
 
 
-if(require(latticeExtra)){
-  # Plot Data, fixed-effect prediction, random-effect prediction.
-  pdat <- expand.grid(gen=levels(dat$gen), pop=seq(2,8,length=50))
-  pdat$pred <- predict(m1, pdat)
-  pdat$predf <- predict(m1, pdat, level=0)
+libs(latticeExtra)
+# Plot Data, fixed-effect prediction, random-effect prediction.
+pdat <- expand.grid(gen=levels(dat$gen), pop=seq(2,8,length=50))
+pdat$pred <- predict(m1, pdat)
+pdat$predf <- predict(m1, pdat, level=0)
 
-  xyplot(yield~pop|gen, dat, pch=16, as.table=TRUE,
-         main="carmer.density models",
-         key=simpleKey(text=c("Data", "Fixed effect","Random effect"),
-           col=c("blue", "red","darkgreen"), columns=3, points=FALSE)) +
-    xyplot(predf~pop|gen, pdat, type='l', as.table=TRUE, col="red") +
-    xyplot(pred~pop|gen, pdat, type='l', col="darkgreen", lwd=2)
+xyplot(yield~pop|gen, dat, pch=16, as.table=TRUE,
+       main="carmer.density models",
+       key=simpleKey(text=c("Data", "Fixed effect","Random effect"),
+         col=c("blue", "red","darkgreen"), columns=3, points=FALSE)) +
+  xyplot(predf~pop|gen, pdat, type='l', as.table=TRUE, col="red") +
+  xyplot(pred~pop|gen, pdat, type='l', col="darkgreen", lwd=2)
+
 }
-
 }
 \keyword{datasets}
 

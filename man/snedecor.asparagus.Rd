@@ -38,6 +38,8 @@
 
 \examples{
 
+library(agridat)
+
 data(snedecor.asparagus)
 dat <- snedecor.asparagus
 
@@ -45,13 +47,13 @@ dat <- transform(dat, year=factor(year))
 dat$trt <- factor(dat$trt,
                   levels=c("Jun-01", "Jun-15", "Jul-01", "Jul-15"))
 # Continued cutting reduces plant vigor and yield
-require(lattice)
+libs(lattice)
 dotplot(yield ~ trt|year, data=dat,
         xlab="Cutting treatment", main="snedecor.asparagus")
 
 # Split-plot
 \dontrun{
-  require(lme4)
+  libs(lme4)
   m1 <- lmer(yield ~ trt + year + trt:year + (1|block) + (1|block:trt), data=dat)
 }
 
@@ -60,11 +62,11 @@ dotplot(yield ~ trt|year, data=dat,
 \dontrun{
   # Split-plot with asreml
   # asreml3
-  require(asreml)
+  libs(asreml)
   m2 <- asreml(yield ~ trt + year + trt:year, data=dat,
                random = ~ block + block:trt)
   
-  require(lucid)
+  libs(lucid)
   vc(m2)
   ##               effect component std.error z.ratio constr
   ##      block!block.var     476.7     518.2    0.92    pos
@@ -119,11 +121,11 @@ dotplot(yield ~ trt|year, data=dat,
 
 \dontrun{
   # Split-plot with asreml
-  ## require(asreml4)
+  ## libs(asreml4)
   ## m2 <- asreml(yield ~ trt + year + trt:year, data=dat,
   ##            random = ~ block + block:trt)
 
-  ## require(lucid)
+  ## libs(lucid)
   ## vc(m2)
   ## ##    effect component std.error z.ratio bound %ch
   ## ##     block     476.7     518.2    0.92     P   0

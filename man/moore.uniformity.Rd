@@ -98,10 +98,12 @@
 }
 \examples{
 \dontrun{
+
+library(agridat)
   
   cv <- function(x) sd(x)/mean(x)
 
-  require(desplot)
+  libs(desplot)
   
   # Pole Bean
   data(moore.polebean.uniformity)
@@ -126,10 +128,10 @@
   ## desplot(ears~col*row, moore.sweetcorn.uniformity,
   ##         flip=TRUE, tick=TRUE, aspect=120/72, # true aspect
   ##         main="moore.sweetcorn.uniformity - ears")
-  ## library(lattice)
+  ## libs(lattice)
   ## xyplot(yield ~ ears, moore.sweetcorn.uniformity)
   
-  require(desplot)
+  libs(desplot)
   # Carrot
   data(moore.carrot.uniformity)
   cv(moore.carrot.uniformity$yield) # 33.4. Moore says 27.6
@@ -137,7 +139,7 @@
           flip=TRUE, tick=TRUE, aspect=60/36, # true aspect
           main="moore.carrot.uniformity - yield")
 
-  require(desplot)
+  libs(desplot)
   # Spring cauliflower
   data(moore.springcauliflower.uniformity)
   cv(moore.springcauliflower.uniformity$yield) # 21. Moore says 19.5
@@ -147,10 +149,10 @@
   ## desplot(heads~col*row, moore.springcauliflower.uniformity,
   ##         flip=TRUE, tick=TRUE, aspect=300/36, # true aspect
   ##         main="moore.springcauliflower.uniformity - heads")
-  ## library(lattice)
+  ## libs(lattice)
   ## xyplot(yield ~ heads, moore.springcauliflower.uniformity)
 
-  require(desplot)
+  libs(desplot)
   # Fall cauliflower
   data(moore.fallcauliflower.uniformity)
   cv(moore.fallcauliflower.uniformity$yield) # 17.7. Moore says 17.0
@@ -160,7 +162,7 @@
   ## desplot(heads~col*row, moore.fallcauliflower.uniformity,
   ##         flip=TRUE, tick=TRUE, aspect=300/36, # true aspect
   ##         main="moore.fallcauliflower.uniformity - heads")
-  ## library(lattice)
+  ## libs(lattice)
   ## xyplot(yield ~ heads, moore.fallcauliflower.uniformity)
   
 }

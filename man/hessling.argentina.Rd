@@ -40,7 +40,9 @@
   http://doi.org/10.1175/1520-0493(1922)50<302:RBTWAT>2.0.CO;2
 }
 \examples{
+\dontrun{
 
+library(agridat)
 data(hessling.argentina)
 dat <- hessling.argentina
 
@@ -52,19 +54,19 @@ main="hessling.argentina: observed (black) and predicted yield (blue)")
 lines(fitted(m0)~year, dat, col="blue")
 
 # A modern, PLS approach
-if(require(pls)){
-  yld <- dat[,"yield",drop=FALSE]
-  yld <- as.matrix(sweep(yld, 2, colMeans(yld)))
-  cov <- dat[,c("p06","p07","p08","p09","p10","p11", "t08","t09","t10","t11")]
-  cov <- as.matrix(scale(cov))
-  m2 <- plsr(yld~cov)
+libs(pls)
+yld <- dat[,"yield",drop=FALSE]
+yld <- as.matrix(sweep(yld, 2, colMeans(yld)))
+cov <- dat[,c("p06","p07","p08","p09","p10","p11", "t08","t09","t10","t11")]
+cov <- as.matrix(scale(cov))
+m2 <- plsr(yld~cov)
 
-  # biplot(m2, which="x", var.axes=TRUE, main="hessling.argentina")
+# biplot(m2, which="x", var.axes=TRUE, main="hessling.argentina")
+
+
+libs(corrgram)
+corrgram(dat, main="hessling.argentina - correlations of yield and covariates")
+
 }
-
-if(require(corrgram)){
-  corrgram(dat, main="hessling.argentina - correlations of yield and covariates")
-}
-
 }
 \keyword{datasets}

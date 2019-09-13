@@ -38,6 +38,8 @@ Field width: 24 columns * 6 plants * 0.3 m = 43.2 m.
 }
 \examples{
 \dontrun{
+
+library(agridat)
   
   data(nagai.strawberry.uniformity)
   dat <- nagai.strawberry.uniformity
@@ -46,7 +48,7 @@ Field width: 24 columns * 6 plants * 0.3 m = 43.2 m.
   # with(dat, sd(yield)/mean(yield))
   # 23.42
   
-  require(desplot)
+  libs(desplot)
   desplot(yield ~ col*row, dat,
           flip=TRUE, aspect=(5.4)/(43.2), # true aspect
           main="nagai.strawberry.uniformity")

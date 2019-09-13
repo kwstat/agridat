@@ -34,11 +34,13 @@
   http://doi.org/10.2307/2527917
 }
 \examples{
+
+library(agridat)
 data(cochran.beets)
 dat = cochran.beets
 
 # P has strong effect
-require(lattice)
+libs(lattice)
 xyplot(yield ~ plants|fert, dat, main="cochran.beets") 
 
 }

@@ -46,15 +46,17 @@
 
 \examples{
 
+library(agridat)
+
 data(perry.springwheat)
 dat <- perry.springwheat
 
-library(lattice)
+libs(lattice)
 xyplot(yield~yor|env, dat, type=c('p','r'), xlab="year of release",
        main="perry.springwheat")
 
 # Show a table of sites*year
-# library(latticeExtra)
+# libs(latticeExtra)
 # useOuterStrips(xyplot(yield~yor|site*factor(year), dat,
 #                       type=c('p','r')))
 
@@ -74,7 +76,7 @@ mean(c(coef(m1)[21], coef(m1)[21]+coef(m1)[22:40]))
   # First, re-scale response so we don't have huge variances
   dat$y <- dat$yield / 100
 
-  require(lme4)
+  libs(lme4)
   # Use || for uncorrelated int/slope.  Bad model.  See below.
   # m2 <- lmer(y ~ 1 + yor + (1+yor||env), data=dat)
   ## Warning messages:
@@ -97,10 +99,10 @@ mean(c(coef(m1)[21], coef(m1)[21]+coef(m1)[22:40]))
   ##  5.87492444  0.05494464
 
   # asreml3
-  require(asreml)
+  libs(asreml)
   m3a <- asreml(y ~ 1 + yorc, data=dat, random = ~ env + env:yorc)
 
-  require(lucid)
+  libs(lucid)
   vc(m3)
   ##      grp        var1 var2     vcov   sdcor
   ##      env (Intercept) <NA> 11.61    3.407

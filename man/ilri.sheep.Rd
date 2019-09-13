@@ -65,6 +65,8 @@
 
 \examples{
 
+library(agridat)
+
 data(ilri.sheep)
 dat <- ilri.sheep
 dat <- transform(dat, lamb=factor(lamb), ewe=factor(ewe), ram=factor(ram),
@@ -80,7 +82,7 @@ dat <- within(dat, {
 dat <- subset(dat, !is.na(weanage))
 
 # EDA
-require(lattice)
+libs(lattice)
 ## bwplot(weanwt ~ year, dat, main="ilri.sheep", xlab="year", ylab="Wean weight",
 ##        panel=panel.violin) # Year effect
 bwplot(weanwt ~ factor(dl), dat,
@@ -98,7 +100,7 @@ anova(lm1)
 # ----------------------------------------------------------------------------
 
 \dontrun{
-  require(lme4)
+  libs(lme4)
   lme1 <- lmer(weanwt ~ year + sex + weanage + dl + dq + ewegen + ramgen +
                  (1|ewe) + (1|ram), data=dat)
   print(lme1, corr=FALSE)
@@ -113,7 +115,7 @@ anova(lm1)
 
 \dontrun{
   # asreml3
-  require(asreml)
+  libs(asreml)
   # case study page 4.20
   m1 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
                data=dat)
@@ -131,7 +133,7 @@ anova(lm1)
 # ----------------------------------------------------------------------------
 
 \dontrun{
-  ## require(asreml4)
+  ## libs(asreml4)
   ## # case study page 4.20
   ## m1 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
   ##              data=dat)

@@ -42,10 +42,12 @@
 }
 \examples{
 
+library(agridat)
+
 data(hanover.whitepine)
 dat <- hanover.whitepine
 
-require(lattice)
+libs(lattice)
 # Relatively high male-female interaction in growth comared
 # to additive gene action. Response is more consistent within
 # male progeny than female progeny.
@@ -65,8 +67,8 @@ anova(m1)
 
 \dontrun{
   # Variance components match Becker p. 85
-  require(lme4)
-  require(lucid)
+  libs(lme4)
+  libs(lucid)
   m2 <- lmer(length ~ (1|rep) + (1|male) + (1|female) + (1|male:female), data=dat)
   #as.data.frame(lme4::VarCorr(m2))
   vc(m2)

@@ -44,14 +44,17 @@
   http://doi.org/10.1098/rspa.2006.1667 
 }
 \examples{
+\dontrun{
+  
+library(agridat)
 data(rothamsted.oats)
 dat <- rothamsted.oats
 
-library(lattice)
+libs(lattice)
 xyplot(grain~straw, dat, main="rothamsted.oats") # traits are correlated
 
 # compare to summary at bottom of page 146, first 3 columns
-if(require(dplyr)){
+libs(dplyr)
 dat = mutate(dat,
              nfert=trt, # number of fertilizer applications
              nfert=recode(nfert, oa="None", ob="None", oc="None", od="None",
@@ -72,17 +75,17 @@ dat <- mutate(dat, straw= straw * 40/112, grain = grain * 40/42)
 ## 1 Single  50.3  78.9
 ## 2 Double  53.7  77.7
 ## 3 None    44.1  75.4
-}
 
-\dontrun{
-  require(desplot)
+
+  
+  libs(desplot)
   desplot(grain~col*row, dat, out1=block, text=trt, cex=1, shorten=FALSE,
           aspect=1,
           main="rothamsted.oats")
   desplot(straw~col*row, dat, out1=block, text=trt, cex=1, shorten=FALSE,
           aspect=1,
           main="rothamsted.oats")
-}
 
+}
 }
 \keyword{datasets}

@@ -52,7 +52,9 @@
   None
 }
 \examples{
+\dontrun{
 
+library(agridat)
 data(christidis.competition)
 dat <- christidis.competition
 
@@ -62,29 +64,28 @@ dat <- christidis.competition
 # Each RCB block has 2 replicates of each genotype
 # with(dat, table(block,gen))
 
-if(require(lattice)){
+libs(lattice)
 
-  # Tall plants yield more
-  # xyplot(yield ~ height|gen, data=dat)
+# Tall plants yield more
+# xyplot(yield ~ height|gen, data=dat)
 
-  # Huge yield variation across field. Also heterogeneous variance.
-  xyplot(yield ~ col, dat, group=gen, auto.key=list(columns=5),
-         main="christidis.competition")
+# Huge yield variation across field. Also heterogeneous variance.
+xyplot(yield ~ col, dat, group=gen, auto.key=list(columns=5),
+       main="christidis.competition")
+
+
+libs(mgcv)
+if(is.element("package:gam", search())) detach("package:gam")
+# Simple non-competition model to remove main effects
+m1 <- gam(yield ~ gen + s(col), data=dat)
+p1 <- as.data.frame(predict(m1, type="terms"))
+names(p1) <- c('geneff','coleff')
+dat2 <- cbind(dat, p1)
+dat2 <- transform(dat2, res=yield-geneff-coleff)
+libs(lattice)
+xyplot(res ~  col, data=dat2, group=gen,
+       main="christidis.competition - residuals")
+
 }
-
-\dontrun{
-  require(lattice)
-  require(mgcv)
-  if(is.element("package:gam", search())) detach("package:gam")
-  # Simple non-competition model to remove main effects
-  m1 <- gam(yield ~ gen + s(col), data=dat)
-  p1 <- as.data.frame(predict(m1, type="terms"))
-  names(p1) <- c('geneff','coleff')
-  dat2 <- cbind(dat, p1)
-  dat2 <- transform(dat2, res=yield-geneff-coleff)
-  xyplot(res ~  col, data=dat2, group=gen,
-         main="christidis.competition - residuals")
-}
-
 }
 \keyword{datasets}

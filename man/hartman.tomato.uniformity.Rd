@@ -57,11 +57,14 @@
 }
 \examples{
 \dontrun{
-  data(hartman.tomato.uniformity)
-  require(desplot)
-  desplot(yield ~ col*row, hartman.tomato.uniformity,
-          flip=TRUE, aspect=192/330, # true aspect
-          main="hartman.tomato.uniformity")
+
+library(agridat)
+data(hartman.tomato.uniformity)
+libs(desplot)
+desplot(yield ~ col*row, hartman.tomato.uniformity,
+        flip=TRUE, aspect=192/330, # true aspect
+        main="hartman.tomato.uniformity")
+
 }
 }
 \keyword{datasets}

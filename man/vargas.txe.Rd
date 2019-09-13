@@ -91,13 +91,14 @@ data("vargas.txe.yield")
 }
 
 \examples{
-
-data(vargas.txe.covs)
-data(vargas.txe.yield)
-
-if(require(reshape2)){
+\dontrun{
   
-  require(lattice)
+  library(agridat)
+  data(vargas.txe.covs)
+  data(vargas.txe.yield)
+  
+  libs(reshape2)
+  libs(lattice)
   redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
   Z <- vargas.txe.yield
   Z <- acast(Z, year ~ trt, value.var='yield')
@@ -114,12 +115,11 @@ if(require(reshape2)){
   # Now, PLS relating the two matrices
   U <- vargas.txe.covs
   U <- scale(U) # Standardized covariates
-  require(pls)
+  libs(pls)
   m1 <- plsr(Z~U)
   # Vargas Fig 2, flipped vertical/horizontal
   biplot(m1, which="x", var.axes=TRUE)
 
 }
-
 }
 \keyword{datasets}

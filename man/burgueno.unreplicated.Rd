@@ -41,25 +41,25 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(burgueno.unreplicated)
 dat <- burgueno.unreplicated
 
 # Define a 'check' variable for colors
 dat$check <- ifelse(dat$gen=="G000", 2, 1)
 # Every fourth column is the 'check' genotype
-if(require(desplot)){
-  desplot(yield ~ col*row, data=dat,
-          col=check, num=gen, #text=gen, cex=.3, # aspect unknown
-          main="burgueno.unreplicated")
-}
+libs(desplot)
+desplot(yield ~ col*row, data=dat,
+        col=check, num=gen, #text=gen, cex=.3, # aspect unknown
+        main="burgueno.unreplicated")
 
-# ----------------------------------------------------------------------------
 
-\dontrun{
+if(0){
   # asreml3
-  require(asreml)
-  require(lucid)
+  libs(asreml)
+  libs(lucid)
 
   # AR1 x AR1 with random genotypes
   dat <- transform(dat, xf=factor(col), yf=factor(row))
@@ -71,7 +71,7 @@ if(require(desplot)){
   # be column effects.
   plot(variogram(m2), xlim=c(0,15), ylim=c(0,9), zlim=c(0,0.5),
        main="burgueno.unreplicated - AR1xAR1")
-  # library(lattice) # Show how odd columns are high
+  # libs(lattice) # Show how odd columns are high
   # bwplot(resid(m2) ~ col, data=dat, horizontal=FALSE)
 
   # Define an even/odd column factor as fixed effect
@@ -89,9 +89,9 @@ if(require(desplot)){
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
-  ## require(asreml4)
-  ## require(lucid)
+if(0){
+  ## libs(asreml4)
+  ## libs(lucid)
 
   ## # AR1 x AR1 with random genotypes
   ## dat <- transform(dat, xf=factor(col), yf=factor(row))
@@ -109,7 +109,7 @@ if(require(desplot)){
   ## # be column effects.
   ## plot(varioGram(m2), xlim=c(0,15), ylim=c(0,9), zlim=c(0,0.5),
   ##      main="burgueno.unreplicated - AR1xAR1")
-  ## # library(lattice) # Show how odd columns are high
+  ## # libs(lattice) # Show how odd columns are high
   ## # bwplot(resid(m2) ~ col, data=dat, horizontal=FALSE)
 
   ## # Define an even/odd column factor as fixed effect
@@ -125,7 +125,7 @@ if(require(desplot)){
   ## # Much better-looking variogram
 
 }
-
+}
 }
 
 \keyword{datasets}

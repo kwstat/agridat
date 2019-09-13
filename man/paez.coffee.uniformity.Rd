@@ -42,34 +42,36 @@
   None
 }
 \examples{
+\dontrun{
+
+library(agridat)
 data(paez.coffee.uniformity)
 dat <- paez.coffee.uniformity
 
-if(require(reshape2) & require(corrgram)){
+libs(reshape2, corrgram)
   datt <- acast(dat, plot ~ year)
   corrgram(datt, lower.panel=panel.pts,
            main="paez.coffee.uniformity")
-}
 
-\dontrun{
-  # Not quite right. The rows are not actually horizontal.  See notes above.
-  require(desplot)
-  desplot(yield ~ col*row, dat, subset=year=="Y1",
-          tick=TRUE, aspect=1,
-          main="paez.coffee.uniformity - Y1")
-  desplot(yield ~ col*row, dat, subset=year=="Y2",
-          tick=TRUE, aspect=1,
-          main="paez.coffee.uniformity - Y2")
-  desplot(yield ~ col*row, dat, subset=year=="Y3",
-          tick=TRUE, aspect=1,
-          main="paez.coffee.uniformity - Y3")
-  desplot(yield ~ col*row, dat, subset=year=="Y4",
-          tick=TRUE, aspect=1,
-          main="paez.coffee.uniformity - Y4")
-  desplot(yield ~ col*row, dat, subset=year=="Y5",
-          tick=TRUE, aspect=1,
-          main="paez.coffee.uniformity - Y5")
-}
 
+# Not quite right. The rows are not actually horizontal.  See notes above.
+libs(desplot)
+desplot(yield ~ col*row, dat, subset=year=="Y1",
+        tick=TRUE, aspect=1,
+        main="paez.coffee.uniformity - Y1")
+desplot(yield ~ col*row, dat, subset=year=="Y2",
+        tick=TRUE, aspect=1,
+        main="paez.coffee.uniformity - Y2")
+desplot(yield ~ col*row, dat, subset=year=="Y3",
+        tick=TRUE, aspect=1,
+        main="paez.coffee.uniformity - Y3")
+desplot(yield ~ col*row, dat, subset=year=="Y4",
+        tick=TRUE, aspect=1,
+        main="paez.coffee.uniformity - Y4")
+desplot(yield ~ col*row, dat, subset=year=="Y5",
+        tick=TRUE, aspect=1,
+        main="paez.coffee.uniformity - Y5")
+
+}
 }
 \keyword{datasets}

@@ -43,11 +43,13 @@
 \examples{
 \dontrun{
 
+library(agridat)
+
   data(love.cotton.uniformity)
   # omit first column which has 20-foot plots
   dat <- subset(love.cotton.uniformity, col > 1)
 
-  require(desplot)
+  libs(desplot)
   desplot(yield ~ col*row, dat, flip=TRUE,
           aspect=20/80, # just a guess
           main="love.cotton.uniformity")

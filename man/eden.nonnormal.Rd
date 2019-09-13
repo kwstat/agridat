@@ -47,29 +47,28 @@
 
 \examples{
 
+library(agridat)
+
 data(eden.nonnormal)
 dat <- eden.nonnormal
 mean(dat$height) # 55.23 matches Eden table 1
 
 # Eden figure 2
-if(require(dplyr) & require(lattice)){
-  # Blocks had different means, so substract block mean from each datum
-  dat <- group_by(dat, block)
-  dat <- mutate(dat, blkmn=mean(height))
-  dat <- transform(dat, dev=height-blkmn)
-  
-  histogram( ~ dev, data=dat, breaks=seq(from=-40, to=30, by=2.5),
-            xlab="Deviations from block means",
-            main="eden.nonnormal - heights skewed left")
-}
+libs(dplyr, lattice)
+# Blocks had different means, so substract block mean from each datum
+dat <- group_by(dat, block)
+dat <- mutate(dat, blkmn=mean(height))
+dat <- transform(dat, dev=height-blkmn)
+
+histogram( ~ dev, data=dat, breaks=seq(from=-40, to=30, by=2.5),
+          xlab="Deviations from block means",
+          main="eden.nonnormal - heights skewed left")
 
 \dontrun{
 
   # calculate skewness, permutation 
   
-  library(dplyr)
-  library(lattice)
-  library(latticeExtra)
+  libs(dplyr, lattice, latticeExtra)
   
   # Eden table 1
   # anova(aov(height ~ factor(block), data=dat))

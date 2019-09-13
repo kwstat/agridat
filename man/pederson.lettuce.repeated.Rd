@@ -32,10 +32,12 @@ https://scse.d.umn.edu/sites/scse.d.umn.edu/files/pedersonprojectthesis.pdf
   None
 }
 \examples{
+
+library(agridat)
 data(pederson.lettuce.repeated)
 dat <- pederson.lettuce.repeated
 
-require(lattice)
+libs(lattice)
 dat <- dat[order(dat$day),]
 xyplot(weight ~ day|trt, dat, type='l', group=plant, layout=c(3,1),
 main="pederson.lettuce.repeated")
@@ -48,7 +50,7 @@ main="pederson.lettuce.repeated")
 # repeated day / subject=plant type=un r rcorr;   
 
 # This should give the same results as SAS, but does not.
-require(nlme)
+libs(nlme)
 dat <- transform(dat, plant=factor(plant), day=factor(day))
 datg <- groupedData(weight ~ day|plant, data=dat)
 un1 <- gls(weight ~ trt * day, data=datg,

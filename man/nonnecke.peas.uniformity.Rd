@@ -53,11 +53,13 @@
 
 \examples{
 \dontrun{
+
+library(agridat)
   
   data(nonnecke.peas.uniformity)
   dat <- nonnecke.peas.uniformity
   
-  require(desplot)
+  libs(desplot)
   desplot(vines~col*row|block, data=dat,
           tick=TRUE, flip=TRUE, aspect=248/90, # true aspect
           main="nonnecke.peas.uniformity - vines")
@@ -65,7 +67,7 @@
           tick=TRUE, flip=TRUE, aspect=248/90, # true aspect
           main="nonnecke.peas.uniformity - peas")
 
-  require(lattice)
+  libs(lattice)
   xyplot(peas~vines|block,dat,
          xlab="vine weight", ylab="shelled pea weight",
          main="nonnecke.peas.uniformity")

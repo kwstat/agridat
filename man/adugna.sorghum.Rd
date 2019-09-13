@@ -45,11 +45,13 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(adugna.sorghum)
 dat <- adugna.sorghum
 
-require(lattice)
+libs(lattice)
 redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
 levelplot(yield ~ env*gen, data=dat, main="adugna.sorghum gxe heatmap",
           col.regions=redblue)
@@ -59,7 +61,7 @@ tapply(dat$yield, dat$gen, mean)
 
 # CV for each genotype.  G1..G15 match, except for G2.
 # The table in Adugna scrambles the means for G16..G28
-if(require(reshape2)){
+libs(reshape2)
 mat <- acast(dat, gen~env,  value.var='yield')
 round(sqrt(apply(mat, 1, var, na.rm=TRUE)) / apply(mat, 1, mean, na.rm=TRUE) * 100,2)
 

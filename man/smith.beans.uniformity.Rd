@@ -66,6 +66,8 @@
 
 \examples{
 \dontrun{
+
+library(agridat)
   
   data(smith.beans.uniformity)
   dat1 <- subset(smith.beans.uniformity, expt=="E1")
@@ -79,7 +81,7 @@
   cv(dat3$yield)
   cv(dat4$yield)
 
-  require("desplot")
+  libs("desplot")
   desplot(yield ~ col*row, dat1, 
           aspect=180/45, flip=TRUE, # true aspect
           main="smith.beans.uniformity, expt 1 (true aspect)")

@@ -39,7 +39,7 @@
 \examples{
 \dontrun{
 
-require(agridat)
+library(agridat)
 data(lin.unbalanced)
 dat <- lin.unbalanced
 
@@ -52,9 +52,9 @@ dat2 <- subset(dat, is.element(dat$gen,
     'S3','S4','S5','S6','S7','T1','T2')))
 aggregate(yield ~ loc, data=dat2, FUN=mean)
 
-require(reshape2)
+libs(reshape2)
 dat3 <- acast(dat, gen ~ loc, value.var="yield")
-require(lattice)
+libs(lattice)
 lattice::levelplot(t(scale(dat3)), main="lin.unbalanced", xlab="loc", ylab="genotype")
 
 # calculate the superiority measure of Lin & Binns 1988.

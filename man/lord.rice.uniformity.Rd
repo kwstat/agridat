@@ -45,11 +45,14 @@
   None
 }
 \examples{
+\dontrun{
+
+library(agridat)
 data(lord.rice.uniformity)
 dat <- lord.rice.uniformity
 
 # match table on page 180
-## require(dplyr)
+## libs(dplyr)
 ## dat %>% group_by(field) %>% dplyr::summarize(grain=sum(grain), straw=sum(straw))
 ##   field grain straw
 ##   <chr> <dbl> <dbl>
@@ -63,19 +66,20 @@ dat <- lord.rice.uniformity
 ## 8 28      530   718
 
 # There are consistently high yields along all edges of the field
-# require(lattice)
+# libs(lattice)
 # bwplot(grain ~ factor(col)|field,dat)
 # bwplot(grain ~ factor(col)|field,dat)
 
 # Heatmaps
-if(require(desplot)){
-  desplot(grain ~ col*row|field, dat,
-          flip=TRUE, aspect=140/50,
-          main="lord.rice.uniformity")
-}
+libs(desplot)
+desplot(grain ~ col*row|field, dat,
+        flip=TRUE, aspect=140/50,
+        main="lord.rice.uniformity")
+
 
 # bivariate scatterplots  
 # xyplot(grain ~ straw|field, dat)
 
+}
 }
 \keyword{datasets}

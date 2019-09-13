@@ -90,11 +90,13 @@
 
 \examples{
 
+library(agridat)
+
 data(thompson.cornsoy)
 dat <- thompson.cornsoy
 
 # The droughts of 1934/36 were severe in IA/MO. Less so in OH.
-require(lattice)
+libs(lattice)
 xyplot(corn+soy~year|state, dat,
        type=c('p','l','r'), auto.key=list(columns=2),
        main="thompson.cornsoy",
@@ -116,7 +118,7 @@ xyplot(corn+soy~year|state, dat,
 
   dat.ia <- subset(dat, state=="Iowa")
 
-  require(splines)
+  libs(splines)
   m2 <- aov(corn ~ ns(rain0, 3) + ns(rain7, 3) +
               ns(temp8, 3) + ns(year,3), dat.ia)
   op <- par(mfrow=c(2,2))
@@ -124,7 +126,7 @@ xyplot(corn+soy~year|state, dat,
   par(op)
 
   # do NOT use gam package
-  require(mgcv)
+  libs(mgcv)
   m1 <- gam(corn ~ s(year, k=5) + s(rain0, k=5) +
               s(rain7, k=5) + s(temp8, k=5), data=dat.ia)
   op <- par(mfrow=c(2,2))

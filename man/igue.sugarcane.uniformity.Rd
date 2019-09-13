@@ -36,17 +36,19 @@
 }
 \examples{
 \dontrun{
+
+library(agridat)
   
-  data(igue.sugarcane.uniformity)
-  dat <- igue.sugarcane.uniformity
+data(igue.sugarcane.uniformity)
+dat <- igue.sugarcane.uniformity
 
-  # match Igue CV top row of page 171
-  sd(dat$yield)/mean(dat$yield) # 16.4
+# match Igue CV top row of page 171
+sd(dat$yield)/mean(dat$yield) # 16.4
 
-  require(desplot)
-  desplot(yield ~ col*row, dat,
-          flip=TRUE, tick=TRUE, aspect=(42*2)/(36*1.5),
-          main="igue.sugarcane.uniformity")
+libs(desplot)
+desplot(yield ~ col*row, dat,
+        flip=TRUE, tick=TRUE, aspect=(42*2)/(36*1.5),
+        main="igue.sugarcane.uniformity")
   
 }  
 }

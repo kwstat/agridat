@@ -47,52 +47,52 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(besag.elbatan)
 dat <- besag.elbatan
 
-if(require(desplot)){
-  desplot(yield~col*row, dat,
-          num=gen, # aspect unknown
-          main="besag.elbatan - wheat yields")
-}
+libs(desplot)
+desplot(yield~col*row, dat,
+        num=gen, # aspect unknown
+        main="besag.elbatan - wheat yields")
 
-\dontrun{
-  # Besag figure 1
-  library(lattice)
-  xyplot(yield~row|col, dat, type=c('l'),
-         layout=c(1,3), main="besag.elbatan wheat yields")
-}
+
+# Besag figure 1
+library(lattice)
+xyplot(yield~row|col, dat, type=c('l'),
+       layout=c(1,3), main="besag.elbatan wheat yields")
+
 
 # RCB
 m1 <- lm(yield ~ 0 + gen + factor(col), dat)
 p1 <- coef(m1)[1:50]
 
-\dontrun{
-  # Formerly used gam package, but as of R 3.1, Rcmd check --as-cran
-  # is complaining
-  # Calls: plot.gam ... model.matrix.gam -> predict -> predict.gam -> array
-  # but it works perfectly in interactive mode !!!
-  # Remove the FALSE to run the code below
-  if(is.element("gam", search())) detach(package:gam)
-  library(mgcv)
-  m2 <- mgcv::gam(yield ~ -1 + gen + factor(col) + s(row), data=dat)
-  plot(m2, residuals=TRUE, main="besag.elbatan")
-  pred <- cbind(dat, predict(m2, dat, type="terms"))
-  # Need to correct for the average loess effect, which is like
-  # an overall intercept term.
-  adjlo <-  mean(pred$"s(row)")
-  p2 <- coef(m2)[1:50] + adjlo
+# Formerly used gam package, but as of R 3.1, Rcmd check --as-cran
+# is complaining
+# Calls: plot.gam ... model.matrix.gam -> predict -> predict.gam -> array
+# but it works perfectly in interactive mode !!!
+# Remove the FALSE to run the code below
+if(is.element("gam", search())) detach(package:gam)
+libs(mgcv)
+m2 <- mgcv::gam(yield ~ -1 + gen + factor(col) + s(row), data=dat)
+plot(m2, residuals=TRUE, main="besag.elbatan")
+pred <- cbind(dat, predict(m2, dat, type="terms"))
+# Need to correct for the average loess effect, which is like
+# an overall intercept term.
+adjlo <-  mean(pred$"s(row)")
+p2 <- coef(m2)[1:50] + adjlo
 
-  # Compare estimates
-  lims <- range(c(p1,p2))
-  plot(p1, p2, xlab="RCB prediction",
-       ylab="RCB with smooth trend (predicted)",
-       type='n', xlim=lims, ylim=lims,
-       main="besag.elbatan")
-  text(p1, p2, 1:50, cex=.5)
-  abline(0,1,col="gray")
+# Compare estimates
+lims <- range(c(p1,p2))
+plot(p1, p2, xlab="RCB prediction",
+     ylab="RCB with smooth trend (predicted)",
+     type='n', xlim=lims, ylim=lims,
+     main="besag.elbatan")
+text(p1, p2, 1:50, cex=.5)
+abline(0,1,col="gray")
+
 }
-
 }
 

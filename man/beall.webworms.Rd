@@ -62,12 +62,12 @@ dat <- beall.webworms
 # Match Beall table 1
 # with(dat, table(y,trt))
 
-require(lattice)
+libs(lattice)
 histogram(~y|trt, data=dat, layout=c(1,4), as.table=TRUE,
           main="beall.webworms")
 
 # Visualize Beall table 6.  Block effects may exist, but barely.
-require(desplot)
+libs(desplot)
 grays <- colorRampPalette(c("white","#252525"))
 desplot(y ~ col*row, data=dat,
         col.regions=grays(10),
@@ -85,12 +85,12 @@ m1 <- glm(y ~ block + spray*lead, data=dat, family="poisson")
 logLik(m1) # -1497.719 (df=16)
 
 # Negative binomial model
-# require(MASS)
+# libs(MASS)
 # m2 <- glm.nb(y ~ block + spray*lead, data=dat)
 # logLik(m2) # -1478.341 (df=17)
 
 # # Conway=Maxwell-Poisson model (takes several minutes)
-# require(spaMM)
+# libs(spaMM)
 # # estimate nu parameter
 # m3 <- fitme(y ~ block + spray*lead, data=dat, family = COMPoisson())
 # logLik(m3) # -1475.999 

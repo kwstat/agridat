@@ -27,14 +27,15 @@
 
 \examples{
 
+library(agridat)
+
 data(cochran.latin)
 dat <- cochran.latin
 
-if(require(desplot)){
-  desplot(diff~col*row, dat,
-          text=operator, cex=1, # aspect unknown
-          main="cochran.latin")
-}
+libs(desplot)
+desplot(diff~col*row, dat,
+        text=operator, cex=1, # aspect unknown
+        main="cochran.latin")
 
 
 dat <- transform(dat, rf=factor(row), cf=factor(col))

@@ -31,12 +31,14 @@
 
 \examples{
 
+library(agridat)
+
 data(gomez.multilocsplitplot)
 dat <- gomez.multilocsplitplot
 dat$nf <- factor(dat$nitro)
 
 # Gomez figure 8.3
-require(lattice)
+libs(lattice)
 xyplot(yield~nitro, dat, group=loc, type=c('p','smooth'), auto.key=TRUE,
        main="gomez.multilocsplitplot")
 
@@ -50,7 +52,7 @@ summary(m1)
 
 \dontrun{
   # F values are somewhat similar to Gomez Table 8.21
-  require(lme4)
+  libs(lme4)
   m2 <- lmer(yield ~ loc*nf*gen + (1|loc/rep/nf), dat)
   anova(m2)
   ## Analysis of Variance Table

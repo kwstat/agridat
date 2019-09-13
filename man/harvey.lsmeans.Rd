@@ -52,31 +52,31 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 data(harvey.lsmeans)
 dat = harvey.lsmeans
 
-require(lattice)
+libs(lattice)
 dotplot(adg ~ sire|line,dat,
         main="harvey.lsmeans", xlab="sire", ylab="average daily gain")
 
-\dontrun{
-  # Model suggested by Harvey on page 103
-  m0 <- lm(adg ~ 1 + line + sire + damage + line:damage + weanage +
-           weight, data=dat)
+# Model suggested by Harvey on page 103
+m0 <- lm(adg ~ 1 + line + sire + damage + line:damage + weanage +
+         weight, data=dat)
 
-  # Due to contrast settings, it can be hard to compare model coefficients to Harvey,
-  # but note the slopes of the continuous covariates match Harvey p. 107, where his
-  # b is weanage, d is weight
-  # coef(m0)
-  #       weanage       weight 
-  #  -0.008154879  0.001970446
+# Due to contrast settings, it can be hard to compare model coefficients to Harvey,
+# but note the slopes of the continuous covariates match Harvey p. 107, where his
+# b is weanage, d is weight
+# coef(m0)
+#       weanage       weight 
+#  -0.008154879  0.001970446
   
-  # A quick attempt to reproduce table 4 of Harvey, p. 109. Not right.
-  # require(emmeans)
-  # emmeans(m0,c('line','sire','damage'))
-}
+# A quick attempt to reproduce table 4 of Harvey, p. 109. Not right.
+# libs(emmeans)
+# emmeans(m0,c('line','sire','damage'))
 
+}
 }
 \keyword{datasets}

@@ -43,10 +43,12 @@
 
 \examples{
 
+library(agridat)
+
 data(jenkyn.mildew)
 dat <- jenkyn.mildew
 
-require(lattice)
+libs(lattice)
 bwplot(yield ~ trt, dat, main="jenkyn.mildew", xlab="Treatment")
 
 # Residuals from treatment model show obvious spatial trends

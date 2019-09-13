@@ -50,6 +50,9 @@
 }
 
 \examples{
+\dontrun{
+
+library(agridat)
 
 data(federer.tobacco)
 dat <- federer.tobacco
@@ -61,15 +64,16 @@ m1 <- lm(height ~ blockf + dosef, data=dat)
 anova(m1)
 
 # RCB residuals show strong spatial trends
-if(require(desplot)){
+libs(desplot)
 dat$resid <- resid(m1)
 desplot(resid ~ row * block, data=dat,
         # aspect unknown
         main="federer.tobacco")
-}
+
 
 # Row-column analysis.  Treatment now significant
 m2 <- lm(height ~ rowf + blockf + dosef, data=dat)
 anova(m2)
 
+}
 }

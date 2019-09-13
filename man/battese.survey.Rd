@@ -52,76 +52,75 @@
   SAS Global Forum 2011.  
 }
 \examples{
+\dontrun{
+
+library(agridat)
 data(battese.survey)
 dat <- battese.survey
 
 # Battese fig 1 & 2.  Corn plot shows outlier in Hardin county
-library("lattice")
+libs(lattice)
 dat <- dat[order(dat$cornpix),]
 xyplot(cornhect ~ cornpix, data=dat, group=county, type=c('p','l'),
        main="battese.survey", xlab="Pixels of corn", ylab="Hectares of corn",
        auto.key=list(columns=3))
 
-\dontrun{
-  dat <- dat[order(dat$soypix),]
-  xyplot(soyhect ~ soypix, data=dat, group=county, type=c('p','l'),
-         main="battese.survey", xlab="Pixels of soy", ylab="Hectares of soy",
-         auto.key=list(columns=3))
-}
+dat <- dat[order(dat$soypix),]
+xyplot(soyhect ~ soypix, data=dat, group=county, type=c('p','l'),
+       main="battese.survey", xlab="Pixels of soy", ylab="Hectares of soy",
+       auto.key=list(columns=3))
 
-\dontrun{
-  require("lme4")
-  require("lucid")
+libs(lme4, lucid)
   
-  # Fit the models of Battese 1982, p.18.  Results match
-  m1 <- lmer(cornhect ~ 1 + cornpix + (1|county), data=dat)
-  fixef(m1)
-  ## (Intercept)     cornpix 
-  ##   5.4661899   0.3878358 
-  vc(m1)
-  ##      grp        var1 var2   vcov  sdcor
-  ##   county (Intercept) <NA>  62.83  7.926
-  ## Residual        <NA> <NA> 290.4  17.04 
-  m2 <- lmer(soyhect ~ 1 + soypix + (1|county), data=dat)
-  fixef(m2)
-  ## (Intercept)      soypix 
-  ##  -3.8223566   0.4756781 
-  vc(m2)
-  ##      grp        var1 var2  vcov sdcor
-  ##   county (Intercept) <NA> 239.2 15.47
-  ## Residual        <NA> <NA> 180   13.42
+# Fit the models of Battese 1982, p.18.  Results match
+m1 <- lmer(cornhect ~ 1 + cornpix + (1|county), data=dat)
+fixef(m1)
+## (Intercept)     cornpix 
+##   5.4661899   0.3878358 
+vc(m1)
+##      grp        var1 var2   vcov  sdcor
+##   county (Intercept) <NA>  62.83  7.926
+## Residual        <NA> <NA> 290.4  17.04 
+m2 <- lmer(soyhect ~ 1 + soypix + (1|county), data=dat)
+fixef(m2)
+## (Intercept)      soypix 
+##  -3.8223566   0.4756781 
+vc(m2)
+##      grp        var1 var2  vcov sdcor
+##   county (Intercept) <NA> 239.2 15.47
+## Residual        <NA> <NA> 180   13.42
   
-  # Predict for Humboldt county as in Battese 1982 table 2
-  5.4662+.3878*290.74
-  # 118.2152 # mu_i^0
-  5.4662+.3878*290.74+ -2.8744
-  # 115.3408 # mu_i^gamma
-  (185.35+116.43)/2
-  # 150.89 # y_i bar
+# Predict for Humboldt county as in Battese 1982 table 2
+5.4662+.3878*290.74
+# 118.2152 # mu_i^0
+5.4662+.3878*290.74+ -2.8744
+# 115.3408 # mu_i^gamma
+(185.35+116.43)/2
+# 150.89 # y_i bar
   
-  # Survey regression estimator of Battese 1988
+# Survey regression estimator of Battese 1988
   
-  # Delete the outlier
-  dat2 <- subset(dat, !(county=="Hardin" & soyhect < 30))
+# Delete the outlier
+dat2 <- subset(dat, !(county=="Hardin" & soyhect < 30))
   
-  # Results match top-right of Battese 1988, p. 33
-  m3 <- lmer(cornhect ~ cornpix + soypix + (1|county), data=dat2)
-  fixef(m3)
-  ## (Intercept)     cornpix      soypix 
-  ##  51.0703979   0.3287217  -0.1345684 
-  vc(m3)
-  ##      grp        var1 var2  vcov sdcor
-  ##   county (Intercept) <NA> 140   11.83
-  ## Residual        <NA> <NA> 147.3 12.14
-  m4 <- lmer(soyhect ~ cornpix + soypix + (1|county), data=dat2)
-  fixef(m4)
-  ##  (Intercept)      cornpix       soypix 
-  ## -15.59027098   0.02717639   0.49439320 
-  vc(m4)
-  ##      grp        var1 var2  vcov sdcor
-  ##   county (Intercept) <NA> 247.5 15.73
-  ## Residual        <NA> <NA> 190.5 13.8 
-}
+# Results match top-right of Battese 1988, p. 33
+m3 <- lmer(cornhect ~ cornpix + soypix + (1|county), data=dat2)
+fixef(m3)
+## (Intercept)     cornpix      soypix 
+##  51.0703979   0.3287217  -0.1345684 
+vc(m3)
+##      grp        var1 var2  vcov sdcor
+##   county (Intercept) <NA> 140   11.83
+## Residual        <NA> <NA> 147.3 12.14
+m4 <- lmer(soyhect ~ cornpix + soypix + (1|county), data=dat2)
+fixef(m4)
+##  (Intercept)      cornpix       soypix 
+## -15.59027098   0.02717639   0.49439320 
+vc(m4)
+##      grp        var1 var2  vcov sdcor
+##   county (Intercept) <NA> 247.5 15.73
+## Residual        <NA> <NA> 190.5 13.8 
 
+}
 }
 \keyword{datasets}

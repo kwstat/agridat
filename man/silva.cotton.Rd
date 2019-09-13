@@ -78,7 +78,9 @@
 
 }
 \examples{
-
+\dontrun{
+  
+library(agridat)
 data(silva.cotton)
 dat <- silva.cotton
 dat$stage <- ordered(dat$stage,
@@ -92,17 +94,17 @@ dat <- transform(dat,
 dat <- aggregate(cbind(weight,height,bolls,nodes) ~
                     stage+defoliation+rep, data=dat, FUN=sum)
 
-# all traits, plant-level data
-if(require(latticeExtra)){
+  # all traits, plant-level data
+  libs(latticeExtra)
   foo <- xyplot(weight + height + bolls + nodes ~ defoliation | stage,
                 data = dat, outer=TRUE,
                 xlab="Defoliation percent", ylab="", main="silva.cotton",
                 as.table = TRUE, jitter.x = TRUE, type = c("p", "smooth"),
                 scales = list(y = "free"))
   combineLimits(useOuterStrips(foo))
-}
 
-\dontrun{
+
+if(0){
 
   # poisson glm with quadratic effect for defoliation
   m0 <- glm(bolls ~ 1, data=dat, family=poisson)
@@ -118,7 +120,7 @@ if(require(latticeExtra)){
   preddat$pred <- predict(m3, newdata=preddat, type="response")
 
   # Zeviani figure 3
-  require(latticeExtra)
+  libs(latticeExtra)
   xyplot(bolls ~ jitter(defoliation)|stage, dat,
          as.table=TRUE,
          main="silva.cotton - observed and model predictions",
@@ -129,11 +131,11 @@ if(require(latticeExtra)){
            type='smooth', col="black", lwd=2)
 }
 
-\dontrun{
+if(0){
   # ----- mcglm -----
   dat <- transform(dat, deffac=factor(defoliation))
 
-  library(car)
+  libs(car)
 
   vars <- c("weight","height","bolls","nodes")
   splom(~dat[vars], data=dat,
@@ -166,5 +168,6 @@ if(require(latticeExtra)){
                          diagonal = "qqplot")
 
   }
+}
 }
 \keyword{datasets}

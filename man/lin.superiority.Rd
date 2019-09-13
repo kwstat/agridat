@@ -46,11 +46,13 @@
 \examples{
 \dontrun{
 
+library(agridat)
+
 data(lin.superiority)
 dat <- lin.superiority
 
-require(latticeExtra)
-require(reshape2)
+libs(latticeExtra)
+libs(reshape2)
 # calculate the superiority measure of Lin & Binns 1988
 
 dat2 <- acast(dat, gen ~ loc, value.var="yield")
@@ -63,7 +65,7 @@ P <- sort(P)
 round(P) # match Lin & Binns 1988 table 2, column Pi
 
 # atlantic & quebec regions overlap
-# require(gge)
+# libs(gge)
 # m1 <- gge(yield ~ gen*loc, env.group=region, data=dat,
 #           main="lin.superiority")
 # biplot(m1)

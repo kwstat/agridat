@@ -48,11 +48,13 @@
 \examples{
 \dontrun{
 
+library(agridat)
+
 data(miguez.biomass)
 dat <- miguez.biomass
 dat <- subset(dat, doy > 141)
 
-library(lattice)
+libs(lattice)
 xyplot(yield ~ doy | crop*input,  data = dat,
        main="miguez.biomass",
        groups = crop,
@@ -68,7 +70,7 @@ dat2 <- groupedData(yield ~ doy | eu, data = dat2)
 fit.lis <- nlsList(yield ~ SSfpl(doy, A, B, xmid, scal), data = dat2)
 print(plot(intervals(fit.lis)))
 
-library(nlme)
+libs(nlme)
 # use all data to get initial values
 inits <- getInitial(yield ~ SSfpl(doy, A, B, xmid, scal), data = dat2)
 inits

@@ -35,11 +35,13 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(corsten.interaction)
 dat <- corsten.interaction
 
-if(require(reshape2)){
+libs(reshape2)
 m1 <- melt(dat, measure.var='yield')
 dmat <- acast(m1, loc~gen)
 
@@ -50,8 +52,7 @@ dmat <- acast(m1, loc~gen)
 # For comparison, the 'heatmap' function clusters the rows and
 # columns _independently_ of each other.
 heatmap(dmat, main="corsten.interaction")
+
 }
-
-
 }
 

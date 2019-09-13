@@ -83,13 +83,15 @@ data("vargas.wheat1.traits")
 
 \examples{
 
+library(agridat)
+
 \dontrun{
 
   data(vargas.wheat1.covs)
   data(vargas.wheat1.traits)
 
-  require(pls)
-  require(reshape2)
+  libs(pls)
+  libs(reshape2)
   
   # Yield as a function of non-yield traits
   Y0 <- vargas.wheat1.traits[,c('gen','rep','year','yield')]

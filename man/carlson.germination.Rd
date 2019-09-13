@@ -30,7 +30,9 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(carlson.germination)
 dat <- carlson.germination
 dat$germ <- dat$germ/100 # Convert to percent
@@ -40,30 +42,30 @@ dat$germ <- dat$germ/100 # Convert to percent
 m1 <- glm(germ~ 0 + gen*nacl, data=dat, family=quasibinomial)
 
 # Plot data and fitted model
-if(require(latticeExtra)){
-  newd <- data.frame(expand.grid(gen=levels(dat$gen), nacl=seq(0,2,length=100)))
-  newd$pred <- predict(m1, newd, type="response")
-  xyplot(germ~nacl|gen, dat, as.table=TRUE, main="carlson.germination",
-         xlab="Percent NaCl", ylab="Fraction germinated") +
-  xyplot(pred~nacl|gen, newd, type='l', grid=list(h=1,v=0))
-}
+libs(latticeExtra)
+newd <- data.frame(expand.grid(gen=levels(dat$gen), nacl=seq(0,2,length=100)))
+newd$pred <- predict(m1, newd, type="response")
+xyplot(germ~nacl|gen, dat, as.table=TRUE, main="carlson.germination",
+       xlab="Percent NaCl", ylab="Fraction germinated") +
+xyplot(pred~nacl|gen, newd, type='l', grid=list(h=1,v=0))
+
 
 # Calculate LD50 values.  Note, Carlson et al used quadratics, not glm.
 # MASS::dose.p cannot handle multiple slopes, so do a separate fit for
 # each genotype.  Results are vaguely similar to Carlson table 5.
-if(require(MASS)){
-  for(ii in unique(dat$gen)){
-    cat("\n", ii, "\n")
-    mm <- glm(germ ~ 1 + nacl, data=dat, subset=gen==ii, family=quasibinomial(link="probit"))
-    print(dose.p(mm))
-  }
-  ##              Dose         SE
-  ## Anchor    1.445728  0.05750418
-  ## Apollo    1.305804  0.04951644
-  ## Baker     1.444153  0.07653989
-  ## Drylander 1.351201  0.03111795
-  ## Grimm     1.395735  0.04206377
-}
+## libs(MASS)
+## for(ii in unique(dat$gen)){
+##   cat("\n", ii, "\n")
+##   mm <- glm(germ ~ 1 + nacl, data=dat, subset=gen==ii, family=quasibinomial(link="probit"))
+##   print(dose.p(mm))
+## }
+##              Dose         SE
+## Anchor    1.445728  0.05750418
+## Apollo    1.305804  0.04951644
+## Baker     1.444153  0.07653989
+## Drylander 1.351201  0.03111795
+## Grimm     1.395735  0.04206377
 
+}
 }
 \keyword{datasets}

@@ -55,6 +55,7 @@
   Genet. Mol. Res. 14.
 }
 \examples{
+
 library(agridat)
 data(dasilva.maize)
 dat <- dasilva.maize

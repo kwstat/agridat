@@ -1,0 +1,8 @@
+pandoc: 2.7.2
+pkgdown: 1.4.0
+pkgdown_sha: ~
+articles:
+  agridat_data: agridat_data.html
+  agridat_examples: agridat_examples.html
+  agridat_papadakis: agridat_papadakis.html
+

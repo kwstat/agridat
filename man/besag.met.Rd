@@ -56,16 +56,18 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(besag.met)
 dat <- besag.met
 
-if(require(desplot)){
-  desplot(yield ~ col*row|county, dat,
-          aspect=36/11, # true aspect
-          out1=rep, out2=block,
-          main="besag.met")
-}
+libs(desplot)
+desplot(yield ~ col*row|county, dat,
+        aspect=36/11, # true aspect
+        out1=rep, out2=block,
+        main="besag.met")
+
 
 # Average reps
 datm <- aggregate(yield ~ county + gen, data=dat, FUN=mean)
@@ -73,24 +75,22 @@ datm <- aggregate(yield ~ county + gen, data=dat, FUN=mean)
 # Sections below fit heteroskedastic variance models (variance for each variety)
 # asreml takes 1 second, lme 73 seconds, SAS PROC MIXED 30 minutes
 
-# ----------------------------------------------------------------------------
 
-\dontrun{
-  # lme
-  require(nlme)
-  m1l <- lme(yield ~ -1 + gen, data=datm, random=~1|county,
-             weights = varIdent(form=~ 1|gen))
-  m1l$sigma^2 * c(1, coef(m1l$modelStruct$varStruct, unc = FALSE))^2
-  ##           G02    G03    G04    G05    G06    G07    G08
-  ##  91.90 210.75  63.03 112.05  28.39 237.36  72.72  42.97
-  ## ... etc ...
-}
 
-# ----------------------------------------------------------------------------
+# lme
+# libs(nlme)
+# m1l <- lme(yield ~ -1 + gen, data=datm, random=~1|county,
+#            weights = varIdent(form=~ 1|gen))
+# m1l$sigma^2 * c(1, coef(m1l$modelStruct$varStruct, unc = FALSE))^2
+##           G02    G03    G04    G05    G06    G07    G08
+##  91.90 210.75  63.03 112.05  28.39 237.36  72.72  42.97
+## ... etc ...
 
-\dontrun{
+
+
+if(0){
   # asreml3
-  require(asreml)
+  libs(asreml)
   
   # asreml Using 'rcov' ALWAYS requires sorting the data
 
@@ -100,7 +100,7 @@ datm <- aggregate(yield ~ county + gen, data=dat, FUN=mean)
                 rcov = ~ at(gen):units,
                 predict=asreml:::predict.asreml(classify="gen"))
 
-  require(lucid)
+  libs(lucid)
   vc(m1a)[1:7,]
   ##             effect component std.error z.ratio constr
   ##  county!county.var   1324       838.2      1.6    pos
@@ -160,7 +160,7 @@ datm <- aggregate(yield ~ county + gen, data=dat, FUN=mean)
   # Now get predictions and make an ordinary biplot
   p3 <- predict(m3, data=dat, classify="county:gen")
   p3 <- p3$pred$pval
-  require("gge")  
+  libs("gge")  
   bi3 <- gge(predicted.value ~ gen*county, data=p3, scale=FALSE)
   if(interactive()) dev.new()
   # Very similar to the coefficient biplot
@@ -169,7 +169,7 @@ datm <- aggregate(yield ~ county + gen, data=dat, FUN=mean)
 
   # latent factor plots and more
   if(FALSE) {
-    library(ASExtras)
+    libs(ASExtras)
     ASExtras:::summary.fa(m3, g.list=c("G01","G02","G03","G04","G05","G06","G07","G08")) 
     out <- ASExtras:::summary.fa(m3,uniplot=0,blups=1,regplot=1,addedplot=0,heatmap=0) 
     loads <- as.data.frame(out$gammas$`fa(county, 2):gen`$`rotated loads`)
@@ -178,7 +178,7 @@ datm <- aggregate(yield ~ county + gen, data=dat, FUN=mean)
     regdat <- out$blups$`fa(county, 2):gen`$blups.inmet
     regdat <- merge(regdat, loads)
     
-    library(latticeExtra)
+    libs(latticeExtra)
     xyplot(blup ~ fac_1|gen, data=regdat, as.table=TRUE)+
       xyplot(regblup ~ fac_1|gen, data=regdat,
              as.table=TRUE, type='r')
@@ -186,10 +186,7 @@ datm <- aggregate(yield ~ county + gen, data=dat, FUN=mean)
 
 }
 
-# ----------------------------------------------------------------------------
-
-\dontrun{
- ##  require(asreml4)
+ ##  libs(asreml4)
   
  ##  # asreml Using 'rcov' ALWAYS requires sorting the data
  ##  datm <- datm[order(datm$gen),]
@@ -198,7 +195,7 @@ datm <- aggregate(yield ~ county + gen, data=dat, FUN=mean)
  ##               random = ~ county,
  ##               resid = ~ dsum( ~ units|gen))
  ##  #summary(m1)$varcomp[1:7,]
- ##  require(lucid)
+ ##  libs(lucid)
  ##  vc(m1)[1:7,]
  ## ##     effect component std.error z.ratio bound %ch
  ## ##     county   1324       838.2      1.6     P 0  
@@ -256,13 +253,12 @@ datm <- aggregate(yield ~ county + gen, data=dat, FUN=mean)
  ##  # Now get predictions and make an ordinary biplot
  ##  p3 <- predict(m3, data=dat, classify="county:gen")
  ##  p3 <- p3$pvals
- ##  require("gge")  
+ ##  libs("gge")  
  ##  bi3 <- gge(predicted.value ~ gen*county, data=p3, scale=FALSE)
  ##  if(interactive()) dev.new()
  ##  # Very similar to the coefficient biplot
  ##  biplot(bi3, stand=FALSE, main="SVD biplot of FA2 predictions")
 
 }
-
 }
 

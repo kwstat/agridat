@@ -39,13 +39,15 @@
 
 \examples{
 \dontrun{
+
+library(agridat)
   
   data(li.millet.uniformity)
   dat <- li.millet.uniformity
 
   mean(dat$yield) # matches Li et al.
   
-  require(desplot)
+  libs(desplot)
   desplot(yield~col*row, dat,
           aspect=100/100, # true aspect
           main="li.millet.uniformity")

@@ -54,12 +54,14 @@
 }
 \examples{
 
+library(agridat)
+
 data(wheatley.carrot)
 dat <- wheatley.carrot
 
 # Observed proportions of damage
 dat <- transform(dat, prop=damaged/total)
-require(lattice)
+libs(lattice)
 xyplot(prop~depth|insecticide, data=dat, subset=treatment!="T11",
        cex=1.5, main="wheatley.carrot", ylab="proportion damaged")
 

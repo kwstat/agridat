@@ -57,35 +57,35 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 data(yates.oats)
 dat <- yates.oats
 
 ## # Means match Rothamsted report p. 144
-## require(dplyr)
+## libs(dplyr)
 ## dat %>% group_by(nitro,gen) %>%
 ##   summarize(grain=mean(grain)*80/112,
 ##             straw=mean(straw)*80/112)
 
-if(require(desplot)){
-  # Experiment design & yield heatmap
-  desplot(yield ~ col*row, dat,
-          out1=block, num=nitro, col=gen,
-          cex=1, aspect=511/176, # true aspect
-          main="yates.oats")
-}
+libs(desplot)
+# Experiment design & yield heatmap
+desplot(yield ~ col*row, dat,
+        out1=block, num=nitro, col=gen,
+        cex=1, aspect=511/176, # true aspect
+        main="yates.oats")
 
 
 # Roughly linear gradient across the field.  The right-half of each
 # block has lower yield.  The blocking is inadequate!
-require("lattice")
+libs("lattice")
 xyplot(yield ~ col|factor(nitro), dat,
        type = c('p', 'r'), xlab='col', as.table = TRUE,
        main="yates.oats")
 
-\dontrun{
-  require(lme4)
+if(0){
+  libs(lme4)
   # Typical split-plot analysis. Non-significant gen differences
   m3 <- lmer(yield ~ nitro * gen + (1|block/gen), data=dat)
   # Residuals still show structure
@@ -105,24 +105,24 @@ xyplot(yield ~ col|factor(nitro), dat,
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
+if(0){
 
   # Marginal predictions from emmeans package and asreml::predict
 
   # --- nlme ---
-  require(nlme)
-  require(emmeans)
+  libs(nlme)
+  libs(emmeans)
   # create unbalance
   dat2 <- yates.oats[-c(1,2,3,5,8,13,21,34,55),]
   m5l <- lme(yield ~ factor(nitro) + gen, random = ~1 | block/gen,
              data = dat2)
 
   # --- asreml ---
-  require(asreml)
+  libs(asreml)
   m5a <- asreml(yield ~ factor(nitro) + gen,
                 random = ~ block + block:gen, data=dat2)
 
-  require(lucid)
+  libs(lucid)
   vc(m5l)
   vc(m5a)
 
@@ -133,11 +133,11 @@ xyplot(yield ~ col|factor(nitro), dat,
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
+if(0){
 
   # Demonstrate use of regress package, compare to lme
 
-  library(regress)
+  libs(regress)
   dat$nitrof <- factor(dat$nitro)
   m6 <- regress(yield ~ nitrof + gen, ~block + I(block:gen), identity=TRUE,
                 verbose=1, data=dat)
@@ -161,4 +161,5 @@ xyplot(yield ~ col|factor(nitro), dat,
   ## Residual    162.5591     12.74987
 }
 
+}
 }

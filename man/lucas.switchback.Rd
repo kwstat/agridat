@@ -44,13 +44,15 @@
 
 \examples{
 
+library(agridat)
+
 data(lucas.switchback)
 dat <- lucas.switchback
 
 # Create a numeric period variable
 dat$per <- as.numeric(substring(dat$period,2))
 
-require(lattice)
+libs(lattice)
 xyplot(yield ~ period|block, data=dat, group=cow, type=c('l','r'),
        auto.key=list(columns=6),
        main="lucas.switchback - (actually uniformity data)")

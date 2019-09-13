@@ -34,38 +34,36 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(brandle.rape)
 dat <- brandle.rape
 
-require(lattice)
+libs(lattice)
 dotplot(gen~yield|loc, dat, group=year, auto.key=list(columns=3),
         main="brandle.rape, yields per location", ylab="Genotype")
 
 # Matches table 4 of Brandle
-round(tapply(dat$yield, dat$gen, mean),0)
+# round(tapply(dat$yield, dat$gen, mean),0)
 
-\dontrun{
-  # Brandle reports variance components:
-  # sigma^2_gl: 9369  gy: 14027 g: 72632 resid: 150000
-  # Brandle analyzed rep-level data, so the residual variance is different.
-  # The other components are matched by the following analysis.
-  
-  require(lme4)
-  require(lucid)
-  dat$year <- factor(dat$year)
-  m1 <- lmer(yield ~ year + loc + year:loc + (1|gen) +
-               (1|gen:loc) + (1|gen:year), data=dat)
-  vc(m1)
-  ##      grp        var1 var2  vcov  sdcor
-  ##  gen:loc (Intercept) <NA>  9363  96.76
-  ## gen:year (Intercept) <NA> 14030 118.4
-  ##      gen (Intercept) <NA> 72630 269.5
-  ## Residual        <NA> <NA> 75010 273.9
+# Brandle reports variance components:
+# sigma^2_gl: 9369  gy: 14027 g: 72632 resid: 150000
+# Brandle analyzed rep-level data, so the residual variance is different.
+# The other components are matched by the following analysis.
+
+libs(lme4)
+libs(lucid)
+dat$year <- factor(dat$year)
+m1 <- lmer(yield ~ year + loc + year:loc + (1|gen) +
+             (1|gen:loc) + (1|gen:year), data=dat)
+vc(m1)
+##      grp        var1 var2  vcov  sdcor
+##  gen:loc (Intercept) <NA>  9363  96.76
+## gen:year (Intercept) <NA> 14030 118.4
+##      gen (Intercept) <NA> 72630 269.5
+## Residual        <NA> <NA> 75010 273.9
   
 }
-
-
-
 }
 \keyword{datasets}

@@ -55,17 +55,19 @@
 
 \examples{
 
+library(agridat)
+\dontrun{
 data(hanks.sprinkler)
 dat <- hanks.sprinkler
 
 # The line sprinkler is vertical between subplots 6 & 7
-if(require(desplot)){
-  desplot(yield~subplot*row, dat,
-          out1=block, out2=irr, cex=1, # aspect unknown
-          num=gen, main="hanks.sprinkler")
-}
+libs(desplot)
+desplot(yield~subplot*row, dat,
+        out1=block, out2=irr, cex=1, # aspect unknown
+        num=gen, main="hanks.sprinkler")
 
-require(lattice)
+
+libs(lattice)
 xyplot(yield~subplot|block, dat, type=c('b'), group=gen,
        layout=c(1,3), auto.key=TRUE,
        main="hanks.sprinkler",
@@ -85,39 +87,36 @@ xyplot(yield~subplot|block, dat, type=c('b'), group=gen,
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
-  # asreml3
-  require(asreml)
-  
-  dat <- transform(dat, subf=factor(subplot),
-                   irrf=factor(irr))
-  dat <- dat[order(dat$block, dat$gen, dat$subplot),]
-  
-  m1 <- asreml(yield ~ gen + dir + irrf + gen:dir + gen:irrf + dir:irrf,
-               data=dat,
-               random= ~ block + block:dir + block:irrf,
-               rcov= ~ block:gen:corb(subf, k=3))
+# asreml3
+libs(asreml)
 
-  require(lucid)
-  vc(m1)
-  ##                effect component std.error z.ratio constr
-  ##       block!block.var  0.2194     0.2393     0.92    pos
-  ##   block:dir!block.var  0.01768    0.03154    0.56    pos
-  ##  block:irrf!block.var  0.03539    0.03617    0.98    pos
-  ##            R!variance  0.285      0.05086    5.6     pos
-  ##                R!cor1  0.02802    0.1143     0.25  uncon
-  ##                R!cor2  0.005095   0.1278     0.04  uncon
-  ##                R!cor3 -0.3246     0.0905    -3.6   uncon
-  
-  ## # convert asreml correlations to SAS covariances
-  ## round(.2850 * c(1, .02802, .005095, -.3246),4) # res var * (cor1, cor2, cor3)
-  ## [1]  0.2850  0.0080  0.0015 -0.0925
-}
+dat <- transform(dat, subf=factor(subplot),
+                 irrf=factor(irr))
+dat <- dat[order(dat$block, dat$gen, dat$subplot),]
 
-# ----------------------------------------------------------------------------
+m1 <- asreml(yield ~ gen + dir + irrf + gen:dir + gen:irrf + dir:irrf,
+             data=dat,
+             random= ~ block + block:dir + block:irrf,
+             rcov= ~ block:gen:corb(subf, k=3))
 
-\dontrun{
-  ## require(asreml4)
+libs(lucid)
+vc(m1)
+##                effect component std.error z.ratio constr
+##       block!block.var  0.2194     0.2393     0.92    pos
+##   block:dir!block.var  0.01768    0.03154    0.56    pos
+##  block:irrf!block.var  0.03539    0.03617    0.98    pos
+##            R!variance  0.285      0.05086    5.6     pos
+##                R!cor1  0.02802    0.1143     0.25  uncon
+##                R!cor2  0.005095   0.1278     0.04  uncon
+##                R!cor3 -0.3246     0.0905    -3.6   uncon
+
+## # convert asreml correlations to SAS covariances
+## round(.2850 * c(1, .02802, .005095, -.3246),4) # res var * (cor1, cor2, cor3)
+## [1]  0.2850  0.0080  0.0015 -0.0925
+
+
+if(0){
+  ## libs(asreml4)
   
   ## dat <- transform(dat, subf=factor(subplot),
   ##                  irrf=factor(irr))
@@ -129,7 +128,7 @@ xyplot(yield~subplot|block, dat, type=c('b'), group=gen,
   ##              random= ~ block + block:dir + block:irrf,
   ##              resid = ~ block:gen:corb(subf, b=3))
 
-  ## require(lucid)
+  ## libs(lucid)
   ## vc(m1)
   ## ##                effect component std.error z.ratio constr
   ## ##       block!block.var  0.2194     0.2393     0.92    pos
@@ -147,5 +146,6 @@ xyplot(yield~subplot|block, dat, type=c('b'), group=gen,
   ## detach(package:asreml4)
 }
 
+}
 }
 

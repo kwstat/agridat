@@ -136,11 +136,13 @@
 }
 \examples{
 \dontrun{
-  
-  require(desplot)
-  # Apple
-  data(batchelor.apple.uniformity)
-  desplot(yield~col*row, data=batchelor.apple.uniformity,
+
+library(agridat)
+libs(desplot)
+
+# Apple
+data(batchelor.apple.uniformity)
+desplot(yield~col*row, data=batchelor.apple.uniformity,
           aspect=840/128, tick=TRUE, # true aspect
           main="batchelor.apple.uniformity")
 

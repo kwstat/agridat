@@ -43,18 +43,19 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(cochran.wireworms)
 dat <- cochran.wireworms
 
-if(require(desplot)){
-  desplot(worms ~ col*row, data=dat,
-          text=trt, cex=1, # aspect unknown
-          main="cochran.wireworms")
-}
+libs(desplot)
+desplot(worms ~ col*row, data=dat,
+        text=trt, cex=1, # aspect unknown
+        main="cochran.wireworms")
 
 # Trt K is effective, but not the others.  Really, this says it all.
-require(lattice)
+libs(lattice)
 bwplot(worms ~ trt, dat, main="cochran.wireworms", xlab="Treatment")
 
 # Snedecor and Cochran do ANOVA on sqrt(x+1).
@@ -67,7 +68,7 @@ m2 <- glm(worms ~ trt + rowf + colf, data=dat, family="poisson")
 anova(m2)
 
 # GLM with random blocking.
-if(require(lme4)){
+libs(lme4)
 m3 <- glmer(worms ~ -1 +trt +(1|rowf) +(1|colf), data=dat, family="poisson")
 summary(m3)
 ## Fixed effects:
@@ -78,6 +79,5 @@ summary(m3)
 ## trtO   1.7147     0.2275   7.537 4.80e-14 ***
 
 }
-
 }
 \keyword{datasets}

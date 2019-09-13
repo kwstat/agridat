@@ -56,28 +56,29 @@
   
 }
 \examples{
+\dontrun{
+  
+  library(agridat)
+  data(vaneeuwijk.drymatter)
+  dat <- vaneeuwijk.drymatter
+  dat <- transform(dat, year=factor(year))
+  dat <- transform(dat, env=factor(paste(year,site)))
 
-data(vaneeuwijk.drymatter)
-dat <- vaneeuwijk.drymatter
-dat <- transform(dat, year=factor(year))
-dat <- transform(dat, env=factor(paste(year,site)))
-
-if(require(HH)){
+  libs(HH)
   HH::interaction2wt(y ~ year+site+variety,dat,rot=c(90,0),
                      x.between=0, y.between=0,
                      main="vaneeuwijk.drymatter")
-}
 
-\dontrun{
+  
   # anova model
   m1 <- aov(y ~ variety+env+variety:env, data=dat)
   anova(m1) # Similar to VanEeuwijk table 2
   m2 <- aov(y ~ year*site*variety, data=dat)
   anova(m2) # matches Sahai table 5.5
-
+  
   # variance components model
-  require(lme4)
-  require(lucid)
+  libs(lme4)
+  libs(lucid)
   m3 <- lmer(y ~ (1|year) + (1|site) + (1|variety) +
                (1|year:site) + (1|year:variety) + (1|site:variety),
              data=dat)
@@ -90,7 +91,7 @@ if(require(HH)){
   ##      variety (Intercept) <NA> 0.4867  0.6976
   ##         site (Intercept) <NA> 6.504   2.55  
   ##     Residual        <NA> <NA> 0.8885  0.9426
+  
 }
-
 }
 \keyword{datasets}

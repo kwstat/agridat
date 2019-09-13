@@ -36,20 +36,21 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(cox.stripsplit)
 dat <- cox.stripsplit
 
 # Raw means
-aggregate(yield ~ calcium, data=dat, mean)
-aggregate(yield ~ soil, data=dat, mean)
-aggregate(yield ~ calcium, data=dat, mean)
+# aggregate(yield ~ calcium, data=dat, mean)
+# aggregate(yield ~ soil, data=dat, mean)
+# aggregate(yield ~ calcium, data=dat, mean)
 
-if(require(HH)) {
-  interaction2wt(yield ~ rep + soil + fert + calcium, dat,
-                 x.between=0, y.between=0,
-                 main="cox.stripsplit")
-}
+libs(HH)
+interaction2wt(yield ~ rep + soil + fert + calcium, dat,
+               x.between=0, y.between=0,
+               main="cox.stripsplit")
 
 # Traditional AOV
 m1 <- aov(yield~ fert*calcium*soil +
@@ -59,32 +60,29 @@ summary(m1)
 
 # With balanced data, the following are all basically identical
 
-if(require(lme4)){
-  # The 'rep:soil:fert' term causes problems...so we drop it.
-  m2 <- lmer(yield ~ fert*soil*calcium + (1|rep) + (1|rep:fert) +
-               (1|rep:soil) + (1|rep:fert:calcium), data=dat)
-}
+libs(lme4)
+# The 'rep:soil:fert' term causes problems...so we drop it.
+m2 <- lmer(yield ~ fert*soil*calcium + (1|rep) + (1|rep:fert) +
+             (1|rep:soil) + (1|rep:fert:calcium), data=dat)
 
-# ----------------------------------------------------------------------------
 
-\dontrun{
-
+if(0){
   # afex uses Kenword-Rogers approach for denominator d.f.
-  if(require(afex)){
-    mixed(yield ~ fert*soil*calcium + (1|rep) + (1|rep:fert) +
-            (1|rep:soil) + (1|rep:fert:calcium) + (1|rep:soil:fert), data=dat,
-          control=lmerControl(check.nobs.vs.rankZ="ignore"))
-    ##              Effect      stat ndf     ddf F.scaling p.value
-    ## 1       (Intercept) 1350.8113   1  3.0009         1  0.0000
-    ## 2              fert    3.5619   3  9.0000         1  0.0604
-    ## 3              soil    3.4659   2  6.0000         1  0.0999
-    ## 4           calcium    1.8835   1 12.0000         1  0.1950
-    ## 5         fert:soil    1.2735   6 18.0000         1  0.3179
-    ## 6      fert:calcium    4.4457   3 12.0000         1  0.0255
-    ## 7      soil:calcium    0.2494   2 24.0000         1  0.7813
-    ## 8 fert:soil:calcium    0.3504   6 24.0000         1  0.9027
-  }
+  libs(afex)
+  mixed(yield ~ fert*soil*calcium + (1|rep) + (1|rep:fert) +
+          (1|rep:soil) + (1|rep:fert:calcium) + (1|rep:soil:fert), data=dat,
+        control=lmerControl(check.nobs.vs.rankZ="ignore"))
+  ##              Effect      stat ndf     ddf F.scaling p.value
+  ## 1       (Intercept) 1350.8113   1  3.0009         1  0.0000
+  ## 2              fert    3.5619   3  9.0000         1  0.0604
+  ## 3              soil    3.4659   2  6.0000         1  0.0999
+  ## 4           calcium    1.8835   1 12.0000         1  0.1950
+  ## 5         fert:soil    1.2735   6 18.0000         1  0.3179
+  ## 6      fert:calcium    4.4457   3 12.0000         1  0.0255
+  ## 7      soil:calcium    0.2494   2 24.0000         1  0.7813
+  ## 8 fert:soil:calcium    0.3504   6 24.0000         1  0.9027
 }
 
+}
 }
 

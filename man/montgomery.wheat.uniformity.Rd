@@ -73,6 +73,8 @@
 
 \examples{
 \dontrun{
+
+library(agridat)
   
   data(montgomery.wheat.uniformity)
   dat <- montgomery.wheat.uniformity
@@ -80,7 +82,7 @@
   dat11 <- subset(dat, year==1911)
 
   # Match the figures of Montgomery 1912 Fig 3, p. 178
-  require(desplot)
+  libs(desplot)
   desplot(yield ~ col*row, dat09,
           aspect=1, # true aspect
           main="montgomery.wheat.uniformity - 1909 yield")
@@ -100,7 +102,7 @@
   # Corrected.  Similar (but not exact) to Surface, fig 2.
   dat09$correct <- round(dat09$yield - dev1,0)
 
-  require(desplot)
+  libs(desplot)
   desplot(yield ~ col*row, dat09,
           shorten="none", text=yield,
           main="montgomery.wheat.uniformity 1909 observed")

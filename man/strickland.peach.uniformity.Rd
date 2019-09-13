@@ -31,13 +31,15 @@
 \examples{
 \dontrun{
 
+library(agridat)
+
   data(strickland.peach.uniformity)
   dat <- strickland.peach.uniformity
 
   mean(dat$yield) # 131.3, Strickland has 131.3
   sd(dat$yield)/mean(dat$yield) # 31.1, Strickland has 34.4
 
-  require(desplot)
+  libs(desplot)
   desplot(yield ~ col*row, dat,
           main="strickland.peach.uniformity",
           flip=TRUE, aspect=1)

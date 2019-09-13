@@ -53,6 +53,8 @@
 }
 
 \examples{
+\dontrun{
+
 library(agridat)
 data(alwan.lamb)
 dat <- alwan.lamb
@@ -70,14 +72,13 @@ dat <- transform(dat,
 dat <- transform(dat, shape=ordered(shape, levels=c("LF5","LF4","LF3")))
 
 # View counts by year and breed
-require(latticeExtra)
+libs(latticeExtra)
 dat2 <- aggregate(count ~ year+breed+shape, dat, FUN=sum)
 useOuterStrips(barchart(count ~ shape|year*breed, data=dat2, main="alwan.lamb"))
 
-\dontrun{
 # Model used by Gilmour and SAS
 dat <- subset(dat, count > 0) 
-library(ordinal)
+libs(ordinal)
 m1 <- clmm(shape ~ yr + b1 + b2 + b3 + (1|sire), data=dat, weights=count, link="probit", Hess=TRUE)
 summary(m1) # Very similar to Gilmour results
 ranef(m1) # sign is opposite of SAS
@@ -129,11 +130,14 @@ ix <- plot.random(m1, "sire")
 tab <- prop.table(xtabs(count ~ sire+shape, dat), margin=1)
 tab <- tab[ix,]
 tab <- tab[nrow(tab):1,] # reverse the order
-barchart(tab,
+lattice::barchart(tab,
          horizontal=FALSE, auto.key=TRUE,
          main="alwan.lamb", xlab="Sire", ylab="Proportion of lambs",
          scales=list(x=list(rot=70)),
          par.settings = simpleTheme(col=c("yellow","orange","red")) )
+
+detach("package:ordinal") # to avoid VarCorr clash with lme4
+
 }
 }
 \keyword{datasets}

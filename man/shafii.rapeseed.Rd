@@ -49,7 +49,9 @@
 }
 
 \examples{
-
+\dontrun{
+  
+library(agridat)
 data(shafii.rapeseed)
 dat <- shafii.rapeseed
 
@@ -69,7 +71,7 @@ datm$gen <- factor(datm$gen,
                          "Dwarf","Glacier","Jet"))
 dat$locyr <- reorder(dat$locyr, dat$yield, mean)
 
-require(lattice)
+libs(lattice)
 # This picture tells most of the story
 dotplot(loc~yield|gen,group=year,data=dat,
         auto.key=list(columns=3),
@@ -81,12 +83,11 @@ dotplot(loc~yield|gen,group=year,data=dat,
 m1.lm <- lm(yield ~ gen + locyr, data=datm)
 datm$res <- resid(m1.lm)
 # Convert to a matrix
-if(require(reshape2)){
+libs(reshape2)
 dm <- melt(datm, measure.var='res', id.var=c('gen', 'locyr'))
 dmat <- acast(dm, gen~locyr)
 # AMMI biplot.  Figure 1 of Shafii (1998)
 biplot(prcomp(dmat), main="shafii.rapeseed - AMMI biplot")
+
 }
-
-
 }

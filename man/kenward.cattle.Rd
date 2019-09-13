@@ -51,11 +51,13 @@
 
 \examples{
 
+library(agridat)
+
 data(kenward.cattle)
 dat <- kenward.cattle
 
 # Profile plots
-require(lattice)
+libs(lattice)
 foo1 <- xyplot(weight~day|trt, data=dat, type='l', group=animal,
                xlab="Day", ylab="Animal weight", main="kenward.cattle")
 print(foo1)
@@ -66,7 +68,7 @@ print(foo1)
 
   # lme4. Fixed treatment intercepts, treatment polynomial trend.
   # Random deviation for each animal
-  require(lme4)
+  libs(lme4)
   m1a <-lmer(weight ~ trt*poly(day, 4) + (1|animal), data=dat,
              REML = FALSE)
   # Change separate polynomials into common polynomial
@@ -78,13 +80,13 @@ print(foo1)
   anova(m1a, m1b, m1c) # Significant differences between trt polynomials
 
   # Overlay polynomial predictions on plot
-  require(latticeExtra)
+  libs(latticeExtra)
   dat$pred <- predict(m1a, re.form=NA)
   foo1 + xyplot(pred ~ day|trt, data=dat,
                 lwd=2, col="black", type='l')
 
   # A Kenward-Roger Approximation and Parametric Bootstrap
-  library(pbkrtest)
+  libs(pbkrtest)
   KRmodcomp(m1b, m1c) # Non-signif
   # Model comparison of nested models using parametric bootstrap methods
   # PBmodcomp(m1b, m1c, nsim=500)
@@ -103,7 +105,7 @@ print(foo1)
   # ASREML approach to model. Not final by any means.
   # Maybe a spline curve for each treatment, plus random deviations for each time
   # asreml3
-  require(asreml)
+  libs(asreml)
   m1 <- asreml(weight ~  1 + lin(day) +    # overall line
                  trt + trt:lin(day),       # different line for each treatment
                data=dat,
@@ -115,7 +117,7 @@ print(foo1)
   p1 <- p1$predictions$pvals
   foo2 <- xyplot(predicted.value ~ day|trt, p1, type='l', lwd=2, lty=1, col="black")
   
-  require(latticeExtra)
+  libs(latticeExtra)
   print(foo1 + foo2)
 
   # Not much evidence for treatment differences
@@ -128,7 +130,7 @@ print(foo1)
   ## trt:lin(day)   1       283              1    0.3031    
   ## residual (MS)          267                             
   
-  require(lucid)
+  libs(lucid)
   vc(m1)
   ##               effect component std.error z.ratio constr
   ##             spl(day)  25.29    24.09        1       pos
@@ -143,7 +145,7 @@ print(foo1)
 \dontrun{
   # ASREML approach to model. Not final by any means.
   # Maybe a spline curve for each treatment, plus random deviations for each time
-  ## require(asreml4)
+  ## libs(asreml4)
   ## m1 <- asreml(weight ~  1 + lin(day) +    # overall line
   ##                trt + trt:lin(day),       # different line for each treatment
   ##              data=dat,
@@ -156,7 +158,7 @@ print(foo1)
   ## p1 <- p1$pvals
   ## foo2 <- xyplot(predicted.value ~ day|trt, p1, type='l', lwd=2, lty=1, col="black")
   
-  ## require(latticeExtra)
+  ## libs(latticeExtra)
   ## print(foo1 + foo2)
 
   ## # Not much evidence for treatment differences
@@ -169,7 +171,7 @@ print(foo1)
   ## ## trt:lin(day)   1       283              1    0.3031    
   ## ## residual (MS)          267                             
   
-  ## require(lucid)
+  ## libs(lucid)
   ## vc(m1)
   ## ##               effect component std.error z.ratio constr
   ## ##             spl(day)  25.29    24.09        1       pos

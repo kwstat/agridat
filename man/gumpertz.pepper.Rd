@@ -44,7 +44,9 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(gumpertz.pepper)
 dat <- gumpertz.pepper
 
@@ -56,7 +58,7 @@ dat[ dat$field =="F2" & dat$row==5 & dat$quadrat==4, 'water'] <- NA
 dat <- transform(dat, row=21-row)
 
 # Disease presence.  Gumpertz fig 1a, 2a.
-if(require(desplot)){
+libs(desplot)
 grays <- colorRampPalette(c("#d9d9d9","#252525"))
 desplot(disease ~ row*quadrat|field, data=dat,
         col.regions=c('white','black'), aspect=1, # uncertain aspect
@@ -73,7 +75,6 @@ desplot(leaf ~ row*quadrat|field, data=dat,
         col.regions=grays(6),
         at=c(0,1,2,3,4,5,6)-.5, aspect=1, # uncertain aspect
         main="gumpertz.pepper leaf assay", )
-}
 
 
 # Use the inner 16x16 grid of plots in field 2
@@ -85,13 +86,14 @@ coef(m21) # These match Gumpertz et al table 4, model 1
 ## (Intercept)       water        leaf
 ##  -9.1019623   0.7059993   0.4603931
 dat2$res21 <- resid(m21)
-if(FALSE & require(desplot)){
+if(0){
+  libs(desplot)
   desplot(res21 ~ row*quadrat, data=dat2,
           main="gumpertz.pepper field 2, model 1 residuals")
   # Still shows obvious trends.  Gumpertz et al add spatial covariates for
   # neighboring plots, but with only minor improvement in misclassification
 }
 
-
+}
 }
 \keyword{datasets}

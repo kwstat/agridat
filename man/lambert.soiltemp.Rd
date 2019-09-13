@@ -45,6 +45,8 @@
 }
 
 \examples{
+
+library(agridat)
 # Reproduce Lambert figure 39.
 
 data(lambert.soiltemp)
@@ -54,7 +56,7 @@ dat <- lambert.soiltemp
 # month 1 and month 12
 dat <- rbind(dat, transform(dat, month=month-12),
              transform(dat, month=month+12))
-require(lattice)
+libs(lattice)
 xyplot(temp ~ month, dat, group=depth, type=c('p','smooth'),
        main="lambert.soiltemp",
        xlim=c(-3,15), ylab="Soil temperature (du Crest) at depth (feet)",

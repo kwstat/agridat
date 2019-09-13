@@ -47,12 +47,14 @@
 }
 \examples{
 \dontrun{
+
+library(agridat)
   
   data(kadam.millet.uniformity)
   dat <- kadam.millet.uniformity
   
   # similar to Kadam fig 1
-  require(desplot)
+  libs(desplot)
   desplot(yield ~ col*row, dat,
           subset=year==1933,
           flip=TRUE, aspect=(10*33)/(8*16.5), # true aspect

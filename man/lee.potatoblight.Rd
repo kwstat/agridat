@@ -80,7 +80,9 @@ following:
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(lee.potatoblight)
 dat <- lee.potatoblight
 
@@ -110,20 +112,19 @@ skp <- c(rep(0,10),
          rep(0,5),1,1,1,1,1,
          rep(0,5),1,1,1,1,1)
 
-if(require(desplot)){
-  desplot(y ~ col*row|date, dat,
-          ylab="Year of testing", # unknown aspect
-          layout=c(10,11),skip=as.logical(skp),
-          main="lee.potatoblight - maps of blight resistance over time")
-}
+libs(desplot)
+desplot(y ~ col*row|date, dat,
+        ylab="Year of testing", # unknown aspect
+        layout=c(10,11),skip=as.logical(skp),
+        main="lee.potatoblight - maps of blight resistance over time")
 
 
 # 1983 only.  I.Hardy succumbs to blight quickly
-require("lattice")
+libs(lattice)
 xyplot(y ~ date|gen, dat, subset=year==1983, group=rep,
        xlab="Date", ylab="Blight resistance score",
        main="lee.potatoblight 1983", as.table=TRUE,
        auto.key=list(columns=5),
        scales=list(alternating=FALSE, x=list(rot=90, cex=.7)))
 }
-\keyword{datasets}
+}

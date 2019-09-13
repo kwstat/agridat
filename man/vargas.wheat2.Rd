@@ -75,8 +75,10 @@ data("vargas.wheat2.yield")
 }
 
 \examples{
-
-if(require(pls) & require(reshape2)){
+\dontrun{
+  
+  library(agridat)
+  libs(pls,reshape2)
   
   data(vargas.wheat2.covs)
   datc <- vargas.wheat2.covs
@@ -109,6 +111,6 @@ if(require(pls) & require(reshape2)){
   biplot(m2, cex=.5, which="x", var.axes=TRUE) # Vectors form figure 2 b
   # biplot(m2, cex=.5, which="scores", var.axes=TRUE)
   # biplot(m2, cex=.5, which="loadings", var.axes=TRUE)
+  
 }
-
 }

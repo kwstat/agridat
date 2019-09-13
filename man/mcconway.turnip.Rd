@@ -53,7 +53,9 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(mcconway.turnip)
 dat <- mcconway.turnip
 dat$densf <- factor(dat$density)
@@ -75,13 +77,13 @@ summary(m0)
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 # Boxplots suggest heteroskedasticity for date, density
-if(require("HH")){
-  interaction2wt(yield ~ gen + date + densf +block, dat,
-                 x.between=0, y.between=0,
-                 main="mcconway.turnip - yield")
-}
+libs("HH")
+interaction2wt(yield ~ gen + date + densf +block, dat,
+               x.between=0, y.between=0,
+               main="mcconway.turnip - yield")
 
-require(nlme)
+
+libs(nlme)
 # Random block model
 m1 <- lme(yield ~ gen * date * densf, random= ~1|block, data=dat)
 summary(m1)
@@ -103,5 +105,6 @@ anova(m3)
 m4 <- aov( yield^.235 ~ gen * date * densf + block, dat )
 summary(m4)
 
+}
 }
 

@@ -35,17 +35,19 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(mead.cowpeamaize)
 dat <- mead.cowpeamaize
 
 # Cowpea and maize yields are clearly in competition
-if(require("latticeExtra")){
-  useOuterStrips(xyplot(myield ~ cyield|maize*cowpea, dat, group=nitro,
-                        main="mead.cowpeamaize - intercropping",
-                        xlab="cowpea yield",
-                        ylab="maize yield", auto.key=list(columns=4)))
-}
+libs("latticeExtra")
+useOuterStrips(xyplot(myield ~ cyield|maize*cowpea, dat, group=nitro,
+                      main="mead.cowpeamaize - intercropping",
+                      xlab="cowpea yield",
+                      ylab="maize yield", auto.key=list(columns=4)))
+
 
 # Mead Table 2 Cowpea yield anova...strongly affected by maize variety.
 anova(aov(cyield ~ block + maize + cowpea + nitro +
@@ -85,5 +87,6 @@ signif(biv,2)
 ## maize:cowpea:nitro  6    1.300    0.1400      1.300      -0.033 -0.079
 ## Residuals          46   16.000    0.6000     14.000      -1.400 -0.460
 
+}
 }
 \keyword{datasets}

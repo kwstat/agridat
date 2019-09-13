@@ -56,6 +56,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 data(crowder.seeds)
@@ -64,7 +65,7 @@ m1.glm <- m1.glmm <- m1.bb <- m1.hglm <- NA
 
 
 # ----- Graphic
-require(lattice)
+libs(lattice)
 dotplot(germ/n~gen|extract, dat, main="crowder.seeds")
 
 
@@ -80,25 +81,25 @@ summary(m1.glm)
 
 
 # --- GLMM.  Assumes Gaussian random effects
-require(MASS)
+libs(MASS)
 m1.glmm <- glmmPQL(cbind(germ, n-germ) ~ gen*extract, random= ~1|plate,
   family=binomial(), data=dat)
 summary(m1.glmm)
 
 
 # ----- AODS3 package
-# require(aods3)
+# libs(aods3)
 # m1.bb <- aodml(cbind(germ, n-germ) ~ gen * extract, data=dat, family="bb")
 
 
 # ----- HGML package. Beta-binomial with beta-distributed random effects
-# require(hglm)
+# libs(hglm)
 # m1.hglm <- hglm(fixed= germ/n ~ I(gen=="O75")*extract, weights=n, data=dat,
 #                 random=~1|plate, family=binomial(), rand.family=Beta(),
 #                 fix.disp=1)
 
 # ----- INLA package. See: https://haakonbakka.bitbucket.io/btopic102.html
-# require(INLA)
+# libs(INLA)
 # gen,extract are fixed. plate is a random effect
 # Priors for hyper parameters. See: inla.doc("pc.prec")
 # hyper1 = list(theta = list(prior="pc.prec", param=c(1,0.01)))
@@ -107,17 +108,16 @@ summary(m1.glmm)
 #                family="binomial", Ntrials=n, 
 #                control.family=list(control.link=list(model="logit")))
 
-\dontrun{
 # Compare coefficients
 
-round(summary(m1.glm)$coef,2)
+## round(summary(m1.glm)$coef,2)
 ##                        Estimate Std. Error t value Pr(>|t|)
 ## (Intercept)               -0.41       0.25   -1.64     0.12
 ## genO75                    -0.15       0.30   -0.48     0.64
 ## extractcucumber            0.54       0.34    1.58     0.13
 ## genO75:extractcucumber     0.78       0.42    1.86     0.08
 
-round(summary(m1.glmm)$tTable,2)
+## round(summary(m1.glmm)$tTable,2)
 ##                        Value Std.Error DF t-value p-value
 ## (Intercept)            -0.44      0.25 17   -1.80    0.09
 ## genO75                 -0.10      0.31 17   -0.34    0.74
@@ -145,9 +145,7 @@ round(summary(m1.glmm)$tTable,2)
 ## extractcucumber         0.53 0.32      -0.12     0.53       1.17  0.53   0
 ## genO75:extractcucumber  0.82 0.42       0.01     0.82       1.66  0.81   0
 
-}
-
-\dontrun{
+if(0) {
 
   # --- rjags version ---
 
@@ -181,7 +179,7 @@ mod.bug =
   sigma <- 1 / sqrt(tau)
 }"
 
-require(rjags)
+libs(rjags)
 oo <- textConnection(mod.bug)
 j1 <- jags.model(oo, data=jdat, inits=jinit, n.chains=1)
 close(oo)
@@ -189,7 +187,7 @@ close(oo)
 c1 <- coda.samples(j1, c("int","genO75","g75ecuke","extcuke","sigma"),
                    n.iter=20000)
 summary(c1) # Medians are very similar to estimates from hglm
-# require(lucid)
+# libs(lucid)
 # print(vc(c1),3)
 ##             Mean    SD    2.5%  Median   97.5%
 ## extcuke   0.543  0.331 -0.118   0.542   1.2   
@@ -204,18 +202,17 @@ hpd <- HPDinterval(c2)[[1]]
 med <- summary(c2, quantiles=.5)$quantiles
 fit <- data.frame(med, hpd)
 
-if(require(latticeExtra)){
-  obs <- dotplot(1:21 ~ germ/n, dat,
-                 main="crowder.seeds", ylab="plate",
-                 col=as.numeric(dat$gen), pch=substring(dat$extract,1))
-  obs + segplot(1:21 ~ lower + upper, data=fit, centers=med)
-}
+libs(latticeExtra)
+obs <- dotplot(1:21 ~ germ/n, dat,
+               main="crowder.seeds", ylab="plate",
+               col=as.numeric(dat$gen), pch=substring(dat$extract,1))
+obs + segplot(1:21 ~ lower + upper, data=fit, centers=med)
 
-# ----------------------------------------------------------------------------
+
 ## --- R2jags version ---
 
-require("agridat")
-require("R2jags")
+libs("agridat")
+libs("R2jags")
 dat <- crowder.seeds
 
 # To match the output on the BUGS web page, use: dat$gen=="O73".
@@ -258,6 +255,8 @@ print(j1)
 traceplot(as.mcmc(j1))
 densityplot(as.mcmc(j1))
 HPDinterval(as.mcmc(j1))
+
+}
 
 }
 }

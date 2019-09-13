@@ -35,16 +35,18 @@
 }
 
 \examples{
-library(agridat)
-data(harris.wateruse)
-dat <- harris.wateruse
+\dontrun{
 
-# Compare to Schabenberger & Pierce, fig 7.23
-if(require(latticeExtra)){
+  library(agridat)
+  data(harris.wateruse)
+  dat <- harris.wateruse
+
+  # Compare to Schabenberger & Pierce, fig 7.23
+  libs(latticeExtra)
   useOuterStrips(xyplot(water ~ day|species*age,dat, as.table=TRUE,
                         group=tree, type=c('p','smooth'),
                         main="harris.wateruse 2 species, 2 ages (10 trees each)"))
-}
+
 
 # Note that measurements on day 268 are all below the trend line and
 # thus considered outliers.  Delete them.
@@ -76,15 +78,15 @@ d22 <- droplevels(subset(dat, age=="A2" & species=="S2"))
 ##   model water = ti ti*ti / s;
 ##   random intercept ti ti*ti/subject=tree;
 
-require(nlme)
+libs(nlme)
 ## We use pdDiag() to get uncorrelated random effects
 m1n <- lme(water ~ 1 + ti + ti2, data=d22, na.action=na.omit,
            random = list(tree=pdDiag(~1+ti+ti2)))
 
-\dontrun{  
+if(0){  
   # Various other models with lme4 & asreml
   
-require(lucid)
+libs(lucid)
 vc(m1n)
 ##       effect variance    stddev
 ##  (Intercept)   0.2691 0.5188
@@ -92,7 +94,7 @@ vc(m1n)
 ##          ti2   0      0.0000039
 ##     Residual   0.1472 0.3837
 
-require(lme4)
+libs(lme4)
 m1l <- lmer(water ~ 1 + ti + ti2 + (1|tree) +
             (0+ti|tree) + (0+ti2|tree), data=d22)
 
@@ -154,7 +156,7 @@ vc(m2l)
 ## SAS reports 3.79, asreml reports 0.77, and exp(-1/3.7945) = 0.7683274
 ## Note: normally a quadratic would be included as 'pol(day,2)'
 
-require(asreml)
+libs(asreml)
 d22 <- d22[order(d22$tree, d22$day),]
 m2a <- asreml(water ~ 1 + ti + ti2,
               data=d22,
@@ -209,5 +211,6 @@ vc(m3a) # Note: day.pow = .8091 = exp(-1/4.7217)
 ##                    R!day.pow   0.8091   0.01581     51    uncon
 
 }
+  
 }
-\keyword{datasets}
+}

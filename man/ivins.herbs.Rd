@@ -76,11 +76,13 @@
 
 \examples{
 
+library(agridat)
+
 data(ivins.herbs)
 dat <- ivins.herbs
 
 # Nettle is primarily established in legumes.
-require(lattice)
+libs(lattice)
 xyplot(herb~nettle|gen, dat, main="ivins.herbs - herb yield vs weeds",
        xlab="Percent groundcover in nettles",
        ylab="Percent groundcover in herbs")

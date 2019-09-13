@@ -37,6 +37,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 data(mead.cauliflower)
@@ -50,14 +51,14 @@ coef(m1)
 ##  3.49492453  0.08512651  0.21688760
 
 dat$pred <- predict(m1, type="response")
-require(lattice)
-if(require(latticeExtra)){
+libs(lattice)
+libs(latticeExtra)
 xyplot(leaves~degdays, data=dat, groups=year, type=c('p'),
        auto.key=list(columns=2),
        main="mead.cauliflower - observed (symbol) & fitted (line)",
        xlab="degree days", ylab="Number of leaves", ) +
   xyplot(pred~degdays, data=dat, groups=year, type=c('l'), col="black")
-}
 
+}
 }
 \keyword{datasets}

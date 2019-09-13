@@ -44,7 +44,9 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(patterson.switchback)
 dat <- patterson.switchback
 
@@ -54,14 +56,14 @@ datp2 <- subset(dat, period=="P2")
 dat$p1trt <- datp1$trt[match(dat$cow, datp1$cow)]
 dat$p2trt <- datp2$trt[match(dat$cow, datp2$cow)]
                      
-if(require(latticeExtra)){
-  useOuterStrips(xyplot(y ~ period|p1trt*p2trt, data=dat,
-                        group=cow, type=c('l','r'),
-                        auto.key=list(columns=5),
-                        main="patterson.switchback",
-                        xlab="First/Third period treatment", 
-                        ylab="Second period treatment"))
-}
+libs(latticeExtra)
+useOuterStrips(xyplot(y ~ period|p1trt*p2trt, data=dat,
+                      group=cow, type=c('l','r'),
+                      auto.key=list(columns=5),
+                      main="patterson.switchback",
+                      xlab="First/Third period treatment", 
+                      ylab="Second period treatment"))
+
 
 # Create a numeric period variable
 dat$per <- as.numeric(substring(dat$period,2))
@@ -77,5 +79,6 @@ anova(m1) # Match table 2 of Lowry
 ## trt        3   58.3  19.418  3.5237 0.0685092 .
 ## Residuals  8   44.1   5.511
 
+}
 }
 \keyword{datasets}

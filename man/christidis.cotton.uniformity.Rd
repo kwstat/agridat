@@ -42,18 +42,19 @@
 }
 \examples{
 \dontrun{
+
+library(agridat)
+data(christidis.cotton.uniformity)
+dat <- christidis.cotton.uniformity
   
-  data(christidis.cotton.uniformity)
-  dat <- christidis.cotton.uniformity
+# Match the mean yields in table 2. Not sure why '16' is needed
+# sapply(split(dat$yield, dat$block), mean)*16
   
-  # Match the mean yields in table 2. Not sure why '16' is needed
-  sapply(split(dat$yield, dat$block), mean)*16
-  
-  require(desplot)
-  dat$yld <- dat$yield/4*1000 # re-scale to match Christidis fig 1
-  desplot(yld ~ col*row|block, data=dat,
-          flip=TRUE, aspect=(16)/(64),
-          main="christidis.cotton.uniformity")
+libs(desplot)
+dat$yld <- dat$yield/4*1000 # re-scale to match Christidis fig 1
+desplot(yld ~ col*row|block, data=dat,
+        flip=TRUE, aspect=(16)/(64),
+        main="christidis.cotton.uniformity")
 
 }  
 }

@@ -42,14 +42,16 @@
 }
 
 \examples{
+\dontrun{
+
+library(agridat)
 
 data(engelstad.nitro)
 dat <- engelstad.nitro
 
-if(require(latticeExtra)) {
-  useOuterStrips(xyplot(yield ~ nitro | factor(year)*loc, dat,
-                        main="engelstad.nitro"))
-}
+libs(latticeExtra)
+useOuterStrips(xyplot(yield ~ nitro | factor(year)*loc, dat,
+                      main="engelstad.nitro"))
 
 # Fit a quadratic plateau model to one year/loc
 j62 <- droplevels(subset(dat, loc=="Jackson" & year==1962))
@@ -73,5 +75,6 @@ coef(m1)['M']
 # Set the first derivative equal to N/corn price, k(M-nitro)=.11/1.15
 coef(m1)['M']-(.11/1.15)/coef(m1)['k']
 
+}
 }
 \keyword{datasets}

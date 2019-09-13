@@ -45,10 +45,11 @@ Field length: 4 blocks of 40 feet + 3 alleys of 20 feet = 220 feet.
 }
 \examples{
 
+library(agridat)
 data(baker.wheat.uniformity)
 dat <- baker.wheat.uniformity
 
-require(desplot)
+libs(desplot)
 desplot(yield ~ col*row, dat,
         flip=TRUE, aspect=1,
         main="baker.wheat.uniformity")

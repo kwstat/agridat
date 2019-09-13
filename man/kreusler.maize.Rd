@@ -109,7 +109,7 @@ dat$date2 <- as.Date(dat$date,"\%d \%b \%Y")
 dat$doy <- as.numeric(strftime(dat$date2, format="\%j"))
 
 # Hunt & Evans Fig 2a
-library(lattice)
+libs(lattice)
 xyplot(log10(plantweight)~doy|factor(year), data=dat, group=gen,
        type=c('p','smooth'), span=.4, as.table=TRUE, 
        xlab="Day of year", main="kreusler.maize - growth of maize",

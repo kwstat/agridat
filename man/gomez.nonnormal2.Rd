@@ -32,6 +32,9 @@
   None.
 }
 \examples{
+\dontrun{
+
+library(agridat)
 
 data(gomez.nonnormal2)
 dat <- gomez.nonnormal2
@@ -40,10 +43,10 @@ dat <- gomez.nonnormal2
 dat <- transform(dat, twhite = sqrt(white+.5))
 
 # QQ plots for raw/transformed data
-if(require(reshape2) & require(lattice))
-  qqmath( ~ value|variable, data=melt(dat),
-         main="gomez.nonnormal2 - raw/transformed QQ plot",
-         scales=list(relation="free"))
+libs(reshape2, lattice)
+qqmath( ~ value|variable, data=melt(dat),
+       main="gomez.nonnormal2 - raw/transformed QQ plot",
+       scales=list(relation="free"))
 
 # Gomez anova table 7.21
 m1 <- lm(twhite ~ rep + gen, data=dat)
@@ -54,5 +57,6 @@ anova(m1)
 ## gen       13 48.011  3.6931  5.8877 6.366e-05 ***
 ## Residuals 26 16.309  0.6273                      
 
+}
 }
 \keyword{datasets}

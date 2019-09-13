@@ -48,17 +48,20 @@
   Springer, New York.
 }
 \examples{
+
+library(agridat)
+
 data(davidian.soybean)
 dat <- davidian.soybean
 dat$year <- factor(dat$year)
 
-require(lattice)
+libs(lattice)
 xyplot(weight ~ day|variety*year, dat,
        group=plot, type='l',
        main="davidian.soybean")
 
 \dontrun{
-require(nlme)
+libs(nlme)
 # the only way to keep your sanity with nlme is to use groupedData objects
 datg <- groupedData(weight ~ day|plot, dat)
 

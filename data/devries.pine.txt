@@ -1,4 +1,4 @@
-"block"	"row"	"column"	"spacing"	"thinning"	"volume"	"growth"
+"block"	"row"	"col"	"spacing"	"thinning"	"volume"	"growth"
 "B1"	1	1	"a"	"s"	91	24.4
 "B1"	2	1	"b"	"z"	53.7	28.9
 "B1"	3	1	"c"	"m"	37.8	25.7

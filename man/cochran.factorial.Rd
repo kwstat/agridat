@@ -37,7 +37,9 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(cochran.factorial)
 dat <- cochran.factorial
 
@@ -54,11 +56,11 @@ m1 <- lm(yield ~ rep * block + (d+n+p+k)^3, data=dat)
 anova(m1)
 
 
-if(require(FrF2)){
-  aliases(m1)
-  MEPlot(m1, select=3:6,
-         main="cochran.factorial - main effects plot")
-}
+libs(FrF2)
+aliases(m1)
+MEPlot(m1, select=3:6,
+       main="cochran.factorial - main effects plot")
 
+}
 }
 \keyword{datasets}

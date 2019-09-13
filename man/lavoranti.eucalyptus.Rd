@@ -52,6 +52,7 @@
 }
 
 \examples{
+\dontrun{
 
 # Arciniegas-Alarcon et al use SVD and regression to estimate missing values.
 # Partition the matrix X as a missing value xm, row vector xr1, column
@@ -63,11 +64,11 @@
 data(lavoranti.eucalyptus)
 dat <- lavoranti.eucalyptus
 
-require(lattice)
+libs(lattice)
 levelplot(height~loc*gen, dat, main="lavoranti.eucalyptus - GxE heatmap")
 
 dat <- droplevels(subset(dat, origin=="Ravenshoe"))
-if(require(reshape2)){
+libs(reshape2)
 dat <- acast(dat, gen~loc, value.var='height')
 
 dat[1,1] <- NA
@@ -77,7 +78,7 @@ xc1 <- dat[-1,][,1]
 xr1 <- dat[,-1][1,]
 xm <- xr1 %*% X11.svd$v %*% diag(1/X11.svd$d) %*% t(X11.svd$u) %*% xc1
 xm # = 18.29, Original value was 17.4
-}
 
+}
 }
 \keyword{datasets}

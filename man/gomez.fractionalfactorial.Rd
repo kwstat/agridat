@@ -41,18 +41,20 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(gomez.fractionalfactorial)
 dat <- gomez.fractionalfactorial
 
 # trt abcdef has the highest yield
 # Gomez, Figure 4.8
-if(require(desplot)){
-  desplot(yield~col*row, dat,
-          # aspect unknown
-          text=trt, shorten="none", show.key=FALSE, cex=1,
-          main="gomez.fractionalfactorial - treatment & yield")
-}
+libs(desplot)
+desplot(yield~col*row, dat,
+        # aspect unknown
+        text=trt, shorten="none", show.key=FALSE, cex=1,
+        main="gomez.fractionalfactorial - treatment & yield")
+
 
 # Split treatment into individual factors
 dat <- transform(dat,
@@ -72,12 +74,10 @@ anova(m0)
 m1 <- lm(yield ~ rep * block + (a+b+c+d+e+f)^3, dat)
 anova(m1)
 
-\dontrun{
-  require(FrF2)
-  aliases(m1)
-  MEPlot(m1, select=3:8,
-         main="gomez.fractionalfactorial - main effects plot")
-}
+libs(FrF2)
+aliases(m1)
+MEPlot(m1, select=3:8,
+       main="gomez.fractionalfactorial - main effects plot")
 
 }
-
+}

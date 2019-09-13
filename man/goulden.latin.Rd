@@ -34,19 +34,24 @@
 }
 
 \examples{
+\dontrun{
+
+library(agridat)
 library(agridat)
 data(goulden.latin)
 dat <- goulden.latin
 
-if(require(desplot)){
-  desplot(yield ~ col*row, dat,
-          text=trt, cex=1, # aspect unknown
-          main="goulden.latin")
-}
+
+libs(desplot)
+desplot(yield ~ col*row, dat,
+        text=trt, cex=1, # aspect unknown
+        main="goulden.latin")
+
 
 # Matches Goulden.
 m1 <- lm(yield~ trt + factor(row) + factor(col), data=dat)
 anova(m1)
 
+}
 }
 \keyword{datasets}

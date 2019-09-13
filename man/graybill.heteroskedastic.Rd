@@ -34,7 +34,9 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(graybill.heteroskedastic)
 dat <- graybill.heteroskedastic
 
@@ -44,7 +46,7 @@ boxplot(yield ~ gen, dat, main="graybill.heteroskedastic")
 # Shukla stability variance of each genotype, same as Grubbs' estimate
 # Matches Piepho 1994 page 143.
 # Do not do this!  Nowadays, use mixed models instead.
-if(require("reshape2")){
+libs("reshape2")
 datm <- acast(dat, gen~env)
 w <- datm
 w <- sweep(w, 1, rowMeans(datm))
@@ -81,7 +83,5 @@ var.shukla(sig2,13)
 ## 4069.3296  138.9424 1423.0797  306.5270 
 
 }
-
-
 }
 

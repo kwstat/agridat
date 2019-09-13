@@ -41,52 +41,54 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(durban.rowcol)
 dat <- durban.rowcol
 
-if(require(desplot)){
-  desplot(yield~bed*row, dat,
-          out1=rep, num=gen, # aspect unknown
-          main="durban.rowcol")
-}
+libs(desplot)
+desplot(yield~bed*row, dat,
+        out1=rep, num=gen, # aspect unknown
+        main="durban.rowcol")
+
 
 # Durban 2003 Figure 1
 m10 <- lm(yield~gen, data=dat)
 dat$resid <- m10$resid
-## require(lattice)
+## libs(lattice)
 ## xyplot(resid~row, dat, type=c('p','smooth'), main="durban.rowcol")
 ## xyplot(resid~bed, dat, type=c('p','smooth'), main="durban.rowcol")
 
 # Figure 3
-if(require(lattice)){
-  xyplot(resid ~ bed|factor(row), data=dat,
-         main="durban.rowcol",
-         type=c('p','smooth'))
-}
+libs(lattice)
+xyplot(resid ~ bed|factor(row), data=dat,
+       main="durban.rowcol",
+       type=c('p','smooth'))
+
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
+if(0){
   # Figure 5 - field trend
   # note, Durban used gam package like this
   # m1lo <- gam(yield ~ gen + lo(row, span=10/16) + lo(bed, span=9/34), data=dat)
-  require(mgcv)
+  libs(mgcv)
   m1lo <- gam(yield ~ gen + s(row) + s(bed, k=5), data=dat)
   new1 <- expand.grid(row=unique(dat$row),bed=unique(dat$bed))
   new1 <- cbind(new1, gen="G001")
   p1lo <- predict(m1lo, newdata=new1)
-  require(lattice)
+  libs(lattice)
   wireframe(p1lo~row+bed, new1, aspect=c(1,.5), main="Field trend") # Figure 5
 }
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
+if(0){
   # Figure 7 - variograms
   
   # asreml3
-  require(asreml)
+  libs(asreml)
   dat <- transform(dat, rowf=factor(row), bedf=factor(bed))
   dat <- dat[order(dat$rowf, dat$bedf),]
 
@@ -97,7 +99,7 @@ if(require(lattice)){
                  random=~spl(rowf) + spl(bedf) + units, rcov=~ar1(rowf):ar1(bedf))
   m1a3 <- asreml(yield~gen, data=dat, random=~units, rcov=~ar1(rowf):ar1(bedf))
 
-  require(lattice)
+  libs(lattice)
   v7a <- asreml.variogram(x=dat$bedf, y=dat$rowf, z=m1a3$residuals)
   wireframe(gamma ~ x*y, v7a, aspect=c(1,.5)) # Fig 7a
   
@@ -111,8 +113,8 @@ if(require(lattice)){
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
-  ## require(asreml4)
+if(0){
+  ## libs(asreml4)
   ## dat <- transform(dat, rowf=factor(row), bedf=factor(bed))
   ## dat <- dat[order(dat$rowf, dat$bedf),]
 
@@ -127,7 +129,7 @@ if(require(lattice)){
   ##                resid = ~ar1(rowf):ar1(bedf))
 
   ## # Figure 7
-  ## require(lattice)
+  ## libs(lattice)
   ## v7a <- asr_varioGram(x=dat$bedf, y=dat$rowf, z=m1a3$residuals)
   ## wireframe(gamma ~ x*y, v7a, aspect=c(1,.5)) # Fig 7a
   
@@ -138,5 +140,6 @@ if(require(lattice)){
   ## wireframe(gamma ~ x*y, v7c, aspect=c(1,.5)) # Fig 7c
 }
 
+}
 }
 

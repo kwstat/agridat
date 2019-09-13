@@ -49,6 +49,9 @@
 
 }
 \examples{
+\dontrun{
+
+library(agridat)
 
 data(beaven.barley)
 dat <- beaven.barley
@@ -59,11 +62,10 @@ tapply(dat$yield, dat$gen, mean)
 ## 298.080 300.710 318.685 295.260 306.410 276.475 304.605 271.820
 
 # Compare to Student 1923, diagram I,II
-if(require(desplot)){
-  desplot(yield ~ col*row, data=dat,
-          aspect=15/96, # true aspect
-          main="beaven.barley - variety trial", text=gen)
+libs(desplot)
+desplot(yield ~ col*row, data=dat,
+        aspect=15/96, # true aspect
+        main="beaven.barley - variety trial", text=gen)
 }
-
 }
 \keyword{datasets}

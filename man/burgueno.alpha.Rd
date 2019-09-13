@@ -39,21 +39,21 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(burgueno.alpha)
 dat <- burgueno.alpha
 
-if(require(desplot)){
-  desplot(yield~col*row, dat,
-          out1=rep, out2=block, # aspect unknown
-          text=gen, cex=1,shorten="none",
-          main='burgueno.alpha')
-}
+libs(desplot)
+desplot(yield~col*row, dat,
+        out1=rep, out2=block, # aspect unknown
+        text=gen, cex=1,shorten="none",
+        main='burgueno.alpha')
 
-
-\dontrun{
-  require(lme4)
-  require(lucid)
+if(0){
+  libs(lme4)
+  libs(lucid)
   # Inc block model
   m0 <- lmer(yield ~ gen + (1|rep/block), data=dat)
   vc(m0) # Matches Burgueno p. 26
@@ -67,7 +67,7 @@ if(require(desplot)){
 
 \dontrun{
   # asreml3
-  require(asreml)
+  libs(asreml)
 
   dat <- transform(dat, xf=factor(col), yf=factor(row))
   dat <- dat[order(dat$xf, dat$yf),]                 
@@ -137,7 +137,7 @@ if(require(desplot)){
 # ----------------------------------------------------------------------------
 
 \dontrun{
-  ## require(asreml4)
+  ## libs(asreml4)
 
   ## dat <- transform(dat, xf=factor(col), yf=factor(row))
   ## dat <- dat[order(dat$xf, dat$yf),]                 
@@ -207,7 +207,7 @@ if(require(desplot)){
   ## m13$loglik # -207.52
 
 }
-
+}
 }
 
 \keyword{datasets}

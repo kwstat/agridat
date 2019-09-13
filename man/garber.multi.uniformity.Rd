@@ -61,11 +61,13 @@
 
 \examples{
 \dontrun{
+
+library(agridat)
   
   data(garber.multi.uniformity)
   dat <- garber.multi.uniformity
 
-  require(desplot)
+  libs(desplot)
   desplot(oats ~ col*row, data=dat,
           flip=TRUE, tick=TRUE, aspect=945/436, # true aspect
           main="garber.multi.uniformity oats")

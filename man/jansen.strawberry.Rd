@@ -45,6 +45,9 @@
 }
 
 \examples{
+\dontrun{
+
+library(agridat)
 
 data(jansen.strawberry)
 dat <- jansen.strawberry
@@ -58,11 +61,11 @@ mosaicplot(dtab,
            main="jansen.strawberry disease ratings",
            xlab="Male parent", ylab="Female parent")
 
-if(require(MASS) & require(vcd)){
-  # Friendly suggests a minimal model is [MF][C]
-  # m1 <- loglm( ~ 1*2 + 3, dtab) # Fails, only with devtools
-  # mosaic(m1)
-}
+libs(MASS,vcd)
+# Friendly suggests a minimal model is [MF][C]
+# m1 <- loglm( ~ 1*2 + 3, dtab) # Fails, only with devtools
+# mosaic(m1)
 
+}
 }
 \keyword{datasets}

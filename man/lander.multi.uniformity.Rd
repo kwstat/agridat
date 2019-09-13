@@ -56,6 +56,9 @@
   None
 }
 \examples{
+\dontrun{
+
+library(agridat)
 data(lander.multi.uniformity)
 dat <- lander.multi.uniformity
 
@@ -67,12 +70,11 @@ dat <- lander.multi.uniformity
 ## 4 1932   14.1
 
 # heatmaps for all years
-if(require(desplot)){
-  dat$year <- factor(dat$year)
-  desplot(yield ~ col*row|year, dat,
-          flip=TRUE, aspect=(1037.1/939.12),
-          main="lander.multi.uniformity")
-}
+libs(desplot)
+dat$year <- factor(dat$year)
+desplot(yield ~ col*row|year, dat,
+        flip=TRUE, aspect=(1037.1/939.12),
+        main="lander.multi.uniformity")
 
 }
-\keyword{datasets}
+}

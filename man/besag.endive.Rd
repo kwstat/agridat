@@ -42,28 +42,27 @@
   http://doi.org/10.1198/1061860043029
 }
 \examples{
+\dontrun{
 
+library(agridat)
 data(besag.endive)
 dat <- besag.endive
 
 # Incidence map.  Figure 2 of Friel and Pettitt
-if(require(desplot)){
-  grays <- colorRampPalette(c("#d9d9d9","#252525"))
-  desplot(disease~col*row, dat,
-          col.regions=grays(2),
-          aspect = 0.5, # aspect unknown
-          main="besag.endive - Disease incidence")
-}
+libs(desplot)
+grays <- colorRampPalette(c("#d9d9d9","#252525"))
+desplot(disease~col*row, dat,
+        col.regions=grays(2),
+        aspect = 0.5, # aspect unknown
+        main="besag.endive - Disease incidence")
 
-# ----------------------------------------------------------------------------
 
-\dontrun{
-
+if(0){
   # Besag (2000) "An Introduction to Markov Chain Monte Carlo" suggested
   # that the autologistic model is not a very good fit for this data.
   # We try it anyway.  No idea if this is correct or how to interpret...
 
-  require(ngspatial)
+  libs(ngspatial)
   A = adjacency.matrix(179,14)
   X = cbind(x=dat$col, y=dat$row)
   Z = as.numeric(dat$disease=="Y")
@@ -79,9 +78,9 @@ if(require(desplot)){
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
+if(0){
   # asreml3
-  require(asreml)
+  libs(asreml)
   
   # Now try an AR1xAR1 model.
   dat2 <- transform(dat, xf=factor(col), yf=factor(row),
@@ -93,7 +92,7 @@ if(require(desplot)){
   # suggesting the pattern is more 'patchy' than just random noise,
   # but is it meaningful?
   
-  require(lucid)
+  libs(lucid)
   vc(m2)
   ##     effect component std.error z.ratio constr
   ## R!variance   0.1301   0.003798    34      pos
@@ -102,10 +101,9 @@ if(require(desplot)){
 
 }
 
-# ----------------------------------------------------------------------------
 
-\dontrun{
-  ## require(asreml4)
+if(0){
+  ## libs(asreml4)
   
   ## # Now try an AR1xAR1 model.
   ## dat2 <- transform(dat, xf=factor(col), yf=factor(row),
@@ -118,7 +116,7 @@ if(require(desplot)){
   ## # suggesting the pattern is more 'patchy' than just random noise,
   ## # but is it meaningful?
   
-  ## require(lucid)
+  ## libs(lucid)
   ## vc(m2)
   ## ##       effect component std.error z.ratio bound %ch
   ## ##     xf:yf(R)   0.1301   0.003798    34       P   0
@@ -126,7 +124,7 @@ if(require(desplot)){
   ## ## xf:yf!yf!cor   0.09842  0.02038      4.8     U   0
 
 }
-
+}
 }
 
 \keyword{datasets}

@@ -46,11 +46,13 @@
 
 \examples{
 
+library(agridat)
+
 data(wedderburn.barley)
 dat <- wedderburn.barley
 dat$y <- dat$y/100
 
-require(lattice)
+libs(lattice)
 dotplot(gen~y|site, dat, main="wedderburn.barley")
 
 # Use the variance function mu(1-mu).  McCullagh page 330
@@ -80,7 +82,7 @@ m2 <- glm(y ~ gen + site, data=dat, family=quasi(link="logit", variance=wedder))
 
 \dontrun{
 # Alternatively, the 'gnm' package has the 'wedderburn' family.
-require(gnm)
+libs(gnm)
 m3 <- glm(y ~ gen + site, data=dat, family="wedderburn")
 summary(m3)
 # Similar to McCullagh fig 9.2

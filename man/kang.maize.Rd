@@ -33,17 +33,19 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(kang.maize)
 dat <- kang.maize
 
 # Sweep out loc means, then show interaction plot.
-if(require(reshape2)){
+libs(reshape2)
 mat <- acast(dat, gen~env, value.var='yield')
 mat <- sweep(mat, 2, colMeans(mat))
 dat2 <- melt(mat)
 names(dat2) <- c('gen','env','yield')
-require(lattice)
+libs(lattice)
 xyplot(yield~env|gen, data=dat2, type='l', group=gen,
        panel=function(x,y,...){
          panel.abline(h=0,col="gray70")
@@ -51,7 +53,7 @@ xyplot(yield~env|gen, data=dat2, type='l', group=gen,
        },
        ylab="Environment-centered yield",
        main="kang.maize - maize hybrid yields", scales=list(x=list(rot=90)))
-}
+
 
 # Weather covariates for each environment.
 covs <- data.frame(env=c("AL85","AL86","AL87", "BR85","BR86","BR87",
@@ -62,4 +64,5 @@ covs <- data.frame(env=c("AL85","AL86","AL87", "BR85","BR86","BR87",
                    humid=c(82.8,91.1,85.4, 88.1,90.9,88.6, 95.4,90.4,86.7, 95.6,89.5,85))
 
 }
-\keyword{datasets}
+}
+

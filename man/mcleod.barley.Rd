@@ -43,6 +43,8 @@
 
 \examples{
 
+library(agridat)
+
 data(mcleod.barley)
 dat <- mcleod.barley
 
@@ -64,7 +66,7 @@ signif(d1,3)
 # rate increases, the total yield is still increasing.
 # But, income peaks around seed rate of 100.
 
-require(lattice)
+libs(lattice)
 xyplot(yield +income +surviving +grains +weight +plants +tillers +heads ~ rate,
        data=d1, outer=TRUE, type=c('p','l'),
        scales=list(y=list(relation="free")),

@@ -45,24 +45,29 @@
   None
 }
 \examples{
+\dontrun{
+
+library(agridat)
+
 data(baker.strawberry.uniformity)
 dat <- baker.strawberry.uniformity
+
 # Match mean and cv of Baker p 414.
-require(dplyr)
+libs(dplyr)
 dat <- group_by(dat, trial)
-dat <- summarize(dat, mn=mean(yield), cv=sd(yield)/mean(yield))
+summarize(dat, mn=mean(yield), cv=sd(yield)/mean(yield))
 
-\dontrun{
-dat$col = ifelse(dat$trial=="T1" & dat$col==4, 7, dat$col)
-dat$col = ifelse(dat$trial=="T1" & dat$col==3, 6, dat$col)
+dat <- mutate(dat, col = ifelse(trial=="T1" & col==4, 7, col),
+                   col = ifelse(trial=="T1" & col==3, 6, col))
 
-library(desplot)
+libs(desplot)
 desplot(yield ~ col*row, dat, subset=trial=="T1",
         flip=TRUE, aspect=500/(5*12),
         main="baker.strawberry.uniformity - trial T1")
 desplot(yield ~ col*row, dat, subset=trial=="T2",
         flip=TRUE, aspect=500/300,
         main="baker.strawberry.uniformity - trial T2")
+
 }
 }
 \keyword{datasets}

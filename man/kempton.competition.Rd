@@ -34,6 +34,8 @@
 
 \examples{
 
+library(agridat)
+
 data(kempton.competition)
 dat <- kempton.competition
 
@@ -42,7 +44,7 @@ round(tapply(dat$yield, dat$gen, mean),2)
 
 # Fixed genotype effects, random rep effects,
 # Autocorrelation of neighboring plots within the same rep, phi = -0.22
-require("nlme")
+libs(nlme)
 m1 <- lme(yield ~ -1+gen, random=~1|rep, data=dat,
           corr=corAR1(form=~col|rep))
 # Lag 1 autocorrelation is negative--evidence of competition

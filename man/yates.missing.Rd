@@ -37,16 +37,18 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(yates.missing)
 dat <- yates.missing
 
-require(lattice)
+libs(lattice)
 bwplot(y ~ trt, data=dat,
        xlab="Treatment", ylab="Infection intensity",
        main="yates.missing")
 
-if(require(reshape2)){
+libs(reshape2)
 mat0 <- acast(dat[, c('trt','block','y')], trt~block,
                id.var=c('trt','block'), value.var='y')
 
@@ -57,11 +59,10 @@ dat$pred <- predict(m1, new=dat[, c('trt','block')])
 dat$filled <- ifelse(is.na(dat$y), dat$pred, dat$y)
 mat1 <- acast(dat[, c('trt','block','pred')], trt~block,
                id.var=c('trt','block'), value.var='pred')
-}
 
-\dontrun{
+
 # Another method to estimate missing values via PCA
-require("nipals")
+libs("nipals")
 m2 <- nipals(mat0, center=FALSE, ncomp=3, fitted=TRUE)
 # mat2 <- m2$scores %*% t(m2$loadings)
 mat2 <- m2$fitted

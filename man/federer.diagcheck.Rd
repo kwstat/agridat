@@ -52,18 +52,20 @@
 }
 
 \examples{
+\dontrun{
+
+library(agridat)
 
 data(federer.diagcheck)
 dat <- federer.diagcheck
 
 # Show the layout as in Federer 1998.
 dat$check <- ifelse(dat$gen == "G121" | dat$gen=="G122", "C","N")
-if(require(desplot)){
-  desplot(yield ~ col*row, dat,
-          text=gen, show.key=FALSE, # aspect unknown
-          shorten='no', col=check, cex=.8, col.text=c("yellow","gray"),
-          main="federer.diagcheck")
-}
+libs(desplot)
+desplot(yield ~ col*row, dat,
+        text=gen, show.key=FALSE, # aspect unknown
+        shorten='no', col=check, cex=.8, col.text=c("yellow","gray"),
+        main="federer.diagcheck")
 
 
 # Now reproduce the analysis of Federer 2003.
@@ -91,79 +93,78 @@ m1 <- lm(yield ~ c1 + c2 + c3 + c4 + c6 + c8
          + r1 + r2 + r4 + r8 + r10
          + c1:r1 + c2:r1 + c3:r1 + gen, data = dat)
 # To get Type III SS use the following
-if(require(car)) {
-  Anova(m1, type=3) # Matches PROC GLM output
-  ##                Sum Sq  Df  F value    Pr(>F)    
-  ## (Intercept)  538948   1 159.5804 3.103e-16 ***
-  ## c1            13781   1   4.0806 0.0494940 *  
-  ## c2            51102   1  15.1312 0.0003354 ***
-  ## c3            45735   1  13.5419 0.0006332 ***
-  ## c4            24670   1   7.3048 0.0097349 ** 
-  ## c6            33002   1   9.7719 0.0031359 ** 
-}
+# libs(car)
+# Anova(m1, type=3) # Matches PROC GLM output
+##                Sum Sq  Df  F value    Pr(>F)    
+## (Intercept)  538948   1 159.5804 3.103e-16 ***
+## c1            13781   1   4.0806 0.0494940 *  
+## c2            51102   1  15.1312 0.0003354 ***
+## c3            45735   1  13.5419 0.0006332 ***
+## c4            24670   1   7.3048 0.0097349 ** 
+## c6            33002   1   9.7719 0.0031359 ** 
+
 
 # lmer
-if(require(lme4) & require(lucid)){
+libs(lme4,lucid)
 
-  dat$one <- factor(rep(1, nrow(dat)))
+dat$one <- factor(rep(1, nrow(dat)))
 
-  # lmer with bobyqa (default)
-  m2b <- lmer(yield ~ trtn + (0 + r1 + r2 + r4 + r8 + r10 +
-             c1 + c2 + c3 + c4 + c6 + c8 + r1:c1 + r1:c2 + r1:c3 || one) +
-                (1|new:gen),
-              data = dat, control=lmerControl(check.nlev.gtr.1="ignore"))
-  vc(m2b)
-  ##      grp        var1 var2     vcov  sdcor
-  ##  new.gen (Intercept) <NA>   2869    53.57
-  ##      one       r1:c3 <NA>   5532    74.37
-  ##    one.1       r1:c2 <NA>  58230   241.3
-  ##    one.2       r1:c1 <NA> 128000   357.8
-  ##    one.3          c8 <NA>   6456    80.35
-  ##    one.4          c6 <NA>   1400    37.41
-  ##    one.5          c4 <NA>   1792    42.33
-  ##    one.6          c3 <NA>   2549    50.49
-  ##    one.7          c2 <NA>   5942    77.08
-  ##    one.8          c1 <NA>      0     0
-  ##    one.9         r10 <NA>   1133    33.66
-  ##   one.10          r8 <NA>   1355    36.81
-  ##   one.11          r4 <NA>   2269    47.63
-  ##   one.12          r2 <NA>    241.8  15.55
-  ##   one.13          r1 <NA>   9200    95.92
-  ## Residual        <NA> <NA>   4412    66.42
-  
-  ## lmer with Nelder_Mead gives 'wrong' results
-  ## m2n <- lmer(yield ~ trtn + (0 + r1 + r2 + r4 + r8 + r10 +
-  ##             c1 + c2 + c3 + c4 + c6 + c8 + r1:c1 + r1:c2 + r1:c3 || one) +
-  ##             (1|new:gen)
-  ##             , data = dat,
-  ##             control=lmerControl(optimizer="Nelder_Mead",check.nlev.gtr.1="ignore"))
-  ## vc(m2n)
-  ##    groups        name variance   stddev
-  ##  new.gen  (Intercept)   3228    56.82
-  ##  one      r1:c3         7688    87.68
-  ##  one.1    r1:c2        69750   264.1
-  ##  one.2    r1:c1       107400   327.8
-  ##  one.3    c8            6787    82.38
-  ##  one.4    c6            1636    40.45
-  ##  one.5    c4           12270   110.8
-  ##  one.6    c3            2686    51.83
-  ##  one.7    c2            7645    87.43
-  ##  one.8    c1               0     0.0351
-  ##  one.9    r10           1976    44.45
-  ##  one.10   r8            1241    35.23
-  ##  one.11   r4            2811    53.02
-  ##  one.12   r2             928.2  30.47
-  ##  one.13   r1           10360   101.8
-  ##  Residual               4127    64.24
+# lmer with bobyqa (default)
+m2b <- lmer(yield ~ trtn + (0 + r1 + r2 + r4 + r8 + r10 +
+           c1 + c2 + c3 + c4 + c6 + c8 + r1:c1 + r1:c2 + r1:c3 || one) +
+              (1|new:gen),
+            data = dat, control=lmerControl(check.nlev.gtr.1="ignore"))
+vc(m2b)
+##      grp        var1 var2     vcov  sdcor
+##  new.gen (Intercept) <NA>   2869    53.57
+##      one       r1:c3 <NA>   5532    74.37
+##    one.1       r1:c2 <NA>  58230   241.3
+##    one.2       r1:c1 <NA> 128000   357.8
+##    one.3          c8 <NA>   6456    80.35
+##    one.4          c6 <NA>   1400    37.41
+##    one.5          c4 <NA>   1792    42.33
+##    one.6          c3 <NA>   2549    50.49
+##    one.7          c2 <NA>   5942    77.08
+##    one.8          c1 <NA>      0     0
+##    one.9         r10 <NA>   1133    33.66
+##   one.10          r8 <NA>   1355    36.81
+##   one.11          r4 <NA>   2269    47.63
+##   one.12          r2 <NA>    241.8  15.55
+##   one.13          r1 <NA>   9200    95.92
+## Residual        <NA> <NA>   4412    66.42
 
-}
+## lmer with Nelder_Mead gives 'wrong' results
+## m2n <- lmer(yield ~ trtn + (0 + r1 + r2 + r4 + r8 + r10 +
+##             c1 + c2 + c3 + c4 + c6 + c8 + r1:c1 + r1:c2 + r1:c3 || one) +
+##             (1|new:gen)
+##             , data = dat,
+##             control=lmerControl(optimizer="Nelder_Mead",check.nlev.gtr.1="ignore"))
+## vc(m2n)
+##    groups        name variance   stddev
+##  new.gen  (Intercept)   3228    56.82
+##  one      r1:c3         7688    87.68
+##  one.1    r1:c2        69750   264.1
+##  one.2    r1:c1       107400   327.8
+##  one.3    c8            6787    82.38
+##  one.4    c6            1636    40.45
+##  one.5    c4           12270   110.8
+##  one.6    c3            2686    51.83
+##  one.7    c2            7645    87.43
+##  one.8    c1               0     0.0351
+##  one.9    r10           1976    44.45
+##  one.10   r8            1241    35.23
+##  one.11   r4            2811    53.02
+##  one.12   r2             928.2  30.47
+##  one.13   r1           10360   101.8
+##  Residual               4127    64.24
+
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
+if(0){
   # asreml3
-  require(asreml)
-  require(lucid)
+  libs(asreml)
+  libs(lucid)
   m3 <- asreml(yield ~ -1 + trtn, data=dat,
                random = ~ r1 + r2 + r4 + r8 + r10 +
                  c1 + c2 + c3 + c4 + c6 + c8 + r1:c1 + r1:c2 + r1:c3 + new:gen)
@@ -200,9 +201,9 @@ if(require(lme4) & require(lucid)){
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
-  ## require(asreml4)
-  ## require(lucid)
+if(0){
+  ## libs(asreml4)
+  ## libs(lucid)
   ## m3 <- asreml(yield ~ -1 + trtn, data=dat,
   ##              random = ~ r1 + r2 + r4 + r8 + r10 +
   ##                c1 + c2 + c3 + c4 + c6 + c8 + r1:c1 + r1:c2 + r1:c3 + new:gen)
@@ -236,5 +237,6 @@ if(require(lme4) & require(lucid)){
   ## ##       R!variance   4412          915    4.8     pos
 }
 
+}
 }
 \keyword{datasets}

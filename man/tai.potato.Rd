@@ -43,10 +43,12 @@
 }
 
 \examples{
-data(tai.potato)
-dat = tai.potato
 
-require(lattice)
+library(agridat)
+data(tai.potato)
+dat <- tai.potato
+
+libs(lattice)
 dotplot(variety ~ yield|env, dat, main="tai.potato")
 
 # fixme - need to add tai() example

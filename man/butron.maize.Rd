@@ -54,27 +54,24 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(butron.maize)
 dat <- butron.maize
 
-# ----------------------------------------------------------------------------
+libs(reshape2)
+mat <- acast(dat, gen~env, value.var='yield')
+mat <- sweep(mat, 2, colMeans(mat))
+mat.svd <- svd(mat)
+# Calculate PC1 and PC2 scores as in Table 4 of Butron
+# Comment out to keep Rcmd check from choking on '%*%'
+# round(mat.svd$u[,1:2] %*% diag(sqrt(mat.svd$d[1:2])) %*% diag(c(-1,1)),3)
 
-if(require(reshape2)){
-  mat <- acast(dat, gen~env, value.var='yield')
-  mat <- sweep(mat, 2, colMeans(mat))
-  mat.svd <- svd(mat)
-  # Calculate PC1 and PC2 scores as in Table 4 of Butron
-  # Comment out to keep Rcmd check from choking on '%*%'
-  # round(mat.svd$u[,1:2] %*% diag(sqrt(mat.svd$d[1:2])) %*% diag(c(-1,1)),3)
-  
-  biplot(princomp(mat), main="butron.maize", cex=.7) # Figure 1 of Butron
-}
+biplot(princomp(mat), main="butron.maize", cex=.7) # Figure 1 of Butron
 
-# ----------------------------------------------------------------------------
 
-\dontrun{
-  
+if(0){  
   # Here we see if including pedigree information is helpful for a
   # multi-environment model
   # Including the pedigree provided little benefit
@@ -98,7 +95,7 @@ if(require(reshape2)){
 
   # View the pedigree.  Can't use kinship2 ... plants can be both male/female
   # Not the best view...too much overplotting
-  require(synbreed)
+  libs(synbreed)
   pe <- with(ped[1:57,], create.pedigree(gen, male, female, gener=NULL))
   # windows(9,6)
   synbreed::plot.pedigree(pe, vertex.size=10, vertex.label.cex=.5, asp=.5) #
@@ -106,9 +103,9 @@ if(require(reshape2)){
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
+if(0){
   # asreml3
-  require(asreml)
+  libs(asreml)
   ped.ainv <- asreml.Ainverse(ped)$ginv
 
   m0 <- asreml(yield ~ 1+env, random = ~ gen, data=dat)
@@ -144,9 +141,9 @@ if(require(reshape2)){
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
+if(0){
 
-##   require(asreml4)
+##   libs(asreml4)
 ##   ped.ainv <- ainverse(ped)
 
 ## if(FALSE){
@@ -183,8 +180,8 @@ if(require(reshape2)){
 ##   # Including the pedigree provided little benefit
 ## } # if(FALSE)
 
-} # dontrun
-
+}
+}
 }
 
 \keyword{datasets}

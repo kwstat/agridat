@@ -65,7 +65,7 @@ dat <- panse.cotton.uniformity
 # 32.1
   
 # match the fertility map of Hutchinson, fig 1
-require(desplot)
+libs(desplot)
 desplot(yield ~ col*row, dat,
         flip=TRUE, aspect=207/150, # true aspect
         main="panse.cotton.uniformity")

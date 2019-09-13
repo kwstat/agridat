@@ -46,6 +46,9 @@
   Livestock. Table 8.1, page 165.
 }
 \examples{
+\dontrun{
+
+library(agridat)
 data(harville.lamb)
 dat <- harville.lamb
 dat <- transform(dat, line=factor(line), sire=factor(sire), damage=factor(damage))
@@ -55,19 +58,18 @@ bwplot(weight ~ line, dat,
        main="harville.lamb",
        xlab="line", ylab="birth weights")
 
-\dontrun{
-  if(require(lme4) & require(lucid)){
+if(0){
+  libs(lme4, lucid)
     
-    m1 <- lmer(weight ~  -1 + line + damage + (1|sire), data=dat)
-    summary(m1)
-    vc(m1) # Khuri reports variances 0.5171, 2.9616
-    ##      grp        var1 var2   vcov  sdcor
-    ##     sire (Intercept) <NA> 0.5171 0.7191
-    ## Residual        <NA> <NA> 2.962  1.721 
-
+  m1 <- lmer(weight ~  -1 + line + damage + (1|sire), data=dat)
+  summary(m1)
+  vc(m1) # Khuri reports variances 0.5171, 2.9616
+  ##      grp        var1 var2   vcov  sdcor
+  ##     sire (Intercept) <NA> 0.5171 0.7191
+  ## Residual        <NA> <NA> 2.962  1.721 
   }
-}
 
+}
 }
 
 \keyword{datasets}

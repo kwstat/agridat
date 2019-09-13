@@ -55,22 +55,23 @@
   None
 }
 \examples{
+\dontrun{
 
+library(agridat)
 data(goulden.splitsplit)
 dat <- goulden.splitsplit
 
-if(require(desplot)) {
+libs(desplot)
 
-  ## Experiment design. Goulden p. 152-153
-  ## desplot(gen ~ col*row, data=dat,
-  ##         out1=block, out2=trt, text=dust, col=inoc, cex=1,
-  ##         main="goulden.splitsplit")
-  
-  desplot(yield ~ col*row, data=dat,
-          out1=block, out2=gen, col=inoc, num=trt, cex=1,
-          main="goulden.splitsplit")
+## Experiment design. Goulden p. 152-153
+## desplot(gen ~ col*row, data=dat,
+##         out1=block, out2=trt, text=dust, col=inoc, cex=1,
+##         main="goulden.splitsplit")
 
-}
+desplot(yield ~ col*row, data=dat,
+        out1=block, out2=gen, col=inoc, num=trt, cex=1,
+        main="goulden.splitsplit")
+
 
 # Match Goulden table 40
 m1 <- aov(yield ~ gen
@@ -80,5 +81,6 @@ m1 <- aov(yield ~ gen
           + Error(block/(gen+gen:dust:dry+gen:inoc:dry)), data=dat)
 summary(m1)
 
+}
 }
 \keyword{datasets}

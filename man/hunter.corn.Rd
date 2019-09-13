@@ -40,12 +40,13 @@
 
 \examples{
 
+library(agridat)
 data(hunter.corn)
 dat <- hunter.corn
 
 dat <- transform(dat, env=factor(paste(loc,year)))
 
-require(lattice)
+libs(lattice)
 xyplot(yield~nitro|env, dat, type='b',
 main="hunter.corn - nitrogen response curves")
 

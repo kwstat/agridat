@@ -42,6 +42,8 @@
 }
 \examples{
 
+library(agridat)
+
 data(acorsi.grayleafspot)
 dat <- acorsi.grayleafspot
 
@@ -68,7 +70,7 @@ par(op)
   # "Generalized nonlinear models in R: An overview of the gnm package"
   
   # full gnm model with wedderburn, seems to work
-  require(gnm)
+  libs(gnm)
   set.seed(1)
   gnm1 <- gnm(y ~  env/rep + env + gen + instances(Mult(env,gen),2),
               data=dat,

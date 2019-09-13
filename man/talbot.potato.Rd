@@ -69,31 +69,33 @@ data("talbot.potato.yield")
 }
 
 \examples{
+\dontrun{
 
-if(require(pls) & require(reshape2)){
+library(agridat)
 
-  data(talbot.potato.traits)
-  datt <- talbot.potato.traits
-  data(talbot.potato.yield)
-  daty <- talbot.potato.yield
+libs(pls, reshape2)
 
-  datt <- acast(datt, gen ~ trait, value.var='score')
-  daty <- acast(daty, gen ~ loc, value.var='yield')  
-  
-  # Transform columns to zero mean and unit variance
-  datt <- scale(datt)
-  daty <- scale(daty)
+data(talbot.potato.traits)
+datt <- talbot.potato.traits
+data(talbot.potato.yield)
+daty <- talbot.potato.yield
 
-  m1 <- plsr(daty ~ datt, ncomp=3)
-  summary(m1)
+datt <- acast(datt, gen ~ trait, value.var='score')
+daty <- acast(daty, gen ~ loc, value.var='yield')  
 
-  # Loadings factor 1
-  lo <- loadings(m1)[,1,drop=FALSE]
-  round(-1*lo[order(-1*lo),1,drop=FALSE],2)
+# Transform columns to zero mean and unit variance
+datt <- scale(datt)
+daty <- scale(daty)
 
-  biplot(m1, main="talbot.potato - biplot")
+m1 <- plsr(daty ~ datt, ncomp=3)
+summary(m1)
+
+# Loadings factor 1
+lo <- loadings(m1)[,1,drop=FALSE]
+round(-1*lo[order(-1*lo),1,drop=FALSE],2)
+
+biplot(m1, main="talbot.potato - biplot")
 
 }
-
 }
 

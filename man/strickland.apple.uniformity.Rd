@@ -34,9 +34,11 @@
 }
 \examples{
 \dontrun{
+
+library(agridat)
   data(strickland.apple.uniformity)
   dat <- strickland.apple.uniformity
-  require(desplot)
+  libs(desplot)
   desplot(yield ~ col*row, dat,
           main="strickland.apple.uniformity",
           flip=TRUE, aspect=(18/11))

@@ -112,21 +112,23 @@
 \examples{
 \dontrun{
 
+library(agridat)
+
 data(smith.corn.uniformity)
 dat <- smith.corn.uniformity
 
   dat = transform(dat, year=factor(year))
-  require(desplot)
+  libs(desplot)
   desplot(yield~col*row|year, dat,
           layout=c(2,2), aspect=1,
           main="smith.corn.uniformity: yield across years 1895-1987")
 
   ## # Outliers are obvious
-  ## require(lattice)
+  ## libs(lattice)
   ## xyplot(yield~row|factor(col), dat, groups=year,
   ##        auto.key=list(columns=3), main="smith.corn.uniformity")
 
-  require(rgl)
+  libs(rgl)
   # A few odd pairs of outliers in column 6
   # black/gray dots very close to each other
   plot3d(dat$col, dat$row, dat$yield, col=dat$year,

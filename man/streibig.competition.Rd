@@ -43,6 +43,8 @@
 
 \examples{
 
+library(agridat)
+
 data(streibig.competition)
 dat <- streibig.competition
 
@@ -52,7 +54,7 @@ d1 <- subset(dat, sseeds<1)
 d1 <- transform(d1, x=bseeds, y=bdwt, block=factor(block))
 
 # Inverse yield looks like it will be a good fit for Gamma's inverse link
-require(lattice)
+libs(lattice)
 xyplot(1/y~x, data=d1, group=block, auto.key=list(columns=3),
        xlab="Seeding rate", ylab="Inverse yield of barley dry weight",
        main="streibig.competition")

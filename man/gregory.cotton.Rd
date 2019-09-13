@@ -57,21 +57,24 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(gregory.cotton)
 dat <- gregory.cotton
 
-if(require(dplyr)){
-  # Main effect means, Gregory table 2
-  dat %>% group_by(year,date) %>% summarise(yield=mean(yield))
-  dat %>% group_by(year,spacing) %>% summarise(yield=mean(yield))
-  dat %>% group_by(year,water) %>% summarise(yield=mean(yield))
-  dat %>% group_by(year,nitrogen) %>% summarise(yield=mean(yield))
-}
+# Main effect means, Gregory table 2
+## libs(dplyr)
+## dat %>% group_by(year,date) %>% summarise(yield=mean(yield))
+## dat %>% group_by(year,spacing) %>% summarise(yield=mean(yield))
+## dat %>% group_by(year,water) %>% summarise(yield=mean(yield))
+## dat %>% group_by(year,nitrogen) %>% summarise(yield=mean(yield))
+
 
 # Figure 2 of Gregory. Not recommended, but an interesting exercise.
 # http://stackoverflow.com/questions/13887365
-if(require(ggplot2)){
+if(FALSE){
+  libs(ggplot2)
   d1 <- subset(dat, year=="Y1")
   d1 <- transform(d1, grp=factor(paste(date,nitrogen,water,spacing)))
   d1 <- d1[order(d1$grp),] # for angles
@@ -105,6 +108,5 @@ if(require(ggplot2)){
   print(gg)
   
 }
-
 }
-\keyword{datasets}
+}

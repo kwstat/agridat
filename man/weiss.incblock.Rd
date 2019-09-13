@@ -46,31 +46,31 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(weiss.incblock)
 dat <- weiss.incblock
 
 # True aspect as shown in Weiss and Cox
-if(require(desplot)){
-  desplot(yield~col*row, dat,
-          text=gen, shorten='none', cex=.6, out1=block,
-          aspect=252/96, # true aspect
-          main="weiss.incblock")
+libs(desplot)
+desplot(yield~col*row, dat,
+        text=gen, shorten='none', cex=.6, out1=block,
+        aspect=252/96, # true aspect
+        main="weiss.incblock")
+
+
+# Standard inc block analysis used by Weiss and Cox
+libs(asreml)
+m1 <- asreml(yield ~ gen + block , data=dat)
+predict(m1, data=dat, classify="gen")$predictions$pvals
+## gen pred.value std.error est.stat
+## G01     24.59    0.8312  Estimable
+## G02     26.92    0.8312  Estimable
+## G03     32.62    0.8312  Estimable
+## G04     26.97    0.8312  Estimable
+## G05     26.02    0.8312  Estimable
+
 }
-
-
-\dontrun{
-  # Standard inc block analysis used by Weiss and Cox
-  require(asreml)
-  m1 <- asreml(yield ~ gen + block , data=dat)
-  predict(m1, data=dat, classify="gen")$predictions$pvals
-  ## gen pred.value std.error est.stat
-  ## G01     24.59    0.8312  Estimable
-  ## G02     26.92    0.8312  Estimable
-  ## G03     32.62    0.8312  Estimable
-  ## G04     26.97    0.8312  Estimable
-  ## G05     26.02    0.8312  Estimable
-}
-
 }
 \keyword{datasets}

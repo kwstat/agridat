@@ -59,14 +59,14 @@ No. \tab Line \cr
 55 \tab Lee  USA \cr
 56 \tab Hood  USA \cr
 57 \tab Ogden  USA \cr
-58 \tab Wayne  USA \cr
+58 \tab Wayne  USA
 }
 
 Note on the data in Basford and Tukey book. The values for line 58 for
-Nambour 1970 and Redland Bay 1971 are
-incorrectly listed on page 477 as 20.490 and 15.070. They should be 17.350 and
-13.000, respectively. In the data set made available here, these values have
-been corrected.
+Nambour 1970 and Redland Bay 1971 are incorrectly listed on page 477 as
+20.490 and 15.070. They should be 17.350 and 13.000, respectively. In
+the data set made available here, these values have been corrected.
+
 }
 
 \source{
@@ -78,8 +78,7 @@ been corrected.
 
   Used with permission of Kaye Basford, Pieter Kroonenberg.
 }
-\references{
-  
+\references{  
   K E Basford. 1982. The Use of Multidimensional Scaling in Analysing
   Multi-Attribute Genotype Response Across Environments,
   \emph{Aust J Agric Res}, 33, 473--480.
@@ -96,22 +95,24 @@ been corrected.
 
 }
 \examples{
+\dontrun{
+
+library(agridat)
 
 data(australia.soybean)
 dat <- australia.soybean
 
-if(require(reshape2)){
+libs(reshape2)
 dm <- melt(dat, id.var=c('env', 'year','loc','gen'))
 
 # Joint plot of genotypes & traits. Similar to Figure 1 of Kroonenberg 1989
 dmat <- acast(dm, gen~variable, fun=mean)
 dmat <- scale(dmat)
 biplot(princomp(dmat), main="australia.soybean trait x gen biplot", cex=.75)
-}
+
 
 # Figure 1 of Kozak 2010, lines 44-58
-\dontrun{
-  require(agridat); require(reshape2) ; require(lattice); require(latticeExtra)
+  libs(reshape2, lattice, latticeExtra)
   data(australia.soybean)
   dat <- australia.soybean
   dat <- melt(dat, id.var=c('env', 'year','loc','gen'))
@@ -128,7 +129,7 @@ biplot(princomp(dmat), main="australia.soybean trait x gen biplot", cex=.75)
     parallelplot( ~ dat2[,1:6], horiz=FALSE, col="gray80") +
     parallelplot( ~ dat3[,1:6]|dat3$gen,
                  as.table=TRUE, horiz=FALSE, lwd=2)
-}
 
+}
 }
 

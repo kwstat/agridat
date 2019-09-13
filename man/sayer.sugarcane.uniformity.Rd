@@ -60,6 +60,8 @@ Field length: 121 rows * 3 feet = 363 feet
 }
 \examples{
 \dontrun{
+
+library(agridat)
   
   data(sayer.sugarcane.uniformity)
   dat33 <- subset(sayer.sugarcane.uniformity, year==1933)
@@ -76,7 +78,7 @@ Field length: 121 rows * 3 feet = 363 feet
 
   mean(dat34$yield) # 270.83 vs Sayer 270.83
   
-  require(desplot)
+  libs(desplot)
   
   desplot(yield ~ col*row, dat33,
           flip=TRUE, aspect=408/480, # true aspect

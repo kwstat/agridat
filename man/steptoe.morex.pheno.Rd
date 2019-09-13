@@ -126,57 +126,52 @@ http://wheat.pw.usda.gov/ggpages/SxM/pedigrees.html
 }
 
 \examples{
-
-data(steptoe.morex.pheno)
-dat <- steptoe.morex.pheno
-
 \dontrun{
+  
+  library(agridat)
+  data(steptoe.morex.pheno)
+  dat <- steptoe.morex.pheno
+
   # Visualize GxE of traits
-  require(lattice)
+  libs(lattice)
   redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
   levelplot(amylase~env*gen, data=dat, col.regions=redblue,
             scales=list(x=list(rot=90)), main="amylase")
-  levelplot(diapow~env*gen, data=dat, col.regions=redblue,
-            scales=list(x=list(rot=90)), main="diapow")
-  levelplot(hddate~env*gen, data=dat, col.regions=redblue,
-            scales=list(x=list(rot=90)), main="hddate")
-  levelplot(lodging~env*gen, data=dat, col.regions=redblue,
-            scales=list(x=list(rot=90)), main="lodging")
-  levelplot(malt~env*gen, data=dat, col.regions=redblue,
-            scales=list(x=list(rot=90)), main="malt")
-  levelplot(height~env*gen, data=dat, col.regions=redblue,
-            scales=list(x=list(rot=90)), main="height")
-  levelplot(protein~env*gen, data=dat, col.regions=redblue,
-            scales=list(x=list(rot=90)), main="protein")
-  levelplot(yield~env*gen, data=dat, col.regions=redblue,
-            scales=list(x=list(rot=90)), main="yield")
-}
+  ## levelplot(diapow~env*gen, data=dat, col.regions=redblue,
+  ##           scales=list(x=list(rot=90)), main="diapow")
+  ## levelplot(hddate~env*gen, data=dat, col.regions=redblue,
+  ##           scales=list(x=list(rot=90)), main="hddate")
+  ## levelplot(lodging~env*gen, data=dat, col.regions=redblue,
+  ##           scales=list(x=list(rot=90)), main="lodging")
+  ## levelplot(malt~env*gen, data=dat, col.regions=redblue,
+  ##           scales=list(x=list(rot=90)), main="malt")
+  ## levelplot(height~env*gen, data=dat, col.regions=redblue,
+  ##           scales=list(x=list(rot=90)), main="height")
+  ## levelplot(protein~env*gen, data=dat, col.regions=redblue,
+  ##           scales=list(x=list(rot=90)), main="protein")
+  ## levelplot(yield~env*gen, data=dat, col.regions=redblue,
+  ##           scales=list(x=list(rot=90)), main="yield")
 
-# ----------------------------------------------------------------------------
 
-# Calculate avg yield for each loc as in Romagosa 1996, table 3
-t(t(round(tapply(dat$yield, dat$env, FUN=mean),2)))
-# SKo92,SKg92 means in table 3 are switched.  Who is right, him or me?
+  # Calculate avg yield for each loc as in Romagosa 1996, table 3
+  # t(t(round(tapply(dat$yield, dat$env, FUN=mean),2)))
+  # SKo92,SKg92 means in table 3 are switched.  Who is right, him or me?
 
-# ----------------------------------------------------------------------------
-
-# Draw marker map
-if(require(qtl)){
+  # Draw marker map
+  libs(qtl)
   data(steptoe.morex.geno)
   datg <- steptoe.morex.geno
   plot.map(datg, main="steptoe.morex.pheno")  # or just use plot()
-}
 
-# ----------------------------------------------------------------------------
 
-\dontrun{
+if(0){
   # This is a very rudimentary example.
   # Fit a simple multi-environment mixed model
   # asreml3
-  require(asreml)
+  libs(asreml)
   m1 <- asreml(yield ~ env, data=dat, random=~gen)
   
-  require(wgaim)
+  libs(wgaim)
   qtl::plotMissing(datg)
   link.map(datg)
   # Create an interval object for wgaim
@@ -197,14 +192,14 @@ if(require(qtl)){
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
+if(0){
   # This is a very rudimentary example.
 
   # Fit a simple multi-environment mixed model
-  ## require(asreml4)
+  ## libs(asreml4)
   ## m1 <- asreml(yield ~ env, data=dat, random=~gen)
   
-  ## require(wgaim)
+  ## libs(wgaim)
   ## plotMissing(datg)
   ## link.map(datg)
   ## # Create an interval object for wgaim
@@ -224,6 +219,6 @@ if(require(qtl)){
 
 }
 
-
+}
 }
 \keyword{datasets}

@@ -25,7 +25,9 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(henderson.milkfat)
 dat <- henderson.milkfat
 
@@ -49,7 +51,7 @@ m3 <- glm(yield ~ 1 + log(week) + week, quasi(link = "log"), dat)
 #  and m3 has  log(E[y]) = log(alpha) + beta*log(t)  + gamma*t
 
 # Generalized additive models
-require("mgcv")
+libs("mgcv")
 m4 <- gam(log(yield) ~ s(week), gaussian, dat)
 m5 <- gam(yield ~ s(week), quasi(link = "log"), dat)
 
@@ -77,5 +79,6 @@ legend("topright",
   col = c("black", "red", "red", "blue", "blue"),
   cex = 0.8, bty = "n")
 
+}
 }
 \keyword{datasets}

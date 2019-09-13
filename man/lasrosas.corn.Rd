@@ -91,21 +91,22 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(lasrosas.corn)
 dat <- lasrosas.corn
 
 # yield map
-require(lattice)
-if(require(latticeExtra)){  # for panel.levelplot.points
-  redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
-  levelplot(yield ~ long*lat|factor(year), data=dat, 
-            main="lasrosas.corn grain yield", xlab="Longitude", ylab="Latitude",
-            scales=list(alternating=FALSE),
-            prepanel = prepanel.default.xyplot,
-            panel = panel.levelplot.points,
-            type = c("p", "g"), aspect = "iso", col.regions=redblue)
-}
+libs(lattice,latticeExtra)  # for panel.levelplot.points
+redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
+levelplot(yield ~ long*lat|factor(year), data=dat, 
+          main="lasrosas.corn grain yield", xlab="Longitude", ylab="Latitude",
+          scales=list(alternating=FALSE),
+          prepanel = prepanel.default.xyplot,
+          panel = panel.levelplot.points,
+          type = c("p", "g"), aspect = "iso", col.regions=redblue)
+
 
 d1 <- subset(dat, year==1999)
 
@@ -123,4 +124,5 @@ m1 <- lm(yield ~ 1 + nitro + I(nitro^2), data=d1, subset=year==1999)
 coef(m1)
 
 }
-\keyword{datasets}
+}
+

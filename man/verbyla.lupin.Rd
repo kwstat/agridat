@@ -86,36 +86,38 @@
 }
 
 \examples{
-
+\dontrun{
+  
+library(agridat)
 data(verbyla.lupin)
 dat <- verbyla.lupin
 
-# The same RCB randomization was used at all sites in each year
-if(require(desplot)){
+  # The same RCB randomization was used at all sites in each year
+  libs(desplot)
   desplot(gen~col+row|site, data=dat,
           out1=rep, num=rate,
           # aspect unknown
           main="verbyla.lupin - experiment design")
-}
 
-# Figure 3 of Verbyla
-require(lattice)
-foo <- xyplot(yield ~ rate|loc*gen, data=dat, subset=year==92,
-              type=c('p','smooth'), cex=.5,
-              main="verbyla.lupin: 1992 yield response curves",
-              xlab="Seed rate (plants/m^2)",
-              ylab="Yield (tons/ha)",
-              strip=strip.custom(par.strip.text=list(cex=.7)))
 
-if (require(latticeExtra)) { # for useOuterStrips
+  # Figure 3 of Verbyla
+  libs(lattice)
+  foo <- xyplot(yield ~ rate|loc*gen, data=dat, subset=year==92,
+                type=c('p','smooth'), cex=.5,
+                main="verbyla.lupin: 1992 yield response curves",
+                xlab="Seed rate (plants/m^2)",
+                ylab="Yield (tons/ha)",
+                strip=strip.custom(par.strip.text=list(cex=.7)))
+
+  libs(latticeExtra) # for useOuterStrips
   useOuterStrips(foo,
                  strip=strip.custom(par.strip.text=list(cex=.7)),
                  strip.left=strip.custom(par.strip.text=list(cex=.7)))
-}
+
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
+if(0){
   
   # We try to reproduce the analysis of Verbyla 1999.
   # May not be exactly the same, but is pretty close.
@@ -133,7 +135,7 @@ if (require(latticeExtra)) { # for useOuterStrips
   dat <- transform(dat, site=factor(paste0(year,".",substring(loc,1,4))))
   
   # Initial model from top of Verbyla table 9.
-#  require(asreml4)
+#  libs(asreml4)
   # FIXME asreml4 This is not working in asreml4
   
 ##   m0 <- asreml(yield ~ 1
@@ -188,7 +190,7 @@ if (require(latticeExtra)) { # for useOuterStrips
 ##              - at(site, c(5,7,8,10)):units + at(site, c(5,7,8)):units)
 
 ## # Variance components are a pretty good match to Verbyla 1997, table 15
-## require(lucid)
+## libs(lucid)
 ## vc(m5)
 ## .001004/sqrt(.005446*.0003662) # .711 correlation for RC1
 ## .00175/sqrt(.01881*.000167) # .987 correlation for RC2
@@ -200,5 +202,6 @@ if (require(latticeExtra)) { # for useOuterStrips
 
 }
 
+}
 }
 

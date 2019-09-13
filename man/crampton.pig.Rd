@@ -41,11 +41,13 @@
 }
 \examples{
 
+library(agridat)
+
 data(crampton.pig)
 dat <- crampton.pig
 
 dat <- transform(dat, gain=weight2-weight1)
-require(lattice)
+libs(lattice)
 # Trt 4 looks best
 xyplot(gain ~ feed, dat, group=treatment, type=c('p','r'),
        auto.key=list(columns=5),

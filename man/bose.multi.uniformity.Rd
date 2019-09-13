@@ -51,14 +51,16 @@
   http://krishikosh.egranth.ac.in/handle/1/21153
 }
 \examples{
+\dontrun{
 
+library(agridat)
 data(bose.multi.uniformity)
 dat <- bose.multi.uniformity
 
 # match sum at bottom of Bose tables 1, 4, 5
 # dat %>% group_by(year) %>% summarize(sum=sum(yield))
 
-if(require(desplot) & require(dplyr)){
+libs(desplot, dplyr)
   # Calculate percent of mean yield for each year
   dat <- group_by_(dat, ~ year)
   dat <- mutate_(dat, pctyld = ~ (yield-mean(yield))/mean(yield))
@@ -72,7 +74,7 @@ if(require(desplot) & require(dplyr)){
   # contourplot() results need to be mentally flipped upside down
   # contourplot(pctyld ~ col*row|year, dat,
   #   region=TRUE, as.table=TRUE, aspect=26/15)
-}
 
+}
 }
 \keyword{datasets}

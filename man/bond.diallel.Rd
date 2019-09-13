@@ -42,7 +42,7 @@
 data(bond.diallel)
 dat <- bond.diallel
 
-require(lattice)
+libs(lattice)
 splom(dat[,3:11], main="bond.diallel")
 
 # Needs an example.  Bond says yield heterosis of F1 hybrids over parent

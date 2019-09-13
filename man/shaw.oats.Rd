@@ -43,13 +43,15 @@
   None
 }
 \examples{
+
+library(agridat)
 data(shaw.oats)
 dat <- shaw.oats
 # sum(dat$yield) # 16309 matches Shaw p. 125
 # sum( (dat$yield-mean(dat$yield)) ^2) # total SS matches Shaw p. 141
 
 dat$year <- factor(dat$year)
-library(lattice)
+libs(lattice)
 
 dotplot(yield ~ gen|env, data=dat, groups=year,
         main="shaw.oats",

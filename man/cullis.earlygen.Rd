@@ -63,34 +63,35 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(cullis.earlygen)
 dat <- cullis.earlygen
 
 # Show field layout of checks.  Cullis Table 1.
 dat$check <- ifelse(dat$entry < 8, dat$entry, NA)
-if(require(desplot)){
-  desplot(yield ~ col*row, dat,
-          col="check", cex=0.5, flip=TRUE, aspect=121/150, # true aspect
-          main="cullis.earlygen (yield)")
+libs(desplot)
+desplot(yield ~ col*row, dat,
+        col="check", cex=0.5, flip=TRUE, aspect=121/150, # true aspect
+        main="cullis.earlygen (yield)")
 
-  grays <- colorRampPalette(c("white","#252525"))
-  desplot(weed ~ col*row, dat,
-          at=0:6-0.5, col.regions=grays(7)[-1],
-          flip=TRUE, aspect=121/150, # true aspect
-          main="cullis.earlygen (weed)")
-}
+grays <- colorRampPalette(c("white","#252525"))
+desplot(weed ~ col*row, dat,
+        at=0:6-0.5, col.regions=grays(7)[-1],
+        flip=TRUE, aspect=121/150, # true aspect
+        main="cullis.earlygen (weed)")
 
-require(lattice)
+libs(lattice)
 bwplot(yield ~ as.character(weed), dat,
        horizontal=FALSE,
        xlab="Weed score", main="cullis.earlygen")
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
+if(0){
   # asreml3
-  require(asreml)
+  libs(asreml)
   # Start with the standard AR1xAR1 analysis
   dat <- transform(dat, xf=factor(col), yf=factor(row))
   dat <- dat[order(dat$xf, dat$yf),]
@@ -103,7 +104,7 @@ bwplot(yield ~ as.character(weed), dat,
   # Now add a nugget variance
   m4 <- update(m3, random= ~ gen + units)
   
-  require(lucid)
+  libs(lucid)
   vc(m4)
   ##           effect component std.error z.ratio constr
   ##      gen!gen.var  73770    10420         7.1    pos
@@ -124,7 +125,7 @@ bwplot(yield ~ as.character(weed), dat,
   ## 6    Eno012        2771.148      162.21897  Estimable
 
   # Compare AR1 with Moving Grid
-  require(mvngGrAd)
+  libs(mvngGrAd)
   shape <- list(c(1),
                 c(1),
                 c(1:4),
@@ -148,8 +149,8 @@ bwplot(yield ~ as.character(weed), dat,
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
-  ## require(asreml4)
+if(0){
+  ## libs(asreml4)
   ## # Start with the standard AR1xAR1 analysis
   ## dat <- transform(dat, xf=factor(col), yf=factor(row))
   ## dat <- dat[order(dat$xf, dat$yf),]
@@ -162,7 +163,7 @@ bwplot(yield ~ as.character(weed), dat,
   ## # Now add a nugget variance
   ## m4 <- update(m3, random= ~ gen + units)
   
-  ## require(lucid)
+  ## libs(lucid)
   ## vc(m4)
   ## ##       effect component std.error z.ratio bound %ch
   ## ##          gen  73780    10420         7.1     P 0  
@@ -183,7 +184,7 @@ bwplot(yield ~ as.character(weed), dat,
   
 
   ## # Compare AR1 with Moving Grid
-  ## require(mvngGrAd)
+  ## libs(mvngGrAd)
   ## shape <- list(c(1),
   ##               c(1),
   ##               c(1:4),
@@ -205,5 +206,6 @@ bwplot(yield ~ as.character(weed), dat,
 
 }
 
+}
 }
 \keyword{datasets}

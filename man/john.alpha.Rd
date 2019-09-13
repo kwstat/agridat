@@ -43,6 +43,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 data(john.alpha)
@@ -56,7 +57,7 @@ m1 <- lm(yield ~ 0 + gen + rep + rep:block, dat)
 anova(m1)
 
 # Block random (combined inter-intra block analysis)
-if(require(lme4) & require(lucid)){
+libs(lme4, lucid)
 m2 <- lmer(yield ~ 0 + gen + rep + (1|rep:block), dat)
 
 anova(m2)
@@ -84,51 +85,48 @@ head(means)
 ## genG05 5.103100 5.225708 5.075944
 ## genG06 4.749067 4.618234 4.575394
 
-require(lattice)
+libs(lattice)
 splom(means, main="john.alpha - means for RCB, IB, Intra-block")
 
-}
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
-  # asreml3
-  # Heritability calculation of Piepho & Mohring, Example 1
-  require(asreml)
-  m3 <- asreml(yield ~ 1 + rep, data=dat, random=~ gen + rep:block)
-  sg2 <- summary(m3)$varcomp['gen!gen.var','component'] # .142902
+# asreml3
+# Heritability calculation of Piepho & Mohring, Example 1
+libs(asreml)
+m3 <- asreml(yield ~ 1 + rep, data=dat, random=~ gen + rep:block)
+sg2 <- summary(m3)$varcomp['gen!gen.var','component'] # .142902
 
-  # Average variance of a difference of two adjusted means (BLUP)
-  
-  p3 <- predict(m3, data=dat, classify="gen", sed=TRUE)
-  # Matrix of pair-wise SED values, squared
-  vdiff <- p3$predictions$sed^2
-  # Average variance of two DIFFERENT means (using lower triangular of vdiff)
-  vblup <- mean(vdiff[lower.tri(vdiff)]) # .05455038
-  
-  # Note that without sed=TRUE, asreml reports square root of the average variance
-  # of a difference between the variety means, so the following gives the same value
-  # predict(m3, data=dat, classify="gen")$pred$avsed ^ 2 # .05455038
+# Average variance of a difference of two adjusted means (BLUP)
 
-  # Average variance of a difference of two adjusted means (BLUE)
-  m4 <- asreml(yield ~ 1 + gen + rep, data=dat, random = ~ rep:block)
-  p4 <- predict(m4, data=dat, classify="gen", sed=TRUE)
-  vdiff <- p4$predictions$sed^2
-  vblue <- mean(vdiff[lower.tri(vdiff)]) # .07010875
-  # Again, could use predict(m4, data=dat, classify="gen")$pred$avsed ^ 2
-  
-  # H^2 Ad-hoc measure of heritability
-  sg2 / (sg2 + vblue/2) # .803
-  
-  # H^2c Similar measure proposed by Cullis.
-  1-(vblup / 2 / sg2) # .809
-}
+p3 <- predict(m3, data=dat, classify="gen", sed=TRUE)
+# Matrix of pair-wise SED values, squared
+vdiff <- p3$predictions$sed^2
+# Average variance of two DIFFERENT means (using lower triangular of vdiff)
+vblup <- mean(vdiff[lower.tri(vdiff)]) # .05455038
+
+# Note that without sed=TRUE, asreml reports square root of the average variance
+# of a difference between the variety means, so the following gives the same value
+# predict(m3, data=dat, classify="gen")$pred$avsed ^ 2 # .05455038
+
+# Average variance of a difference of two adjusted means (BLUE)
+m4 <- asreml(yield ~ 1 + gen + rep, data=dat, random = ~ rep:block)
+p4 <- predict(m4, data=dat, classify="gen", sed=TRUE)
+vdiff <- p4$predictions$sed^2
+vblue <- mean(vdiff[lower.tri(vdiff)]) # .07010875
+# Again, could use predict(m4, data=dat, classify="gen")$pred$avsed ^ 2
+
+# H^2 Ad-hoc measure of heritability
+sg2 / (sg2 + vblue/2) # .803
+
+# H^2c Similar measure proposed by Cullis.
+1-(vblup / 2 / sg2) # .809
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
+if(0){
   ## # Heritability calculation of Piepho & Mohring, Example 1
-  ## require(asreml4)
+  ## libs(asreml4)
   ## m3 <- asreml(yield ~ 1 + rep, data=dat, random=~ gen + rep:block)
   ## sg2 <- summary(m3)$varcomp['gen','component'] # .142902
 
@@ -160,12 +158,12 @@ splom(means, main="john.alpha - means for RCB, IB, Intra-block")
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
+if(0){
 
   # Illustrate how to do the same calculations with lme4
   # http://stackoverflow.com/questions/38697477
   
- require(lme4)
+ libs(lme4)
   
   cov2sed <- function(x){
     # Convert var-cov matrix to SED matrix
@@ -181,7 +179,7 @@ splom(means, main="john.alpha - means for RCB, IB, Intra-block")
   # Same as asreml model m4. Note 'gen' must be first term
   m5blue <- lmer(yield ~ 0 + gen + rep + (1|rep:block), dat)
   
-  require(emmeans)
+  libs(emmeans)
   ls5blue <- emmeans(m5blue, "gen")
   con <- ls5blue@linfct[,1:24] # contrast matrix for genotypes
   # The 'con' matrix is identity diagonal, so we don't need to multiply,
@@ -208,7 +206,6 @@ splom(means, main="john.alpha - means for RCB, IB, Intra-block")
   1-(vblup / 2 / sg2) # .809 from asreml, .800 from lme4
 }
 
-# ----------------------------------------------------------------------------
-
+}
 }
 \keyword{datasets}

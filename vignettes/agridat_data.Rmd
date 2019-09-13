@@ -3,12 +3,10 @@ title: "Additional sources of agricultural data"
 author: "Kevin Wright"
 date: "`r Sys.Date()`"
 output:
-  rmarkdown::html_vignette: default
-  html_document:
-    highlight: tango
-vignette: |
-  % \VignetteIndexEntry{Additional agricultural data} 
-  % \VignetteEngine{knitr::rmarkdown}
+  rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Additional agricultural data} 
+  %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
 
@@ -81,7 +79,7 @@ Original source: A. P. Verbyla and B. R. Cullis, Modelling in Repeated Measures 
 
 ### Finney 1972. _An Introduction to Statistical Science in Agriculture_.
 
-Not reviewed.
+Small, mostly simulated data.
 
 
 ### Galwey, N.W. (2014). _Introduction to Mixed Modelling_, 2nd ed.

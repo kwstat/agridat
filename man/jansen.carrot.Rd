@@ -44,17 +44,19 @@
   None.
 }
 \examples{
+
+library(agridat)
 data(jansen.carrot)
 dat <- jansen.carrot
 
-require(lattice)
+libs(lattice)
 dotplot(gen ~ y/n, data=dat, group=trt, auto.key=TRUE,
         main="jansen.carrot",
         xlab="Proportion of carrots infected per block", ylab="Genotype")
 
 \dontrun{
   # Not run because CRAN wants < 5 seconds per example.  This is close.
-  require(lme4)
+  libs(lme4)
   # Tentative model.  Needs improvement.
   m1 <- glmer(cbind(y,n-y) ~ gen*trt + (1|block),
               data=dat, family=binomial)

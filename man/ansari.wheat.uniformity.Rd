@@ -54,12 +54,13 @@
 }
 \examples{
 \dontrun{
-  
+
+  library(agridat)
   data(ansari.wheat.uniformity)
   dat <- ansari.wheat.uniformity
 
   # match Ansari figure 3
-  require(desplot)
+  libs(desplot)
   desplot(yield ~ col*row, dat,
           flip=TRUE, aspect=216/160, # true aspect
           main="ansari.wheat.uniformity") 

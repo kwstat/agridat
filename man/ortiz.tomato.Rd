@@ -87,11 +87,13 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(ortiz.tomato.covs)
 data(ortiz.tomato.yield)
 
-if(require(pls) & require(reshape2))
+libs(pls, reshape2)
 # Double-centered yield matrix
 Y <- acast(ortiz.tomato.yield, env ~ gen, value.var='yield')
 Y <- sweep(Y, 1, rowMeans(Y, na.rm=TRUE))
@@ -112,5 +114,5 @@ m1 <- plsr(Y~X)
 biplot(m1, which="x", var.axes=TRUE, main="ortiz.tomato - env*cov biplot")
 #biplot(m1, which="y", var.axes=TRUE)
 }
-
+}
 \keyword{datasets}

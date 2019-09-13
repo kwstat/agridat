@@ -43,6 +43,8 @@
 
 \examples{
 
+library(agridat)
+
 data(stroup.splitplot)
 dat <- stroup.splitplot
 
@@ -51,19 +53,19 @@ dat <- stroup.splitplot
 \dontrun{
 
   # ---- lme4 -----
-  require(lme4)
+  libs(lme4)
   m0 <- lmer(y~ -1 + a + b + a:b + (1|rep) + (1|a:rep), data=dat)
   # No predict function
   
   # ----- nlme -----
-  require(nlme)
+  libs(nlme)
   m0 <- lme(y ~ -1 + a + b + a:b, data=dat, random = ~ 1|rep/a)
   
   # ----- ASREML model -----
-  require(asreml)
+  libs(asreml)
   m1 <- asreml(y~ -1 + a + b + a:b, random=~ rep + a:rep, data=dat)
   
-  library(lucid)
+  libs(lucid)
   vc(m1) # Variance components match Stroup p. 41
   ##   effect component std.error z.ratio bound %ch
   ##      rep    62.4      56.54      1.1     P   0
@@ -95,7 +97,7 @@ dat <- stroup.splitplot
 
 # ----- Mcmcglmm model -----
 # Use the point estimates from REML with a prior distribution
-require(MCMCglmm)
+libs(MCMCglmm)
 prior2 = list(
   G = list(G1=list(V=62.40, nu=1),  G2=list(V=15.38, nu=1)),
   R = list(V = 9.4, nu=1)

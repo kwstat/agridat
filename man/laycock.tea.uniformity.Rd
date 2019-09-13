@@ -50,10 +50,12 @@
 \examples{
 \dontrun{
 
+library(agridat)
+
 data(laycock.tea.uniformity)
 dat <- laycock.tea.uniformity
 
-require(desplot)
+libs(desplot)
 desplot(yield ~ col*row|loc, dat,
         flip=TRUE, aspect=322/252, # average of 2 locs
         main="laycock.tea.uniformity")

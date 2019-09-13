@@ -8,7 +8,7 @@
   Multi-environment trial of oats in 5 locations, 7 years, with 3
   replicates in each trial.
 }
-\usage{data("edwards.oat")}
+\usage{data("edwards.oats")}
 \format{
   A data frame with 3694 observations on the following 7 variables.
   \describe{
@@ -49,16 +49,18 @@
   None
 }
 \examples{
+\dontrun{
+
+library(agridat)
+
 data(edwards.oats)
 dat <- edwards.oats
 
-if(require(reshape2)){
-  mat <- reshape2::acast(dat, eid ~ gen, fun.aggregate=mean, value.var="yield", na.rm=TRUE)
-  lattice::levelplot(mat, xlab="environment", ylab="genotype",
-                     main="edwards.oats", aspect="m")
-}
+libs(reshape2)
+mat <- reshape2::acast(dat, eid ~ gen, fun.aggregate=mean, value.var="yield", na.rm=TRUE)
+lattice::levelplot(mat, xlab="environment", ylab="genotype",
+                   main="edwards.oats", aspect="m")
 
-\dontrun{
 # Calculate BLUEs of gen/env effects
 m1 <- lm(yield ~ gen+ eid, dat)
 
@@ -80,11 +82,11 @@ dat2 <- mutate(dat2, y = yield - gencoef - envcoef)
 
 # Calculate variance for each gen*env. Shape of the graph is vaguely
 # similar to Fig 2 of Edwards et al (2006), who used a Bayesian model
-library(dplyr)
+libs(dplyr)
 dat2 <- group_by(dat2, gen, eid)
 dat2sum <- summarize(dat2, stddev = sd(y))
 bwplot(stddev ~ eid, dat2sum)
-}
 
+}
 }
 \keyword{datasets}

@@ -32,17 +32,20 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(gomez.splitplot.subsample)
 dat <- gomez.splitplot.subsample
-if(require(HH)){
-  interaction2wt(height ~ rep + time + manage, data=dat,
-                 x.between=0, y.between=0,
-                 main="gomez.splitplot.subsample - plant height")
-}
+
+libs(HH)
+interaction2wt(height ~ rep + time + manage, data=dat,
+               x.between=0, y.between=0,
+               main="gomez.splitplot.subsample - plant height")
+
 
 # Management totals, Gomez table 6.8
-tapply(dat$height, dat$manage, sum)
+# tapply(dat$height, dat$manage, sum)
 
 # Gomez table 6.11 analysis of variance
 m1 <- aov(height ~ rep + manage + time + manage:time +
@@ -71,5 +74,6 @@ summary(m1)
 ##           Df Sum Sq Mean Sq F value Pr(>F)
 ## Residuals 96  167.4   1.744
 
+}
 }
 \keyword{datasets}

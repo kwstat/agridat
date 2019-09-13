@@ -32,6 +32,8 @@
 
 \examples{
 
+library(agridat)
+
 data(hernandez.nitrogen)
 dat <- hernandez.nitrogen
 cprice <- 118.1 # $118.1/Mg or $3/bu
@@ -40,7 +42,7 @@ nprice <- 0.6615 # $0.66/kg N or $0.30/lb N
 # Hernandez optimized yield with a constraint on the ratio of the prices.
 # Simpler to just calculate the income and optimize that.
 dat <- transform(dat, inc = yield * cprice - nitro * nprice)
-require(lattice)
+libs(lattice)
 xyplot(inc ~ nitro|site, dat, groups=rep, auto.key=list(columns=4),
        xlab="nitrogen", ylab="income", main="hernandez.nitrogen")
 
@@ -59,7 +61,7 @@ c1 <- coef(lm1)
 
 \dontrun{
 # Use the delta method to get a conf int
-require("car")
+libs("car")
 del1 <- deltaMethod(lm1, "-b1/(2*b2)", parameterNames= paste("b", 0:2, sep=""))
 # Simple Wald-type conf int for optimum
 del1$Est +  c(-1,1) * del1$SE * qt(1-.1/2, nrow(dat1)-length(coef(lm1)))
@@ -90,14 +92,14 @@ round(wald(nls1),2)
 
 
 # Likelihood conf int
-require(MASS)
+libs(MASS)
 round(confint(nls1, "th2", level = 0.9),2)
 ##       5%      95%
 ## 147.96 401.65
 
 
 # Bootstrap conf int
-require(boot)
+libs(boot)
 dat1$fit <- fitted(nls1)
 bootfun <- function(rs, i) { # bootstrap the residuals
   dat1$y <- dat1$fit + rs[i]

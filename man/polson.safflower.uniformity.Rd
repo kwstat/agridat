@@ -45,16 +45,18 @@
 \examples{
 \dontrun{
 
+library(agridat)
+
   data(polson.safflower.uniformity)
   dat <- polson.safflower.uniformity
   
-  require(desplot)
+  libs(desplot)
   desplot(yield ~ col*row, data=dat,
           flip=TRUE, aspect=189/110, # true aspect
           main="polson.safflower.uniformity")
 
-  require(agricolae)
-  require(reshape2)
+  libs(agricolae)
+  libs(reshape2)
   dmat <- acast(dat, row~col, value.var="yield")
   # Similar to Polson fig 4.
   tab <- index.smith(dmat, col="red",

@@ -35,6 +35,8 @@
 
 \examples{
 
+library(agridat)
+
 data(cate.potassium)
 dat <- cate.potassium
 names(dat) <- c('y','x')
@@ -74,7 +76,7 @@ abline(h=(dat$y[ix] + dat$y[ix+1])/2, col="skyblue")
 \dontrun{
   # another approach with similar results
   # https://joe.org/joe/2013october/tt1.php
-  require("rcompanion")
+  libs("rcompanion")
   cateNelson(dat$x, dat$y, plotit=0)
 }
 

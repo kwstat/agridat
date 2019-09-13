@@ -49,7 +49,9 @@
     Disciplines}.  Pages 55-79.
 }
 \examples{
+\dontrun{
 
+library(agridat)
 data(archbold.apple)
 dat <- archbold.apple
 
@@ -61,28 +63,22 @@ dat <- transform(dat, rep=factor(rep), spacing=factor(spacing), trt=factor(trt),
 # Due to 'spacing', the plots are different sizes, but the following layout
 # shows the relative position of the plots and treatments. Note that the
 # 'spacing' treatments are not contiguous in some reps.
-if(require(desplot)){
-  desplot(spacing~row*pos, dat,
-          col=stock, cex=1, num=gen, # aspect unknown
-          main="archbold.apple")
-}
+libs(desplot)
+desplot(spacing~row*pos, dat,
+        col=stock, cex=1, num=gen, # aspect unknown
+        main="archbold.apple")
 
 
-\dontrun{
-  require("lme4")
-  require("lucid")
-  
-  m1 <- lmer(yield ~ -1 + trt + (1|rep/mp/sp), dat)
-  
-  vc(m1)  # Variances/means on Cornelius, page 59
-  ##         grp        var1 var2   vcov sdcor
-  ## sp:(mp:rep) (Intercept) <NA>  193.3 13.9
-  ##      mp:rep (Intercept) <NA>  203.8 14.28
-  ##         rep (Intercept) <NA>  197.3 14.05
-  ##    Residual        <NA> <NA> 1015   31.86
+libs(lme4, lucid)  
+m1 <- lmer(yield ~ -1 + trt + (1|rep/mp/sp), dat)
+
+vc(m1)  # Variances/means on Cornelius, page 59
+##         grp        var1 var2   vcov sdcor
+## sp:(mp:rep) (Intercept) <NA>  193.3 13.9
+##      mp:rep (Intercept) <NA>  203.8 14.28
+##         rep (Intercept) <NA>  197.3 14.05
+##    Residual        <NA> <NA> 1015   31.86
   
 }
-
-
 }
 \keyword{datasets}

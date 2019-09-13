@@ -38,11 +38,13 @@
 }
 \examples{
 \dontrun{
+
+library(agridat)
   
   data(khin.rice.uniformity)
   dat <- khin.rice.uniformity
 
-  require(desplot)
+  libs(desplot)
   desplot(yield ~ col*row, data=dat, flip=TRUE,
           main="khin.rice.uniformity",
           aspect=(36*3)/(30*3)) # true aspect

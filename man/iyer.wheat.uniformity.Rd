@@ -45,24 +45,25 @@
 }
 \examples{
 \dontrun{
-  
-  data(iyer.wheat.uniformity)
-  dat <- iyer.wheat.uniformity
 
-  require(desplot)
-  desplot(yield ~ col*row, data=dat,
-          main="iyer.wheat.uniformity", tick=TRUE, 
-          aspect=(25*5)/(80*5)) # true aspect
+library(agridat)
+data(iyer.wheat.uniformity)
+dat <- iyer.wheat.uniformity
 
-  # not exactly the same as Iyer table 1, p. 241
-  var(subset(dat, col <= 20)$yield)
-  var(subset(dat, col > 20 & col <= 40)$yield)
-  var(subset(dat, col > 40 & col <= 60)$yield)
-  var(subset(dat, col > 60)$yield)
+libs(desplot)
+desplot(yield ~ col*row, data=dat,
+        main="iyer.wheat.uniformity", tick=TRUE, 
+        aspect=(25*5)/(80*5)) # true aspect
+
+# not exactly the same as Iyer table 1, p. 241
+var(subset(dat, col <= 20)$yield)
+var(subset(dat, col > 20 & col <= 40)$yield)
+var(subset(dat, col > 40 & col <= 60)$yield)
+var(subset(dat, col > 60)$yield)
   
-  # cv for 1x1 whole-field
-  # sd(dat$yield)/mean(dat$yield)
-  # 18.3
+# cv for 1x1 whole-field
+# sd(dat$yield)/mean(dat$yield)
+# 18.3
 
 }
 }

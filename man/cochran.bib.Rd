@@ -33,11 +33,13 @@
 
 \examples{
 
+library(agridat)
+
 data(cochran.bib)
 dat <- cochran.bib
 
 # Show the incomplete-block structure
-require(lattice)
+libs(lattice)
 redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
 levelplot(yield~loc*gen, dat,
           col.regions=redblue,
@@ -50,7 +52,7 @@ colSums(as.matrix(with(dat, table(gen,loc))))
 m1 = aov(yield ~ gen + Error(loc), data=dat)
 summary(m1)
 
-require(nlme)
+libs(nlme)
 m2 = lme(yield ~ -1 + gen, data=dat, random=~1|loc)
 
 }

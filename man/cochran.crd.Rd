@@ -42,16 +42,17 @@
   http://doi.org/10.2134/agronj1988.00021962008000050003x
 }
 \examples{
+\dontrun{
 
+library(agridat)
 data(cochran.crd)
 dat <- cochran.crd
 
 # Field plan
-if(require(desplot)){
-  desplot(inf~col*row, data=dat,
-          text=trt, cex=1, # aspect unknown
-          main="cochran.crd")
-}
+libs(desplot)
+desplot(inf~col*row, data=dat,
+        text=trt, cex=1, # aspect unknown
+        main="cochran.crd")
 
 # CRD anova.  Table 6 of Tamura 1988
 contrasts(dat$trt) <- cbind(c1=c(1,1,1,-6,1,1,1),   # Control vs Sulf
@@ -65,5 +66,6 @@ m2 <- aov(inf ~ trt + poly(col,2), data=dat)
 anova(m2)
 summary(m2, split=list(trt=list("Control vs Sulf"=1, "Fall vs Spring"=2)))
 
+}
 }
 \keyword{datasets}

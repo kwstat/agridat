@@ -67,12 +67,14 @@
 
 \examples{
 \dontrun{
-  
-  data("draper.safflower.uniformity")
+
+ library(agridat)
+
+  data(draper.safflower.uniformity)
   dat4 <- subset(draper.safflower.uniformity, expt=="E4")
   dat5 <- subset(draper.safflower.uniformity, expt=="E5")
 
-  require(desplot)
+  libs(desplot)
   desplot(yield~col*row, dat4,
           flip=TRUE, tick=TRUE, aspect=72/53, # true aspect
           main="draper.safflower.uniformity (four foot)")
@@ -81,8 +83,8 @@
           flip=TRUE, tick=TRUE, aspect=90/46, # true aspect
           main="draper.safflower.uniformity (five foot)")
 
-  require(agricolae)
-  require(reshape2)
+  libs(agricolae)
+  libs(reshape2)
   # Remove border plots at either end and right side
   dat4 <- subset(dat4, row>1 & row<20)
   dat4 <- subset(dat4, col<17)

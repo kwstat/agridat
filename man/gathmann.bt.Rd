@@ -32,18 +32,19 @@
   http://www.seedtest.org/upload/cms/user/presentation7Hothorn.pdf
 
   Used with permission of Achim Gathmann.
-
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(gathmann.bt)
 dat <- gathmann.bt
 
 
 # EDA suggests Bt vs ISO is significant for thysan, not for aranei
-require(lattice)
-if(require(reshape2)){
+libs(lattice)
+libs(reshape2)
 d2 <- melt(dat, id.var='gen')
 bwplot(value ~ gen|variable, d2,
        main="gathmann.bt", ylab="Insect abundance",
@@ -52,13 +53,12 @@ bwplot(value ~ gen|variable, d2,
          panel.bwplot(x,y,...)
        },
        scales=list(relation="free"))
-}
 
 
-\dontrun{
+if(0){
 
   # ----- Parametric CI.  Thysan significant, aranei not significant.
-  require(equivalence)
+  libs(equivalence)
 
   th0 <- with(dat, tost(thysan[1:8], thysan[9:16], alpha=.05, paired=FALSE))
   lapply(th0[c("estimate","tost.interval")], round, 2)
@@ -69,7 +69,7 @@ bwplot(value ~ gen|variable, d2,
   # .57-.47=.10, (-0.19, 0.40) # match Gathmann p. 11
 
   # ----- Non-parametric exact CI.  Same result.
-  require(coin)
+  libs(coin)
 
   th1 <- wilcox_test(thysan ~ gen, data=dat, conf.int=TRUE, conf.level=0.90)
   lapply(confint(th1), round, 2)
@@ -91,6 +91,8 @@ bwplot(value ~ gen|variable, d2,
                      alternative=c("two.sided"),
                      conf.int=TRUE, conf.level=0.9)
   lapply(confint(ar2), function(x) round(sinh(x)*2,1))
+
+}
 
 }
 }

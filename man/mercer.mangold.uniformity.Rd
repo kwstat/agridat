@@ -47,21 +47,23 @@
 
 \examples{
 \dontrun{
+
+library(agridat)
   
   data(mercer.mangold.uniformity)
   dat <- mercer.mangold.uniformity
   
-  require(desplot)
+  libs(desplot)
   desplot(leaves~col*row, data=dat,
           aspect=145/302, # true aspect
           main="mercer.mangold.uniformity - leaves")
 
-  require(desplot)
+  libs(desplot)
   desplot(roots~col*row, data=dat,
           aspect=145/302, # true aspect
           main="mercer.mangold.uniformity - roots")
 
-  require(lattice)
+  libs(lattice)
   xyplot(roots~leaves, data=dat)
   
 }

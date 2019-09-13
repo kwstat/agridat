@@ -47,10 +47,12 @@
 }
 \examples{
 
+library(agridat)
+
 data(ars.earlywhitecorn96)
 dat <- ars.earlywhitecorn96
 
-require(lattice)
+libs(lattice)
 # These views emphasize differences between locations
 dotplot(gen~yield, dat, group=loc, auto.key=list(columns=3),
         main="ars.earlywhitecorn96")

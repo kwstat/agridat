@@ -54,10 +54,12 @@
 
 \examples{
 
+library(agridat)
+
 data(heady.fertilizer)
 dat <- heady.fertilizer
 
-require(lattice)
+libs(lattice)
 xyplot(yield ~ P|crop, data=dat, scales=list(relation="free"),
        groups=factor(paste(dat$N,dat$K)), auto.key=list(columns=5),
        main="heady.fertilizer", xlab="Phosphorous")
@@ -93,7 +95,7 @@ m4 <- lm(yield ~ N + P + sqrt(N) + sqrt(P) + sqrt(N*P), data=d4)
 summary(m4)
 
 \dontrun{
-  require(rgl)
+  libs(rgl)
   with(d1, plot3d(N,P,yield))
   with(d2, plot3d(K,P,yield))
   with(d3, plot3d(K,P,yield))

@@ -48,25 +48,27 @@
 }
 
 \examples{
+\dontrun{
 
+library(agridat)
 data(gilmour.serpentine)
 dat <- gilmour.serpentine
 
-if(require(desplot)){
-  desplot(yield~ col*row, data=dat,
-          num=gen, show.key=FALSE, out1=rep,
-          aspect = 16.5/90, # true aspect
-          main="gilmour.serpentine")
-}
+libs(desplot)
+desplot(yield~ col*row, data=dat,
+        num=gen, show.key=FALSE, out1=rep,
+        aspect = 16.5/90, # true aspect
+        main="gilmour.serpentine")
+
 
 # Extreme field trend.  Blocking insufficient--needs a spline/smoother
 # xyplot(yield~col, data=dat, main="gilmour.serpentine")
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
+if(0){
   # asreml3
-  require(asreml)
+  libs(asreml)
   dat <- transform(dat, rowf=factor(row), colf=factor(10*(col-8)))
   dat <- dat[order(dat$rowf, dat$colf), ] # Sort order needed by asreml
   
@@ -113,8 +115,8 @@ if(require(desplot)){
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
-  ## require(asreml4)
+if(0){
+  ## libs(asreml4)
   ## dat <- transform(dat, rowf=factor(row), colf=factor(10*(col-8)))
   ## dat <- dat[order(dat$rowf, dat$colf), ] # Sort order needed by asreml
 
@@ -159,5 +161,6 @@ if(require(desplot)){
   ##      main="gilmour.serpentine")
 }
 
+}
 }
 

@@ -37,16 +37,18 @@
 
 \examples{
 
+library(agridat)
+
 data(theobald.covariate)
 dat <- theobald.covariate
-require(lattice)
+libs(lattice)
 xyplot(yield ~ chu|gen, dat, type=c('p','smooth'),
        xlab =  "chu = corn heat units",
        main="theobald.covariate - yield vs heat")
 
 \dontrun{
   # REML estimates (Means) in table 3 of Theobald 2002
-  require(lme4)
+  libs(lme4)
   dat <- transform(dat, year=factor(year))
   m0 <- lmer(yield ~ -1 + gen + (1|year/env) + (1|gen:year), data=dat)
   round(fixef(m0),2)
@@ -56,7 +58,7 @@ xyplot(yield ~ chu|gen, dat, type=c('p','smooth'),
 
 # Use JAGS to fit Theobald (2002) model 3.2 with 'Expert' prior
 
-require(reshape2)
+libs(reshape2)
 ymat <- acast(dat, year+env~gen, value.var='yield')
 chu <- acast(dat, year+env~., mean, value.var='chu', na.rm=TRUE)
 chu <- as.vector(chu - mean(chu))  # Center the covariate
@@ -69,7 +71,7 @@ locidx <- as.vector(locidx)
 jdat <- list(nVar = 10, nYear = 5, nLoc = 7, nYL = 29, yield = ymat,
             chu = chu, year = yridx, loc = locidx)
 
-require(rjags)
+libs(rjags)
 m1 <- jags.model(file=system.file(package="agridat", "files/theobald.covariate.jag"),
   data=jdat, n.chains=2)
 

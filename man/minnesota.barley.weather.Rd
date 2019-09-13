@@ -56,21 +56,23 @@
 }
 
 \examples{
-
+\dontrun{
+  
+library(agridat)
 data(minnesota.barley.yield)
 dat <- minnesota.barley.yield
 data( minnesota.barley.weather)
 datw <- minnesota.barley.weather
 
-# Weather trends over time
-if(require(latticeExtra)){
+  # Weather trends over time
+  libs(latticeExtra)
   useOuterStrips(xyplot(cdd~mo|year*site, datw, groups=year,
                         main="minnesota.barley",
                         xlab="month", ylab="Cooling degree days",
                         subset=(mo > 3 & mo < 10),
                         scales=list(alternating=FALSE),
                         type='l', auto.key=list(columns=5)))
-}
+
 
 # Total cooling/heating/precip in Apr-Aug for each site/yr
 ww <- subset(datw, mo>=4 & mo<=8)
@@ -83,7 +85,7 @@ minn <- merge(ww, yy)
 
 
 # Higher yields generally associated with cooler temps, more precip
-if(require(reshape2)){
+libs(reshape2)
 me <- melt(minn, id.var=c('site','year'))
 mey <- subset(me, variable=="yield")
 mey <- mey[,c('site','year','value')]
@@ -100,11 +102,10 @@ foo <- xyplot(y~x|covar*site, data=mecy, groups=yr, cex=1, ylim=c(5,65),
                 panel.superpose(x,y,...)
               },
               scales=list(x=list(relation="free")))
-if(require(latticeExtra)){
+  libs(latticeExtra)
   foo <- useOuterStrips(foo, strip.left = strip.custom(par.strip.text=list(cex=.7)))
   combineLimits(foo, margin.x=2L) # Use a common x axis for all rows
-} 
-} # reshape2
 
+}
 }
 \keyword{datasets}

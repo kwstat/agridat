@@ -46,6 +46,9 @@
 }
 
 \examples{
+\dontrun{
+
+library(agridat)
 
 data(durban.competition)
 dat <- durban.competition
@@ -53,11 +56,10 @@ dat <- durban.competition
 # Check that genotypes were balanced across wheel tracks.
 with(dat, table(gen,wheel))
 
-if(require(desplot)){
-  desplot(yield ~ col*block, dat,
-          out1=block, text=gen, col=wheel, aspect=37/19, # true aspect
-          main="durban.competition")
-}
+libs(desplot)
+desplot(yield ~ col*block, dat,
+        out1=block, text=gen, col=wheel, aspect=37/19, # true aspect
+        main="durban.competition")
 
 
 # Calculate residual after removing block/genotype effects
@@ -75,8 +77,9 @@ dat$comp[79:112] <- ( dat$yield[78:111] + dat$yield[80:113] ) / 2
 
 # Demonstrate the competition effect
 # Competitor plots have low/high yield -> residuals are negative/positive
-require(lattice)
+libs(lattice)
 xyplot(res~comp, dat, type=c('p','r'), main="durban.competition",
        xlab="Average yield of neighboring plots", ylab="Residual")
 
+}
 }

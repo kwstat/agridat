@@ -52,6 +52,8 @@
 
 \examples{
 
+library(agridat)
+
 data(nass.corn)
 dat <- nass.corn
 
@@ -60,12 +62,12 @@ keep <- droplevels(subset(dat, year == 2011 & acres > 100000))$state
 dat <- droplevels(subset(dat, is.element(state, keep)))
 
 # Acres of corn grown each year
-require(lattice)
+libs(lattice)
 xyplot(acres ~ year|state, dat, type='l', as.table=TRUE,
        main="nass.corn: state trends in corn acreage")
 
 ## Plain levelplot, using only states
-## require(reshape2)
+## libs(reshape2)
 ## datm <- acast(dat, year~state, value.var='yield')
 ## redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
 ## levelplot(datm, aspect=.7, col.regions=redblue,

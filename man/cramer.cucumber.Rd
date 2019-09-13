@@ -44,10 +44,13 @@
 }
 
 \examples{
+
+library(agridat)
+
 data(cramer.cucumber)
 dat <- cramer.cucumber
 
-require(lattice)
+libs(lattice)
 splom(dat[3:9], main="cramer.cucumber - traits by cycle", group=dat$cycle,
       auto.key=list(columns=3))
 

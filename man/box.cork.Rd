@@ -39,41 +39,36 @@
 }
 
 \examples{
+\dontrun{
 
 data(box.cork)
 dat <- box.cork
 
-if(require(lattice) & require(reshape2)){  
-  dat2 <- acast(dat, tree ~ dir, value.var='y')
-  splom(dat2, pscales=3,
-        prepanel.limits = function(x) c(25,100),
-        main="box.cork", xlab="Cork yield on side of tree",
-        panel=function(x,y,...){
-          panel.splom(x,y,...)
-          panel.abline(0,1,col="gray80")
-        })
-}
+libs(reshape2, lattice)
+dat2 <- acast(dat, tree ~ dir, value.var='y')
+splom(dat2, pscales=3,
+      prepanel.limits = function(x) c(25,100),
+      main="box.cork", xlab="Cork yield on side of tree",
+      panel=function(x,y,...){
+        panel.splom(x,y,...)
+        panel.abline(0,1,col="gray80")
+      })
 
-# ----------------------------------------------------------------------------
 
-\dontrun{
-  require(plotrix)
-  require(reshape2)
-  ## Each tree is one line
-  dat2 <- acast(dat, tree ~ dir, value.var='y')
-  radial.plot(dat2, start=pi/2, rp.type='p', clockwise=TRUE,
-              radial.lim=c(0,100), main="box.cork",
-              lwd=2, labels=c('North','East','South','West'),
-              line.col=rep(c("royalblue","red","#009900","dark orange",
-                             "#999999","#a6761d","deep pink"),
-                           length=nrow(dat2)))
-}
+libs(plotrix)
+libs(reshape2)
+## Each tree is one line
+dat2 <- acast(dat, tree ~ dir, value.var='y')
+radial.plot(dat2, start=pi/2, rp.type='p', clockwise=TRUE,
+            radial.lim=c(0,100), main="box.cork",
+            lwd=2, labels=c('North','East','South','West'),
+            line.col=rep(c("royalblue","red","#009900","dark orange",
+                           "#999999","#a6761d","deep pink"),
+                         length=nrow(dat2)))
 
-# ----------------------------------------------------------------------------
-
-\dontrun{
+if(0){
   # asreml3
-  require(asreml)
+  libs(asreml)
 
   data(box.cork)
   dat <- box.cork
@@ -109,8 +104,7 @@ if(require(lattice) & require(reshape2)){
 
 # ----------------------------------------------------------------------------
 
-\dontrun{
-  ## require(asreml4)
+  ## libs(asreml4)
 
   ## data(box.cork)
   ## dat <- box.cork
@@ -125,7 +119,7 @@ if(require(lattice) & require(reshape2)){
   ## m1 <- asreml(y~dir, data=dat,
   ##              resid = ~ tree:us(dir, init=rep(200,10)))
 
-  ## library(lucid)
+  ## libs(lucid)
   ## vc(m1)
   
   ## # Note: 'rcor' is a personal function to extract the correlation
@@ -146,7 +140,7 @@ if(require(lattice) & require(reshape2)){
   ## # N 209.46 290.41 291.82 228.43
   ## # S 232.85 291.82 349.99 253.94
   ## # W 182.27 228.43 253.94 225.99
-}
 
+}
 }
 \keyword{datasets}

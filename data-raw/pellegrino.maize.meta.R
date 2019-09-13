@@ -1,5 +1,12 @@
 # pellegrino.maize.meta.R
-# Time-stamp: <29 Oct 2018 21:34:53 c:/x/rpack/agridat/data-raw/pellegrino.maize.meta.R>
+# Time-stamp: <14 Aug 2019 10:13:01 c:/x/rpack/agridat/data-raw/pellegrino.maize.meta.R>
+
+# Have not taken the time to work through this data completely.
+
+# Source
+Elisa Pellegrino, Stefano Bedini, Marco Nuti, Laura Ercoli (2018).
+Impact of genetically engineered maize on agronomic, environmental and toxicological traits: a meta-analysis of 21 years of field data.
+Scientific Reports, 8, 3113.
 
 libs(asreml,dplyr,fs,kw,lattice,readxl,readr,reshape2,tibble)
 
@@ -13,15 +20,15 @@ dat1 <- mutate(dat1,
                mean.gmo=`Grain Yield GMO (t ha-1)`,
                sem.gmo=`SEMYield GMO`,
                sd.gmo=`SDYield GMO`,
-               cv.gmo=CV,
-               lsd.gmo=LSD,
-               t.gmo=t,
+               cv.gmo=CV...35,
+               lsd.gmo=LSD...36,
+               t.gmo=t...37,
                mean.non=`Grain Yield Non-GMO (t ha-1)`,
                sem.non=`SEMYield Non-GMO`,
                sd.non=`SDYield non-GMO`,
-               cv.non=CV__1,
-               lsd.non=LSD__1,
-               t.non=t__1,
+               cv.non=CV...41,
+               lsd.non=LSD...42,
+               t.non=t...43,
                f.value=FYield,
                p.value=PYield)
 dat1 <- mutate(dat1, `GMO event type` = ifelse(`GMO event type` %in% c('triple','Triple'), "triple", `GMO event type`))
@@ -41,23 +48,15 @@ dat1 <- mutate(dat1,
                
                wt = 1 - 3/(4*(reps.gmo+reps.non)-9),
                hedges.g = (mean.gmo - mean.non) / sd.pool * wt)
-lib(effsize)               
+libs(effsize)               
 
 dat1s <- filter(dat1, `GMO event type`=="single")
 with( dat1s, mean( (mean.gmo-mean.non ) ) )
 with( dat1s, mean( hedges.g ))
-View( select(dat1s, mean.gmo, mean.non, sd.gmo, sd.non, reps.gmo, reps.non, sdpooled, wt, hedges.g) )
+#View( select(dat1s, mean.gmo, mean.non, sd.gmo, sd.non, reps.gmo, reps.non, sdpool, wt, hedges.g) )
 dat1s[ , cc(yi, sei, mean.gmo, mean.non, sem.gmo, sem.non)] %>% ht
             mod1 <- rma.uni(yi, sei, method="ML", data=dat1s)
 plot(mod1)
 library(metafor)
-
-
-
-%>% 
-  escalc(measure="SMD", m1i=mean.gmo, m2i=mean.non, sd1i=sd.gmo, sd2i=sd.non, data=.) -> mod1
-
-
-
 
 

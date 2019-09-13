@@ -87,30 +87,30 @@
 }
 
 \examples{
-
+\dontrun{
+  
+library(agridat)
 data("sawyer.multi.uniformity")
 dat <- sawyer.multi.uniformity
 
-if(require(desplot)){
+  libs(desplot)
   # The field plan shows square plots
   desplot(grain~col*row, subset(dat, year==1925),
           main="sawyer.multi.uniformity - 1925 wheat grain yield",
           aspect=(6)/(8)) # true aspect
-}
-if(require(desplot)){
+
   desplot(rootwt~col*row, subset(dat, year==1926),
           main="sawyer.multi.uniformity - 1926 root weight of swedes",
           aspect=(6)/(8))
-}
-if(require(desplot)){
+
   desplot(grain~col*row, subset(dat, year==1927),
           main="sawyer.multi.uniformity - 1927 oats grain yield",
           aspect=(6)/(8))
-}
 
-\dontrun{
+
+if(0){
   # This plot shows the "outlier" in the wheat data reported by Mackenzie.
-  require(lattice)
+  libs(lattice)
   xyplot(grain ~ straw, data=subset(dat, year==1925))
   
   round(cor(dat[,7:9], use="pair"),2) # Matches McCullagh p 2121
@@ -123,5 +123,6 @@ if(require(desplot)){
   ##       main="sawyer.multi.uniformity")
 }
 
+}
 }
 \keyword{datasets}

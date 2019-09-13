@@ -52,6 +52,8 @@
 
 \examples{
 
+library(agridat)
+
 data(snijders.fusarium)
 dat <- snijders.fusarium
 
@@ -60,7 +62,7 @@ aggregate(y ~ strain + year, dat, FUN=mean) # Match means in Snijders table 1
 dat <- transform(dat, y=y/100, year=factor(year), yrstr=factor(paste0(year,"-",strain)))
 
 # Strain F329 shows little variation across years. F39 shows a lot.
-require(lattice)
+libs(lattice)
 dotplot(gen~y|strain, data=dat, group=year,
         main="snijders.fusarium : infection by strain",
         xlab="Fraction infected", ylab="variety",
@@ -76,7 +78,7 @@ anova(m2) # Match to VanEeuwijk table 5
 \dontrun{
 
 # GLM on untransformed data using logit link, variance mu^2(1-mu)^2
-require(gnm) # for 'wedderburn' family
+libs(gnm) # for 'wedderburn' family
 m2 <- glm(y ~ yrstr + gen, data=dat, family="wedderburn")
 anova(m2) # Main effects match VanEeuwijk table 6
 

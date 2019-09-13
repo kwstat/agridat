@@ -36,16 +36,18 @@
 
 \examples{
 
+library(agridat)
+
 data(piepho.cocksfoot)
 dat <- piepho.cocksfoot
 dat$year <- factor(dat$year)
 
-require(lattice)
+libs(lattice)
 # Gaussian, not gamma distn
 densityplot(~date|year, data=dat, main="piepho.cocksfoot - heading date")
 
 \dontrun{
-require(mumm) # The mumm package can reproduce Piepho's results
+libs(mumm) # The mumm package can reproduce Piepho's results
 
 levelplot(date ~ year*gen, dat)
 # note mp(random,fixed)

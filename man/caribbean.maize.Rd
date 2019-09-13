@@ -48,11 +48,14 @@
 }
 
 \examples{
+
+library(agridat)
+
 data(caribbean.maize)
 dat <- caribbean.maize
 
 # Yield and ears are correlated
-require(lattice)
+libs(lattice)
 xyplot(yield~ears|site, dat, ylim=c(0,10), subset=isle=="Antigua",
        main="caribbean.maize - Antiqua")
 

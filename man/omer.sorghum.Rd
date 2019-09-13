@@ -36,12 +36,14 @@ None.
 }
 \examples{
 
+library(agridat)
+
 data(omer.sorghum)
 dat <- omer.sorghum
 
 # REML approach
-require(lme4)
-require(lucid)
+libs(lme4)
+libs(lucid)
 
 # 1 loc, 2 years. Match Omer table 1.
 m1 <- lmer(yield ~ 1 + env + (1|env:rep) + (1|gen) + (1|gen:env),
