@@ -1,8 +1,14 @@
-# agridat 1.17 - Aug 2019
+# agridat 1.17 - Unpublished
 
 ## New data
 
-alwan.lamb, baker.strawberry.uniformity, davidian.soybean, devries.pine, edwards.oats, hartman.tomato.uniformity, johnson.douglasfir, kayad.alfalfa, kerr.sugarcane.uniformity, laycock.tea.uniformity, lehmann.millet.uniformity, linder.wheat, miguez.biomass, obsi.potato.uniformity, paez.coffee.uniformity, pederson.lettuce.repeated, rothamsted.oats, shaw.oats, wyatt.multi.uniformity
+alwan.lamb, baker.strawberry.uniformity, bryan.corn.uniformity,
+davidian.soybean, devries.pine, edwards.oats, george.wheat,
+hartman.tomato.uniformity, heath.raddish.uniformity, johnson.douglasfir,
+kayad.alfalfa, kerr.sugarcane.uniformity, laycock.tea.uniformity,
+lehmann.millet.uniformity, linder.wheat, miguez.biomass,
+obsi.potato.uniformity, paez.coffee.uniformity, pederson.lettuce.repeated,
+rothamsted.oats, shaw.oats, wyatt.multi.uniformity
 
 ## Other
 
@@ -10,15 +16,23 @@ alwan.lamb, baker.strawberry.uniformity, davidian.soybean, devries.pine, edwards
 
 * Added INLA example to crowder.seeds.
 
-* Wrapped most examples with dontrun.
+* Wrapped many (most?) example sections with dontrun.
 
-* Change `library` and `require` to `libs`, which is basically `pacman::p_load`.
+* New function `libs`, which is basically the same as `pacman::p_load`.
+
+* Change `library` and `require` to `libs`.
 
 * Website built with `pkgdown`.
+
+* Removed vignette about Papadakis' method.
+
+
 
 # agridat 1.16 - Jul 2018
 
 * Minor release to make a small change for the next release of the `broom` package.
+
+
 
 # agridat 1.15 - Jun 2018
 
@@ -31,8 +45,11 @@ dasilva.maize, mead.turnip
 ## Other
 
 * nonnecke.corn.uniformity is renamed nonnecke.sweetcorn.uniformity
+
 * moore.carrots.uniformity is renamed moore.carrot.uniformity
+
 * Switch from `lsmeans` to `emmeans` in examples.
+
 
 
 # agridat 1.13 - Nov 2017
@@ -81,11 +98,15 @@ acorsi.grayleafspot, becker.chicken, chinloy.fractionalfactorial, cramer.cucumbe
 
 * Added package logo on github.
 
+
+
 # agridat 1.12 - Jun 2015
 
 ## New data
 
 cochran.beets, cochran.lattice, jansen.apple, jansen.carrot
+
+
 
 # agridat 1.11 - Mar 2015
 
@@ -97,6 +118,8 @@ besag.beans, besag.triticale, burgeuno.alpha, burgueno.rowcol, burgueno.unreplic
 
 * Removed `asreml` package from Suggests (due to CRAN check problems).
 
+
+
 # agridat 1.10 - Nov 2014
 
 ## New data
@@ -106,6 +129,8 @@ beaven.barley, perry.springwheat, ridout.appleshoots
 ## Other
 
 * Move packages from Depends to Imports.
+
+
 
 # agridat 1.9 - Jul 2014
 
@@ -119,11 +144,15 @@ beall.webworms, besag.endive, brandt.switchback, butron.maize, carlson.germinati
 
 * All data (almost) now have an example graphic.
 
+
+
 # agridat 1.8 - Sep 2013
 
 ## New data
 
 brandle.rape, salmon.bunt
+
+
 
 # agridat 1.7 - Sep 2013
 
@@ -131,11 +160,15 @@ brandle.rape, salmon.bunt
 
 baker.barley.uniformity, bliss.borers, bond.diallel, harris.wateruse, hayman.tobacco, holshouser.splitstrip, pearce.apple, waynick.soil
 
+
+
 # agridat 1.6 - June 2013
 
 ## New data
 
 crossa.wheat, garber.multi.uniformity, gomez.nitrogen, harris.multi.uniformity, hughes.grapes, li.millet.uniformity, odland.soybean.uniformity, odland.soyhay.uniformity, ratkowsky.onions, stephens.sorghum.uniformity
+
+
 
 # agridat 1.5 - Apr 2013
 
@@ -143,11 +176,15 @@ crossa.wheat, garber.multi.uniformity, gomez.nitrogen, harris.multi.uniformity, 
 
 adugna.sorghum, ars.earlywhitecorn96, besag.bayesian, box.cork, broadbalk.wheat, byers.apple, caribbean.maize, carmer.density, cate.potassium, cleveland.soil, cochran.eelworms, cochran.wireworms, fan.stability, gomez.seedrate, gotway.hessianfly, goulden.barley.uniformity, henderson.milkfat, hernandez.nitrogen, hessling.argentina, immer.sugarbeet.uniformity, ivins.herbs, jenkyn.mildew, johnson.blight, lambert.soiltemp, lavoranti.eucalyptus, lyon.potato.uniformity, lyons.wheat, mead.cowpeamaize, mead.germination, minnesota.barley.weather, minnesota.barley.yield, nebraska.farmincome, nass.barley, nass.corn, nass.cotton, nass.hay, nass.rice, nass.sorghum, nass.soybean, nass.wheat, ortiz.tomato, pacheco.soybean, senshu.rice, snedecor.asparagus, streibig.competition, zuidhof.broiler
 
+
+
 # agridat 1.4 - Mar 2012
 
 ## New data
 
 archbold.apple, blackman.wheat, cochran.crd, cochran.latin, darwin.maize, denis.ryegrass, digby.jointregression, engelstad.nitro, federer.diagcheck, gilmour.slatehall, john.alpha, ilra.sheep, kempton.slatehall, ryder.groundnut, vsn.lupin3
+
+
 
 # agridat 1.3 - Sep 2011
 
@@ -155,11 +192,15 @@ archbold.apple, blackman.wheat, cochran.crd, cochran.latin, darwin.maize, denis.
 
 bridges.cucumber, cox.stripsplit, diggle.cow, eden.potato, gauch.soy, graybill.heteroskedastic, hildebrand.systems, hanks.sprinkler, mcconway.turnip, pearl.kernels, williams.barley.uniformity, williams.cotton.uniformity
 
+
+
 # agridat 1.2 - Jun 2011
 
 ## New data
 
 aastveit.barley, gathmann.bt, kempton.competition, wedderburn.barley
+
+
 
 # agridat 1.0 - Apr 2011
 
@@ -168,6 +209,8 @@ aastveit.barley, gathmann.bt, kempton.competition, wedderburn.barley
 ## New data
 
 allcroft.lodging, australia.soybean, batchelor.apple.uniformity, batchelor.lemon.uniformity, batchelor.navel1.uniformity, batchelor.navel2.uniformity, batchelor.valencia.uniformity, batchelor.walnut.uniformity, besag.elbatan, besag.met, cochran.bib, corsten.interaction, crowder.germination, denis.missing, durban.competition, durban.rowcol, durban.splitplot, federer.tobacco, gilmour.serpentine, gomez.fractionalfactorial, gomez.groupsplit, gomez.multilocsplitplot, gomez.splitsplit, gomez.stripplot, gomez.stripsplitplot, gomez.rice.uniformity, hughes.grapes, kempton.rowcol, kempton.barley.uniformity, mead.strawberry, mercer.wheat.uniformity, rothamsted.brussels, shafii.rapeseed, smith.uniformity3, stroup.nin, stroup.splitplot, student.barley, talbot.potato, theobald.covariate, thompson.cornsoy, vargas.wheat1, vargas.wheat2, verbyla.lupin, williams.trees, wiebe.wheat.uniformity, yan.winterwheat, yates.missing, yates.oats
+
+
 
 # agridat 0.0 - Oct 2010
 

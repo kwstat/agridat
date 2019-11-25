@@ -38,6 +38,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{batchelor.walnut.uniformity}        \tab 10 x 28 \tab xy \tab \cr
 \link{bose.multi.uniformity}              \tab 15 x 26 \tab xy, 3 years \tab \cr
 \link{bradley.multi.uniformity}           \tab 10 x 11 \tab xy \tab \cr
+\link{bryan.corn.uniformity}              \tab 6 x 48 \tab xy \tab \cr
 \link{christidis.cotton.uniformity}       \tab 16 x 16 \tab xy, 4 blocks \tab \cr
 \link{christidis.wheat.uniformity}        \tab 12 x 24 \tab xy \tab \cr
 \link{correa.soybean.uniformity}          \tab 24 x 48 \tab xy \tab \cr
@@ -50,6 +51,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{goulden.barley.uniformity}          \tab 20 x 20 \tab xy \tab \cr
 \link{harris.multi.uniformity}            \tab 2 x 23 \tab xy, 23 crops \tab corrgram\cr
 \link{hartman.tomato.uniformity}          \tab 12 x 32 \tab xy \tab \cr
+\link{heath.raddish.uniformity}           \tab 10 x 10 \tab xy \tab \cr
 \link{holtsmark.timothy.uniformity}       \tab 6 x 40 \tab xy \tab \cr
 \link{igue.sugarcane.uniformity}          \tab 36 x 42 \tab xy \tab \cr
 \link{immer.sugarbeet.uniformity}         \tab 10 x 60 \tab xy, 3 traits \tab \cr
@@ -240,6 +242,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{fox.wheat}                   \tab 22  \tab 14 \tab     \tab    \tab       \tab \tab lm\cr
 \link{gathmann.bt}                 \tab 2   \tab    \tab 8   \tab    \tab       \tab \tab tost \cr
 \link{gauch.soy}                   \tab 7   \tab 7  \tab 4   \tab 12 \tab       \tab \tab ammi \cr
+\link{george.wheat}                \tab 211 \tab 9  \tab 4   \tab 15 \tab       \tab \tab \cr
 \link{giles.wheat}                 \tab 19  \tab    \tab     \tab 13 \tab       \tab 2 traits\tab gnm \cr
 \link{gilmour.serpentine}          \tab 108 \tab    \tab 3   \tab    \tab       \tab xy, serpentine\tab asreml \cr
 \link{gilmour.slatehall}           \tab 25  \tab    \tab 6   \tab    \tab       \tab xy \tab asreml \cr
@@ -399,68 +402,25 @@ Summaries:
 
 Multi-environment trials with multi-genotype,loc,rep,year:
 \tabular{llllllll}{
-name                               \tab gen \tab loc\tab reps\tab years \tab trt \tab other \tab model \cr
-\link{edwards.oats}                \tab 80  \tab 5  \tab 3   \tab 7  \tab       \tab \tab \cr
-\link{gauch.soy}                   \tab 7   \tab 7  \tab 4   \tab 12 \tab       \tab \tab ammi \cr
-\link{shafii.rapeseed}             \tab 6   \tab 14 \tab 3   \tab 3  \tab       \tab \tab biplot \cr
-\link{shaw.oats}                   \tab 13  \tab 2  \tab 5   \tab 3  \tab       \tab \tab aov \cr
-\link{verbyla.lupin}               \tab 9   \tab 8  \tab 3   \tab 2  \tab 7     \tab rsm1, xy, density\tab asreml
+  name                               \tab gen \tab loc\tab reps\tab years \tab trt \tab other \tab model \cr
+  \link{edwards.oats}                \tab 80  \tab 5  \tab 3   \tab 7  \tab       \tab \tab \cr
+  \link{gauch.soy}                   \tab 7   \tab 7  \tab 4   \tab 12 \tab       \tab \tab ammi \cr
+  \link{george.wheat}                \tab 211 \tab 9  \tab 4   \tab 15 \tab       \tab \tab \cr
+  \link{shafii.rapeseed}             \tab 6   \tab 14 \tab 3   \tab 3  \tab       \tab \tab biplot \cr
+  \link{shaw.oats}                   \tab 13  \tab 2  \tab 5   \tab 3  \tab       \tab \tab aov \cr
+  \link{verbyla.lupin}               \tab 9   \tab 8  \tab 3   \tab 2  \tab 7     \tab rsm1, xy, density\tab asreml
 }
-
-\bold{Comments of the package purpose}
-
-Box (1957) said,
-"I had hoped that we had seen the end of the obscene tribal habit practiced by statisticians of continually exhuming and massaging dead data sets after their purpose in life has long since been forgotten and there was no possibility of doing anything useful as a result of this treatment."
-
-Massaging these dead data sets will not lead to any of the genetics being released for commercial use.
-The value of this package is:
-1. Validating published analyses.
-2. Providing data for testing new analysis methods.
-3. Illustrating (and validating) the use of R packages.
-
-White and van Evert (2008) present some guidelines for publication of data.
-
-Some of the examples use the \code{asreml} package since it is the _only_ R tool for fitting mixed models with complex variance structures to large datasets, and the best option for modelling AR1xAR1 residual variance structures.  Commercial use of \code{asreml} requires a license: http://www.vsni.co.uk/downloads/asreml.
-
-\bold{Comments on the package structure}
-
-A large portion of these datasets appear in electronic form here for the first time.
-
-A tremendous amount of effort has been given to the curating process of identifying datasets, extracting the data from source materials, checking data values, and documenting the data.  In effect, to make the data somewhat 'computable' (Wolfram 2017).
-
-The original sources for these data use several different words to refer to genotypes including \emph{accession}, \emph{breed}, \emph{cultivar}, \emph{genotype}, \emph{hybrid}, \emph{line}, \emph{progeny}, \emph{stock}, \emph{type}, and \emph{variety}.  For consistency, these datasets mostly use \code{gen} (genotype).
-
-Also for consistency \code{row} and \code{col} are usually used for the field coordinates.
-
-In dataframes, 'block', 'rep', and similar terms are almost always coded like B1, B2, B3 instead of 1, 2, 3.  This causes R to treat the data as a factor instead of a numeric covariate (which is a good thing).
-
-Almost all of the data are presented as 'tidy' dataframes with 'observations' in rows and 'variables' in columns.
-
-Although using \code{data()} is not necessary to access the data files, the example sections do include the use of \code{data()} because \code{devtools::run_examples()} needs it.
 
 }
 
 \author{
-
-  Kevin Wright
-
-  The author is grateful to the many people who granted permission to include their data in this package.
-  
+  Kevin Wright, with support from many people who granted permission to include their data in this package.
 }
 
 \references{
-
-  G. E. P. Box (1957). Integration of Techniques in Process Development,
-  \emph{Transactions of the American Society for Quality Control}.
-
   J. White and Frits van Evert. (2008).
   Publishing Agronomic Data.
   \emph{Agron J.} 100, 1396-1400.
   http://doi.org/10.2134/agronj2008.0080F
-
-  Stephen Wolfram (2017).
-  \emph{Launching the Wolfram Data Repository: Data Publishing that Really Works}.
-  http://blog.stephenwolfram.com/2017/04/launching-the-wolfram-data-repository-data-publishing-that-really-works/
-
 }
 
