@@ -64,20 +64,19 @@ data("aastveit.barley.height")
   sowing to harvest.  Because the plant stop growing about 20 days after
   ear emergence, only the first 6 periods are included here.
 
+  Used with permission of Harald Martens.
 }
 
 \source{
   Aastveit, A. H. and Martens, H. (1986).
   ANOVA interactions interpreted by partial least squares regression.
-  \emph{Biometrics}, 42, 829--844.
+  Biometrics, 42, 829--844.
   http://doi.org/10.2307/2530697
-
-  Used with permission of Harald Martens.
 }
 \references{
   J. Chadoeuf and J. B. Denis (1991).
   Asymptotic variances for the multiplicative interaction model.
-  \emph{J. App. Stat.} 18, 331-353.
+  J. App. Stat., 18, 331-353.
   http://doi.org/10.1080/02664769100000032
 }
 \examples{

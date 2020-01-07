@@ -39,7 +39,7 @@
   V. G. Panse (1941).
   Studies in the technique of field experiments. V. Size and shape of
   blocks and arrangements of plots in cotton trials. 
-  \emph{The Indian Journal Of Agricultural Science}, 11, 850-867
+  The Indian Journal Of Agricultural Science, 11, 850-867
   https://archive.org/details/in.ernet.dli.2015.271747/page/n955
 }
 \references{

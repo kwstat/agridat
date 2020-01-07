@@ -46,8 +46,8 @@
 \source{
   F. R. Immer. 1932.
   Size and shape of plot in relation to field experiments with sugar beets.
-  \emph{Jour. Agr. Research}, 44, 649--668.
-  naldc.nal.usda.gov/download/IND43968078/PDF
+  Jour. Agr. Research, 44, 649--668.
+  http://naldc.nal.usda.gov/download/IND43968078/PDF
 }
 
 \examples{

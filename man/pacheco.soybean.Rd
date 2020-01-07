@@ -18,14 +18,14 @@
 \details{
   In each environment was used an RCB design with 3 reps.  The means of
   the reps are shown here.
+
+  Used with permission of Robert Pacheco.
 }
 \source{
   R M Pacheco, J B Duarte, R Vencovsky, J B Pinheiro, A B Oliveira,
   (2005). Use of supplementary genotypes in AMMI analysis.
-  \emph{Theor Appl Genet}, 110, 812-818.
+  Theor Appl Genet, 110, 812-818.
   http://doi.org/10.1007/s00122-004-1822-6
-
-  Used with permission of Robert Pacheco.
 }
 
 \examples{

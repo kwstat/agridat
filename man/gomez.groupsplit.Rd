@@ -23,13 +23,14 @@
 \details{
   Genotype group S1 is less than 105 days growth duration, S2 is
   105-115 days growth duration, S3 is more than 115 days.
+
+  Used with permission of Kwanchai Gomez.
 }
 \source{
   Gomez, K.A. and Gomez, A.A.. 1984,
-  \emph{Statistical Procedures for Agricultural Research}.
-  Wiley-Interscience. Page 120.
-
-  Used with permission of Kwanchai Gomez.
+  Statistical Procedures for Agricultural Research.
+  Wiley-Interscience.
+  Page 120.
 }
 
 \examples{

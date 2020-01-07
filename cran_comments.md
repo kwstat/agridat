@@ -27,6 +27,7 @@ The error on this page appears to be a spurious error on one specific flavor.
 devtools::revdep_check() had no failures.
 
 
+
 # agridat 1.16
 
 This is a tiny update making a small change requested by the maintainers of the 'broom' package to support the next version of 'broom'.

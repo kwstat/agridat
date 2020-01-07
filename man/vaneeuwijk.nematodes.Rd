@@ -85,7 +85,7 @@ par(op)
   # only 2, not 3 axes needed
 
   # match vaneeuwijk table 2
-  anova(gnm2)
+  # anova(gnm2)
   ##                          Df Deviance Resid. Df Resid. Dev
   ## NULL                                        54     8947.4
   ## pop                       4    690.6        50     8256.8

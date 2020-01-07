@@ -38,7 +38,8 @@ Field length: 4 blocks of 40 feet + 3 alleys of 20 feet = 220 feet.
 \source{
   G. A. Baker, E. B. Roessler (1957).
   Implications of a uniformity trial with small plots of wheat.
-  \emph{Hilgardia}, 27, 183-188.
+  Hilgardia, 27, 183-188.
+  http://hilgardia.ucanr.edu/Abstract/?a=hilg.v27n05p183
 }
 \references{
   None

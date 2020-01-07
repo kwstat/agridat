@@ -18,13 +18,14 @@
 }
 \details{
   Rice yield at six different densities in an RCB design.
+
+  Used with permission of Kwanchai Gomez.
 }
 \source{
   Gomez, K.A. and Gomez, A.A. 1984,
-  \emph{Statistical Procedures for Agricultural Research}.
-  Wiley-Interscience. Page 26.
-
-  Used with permission of Kwanchai Gomez.
+  Statistical Procedures for Agricultural Research.
+  Wiley-Interscience.
+  Page 26.
 }
 
 \examples{

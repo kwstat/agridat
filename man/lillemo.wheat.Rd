@@ -42,6 +42,10 @@
   'Aa03' had 3 reps and so the mean for genotype 1 was probably 16.333,
   not 16.3. 
 
+  
+  Used with permission of Morten Lillemo.
+
+  Electronic data supplied by Miroslav Zoric.
 }
 \source{
 
@@ -50,10 +54,6 @@
   on Parametric and Nonparametric Methods
   Crop Sci. 50:478-485.
   http://doi.org/10.2135/cropsci2009.03.0116
-  
-  Used with permission of Morten Lillemo.
-
-  Electronic data supplied by Miroslav Zoric.
 }
 \references{
   None.

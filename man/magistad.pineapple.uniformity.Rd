@@ -65,7 +65,7 @@ Total area: 2400*48/43560=2.64 acres
 \source{
   O. C. Magistad & C. A. Farden (1934).
   Experimental Error In Field Experiments With Pineapples.
-  \emph{Journal of the American Society of Agronomy}, 26, 631--643.
+  Journal of the American Society of Agronomy, 26, 631--643.
 }
 \references{
   None

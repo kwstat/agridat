@@ -151,8 +151,7 @@
   text(eff$ranblock, eff$corLin, rownames(eff), cex=0.5)
   abline(0,1)
 
-  # ----------------------------------------------------------------------------
-
+  # -----------
 
   libs(SpATS)
     
@@ -184,82 +183,70 @@
   # ----------------------------------------------------------------------------
 
 
-  # asreml3
-  libs(asreml)
- 
-  # RCB analysis
-  dat.rcb <- asreml(yield ~ gen, random = ~ rep, data=dat,
-                    na.method.X="omit")
-  pred.rcb <- predict(dat.rcb, data=dat, classify="gen")$predictions
+  libs(asreml,lucid)
+  if( utils::packageVersion("asreml") < "4") {
+    # asreml3
+    
+    # RCB analysis
+    dat.rcb <- asreml(yield ~ gen, random = ~ rep, data=dat,
+                      na.method.X="omit")
+    pred.rcb <- predict(dat.rcb, data=dat, classify="gen")$predictions
+    
+    # Two-dimensional AR1xAR1 spatial model
+    dat <- transform(dat, xf=factor(col), yf=factor(row))
+    dat <- dat[order(dat$xf, dat$yf),]
+    dat.sp <- asreml(yield~gen, data=dat,
+                     rcov=~ar1(xf):ar1(yf),
+                     na.method.X='ignore')
+    pred.sp <- predict(dat.sp, data=dat, classify="gen")$predictions
 
-  # Two-dimensional AR1xAR1 spatial model
-  dat <- transform(dat, xf=factor(col), yf=factor(row))
-  dat <- dat[order(dat$xf, dat$yf),]
-  dat.sp <- asreml(yield~gen, data=dat,
-                   rcov=~ar1(xf):ar1(yf),
-                   na.method.X='ignore')
-  pred.sp <- predict(dat.sp, data=dat, classify="gen")$predictions
+    # lucid::vc(dat.sp)
+    ##     effect component std.error z.ratio constr
+    ## R!variance   48.7      7.155       6.8    pos
+    ##   R!xf.cor    0.6555   0.05638    12      unc
+    ##   R!yf.cor    0.4375   0.0806      5.4    unc
 
-  libs(lucid)
-  vc(dat.sp)
-  ##     effect component std.error z.ratio constr
-  ## R!variance   48.7      7.155       6.8    pos
-  ##   R!xf.cor    0.6555   0.05638    12      unc
-  ##   R!yf.cor    0.4375   0.0806      5.4    unc
+    # Compare the estimates from the two methods
+    plot(pred.rcb$pvals[,2], pred.sp$pvals[,2], xlim=c(13,37), ylim=c(13,37),
+         xlab="RCB",ylab="AR1xAR1",type='n')
+    title("stroup.nin: Comparison of predicted values")
+    text(pred.rcb$pvals[,2],pred.sp$pvals[,2],
+         as.character(pred.rcb$pvals[,1]),cex=0.5)
+    abline(0,1) 
+  }
 
-  # Compare the estimates from the two methods
-  plot(pred.rcb$pvals[,2], pred.sp$pvals[,2], xlim=c(13,37), ylim=c(13,37),
-       xlab="RCB",ylab="AR1xAR1",type='n')
+  # ----------
+
+  libs(asreml,lucid)
+  if( utils::packageVersion("asreml") > "4") {
+    # asreml4
+
+    # RCB analysis
+    dat.rcb <- asreml(yield ~ gen, random = ~ rep, data=dat,
+                      na.action=na.method(x="omit"))
+    pred.rcb <- predict(dat.rcb, data=dat, classify="gen")
+    
+    # Two-dimensional AR1xAR1 spatial model
+    dat <- transform(dat, xf=factor(col), yf=factor(row))
+    dat <- dat[order(dat$xf, dat$yf),]
+    dat.sp <- asreml(yield~gen, data=dat,
+                     residual = ~ar1(xf):ar1(yf),
+                     na.action=na.method(x="omit"))
+    pred.sp <- predict(dat.sp, data=dat, classify="gen")
+
+    lucid::vc(dat.sp)
+    ##     effect component std.error z.ratio constr
+    ## R!variance   48.7      7.155       6.8    pos
+    ##   R!xf.cor    0.6555   0.05638    12      unc
+    ##   R!yf.cor    0.4375   0.0806      5.4    unc
+
+    # Compare the estimates from the two methods
+    plot(pred.rcb$pvals[,2], pred.sp$pvals[,2], xlim=c(13,37), ylim=c(13,37),
+         xlab="RCB", ylab="AR1xAR1", type='n')
   title("stroup.nin: Comparison of predicted values")
   text(pred.rcb$pvals[,2],pred.sp$pvals[,2],
        as.character(pred.rcb$pvals[,1]),cex=0.5)
-  abline(0,1) 
-
-
-# ----------------------------------------------------------------------------
-
-if(0){
-  # asreml4
-
-  ## library(agridat)
-  ## data(stroup.nin)
-  ## dat <- stroup.nin
-
-  ## # Note, ASREML4 stand-alone might not need a completely-filled rectangle
-  ## # of plots to perform AR1xAR1 analysis.  It might be able to fill in missing
-  ## # combinations of rows/columns. The R version asreml4 still seems to require
-  ## # rectangles.
-
-  ## libs(asreml)
-
-  ## # RCB analysis
-  ## dat.rcb <- asreml(yield ~ gen, random = ~ rep, data=dat,
-  ##                   na.action=na.method(x="omit"))
-  ## pred.rcb <- predict(dat.rcb, data=dat, classify="gen")
-
-  ## # Two-dimensional AR1xAR1 spatial model
-  ## dat <- transform(dat, xf=factor(col), yf=factor(row))
-  ## #dat <- dat[order(dat$xf, dat$yf),]
-  ## dat.sp <- asreml(yield~gen, data=dat,
-  ##                  residual = ~ar1(xf):ar1(yf),
-  ##                  na.action=na.method(x="omit"))
-  ## pred.sp <- predict(dat.sp, data=dat, classify="gen")
-
-  ## libs(lucid)
-  ## vc(dat.sp)
-  ## ##     effect component std.error z.ratio constr
-  ## ## R!variance   48.7      7.155       6.8    pos
-  ## ##   R!xf.cor    0.6555   0.05638    12      unc
-  ## ##   R!yf.cor    0.4375   0.0806      5.4    unc
-
-  ## # Compare the estimates from the two methods
-  ## plot(pred.rcb$pvals[,2], pred.sp$pvals[,2], xlim=c(13,37), ylim=c(13,37),
-  ##      xlab="RCB", ylab="AR1xAR1", type='n')
-  ## title("stroup.nin: Comparison of predicted values")
-  ## text(pred.rcb$pvals[,2],pred.sp$pvals[,2],
-  ##      as.character(pred.rcb$pvals[,1]),cex=0.5)
-  ## abline(0,1)
-  
+  abline(0,1)  
 }
 
 }

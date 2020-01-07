@@ -31,13 +31,14 @@
   Page 172: treatment (1) in Rep 1, block 1 and rep 2, block 1.
 
   This data uses the layout shown on page 171.
+
+  Used with permission of Kwanchai Gomez.
 }
 \source{
   Gomez, K.A. and Gomez, A.A.. 1984,
-  \emph{Statistical Procedures for Agricultural Research}.
-  Wiley-Interscience. Page 171-172.
-
-  Used with permission of Kwanchai Gomez.
+  Statistical Procedures for Agricultural Research.
+  Wiley-Interscience.
+  Page 171-172.
 }
 
 \examples{

@@ -24,14 +24,14 @@
   \emph{Araneida} (spiders) in 8 different plots.
 
   Each response is probably a mean across repeated measurements.
+  
+  Used with permission of Achim Gathmann.
+
 }
 \source{
-
   L. A. Hothorn, 2005.
   Evaluation of Bt-Maize Field Trials by a Proof of Safety.
   http://www.seedtest.org/upload/cms/user/presentation7Hothorn.pdf
-
-  Used with permission of Achim Gathmann.
 }
 
 \examples{

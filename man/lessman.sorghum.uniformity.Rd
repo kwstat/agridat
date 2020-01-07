@@ -40,9 +40,10 @@
 }
 \source{
   Lessman, Koert James (1962).
-  \emph{Comparisons of methods for testing grain yield of sorghum}.
+  Comparisons of methods for testing grain yield of sorghum.
   Iowa State University.
   Retrospective Theses and Dissertations. Paper 2063. Appendix Table 17.
+  https://lib.dr.iastate.edu/rtd/2063
 }
 \references{
   None.

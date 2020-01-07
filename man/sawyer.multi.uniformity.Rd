@@ -75,14 +75,14 @@
   
   McCullagh, P. and Clifford, D., (2006).
   Evidence for conformal invariance of crop yields,
-  \emph{Proceedings of the Royal Society A: Mathematical, Physical and
-    Engineering Science}, 462, 2119--2143.
+  Proceedings of the Royal Society A: Mathematical, Physical and
+    Engineering Science, 462, 2119--2143.
   http://doi.org/10.1098/rspa.2006.1667
 
   Winifred A. Mackenzie. (1926)
   Note on a remarkable correlation between grain and straw, obtained at
   Rothamsted.
-  \emph{Journal of Agricultural Science}, 16, 275-279.
+  Journal of Agricultural Science, 16, 275-279.
   https://doi.org/10.1017/S0021859600018256
 }
 

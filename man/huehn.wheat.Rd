@@ -44,41 +44,41 @@
 \examples{
 \dontrun{
 
-library(agridat)
-data(huehn.wheat)
-dat <- huehn.wheat
+  library(agridat)
+  data(huehn.wheat)
+  dat <- huehn.wheat
+  
+  # Nassar & Huehn, p. 51 "there is no evidence for differences in stability
+  # among the 20 varieties".
+  libs(gge)
+  m1 <- gge(yield ~ gen*env, dat)
+  biplot(m1, main="huehn.wheat")
+  
+  libs(reshape2)
+  datm <- acast(dat, gen~env, value.var='yield')
 
-# Nassar & Huehn, p. 51 "there is no evidence for differences in stability
-# among the 20 varieties".
-libs(gge)
-m1 <- gge(yield ~ gen*env, dat)
-biplot(m1, main="huehn.wheat")
+  apply(datm,1,mean) # Gen means match Huehn 1979 table 1
+  apply(datm,2,mean) # Env means
+  apply(datm, 2, rank) # Ranks match Huehn table 1
 
-libs(reshape2)
-datm <- acast(dat, gen~env, value.var='yield')
+  # Huehn 1979 did not use genotype-centered data, and his definition
+  # of S2 is different from later papers.
 
-apply(datm,1,mean) # Gen means match Huehn 1979 table 1
-apply(datm,2,mean) # Env means
-apply(datm, 2, rank) # Ranks match Huehn table 1
+  # I'm not sure where 'huehn' function is found
+  # apply(huehn(datm, corrected=FALSE), 2, round,2) # S1 matches Huehn
+  ##          MeanRank   S1
+  ## Jubilar      6.70 3.62
+  ## Diplomat     8.35 5.61
+  ## Caribo      11.20 6.07
+  ## Cbc710      13.65 6.70
 
-# Huehn 1979 did not use genotype-centered data, and his definition
-# of S2 is different from later papers.
-
-libs(stable)
-apply(huehn(datm, corrected=FALSE), 2, round,2) # S1 matches Huehn
-##          MeanRank   S1
-## Jubilar      6.70 3.62
-## Diplomat     8.35 5.61
-## Caribo      11.20 6.07
-## Cbc710      13.65 6.70
-
-# Very close match to Nassar & Huehn 1987 table 4.
-apply(huehn(datm, corrected=TRUE), 2, round,2)
-##          MeanRank   S1   Z1    S2   Z2
-## Jubilar      10.2 4.00 5.51 11.29 4.29
-## Diplomat     11.0 6.31 0.09 27.78 0.27
-## Caribo       10.6 6.98 0.08 34.49 0.01
-## Cbc710       10.9 8.16 1.78 47.21 1.73
+  # Very close match to Nassar & Huehn 1987 table 4.
+  # apply(huehn(datm, corrected=TRUE), 2, round,2)
+  ##          MeanRank   S1   Z1    S2   Z2
+  ## Jubilar      10.2 4.00 5.51 11.29 4.29
+  ## Diplomat     11.0 6.31 0.09 27.78 0.27
+  ## Caribo       10.6 6.98 0.08 34.49 0.01
+  ## Cbc710       10.9 8.16 1.78 47.21 1.73
 
 }
 }

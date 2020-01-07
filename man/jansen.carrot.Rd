@@ -30,15 +30,14 @@
   each plot and evaluated.  The data show the number of carrots and the
   number infested by fly larvae.
 
+  Used with permission of J. Jansen. Electronic version supplied by Miroslav Zoric.
 }
 \source{
   J. Jansen & J.A. Hoekstra (1993).
   The analysis of proportions in agricultural experiments by a
   generalized linear mixed model. 
-  \emph{Statistica Neerlandica}, 47(3), 161-174.
+  Statistica Neerlandica, 47(3), 161-174.
   http://doi.org/10.1111/j.1467-9574.1993.tb01414.x
-
-  Used with permission of J. Jansen. Electronic version supplied by Miroslav Zoric.
 }
 \references{
   None.

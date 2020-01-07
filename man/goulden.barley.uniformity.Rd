@@ -26,13 +26,13 @@
 }
 \source{
   C. H. Goulden, (1939).
-  \emph{Methods of statistical analysis}, 1st ed. Page 18.  
+  Methods of statistical analysis, 1st ed. Page 18.  
   https://archive.org/stream/methodsofstatist031744mbp
   
 }
 \references{
   Erwin LeClerg, Warren Leonard, Andrew Clark (1962).
-  \emph{Field Plot Technique}, 2nd ed. Page 27.
+  Field Plot Technique, 2nd ed. Page 27.
 
   Alternatively, page 39 in 1939 edition of "Field Plot Technique".
   https://archive.org/stream/fieldplottechniq00leon

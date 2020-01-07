@@ -42,40 +42,48 @@ rep (instead of across reps).
 \examples{
 \dontrun{
 
-library(agridat)
-data(weiss.lattice)
-dat <- weiss.lattice
+  library(agridat)
+  data(weiss.lattice)
+  dat <- weiss.lattice
 
-libs(desplot)
-desplot(yield~col*row|rep,dat,
-        text=gen, shorten="none", cex=.8, aspect=3/16, # true aspect
-        main="weiss.lattice (layout uncertain)", xlab="Soybean yields")
+  libs(desplot)
+  desplot(yield~col*row|rep,dat,
+          text=gen, shorten="none", cex=.8, aspect=3/16, # true aspect
+          main="weiss.lattice (layout uncertain)", xlab="Soybean yields")
 
 
-dat <- transform(dat, xf=factor(col), yf=factor(row))
-m1 <- lm(terms(yield ~ rep + rep:xf + rep:yf + gen, keep.order=TRUE), data=dat)
-anova(m1) # Matches Weiss table 7
-## Response: yield
-##           Df  Sum Sq Mean Sq F value    Pr(>F)
-## rep        3   91.57  30.525  4.7414 0.0039709 **
-## rep:xf    24 2913.43 121.393 18.8557 < 2.2e-16 ***
-## rep:yf    24  390.21  16.259  2.5254 0.0007734 ***
-## gen       48 1029.87  21.456  3.3327 2.652e-07 ***
-## Residuals 96  618.05   6.438
+  dat <- transform(dat, xf=factor(col), yf=factor(row))
+  m1 <- lm(terms(yield ~ rep + rep:xf + rep:yf + gen, keep.order=TRUE), data=dat)
+  anova(m1) # Matches Weiss table 7
+  ## Response: yield
+  ##           Df  Sum Sq Mean Sq F value    Pr(>F)
+  ## rep        3   91.57  30.525  4.7414 0.0039709 **
+  ## rep:xf    24 2913.43 121.393 18.8557 < 2.2e-16 ***
+  ## rep:yf    24  390.21  16.259  2.5254 0.0007734 ***
+  ## gen       48 1029.87  21.456  3.3327 2.652e-07 ***
+  ## Residuals 96  618.05   6.438
+  
+  # ----------
 
-# ----------------------------------------------------------------------------
-
-libs(asreml)
-m2 <- asreml(yield ~ rep + rep:xf + rep:yf + gen, data=dat)
-anova(m2)
-predict(m2, data=dat, classify="gen")$predictions$pvals # Weiss table 6 means
-##  gen pred.value std.error  est.stat
-##  G01      27.74     1.461 Estimable
-##  G02      24.95     1.461 Estimable
-##  G03      24.38     1.461 Estimable
-##  G04      28.05     1.461 Estimable
-##  G05      19.6      1.461 Estimable
-##  G06      23.79     1.461 Estimable
+  # asreml3 & asreml4
+  libs(asreml)
+  m2 <- asreml(yield ~ rep + rep:xf + rep:yf + gen, data=dat)
+  # Weiss table 6 means
+  if( utils::packageVersion("asreml") < "4") {
+    anova(m2)
+    predict(m2, data=dat, classify="gen")$predictions$pvals
+  } else {
+    wald(m2)
+    predict(m2, data=dat, classify="gen")$pvals
+  }
+  
+  ##  gen pred.value std.error  est.stat
+  ##  G01      27.74     1.461 Estimable
+  ##  G02      24.95     1.461 Estimable
+  ##  G03      24.38     1.461 Estimable
+  ##  G04      28.05     1.461 Estimable
+  ##  G05      19.6      1.461 Estimable
+  ##  G06      23.79     1.461 Estimable
 
 }
 }

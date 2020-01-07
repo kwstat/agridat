@@ -70,8 +70,7 @@
   
   library(agridat)
   
-  # 1951 data.  Fit the first REML model of Mohring 2011 Supplement.
-  
+  # 1951 data.  Fit the first REML model of Mohring 2011 Supplement.  
   data(hayman.tobacco)
   dat1 <- subset(hayman.tobacco, year==1951)
   
@@ -86,7 +85,7 @@
   dat1 <- transform(dat1,
                     dr = ifelse(as.character(male) == as.character(female), 0, dr))
   
-  # ASREML code for Mixed Griffing.
+  # asreml r version 3 & 4 code for Mixed Griffing.
   # Mohring Table 2, column 2 (after dividing by 10^2) gives variances:
   # GCA 12.77, SCA 11.09, RSCA .65, Error 4.23.
   # Mohring Supplement ASREML code part1 model is:
@@ -95,9 +94,9 @@
   # and(female) term tells asreml to use the same levels (or, equivalently,
   # fix the correlation of the male/female levels to be 1.
   # The block effect is minimial and therefore ignored.
+  ## libs(asreml, lucid)
   ## m1 <- asreml(day~1, data=dat1,
   ##              random = ~ male + and(female) + comb + comb:dr)
-  ## libs(lucid)
   ## vc(m1)
   ##           effect component std.error z.ratio      con
   ##    male!male.var   12.77      7.502      1.7 Positive
@@ -105,7 +104,7 @@
   ## comb:dr!comb.var    0.6603    0.4926     1.3 Positive
   ##       R!variance    4.185     0.7449     5.6 Positive
   
-  # --------------------
+  # ----------
   
   # 1952 data. Reproduce table 3 and figure 2 of Hayman 1954b.
   
@@ -145,5 +144,6 @@
   abline(0,1,col="gray")
   # Hayman notes that 1 and 3 do not lie along the line,
   # so modifies them and re-analyzes.
+
 }
 }

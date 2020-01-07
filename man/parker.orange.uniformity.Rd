@@ -56,7 +56,7 @@
 \source{
   E. R. Parker & L. D. Batchelor. (1932).
   Variation in the Yields of Fruit Trees in Relation to the Planning of Future Experiments.
-  \emph{Hilgardia}, 7(2), 81-161. Tables 3-9.
+  Hilgardia, 7(2), 81-161. Tables 3-9.
   http://doi.org/10.3733/hilg.v07n02p081
 }
 

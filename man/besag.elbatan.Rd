@@ -25,19 +25,17 @@
 
   Plot dimensions are not given by Besag.
   
+  Data retrieved from
+  http://web.archive.org/web/19991008143232/www.stat.duke.edu/~higdon/trials/elbatan.dat
+
+  Used with permission of David Higdon.
 }
 \source{
   Julian Besag and D Higdon, 1999.
   Bayesian Analysis of Agricultural Field Experiments,
-  \emph{Journal of the Royal Statistical Society: Series B (Statistical
-    Methodology)},61, 691--746. Table 1.
-
+  Journal of the Royal Statistical Society: Series B,61, 691--746.
+  Table 1.
   http://doi.org/10.1111/1467-9868.00201
-
-  Retrieved from
-  http://web.archive.org/web/19991008143232/www.stat.duke.edu/~higdon/trials/elbatan.dat
-
-  Used with permission of David Higdon.
 }
 
 \references{

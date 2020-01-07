@@ -61,33 +61,31 @@
   However, Bongiovanni and Lowenberg-DeBoer (2002) found that slope
   position was NOT significant in 2001.
 
+
+  Used with permission of the ASU GeoDa Center.
 }
 
 \source{
   The Las Rosas data files were obtained from
   https://geodacenter.asu.edu/sdata
   and converted from ESRI shape files to a flat data.frame.
-
-  Used with permission of the ASU GeoDa Center.
 }
 
 \references{
-
   Bongiovanni and Lowenberg-DeBoer (2000).
   Nitrogen management in corn with a spatial regression model.
-  \emph{Proceedings of the  Fifth International Conference on  Precision
-  Agriculture}
+  Proceedings of the  Fifth International Conference on  Precision
+  Agriculture.
 
   Anselin, L., R. Bongiovanni, J. Lowenberg-DeBoer (2004).
   A spatial econometric approach to the economics of site-specific
   nitrogen management in corn production.
-  \emph{American Journal of Agricultural Economics}, 86, 675--687.
+  American Journal of Agricultural Economics, 86, 675--687.
 
   Lambert, Lowenberg-Deboer, Bongiovanni (2004).
   A Comparison of Four Spatial Regression Models for Yield Monitor Data:
   A Case Study from Argentina.
-  \emph{Precision Agriculture}, 5, 579-600.
-
+  Precision Agriculture, 5, 579-600.
 }
 
 \examples{

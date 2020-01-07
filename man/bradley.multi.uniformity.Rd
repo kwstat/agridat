@@ -75,7 +75,7 @@
   http://hdl.handle.net/2139/41264
 
   The data are repeated in:
-  C. E. Wilson. (
+  C. E. Wilson.
   Study of the plots laid out on field II with a view to obtaining
   plot-fertility data for use in future experiments on these plots,
   season 1940-41.

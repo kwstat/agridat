@@ -31,20 +31,20 @@
   Field length: 24 plots x 1m = 24m.
 
   Field width: 12 plots x 1m = 12m.
+  
+  Used with permission of Asif Masood.
 }
 
 \source{
   Masood, M Asif and Raza, Irum. 2012.
   Estimation of optimum field plot size and shape in paddy yield trial.
-  \emph{Pakistan J. Agric. Res.}, Vol. 25 No. 4, 2012
-  
-  Used with permission of Asif Masood.
+  Pakistan J. Agric. Res., Vol. 25 No. 4, 2012
 }
 
 \references{
   Masood, M Asif and Raza, Irum. 2012.
   Estimation of optimum field plot size and shape in paddy yield trial.
-  \emph{American-Eurasian Journal of Scientific Research}, 7, 264-269.
+  American-Eurasian Journal of Scientific Research, 7, 264-269.
   Table 1.
   http://doi.org/10.5829/idosi.aejsr.2012.7.6.1926
 }

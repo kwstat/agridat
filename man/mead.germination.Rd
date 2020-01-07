@@ -20,19 +20,19 @@
 }
 \details{
   The rep factor is NOT a blocking factor.
+
+  Used with permission of Roger Mead, Robert Curnow, and Anne Hasted.
 }
 
 \source{
   Roger Mead, Robert N Curnow, Anne M Hasted. 2002.
   Statistical Methods in Agriculture and Experimental Biology, 3rd ed.
   Chapman and Hall.  Page 350-351.
-
-  Used with permission of Roger Mead, Robert Curnow, and Anne Hasted.
 }
 
 \references{
   Schabenberger, O. and Pierce, F.J., 2002.
-  \emph{Contemporary statistical models for the plant and soil sciences},
+  Contemporary statistical models for the plant and soil sciences.
   CRC.
 }
 

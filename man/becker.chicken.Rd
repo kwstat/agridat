@@ -39,36 +39,36 @@
 \examples{
 \dontrun{
 
-library(agridat)
-data(becker.chicken)
-dat <- becker.chicken
+  library(agridat)
+  data(becker.chicken)
+  dat <- becker.chicken
+  
+  libs(lattice)
+  dotplot(weight ~ female, data=dat, group=male,
+          main="becker.chicken - progeny weight by M*F",
+          xlab="female parent",ylab="progeny weight",
+          auto.key=list(columns=5))
 
-libs(lattice)
-dotplot(weight ~ female, data=dat, group=male,
-        main="becker.chicken - progeny weight by M*F",
-        xlab="female parent",ylab="progeny weight",
-        auto.key=list(columns=5))
+  # Sums match Becker
+  # sum(dat$weight)
+  # aggregate(weight ~  male + female, dat, FUN=sum)
 
-# Sums match Becker
-# sum(dat$weight)
-# aggregate(weight ~  male + female, dat, FUN=sum)
+  # Variance components
+  libs(lme4,lucid)
+  m1 <- lmer(weight ~  (1|male) + (1|female), data=dat)
+  # vc(m1)
+  ## grp        var1 var2      vcov    sdcor
+  ## 1   female (Intercept) <NA> 1096   33.1
+  ## 2     male (Intercept) <NA>  776.8 27.87
+  ## 3 Residual        <NA> <NA> 5524   74.32
 
-# Variance components
-libs(lme4,lucid)
-m1 <- lmer(weight ~  (1|male) + (1|female), data=dat)
-as.data.frame(lme4::VarCorr(m1))
-## grp        var1 var2      vcov    sdcor
-## 1   female (Intercept) <NA> 1095.6296 33.10030
-## 2     male (Intercept) <NA>  776.7543 27.87031
-## 3 Residual        <NA> <NA> 5524.4000 74.32631
-
-# Calculate heritabilities
-s2m <- 776  # variability for males
-s2f <- 1095 # variability for females
-s2w <- 5524 # variability within crosses
-vp <- s2m + s2f + s2w # 7395
-4*s2m/vp # .42 male heritability
-4*s2f/vp # .59 female heritability
+  # Calculate heritabilities
+  # s2m <- 776  # variability for males
+  # s2f <- 1095 # variability for females
+  # s2w <- 5524 # variability within crosses
+  # vp <- s2m + s2f + s2w # 7395
+  # 4*s2m/vp # .42 male heritability
+  #4*s2f/vp # .59 female heritability
 
 }
 }

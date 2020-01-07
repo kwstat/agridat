@@ -57,15 +57,15 @@ data("talbot.potato.yield")
     TE \tab Terrington \cr
   }
 
+
+  Used with permission of Mike Talbot.
 }
 
 \source{
   Mike Talbot and A V Wheelwright, 1989,
   The analysis of genotype x analysis interactions by partial
   least squares regression.
-  \emph{Biuletyn Oceny Odmian}, 21/22, 19--25.
-
-  Used with permission of Mike Talbot.
+  Biuletyn Oceny Odmian, 21/22, 19--25.
 }
 
 \examples{

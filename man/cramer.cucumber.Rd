@@ -25,36 +25,36 @@
 \details{
   The data are used to illustrate path analysis of the correlations
   between phenotypic traits.
+
+  Used with permission of Christopher Cramer.
+
 }
 \source{
-  
   Christopher S. Cramer, Todd C. Wehner, and Sandra B. Donaghy. 1999.
   Path Coefficient Analysis of Quantitative Traits.
   In: Handbook of Formulas and Software for Plant Geneticists and
   Breeders, page 89.
-
-  Used with permission of Christopher Cramer.
-  
 }
 \references{
   Cramer, C. S., T. C. Wehner, and S. B. Donaghy. 1999.
   PATHSAS: a SAS computer program for path coefficient analysis of quantitative data.
-  \emph{J. Hered}, 90, 260-262
+  J. Hered, 90, 260-262
   https://doi.org/10.1093/jhered/90.1.260
 }
 
 \examples{
-
-library(agridat)
-
-data(cramer.cucumber)
-dat <- cramer.cucumber
-
-libs(lattice)
-splom(dat[3:9], main="cramer.cucumber - traits by cycle", group=dat$cycle,
-      auto.key=list(columns=3))
-
 \dontrun{
+
+  library(agridat)
+  data(cramer.cucumber)
+  dat <- cramer.cucumber
+
+  libs(lattice)
+  splom(dat[3:9], group=dat$cycle,
+        main="cramer.cucumber - traits by cycle",
+        auto.key=list(columns=3))
+
+
   # derived traits
   dat <- transform(dat,
                    marketable = totalfruit-culledfruit,
@@ -74,7 +74,7 @@ splom(dat[3:9], main="cramer.cucumber - traits by cycle", group=dat$cycle,
   indep <- c("branchesperplant", "nodesperbranch", "perfenod", "fruitset")
   dep0 <- "fruitperplant"
   dep <- c("marketable","earlyperplant")
-  
+
   # standardize trait data for cycle 1
   sdat <- data.frame(scale(dat1[1:8, c(indep,dep0,dep)]))
 
@@ -88,7 +88,7 @@ splom(dat[3:9], main="cramer.cucumber - traits by cycle", group=dat$cycle,
   ## nodesperbranch   0.3415537
   ## perfenod         0.2316693
   ## fruitset         0.2985557
-  
+
   # slopes for dep ~ dep0
   X <- as.matrix(sdat[,dep0])
   Y <- as.matrix(sdat[,c(dep)])
@@ -128,13 +128,12 @@ splom(dat[3:9], main="cramer.cucumber - traits by cycle", group=dat$cycle,
   resdep <- cbind(resdep0,resdep0)*matrix(estind2, nrow=4,ncol=2,byrow=TRUE)
   colnames(resdep) <- dep
   # slightly different from SAS output last 2 columns
-  round(cbind(fruitperplant=resdep0, round(resdep,2)),2) 
+  round(cbind(fruitperplant=resdep0, round(resdep,2)),2)
   ##                  fruitperplant marketable earlyperplant
   ## branchesperplant          0.87       0.84          0.76
   ## nodesperbranch            0.65       0.63          0.58
   ## perfenod                 -0.08      -0.08         -0.07
   ## fruitset                  0.42       0.41          0.37
 }
-
 }
 \keyword{datasets}

@@ -122,7 +122,7 @@
   
 }
 \source{
-  Batchelor, LD and Reed, HS. 1918.
+  L. D. Batchelor and H. S. Reed. (1918).
   Relation of the variability of yields of fruit trees to the accuracy
   of field trials. \emph{J. Agric. Res}, 12, 245--283.
   http://books.google.com/books?id=Lil6AAAAMAAJ&lr&pg=PA245

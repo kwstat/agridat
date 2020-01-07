@@ -36,7 +36,7 @@
 }
 \source{
   Bancroft, T. A. et a1., (1948).
-  "Size and Shape of Plots and Distribution of Plot Yield for Field Experiments with Peanuts."
+  Size and Shape of Plots and Distribution of Plot Yield for Field Experiments with Peanuts.
   Alabama Agricultural Experiment Station Progress Report, sec. 39.
   Table 4, page 6.
   https://aurora.auburn.edu/bitstream/handle/11200/1345/0477PROG.pdf;sequence=1

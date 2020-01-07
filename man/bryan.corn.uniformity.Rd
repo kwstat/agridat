@@ -41,25 +41,27 @@
 }
 \examples{
 \dontrun{
-libs(agridat)
-data(bryan.corn.uniformity)
-libs(desplot)
-desplot(yield ~ col*row|expt, dat,
-        main="bryan.corn.uniformity",
-        aspect=(48*3.5/(6*8*3.5)), # true aspect
-        flip=TRUE, tick=TRUE)
+  library(agridat)
+  data(bryan.corn.uniformity)
+  dat <- bryan.corn.uniformity
+  
+  libs(desplot)
+  desplot(yield ~ col*row|expt, dat,
+          main="bryan.corn.uniformity",
+          aspect=(48*3.5/(6*8*3.5)), # true aspect
+          flip=TRUE, tick=TRUE)
 
-# CVs in Table 5, column 8 hills
-# libs(dplyr)
-# dat %>% group_by(expt) %>%
-#   summarize(cv=sd(yield)/mean(yield)*100)
-##   expt    cv
-## 1 K23E  10.9
-## 2 K23N  10.9
-## 3 I25E  16.3
-## 4 I25N  17.0
-## 5 M25E  16.2
-## 6 M25N  17.2
+  # CVs in Table 5, column 8 hills
+  # libs(dplyr)
+  # dat %>% group_by(expt) %>%
+  #   summarize(cv=sd(yield)/mean(yield)*100)
+  ##   expt    cv
+  ## 1 K23E  10.9
+  ## 2 K23N  10.9
+  ## 3 I25E  16.3
+  ## 4 I25N  17.0
+  ## 5 M25E  16.2
+  ## 6 M25N  17.2
 
 }
 }

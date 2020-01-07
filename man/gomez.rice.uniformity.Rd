@@ -25,14 +25,15 @@
   Field width: 18 plots x 1 m = 18 m
 
   Field length: 38 plots x 1 m = 38 m
+  
+  Used with permission of Kwanchai Gomez.
+
 }
 
 \source{
-  Gomez, K.A. and Gomez, A.A.. 1984,
-  \emph{Statistical Procedures for Agricultural Research}.
+  Gomez, K.A. and Gomez, A.A. (1984).
+  Statistical Procedures for Agricultural Research.
   Wiley-Interscience. Page 481.
-
-  Used with permission of Kwanchai Gomez.
 }
 
 \examples{

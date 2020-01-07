@@ -30,137 +30,143 @@
   Field width 15 columns * 6 m = 90 m
 
   Field length 22 plots * .75 m = 16.5 m
+  
+  Used with permission of Arthur Gilmour, in turn with permission from
+  Gil Hollamby.
 }
 \source{
   Arthur R Gilmour and Brian R Cullis and Arunas P Verbyla, 1997.
   Accounting for natural and extraneous variation in the analysis of
   field experiments.
-  \emph{Journal of Agric Biol Env Statistics}, 2, 269-293.
-  
-  Used with permission of Arthur Gilmour, in turn with permission from
-  Gil Hollamby.
+  Journal of Agric Biol Env Statistics, 2, 269-293.
 }
 
 \references{
   N. W. Galwey. 2014.
-  \emph{Introduction to Mixed Modelling: Beyond Regression and Analysis
-    of Variance}. Table 10.9 
+  Introduction to Mixed Modelling: Beyond Regression and Analysis
+  of Variance.
+  Table 10.9 
 }
 
 \examples{
 \dontrun{
 
-library(agridat)
-data(gilmour.serpentine)
-dat <- gilmour.serpentine
+  library(agridat)
+  data(gilmour.serpentine)
+  dat <- gilmour.serpentine
 
-libs(desplot)
-desplot(yield~ col*row, data=dat,
-        num=gen, show.key=FALSE, out1=rep,
-        aspect = 16.5/90, # true aspect
-        main="gilmour.serpentine")
+  libs(desplot)
+  desplot(yield~ col*row, data=dat,
+          num=gen, show.key=FALSE, out1=rep,
+          aspect = 16.5/90, # true aspect
+          main="gilmour.serpentine")
 
 
-# Extreme field trend.  Blocking insufficient--needs a spline/smoother
-# xyplot(yield~col, data=dat, main="gilmour.serpentine")
+  # Extreme field trend.  Blocking insufficient--needs a spline/smoother
+  # xyplot(yield~col, data=dat, main="gilmour.serpentine")
 
-# ----------------------------------------------------------------------------
 
-if(0){
-  # asreml3
-  libs(asreml)
-  dat <- transform(dat, rowf=factor(row), colf=factor(10*(col-8)))
-  dat <- dat[order(dat$rowf, dat$colf), ] # Sort order needed by asreml
-  
-  # RCB
-  m0 <- asreml(yield ~ gen, data=dat, random=~rep)
-  
-  # Add AR1 x AR1
-  m1 <- asreml(yield ~ gen, data=dat, rcov = ~ar1(rowf):ar1(colf))
-  
-  # Add spline
-  m2 <- asreml(yield ~ gen + col, data=dat,
-               random= ~ spl(col) + colf,
-               rcov = ~ar1(rowf):ar1(colf))
-  
-  # Figure 4 shows serpentine spraying
-  p2 <- predict(m2, data=dat, classify="colf")$predictions$pvals
-  plot(p2$predicted, type='b', xlab="column number", ylab="BLUP")
-  
-  # Define column code (due to serpentine spraying)
-  # Rhelp doesn't like double-percent modulus symbol, so compute by hand
-  dat <- transform(dat, colcode = factor(dat$col-floor((dat$col-1)/4)*4 -1))
-  
-  m3 <- asreml(yield ~ gen + lin(colf) + colcode, data=dat,
-               random= ~ colf + rowf + spl(colf),
-               rcov = ~ar1(rowf):ar1(colf))
-  
-  # Figure 6 shows serpentine row effects
-  p3 <- predict(m3, data=dat, classify="rowf")$predictions$pvals
-  plot(p3$predicted, type='l', xlab="row number", ylab="BLUP")
-  text(1:22, p3$predicted, c('L','L','M','R','R','M','L','L',
-                             'M','R','R','M','L','L','M','R','R','M','L','L','M','R'))
-  
-  # Define row code (due to serpentine planting). 1=middle, 2=left/right
-  dat <- transform(dat, rowcode = factor(row))
-  levels(dat$rowcode) <- c('2','2','1','2','2','1','2','2','1',
-                           '2','2','1','2','2','1','2','2','1','2','2','1','2')
-  
-  m6 <- asreml(yield ~ gen + lin(colf) + colcode +rowcode, data=dat,
-               random= ~ colf + rowf + spl(col),
-               rcov = ~ar1(rowf):ar1(colf))
-  plot(variogram(m6), xlim=c(0:17), ylim=c(0,11), zlim=c(0,4000),
-       main="gilmour.serpentine")
-}
+  # ----------------------------------------------------------------------------
 
-# ----------------------------------------------------------------------------
+  libs(asreml,lucid)
+  if( utils::packageVersion("asreml") < "4") {
+    # asreml3
 
-if(0){
-  ## libs(asreml4)
-  ## dat <- transform(dat, rowf=factor(row), colf=factor(10*(col-8)))
-  ## dat <- dat[order(dat$rowf, dat$colf), ] # Sort order needed by asreml
+    dat <- transform(dat, rowf=factor(row), colf=factor(10*(col-8)))
+    dat <- dat[order(dat$rowf, dat$colf), ] # Sort order needed by asreml
+  
+    # RCB
+    m0 <- asreml(yield ~ gen, data=dat, random=~rep)
+  
+    # Add AR1 x AR1
+    m1 <- asreml(yield ~ gen, data=dat, rcov = ~ar1(rowf):ar1(colf))
+  
+    # Add spline
+    m2 <- asreml(yield ~ gen + col, data=dat,
+                 random= ~ spl(col) + colf,
+                 rcov = ~ar1(rowf):ar1(colf))
+  
+    # Figure 4 shows serpentine spraying
+    p2 <- predict(m2, data=dat, classify="colf")$predictions$pvals
+    plot(p2$predicted, type='b', xlab="column number", ylab="BLUP")
+  
+    # Define column code (due to serpentine spraying)
+    # Rhelp doesn't like double-percent modulus symbol, so compute by hand
+    dat <- transform(dat, colcode = factor(dat$col-floor((dat$col-1)/4)*4 -1))
+    
+    m3 <- asreml(yield ~ gen + lin(colf) + colcode, data=dat,
+                 random= ~ colf + rowf + spl(colf),
+                 rcov = ~ar1(rowf):ar1(colf))
+  
+    # Figure 6 shows serpentine row effects
+    p3 <- predict(m3, data=dat, classify="rowf")$predictions$pvals
+    plot(p3$predicted, type='l', xlab="row number", ylab="BLUP")
+    text(1:22, p3$predicted, c('L','L','M','R','R','M','L','L',
+                               'M','R','R','M','L','L','M','R','R','M','L','L','M','R'))
+    
+    # Define row code (due to serpentine planting). 1=middle, 2=left/right
+    dat <- transform(dat, rowcode = factor(row))
+    levels(dat$rowcode) <- c('2','2','1','2','2','1','2','2','1',
+                             '2','2','1','2','2','1','2','2','1','2','2','1','2')
+  
+    m6 <- asreml(yield ~ gen + lin(colf) + colcode +rowcode, data=dat,
+                 random= ~ colf + rowf + spl(col),
+                 rcov = ~ar1(rowf):ar1(colf))
+    plot(variogram(m6), xlim=c(0:17), ylim=c(0,11), zlim=c(0,4000),
+         main="gilmour.serpentine")
+  }
 
-  ## # RCB
-  ## m0 <- asreml(yield ~ gen, data=dat, random=~rep)
-
-  ## # Add AR1 x AR1
-  ## m1 <- asreml(yield ~ gen, data=dat, resid = ~ar1(rowf):ar1(colf))
+  # ----------------------------------------------------------------------------
   
-  ## # Add spline
-  ## m2 <- asreml(yield ~ gen + col, data=dat,
-  ##              random= ~ spl(col) + colf,
-  ##              resid = ~ar1(rowf):ar1(colf))
+  libs(asreml,lucid)
+  if( utils::packageVersion("asreml") > "4") {
+    # asreml4
+    
+    dat <- transform(dat, rowf=factor(row), colf=factor(10*(col-8)))
+    dat <- dat[order(dat$rowf, dat$colf), ] # Sort order needed by asreml
+    
+    # RCB
+    m0 <- asreml(yield ~ gen, data=dat, random=~rep)
+    
+    # Add AR1 x AR1
+    m1 <- asreml(yield ~ gen, data=dat,
+                 resid = ~ar1(rowf):ar1(colf))
   
-  ## # Figure 4 shows serpentine spraying
-  ## p2 <- predict(m2, data=dat, classify="colf")$pvals
-  ## plot(p2$predicted, type='b', xlab="column number", ylab="BLUP")
+    # Add spline
+    m2 <- asreml(yield ~ gen + col, data=dat,
+                 random= ~ spl(col) + colf,
+                 resid = ~ar1(rowf):ar1(colf))
   
-  ## # Define column code (due to serpentine spraying)
-  ## # Rhelp doesn't like double-percent modulus symbol, so compute by hand
-  ## dat <- transform(dat, colcode = factor(dat$col-floor((dat$col-1)/4)*4 -1))
+    # Figure 4 shows serpentine spraying
+    p2 <- predict(m2, data=dat, classify="colf")$pvals
+    plot(p2$predicted, type='b', xlab="column number", ylab="BLUP")
   
-  ## m3 <- asreml(yield ~ gen + lin(colf) + colcode, data=dat,
-  ##              random= ~ colf + rowf + spl(colf),
-  ##              resid = ~ar1(rowf):ar1(colf))
+    # Define column code (due to serpentine spraying)
+    # Rhelp doesn't like double-percent modulus symbol, so compute by hand
+    dat <- transform(dat, colcode = factor(dat$col-floor((dat$col-1)/4)*4 -1))
   
-  ## # Figure 6 shows serpentine row effects
-  ## p3 <- predict(m3, data=dat, classify="rowf")$pvals
-  ## plot(p3$predicted, type='l', xlab="row number", ylab="BLUP")
-  ## text(1:22, p3$predicted, c('L','L','M','R','R','M','L','L',
-  ##                            'M','R','R','M','L','L','M','R','R','M','L','L','M','R'))
+    m3 <- asreml(yield ~ gen + lin(colf) + colcode, data=dat,
+                 random= ~ colf + rowf + spl(colf),
+                 resid = ~ar1(rowf):ar1(colf))
   
-  ## # Define row code (due to serpentine planting). 1=middle, 2=left/right
-  ## dat <- transform(dat, rowcode = factor(row))
-  ## levels(dat$rowcode) <- c('2','2','1','2','2','1','2','2','1',
-  ##                          '2','2','1','2','2','1','2','2','1','2','2','1','2')
+    # Figure 6 shows serpentine row effects
+    p3 <- predict(m3, data=dat, classify="rowf")$pvals
+    plot(p3$predicted, type='l', xlab="row number", ylab="BLUP")
+    text(1:22, p3$predicted, c('L','L','M','R','R','M','L','L',
+                               'M','R','R','M','L','L','M','R','R','M','L','L','M','R'))
   
-  ## m6 <- asreml(yield ~ gen + lin(colf) + colcode +rowcode, data=dat,
-  ##              random= ~ colf + rowf + spl(col),
-  ##              resid = ~ar1(rowf):ar1(colf))
-  ## plot(varioGram(m6), xlim=c(0:17), ylim=c(0,11), zlim=c(0,4000),
-  ##      main="gilmour.serpentine")
-}
-
+    # Define row code (due to serpentine planting). 1=middle, 2=left/right
+    dat <- transform(dat, rowcode = factor(row))
+    levels(dat$rowcode) <- c('2','2','1','2','2','1','2','2','1',
+                             '2','2','1','2','2','1','2','2','1','2','2','1','2')
+  
+    m6 <- asreml(yield ~ gen + lin(colf) + colcode +rowcode, data=dat,
+                 random= ~ colf + rowf + spl(col),
+                 resid = ~ar1(rowf):ar1(colf))
+    plot(varioGram(m6), xlim=c(0:17), ylim=c(0,11), zlim=c(0,4000),
+         main="gilmour.serpentine")
+  }
+  
 }
 }
 

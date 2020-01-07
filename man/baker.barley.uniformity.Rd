@@ -45,7 +45,7 @@ data(baker.barley.uniformity)
 dat <- baker.barley.uniformity
 
 # Ten-year average
-# dat2 <- aggregate(yield ~ row*col, data=dat, FUN=mean, na.rm=TRUE)
+dat2 <- aggregate(yield ~ row*col, data=dat, FUN=mean, na.rm=TRUE)
 
 libs(desplot)
 desplot(yield~col*row|year, data=dat,

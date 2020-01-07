@@ -34,6 +34,7 @@
   Dechassa Obsi. 2008.
   Application of Spatial Modeling to the Study of Soil Fertility Pattern.
   MS Thesis, Addis Ababa University. Page 122-125.
+  http://etd.aau.edu.et/handle/123456789/3221
 }
 \references{
   None.

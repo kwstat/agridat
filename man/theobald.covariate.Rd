@@ -17,6 +17,8 @@
     \item{\code{yield}}{dry-matter silage yield for corn}
     \item{\code{chu}}{corn heat units, thousand degrees Celsius}
   }
+
+  Used with permission of Chris Theobald.
 }
 \details{
   The trials were carried out in seven districts in the maritime
@@ -25,13 +27,12 @@
   The covariate CHU (Corn Heat Units) is the accumulated average daily
   temperatures (thousands of degrees Celsius) during the growing season
   at each location.
-
-  Used with permission of Chris Theobald.
 }
 \source{
   Chris M. Theobald and Mike Talbot and Fabian Nabugoomu, 2002.
   A Bayesian Approach to Regional and Local-Area Prediction From Crop
-  Variety Trials, \emph{Journ Agric Biol Env Sciences}, 7, 403--419.
+  Variety Trials.
+  Journ Agric Biol Env Sciences, 7, 403--419.
   http://doi.org/10.1198/108571102230
 }
 

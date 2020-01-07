@@ -28,28 +28,29 @@
   treatment variances.
 
   Piepho (2009) proposed an ordinary ANOVA using transformed data.
+
+  Used with permission of Kevin McConway.
 }
 
 \source{
   Statistical Modelling Using Genstat, K. J. McConway, M. C. Jones,
   P. C. Taylor.
-
-  Used with permission of Kevin McConway.
 }
 
 \references{
   Michael Berthold, D. J. Hand.
-  \emph{Intelligent data analysis: an introduction}, 1998.
+  Intelligent data analysis: an introduction, 1998.
   Pages 75--82.
 
   Lee, C.J. and O Donnell, M. and O Neill, M. (2008).
   Statistical analysis of field trials with changing treatment
-  variance. \emph{Agronomy Journal}, 100, 484--489.
+  variance.
+  Agronomy Journal, 100, 484--489.
 
   Piepho, H.P. (2009),
   Data transformation in statistical analysis of field trials
   with changing treatment variance.
-  \emph{Agronomy Journal}, 101, 865--869.
+  Agronomy Journal, 101, 865--869.
 }
 
 \examples{

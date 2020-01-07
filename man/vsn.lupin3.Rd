@@ -21,13 +21,13 @@
 \details{
   An early-stage multi-environment trial, with 6 check lines and 300
   test lines.  The 6 check lines were replicated in each environment.
+
+  Used with permission of Arthur Gilmour, Brian Cullis, Robin Thompson.
 }
 
 \source{
   Multi-Environment Trials - Lupins.
   http://www.vsni.co.uk/software/asreml/htmlhelp/asreml/xlupin.htm
-
-  Used with permission of Arthur Gilmour, Brian Cullis, Robin Thompson.
 }
 
 \examples{
@@ -51,14 +51,14 @@
           # midpoint="midrange",
           # aspect unknown
           main="vsn.lupin3 - yield")
+  # Site 1 & 2 used same randomization
   desplot(check~ col*row|site, dat,
-          main="vsn.lupin3: check plot placement") # Site 1 & 2 used same randomization
+          main="vsn.lupin3: check plot placement") 
 
-
-  if(0){
+  libs(asreml,lucid)
+  if( utils::packageVersion("asreml") < "4") {
     # asreml3
-    libs(asreml)
-    
+     
     # Single-site analyses suggested random row term for site 3, random column terms
     # for all sites, AR1 was unnecessary for the col dimension of site 3
     dat <- transform(dat, colf=factor(col), rowf=factor(row))
@@ -67,11 +67,10 @@
                  random = ~ at(site):colf + at(site,3):rowf + test,
                  rcov = ~ at(site,c(1,2)):ar1(colf):ar1(rowf)
                  + at(site,3):id(colf):ar1(rowf))
-    m1$loglik
+    # m1$loglik
     ## [1] -314.2616
     
-    libs(lucid)
-    vc(m1)
+    # vc(m1)
     ##                      effect component std.error z.ratio constr
     ##  at(site, S1):colf!colf.var   0.6228   0.4284       1.5    pos
     ##  at(site, S2):colf!colf.var   0.159    0.1139       1.4    pos
@@ -137,6 +136,10 @@
     ## [2,] 0.156 0.092 0.078
     ## [3,] 0.133 0.078 0.122
   }
+
+  # ----------
+
+  # FIXME Add asreml4
   
 }
 }

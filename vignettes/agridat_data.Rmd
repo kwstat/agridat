@@ -100,6 +100,14 @@ http://www.wiley.com/WileyCDA/WileyTitle/productCd-1119945496.html
 ```
 
 
+### O.V.S. Heath. _Investigation by experiment_.
+https://archive.org/details/investigationbye0000heat
+```
+?  uniformity trial of raddish - agridat::heath.raddish.uniformity
+50 uniformity trial of cabbage 6x8 plots
+```
+
+
 ### Kwanchai A. Gomez & Gomez (1984). _Statistical Procedures for Agricultural Research_.
 
 Extensive collection of datasets from rice experiments.
@@ -559,33 +567,6 @@ Singular value partitioning in biplots.  Agron Journal.
 Winter wheat, 31 gen in 8 loc. This data is different from Yan's earlier papers. Unfortunately, the data given in the paper are missing two rows. 
 
 
-# Papers - Uniformity trials
-
-
-**Niels Anton Hansen**, 1914.
-Prøvedyrkning paa Forsøgsstationen ved Aarslev.
-_Tidsskrift for landbrugets planteavl_.
-http://dca.au.dk/publikationer/historiske/planteavl/ 
-Bind 21, page 553. In Danish. 
-Page 557 might be the table referred to by Eden, except there are 30 plots, not 35. Yields appear to be given as percents.
-
-See comments by Eden & Maskell found here:
-https://archive.org/stream/in.ernet.dli.2015.25895/2015.25895.Journal-Of-Agricultural-Science-Vol-xviii-1928#page/n175
-Page 165: "One of the trials, comprising 35 plots, extended over the years 1907-11 and included oats, rye, barley, roots, barley."
-Oats and rye 1907 and 1908 show marked positive correlation.
-rye and barley 1908 and 1909 no correlation of significance.
-barley and roots 1909 and 1910 no correlation.
-roots and barley 1910 and 1911 a significant correlation.
-rye and roots 1908 and 1910 satisfactory.
-
-
-**Edmund B. Lambert** (1934).
-Size and arrangement of plots for yield tests with cultivated mushrooms.
-Journal of Agricultural Research, Vol 48, 971-980.
-
-Note: Uniformity trial at three locations for mushrooms in growth houses.
-https://naldc.nal.usda.gov/naldc/download.xhtml?id=IND43968493
-
 
 # R packages on CRAN, Github
 
@@ -604,6 +585,12 @@ Five datasets used to illustrate analyses.
 ### agricolae 
 
 Has assorted data and functions for analysis of agricultural data.
+
+
+### agroBioData
+https://github.com/OnofriAndreaPG/agroBioData
+
+Datasets for agriculture and applied biology.  Referenced by this blog: https://www.statforbiology.com/
 
 
 ### aml - Adaptive Mixed LASSO
@@ -640,7 +627,7 @@ https://r-forge.r-project.org/projects/cropcc/
 Has nice herbicide dose response curves and germination data for mungbean, rice, wheat.
 
 
-### ephiphy
+### epiphy
 https://github.com/chgigot/epiphy
 
 Contains 10 historical datasets for plant disease epidemics.
@@ -730,8 +717,7 @@ http://www.genetics.org/content/197/4/1343.supplemental
 
 ### SoyNAM - Soybean nested association mapping 
 
-Dataset with phenotype data 3 yr, 9 locations, 18 environments, 60 thousand observations for height, maturity,
-lodging, moisture, protein, oil, fiber, seed size. There are 5000+ strains, 40 families.
+Dataset with phenotype data 3 yr, 9 locations, 18 environments, 60 thousand observations for height, maturity, lodging, moisture, protein, oil, fiber, seed size. There are 5000+ strains, 40 families.
 
 Data formatted for the analysis of the NAM package is available with the following command: `SoyNAM::ENV()`.
 
@@ -746,6 +732,12 @@ See also the data `ade4::irishdata`.
 
 Data: `spuRs::trees` has data for 107 trees that were cut into cross sections with the volume calculated at roughly 10-year increments.  This is a subset of the much-larger original data from Guttenberg: 
 https://archive.org/stream/wachstumundertra00gutt
+
+
+### StatForBiology
+https://www.statforbiology.com/
+
+Blog posts with example analyses.
 
 
 ### st4gi - Stat for genetic improvement
@@ -780,6 +772,13 @@ Very large GxE data here for 2014 and 2015. Hybrid & inbred phenotype data, weat
 https://usda-gem.public.iastate.edu/
 
 Data from trials at multiple locations. Yield, mst, pltht, lodging. No field plans.
+
+
+### GLTEN Global Long Term Metadal Portal
+https://glten.org/
+
+Links to long-term experiments.
+
 
 
 ### Google dataset search
@@ -837,6 +836,11 @@ Case Study in Precision Farming: http://www.innovativegis.com/basis/pfprimer/App
 http://www.era.rothamsted.ac.uk/index.php
 Data from Broadbalk and other long-term experiments.
 
+Twitter: https://twitter.com/eRA_Curator
+
+Github draft data: https://github.com/Rothamsted-Ecoinformatics/YieldbookDatasetDrafts
+
+
 
 ### Rothamsted Documents Archive
 http://www.era.rothamsted.ac.uk/eradoc/collections.php
@@ -868,9 +872,15 @@ Potato and Tomato genotype and phenotype data.
 
 
 ### Statistical Analysis of Agricultural Experiments with R
-See: rstats4ag.org (no http included here because of firewall problems).
+rstats4ag.org (no http included here because of firewall problems).
 
 Datasets for mixed models, ancova, dose response curves, competition.
+
+
+### Syngenta Crop Challenge
+https://www.ideaconnection.com/syngenta-crop-challenge/
+
+Annual Kaggle-style competition sponsored by Syngenta.
 
 
 ### Terra-Ref

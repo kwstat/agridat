@@ -28,18 +28,19 @@
   SAS codes for the analysis can be found at
   https://webpages.uidaho.edu/cals-statprog/ammi/index.html
 
-}
-\source{
-  Bahman Shafii and William J Price, 1998.
-  Analysis of Genotype-by-Environment Interaction Using the
-  Additive Main Effects and Multiplicative Interaction Model
-  and Stability Estimates, \emph{JABES}, 3, 335--345.
-  http://doi.org/10.2307/1400587
 
   Electronic version from:
   http://www.uiweb.uidaho.edu/ag/statprog/ammi/yld.data
 
   Used with permission of Bill Price.
+}
+\source{
+  Bahman Shafii and William J Price, 1998.
+  Analysis of Genotype-by-Environment Interaction Using the
+  Additive Main Effects and Multiplicative Interaction Model
+  and Stability Estimates.
+  JABES, 3, 335--345.
+  http://doi.org/10.2307/1400587
 }
 \references{
   Matthew Kramer (2018).

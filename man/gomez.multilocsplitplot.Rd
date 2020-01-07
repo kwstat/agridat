@@ -19,14 +19,15 @@
     \item{\code{gen}}{genotype, 2 levels}
     \item{\code{yield}}{yield, kg/ha}
   }
+
+  Used with permission of Kwanchai Gomez.
 }
 
 \source{
   Gomez, K.A. and Gomez, A.A.. 1984,
-  \emph{Statistical Procedures for Agricultural Research}.
-  Wiley-Interscience. Page 339.
-
-  Used with permission of Kwanchai Gomez.
+  Statistical Procedures for Agricultural Research.
+  Wiley-Interscience.
+  Page 339.
 }
 
 \examples{

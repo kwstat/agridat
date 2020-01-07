@@ -1,30 +1,43 @@
 # agridat 1.17 - Unpublished
 
+libs(asreml)
+setwd("c:/x/rpack/agridat")
+run_examples(run=TRUE) # DO run dontrun{}
+
+  libs(asreml,lucid)
+  if( utils::packageVersion("asreml") < "4") {
+    # asreml3
+    
+  libs(asreml,lucid)
+  if( utils::packageVersion("asreml") > "4") {
+    # asreml4
+
 ## New data
 
-alwan.lamb, baker.strawberry.uniformity, bryan.corn.uniformity,
-davidian.soybean, devries.pine, edwards.oats, george.wheat,
-hartman.tomato.uniformity, heath.raddish.uniformity, johnson.douglasfir,
-kayad.alfalfa, kerr.sugarcane.uniformity, laycock.tea.uniformity,
-lehmann.millet.uniformity, linder.wheat, miguez.biomass,
-obsi.potato.uniformity, paez.coffee.uniformity, pederson.lettuce.repeated,
-rothamsted.oats, shaw.oats, wyatt.multi.uniformity
+alwan.lamb, baker.strawberry.uniformity, bryan.corn.uniformity, davidian.soybean, devries.pine, edwards.oats, george.wheat, hartman.tomato.uniformity, heath.raddish.uniformity, johnson.douglasfir, kayad.alfalfa, kerr.sugarcane.uniformity, laycock.tea.uniformity, lehmann.millet.uniformity, linder.wheat, miguez.biomass, obsi.potato.uniformity, paez.coffee.uniformity, pederson.lettuce.repeated, rothamsted.oats, shaw.oats, wyatt.multi.uniformity
 
 ## Other
 
-* Re-named hutchinson.cotton.uniformity to panse.cotton.uniformity.
+* Examples using `asreml()` now work with either asreml version 3 or version 4.
+  
+Indented means adapted for asreml3/asreml4
+besag.met -- asreml4 needs work
+butron.maize ----- report
+hanks.sprinkler ----- report
+steptoe.morex.pheno --- broken wgaim
+verbyla.lupin  ----- asreml4
 
-* Added INLA example to crowder.seeds.
+* Re-named `hutchinson.cotton.uniformity` to `panse.cotton.uniformity`.
 
-* Wrapped many (most?) example sections with dontrun.
+* Added INLA example to `crowder.seeds`.
 
-* New function `libs`, which is basically the same as `pacman::p_load`.
+* Wrapped most example sections with `dontrun`.
 
-* Change `library` and `require` to `libs`.
+* New function `libs()`, which is basically the same as `pacman::p_load()`, but without the dependency on `pacman`.
+
+* Example sections now use `library(agridat)` and then `libs()` to load all other packages on the fly if needed.
 
 * Website built with `pkgdown`.
-
-* Removed vignette about Papadakis' method.
 
 
 

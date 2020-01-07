@@ -26,18 +26,18 @@
   The source data (in McCullagh) also contains a count of plants
   harvested (not included here) that sometimes is greater than the
   number of seeds planted.
-}
-
-\source{
-  Peter McCullagh, John A. Nelder.
-  \emph{Generalized Linear Models}, page 318-320.
 
   Used with permission of Jens Streibig.
 }
 
+\source{
+  Peter McCullagh, John A. Nelder.
+  Generalized Linear Models, page 318-320.
+}
+
 \references{
   Oliver Schabenberger and Francis J Pierce. 2002.
-  \emph{Contemporary Statistical Models for the Plant and Soil Sciences},
+  Contemporary Statistical Models for the Plant and Soil Sciences.
   CRC Press.  Page 370-375.
 }
 

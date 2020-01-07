@@ -22,6 +22,10 @@
   }
 }
 \details{
+  This data comes from a breeding program, but does not have the usual
+  pattern of (1) genotypes entering/leaving the program (2) check
+  genotypes that remain throughout the duration of the program.
+  
   Experiments were conducted by the Iowa State University Oat Variety
   Trial in the years 1997 to 2003.
   
@@ -29,9 +33,10 @@
   and 10 experimental lines. Each genotype appeared in a range of 3 to
   34 of the year-loc combinations.
 
-  The trials were grown in five locations in Iowa (Ames, Nashua,
-  Crawfordsville, Lewis, Sutherland). In 1998 there was no trial grown
-  at Sutherland. There were 3 blocks in each trial.
+  The trials were grown in five locations in Iowa:
+  Ames, Nashua, Crawfordsville, Lewis, Sutherland.
+  In 1998 there was no trial grown at Sutherland.
+  There were 3 blocks in each trial.
   
   Five genotypes were removed from the data because of low yields (and are not included here).
 
@@ -39,11 +44,13 @@
   table 1.
 
   Electronic data supplied by Jode Edwards.
+  
 }
 \source{
   Jode W. Edwards, Jean-Luc Jannink (2006).
   Bayesian Modeling of Heterogeneous Error and Genotype x Environment Interaction Variances.
   Crop Science, 46, 820-833.
+  http://dx.doi.org/10.2135/cropsci2005.0164
 }
 \references{
   None
@@ -51,41 +58,43 @@
 \examples{
 \dontrun{
 
-library(agridat)
+  library(agridat)
+  libs(dplyr,lattice, reshape2, stringr)
+  data(edwards.oats)
+  dat <- edwards.oats
+  dat$env <- paste0(dat$year,".",dat$loc)
+  dat$eid <- factor(dat$eid)
+  mat <- reshape2::acast(dat, env ~ gen,
+                         fun.aggregate=mean, value.var="yield", na.rm=TRUE)
+  lattice::levelplot(mat, aspect="m",
+                     main="edwards.oats",
+                     xlab="environment", ylab="genotype",
+                     scales=list(x=list(rot=90)))
 
-data(edwards.oats)
-dat <- edwards.oats
+  # Calculate BLUEs of gen/env effects
+  m1 <- lm(yield ~ gen+eid, dat)
 
-libs(reshape2)
-mat <- reshape2::acast(dat, eid ~ gen, fun.aggregate=mean, value.var="yield", na.rm=TRUE)
-lattice::levelplot(mat, xlab="environment", ylab="genotype",
-                   main="edwards.oats", aspect="m")
+  gg <- coef(m1)[2:80]
+  names(gg) <- stringr::str_replace(names(gg), "gen", "")
+  gg <- c(0,gg)
+  names(gg)[1] <- "ACStewart"
 
-# Calculate BLUEs of gen/env effects
-m1 <- lm(yield ~ gen+ eid, dat)
+  ee <- coef(m1)[81:113]
+  names(ee) <- stringr::str_replace(names(ee), "eid", "")
+  ee <- c(0,ee)
+  names(ee)[1] <- "1"
+  
+  # Subtract gen/env coefs from yield values
+  dat2 <- dat
+  dat2$gencoef <- gg[match(dat2$gen, names(gg))]
+  dat2$envcoef <- ee[match(dat2$eid, names(ee))]
+  dat2 <- dplyr::mutate(dat2, y = yield - gencoef - envcoef)
 
-gg <- coef(m1)[2:80]
-names(gg) <- str_replace(names(gg), "gen", "")
-gg <- c(0,gg)
-names(gg)[1] <- "ACStewart"
-
-ee <- coef(m1)[81:113]
-names(ee) <- str_replace(names(ee), "eid", "")
-ee <- c(0,ee)
-names(ee)[1] <- "1"
-
-# Subtract gen/env coefs from yield values
-dat2 <- dat
-dat2$gencoef <- lookup(dat2$gen, names(gg), gg)
-dat2$envcoef <- lookup(dat2$eid, names(ee), ee)
-dat2 <- mutate(dat2, y = yield - gencoef - envcoef)
-
-# Calculate variance for each gen*env. Shape of the graph is vaguely
-# similar to Fig 2 of Edwards et al (2006), who used a Bayesian model
-libs(dplyr)
-dat2 <- group_by(dat2, gen, eid)
-dat2sum <- summarize(dat2, stddev = sd(y))
-bwplot(stddev ~ eid, dat2sum)
+  # Calculate variance for each gen*env. Shape of the graph is vaguely
+  # similar to Fig 2 of Edwards et al (2006), who used a Bayesian model
+  dat2 <- group_by(dat2, gen, eid)
+  dat2sum <- summarize(dat2, stddev = sd(y))
+  bwplot(stddev ~ eid, dat2sum)
 
 }
 }

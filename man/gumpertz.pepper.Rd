@@ -31,16 +31,16 @@
   Gumpertz et al. model the presence of disease  using soil moisture and
   leaf assay as covariates, and using disease presence of neighboring
   plots as covariates in an autologistic model.
+
+  Used with permission of Marcia Gumpertz.  Research funded by USDA.
 }
 
 \source{
   Marcia L. Gumpertz; Jonathan M. Graham; Jean B. Ristaino (1997).
   Autologistic Model of Spatial Pattern of Phytophthora Epidemic
   in Bell Pepper: Effects of Soil Variables on Disease Presence.
-  \emph{Journal of Agricultural, Biological, and Environmental
-    Statistics}, Vol. 2, No. 2., pp. 131-156.
-
-  Used with permission of Marcia Gumpertz.  Research funded by USDA.
+  Journal of Agricultural, Biological, and Environmental
+    Statistics, Vol. 2, No. 2., pp. 131-156.
 }
 
 \examples{

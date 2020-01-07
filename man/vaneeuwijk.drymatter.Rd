@@ -28,31 +28,31 @@
   van Eeuwijk, Keizer, and Bakker (1995b) and
   Kroonenberg, Basford, and Ebskamp (1995).
   
+  
+  Used with permission of Fred van Eeuwijk.
 }
 \source{  
   van Eeuwijk, Fred A. and Pieter M. Kroonenberg (1998).
   Multiplicative Models for Interaction in Three-Way ANOVA, with Applications to Plant Breeding
-  \emph{Biometrics}, 54, 1315-1333.
+  Biometrics, 54, 1315-1333.
   http://doi.org/10.2307/2533660
-  
-  Used with permission of Fred van Eeuwijk.
 }
 
 \references{
   
   Kroonenberg, P.M., Basford, K.E. & Ebskamp, A.G.M. (1995).
   Three-way cluster and component analysis of maize variety trials.
-  \emph{Euphytica}, 84(1):31-42.
+  Euphytica, 84(1):31-42.
   http://doi.org/10.1007/BF01677554
 
   van Eeuwijk, F.A., Keizer, L.C.P. & Bakker, J.J. Van Eeuwijk. (1995b).
   Linear and bilinear models for the analysis of multi-environment trials: 
   II. An application to data from the Dutch Maize Variety Trials
-  \emph{Euphytica}, 84(1):9-22.
+  Euphytica, 84(1):9-22.
   http://doi.org/10.1007/BF01677552
 
   Hardeo Sahai, Mario M. Ojeda.
-  \emph{Analysis of Variance for Random Models}, Volume 1. Page 261.
+  Analysis of Variance for Random Models, Volume 1. Page 261.
   
 }
 \examples{

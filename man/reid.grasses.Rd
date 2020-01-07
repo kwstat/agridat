@@ -40,9 +40,9 @@
 \examples{
 \dontrun{
   
-library(agridat)
-data(reid.grasses)
-dat <- reid.grasses
+  library(agridat)
+  data(reid.grasses)
+  dat <- reid.grasses
 
   libs(latticeExtra)
   foo <- xyplot(drymatter + protein ~ nitro|year, dat, group=gen,
@@ -52,38 +52,37 @@ dat <- reid.grasses
                 scales=list(y=list(relation="free")))
   combineLimits(foo)
 
-
-  
-  libs(nlme)
-  dat2 <- dat
-  dat2$indiv <- paste(dat$year, dat$gen) # individual year+genotype curves
-  
-  # use all data to get initial values
-  inits <- getInitial(drymatter ~ SSfpl(nitro, A, B, xmid, scal), data = dat2)
-  inits
-  ##         A          B       xmid       scal 
-  ## -4.167902  12.139796  68.764796 128.313106 
-  xvals <- 0:800
-  y1 <- with(as.list(inits), SSfpl(xvals, A, B, xmid, scal))
-  plot(drymatter ~ nitro, dat2)
-  lines(xvals,y1)
-  
-  # must have groupedData object to use augPred
-  dat2 <- groupedData(drymatter ~ nitro|indiv, data=dat2)
-  plot(dat2)
-  
-  # without 'random', all effects are included in 'random'
-  m1 <- nlme(drymatter ~ SSfpl(nitro, A, B, xmid,scale),
-             data= dat2,
-             fixed= A + B + xmid + scale ~ 1,
-             # random = B ~ 1|indiv, # to make only B random
-             random = A + B + xmid + scale ~ 1|indiv,
-             start=inits)
-  fixef(m1)
-  summary(m1)
-  plot(augPred(m1, level=0:1),
-       main="reid.grasses - observed/predicted data") # only works with groupedData object
-  
+  # devtools::run_examples does NOT like groupedData
+  if (0){
+    libs(nlme)
+    dat2 <- dat
+    dat2$indiv <- paste(dat$year, dat$gen) # individual year+genotype curves
+    
+    # use all data to get initial values
+    inits <- getInitial(drymatter ~ SSfpl(nitro, A, B, xmid, scal), data = dat2)
+    inits
+    ##         A          B       xmid       scal 
+    ## -4.167902  12.139796  68.764796 128.313106 
+    xvals <- 0:800
+    y1 <- with(as.list(inits), SSfpl(xvals, A, B, xmid, scal))
+    plot(drymatter ~ nitro, dat2)
+    lines(xvals,y1)
+    
+    # must have groupedData object to use augPred
+    dat2 <- groupedData(drymatter ~ nitro|indiv, data=dat2)
+    plot(dat2)
+    
+    # without 'random', all effects are included in 'random'
+    m1 <- nlme(drymatter ~ SSfpl(nitro, A, B, xmid,scale),
+               data= dat2,
+               fixed= A + B + xmid + scale ~ 1,
+               random = A + B + xmid + scale ~ 1|indiv,
+               start=inits)
+    fixef(m1)
+    summary(m1)
+    plot(augPred(m1, level=0:1),
+         main="reid.grasses - observed/predicted data") # only works with groupedData object
+  } # if(0)  
 }
 }
 \keyword{datasets}

@@ -23,13 +23,13 @@
   Rouge, Bossier City, and St. Joseph) in Louisiana during 1985 to 1987.
   Each loc was planted as RCB design with 4 reps.  Mean yields are given
   in this data.
+
+  Used with permission of Dan Gorman.
 }
 \source{
   Kang, MS and Gorman, DP. (1989).
   Genotype x environment interaction in maize.
-  \emph{Agronomy Journal}, 81, 662-664.  Table 2.
-
-  Used with permission of Dan Gorman.
+  Agronomy Journal, 81, 662-664.  Table 2.
 }
 
 \examples{

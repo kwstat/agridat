@@ -25,14 +25,14 @@
   Within each block, cultivars were whole plots.  Withing whole plots,
   spacing was applied in strips vertically, and population was applied
   in strips horizontally.
+
+  Used with permission of David Holshouser at Virginia Polytechnic.
 }
 
 \source{
   Schabenberger, Oliver and Francis J. Pierce. 2002.
-  \emph{Contemporary Statistical Models for the Plant and Soil
-    Sciences}. CRC Press, Boca Raton, FL.  Page 493.
-
-  Used with permission of David Holshouser at Virginia Polytechnic.
+  Contemporary Statistical Models for the Plant and Soil Sciences
+  CRC Press, Boca Raton, FL.  Page 493.
 }
 
 \examples{

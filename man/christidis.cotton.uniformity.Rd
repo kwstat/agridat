@@ -33,7 +33,7 @@
 
 }
 \source{
-  Christidis, B. G., 1939.
+  Christidis, B. G. (1939).
   Variability of Plots of Various Shapes as Affected by Plot Orientation.
   Empire Journal of Experimental Agriculture 7: 330-342. Table 1.
 }

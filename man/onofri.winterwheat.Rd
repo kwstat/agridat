@@ -20,17 +20,17 @@
 }
 \details{
   Yield of 8 durum winter wheat varieties across 7 years with 3 reps.
+
+  Downloaded electronic version from here Nov 2015:
+  http://www.casaonofri.it/Biometry/index.html
+
+  Used with permission of Andrea Onofri.
 }
 
 \source{
   Andrea Onofri, Egidio Ciriciofolo (2007).
   Using R to Perform the AMMI Analysis on Agriculture Variety Trials.
   R News, Vol. 7, No. 1, pp. 14-19.
-  
-  Downloaded electronic version from here Nov 2015:
-  http://www.casaonofri.it/Biometry/index.html
-
-  Used with permission of Andrea Onofri.
 }
 
 \references{

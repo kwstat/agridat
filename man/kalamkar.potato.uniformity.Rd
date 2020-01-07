@@ -30,7 +30,7 @@
 \source{
   Kalamkar, R.J. (1932).
   Experimental Error and the Field-Plot Technique with Potatoes.
-  \emph{The Journal of Agricultural Science}, 22, 373-385.
+  The Journal of Agricultural Science, 22, 373-385.
   http://doi.org/10.1017/S0021859600053697
 }
 

@@ -76,18 +76,17 @@ data("vargas.txe.yield")
     n \tab 100 kg/ha nitrogen \cr
     N \tab 200 kg/ha nitrogen \cr
   }
-}
-
-\source{
-
-  Vargas, Mateo and Crossa, Jose and van Eeuwijk, Fred and Sayre,
-  Kenneth D. and Reynolds, Matthew P. (2001).
-  Interpreting Treatment x Environment Interaction in Agronomy Trials.
-  \emph{Agron. J.}, 93, 949-960.  Table A1, A3.
-  https://doi.org/10.2134/agronj2001.934949x
 
   Used with permission of Jose Crossa.
 
+}
+
+\source{
+  Vargas, Mateo and Crossa, Jose and van Eeuwijk, Fred and Sayre,
+  Kenneth D. and Reynolds, Matthew P. (2001).
+  Interpreting Treatment x Environment Interaction in Agronomy Trials.
+  Agron. J., 93, 949-960.  Table A1, A3.
+  https://doi.org/10.2134/agronj2001.934949x
 }
 
 \examples{

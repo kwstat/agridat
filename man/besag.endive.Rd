@@ -43,88 +43,86 @@
 }
 \examples{
 \dontrun{
+  
+  library(agridat)
+  data(besag.endive)
+  dat <- besag.endive
 
-library(agridat)
-data(besag.endive)
-dat <- besag.endive
-
-# Incidence map.  Figure 2 of Friel and Pettitt
-libs(desplot)
-grays <- colorRampPalette(c("#d9d9d9","#252525"))
-desplot(disease~col*row, dat,
-        col.regions=grays(2),
-        aspect = 0.5, # aspect unknown
-        main="besag.endive - Disease incidence")
-
-
-if(0){
+  # Incidence map.  Figure 2 of Friel and Pettitt
+  libs(desplot)
+  grays <- colorRampPalette(c("#d9d9d9","#252525"))
+  desplot(disease~col*row, dat,
+          col.regions=grays(2),
+          aspect = 0.5, # aspect unknown
+          main="besag.endive - Disease incidence")
+  
+  
   # Besag (2000) "An Introduction to Markov Chain Monte Carlo" suggested
   # that the autologistic model is not a very good fit for this data.
   # We try it anyway.  No idea if this is correct or how to interpret...
-
+  
   libs(ngspatial)
   A = adjacency.matrix(179,14)
   X = cbind(x=dat$col, y=dat$row)
   Z = as.numeric(dat$disease=="Y")
   m1 <- autologistic(Z ~ 0+X, A=A, control=list(confint="none"))
-
+  
   summary(m1)
   ## Coefficients:
   ##      Estimate Lower Upper MCSE
   ## Xx  -0.007824    NA    NA   NA
   ## Xy  -0.144800    NA    NA   NA
   ## eta  0.806200    NA    NA   NA
-}
 
-# ----------------------------------------------------------------------------
 
-if(0){
-  # asreml3
   libs(asreml)
-  
-  # Now try an AR1xAR1 model.
-  dat2 <- transform(dat, xf=factor(col), yf=factor(row),
-                    pres=as.numeric(disease=="Y"))
+  if( utils::packageVersion("asreml") < "4" ) {
+    # asreml3
 
-  m2 <- asreml(pres ~ 1, data=dat2, rcov= ~ar1(xf):ar1(yf))
-  # The 0/1 response is arbitrary, but there is some suggestion
-  # of auto-correlation in the x (.17) and y (.10) directions,
-  # suggesting the pattern is more 'patchy' than just random noise,
-  # but is it meaningful?
-  
-  libs(lucid)
-  vc(m2)
-  ##     effect component std.error z.ratio constr
-  ## R!variance   0.1301   0.003798    34      pos
-  ##   R!xf.cor   0.1699   0.01942      8.7  uncon
-  ##   R!yf.cor   0.09842  0.02038      4.8  uncon
+    # Now try an AR1xAR1 model.
+    dat2 <- transform(dat, xf=factor(col), yf=factor(row),
+                      pres=as.numeric(disease=="Y"))
 
+    m2 <- asreml(pres ~ 1, data=dat2, rcov= ~ar1(xf):ar1(yf))
+    # The 0/1 response is arbitrary, but there is some suggestion
+    # of auto-correlation in the x (.17) and y (.10) directions,
+    # suggesting the pattern is more 'patchy' than just random noise,
+    # but is it meaningful?
+  
+    libs(lucid)
+    lucid::vc(m2)
+    ##     effect component std.error z.ratio constr
+    ## R!variance   0.1301   0.003798    34      pos
+    ##   R!xf.cor   0.1699   0.01942      8.7  uncon
+    ##   R!yf.cor   0.09842  0.02038      4.8  uncon
+
+  }
+
+  libs(asreml)
+  if( utils::packageVersion("asreml") >  "4" ) {
+    # asreml4
+    
+    # Now try an AR1xAR1 model.
+    dat2 <- transform(dat, xf=factor(col), yf=factor(row),
+                      pres=as.numeric(disease=="Y"))
+    
+    m2 <- asreml(pres ~ 1, data=dat2,
+                 resid = ~ar1(xf):ar1(yf))
+    # The 0/1 response is arbitrary, but there is some suggestion
+    # of auto-correlation in the x (.17) and y (.10) directions,
+    # suggesting the pattern is more 'patchy' than just random noise,
+    # but is it meaningful?
+    
+    libs(lucid)
+    vc(m2)
+    ##       effect component std.error z.ratio bound %ch
+    ##     xf:yf(R)   0.1301   0.003798    34       P   0
+    ## xf:yf!xf!cor   0.1699   0.01942      8.7     U   0
+    ## xf:yf!yf!cor   0.09842  0.02038      4.8     U   0
+    
+  }
 }
 
-
-if(0){
-  ## libs(asreml4)
-  
-  ## # Now try an AR1xAR1 model.
-  ## dat2 <- transform(dat, xf=factor(col), yf=factor(row),
-  ##                   pres=as.numeric(disease=="Y"))
-
-  ## m2 <- asreml(pres ~ 1, data=dat2,
-  ##              resid = ~ar1(xf):ar1(yf))
-  ## # The 0/1 response is arbitrary, but there is some suggestion
-  ## # of auto-correlation in the x (.17) and y (.10) directions,
-  ## # suggesting the pattern is more 'patchy' than just random noise,
-  ## # but is it meaningful?
-  
-  ## libs(lucid)
-  ## vc(m2)
-  ## ##       effect component std.error z.ratio bound %ch
-  ## ##     xf:yf(R)   0.1301   0.003798    34       P   0
-  ## ## xf:yf!xf!cor   0.1699   0.01942      8.7     U   0
-  ## ## xf:yf!yf!cor   0.09842  0.02038      4.8     U   0
-
-}
-}
 }
 
 \keyword{datasets}

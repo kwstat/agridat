@@ -22,25 +22,26 @@
     \item{\code{env}}{environment}
     \item{\code{yield}}{yield in metric tons per hectare}
   }
+
+  Used with permission of Weikai Yan.
 }
 
 \source{
-  Weikai Yan and M.S. Kang.
-  \emph{GGE biplot analysis: A graphical tool for breeders, geneticists, and
-  agronomists}, 2002. CRC. Page 59.
+  Weikai Yan and M.S. Kang (2002).
+  GGE biplot analysis: A graphical tool for breeders, geneticists, and
+  agronomists.
+  CRC. Page 59.
 
   Weikai Yan and Nicholas A. Tinker. 2006.
   Biplot analysis of multi-environment trial data: Principles and
   applications. Table 1.
-
-  Used with permission of Weikai Yan.
 }
 
 \references{
 
   Weikai Yan and Manjit S. Kang and Baoluo Ma and Sheila Woods, 2007,
   GGE Biplot vs. AMMI Analysis of Genotype-by-Environment Data,
-  \emph{Crop Science}, 2007, 47, 641--653.
+  Crop Science, 2007, 47, 641--653.
   http://doi.org/10.2135/cropsci2006.06.0374
 
 }

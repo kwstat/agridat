@@ -19,21 +19,20 @@
 }
 \details{
   Five nitrogen fertilizer treatments were tested in 2 seasons using 3 reps.
-}
-\source{
-  Gomez, K.A. and Gomez, A.A.. 1984,
-  \emph{Statistical Procedures for Agricultural Research}.
-  Wiley-Interscience. Page 318.
 
   Used with permission of Kwanchai Gomez.
 }
+\source{
+  Gomez, K.A. and Gomez, A.A.. 1984,
+  Statistical Procedures for Agricultural Research.
+  Wiley-Interscience.
+  Page 318.
+}
 \references{
-  
   Rong-Cai Yang, Patricia Juskiw. (2011).
   Analysis of covariance in agronomy and crop research.
-  \emph{Canadian Journal of Plant Science}, 91:621-641.
+  Canadian Journal of Plant Science, 91:621-641.
   http://doi.org/10.4141/cjps2010-032
-  
 }
 
 \examples{

@@ -33,7 +33,7 @@
 \source{
   Williams, ER and Luckett, DJ. 1988.
   The use of uniformity data in the design and analysis of cotton and barley variety trials.
-  \emph{Australian Journal of Agricultural Research}, 39, 339-350.
+  Australian Journal of Agricultural Research, 39, 339-350.
   http://doi.org/10.1071/AR9880339
 }
 \references{
@@ -41,7 +41,7 @@
   H. C. Eilersd (2018).
   Correcting for spatial heterogeneity in plant breeding experiments
   with P-splines.
-  \emph{Spatial Statistics}, 23, 52-71.
+  Spatial Statistics, 23, 52-71.
   https://doi.org/10.1016/j.spasta.2017.10.003
 }
 \examples{

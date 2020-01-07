@@ -44,20 +44,19 @@
   Bonat & Zeviani used this data to fit multivariate correlated
   generalized linear model.
 
-}
-\source{
-
-  Silva, Anderson Miguel da; Degrande, Paulo Eduardo; Suekane, Renato;
-  Fernandes, Marcos Gino; & Zeviani, Walmes Marques. (2012).
-  Impacto de diferentes niveis de desfolha artificial nos estadios fenologicos do algodoeiro.
-  \emph{Revista de Ciencias Agrarias}, 35(1), 163-172.
-  http://www.scielo.mec.pt/scielo.php?script=sci_arttext&pid=S0871-018X2012000100016&lng=pt&tlng=pt.
 
   Used with permission of Walmes Zeviani.
 
   Electronic version from:
   http://www.leg.ufpr.br/~walmes/data/desfolha_algodao.txt
 
+}
+\source{
+  Silva, Anderson Miguel da; Degrande, Paulo Eduardo; Suekane, Renato;
+  Fernandes, Marcos Gino; & Zeviani, Walmes Marques. (2012).
+  Impacto de diferentes niveis de desfolha artificial nos estadios fenologicos do algodoeiro.
+  Revista de Ciencias Agrarias, 35(1), 163-172.
+  http://www.scielo.mec.pt/scielo.php?script=sci_arttext&pid=S0871-018X2012000100016&lng=pt&tlng=pt.
 }
 \references{
 

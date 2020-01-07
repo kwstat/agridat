@@ -45,125 +45,130 @@
 \examples{
 \dontrun{
 
-library(agridat)
-data(john.alpha)
-dat <- john.alpha
-
-# RCB (no incomplete block)
-m0 <- lm(yield ~ 0 + gen + rep, data=dat)
-
-# Block fixed (intra-block analysis) (bottom of table 7.4 in John)
-m1 <- lm(yield ~ 0 + gen + rep + rep:block, dat)
-anova(m1)
-
-# Block random (combined inter-intra block analysis)
-libs(lme4, lucid)
-m2 <- lmer(yield ~ 0 + gen + rep + (1|rep:block), dat)
-
-anova(m2)
-## Analysis of Variance Table
-##     Df Sum Sq Mean Sq  F value
-## gen 24 380.43 15.8513 185.9942
-## rep  2   1.57  0.7851   9.2123
-vc(m2)
-##        grp        var1 var2    vcov  sdcor
-##  rep:block (Intercept) <NA> 0.06194 0.2489
-##   Residual        <NA> <NA> 0.08523 0.2919
-
-
-# Variety means.  John and Williams table 7.5.  Slight, constant
-# difference for each method as compared to John and Williams.
-means <- data.frame(rcb=coef(m0)[1:24],
-                    ib=coef(m1)[1:24],
-                    intra=fixef(m2)[1:24])
-head(means)
-##             rcb       ib    intra
-## genG01 5.201233 5.268742 5.146433
-## genG02 4.552933 4.665389 4.517265
-## genG03 3.381800 3.803790 3.537934
-## genG04 4.439400 4.728175 4.528828
-## genG05 5.103100 5.225708 5.075944
-## genG06 4.749067 4.618234 4.575394
-
-libs(lattice)
-splom(means, main="john.alpha - means for RCB, IB, Intra-block")
-
-
-# ----------------------------------------------------------------------------
-
-# asreml3
-# Heritability calculation of Piepho & Mohring, Example 1
-libs(asreml)
-m3 <- asreml(yield ~ 1 + rep, data=dat, random=~ gen + rep:block)
-sg2 <- summary(m3)$varcomp['gen!gen.var','component'] # .142902
-
-# Average variance of a difference of two adjusted means (BLUP)
-
-p3 <- predict(m3, data=dat, classify="gen", sed=TRUE)
-# Matrix of pair-wise SED values, squared
-vdiff <- p3$predictions$sed^2
-# Average variance of two DIFFERENT means (using lower triangular of vdiff)
-vblup <- mean(vdiff[lower.tri(vdiff)]) # .05455038
-
-# Note that without sed=TRUE, asreml reports square root of the average variance
-# of a difference between the variety means, so the following gives the same value
-# predict(m3, data=dat, classify="gen")$pred$avsed ^ 2 # .05455038
-
-# Average variance of a difference of two adjusted means (BLUE)
-m4 <- asreml(yield ~ 1 + gen + rep, data=dat, random = ~ rep:block)
-p4 <- predict(m4, data=dat, classify="gen", sed=TRUE)
-vdiff <- p4$predictions$sed^2
-vblue <- mean(vdiff[lower.tri(vdiff)]) # .07010875
-# Again, could use predict(m4, data=dat, classify="gen")$pred$avsed ^ 2
-
-# H^2 Ad-hoc measure of heritability
-sg2 / (sg2 + vblue/2) # .803
-
-# H^2c Similar measure proposed by Cullis.
-1-(vblup / 2 / sg2) # .809
-
-# ----------------------------------------------------------------------------
-
-if(0){
-  ## # Heritability calculation of Piepho & Mohring, Example 1
-  ## libs(asreml4)
-  ## m3 <- asreml(yield ~ 1 + rep, data=dat, random=~ gen + rep:block)
-  ## sg2 <- summary(m3)$varcomp['gen','component'] # .142902
-
-  ## # Average variance of a difference of two adjusted means (BLUP)
+  library(agridat)
+  data(john.alpha)
+  dat <- john.alpha
   
-  ## p3 <- predict(m3, data=dat, classify="gen", sed=TRUE)
-  ## # Matrix of pair-wise SED values, squared
-  ## vdiff <- p3$sed^2
-  ## # Average variance of two DIFFERENT means (using lower triangular of vdiff)
-  ## vblup <- mean(vdiff[lower.tri(vdiff)]) # .05455038
-  
-  ## # Note that without sed=TRUE, asreml reports square root of the average variance
-  ## # of a difference between the variety means, so the following gives the same value
-  ## # predict(m3, data=dat, classify="gen")$pred$avsed ^ 2 # .05455038
+  # RCB (no incomplete block)
+  m0 <- lm(yield ~ 0 + gen + rep, data=dat)
 
-  ## # Average variance of a difference of two adjusted means (BLUE)
-  ## m4 <- asreml(yield ~ 1 + gen + rep, data=dat, random = ~ rep:block)
-  ## p4 <- predict(m4, data=dat, classify="gen", sed=TRUE)
-  ## vdiff <- p4$sed^2
-  ## vblue <- mean(vdiff[lower.tri(vdiff)]) # .07010875
-  ## # Again, could use predict(m4, data=dat, classify="gen")$pred$avsed ^ 2
-  
-  ## # H^2 Ad-hoc measure of heritability
-  ## sg2 / (sg2 + vblue/2) # .803
-  
-  ## # H^2c Similar measure proposed by Cullis.
-  ## 1-(vblup / 2 / sg2) # .809
-}
+  # Block fixed (intra-block analysis) (bottom of table 7.4 in John)
+  m1 <- lm(yield ~ 0 + gen + rep + rep:block, dat)
+  anova(m1)
 
-# ----------------------------------------------------------------------------
+  # Block random (combined inter-intra block analysis)
+  libs(lme4, lucid)
+  m2 <- lmer(yield ~ 0 + gen + rep + (1|rep:block), dat)
 
-if(0){
+  anova(m2)
+  ## Analysis of Variance Table
+  ##     Df Sum Sq Mean Sq  F value
+  ## gen 24 380.43 15.8513 185.9942
+  ## rep  2   1.57  0.7851   9.2123
+  vc(m2)
+  ##        grp        var1 var2    vcov  sdcor
+  ##  rep:block (Intercept) <NA> 0.06194 0.2489
+  ##   Residual        <NA> <NA> 0.08523 0.2919
+
+
+  # Variety means.  John and Williams table 7.5.  Slight, constant
+  # difference for each method as compared to John and Williams.
+  means <- data.frame(rcb=coef(m0)[1:24],
+                      ib=coef(m1)[1:24],
+                      intra=fixef(m2)[1:24])
+  head(means)
+  ##             rcb       ib    intra
+  ## genG01 5.201233 5.268742 5.146433
+  ## genG02 4.552933 4.665389 4.517265
+  ## genG03 3.381800 3.803790 3.537934
+  ## genG04 4.439400 4.728175 4.528828
+  ## genG05 5.103100 5.225708 5.075944
+  ## genG06 4.749067 4.618234 4.575394
+  
+  libs(lattice)
+  splom(means, main="john.alpha - means for RCB, IB, Intra-block")
+  
+
+  # ----------
+
+  libs(asreml,lucid)
+  if( utils::packageVersion("asreml") < "4") {
+    # asreml3
+
+    # Heritability calculation of Piepho & Mohring, Example 1
+    m3 <- asreml(yield ~ 1 + rep, data=dat, random=~ gen + rep:block)
+    sg2 <- summary(m3)$varcomp['gen!gen.var','component'] # .142902
+
+    # Average variance of a difference of two adjusted means (BLUP)
+
+    p3 <- predict(m3, data=dat, classify="gen", sed=TRUE)
+    # Matrix of pair-wise SED values, squared
+    vdiff <- p3$predictions$sed^2
+    # Average variance of two DIFFERENT means (using lower triangular of vdiff)
+    vblup <- mean(vdiff[lower.tri(vdiff)]) # .05455038
+
+    # Note that without sed=TRUE, asreml reports square root of the average variance
+    # of a difference between the variety means, so the following gives the same value
+    # predict(m3, data=dat, classify="gen")$pred$avsed ^ 2 # .05455038
+
+    # Average variance of a difference of two adjusted means (BLUE)
+    m4 <- asreml(yield ~ 1 + gen + rep, data=dat, random = ~ rep:block)
+    p4 <- predict(m4, data=dat, classify="gen", sed=TRUE)
+    vdiff <- p4$predictions$sed^2
+    vblue <- mean(vdiff[lower.tri(vdiff)]) # .07010875
+    # Again, could use predict(m4, data=dat, classify="gen")$pred$avsed ^ 2
+
+    # H^2 Ad-hoc measure of heritability
+    sg2 / (sg2 + vblue/2) # .803
+
+    # H^2c Similar measure proposed by Cullis.
+    1-(vblup / 2 / sg2) # .809
+
+  }
+
+  # ----------
+
+  libs(asreml,lucid)
+  if( utils::packageVersion("asreml") > "4") {
+    # asreml4
+
+    # Heritability calculation of Piepho & Mohring, Example 1
+
+    m3 <- asreml(yield ~ 1 + rep, data=dat, random=~ gen + rep:block)
+    sg2 <- summary(m3)$varcomp['gen','component'] # .142902
+
+    # Average variance of a difference of two adjusted means (BLUP)
+    
+    p3 <- predict(m3, data=dat, classify="gen", sed=TRUE)
+    # Matrix of pair-wise SED values, squared
+    vdiff <- p3$sed^2
+    # Average variance of two DIFFERENT means (using lower triangular of vdiff)
+    vblup <- mean(vdiff[lower.tri(vdiff)]) # .05455038
+  
+    # Note that without sed=TRUE, asreml reports square root of the average variance
+    # of a difference between the variety means, so the following gives the same value
+    # predict(m3, data=dat, classify="gen")$avsed ^ 2 # .05455038
+
+    # Average variance of a difference of two adjusted means (BLUE)
+    m4 <- asreml(yield ~ 1 + gen + rep, data=dat, random = ~ rep:block)
+    p4 <- predict(m4, data=dat, classify="gen", sed=TRUE)
+    vdiff <- p4$sed^2
+    vblue <- mean(vdiff[lower.tri(vdiff)]) # .07010875
+    # Again, could use predict(m4, data=dat, classify="gen")$avsed ^ 2
+  
+    # H^2 Ad-hoc measure of heritability
+    sg2 / (sg2 + vblue/2) # .803
+  
+    # H^2c Similar measure proposed by Cullis.
+    1-(vblup / 2 / sg2) # .809
+  }
+
+  # ----------
 
   # Illustrate how to do the same calculations with lme4
   # http://stackoverflow.com/questions/38697477
   
- libs(lme4)
+  libs(lme4)
   
   cov2sed <- function(x){
     # Convert var-cov matrix to SED matrix
@@ -175,7 +180,7 @@ if(0){
     diag(sed) <- 0
     return(sed)
   }
-
+  
   # Same as asreml model m4. Note 'gen' must be first term
   m5blue <- lmer(yield ~ 0 + gen + rep + (1|rep:block), dat)
   
@@ -190,13 +195,16 @@ if(0){
 
   
   # vblue Average variance of difference between genotypes
-  vblue <- mean(sed5blue[upper.tri(sed5blue)]^2) # .07010875 matches 'vblue' from asreml
-
+  vblue <- mean(sed5blue[upper.tri(sed5blue)]^2)
+  vblue # .07010875 matches 'vblue' from asreml
+  
   # Now blups
   m5blup <- lmer(yield ~ 0 + (1|gen) + rep + (1|rep:block), dat)
-  re5 <- ranef(m5blup,condVar=TRUE)
+  # Need lme4::ranef in case ordinal is loaded
+  re5 <- lme4::ranef(m5blup,condVar=TRUE)
   vv1 <- attr(re5$gen,"postVar")  
   vblup <- 2*mean(vv1) # .0577 not exactly same as 'vblup' above
+  vblup
   
   # H^2 Ad-hoc measure of heritability
   sg2 <- c(lme4::VarCorr(m5blup)[["gen"]])  # 0.142902
@@ -204,7 +212,6 @@ if(0){
 
   # H^2c Similar measure proposed by Cullis.
   1-(vblup / 2 / sg2) # .809 from asreml, .800 from lme4
-}
 
 }
 }

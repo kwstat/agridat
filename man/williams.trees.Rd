@@ -23,6 +23,8 @@
   spacing 2m x 2m.  Measurements collected at 24 months.  The \code{gen}
   column in the data is actually \emph{seedlot}, as some tree species
   have multiple seed lots.  The trees are mostly acacia and eucalyptus.
+
+  Used with permission of Emlyn Williams.
 }
 
 \source{
@@ -32,13 +34,11 @@
     Tropics: Growing Australian Multipurpose Trees and Shrubs in
     Developing Countries}. Pages 145--152.
   http://aciar.gov.au/publication/MN010
-
-  Used with permission of Emlyn Williams.
 }
 
 \references{
   E. R. Williams and A. C. Matheson and C. E Harwood,
-  \emph{Experimental Design and Analysis for Tree Improvement},
+  Experimental Design and Analysis for Tree Improvement.
   CSIRO Publishing, 2002.
 }
 

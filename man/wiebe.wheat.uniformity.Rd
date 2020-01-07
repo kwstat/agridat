@@ -34,8 +34,10 @@
 }
 
 \source{
-  Wiebe, G.A. 1935. Variation and Correlation in Grain Yield among 1,500 Wheat
-  Nursery Plots, \emph{Journal of Agricultural Research}, 50, 331-357.
+  Wiebe, G.A. 1935.
+  Variation and Correlation in Grain Yield among 1,500 Wheat
+  Nursery Plots.
+  Journal of Agricultural Research, 50, 331-357.
   http://naldc.nal.usda.gov/download/IND43968632/PDF
 }
 

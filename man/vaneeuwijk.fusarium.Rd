@@ -30,14 +30,14 @@
   
   The data is a subset of the data analyzed by VanEeuwijk et al. 1995.
   
+  Used with permission of Fred van Eeuwijk.
+  
 }
 \source{
   van Eeuwijk, Fred A. and Pieter M. Kroonenberg (1998).
   Multiplicative Models for Interaction in Three-Way ANOVA, with Applications to Plant Breeding
-  \emph{Biometrics}, 54, 1315-1333.
+  Biometrics, 54, 1315-1333.
   http://doi.org/10.2307/2533660
-  
-  Used with permission of Fred van Eeuwijk.
 }
 
 \references{
@@ -48,7 +48,7 @@
   by inoculation with European strains of Fusarium culmorum,
   F. graminearum and F. nivale using a multiplicative model for
   interaction.
-  \emph{Theor Appl Genet}. 90(2), 221-8. 
+  Theor Appl Genet. 90(2), 221-8. 
   http://doi.org/10.1007/BF00222205
 }
 

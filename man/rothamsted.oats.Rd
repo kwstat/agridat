@@ -46,45 +46,53 @@
 \examples{
 \dontrun{
   
-library(agridat)
-data(rothamsted.oats)
-dat <- rothamsted.oats
-
-libs(lattice)
-xyplot(grain~straw, dat, main="rothamsted.oats") # traits are correlated
-
-# compare to summary at bottom of page 146, first 3 columns
-libs(dplyr)
-dat = mutate(dat,
-             nfert=trt, # number of fertilizer applications
-             nfert=recode(nfert, oa="None", ob="None", oc="None", od="None",
-                          "1se"="Single", "1sl"="Single",
-                          "1me"="Single", "1ml"="Single",
-                          "2se"="Double", "2sl"="Double",
-                          "2me"="Double", "2ml"="Double"))
-# English ton = 2240 pounds, cwt = 112 pounds
-# multiply by 40 to get pounds/acre
-# divide by: 112 to get hundredweight/acre, 42 to get bushels/acre
-# NOTE! Avoid pipe operator in Rd examples!
-dat <- group_by(dat, nfert)
-dat <- summarize(dat, straw=mean(straw), grain=mean(grain))
-dat <- mutate(dat, straw= straw * 40/112, grain = grain * 40/42)
-## # A tibble: 3 x 3
-##   nfert  straw grain
-##   <fct>  <dbl> <dbl>
-## 1 Single  50.3  78.9
-## 2 Double  53.7  77.7
-## 3 None    44.1  75.4
-
+  library(agridat)
+  data(rothamsted.oats)
+  dat <- rothamsted.oats
 
   
   libs(desplot)
-  desplot(grain~col*row, dat, out1=block, text=trt, cex=1, shorten=FALSE,
+  desplot(grain~col*row, dat,
+          out1=block, text=trt, cex=1, shorten=FALSE,
           aspect=1,
           main="rothamsted.oats")
-  desplot(straw~col*row, dat, out1=block, text=trt, cex=1, shorten=FALSE,
+  desplot(straw~col*row, dat,
+          out1=block, text=trt, cex=1, shorten=FALSE,
           aspect=1,
           main="rothamsted.oats")
+
+  
+  libs(lattice)
+  xyplot(grain~straw, dat,
+         main="rothamsted.oats") # traits are correlated
+
+
+  if(0){
+    # compare to summary at bottom of page 146, first 3 columns
+    libs(dplyr)
+    dat = mutate(dat,
+                 nfert=trt, # number of fertilizer applications
+                 nfert=dplyr::recode(nfert,
+                                     "oa"="None", "ob"="None",
+                                     "oc"="None", "od"="None",
+                                     "1se"="Single", "1sl"="Single",
+                                     "1me"="Single", "1ml"="Single",
+                                     "2se"="Double", "2sl"="Double",
+                                     "2me"="Double", "2ml"="Double"))
+    # English ton = 2240 pounds, cwt = 112 pounds
+    # multiply by 40 to get pounds/acre
+    # divide by: 112 to get hundredweight/acre, 42 to get bushels/acre
+    # Avoid pipe operator in Rd examples!
+    dat <- group_by(dat, nfert)
+    dat <- summarize(dat, straw=mean(straw), grain=mean(grain))
+    dat <- mutate(dat, straw= straw * 40/112, grain = grain * 40/42)
+    ## # A tibble: 3 x 3
+    ##   nfert  straw grain
+    ##   <fct>  <dbl> <dbl>
+    ## 1 Single  50.3  78.9
+    ## 2 Double  53.7  77.7
+    ## 3 None    44.1  75.4
+  }
 
 }
 }

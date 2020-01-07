@@ -60,6 +60,12 @@
     Merrit \tab 1991\cr
     Myallie \tab 1995\cr
   }
+  
+  Data retrieved Oct 2010 from http://www.blackwellpublishers.co.uk/rss.
+  (No longer available).
+
+  Used with permission of Blackwell Publishing.
+
 }
 
 \source{  
@@ -67,7 +73,7 @@
   and Sue J. Welham, (1999).
   The analysis of designed experiments and longitudinal data by using
   smoothing splines. 
-  \emph{Appl. Statist.}, 48, 269--311.
+  Appl. Statist., 48, 269--311.
   http://doi.org/10.1111/1467-9876.00154
 
   Arunas P. Verbyla and Brian R. Cullis and Michael G. Kenward
@@ -77,20 +83,14 @@
   University of Adelaide, Department of Statistics, Research Report
   97/4.
   http://http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.56.808
-  
-  Data retrieved Oct 2010 from http://www.blackwellpublishers.co.uk/rss.
-  (No longer available).
-
-  Used with permission of Blackwell Publishing.
-
 }
 
 \examples{
 \dontrun{
   
-library(agridat)
-data(verbyla.lupin)
-dat <- verbyla.lupin
+  library(agridat)
+  data(verbyla.lupin)
+  dat <- verbyla.lupin
 
   # The same RCB randomization was used at all sites in each year
   libs(desplot)
@@ -115,93 +115,96 @@ dat <- verbyla.lupin
                  strip.left=strip.custom(par.strip.text=list(cex=.7)))
 
 
-# ----------------------------------------------------------------------------
+  # ----------
 
-if(0){
-  
+  libs(asreml,lucid)
+  # asreml 4
+    
   # We try to reproduce the analysis of Verbyla 1999.
   # May not be exactly the same, but is pretty close.
   
   # Check nlevels for size of random-coefficient structures
-  length(with(dat, table(gen)))      # 9 varieties for RC1
-  length(with(dat, table(gen,site))) # 99 site:gen combinations for RC2
+  # length(with(dat, table(gen)))      # 9 varieties for RC1
+  # length(with(dat, table(gen,site))) # 99 site:gen combinations for RC2
   
   # Make row and col into factors
-  dat <- transform(dat, colf=factor(col), rowf=factor(row))
+  #  dat <- transform(dat, colf=factor(col), rowf=factor(row))
   # sort for asreml
-  dat <- dat[order(dat$site, dat$rowf, dat$colf),]
-  
+  # dat <- dat[order(dat$site, dat$rowf, dat$colf),]
+    
   # Make site names more useful for plots
-  dat <- transform(dat, site=factor(paste0(year,".",substring(loc,1,4))))
-  
+  # dat <- transform(dat, site=factor(paste0(year,".",substring(loc,1,4))))
+    
   # Initial model from top of Verbyla table 9.
-#  libs(asreml4)
+  #  libs(asreml4)
   # FIXME asreml4 This is not working in asreml4
+    
+  ## m0 <- asreml(yield ~ 1
+  ##              + site
+  ##              + linrate
+  ##              + site:linrate,
+  ##              data = dat,
+  ##              random = ~ spl(rate)
+  ##              + dev(rate)
+  ##              + site:spl(rate)
+  ##              + site:dev(rate)
+  ##              + str(~gen+gen:linrate, ~us(2):id(9)) # RC1
+  ##              + gen:spl(rate)
+  ##              + gen:dev(rate)
+  ##              + str(~site:gen+site:gen:linrate, ~us(2):id(99)) # RC2
+  ##              + site:gen:spl(rate)
+  ##              + site:gen:dev(rate),
+  ##              resid = ~ dsum( ~ ar1(rowf):ar1(colf)|site) # Spatial AR1 x AR1
+  ##              )
+  ## m0 <- update(m0)
+  ## m0 <- update(m0)
+  ## m0 <- update(m0)
+  ## m0 <- update(m0)
+  ## m0 <- update(m0)
+
+  # Variograms match Verbyla 1999 figure 7 (scale slightly different)
+  ## plot(varioGram(m0), xlim=c(1:19), zlim=c(0,2),
+  ##      main="verbyla.lupin - variogram by site")
   
-##   m0 <- asreml(yield ~ 1
-##                + site
-##                + linrate
-##                + site:linrate,
-##                data = dat,
-##                random = ~ spl(rate)
-##                + dev(rate)
-##                + site:spl(rate)
-##                + site:dev(rate)
-##                + str(~gen+gen:linrate, ~us(2):id(9)) # RC1
-##                + gen:spl(rate)
-##                + gen:dev(rate)
-##                + str(~site:gen+site:gen:linrate, ~us(2):id(99)) # RC2
-##                + site:gen:spl(rate)
-##                + site:gen:dev(rate),
-##                residual = ~ dsum( ~ ar1(rowf):ar1(colf)|site) # Spatial AR1 x AR1
-##              )
-## m0 <- update(m0)
-## m0 <- update(m0) # to get convergence
-
-## # Variograms match Verbyla 1999 figure 7 (scale slightly different)
-## plot(varioGram(m0), xlim=c(1:19), zlim=c(0,2),
-##      main="verbyla.lupin - variogram by site")
+  ##   # Sequence of models in Verbyla 1999 table 10
+  ## m1 <- update(m0, fixed= ~ .
+  ##              + at(site, c(2,5,6,8,9,10)):lincol
+  ##              + at(site, c(3,5,7,8)):linrow
+  ##              + at(site, c(2,3,5,7,8,9,11)):serp
+  ##              , random = ~ .
+  ##              + at(site, c(3,6,7,9)):rowf
+  ##              + at(site, c(1,2,3,9,10)):colf
+  ##              + at(site, c(5,7,8,10)):units)
+  ## m1 <- update(m1)
   
-##   # Sequence of models in Verbyla 1999 table 10
-## m1 <- update(m0, fixed= ~ .
-##              + at(site, c(2,5,6,8,9,10)):lincol
-##              + at(site, c(3,5,7,8)):linrow
-##              + at(site, c(2,3,5,7,8,9,11)):serp
-##              , random = ~ .
-##              + at(site, c(3,6,7,9)):rowf
-##              + at(site, c(1,2,3,9,10)):colf
-##              + at(site, c(5,7,8,10)):units)
-## m1 <- update(m1)
-
-## m2 <- update(m1,
-##              random = ~ .
-##              - site:gen:spl(rate) - site:gen:dev(rate))
-
-## m3 <- update(m2,
-##              random = ~ .
-##              - site:dev(rate) - gen:dev(rate))
-             
-## m4 <- update(m3,
-##              random = ~ .
-##              - dev(rate))
-
-## m5 <- update(m4,
-##              random = ~ .
-##              - at(site, c(5,7,8,10)):units + at(site, c(5,7,8)):units)
-
-## # Variance components are a pretty good match to Verbyla 1997, table 15
-## libs(lucid)
-## vc(m5)
-## .001004/sqrt(.005446*.0003662) # .711 correlation for RC1
-## .00175/sqrt(.01881*.000167) # .987 correlation for RC2
-
-## # Matches Verbyla 1999 figure 5
-## plot(varioGram(m5),
-##      main="verbyla.lupin - final model variograms",
-##      xlim=c(1:19), zlim=c(0,1.5))
-
-}
-
+  ## m2 <- update(m1,
+  ##              random = ~ .
+  ##              - site:gen:spl(rate) - site:gen:dev(rate))
+  
+  ## m3 <- update(m2,
+  ##              random = ~ .
+  ##              - site:dev(rate) - gen:dev(rate))
+  
+  ## m4 <- update(m3,
+  ##              random = ~ .
+  ##              - dev(rate))
+  
+  ## m5 <- update(m4,
+  ##              random = ~ .
+  ##              - at(site, c(5,7,8,10)):units + at(site, c(5,7,8)):units)
+  
+  ## # Variance components are a pretty good match to Verbyla 1997, table 15
+  ## libs(lucid)
+  ## vc(m5)
+  ## .001004/sqrt(.005446*.0003662) # .711 correlation for RC1
+  ## .00175/sqrt(.01881*.000167) # .987 correlation for RC2
+  
+  ## # Matches Verbyla 1999 figure 5
+  ## plot(varioGram(m5),
+  ##      main="verbyla.lupin - final model variograms",
+  ##      xlim=c(1:19), zlim=c(0,1.5))
+  
 }
 }
+
 

@@ -52,7 +52,7 @@
   E. G. Montgomery (1912).
   Variation in Yield and Methods of Arranging Plats To Secure
   Comparative Results.
-  \emph{Twenty-Fifth Annual Report of the Agricultural Experiment Station of Nebraska}, 164-180.
+  Twenty-Fifth Annual Report of the Agricultural Experiment Station of Nebraska, 164-180.
   https://books.google.com/books?id=M-5BAQAAMAAJ&pg=RA4-PA164
   
   E. G. Montgomery (1913).
@@ -66,7 +66,7 @@
 \references{
   Surface & Pearl, (1916).
   A method of correcting for soil heterogeneity in variety tests.
-  \emph{Journal of Agricultural Research}, 5, 22, 1039-1050.
+  Journal of Agricultural Research, 5, 22, 1039-1050.
   Figure 2.
   https://books.google.com/books?id=BVNyoZXFVSkC&pg=PA1039
 }

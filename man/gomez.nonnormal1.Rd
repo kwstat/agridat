@@ -22,14 +22,15 @@
   replicates.  The number of living insect larvae were recorded.
 
   The data show signs of non-normality, and a log transform was used by Gomez.
+
+  Used with permission of Kwanchai Gomez.
   
 }
 \source{
   Gomez, K.A. and Gomez, A.A.. 1984,
-  \emph{Statistical Procedures for Agricultural Research}.
-  Wiley-Interscience. Page 300.
-
-  Used with permission of Kwanchai Gomez.
+  Statistical Procedures for Agricultural Research.
+  Wiley-Interscience.
+  Page 300.
 }
 \references{
   None.

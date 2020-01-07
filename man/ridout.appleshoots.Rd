@@ -32,15 +32,15 @@
   High BAP concentrations often inhibit root formation of apples, but
   perhaps not for columnar varieties.
 
+
+  Used with permission of Martin Ridout.
 }
 
 \source{
   Ridout, M. S., Hinde, J. P., and Demetrio, C. G. B. (1998).
   Models for Count Data with Many Zeros.
-  \emph{Proceedings of the 19th International Biometric Conference},
+  Proceedings of the 19th International Biometric Conference,
   179-192.
-
-  Used with permission of Martin Ridout.
 }
 
 \references{

@@ -1,5 +1,5 @@
-# butron.maize.r
-# Time-stamp: c:/x/rpack/agridat2/butron.maize.r
+# butron.maize.R
+# Time-stamp: c:/x/rpack/agridat2/butron.maize.R
 
 library(asreml)
 library(kw)
@@ -32,8 +32,6 @@ round(mat.svd$u[,1:2] %*% diag(sqrt(mat.svd$d[1:2])) %*% diag(c(-1,1)),3)
 biplot(princomp(mat), main="butron.maize", cex=.7) # Figure 1 of Butron
 
 # ----------------------------------------------------------------------------
-
-\dontrun{
 
 # Here we see if including pedigree information is helpful for a multi-environment model
 

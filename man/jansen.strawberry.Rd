@@ -34,14 +34,14 @@
   plants.  Each plant was assessed for damage from fungus and rated as
   belonging to category C1, C2, or C3 (increasing damage).
 
+
+  Used with permission of Hans Jansen.
 }
 \source{
   J. Jansen, 1990.
   On the statistical analysis of ordinal data when extravariation is present.
-  \emph{Applied Statistics}, 39, 75-84, Table 1.
+  Applied Statistics, 39, 75-84, Table 1.
   http://doi.org/10.2307/2347813
-
-  Used with permission of Hans Jansen.
 }
 
 \examples{

@@ -64,11 +64,6 @@ following:
     White Delight \tab 1949.64 \cr
   }
 
-}
-\source{
-  Lee, Arier Chi-Lun (2009). Random effects models for ordinal data.
-  Ph.D. thesis, The University of Auckland.
-  https://researchspace.auckland.ac.nz/handle/2292/4544.
 
   Used with permission of Arier Chi-Lun Lee and John Anderson.
 
@@ -77,6 +72,12 @@ following:
   
   Licensed via Open Database License 1.0. (allows sub-licensing).
   See: http://opendatacommons.org/licenses/dbcl/1.0/
+}
+\source{
+  Lee, Arier Chi-Lun (2009).
+  Random effects models for ordinal data.
+  Ph.D. thesis, The University of Auckland.
+  https://researchspace.auckland.ac.nz/handle/2292/4544.
 }
 
 \examples{

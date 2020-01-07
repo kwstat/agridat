@@ -3,6 +3,9 @@
 
 ## To do
 
+Zuber uniformity data
+https://archive.org/details/in.ernet.dli.2015.141442/page/n411
+
 * Need graphic for tai.potato
 * Need graphic for yang.barley
 * Figure out best way to use jags

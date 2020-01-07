@@ -30,6 +30,8 @@
   look for spatial patterns.  Significant patterns were found for
   N. brevicollis, Carabidae, Lycosidae.  The Lycosidae counts were also
   significantly associated with weed cover.
+  
+  Used with permission of John Holland.
 }
 \source{
   Holland J. M., Perry J. N., Winder, L. (1999).
@@ -38,8 +40,6 @@
   Bulletin of Entomological Research, 89: 499-513.  Figure 3 (large
   grid in 1996).
   http://doi.org/10.1017/S0007485399000656
-  
-  Used with permission of John Holland.
 }
 
 \examples{

@@ -31,7 +31,7 @@
 \source{
   Stephens, Joseph C. 1928.
   Experimental methods and the probable error in field experiments with sorghum.
-  \emph{Journal of Agricultural Research}, 37, 629--646.
+  Journal of Agricultural Research, 37, 629--646.
   http://naldc.nal.usda.gov/catalog/IND43967516
 }
 

@@ -41,121 +41,123 @@
 }
 
 \examples{
-
-library(agridat)
-data(hildebrand.systems)
-dat <- hildebrand.systems
-
-# Piepho 1998 Fig 1
-libs(lattice)
-dotplot(yield ~ system, dat, groups=village, auto.key=TRUE,
-        main="hildebrand.systems", xlab="cropping system by village")
-
-
-# Plot of risk of 'failure' of System 2 vs System 1
-s11 = .30;  s22 <- .92; s12 = .34
-mu1 = 1.35; mu2 = 2.70
-lambda <- seq(from=0, to=5, length=20)
-system1 <- pnorm((lambda-mu1)/sqrt(s11))
-system2 <- pnorm((lambda-mu2)/sqrt(s22))
-
-# A simpler view
-plot(lambda, system1, type="l", xlim=c(0,5), ylim=c(0,1),
-     xlab="Yield level", ylab="Prob(yield < level)",
-     main="hildebrand.systems - risk of failure for each system")
-lines(lambda, system2, col="red")
-
-# Prob of system 1 outperforming system 2. Table 8
-pnorm((mu1-mu2)/sqrt(s11+s22-2*s12))
-# .0331
-
-# ----------------------------------------------------------------------------
-
 \dontrun{
-  # asreml3
-  libs(asreml)
-  # Environmental variance model, unstructured correlations
   
-  dat <- dat[order(dat$system, dat$farm),]
-  m1 <- asreml(yield ~ system, data=dat, rcov = ~us(system):farm)
+  library(agridat)
+  data(hildebrand.systems)
+  dat <- hildebrand.systems
+
+  # Piepho 1998 Fig 1
+  libs(lattice)
+  dotplot(yield ~ system, dat, groups=village, auto.key=TRUE,
+          main="hildebrand.systems", xlab="cropping system by village")
+
+
+  # Plot of risk of 'failure' of System 2 vs System 1
+  s11 = .30;  s22 <- .92; s12 = .34
+  mu1 = 1.35; mu2 = 2.70
+  lambda <- seq(from=0, to=5, length=20)
+  system1 <- pnorm((lambda-mu1)/sqrt(s11))
+  system2 <- pnorm((lambda-mu2)/sqrt(s22))
+
+  # A simpler view
+  plot(lambda, system1, type="l", xlim=c(0,5), ylim=c(0,1),
+       xlab="Yield level", ylab="Prob(yield < level)",
+       main="hildebrand.systems - risk of failure for each system")
+  lines(lambda, system2, col="red")
   
-  # Means, table 5
-  p1 <- predict(m1, data=dat, classify="system")$predictions$pvals
-  ##  system pred.value std.error  est.stat
-  ##     CCA      1.164    0.2816 Estimable
-  ##    CCAF      2.657    0.3747 Estimable
-  ##      LM      1.35     0.1463 Estimable
-  ##     LMF      2.7      0.2561 Estimable
+  # Prob of system 1 outperforming system 2. Table 8
+  pnorm((mu1-mu2)/sqrt(s11+s22-2*s12))
+  # .0331
+
+  # ----------
+
+  libs(asreml,lucid)
+  if( utils::packageVersion("asreml") < "4") {
+    # asreml3
+
+    # Environmental variance model, unstructured correlations
   
-  # Variances, table 5
-  libs(lucid)
-  vc(m1)[c(2,4,7,11),]
-  ##              effect component std.error z.ratio constr
-  ##    R!system.CCA:CCA    1.11      0.4354     2.5    pos
-  ##  R!system.CCAF:CCAF    1.966     0.771      2.5    pos
-  ##      R!system.LM:LM    0.2996    0.1175     2.5    pos
-  ##    R!system.LMF:LMF    0.9185    0.3603     2.5    pos
+    dat <- dat[order(dat$system, dat$farm),]
+    m1 <- asreml(yield ~ system, data=dat, rcov = ~us(system):farm)
   
-  # Stability variance model
-  m2 <- asreml(yield ~ system, data=dat,
-               random = ~ farm,
-               rcov = ~ at(system):units)
-  p2 <- predict(m2, data=dat, classify="system")$predictions$pvals
+    # Means, table 5
+    ## predict(m1, data=dat, classify="system")$predictions$pvals
+    ##  system pred.value std.error  est.stat
+    ##     CCA      1.164    0.2816 Estimable
+    ##    CCAF      2.657    0.3747 Estimable
+    ##      LM      1.35     0.1463 Estimable
+    ##     LMF      2.7      0.2561 Estimable
   
-  # Variances, table 6
-  vc(m2)
-  ##                effect component std.error z.ratio constr
-  ##         farm!farm.var 0.2996       0.1175     2.5    pos
-  ##   system_CCA!variance 0.4136       0.1622     2.5    pos
-  ##  system_CCAF!variance 1.267        0.4969     2.5    pos
-  ##    system_LM!variance 0.0000002        NA      NA  bound
-  ##   system_LMF!variance 0.5304       0.208      2.5    pos
+    # Variances, table 5
+    vc(m1)[c(2,4,7,11),]
+    ##              effect component std.error z.ratio constr
+    ##    R!system.CCA:CCA    1.11      0.4354     2.5    pos
+    ##  R!system.CCAF:CCAF    1.966     0.771      2.5    pos
+    ##      R!system.LM:LM    0.2996    0.1175     2.5    pos
+    ##    R!system.LMF:LMF    0.9185    0.3603     2.5    pos
+  
+    # Stability variance model
+    m2 <- asreml(yield ~ system, data=dat,
+                 random = ~ farm,
+                 rcov = ~ at(system):units)
+    # predict(m2, data=dat, classify="system")$predictions$pvals
+  
+    # Variances, table 6
+    vc(m2)
+    ##                effect component std.error z.ratio constr
+    ##         farm!farm.var 0.2996       0.1175     2.5    pos
+    ##   system_CCA!variance 0.4136       0.1622     2.5    pos
+    ##  system_CCAF!variance 1.267        0.4969     2.5    pos
+    ##    system_LM!variance 0.0000002        NA      NA  bound
+    ##   system_LMF!variance 0.5304       0.208      2.5    pos
+  }
+
+  # ---------- 
+
+  libs(asreml,lucid)
+  if( utils::packageVersion("asreml") > "4") {
+    # asreml4
+
+    # Environmental variance model, unstructured correlations
+  
+    dat <- dat[order(dat$system, dat$farm),]
+    m1 <- asreml(yield ~ system, data=dat,
+                 resid = ~us(system):farm)
+  
+    # Means, table 5
+    ## predict(m1, data=dat, classify="system")$pvals
+    ##  system pred.value std.error  est.stat
+    ##     CCA      1.164    0.2816 Estimable
+    ##    CCAF      2.657    0.3747 Estimable
+    ##      LM      1.35     0.1463 Estimable
+    ##     LMF      2.7      0.2561 Estimable
+  
+    # Variances, table 5
+    # vc(m1)[c(2,4,7,11),]
+    ##              effect component std.error z.ratio constr
+    ##    R!system.CCA:CCA    1.11      0.4354     2.5    pos
+    ##  R!system.CCAF:CCAF    1.966     0.771      2.5    pos
+    ##      R!system.LM:LM    0.2996    0.1175     2.5    pos
+    ##    R!system.LMF:LMF    0.9185    0.3603     2.5    pos
+  
+    # Stability variance model
+    m2 <- asreml(yield ~ system, data=dat,
+                 random = ~ farm,
+                 resid = ~ dsum( ~ units|system))
+    m2 <- update(m2)
+    # predict(m2, data=dat, classify="system")$pvals
+  
+    ## # Variances, table 6
+    # vc(m2)
+    ##        effect component std.error z.ratio bound %ch
+    ##          farm 0.2998      0.1187   2.5        P 0  
+    ##  system_CCA!R 0.4133      0.1699   2.4        P 0  
+    ## system_CCAF!R 1.265       0.5152   2.5        P 0  
+    ##   system_LM!R 0.0003805   0.05538  0.0069     P 1.5
+    ##  system_LMF!R 0.5294      0.2295   2.3        P 0  
 }
 
-# ----------------------------------------------------------------------------
-
-\dontrun{
-  ## libs(asreml4)
-  ## # Environmental variance model, unstructured correlations
-  
-  ## dat <- dat[order(dat$system, dat$farm),]
-  ## m1 <- asreml(yield ~ system, data=dat,
-  ##              resid = ~us(system):farm)
-  
-  ## # Means, table 5
-  ## p1 <- predict(m1, data=dat, classify="system")$pvals
-  ## ##  system pred.value std.error  est.stat
-  ## ##     CCA      1.164    0.2816 Estimable
-  ## ##    CCAF      2.657    0.3747 Estimable
-  ## ##      LM      1.35     0.1463 Estimable
-  ## ##     LMF      2.7      0.2561 Estimable
-  
-  ## # Variances, table 5
-  ## libs(lucid)
-  ## vc(m1)[c(2,4,7,11),]
-  ## ##              effect component std.error z.ratio constr
-  ## ##    R!system.CCA:CCA    1.11      0.4354     2.5    pos
-  ## ##  R!system.CCAF:CCAF    1.966     0.771      2.5    pos
-  ## ##      R!system.LM:LM    0.2996    0.1175     2.5    pos
-  ## ##    R!system.LMF:LMF    0.9185    0.3603     2.5    pos
-  
-  ## # Stability variance model
-  ## m2 <- asreml(yield ~ system, data=dat,
-  ##              random = ~ farm,
-  ##              resid = ~ dsum( ~ units|system))
-  ## m2 <- update(m2)
-  ## p2 <- predict(m2, data=dat, classify="system")$pvals
-  
-  ## # Variances, table 6
-  ## vc(m2)
-  ## ##                effect component std.error z.ratio constr
-  ## ##         farm!farm.var 0.2996       0.1175     2.5    pos
-  ## ##   system_CCA!variance 0.4136       0.1622     2.5    pos
-  ## ##  system_CCAF!variance 1.267        0.4969     2.5    pos
-  ## ##    system_LM!variance 0.0000002        NA      NA  bound
-  ## ##   system_LMF!variance 0.5304       0.208      2.5    pos
 }
-
-
 }
 

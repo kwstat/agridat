@@ -15,18 +15,19 @@
     \item{\code{gen}}{genotype factor, 5 levels}
     \item{\code{yield}}{yield}
   }
+
+  Used with permission of Jean-Baptists Denis.
 }
 
 \source{
   Denis, J. B. and C P Baril, 1992, Sophisticated models with numerous missing
   values: The multiplicative interaction model as an example.
-  \emph{Biul. Oceny Odmian}, 24--25, 7--31.
-
-  Used with permission of Jean-Baptists Denis.
+  Biul. Oceny Odmian, 24--25, 7--31.
 }
+
 \references{
   H P Piepho, (1999) Stability analysis using the SAS system,
-  \emph{Agron Journal}, 91, 154--160.
+  Agron Journal, 91, 154--160.
   http://doi.og/10.2134/agronj1999.00021962009100010024x
 }
 
@@ -57,8 +58,6 @@ svar <- m1$sigma^2 * c(1, coef(m1$modelStruct$varStruct, unc = FALSE))^2
 round(svar, 2)
 ##          G5    G3    G1    G2
 ## 39.25 22.95 54.36 12.17 23.77
-
-# m2 <- asreml(yield ~ gen, random = ~ env + at(gen):env, data=dat)
 
 }
 }

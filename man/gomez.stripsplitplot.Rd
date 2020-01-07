@@ -23,13 +23,14 @@
 }
 \details{
   Note, this is a superset of the the 'gomez.stripplot' data.
+
+  Used with permission of Kwanchai Gomez.
 }
 \source{
   Gomez, K.A. and Gomez, A.A.. 1984,
-  \emph{Statistical Procedures for Agricultural Research}.
-  Wiley-Interscience. Page 155.
-
-  Used with permission of Kwanchai Gomez.
+  Statistical Procedures for Agricultural Research.
+  Wiley-Interscience.
+  Page 155.
 }
 
 \examples{

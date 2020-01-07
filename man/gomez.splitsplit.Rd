@@ -23,14 +23,15 @@
     \item{\code{col}}{column position in the field}
     \item{\code{row}}{row position in the field}
   }
+
+  Used with permission of Kwanchai Gomez.
 }
 
 \source{
   Gomez, K.A. and Gomez, A.A.. 1984,
-  \emph{Statistical Procedures for Agricultural Research}.
-  Wiley-Interscience. Page 143.
-
-  Used with permission of Kwanchai Gomez.
+  Statistical Procedures for Agricultural Research.
+  Wiley-Interscience.
+  Page 143.
 }
 \references{
   H. P. Piepho, R. N. Edmondson. (2018).

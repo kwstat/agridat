@@ -39,13 +39,13 @@
 \source{
   Laycock, D. H. (1955).
   The effect of plot shape in reducing the errors of tea experiments.
-  \emph{Tropical Agriculture}, 32, 107-114.
+  Tropical Agriculture, 32, 107-114.
 }
 \references{
   Zimmerman, Dale L., and David A. Harville. (1991).
   A random field approach to the analysis of field-plot experiments
   and other spatial experiments.
-  \emph{Biometrics}, 47, 223-239.
+  Biometrics, 47, 223-239.
 }
 \examples{
 \dontrun{

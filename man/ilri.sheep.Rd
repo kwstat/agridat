@@ -64,42 +64,41 @@
 }
 
 \examples{
-
-library(agridat)
-
-data(ilri.sheep)
-dat <- ilri.sheep
-dat <- transform(dat, lamb=factor(lamb), ewe=factor(ewe), ram=factor(ram),
-                 year=factor(year))
-# dl is linear covariate, same as damage, but truncated to [2,8]
-dat <- within(dat, {
-  dl <- damage
-  dl <- ifelse(dl < 3, 2, dl)
-  dl <- ifelse(dl > 7, 8, dl)
-  dq <- dl^2
-})
-
-dat <- subset(dat, !is.na(weanage))
-
-# EDA
-libs(lattice)
-## bwplot(weanwt ~ year, dat, main="ilri.sheep", xlab="year", ylab="Wean weight",
-##        panel=panel.violin) # Year effect
-bwplot(weanwt ~ factor(dl), dat,
-       main="ilri.sheep", xlab="Dam age", ylab="Wean weight") # Dam age effect
-# bwplot(weanwt ~ gen, dat,
-#        main="ilri.sheep", xlab="Genotype", ylab="Wean weight") # Genotype differences
-xyplot(weanwt ~ weanage, dat, type=c('p','smooth'),
-       main="ilri.sheep", xlab="Wean age", ylab="Wean weight") # Age covariate
-
-# case study page 4.18
-lm1 <- lm(weanwt ~ year + sex + weanage + dl + dq + ewegen + ramgen, data=dat)
-summary(lm1)
-anova(lm1)
-
-# ----------------------------------------------------------------------------
-
 \dontrun{
+  
+  library(agridat)
+  data(ilri.sheep)
+  dat <- ilri.sheep
+  dat <- transform(dat, lamb=factor(lamb), ewe=factor(ewe), ram=factor(ram),
+                   year=factor(year))
+  # dl is linear covariate, same as damage, but truncated to [2,8]
+  dat <- within(dat, {
+    dl <- damage
+    dl <- ifelse(dl < 3, 2, dl)
+    dl <- ifelse(dl > 7, 8, dl)
+    dq <- dl^2
+  })
+
+  dat <- subset(dat, !is.na(weanage))
+
+  # EDA
+  libs(lattice)
+  ## bwplot(weanwt ~ year, dat, main="ilri.sheep", xlab="year", ylab="Wean weight",
+  ##        panel=panel.violin) # Year effect
+  bwplot(weanwt ~ factor(dl), dat,
+         main="ilri.sheep", xlab="Dam age", ylab="Wean weight") # Dam age effect
+  # bwplot(weanwt ~ gen, dat,
+  #        main="ilri.sheep", xlab="Genotype", ylab="Wean weight") # Genotype differences
+  xyplot(weanwt ~ weanage, dat, type=c('p','smooth'),
+         main="ilri.sheep", xlab="Wean age", ylab="Wean weight") # Age covariate
+
+  # case study page 4.18
+  lm1 <- lm(weanwt ~ year + sex + weanage + dl + dq + ewegen + ramgen, data=dat)
+  summary(lm1)
+  anova(lm1)
+
+  # ----------
+
   libs(lme4)
   lme1 <- lmer(weanwt ~ year + sex + weanage + dl + dq + ewegen + ramgen +
                  (1|ewe) + (1|ram), data=dat)
@@ -109,44 +108,34 @@ anova(lm1)
   lme3 <- lmer(weanwt ~ year + sex + weanage + dl + dq + ewegen + ramgen +
                  (1|ram), data=dat)
   anova(lme1, lme2,  lme3)
-}
 
-# ----------------------------------------------------------------------------
+  # ----------
 
-\dontrun{
-  # asreml3
-  libs(asreml)
+  libs(asreml,lucid)
+  # asreml3 and asreml4
+
   # case study page 4.20
   m1 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
                data=dat)
-  anova(m1)
+  # anova(m1) # asreml3
+  # wald(m1) # asreml4
   
   # case study page 4.26
   m2 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
                random = ~ ram + ewe, data=dat)
-  anova(m2)
+  # anova(m2)
+  # wald(m2)
   
   # case study page 4.37, year means
-  predict(m2, data=dat, classify="year")$predictions  
+  # predict(m2, data=dat, classify="year")
+  ##   year predicted.value standard.error est.status
+  ## 1   91       12.638564      0.2363652  Estimable
+  ## 2   92       11.067659      0.2285252  Estimable
+  ## 3   93       11.561932      0.1809891  Estimable
+  ## 4   94        9.636058      0.2505478  Estimable
+  ## 5   95        9.350247      0.2346849  Estimable
+  ## 6   96       10.188482      0.2755387  Estimable
+    
 }
-
-# ----------------------------------------------------------------------------
-
-\dontrun{
-  ## libs(asreml4)
-  ## # case study page 4.20
-  ## m1 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
-  ##              data=dat)
-  ## wald(m1)
-  
-  ## # case study page 4.26
-  ## m2 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
-  ##              random = ~ ram + ewe, data=dat)
-  ## wald(m2)
-  
-  ## # case study page 4.37, year means
-  ## predict(m2, data=dat, classify="year")  
-}
-
 }
 \keyword{datasets}

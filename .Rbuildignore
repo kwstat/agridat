@@ -18,6 +18,7 @@
 ^notes.*\.md$
 ^data-done$
 ^data-raw$
+^data-todo$
 ^data-unused$
 ^figure$
 ^Rplots\.pdf$

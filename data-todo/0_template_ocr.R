@@ -1,47 +1,5 @@
-
-# ----------------------------------------------------------------------------
-
-# multiple sheets combined into one
-
-libs(dplyr,readxl,reshape2,tidyverse)
-
-setwd("c:/x/rpack/agridat/data-done/")
-
-d1 <- read_excel("kristensen.barley.uniformity.xlsx",1, col_names=FALSE)
-d2 <- read_excel("kristensen.barley.uniformity.xlsx",2, col_names=FALSE)
-d3 <- read_excel("kristensen.barley.uniformity.xlsx",3, col_names=FALSE)
-d4 <- read_excel("kristensen.barley.uniformity.xlsx",4, col_names=FALSE)
-
-dat <- dat %>% as.matrix %>%
-  `rownames<-`(1:nrow(dat)) %>% `colnames<-`(1:ncol(dat)) %>%
-  melt %>% rename(row=Var1,col=Var2,yield=value)
-
-d1 %<>% as.matrix %>% setNames(., 1:ncol(d1)) %>% melt %>% rename(col=Var1,row=Var2,yield=value)
-d1 <- as.matrix(d1)
-d2 <- as.matrix(d2)
-d3 <- as.matrix(d3)
-d4 <- as.matrix(d4)
-rownames(d1) <- rownames(d1) <- rownames(d1) <- rownames(d1) <- 5:15
-colnames(d1) <- colnames(d2) <- colnames(d3) <- colnames(d4) <- 1:10
-
-d1 <- melt(d1)
-d2 <- melt(d2)
-d3 <- melt(d3)
-d4 <- melt(d4)
-
-names(d1) <- names(d2) <- names(d3) <- names(d4) <- c('row','col','yield')
-
-d1$season <- 1; d1$crop <- "woolypyrol"
-d2$season <- 2; d2$crop <- "woolypyrol"
-d3$season <- 3; d3$crop <- "maize"
-d4$season <- 4; d4$crop <- "yams"
-
-kristensen.barley.uniformity <- rbind(d1,d2,d3,d4)
-
-# ----------------------------------------------------------------------------
-
 # ocr.r
-# Time-stamp: <20 Jul 2017 19:52:13 c:/Dropbox/r/ocr.r>
+# Time-stamp: <20 Nov 2019 06:50:38 c:/x/rpack/agridat/data-raw/0_template_ocr.R>
 
 lib(tesseract)
 # Default settings

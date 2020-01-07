@@ -64,7 +64,7 @@
 
   # ANOVA matches appendix 5 of DeVries
   m1 <- aov(volume ~ block + spacing + thinning + block:factor(row) +
-              block:factor(column), data=dat)
+              block:factor(col), data=dat)
   anova(m1)
 
 }

@@ -40,6 +40,7 @@
   Lord, L. (1931).
   A Uniformity Trial with Irrigated Broadcast Rice.
   The Journal of Agricultural Science, 21(1), 178-188.
+  https://doi.org/10.1017/S0021859600008029
 }
 \references{
   None

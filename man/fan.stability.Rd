@@ -23,14 +23,14 @@
   Data are the mean of 3 reps.
 
   These data were used to conduct a stability analysis of yield.
+
+  Used with permission of Manjit Kang.
 }
 \source{
   Fan, X.M. and Kang, M.S. and Chen, H. and Zhang, Y. and Tan, J. and Xu, C. (2007).
   Yield stability of maize hybrids evaluated in multi-environment trials in Yunnan, China.
-  \emph{Agronomy Journal}, 99, 220-228.
+  Agronomy Journal, 99, 220-228.
   https://doi.org/10.2134/agronj2006.0144
-
-  Used with permission of Manjit Kang.
 }
 
 \examples{

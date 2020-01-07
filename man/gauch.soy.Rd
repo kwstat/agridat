@@ -37,18 +37,20 @@
 
   The gen x env means of Table 1 (Zobel et al 1998) are least-squares
   means (personal communication).
-}
-\source{
+
   Retrieved Sep 2011 from
   http://www.microcomputerpower.com/matmodel/matmodelmatmodel_sample_.html
 
   Used with permission of Hugh Gauch.
 }
-\references{
+\source{
   Zobel, RW and Wright, MJ and Gauch Jr, HG. 1998.
-  Statistical analysis of a yield trial, \emph{Agronomy journal},
-  80, 388-393.
+  Statistical analysis of a yield trial.
+  Agronomy journal, 80, 388-393.
   https://doi.org/10.2134/agronj1988.00021962008000030002x
+}
+\references{
+  None
 }
 
 \examples{

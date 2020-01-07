@@ -23,14 +23,14 @@
   Note, in table 2 of Brandle, the value of Triton in 1985 at Bagot is
   shown as 2355, but should be 2555 to match the means reported
   in the paper.
+
+  Used with permission of P. McVetty.
 }
 \source{
   Brandle, JE and McVetty, PBE. (1988).
   Genotype x environment interaction and stability analysis of seed
   yield of oilseed rape grown in Manitoba.
-  \emph{Canadian Journal of Plant Science}, 68, 381--388.
-
-  Used with permission of P. McVetty.
+  Canadian Journal of Plant Science, 68, 381--388.
 }
 
 \examples{

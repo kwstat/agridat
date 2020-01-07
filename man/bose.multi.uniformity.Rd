@@ -53,18 +53,21 @@
 \examples{
 \dontrun{
 
-library(agridat)
-data(bose.multi.uniformity)
-dat <- bose.multi.uniformity
+  library(agridat)
+  data(bose.multi.uniformity)
+  dat <- bose.multi.uniformity
 
-# match sum at bottom of Bose tables 1, 4, 5
-# dat %>% group_by(year) %>% summarize(sum=sum(yield))
+  # match sum at bottom of Bose tables 1, 4, 5
+  # library(dplyr)
+  # dat %>% group_by(year) %>% summarize(sum=sum(yield))
 
-libs(desplot, dplyr)
+  libs(desplot, dplyr)
   # Calculate percent of mean yield for each year
-  dat <- group_by_(dat, ~ year)
-  dat <- mutate_(dat, pctyld = ~ (yield-mean(yield))/mean(yield))
-  dat$year = factor(dat$year)
+  dat <- group_by(dat, year)
+  dat <- mutate(dat, pctyld = (yield-mean(yield))/mean(yield))
+
+  dat <- ungroup(dat)
+  dat <- mutate(dat, year=as.character(year))
   # Bose smoothed the data by averaging 2x3 plots together before drawing
   # contour maps.  Heatmaps of raw data have similar structure to Bose Fig 1.
   desplot(pctyld ~ col*row|year, dat,

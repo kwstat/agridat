@@ -46,7 +46,7 @@
   
   # match Kayad table 1 stats
   libs(dplyr)
-  dat <- group_by(harvest)
+  dat <- group_by(dat, harvest)
   summarize(dat, min=min(yield), max=max(yield),
             mean=mean(yield), stdev=sd(yield), var=var(yield))
 

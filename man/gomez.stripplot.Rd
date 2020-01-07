@@ -22,18 +22,19 @@
 
 \details{
   Note, this is a subset of the the 'gomez.stripsplitplot' data.
+
+  Used with permission of Kwanchai Gomez.
 }
 \source{
   Gomez, K.A. and Gomez, A.A.. 1984,
-  \emph{Statistical Procedures for Agricultural Research}.
-  Wiley-Interscience. Page 110.
-
-  Used with permission of Kwanchai Gomez.
+  Statistical Procedures for Agricultural Research.
+  Wiley-Interscience.
+  Page 110.
 }
 \references{
   Jan Gertheiss (2014).
   ANOVA for Factors With Ordered Levels.
-  \emph{J Agric Biological Environmental Stat}, 19, 258-277.
+  J Agric Biological Environmental Stat, 19, 258-277.
 }
 
 \examples{

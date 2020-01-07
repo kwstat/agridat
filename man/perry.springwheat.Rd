@@ -32,45 +32,45 @@
   Note: Although not indicated by the original paper, it may be that the
   Merredin site in 1979 also had early/late sowing dates.
 
+
+  Used with permission of Mario D'Antuono and CSIRO Publishing.
 }
 
 \source{
   MW Perry and MF D'Antuono. (1989).
   Yield improvement and associated characteristics of some Australian
   spring wheat cultivars introduced between 1860 and 1982.
-  \emph{Australian Journal of Agricultural Research}, 40(3), 457--472.
+  Australian Journal of Agricultural Research, 40(3), 457--472.
   http://www.publish.csiro.au/nid/43/issue/1237.htm
-
-  Used with permission of Mario D'Antuono and CSIRO Publishing.
 }
 
 \examples{
-
-library(agridat)
-
-data(perry.springwheat)
-dat <- perry.springwheat
-
-libs(lattice)
-xyplot(yield~yor|env, dat, type=c('p','r'), xlab="year of release",
-       main="perry.springwheat")
-
-# Show a table of sites*year
-# libs(latticeExtra)
-# useOuterStrips(xyplot(yield~yor|site*factor(year), dat,
-#                       type=c('p','r')))
-
-
-# Perry reports a rate of gain of 5.8 kg/ha/year.  No model is given.
-# We fit a model with separate intercept/slope for each env
-m1 <- lm(yield ~ env + yor + env:yor, data=dat)
-# Average slope across environments
-mean(c(coef(m1)[21], coef(m1)[21]+coef(m1)[22:40]))
-## [1] 5.496781
-
-# ----------------------------------------------------------------------------
-
 \dontrun{
+  
+  library(agridat)
+  data(perry.springwheat)
+  dat <- perry.springwheat
+
+  libs(lattice)
+  xyplot(yield~yor|env, dat, type=c('p','r'), xlab="year of release",
+         main="perry.springwheat")
+  
+  # Show a table of sites*year
+  # libs(latticeExtra)
+  # useOuterStrips(xyplot(yield~yor|site*factor(year), dat,
+  #                       type=c('p','r')))
+
+
+  # Perry reports a rate of gain of 5.8 kg/ha/year.  No model is given.
+  # We fit a model with separate intercept/slope for each env
+  m1 <- lm(yield ~ env + yor + env:yor, data=dat)
+  # Average slope across environments
+  mean(c(coef(m1)[21], coef(m1)[21]+coef(m1)[22:40]))
+  ## [1] 5.496781
+
+
+  # ----------
+
   # Now a mixed-effects model.  Fixed overall int/slope.  Random env int/slope.
 
   # First, re-scale response so we don't have huge variances
@@ -98,11 +98,9 @@ mean(c(coef(m1)[21], coef(m1)[21]+coef(m1)[22:40]))
   ## (Intercept)        yorc
   ##  5.87492444  0.05494464
 
-  # asreml3
-  libs(asreml)
+  # asreml3 & asreml4
+  libs(asreml,lucid)
   m3a <- asreml(y ~ 1 + yorc, data=dat, random = ~ env + env:yorc)
-
-  libs(lucid)
   vc(m3)
   ##      grp        var1 var2     vcov   sdcor
   ##      env (Intercept) <NA> 11.61    3.407
@@ -116,8 +114,5 @@ mean(c(coef(m1)[21], coef(m1)[21]+coef(m1)[22:40]))
   ##       R!variance   3.551    0.2231      16   Positive
 
 }
-
-# ----------------------------------------------------------------------------
-
 }
 \keyword{datasets}

@@ -34,23 +34,23 @@
   intertwined.  On each shoot, the total number of leaves and the number
   of infected leaves were recorded.
   
+
+  Used with permission of Larry Madden.
 }
 
 \source{
   Hughes, G. and Madden, LV. 1995.
   Some methods allowing for aggregated patterns of disease incidence in
   the analysis of data from designed experiments.
-  \emph{Plant Pathology}, 44, 927--943.
+  Plant Pathology, 44, 927--943.
   http://doi.org/10.1111/j.1365-3059.1995.tb02651.x
-
-  Used with permission of Larry Madden.
 }
 
 \references{
   Hans-Pieter Piepho. 1999.
   Analysing disease incidence data from designed experiments by
   generalized linear mixed models.
-  \emph{Plant Pathology}, 48, 668--684.
+  Plant Pathology, 48, 668--684.
   http://doi.org/10.1046/j.1365-3059.1999.00383.x
 }
 

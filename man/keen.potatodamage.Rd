@@ -37,14 +37,14 @@
   # Rod: 1 2 3 4 5 6 7 8
 
   # Effect: 0 -1.26 -0.42 0.55 -1.50 -1.85 -1.76 -2.09
+
+  Used with permission of Bas Engel.
 }
 \source{
   A. Keen and B. Engel.
   Analysis of a mixed model for ordinal data by iterative re-weighted REML.
-  \emph{Statistica Neerlandica}, 51, 129--144. Table 2.
+  Statistica Neerlandica, 51, 129--144. Table 2.
   http://doi.org/10.1111/1467-9574.00044
-
-  Used with permission of Bas Engel.
 }
 
 \examples{

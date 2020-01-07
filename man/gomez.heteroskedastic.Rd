@@ -21,15 +21,16 @@
   
   RCB design with three reps.  Genotypes 1-15 are hybrids, 16-32 are
   parents, 33-35 are checks.
+
+  Used with permission of Kwanchai Gomez.
   
 }
 
 \source{
   Gomez, K.A. and Gomez, A.A.. 1984,
-  \emph{Statistical Procedures for Agricultural Research}.
-  Wiley-Interscience. Page 310.
-
-  Used with permission of Kwanchai Gomez.
+  Statistical Procedures for Agricultural Research.
+  Wiley-Interscience.
+  Page 310.
 }
 \references{
   None.

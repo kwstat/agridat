@@ -40,7 +40,6 @@
 \examples{
 
 library(agridat)
-
 data(digby.jointregression)
 dat <- digby.jointregression
 
@@ -110,9 +109,16 @@ round(thetas,3)+1.164-.515 # Adjust intercept to match
 # envE11 envE12 envE13 envE14 envE15 envE16 envE17
 # -0.576  1.568 -0.779 -0.692  0.836 -1.080  0.649
 
-# How to use gnm package for this?
+# Using 'gnm' gives similar results.
 # libs(gnm)
 # m3 <- gnm(yield ~ gen + Mult(gen,env), data=dat) # slopes negated
+# round(coef(m3)[11:20],3)
+
+# Using 'mumm' gives similar results, though gen is random and the
+# coeffecients are shrunk toward 0 a bit.
+# libs(mumm)
+# m1 <- mumm(yield ~ -1 + env + mp(gen, env), dat)
+# round(1 + ranef(m1)$`mp gen:env`,2)
 
 }
 \keyword{datasets}

@@ -1,5 +1,5 @@
 # bryan.corn.uniformity.R
-# Time-stamp: <24 Nov 2019 20:59:31 c:/x/0uniformity/bryan.corn.uniformity.R>
+# Time-stamp: <06 Dec 2019 15:53:04 c:/x/rpack/agridat/data-raw/bryan.corn.uniformity.R>
 
 libs(desplot,dplyr,kw,lattice,magrittr,readxl,readr,reshape2,tibble)
 
@@ -44,7 +44,7 @@ desplot(yield ~ col*row, dat26, flip=TRUE, tick=TRUE)
 desplot(yield ~ col*row, dat27, flip=TRUE, tick=TRUE)
 
 
-Table 1.
+# Table 1.
 mean(dat22$yield)/8
 mean(dat23$yield)/8 # slight difference
 mean(dat24$yield)/8

@@ -28,14 +28,14 @@
   Because the data are percents, Gomez suggested using the arcsin
   transformation.
   
+  Used with permission of Kwanchai Gomez.
+
 }
 \source{
   Gomez, K.A. and Gomez, A.A.. 1984,
-  \emph{Statistical Procedures for Agricultural Research}.
-  Wiley-Interscience. Page 307.
-
-  Used with permission of Kwanchai Gomez.
-
+  Statistical Procedures for Agricultural Research.
+  Wiley-Interscience.
+  Page 307.
 }
 \references{
   None.

@@ -20,13 +20,14 @@
   The data are the percent of white heads from a rice variety trial of
   14 varieties with 3 reps.  Because many of the values are less than
   10, the suggested data transformation is sqrt(x+.5).
+
+  Used with permission of Kwanchai Gomez.
 }
 \source{
   Gomez, K.A. and Gomez, A.A.. 1984,
-  \emph{Statistical Procedures for Agricultural Research}.
-  Wiley-Interscience. Page 300.
-
-  Used with permission of Kwanchai Gomez.
+  Statistical Procedures for Agricultural Research.
+  Wiley-Interscience.
+  Page 300.
 }
 \references{
   None.

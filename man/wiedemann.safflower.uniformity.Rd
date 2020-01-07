@@ -57,7 +57,7 @@
 
 \source{
   Wiedemann, Alfred Max. 1962.
-  "Estimation of Optimum Plot Size and Shape for Use in Safflower Yield Trails". Table 5.
+  Estimation of Optimum Plot Size and Shape for Use in Safflower Yield Trails. Table 5.
   All Graduate Theses and Dissertations. Paper 3600. Table 5.
   http://digitalcommons.usu.edu/etd/3600
 }

@@ -23,13 +23,14 @@
   Soil nitrogen content was measured at three times.  P1 = 15 days post
   transplanting. P2 = 40 days post transplanting. P3 = panicle initiation.
 
+  Used with permission of Kwanchai Gomez.
+
 }
 \source{
   Gomez, K.A. and Gomez, A.A.. 1984,
-  \emph{Statistical Procedures for Agricultural Research}.
-  Wiley-Interscience. Page 259.
-
-  Used with permission of Kwanchai Gomez.
+  Statistical Procedures for Agricultural Research.
+  Wiley-Interscience.
+  Page 259.
 }
 \references{
   R-help mailing list, 9 May 2013.

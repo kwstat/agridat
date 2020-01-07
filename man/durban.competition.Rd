@@ -33,16 +33,15 @@
   Field width: 18m + 1m guard rows = 19m
   
   Field length: 3 blocks * 12m + 2*0.5m spacing = 37m
-}
-\source{
-  Durban, M., Currie, I. and R. Kempton, 2001.
-  Adjusting for fertility and competition in variety trials.
-  \emph{J. of Agricultural Science}, 136, 129--140.
-
   Retrieved from
   http://www.ma.hw.ac.uk/~iain/research/JAgSciData/data/Trial1.dat
 
   Used with permission of Iain Currie.
+}
+\source{
+  Durban, M., Currie, I. and R. Kempton, 2001.
+  Adjusting for fertility and competition in variety trials.
+  J. of Agricultural Science, 136, 129--140.
 }
 
 \examples{

@@ -31,14 +31,15 @@
   Note: The paper by Foulley and Gianola has '21943' as the count for
   score 1, F, >8.  This data uses '20943' so that the marginal totals
   from this data match the marginal totals given in the paper.
+  
+  Used with permission of Jean-Louis Foulley.
 }
 \source{
   JL Foulley, D Gianola (1996).
   Statistical Analysis of Ordered Categorical Data via a Structured
-  Heteroskedastic Threshold Model. \emph{Genet Sel Evol}, 28, 249--273.
+  Heteroskedastic Threshold Model.
+  Genet Sel Evol, 28, 249--273.
   http://doi.org/10.1051/gse:19960304
-  
-  Used with permission of Jean-Louis Foulley.
 }
 
 \examples{

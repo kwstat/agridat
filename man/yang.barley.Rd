@@ -42,22 +42,22 @@
     Stettler \tab  112.71 \tab 52.31
   }
 
+
+  Used with permission of Rong-Cai Yang.
 }
 
 \source{
   Rong-Cai Yang (2007).
   Mixed-Model Analysis of Crossover Genotype-Environment Interactions.
-  \emph{Crop Science}, 47, 1051-1062.
+  Crop Science, 47, 1051-1062.
   http://doi.org/10.2135/cropsci2006.09.0611
-
-  Used with permission of Rong-Cai Yang.
 }
 
 \references{
   Zhiqiu Hu and Rong-Cai Yang, (2013).
   Improved Statistical Inference for Graphical Description and
   Interpretation of Genotype x Environment Interaction.
-  \emph{Crop Science}, 53, 2400-2410.
+  Crop Science, 53, 2400-2410.
   http://doi.org/10.2135/cropsci2013.04.0218 
 }
 

@@ -56,7 +56,7 @@
   Francis L. Smith, 1958.
   Effects of plot size, plot shape, and number of replications on the
   efficacy of bean yield trials.
-  \emph{Hilgardia}, 28, 43-63.
+  Hilgardia, 28, 43-63.
   http://doi.org/10.3733/hilg.v28n02p043  
 }
 

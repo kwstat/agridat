@@ -47,39 +47,39 @@
 \examples{
 \dontrun{
 
-library(agridat)
-data(kempton.slatehall)
-dat <- kempton.slatehall
+  library(agridat)
+  data(kempton.slatehall)
+  dat <- kempton.slatehall
 
-# Besag 1993 figure 4.1 (left panel)
-libs(desplot)
-grays <- colorRampPalette(c("#d9d9d9","#252525"))
-desplot(yield ~ col * row, dat,
-        aspect=40/22.5, # true aspect
-        num=gen, out1=rep, col.regions=grays, # unknown aspect
-        main="kempton.slatehall - spring wheat yields")
+  # Besag 1993 figure 4.1 (left panel)
+  libs(desplot)
+  grays <- colorRampPalette(c("#d9d9d9","#252525"))
+  desplot(yield ~ col * row, dat,
+          aspect=40/22.5, # true aspect
+          num=gen, out1=rep, col.regions=grays, # unknown aspect
+          main="kempton.slatehall - spring wheat yields")
 
+  # ----------
 
-# ----------------------------------------------------------------------------
-
-# Incomplete block model of Gilmour et al 1995
-libs(lme4, lucid)
-dat <- transform(dat, xf=factor(col), yf=factor(row))
-m1 <- lmer(yield ~ gen + (1|rep) + (1|rep:yf) + (1|rep:xf), data=dat)
-vc(m1)
-##    groups        name variance stddev
-##  rep:xf   (Intercept)    14810 121.7
-##  rep:yf   (Intercept)    15600 124.9
-##  rep      (Intercept)     4262  65.29
-##  Residual                 8062  89.79
-
-
-# ----------------------------------------------------------------------------
-
-if(0){
   # Incomplete block model of Gilmour et al 1995
-  # asreml3
-  libs(asreml)
+  libs(lme4, lucid)
+  dat <- transform(dat, xf=factor(col), yf=factor(row))
+  m1 <- lmer(yield ~ gen + (1|rep) + (1|rep:yf) + (1|rep:xf), data=dat)
+  vc(m1)
+  ##    groups        name variance stddev
+  ##  rep:xf   (Intercept)    14810 121.7
+  ##  rep:yf   (Intercept)    15600 124.9
+  ##  rep      (Intercept)     4262  65.29
+  ##  Residual                 8062  89.79
+  
+  
+  # ----------
+
+  # asreml3 & asreml4
+  libs(asreml,lucid)
+  
+  # Incomplete block model of Gilmour et al 1995
+  dat <- transform(dat, xf=factor(col), yf=factor(row))
   m2 <- asreml(yield ~ gen, random = ~ rep/(xf+yf), data=dat)
   
   vc(m2)
@@ -90,34 +90,10 @@ if(0){
   ##      R!variance      8062      1340    6       pos
   
   # Table 4
-  predict(m2, data=dat, classify="gen")$predictions$pvals
-}
-
-# ----------------------------------------------------------------------------
-
-if(0){
-  # Incomplete block model of Gilmour et al 1995
-  ## libs(asreml4)
-  ## libs(lucid)
-  ## m2 <- asreml(yield ~ gen, random = ~ rep/(xf+yf), data=dat)
-
-  ## vc(m2)
-  ## ##   effect component std.error z.ratio bound %ch
-  ## ##      rep      4262      6890    0.62     P   0
-  ## ##   rep:yf     15600      5091    3.1      P   0
-  ## ##   rep:xf     14810      4865    3        P   0
-  ## ## units(R)      8062      1340    6        P   0
-
-  ## # Table 4
-  ## predict(m2, data=dat, classify="gen")$pvals
-  ## ##    gen predicted.value std.error    status
-  ## ## 1  G01            1280      60.2 Estimable
-  ## ## 2  G02            1550      60.2 Estimable
-  ## ## 3  G03            1420      60.2 Estimable
-  ## ## 4  G04            1450      60.2 Estimable
-  ## ## 5  G05            1530      60.2 Estimable
-}
-
+  # asreml3
+  # predict(m2, data=dat, classify="gen")$predictions$pvals
+  # asreml4
+  # predict(m2, data=dat, classify="gen")$pvals
 
 }
 }

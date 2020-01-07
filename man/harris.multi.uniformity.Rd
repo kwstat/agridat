@@ -66,27 +66,27 @@
   canal bank has been worn away by internal erosion, exposing a stratum
   of sandy subsoil that underlies the canal and part of the field.
 
-  Whereas in the earlier crops Series II was better for
-  alfalfa, Series III was better for alfalfa in the later period.  The
-  writers feel inclined to suggest that in the earlier experiments the
-  height of the water table had no harmful effect upon a deep-rooted
-  crop such as alfalfa.  It is quite possible that during drier periods
-  the higher water table  actually favored alfalfa growth on Series
-  II. The higher water tables of recent years have probably had a
-  deleterious influence, which has been especially marked on Series II,
-  where the water apparently comes nearer to the surface than in Series
-  III.
+  Whereas in the earlier crops Series II was better for alfalfa, Series
+  III was better for alfalfa in the later period.  The writers feel
+  inclined to suggest that in the earlier experiments the height of the
+  water table had no harmful effect upon a deep-rooted crop such as
+  alfalfa.  It is quite possible that during drier periods the higher
+  water table actually favored alfalfa growth on Series II. The higher
+  water tables of recent years have probably had a deleterious
+  influence, which has been especially marked on Series II, where the
+  water apparently comes nearer to the surface than in Series III.
   
 }
 \source{
   Harris, J Arthur and Scofield, CS. (1920).
   Permanence of differences in the plats of an experimental field.
-  \emph{Jour. Agr. Res}, 20, 335-356.
+  Jour. Agr. Res, 20, 335-356.
   http://naldc.nal.usda.gov/catalog/IND43966236
 
   Harris, J Arthur and Scofield, CS. (1928).
   Further studies on the permanence of differences in the plots of an
-  experimental field. \emph{Jour. Agr. Res}, 36, 15--40.
+  experimental field.
+  Jour. Agr. Res, 36, 15--40.
   http://naldc.nal.usda.gov/catalog/IND43967538
 }
 

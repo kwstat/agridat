@@ -39,9 +39,7 @@
   Studies Concerning the Elimination of Experimental Error in Comparative Crop Tests.
   University of Nebraska Agricultural Experiment Station Research Bulletin No. 13.
   Pages 51-72.
-
   https://archive.org/details/StudiesConcerningTheEliminationOfExperimentalErrorInComparativeCrop
-
   http://digitalcommons.unl.edu/extensionhist/430/
 }
 \references{

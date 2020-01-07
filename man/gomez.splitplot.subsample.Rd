@@ -22,13 +22,14 @@
   A split-plot experiment in three blocks.  Whole-plot is 'management',
   sub-plot is 'time' of application, with two subsamples.  The data are
   the heights, measured on two single-hill sampling units in each plot.
+
+  Used with permission of Kwanchai Gomez.
 }
 \source{
   Gomez, K.A. and Gomez, A.A.. 1984,
-  \emph{Statistical Procedures for Agricultural Research}.
-  Wiley-Interscience. Page 481.
-
-  Used with permission of Kwanchai Gomez.
+  Statistical Procedures for Agricultural Research.
+  Wiley-Interscience.
+  Page 481.
 }
 
 \examples{
