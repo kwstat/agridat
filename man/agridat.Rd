@@ -187,6 +187,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{beaven.barley}               \tab  8  \tab    \tab 20  \tab    \tab       \tab xy \tab \cr
 \link{besag.bayesian}              \tab 75  \tab    \tab 3   \tab    \tab       \tab xy \tab asreml \cr
 \link{besag.beans}                 \tab 6   \tab    \tab 4*6 \tab    \tab       \tab xy \tab lm,competition \cr
+\link{besag.checks}                \tab 2   \tab    \tab     \tab    \tab       \tab xy \tab \cr
 \link{besag.elbatan}               \tab 50  \tab    \tab 3   \tab    \tab       \tab xy \tab lm, gam \cr
 \link{besag.endive}                \tab     \tab    \tab     \tab    \tab       \tab xy,binary \tab autologistic \cr
 \link{besag.met}                   \tab 64  \tab 6  \tab 3   \tab    \tab       \tab xy, incblock\tab asreml, lme \cr
