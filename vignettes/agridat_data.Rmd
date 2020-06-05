@@ -560,6 +560,13 @@ https://doi.org/10.5061/dryad.q968v83
 Large phenotypic dataset with 691 wheat lines, 33 years, 670 environments, 3-4 reps, 120000 datapoints. No genotypic data is included.
 
 
+**van der Voet et al.** (2017).
+Equivalence testing using existing reference data: An example with genetically modiﬁed and conventional crops in animal feeding studies.
+https://doi.org/10.1016/j.fct.2017.09.044
+
+The full datasets for the GRACE studies A-E are available here: https://www.cadima.info/index.php/area/publicAnimalFeedingTrials
+CC license.
+
 
 **Yan, Weikei** (2002).
 Singular value partitioning in biplots.  Agron Journal.
@@ -738,6 +745,18 @@ https://archive.org/stream/wachstumundertra00gutt
 https://www.statforbiology.com/
 
 Blog posts with example analyses.
+
+
+### statgenSTA
+
+Modeling field trials using statgenSTA
+https://cran.r-project.org/web/packages/statgenSTA/vignettes/statgenSTA.html
+
+### statgenGWAS
+https://cran.r-project.org/web/packages/statgenGWAS/vignettes/GWAS.html
+
+Includes a worked example with data from:
+https://data.inra.fr/dataset.xhtml?persistentId=doi:10.15454/IASSTN 
 
 
 ### st4gi - Stat for genetic improvement

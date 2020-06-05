@@ -2,10 +2,7 @@
 % agridat notes
 
 ## To do
-
-Zuber uniformity data
-https://archive.org/details/in.ernet.dli.2015.141442/page/n411
-
+   
 * Need graphic for tai.potato
 * Need graphic for yang.barley
 * Figure out best way to use jags
@@ -43,7 +40,6 @@ http://cucurbitbreeding.com/todd-wehner/publications/software-sas-r-project/
 
 Plant-level data for distinctness, uniformity and stability testing.  Most published data is for plot-means.
 This page mentions an R version for DUS: http://www.bioss.ac.uk/knowledge/software.html
-
 
 
 # stability

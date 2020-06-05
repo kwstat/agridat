@@ -1,9 +1,4 @@
 
-
-Additional details
-
-lib(rio)
-
 setwd("c:/x/rpack/agridat/data-raw")
 
 d1 <- import("parker.orange.xlsx",sheet=1)
@@ -47,7 +42,16 @@ dat <- rbind(cbind(year = 1921, d1),
       cbind(year = 1926, d6),
       cbind(year = 1927, d7))
 
-dat <- subset(dat, !is.na(yield)) 
+# I added this much later so that agridat has "square" fields with
+# observations that have missing values instead of missing observations.
+
+p2 <- kw::expand.block( ~ row+col|year, data=parker.orange.uniformity)
+p2 <- arrange(p2, year, row, col)
+desplot(yield ~ col*row|year, data = p2,
+        flip = TRUE, aspect = 27*48/(10*200), # true aspect
+        main = "parker.orange.uniformity")
+
+#dat <- subset(dat, !is.na(yield)) 
 parker.orange.uniformity <- dat
 # ----------------------------------------------------------------------------
 

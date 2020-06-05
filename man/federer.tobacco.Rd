@@ -47,6 +47,7 @@
   Paul N Hinz, (1987).
   Nearest-Neighbor Analysis in Practice,
   \emph{Iowa State Journal of Research}, 62, 199--217.
+  https://lib.dr.iastate.edu/iowastatejournalofresearch/vol62/iss2/1
 }
 
 \examples{

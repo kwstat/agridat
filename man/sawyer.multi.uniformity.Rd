@@ -89,16 +89,16 @@
 \examples{
 \dontrun{
   
-library(agridat)
-data("sawyer.multi.uniformity")
-dat <- sawyer.multi.uniformity
-
+  library(agridat)
+  data("sawyer.multi.uniformity")
+  dat <- sawyer.multi.uniformity
+  
   libs(desplot)
   # The field plan shows square plots
   desplot(grain~col*row, subset(dat, year==1925),
           main="sawyer.multi.uniformity - 1925 wheat grain yield",
           aspect=(6)/(8)) # true aspect
-
+  
   desplot(rootwt~col*row, subset(dat, year==1926),
           main="sawyer.multi.uniformity - 1926 root weight of swedes",
           aspect=(6)/(8))
@@ -108,7 +108,6 @@ dat <- sawyer.multi.uniformity
           aspect=(6)/(8))
 
 
-if(0){
   # This plot shows the "outlier" in the wheat data reported by Mackenzie.
   libs(lattice)
   xyplot(grain ~ straw, data=subset(dat, year==1925))
@@ -121,7 +120,6 @@ if(0){
   
   ## pairs(dat[,7:9],
   ##       main="sawyer.multi.uniformity")
-}
 
 }
 }

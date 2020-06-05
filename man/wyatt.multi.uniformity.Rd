@@ -67,6 +67,7 @@ xyplot(yield ~ col|factor(row), dat, group=crop,
 \dontrun{
 libs(desplot)
 desplot(yield ~ col*row, dat, subset=crop=="oats",
+        tick=TRUE,
         aspect=(440)/(1591), # true aspect
         main="wyatt.multi.uniformity - 1925 oats")
 desplot(yield ~ col*row, dat, subset=crop=="wheat",

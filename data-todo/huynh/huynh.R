@@ -3,7 +3,7 @@
 
 library(rio)
 
-setwd("c:/x/rpack/agridat/data-unused/huynh/")
+setwd("c:/x/rpack/agridat/data-todo/huynh/")
 # 1 env, 92 gen, 0-9 score, 1 row per genotype
 dat <- import("Cowpea Phenotypic Means.csv")
 #
@@ -25,5 +25,5 @@ dat <- import("Cowpea Phenotypic Means.csv")
 1_0950	1_0129	1_0055	1_0100
 
 lib(qtl)
-setwd("c:/x/rpack/agridat/data-unused/huynh")
+setwd("c:/x/rpack/agridat/data-todo/huynh")
 d1 <- read.cross("csv", "", "Cowpea Phenotypic Means.csv")

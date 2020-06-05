@@ -70,6 +70,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{lehmann.millet.uniformity}          \tab 6 x 22 \tab xy, 3 years \tab \cr
 \link{lessman.sorghum.uniformity}         \tab 46 x 60 \tab xy \tab \cr
 \link{li.millet.uniformity}               \tab 6 x 100 \tab xy \tab \cr
+\link{loesell.bean.uniformity}            \tab 21 x 90 \tab xy \tab \cr
 \link{lord.rice.uniformity}               \tab 5 x 14 \tab xy, 8 fields \tab \cr
 \link{love.cotton.uniformity}             \tab 16 x 10 \tab xy \tab \cr
 \link{lyon.potato.uniformity}             \tab 34 x 6 \tab xy \tab \cr

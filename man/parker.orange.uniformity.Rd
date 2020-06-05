@@ -83,7 +83,6 @@ desplot(yield ~ col*row|year, data = dat,
         flip = TRUE, aspect = 27*48/(10*200), # true aspect
         main = "parker.orange.uniformity")
 
-
 # CV across plots in each year. Similar to Parker table 11
 cv <- function(x) {
   x <- na.omit(x)
