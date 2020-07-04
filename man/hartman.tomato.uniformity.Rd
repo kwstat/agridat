@@ -61,7 +61,7 @@
 library(agridat)
 data(hartman.tomato.uniformity)
 libs(desplot)
-desplot(yield ~ col*row, hartman.tomato.uniformity,
+desplot(hartman.tomato.uniformity, yield ~ col*row, 
         flip=TRUE, aspect=192/330, # true aspect
         main="hartman.tomato.uniformity")
 

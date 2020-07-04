@@ -54,7 +54,7 @@
 
   # True aspect as shown in Weiss and Cox
   libs(desplot)
-  desplot(yield~col*row, dat,
+  desplot(dat, yield~col*row,
           text=gen, shorten='none', cex=.6, out1=block,
           aspect=252/96, # true aspect
           main="weiss.incblock")

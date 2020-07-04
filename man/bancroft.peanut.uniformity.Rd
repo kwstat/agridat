@@ -60,7 +60,7 @@ dat <- bancroft.peanut.uniformity
 ## 2 B2     2.05
   
 libs(desplot)
-desplot(yield ~ col*row|block, dat,
+desplot(dat, yield ~ col*row|block,
         flip=TRUE, aspect=(18*3)/(6*16.66), # true aspect
         main="bancroft.peanut.uniformity")
 

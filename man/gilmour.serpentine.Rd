@@ -56,7 +56,7 @@
   dat <- gilmour.serpentine
 
   libs(desplot)
-  desplot(yield~ col*row, data=dat,
+  desplot(dat, yield~ col*row,
           num=gen, show.key=FALSE, out1=rep,
           aspect = 16.5/90, # true aspect
           main="gilmour.serpentine")

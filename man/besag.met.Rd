@@ -62,7 +62,7 @@
   dat <- besag.met
 
   libs(desplot)
-  desplot(yield ~ col*row|county, dat,
+  desplot(dat, yield ~ col*row|county,
           aspect=36/11, # true aspect
           out1=rep, out2=block,
           main="besag.met")

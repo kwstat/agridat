@@ -119,7 +119,7 @@ dat <- smith.corn.uniformity
 
   dat = transform(dat, year=factor(year))
   libs(desplot)
-  desplot(yield~col*row|year, dat,
+  desplot(dat, yield~col*row|year,
           layout=c(2,2), aspect=1,
           main="smith.corn.uniformity: yield across years 1895-1987")
 

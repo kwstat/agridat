@@ -43,7 +43,7 @@ dat <- goulden.latin
 
 
 libs(desplot)
-desplot(yield ~ col*row, dat,
+desplot(dat, yield ~ col*row,
         text=trt, cex=1, # aspect unknown
         main="goulden.latin")
 

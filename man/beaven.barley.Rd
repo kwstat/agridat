@@ -63,7 +63,7 @@ tapply(dat$yield, dat$gen, mean)
 
 # Compare to Student 1923, diagram I,II
 libs(desplot)
-desplot(yield ~ col*row, data=dat,
+desplot(dat, yield ~ col*row,
         aspect=15/96, # true aspect
         main="beaven.barley - variety trial", text=gen)
 }

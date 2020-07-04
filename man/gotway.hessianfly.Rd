@@ -44,7 +44,7 @@
   
   dat$prop <- dat$y / dat$n
   libs(desplot)
-  desplot(prop~long*lat, dat,
+  desplot(dat, prop~long*lat,
           aspect=1, # true aspect
           out1=block, text=gen, cex=1, shorten='no',
           main="gotway.hessianfly")

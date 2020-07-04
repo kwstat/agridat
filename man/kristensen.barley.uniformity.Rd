@@ -60,7 +60,7 @@ data(kristensen.barley.uniformity)
 dat <- kristensen.barley.uniformity
 
 libs(desplot)
-desplot(yield ~ col*row, dat,
+desplot(dat, yield ~ col*row,
         flip=TRUE, aspect=(11*6.24)/(22*8.79),
         main="kristensen.barley.uniformity")
   

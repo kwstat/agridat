@@ -50,8 +50,8 @@ library(agridat)
   dat <- subset(love.cotton.uniformity, col > 1)
 
   libs(desplot)
-  desplot(yield ~ col*row, dat, flip=TRUE,
-          aspect=20/80, # just a guess
+  desplot(dat, yield ~ col*row,
+          flip=TRUE, aspect=20/80, # just a guess
           main="love.cotton.uniformity")
   
 }

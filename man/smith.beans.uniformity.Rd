@@ -82,19 +82,19 @@ library(agridat)
   cv(dat4$yield)
 
   libs("desplot")
-  desplot(yield ~ col*row, dat1, 
+  desplot(dat1, yield ~ col*row,
           aspect=180/45, flip=TRUE, # true aspect
           main="smith.beans.uniformity, expt 1 (true aspect)")
 
-  desplot(yield ~ col*row, dat2, 
+  desplot(dat2, yield ~ col*row,
           aspect=180/45, flip=TRUE, # true aspect
           main="smith.beans.uniformity, expt 2 (true aspect)")
 
-  desplot(yield ~ col*row, dat3, 
+  desplot(dat3, yield ~ col*row,
           aspect=450/80, flip=TRUE, # true aspect
           main="smith.beans.uniformity, expt 3 (true aspect)")
 
-  desplot(yield ~ col*row, dat4, 
+  desplot(dat4, yield ~ col*row,
           aspect=450/80, flip=TRUE, # true aspect
           main="smith.beans.uniformity expt 4, (true aspect)")
   

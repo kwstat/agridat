@@ -77,7 +77,7 @@ library(agridat)
   sd(dat$yield)/mean(dat$yield)
 
   libs(desplot)
-  desplot(yield~col*row, dat,
+  desplot(dat, yield~col*row,
           flip=TRUE, tick=TRUE, aspect =99/165, # true aspect
           main="wiedemann.safflower.uniformity (true shape)")
 

@@ -72,7 +72,7 @@
 
   libs(desplot)
   # Experiment design & yield heatmap
-  desplot(yield ~ col*row, dat,
+  desplot(dat, yield ~ col*row,
           out1=block, num=nitro, col=gen,
           cex=1, aspect=511/176, # true aspect
           main="yates.oats")

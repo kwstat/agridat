@@ -61,7 +61,7 @@ dat <- connolly.potato
 
 # Field plan
 libs(desplot)
-desplot(yield~col*row, data=dat,
+desplot(dat, yield~col*row,
         out1=rep, # aspect unknown
         main="connolly.potato yields (reps not contiguous)")
 

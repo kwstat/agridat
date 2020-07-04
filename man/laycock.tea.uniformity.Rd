@@ -56,7 +56,7 @@ data(laycock.tea.uniformity)
 dat <- laycock.tea.uniformity
 
 libs(desplot)
-desplot(yield ~ col*row|loc, dat,
+desplot(dat, yield ~ col*row|loc,
         flip=TRUE, aspect=322/252, # average of 2 locs
         main="laycock.tea.uniformity")
 

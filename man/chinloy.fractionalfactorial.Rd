@@ -71,7 +71,8 @@ dat <- transform(dat,
 
 # Experiment layout
 libs(desplot)
-desplot(yield ~ col*row, dat, out1=block, text=trt, shorten="no", cex=0.6,
+desplot(dat, yield ~ col*row,
+        out1=block, text=trt, shorten="no", cex=0.6,
         aspect=178/86,
         main="chinloy.fractionalfactorial")
 

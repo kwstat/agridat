@@ -52,7 +52,7 @@ library(agridat)
   # 0.67449 * sd(dat$yield)/mean(dat$yield) # 11.2%
   
   libs(desplot)
-  desplot(yield ~ col*row, dat,
+  desplot(dat, yield ~ col*row,
           flip=TRUE,
           aspect=(219*44/12)/132, # true aspect, 219 rows * 44 inches x 132 feet
           main="mcclelland.corn.uniformity")

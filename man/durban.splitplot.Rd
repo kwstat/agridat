@@ -45,7 +45,7 @@
   dat <- durban.splitplot
 
   libs(desplot)
-  desplot(yield~bed*row, dat,
+  desplot(dat, yield~bed*row,
           out1=block, out2=fung, num=gen, # aspect unknown
           main="durban.splitplot")
 

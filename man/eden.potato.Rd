@@ -63,7 +63,7 @@ dat <- eden.potato
 # 1925 qualitative
 d5a <- subset(dat, year=='1925a')
 libs(desplot)
-desplot(trt~col*row, d5a,
+desplot(d5a, trt~col*row,
         text=yield, cex=1, shorten='no', # aspect unknown
         main="eden.potato: 1925 qualitative")
 anova(m5a <- aov(yield~trt+factor(row)+factor(col), d5a)) # table 2
@@ -71,7 +71,7 @@ anova(m5a <- aov(yield~trt+factor(row)+factor(col), d5a)) # table 2
 # 1926 qualitative
 d6a <- subset(dat, year=='1926a')
 libs(desplot)
-desplot(trt~col*row, d6a,
+desplot(d6a, trt~col*row,
         text=yield, cex=1, shorten='no', # aspect unknown
         main="eden.potato: 1926 qualitative")
 anova(m6a <- aov(yield~trt+factor(row)+factor(col), d6a)) # table 4
@@ -79,7 +79,7 @@ anova(m6a <- aov(yield~trt+factor(row)+factor(col), d6a)) # table 4
 # 1925 quantitative
 d5 <- subset(dat, year=='1925b')
 libs(desplot)
-desplot(yield ~ col*row, d5,
+desplot(d5, yield ~ col*row,
         out1=block, text=trt, cex=1, # aspect unknown
         main="eden.potato: 1925 quantitative")
 
@@ -93,7 +93,7 @@ anova(m5 <- aov(yield~trt+block, d5)) # table 6
 # 1926 quantitative
 d6 <- subset(dat, year=='1926b')
 libs(desplot)
-desplot(yield ~ col*row, d6,
+desplot(d6, yield ~ col*row,
         out1=block, text=trt, cex=1, # aspect unknown
         main="eden.potato: 1926 quantitative")
 anova(m6 <- aov(yield~trt+block, d6)) # table 7
@@ -101,7 +101,7 @@ anova(m6 <- aov(yield~trt+block, d6)) # table 7
 # 1927 qualitative + quantitative
 d7 <- droplevels(subset(dat, year==1927))
 libs(desplot)
-desplot(yield ~ col*row, d7,
+desplot(d7, yield ~ col*row,
         out1=block, text=trt, cex=1, col=ptype, # aspect unknown
       main="eden.potato: 1927 qualitative + quantitative")
 

@@ -46,7 +46,7 @@ dat <- gomez.stripplot
 
 # Gomez figure 3.7
 libs(desplot)
-desplot(gen ~ col*row, data=dat,
+desplot(dat, gen ~ col*row,
         # aspect unknown
         out1=rep, out2=nitro, num=nitro, cex=1,
         main="gomez.stripplot")

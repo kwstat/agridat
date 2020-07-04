@@ -57,7 +57,7 @@ data(cochran.lattice)
 dat <- cochran.lattice
 
 libs(desplot)
-desplot(y~row*col|rep, dat,
+desplot(dat, y~row*col|rep,
         text=trt, # aspect unknown, should be 2 or .5
          main="cochran.lattice")
 

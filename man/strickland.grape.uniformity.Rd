@@ -41,7 +41,7 @@ data(strickland.grape.uniformity)
 dat <- strickland.grape.uniformity
 
   libs(desplot)
-  desplot(yield ~ col*row, dat,
+  desplot(dat, yield ~ col*row,
           main="strickland.grape.uniformity",
           flip=TRUE, aspect=(31*8)/(5*10) )
   

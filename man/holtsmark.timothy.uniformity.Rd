@@ -53,7 +53,8 @@ dat <- transform(dat,
                  check = ifelse(floor((row+col)/3)==(row+col)/3, "C", ""))
                  
 libs(desplot)
-desplot(yield ~ col*row, data=dat, flip=TRUE, text=check, show.key=FALSE,
+desplot(dat, yield ~ col*row,
+        flip=TRUE, text=check, show.key=FALSE,
         aspect=30/200, # true aspect
         main="holtsmark.timothy.uniformity")
 

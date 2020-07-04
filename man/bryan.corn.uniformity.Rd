@@ -46,7 +46,7 @@
   dat <- bryan.corn.uniformity
   
   libs(desplot)
-  desplot(yield ~ col*row|expt, dat,
+  desplot(dat, yield ~ col*row|expt,
           main="bryan.corn.uniformity",
           aspect=(48*3.5/(6*8*3.5)), # true aspect
           flip=TRUE, tick=TRUE)

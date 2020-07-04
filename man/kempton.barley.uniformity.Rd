@@ -49,7 +49,7 @@
   dat <- kempton.barley.uniformity
 
   libs(desplot)
-  desplot(yield~col*row, dat,
+  desplot(dat, yield~col*row,
           aspect=140/98, tick=TRUE, # true aspect
           main="kempton.barley.uniformity")
   

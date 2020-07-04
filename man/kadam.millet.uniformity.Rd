@@ -55,12 +55,12 @@ library(agridat)
   
   # similar to Kadam fig 1
   libs(desplot)
-  desplot(yield ~ col*row, dat,
+  desplot(dat, yield ~ col*row,
           subset=year==1933,
           flip=TRUE, aspect=(10*33)/(8*16.5), # true aspect
           main="kadam.millet.uniformity 1933")
 
-  desplot(yield ~ col*row, dat,
+  desplot(dat, yield ~ col*row,
           subset=year==1934,
           flip=TRUE, aspect=(20*16.5)/(8*16.5), # true aspect
           main="kadam.millet.uniformity 1934")

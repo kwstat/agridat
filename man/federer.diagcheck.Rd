@@ -61,7 +61,7 @@
 
   # Show the layout as in Federer 1998.
   libs(desplot)
-  desplot(yield ~ col*row, dat,
+  desplot(dat, yield ~ col*row,
           text=gen, show.key=FALSE, # aspect unknown
           shorten='no', col=check, cex=.8, col.text=c("yellow","gray"),
           main="federer.diagcheck")

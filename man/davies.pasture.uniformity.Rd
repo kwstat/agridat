@@ -56,7 +56,7 @@ library(agridat)
   # qqmath( ~ yield, dat) # clearly non-normal, skewed right
 
   libs(desplot)
-  desplot(yield ~ col*row, dat,
+  desplot(dat, yield ~ col*row,
           flip=TRUE, aspect=(40*5)/(19*10), # true aspect
           main="davies.pasture.uniformity") 
 

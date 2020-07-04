@@ -40,7 +40,7 @@ library(agridat)
   sd(dat$yield)/mean(dat$yield) # 31.1, Strickland has 34.4
 
   libs(desplot)
-  desplot(yield ~ col*row, dat,
+  desplot(dat, yield ~ col*row,
           main="strickland.peach.uniformity",
           flip=TRUE, aspect=1)
 }

@@ -79,7 +79,7 @@ dat <- parker.orange.uniformity
 libs(desplot)
 dat$year <- factor(dat$year)
 # 27 rows * 48 ft x 10 cols * 200 feet
-desplot(yield ~ col*row|year, data = dat,
+desplot(dat, yield ~ col*row|year,
         flip = TRUE, aspect = 27*48/(10*200), # true aspect
         main = "parker.orange.uniformity")
 
@@ -107,7 +107,7 @@ dat3 <- aggregate(yield ~ row+col, data = subset(dat, year !=1921 ),
 round(acast(dat3, row ~ col, value.var = 'yield'),0)
 
 libs(desplot)
-desplot(yield ~ col*row, data = dat3,
+desplot(dat3, yield ~ col*row,
         flip = TRUE, aspect = 27*48/(10*200), # true aspect
         main = "parker.orange.uniformity - mean across years")
 

@@ -71,12 +71,12 @@
   # Show field layout of checks.  Cullis Table 1.
   dat$check <- ifelse(dat$entry < 8, dat$entry, NA)
   libs(desplot)
-  desplot(yield ~ col*row, dat,
+  desplot(dat, yield ~ col*row,
           col="check", cex=0.5, flip=TRUE, aspect=121/150, # true aspect
           main="cullis.earlygen (yield)")
 
   grays <- colorRampPalette(c("white","#252525"))
-  desplot(weed ~ col*row, dat,
+  desplot(dat, weed ~ col*row,
           at=0:6-0.5, col.regions=grays(7)[-1],
           flip=TRUE, aspect=121/150, # true aspect
           main="cullis.earlygen (weed)")

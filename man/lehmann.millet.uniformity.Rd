@@ -45,10 +45,12 @@ The season of 1906 was abnormally wet compared with 1905 and 1907. [9th report]
 
   libs(desplot)
   dat$year = factor(dat$year)
-  desplot(yield ~ range*plot|year, dat, aspect=(22*50)/(6*200),
+  desplot(dat, yield ~ range*plot|year,
+          aspect=(22*50)/(6*200),
           main="lehmann.millet.uniformity",
           flip=TRUE, tick=TRUE)
-  desplot(total ~ range*plot|year, dat, aspect=(22*50)/(6*200),
+  desplot(dat, total ~ range*plot|year,
+          aspect=(22*50)/(6*200),
           main="lehmann.millet.uniformity",
           flip=TRUE, tick=TRUE)
   

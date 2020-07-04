@@ -57,7 +57,7 @@ library(agridat)
   dat <- lessman.sorghum.uniformity
   
   libs(desplot)
-  desplot(yield ~ col*row, dat,
+  desplot(dat, yield ~ col*row,
           aspect=300/160, tick=TRUE, flip=TRUE, # true aspect
           main="lessman.sorghum.uniformity")
 

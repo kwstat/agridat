@@ -46,7 +46,7 @@ library(agridat)
   sd(dat$yield)
 
   libs(desplot)
-  desplot(yield ~ col*row, dat,
+  desplot(dat, yield ~ col*row,
           main="strickland.tomato.uniformity",
           flip=TRUE, aspect=(6*12)/(30*4))
 }

@@ -51,7 +51,7 @@ dat <- gomez.fractionalfactorial
 # trt abcdef has the highest yield
 # Gomez, Figure 4.8
 libs(desplot)
-desplot(yield~col*row, dat,
+desplot(dat, yield~col*row,
         # aspect unknown
         text=trt, shorten="none", show.key=FALSE, cex=1,
         main="gomez.fractionalfactorial - treatment & yield")

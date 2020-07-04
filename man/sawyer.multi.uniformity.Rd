@@ -95,15 +95,17 @@
   
   libs(desplot)
   # The field plan shows square plots
-  desplot(grain~col*row, subset(dat, year==1925),
+  desplot(dat, grain~col*row,
+          subset= year==1925,
           main="sawyer.multi.uniformity - 1925 wheat grain yield",
           aspect=(6)/(8)) # true aspect
   
-  desplot(rootwt~col*row, subset(dat, year==1926),
+  desplot(dat, rootwt~col*row,
+          subset= year==1926,
           main="sawyer.multi.uniformity - 1926 root weight of swedes",
           aspect=(6)/(8))
 
-  desplot(grain~col*row, subset(dat, year==1927),
+  desplot(dat, grain~col*row, subset= year==1927,
           main="sawyer.multi.uniformity - 1927 oats grain yield",
           aspect=(6)/(8))
 

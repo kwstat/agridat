@@ -52,7 +52,7 @@ dat <- christidis.cotton.uniformity
   
 libs(desplot)
 dat$yld <- dat$yield/4*1000 # re-scale to match Christidis fig 1
-desplot(yld ~ col*row|block, data=dat,
+desplot(dat, yld ~ col*row|block,
         flip=TRUE, aspect=(16)/(64),
         main="christidis.cotton.uniformity")
 

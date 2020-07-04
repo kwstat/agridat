@@ -68,7 +68,7 @@ splom(dmat, main="kulkarni.sorghum.uniformity")
 cor(dmat)
 
 libs(desplot)
-desplot(yield ~ col*row|year, dat,
+desplot(dat, yield ~ col*row|year,
         flip=TRUE, aspect=150/290,
         main="kulkarni.sorghum.uniformity")
   

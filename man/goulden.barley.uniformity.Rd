@@ -46,7 +46,7 @@ data(goulden.barley.uniformity)
 dat <- goulden.barley.uniformity
 
 libs(desplot)
-desplot(yield ~ col*row, data=dat,
+desplot(dat, yield ~ col*row,
         aspect=20/20, # true aspect
         main="goulden.barley.uniformity")
 

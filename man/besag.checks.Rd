@@ -50,7 +50,7 @@ data(besag.checks)
 dat <- besag.checks
 \dontrun{
   libs(desplot)
-  desplot(yield~col*row,dat,
+  desplot(dat, yield~col*row,
           num=gen, aspect=234/46.5, # true aspect
           main="besag.checks")
 }

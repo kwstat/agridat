@@ -47,12 +47,12 @@
   })
 
   libs(desplot)
-  desplot(yield~ col*row|site, dat,
+  desplot(dat, yield~ col*row|site,
           # midpoint="midrange",
           # aspect unknown
           main="vsn.lupin3 - yield")
   # Site 1 & 2 used same randomization
-  desplot(check~ col*row|site, dat,
+  desplot(dat, check~ col*row|site,
           main="vsn.lupin3: check plot placement") 
 
   libs(asreml,lucid)

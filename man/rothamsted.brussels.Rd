@@ -50,7 +50,7 @@ libs(lattice)
 bwplot(yield~trt, dat, main="rothamsted.brussels")
 
   libs(desplot)
-  desplot(yield~col*row, data=dat,
+  desplot(dat, yield~col*row,
           num=trt, out1=block, cex=1, # aspect unknown
           main="rothamsted.brussels")
 

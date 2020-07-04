@@ -33,7 +33,7 @@ data(cochran.latin)
 dat <- cochran.latin
 
 libs(desplot)
-desplot(diff~col*row, dat,
+desplot(dat, diff~col*row,
         text=operator, cex=1, # aspect unknown
         main="cochran.latin")
 

@@ -70,7 +70,7 @@
   dat <- mutate(dat, year=as.character(year))
   # Bose smoothed the data by averaging 2x3 plots together before drawing
   # contour maps.  Heatmaps of raw data have similar structure to Bose Fig 1.
-  desplot(pctyld ~ col*row|year, dat,
+  desplot(dat, pctyld ~ col*row|year,
           tick=TRUE, flip=TRUE, aspect=(26)/(15),
           main="bose.multi.* - Percent of mean yield")
   

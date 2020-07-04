@@ -54,9 +54,9 @@
   dat <- devries.pine
 
   libs(desplot)
-  desplot::desplot(volume ~ col*row, dat,
-                   main="devries.pine - expt design and tree volume",
-                   col=spacing, num=thinning, cex=1, out1=block, aspect=200/720)
+  desplot(dat, volume ~ col*row,
+          main="devries.pine - expt design and tree volume",
+          col=spacing, num=thinning, cex=1, out1=block, aspect=200/720)
   
   libs(HH)
   HH::interaction2wt(volume ~ spacing+thinning, dat,

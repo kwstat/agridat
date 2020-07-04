@@ -53,7 +53,7 @@ dat <- little.splitblock
 
 # Layout shown by Little figure 10.2
 libs(desplot)
-desplot(yield ~ col*row, data=dat,
+desplot(dat, yield ~ col*row,
         out1=block, out2=col, col=nitro, cex=1, num=harvest,
         main="little.splitblock")
 

@@ -49,7 +49,7 @@ round(dat$res1 * 596.6,0)
 
   # Visually.  Note largest positive/negative residuals are adjacent
   libs(desplot)
-  desplot(res1 ~ col + row, dat,
+  desplot(dat, res1 ~ col + row,
           text=gen, # aspect unknown
           main="ryder.groundnut - residuals")
 
@@ -61,7 +61,7 @@ if(0){
   dat[dat$block=="B3" & dat$gen=="B", "dry"] <- 1.4
   m2 <- lm(dry~block+gen, dat)
   dat$res2 <- resid(m2)
-  desplot(res2 ~ col+row, dat,
+  desplot(dat, res2 ~ col+row,
           # aspect unknown
           text=gen, main="ryder.groundnut")
 }

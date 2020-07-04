@@ -61,10 +61,10 @@ dat <- mutate(dat, col = ifelse(trial=="T1" & col==4, 7, col),
                    col = ifelse(trial=="T1" & col==3, 6, col))
 
 libs(desplot)
-desplot(yield ~ col*row, dat, subset=trial=="T1",
+desplot(dat, yield ~ col*row, subset=trial=="T1",
         flip=TRUE, aspect=500/(5*12),
         main="baker.strawberry.uniformity - trial T1")
-desplot(yield ~ col*row, dat, subset=trial=="T2",
+desplot(dat, yield ~ col*row, subset=trial=="T2",
         flip=TRUE, aspect=500/300,
         main="baker.strawberry.uniformity - trial T2")
 

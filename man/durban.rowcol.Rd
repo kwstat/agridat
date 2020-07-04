@@ -48,7 +48,7 @@
   dat <- durban.rowcol
   
   libs(desplot)
-  desplot(yield~bed*row, dat,
+  desplot(dat, yield~bed*row,
           out1=rep, num=gen, # aspect unknown
           main="durban.rowcol")
   

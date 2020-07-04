@@ -94,20 +94,20 @@ dat <- bradley.multi.uniformity
 
 # figures similar to Bradley, pages 11-15
 libs(desplot)
-desplot(yield ~ col*row, dat, subset=season==1,
+desplot(dat, yield ~ col*row, subset=season==1,
         flip=TRUE, aspect=433/366, # true aspect (omits roadways)
         main="bradley.multi.uniformity - season 1, woolly pyrol")
 
-desplot(yield ~ col*row, dat, subset=season==2,
+desplot(dat, yield ~ col*row, subset=season==2,
         flip=TRUE, aspect=433/366, # true aspect (omits roadways)
         main="bradley.multi.uniformity - season 2, woolly pyrol")
 
-desplot(yield ~ col*row, dat, subset=season==3,
+desplot(dat, yield ~ col*row, subset=season==3,
         flip=TRUE, aspect=433/366, # true aspect (omits roadways)
         main="bradley.multi.uniformity - season 3, maize")
 
 
-desplot(yield ~ col*row, dat, subset=season==4,
+desplot(dat, yield ~ col*row, subset=season==4,
         flip=TRUE, aspect=433/366, # true aspect (omits roadways)
         main="bradley.multi.uniformity - season 4, yams")
 
@@ -130,7 +130,7 @@ dat4 <- subset(bradley.multi.uniformity, season==4)
   dat14$fertility <- dat1$percent + dat2$percent + dat3$percent + dat4$percent
 
   libs(desplot)
-  desplot(fertility ~ col*row, dat14,
+  desplot(dat14, fertility ~ col*row,
           tick=TRUE, flip=TRUE, aspect=433/366, # true aspect (omits roadways)
           main="bradley.multi.uniformity - fertility")
 

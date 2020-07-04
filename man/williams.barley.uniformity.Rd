@@ -52,7 +52,7 @@ data(williams.barley.uniformity)
 dat <- williams.barley.uniformity
 
 libs(desplot)
-desplot(yield ~ col*row, dat,
+desplot(dat, yield ~ col*row,
         aspect= 75/36, # true aspect
         main="williams.barley.uniformity")
 

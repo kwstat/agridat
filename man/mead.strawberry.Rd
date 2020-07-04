@@ -54,7 +54,7 @@ dat$sub <- ifelse(is.element(dat$gen, c('G', 'V', 'R1', 'F')),
               "S1","S2")
 
 libs(desplot)
-desplot(yield~col*row, dat,
+desplot(dat, yield~col*row,
         text=gen, cex=1, out1=block, out2=sub, # unknown aspect
         main="mead.strawberry")
 

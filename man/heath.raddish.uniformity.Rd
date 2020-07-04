@@ -37,7 +37,7 @@ Heath said, Most of the large plants were round the edges...one important source
   data(heath.raddish.uniformity)
   dat <- heath.raddish.uniformity
   libs(desplot, dplyr)
-  desplot(yield ~ col*row|block, dat,
+  desplot(dat, yield ~ col*row|block,
           aspect=1,
           main="heath.raddish.uniformity")
 

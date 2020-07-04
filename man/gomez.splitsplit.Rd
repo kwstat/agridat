@@ -51,11 +51,11 @@ dat <- gomez.splitsplit
 dat$nf <- factor(dat$nitro)
 
 libs(desplot)
-desplot(nf ~ col*row, dat,
+desplot(dat, nf ~ col*row,
         # aspect unknown
         out1=rep, col=management, num=gen, cex=1,
         main="gomez.splitsplit")
-desplot(yield ~ col*row, dat,
+desplot(dat, yield ~ col*row,
         # aspect unknown
         out1=rep, main="gomez.splitsplit")
 

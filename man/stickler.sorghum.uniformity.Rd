@@ -59,14 +59,14 @@ library(agridat)
   dat2 <- subset(dat, expt!="E1")
   
   libs(desplot)
-  desplot(yield ~ col*row|expt, data=dat,
+  desplot(dat, yield ~ col*row|expt,
           subset=expt=="E1",
           #cex=1,text=yield, shorten="none",
           xlab="row",ylab="range",
           flip=TRUE, tick=TRUE, aspect=(20*10)/(20*14/12), # true aspect
           main="stickler.sorghum.uniformity: expt E1")
 
-  desplot(yield ~ col*row|expt, data=dat,
+  desplot(dat, yield ~ col*row|expt,
           subset=expt!="E1",
           xlab="row",ylab="range",
           flip=TRUE, tick=TRUE, aspect=(20*5)/(20*44/12), # true aspect

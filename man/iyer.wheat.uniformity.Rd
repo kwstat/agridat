@@ -51,7 +51,7 @@ data(iyer.wheat.uniformity)
 dat <- iyer.wheat.uniformity
 
 libs(desplot)
-desplot(yield ~ col*row, data=dat,
+desplot(dat, yield ~ col*row,
         main="iyer.wheat.uniformity", tick=TRUE, 
         aspect=(25*5)/(80*5)) # true aspect
 

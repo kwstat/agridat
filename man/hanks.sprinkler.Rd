@@ -62,7 +62,7 @@
 
   # The line sprinkler is vertical between subplots 6 & 7
   libs(desplot)
-  desplot(yield~subplot*row, dat,
+  desplot(dat, yield~subplot*row,
           out1=block, out2=irr, cex=1, # aspect unknown
           num=gen, main="hanks.sprinkler")
   

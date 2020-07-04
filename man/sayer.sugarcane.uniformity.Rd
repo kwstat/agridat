@@ -80,11 +80,11 @@ library(agridat)
   
   libs(desplot)
   
-  desplot(yield ~ col*row, dat33,
+  desplot(dat33, yield ~ col*row,
           flip=TRUE, aspect=408/480, # true aspect
           main="sayer.sugarcane.uniformity 1933")
 
-  desplot(yield ~ col*row, dat34,
+  desplot(dat34, yield ~ col*row,
           flip=TRUE, aspect=363/480, # true aspect
           main="sayer.sugarcane.uniformity 1934")
   

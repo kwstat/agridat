@@ -107,24 +107,24 @@ library(agridat)
   # Pole Bean
   data(moore.polebean.uniformity)
   cv(moore.polebean.uniformity$yield) # 8.00. Moore says 6.73.
-  desplot(yield~col*row, moore.polebean.uniformity,
+  desplot(moore.polebean.uniformity, yield~col*row,
           flip=TRUE, tick=TRUE, aspect=120/60, # true aspect
           main="moore.polebean.uniformity - yield")
 
   # Bush bean
   data(moore.bushbean.uniformity)
   cv(moore.bushbean.uniformity$yield) # 12.1. Moore says 10.8
-  desplot(yield~col*row, moore.bushbean.uniformity,
+  desplot(moore.bushbean.uniformity, yield~col*row,
           flip=TRUE, tick=TRUE, aspect=120/72, # true aspect
           main="moore.bushbean.uniformity - yield")
 
   # Sweet corn
   data(moore.sweetcorn.uniformity)
   cv(moore.sweetcorn.uniformity$yield) # 17.5. Moore says 13.6
-  desplot(yield~col*row, moore.sweetcorn.uniformity,
+  desplot(moore.sweetcorn.uniformity, yield~col*row,
           flip=TRUE, tick=TRUE, aspect=120/72, # true aspect
           main="moore.sweetcorn.uniformity - yield")
-  ## desplot(ears~col*row, moore.sweetcorn.uniformity,
+  ## desplot(moore.sweetcorn.uniformity, ears~col*row,
   ##         flip=TRUE, tick=TRUE, aspect=120/72, # true aspect
   ##         main="moore.sweetcorn.uniformity - ears")
   ## libs(lattice)
@@ -134,7 +134,7 @@ library(agridat)
   # Carrot
   data(moore.carrot.uniformity)
   cv(moore.carrot.uniformity$yield) # 33.4. Moore says 27.6
-  desplot(yield~col*row, moore.carrot.uniformity,
+  desplot(moore.carrot.uniformity, yield~col*row,
           flip=TRUE, tick=TRUE, aspect=60/36, # true aspect
           main="moore.carrot.uniformity - yield")
 
@@ -142,10 +142,10 @@ library(agridat)
   # Spring cauliflower
   data(moore.springcauliflower.uniformity)
   cv(moore.springcauliflower.uniformity$yield) # 21. Moore says 19.5
-  desplot(yield~col*row, moore.springcauliflower.uniformity,
+  desplot(moore.springcauliflower.uniformity, yield~col*row,
           flip=TRUE, tick=TRUE, aspect=300/36, # true aspect
           main="moore.springcauliflower.uniformity - yield")
-  ## desplot(heads~col*row, moore.springcauliflower.uniformity,
+  ## desplot(moore.springcauliflower.uniformity, heads~col*row, 
   ##         flip=TRUE, tick=TRUE, aspect=300/36, # true aspect
   ##         main="moore.springcauliflower.uniformity - heads")
   ## libs(lattice)
@@ -155,10 +155,10 @@ library(agridat)
   # Fall cauliflower
   data(moore.fallcauliflower.uniformity)
   cv(moore.fallcauliflower.uniformity$yield) # 17.7. Moore says 17.0
-  desplot(yield~col*row, moore.fallcauliflower.uniformity,
+  desplot(moore.fallcauliflower.uniformity, yield~col*row, 
           flip=TRUE, tick=TRUE, aspect=300/36, # true aspect
           main="moore.fallcauliflower.uniformity - yield")
-  ## desplot(heads~col*row, moore.fallcauliflower.uniformity,
+  ## desplot(moore.fallcauliflower.uniformity, heads~col*row, 
   ##         flip=TRUE, tick=TRUE, aspect=300/36, # true aspect
   ##         main="moore.fallcauliflower.uniformity - heads")
   ## libs(lattice)

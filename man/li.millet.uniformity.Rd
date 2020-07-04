@@ -48,7 +48,7 @@ library(agridat)
   mean(dat$yield) # matches Li et al.
   
   libs(desplot)
-  desplot(yield~col*row, dat,
+  desplot(dat, yield~col*row,
           aspect=100/100, # true aspect
           main="li.millet.uniformity")
   

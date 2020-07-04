@@ -54,12 +54,12 @@ library(agridat)
   dat <- mercer.mangold.uniformity
   
   libs(desplot)
-  desplot(leaves~col*row, data=dat,
+  desplot(dat, leaves~col*row,
           aspect=145/302, # true aspect
           main="mercer.mangold.uniformity - leaves")
 
   libs(desplot)
-  desplot(roots~col*row, data=dat,
+  desplot(dat, roots~col*row,
           aspect=145/302, # true aspect
           main="mercer.mangold.uniformity - roots")
 

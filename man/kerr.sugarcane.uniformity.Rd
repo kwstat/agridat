@@ -50,7 +50,7 @@ dat <- kerr.sugarcane.uniformity
 
 # match Kerr figure 4
 libs(desplot)
-desplot(yield ~ col*row|trial, dat,
+desplot(dat, yield ~ col*row|trial,
         flip=TRUE, aspect=1, # true aspect
         main="kerr.sugarcane.uniformity")
 

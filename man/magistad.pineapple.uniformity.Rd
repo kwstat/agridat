@@ -89,19 +89,19 @@ library(agridat)
   ## 4    82 220.7500 1264.500
   
   libs(desplot)
-  desplot(weight ~ col*row, dat,
+  desplot(dat, weight ~ col*row,
           subset=field==1,
           aspect=2400/48,
           main="magistad.pineapple.uniformity - field 1")          
-  desplot(weight ~ col*row, dat,
+  desplot(dat, weight ~ col*row,
           subset=field==19,
           aspect=300/39,
           main="magistad.pineapple.uniformity - field 19")
-  desplot(weight ~ col*row, dat,
+  desplot(dat, weight ~ col*row,
           subset=field==82,
           aspect=228/192,
           main="magistad.pineapple.uniformity - field 82")          
-  desplot(weight ~ col*row, dat,
+  desplot(dat, weight ~ col*row,
           subset=field==21,
           aspect=300/112.5,
           main="magistad.pineapple.uniformity - field 21")

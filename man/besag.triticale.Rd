@@ -46,7 +46,7 @@
   dat <- transform(dat, xf=factor(col), yf=factor(row))
 
   libs(desplot)
-  desplot(yield ~ col*row, data=dat,
+  desplot(dat, yield ~ col*row,
           # aspect unknown
           main="besag.triticale")
 

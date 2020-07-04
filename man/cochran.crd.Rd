@@ -50,7 +50,7 @@ dat <- cochran.crd
 
 # Field plan
 libs(desplot)
-desplot(inf~col*row, data=dat,
+desplot(dat, inf~col*row,
         text=trt, cex=1, # aspect unknown
         main="cochran.crd")
 

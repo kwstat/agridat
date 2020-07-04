@@ -58,7 +58,7 @@ library(agridat)
   # 703.7847 787.8125 
   
   libs(desplot)
-  desplot(yield ~ col*row|year, dat,
+  desplot(dat, yield ~ col*row|year,
           flip=TRUE, tick=TRUE, aspect=200/48,
           main="robinson.peanut.uniformity")
   

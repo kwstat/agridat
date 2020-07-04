@@ -47,7 +47,7 @@ rep (instead of across reps).
   dat <- weiss.lattice
 
   libs(desplot)
-  desplot(yield~col*row|rep,dat,
+  desplot(dat, yield~col*row|rep,
           text=gen, shorten="none", cex=.8, aspect=3/16, # true aspect
           main="weiss.lattice (layout uncertain)", xlab="Soybean yields")
 

@@ -49,7 +49,7 @@ library(agridat)
   # 23.42
   
   libs(desplot)
-  desplot(yield ~ col*row, dat,
+  desplot(dat, yield ~ col*row,
           flip=TRUE, aspect=(5.4)/(43.2), # true aspect
           main="nagai.strawberry.uniformity")
 }

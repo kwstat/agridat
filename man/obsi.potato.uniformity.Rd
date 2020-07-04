@@ -54,10 +54,10 @@ dat <- obsi.potato.uniformity
 
 \dontrun{
 libs(desplot)
-desplot(yield ~ col*row, dat, subset=loc=="L1",
+desplot(dat, yield ~ col*row, subset=loc=="L1",
   main="obsi.potato.uniformity - loc L1",
   flip=TRUE, tick=TRUE)
-desplot(yield ~ col*row, dat, subset=loc=="L2",
+desplot(dat, yield ~ col*row, subset=loc=="L2",
   main="obsi.potato.uniformity - loc L2",
   flip=TRUE, tick=TRUE)
 }

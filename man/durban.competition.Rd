@@ -56,7 +56,7 @@ dat <- durban.competition
 with(dat, table(gen,wheel))
 
 libs(desplot)
-desplot(yield ~ col*block, dat,
+desplot(dat, yield ~ col*block,
         out1=block, text=gen, col=wheel, aspect=37/19, # true aspect
         main="durban.competition")
 
@@ -65,7 +65,7 @@ desplot(yield ~ col*block, dat,
 m1 <- lm(yield ~ gen + block, data=dat)
 dat$res <- resid(m1)
 
-## desplot(res ~ col*block, dat, out1=block, text=gen, col=wheel,
+## desplot(dat, res ~ col*block, out1=block, text=gen, col=wheel,
 ##         main="durban.competition - residuals")
 
 # Calculate mean of neighboring plots

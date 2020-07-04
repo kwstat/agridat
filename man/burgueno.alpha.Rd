@@ -46,7 +46,7 @@
   dat <- burgueno.alpha
 
   libs(desplot)
-  desplot(yield~col*row, dat,
+  desplot(dat, yield~col*row,
           out1=rep, out2=block, # aspect unknown
           text=gen, cex=1,shorten="none",
           main='burgueno.alpha')

@@ -51,7 +51,7 @@ data(baker.wheat.uniformity)
 dat <- baker.wheat.uniformity
 
 libs(desplot)
-desplot(yield ~ col*row, dat,
+desplot(dat, yield ~ col*row,
         flip=TRUE, aspect=1,
         main="baker.wheat.uniformity")
 

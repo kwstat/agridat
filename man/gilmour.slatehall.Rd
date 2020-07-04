@@ -52,7 +52,7 @@
   dat <- gilmour.slatehall
 
   libs(desplot)
-  desplot(yield ~ col * row, dat,
+  desplot(dat, yield ~ col * row,
           aspect=22.5/40, num=gen, out1=rep, cex=1,
           main="gilmour.slatehall")
 

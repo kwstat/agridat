@@ -42,7 +42,7 @@ data(williams.cotton.uniformity)
 dat <- williams.cotton.uniformity
 
 libs(desplot)
-desplot(yield ~ col*row, dat,
+desplot(dat, yield ~ col*row,
         aspect=144/24, # true aspect
         main="williams.cotton.uniformity")
 

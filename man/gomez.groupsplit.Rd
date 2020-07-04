@@ -42,7 +42,7 @@ dat <- gomez.groupsplit
 
 # Gomez figure 3.10.  Obvious fert and group effects
 libs(desplot)
-desplot(group ~ col*row, dat,
+desplot(dat, group ~ col*row,
         out1=rep, col=fert, text=gen, # aspect unknown
         main="gomez.groupsplit")
 

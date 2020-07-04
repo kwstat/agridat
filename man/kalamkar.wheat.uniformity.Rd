@@ -70,10 +70,10 @@
   # sum(dat$ears) # 25850
   
   libs(desplot)
-  desplot(ears ~ col*row, dat,
+  desplot(dat, ears ~ col*row,
           flip=TRUE, aspect=(80*0.5)/(16*1.64042), # true aspect
           main="kalamkar.wheat.uniformity - ears")
-  desplot(yield ~ col*row, dat,
+  desplot(dat, yield ~ col*row,
           flip=TRUE, aspect=(80*0.5)/(16*1.64042), # true aspect
           main="kalamkar.wheat.uniformity - yield")
   

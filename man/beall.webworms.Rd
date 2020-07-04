@@ -69,7 +69,7 @@ histogram(~y|trt, data=dat, layout=c(1,4), as.table=TRUE,
 # Visualize Beall table 6.  Block effects may exist, but barely.
 libs(desplot)
 grays <- colorRampPalette(c("white","#252525"))
-desplot(y ~ col*row, data=dat,
+desplot(dat, y ~ col*row,
         col.regions=grays(10),
         at=0:10-0.5,
         out1=block, out2=trt, num=trt, flip=TRUE, # aspect unknown

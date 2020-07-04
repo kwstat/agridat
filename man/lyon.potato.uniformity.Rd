@@ -58,7 +58,7 @@ library(agridat)
   sum(dat$yield)/(6*72*96) # 0.11
   
   libs(desplot)
-  desplot(yield ~ col*row, dat,
+  desplot(dat, yield ~ col*row,
           tick=TRUE, flip=TRUE, aspect=96/72, # true aspect
           main="lyon.potato.uniformity")
   

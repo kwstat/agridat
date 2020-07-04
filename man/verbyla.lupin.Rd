@@ -94,7 +94,7 @@
 
   # The same RCB randomization was used at all sites in each year
   libs(desplot)
-  desplot(gen~col+row|site, data=dat,
+  desplot(dat, gen~col+row|site,
           out1=rep, num=rate,
           # aspect unknown
           main="verbyla.lupin - experiment design")

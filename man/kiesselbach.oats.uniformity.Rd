@@ -56,7 +56,7 @@ library(agridat)
   range(dat$yield) # 56.7 92.8 match Kiesselbach p 64.
 
   libs(desplot)
-  desplot(yield ~ col*row, dat,
+  desplot(dat, yield ~ col*row,
           tick=TRUE, flip=TRUE, aspect=792/469, # true aspect
           main="kiesselbach.oats.uniformity")
   

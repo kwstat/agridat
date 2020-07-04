@@ -60,18 +60,18 @@ dat <- transform(dat, row=21-row)
 # Disease presence.  Gumpertz fig 1a, 2a.
 libs(desplot)
 grays <- colorRampPalette(c("#d9d9d9","#252525"))
-desplot(disease ~ row*quadrat|field, data=dat,
+desplot(dat, disease ~ row*quadrat|field,
         col.regions=c('white','black'), aspect=1, # uncertain aspect
         main="gumpertz.pepper disease presence", )
 
 # Soil water.  Gumpertz fig 1b, 2b
-desplot(water ~ row*quadrat|field, data=dat,
+desplot(dat, water ~ row*quadrat|field,
         col.regions=grays(5), aspect=1, # uncertain aspect
         at=c(5,7.5,10,12.5,15,18),
         main="gumpertz.pepper soil moisture")
 
 # Leaf assay.  Gumpertz fig 1c, 2c
-desplot(leaf ~ row*quadrat|field, data=dat,
+desplot(dat, leaf ~ row*quadrat|field,
         col.regions=grays(6),
         at=c(0,1,2,3,4,5,6)-.5, aspect=1, # uncertain aspect
         main="gumpertz.pepper leaf assay", )
@@ -88,7 +88,7 @@ coef(m21) # These match Gumpertz et al table 4, model 1
 dat2$res21 <- resid(m21)
 if(0){
   libs(desplot)
-  desplot(res21 ~ row*quadrat, data=dat2,
+  desplot(dat2, res21 ~ row*quadrat,
           main="gumpertz.pepper field 2, model 1 residuals")
   # Still shows obvious trends.  Gumpertz et al add spatial covariates for
   # neighboring plots, but with only minor improvement in misclassification

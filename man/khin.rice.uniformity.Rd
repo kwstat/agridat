@@ -45,7 +45,8 @@ library(agridat)
   dat <- khin.rice.uniformity
 
   libs(desplot)
-  desplot(yield ~ col*row, data=dat, flip=TRUE,
+  desplot(dat, yield ~ col*row,
+          flip=TRUE,
           main="khin.rice.uniformity",
           aspect=(36*3)/(30*3)) # true aspect
   

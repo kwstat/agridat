@@ -61,7 +61,7 @@
 
   # match Ansari figure 3
   libs(desplot)
-  desplot(yield ~ col*row, dat,
+  desplot(dat, yield ~ col*row,
           flip=TRUE, aspect=216/160, # true aspect
           main="ansari.wheat.uniformity") 
 

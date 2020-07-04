@@ -56,7 +56,7 @@ library(agridat)
   summary(m1)
   
   libs(desplot)
-  desplot(yield ~ col*row, dat,
+  desplot(dat, yield ~ col*row,
           aspect=1,
           main="eden.tea.uniformity")
   

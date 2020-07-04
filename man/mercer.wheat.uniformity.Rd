@@ -75,7 +75,7 @@
 
   
   libs(desplot)
-  desplot(grain ~ col*row, dat,
+  desplot(dat, grain ~ col*row,
           aspect=216/200, # true aspect
           main="mercer.wheat.uniformity - grain yield")
 

@@ -50,7 +50,7 @@
   dat <- transform(dat, rowf=factor(row), colf=factor(col))
 
   libs(desplot)
-  desplot(yield~col*row|loc, data=dat,
+  desplot(dat, yield~col*row|loc,
           # aspect unknown
           text=gen, cex=1,
           main="bridges.cucumber")

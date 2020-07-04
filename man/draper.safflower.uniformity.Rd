@@ -75,11 +75,11 @@
   dat5 <- subset(draper.safflower.uniformity, expt=="E5")
 
   libs(desplot)
-  desplot(yield~col*row, dat4,
+  desplot(dat4, yield~col*row,
           flip=TRUE, tick=TRUE, aspect=72/53, # true aspect
           main="draper.safflower.uniformity (four foot)")
 
-  desplot(yield~col*row, dat5,
+  desplot(dat5, yield~col*row,
           flip=TRUE, tick=TRUE, aspect=90/46, # true aspect
           main="draper.safflower.uniformity (five foot)")
 

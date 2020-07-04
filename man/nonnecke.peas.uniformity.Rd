@@ -60,10 +60,10 @@ library(agridat)
   dat <- nonnecke.peas.uniformity
   
   libs(desplot)
-  desplot(vines~col*row|block, data=dat,
+  desplot(dat, vines~col*row|block,
           tick=TRUE, flip=TRUE, aspect=248/90, # true aspect
           main="nonnecke.peas.uniformity - vines")
-  desplot(peas~col*row|block, data=dat,
+  desplot(dat, peas~col*row|block,
           tick=TRUE, flip=TRUE, aspect=248/90, # true aspect
           main="nonnecke.peas.uniformity - peas")
 

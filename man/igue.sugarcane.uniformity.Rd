@@ -46,7 +46,7 @@ dat <- igue.sugarcane.uniformity
 sd(dat$yield)/mean(dat$yield) # 16.4
 
 libs(desplot)
-desplot(yield ~ col*row, dat,
+desplot(dat, yield ~ col*row,
         flip=TRUE, tick=TRUE, aspect=(42*2)/(36*1.5),
         main="igue.sugarcane.uniformity")
   

@@ -51,7 +51,7 @@
   # Incidence map.  Figure 2 of Friel and Pettitt
   libs(desplot)
   grays <- colorRampPalette(c("#d9d9d9","#252525"))
-  desplot(disease~col*row, dat,
+  desplot(dat, disease~col*row,
           col.regions=grays(2),
           aspect = 0.5, # aspect unknown
           main="besag.endive - Disease incidence")

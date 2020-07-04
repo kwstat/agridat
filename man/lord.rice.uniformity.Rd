@@ -73,7 +73,7 @@ dat <- lord.rice.uniformity
 
 # Heatmaps
 libs(desplot)
-desplot(grain ~ col*row|field, dat,
+desplot(dat, grain ~ col*row|field,
         flip=TRUE, aspect=140/50,
         main="lord.rice.uniformity")
 

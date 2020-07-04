@@ -39,7 +39,7 @@ library(agridat)
   data(strickland.apple.uniformity)
   dat <- strickland.apple.uniformity
   libs(desplot)
-  desplot(yield ~ col*row, dat,
+  desplot(dat, yield ~ col*row,
           main="strickland.apple.uniformity",
           flip=TRUE, aspect=(18/11))
 }

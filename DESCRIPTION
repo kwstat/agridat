@@ -48,6 +48,7 @@ Suggests:
     pscl,
     reshape2,
     rgdal,
+    rmarkdown,
     qicharts,
     qtl,
     sp,
@@ -61,4 +62,4 @@ URL: http://kwstat.github.io/agridat/
 BugReports: https://github.com/kwstat/agridat/issues
 VignetteBuilder: knitr
 Encoding: UTF-8
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1

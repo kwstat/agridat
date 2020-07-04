@@ -72,7 +72,7 @@ dat <- lander.multi.uniformity
 # heatmaps for all years
 libs(desplot)
 dat$year <- factor(dat$year)
-desplot(yield ~ col*row|year, dat,
+desplot(dat, yield ~ col*row|year,
         flip=TRUE, aspect=(1037.1/939.12),
         main="lander.multi.uniformity")
 

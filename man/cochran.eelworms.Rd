@@ -51,7 +51,7 @@ dat <- cochran.eelworms
 
 # Very strong spatial trends
 libs(desplot)
-desplot(initial ~ col*row, data=dat,
+desplot(dat, initial ~ col*row,
         flip=TRUE, # aspect unknown
         main="cochran.eelworms")
 

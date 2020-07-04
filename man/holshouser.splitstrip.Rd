@@ -46,10 +46,10 @@ dat$pop <- factor(dat$pop)
 
 # Experiment layout and field trends
   libs(desplot)
-  desplot(yield ~ col*row, data=dat,
+  desplot(dat, yield ~ col*row,
           out1=block, # unknown aspect
           main="holshouser.splitstrip")
-  desplot(spacing ~ col*row, data=dat,
+  desplot(dat, spacing ~ col*row,
           out1=block, out2=cultivar, # unknown aspect
           col=cultivar, text=pop, cex=.8, shorten='none', col.regions=c('wheat','white'),
           main="holshouser.splitstrip experiment design")

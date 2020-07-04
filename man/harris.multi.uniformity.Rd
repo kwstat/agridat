@@ -129,14 +129,14 @@ d2$xord <- 5 - dat$series
 # Note that for alfalfa, higher-yielding plots in 1912-1914 were
 # lower-yielding in 1922-1923.
 libs(desplot)
-desplot(yield ~ xord*plot|harv, d2,
+desplot(d2, yield ~ xord*plot|harv,
         aspect=536/639, flip=TRUE, # true aspect
         main="harris.multi.uniformity")
 
 # Crude fertility map by averaging across years shows probable
 # sub-surface water effects
 agg <- aggregate(yield ~ xord + plot, data=d2, mean)
-desplot(yield ~ xord + plot, agg,
+desplot(agg, yield ~ xord + plot,
         aspect=536/639, # true aspect
         main="harris.multi.uniformity fertility")
 

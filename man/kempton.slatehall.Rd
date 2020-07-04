@@ -54,7 +54,7 @@
   # Besag 1993 figure 4.1 (left panel)
   libs(desplot)
   grays <- colorRampPalette(c("#d9d9d9","#252525"))
-  desplot(yield ~ col * row, dat,
+  desplot(dat, yield ~ col * row,
           aspect=40/22.5, # true aspect
           num=gen, out1=rep, col.regions=grays, # unknown aspect
           main="kempton.slatehall - spring wheat yields")

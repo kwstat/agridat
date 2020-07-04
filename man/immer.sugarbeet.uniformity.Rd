@@ -60,13 +60,13 @@ library(agridat)
 
   # Immer numbers rows from the top
   libs(desplot)
-  desplot(yield~col*row, data=dat,
+  desplot(dat, yield~col*row,
           aspect=110/348, tick=TRUE, flip=TRUE, # true aspect
           main="immer.sugarbeet.uniformity - yield")
-  desplot(sugar~col*row, data=dat,
+  desplot(dat, sugar~col*row,
           aspect=110/348, tick=TRUE, flip=TRUE,
           main="immer.sugarbeet.uniformity - sugar")
-  desplot(purity~col*row, data=dat,
+  desplot(dat, purity~col*row,
           aspect=110/348, tick=TRUE, flip=TRUE,
           main="immer.sugarbeet.uniformity - purity")
   

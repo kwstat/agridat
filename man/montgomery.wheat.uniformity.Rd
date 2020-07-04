@@ -83,10 +83,10 @@ library(agridat)
 
   # Match the figures of Montgomery 1912 Fig 3, p. 178
   libs(desplot)
-  desplot(yield ~ col*row, dat09,
+  desplot(dat09, yield ~ col*row,
           aspect=1, # true aspect
           main="montgomery.wheat.uniformity - 1909 yield")
-  desplot(yield ~ col*row, subset(dat, year==1911),
+  desplot(dat, yield ~ col*row, subset= year==1911,
           aspect=1, # true aspect
           main="montgomery.wheat.uniformity - 1911 yield")
 
@@ -103,10 +103,10 @@ library(agridat)
   dat09$correct <- round(dat09$yield - dev1,0)
 
   libs(desplot)
-  desplot(yield ~ col*row, dat09,
+  desplot(dat09, yield ~ col*row,
           shorten="none", text=yield,
           main="montgomery.wheat.uniformity 1909 observed")
-  desplot(correct ~ col*row, dat09, text=correct,
+  desplot(dat09, correct ~ col*row, text=correct,
           cex=0.8, shorten="none",
           main="montgomery.wheat.uniformity 1909 corrected")
   # Corrected yields are slightly shrunk toward overall mean

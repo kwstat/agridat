@@ -56,19 +56,19 @@ libs(reshape2, corrgram)
 
 # Not quite right. The rows are not actually horizontal.  See notes above.
 libs(desplot)
-desplot(yield ~ col*row, dat, subset=year=="Y1",
+desplot(dat, yield ~ col*row,subset=year=="Y1",
         tick=TRUE, aspect=1,
         main="paez.coffee.uniformity - Y1")
-desplot(yield ~ col*row, dat, subset=year=="Y2",
+desplot(dat, yield ~ col*row,subset=year=="Y2",
         tick=TRUE, aspect=1,
         main="paez.coffee.uniformity - Y2")
-desplot(yield ~ col*row, dat, subset=year=="Y3",
+desplot(dat, yield ~ col*row,subset=year=="Y3",
         tick=TRUE, aspect=1,
         main="paez.coffee.uniformity - Y3")
-desplot(yield ~ col*row, dat, subset=year=="Y4",
+desplot(dat, yield ~ col*row,subset=year=="Y4",
         tick=TRUE, aspect=1,
         main="paez.coffee.uniformity - Y4")
-desplot(yield ~ col*row, dat, subset=year=="Y5",
+desplot(dat, yield ~ col*row,subset=year=="Y5",
         tick=TRUE, aspect=1,
         main="paez.coffee.uniformity - Y5")
 

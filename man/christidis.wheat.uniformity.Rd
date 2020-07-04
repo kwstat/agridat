@@ -47,7 +47,7 @@ dat <- christidis.wheat.uniformity
 # sum(dat$yield) # Matches Christidis
   
  libs(desplot)
- desplot(yield ~  col*row, data=dat,
+ desplot(dat, yield ~  col*row,
          flip=TRUE, aspect=16/90, # true aspect
          main="christidis.wheat.uniformity")
 

@@ -56,7 +56,7 @@ data(day.wheat.uniformity)
 dat <- day.wheat.uniformity
 
 libs(desplot)
-desplot(grain~col*row, data=dat,
+desplot(dat, grain~col*row,
         flip=TRUE, aspect=(100*8)/(155*12), # true aspect
         main="day.wheat.uniformity - grain yield")
   
@@ -66,7 +66,7 @@ xyplot(grain~straw, data=dat, main="day.wheat.uniformity", type=c('p','r'))
 # cor(dat$grain, dat$straw) # .9498 # Day calculated 0.9416
   
 libs(desplot)
-desplot(straw~col*row, data=dat,
+desplot(dat, straw~col*row,
         flip=TRUE, aspect=(100*8)/(155*12), # true aspect
         main="day.wheat.uniformity - straw yield")
   

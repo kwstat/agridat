@@ -50,7 +50,7 @@
   data(loesell.bean.uniformity)
   dat <- loesell.bean.uniformity
   require(desplot)
-  desplot(yield ~ col*row, dat,
+  desplot(dat, yield ~ col*row,
           flip=TRUE, aspect=1, tick=TRUE,
           main="loesell.bean.uniformity")
 }

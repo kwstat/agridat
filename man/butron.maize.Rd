@@ -71,7 +71,8 @@
   biplot(princomp(mat), main="butron.maize", cex=.7) # Figure 1 of Butron
 
 
-  if(0){  
+  if(0){
+    # Fixme: This section is broken because synbreed has been removed from CRAN
     # Here we see if including pedigree information is helpful for a
     # multi-environment model
     # Including the pedigree provided little benefit
@@ -99,6 +100,12 @@
     pe <- with(ped[1:57,], create.pedigree(gen, male, female, gener=NULL))
     # windows(9,6)
     synbreed::plot.pedigree(pe, vertex.size=10, vertex.label.cex=.5, asp=.5) #
+
+    libs(kinship2)
+    pedAll <- pedigree(id=ped$gen, dadid=as.numeric(as.factor(ped$male)),
+                       momid=as.numeric(as.factor(ped$female)),
+                       sex=rep(1,61))
+    
   }
 
 

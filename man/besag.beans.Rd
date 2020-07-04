@@ -58,7 +58,7 @@ data(besag.beans)
 dat = besag.beans
 
 libs(desplot)
-desplot(yield ~ col*row, data=dat,
+desplot(dat, yield ~ col*row,
         aspect=12/19, out1=row, out2=rep, num=gen, cex=1, # true aspect
         main="besag.beans")
 

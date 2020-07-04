@@ -58,7 +58,7 @@ library(agridat)
   dat <- nonnecke.sweetcorn.uniformity
 
   libs(desplot)
-  desplot(yield~col*row|loc, dat,
+  desplot(dat, yield~col*row|loc,
           flip=TRUE, tick=TRUE, aspect=96/180, # true aspect
           main="nonnecke.sweetcorn.uniformity")
     

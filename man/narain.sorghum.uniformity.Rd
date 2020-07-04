@@ -47,7 +47,7 @@ library(agridat)
   
   # Narain figure 1
   libs(desplot)
-  desplot(yield ~ col*row, dat,
+  desplot(dat, yield ~ col*row,
           flip=TRUE, aspect=(16*36)/(10*30.25),
           main="narain.sorghum.uniformity")
   

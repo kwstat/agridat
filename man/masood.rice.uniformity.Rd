@@ -57,7 +57,7 @@ library(agridat)
   dat <- masood.rice.uniformity
   
   libs(desplot)
-  desplot(yield ~ col*row, data=dat,
+  desplot(dat, yield ~ col*row,
           flip=TRUE, tick=TRUE, aspect=24/12, # true aspect
           main="masood.rice.uniformity - yield heatmap")
 

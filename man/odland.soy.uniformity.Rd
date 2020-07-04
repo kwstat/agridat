@@ -62,14 +62,14 @@ library(agridat)
 
   data(odland.soyhay.uniformity)
   dat1 <- odland.soyhay.uniformity
-  desplot(yield ~ col*row, dat1,
+  desplot(dat1, yield ~ col*row,
           flip=TRUE, aspect=200/105, # true aspect
           main="odland.soyhay.uniformity")
 
   data(odland.soybean.uniformity)
   dat2 <- odland.soybean.uniformity
-  desplot(yield ~ col*row, dat2, flip=TRUE,
-          aspect = 232/137, 
+  desplot(dat2, yield ~ col*row,
+          flip=TRUE, aspect = 232/137, 
           main="odland.soybean.uniformity")
   
 }

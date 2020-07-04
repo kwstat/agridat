@@ -68,11 +68,11 @@ library(agridat)
   dat <- garber.multi.uniformity
 
   libs(desplot)
-  desplot(oats ~ col*row, data=dat,
+  desplot(dat, oats ~ col*row,
           flip=TRUE, tick=TRUE, aspect=945/436, # true aspect
           main="garber.multi.uniformity oats")
 
-  desplot(wheat ~ col*row, data=dat,
+  desplot(dat, wheat ~ col*row,
           flip=TRUE, tick=TRUE, aspect=945/436, # true aspect
           main="garber.multi.uniformity wheat")
 

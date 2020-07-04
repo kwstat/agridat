@@ -57,7 +57,7 @@ library(agridat)
   
   libs(desplot)
   grays <- colorRampPalette(c("#d9d9d9","#252525"))
-  desplot(yield ~ row2*col, data=d4,
+  desplot(d4, yield ~ row2*col,
           aspect=333/330, flip=TRUE, # true aspect
           main="stephens.sorghum.uniformity",
           col.regions=grays(3),

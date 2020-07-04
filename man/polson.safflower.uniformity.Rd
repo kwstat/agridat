@@ -51,7 +51,7 @@ library(agridat)
   dat <- polson.safflower.uniformity
   
   libs(desplot)
-  desplot(yield ~ col*row, data=dat,
+  desplot(dat, yield ~ col*row,
           flip=TRUE, aspect=189/110, # true aspect
           main="polson.safflower.uniformity")
 

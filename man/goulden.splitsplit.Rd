@@ -68,8 +68,9 @@ libs(desplot)
 ##         out1=block, out2=trt, text=dust, col=inoc, cex=1,
 ##         main="goulden.splitsplit")
 
-desplot(yield ~ col*row, data=dat,
-        out1=block, out2=gen, col=inoc, num=trt, cex=1,
+desplot(dat, yield ~ col*row, 
+        out1=block, out2=gen,
+        col=inoc, num=trt, cex=1,
         main="goulden.splitsplit")
 
 

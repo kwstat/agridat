@@ -52,7 +52,7 @@ data(besag.elbatan)
 dat <- besag.elbatan
 
 libs(desplot)
-desplot(yield~col*row, dat,
+desplot(dat, yield~col*row,
         num=gen, # aspect unknown
         main="besag.elbatan - wheat yields")
 

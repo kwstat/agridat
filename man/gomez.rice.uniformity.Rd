@@ -45,7 +45,7 @@ dat <- gomez.rice.uniformity
 
 libs(desplot)
 # Raw data plot
-desplot(yield ~ col*row, data=dat,
+desplot(dat, yield ~ col*row,
         aspect=38/18, # true aspect
         main="gomez.rice.uniformity")
 
@@ -60,7 +60,7 @@ dmat3 <- (m0[rx+1,cx+1]+m0[rx+1,cx]+m0[rx+1,cx-1]+
             m0[rx,cx+1]+m0[rx,cx]+m0[rx,cx-1]+
             m0[rx-1,cx+1]+m0[rx-1,cx]+m0[rx-1,cx-1])/9
 dat3 <- melt(dmat3)
-desplot(value~Var2*Var1, dat3,
+desplot(dat3, value~Var2*Var1,
         aspect=38/18,
         at=c(576,637,695,753,811,870,927),
         main="gomez.rice.uniformity smoothed")

@@ -45,7 +45,7 @@
 
   # Two contiguous reps in 8 rows, 16 columns
   libs(desplot)
-  desplot(yield ~ col*row, data=dat,
+  desplot(dat, yield ~ col*row,
           out1=rep, # aspect unknown
           text=gen, shorten="none", cex=.75,
           main="burgueno.rowcol")

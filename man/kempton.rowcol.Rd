@@ -36,7 +36,7 @@ dat <- kempton.rowcol
 dat <- transform(dat, rowf=factor(row), colf=factor(col))
 
 libs(desplot)
-desplot(yield~col*row|rep, dat,
+desplot(dat, yield~col*row|rep,
         num=gen, out1=rep, # unknown aspect
         main="kempton.rowcol")
 

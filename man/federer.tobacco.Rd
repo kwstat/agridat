@@ -67,7 +67,7 @@ anova(m1)
 # RCB residuals show strong spatial trends
 libs(desplot)
 dat$resid <- resid(m1)
-desplot(resid ~ row * block, data=dat,
+desplot(dat, resid ~ row * block,
         # aspect unknown
         main="federer.tobacco")
 

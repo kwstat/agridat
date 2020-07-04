@@ -62,7 +62,7 @@ library(agridat)
   dat <- wassom.brome.uniformity
 
   libs(desplot)
-  desplot(yield~col*row|expt, dat,
+  desplot(dat, yield~col*row|expt,
           flip=TRUE, aspect=1, # approximate aspect
           main="wassom.brome.uniformity")
   

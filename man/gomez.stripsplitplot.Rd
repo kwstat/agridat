@@ -42,7 +42,7 @@ dat <- gomez.stripsplitplot
 
 # Layout
 libs(desplot)
-desplot(gen ~ col*row, dat,
+desplot(dat, gen ~ col*row,
         out1=rep, col=nitro, text=planting, cex=1,
         main="gomez.stripsplitplot")
 

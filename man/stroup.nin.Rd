@@ -112,7 +112,7 @@
   
   # Experiment layout. All "Buckskin" plots are near left side
   libs(desplot)
-  desplot(yield~col*row, dat,
+  desplot(dat, yield~col*row,
           aspect=47.3/26.4, out1="rep", num=gen, cex=0.6, # true aspect
           main="stroup.nin - yield heatmap (true shape)")
 

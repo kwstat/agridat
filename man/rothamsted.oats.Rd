@@ -52,11 +52,11 @@
 
   
   libs(desplot)
-  desplot(grain~col*row, dat,
+  desplot(dat, grain~col*row,
           out1=block, text=trt, cex=1, shorten=FALSE,
           aspect=1,
           main="rothamsted.oats")
-  desplot(straw~col*row, dat,
+  desplot(dat, straw~col*row,
           out1=block, text=trt, cex=1, shorten=FALSE,
           aspect=1,
           main="rothamsted.oats")

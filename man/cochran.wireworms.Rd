@@ -50,7 +50,7 @@ data(cochran.wireworms)
 dat <- cochran.wireworms
 
 libs(desplot)
-desplot(worms ~ col*row, data=dat,
+desplot(dat, worms ~ col*row,
         text=trt, cex=1, # aspect unknown
         main="cochran.wireworms")
 
