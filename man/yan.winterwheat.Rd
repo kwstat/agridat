@@ -55,7 +55,7 @@ data(yan.winterwheat)
 dat <- yan.winterwheat
 
 libs(gge)
-m1 <- gge(yield ~ gen*env, data=dat)
+m1 <- gge(dat, yield ~ gen*env)
 biplot(m1, flip=c(1,1), hull=TRUE,
        main="yan.winterwheat - GGE biplot")
 

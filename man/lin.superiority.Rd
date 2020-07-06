@@ -66,7 +66,7 @@ round(P) # match Lin & Binns 1988 table 2, column Pi
 
 # atlantic & quebec regions overlap
 # libs(gge)
-# m1 <- gge(yield ~ gen*loc, env.group=region, data=dat,
+# m1 <- gge(dat, yield ~ gen*loc, env.group=region,
 #           main="lin.superiority")
 # biplot(m1)
 

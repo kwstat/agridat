@@ -106,7 +106,7 @@ data(crossa.wheat)
 dat2 <- crossa.wheat
 libs(gge)
 # Specify env.group as column in data frame
-m2 <- gge(yield~gen*loc, dat2, env.group=locgroup, scale=FALSE)
+m2 <- gge(dat2, yield~gen*loc, env.group=locgroup, scale=FALSE)
 biplot(m2, main="crossa.wheat - GGB biplot")
 
 }

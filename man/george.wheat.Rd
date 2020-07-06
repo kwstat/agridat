@@ -13,7 +13,7 @@
   \describe{
     \item{\code{gen}}{genotype number}
     \item{\code{year}}{year}
-    \item{\code{location}}{location}
+    \item{\code{loc}}{location}
     \item{\code{block}}{block}
     \item{\code{yield}}{yield per plot}
   }
@@ -54,7 +54,7 @@
   data(george.wheat)
   dat <- george.wheat
   
-  dat$env <- paste0(dat$year, ".", dat$location)
+  dat$env <- paste0(dat$year, ".", dat$loc)
   # average reps, cast to matrix
   mat <- reshape2::acast(dat, gen ~ env, value.var="yield", fun=mean, na.rm=TRUE)
   lattice::levelplot(mat, aspect="m", 

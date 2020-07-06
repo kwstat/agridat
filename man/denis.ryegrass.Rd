@@ -48,7 +48,7 @@ dat <- denis.ryegrass
 
 # biplots (without ellipses) similar to Denis figure 1
 libs(gge)
-m1 <- gge(strength ~ gen*loc, dat, scale=FALSE)
+m1 <- gge(dat, strength ~ gen*loc, scale=FALSE)
 biplot(m1, main="denis.ryegrass biplot")
 
 }

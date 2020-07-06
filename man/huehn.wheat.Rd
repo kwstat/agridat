@@ -51,7 +51,7 @@
   # Nassar & Huehn, p. 51 "there is no evidence for differences in stability
   # among the 20 varieties".
   libs(gge)
-  m1 <- gge(yield ~ gen*env, dat)
+  m1 <- gge(dat, yield ~ gen*env)
   biplot(m1, main="huehn.wheat")
   
   libs(reshape2)

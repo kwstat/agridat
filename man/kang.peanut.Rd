@@ -57,11 +57,11 @@ round(Y0,2)
 
 # GGE biplot of Kang, p. 82.
 libs(gge)
-m1 <- gge(yield~gen*env, data=dat, scale=FALSE)
+m1 <- gge(dat, yield~gen*env, scale=FALSE)
 biplot(m1, flip=c(1,1), main="kang.peanut - GGE biplot")
 
 # Forkman 2019, fig 2
-# m2 <- gge(yield~gen*env, data=dat, scale=TRUE)
+# m2 <- gge(dat, yield~gen*env, scale=TRUE)
 # biplot(m2, main="kang.peanut - GGE biplot")
 # biplot(m2, comps=3:4, main="kang.peanut - GGE biplot")
 
