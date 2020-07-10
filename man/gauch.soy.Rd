@@ -16,6 +16,8 @@
     \item{\code{rep}}{repeated measurement}
     \item{\code{gen}}{genotype, 7 levels}
     \item{\code{env}}{environment, 55 levels}
+    \item{\code{year}{year, 77-88}
+    \item{\code{loc}{location, 10 levels}
   }
 }
 \details{
@@ -26,14 +28,15 @@
   The replications appear in random order and do _NOT_ define blocks.
   Environment names are a combination of the first letter of the
   location name and the last two digits of the year.  The location codes
-  are C=Chazy, N=Canton, L=Lockport, G=Geneseo, R=Romulus, A=Aurora,
-  I=Ithica, V=Valatie, D=Riverhead.
+  are: 
+  A=Aurora, C=Chazy, D=Riverhead, E=Etna, G=Geneseo,
+  I=Ithica, L=Lockport, N=Canton, R=Romulus, V=Valatie.
   Plots were 7.6 m long, four rows wide (middle two rows were
   harvested).
 
-  This data has been widely used (in various subsets)
-  to promote the benefits of AMMI (Additive Main Effects
-  Multiplicative Interactions) analyses.
+  This data has been widely used (in various subsets) to promote the
+  benefits of AMMI (Additive Main Effects Multiplicative Interactions)
+  analyses.
 
   The gen x env means of Table 1 (Zobel et al 1998) are least-squares
   means (personal communication).
