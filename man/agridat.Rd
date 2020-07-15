@@ -96,6 +96,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{panse.cotton.uniformity}            \tab 32 x 40 \tab xy \tab \cr
 \link{parker.orange.uniformity}           \tab 10 x 27 \tab xy, 6 yr \tab \cr
 \link{paez.coffee.uniformity}             \tab 32 x 36 \tab xy, 5 yr \tab \cr
+\link{piepho.barley.uniformity}           \tab 30 x 36 \tab xy \tab \cr
 \link{polson.safflower.uniformity}        \tab 52 x 33 \tab xy \tab smith\cr
 \link{robinson.peanut.uniformity}         \tab 16 x 36 \tab xy \tab \cr
 \link{sawyer.multi.uniformity}            \tab 8 x 6   \tab xy, 3 year \tab \cr
