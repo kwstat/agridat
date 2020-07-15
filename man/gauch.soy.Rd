@@ -63,9 +63,10 @@ library(agridat)
 data(gauch.soy)
 dat <- gauch.soy
 
-dat <- transform(dat,
-                 year = substring(env, 2),
-                 loc = substring(env, 1, 1))
+## dat <- transform(dat,
+##                  year = substring(env, 2),
+##                  loc = substring(env, 1, 1))
+
 # AMMI biplot
 libs(agricolae)
 # Figure 1 of Zobel et al 1988, means vs PC1 score
