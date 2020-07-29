@@ -54,6 +54,15 @@
 
   Used under Creative Commons BY-SA 3.0 license.
 }
+\references{
+  Suman Rakshit, Adrian Baddeley, Katia Stefanova, Karyn Reeves, Kefei
+  Chen, Zhanglong Cao, Fiona Evans, Mark Gibberd (2020).
+  Novel approach to the analysis of spatially-varying treatment effects
+  in on-farm experiments.
+  Field Crops Research, 255, 15 September 2020, 107783.
+  https://doi.org/10.1016/j.fcr.2020.107783
+
+}
 
 \examples{
 \dontrun{

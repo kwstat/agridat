@@ -80,24 +80,6 @@
   # ----------
   
   libs(asreml,lucid)
-  if( utils::packageVersion("asreml") < "4") {
-    # asreml3
-    
-    # Show the negative correlation between rows
-    dat <- transform(dat,
-                     rowf=factor(row), colf=factor(col))
-    dat <- dat[order(dat$rowf, dat$colf),]
-    m1 = asreml(yield ~ 1, data=dat, rcov= ~ ar1(rowf):ar1(colf))
-    # vc(m1)
-    ##     effect component std.error z.ratio constr
-    ## R!variance  81.54      3.527      23        P
-    ## R!rowf.cor  -0.09465   0.0277     -3.4      U
-    ## R!colf.cor   0.2977    0.02628    11        U
-  }
-  
-  # ----------
-  
-  libs(asreml,lucid)
   if( utils::packageVersion("asreml") > "4") {
     # asreml4
     

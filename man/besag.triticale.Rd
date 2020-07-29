@@ -67,23 +67,6 @@
          main="besag.triticale")
   
   libs(asreml)
-  if( utils::packageVersion("asreml") < "4") {
-    # asreml3
-
-    # Besag uses an adjustment based on neighboring plots.
-    # This analysis fits the standard AR1xAR1 residual model
-
-    dat <- dat[order(dat$xf, dat$yf), ]
-    m3 <- asreml(yield ~ gen + rate + nitro + regulator +
-                   gen:rate + gen:nitro + gen:regulator +
-                   rate:nitro + rate:regulator +
-                   nitro:regulator + yf, data=dat,
-                 rcov = ~ ar1(xf):ar1(yf))
-    anova(m3) # Strongly significant gen, rate, regulator
-    
-  }
-
-  libs(asreml)
   if( utils::packageVersion("asreml") >  "4") {
     # asreml4
 

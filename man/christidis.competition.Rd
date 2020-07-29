@@ -26,6 +26,7 @@
   Nine genotypes/varieties of cotton were used in a variety test.
   The plots were 100 meters long and 2.40 meters wide, each plot having
   3 rows 0.80 meters apart.  
+
   The layout was an RCB of 5 blocks, each block having 2 replicates of
   every variety (with the original intention of trying 2 seed
   treatments). Each row was harvested/weighed separately.

@@ -174,12 +174,14 @@
   if( utils::packageVersion("asreml") >  "4") {
     # asreml4
 
+    # Average reps
+    datm <- aggregate(yield ~ county + gen, data=dat, FUN=mean)
     # asreml Using 'rcov' ALWAYS requires sorting the data
     datm <- datm[order(datm$gen),]
     
     m1 <- asreml(yield ~ gen, data=datm,
                  random = ~ county,
-                 resid = ~ dsum( ~ units|gen))
+                 residual = ~ dsum( ~ units|gen))
     libs(lucid)
     vc(m1)[1:7,]
     ##      effect component std.error z.ratio bound %ch
@@ -198,6 +200,7 @@
     # The following example shows how to construct a GxE biplot
     # from the FA2 model.
 
+    
     dat <- besag.met
     dat <- transform(dat, xf=factor(col), yf=factor(row))
     dat <- dat[order(dat$county, dat$xf, dat$yf), ]
@@ -205,13 +208,13 @@
     # First, AR1xAR1
     m1 <- asreml(yield ~ county, data=dat,
                  random = ~ gen:county,
-                 resid = ~ dsum( ~ ar1(xf):ar1(yf)|county))
+                 residual = ~ dsum( ~ ar1(xf):ar1(yf)|county))
     # Add FA1
     m2 <- update(m1, random=~gen:fa(county,1)) # rotate.FA=FALSE
     # FA2
     m3 <- update(m2, random=~gen:fa(county,2))
-    asreml.options(extra=100)
-    m3 <- update(m3, maxit=100)
+    asreml.options(extra=50)
+    m3 <- update(m3, maxit=50)
     asreml.options(extra=0)
 
     # Use the loadings to make a biplot

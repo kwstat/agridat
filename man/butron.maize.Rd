@@ -94,21 +94,10 @@
     ped[is.na(ped$male),'male'] <- 0
     ped[is.na(ped$female),'female'] <- 0
     
-    # View the pedigree.  Can't use kinship2 ... plants can be both male/female
-    # Not the best view...too much overplotting
-    libs(synbreed)
-    pe <- with(ped[1:57,], create.pedigree(gen, male, female, gener=NULL))
-    # windows(9,6)
-    synbreed::plot.pedigree(pe, vertex.size=10, vertex.label.cex=.5, asp=.5) #
-
-    libs(kinship2)
-    pedAll <- pedigree(id=ped$gen, dadid=as.numeric(as.factor(ped$male)),
-                       momid=as.numeric(as.factor(ped$female)),
-                       sex=rep(1,61))
-    
   }
 
 
+  # asreml 3
   if(0){
     libs(asreml)
     if( utils::packageVersion("asreml") < "4") {
@@ -148,6 +137,7 @@
       text(x=min(lims), y=p4par$predicted.value, p4par$gen, cex=.5)
     }
 
+    # asreml 4
     libs(asreml)
     if( utils::packageVersion("asreml") > "4") {
       # asreml4
@@ -155,12 +145,11 @@
       
       m0 <- asreml(yield ~ 1+env, data=dat, random = ~ gen)
       m1 <- asreml(yield ~ 1+env, random = ~ vm(gen, ped.ainv), data=dat)
-      
-      # FIXME. Does not work in asreml4
-      #m2 <- update(m1, random = ~ id(env):vm(gen, ped.ainv))
-      #m3 <- update(m2, random = ~ diag(env):ped(gen))
-      #m4 <- update(m3, random = ~ fa(env,1):ped(gen))
-      ## AIC(m0,m1,m2,m3,m4)
+      m2 <- update(m1, random = ~ idv(env):vm(gen, ped.ainv))
+      m3 <- update(m2, random = ~ diag(env):vm(gen, ped.ainv))
+      m4 <- update(m3, random = ~ fa(env,1):vm(gen, ped.ainv))
+      #summary(m0)$aic
+      #summary(m4)$aic
       ##    df      AIC
       ## m0  2 229.4037
       ## m1  2 213.2487
@@ -168,23 +157,25 @@
       ## m3  6 296.8061
       ## m4 11 218.1568
       
-      ## p0 <- predict(m0, data=dat, classify="gen")$pred$pvals
-      ## p4 <- predict(m4, data=dat, classify="gen")$pred$pvals
-      ## p4par <- p4[1:12,]   # parents
-      ## p4 <- p4[-c(1:12),]  # hybrids
-      ## # Careful!  Need to manually sort the predictions
-      ## p0 <- p0[order(as.character(p0$gen)),]
-      ## p4 <- p4[order(as.character(p4$gen)),]
+      p0 <- predict(m0, data=dat, classify="gen")$pvals
+      p1 <- predict(m1, data=dat, classify="gen")$pvals
+      p1par <- p1[1:12,]   # parents
+      p1 <- p1[-c(1:12),]  # remove parents
+      # Careful!  Need to manually sort the predictions
+      p0 <- p0[order(as.character(p0$gen)),]
+      p1 <- p1[order(as.character(p1$gen)),]
       
-      ## # lims <- range(c(p0$pred, p4$pred)) * c(.95,1.05)
-      ## lims <- c(6,8.25) # zoom in on the higher-yielding hybrids
-      ## plot(p0$predicted.value, p4$predicted.value,
-      ##      pch="", xlim=lims, ylim=lims, main="butron.maize",
-      ##      xlab="BLUP w/o pedigree", ylab="BLUP with pedigree")
-      ## abline(0,1,col="lightgray")
-      ## text(x=p0$predicted.value, y=p4$predicted.value, p0$gen, cex=.5, srt=-45)
-      ## text(x=min(lims), y=p4par$predicted.value, p4par$gen, cex=.5)
-      ## # Including the pedigree provided little benefit
+      # lims <- range(c(p0$pred, p1$pred)) * c(.95,1.05)
+      lims <- c(6,8.25) # zoom in on the higher-yielding hybrids
+      plot(p0$predicted.value, p1$predicted.value,
+           pch="", xlim=lims, ylim=lims, main="butron.maize",
+           xlab="BLUP w/o pedigree", ylab="BLUP with pedigree")
+      abline(0,1,col="lightgray")
+      text(x=p0$predicted.value, y=p1$predicted.value,
+           p0$gen, cex=.5, srt=-45)
+      text(x=min(lims), y=p1par$predicted.value, p1par$gen, cex=.5, col="red")
+      round( cor(p0$predicted.value, p1$predicted.value), 3)
+      # Including the pedigree provided very little change
     
     }
   

@@ -81,35 +81,6 @@
 
 
   libs(asreml)
-  if( utils::packageVersion("asreml") < "4") {
-    # asreml3
-    dat <- transform(dat, rowf=factor(row), bedf=factor(bed))
-    dat <- dat[order(dat$rowf, dat$bedf),]
-
-    m1a1 <- asreml(yield~gen + lin(rowf) + lin(bedf), data=dat,
-                   random=~spl(rowf) + spl(bedf) + units,
-                   family=asreml.gaussian(dispersion=1))
-    m1a2 <- asreml(yield~gen + lin(rowf) + lin(bedf), data=dat,
-                   random=~spl(rowf) + spl(bedf) + units,
-                   rcov=~ar1(rowf):ar1(bedf))
-    m1a3 <- asreml(yield~gen, data=dat, random=~units,
-                   rcov=~ar1(rowf):ar1(bedf))
-
-  libs(lattice)
-    # v7a <- asreml.variogram(x=dat$bedf, y=dat$rowf, z=m1a3$residuals)
-    # wireframe(gamma ~ x*y, v7a, aspect=c(1,.5),
-    #           main="durban.rowcol - Fig 7a")
-    
-    # v7b <- asreml.variogram(x=dat$bedf, y=dat$rowf, z=m1a2$residuals)
-    # wireframe(gamma ~ x*y, v7b, aspect=c(1,.5)) # Fig 7b
-    
-    v7c <- asreml.variogram(x=dat$bedf, y=dat$rowf, z=m1lo$residuals)
-    wireframe(gamma ~ x*y, v7c, aspect=c(1,.5),
-              main="durban.rowcol - Fig 7c")
-
-  }
-
-  libs(asreml)
   if( utils::packageVersion("asreml") > "4") {
     # asreml4
 

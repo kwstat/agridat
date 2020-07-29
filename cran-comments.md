@@ -1,10 +1,9 @@
-# agridat 1.17
 
-Ordinary periodic release (about one year since previous release).
+# agridat 1.17
 
 ## Test environments
 
-* local: R 3.6.1 on Windows 7
+* local: R 4.0.2 on Windows 10
 * win-builder: R-release
 * win-builder: R-devel
 

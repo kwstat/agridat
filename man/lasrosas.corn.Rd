@@ -74,18 +74,28 @@
 \references{
   Bongiovanni and Lowenberg-DeBoer (2000).
   Nitrogen management in corn with a spatial regression model.
-  Proceedings of the  Fifth International Conference on  Precision
+  Proceedings of the Fifth International Conference on Precision
   Agriculture.
 
   Anselin, L., R. Bongiovanni, J. Lowenberg-DeBoer (2004).
   A spatial econometric approach to the economics of site-specific
   nitrogen management in corn production.
   American Journal of Agricultural Economics, 86, 675--687.
+  https://doi.org/10.1111/j.0002-9092.2004.00610.x
 
   Lambert, Lowenberg-Deboer, Bongiovanni (2004).
   A Comparison of Four Spatial Regression Models for Yield Monitor Data:
   A Case Study from Argentina.
   Precision Agriculture, 5, 579-600.
+  https://doi.org/10.1007/s11119-004-6344-3
+
+  Suman Rakshit, Adrian Baddeley, Katia Stefanova, Karyn Reeves, Kefei
+  Chen, Zhanglong Cao, Fiona Evans, Mark Gibberd (2020).
+  Novel approach to the analysis of spatially-varying treatment effects
+  in on-farm experiments.
+  Field Crops Research, 255, 15 September 2020, 107783.
+  https://doi.org/10.1016/j.fcr.2020.107783
+  
 }
 
 \examples{

@@ -67,51 +67,51 @@
          main="bridges.cucumber - graphical inference")
 
 
-  libs(asreml)
-  if( utils::packageVersion("asreml") < "4") {
-    # asreml3
+  ## libs(asreml)
+  ## if( utils::packageVersion("asreml") < "4") {
+  ##   # asreml3
   
-    ## Random row/col/resid. Same as Bridges 1989, p. 147
-    m1 <- asreml(yield ~ 1 + gen + loc + loc:gen,
-                 random = ~ rowf:loc + colf:loc, data=dat)
+  ##   ## Random row/col/resid. Same as Bridges 1989, p. 147
+  ##   m1 <- asreml(yield ~ 1 + gen + loc + loc:gen,
+  ##                random = ~ rowf:loc + colf:loc, data=dat)
 
-    libs(lucid)
-    vc(m1)
-    ##             effect component std.error z.ratio constr
-    ##  rowf:loc!rowf.var     31.62     23.02     1.4    pos
-    ##  colf:loc!colf.var     18.08     15.32     1.2    pos
-    ##         R!variance     31.48     12.85     2.4    pos
+  ##   libs(lucid)
+  ##   vc(m1)
+  ##   ##             effect component std.error z.ratio constr
+  ##   ##  rowf:loc!rowf.var     31.62     23.02     1.4    pos
+  ##   ##  colf:loc!colf.var     18.08     15.32     1.2    pos
+  ##   ##         R!variance     31.48     12.85     2.4    pos
   
-    ## Random row/col/resid at each loc. Matches p. 147
-    m2 <- asreml(yield ~ 1 + gen + loc + loc:gen,
-                 random = ~ at(loc):rowf + at(loc):colf, data=dat,
-                 rcov = ~at(loc):units)
-    vc(m2)
-    ##                          effect component std.error z.ratio constr
-    ##  at(loc, Clemson):rowf!rowf.var     32.32    36.58     0.88    pos
-    ##   at(loc, Tifton):rowf!rowf.var     30.92    28.63     1.1     pos
-    ##  at(loc, Clemson):colf!colf.var     22.55    28.78     0.78    pos
-    ##   at(loc, Tifton):colf!colf.var     13.62    14.59     0.93    pos
-    ##            loc_Clemson!variance     46.85    27.05     1.7     pos
-    ##             loc_Tifton!variance     16.11     9.299    1.7     pos
+  ##   ## Random row/col/resid at each loc. Matches p. 147
+  ##   m2 <- asreml(yield ~ 1 + gen + loc + loc:gen,
+  ##                random = ~ at(loc):rowf + at(loc):colf, data=dat,
+  ##                rcov = ~at(loc):units)
+  ##   vc(m2)
+  ##   ##                          effect component std.error z.ratio constr
+  ##   ##  at(loc, Clemson):rowf!rowf.var     32.32    36.58     0.88    pos
+  ##   ##   at(loc, Tifton):rowf!rowf.var     30.92    28.63     1.1     pos
+  ##   ##  at(loc, Clemson):colf!colf.var     22.55    28.78     0.78    pos
+  ##   ##   at(loc, Tifton):colf!colf.var     13.62    14.59     0.93    pos
+  ##   ##            loc_Clemson!variance     46.85    27.05     1.7     pos
+  ##   ##             loc_Tifton!variance     16.11     9.299    1.7     pos
   
-    predict(m2, data=dat, classify='loc:gen')$predictions$pvals
-    ##     loc      gen Predicted Std Err    Status
-    ## Clemson   Dasher     45.55   5.043 Estimable
-    ## Clemson Guardian     31.62   5.043 Estimable
-    ## Clemson Poinsett     21.42   5.043 Estimable
-    ## Clemson   Sprint     25.95   5.043 Estimable
-    ##  Tifton   Dasher     50.48   3.894 Estimable
-    ##  Tifton Guardian     38.72   3.894 Estimable
-    ##  Tifton Poinsett     33.01   3.894 Estimable
-    ##  Tifton   Sprint     39.18   3.894 Estimable
+  ##   predict(m2, data=dat, classify='loc:gen')$predictions$pvals
+  ##   ##     loc      gen Predicted Std Err    Status
+  ##   ## Clemson   Dasher     45.55   5.043 Estimable
+  ##   ## Clemson Guardian     31.62   5.043 Estimable
+  ##   ## Clemson Poinsett     21.42   5.043 Estimable
+  ##   ## Clemson   Sprint     25.95   5.043 Estimable
+  ##   ##  Tifton   Dasher     50.48   3.894 Estimable
+  ##   ##  Tifton Guardian     38.72   3.894 Estimable
+  ##   ##  Tifton Poinsett     33.01   3.894 Estimable
+  ##   ##  Tifton   Sprint     39.18   3.894 Estimable
     
-    # Is a heterogeneous model justified? Maybe not.
-    # m1$loglik
-    ## -67.35585
-    # m2$loglik
-    ## -66.35621
-  }
+  ##   # Is a heterogeneous model justified? Maybe not.
+  ##   # m1$loglik
+  ##   ## -67.35585
+  ##   # m2$loglik
+  ##   ## -66.35621
+  ## }
 
   libs(asreml)
   if( utils::packageVersion("asreml") >  "4") {

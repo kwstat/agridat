@@ -73,49 +73,6 @@
   # ----------
 
   libs(asreml,lucid)
-  if( utils::packageVersion("asreml") < "4") {
-    # asreml3
-
-    # Environmental variance model, unstructured correlations
-  
-    dat <- dat[order(dat$system, dat$farm),]
-    m1 <- asreml(yield ~ system, data=dat, rcov = ~us(system):farm)
-  
-    # Means, table 5
-    ## predict(m1, data=dat, classify="system")$predictions$pvals
-    ##  system pred.value std.error  est.stat
-    ##     CCA      1.164    0.2816 Estimable
-    ##    CCAF      2.657    0.3747 Estimable
-    ##      LM      1.35     0.1463 Estimable
-    ##     LMF      2.7      0.2561 Estimable
-  
-    # Variances, table 5
-    vc(m1)[c(2,4,7,11),]
-    ##              effect component std.error z.ratio constr
-    ##    R!system.CCA:CCA    1.11      0.4354     2.5    pos
-    ##  R!system.CCAF:CCAF    1.966     0.771      2.5    pos
-    ##      R!system.LM:LM    0.2996    0.1175     2.5    pos
-    ##    R!system.LMF:LMF    0.9185    0.3603     2.5    pos
-  
-    # Stability variance model
-    m2 <- asreml(yield ~ system, data=dat,
-                 random = ~ farm,
-                 rcov = ~ at(system):units)
-    # predict(m2, data=dat, classify="system")$predictions$pvals
-  
-    # Variances, table 6
-    vc(m2)
-    ##                effect component std.error z.ratio constr
-    ##         farm!farm.var 0.2996       0.1175     2.5    pos
-    ##   system_CCA!variance 0.4136       0.1622     2.5    pos
-    ##  system_CCAF!variance 1.267        0.4969     2.5    pos
-    ##    system_LM!variance 0.0000002        NA      NA  bound
-    ##   system_LMF!variance 0.5304       0.208      2.5    pos
-  }
-
-  # ---------- 
-
-  libs(asreml,lucid)
   if( utils::packageVersion("asreml") > "4") {
     # asreml4
 

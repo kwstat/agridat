@@ -62,31 +62,6 @@
   ## Residual        <NA> <NA> 0.1796 0.4238
   
   libs(asreml)
-  if( utils::packageVersion("asreml") < "4") {
-    # asreml3
-
-    # AR1 x AR1 with linear row/col effects, random spline row/col
-    dat <- transform(dat, xf=factor(col), yf=factor(row))
-    dat <- dat[order(dat$xf,dat$yf),]
-    m2 <- asreml(yield ~ gen + lin(yf) + lin(xf), data=dat,
-                 random = ~ spl(yf) + spl(xf),
-                 rcov = ~ ar1(xf):ar1(yf))
-    m2 <- update(m2) # More iterations
-
-    # Scaling of spl components has changed in asreml from old versions
-    libs(lucid)
-    lucid::vc(m2) # Match Burgueno p. 42
-    ##      effect component std.error z.ratio constr
-    ##     spl(yf)  0.09077    0.08252   1.1      pos
-    ##     spl(xf)  0.08108    0.0821    0.99     pos
-    ##  R!variance  0.1482     0.03119   4.8      pos
-    ##    R!xf.cor  0.1152     0.2269    0.51   uncon
-    ##    R!yf.cor  0.009436   0.2414    0.039  uncon
-    plot(variogram(m2), main="burgueno.rowcol")
-
-  }
-
-  libs(asreml)
   if( utils::packageVersion("asreml") > "4") {
     # asreml4
 

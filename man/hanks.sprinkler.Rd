@@ -87,6 +87,7 @@
   
   # ----------------------------------------------------------------------------
 
+  # asreml 3
   libs(asreml,lucid)
   if( utils::packageVersion("asreml") < "4") {
     # asreml3
@@ -116,15 +117,14 @@
     ## [1]  0.2850  0.0080  0.0015 -0.0925
   }
 
+  # asreml 4
   libs(asreml,lucid)
   if( utils::packageVersion("asreml") > "4") {
-    # asreml4
 
     dat <- transform(dat, subf=factor(subplot),
                      irrf=factor(irr))
     dat <- dat[order(dat$block, dat$gen, dat$subplot),]
 
-    # FIXME
     # In asreml3, we can specify corb(subf, 3)
     # In asreml4, only corb(subf, 1) runs.  corb(subf, 3) says:
     # Correlation structure is not positive definite
@@ -133,7 +133,13 @@
                  random= ~ block + block:dir + block:irrf,
                  resid = ~ block:gen:corb(subf, 1))
 
-    # vc(m1)
+    lucid::vc(m1)
+    #                   effect component std.error z.ratio bound %ch
+    #                    block   0.194     0.2231     0.87     P 0.5
+    #                block:dir   0.02729   0.04959    0.55     P 0  
+    #               block:irrf   0.02275   0.0347     0.66     P 0.1
+    #         block:gen:subf!R   0.3234    0.05921    5.5      P 0  
+    # block:gen:subf!subf!cor1   0.169     0.09906    1.7      P 0.1
 
   }
 

@@ -16,8 +16,8 @@
     \item{\code{rep}}{repeated measurement}
     \item{\code{gen}}{genotype, 7 levels}
     \item{\code{env}}{environment, 55 levels}
-    \item{\code{year}{year, 77-88}
-    \item{\code{loc}{location, 10 levels}
+    \item{\code{year}}{year, 77-88}
+    \item{\code{loc}}{location, 10 levels}
   }
 }
 \details{

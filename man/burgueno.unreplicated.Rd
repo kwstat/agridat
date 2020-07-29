@@ -55,36 +55,6 @@
           main="burgueno.unreplicated")
 
   libs(asreml,lucid)
-  if( utils::packageVersion("asreml") < "4") {
-    # asreml3
-    
-    # AR1 x AR1 with random genotypes
-    dat <- transform(dat, xf=factor(col), yf=factor(row))
-    dat <- dat[order(dat$xf,dat$yf),]
-    m2 <- asreml(yield ~ 1, data=dat, random = ~ gen,
-                 rcov = ~ ar1(xf):ar1(yf))
-    lucid::vc(m2)
-    # Note the strong saw-tooth pattern in the variogram.  Seems to
-    # be column effects.
-    plot(variogram(m2), xlim=c(0,15), ylim=c(0,9), zlim=c(0,0.5),
-         main="burgueno.unreplicated - AR1xAR1")
-    # libs(lattice) # Show how odd columns are high
-    # bwplot(resid(m2) ~ col, data=dat, horizontal=FALSE)
-    
-    # Define an even/odd column factor as fixed effect
-    # dat$oddcol <- factor(dat$col %% 2)
-    # The modulus operator throws a bug, so do it the hard way.
-    dat$oddcol <- factor(dat$col - floor(dat$col / 2) *2 )
-    
-    m3 <- update(m2, yield ~ 1 + oddcol)
-    m3$loglik # Matches Burgueno table 3, line 3
-    plot(variogram(m3), xlim=c(0,15), ylim=c(0,9), zlim=c(0,0.5),
-         main="burgueno.unreplicated - AR1xAR1 + Even/Odd")
-    # Much better-looking variogram
-
-  }
-
-  libs(asreml,lucid)
     if( utils::packageVersion("asreml") > "4") {
     # asreml4
 

@@ -1,31 +1,17 @@
-# agridat 1.17 - Unpublished
+# agridat 1.17 - Jul 2020
 
 libs(asreml)
 setwd("c:/x/rpack/agridat")
 run_examples(run=TRUE) # DO run dontrun{}
 
-  libs(asreml,lucid)
-  if( utils::packageVersion("asreml") < "4") {
-    # asreml3
-    
-  libs(asreml,lucid)
-  if( utils::packageVersion("asreml") > "4") {
-    # asreml4
 
 ## New data
 
 alwan.lamb, baker.strawberry.uniformity, besag.checks, bryan.corn.uniformity, davidian.soybean, devries.pine, edwards.oats, george.wheat, hartman.tomato.uniformity, heath.raddish.uniformity, johnson.douglasfir, kayad.alfalfa, kerr.sugarcane.uniformity, laycock.tea.uniformity, lehmann.millet.uniformity, linder.wheat, loesell.bean.uniformity, miguez.biomass, obsi.potato.uniformity, paez.coffee.uniformity, pederson.lettuce.repeated, piepho.barley.uniformity, rothamsted.oats, shaw.oats, wyatt.multi.uniformity
 
-## Other
+## Other notes
 
-* Examples using `asreml()` now work with either asreml version 3 or version 4.
-  
-Indented means adapted for asreml3/asreml4
-besag.met -- asreml4 needs work
-butron.maize ----- report
-hanks.sprinkler ----- report
-steptoe.morex.pheno --- broken wgaim
-verbyla.lupin  ----- asreml4
+* Examples using `asreml()` are using asreml version 4. Some examples also have asreml 3 code.
 
 * Re-named `hutchinson.cotton.uniformity` to `panse.cotton.uniformity`.
 
@@ -46,7 +32,6 @@ verbyla.lupin  ----- asreml4
 * Minor release to make a small change for the next release of the `broom` package.
 
 
-
 # agridat 1.15 - Jun 2018
 
 ## New data
@@ -55,7 +40,7 @@ ansari.wheat.uniformity, baker.wheat.uniformity, bancroft.peanut.uniformity, bos
 
 dasilva.maize, mead.turnip
 
-## Other
+## Other notes
 
 * nonnecke.corn.uniformity is renamed nonnecke.sweetcorn.uniformity
 
