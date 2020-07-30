@@ -1,10 +1,5 @@
 # agridat 1.17 - Jul 2020
 
-libs(asreml)
-setwd("c:/x/rpack/agridat")
-run_examples(run=TRUE) # DO run dontrun{}
-
-
 ## New data
 
 alwan.lamb, baker.strawberry.uniformity, besag.checks, bryan.corn.uniformity, davidian.soybean, devries.pine, edwards.oats, george.wheat, hartman.tomato.uniformity, heath.raddish.uniformity, johnson.douglasfir, kayad.alfalfa, kerr.sugarcane.uniformity, laycock.tea.uniformity, lehmann.millet.uniformity, linder.wheat, loesell.bean.uniformity, miguez.biomass, obsi.potato.uniformity, paez.coffee.uniformity, pederson.lettuce.repeated, piepho.barley.uniformity, rothamsted.oats, shaw.oats, wyatt.multi.uniformity
@@ -79,8 +74,6 @@ acorsi.grayleafspot, becker.chicken, chinloy.fractionalfactorial, cramer.cucumbe
 * Checked aspect ratio of field plot heatmaps where possible.
 
 * `devtools::run_examples()` now works even without suggested packages installed.
-
-* Fixed `dontrun` sections to work with  `devtools::run_examples(run=FALSE)`
 
 * Changed extensions in inst/files from .bug to .jag .
 

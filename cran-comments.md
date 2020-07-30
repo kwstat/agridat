@@ -4,22 +4,24 @@
 ## Test environments
 
 * local: R 4.0.2 on Windows 10
-* win-builder: R-release
-* win-builder: R-devel
+* Win-Builder: devtools::check_win_devel()
+* rhub::check_for_cran()
 
-## Results from local devtools build(), check_built()
+## Check results on Win-Builder
 
-R CMD check results
-0 errors | 0 warnings | 0 notes
+0 errors, 0 warnings, 1 note
+Note: Found the following (possibly) invalid URLs:
+I hand-checked these URLs are valid.
 
-## Results from Rcmd check
+## Check results on Rhub
 
-Status: OK
+OK: Windows Server 2008
 
 ## CRAN Package check
 
 https://cran.r-project.org/web/checks/check_results_kw.stat_at_gmail.com.html
-The error on this page appears to be a spurious error on one specific flavor.
+Current CRAN status: ERROR: 1, OK: 11 
+The 1 ERROR is on the r-oldrel-macos-x86_64 platform, caused by a missing "stringi" package.
 
 ## Downstream dependencies
 

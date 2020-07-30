@@ -235,7 +235,7 @@ https://archive.org/details/secondeditionsta001000mbp
 
 
 ### V. G. Panse and P. V. Sukhatme (1957). _Statistical Methods for Agricultural Workers_.
-http://krishikosh.egranth.ac.in/bitstream/1/2049376/1/44688.pdf
+https://krishikosh.egranth.ac.in/handle/1/5810134296
 
 ```
   3 Length and number of grains per ear of wheat
@@ -372,7 +372,7 @@ http://library.wur.nl/ojs/index.php/odjar/
 
 
 ### Plant Genomics and Phenomics Research Data Repository
-http://edal.ipk-gatersleben.de/repos/pgp/
+https://edal-pgp.ipk-gatersleben.de/
 
 
 ### Wolfram Data Repository 
@@ -561,7 +561,7 @@ Large phenotypic dataset with 691 wheat lines, 33 years, 670 environments, 3-4 r
 
 
 **van der Voet et al.** (2017).
-Equivalence testing using existing reference data: An example with genetically modiﬁed and conventional crops in animal feeding studies.
+Equivalence testing using existing reference data: An example with genetically modified and conventional crops in animal feeding studies.
 https://doi.org/10.1016/j.fct.2017.09.044
 
 The full datasets for the GRACE studies A-E are available here: https://www.cadima.info/index.php/area/publicAnimalFeedingTrials
@@ -575,7 +575,7 @@ Winter wheat, 31 gen in 8 loc. This data is different from Yan's earlier papers.
 
 
 
-# R packages on CRAN, Github
+# R packages on CRAN, Github, etc.
 
 
 ### agriCensData
@@ -748,12 +748,12 @@ Blog posts with example analyses.
 
 
 ### statgenSTA
+https://CRAN.R-project.org/package=statgenSTA
+See vignette: Modeling field trials using statgenSTA
 
-Modeling field trials using statgenSTA
-https://cran.r-project.org/web/packages/statgenSTA/vignettes/statgenSTA.html
 
 ### statgenGWAS
-https://cran.r-project.org/web/packages/statgenGWAS/vignettes/GWAS.html
+https://CRAN.R-project.org/package=statgenGWAS
 
 Includes a worked example with data from:
 https://data.inra.fr/dataset.xhtml?persistentId=doi:10.15454/IASSTN 
@@ -787,11 +787,6 @@ http://datacommons.cyverse.org/browse/iplant/home/shared/commons_repo/curated/Ca
 Very large GxE data here for 2014 and 2015. Hybrid & inbred phenotype data, weather data, genomic data.  Very nice.
 
 
-### Germplasm Enhancement of Maize (ISU)
-https://usda-gem.public.iastate.edu/
-
-Data from trials at multiple locations. Yield, mst, pltht, lodging. No field plans.
-
 
 ### GLTEN Global Long Term Metadal Portal
 https://glten.org/
@@ -823,9 +818,8 @@ http://vt.cropsci.illinois.edu/corn.html
 
 
 ### ILRI International Livestock Research Institute
-http://www.ilri.org/biometrics/CS/
 
-Case study 4 is a nice dialel example with sheep data.
+Case study 4 is a nice diallel example with sheep data.
 Available as agridat::ilri.sheep
 
 
@@ -836,18 +830,6 @@ STAR, PBTools, CropStat.
 The STAR user guide has well-documented data (even using 2 from agridat), but
 the PBTools user guide does not document the data.
 
-
-### MapCalc
-http://www.innovativegis.com/basis/ Joseph Berry.
-
-Contains data for a center-pivot field, 3 years of harvest data, multiple nutrient data, clay, sand, and silt. All data layers have been gridded to the same set of coordinates.
-
-Analyzing Precision Ag Data workshop: http://www.innovativegis.com/basis/Books/AnalyzingPAdata/Default.htm
-
-Workbook here: http://www.innovativegis.com/basis/Books/AnalyzingPAdata/PA_download/Default.htm
-http://www.innovativegis.com/basis/Books/AnalyzingPAdata/PA_download/Support_materials/Default.htm
-
-Case Study in Precision Farming: http://www.innovativegis.com/basis/pfprimer/Appendix_D/Appendix_D.htm 
 
 
 

@@ -21,7 +21,7 @@
   University of Hohenheim, Germany, in 2007.
   
   Note: The paper by Piepho says
-  "The trial had 30 rows and 36 columns. Plot widths were 1.90 m along rows and 3.73 m along columns."
+  "The trial had 30 rows and 36 columns. Plot widths were 1.90 m along rows and 3.73 m along columns."
   However, the SAS code supplement to the paper, called
   "PBR_1654_sm_example1.sas", has row=1-36, col=1-30.  We cannot
   determine which dimension is "row" and which is "column", and
