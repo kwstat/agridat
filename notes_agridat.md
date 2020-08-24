@@ -24,6 +24,12 @@ Although this is an .md file, the formatting is best viewed in plain text mode.
 ---
 
 
+rangaswamy groundnut uniformity trial 
+https://books.google.com/books?id=QDLWE4oakSgC&pg=PA231&lpg=PA231&dq=%22uniformity+trial%22&source=bl&ots=YlItaP9T0d&sig=ACfU3U3YVgplrlieEbI-O4TJe8M67BCAMw&hl=en&sa=X&ved=2ahUKEwjAjaDTxbTrAhUYCs0KHQqbAV44ChDoATAHegQICRAB#v=onepage&q=%22uniformity%20trial%22&f=false
+
+---
+
+
 Henry Wallace archive at Univ Iowa Library
 http://www.lib.uiowa.edu/sc/location-and-hours/
 Henry Wallace research papers

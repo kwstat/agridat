@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Multi-environment trial of 5 barley varieties, 6 locations, 2 years — fisher.barley" />
-
 <meta property="og:description" content="Multi-environment trial of 5 barley varieties, 6 locations, 2 years" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,37 +143,34 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Multi-environment trial of 5 barley varieties, 6 locations, 2 years</p>
-    
     </div>
 
     <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"fisher.barley"</span>)</pre>
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 60 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 60 observations on the following 4 variables.</p><dl'>
     <dt><code>yield</code></dt><dd><p>yield, bu/ac</p></dd>
     <dt><code>gen</code></dt><dd><p>genotype/variety, 5 levels</p></dd>
     <dt><code>env</code></dt><dd><p>environment/location, 2 levels</p></dd>
     <dt><code>year</code></dt><dd><p>year, 1931/1932</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Trials of 5 varieties of barley were conducted at 6 stations in
   Minnesota during the years 1931-1932.</p>  
 <p>This is a subset of Immer's barley data.  The yield values here are
   totals of 3 reps (Immer gave the average yield of 3 reps).</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     
   
 <p>Ronald Fisher (1935).
   <em>The Design of Experiments</em>.</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     
@@ -186,65 +187,66 @@
   components of variability.
   <em>Heredity</em>, 29, 237-245. Table 1.
   http://doi.org/10.1038/hdy.1972.87</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>fisher.barley</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>fisher.barley</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>dplyr</span>,<span class='no'>lattice</span>)
-<span class='co'># Yates 1938 figure 1. Regression on env mean</span>
-<span class='co'># Sum years within loc</span>
-<span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span>(<span class='no'>yield</span> ~ <span class='no'>gen</span> + <span class='no'>env</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>FUN</span><span class='kw'>=</span><span class='no'>sum</span>)
-<span class='co'># Avg within env</span>
-<span class='no'>emn</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span>(<span class='no'>yield</span> ~ <span class='no'>env</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat2</span>, <span class='kw'>FUN</span><span class='kw'>=</span><span class='no'>mean</span>)
-<span class='no'>dat2</span>$<span class='no'>envmn</span> <span class='kw'>&lt;-</span> <span class='no'>emn</span>$<span class='no'>yield</span>[<span class='fu'><a href='https://rdrr.io/r/base/match.html'>match</a></span>(<span class='no'>dat2</span>$<span class='no'>env</span>, <span class='no'>emn</span>$<span class='no'>env</span>)]
-<span class='fu'>xyplot</span>(<span class='no'>yield</span> ~ <span class='no'>envmn</span>, <span class='no'>dat2</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>gen</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'p'</span>,<span class='st'>'r'</span>),
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"fisher.barley - stability regression"</span>,
-       <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Environment total"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Variety mean"</span>,
-       <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>3</span>))</div><div class='img'><img src='fisher.barley-1.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='co'># ----------------------------------------------------------------------------</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>fisher.barley</span>)
+  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>fisher.barley</span>
 
-<span class='kw'>if</span>(<span class='fl'>0</span>){
+  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>dplyr</span>,<span class='no'>lattice</span>)
+  <span class='co'># Yates 1938 figure 1. Regression on env mean</span>
+  <span class='co'># Sum years within loc</span>
+  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span>(<span class='no'>yield</span> ~ <span class='no'>gen</span> + <span class='no'>env</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>FUN</span><span class='kw'>=</span><span class='no'>sum</span>)
+  <span class='co'># Avg within env</span>
+  <span class='no'>emn</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span>(<span class='no'>yield</span> ~ <span class='no'>env</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat2</span>, <span class='kw'>FUN</span><span class='kw'>=</span><span class='no'>mean</span>)
+  <span class='no'>dat2</span>$<span class='no'>envmn</span> <span class='kw'>&lt;-</span> <span class='no'>emn</span>$<span class='no'>yield</span>[<span class='fu'><a href='https://rdrr.io/r/base/match.html'>match</a></span>(<span class='no'>dat2</span>$<span class='no'>env</span>, <span class='no'>emn</span>$<span class='no'>env</span>)]
+  <span class='fu'>xyplot</span>(<span class='no'>yield</span> ~ <span class='no'>envmn</span>, <span class='no'>dat2</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>gen</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'p'</span>,<span class='st'>'r'</span>),
+         <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"fisher.barley - stability regression"</span>,
+         <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Environment total"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Variety mean"</span>,
+         <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>3</span>))</div><div class='img'><img src='fisher.barley-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
-  <span class='co'># calculate stability according to the sum-of-squares approach used by</span>
-  <span class='co'># Shukla (1972), eqn 11. match to Shukla, Table 4, M.S. column</span>
-  <span class='co'># also matches fernandez, table 3, stabvar column</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>dplyr</span>)
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>group_by</span>(<span class='no'>dat2</span>, <span class='no'>gen</span>,<span class='no'>env</span>)
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>summarize</span>(<span class='no'>dat2</span>, <span class='kw'>yield</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='no'>yield</span>)) <span class='co'># means across years</span>
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>group_by</span>(<span class='no'>dat2</span>, <span class='no'>env</span>)
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>mutate</span>(<span class='no'>dat2</span>, <span class='kw'>envmn</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>yield</span>)) <span class='co'># env means</span>
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>group_by</span>(<span class='no'>dat2</span>, <span class='no'>gen</span>)
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>mutate</span>(<span class='no'>dat2</span>, <span class='kw'>genmn</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>yield</span>)) <span class='co'># gen means</span>
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>ungroup</span>(<span class='no'>dat2</span>)
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>mutate</span>(<span class='no'>dat2</span>, <span class='kw'>grandmn</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>yield</span>)) <span class='co'># grand mean</span>
-  <span class='co'># correction factor overall</span>
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>mutate</span>(<span class='no'>dat2</span>, <span class='kw'>cf</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>((<span class='no'>yield</span> - <span class='no'>genmn</span> - <span class='no'>envmn</span> + <span class='no'>grandmn</span>)^<span class='fl'>2</span>))
-  <span class='no'>t</span><span class='kw'>=</span><span class='fl'>5</span>; <span class='no'>s</span><span class='kw'>=</span><span class='fl'>6</span> <span class='co'># t genotypes, s environments</span>
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>group_by</span>(<span class='no'>dat2</span>, <span class='no'>gen</span>)
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>mutate</span>(<span class='no'>dat2</span>, <span class='kw'>ss</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>((<span class='no'>yield</span>-<span class='no'>genmn</span>-<span class='no'>envmn</span>+<span class='no'>grandmn</span>)^<span class='fl'>2</span>))
-  <span class='co'># divide by 6 to scale down to plot-level</span>
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>mutate</span>(<span class='no'>dat2</span>, <span class='kw'>sig2i</span> <span class='kw'>=</span> <span class='fl'>1</span>/((<span class='no'>s</span>-<span class='fl'>1</span>)*(<span class='no'>t</span>-<span class='fl'>1</span>)*(<span class='no'>t</span>-<span class='fl'>2</span>)) * (<span class='no'>t</span>*(<span class='no'>t</span>-<span class='fl'>1</span>)*<span class='no'>ss</span>-<span class='no'>cf</span>)/<span class='fl'>6</span>)
-  <span class='no'>dat2</span>[!<span class='fu'><a href='https://rdrr.io/r/base/duplicated.html'>duplicated</a></span>(<span class='no'>dat2</span>$<span class='no'>gen</span>),<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'gen'</span>,<span class='st'>'sig2i'</span>)]
-  <span class='co'>##       &lt;chr&gt;     &lt;dbl&gt;</span>
-  <span class='co'>## 1 Manchuria  25.87912</span>
-  <span class='co'>## 2  Peatland  75.68001</span>
-  <span class='co'>## 3  Svansota  19.59984</span>
-  <span class='co'>## 4     Trebi 225.52866</span>
-  <span class='co'>## 5    Velvet  22.73051</span>
-}
+  <span class='kw'>if</span>(<span class='fl'>0</span>){
+    <span class='co'># calculate stability according to the sum-of-squares approach used by</span>
+    <span class='co'># Shukla (1972), eqn 11. match to Shukla, Table 4, M.S. column</span>
+    <span class='co'># also matches fernandez, table 3, stabvar column</span>
+    <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>dplyr</span>)
+    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>
+    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>group_by</span>(<span class='no'>dat2</span>, <span class='no'>gen</span>,<span class='no'>env</span>)
+    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>summarize</span>(<span class='no'>dat2</span>, <span class='kw'>yield</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='no'>yield</span>)) <span class='co'># means across years</span>
+    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>group_by</span>(<span class='no'>dat2</span>, <span class='no'>env</span>)
+    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>mutate</span>(<span class='no'>dat2</span>, <span class='kw'>envmn</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>yield</span>)) <span class='co'># env means</span>
+    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>group_by</span>(<span class='no'>dat2</span>, <span class='no'>gen</span>)
+    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>mutate</span>(<span class='no'>dat2</span>, <span class='kw'>genmn</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>yield</span>)) <span class='co'># gen means</span>
+    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>ungroup</span>(<span class='no'>dat2</span>)
+    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>mutate</span>(<span class='no'>dat2</span>, <span class='kw'>grandmn</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>yield</span>)) <span class='co'># grand mean</span>
+    <span class='co'># correction factor overall</span>
+    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>mutate</span>(<span class='no'>dat2</span>, <span class='kw'>cf</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>((<span class='no'>yield</span> - <span class='no'>genmn</span> - <span class='no'>envmn</span> + <span class='no'>grandmn</span>)^<span class='fl'>2</span>))
+    <span class='no'>t</span><span class='kw'>=</span><span class='fl'>5</span>; <span class='no'>s</span><span class='kw'>=</span><span class='fl'>6</span> <span class='co'># t genotypes, s environments</span>
+    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>group_by</span>(<span class='no'>dat2</span>, <span class='no'>gen</span>)
+    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>mutate</span>(<span class='no'>dat2</span>, <span class='kw'>ss</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>((<span class='no'>yield</span>-<span class='no'>genmn</span>-<span class='no'>envmn</span>+<span class='no'>grandmn</span>)^<span class='fl'>2</span>))
+    <span class='co'># divide by 6 to scale down to plot-level</span>
+    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>mutate</span>(<span class='no'>dat2</span>, <span class='kw'>sig2i</span> <span class='kw'>=</span> <span class='fl'>1</span>/((<span class='no'>s</span>-<span class='fl'>1</span>)*(<span class='no'>t</span>-<span class='fl'>1</span>)*(<span class='no'>t</span>-<span class='fl'>2</span>)) * (<span class='no'>t</span>*(<span class='no'>t</span>-<span class='fl'>1</span>)*<span class='no'>ss</span>-<span class='no'>cf</span>)/<span class='fl'>6</span>)
+    <span class='no'>dat2</span>[!<span class='fu'><a href='https://rdrr.io/r/base/duplicated.html'>duplicated</a></span>(<span class='no'>dat2</span>$<span class='no'>gen</span>),<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'gen'</span>,<span class='st'>'sig2i'</span>)]
+    <span class='co'>##       &lt;chr&gt;     &lt;dbl&gt;</span>
+    <span class='co'>## 1 Manchuria  25.87912</span>
+    <span class='co'>## 2  Peatland  75.68001</span>
+    <span class='co'>## 3  Svansota  19.59984</span>
+    <span class='co'>## 4     Trebi 225.52866</span>
+    <span class='co'>## 5    Velvet  22.73051</span>
+  }
 
-<span class='co'># ----------------------------------------------------------------------------</span>
 
-<span class='kw'>if</span>(<span class='fl'>0</span>){
-  <span class='co'># mixed model approach gives similar results (but not identical)</span>
-  <span class='co'># asreml3</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='no'>dat2</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat2</span>$<span class='no'>gen</span>),]
+  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>,<span class='no'>lucid</span>)
+  <span class='kw'>if</span>( <span class='kw pkg'>utils</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/r/utils/packageDescription.html'>packageVersion</a></span>(<span class='st'>"asreml"</span>) <span class='kw'>&lt;</span> <span class='st'>"4"</span>) {
+    <span class='co'># asreml3</span>
+    <span class='co'># mixed model approach gives similar results (but not identical)</span>
+
+    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>
+    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span>(<span class='no'>dat2</span>, <span class='no'>gen</span>,<span class='no'>env</span>)
+    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span>(<span class='no'>dat2</span>, <span class='kw'>yield</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='no'>yield</span>)) <span class='co'># means across years</span>
+    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='no'>dat2</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat2</span>$<span class='no'>gen</span>),]
 
   <span class='co'># G-side</span>
   <span class='no'>m1g</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat2</span>,
@@ -273,23 +275,14 @@
   <span class='co'>## gen_Trebi!variance     231.84662 231.84662</span>
   <span class='co'>## gen_Velvet!variance     14.05591  14.05591</span>
 
-}</div></pre>
+}
+
+<span class='co'># }</span></div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -300,7 +293,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

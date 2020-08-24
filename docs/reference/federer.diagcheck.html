@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Wheat experiment with diagonal checks — federer.diagcheck" />
-
 <meta property="og:description" content="Wheat experiment augmented with two check varieties in diagonal strips." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,22 +143,21 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Wheat experiment augmented with two check varieties in diagonal strips.</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 180 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 180 observations on the following 4 variables.</p><dl'>
     <dt><code>row</code></dt><dd><p>row</p></dd>
     <dt><code>col</code></dt><dd><p>column</p></dd>
     <dt><code>gen</code></dt><dd><p>genotype, 120 levels</p></dd>
     <dt><code>yield</code></dt><dd><p>yield</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>This experiment was conducted by Matthew Reynolds, CIMMYT.  There are
@@ -172,154 +175,153 @@
   code of Federer &amp; Wolfinger (2003) when both are applied to this
   version of the data.</p>
 <p>Plot dimensions are not given.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Federer, Walter T. 1998. Recovery of interblock, intergradient, and
   intervariety information in incomplete block and lattice rectangle
   design experiments. <em>Biometrics</em>, 54, 471--481.
   http://doi.org/10.2307/3109756</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Walter T Federer and Russell D Wolfinger, 2003.
   Augmented Row-Column Design and Trend Analysis, chapter 28 of
   <em>Handbook of Formulas and Software for Plant Geneticists
     and Breeders</em>, Haworth Press.</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>federer.diagcheck</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>federer.diagcheck</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>federer.diagcheck</span>)
+  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>federer.diagcheck</span>
+  <span class='no'>dat</span>$<span class='no'>check</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='no'>dat</span>$<span class='no'>gen</span> <span class='kw'>==</span> <span class='st'>"G121"</span> <span class='kw'>|</span> <span class='no'>dat</span>$<span class='no'>gen</span><span class='kw'>==</span><span class='st'>"G122"</span>, <span class='st'>"C"</span>,<span class='st'>"N"</span>)
 
-<span class='co'># Show the layout as in Federer 1998.</span>
-<span class='no'>dat</span>$<span class='no'>check</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='no'>dat</span>$<span class='no'>gen</span> <span class='kw'>==</span> <span class='st'>"G121"</span> <span class='kw'>|</span> <span class='no'>dat</span>$<span class='no'>gen</span><span class='kw'>==</span><span class='st'>"G122"</span>, <span class='st'>"C"</span>,<span class='st'>"N"</span>)
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='fu'>desplot</span>(<span class='no'>yield</span> ~ <span class='no'>col</span>*<span class='no'>row</span>, <span class='no'>dat</span>,
-        <span class='kw'>text</span><span class='kw'>=</span><span class='no'>gen</span>, <span class='kw'>show.key</span><span class='kw'>=</span><span class='fl'>FALSE</span>, <span class='co'># aspect unknown</span>
-        <span class='kw'>shorten</span><span class='kw'>=</span><span class='st'>'no'</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='no'>check</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>.8</span>, <span class='kw'>col.text</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"yellow"</span>,<span class='st'>"gray"</span>),
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"federer.diagcheck"</span>)</div><div class='img'><img src='federer.diagcheck-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='co'># Show the layout as in Federer 1998.</span>
+  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
+  <span class='fu'>desplot</span>(<span class='no'>dat</span>, <span class='no'>yield</span> ~ <span class='no'>col</span>*<span class='no'>row</span>,
+          <span class='kw'>text</span><span class='kw'>=</span><span class='no'>gen</span>, <span class='kw'>show.key</span><span class='kw'>=</span><span class='fl'>FALSE</span>, <span class='co'># aspect unknown</span>
+          <span class='kw'>shorten</span><span class='kw'>=</span><span class='st'>'no'</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='no'>check</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>.8</span>, <span class='kw'>col.text</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"yellow"</span>,<span class='st'>"gray"</span>),
+          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"federer.diagcheck"</span>)</div><div class='img'><img src='federer.diagcheck-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
-<span class='co'># Now reproduce the analysis of Federer 2003.</span>
+  <span class='co'># Now reproduce the analysis of Federer 2003.</span>
 
-<span class='co'># Only to match SAS results</span>
-<span class='no'>dat</span>$<span class='no'>row</span> <span class='kw'>&lt;-</span> <span class='fl'>16</span> - <span class='no'>dat</span>$<span class='no'>row</span>
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>col</span>, <span class='no'>dat</span>$<span class='no'>row</span>), ]
+  <span class='co'># Only to match SAS results</span>
+  <span class='no'>dat</span>$<span class='no'>row</span> <span class='kw'>&lt;-</span> <span class='fl'>16</span> - <span class='no'>dat</span>$<span class='no'>row</span>
+  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>col</span>, <span class='no'>dat</span>$<span class='no'>row</span>), ]
 
-<span class='co'># Add row / column polynomials to the data.</span>
-<span class='co'># The scaling factors sqrt() are arbitrary, but used to match SAS</span>
-<span class='no'>nr</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span>(<span class='no'>dat</span>$<span class='no'>row</span>))
-<span class='no'>nc</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span>(<span class='no'>dat</span>$<span class='no'>col</span>))
-<span class='no'>rpoly</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/poly.html'>poly</a></span>(<span class='no'>dat</span>$<span class='no'>row</span>, <span class='kw'>degree</span><span class='kw'>=</span><span class='fl'>10</span>) * <span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span>(<span class='no'>nc</span>)
-<span class='no'>cpoly</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/poly.html'>poly</a></span>(<span class='no'>dat</span>$<span class='no'>col</span>, <span class='kw'>degree</span><span class='kw'>=</span><span class='fl'>10</span>) * <span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span>(<span class='no'>nr</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>,
-                 <span class='kw'>c1</span> <span class='kw'>=</span> <span class='no'>cpoly</span>[,<span class='fl'>1</span>], <span class='kw'>c2</span> <span class='kw'>=</span> <span class='no'>cpoly</span>[,<span class='fl'>2</span>], <span class='kw'>c3</span> <span class='kw'>=</span> <span class='no'>cpoly</span>[,<span class='fl'>3</span>],
-                 <span class='kw'>c4</span> <span class='kw'>=</span> <span class='no'>cpoly</span>[,<span class='fl'>4</span>], <span class='kw'>c6</span> <span class='kw'>=</span> <span class='no'>cpoly</span>[,<span class='fl'>6</span>], <span class='kw'>c8</span> <span class='kw'>=</span> <span class='no'>cpoly</span>[,<span class='fl'>8</span>],
-                 <span class='kw'>r1</span> <span class='kw'>=</span> <span class='no'>rpoly</span>[,<span class='fl'>1</span>], <span class='kw'>r2</span> <span class='kw'>=</span> <span class='no'>rpoly</span>[,<span class='fl'>2</span>], <span class='kw'>r3</span> <span class='kw'>=</span> <span class='no'>rpoly</span>[,<span class='fl'>3</span>],
-                 <span class='kw'>r4</span> <span class='kw'>=</span> <span class='no'>rpoly</span>[,<span class='fl'>4</span>], <span class='kw'>r8</span> <span class='kw'>=</span> <span class='no'>rpoly</span>[,<span class='fl'>8</span>], <span class='kw'>r10</span> <span class='kw'>=</span> <span class='no'>rpoly</span>[,<span class='fl'>10</span>])
-<span class='no'>dat</span>$<span class='no'>trtn</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='no'>dat</span>$<span class='no'>gen</span> <span class='kw'>==</span> <span class='st'>"G121"</span> <span class='kw'>|</span> <span class='no'>dat</span>$<span class='no'>gen</span><span class='kw'>==</span><span class='st'>"G122"</span>, <span class='no'>dat</span>$<span class='no'>gen</span>, <span class='st'>"G999"</span>)
-<span class='no'>dat</span>$<span class='no'>new</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='no'>dat</span>$<span class='no'>gen</span> <span class='kw'>==</span> <span class='st'>"G121"</span> <span class='kw'>|</span> <span class='no'>dat</span>$<span class='no'>gen</span><span class='kw'>==</span><span class='st'>"G122"</span>, <span class='st'>"N"</span>, <span class='st'>"Y"</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>trtn</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>trtn</span>), <span class='kw'>new</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>new</span>))
+  <span class='co'># Add row / column polynomials to the data.</span>
+  <span class='co'># The scaling factors sqrt() are arbitrary, but used to match SAS</span>
+  <span class='no'>nr</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span>(<span class='no'>dat</span>$<span class='no'>row</span>))
+  <span class='no'>nc</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/unique.html'>unique</a></span>(<span class='no'>dat</span>$<span class='no'>col</span>))
+  <span class='no'>rpoly</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/poly.html'>poly</a></span>(<span class='no'>dat</span>$<span class='no'>row</span>, <span class='kw'>degree</span><span class='kw'>=</span><span class='fl'>10</span>) * <span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span>(<span class='no'>nc</span>)
+  <span class='no'>cpoly</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/poly.html'>poly</a></span>(<span class='no'>dat</span>$<span class='no'>col</span>, <span class='kw'>degree</span><span class='kw'>=</span><span class='fl'>10</span>) * <span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span>(<span class='no'>nr</span>)
+  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>,
+                   <span class='kw'>c1</span> <span class='kw'>=</span> <span class='no'>cpoly</span>[,<span class='fl'>1</span>], <span class='kw'>c2</span> <span class='kw'>=</span> <span class='no'>cpoly</span>[,<span class='fl'>2</span>], <span class='kw'>c3</span> <span class='kw'>=</span> <span class='no'>cpoly</span>[,<span class='fl'>3</span>],
+                   <span class='kw'>c4</span> <span class='kw'>=</span> <span class='no'>cpoly</span>[,<span class='fl'>4</span>], <span class='kw'>c6</span> <span class='kw'>=</span> <span class='no'>cpoly</span>[,<span class='fl'>6</span>], <span class='kw'>c8</span> <span class='kw'>=</span> <span class='no'>cpoly</span>[,<span class='fl'>8</span>],
+                   <span class='kw'>r1</span> <span class='kw'>=</span> <span class='no'>rpoly</span>[,<span class='fl'>1</span>], <span class='kw'>r2</span> <span class='kw'>=</span> <span class='no'>rpoly</span>[,<span class='fl'>2</span>], <span class='kw'>r3</span> <span class='kw'>=</span> <span class='no'>rpoly</span>[,<span class='fl'>3</span>],
+                   <span class='kw'>r4</span> <span class='kw'>=</span> <span class='no'>rpoly</span>[,<span class='fl'>4</span>], <span class='kw'>r8</span> <span class='kw'>=</span> <span class='no'>rpoly</span>[,<span class='fl'>8</span>], <span class='kw'>r10</span> <span class='kw'>=</span> <span class='no'>rpoly</span>[,<span class='fl'>10</span>])
+  <span class='no'>dat</span>$<span class='no'>trtn</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='no'>dat</span>$<span class='no'>gen</span> <span class='kw'>==</span> <span class='st'>"G121"</span> <span class='kw'>|</span> <span class='no'>dat</span>$<span class='no'>gen</span><span class='kw'>==</span><span class='st'>"G122"</span>, <span class='no'>dat</span>$<span class='no'>gen</span>, <span class='st'>"G999"</span>)
+  <span class='no'>dat</span>$<span class='no'>new</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='no'>dat</span>$<span class='no'>gen</span> <span class='kw'>==</span> <span class='st'>"G121"</span> <span class='kw'>|</span> <span class='no'>dat</span>$<span class='no'>gen</span><span class='kw'>==</span><span class='st'>"G122"</span>, <span class='st'>"N"</span>, <span class='st'>"Y"</span>)
+  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>trtn</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>trtn</span>), <span class='kw'>new</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>new</span>))
 
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>yield</span> ~ <span class='no'>c1</span> + <span class='no'>c2</span> + <span class='no'>c3</span> + <span class='no'>c4</span> + <span class='no'>c6</span> + <span class='no'>c8</span>
-         + <span class='no'>r1</span> + <span class='no'>r2</span> + <span class='no'>r4</span> + <span class='no'>r8</span> + <span class='no'>r10</span>
-         + <span class='no'>c1</span>:<span class='no'>r1</span> + <span class='no'>c2</span>:<span class='no'>r1</span> + <span class='no'>c3</span>:<span class='no'>r1</span> + <span class='no'>gen</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>dat</span>)
-<span class='co'># To get Type III SS use the following</span>
-<span class='co'># libs(car)</span>
-<span class='co'># Anova(m1, type=3) # Matches PROC GLM output</span>
-<span class='co'>##                Sum Sq  Df  F value    Pr(&gt;F)    </span>
-<span class='co'>## (Intercept)  538948   1 159.5804 3.103e-16 ***</span>
-<span class='co'>## c1            13781   1   4.0806 0.0494940 *  </span>
-<span class='co'>## c2            51102   1  15.1312 0.0003354 ***</span>
-<span class='co'>## c3            45735   1  13.5419 0.0006332 ***</span>
-<span class='co'>## c4            24670   1   7.3048 0.0097349 ** </span>
-<span class='co'>## c6            33002   1   9.7719 0.0031359 ** </span>
+  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>yield</span> ~ <span class='no'>c1</span> + <span class='no'>c2</span> + <span class='no'>c3</span> + <span class='no'>c4</span> + <span class='no'>c6</span> + <span class='no'>c8</span>
+           + <span class='no'>r1</span> + <span class='no'>r2</span> + <span class='no'>r4</span> + <span class='no'>r8</span> + <span class='no'>r10</span>
+           + <span class='no'>c1</span>:<span class='no'>r1</span> + <span class='no'>c2</span>:<span class='no'>r1</span> + <span class='no'>c3</span>:<span class='no'>r1</span> + <span class='no'>gen</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>dat</span>)
+  <span class='co'># To get Type III SS use the following</span>
+  <span class='co'># libs(car)</span>
+  <span class='co'># car::Anova(m1, type=3) # Matches PROC GLM output</span>
+  <span class='co'>##                Sum Sq  Df  F value    Pr(&gt;F)    </span>
+  <span class='co'>## (Intercept)  538948   1 159.5804 3.103e-16 ***</span>
+  <span class='co'>## c1            13781   1   4.0806 0.0494940 *  </span>
+  <span class='co'>## c2            51102   1  15.1312 0.0003354 ***</span>
+  <span class='co'>## c3            45735   1  13.5419 0.0006332 ***</span>
+  <span class='co'>## c4            24670   1   7.3048 0.0097349 ** </span>
+  <span class='co'>## ...</span>
 
 
-<span class='co'># lmer</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lme4</span>,<span class='no'>lucid</span>)
+  <span class='co'># lmer</span>
+  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lme4</span>,<span class='no'>lucid</span>)
 
-<span class='no'>dat</span>$<span class='no'>one</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='fl'>1</span>, <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span>(<span class='no'>dat</span>)))
+  <span class='co'># "group" for all data</span>
+  <span class='no'>dat</span>$<span class='no'>one</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='fl'>1</span>, <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span>(<span class='no'>dat</span>)))
 
-<span class='co'># lmer with bobyqa (default)</span>
-<span class='no'>m2b</span> <span class='kw'>&lt;-</span> <span class='fu'>lmer</span>(<span class='no'>yield</span> ~ <span class='no'>trtn</span> + (<span class='fl'>0</span> + <span class='no'>r1</span> + <span class='no'>r2</span> + <span class='no'>r4</span> + <span class='no'>r8</span> + <span class='no'>r10</span> +
-           <span class='no'>c1</span> + <span class='no'>c2</span> + <span class='no'>c3</span> + <span class='no'>c4</span> + <span class='no'>c6</span> + <span class='no'>c8</span> + <span class='no'>r1</span>:<span class='no'>c1</span> + <span class='no'>r1</span>:<span class='no'>c2</span> + <span class='no'>r1</span>:<span class='no'>c3</span> <span class='kw'>||</span> <span class='no'>one</span>) +
-              (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>new</span>:<span class='no'>gen</span>),
-            <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>dat</span>, <span class='kw'>control</span><span class='kw'>=</span><span class='fu'>lmerControl</span>(<span class='kw'>check.nlev.gtr.1</span><span class='kw'>=</span><span class='st'>"ignore"</span>))</div><div class='output co'>#&gt; <span class='message'>boundary (singular) fit: see ?isSingular</span></div><div class='input'><span class='fu'>vc</span>(<span class='no'>m2b</span>)</div><div class='output co'>#&gt;       grp        var1 var2     vcov  sdcor
+  <span class='co'># lmer with bobyqa (default)</span>
+  <span class='no'>m2b</span> <span class='kw'>&lt;-</span> <span class='fu'>lmer</span>(<span class='no'>yield</span> ~ <span class='no'>trtn</span> + (<span class='fl'>0</span> + <span class='no'>r1</span> + <span class='no'>r2</span> + <span class='no'>r4</span> + <span class='no'>r8</span> + <span class='no'>r10</span> +
+                                <span class='no'>c1</span> + <span class='no'>c2</span> + <span class='no'>c3</span> + <span class='no'>c4</span> + <span class='no'>c6</span> +
+                                <span class='no'>c8</span> + <span class='no'>r1</span>:<span class='no'>c1</span> + <span class='no'>r1</span>:<span class='no'>c2</span> + <span class='no'>r1</span>:<span class='no'>c3</span> <span class='kw'>||</span> <span class='no'>one</span>) +
+                (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>new</span>:<span class='no'>gen</span>),
+              <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>dat</span>,
+              <span class='kw'>control</span><span class='kw'>=</span><span class='fu'>lmerControl</span>(<span class='kw'>check.nlev.gtr.1</span><span class='kw'>=</span><span class='st'>"ignore"</span>))</div><div class='output co'>#&gt; <span class='message'>boundary (singular) fit: see ?isSingular</span></div><div class='input'>  <span class='fu'>vc</span>(<span class='no'>m2b</span>)</div><div class='output co'>#&gt;       grp        var1 var2     vcov  sdcor
 #&gt;   new.gen (Intercept) &lt;NA&gt;   2870    53.57
-#&gt;       one       r1:c3 &lt;NA&gt;   5589    74.76
-#&gt;     one.1       r1:c2 &lt;NA&gt;  57390   239.6 
-#&gt;     one.2       r1:c1 &lt;NA&gt; 130000   360.5 
-#&gt;     one.3          c8 &lt;NA&gt;   6467    80.42
-#&gt;     one.4          c6 &lt;NA&gt;   1398    37.38
-#&gt;     one.5          c4 &lt;NA&gt;   1790    42.31
-#&gt;     one.6          c3 &lt;NA&gt;   2556    50.56
-#&gt;     one.7          c2 &lt;NA&gt;   5935    77.04
+#&gt;       one       r1:c3 &lt;NA&gt;   5534    74.39
+#&gt;     one.1       r1:c2 &lt;NA&gt;  58250   241.4 
+#&gt;     one.2       r1:c1 &lt;NA&gt; 128000   357.8 
+#&gt;     one.3          c8 &lt;NA&gt;   6458    80.36
+#&gt;     one.4          c6 &lt;NA&gt;   1400    37.41
+#&gt;     one.5          c4 &lt;NA&gt;   1792    42.33
+#&gt;     one.6          c3 &lt;NA&gt;   2549    50.48
+#&gt;     one.7          c2 &lt;NA&gt;   5942    77.08
 #&gt;     one.8          c1 &lt;NA&gt;      0     0   
-#&gt;     one.9         r10 &lt;NA&gt;   1130    33.61
+#&gt;     one.9         r10 &lt;NA&gt;   1133    33.66
 #&gt;    one.10          r8 &lt;NA&gt;   1355    36.81
-#&gt;    one.11          r4 &lt;NA&gt;   2261    47.55
-#&gt;    one.12          r2 &lt;NA&gt;    242.8  15.58
-#&gt;    one.13          r1 &lt;NA&gt;   9198    95.91
-#&gt;  Residual        &lt;NA&gt; &lt;NA&gt;   4412    66.42</div><div class='input'><span class='co'>##      grp        var1 var2     vcov  sdcor</span>
-<span class='co'>##  new.gen (Intercept) &lt;NA&gt;   2869    53.57</span>
-<span class='co'>##      one       r1:c3 &lt;NA&gt;   5532    74.37</span>
-<span class='co'>##    one.1       r1:c2 &lt;NA&gt;  58230   241.3</span>
-<span class='co'>##    one.2       r1:c1 &lt;NA&gt; 128000   357.8</span>
-<span class='co'>##    one.3          c8 &lt;NA&gt;   6456    80.35</span>
-<span class='co'>##    one.4          c6 &lt;NA&gt;   1400    37.41</span>
-<span class='co'>##    one.5          c4 &lt;NA&gt;   1792    42.33</span>
-<span class='co'>##    one.6          c3 &lt;NA&gt;   2549    50.49</span>
-<span class='co'>##    one.7          c2 &lt;NA&gt;   5942    77.08</span>
-<span class='co'>##    one.8          c1 &lt;NA&gt;      0     0</span>
-<span class='co'>##    one.9         r10 &lt;NA&gt;   1133    33.66</span>
-<span class='co'>##   one.10          r8 &lt;NA&gt;   1355    36.81</span>
-<span class='co'>##   one.11          r4 &lt;NA&gt;   2269    47.63</span>
-<span class='co'>##   one.12          r2 &lt;NA&gt;    241.8  15.55</span>
-<span class='co'>##   one.13          r1 &lt;NA&gt;   9200    95.92</span>
-<span class='co'>## Residual        &lt;NA&gt; &lt;NA&gt;   4412    66.42</span>
+#&gt;    one.11          r4 &lt;NA&gt;   2269    47.63
+#&gt;    one.12          r2 &lt;NA&gt;    241.9  15.55
+#&gt;    one.13          r1 &lt;NA&gt;   9203    95.93
+#&gt;  Residual        &lt;NA&gt; &lt;NA&gt;   4412    66.42</div><div class='input'>  <span class='co'>##      grp        var1 var2     vcov  sdcor</span>
+  <span class='co'>##  new.gen (Intercept) &lt;NA&gt;   2869    53.57</span>
+  <span class='co'>##      one       r1:c3 &lt;NA&gt;   5532    74.37</span>
+  <span class='co'>##    one.1       r1:c2 &lt;NA&gt;  58230   241.3</span>
+  <span class='co'>##    one.2       r1:c1 &lt;NA&gt; 128000   357.8</span>
+  <span class='co'>##    one.3          c8 &lt;NA&gt;   6456    80.35</span>
+  <span class='co'>##    one.4          c6 &lt;NA&gt;   1400    37.41</span>
+  <span class='co'>##    one.5          c4 &lt;NA&gt;   1792    42.33</span>
+  <span class='co'>##    one.6          c3 &lt;NA&gt;   2549    50.49</span>
+  <span class='co'>##    one.7          c2 &lt;NA&gt;   5942    77.08</span>
+  <span class='co'>##    one.8          c1 &lt;NA&gt;      0     0</span>
+  <span class='co'>##    one.9         r10 &lt;NA&gt;   1133    33.66</span>
+  <span class='co'>##   one.10          r8 &lt;NA&gt;   1355    36.81</span>
+  <span class='co'>##   one.11          r4 &lt;NA&gt;   2269    47.63</span>
+  <span class='co'>##   one.12          r2 &lt;NA&gt;    241.8  15.55</span>
+  <span class='co'>##   one.13          r1 &lt;NA&gt;   9200    95.92</span>
+  <span class='co'>## Residual        &lt;NA&gt; &lt;NA&gt;   4412    66.42</span>
 
-<span class='co'>## lmer with Nelder_Mead gives 'wrong' results</span>
-<span class='co'>## m2n &lt;- lmer(yield ~ trtn + (0 + r1 + r2 + r4 + r8 + r10 +</span>
-<span class='co'>##             c1 + c2 + c3 + c4 + c6 + c8 + r1:c1 + r1:c2 + r1:c3 || one) +</span>
-<span class='co'>##             (1|new:gen)</span>
-<span class='co'>##             , data = dat,</span>
-<span class='co'>##             control=lmerControl(optimizer="Nelder_Mead",check.nlev.gtr.1="ignore"))</span>
-<span class='co'>## vc(m2n)</span>
-<span class='co'>##    groups        name variance   stddev</span>
-<span class='co'>##  new.gen  (Intercept)   3228    56.82</span>
-<span class='co'>##  one      r1:c3         7688    87.68</span>
-<span class='co'>##  one.1    r1:c2        69750   264.1</span>
-<span class='co'>##  one.2    r1:c1       107400   327.8</span>
-<span class='co'>##  one.3    c8            6787    82.38</span>
-<span class='co'>##  one.4    c6            1636    40.45</span>
-<span class='co'>##  one.5    c4           12270   110.8</span>
-<span class='co'>##  one.6    c3            2686    51.83</span>
-<span class='co'>##  one.7    c2            7645    87.43</span>
-<span class='co'>##  one.8    c1               0     0.0351</span>
-<span class='co'>##  one.9    r10           1976    44.45</span>
-<span class='co'>##  one.10   r8            1241    35.23</span>
-<span class='co'>##  one.11   r4            2811    53.02</span>
-<span class='co'>##  one.12   r2             928.2  30.47</span>
-<span class='co'>##  one.13   r1           10360   101.8</span>
-<span class='co'>##  Residual               4127    64.24</span>
+  <span class='co'># lmer with Nelder_Mead gives 'wrong' results</span>
+  <span class='co'>## m2n &lt;- lmer(yield ~ trtn + (0 + r1 + r2 + r4 + r8 + r10 +</span>
+  <span class='co'>##             c1 + c2 + c3 + c4 + c6 + c8 + r1:c1 + r1:c2 + r1:c3 || one) +</span>
+  <span class='co'>##             (1|new:gen)</span>
+  <span class='co'>##             , data = dat,</span>
+  <span class='co'>##             control=lmerControl(optimizer="Nelder_Mead",</span>
+  <span class='co'>##                                 check.nlev.gtr.1="ignore"))</span>
+  <span class='co'>## vc(m2n)</span>
+  <span class='co'>##    groups        name variance   stddev</span>
+  <span class='co'>##  new.gen  (Intercept)   3228    56.82</span>
+  <span class='co'>##  one      r1:c3         7688    87.68</span>
+  <span class='co'>##  one.1    r1:c2        69750   264.1</span>
+  <span class='co'>##  one.2    r1:c1       107400   327.8</span>
+  <span class='co'>##  one.3    c8            6787    82.38</span>
+  <span class='co'>##  one.4    c6            1636    40.45</span>
+  <span class='co'>##  one.5    c4           12270   110.8</span>
+  <span class='co'>##  one.6    c3            2686    51.83</span>
+  <span class='co'>##  one.7    c2            7645    87.43</span>
+  <span class='co'>##  one.8    c1               0     0.0351</span>
+  <span class='co'>##  one.9    r10           1976    44.45</span>
+  <span class='co'>##  one.10   r8            1241    35.23</span>
+  <span class='co'>##  one.11   r4            2811    53.02</span>
+  <span class='co'>##  one.12   r2             928.2  30.47</span>
+  <span class='co'>##  one.13   r1           10360   101.8</span>
+  <span class='co'>##  Residual               4127    64.24</span>
 
+  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>,<span class='no'>lucid</span>)
+  <span class='kw'>if</span>( <span class='kw pkg'>utils</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/r/utils/packageDescription.html'>packageVersion</a></span>(<span class='st'>"asreml"</span>) <span class='kw'>&lt;</span> <span class='st'>"4"</span>) {
+    <span class='co'># asreml3</span>
 
-<span class='co'># ----------------------------------------------------------------------------</span>
-
-<span class='kw'>if</span>(<span class='fl'>0</span>){
-  <span class='co'># asreml3</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lucid</span>)
-  <span class='no'>m3</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ -<span class='fl'>1</span> + <span class='no'>trtn</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-               <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='no'>r1</span> + <span class='no'>r2</span> + <span class='no'>r4</span> + <span class='no'>r8</span> + <span class='no'>r10</span> +
-                 <span class='no'>c1</span> + <span class='no'>c2</span> + <span class='no'>c3</span> + <span class='no'>c4</span> + <span class='no'>c6</span> + <span class='no'>c8</span> + <span class='no'>r1</span>:<span class='no'>c1</span> + <span class='no'>r1</span>:<span class='no'>c2</span> + <span class='no'>r1</span>:<span class='no'>c3</span> + <span class='no'>new</span>:<span class='no'>gen</span>)
-  <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m3</span>)
+    <span class='no'>m3</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ -<span class='fl'>1</span> + <span class='no'>trtn</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
+                 <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='no'>r1</span> + <span class='no'>r2</span> + <span class='no'>r4</span> + <span class='no'>r8</span> + <span class='no'>r10</span> +
+                   <span class='no'>c1</span> + <span class='no'>c2</span> + <span class='no'>c3</span> + <span class='no'>c4</span> + <span class='no'>c6</span> + <span class='no'>c8</span> +
+                   <span class='no'>r1</span>:<span class='no'>c1</span> + <span class='no'>r1</span>:<span class='no'>c2</span> + <span class='no'>r1</span>:<span class='no'>c3</span> + <span class='no'>new</span>:<span class='no'>gen</span>)
+  <span class='co'>## coef(m3)</span>
   <span class='co'># REML cultivar means.  Very similar to Federer table 2.</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/rev.html'>rev</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m3</span>)$<span class='no'>fixed</span>[<span class='fl'>3</span>] + <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m3</span>)$<span class='no'>random</span>[<span class='fl'>137</span>:<span class='fl'>256</span>,],<span class='fl'>0</span>)))
+  <span class='co'>## rev(sort(round(coef(m3)$fixed[3] + coef(m3)$random[137:256,],0)))</span>
   <span class='co'>## gen_G060 gen_G021 gen_G011 gen_G099 gen_G002</span>
   <span class='co'>##      974      949      945      944      942</span>
   <span class='co'>## gen_G118 gen_G058 gen_G035 gen_G111 gen_G120</span>
@@ -346,16 +348,17 @@
   <span class='co'>##  new:gen!new.var   2869         1367    2.1     pos</span>
   <span class='co'>##       R!variance   4412          915    4.8     pos</span>
 
-}
+  }
 
-<span class='co'># ----------------------------------------------------------------------------</span>
 
-<span class='kw'>if</span>(<span class='fl'>0</span>){
-  <span class='co'>## libs(asreml4)</span>
-  <span class='co'>## libs(lucid)</span>
-  <span class='co'>## m3 &lt;- asreml(yield ~ -1 + trtn, data=dat,</span>
-  <span class='co'>##              random = ~ r1 + r2 + r4 + r8 + r10 +</span>
-  <span class='co'>##                c1 + c2 + c3 + c4 + c6 + c8 + r1:c1 + r1:c2 + r1:c3 + new:gen)</span>
+  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>,<span class='no'>lucid</span>)
+  <span class='kw'>if</span>( <span class='kw pkg'>utils</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/r/utils/packageDescription.html'>packageVersion</a></span>(<span class='st'>"asreml"</span>) <span class='kw'>&gt;</span> <span class='st'>"4"</span>) {
+    <span class='co'># asreml4</span>
+
+    <span class='no'>m3</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ -<span class='fl'>1</span> + <span class='no'>trtn</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
+                 <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='no'>r1</span> + <span class='no'>r2</span> + <span class='no'>r4</span> + <span class='no'>r8</span> + <span class='no'>r10</span> +
+                   <span class='no'>c1</span> + <span class='no'>c2</span> + <span class='no'>c3</span> + <span class='no'>c4</span> + <span class='no'>c6</span> + <span class='no'>c8</span> +
+                   <span class='no'>r1</span>:<span class='no'>c1</span> + <span class='no'>r1</span>:<span class='no'>c2</span> + <span class='no'>r1</span>:<span class='no'>c3</span> + <span class='no'>new</span>:<span class='no'>gen</span>)
   <span class='co'>## coef(m3)</span>
   <span class='co'>## # REML cultivar means.  Very similar to Federer table 2.</span>
   <span class='co'>## rev(sort(round(coef(m3)$fixed[3] + coef(m3)$random[137:256,],0)))</span>
@@ -384,23 +387,24 @@
   <span class='co'>## ##     r1:c3!r1.var   5531        16550    0.33    pos</span>
   <span class='co'>## ##  new:gen!new.var   2869         1367    2.1     pos</span>
   <span class='co'>## ##       R!variance   4412          915    4.8     pos</span>
-}</div></pre>
+}</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Thu Jul 30 15:49:17 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -894.584      7526.086    177 15:49:17    0.0 (2 restrained)
+#&gt;  2      -889.375      6662.270    177 15:49:17    0.0 (2 restrained)
+#&gt;  3      -884.552      5769.453    177 15:49:17    0.0 (2 restrained)
+#&gt;  4      -881.358      5118.056    177 15:49:17    0.0 (1 restrained)
+#&gt;  5      -879.668      4685.628    177 15:49:17    0.0
+#&gt;  6      -879.163      4511.141    177 15:49:17    0.0
+#&gt;  7      -879.061      4442.917    177 15:49:17    0.0
+#&gt;  8      -879.050      4420.492    177 15:49:17    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>
+# }
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -411,7 +415,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

@@ -1,3 +1,9 @@
+# agridat 1.18 (unpublished)
+
+## New data
+
+jayaraman.bamboo, nair.turmeric.uniformity, shafi.tomato.uniformity
+
 # agridat 1.17 - Jul 2020
 
 ## New data

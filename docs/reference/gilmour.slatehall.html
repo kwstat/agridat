@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Slate Hall Farm 1978 — gilmour.slatehall" />
-
 <meta property="og:description" content="Yields for a trial at Slate Hall Farm in 1978." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,23 +143,22 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Yields for a trial at Slate Hall Farm in 1978.</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 150 observations on the following 5 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 150 observations on the following 5 variables.</p><dl'>
     <dt><code>row</code></dt><dd><p>row</p></dd>
     <dt><code>col</code></dt><dd><p>column</p></dd>
     <dt><code>yield</code></dt><dd><p>yield (grams/plot)</p></dd>
     <dt><code>gen</code></dt><dd><p>genotype factor, 25 levels</p></dd>
     <dt><code>rep</code></dt><dd><p>rep factor, 6 levels</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>The trial was of spring wheat at Slate Hall Farm in 1978.  The
@@ -166,7 +169,6 @@
   The plot size was 1.5 meters by 4 meters.</p>  
 <p>Field width: 10 plots x 4 m = 40 m</p>  
 <p>Field length: 15 plots x 1.5 meters = 22.5 m</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Arthur R Gilmour and Brian R Cullis and Arunas P Verbyla (1997).
@@ -175,88 +177,88 @@
   <em>Journal of Agricultural, Biological, and Environmental
     Statistics</em>, 2, 269-293.
   http://doi.org/10.2307/1400446</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>None.</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>gilmour.slatehall</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>gilmour.slatehall</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='fu'>desplot</span>(<span class='no'>yield</span> ~ <span class='no'>col</span> * <span class='no'>row</span>, <span class='no'>dat</span>,
-        <span class='kw'>aspect</span><span class='kw'>=</span><span class='fl'>22.5</span>/<span class='fl'>40</span>, <span class='kw'>num</span><span class='kw'>=</span><span class='no'>gen</span>, <span class='kw'>out1</span><span class='kw'>=</span><span class='no'>rep</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>1</span>,
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"gilmour.slatehall"</span>)</div><div class='img'><img src='gilmour.slatehall-1.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='co'># ----------------------------------------------------------------------------</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>gilmour.slatehall</span>)
+  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>gilmour.slatehall</span>
 
-<span class='kw'>if</span>(<span class='fl'>0</span>){
-  <span class='co'># Model 4 of Gilmour et al 1997</span>
-  <span class='co'># asreml3</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>xf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>col</span>), <span class='kw'>yf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>))
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>xf</span>, <span class='no'>dat</span>$<span class='no'>yf</span>), ]
-  <span class='no'>m4</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span> + <span class='fu'>lin</span>(<span class='no'>row</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-               <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='fu'>dev</span>(<span class='no'>row</span>) + <span class='fu'>dev</span>(<span class='no'>col</span>),
-               <span class='kw'>rcov</span> <span class='kw'>=</span> ~ <span class='fu'>ar1</span>(<span class='no'>xf</span>):<span class='fu'>ar1</span>(<span class='no'>yf</span>))
-  <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m4</span>)$<span class='no'>fixed</span>[<span class='fl'>1</span>] <span class='co'># linear row</span>
-  <span class='co'># [1] 31.72252 # (sign switch due to row ordering)</span>
+  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
+  <span class='fu'>desplot</span>(<span class='no'>dat</span>, <span class='no'>yield</span> ~ <span class='no'>col</span> * <span class='no'>row</span>,
+          <span class='kw'>aspect</span><span class='kw'>=</span><span class='fl'>22.5</span>/<span class='fl'>40</span>, <span class='kw'>num</span><span class='kw'>=</span><span class='no'>gen</span>, <span class='kw'>out1</span><span class='kw'>=</span><span class='no'>rep</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>1</span>,
+          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"gilmour.slatehall"</span>)</div><div class='img'><img src='gilmour.slatehall-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='co'># ----------------------------------------------------------------------------</span>
 
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lucid</span>)
-  <span class='fu'>vc</span>(<span class='no'>m4</span>)
-  <span class='co'>##      effect component std.error z.ratio constr</span>
-  <span class='co'>##    dev(row) 20290     10260         2      pos</span>
-  <span class='co'>##    dev(col)  2519      1959         1.3    pos</span>
-  <span class='co'>##  R!variance 23950      4616         5.2    pos</span>
-  <span class='co'>##    R!xf.cor     0.439     0.113     3.9  uncon</span>
-  <span class='co'>##    R!yf.cor     0.125     0.117     1.1  uncon</span>
+  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>,<span class='no'>lucid</span>)
+  <span class='kw'>if</span>( <span class='kw pkg'>utils</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/r/utils/packageDescription.html'>packageVersion</a></span>(<span class='st'>"asreml"</span>) <span class='kw'>&lt;</span> <span class='st'>"4"</span>) {
+    <span class='co'># asreml3</span>
 
-  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='fu'>variogram</span>(<span class='no'>m4</span>))
-}
+    <span class='co'># Model 4 of Gilmour et al 1997</span>
+    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>xf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>col</span>), <span class='kw'>yf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>))
+    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>xf</span>, <span class='no'>dat</span>$<span class='no'>yf</span>), ]
+    <span class='no'>m4</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span> + <span class='fu'>lin</span>(<span class='no'>row</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
+                 <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='fu'>dev</span>(<span class='no'>row</span>) + <span class='fu'>dev</span>(<span class='no'>col</span>),
+                 <span class='kw'>rcov</span> <span class='kw'>=</span> ~ <span class='fu'>ar1</span>(<span class='no'>xf</span>):<span class='fu'>ar1</span>(<span class='no'>yf</span>))
+    <span class='co'># coef(m4)$fixed[1] # linear row</span>
+    <span class='co'># [1] 31.72252 # (sign switch due to row ordering)</span>
 
-<span class='co'># ----------------------------------------------------------------------------</span>
+    <span class='fu'>vc</span>(<span class='no'>m4</span>)
+    <span class='co'>##      effect component std.error z.ratio constr</span>
+    <span class='co'>##    dev(row) 20290     10260         2      pos</span>
+    <span class='co'>##    dev(col)  2519      1959         1.3    pos</span>
+    <span class='co'>##  R!variance 23950      4616         5.2    pos</span>
+    <span class='co'>##    R!xf.cor     0.439     0.113     3.9  uncon</span>
+    <span class='co'>##    R!yf.cor     0.125     0.117     1.1  uncon</span>
 
-<span class='kw'>if</span>(<span class='fl'>0</span>){
-  <span class='co'># Model 4 of Gilmour et al 1997</span>
-  <span class='co'>## libs(asreml4)</span>
-  <span class='co'>## dat &lt;- transform(dat, xf=factor(col), yf=factor(row))</span>
-  <span class='co'>## dat &lt;- dat[order(dat$xf, dat$yf), ]</span>
-  <span class='co'>## m4 &lt;- asreml(yield ~ gen + lin(row), data=dat,</span>
-  <span class='co'>##              random = ~ dev(row) + dev(col),</span>
-  <span class='co'>##              resid = ~ ar1(xf):ar1(yf))</span>
-  <span class='co'>## coef(m4)$fixed[1] # linear row</span>
-  <span class='co'>## # [1] 31.72252 # (sign switch due to row ordering)</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/plot.html'>plot</a></span>(<span class='fu'>variogram</span>(<span class='no'>m4</span>), <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"gilmour.slatehall"</span>)
+  }
 
-  <span class='co'>## libs(lucid)</span>
-  <span class='co'>## vc(m4)</span>
-  <span class='co'>## ##       effect component std.error z.ratio bound &lt;!-- %ch --&gt;</span>
-  <span class='co'>## ##     dev(col)  2519      1959         1.3     P   0</span>
-  <span class='co'>## ##     dev(row) 20290     10260         2       P   0</span>
-  <span class='co'>## ##     xf:yf(R) 23950      4616         5.2     P   0</span>
-  <span class='co'>## ## xf:yf!xf!cor     0.439     0.113     3.9     U   0</span>
-  <span class='co'>## ## xf:yf!yf!cor     0.125     0.117     1.1     U   0</span>
+  <span class='co'># ----------------------------------------------------------------------------</span>
 
-  <span class='co'>## plot(varioGram(m4))</span>
-}</div></pre>
+  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>,<span class='no'>lucid</span>)
+  <span class='kw'>if</span>( <span class='kw pkg'>utils</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/r/utils/packageDescription.html'>packageVersion</a></span>(<span class='st'>"asreml"</span>) <span class='kw'>&gt;</span> <span class='st'>"4"</span>) {
+    <span class='co'># asreml4</span>
+
+    <span class='co'># Model 4 of Gilmour et al 1997</span>
+    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>xf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>col</span>), <span class='kw'>yf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>))
+    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>xf</span>, <span class='no'>dat</span>$<span class='no'>yf</span>), ]
+    <span class='no'>m4</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span> + <span class='fu'>lin</span>(<span class='no'>row</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
+                 <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='fu'>dev</span>(<span class='no'>row</span>) + <span class='fu'>dev</span>(<span class='no'>col</span>),
+                 <span class='kw'>resid</span> <span class='kw'>=</span> ~ <span class='fu'>ar1</span>(<span class='no'>xf</span>):<span class='fu'>ar1</span>(<span class='no'>yf</span>))
+    <span class='co'># coef(m4)$fixed[1] # linear row</span>
+    <span class='co'># [1] 31.72252 # (sign switch due to row ordering)</span>
+
+    <span class='fu'>vc</span>(<span class='no'>m4</span>)
+    <span class='co'>##       effect component std.error z.ratio bound </span>
+    <span class='co'>##     dev(col)  2519      1959         1.3     P   0</span>
+    <span class='co'>##     dev(row) 20290     10260         2       P   0</span>
+    <span class='co'>##     xf:yf(R) 23950      4616         5.2     P   0</span>
+    <span class='co'>## xf:yf!xf!cor     0.439     0.113     3.9     U   0</span>
+    <span class='co'>## xf:yf!yf!cor     0.125     0.117     1.1     U   0</span>
+
+    <span class='fu'><a href='https://rdrr.io/r/base/plot.html'>plot</a></span>(<span class='fu'>varioGram</span>(<span class='no'>m4</span>), <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"gilmour.slatehall"</span>)
+  }</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Thu Jul 30 15:49:29 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -733.509      30064.20    124 15:49:30    0.0
+#&gt;  2      -725.011      26801.71    124 15:49:30    0.0
+#&gt;  3      -718.953      25508.52    124 15:49:30    0.0
+#&gt;  4      -716.764      24942.33    124 15:49:30    0.0
+#&gt;  5      -716.202      24265.54    124 15:49:30    0.0
+#&gt;  6      -716.167      23974.18    124 15:49:30    0.0
+#&gt;  7      -716.166      23946.12    124 15:49:30    0.0</div><div class='img'><img src='gilmour.slatehall-2.png' alt='' width='700' height='433' /></div><div class='input'>
+# }
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -267,7 +269,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

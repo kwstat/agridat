@@ -17,23 +17,27 @@
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -46,7 +50,6 @@
 <meta property="og:description" content="This package contains datasets from publications relating to agriculture,
   including field crops, tree crops, animal studies, and a few others." />
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
 
 
 
@@ -64,7 +67,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -107,7 +110,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -116,7 +119,12 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/kwstat/agridat/">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -170,6 +178,7 @@
 <tr><td><a href='batchelor.uniformity.html'>batchelor.walnut.uniformity</a></td><td>10 x 28</td><td>xy</td><td></td></tr>
 <tr><td><a href='bose.multi.uniformity.html'>bose.multi.uniformity</a></td><td>15 x 26</td><td>xy, 3 years</td><td></td></tr>
 <tr><td><a href='bradley.multi.uniformity.html'>bradley.multi.uniformity</a></td><td>10 x 11</td><td>xy</td><td></td></tr>
+<tr><td><a href='bryan.corn.uniformity.html'>bryan.corn.uniformity</a></td><td>6 x 48</td><td>xy</td><td></td></tr>
 <tr><td><a href='christidis.cotton.uniformity.html'>christidis.cotton.uniformity</a></td><td>16 x 16</td><td>xy, 4 blocks</td><td></td></tr>
 <tr><td><a href='christidis.wheat.uniformity.html'>christidis.wheat.uniformity</a></td><td>12 x 24</td><td>xy</td><td></td></tr>
 <tr><td><a href='correa.soybean.uniformity.html'>correa.soybean.uniformity</a></td><td>24 x 48</td><td>xy</td><td></td></tr>
@@ -182,6 +191,7 @@
 <tr><td><a href='goulden.barley.uniformity.html'>goulden.barley.uniformity</a></td><td>20 x 20</td><td>xy</td><td></td></tr>
 <tr><td><a href='harris.multi.uniformity.html'>harris.multi.uniformity</a></td><td>2 x 23</td><td>xy, 23 crops</td><td>corrgram</td></tr>
 <tr><td><a href='hartman.tomato.uniformity.html'>hartman.tomato.uniformity</a></td><td>12 x 32</td><td>xy</td><td></td></tr>
+<tr><td><a href='heath.raddish.uniformity.html'>heath.raddish.uniformity</a></td><td>10 x 10</td><td>xy</td><td></td></tr>
 <tr><td><a href='holtsmark.timothy.uniformity.html'>holtsmark.timothy.uniformity</a></td><td>6 x 40</td><td>xy</td><td></td></tr>
 <tr><td><a href='igue.sugarcane.uniformity.html'>igue.sugarcane.uniformity</a></td><td>36 x 42</td><td>xy</td><td></td></tr>
 <tr><td><a href='immer.sugarbeet.uniformity.html'>immer.sugarbeet.uniformity</a></td><td>10 x 60</td><td>xy, 3 traits</td><td></td></tr>
@@ -200,6 +210,7 @@
 <tr><td><a href='lehmann.millet.uniformity.html'>lehmann.millet.uniformity</a></td><td>6 x 22</td><td>xy, 3 years</td><td></td></tr>
 <tr><td><a href='lessman.sorghum.uniformity.html'>lessman.sorghum.uniformity</a></td><td>46 x 60</td><td>xy</td><td></td></tr>
 <tr><td><a href='li.millet.uniformity.html'>li.millet.uniformity</a></td><td>6 x 100</td><td>xy</td><td></td></tr>
+<tr><td><a href='loesell.bean.uniformity.html'>loesell.bean.uniformity</a></td><td>21 x 90</td><td>xy</td><td></td></tr>
 <tr><td><a href='lord.rice.uniformity.html'>lord.rice.uniformity</a></td><td>5 x 14</td><td>xy, 8 fields</td><td></td></tr>
 <tr><td><a href='love.cotton.uniformity.html'>love.cotton.uniformity</a></td><td>16 x 10</td><td>xy</td><td></td></tr>
 <tr><td><a href='lyon.potato.uniformity.html'>lyon.potato.uniformity</a></td><td>34 x 6</td><td>xy</td><td></td></tr>
@@ -225,6 +236,7 @@
 <tr><td><a href='panse.cotton.uniformity.html'>panse.cotton.uniformity</a></td><td>32 x 40</td><td>xy</td><td></td></tr>
 <tr><td><a href='parker.orange.uniformity.html'>parker.orange.uniformity</a></td><td>10 x 27</td><td>xy, 6 yr</td><td></td></tr>
 <tr><td><a href='paez.coffee.uniformity.html'>paez.coffee.uniformity</a></td><td>32 x 36</td><td>xy, 5 yr</td><td></td></tr>
+<tr><td><a href='piepho.barley.uniformity.html'>piepho.barley.uniformity</a></td><td>30 x 36</td><td>xy</td><td></td></tr>
 <tr><td><a href='polson.safflower.uniformity.html'>polson.safflower.uniformity</a></td><td>52 x 33</td><td>xy</td><td>smith</td></tr>
 <tr><td><a href='robinson.peanut.uniformity.html'>robinson.peanut.uniformity</a></td><td>16 x 36</td><td>xy</td><td></td></tr>
 <tr><td><a href='sawyer.multi.uniformity.html'>sawyer.multi.uniformity</a></td><td>8 x 6</td><td>xy, 3 year</td><td></td></tr>
@@ -312,6 +324,7 @@
 <tr><td><a href='beaven.barley.html'>beaven.barley</a></td><td>8</td><td></td><td>20</td><td></td><td></td><td>xy</td><td></td></tr>
 <tr><td><a href='besag.bayesian.html'>besag.bayesian</a></td><td>75</td><td></td><td>3</td><td></td><td></td><td>xy</td><td>asreml</td></tr>
 <tr><td><a href='besag.beans.html'>besag.beans</a></td><td>6</td><td></td><td>4*6</td><td></td><td></td><td>xy</td><td>lm,competition</td></tr>
+<tr><td><a href='besag.checks.html'>besag.checks</a></td><td>2</td><td></td><td></td><td></td><td></td><td>xy</td><td></td></tr>
 <tr><td><a href='besag.elbatan.html'>besag.elbatan</a></td><td>50</td><td></td><td>3</td><td></td><td></td><td>xy</td><td>lm, gam</td></tr>
 <tr><td><a href='besag.endive.html'>besag.endive</a></td><td></td><td></td><td></td><td></td><td></td><td>xy,binary</td><td>autologistic</td></tr>
 <tr><td><a href='besag.met.html'>besag.met</a></td><td>64</td><td>6</td><td>3</td><td></td><td></td><td>xy, incblock</td><td>asreml, lme</td></tr>
@@ -367,6 +380,7 @@
 <tr><td><a href='fox.wheat.html'>fox.wheat</a></td><td>22</td><td>14</td><td></td><td></td><td></td><td></td><td>lm</td></tr>
 <tr><td><a href='gathmann.bt.html'>gathmann.bt</a></td><td>2</td><td></td><td>8</td><td></td><td></td><td></td><td>tost</td></tr>
 <tr><td><a href='gauch.soy.html'>gauch.soy</a></td><td>7</td><td>7</td><td>4</td><td>12</td><td></td><td></td><td>ammi</td></tr>
+<tr><td><a href='george.wheat.html'>george.wheat</a></td><td>211</td><td>9</td><td>4</td><td>15</td><td></td><td></td><td></td></tr>
 <tr><td><a href='giles.wheat.html'>giles.wheat</a></td><td>19</td><td></td><td></td><td>13</td><td></td><td>2 traits</td><td>gnm</td></tr>
 <tr><td><a href='gilmour.serpentine.html'>gilmour.serpentine</a></td><td>108</td><td></td><td>3</td><td></td><td></td><td>xy, serpentine</td><td>asreml</td></tr>
 <tr><td><a href='gilmour.slatehall.html'>gilmour.slatehall</a></td><td>25</td><td></td><td>6</td><td></td><td></td><td>xy</td><td>asreml</td></tr>
@@ -527,57 +541,26 @@
 <tr><td>name</td><td>gen</td><td>loc</td><td>reps</td><td>years</td><td>trt</td><td>other</td><td>model</td></tr>
 <tr><td><a href='edwards.oats.html'>edwards.oats</a></td><td>80</td><td>5</td><td>3</td><td>7</td><td></td><td></td><td></td></tr>
 <tr><td><a href='gauch.soy.html'>gauch.soy</a></td><td>7</td><td>7</td><td>4</td><td>12</td><td></td><td></td><td>ammi</td></tr>
+<tr><td><a href='george.wheat.html'>george.wheat</a></td><td>211</td><td>9</td><td>4</td><td>15</td><td></td><td></td><td></td></tr>
 <tr><td><a href='shafii.rapeseed.html'>shafii.rapeseed</a></td><td>6</td><td>14</td><td>3</td><td>3</td><td></td><td></td><td>biplot</td></tr>
 <tr><td><a href='shaw.oats.html'>shaw.oats</a></td><td>13</td><td>2</td><td>5</td><td>3</td><td></td><td></td><td>aov</td></tr>
 <tr><td><a href='verbyla.lupin.html'>verbyla.lupin</a></td><td>9</td><td>8</td><td>3</td><td>2</td><td>7</td><td>rsm1, xy, density</td><td>asreml</td></tr>
 </table>
 
 
-<p><b>Comments of the package purpose</b></p>
-<p>Box (1957) said,
-"I had hoped that we had seen the end of the obscene tribal habit practiced by statisticians of continually exhuming and massaging dead data sets after their purpose in life has long since been forgotten and there was no possibility of doing anything useful as a result of this treatment."</p>
-<p>Massaging these dead data sets will not lead to any of the genetics being released for commercial use.
-The value of this package is:
-1. Validating published analyses.
-2. Providing data for testing new analysis methods.
-3. Illustrating (and validating) the use of R packages.</p>
-<p>White and van Evert (2008) present some guidelines for publication of data.</p>
-<p>Some of the examples use the <code>asreml</code> package since it is the _only_ R tool for fitting mixed models with complex variance structures to large datasets, and the best option for modelling AR1xAR1 residual variance structures.  Commercial use of <code>asreml</code> requires a license: http://www.vsni.co.uk/downloads/asreml.</p>
-<p><b>Comments on the package structure</b></p>
-<p>A large portion of these datasets appear in electronic form here for the first time.</p>
-<p>A tremendous amount of effort has been given to the curating process of identifying datasets, extracting the data from source materials, checking data values, and documenting the data.  In effect, to make the data somewhat 'computable' (Wolfram 2017).</p>
-<p>The original sources for these data use several different words to refer to genotypes including <em>accession</em>, <em>breed</em>, <em>cultivar</em>, <em>genotype</em>, <em>hybrid</em>, <em>line</em>, <em>progeny</em>, <em>stock</em>, <em>type</em>, and <em>variety</em>.  For consistency, these datasets mostly use <code>gen</code> (genotype).</p>
-<p>Also for consistency <code>row</code> and <code>col</code> are usually used for the field coordinates.</p>
-<p>In dataframes, 'block', 'rep', and similar terms are almost always coded like B1, B2, B3 instead of 1, 2, 3.  This causes R to treat the data as a factor instead of a numeric covariate (which is a good thing).</p>
-<p>Almost all of the data are presented as 'tidy' dataframes with 'observations' in rows and 'variables' in columns.</p>
-<p>Although using <code><a href='https://rdrr.io/r/utils/data.html'>data()</a></code> is not necessary to access the data files, the example sections do include the use of <code><a href='https://rdrr.io/r/utils/data.html'>data()</a></code> because <code><a href='https://rdrr.io/pkg/devtools/man/run_examples.html'>devtools::run_examples()</a></code> needs it.</p>
+
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
-    
-
-<p>G. E. P. Box (1957). Integration of Techniques in Process Development,
-  <em>Transactions of the American Society for Quality Control</em>.</p>
-<p>J. White and Frits van Evert. (2008).
+    <p>J. White and Frits van Evert. (2008).
   Publishing Agronomic Data.
   <em>Agron J.</em> 100, 1396-1400.
   http://doi.org/10.2134/agronj2008.0080F</p>
-<p>Stephen Wolfram (2017).
-  <em>Launching the Wolfram Data Repository: Data Publishing that Really Works</em>.
-  http://blog.stephenwolfram.com/2017/04/launching-the-wolfram-data-repository-data-publishing-that-really-works/</p>
 
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#details">Details</a></li>
-      <li><a href="#references">References</a></li>
-    </ul>
-
-    <h2>Author</h2>
-    
-
-<p>Kevin Wright</p>
-<p>The author is grateful to the many people who granted permission to include their data in this package.</p>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -588,7 +571,7 @@ The value of this package is:
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

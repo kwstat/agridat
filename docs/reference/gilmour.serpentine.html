@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,13 +45,12 @@
 
 
 
-<meta property="og:title" content="Wheat yield in South Australia with serpentine row/col effects — gilmour.serpentine" />
 
+<meta property="og:title" content="Wheat yield in South Australia with serpentine row/col effects — gilmour.serpentine" />
 <meta property="og:description" content="An RCB experiment of wheat in South Australia, with strong spatial
   variation and serpentine row/column effects." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -62,7 +67,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -105,7 +110,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -113,10 +118,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -140,24 +144,23 @@
     </div>
 
     <div class="ref-description">
-    
     <p>An RCB experiment of wheat in South Australia, with strong spatial
   variation and serpentine row/column effects.</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 330 observations on the following 5 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 330 observations on the following 5 variables.</p><dl'>
     <dt><code>col</code></dt><dd><p>column</p></dd>
     <dt><code>row</code></dt><dd><p>row</p></dd>
     <dt><code>rep</code></dt><dd><p>replicate factor, 3 levels</p></dd>
     <dt><code>gen</code></dt><dd><p>wheat variety, 108 levels</p></dd>
     <dt><code>yield</code></dt><dd><p>yield</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>A randomized complete block experiment.  There are 108 varieties in 3
@@ -167,151 +170,214 @@
   down columns.  The trial was sown in a serpentine manner with a
   planter that seeds three rows at a time (Left, Middle, Right).</p>
 <p>Field width 15 columns * 6 m = 90 m</p>
-<p>Field length 22 plots * .75 m = 16.5 m</p>
-    
+<p>Field length 22 plots * .75 m = 16.5 m</p>  
+<p>Used with permission of Arthur Gilmour, in turn with permission from
+  Gil Hollamby.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Arthur R Gilmour and Brian R Cullis and Arunas P Verbyla, 1997.
   Accounting for natural and extraneous variation in the analysis of
   field experiments.
-  <em>Journal of Agric Biol Env Statistics</em>, 2, 269-293.</p>  
-<p>Used with permission of Arthur Gilmour, in turn with permission from
-  Gil Hollamby.</p>
-    
+  Journal of Agric Biol Env Statistics, 2, 269-293.</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>N. W. Galwey. 2014.
-  <em>Introduction to Mixed Modelling: Beyond Regression and Analysis
-    of Variance</em>. Table 10.9</p>
-    
+  Introduction to Mixed Modelling: Beyond Regression and Analysis
+  of Variance.
+  Table 10.9</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>gilmour.serpentine</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>gilmour.serpentine</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='fu'>desplot</span>(<span class='no'>yield</span>~ <span class='no'>col</span>*<span class='no'>row</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-        <span class='kw'>num</span><span class='kw'>=</span><span class='no'>gen</span>, <span class='kw'>show.key</span><span class='kw'>=</span><span class='fl'>FALSE</span>, <span class='kw'>out1</span><span class='kw'>=</span><span class='no'>rep</span>,
-        <span class='kw'>aspect</span> <span class='kw'>=</span> <span class='fl'>16.5</span>/<span class='fl'>90</span>, <span class='co'># true aspect</span>
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"gilmour.serpentine"</span>)</div><div class='img'><img src='gilmour.serpentine-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>gilmour.serpentine</span>)
+  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>gilmour.serpentine</span>
 
-<span class='co'># Extreme field trend.  Blocking insufficient--needs a spline/smoother</span>
-<span class='co'># xyplot(yield~col, data=dat, main="gilmour.serpentine")</span>
+  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
+  <span class='fu'>desplot</span>(<span class='no'>dat</span>, <span class='no'>yield</span>~ <span class='no'>col</span>*<span class='no'>row</span>,
+          <span class='kw'>num</span><span class='kw'>=</span><span class='no'>gen</span>, <span class='kw'>show.key</span><span class='kw'>=</span><span class='fl'>FALSE</span>, <span class='kw'>out1</span><span class='kw'>=</span><span class='no'>rep</span>,
+          <span class='kw'>aspect</span> <span class='kw'>=</span> <span class='fl'>16.5</span>/<span class='fl'>90</span>, <span class='co'># true aspect</span>
+          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"gilmour.serpentine"</span>)</div><div class='img'><img src='gilmour.serpentine-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
-<span class='co'># ----------------------------------------------------------------------------</span>
+  <span class='co'># Extreme field trend.  Blocking insufficient--needs a spline/smoother</span>
+  <span class='co'># xyplot(yield~col, data=dat, main="gilmour.serpentine")</span>
 
-<span class='kw'>if</span>(<span class='fl'>0</span>){
-  <span class='co'># asreml3</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>rowf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>), <span class='kw'>colf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='fl'>10</span>*(<span class='no'>col</span>-<span class='fl'>8</span>)))
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>rowf</span>, <span class='no'>dat</span>$<span class='no'>colf</span>), ] <span class='co'># Sort order needed by asreml</span>
 
-  <span class='co'># RCB</span>
-  <span class='no'>m0</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>random</span><span class='kw'>=</span>~<span class='no'>rep</span>)
+  <span class='co'># ----------------------------------------------------------------------------</span>
 
-  <span class='co'># Add AR1 x AR1</span>
-  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>rcov</span> <span class='kw'>=</span> ~<span class='fu'>ar1</span>(<span class='no'>rowf</span>):<span class='fu'>ar1</span>(<span class='no'>colf</span>))
+  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>,<span class='no'>lucid</span>)
+  <span class='kw'>if</span>( <span class='kw pkg'>utils</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/r/utils/packageDescription.html'>packageVersion</a></span>(<span class='st'>"asreml"</span>) <span class='kw'>&lt;</span> <span class='st'>"4"</span>) {
+    <span class='co'># asreml3</span>
 
-  <span class='co'># Add spline</span>
-  <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span> + <span class='no'>col</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-               <span class='kw'>random</span><span class='kw'>=</span> ~ <span class='fu'>spl</span>(<span class='no'>col</span>) + <span class='no'>colf</span>,
-               <span class='kw'>rcov</span> <span class='kw'>=</span> ~<span class='fu'>ar1</span>(<span class='no'>rowf</span>):<span class='fu'>ar1</span>(<span class='no'>colf</span>))
+    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>rowf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>), <span class='kw'>colf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='fl'>10</span>*(<span class='no'>col</span>-<span class='fl'>8</span>)))
+    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>rowf</span>, <span class='no'>dat</span>$<span class='no'>colf</span>), ] <span class='co'># Sort order needed by asreml</span>
 
-  <span class='co'># Figure 4 shows serpentine spraying</span>
-  <span class='no'>p2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m2</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>classify</span><span class='kw'>=</span><span class='st'>"colf"</span>)$<span class='no'>predictions</span>$<span class='no'>pvals</span>
-  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>p2</span>$<span class='no'>predicted</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'b'</span>, <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"column number"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"BLUP"</span>)
+    <span class='co'># RCB</span>
+    <span class='no'>m0</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>random</span><span class='kw'>=</span>~<span class='no'>rep</span>)
 
-  <span class='co'># Define column code (due to serpentine spraying)</span>
-  <span class='co'># Rhelp doesn't like double-percent modulus symbol, so compute by hand</span>
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>colcode</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>dat</span>$<span class='no'>col</span>-<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>floor</a></span>((<span class='no'>dat</span>$<span class='no'>col</span>-<span class='fl'>1</span>)/<span class='fl'>4</span>)*<span class='fl'>4</span> -<span class='fl'>1</span>))
+    <span class='co'># Add AR1 x AR1</span>
+    <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>rcov</span> <span class='kw'>=</span> ~<span class='fu'>ar1</span>(<span class='no'>rowf</span>):<span class='fu'>ar1</span>(<span class='no'>colf</span>))
 
-  <span class='no'>m3</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span> + <span class='fu'>lin</span>(<span class='no'>colf</span>) + <span class='no'>colcode</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-               <span class='kw'>random</span><span class='kw'>=</span> ~ <span class='no'>colf</span> + <span class='no'>rowf</span> + <span class='fu'>spl</span>(<span class='no'>colf</span>),
-               <span class='kw'>rcov</span> <span class='kw'>=</span> ~<span class='fu'>ar1</span>(<span class='no'>rowf</span>):<span class='fu'>ar1</span>(<span class='no'>colf</span>))
+    <span class='co'># Add spline</span>
+    <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span> + <span class='no'>col</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
+                 <span class='kw'>random</span><span class='kw'>=</span> ~ <span class='fu'>spl</span>(<span class='no'>col</span>) + <span class='no'>colf</span>,
+                 <span class='kw'>rcov</span> <span class='kw'>=</span> ~<span class='fu'>ar1</span>(<span class='no'>rowf</span>):<span class='fu'>ar1</span>(<span class='no'>colf</span>))
 
-  <span class='co'># Figure 6 shows serpentine row effects</span>
-  <span class='no'>p3</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m3</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>classify</span><span class='kw'>=</span><span class='st'>"rowf"</span>)$<span class='no'>predictions</span>$<span class='no'>pvals</span>
-  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>p3</span>$<span class='no'>predicted</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'l'</span>, <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"row number"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"BLUP"</span>)
-  <span class='fu'><a href='https://rdrr.io/r/graphics/text.html'>text</a></span>(<span class='fl'>1</span>:<span class='fl'>22</span>, <span class='no'>p3</span>$<span class='no'>predicted</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'L'</span>,<span class='st'>'L'</span>,<span class='st'>'M'</span>,<span class='st'>'R'</span>,<span class='st'>'R'</span>,<span class='st'>'M'</span>,<span class='st'>'L'</span>,<span class='st'>'L'</span>,
-                             <span class='st'>'M'</span>,<span class='st'>'R'</span>,<span class='st'>'R'</span>,<span class='st'>'M'</span>,<span class='st'>'L'</span>,<span class='st'>'L'</span>,<span class='st'>'M'</span>,<span class='st'>'R'</span>,<span class='st'>'R'</span>,<span class='st'>'M'</span>,<span class='st'>'L'</span>,<span class='st'>'L'</span>,<span class='st'>'M'</span>,<span class='st'>'R'</span>))
+    <span class='co'># Figure 4 shows serpentine spraying</span>
+    <span class='no'>p2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m2</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>classify</span><span class='kw'>=</span><span class='st'>"colf"</span>)$<span class='no'>predictions</span>$<span class='no'>pvals</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/plot.html'>plot</a></span>(<span class='no'>p2</span>$<span class='no'>predicted</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'b'</span>, <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"column number"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"BLUP"</span>)
 
-  <span class='co'># Define row code (due to serpentine planting). 1=middle, 2=left/right</span>
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>rowcode</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>))
-  <span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span>(<span class='no'>dat</span>$<span class='no'>rowcode</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'2'</span>,<span class='st'>'2'</span>,<span class='st'>'1'</span>,<span class='st'>'2'</span>,<span class='st'>'2'</span>,<span class='st'>'1'</span>,<span class='st'>'2'</span>,<span class='st'>'2'</span>,<span class='st'>'1'</span>,
-                           <span class='st'>'2'</span>,<span class='st'>'2'</span>,<span class='st'>'1'</span>,<span class='st'>'2'</span>,<span class='st'>'2'</span>,<span class='st'>'1'</span>,<span class='st'>'2'</span>,<span class='st'>'2'</span>,<span class='st'>'1'</span>,<span class='st'>'2'</span>,<span class='st'>'2'</span>,<span class='st'>'1'</span>,<span class='st'>'2'</span>)
+    <span class='co'># Define column code (due to serpentine spraying)</span>
+    <span class='co'># Rhelp doesn't like double-percent modulus symbol, so compute by hand</span>
+    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>colcode</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>dat</span>$<span class='no'>col</span>-<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>floor</a></span>((<span class='no'>dat</span>$<span class='no'>col</span>-<span class='fl'>1</span>)/<span class='fl'>4</span>)*<span class='fl'>4</span> -<span class='fl'>1</span>))
 
-  <span class='no'>m6</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span> + <span class='fu'>lin</span>(<span class='no'>colf</span>) + <span class='no'>colcode</span> +<span class='no'>rowcode</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-               <span class='kw'>random</span><span class='kw'>=</span> ~ <span class='no'>colf</span> + <span class='no'>rowf</span> + <span class='fu'>spl</span>(<span class='no'>col</span>),
-               <span class='kw'>rcov</span> <span class='kw'>=</span> ~<span class='fu'>ar1</span>(<span class='no'>rowf</span>):<span class='fu'>ar1</span>(<span class='no'>colf</span>))
-  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='fu'>variogram</span>(<span class='no'>m6</span>), <span class='kw'>xlim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0</span>:<span class='fl'>17</span>), <span class='kw'>ylim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0</span>,<span class='fl'>11</span>), <span class='kw'>zlim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0</span>,<span class='fl'>4000</span>),
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"gilmour.serpentine"</span>)
-}
+    <span class='no'>m3</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span> + <span class='fu'>lin</span>(<span class='no'>colf</span>) + <span class='no'>colcode</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
+                 <span class='kw'>random</span><span class='kw'>=</span> ~ <span class='no'>colf</span> + <span class='no'>rowf</span> + <span class='fu'>spl</span>(<span class='no'>colf</span>),
+                 <span class='kw'>rcov</span> <span class='kw'>=</span> ~<span class='fu'>ar1</span>(<span class='no'>rowf</span>):<span class='fu'>ar1</span>(<span class='no'>colf</span>))
 
-<span class='co'># ----------------------------------------------------------------------------</span>
+    <span class='co'># Figure 6 shows serpentine row effects</span>
+    <span class='no'>p3</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m3</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>classify</span><span class='kw'>=</span><span class='st'>"rowf"</span>)$<span class='no'>predictions</span>$<span class='no'>pvals</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/plot.html'>plot</a></span>(<span class='no'>p3</span>$<span class='no'>predicted</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'l'</span>, <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"row number"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"BLUP"</span>)
+    <span class='fu'><a href='https://rdrr.io/r/graphics/text.html'>text</a></span>(<span class='fl'>1</span>:<span class='fl'>22</span>, <span class='no'>p3</span>$<span class='no'>predicted</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'L'</span>,<span class='st'>'L'</span>,<span class='st'>'M'</span>,<span class='st'>'R'</span>,<span class='st'>'R'</span>,<span class='st'>'M'</span>,<span class='st'>'L'</span>,<span class='st'>'L'</span>,
+                               <span class='st'>'M'</span>,<span class='st'>'R'</span>,<span class='st'>'R'</span>,<span class='st'>'M'</span>,<span class='st'>'L'</span>,<span class='st'>'L'</span>,<span class='st'>'M'</span>,<span class='st'>'R'</span>,<span class='st'>'R'</span>,<span class='st'>'M'</span>,<span class='st'>'L'</span>,<span class='st'>'L'</span>,<span class='st'>'M'</span>,<span class='st'>'R'</span>))
 
-<span class='kw'>if</span>(<span class='fl'>0</span>){
-  <span class='co'>## libs(asreml4)</span>
-  <span class='co'>## dat &lt;- transform(dat, rowf=factor(row), colf=factor(10*(col-8)))</span>
-  <span class='co'>## dat &lt;- dat[order(dat$rowf, dat$colf), ] # Sort order needed by asreml</span>
+    <span class='co'># Define row code (due to serpentine planting). 1=middle, 2=left/right</span>
+    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>rowcode</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>))
+    <span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span>(<span class='no'>dat</span>$<span class='no'>rowcode</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'2'</span>,<span class='st'>'2'</span>,<span class='st'>'1'</span>,<span class='st'>'2'</span>,<span class='st'>'2'</span>,<span class='st'>'1'</span>,<span class='st'>'2'</span>,<span class='st'>'2'</span>,<span class='st'>'1'</span>,
+                             <span class='st'>'2'</span>,<span class='st'>'2'</span>,<span class='st'>'1'</span>,<span class='st'>'2'</span>,<span class='st'>'2'</span>,<span class='st'>'1'</span>,<span class='st'>'2'</span>,<span class='st'>'2'</span>,<span class='st'>'1'</span>,<span class='st'>'2'</span>,<span class='st'>'2'</span>,<span class='st'>'1'</span>,<span class='st'>'2'</span>)
 
-  <span class='co'>## # RCB</span>
-  <span class='co'>## m0 &lt;- asreml(yield ~ gen, data=dat, random=~rep)</span>
+    <span class='no'>m6</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span> + <span class='fu'>lin</span>(<span class='no'>colf</span>) + <span class='no'>colcode</span> +<span class='no'>rowcode</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
+                 <span class='kw'>random</span><span class='kw'>=</span> ~ <span class='no'>colf</span> + <span class='no'>rowf</span> + <span class='fu'>spl</span>(<span class='no'>col</span>),
+                 <span class='kw'>rcov</span> <span class='kw'>=</span> ~<span class='fu'>ar1</span>(<span class='no'>rowf</span>):<span class='fu'>ar1</span>(<span class='no'>colf</span>))
+    <span class='fu'><a href='https://rdrr.io/r/base/plot.html'>plot</a></span>(<span class='fu'>variogram</span>(<span class='no'>m6</span>), <span class='kw'>xlim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0</span>:<span class='fl'>17</span>), <span class='kw'>ylim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0</span>,<span class='fl'>11</span>), <span class='kw'>zlim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0</span>,<span class='fl'>4000</span>),
+         <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"gilmour.serpentine"</span>)
+  }
 
-  <span class='co'>## # Add AR1 x AR1</span>
-  <span class='co'>## m1 &lt;- asreml(yield ~ gen, data=dat, resid = ~ar1(rowf):ar1(colf))</span>
+  <span class='co'># ----------------------------------------------------------------------------</span>
 
-  <span class='co'>## # Add spline</span>
-  <span class='co'>## m2 &lt;- asreml(yield ~ gen + col, data=dat,</span>
-  <span class='co'>##              random= ~ spl(col) + colf,</span>
-  <span class='co'>##              resid = ~ar1(rowf):ar1(colf))</span>
+  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>,<span class='no'>lucid</span>)
+  <span class='kw'>if</span>( <span class='kw pkg'>utils</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/r/utils/packageDescription.html'>packageVersion</a></span>(<span class='st'>"asreml"</span>) <span class='kw'>&gt;</span> <span class='st'>"4"</span>) {
+    <span class='co'># asreml4</span>
 
-  <span class='co'>## # Figure 4 shows serpentine spraying</span>
-  <span class='co'>## p2 &lt;- predict(m2, data=dat, classify="colf")$pvals</span>
-  <span class='co'>## plot(p2$predicted, type='b', xlab="column number", ylab="BLUP")</span>
+    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>rowf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>), <span class='kw'>colf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='fl'>10</span>*(<span class='no'>col</span>-<span class='fl'>8</span>)))
+    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>rowf</span>, <span class='no'>dat</span>$<span class='no'>colf</span>), ] <span class='co'># Sort order needed by asreml</span>
 
-  <span class='co'>## # Define column code (due to serpentine spraying)</span>
-  <span class='co'>## # Rhelp doesn't like double-percent modulus symbol, so compute by hand</span>
-  <span class='co'>## dat &lt;- transform(dat, colcode = factor(dat$col-floor((dat$col-1)/4)*4 -1))</span>
+    <span class='co'># RCB</span>
+    <span class='no'>m0</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>random</span><span class='kw'>=</span>~<span class='no'>rep</span>)
 
-  <span class='co'>## m3 &lt;- asreml(yield ~ gen + lin(colf) + colcode, data=dat,</span>
-  <span class='co'>##              random= ~ colf + rowf + spl(colf),</span>
-  <span class='co'>##              resid = ~ar1(rowf):ar1(colf))</span>
+    <span class='co'># Add AR1 x AR1</span>
+    <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
+                 <span class='kw'>resid</span> <span class='kw'>=</span> ~<span class='fu'>ar1</span>(<span class='no'>rowf</span>):<span class='fu'>ar1</span>(<span class='no'>colf</span>))
 
-  <span class='co'>## # Figure 6 shows serpentine row effects</span>
-  <span class='co'>## p3 &lt;- predict(m3, data=dat, classify="rowf")$pvals</span>
-  <span class='co'>## plot(p3$predicted, type='l', xlab="row number", ylab="BLUP")</span>
-  <span class='co'>## text(1:22, p3$predicted, c('L','L','M','R','R','M','L','L',</span>
-  <span class='co'>##                            'M','R','R','M','L','L','M','R','R','M','L','L','M','R'))</span>
+    <span class='co'># Add spline</span>
+    <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span> + <span class='no'>col</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
+                 <span class='kw'>random</span><span class='kw'>=</span> ~ <span class='fu'>spl</span>(<span class='no'>col</span>) + <span class='no'>colf</span>,
+                 <span class='kw'>resid</span> <span class='kw'>=</span> ~<span class='fu'>ar1</span>(<span class='no'>rowf</span>):<span class='fu'>ar1</span>(<span class='no'>colf</span>))
 
-  <span class='co'>## # Define row code (due to serpentine planting). 1=middle, 2=left/right</span>
-  <span class='co'>## dat &lt;- transform(dat, rowcode = factor(row))</span>
-  <span class='co'>## levels(dat$rowcode) &lt;- c('2','2','1','2','2','1','2','2','1',</span>
-  <span class='co'>##                          '2','2','1','2','2','1','2','2','1','2','2','1','2')</span>
+    <span class='co'># Figure 4 shows serpentine spraying</span>
+    <span class='no'>p2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m2</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>classify</span><span class='kw'>=</span><span class='st'>"colf"</span>)$<span class='no'>pvals</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/plot.html'>plot</a></span>(<span class='no'>p2</span>$<span class='no'>predicted</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'b'</span>, <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"column number"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"BLUP"</span>)
 
-  <span class='co'>## m6 &lt;- asreml(yield ~ gen + lin(colf) + colcode +rowcode, data=dat,</span>
-  <span class='co'>##              random= ~ colf + rowf + spl(col),</span>
-  <span class='co'>##              resid = ~ar1(rowf):ar1(colf))</span>
-  <span class='co'>## plot(varioGram(m6), xlim=c(0:17), ylim=c(0,11), zlim=c(0,4000),</span>
-  <span class='co'>##      main="gilmour.serpentine")</span>
-}</div></pre>
+    <span class='co'># Define column code (due to serpentine spraying)</span>
+    <span class='co'># Rhelp doesn't like double-percent modulus symbol, so compute by hand</span>
+    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>colcode</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>dat</span>$<span class='no'>col</span>-<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>floor</a></span>((<span class='no'>dat</span>$<span class='no'>col</span>-<span class='fl'>1</span>)/<span class='fl'>4</span>)*<span class='fl'>4</span> -<span class='fl'>1</span>))
+
+    <span class='no'>m3</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span> + <span class='fu'>lin</span>(<span class='no'>colf</span>) + <span class='no'>colcode</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
+                 <span class='kw'>random</span><span class='kw'>=</span> ~ <span class='no'>colf</span> + <span class='no'>rowf</span> + <span class='fu'>spl</span>(<span class='no'>colf</span>),
+                 <span class='kw'>resid</span> <span class='kw'>=</span> ~<span class='fu'>ar1</span>(<span class='no'>rowf</span>):<span class='fu'>ar1</span>(<span class='no'>colf</span>))
+
+    <span class='co'># Figure 6 shows serpentine row effects</span>
+    <span class='no'>p3</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m3</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>classify</span><span class='kw'>=</span><span class='st'>"rowf"</span>)$<span class='no'>pvals</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/plot.html'>plot</a></span>(<span class='no'>p3</span>$<span class='no'>predicted</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'l'</span>, <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"row number"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"BLUP"</span>)
+    <span class='fu'><a href='https://rdrr.io/r/graphics/text.html'>text</a></span>(<span class='fl'>1</span>:<span class='fl'>22</span>, <span class='no'>p3</span>$<span class='no'>predicted</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'L'</span>,<span class='st'>'L'</span>,<span class='st'>'M'</span>,<span class='st'>'R'</span>,<span class='st'>'R'</span>,<span class='st'>'M'</span>,<span class='st'>'L'</span>,<span class='st'>'L'</span>,
+                               <span class='st'>'M'</span>,<span class='st'>'R'</span>,<span class='st'>'R'</span>,<span class='st'>'M'</span>,<span class='st'>'L'</span>,<span class='st'>'L'</span>,<span class='st'>'M'</span>,<span class='st'>'R'</span>,<span class='st'>'R'</span>,<span class='st'>'M'</span>,<span class='st'>'L'</span>,<span class='st'>'L'</span>,<span class='st'>'M'</span>,<span class='st'>'R'</span>))
+
+    <span class='co'># Define row code (due to serpentine planting). 1=middle, 2=left/right</span>
+    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>rowcode</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>))
+    <span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span>(<span class='no'>dat</span>$<span class='no'>rowcode</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'2'</span>,<span class='st'>'2'</span>,<span class='st'>'1'</span>,<span class='st'>'2'</span>,<span class='st'>'2'</span>,<span class='st'>'1'</span>,<span class='st'>'2'</span>,<span class='st'>'2'</span>,<span class='st'>'1'</span>,
+                             <span class='st'>'2'</span>,<span class='st'>'2'</span>,<span class='st'>'1'</span>,<span class='st'>'2'</span>,<span class='st'>'2'</span>,<span class='st'>'1'</span>,<span class='st'>'2'</span>,<span class='st'>'2'</span>,<span class='st'>'1'</span>,<span class='st'>'2'</span>,<span class='st'>'2'</span>,<span class='st'>'1'</span>,<span class='st'>'2'</span>)
+
+    <span class='no'>m6</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span> + <span class='fu'>lin</span>(<span class='no'>colf</span>) + <span class='no'>colcode</span> +<span class='no'>rowcode</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
+                 <span class='kw'>random</span><span class='kw'>=</span> ~ <span class='no'>colf</span> + <span class='no'>rowf</span> + <span class='fu'>spl</span>(<span class='no'>col</span>),
+                 <span class='kw'>resid</span> <span class='kw'>=</span> ~<span class='fu'>ar1</span>(<span class='no'>rowf</span>):<span class='fu'>ar1</span>(<span class='no'>colf</span>))
+    <span class='fu'><a href='https://rdrr.io/r/base/plot.html'>plot</a></span>(<span class='fu'>varioGram</span>(<span class='no'>m6</span>), <span class='kw'>xlim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0</span>:<span class='fl'>17</span>), <span class='kw'>ylim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0</span>,<span class='fl'>11</span>), <span class='kw'>zlim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0</span>,<span class='fl'>4000</span>),
+         <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"gilmour.serpentine"</span>)
+  }</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Thu Jul 30 15:49:27 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1     -1240.605      14296.31    223 15:49:27    0.0
+#&gt;  2     -1238.949      14052.47    223 15:49:27    0.0
+#&gt;  3     -1237.174      13779.88    223 15:49:27    0.0
+#&gt;  4     -1235.989      13576.73    223 15:49:27    0.0
+#&gt;  5     -1235.390      13443.10    223 15:49:27    0.0
+#&gt;  6     -1235.240      13383.33    223 15:49:27    0.0
+#&gt;  7     -1235.223      13362.53    223 15:49:27    0.0
+#&gt;  8     -1235.222      13359.15    223 15:49:27    0.0
+#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Thu Jul 30 15:49:27 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1     -1276.682      20479.20    223 15:49:27    0.0 (1 restrained)
+#&gt;  2     -1204.192      12555.38    223 15:49:27    0.0 (1 restrained)
+#&gt;  3     -1131.606      10258.80    223 15:49:27    0.0
+#&gt;  4     -1107.525      13045.24    223 15:49:27    0.0
+#&gt;  5     -1103.565      16993.13    223 15:49:27    0.0
+#&gt;  6     -1103.220      18861.79    223 15:49:27    0.0
+#&gt;  7     -1103.192      19475.06    223 15:49:27    0.0
+#&gt;  8     -1103.190      19644.93    223 15:49:27    0.0
+#&gt;  9     -1103.190      19689.59    223 15:49:27    0.0
+#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Thu Jul 30 15:49:27 2020
+#&gt; Spline: design points closer than 0.0014 have been merged.
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1     -1115.615      4519.781    222 15:49:28    0.0
+#&gt;  2     -1098.274      3998.898    222 15:49:28    0.0
+#&gt;  3     -1084.274      3762.414    222 15:49:28    0.0
+#&gt;  4     -1078.173      3688.511    222 15:49:28    0.0
+#&gt;  5     -1076.057      3634.376    222 15:49:28    0.0
+#&gt;  6     -1075.757      3596.593    222 15:49:28    0.0
+#&gt;  7     -1075.744      3588.592    222 15:49:28    0.0
+#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Thu Jul 30 15:49:28 2020
+#&gt; Spline: design points closer than 0.0014 have been merged.
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1     -1075.744      3589.184    222 15:49:28    0.0
+#&gt;  2     -1075.744      3589.280    222 15:49:28    0.0
+#&gt;  3     -1075.744      3589.514    222 15:49:28    0.0</div><div class='img'><img src='gilmour.serpentine-2.png' alt='' width='700' height='433' /></div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Thu Jul 30 15:49:28 2020
+#&gt; Spline: design points closer than 0.0014 have been merged.
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1     -1074.771      3215.959    219 15:49:28    0.0
+#&gt;  2     -1065.402      2997.768    219 15:49:28    0.0
+#&gt;  3     -1057.721      2912.815    219 15:49:28    0.0
+#&gt;  4     -1054.628      2939.717    219 15:49:28    0.0
+#&gt;  5     -1053.720      2984.784    219 15:49:28    0.0
+#&gt;  6     -1053.619      3001.884    219 15:49:28    0.0
+#&gt;  7     -1053.616      3009.864    219 15:49:28    0.0
+#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Thu Jul 30 15:49:28 2020
+#&gt; Spline: design points closer than 0.0014 have been merged.
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1     -1053.616      3013.371    219 15:49:28    0.0
+#&gt;  2     -1053.616      3013.726    219 15:49:28    0.0
+#&gt;  3     -1053.616      3014.611    219 15:49:28    0.0</div><div class='img'><img src='gilmour.serpentine-3.png' alt='' width='700' height='433' /></div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Thu Jul 30 15:49:28 2020
+#&gt; Spline: design points closer than 0.0014 have been merged.
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1     -1069.223      3140.388    218 15:49:28    0.0
+#&gt;  2     -1059.875      2949.849    218 15:49:28    0.0
+#&gt;  3     -1052.068      2905.675    218 15:49:28    0.0
+#&gt;  4     -1048.746      2983.113    218 15:49:28    0.0
+#&gt;  5     -1047.717      3075.335    218 15:49:28    0.0
+#&gt;  6     -1047.602      3113.167    218 15:49:28    0.0
+#&gt;  7     -1047.597      3130.509    218 15:49:28    0.0
+#&gt;  8     -1047.596      3137.866    218 15:49:28    0.0</div><div class='img'><img src='gilmour.serpentine-4.png' alt='' width='700' height='433' /></div><div class='input'>  
+# }
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -322,7 +388,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

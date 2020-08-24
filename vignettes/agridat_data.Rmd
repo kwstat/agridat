@@ -126,7 +126,7 @@ First edition: http://archive.org/details/methodsofstatist031744mbp
 255 Covariates in feeding trial - agridat::crampton.pig
 ```
 
-Second edition: http://krishikosh.egranth.ac.in/handle/1/2034118
+Second edition: `http://krishikosh.egranth.ac.in/handle/1/2034118` (broken)
 ```
 216 Latin square - agridat::goulden.latin 
 423 Control chart with egg weights - agridat::goulden.eggs

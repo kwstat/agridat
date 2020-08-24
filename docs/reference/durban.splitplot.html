@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Split-plot experiment of barley with fungicide treatments — durban.splitplot" />
-
 <meta property="og:description" content="Split-plot experiment of barley with fungicide treatments" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,68 +143,64 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Split-plot experiment of barley with fungicide treatments</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 560 observations on the following 6 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 560 observations on the following 6 variables.</p><dl'>
     <dt><code>yield</code></dt><dd><p>yield, tonnes/ha</p></dd>
     <dt><code>block</code></dt><dd><p>block, 4 levels</p></dd>
     <dt><code>gen</code></dt><dd><p>genotype, 70 levels</p></dd>
     <dt><code>fung</code></dt><dd><p>fungicide, 2 levels</p></dd>
     <dt><code>row</code></dt><dd><p>row</p></dd>
     <dt><code>bed</code></dt><dd><p>bed (column)</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Grown in 1995-1996 at the Scottish Crop Research Institute.
   Split-plot design with 4 blocks, 2 whole-plot fungicide treatments,
   and 70 barley varieties or variety mixes.  Total area was 10 rows
   (north/south) by 56 beds (east/west).</p>
-    
+<p>Retrieved from: ftp://ftp.bioss.sari.ac.uk/pub/maria</p>
+<p>Used with permission of Maria Durban.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Durban, Maria and Hackett, Christine and McNicol, James and
   Newton, Adrian and Thomas, William and Currie, Iain. 2003.
   The practical use of semiparametric models in field trials,
-  <em>Journal of Agric Biological and Envir Stats</em>, 8, 48-66.
+  Journal of Agric Biological and Envir Stats, 8, 48-66.
   http://doi.org/10.1198/1085711031265.</p>
-<p>Retrieved from: ftp://ftp.bioss.sari.ac.uk/pub/maria</p>
-<p>Used with permission of Maria Durban.</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>durban.splitplot</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>durban.splitplot</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='fu'>desplot</span>(<span class='no'>yield</span>~<span class='no'>bed</span>*<span class='no'>row</span>, <span class='no'>dat</span>,
-        <span class='kw'>out1</span><span class='kw'>=</span><span class='no'>block</span>, <span class='kw'>out2</span><span class='kw'>=</span><span class='no'>fung</span>, <span class='kw'>num</span><span class='kw'>=</span><span class='no'>gen</span>, <span class='co'># aspect unknown</span>
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"durban.splitplot"</span>)</div><div class='img'><img src='durban.splitplot-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>durban.splitplot</span>)
+  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>durban.splitplot</span>
 
-<span class='co'># Durban 2003, Figure 2</span>
-<span class='no'>m20</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>yield</span>~<span class='no'>gen</span> + <span class='no'>fung</span> + <span class='no'>gen</span>:<span class='no'>fung</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-<span class='no'>dat</span>$<span class='no'>resid</span> <span class='kw'>&lt;-</span> <span class='no'>m20</span>$<span class='no'>resid</span>
-<span class='co'>## libs(lattice)</span>
-<span class='co'>## xyplot(resid~row, dat, type=c('p','smooth'), main="durban.splitplot")</span>
-<span class='co'>## xyplot(resid~bed, dat, type=c('p','smooth'), main="durban.splitplot")</span>
+  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
+  <span class='fu'>desplot</span>(<span class='no'>dat</span>, <span class='no'>yield</span>~<span class='no'>bed</span>*<span class='no'>row</span>,
+          <span class='kw'>out1</span><span class='kw'>=</span><span class='no'>block</span>, <span class='kw'>out2</span><span class='kw'>=</span><span class='no'>fung</span>, <span class='kw'>num</span><span class='kw'>=</span><span class='no'>gen</span>, <span class='co'># aspect unknown</span>
+          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"durban.splitplot"</span>)</div><div class='img'><img src='durban.splitplot-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
-<span class='co'># Figure 4 doesn't quite match due to different break points</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'>xyplot</span>(<span class='no'>resid</span> ~ <span class='no'>bed</span><span class='kw'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"durban.splitplot"</span>,
-       <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'p'</span>,<span class='st'>'smooth'</span>))</div><div class='img'><img src='durban.splitplot-2.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='co'># ----------------------------------------------------------------------------</span>
+  <span class='co'># Durban 2003, Figure 2</span>
+  <span class='no'>m20</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>yield</span>~<span class='no'>gen</span> + <span class='no'>fung</span> + <span class='no'>gen</span>:<span class='no'>fung</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
+  <span class='no'>dat</span>$<span class='no'>resid</span> <span class='kw'>&lt;-</span> <span class='no'>m20</span>$<span class='no'>resid</span>
+  <span class='co'>## libs(lattice)</span>
+  <span class='co'>## xyplot(resid~row, dat, type=c('p','smooth'), main="durban.splitplot")</span>
+  <span class='co'>## xyplot(resid~bed, dat, type=c('p','smooth'), main="durban.splitplot")</span>
 
-<span class='kw'>if</span>(<span class='fl'>0</span>){
+  <span class='co'># Figure 4 doesn't quite match due to different break points</span>
+  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
+  <span class='fu'>xyplot</span>(<span class='no'>resid</span> ~ <span class='no'>bed</span><span class='kw'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
+         <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"durban.splitplot"</span>,
+         <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'p'</span>,<span class='st'>'smooth'</span>))</div><div class='img'><img src='durban.splitplot-2.png' alt='' width='700' height='433' /></div><div class='input'>
+
   <span class='co'># Figure 6 - field trend</span>
   <span class='co'># note, Durban used gam package like this</span>
   <span class='co'># m2lo &lt;- gam(yield ~ gen*fung + lo(row, bed, span=.082), data=dat)</span>
@@ -210,75 +210,73 @@
   <span class='no'>new2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span>(<span class='no'>new2</span>, <span class='kw'>gen</span><span class='kw'>=</span><span class='st'>"G01"</span>, <span class='kw'>fung</span><span class='kw'>=</span><span class='st'>"F1"</span>)
   <span class='no'>p2lo</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m2lo</span>, <span class='kw'>newdata</span><span class='kw'>=</span><span class='no'>new2</span>)
   <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-  <span class='fu'>wireframe</span>(<span class='no'>p2lo</span>~<span class='no'>row</span>+<span class='no'>bed</span>, <span class='no'>new2</span>, <span class='kw'>aspect</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>.5</span>), <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Field trend"</span>)
-}
-
-<span class='co'># ----------------------------------------------------------------------------</span>
-
-<span class='kw'>if</span>(<span class='fl'>0</span>){
-  <span class='co'># asreml3</span>
+  <span class='fu'>wireframe</span>(<span class='no'>p2lo</span>~<span class='no'>row</span>+<span class='no'>bed</span>, <span class='no'>new2</span>, <span class='kw'>aspect</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>.5</span>),
+            <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"durban.splitplot - Field trend"</span>)</div><div class='img'><img src='durban.splitplot-3.png' alt='' width='700' height='433' /></div><div class='input'>
   <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
-  <span class='co'># Table 5, variance components.  Table 6, F tests</span>
+  <span class='kw'>if</span>( <span class='kw pkg'>utils</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/r/utils/packageDescription.html'>packageVersion</a></span>(<span class='st'>"asreml"</span>) <span class='kw'>&gt;</span> <span class='st'>"4"</span>) {
+    <span class='co'># asreml4</span>
 
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>rowf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>), <span class='kw'>bedf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>bed</span>))
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>rowf</span>, <span class='no'>dat</span>$<span class='no'>bedf</span>),]
-  <span class='no'>m2a2</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span>*<span class='no'>fung</span>, <span class='kw'>random</span><span class='kw'>=</span>~<span class='no'>block</span>/<span class='no'>fung</span>+<span class='no'>units</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-                 <span class='kw'>rcov</span><span class='kw'>=</span>~<span class='fu'>ar1v</span>(<span class='no'>rowf</span>):<span class='fu'>ar1</span>(<span class='no'>bedf</span>))
-  <span class='no'>m2a2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span>(<span class='no'>m2a2</span>)
+    <span class='co'># Table 5, variance components.  Table 6, F tests</span>
+    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>rowf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>), <span class='kw'>bedf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>bed</span>))
+    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>rowf</span>, <span class='no'>dat</span>$<span class='no'>bedf</span>),]
+    <span class='no'>m2a2</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span>*<span class='no'>fung</span>, <span class='kw'>random</span><span class='kw'>=</span>~<span class='no'>block</span>/<span class='no'>fung</span>+<span class='no'>units</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
+                   <span class='kw'>resid</span> <span class='kw'>=</span>~<span class='fu'>ar1v</span>(<span class='no'>rowf</span>):<span class='fu'>ar1</span>(<span class='no'>bedf</span>))
+    <span class='no'>m2a2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span>(<span class='no'>m2a2</span>)
 
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lucid</span>)
-  <span class='fu'>vc</span>(<span class='no'>m2a2</span>)
-  <span class='co'>##                effect component std.error z.ratio constr</span>
-  <span class='co'>##       block!block.var 0.0000001        NA      NA  bound</span>
-  <span class='co'>##  block:fung!block.var 0.01207    0.01513      0.8    pos</span>
-  <span class='co'>##       units!units.var 0.02463    0.002465    10      pos</span>
-  <span class='co'>##            R!variance 1                NA      NA    fix</span>
-  <span class='co'>##            R!rowf.cor 0.8836     0.03647     24    uncon</span>
-  <span class='co'>##            R!rowf.var 0.1262     0.04432      2.8    pos</span>
-  <span class='co'>##            R!bedf.cor 0.9202     0.02847     32    uncon</span>
+    <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lucid</span>)
+    <span class='fu'>vc</span>(<span class='no'>m2a2</span>)
+    <span class='co'>##             effect component std.error z.ratio bound </span>
+    <span class='co'>##              block   0              NA      NA     B  NA</span>
+    <span class='co'>##         block:fung   0.01206  0.01512      0.8     P   0</span>
+    <span class='co'>##              units   0.02463  0.002465    10       P   0</span>
+    <span class='co'>##       rowf:bedf(R)   1              NA      NA     F   0</span>
+    <span class='co'>## rowf:bedf!rowf!cor   0.8836   0.03646     24       U   0</span>
+    <span class='co'>## rowf:bedf!rowf!var   0.1261   0.04434      2.8     P   0</span>
+    <span class='co'>## rowf:bedf!bedf!cor   0.9202   0.02846     32       U   0</span>
 
-  <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m2a2</span>)
-}
-
-<span class='co'># ----------------------------------------------------------------------------</span>
-
-<span class='kw'>if</span>(<span class='fl'>0</span>){
-  <span class='co'>## libs(asreml4)</span>
-  <span class='co'>## # Table 5, variance components.  Table 6, F tests</span>
-
-  <span class='co'>## dat &lt;- transform(dat, rowf=factor(row), bedf=factor(bed))</span>
-  <span class='co'>## dat &lt;- dat[order(dat$rowf, dat$bedf),]</span>
-  <span class='co'>## m2a2 &lt;- asreml(yield ~ gen*fung, random=~block/fung+units, data=dat,</span>
-  <span class='co'>##                resid =~ar1v(rowf):ar1(bedf))</span>
-  <span class='co'>## m2a2 &lt;- update(m2a2)</span>
-
-  <span class='co'>## libs(lucid)</span>
-  <span class='co'>## vc(m2a2)</span>
-  <span class='co'>## ##             effect component std.error z.ratio bound &lt;!-- %ch --&gt;</span>
-  <span class='co'>## ##              block   0              NA      NA     B  NA</span>
-  <span class='co'>## ##         block:fung   0.01206  0.01512      0.8     P   0</span>
-  <span class='co'>## ##              units   0.02463  0.002465    10       P   0</span>
-  <span class='co'>## ##       rowf:bedf(R)   1              NA      NA     F   0</span>
-  <span class='co'>## ## rowf:bedf!rowf!cor   0.8836   0.03646     24       U   0</span>
-  <span class='co'>## ## rowf:bedf!rowf!var   0.1261   0.04434      2.8     P   0</span>
-  <span class='co'>## ## rowf:bedf!bedf!cor   0.9202   0.02846     32       U   0</span>
-
-  <span class='co'>## wald(m2a2)</span>
-}</div></pre>
+    <span class='fu'>wald</span>(<span class='no'>m2a2</span>)
+  }</div><div class='output co'>#&gt; Model fitted using the sigma parameterization.
+#&gt; ASReml 4.1.0 Thu Jul 30 15:49:04 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1       208.653           1.0    420 15:49:04    0.1 (3 restrained)
+#&gt; Log-likelihood decreased to  149.571 ; trying with reduced updates (0.757712)
+#&gt;  2       204.621           1.0    420 15:49:04    0.1
+#&gt;  3       215.185           1.0    420 15:49:04    0.1 (3 restrained)
+#&gt;  4       224.963           1.0    420 15:49:04    0.1 (2 restrained)
+#&gt;  5       231.997           1.0    420 15:49:04    0.1 (3 restrained)
+#&gt; Log-likelihood decreased to  199.331 ; trying with reduced updates (0.408715)
+#&gt;  6       234.142           1.0    420 15:49:04    0.1
+#&gt;  7       245.873           1.0    420 15:49:04    0.1
+#&gt;  8       280.158           1.0    420 15:49:04    0.1
+#&gt;  9       312.280           1.0    420 15:49:04    0.1
+#&gt; 10       328.542           1.0    420 15:49:04    0.1
+#&gt; 11       338.508           1.0    420 15:49:04    0.1
+#&gt; 12       343.036           1.0    420 15:49:04    0.1
+#&gt; 13       343.633           1.0    420 15:49:05    0.1</div><div class='output co'>#&gt; <span class='warning'>Warning: Log-likelihood not converged</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='output co'>#&gt; Model fitted using the sigma parameterization.
+#&gt; ASReml 4.1.0 Thu Jul 30 15:49:05 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1       343.701           1.0    420 15:49:05    0.1
+#&gt;  2       343.707           1.0    420 15:49:05    0.1 (1 restrained)
+#&gt;  3       343.714           1.0    420 15:49:05    0.1 (1 restrained)
+#&gt;  4       343.715           1.0    420 15:49:05    0.1 (1 restrained)</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='output co'>#&gt; Wald tests for fixed effects.
+#&gt; Response: yield
+#&gt; Terms added sequentially; adjusted for those above.
+#&gt; 
+#&gt;               Df Sum of Sq Wald statistic Pr(Chisq)    
+#&gt; (Intercept)    1   1051.96        1051.96 &lt; 2.2e-16 ***
+#&gt; gen           69   1099.59        1099.59 &lt; 2.2e-16 ***
+#&gt; fung           1     37.04          37.04 1.156e-09 ***
+#&gt; gen:fung      69     89.64          89.64   0.04816 *  
+#&gt; residual (MS)         1.00                             
+#&gt; ---
+#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'>  
+# }
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -289,7 +287,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

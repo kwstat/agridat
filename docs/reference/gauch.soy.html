@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,13 +45,12 @@
 
 
 
-<meta property="og:title" content="Multi-environment trial of soybeans in New York, 1977 to 1988 — gauch.soy" />
 
+<meta property="og:title" content="Multi-environment trial of soybeans in New York, 1977 to 1988 — gauch.soy" />
 <meta property="og:description" content="New York soybean yields, 1977 to 1988, for 7 genotypes, 55
   environments (9 loc, 12 years), 2-3 reps." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -62,7 +67,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -105,7 +110,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -113,10 +118,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -140,23 +144,24 @@
     </div>
 
     <div class="ref-description">
-    
     <p>New York soybean yields, 1977 to 1988, for 7 genotypes, 55
   environments (9 loc, 12 years), 2-3 reps.</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 1454 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 1454 observations on the following 4 variables.</p><dl'>
     <dt><code>yield</code></dt><dd><p>yield, kg/ha</p></dd>
     <dt><code>rep</code></dt><dd><p>repeated measurement</p></dd>
     <dt><code>gen</code></dt><dd><p>genotype, 7 levels</p></dd>
     <dt><code>env</code></dt><dd><p>environment, 55 levels</p></dd>
-  </dl>
+    <dt><code>year</code></dt><dd><p>year, 77-88</p></dd>
+    <dt><code>loc</code></dt><dd><p>location, 10 levels</p></dd>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Soybean yields at 13 percent moisture for 7 genotypes in 55
@@ -166,39 +171,40 @@
   The replications appear in random order and do _NOT_ define blocks.
   Environment names are a combination of the first letter of the
   location name and the last two digits of the year.  The location codes
-  are C=Chazy, N=Canton, L=Lockport, G=Geneseo, R=Romulus, A=Aurora,
-  I=Ithica, V=Valatie, D=Riverhead.
+  are: 
+  A=Aurora, C=Chazy, D=Riverhead, E=Etna, G=Geneseo,
+  I=Ithica, L=Lockport, N=Canton, R=Romulus, V=Valatie.
   Plots were 7.6 m long, four rows wide (middle two rows were
   harvested).</p>
-<p>This data has been widely used (in various subsets)
-  to promote the benefits of AMMI (Additive Main Effects
-  Multiplicative Interactions) analyses.</p>
+<p>This data has been widely used (in various subsets) to promote the
+  benefits of AMMI (Additive Main Effects Multiplicative Interactions)
+  analyses.</p>
 <p>The gen x env means of Table 1 (Zobel et al 1998) are least-squares
   means (personal communication).</p>
-    
-    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
-
-    <p>Retrieved Sep 2011 from
+<p>Retrieved Sep 2011 from
   http://www.microcomputerpower.com/matmodel/matmodelmatmodel_sample_.html</p>
 <p>Used with permission of Hugh Gauch.</p>
-    
-    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Zobel, RW and Wright, MJ and Gauch Jr, HG. 1998.
-  Statistical analysis of a yield trial, <em>Agronomy journal</em>,
-  80, 388-393.
+  Statistical analysis of a yield trial.
+  Agronomy journal, 80, 388-393.
   https://doi.org/10.2134/agronj1988.00021962008000030002x</p>
-    
+    <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
+
+    <p>None</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+
 <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
 <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>gauch.soy</span>)
 <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>gauch.soy</span>
 
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>,
-                 <span class='kw'>year</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/substr.html'>substring</a></span>(<span class='no'>env</span>, <span class='fl'>2</span>),
-                 <span class='kw'>loc</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/substr.html'>substring</a></span>(<span class='no'>env</span>, <span class='fl'>1</span>, <span class='fl'>1</span>))
+<span class='co'>## dat &lt;- transform(dat,</span>
+<span class='co'>##                  year = substring(env, 2),</span>
+<span class='co'>##                  loc = substring(env, 1, 1))</span>
+
 <span class='co'># AMMI biplot</span>
 <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>agricolae</span>)
 <span class='co'># Figure 1 of Zobel et al 1988, means vs PC1 score</span>
@@ -209,25 +215,15 @@
 
 <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='no'>dat2</span>, <span class='fu'>AMMI</span>(<span class='no'>env</span>, <span class='no'>gen</span>, <span class='no'>rep</span>, <span class='no'>yield</span>))
 <span class='no'>bip</span> <span class='kw'>&lt;-</span> <span class='no'>m2</span>$<span class='no'>biplot</span>
-<span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='no'>bip</span>, <span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>yield</span>, <span class='no'>PC1</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'n'</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"gauch.soy -- AMMI biplot"</span>))</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='no'>bip</span>, <span class='fu'><a href='https://rdrr.io/r/graphics/text.html'>text</a></span>(<span class='no'>yield</span>, <span class='no'>PC1</span>, <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>bip</span>),
+<span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='no'>bip</span>, <span class='fu'><a href='https://rdrr.io/r/base/plot.html'>plot</a></span>(<span class='no'>yield</span>, <span class='no'>PC1</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'n'</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"gauch.soy -- AMMI biplot"</span>))</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='no'>bip</span>, <span class='fu'><a href='https://rdrr.io/r/graphics/text.html'>text</a></span>(<span class='no'>yield</span>, <span class='no'>PC1</span>, <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>bip</span>),
                <span class='kw'>col</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='no'>bip</span>$<span class='no'>type</span><span class='kw'>==</span><span class='st'>"GEN"</span>, <span class='st'>"darkgreen"</span>, <span class='st'>"blue"</span>),
-               <span class='kw'>cex</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='no'>bip</span>$<span class='no'>type</span><span class='kw'>==</span><span class='st'>"GEN"</span>, <span class='fl'>1.5</span>, <span class='fl'>.75</span>)))</div><div class='img'><img src='gauch.soy-1.png' alt='' width='700' height='433' /></div></pre>
+               <span class='kw'>cex</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='no'>bip</span>$<span class='no'>type</span><span class='kw'>==</span><span class='st'>"GEN"</span>, <span class='fl'>1.5</span>, <span class='fl'>.75</span>)))</div><div class='img'><img src='gauch.soy-1.png' alt='' width='700' height='433' /></div><div class='input'># }
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -238,7 +234,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

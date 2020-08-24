@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Multi-environment trial of wheat — digby.jointregression" />
-
 <meta property="og:description" content="Yield of 10 spring wheat varieties for 17 locations in 1976." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,33 +143,30 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Yield of 10 spring wheat varieties for 17 locations in 1976.</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 134 observations on the following 3 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 134 observations on the following 3 variables.</p><dl'>
     <dt><code>gen</code></dt><dd><p>genotype, 10 levels</p></dd>
     <dt><code>env</code></dt><dd><p>environment, 17 levels</p></dd>
     <dt><code>yield</code></dt><dd><p>yield (t/ha)</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Yield of 10 spring wheat varieties for 17 locations in 1976.</p>
 <p>Used to illustrate modified joint regression.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Digby, P.G.N. (1979). Modified joint regression analysis for
   incomplete variety x environment data.
   <em>Journal of Agricultural Science</em>, 93, 81-86.
   http://doi.org/10.1017/S0021859600086159</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Hans-Pieter Piepho, 1997.
@@ -174,108 +175,111 @@
   http://doi.org/10.2307/2533976</p>
 <p>RJOINT procedure in GenStat.
   http://www.vsni.co.uk/software/genstat/htmlhelp/server/RJOINT.htm</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>digby.jointregression</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>digby.jointregression</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>digby.jointregression</span>)
+  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>digby.jointregression</span>
 
-<span class='co'># Simple gen means, ignoring unbalanced data.</span>
-<span class='co'># Matches Digby table 2, Unadjusted Mean</span>
-<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/tapply.html'>tapply</a></span>(<span class='no'>dat</span>$<span class='no'>yield</span>, <span class='no'>dat</span>$<span class='no'>gen</span>, <span class='no'>mean</span>),<span class='fl'>3</span>)</div><div class='output co'>#&gt;   G01   G02   G03   G04   G05   G06   G07   G08   G09   G10 
+  <span class='co'># Simple gen means, ignoring unbalanced data.</span>
+  <span class='co'># Matches Digby table 2, Unadjusted Mean</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/tapply.html'>tapply</a></span>(<span class='no'>dat</span>$<span class='no'>yield</span>, <span class='no'>dat</span>$<span class='no'>gen</span>, <span class='no'>mean</span>),<span class='fl'>3</span>)</div><div class='output co'>#&gt;   G01   G02   G03   G04   G05   G06   G07   G08   G09   G10 
 #&gt; 3.272 3.269 4.040 3.712 3.641 3.144 3.181 2.971 3.697 3.172 </div><div class='input'>
-<span class='co'># Two-way model. Matches Digby table 2, Fitting Constants</span>
-<span class='no'>m00</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>yield</span> ~ <span class='fl'>0</span> + <span class='no'>gen</span> + <span class='no'>env</span>, <span class='no'>dat</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m00</span>)[<span class='fl'>1</span>:<span class='fl'>10</span>]-<span class='fl'>2.756078</span>+<span class='fl'>3.272</span>,<span class='fl'>3</span>) <span class='co'># Adjust intercept</span></div><div class='output co'>#&gt; genG01 genG02 genG03 genG04 genG05 genG06 genG07 genG08 genG09 genG10 
-#&gt;  3.272  3.268  4.051  3.724  3.641  3.195  3.232  3.268  3.749  3.179 </div><div class='input'><span class='co'># genG01 genG02 genG03 genG04 genG05 genG06 genG07 genG08 genG09 genG10 </span>
-<span class='co'>#  3.272  3.268  4.051  3.724  3.641  3.195  3.232  3.268  3.749  3.179 </span>
+  <span class='co'># Two-way model. Matches Digby table 2, Fitting Constants</span>
+  <span class='no'>m00</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>yield</span> ~ <span class='fl'>0</span> + <span class='no'>gen</span> + <span class='no'>env</span>, <span class='no'>dat</span>)
+  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m00</span>)[<span class='fl'>1</span>:<span class='fl'>10</span>]-<span class='fl'>2.756078</span>+<span class='fl'>3.272</span>,<span class='fl'>3</span>) <span class='co'># Adjust intercept</span></div><div class='output co'>#&gt; genG01 genG02 genG03 genG04 genG05 genG06 genG07 genG08 genG09 genG10 
+#&gt;  3.272  3.268  4.051  3.724  3.641  3.195  3.232  3.268  3.749  3.179 </div><div class='input'>  <span class='co'># genG01 genG02 genG03 genG04 genG05 genG06 genG07 genG08 genG09 genG10 </span>
+  <span class='co'>#  3.272  3.268  4.051  3.724  3.641  3.195  3.232  3.268  3.749  3.179 </span>
 
-<span class='no'>n.gen</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/nlevels.html'>nlevels</a></span>(<span class='no'>dat</span>$<span class='no'>gen</span>)
-<span class='no'>n.env</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/nlevels.html'>nlevels</a></span>(<span class='no'>dat</span>$<span class='no'>env</span>)
+  <span class='no'>n.gen</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/nlevels.html'>nlevels</a></span>(<span class='no'>dat</span>$<span class='no'>gen</span>)
+  <span class='no'>n.env</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/nlevels.html'>nlevels</a></span>(<span class='no'>dat</span>$<span class='no'>env</span>)
 
-<span class='co'># Estimate theta (env eff)</span>
-<span class='no'>m0</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>yield</span> ~ -<span class='fl'>1</span> + <span class='no'>env</span> + <span class='no'>gen</span>, <span class='no'>dat</span>)
-<span class='no'>thetas</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m0</span>)[<span class='fl'>1</span>:<span class='no'>n.env</span>]
-<span class='no'>thetas</span> <span class='kw'>&lt;-</span> <span class='no'>thetas</span>-<span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>thetas</span>) <span class='co'># center env effects</span>
-<span class='co'># Add env effects to the data</span>
-<span class='no'>dat</span>$<span class='no'>theta</span> <span class='kw'>&lt;-</span> <span class='no'>thetas</span>[<span class='fu'><a href='https://rdrr.io/r/base/match.html'>match</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='st'>"env"</span>,<span class='no'>dat</span>$<span class='no'>env</span>,<span class='kw'>sep</span><span class='kw'>=</span><span class='st'>""</span>), <span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='no'>thetas</span>))]
+  <span class='co'># Estimate theta (env eff)</span>
+  <span class='no'>m0</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>yield</span> ~ -<span class='fl'>1</span> + <span class='no'>env</span> + <span class='no'>gen</span>, <span class='no'>dat</span>)
+  <span class='no'>thetas</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m0</span>)[<span class='fl'>1</span>:<span class='no'>n.env</span>]
+  <span class='no'>thetas</span> <span class='kw'>&lt;-</span> <span class='no'>thetas</span>-<span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>thetas</span>) <span class='co'># center env effects</span>
+  <span class='co'># Add env effects to the data</span>
+  <span class='no'>dat</span>$<span class='no'>theta</span> <span class='kw'>&lt;-</span> <span class='no'>thetas</span>[<span class='fu'><a href='https://rdrr.io/r/base/match.html'>match</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='st'>"env"</span>,<span class='no'>dat</span>$<span class='no'>env</span>,<span class='kw'>sep</span><span class='kw'>=</span><span class='st'>""</span>), <span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='no'>thetas</span>))]
 
-<span class='co'># Initialize beta (gen slopes) at 1</span>
-<span class='no'>betas</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='fl'>1</span>, <span class='no'>n.gen</span>)
+  <span class='co'># Initialize beta (gen slopes) at 1</span>
+  <span class='no'>betas</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='fl'>1</span>, <span class='no'>n.gen</span>)
 
-<span class='no'>done</span> <span class='kw'>&lt;-</span> <span class='fl'>FALSE</span>
-<span class='kw'>while</span>(!<span class='no'>done</span>){
+  <span class='no'>done</span> <span class='kw'>&lt;-</span> <span class='fl'>FALSE</span>
+  <span class='kw'>while</span>(!<span class='no'>done</span>){
 
-  <span class='no'>betas0</span> <span class='kw'>&lt;-</span> <span class='no'>betas</span>
+    <span class='no'>betas0</span> <span class='kw'>&lt;-</span> <span class='no'>betas</span>
 
-  <span class='co'># M1: Fix thetas (env effects), estimate beta (gen slope)</span>
-  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>yield</span> ~ -<span class='fl'>1</span> + <span class='no'>gen</span> + <span class='no'>gen</span>:<span class='no'>theta</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-  <span class='no'>betas</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m1</span>)[-<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>:<span class='no'>n.gen</span>)]
-  <span class='no'>dat</span>$<span class='no'>beta</span> <span class='kw'>&lt;-</span> <span class='no'>betas</span>[<span class='fu'><a href='https://rdrr.io/r/base/match.html'>match</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='st'>"gen"</span>,<span class='no'>dat</span>$<span class='no'>gen</span>,<span class='st'>":theta"</span>,<span class='kw'>sep</span><span class='kw'>=</span><span class='st'>""</span>), <span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='no'>betas</span>))]
-  <span class='co'># print(betas)</span>
+    <span class='co'># M1: Fix thetas (env effects), estimate beta (gen slope)</span>
+    <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>yield</span> ~ -<span class='fl'>1</span> + <span class='no'>gen</span> + <span class='no'>gen</span>:<span class='no'>theta</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
+    <span class='no'>betas</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m1</span>)[-<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>:<span class='no'>n.gen</span>)]
+    <span class='no'>dat</span>$<span class='no'>beta</span> <span class='kw'>&lt;-</span> <span class='no'>betas</span>[<span class='fu'><a href='https://rdrr.io/r/base/match.html'>match</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='st'>"gen"</span>,<span class='no'>dat</span>$<span class='no'>gen</span>,<span class='st'>":theta"</span>,<span class='kw'>sep</span><span class='kw'>=</span><span class='st'>""</span>), <span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='no'>betas</span>))]
+    <span class='co'># print(betas)</span>
 
-  <span class='co'># M2: Fix betas (gen slopes), estimate theta (env slope)</span>
-  <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>yield</span> ~ <span class='no'>env</span>:<span class='no'>beta</span> + <span class='no'>gen</span> -<span class='fl'>1</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-  <span class='no'>thetas</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m2</span>)[-<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>:<span class='no'>n.gen</span>)]
-  <span class='no'>thetas</span>[<span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span>(<span class='no'>thetas</span>)] <span class='kw'>&lt;-</span> <span class='fl'>0</span>  <span class='co'># Change last coefficient from NA to 0</span>
-  <span class='no'>dat</span>$<span class='no'>theta</span> <span class='kw'>&lt;-</span> <span class='no'>thetas</span>[<span class='fu'><a href='https://rdrr.io/r/base/match.html'>match</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='st'>"env"</span>,<span class='no'>dat</span>$<span class='no'>env</span>,<span class='st'>":beta"</span>,<span class='kw'>sep</span><span class='kw'>=</span><span class='st'>""</span>), <span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='no'>thetas</span>))]
-  <span class='co'># print(thetas)</span>
+    <span class='co'># M2: Fix betas (gen slopes), estimate theta (env slope)</span>
+    <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>yield</span> ~ <span class='no'>env</span>:<span class='no'>beta</span> + <span class='no'>gen</span> -<span class='fl'>1</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
+    <span class='no'>thetas</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m2</span>)[-<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>:<span class='no'>n.gen</span>)]
+    <span class='no'>thetas</span>[<span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span>(<span class='no'>thetas</span>)] <span class='kw'>&lt;-</span> <span class='fl'>0</span>  <span class='co'># Change last coefficient from NA to 0</span>
+    <span class='no'>dat</span>$<span class='no'>theta</span> <span class='kw'>&lt;-</span> <span class='no'>thetas</span>[<span class='fu'><a href='https://rdrr.io/r/base/match.html'>match</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='st'>"env"</span>,<span class='no'>dat</span>$<span class='no'>env</span>,<span class='st'>":beta"</span>,<span class='kw'>sep</span><span class='kw'>=</span><span class='st'>""</span>), <span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='no'>thetas</span>))]
+    <span class='co'># print(thetas)</span>
 
-  <span class='co'># Check convergence</span>
-  <span class='no'>chg</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(((<span class='no'>betas</span>-<span class='no'>betas0</span>)/<span class='no'>betas0</span>)^<span class='fl'>2</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span>(<span class='st'>"Relative change in betas"</span>,<span class='no'>chg</span>,<span class='st'>"\n"</span>)
-  <span class='kw'>if</span>(<span class='no'>chg</span> <span class='kw'>&lt;</span> <span class='fl'>.0001</span>) <span class='no'>done</span> <span class='kw'>&lt;-</span> <span class='fl'>TRUE</span>
+    <span class='co'># Check convergence</span>
+    <span class='no'>chg</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(((<span class='no'>betas</span>-<span class='no'>betas0</span>)/<span class='no'>betas0</span>)^<span class='fl'>2</span>)
+    <span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span>(<span class='st'>"Relative change in betas"</span>,<span class='no'>chg</span>,<span class='st'>"\n"</span>)
+    <span class='kw'>if</span>(<span class='no'>chg</span> <span class='kw'>&lt;</span> <span class='fl'>.0001</span>) <span class='no'>done</span> <span class='kw'>&lt;-</span> <span class='fl'>TRUE</span>
 
-}</div><div class='output co'>#&gt; Relative change in betas 0.1617878 
+  }</div><div class='output co'>#&gt; Relative change in betas 0.1617878 
 #&gt; Relative change in betas 0.0002241629 
 #&gt; Relative change in betas 1.371073e-06 </div><div class='input'>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'>xyplot</span>(<span class='no'>yield</span> ~ <span class='no'>theta</span><span class='kw'>|</span><span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"theta (environment effect)"</span>,
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"digby.jointregression - stability plot"</span>)</div><div class='img'><img src='digby.jointregression-1.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='co'># Dibgy Table 2, modified joint regression</span>
+  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
+  <span class='fu'>xyplot</span>(<span class='no'>yield</span> ~ <span class='no'>theta</span><span class='kw'>|</span><span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"theta (environment effect)"</span>,
+         <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"digby.jointregression - stability plot"</span>)</div><div class='img'><img src='digby.jointregression-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='co'># Dibgy Table 2, modified joint regression</span>
 
-<span class='co'># Genotype sensitivities (slopes)</span>
-<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='no'>betas</span>,<span class='fl'>3</span>) <span class='co'># Match Digby table 2, Modified joint regression sensitivity</span></div><div class='output co'>#&gt; genG01:theta genG02:theta genG03:theta genG04:theta genG05:theta genG06:theta 
+  <span class='co'># Genotype sensitivities (slopes)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='no'>betas</span>,<span class='fl'>3</span>) <span class='co'># Match Digby table 2, Modified joint regression sensitivity</span></div><div class='output co'>#&gt; genG01:theta genG02:theta genG03:theta genG04:theta genG05:theta genG06:theta 
 #&gt;        0.953        0.739        1.082        1.024        1.142        0.877 
 #&gt; genG07:theta genG08:theta genG09:theta genG10:theta 
-#&gt;        1.089        0.914        1.196        0.947 </div><div class='input'><span class='co'># genG01 genG02 genG03 genG04 genG05 genG06 genG07 genG08 genG09 genG10</span>
-<span class='co'>#  0.953  0.739  1.082  1.024  1.142  0.877 1.089  0.914  1.196  0.947</span>
+#&gt;        1.089        0.914        1.196        0.947 </div><div class='input'>  <span class='co'># genG01 genG02 genG03 genG04 genG05 genG06 genG07 genG08 genG09 genG10</span>
+  <span class='co'>#  0.953  0.739  1.082  1.024  1.142  0.877 1.089  0.914  1.196  0.947</span>
 
-<span class='co'># Env effects. Match Digby table 3, Modified joint reg</span>
-<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='no'>thetas</span>,<span class='fl'>3</span>)+<span class='fl'>1.164</span>-<span class='fl'>.515</span> <span class='co'># Adjust intercept to match</span></div><div class='output co'>#&gt; envE01:beta envE02:beta envE03:beta envE04:beta envE05:beta envE06:beta 
+  <span class='co'># Env effects. Match Digby table 3, Modified joint reg</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='no'>thetas</span>,<span class='fl'>3</span>)+<span class='fl'>1.164</span>-<span class='fl'>.515</span> <span class='co'># Adjust intercept to match</span></div><div class='output co'>#&gt; envE01:beta envE02:beta envE03:beta envE04:beta envE05:beta envE06:beta 
 #&gt;      -0.515      -0.578      -0.990      -1.186       1.811       1.696 
 #&gt; envE07:beta envE08:beta envE09:beta envE10:beta envE11:beta envE12:beta 
 #&gt;      -1.096       0.046       0.057       0.825      -0.576       1.568 
 #&gt; envE13:beta envE14:beta envE15:beta envE16:beta envE17:beta 
-#&gt;      -0.779      -0.692       0.836      -1.080       0.649 </div><div class='input'># envE01 envE02 envE03 envE04 envE05 envE06 envE07 envE08 envE09 envE10
-# -0.515 -0.578 -0.990 -1.186  1.811  1.696 -1.096  0.046  0.057  0.825
-# envE11 envE12 envE13 envE14 envE15 envE16 envE17
-# -0.576  1.568 -0.779 -0.692  0.836 -1.080  0.649
+#&gt;      -0.779      -0.692       0.836      -1.080       0.649 </div><div class='input'>  <span class='co'># envE01 envE02 envE03 envE04 envE05 envE06 envE07 envE08 envE09 envE10</span>
+  <span class='co'># -0.515 -0.578 -0.990 -1.186  1.811  1.696 -1.096  0.046  0.057  0.825</span>
+  <span class='co'># envE11 envE12 envE13 envE14 envE15 envE16 envE17</span>
+  <span class='co'># -0.576  1.568 -0.779 -0.692  0.836 -1.080  0.649</span>
 
-# How to use gnm package for this?
-# libs(gnm)
-# m3 <- gnm(yield ~ gen + Mult(gen,env), data=dat) # slopes negated
+  <span class='co'># Using 'gnm' gives similar results.</span>
+  <span class='co'># libs(gnm)</span>
+  <span class='co'># m3 &lt;- gnm(yield ~ gen + Mult(gen,env), data=dat) # slopes negated</span>
+  <span class='co'># round(coef(m3)[11:20],3)</span>
 
+  <span class='co'># Using 'mumm' gives similar results, though gen is random and the</span>
+  <span class='co'># coeffecients are shrunk toward 0 a bit.</span>
+  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>mumm</span>)</div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Attaching package: 'mumm'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:asreml':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    lrt</span></div><div class='input'>  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>mumm</span>(<span class='no'>yield</span> ~ -<span class='fl'>1</span> + <span class='no'>env</span> + <span class='fu'>mp</span>(<span class='no'>gen</span>, <span class='no'>env</span>), <span class='no'>dat</span>)
+  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fl'>1</span> + <span class='fu'>ranef</span>(<span class='no'>m1</span>)$<span class='no'>`mp gen:env`</span>,<span class='fl'>2</span>)</div><div class='output co'>#&gt; $`mp gen:env`
+#&gt;          G01          G02          G03          G04          G05          G06 
+#&gt; -0.030502997 -0.145460728  0.038892126  0.008834426  0.076630297 -0.058095240 
+#&gt;          G07          G08          G09          G10 
+#&gt;  0.052884673 -0.003004166  0.091762826 -0.031937867 
+#&gt; </div><div class='output co'>#&gt;  G01  G02  G03  G04  G05  G06  G07  G08  G09  G10 
+#&gt; 0.97 0.85 1.04 1.01 1.08 0.94 1.05 1.00 1.09 0.97 </div><div class='input'>  
+# }
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -286,7 +290,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

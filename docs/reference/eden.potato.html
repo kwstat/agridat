@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,14 +45,13 @@
 
 
 
-<meta property="og:title" content="Potato yields in response to potash and nitrogen fertilizer — eden.potato" />
 
+<meta property="og:title" content="Potato yields in response to potash and nitrogen fertilizer — eden.potato" />
 <meta property="og:description" content="Potato yields in response to potash and nitrogen fertilizer.
   Data from Fisher's 1929 paper Studies in Crop Variation 6.
   A different design was used each year." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -63,7 +68,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -106,7 +111,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -114,10 +119,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -141,17 +145,16 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Potato yields in response to potash and nitrogen fertilizer.
   Data from Fisher's 1929 paper <em>Studies in Crop Variation 6</em>.
   A different design was used each year.</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 225 observations on the following 9 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 225 observations on the following 9 variables.</p><dl'>
     <dt><code>year</code></dt><dd><p>year/type factor</p></dd>
     <dt><code>yield</code></dt><dd><p>yield, pounds per plot</p></dd>
     <dt><code>block</code></dt><dd><p>block</p></dd>
@@ -161,9 +164,9 @@
     <dt><code>nitro</code></dt><dd><p>nitrogen fertilizer, cwt/acre</p></dd>
     <dt><code>potash</code></dt><dd><p>potash fertilizer, cwt/acre</p></dd>
     <dt><code>ptype</code></dt><dd><p>potash type</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>The data is of interest to show the gradual development of
@@ -176,14 +179,12 @@
 <p>The 1925/1926b/1927 experiments were RCB designs with treatment codes
   defining the amount and type of fertilizer used.  Note: the 't'
   treatment was not defined in the original paper.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>T Eden and R A Fisher, 1929.
   Studies in Crop Variation. VI. Experiments on the response of the
   potato to potash and nitrogen.
   <em>Journal of Agricultural Science</em>, 19: 201-213.</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>McCullagh, P. and Clifford, D., (2006).
@@ -191,7 +192,6 @@
   <em>Proceedings of the Royal Society A: Mathematical, Physical and
     Engineering Science</em>, 462, 2119--2143.
   http://doi.org/10.1098/rspa.2006.1667</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
@@ -203,7 +203,7 @@
 <span class='co'># 1925 qualitative</span>
 <span class='no'>d5a</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, <span class='no'>year</span><span class='kw'>==</span><span class='st'>'1925a'</span>)
 <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='fu'>desplot</span>(<span class='no'>trt</span>~<span class='no'>col</span>*<span class='no'>row</span>, <span class='no'>d5a</span>,
+<span class='fu'>desplot</span>(<span class='no'>d5a</span>, <span class='no'>trt</span>~<span class='no'>col</span>*<span class='no'>row</span>,
         <span class='kw'>text</span><span class='kw'>=</span><span class='no'>yield</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>1</span>, <span class='kw'>shorten</span><span class='kw'>=</span><span class='st'>'no'</span>, <span class='co'># aspect unknown</span>
         <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"eden.potato: 1925 qualitative"</span>)</div><div class='img'><img src='eden.potato-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m5a</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>(<span class='no'>yield</span>~<span class='no'>trt</span>+<span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>)+<span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>col</span>), <span class='no'>d5a</span>)) <span class='co'># table 2</span></div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
@@ -218,7 +218,7 @@
 <span class='co'># 1926 qualitative</span>
 <span class='no'>d6a</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, <span class='no'>year</span><span class='kw'>==</span><span class='st'>'1926a'</span>)
 <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='fu'>desplot</span>(<span class='no'>trt</span>~<span class='no'>col</span>*<span class='no'>row</span>, <span class='no'>d6a</span>,
+<span class='fu'>desplot</span>(<span class='no'>d6a</span>, <span class='no'>trt</span>~<span class='no'>col</span>*<span class='no'>row</span>,
         <span class='kw'>text</span><span class='kw'>=</span><span class='no'>yield</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>1</span>, <span class='kw'>shorten</span><span class='kw'>=</span><span class='st'>'no'</span>, <span class='co'># aspect unknown</span>
         <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"eden.potato: 1926 qualitative"</span>)</div><div class='img'><img src='eden.potato-2.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m6a</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>(<span class='no'>yield</span>~<span class='no'>trt</span>+<span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>)+<span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>col</span>), <span class='no'>d6a</span>)) <span class='co'># table 4</span></div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
@@ -233,7 +233,7 @@
 <span class='co'># 1925 quantitative</span>
 <span class='no'>d5</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, <span class='no'>year</span><span class='kw'>==</span><span class='st'>'1925b'</span>)
 <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='fu'>desplot</span>(<span class='no'>yield</span> ~ <span class='no'>col</span>*<span class='no'>row</span>, <span class='no'>d5</span>,
+<span class='fu'>desplot</span>(<span class='no'>d5</span>, <span class='no'>yield</span> ~ <span class='no'>col</span>*<span class='no'>row</span>,
         <span class='kw'>out1</span><span class='kw'>=</span><span class='no'>block</span>, <span class='kw'>text</span><span class='kw'>=</span><span class='no'>trt</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>1</span>, <span class='co'># aspect unknown</span>
         <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"eden.potato: 1925 quantitative"</span>)</div><div class='img'><img src='eden.potato-3.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Trt 't' not defined, seems to be the same as 'a'</span>
@@ -252,7 +252,7 @@
 <span class='co'># 1926 quantitative</span>
 <span class='no'>d6</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, <span class='no'>year</span><span class='kw'>==</span><span class='st'>'1926b'</span>)
 <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='fu'>desplot</span>(<span class='no'>yield</span> ~ <span class='no'>col</span>*<span class='no'>row</span>, <span class='no'>d6</span>,
+<span class='fu'>desplot</span>(<span class='no'>d6</span>, <span class='no'>yield</span> ~ <span class='no'>col</span>*<span class='no'>row</span>,
         <span class='kw'>out1</span><span class='kw'>=</span><span class='no'>block</span>, <span class='kw'>text</span><span class='kw'>=</span><span class='no'>trt</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>1</span>, <span class='co'># aspect unknown</span>
         <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"eden.potato: 1926 quantitative"</span>)</div><div class='img'><img src='eden.potato-5.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m6</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>(<span class='no'>yield</span>~<span class='no'>trt</span>+<span class='no'>block</span>, <span class='no'>d6</span>)) <span class='co'># table 7</span></div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
@@ -266,7 +266,7 @@
 <span class='co'># 1927 qualitative + quantitative</span>
 <span class='no'>d7</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/droplevels.html'>droplevels</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, <span class='no'>year</span><span class='kw'>==</span><span class='fl'>1927</span>))
 <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='fu'>desplot</span>(<span class='no'>yield</span> ~ <span class='no'>col</span>*<span class='no'>row</span>, <span class='no'>d7</span>,
+<span class='fu'>desplot</span>(<span class='no'>d7</span>, <span class='no'>yield</span> ~ <span class='no'>col</span>*<span class='no'>row</span>,
         <span class='kw'>out1</span><span class='kw'>=</span><span class='no'>block</span>, <span class='kw'>text</span><span class='kw'>=</span><span class='no'>trt</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>1</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='no'>ptype</span>, <span class='co'># aspect unknown</span>
       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"eden.potato: 1927 qualitative + quantitative"</span>)</div><div class='img'><img src='eden.potato-6.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Table 8.  Anova, mean yield tons / acre</span>
@@ -291,21 +291,10 @@
 #&gt; 4 7.037698      NaN 6.458333 7.348214</div><div class='input'>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -316,7 +305,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
 
       </footer>

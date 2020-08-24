@@ -1,32 +1,33 @@
 
 # agridat 1.17
 
-## Test environments
-
-* local: R 4.0.2 on Windows 10
-* Win-Builder: devtools::check_win_devel()
-* rhub::check_for_cran()
-
-## Check results on Win-Builder
-
-0 errors, 0 warnings, 1 note
-Note: Found the following (possibly) invalid URLs:
-I hand-checked these URLs are valid.
-
-## Check results on Rhub
-
-OK: Windows Server 2008
-
-## CRAN Package check
+## CRAN package status check
 
 https://cran.r-project.org/web/checks/check_results_kw.stat_at_gmail.com.html
 Current CRAN status: ERROR: 1, OK: 11 
 The 1 ERROR is on the r-oldrel-macos-x86_64 platform, caused by a missing "stringi" package.
 
+## Test environments and results
+
+1. local: R 4.0.2 on Windows 10
+
+Status: OK
+
+2. Win-Builder: devtools::check_win_devel()
+
+0 errors, 0 warnings, 1 note
+Note: Found the following (possibly) invalid URLs:
+I hand-checked these URLs are valid.
+
+3. rhub::check_for_cran()
+
+OK: Windows Server 2008
+
 ## Downstream dependencies
 
-devtools::revdep_check() had no failures.
+revdep() # desplot, gge
 
+Checked OK.
 
 
 # agridat 1.16
