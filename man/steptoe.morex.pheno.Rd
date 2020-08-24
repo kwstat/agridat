@@ -174,12 +174,12 @@
   qtl::plotMissing(datg)
   wgaim::linkMap(datg)
   # Create an interval object for wgaim
-  dati <- cross2int(datg, id="gen")
+  dati <- wgaim::cross2int(datg, id="gen")
   
   # Whole genome qtl
-  q1 <- wgaim(m1, intervalObj=dati, merge.by="gen", na.action=na.method(x="include"))
+  q1 <- wgaim::wgaim(m1, intervalObj=dati, merge.by="gen", na.action=na.method(x="include"))
   #wgaim::linkMap(q1, dati) # Visualize
-  outStat(q1, dati) # outlier statistic
+  wgaim::outStat(q1, dati) # outlier statistic
   summary(q1, dati)  # Table of important intervals
   # Chrom Left Marker dist(cM) Right Marker dist(cM)   Size Pvalue % Var
   #     3      ABG399     52.6       BCD828     56.1  0.254  0.000  45.0

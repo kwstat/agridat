@@ -41,31 +41,30 @@
   None  
 }
 \examples{
-
-library(agridat)
-
-data(hanover.whitepine)
-dat <- hanover.whitepine
-
-libs(lattice)
-# Relatively high male-female interaction in growth comared
-# to additive gene action. Response is more consistent within
-# male progeny than female progeny.
-# with(dat, interaction.plot(female, male, length))
-# with(dat, interaction.plot(male, female, length))
-bwplot(length ~ male|female, data=dat,
-       main="hanover.whitepine - length for male:female crosses",
-       xlab="Male parent", ylab="Epicotyl length")
-
-# Progeny sums match Becker p 83
-sum(dat$length) # 380.58
-aggregate(length ~  female + male, data=dat, FUN=sum)
-
-# Sum of squares matches Becker p 85
-m1 <- aov(length ~ rep + male + female + male:female, data=dat)
-anova(m1)
-
 \dontrun{
+  
+  library(agridat)
+  data(hanover.whitepine)
+  dat <- hanover.whitepine
+
+  libs(lattice)
+  # Relatively high male-female interaction in growth comared
+  # to additive gene action. Response is more consistent within
+  # male progeny than female progeny.
+  # with(dat, interaction.plot(female, male, length))
+  # with(dat, interaction.plot(male, female, length))
+  bwplot(length ~ male|female, data=dat,
+         main="hanover.whitepine - length for male:female crosses",
+         xlab="Male parent", ylab="Epicotyl length")
+  
+  # Progeny sums match Becker p 83
+  sum(dat$length) # 380.58
+  aggregate(length ~  female + male, data=dat, FUN=sum)
+  
+  # Sum of squares matches Becker p 85
+  m1 <- aov(length ~ rep + male + female + male:female, data=dat)
+  anova(m1)
+  
   # Variance components match Becker p. 85
   libs(lme4)
   libs(lucid)

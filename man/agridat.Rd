@@ -87,6 +87,8 @@ name                                      \tab dimensions \tab other \tab model 
 \link{moore.springcauliflower.uniformity} \tab 12 x 20 \tab xy \tab \cr
 \link{moore.fallcauliflower.uniformity}   \tab 12 x 20 \tab xy \tab \cr
 \link{nagai.strawberry.uniformity}        \tab 18 x 24 \tab xy \tab \cr
+\link{nagai.strawberry.uniformity}        \tab 18 x 24 \tab xy \tab \cr
+\link{nair.turmeric.uniformity}           \tab 72 x 12 \tab xy \tab \cr
 \link{narain.sorghum.uniformity}          \tab 10 x 16 \tab xy \tab \cr
 \link{nonnecke.peas.uniformity}           \tab 15 x 18 \tab xy, 2 traits \tab \cr
 \link{nonnecke.sweetcorn.uniformity}      \tab 32 x 18 \tab xy, 3 loc \tab \cr
@@ -101,6 +103,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{robinson.peanut.uniformity}         \tab 16 x 36 \tab xy \tab \cr
 \link{sawyer.multi.uniformity}            \tab 8 x 6   \tab xy, 3 year \tab \cr
 \link{sayer.sugarcane.uniformity}         \tab 8 x 136, 8 x 121 \tab xy, 2 year \tab \cr
+\link{shafi.tomato.uniformity}            \tab 10 x 20 \tab xy \tab \cr
 \link{smith.beans.uniformity}             \tab 18 x 12, 16 x 15 \tab xy, 2 yr, 2 crops \tab \cr
 \link{smith.corn.uniformity}              \tab 6 x 20 \tab xy, 3 years \tab rgl \cr
 \link{stephens.sorghum.uniformity}        \tab 100 x 20 \tab xy \tab \cr
@@ -283,6 +286,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{jansen.apple}                \tab 3   \tab    \tab 4   \tab    \tab 3     \tab binomial \tab glmer\cr
 \link{jansen.carrot}               \tab 16  \tab    \tab 3   \tab    \tab 2     \tab binomial \tab glmer\cr
 \link{jansen.strawberry}           \tab 12  \tab    \tab 4   \tab    \tab       \tab ordinal \tab mosaicplot\cr
+\link{jayaraman.bamboo}            \tab 6   \tab 2  \tab 3   \tab    \tab       \tab heritability \tab lmer \cr
 \link{jenkyn.mildew}               \tab     \tab    \tab 9   \tab    \tab 4     \tab \tab lm\cr
 \link{john.alpha}                  \tab 24  \tab    \tab 3   \tab    \tab       \tab alpha \tab lm, lmer \cr
 \link{johnson.blight}              \tab     \tab    \tab     \tab 2  \tab       \tab \tab logistic \cr

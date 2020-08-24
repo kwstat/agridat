@@ -84,7 +84,7 @@
   m1 <- clmm(shape ~ yr + b1 + b2 + b3 + (1|sire), data=dat,
              weights=count, link="probit", Hess=TRUE)
   summary(m1) # Very similar to Gilmour results
-  ranef(m1) # sign is opposite of SAS
+  ordinal::ranef(m1) # sign is opposite of SAS
 
   ## SAS var of sires .04849
   ## Effect 	Shape 	Estimate 	Standard Error 	DF 	t Value 	Pr > |t|
@@ -105,7 +105,7 @@
 
   # Plot random sire effects with intervals, similar to SAS example
   plot.random <- function(model, random.effect, ylim=NULL, xlab="", main="") {
-    tab <- ranef(model)[[random.effect]]
+    tab <- ordinal::ranef(model)[[random.effect]]
     tab <- data.frame(lab=rownames(tab), est=tab$"(Intercept)")
     tab <- transform(tab,
                      lo = est - 1.96 * sqrt(model$condVar),
