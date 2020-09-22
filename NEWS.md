@@ -2,7 +2,7 @@
 
 ## New data
 
-jayaraman.bamboo, nair.turmeric.uniformity, shafi.tomato.uniformity
+damesa.maize, jayaraman.bamboo, nair.turmeric.uniformity, shafi.tomato.uniformity
 
 # agridat 1.17 - Jul 2020
 

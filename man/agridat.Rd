@@ -227,6 +227,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{crowder.seeds}               \tab 2   \tab    \tab 21  \tab    \tab 2     \tab \tab glm,INLA,jags \cr
 \link{cox.stripsplit}              \tab     \tab    \tab  4  \tab    \tab 3,4,2 \tab split-block \tab aov \cr
 \link{cullis.earlygen}             \tab 532 \tab    \tab     \tab    \tab       \tab xy \tab asreml \cr
+\link{damesa.maize}                \tab 22  \tab 4  \tab 3   \tab    \tab       \tab xy,incblock,twostage \tab asreml \cr
 \link{dasilva.maize}               \tab 55  \tab 9  \tab 3   \tab    \tab       \tab \tab \cr
 \link{darwin.maize}                \tab     \tab    \tab 12  \tab    \tab 2     \tab \tab t.test \cr
 \link{davidian.soybean}            \tab 2   \tab    \tab     \tab 3  \tab       \tab \tab nlme \cr

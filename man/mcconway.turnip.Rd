@@ -33,8 +33,8 @@
 }
 
 \source{
-  Statistical Modelling Using Genstat, K. J. McConway, M. C. Jones,
-  P. C. Taylor.
+  K. J. McConway, M. C. Jones, P. C. Taylor.
+  Statistical Modelling Using Genstat.
 }
 
 \references{
@@ -51,6 +51,7 @@
   Data transformation in statistical analysis of field trials
   with changing treatment variance.
   Agronomy Journal, 101, 865--869.
+  https://doi.org/10.2134/agronj2008.0226x
 }
 
 \examples{
