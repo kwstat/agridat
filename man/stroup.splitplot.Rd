@@ -10,7 +10,7 @@
   space, narrow space, etc.).
 
   For example, the density of narrow, intermediate and broad-space
-  predictible function for factor level A1 is shown below (html help only)
+  predictable function for factor level A1 is shown below (html help only)
   \if{html}{\figure{stroupsplitplot.png}{options: width=50\% alt="Figure: stroup.splitplot.png"}}
 
 }

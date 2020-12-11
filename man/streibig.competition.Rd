@@ -42,7 +42,8 @@
 }
 
 \examples{
-
+\dontrun{
+  
 library(agridat)
 
 data(streibig.competition)
@@ -72,5 +73,6 @@ for(bb in 1:3){
   lines(pred~x, data=newbb, col=bb)
 }
 
+}
 }
 \keyword{datasets}

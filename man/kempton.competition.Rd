@@ -33,7 +33,8 @@
 }
 
 \examples{
-
+\dontrun{
+  
 library(agridat)
 
 data(kempton.competition)
@@ -58,4 +59,4 @@ round(fixef(m1),2)
 plot(m1, main="kempton.competition")
 
 }
-
+}

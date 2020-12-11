@@ -33,7 +33,7 @@
   Planted in 1930.  Field conditions were uniform.  Beets were planted
   in rows 22 inches apart.  After thinning, one beet was left in each
   12-inch unit.  At harvest, the field was marked out in plot 33 feet
-  long, with a 2-foot alley between plots to minimize carrover from the
+  long, with a 2-foot alley between plots to minimize carryover from the
   harvester.  A sample of 10 beets was taken uniformly (approximately
   every third beet) and measured for sugar percentage and apparent
   purity.  The beets were counted at weighing time and the yields were

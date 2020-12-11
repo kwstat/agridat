@@ -21,7 +21,7 @@
   This data was used in a very early example of a permutation test.
   
   Eden & Yates used this data to consider the impact of non-normal data
-  on the validitiy of a hypothesis test that assumes normality.  They
+  on the validity of a hypothesis test that assumes normality.  They
   concluded that the skew data did not negatively affect the analysis of
   variance.
 

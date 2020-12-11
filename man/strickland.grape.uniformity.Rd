@@ -19,7 +19,7 @@
 \details{
   Yields of individual grape vines, planted 8 feet apart in rows 10 feet
   apart.
-  Grown in Rutherglen, North-East Victoria, Australiaj, 1930.
+  Grown in Rutherglen, North-East Victoria, Australia, 1930.
 
   Certain sections were omitted because of missing vines.
 }

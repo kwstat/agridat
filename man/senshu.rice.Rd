@@ -39,7 +39,8 @@
 }
 
 \examples{
-
+\dontrun{
+  
 library(agridat)
 
 data(senshu.rice)
@@ -71,5 +72,6 @@ main="senshu.rice: Quadratic fit and Fieller confidence interval",
      xlab="Minimum temperature", ylab="Yield")
 lines(17:32, predict(m2, new=data.frame(mint=17:32)))
 abline(v=ci, col="blue")
+}
 }
 \keyword{datasets}

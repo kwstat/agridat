@@ -426,7 +426,7 @@ mapplot(stco ~ crop.rate + animal.rate, data = dat,
 }
 ```
 
-Because counties are different sizes, the second graphic uses an income rate per square mile.  Because of the outlier, it might be smart to use percentile break points, but doing so hides the outlier.  Instead, the break points are calulated using a method called Fisher-Jenks.  These break points show both the outlier and the spatial patterns.  It is now easy to see that northwest (Sandhills) Nebraska has low farming income, especially for crops.  Counties with missing data are white, which is easily distinguished from gray.
+Because counties are different sizes, the second graphic uses an income rate per square mile.  Because of the outlier, it might be smart to use percentile break points, but doing so hides the outlier.  Instead, the break points are calculated using a method called Fisher-Jenks.  These break points show both the outlier and the spatial patterns.  It is now easy to see that northwest (Sandhills) Nebraska has low farming income, especially for crops.  Counties with missing data are white, which is easily distinguished from gray.
 
 Where are farm incomes highest?  Why?
 

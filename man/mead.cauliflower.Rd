@@ -33,7 +33,7 @@
 }
 \references{
   Mick O'Neill. Regression & Generalized Linear (Mixed) Models.
-  STatistical Advisory & Training Service Pty Ltd.
+  Statistical Advisory & Training Service Pty Ltd.
 }
 
 \examples{
