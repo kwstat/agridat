@@ -29,7 +29,7 @@
   Littel et al are given in meters and make the orientation clear.
 
   Field length: 11 plots * 4.3 m = 47.3 m
-  
+
   Field width: 22 plots * 1.2 m = 26.4 m
 
   All plots with missing data are coded as being gen = "Lancer".
@@ -68,7 +68,7 @@
   Note that the figures in Stroup 2002 claim to be based on this data,
   but the number of rows and columns are both off by 1 and the positions
   of Buckskin as shown in Stroup 2002 do not appear to be quite right.
-  
+
 }
 
 \source{
@@ -95,7 +95,7 @@
   Variability. \emph{Journal of Agricultural, Biological, and
     Environmental Statistics}, 7(4), 491-511.
   http://doi.org/10.1198/108571102780
-  
+
 }
 
 \seealso{
@@ -105,58 +105,57 @@
 
 \examples{
 \dontrun{
-  
+
   library(agridat)
   data(stroup.nin)
   dat <- stroup.nin
-  
-  # Experiment layout. All "Buckskin" plots are near left side
+
+  # Experiment layout. All "Buckskin" plots are near left side and suffer
+  # from poor fertility in two of the reps.
   libs(desplot)
   desplot(dat, yield~col*row,
           aspect=47.3/26.4, out1="rep", num=gen, cex=0.6, # true aspect
           main="stroup.nin - yield heatmap (true shape)")
 
+  # Dataframe to hold model predictions
+  preds <- data.frame(gen=levels(dat$gen))
 
-  # ----- nlme -----
-  
+
+  # -----
+  # nlme
   libs(nlme)
   # Random RCB model
   lme1 <- lme(yield ~ 0 + gen, random=~1|rep, data=dat, na.action=na.omit)
-  
+  preds$lme1 <- fixef(lme1)
+
   # Linear (Manhattan distance) correlation model
   lme2 <- gls(yield ~ 0 + gen, data=dat,
               correlation = corLin(form = ~ col + row, nugget=TRUE),
               na.action=na.omit)
-  
+  preds$lme2 <- coef(lme2)
+
   # Random block and spatial correlation.
   # Note: corExp and corSpher give nearly identical results
   lme3 <- lme(yield ~ 0 + gen, data=dat,
               random = ~ 1 | rep,
               correlation = corExp(form = ~ col + row),
               na.action=na.omit)
-  
-  AIC(lme1,lme2,lme3) # lme2 is lowest
+  preds$lme3 <- fixef(lme3)
+
+  # AIC(lme1,lme2,lme3) # lme2 is lowest
   ##      df      AIC
   ## lme1 58 1333.702
   ## lme2 59 1189.135
   ## lme3 59 1216.704
-  
-  # Compare the estimates from the two methods
-  eff = data.frame(ranblock=fixef(lme1), corLin = coef(lme2),
-                   corExp = fixef(lme3))
-  rownames(eff) <- gsub("gen", "", rownames(eff))
-  plot(eff$ranblock, eff$corLin, xlim=c(13,37), ylim=c(13,37),
-       main="stroup.nin - Gen estimates (intercepts differ)",
-       xlab="RCB (random block)", ylab="corLin",type='n')
-  text(eff$ranblock, eff$corLin, rownames(eff), cex=0.5)
-  abline(0,1)
 
-  # -----------
 
+  # -----
+  # SpATS
   libs(SpATS)
-    
+
   dat <- transform(dat, yf = as.factor(row), xf = as.factor(col))
-  
+
+  # what are colcode and rowcode???
   sp1 <- SpATS(response = "yield",
                spatial = ~ SAP(col, row, nseg = c(10,20), degree = 3, pord = 2),
                genotype = "gen",
@@ -164,90 +163,65 @@
                random = ~ yf + xf,
                data = dat,
                control = list(tolerance = 1e-03))
-  plot(sp1)
-  
-  eff <- cbind(eff, spats=predict(sp1, which="gen")$predicted.values)
-  plot(eff$ranblock, eff$spats, xlim=c(13,37), ylim=c(13,37),
-       main="stroup.nin - Gen estimates",
-       xlab="RCB (random block)", ylab="SpATS",type='n')
-  text(eff$ranblock, eff$spats, rownames(eff), cex=0.5)
-  abline(0,1)
+  #plot(sp1)
+  preds$spats <- predict(sp1, which="gen")$predicted.value
 
 
-  # ----------------------------------------------------------------------------
-  # TMB = Template Model Builder could do this.  See the ar1xar1 example:
+  # -----
+  # Template Model Builder
+  # See the ar1xar1 example:
   # https://github.com/kaskr/adcomp/tree/master/TMB/inst/examples
   # This example uses dpois() in the cpp file to model a Poisson response
   # with separable AR1xAR1.  I think this example could be used for the
   # stroup.nin data, changing dpois() to something Normal.
-  # ----------------------------------------------------------------------------
 
 
+  # -----
+  # asreml4
   libs(asreml,lucid)
-  if( utils::packageVersion("asreml") < "4") {
-    # asreml3
-    
-    # RCB analysis
-    dat.rcb <- asreml(yield ~ gen, random = ~ rep, data=dat,
-                      na.method.X="omit")
-    pred.rcb <- predict(dat.rcb, data=dat, classify="gen")$predictions
-    
-    # Two-dimensional AR1xAR1 spatial model
-    dat <- transform(dat, xf=factor(col), yf=factor(row))
-    dat <- dat[order(dat$xf, dat$yf),]
-    dat.sp <- asreml(yield~gen, data=dat,
-                     rcov=~ar1(xf):ar1(yf),
-                     na.method.X='ignore')
-    pred.sp <- predict(dat.sp, data=dat, classify="gen")$predictions
 
-    # lucid::vc(dat.sp)
-    ##     effect component std.error z.ratio constr
-    ## R!variance   48.7      7.155       6.8    pos
-    ##   R!xf.cor    0.6555   0.05638    12      unc
-    ##   R!yf.cor    0.4375   0.0806      5.4    unc
+  # RCB analysis
+  as1 <- asreml(yield ~ gen, random = ~ rep, data=dat,
+                na.action=na.method(x="omit"))
+  preds$asreml1 <- predict(as1, data=dat, classify="gen")$pvals$predicted.value
 
-    # Compare the estimates from the two methods
-    plot(pred.rcb$pvals[,2], pred.sp$pvals[,2], xlim=c(13,37), ylim=c(13,37),
-         xlab="RCB",ylab="AR1xAR1",type='n')
-    title("stroup.nin: Comparison of predicted values")
-    text(pred.rcb$pvals[,2],pred.sp$pvals[,2],
-         as.character(pred.rcb$pvals[,1]),cex=0.5)
-    abline(0,1) 
-  }
+  # Two-dimensional AR1xAR1 spatial model
+  dat <- transform(dat, xf=factor(col), yf=factor(row))
+  dat <- dat[order(dat$xf, dat$yf),]
+  as2 <- asreml(yield~gen, data=dat,
+                residual = ~ar1(xf):ar1(yf),
+                na.action=na.method(x="omit"))
+  preds$asreml2 <- predict(as2, data=dat, classify="gen")$pvals$predicted.value
 
-  # ----------
+  lucid::vc(as2)
+  ##     effect component std.error z.ratio constr
+  ## R!variance   48.7      7.155       6.8    pos
+  ##   R!xf.cor    0.6555   0.05638    12      unc
+  ##   R!yf.cor    0.4375   0.0806      5.4    unc
 
-  libs(asreml,lucid)
-  if( utils::packageVersion("asreml") > "4") {
-    # asreml4
-
-    # RCB analysis
-    dat.rcb <- asreml(yield ~ gen, random = ~ rep, data=dat,
-                      na.action=na.method(x="omit"))
-    pred.rcb <- predict(dat.rcb, data=dat, classify="gen")
-    
-    # Two-dimensional AR1xAR1 spatial model
-    dat <- transform(dat, xf=factor(col), yf=factor(row))
-    dat <- dat[order(dat$xf, dat$yf),]
-    dat.sp <- asreml(yield~gen, data=dat,
-                     residual = ~ar1(xf):ar1(yf),
-                     na.action=na.method(x="omit"))
-    pred.sp <- predict(dat.sp, data=dat, classify="gen")
-
-    lucid::vc(dat.sp)
-    ##     effect component std.error z.ratio constr
-    ## R!variance   48.7      7.155       6.8    pos
-    ##   R!xf.cor    0.6555   0.05638    12      unc
-    ##   R!yf.cor    0.4375   0.0806      5.4    unc
-
-    # Compare the estimates from the two methods
-    plot(pred.rcb$pvals[,2], pred.sp$pvals[,2], xlim=c(13,37), ylim=c(13,37),
-         xlab="RCB", ylab="AR1xAR1", type='n')
+  # Compare the estimates from the two asreml models.
+  # We see that Buckskin has correctly been shifted upward by the spatial model
+  plot(preds$as1, preds$as2, xlim=c(13,37), ylim=c(13,37),
+       xlab="RCB", ylab="AR1xAR1", type='n')
   title("stroup.nin: Comparison of predicted values")
-  text(pred.rcb$pvals[,2],pred.sp$pvals[,2],
-       as.character(pred.rcb$pvals[,1]),cex=0.5)
-  abline(0,1)  
-}
+  text(preds$asreml1, preds$asreml2, preds$gen, cex=0.5)
+  abline(0,1)
+
+
+  # -----
+  # sommer
+  # Fixed gen, random row, col, 2D spline
+  libs(sommer)
+  dat <- transform(dat, yf = as.factor(row), xf = as.factor(col))
+  so1 <- mmer(yield ~ 0+gen,
+              random = ~ vs(xf) + vs(yf) + vs(spl2D(row,col)),
+              data=dat)
+  preds$so1 <- coef(so1)[,"Estimate"]
+  # spatPlot
+
+  # -----
+  # compare variety effects from different packages
+  lattice::splom(preds[,-1], main="stroup.nin")
 
 }
 }

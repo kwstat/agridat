@@ -18,9 +18,9 @@
 }
 \details{
 
-  Twelve hybrids were selfed/crossed in a half-diallel design planted in
-  3 reps at 2 locations in 2 years.  The data here are means adjusted
-  for block effects.
+  Twelve hybrids were selfed/crossed in a half-diallel design.
+  The data here are means adjusted for block effects.
+  Original experiment was 3 reps at 2 locations in 2 years.  
 
 }
 
@@ -28,7 +28,7 @@
   J. H. Lonnquist, C. O. Gardner. (1961)
   Heterosis in Intervarietal Crosses in Maize and Its Implication in
   Breeding Procedures.
-  \emph{Crop Science}, 1, 179-183.  Table 1.
+  Crop Science, 1, 179-183.  Table 1.
 }
 
 \references{
@@ -73,7 +73,7 @@
 
   # ----------
 
-  # asreml3 & asreml4
+  # asreml4
   # Mohring 2011 used 6 varieties to calculate GCA & SCA
   # Matches Table 3, column 2
   d2 <- subset(dat, is.element(p1, c("M","H","G","B","K","K2")) &

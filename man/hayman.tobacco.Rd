@@ -63,6 +63,11 @@
   C. Clark Cockerham and B. S. Weir. (1977).
   Quadratic analyses of reciprocal crosses.
   \emph{Biometrics} 33, 187-203.  Appendix C.
+
+  Andrea Onofri, Niccolo Terzaroli, Luigi Russi (2020).
+  Linear models for diallel crosses: A review with R functions.
+  Theoretical and Applied Genetics.
+  https://doi.org/10.1007/s00122-020-03716-8
 }
 
 \examples{
@@ -73,11 +78,26 @@
   # 1951 data.  Fit the first REML model of Mohring 2011 Supplement.  
   data(hayman.tobacco)
   dat1 <- subset(hayman.tobacco, year==1951)
+
+  # libs(lmDiallel)
+  # m1  <- lm.diallel(day ~ male+female, Block=block, data=dat1, fct="HAYMAN2")
+  # anova(m1) # Similar to table 7 of Hayman 1954a
+  ## Response: day
+  ##                Df  Sum Sq Mean Sq F value    Pr(>F)    
+  ## Block           1    1.42    1.42  0.3416   0.56100    
+  ## Mean Dom. Dev.  1  307.97  307.97 73.8840 3.259e-12 ***
+  ## GCA             7 2777.17  396.74 95.1805 < 2.2e-16 ***
+  ## Dom. Dev.       7  341.53   48.79 11.7050 1.957e-09 ***
+  ## SCA            20  372.89   18.64  4.4729 2.560e-06 ***
+  ## RGCA            7   67.39    9.63  2.3097   0.03671 *  
+  ## RSCA           21  123.73    5.89  1.4135   0.14668    
+  ## Residuals      63  262.60                              
   
   # Make a factor 'comb' in which G1xG2 is the same cross as G2xG1
-  dat1 <- transform(dat1, comb =
-                            ifelse(as.character(male) < as.character(female),
-                                   paste0(male,female), paste0(female,male)))
+  dat1 <- transform(dat1,
+                    comb =
+                      ifelse(as.character(male) < as.character(female),
+                             paste0(male,female), paste0(female,male)))
   # 'dr' is the direction of the cross, 0 for self
   dat1$dr <- 1
   dat1 <- transform(dat1,

@@ -48,7 +48,8 @@
   http://lib.dr.iastate.edu/ag_researchbulletins/22/
 }
 \examples{
-
+\dontrun{
+  
 library(agridat)
 
 data(brandt.switchback)
@@ -71,5 +72,6 @@ xyplot(yield~period|group, data=dat, group=cow, type=c('l','r'),
 m1 <- aov(yield~period+group+cow:group+period:group, data=dat)
 anova(m1)
 
+}
 }
 \keyword{datasets}

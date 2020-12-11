@@ -1,5 +1,5 @@
 # 0_template.R
-# Time-stamp: <14 Jul 2020 22:12:36 c:/x/rpack/agridat/data-raw/piepho.barley.R>
+# Time-stamp: <08 Oct 2020 17:37:57 c:/x/rpack/agridat/data-raw/piepho.barley.R>
 
 A uniformity trial was performed with spring barley at the research farm Ihinger Hof (University of Hohenheim, Germany) in 2007. 
 
@@ -18,7 +18,7 @@ piepho.barley.uniformity <- dat
 
 dat <- piepho.barley.uniformity
 libs(desplot)
-desplot(yield ~ col*row, dat,
+desplot(dat, yield ~ col*row,
         tick=TRUE, aspect=(36*
         main="piepho.barley.uniformity.csv")
 

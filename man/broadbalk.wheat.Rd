@@ -66,7 +66,8 @@
   http://www.era.rothamsted.ac.uk/index.php?area=home&page=index&dataset=4
 }
 \examples{
-
+\dontrun{
+  
 library(agridat)
 data(broadbalk.wheat)
 dat <- broadbalk.wheat
@@ -81,5 +82,6 @@ xyplot(grain~year|plot, dat, type=c('p','smooth'), as.table=TRUE,
 redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
 levelplot(grain~year*plot, dat, main="broadbalk.wheat: Grain", col.regions=redblue)
 
+}
 }
 \keyword{datasets}

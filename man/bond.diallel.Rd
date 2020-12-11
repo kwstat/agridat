@@ -25,8 +25,8 @@
   }
 }
 \details{
-  Yield in grams/plot for diallel crosses between inbred lines of winter
-  beans.  Values are means over two years.
+  Yield in grams/plot for full diallel cross between 6 inbred lines
+  of winter beans.  Values are means over two years.
 }
 \source{
   D. A. Bond (1966). Yield and components of yield in diallel crosses
@@ -38,17 +38,34 @@
   Peter John, \emph{Statistical Design and Analysis of Experiments}, p. 85.
 }
 \examples{
+\dontrun{
+  
+  library(agridat)
+  data(bond.diallel)
+  dat <- bond.diallel
+  
+  # Because these data are means, we will not be able to reproduce
+  # the anova table in Bond. More useful as a multivariate example.
 
-data(bond.diallel)
-dat <- bond.diallel
+  libs(corrgram)
+  corrgram(dat[ , 3:11], main="bond.diallel",
+           lower=panel.pts)
 
-libs(lattice)
-splom(dat[,3:11], main="bond.diallel")
+  # Multivariate example from sommer package
+  corrgram(dat[,c("stems","pods","seeds")],
+           lower=panel.pts, upper=panel.conf, main="bond.diallel")
+  libs(sommer)           
+  
+  m1 <- mmer(cbind(stems,pods,seeds) ~ 1,
+             random= ~ vs(female)+vs(male),
+             rcov= ~ vs(units),
+             dat)
 
-# Needs an example.  Bond says yield heterosis of F1 hybrids over parent
-# means is 22.56, but I cannot match.
+  #### genetic variance covariance
+  cov2cor(m1$sigma$`u:female`)
+  cov2cor(m1$sigma$`u:male`)
+  cov2cor(m1$sigma$`u:units`)
 
-# See man page for FDdata in R package sommer
-
+}
 }
 \keyword{datasets}

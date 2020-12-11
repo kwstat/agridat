@@ -39,7 +39,12 @@
   Journal of Agric Biological and Envir Stats, 8, 48-66.
   http://doi.org/10.1198/1085711031265
 }
-
+\references{
+  Edmondson, Rodney (2020).
+  Multi-level Block Designs for Comparative Experiments.
+  J of Agric, Biol, and Env Stats.
+  https://doi.org/10.1007/s13253-020-00416-0
+}
 \examples{
 \dontrun{
 

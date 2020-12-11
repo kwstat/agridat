@@ -30,8 +30,8 @@ Table 58.1: agridat::caribbean.maize
 ```
 
 ### D. Bayisa (2010). _Application of Spatial Mixed Model in Agricultural Field Experiment_.
-Master thesis. Department of Statistics, Addis Ababa University.
 
+Master thesis. Department of Statistics, Addis Ababa University.
 One dataset from wheat, RCB, with field coordinates.
 
 
@@ -50,6 +50,7 @@ One dataset from wheat, RCB, with field coordinates.
 201 rice variety balanced lattice, 80 obs
 279 maize covariate, yield & plant count, 4 rep, 32 obs
 ```
+
 
 ### Peter Diggle, Patrick Heagerty, Kung-Yee Liang, Scott Zeger. _Analysis of Longitudinal Data_.
 http://faculty.washington.edu/heagerty/Books/AnalysisLongitudinal/datasets.html
@@ -110,7 +111,7 @@ https://archive.org/details/investigationbye0000heat
 
 ### Kwanchai A. Gomez & Gomez (1984). _Statistical Procedures for Agricultural Research_.
 
-Extensive collection of datasets from rice experiments.
+Extensive collection of datasets from rice experiments. Many added to agridat.
 
 
 ### Cyril H. Goulden, _Methods of Statistical Analysis_.
@@ -325,7 +326,7 @@ https://archive.org/details/in.ernet.dli.2015.176662
 
 ### Oliver Schabenberger and Francis J. Pierce. _Contemporary Statistical Models for the Plant and Soil Sciences_.
 
-Many datasets
+Many datasets. Some added to agridat.
 
 
 ### S. J. Welham et al. (2015). _Statistical Methods In Biology_.
@@ -334,6 +335,7 @@ The online-supplements contain many small datasets for the examples and exercise
 
 
 ### Pesticides in the Nation's Streams and Ground Water, 1992-2001
+
 Extensive data for detection of pesticides in water samples.  See Appendix 5 and Appendix 6 of the supporting info.
 https://water.usgs.gov/nawqa/pnsp/pubs/circ1291/supporting_info.php
 
@@ -345,10 +347,10 @@ https://water.usgs.gov/nawqa/pnsp/pubs/circ1291/supporting_info.php
 https://data.nal.usda.gov/about-ag-data-commons
 https://data.nal.usda.gov/search/type/dataset
 
+
 ### CyVerse Data Commons
 
 http://datacommons.cyverse.org/
-
 http://datacommons.cyverse.org/browse/iplant/home/shared/commons_repo/curated
 
 
@@ -656,6 +658,11 @@ Data `sbGeneal` contains a soybean pedigree with 230 varieties.
 
 Data `gRbase::carcass`: thickness of meat and fat on slaughter pigs
 
+
+### lmDiallel
+https://github.com/OnofriAndreaPG/lmDiallel/tree/master/data
+
+
 ### lmtest
 
 Data `lmtest::ChickEgg` time series of annual chicken and egg production in the United States 1930-1983.
@@ -667,10 +674,10 @@ Data `Atra` and `Recon` contain measurements of Atrazine in water samples.
 
 
 ### nlraa
-http://r-forge.r-project.org/R/?group_id=1599
 
 Miguez. Non-linear models in agriculture.
 `nlraa::sm` = `agridat::miguez.biomass`
+Vignettes and functions for working with (non)linear mixed models
 
    
 ### nlme
@@ -712,14 +719,27 @@ Soil database interface.
 
 Data: h2. Modest-sized GxE experiment in potato Data: cornHybrid. Yield/PLTHT for 100 hybrids from 20 inbred * 20 inbred, 4 locs. Phenotype and relationship matrix.
 
-Data: wheatLines  CIMMYT wheat data for 599 lines. Phenotype and relationship data.
+Data: 
+```
+data(DT_wheat) #  CIMMYT wheat data
+DT_wheat # 599 varieties, yield in 4 envts
+GT_wheat # 599 varieties, 1279 markers coded -1,1
+```
 
 Data: RICE
 
 Data: FDdata taken from agridat::bond.diallel
 
-Data: Technow_data. AF=Additive Flint. AD=Additive Dent. MF=Marker Flint. MD=Marker Dent. pheno=phenotype data for 1254 hybrids (GY=yield, GM=moisture).  This data is from Technow et al:
-http://www.genetics.org/content/197/4/1343.supplemental
+Data:
+```
+data(DT_technow) # From http://www.genetics.org/content/197/4/1343.supplemental
+DT <- DT_technow  # 1254 hybs, parents, GY=yield, GM=moisture
+Md <- Md_technow  # 123 dent parents, 35478 markers
+Mf <- Mf_technow  # 86 flint parents, 37478 markers
+Ad <- Ad_technow  # 123 x 123 A matrix 
+Af <- Af_technow  # 86 x 85 A matrix
+```
+
 
 
 ### SoyNAM - Soybean nested association mapping 

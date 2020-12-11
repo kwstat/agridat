@@ -45,15 +45,17 @@ Field length: 4 blocks of 40 feet + 3 alleys of 20 feet = 220 feet.
   None
 }
 \examples{
+\dontrun{
+  
+  library(agridat)
+  data(baker.wheat.uniformity)
+  dat <- baker.wheat.uniformity
 
-library(agridat)
-data(baker.wheat.uniformity)
-dat <- baker.wheat.uniformity
+  libs(desplot)
+  desplot(dat, yield ~ col*row,
+          flip=TRUE, aspect=1,
+          main="baker.wheat.uniformity")
 
-libs(desplot)
-desplot(dat, yield ~ col*row,
-        flip=TRUE, aspect=1,
-        main="baker.wheat.uniformity")
-
+}
 }
 \keyword{datasets}

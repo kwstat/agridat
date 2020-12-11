@@ -17,16 +17,15 @@
   }
 }
 \details{
-    Uniformity trial of barley at Ihinger Hof farm, conducted by the
+  Uniformity trial of barley at Ihinger Hof farm, conducted by the
   University of Hohenheim, Germany, in 2007.
   
-  Note: The paper by Piepho says
-  "The trial had 30 rows and 36 columns. Plot widths were 1.90 m along rows and 3.73 m along columns."
+  Note: The paper by Piepho says "The trial had 30 rows and 36
+  columns. Plot widths were 1.90 m along rows and 3.73 m along columns."
   However, the SAS code supplement to the paper, called
   "PBR_1654_sm_example1.sas", has row=1-36, col=1-30.  We cannot
   determine which dimension is "row" and which is "column", and
   therefore cannot determine the actual dimensions of the field.
-
 }
 \source{
   H. P. Piepho & E. R. Williams (2010).
@@ -46,17 +45,20 @@
           tick=TRUE, # aspect unknown
           main="piepho.barley.uniformity.csv")
 
-  # Piepho AR1xAR1 model (in random term, NOT residual)
-  libs(asreml)
+  libs(asreml,dplyr)
   dat <- mutate(dat, x=factor(col), y=factor(row))
   dat <- arrange(dat, x, y)
+  
+  # Piepho AR1xAR1 model (in random term, NOT residual)
   m1 <- asreml(data=dat,
                yield ~ 1, 
                random = ~ x + y + ar1(x):ar1(y), 
                residual = ~  units,
                na.action=na.method(x="keep") )
   m1 <- update(m1)
-  # Match Piepho: .9671, .9705 for col,row correlation
+  # Match Piepho table 3, footnote 4: .9671, .9705 for col,row correlation
+  # Note these parameters are basically at the boundary of the parameter
+  # space. Questionable fit.
   libs(lucid)
   lucid::vc(m1) 
 }

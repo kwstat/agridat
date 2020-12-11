@@ -46,25 +46,27 @@
   Agricultural Research Service Special Report 502.
 }
 \examples{
+\dontrun{
+  
+  library(agridat)
+  
+  data(ars.earlywhitecorn96)
+  dat <- ars.earlywhitecorn96
 
-library(agridat)
-
-data(ars.earlywhitecorn96)
-dat <- ars.earlywhitecorn96
-
-libs(lattice)
-# These views emphasize differences between locations
-dotplot(gen~yield, dat, group=loc, auto.key=list(columns=3),
+  libs(lattice)
+  # These views emphasize differences between locations
+  dotplot(gen~yield, dat, group=loc, auto.key=list(columns=3),
+          main="ars.earlywhitecorn96")
+  ## dotplot(gen~stalklodge, dat, group=loc, auto.key=list(columns=3),
+  ##         main="ars.earlywhitecorn96")
+  splom(~dat[,3:9], group=dat$loc, auto.key=list(columns=3),
         main="ars.earlywhitecorn96")
-## dotplot(gen~stalklodge, dat, group=loc, auto.key=list(columns=3),
-##         main="ars.earlywhitecorn96")
-splom(~dat[,3:9], group=dat$loc, auto.key=list(columns=3),
-      main="ars.earlywhitecorn96")
-
-# MANOVA
-m1 <- manova(cbind(yield,earht,moisture) ~ gen + loc, dat)
-m1
-summary(m1)
-
+  
+  # MANOVA
+  m1 <- manova(cbind(yield,earht,moisture) ~ gen + loc, dat)
+  m1
+  summary(m1)
+  
+}
 }
 \keyword{datasets}

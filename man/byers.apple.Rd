@@ -37,7 +37,7 @@
 }
 
 \examples{
-
+  
 library(agridat)
 
 data(byers.apple)
