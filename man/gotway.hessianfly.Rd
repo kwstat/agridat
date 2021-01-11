@@ -30,10 +30,10 @@
   \emph{Journal of Agricultural, Biological, and Environmental
     Statistics}, 2, 157-178.
 
-  http://doi.org/10.2307/1400401
+  https://doi.org/10.2307/1400401
 }
 \references{
-  The GLIMMIX procedure. http://www.ats.ucla.edu/stat/SAS/glimmix.pdf
+  The GLIMMIX procedure. https://www.ats.ucla.edu/stat/SAS/glimmix.pdf
 }
 \examples{
 \dontrun{
@@ -43,10 +43,11 @@
   dat <- gotway.hessianfly
   
   dat$prop <- dat$y / dat$n
+  
   libs(desplot)
   desplot(dat, prop~long*lat,
           aspect=1, # true aspect
-          out1=block, text=gen, cex=1, shorten='no',
+          out1=block, num=gen, cex=.75,
           main="gotway.hessianfly")
   
 
@@ -58,7 +59,9 @@
              data=dat, family=binomial(), ranPars=list(nu=0.5, rho=1/.7))
   summary(m1)
   fixef(m1)
-  filled.mapMM(m1)
+  # The following line fails with "Invalid graphics state"
+  # when trying to use pkgdown::build_site
+  # filled.mapMM(m1)
 
   # ----------------------------------------------------------------------------
 

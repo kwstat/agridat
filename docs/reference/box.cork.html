@@ -81,7 +81,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -152,7 +152,7 @@
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>Data frame with 28 observations on the following 5 variables.</p><dl'>
+    <p>Data frame with 28 observations on the following 5 variables.</p><dl>
     <dt><code>tree</code></dt><dd><p>tree number</p></dd>
     <dt><code>dir</code></dt><dd><p>direction N,E,S,W</p></dd>
     <dt><code>y</code></dt><dd><p>weight of cork deposit (centigrams), north direction</p></dd>
@@ -166,7 +166,7 @@
 <p>C.R. Rao (1948).
   Tests of significance in multivariate analysis. 
   <em>Biometrika</em>, 35, 58-79.
-  http://doi.org/10.2307/2332629</p>
+  https://doi.org/10.2307/2332629</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     
@@ -181,50 +181,54 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>box.cork</span>)
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>box.cork</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>box.cork</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>box.cork</span>
 
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>reshape2</span>, <span class='no'>lattice</span>)
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>acast</span>(<span class='no'>dat</span>, <span class='no'>tree</span> ~ <span class='no'>dir</span>, <span class='kw'>value.var</span><span class='kw'>=</span><span class='st'>'y'</span>)
-  <span class='fu'>splom</span>(<span class='no'>dat2</span>, <span class='kw'>pscales</span><span class='kw'>=</span><span class='fl'>3</span>,
-        <span class='kw'>prepanel.limits</span> <span class='kw'>=</span> <span class='kw'>function</span>(<span class='no'>x</span>) <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>25</span>,<span class='fl'>100</span>),
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"box.cork"</span>, <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Cork yield on side of tree"</span>,
-        <span class='kw'>panel</span><span class='kw'>=</span><span class='kw'>function</span>(<span class='no'>x</span>,<span class='no'>y</span>,<span class='no'>...</span>){
-          <span class='fu'>panel.splom</span>(<span class='no'>x</span>,<span class='no'>y</span>,<span class='no'>...</span>)
-          <span class='fu'>panel.abline</span>(<span class='fl'>0</span>,<span class='fl'>1</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"gray80"</span>)
-        })</div><div class='img'><img src='box.cork-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>reshape2</span>, <span class='va'>lattice</span><span class='op'>)</span>
+  <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>acast</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>tree</span> <span class='op'>~</span> <span class='va'>dir</span>, value.var<span class='op'>=</span><span class='st'>'y'</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/splom.html'>splom</a></span><span class='op'>(</span><span class='va'>dat2</span>, pscales<span class='op'>=</span><span class='fl'>3</span>,
+        prepanel.limits <span class='op'>=</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>25</span>,<span class='fl'>100</span><span class='op'>)</span>,
+        main<span class='op'>=</span><span class='st'>"box.cork"</span>, xlab<span class='op'>=</span><span class='st'>"Cork yield on side of tree"</span>,
+        panel<span class='op'>=</span><span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span>,<span class='va'>y</span>,<span class='va'>...</span><span class='op'>)</span><span class='op'>{</span>
+          <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/panel.xyplot.html'>panel.splom</a></span><span class='op'>(</span><span class='va'>x</span>,<span class='va'>y</span>,<span class='va'>...</span><span class='op'>)</span>
+          <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/panel.functions.html'>panel.abline</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>1</span>,col<span class='op'>=</span><span class='st'>"gray80"</span><span class='op'>)</span>
+        <span class='op'>}</span><span class='op'>)</span>
+</div><div class='img'><img src='box.cork-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
   <span class='co'>## Radial star plot, each tree is one line</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>plotrix</span>)
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>reshape2</span>)
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>acast</span>(<span class='no'>dat</span>, <span class='no'>tree</span> ~ <span class='no'>dir</span>, <span class='kw'>value.var</span><span class='kw'>=</span><span class='st'>'y'</span>)
-  <span class='fu'>radial.plot</span>(<span class='no'>dat2</span>, <span class='kw'>start</span><span class='kw'>=</span><span class='no'>pi</span>/<span class='fl'>2</span>, <span class='kw'>rp.type</span><span class='kw'>=</span><span class='st'>'p'</span>, <span class='kw'>clockwise</span><span class='kw'>=</span><span class='fl'>TRUE</span>,
-              <span class='kw'>radial.lim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0</span>,<span class='fl'>100</span>), <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"box.cork"</span>,
-              <span class='kw'>lwd</span><span class='kw'>=</span><span class='fl'>2</span>, <span class='kw'>labels</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'North'</span>,<span class='st'>'East'</span>,<span class='st'>'South'</span>,<span class='st'>'West'</span>),
-              <span class='kw'>line.col</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"royalblue"</span>,<span class='st'>"red"</span>,<span class='st'>"#009900"</span>,<span class='st'>"dark orange"</span>,
-                             <span class='st'>"#999999"</span>,<span class='st'>"#a6761d"</span>,<span class='st'>"deep pink"</span>),
-                           <span class='kw'>length</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span>(<span class='no'>dat2</span>)))</div><div class='img'><img src='box.cork-2.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>plotrix</span><span class='op'>)</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>reshape2</span><span class='op'>)</span>
+  <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>acast</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>tree</span> <span class='op'>~</span> <span class='va'>dir</span>, value.var<span class='op'>=</span><span class='st'>'y'</span><span class='op'>)</span>
+  <span class='fu'>radial.plot</span><span class='op'>(</span><span class='va'>dat2</span>, start<span class='op'>=</span><span class='va'>pi</span><span class='op'>/</span><span class='fl'>2</span>, rp.type<span class='op'>=</span><span class='st'>'p'</span>, clockwise<span class='op'>=</span><span class='cn'>TRUE</span>,
+              radial.lim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>100</span><span class='op'>)</span>, main<span class='op'>=</span><span class='st'>"box.cork"</span>,
+              lwd<span class='op'>=</span><span class='fl'>2</span>, labels<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'North'</span>,<span class='st'>'East'</span>,<span class='st'>'South'</span>,<span class='st'>'West'</span><span class='op'>)</span>,
+              line.col<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"royalblue"</span>,<span class='st'>"red"</span>,<span class='st'>"#009900"</span>,<span class='st'>"dark orange"</span>,
+                             <span class='st'>"#999999"</span>,<span class='st'>"#a6761d"</span>,<span class='st'>"deep pink"</span><span class='op'>)</span>,
+                           length<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>dat2</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='box.cork-2.png' alt='' width='700' height='433' /></div><div class='input'>  
   <span class='co'># asreml 4</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span><span class='op'>)</span>
 
   <span class='co'># Unstructured covariance</span>
-  <span class='no'>dat</span>$<span class='no'>dir</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>dat</span>$<span class='no'>dir</span>)
-  <span class='no'>dat</span>$<span class='no'>tree</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>dat</span>$<span class='no'>tree</span>)
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>tree</span>, <span class='no'>dat</span>$<span class='no'>dir</span>), ]
-
+  <span class='va'>dat</span><span class='op'>$</span><span class='va'>dir</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>dir</span><span class='op'>)</span>
+  <span class='va'>dat</span><span class='op'>$</span><span class='va'>tree</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>tree</span><span class='op'>)</span>  
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>tree</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>dir</span><span class='op'>)</span>, <span class='op'>]</span>
+  
   <span class='co'># Unstructured covariance matrix</span>
-  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>y</span>~<span class='no'>dir</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>residual</span> <span class='kw'>=</span> ~ <span class='no'>tree</span>:<span class='fu'>us</span>(<span class='no'>dir</span>))</div><div class='output co'>#&gt; Model fitted using the sigma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:38 2020
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>y</span><span class='op'>~</span><span class='va'>dir</span>, data<span class='op'>=</span><span class='va'>dat</span>, residual <span class='op'>=</span> <span class='op'>~</span> <span class='va'>tree</span><span class='op'>:</span><span class='fu'>us</span><span class='op'>(</span><span class='va'>dir</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the sigma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:31:56 2020
 #&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -307.529           1.0    108 15:47:38    0.0
-#&gt;  2      -300.714           1.0    108 15:47:38    0.0
-#&gt;  3      -294.337           1.0    108 15:47:38    0.0
-#&gt;  4      -291.522           1.0    108 15:47:38    0.0
-#&gt;  5      -290.967           1.0    108 15:47:38    0.0
-#&gt;  6      -290.959           1.0    108 15:47:38    0.0</div><div class='input'>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lucid</span>)
-  <span class='fu'>vc</span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt;            effect component std.error z.ratio bound %ch
+#&gt;  1      -307.529           1.0    108 17:31:56    0.0
+#&gt;  2      -300.714           1.0    108 17:31:56    0.0
+#&gt;  3      -294.337           1.0    108 17:31:56    0.0
+#&gt;  4      -291.522           1.0    108 17:31:56    0.0
+#&gt;  5      -290.967           1.0    108 17:31:56    0.0
+#&gt;  6      -290.959           1.0    108 17:31:56    0.0</div><div class='input'>    
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lucid</span><span class='op'>)</span>
+  <span class='fu'>vc</span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;            effect component std.error z.ratio bound %ch
 #&gt;        tree:dir!R       1          NA      NA     F   0
 #&gt;  tree:dir!dir_E:E     219.9     59.83     3.7     P   0
 #&gt;  tree:dir!dir_N:E     223.8     64.93     3.4     P   0
@@ -236,28 +240,28 @@
 #&gt;  tree:dir!dir_W:N     226.3     65.75     3.4     P   0
 #&gt;  tree:dir!dir_W:S     259.5     73.62     3.5     P   0
 #&gt;  tree:dir!dir_W:W     226       61.48     3.7     P   0</div><div class='input'>    
-  # Note: 'rcor' is a personal function to extract the correlations
-  # into a matrix format
-  # round(kw::rcor(m1)$dir, 2)
-  #        E      N      S      W
-  # E 219.93 223.75 229.06 171.37
-  # N 223.75 290.41 288.44 226.27
-  # S 229.06 288.44 350.00 259.54
-  # W 171.37 226.27 259.54 226.00
+  <span class='co'># Note: 'rcor' is a personal function to extract the correlations</span>
+  <span class='co'># into a matrix format</span>
+  <span class='co'># round(kw::rcor(m1)$dir, 2)</span>
+  <span class='co'>#        E      N      S      W</span>
+  <span class='co'># E 219.93 223.75 229.06 171.37</span>
+  <span class='co'># N 223.75 290.41 288.44 226.27</span>
+  <span class='co'># S 229.06 288.44 350.00 259.54</span>
+  <span class='co'># W 171.37 226.27 259.54 226.00</span>
     
-  # Note: Wolfinger used a common diagonal variance
+  <span class='co'># Note: Wolfinger used a common diagonal variance</span>
   
-  # Factor Analytic with different specific variances
-  # fixme: does not work with asreml4
-  # m2 &lt;- update(m1, residual = ~tree:facv(dir,1))
-  # round(kw::rcor(m2)$dir, 2)
-  #       E       N      S      W
-  # E 219.94 209.46 232.85 182.27
-  # N 209.46 290.41 291.82 228.43
-  # S 232.85 291.82 349.99 253.94
-  # W 182.27 228.43 253.94 225.99
+  <span class='co'># Factor Analytic with different specific variances</span>
+  <span class='co'># fixme: does not work with asreml4</span>
+  <span class='co'># m2 &lt;- update(m1, residual = ~tree:facv(dir,1))</span>
+  <span class='co'># round(kw::rcor(m2)$dir, 2)</span>
+  <span class='co'>#       E       N      S      W</span>
+  <span class='co'># E 219.94 209.46 232.85 182.27</span>
+  <span class='co'># N 209.46 290.41 291.82 228.43</span>
+  <span class='co'># S 232.85 291.82 349.99 253.94</span>
+  <span class='co'># W 182.27 228.43 253.94 225.99</span>
     
-# }
+<span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -274,7 +278,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -81,7 +81,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -148,12 +148,12 @@
   unbalanced with respect to experiment year and genotype.</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"giles.wheat"</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"giles.wheat"</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 247 observations on the following 4 variables.</p><dl'>
+    <p>A data frame with 247 observations on the following 4 variables.</p><dl>
     <dt><code>gen</code></dt><dd><p>genotype. Note, this is numeric!</p></dd>
     <dt><code>env</code></dt><dd><p>environment</p></dd>
     <dt><code>straw</code></dt><dd><p>straw length</p></dd>
@@ -187,40 +187,43 @@
 <p>Piepho, HP (2003).
   Model-based mean adjustment in quantitative germplasm evaluation data.
   <em>Genetic Resources and Crop Evolution</em>, 50, 281-290.
-  http://doi.org/10.1023/A:1023503900759</p>
+  https://doi.org/10.1023/A:1023503900759</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>giles.wheat</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>giles.wheat</span>
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>gen</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>gen</span>))
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>env</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>env</span>))
-<span class='no'>dat1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, !<span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span>(<span class='no'>straw</span>))
-<span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, !<span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span>(<span class='no'>emergence</span>))
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>giles.wheat</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>giles.wheat</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, gen<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>gen</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, env<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>env</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>dat1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>straw</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>emergence</span><span class='op'>)</span><span class='op'>)</span>
 
 <span class='co'># Traits are not related</span>
 <span class='co'># with(dat, plot(straw~emergence))</span>
 
 <span class='co'># Show unbalancedness of data</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>, <span class='no'>reshape2</span>)
-<span class='no'>redblue</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"firebrick"</span>, <span class='st'>"lightgray"</span>, <span class='st'>"#375997"</span>))
-<span class='fu'>levelplot</span>(<span class='fu'>acast</span>(<span class='no'>dat</span>, <span class='no'>gen</span> ~ <span class='no'>env</span>, <span class='kw'>value.var</span><span class='kw'>=</span><span class='st'>'emergence'</span>),
-          <span class='kw'>col.regions</span><span class='kw'>=</span><span class='no'>redblue</span>,
-          <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"genotype"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"year"</span>,
-          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"giles.wheat - straw length"</span>)</div><div class='img'><img src='giles.wheat-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span>, <span class='va'>reshape2</span><span class='op'>)</span>
+<span class='va'>redblue</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"firebrick"</span>, <span class='st'>"lightgray"</span>, <span class='st'>"#375997"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/levelplot.html'>levelplot</a></span><span class='op'>(</span><span class='fu'>acast</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>gen</span> <span class='op'>~</span> <span class='va'>env</span>, value.var<span class='op'>=</span><span class='st'>'emergence'</span><span class='op'>)</span>,
+          col.regions<span class='op'>=</span><span class='va'>redblue</span>,
+          xlab<span class='op'>=</span><span class='st'>"genotype"</span>, ylab<span class='op'>=</span><span class='st'>"year"</span>,
+          main<span class='op'>=</span><span class='st'>"giles.wheat - straw length"</span><span class='op'>)</span>
+</div><div class='img'><img src='giles.wheat-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
 
 <span class='co'># ----- Analysis of straw length -----</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>emmeans</span>)</div><div class='output co'>#&gt; <span class='message'></span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>emmeans</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'></span>
 #&gt; <span class='message'>Attaching package: 'emmeans'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:HH':</span>
 #&gt; <span class='message'></span>
 #&gt; <span class='message'>    as.glht</span></div><div class='input'>
 <span class='co'># Mean across years. Matches Piepho Table 7 'Simple'</span>
-<span class='no'>m1</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>straw</span> ~ <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat1</span>)
-<span class='fu'>emmeans</span>(<span class='no'>m1</span>, <span class='st'>'gen'</span>)</div><div class='output co'>#&gt;  gen  emmean   SE df lower.CL upper.CL
+<span class='va'>m1</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>straw</span> <span class='op'>~</span> <span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat1</span><span class='op'>)</span>
+<span class='fu'>emmeans</span><span class='op'>(</span><span class='va'>m1</span>, <span class='st'>'gen'</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;  gen  emmean   SE df lower.CL upper.CL
 #&gt;  264   113.7 6.78 40    100.0    127.4
 #&gt;  271    89.2 5.87 40     77.4    101.1
 #&gt;  277   110.7 6.78 40     97.0    124.4
@@ -243,8 +246,9 @@
 #&gt; 
 #&gt; Confidence level used: 0.95 </div><div class='input'>
 <span class='co'># Simple two-way model.  NOT the bi-additive model of Piepho.</span>
-<span class='no'>m2</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>straw</span> ~ <span class='no'>gen</span> + <span class='no'>env</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat1</span>)
-<span class='fu'>emmeans</span>(<span class='no'>m2</span>, <span class='st'>'gen'</span>)</div><div class='output co'>#&gt;  gen  emmean   SE df lower.CL upper.CL
+<span class='va'>m2</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>straw</span> <span class='op'>~</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>env</span>, data<span class='op'>=</span><span class='va'>dat1</span><span class='op'>)</span>
+<span class='fu'>emmeans</span><span class='op'>(</span><span class='va'>m2</span>, <span class='st'>'gen'</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;  gen  emmean   SE df lower.CL upper.CL
 #&gt;  264   124.3 7.52 30    109.0    139.7
 #&gt;  271    97.9 6.35 30     85.0    110.9
 #&gt;  277   121.3 7.52 30    106.0    136.7
@@ -268,12 +272,14 @@
 #&gt; Results are averaged over the levels of: env 
 #&gt; Confidence level used: 0.95 </div><div class='input'>
 <span class='co'># Bi-additive model. Matches Piepho Table 6, rows (c)</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>gnm</span>)
-<span class='no'>m3</span> <span class='kw'>&lt;-</span> <span class='fu'>gnm</span>(<span class='no'>straw</span> ~ <span class='no'>env</span> + <span class='fu'>Mult</span>(<span class='no'>gen</span>,<span class='no'>env</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat1</span>)</div><div class='output co'>#&gt; Initialising
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>gnm</span><span class='op'>)</span>
+<span class='va'>m3</span> <span class='op'>&lt;-</span> <span class='fu'>gnm</span><span class='op'>(</span><span class='va'>straw</span> <span class='op'>~</span> <span class='va'>env</span> <span class='op'>+</span> <span class='fu'>Mult</span><span class='op'>(</span><span class='va'>gen</span>,<span class='va'>env</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Initialising
 #&gt; Running start-up iterations..
 #&gt; Running main iterations.........................................................
-#&gt; .......................
-#&gt; Done</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span>(<span class='kw'>adjusted</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/fitted.values.html'>fitted</a></span>(<span class='no'>m3</span>),<span class='fl'>0</span>), <span class='no'>dat1</span>)</div><div class='output co'>#&gt;     adjusted  gen  env straw emergence
+#&gt; ..........
+#&gt; Done</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span>adjusted<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/fitted.values.html'>fitted</a></span><span class='op'>(</span><span class='va'>m3</span><span class='op'>)</span>,<span class='fl'>0</span><span class='op'>)</span>, <span class='va'>dat1</span><span class='op'>)</span> 
+</div><div class='output co'>#&gt;     adjusted  gen  env straw emergence
 #&gt; 1        120  264 1970   121       156
 #&gt; 2         94  271 1970    90       155
 #&gt; 3        117  277 1970   117       148
@@ -336,8 +342,9 @@
 <span class='co'># ----- Analysis of Ear emergence -----</span>
 
 <span class='co'># Simple two-way model. </span>
-<span class='no'>m4</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>emergence</span> ~ <span class='fl'>1</span> + <span class='no'>gen</span> + <span class='no'>env</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat2</span>)
-<span class='fu'>emmeans</span>(<span class='no'>m4</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'gen'</span>,<span class='st'>'env'</span>)) <span class='co'># Matches Piepho Table 9. rpws (c)</span></div><div class='output co'>#&gt;  gen  env   emmean   SE df lower.CL upper.CL
+<span class='va'>m4</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>emergence</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>env</span>, data<span class='op'>=</span><span class='va'>dat2</span><span class='op'>)</span>
+<span class='fu'>emmeans</span><span class='op'>(</span><span class='va'>m4</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'gen'</span>,<span class='st'>'env'</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># Matches Piepho Table 9. rpws (c)</span>
+</div><div class='output co'>#&gt;  gen  env   emmean   SE df lower.CL upper.CL
 #&gt;  264  1970     155 1.31 43      152      157
 #&gt;  271  1970     156 1.31 43      153      159
 #&gt;  277  1970     146 1.31 43      144      149
@@ -567,7 +574,8 @@
 #&gt;  2495 1980     153 1.48 43      150      156
 #&gt;  2499 1980     157 1.48 43      154      160
 #&gt; 
-#&gt; Confidence level used: 0.95 </div><div class='input'><span class='fu'>emmeans</span>(<span class='no'>m4</span>, <span class='st'>'gen'</span>) <span class='co'># Match Piepho table 10, Least Squares column</span></div><div class='output co'>#&gt;  gen  emmean   SE df lower.CL upper.CL
+#&gt; Confidence level used: 0.95 </div><div class='input'><span class='fu'>emmeans</span><span class='op'>(</span><span class='va'>m4</span>, <span class='st'>'gen'</span><span class='op'>)</span> <span class='co'># Match Piepho table 10, Least Squares column</span>
+</div><div class='output co'>#&gt;  gen  emmean   SE df lower.CL upper.CL
 #&gt;  264     153 1.31 43      150      155
 #&gt;  271     154 1.31 43      151      157
 #&gt;  277     144 1.31 43      142      147
@@ -590,7 +598,7 @@
 #&gt; 
 #&gt; Results are averaged over the levels of: env 
 #&gt; Confidence level used: 0.95 </div><div class='input'>
-# }
+<span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -607,7 +615,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

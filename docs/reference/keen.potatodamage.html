@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Damage to potato tubers from lifting rods. — keen.potatodamage" />
-
 <meta property="og:description" content="Damage to potato tubers from lifting rods." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,25 +143,24 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Damage to potato tubers from lifting rods.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"keen.potatodamage"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"keen.potatodamage"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 1152 observations on the following 6 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 1152 observations on the following 6 variables.</p><dl>
     <dt><code>energy</code></dt><dd><p>energy factor</p></dd>
     <dt><code>weight</code></dt><dd><p>weight class</p></dd>
     <dt><code>gen</code></dt><dd><p>genotype/variety factor</p></dd>
     <dt><code>rod</code></dt><dd><p>rod factor</p></dd>
     <dt><code>damage</code></dt><dd><p>damage category</p></dd>
     <dt><code>count</code></dt><dd><p>count of tubers in each combination of categories</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Experiments performed at Wageningen, Netherlands.</p>
@@ -172,59 +175,62 @@
 <p>Keen and Engle estimated the following rod effects.</p>
 <p># Rod: 1 2 3 4 5 6 7 8</p>
 <p># Effect: 0 -1.26 -0.42 0.55 -1.50 -1.85 -1.76 -2.09</p>
-    
+<p>Used with permission of Bas Engel.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>A. Keen and B. Engel.
   Analysis of a mixed model for ordinal data by iterative re-weighted REML.
-  <em>Statistica Neerlandica</em>, 51, 129--144. Table 2.
-  http://doi.org/10.1111/1467-9574.00044</p>
-<p>Used with permission of Bas Engel.</p>
-    
+  Statistica Neerlandica, 51, 129--144. Table 2.
+  https://doi.org/10.1111/1467-9574.00044</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>keen.potatodamage</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>keen.potatodamage</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>keen.potatodamage</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>keen.potatodamage</span>
 
 <span class='co'># Energy E1, Rod R4, Weight W1 have higher proportions of severe damage</span>
 <span class='co'># Rod 8 has the least damage</span>
-<span class='no'>d2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/xtabs.html'>xtabs</a></span>(<span class='no'>count</span>~<span class='no'>energy</span>+<span class='no'>rod</span>+<span class='no'>gen</span>+<span class='no'>weight</span>+<span class='no'>damage</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-<span class='fu'><a href='https://rdrr.io/r/graphics/mosaicplot.html'>mosaicplot</a></span>(<span class='no'>d2</span>, <span class='kw'>color</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"lemonchiffon1"</span>,<span class='st'>"moccasin"</span>,<span class='st'>"lightsalmon1"</span>,<span class='st'>"indianred"</span>),
-           <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Energy / Genotype"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Rod / Weight"</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"keen.potatodamage"</span>)</div><div class='img'><img src='keen.potatodamage-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='va'>d2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/xtabs.html'>xtabs</a></span><span class='op'>(</span><span class='va'>count</span><span class='op'>~</span><span class='va'>energy</span><span class='op'>+</span><span class='va'>rod</span><span class='op'>+</span><span class='va'>gen</span><span class='op'>+</span><span class='va'>weight</span><span class='op'>+</span><span class='va'>damage</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/mosaicplot.html'>mosaicplot</a></span><span class='op'>(</span><span class='va'>d2</span>, color<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"lemonchiffon1"</span>,<span class='st'>"moccasin"</span>,<span class='st'>"lightsalmon1"</span>,<span class='st'>"indianred"</span><span class='op'>)</span>,
+           xlab<span class='op'>=</span><span class='st'>"Energy / Genotype"</span>, ylab<span class='op'>=</span><span class='st'>"Rod / Weight"</span>, main<span class='op'>=</span><span class='st'>"keen.potatodamage"</span><span class='op'>)</span>
+</div><div class='img'><img src='keen.potatodamage-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
 <span class='co'># Not run because CRAN prefers examples less than 5 seconds.</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>ordinal</span>)
-<span class='co'># Note, the clmm2 function can have only 1 random term.  Results are</span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>ordinal</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Attaching package: 'ordinal'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:dplyr':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    slice</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from 'package:nlme':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    ranef, VarCorr</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from 'package:lme4':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    ranef, VarCorr</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from 'package:spaMM':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    ranef, VarCorr</span></div><div class='input'><span class='co'># Note, the clmm2 function can have only 1 random term.  Results are</span>
 <span class='co'># similar to Keen &amp; Engle, but necessarily different (they had multiple</span>
 <span class='co'># random terms).</span>
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>clmm2</span>(<span class='no'>damage</span> ~ <span class='no'>rod</span> + <span class='no'>energy</span> + <span class='no'>gen</span> + <span class='no'>weight</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-            <span class='kw'>weights</span><span class='kw'>=</span><span class='no'>count</span>, <span class='kw'>random</span><span class='kw'>=</span><span class='no'>rod</span>:<span class='no'>energy</span>, <span class='kw'>link</span><span class='kw'>=</span><span class='st'>'probit'</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: clmm2 may not have converged:</span>
-#&gt; <span class='warning'>  optimizer 'ucminf' terminated with max|gradient|: 6.24989053934658e-05</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m1</span>)[<span class='fl'>4</span>:<span class='fl'>10</span>],<span class='fl'>2</span>)</div><div class='output co'>#&gt; rodR2 rodR3 rodR4 rodR5 rodR6 rodR7 rodR8 
-#&gt; -1.19 -0.41  0.50 -1.46 -1.73 -1.67 -1.99 </div><div class='input'>## rodR2 rodR3 rodR4 rodR5 rodR6 rodR7 rodR8
-## -1.19 -0.41  0.50 -1.46 -1.73 -1.67 -1.99
+<span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>clmm2</span><span class='op'>(</span><span class='va'>damage</span> <span class='op'>~</span> <span class='va'>rod</span> <span class='op'>+</span> <span class='va'>energy</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>weight</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+            weights<span class='op'>=</span><span class='va'>count</span>, random<span class='op'>=</span><span class='va'>rod</span><span class='op'>:</span><span class='va'>energy</span>, link<span class='op'>=</span><span class='st'>'probit'</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='warning'>Warning: clmm2 may not have converged:</span>
+#&gt; <span class='warning'>  optimizer 'ucminf' terminated with max|gradient|: 6.24989053934658e-05</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>4</span><span class='op'>:</span><span class='fl'>10</span><span class='op'>]</span>,<span class='fl'>2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; rodR2 rodR3 rodR4 rodR5 rodR6 rodR7 rodR8 
+#&gt; -1.19 -0.41  0.50 -1.46 -1.73 -1.67 -1.99 </div><div class='input'><span class='co'>## rodR2 rodR3 rodR4 rodR5 rodR6 rodR7 rodR8</span>
+<span class='co'>## -1.19 -0.41  0.50 -1.46 -1.73 -1.67 -1.99</span>
 
-# Alternative
-# m2 <- clmm(damage ~ rod + energy + gen + weight +
-#          (1|rod:energy), data=dat, weights=count, link='probit')
+<span class='co'># Alternative</span>
+<span class='co'># m2 &lt;- clmm(damage ~ rod + energy + gen + weight +</span>
+<span class='co'>#          (1|rod:energy), data=dat, weights=count, link='probit')</span>
 
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -235,7 +241,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Multi-environment trial of corn silage, Year * Loc * Variety with covariate — theobald.covariate" />
-
 <meta property="og:description" content="Corn silage yields for maize in 5 years at 7 districts for 10 hybrids." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,23 +143,23 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Corn silage yields for maize in 5 years at 7 districts for 10 hybrids.</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 256 observations on the following 5 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 256 observations on the following 5 variables.</p><dl>
     <dt><code>year</code></dt><dd><p>year, 1990-1994</p></dd>
     <dt><code>env</code></dt><dd><p>environment/district, 1-7</p></dd>
     <dt><code>gen</code></dt><dd><p>genotype, 1-10</p></dd>
     <dt><code>yield</code></dt><dd><p>dry-matter silage yield for corn</p></dd>
     <dt><code>chu</code></dt><dd><p>corn heat units, thousand degrees Celsius</p></dd>
-  </dl>
+  
+</dl>
 
-    
+<p>Used with permission of Chris Theobald.</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>The trials were carried out in seven districts in the maritime
@@ -164,83 +168,81 @@
   The covariate CHU (Corn Heat Units) is the accumulated average daily
   temperatures (thousands of degrees Celsius) during the growing season
   at each location.</p>
-<p>Used with permission of Chris Theobald.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Chris M. Theobald and Mike Talbot and Fabian Nabugoomu, 2002.
   A Bayesian Approach to Regional and Local-Area Prediction From Crop
-  Variety Trials, <em>Journ Agric Biol Env Sciences</em>, 7, 403--419.
-  http://doi.org/10.1198/108571102230</p>
-    
+  Variety Trials.
+  Journ Agric Biol Env Sciences, 7, 403--419.
+  https://doi.org/10.1198/108571102230</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>theobald.covariate</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>theobald.covariate</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'>xyplot</span>(<span class='no'>yield</span> ~ <span class='no'>chu</span><span class='kw'>|</span><span class='no'>gen</span>, <span class='no'>dat</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'p'</span>,<span class='st'>'smooth'</span>),
-       <span class='kw'>xlab</span> <span class='kw'>=</span>  <span class='st'>"chu = corn heat units"</span>,
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"theobald.covariate - yield vs heat"</span>)</div><div class='img'><img src='theobald.covariate-1.png' alt='' width='700' height='433' /></div><div class='input'>
-</div><div class='input'>  <span class='co'># REML estimates (Means) in table 3 of Theobald 2002</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lme4</span>)
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>year</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>year</span>))
-  <span class='no'>m0</span> <span class='kw'>&lt;-</span> <span class='fu'>lmer</span>(<span class='no'>yield</span> ~ -<span class='fl'>1</span> + <span class='no'>gen</span> + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>year</span>/<span class='no'>env</span>) + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>gen</span>:<span class='no'>year</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fu'>fixef</span>(<span class='no'>m0</span>),<span class='fl'>2</span>)</div><div class='output co'>#&gt; genG01 genG02 genG03 genG04 genG05 genG06 genG07 genG08 genG09 genG10 
-#&gt;   6.50   6.63   5.71   6.81   6.37   6.28   6.54   6.66   6.18   6.80 </div><div class='input'>
-</div><div class='input'>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>theobald.covariate</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>theobald.covariate</span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>chu</span><span class='op'>|</span><span class='va'>gen</span>, <span class='va'>dat</span>, type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'p'</span>,<span class='st'>'smooth'</span><span class='op'>)</span>,
+       xlab <span class='op'>=</span>  <span class='st'>"chu = corn heat units"</span>,
+       main<span class='op'>=</span><span class='st'>"theobald.covariate - yield vs heat"</span><span class='op'>)</span>
+</div><div class='img'><img src='theobald.covariate-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># \dontrun{</span>
+  <span class='co'># REML estimates (Means) in table 3 of Theobald 2002</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lme4</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, year<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>m0</span> <span class='op'>&lt;-</span> <span class='fu'>lmer</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='op'>-</span><span class='fl'>1</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>year</span><span class='op'>/</span><span class='va'>env</span><span class='op'>)</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>gen</span><span class='op'>:</span><span class='va'>year</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='fu'>fixef</span><span class='op'>(</span><span class='va'>m0</span><span class='op'>)</span>,<span class='fl'>2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; genG01 genG02 genG03 genG04 genG05 genG06 genG07 genG08 genG09 genG10 
+#&gt;   6.50   6.63   5.71   6.81   6.37   6.28   6.54   6.66   6.18   6.80 </div><div class='input'><span class='co'># }</span>
+
+<span class='co'># \dontrun{</span>
+
 <span class='co'># Use JAGS to fit Theobald (2002) model 3.2 with 'Expert' prior</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>reshape2</span>)
-<span class='no'>ymat</span> <span class='kw'>&lt;-</span> <span class='fu'>acast</span>(<span class='no'>dat</span>, <span class='no'>year</span>+<span class='no'>env</span>~<span class='no'>gen</span>, <span class='kw'>value.var</span><span class='kw'>=</span><span class='st'>'yield'</span>)
-<span class='no'>chu</span> <span class='kw'>&lt;-</span> <span class='fu'>acast</span>(<span class='no'>dat</span>, <span class='no'>year</span>+<span class='no'>env</span>~<span class='no'>.</span>, <span class='no'>mean</span>, <span class='kw'>value.var</span><span class='kw'>=</span><span class='st'>'chu'</span>, <span class='kw'>na.rm</span><span class='kw'>=</span><span class='fl'>TRUE</span>)
-<span class='no'>chu</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/vector.html'>as.vector</a></span>(<span class='no'>chu</span> - <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>chu</span>))  <span class='co'># Center the covariate</span>
-<span class='no'>dat</span>$<span class='no'>yr</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span>(<span class='no'>dat</span>$<span class='no'>year</span>)
-<span class='no'>yridx</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/vector.html'>as.vector</a></span>(<span class='fu'>acast</span>(<span class='no'>dat</span>, <span class='no'>year</span>+<span class='no'>env</span>~<span class='no'>.</span>, <span class='no'>mean</span>, <span class='kw'>value.var</span><span class='kw'>=</span><span class='st'>'yr'</span>, <span class='kw'>na.rm</span><span class='kw'>=</span><span class='fl'>TRUE</span>))
-<span class='no'>dat</span>$<span class='no'>loc</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span>(<span class='no'>dat</span>$<span class='no'>env</span>)
-<span class='no'>locidx</span> <span class='kw'>&lt;-</span> <span class='fu'>acast</span>(<span class='no'>dat</span>, <span class='no'>year</span>+<span class='no'>env</span>~<span class='no'>.</span>, <span class='no'>mean</span>, <span class='kw'>value.var</span><span class='kw'>=</span><span class='st'>'loc'</span>, <span class='kw'>na.rm</span><span class='kw'>=</span><span class='fl'>TRUE</span>)
-<span class='no'>locidx</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/vector.html'>as.vector</a></span>(<span class='no'>locidx</span>)
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>reshape2</span><span class='op'>)</span>
+<span class='va'>ymat</span> <span class='op'>&lt;-</span> <span class='fu'>acast</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>year</span><span class='op'>+</span><span class='va'>env</span><span class='op'>~</span><span class='va'>gen</span>, value.var<span class='op'>=</span><span class='st'>'yield'</span><span class='op'>)</span>
+<span class='va'>chu</span> <span class='op'>&lt;-</span> <span class='fu'>acast</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>year</span><span class='op'>+</span><span class='va'>env</span><span class='op'>~</span><span class='va'>.</span>, <span class='va'>mean</span>, value.var<span class='op'>=</span><span class='st'>'chu'</span>, na.rm<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+<span class='va'>chu</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/vector.html'>as.vector</a></span><span class='op'>(</span><span class='va'>chu</span> <span class='op'>-</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>chu</span><span class='op'>)</span><span class='op'>)</span>  <span class='co'># Center the covariate</span>
+<span class='va'>dat</span><span class='op'>$</span><span class='va'>yr</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>year</span><span class='op'>)</span>
+<span class='va'>yridx</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/vector.html'>as.vector</a></span><span class='op'>(</span><span class='fu'>acast</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>year</span><span class='op'>+</span><span class='va'>env</span><span class='op'>~</span><span class='va'>.</span>, <span class='va'>mean</span>, value.var<span class='op'>=</span><span class='st'>'yr'</span>, na.rm<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>dat</span><span class='op'>$</span><span class='va'>loc</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>env</span><span class='op'>)</span>
+<span class='va'>locidx</span> <span class='op'>&lt;-</span> <span class='fu'>acast</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>year</span><span class='op'>+</span><span class='va'>env</span><span class='op'>~</span><span class='va'>.</span>, <span class='va'>mean</span>, value.var<span class='op'>=</span><span class='st'>'loc'</span>, na.rm<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+<span class='va'>locidx</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/vector.html'>as.vector</a></span><span class='op'>(</span><span class='va'>locidx</span><span class='op'>)</span>
 
-<span class='no'>jdat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>nVar</span> <span class='kw'>=</span> <span class='fl'>10</span>, <span class='kw'>nYear</span> <span class='kw'>=</span> <span class='fl'>5</span>, <span class='kw'>nLoc</span> <span class='kw'>=</span> <span class='fl'>7</span>, <span class='kw'>nYL</span> <span class='kw'>=</span> <span class='fl'>29</span>, <span class='kw'>yield</span> <span class='kw'>=</span> <span class='no'>ymat</span>,
-            <span class='kw'>chu</span> <span class='kw'>=</span> <span class='no'>chu</span>, <span class='kw'>year</span> <span class='kw'>=</span> <span class='no'>yridx</span>, <span class='kw'>loc</span> <span class='kw'>=</span> <span class='no'>locidx</span>)
+<span class='va'>jdat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>nVar <span class='op'>=</span> <span class='fl'>10</span>, nYear <span class='op'>=</span> <span class='fl'>5</span>, nLoc <span class='op'>=</span> <span class='fl'>7</span>, nYL <span class='op'>=</span> <span class='fl'>29</span>, yield <span class='op'>=</span> <span class='va'>ymat</span>,
+            chu <span class='op'>=</span> <span class='va'>chu</span>, year <span class='op'>=</span> <span class='va'>yridx</span>, loc <span class='op'>=</span> <span class='va'>locidx</span><span class='op'>)</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>rjags</span>)</div><div class='output co'>#&gt; <span class='message'>Linked to JAGS 4.2.0</span></div><div class='output co'>#&gt; <span class='message'>Loaded modules: basemod,bugs</span></div><div class='input'><span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>jags.model</span>(<span class='kw'>file</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span>(<span class='kw'>package</span><span class='kw'>=</span><span class='st'>"agridat"</span>, <span class='st'>"files/theobald.covariate.jag"</span>),
-  <span class='kw'>data</span><span class='kw'>=</span><span class='no'>jdat</span>, <span class='kw'>n.chains</span><span class='kw'>=</span><span class='fl'>2</span>)</div><div class='output co'>#&gt; Compiling model graph
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>rjags</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>Linked to JAGS 4.3.0</span></div><div class='output co'>#&gt; <span class='message'>Loaded modules: basemod,bugs</span></div><div class='input'><span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>jags.model</span><span class='op'>(</span>file<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/system.file.html'>system.file</a></span><span class='op'>(</span>package<span class='op'>=</span><span class='st'>"agridat"</span>, <span class='st'>"files/theobald.covariate.jag"</span><span class='op'>)</span>,
+  data<span class='op'>=</span><span class='va'>jdat</span>, n.chains<span class='op'>=</span><span class='fl'>2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Compiling model graph
 #&gt;    Resolving undeclared variables
 #&gt;    Allocating nodes
 #&gt; Graph information:
 #&gt;    Observed stochastic nodes: 256
 #&gt;    Unobserved stochastic nodes: 153
-#&gt;    Total graph size: 1018
+#&gt;    Total graph size: 1013
 #&gt; 
 #&gt; Initializing model
 #&gt; </div><div class='input'>
 <span class='co'># Table 3, Variety deviations from means (Expert prior)</span>
-<span class='no'>c1</span> <span class='kw'>&lt;-</span> <span class='fu'>coda.samples</span>(<span class='no'>m1</span>, <span class='kw'>variable.names</span><span class='kw'>=</span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'alpha'</span>)),
-                   <span class='kw'>n.iter</span><span class='kw'>=</span><span class='fl'>10000</span>, <span class='kw'>thin</span><span class='kw'>=</span><span class='fl'>10</span>)
-<span class='no'>s1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>c1</span>)
-<span class='no'>effs</span> <span class='kw'>&lt;-</span> <span class='no'>s1</span>$<span class='no'>statistics</span>[,<span class='st'>'Mean'</span>]
-<span class='fu'><a href='https://rdrr.io/r/base/rev.html'>rev</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='no'>effs</span> - <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>effs</span>), <span class='fl'>2</span>))) <span class='co'># Perfect match (different order?)</span></div><div class='output co'>#&gt;  alpha[4] alpha[10]  alpha[8]  alpha[2]  alpha[7]  alpha[1]  alpha[5]  alpha[6] 
-#&gt;      0.33      0.31      0.18      0.17      0.10      0.05     -0.07     -0.15 
+<span class='va'>c1</span> <span class='op'>&lt;-</span> <span class='fu'>coda.samples</span><span class='op'>(</span><span class='va'>m1</span>, variable.names<span class='op'>=</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'alpha'</span><span class='op'>)</span><span class='op'>)</span>,
+                   n.iter<span class='op'>=</span><span class='fl'>10000</span>, thin<span class='op'>=</span><span class='fl'>10</span><span class='op'>)</span>
+<span class='va'>s1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>c1</span><span class='op'>)</span>
+<span class='va'>effs</span> <span class='op'>&lt;-</span> <span class='va'>s1</span><span class='op'>$</span><span class='va'>statistics</span><span class='op'>[</span>,<span class='st'>'Mean'</span><span class='op'>]</span>
+<span class='fu'><a href='https://rdrr.io/r/base/rev.html'>rev</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>effs</span> <span class='op'>-</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>effs</span><span class='op'>)</span>, <span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># Perfect match (different order?)</span>
+</div><div class='output co'>#&gt;  alpha[4] alpha[10]  alpha[8]  alpha[2]  alpha[7]  alpha[1]  alpha[5]  alpha[6] 
+#&gt;      0.34      0.32      0.18      0.17      0.09      0.05     -0.07     -0.15 
 #&gt;  alpha[9]  alpha[3] 
-#&gt;     -0.25     -0.67 </div><div class='input'>
+#&gt;     -0.25     -0.68 </div><div class='input'><span class='co'># }</span>
+
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -251,7 +253,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

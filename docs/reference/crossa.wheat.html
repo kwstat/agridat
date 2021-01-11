@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -150,7 +150,7 @@
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 450 observations on the following 3 variables.</p><dl'>
+    <p>A data frame with 450 observations on the following 3 variables.</p><dl>
     <dt><code>loc</code></dt><dd><p>location</p></dd>
     <dt><code>locgroup</code></dt><dd><p>location group: Grp1-Grp2</p></dd>
     <dt><code>gen</code></dt><dd><p>genotype</p></dd>
@@ -203,46 +203,53 @@
   AMMI adjustment for statistical analysis of an
   international wheat yield trial.
   Theoretical and Applied Genetics, 81, 27--37.
-  http://doi.org/10.1007/BF00226108</p>
+  https://doi.org/10.1007/BF00226108</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Jean-Louis Laffont, Kevin Wright and Mohamed Hanafi (2013).
   Genotype + Genotype x Block of Environments (GGB) Biplots.
   Crop Science, 53, 2332-2341.
-  http://doi.org/10.2135/cropsci2013.03.0178</p>
+  https://doi.org/10.2135/cropsci2013.03.0178</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>crossa.wheat</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>crossa.wheat</span>
-
-<span class='co'># AMMI biplot.  Fig 3 of Crossa et al.</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>agricolae</span>)
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='no'>dat</span>, <span class='fu'>AMMI</span>(<span class='kw'>E</span><span class='kw'>=</span><span class='no'>loc</span>, <span class='kw'>G</span><span class='kw'>=</span><span class='no'>gen</span>, <span class='kw'>R</span><span class='kw'>=</span><span class='fl'>1</span>, <span class='kw'>Y</span><span class='kw'>=</span><span class='no'>yield</span>))
-<span class='no'>b1</span> <span class='kw'>&lt;-</span> <span class='no'>m1</span>$<span class='no'>biplot</span>[,<span class='fl'>1</span>:<span class='fl'>4</span>]
-<span class='no'>b1</span>$<span class='no'>PC1</span> <span class='kw'>&lt;-</span> -<span class='fl'>1</span> * <span class='no'>b1</span>$<span class='no'>PC1</span> <span class='co'># Flip vertical</span>
-<span class='fu'><a href='https://rdrr.io/r/base/plot.html'>plot</a></span>(<span class='no'>b1</span>$<span class='no'>yield</span>, <span class='no'>b1</span>$<span class='no'>PC1</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>0.0</span>,
-     <span class='fu'><a href='https://rdrr.io/r/graphics/text.html'>text</a></span>(<span class='no'>b1</span>$<span class='no'>yield</span>, <span class='no'>b1</span>$<span class='no'>PC1</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>.5</span>, <span class='kw'>labels</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/row.names.html'>row.names</a></span>(<span class='no'>b1</span>),<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"brown"</span>),
-     <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"crossa.wheat AMMI biplot"</span>,
-     <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Average yield"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"PC1"</span>, <span class='kw'>frame</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='input'><span class='no'>mn</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>b1</span>$<span class='no'>yield</span>)
-<span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span>(<span class='kw'>h</span><span class='kw'>=</span><span class='fl'>0</span>, <span class='kw'>v</span><span class='kw'>=</span><span class='no'>mn</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='st'>'wheat'</span>)</div><div class='input'>
-<span class='no'>g1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>b1</span>,<span class='no'>type</span><span class='kw'>==</span><span class='st'>"GEN"</span>)
-<span class='fu'><a href='https://rdrr.io/r/graphics/text.html'>text</a></span>(<span class='no'>g1</span>$<span class='no'>yield</span>, <span class='no'>g1</span>$<span class='no'>PC1</span>, <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>g1</span>), <span class='kw'>col</span><span class='kw'>=</span><span class='st'>"darkgreen"</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>.5</span>)</div><div class='input'>
-<span class='no'>e1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>b1</span>,<span class='no'>type</span><span class='kw'>==</span><span class='st'>"ENV"</span>)
-<span class='fu'><a href='https://rdrr.io/r/graphics/arrows.html'>arrows</a></span>(<span class='no'>mn</span>, <span class='fl'>0</span>,
-       <span class='fl'>0.95</span>*(<span class='no'>e1</span>$<span class='no'>yield</span> - <span class='no'>mn</span>) + <span class='no'>mn</span>, <span class='fl'>0.95</span>*<span class='no'>e1</span>$<span class='no'>PC1</span>,
-       <span class='kw'>col</span><span class='kw'>=</span> <span class='st'>"brown"</span>, <span class='kw'>lwd</span><span class='kw'>=</span><span class='fl'>1.8</span>,<span class='kw'>length</span><span class='kw'>=</span><span class='fl'>0.1</span>)</div><div class='img'><img src='crossa.wheat-1.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='co'># GGB example</span>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>crossa.wheat</span>)
-<span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='no'>crossa.wheat</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>gge</span>)
-<span class='co'># Specify env.group as column in data frame</span>
-<span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'>gge</span>(<span class='no'>dat2</span>, <span class='no'>yield</span>~<span class='no'>gen</span>*<span class='no'>loc</span>, <span class='kw'>env.group</span><span class='kw'>=</span><span class='no'>locgroup</span>, <span class='kw'>scale</span><span class='kw'>=</span><span class='fl'>FALSE</span>)
-<span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span>(<span class='no'>m2</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"crossa.wheat - GGB biplot"</span>)</div><div class='img'><img src='crossa.wheat-2.png' alt='' width='700' height='433' /></div><div class='input'>
-# }
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>crossa.wheat</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>crossa.wheat</span>
+  
+  <span class='co'># AMMI biplot.  Fig 3 of Crossa et al.</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>agricolae</span><span class='op'>)</span>
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='fu'>AMMI</span><span class='op'>(</span>E<span class='op'>=</span><span class='va'>loc</span>, G<span class='op'>=</span><span class='va'>gen</span>, R<span class='op'>=</span><span class='fl'>1</span>, Y<span class='op'>=</span><span class='va'>yield</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>b1</span> <span class='op'>&lt;-</span> <span class='va'>m1</span><span class='op'>$</span><span class='va'>biplot</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>4</span><span class='op'>]</span>
+  <span class='va'>b1</span><span class='op'>$</span><span class='va'>PC1</span> <span class='op'>&lt;-</span> <span class='op'>-</span><span class='fl'>1</span> <span class='op'>*</span> <span class='va'>b1</span><span class='op'>$</span><span class='va'>PC1</span> <span class='co'># Flip vertical</span>
+  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>b1</span><span class='op'>$</span><span class='va'>yield</span>, <span class='va'>b1</span><span class='op'>$</span><span class='va'>PC1</span>, cex<span class='op'>=</span><span class='fl'>0.0</span>,
+       <span class='fu'><a href='https://rdrr.io/r/graphics/text.html'>text</a></span><span class='op'>(</span><span class='va'>b1</span><span class='op'>$</span><span class='va'>yield</span>, <span class='va'>b1</span><span class='op'>$</span><span class='va'>PC1</span>, cex<span class='op'>=</span><span class='fl'>.5</span>, labels<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/row.names.html'>row.names</a></span><span class='op'>(</span><span class='va'>b1</span><span class='op'>)</span>,col<span class='op'>=</span><span class='st'>"brown"</span><span class='op'>)</span>,
+       main<span class='op'>=</span><span class='st'>"crossa.wheat AMMI biplot"</span>,
+       xlab<span class='op'>=</span><span class='st'>"Average yield"</span>, ylab<span class='op'>=</span><span class='st'>"PC1"</span>, frame<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+</div><div class='input'>  <span class='va'>mn</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>b1</span><span class='op'>$</span><span class='va'>yield</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span><span class='op'>(</span>h<span class='op'>=</span><span class='fl'>0</span>, v<span class='op'>=</span><span class='va'>mn</span>, col<span class='op'>=</span><span class='st'>'wheat'</span><span class='op'>)</span>
+</div><div class='input'>
+  <span class='va'>g1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>b1</span>,<span class='va'>type</span><span class='op'>==</span><span class='st'>"GEN"</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/graphics/text.html'>text</a></span><span class='op'>(</span><span class='va'>g1</span><span class='op'>$</span><span class='va'>yield</span>, <span class='va'>g1</span><span class='op'>$</span><span class='va'>PC1</span>, <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>g1</span><span class='op'>)</span>, col<span class='op'>=</span><span class='st'>"darkgreen"</span>, cex<span class='op'>=</span><span class='fl'>.5</span><span class='op'>)</span>
+</div><div class='input'>  
+  <span class='va'>e1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>b1</span>,<span class='va'>type</span><span class='op'>==</span><span class='st'>"ENV"</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/graphics/arrows.html'>arrows</a></span><span class='op'>(</span><span class='va'>mn</span>, <span class='fl'>0</span>,
+         <span class='fl'>0.95</span><span class='op'>*</span><span class='op'>(</span><span class='va'>e1</span><span class='op'>$</span><span class='va'>yield</span> <span class='op'>-</span> <span class='va'>mn</span><span class='op'>)</span> <span class='op'>+</span> <span class='va'>mn</span>, <span class='fl'>0.95</span><span class='op'>*</span><span class='va'>e1</span><span class='op'>$</span><span class='va'>PC1</span>,
+         col<span class='op'>=</span> <span class='st'>"brown"</span>, lwd<span class='op'>=</span><span class='fl'>1.8</span>,length<span class='op'>=</span><span class='fl'>0.1</span><span class='op'>)</span>
+</div><div class='img'><img src='crossa.wheat-1.png' alt='' width='700' height='433' /></div><div class='input'>  
+  <span class='co'># GGB example</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>crossa.wheat</span><span class='op'>)</span>
+  <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='va'>crossa.wheat</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>gge</span><span class='op'>)</span>
+  <span class='co'># Specify env.group as column in data frame</span>
+  <span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'>gge</span><span class='op'>(</span><span class='va'>dat2</span>, <span class='va'>yield</span><span class='op'>~</span><span class='va'>gen</span><span class='op'>*</span><span class='va'>loc</span>,
+            env.group<span class='op'>=</span><span class='va'>locgroup</span>, gen.group<span class='op'>=</span><span class='va'>gengroup</span>,
+            scale<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span><span class='op'>(</span><span class='va'>m2</span>, main<span class='op'>=</span><span class='st'>"crossa.wheat - GGB biplot"</span><span class='op'>)</span>
+</div><div class='img'><img src='crossa.wheat-2.png' alt='' width='700' height='433' /></div><div class='input'>  
+<span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -259,7 +266,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

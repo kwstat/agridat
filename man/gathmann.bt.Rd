@@ -31,7 +31,7 @@
 \source{
   L. A. Hothorn, 2005.
   Evaluation of Bt-Maize Field Trials by a Proof of Safety.
-  http://www.seedtest.org/upload/cms/user/presentation7Hothorn.pdf
+  https://www.seedtest.org/upload/cms/user/presentation7Hothorn.pdf
 }
 
 \examples{

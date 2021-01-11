@@ -33,7 +33,7 @@
   Dodds, KG and Sinclair, AG and Morrison, JD. (1995).
   A bivariate response surface for growth data.
   \emph{Fertilizer research}, 45, 117-122.
-  http://doi.org/10.1007/BF00790661
+  https://doi.org/10.1007/BF00790661
 }
 
 \examples{

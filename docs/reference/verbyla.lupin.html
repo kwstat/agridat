@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,13 +45,12 @@
 
 
 
-<meta property="og:title" content="Multi-environment trial of lupin, multiple varieties and densities — verbyla.lupin" />
 
+<meta property="og:title" content="Multi-environment trial of lupin, multiple varieties and densities — verbyla.lupin" />
 <meta property="og:description" content="Yield of 9 varieties of lupin at different planting densities across
   2 years and multiple locations." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -62,7 +67,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -76,7 +81,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -105,7 +110,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -113,10 +118,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -140,16 +144,15 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Yield of 9 varieties of lupin at different planting densities across
   2 years and multiple locations.</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p></p><dl class='dl-horizontal'>
+    <p></p><dl>
     <dt><code>gen</code></dt><dd><p>genotype, 9 varieties</p></dd>
     <dt><code>site</code></dt><dd><p>site, 11 levels</p></dd>
     <dt><code>rep</code></dt><dd><p>rep, 2-3 levels</p></dd>
@@ -163,9 +166,9 @@
     <dt><code>yield</code></dt><dd><p>yield in tons/hectare</p></dd>
     <dt><code>year</code></dt><dd><p>year, 1991-1992</p></dd>
     <dt><code>loc</code></dt><dd><p>location</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Nine varieties of lupin were tested for yield response to plant density
@@ -194,155 +197,283 @@
 <tr><td>Myallie</td><td>1995</td></tr>
 </table>
 
-
-    
+  
+<p>Data retrieved Oct 2010 from https://www.blackwellpublishers.co.uk/rss.
+  (No longer available).</p>
+<p>Used with permission of Blackwell Publishing.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Arunas P. Verbyla and Brian R. Cullis and Michael G. Kenward
   and Sue J. Welham, (1999).
   The analysis of designed experiments and longitudinal data by using
   smoothing splines. 
-  <em>Appl. Statist.</em>, 48, 269--311.
-  http://doi.org/10.1111/1467-9876.00154</p>
+  Appl. Statist., 48, 269--311.
+  https://doi.org/10.1111/1467-9876.00154</p>
 <p>Arunas P. Verbyla and Brian R. Cullis and Michael G. Kenward
   and Sue J. Welham, (1997).
   The analysis of designed experiments and longitudinal data by using
   smoothing splines.
   University of Adelaide, Department of Statistics, Research Report
   97/4.
-  http://http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.56.808</p>  
-<p>Data retrieved Oct 2010 from http://www.blackwellpublishers.co.uk/rss.
-  (No longer available).</p>
-<p>Used with permission of Blackwell Publishing.</p>
-    
+  https://https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.56.808</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>verbyla.lupin</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>verbyla.lupin</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+  
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>verbyla.lupin</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>verbyla.lupin</span>
 
   <span class='co'># The same RCB randomization was used at all sites in each year</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-  <span class='fu'>desplot</span>(<span class='no'>gen</span>~<span class='no'>col</span>+<span class='no'>row</span><span class='kw'>|</span><span class='no'>site</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-          <span class='kw'>out1</span><span class='kw'>=</span><span class='no'>rep</span>, <span class='kw'>num</span><span class='kw'>=</span><span class='no'>rate</span>,
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+  <span class='fu'><a href='http://kwstat.github.io/desplot/reference/desplot.html'>desplot</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>gen</span><span class='op'>~</span><span class='va'>col</span><span class='op'>+</span><span class='va'>row</span><span class='op'>|</span><span class='va'>site</span>,
+          out1<span class='op'>=</span><span class='va'>rep</span>, num<span class='op'>=</span><span class='va'>rate</span>,
           <span class='co'># aspect unknown</span>
-          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"verbyla.lupin - experiment design"</span>)</div><div class='img'><img src='verbyla.lupin-1.png' alt='' width='700' height='433' /></div><div class='input'>
+          main<span class='op'>=</span><span class='st'>"verbyla.lupin - experiment design"</span><span class='op'>)</span>
+</div><div class='img'><img src='verbyla.lupin-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
   <span class='co'># Figure 3 of Verbyla</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-  <span class='no'>foo</span> <span class='kw'>&lt;-</span> <span class='fu'>xyplot</span>(<span class='no'>yield</span> ~ <span class='no'>rate</span><span class='kw'>|</span><span class='no'>loc</span>*<span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>subset</span><span class='kw'>=</span><span class='no'>year</span><span class='kw'>==</span><span class='fl'>92</span>,
-                <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'p'</span>,<span class='st'>'smooth'</span>), <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>.5</span>,
-                <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"verbyla.lupin: 1992 yield response curves"</span>,
-                <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Seed rate (plants/m^2)"</span>,
-                <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Yield (tons/ha)"</span>,
-                <span class='kw'>strip</span><span class='kw'>=</span><span class='fu'>strip.custom</span>(<span class='kw'>par.strip.text</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>.7</span>)))
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+  <span class='va'>foo</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>rate</span><span class='op'>|</span><span class='va'>loc</span><span class='op'>*</span><span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>, subset<span class='op'>=</span><span class='va'>year</span><span class='op'>==</span><span class='fl'>92</span>,
+                type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'p'</span>,<span class='st'>'smooth'</span><span class='op'>)</span>, cex<span class='op'>=</span><span class='fl'>.5</span>,
+                main<span class='op'>=</span><span class='st'>"verbyla.lupin: 1992 yield response curves"</span>,
+                xlab<span class='op'>=</span><span class='st'>"Seed rate (plants/m^2)"</span>,
+                ylab<span class='op'>=</span><span class='st'>"Yield (tons/ha)"</span>,
+                strip<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/pkg/lattice/man/strip.default.html'>strip.custom</a></span><span class='op'>(</span>par.strip.text<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>cex<span class='op'>=</span><span class='fl'>.7</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
 
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>latticeExtra</span>) <span class='co'># for useOuterStrips</span>
-  <span class='fu'>useOuterStrips</span>(<span class='no'>foo</span>,
-                 <span class='kw'>strip</span><span class='kw'>=</span><span class='fu'>strip.custom</span>(<span class='kw'>par.strip.text</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>.7</span>)),
-                 <span class='kw'>strip.left</span><span class='kw'>=</span><span class='fu'>strip.custom</span>(<span class='kw'>par.strip.text</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>.7</span>)))</div><div class='img'><img src='verbyla.lupin-2.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>latticeExtra</span><span class='op'>)</span> <span class='co'># for useOuterStrips</span>
+  <span class='fu'>useOuterStrips</span><span class='op'>(</span><span class='va'>foo</span>,
+                 strip<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/pkg/lattice/man/strip.default.html'>strip.custom</a></span><span class='op'>(</span>par.strip.text<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>cex<span class='op'>=</span><span class='fl'>.7</span><span class='op'>)</span><span class='op'>)</span>,
+                 strip.left<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/pkg/lattice/man/strip.default.html'>strip.custom</a></span><span class='op'>(</span>par.strip.text<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>cex<span class='op'>=</span><span class='fl'>.7</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='verbyla.lupin-2.png' alt='' width='700' height='433' /></div><div class='input'>
 
-<span class='co'># ----------------------------------------------------------------------------</span>
+  <span class='co'># ----------</span>
 
-<span class='kw'>if</span>(<span class='fl'>0</span>){
-
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span>,<span class='va'>lucid</span><span class='op'>)</span>
+  <span class='co'># asreml 4</span>
+    
   <span class='co'># We try to reproduce the analysis of Verbyla 1999.</span>
   <span class='co'># May not be exactly the same, but is pretty close.</span>
-
+  
   <span class='co'># Check nlevels for size of random-coefficient structures</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='no'>dat</span>, <span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span>(<span class='no'>gen</span>)))      <span class='co'># 9 varieties for RC1</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='no'>dat</span>, <span class='fu'><a href='https://rdrr.io/r/base/table.html'>table</a></span>(<span class='no'>gen</span>,<span class='no'>site</span>))) <span class='co'># 99 site:gen combinations for RC2</span>
-
+  <span class='co'># length(with(dat, table(gen)))      # 9 varieties for RC1</span>
+  <span class='co'># length(with(dat, table(gen,site))) # 99 site:gen combinations for RC2</span>
+  
   <span class='co'># Make row and col into factors</span>
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>colf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>col</span>), <span class='kw'>rowf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>))
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, colf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>col</span><span class='op'>)</span>, rowf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>row</span><span class='op'>)</span><span class='op'>)</span>
   <span class='co'># sort for asreml</span>
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>site</span>, <span class='no'>dat</span>$<span class='no'>rowf</span>, <span class='no'>dat</span>$<span class='no'>colf</span>),]
-
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>site</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>rowf</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>colf</span><span class='op'>)</span>,<span class='op'>]</span>
+    
   <span class='co'># Make site names more useful for plots</span>
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>site</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span>(<span class='no'>year</span>,<span class='st'>"."</span>,<span class='fu'><a href='https://rdrr.io/r/base/substr.html'>substring</a></span>(<span class='no'>loc</span>,<span class='fl'>1</span>,<span class='fl'>4</span>))))
-
+  <span class='co'># dat &lt;- transform(dat, site=factor(paste0(year,".",substring(loc,1,4))))</span>
+    
   <span class='co'># Initial model from top of Verbyla table 9.</span>
-<span class='co'>#  libs(asreml4)</span>
-  <span class='co'># FIXME asreml4 This is not working in asreml4</span>
-
-<span class='co'>##   m0 &lt;- asreml(yield ~ 1</span>
-<span class='co'>##                + site</span>
-<span class='co'>##                + linrate</span>
-<span class='co'>##                + site:linrate,</span>
-<span class='co'>##                data = dat,</span>
-<span class='co'>##                random = ~ spl(rate)</span>
-<span class='co'>##                + dev(rate)</span>
-<span class='co'>##                + site:spl(rate)</span>
-<span class='co'>##                + site:dev(rate)</span>
-<span class='co'>##                + str(~gen+gen:linrate, ~us(2):id(9)) # RC1</span>
-<span class='co'>##                + gen:spl(rate)</span>
-<span class='co'>##                + gen:dev(rate)</span>
-<span class='co'>##                + str(~site:gen+site:gen:linrate, ~us(2):id(99)) # RC2</span>
-<span class='co'>##                + site:gen:spl(rate)</span>
-<span class='co'>##                + site:gen:dev(rate),</span>
-<span class='co'>##                residual = ~ dsum( ~ ar1(rowf):ar1(colf)|site) # Spatial AR1 x AR1</span>
-<span class='co'>##              )</span>
-<span class='co'>## m0 &lt;- update(m0)</span>
-<span class='co'>## m0 &lt;- update(m0) # to get convergence</span>
-
-<span class='co'>## # Variograms match Verbyla 1999 figure 7 (scale slightly different)</span>
-<span class='co'>## plot(varioGram(m0), xlim=c(1:19), zlim=c(0,2),</span>
-<span class='co'>##      main="verbyla.lupin - variogram by site")</span>
-
-<span class='co'>##   # Sequence of models in Verbyla 1999 table 10</span>
-<span class='co'>## m1 &lt;- update(m0, fixed= ~ .</span>
-<span class='co'>##              + at(site, c(2,5,6,8,9,10)):lincol</span>
-<span class='co'>##              + at(site, c(3,5,7,8)):linrow</span>
-<span class='co'>##              + at(site, c(2,3,5,7,8,9,11)):serp</span>
-<span class='co'>##              , random = ~ .</span>
-<span class='co'>##              + at(site, c(3,6,7,9)):rowf</span>
-<span class='co'>##              + at(site, c(1,2,3,9,10)):colf</span>
-<span class='co'>##              + at(site, c(5,7,8,10)):units)</span>
-<span class='co'>## m1 &lt;- update(m1)</span>
-
-<span class='co'>## m2 &lt;- update(m1,</span>
-<span class='co'>##              random = ~ .</span>
-<span class='co'>##              - site:gen:spl(rate) - site:gen:dev(rate))</span>
-
-<span class='co'>## m3 &lt;- update(m2,</span>
-<span class='co'>##              random = ~ .</span>
-<span class='co'>##              - site:dev(rate) - gen:dev(rate))</span>
-
-<span class='co'>## m4 &lt;- update(m3,</span>
-<span class='co'>##              random = ~ .</span>
-<span class='co'>##              - dev(rate))</span>
-
-<span class='co'>## m5 &lt;- update(m4,</span>
-<span class='co'>##              random = ~ .</span>
-<span class='co'>##              - at(site, c(5,7,8,10)):units + at(site, c(5,7,8)):units)</span>
-
-<span class='co'>## # Variance components are a pretty good match to Verbyla 1997, table 15</span>
-<span class='co'>## libs(lucid)</span>
-<span class='co'>## vc(m5)</span>
-<span class='co'>## .001004/sqrt(.005446*.0003662) # .711 correlation for RC1</span>
-<span class='co'>## .00175/sqrt(.01881*.000167) # .987 correlation for RC2</span>
-
-<span class='co'>## # Matches Verbyla 1999 figure 5</span>
-<span class='co'>## plot(varioGram(m5),</span>
-<span class='co'>##      main="verbyla.lupin - final model variograms",</span>
-<span class='co'>##      xlim=c(1:19), zlim=c(0,1.5))</span>
-
-}</div></pre>
+  <span class='va'>m0</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>1</span>
+               <span class='op'>+</span> <span class='va'>site</span>
+               <span class='op'>+</span> <span class='va'>linrate</span>
+               <span class='op'>+</span> <span class='va'>site</span><span class='op'>:</span><span class='va'>linrate</span>,
+               data <span class='op'>=</span> <span class='va'>dat</span>,
+               random <span class='op'>=</span> <span class='op'>~</span> <span class='fu'>spl</span><span class='op'>(</span><span class='va'>rate</span><span class='op'>)</span>
+               <span class='op'>+</span> <span class='fu'>dev</span><span class='op'>(</span><span class='va'>rate</span><span class='op'>)</span>
+               <span class='op'>+</span> <span class='va'>site</span><span class='op'>:</span><span class='fu'>spl</span><span class='op'>(</span><span class='va'>rate</span><span class='op'>)</span>
+               <span class='op'>+</span> <span class='va'>site</span><span class='op'>:</span><span class='fu'>dev</span><span class='op'>(</span><span class='va'>rate</span><span class='op'>)</span>
+               <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='op'>~</span><span class='va'>gen</span><span class='op'>+</span><span class='va'>gen</span><span class='op'>:</span><span class='va'>linrate</span>, <span class='op'>~</span><span class='fu'>us</span><span class='op'>(</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>id</span><span class='op'>(</span><span class='fl'>9</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># RC1</span>
+               <span class='op'>+</span> <span class='va'>gen</span><span class='op'>:</span><span class='fu'>spl</span><span class='op'>(</span><span class='va'>rate</span><span class='op'>)</span>
+               <span class='op'>+</span> <span class='va'>gen</span><span class='op'>:</span><span class='fu'>dev</span><span class='op'>(</span><span class='va'>rate</span><span class='op'>)</span>
+               <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/utils/str.html'>str</a></span><span class='op'>(</span><span class='op'>~</span><span class='va'>site</span><span class='op'>:</span><span class='va'>gen</span><span class='op'>+</span><span class='va'>site</span><span class='op'>:</span><span class='va'>gen</span><span class='op'>:</span><span class='va'>linrate</span>, <span class='op'>~</span><span class='fu'>us</span><span class='op'>(</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>id</span><span class='op'>(</span><span class='fl'>99</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># RC2</span>
+               <span class='op'>+</span> <span class='va'>site</span><span class='op'>:</span><span class='va'>gen</span><span class='op'>:</span><span class='fu'>spl</span><span class='op'>(</span><span class='va'>rate</span><span class='op'>)</span>
+               <span class='op'>+</span> <span class='va'>site</span><span class='op'>:</span><span class='va'>gen</span><span class='op'>:</span><span class='fu'>dev</span><span class='op'>(</span><span class='va'>rate</span><span class='op'>)</span>,
+               residual <span class='op'>=</span> <span class='op'>~</span> <span class='fu'>dsum</span><span class='op'>(</span> <span class='op'>~</span> <span class='fu'>ar1</span><span class='op'>(</span><span class='va'>rowf</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>colf</span><span class='op'>)</span><span class='op'>|</span><span class='va'>site</span><span class='op'>)</span> <span class='co'># Spatial AR1 x AR1</span>
+               <span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:50:41 2020
+#&gt; Spline: design points closer than 0.006 have been merged.</div><div class='output co'>#&gt; <span class='warning'>Warning: US updates modified 2 times in iteration 1 to remain positive definite.</span></div><div class='output co'>#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      1035.181           1.0   1370 17:50:41    0.5 (16 restrained)
+#&gt;  2      1265.567           1.0   1370 17:50:42    0.4 (15 restrained)</div><div class='output co'>#&gt; <span class='warning'>Warning: US updates modified 2 times in iteration 3 to remain positive definite.</span></div><div class='output co'>#&gt;  3      1433.305           1.0   1370 17:50:42    0.3 (13 restrained)</div><div class='output co'>#&gt; <span class='warning'>Warning: US updates modified 1 times in iteration 4 to remain positive definite.</span></div><div class='output co'>#&gt;  4      1491.898           1.0   1370 17:50:42    0.3 (10 restrained)
+#&gt;  5      1530.115           1.0   1370 17:50:43    0.3 (5 restrained)
+#&gt;  6      1535.456           1.0   1370 17:50:43    0.3 (5 restrained)
+#&gt;  7      1537.134           1.0   1370 17:50:43    0.3 (3 restrained)
+#&gt;  8      1537.495           1.0   1370 17:50:44    0.3 (1 restrained)
+#&gt;  9      1537.559           1.0   1370 17:50:44    0.3
+#&gt; 10      1537.563           1.0   1370 17:50:44    0.3</div><div class='output co'>#&gt; <span class='warning'>Warning: US variance structures were modified in 5 instances to make them positive definite</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='va'>m0</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m0</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:50:44 2020
+#&gt; Spline: design points closer than 0.006 have been merged.
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      1537.564           1.0   1370 17:50:45    0.4
+#&gt;  2      1537.564           1.0   1370 17:50:45    0.3</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='va'>m0</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m0</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:50:45 2020
+#&gt; Spline: design points closer than 0.006 have been merged.
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      1537.564           1.0   1370 17:50:46    0.4
+#&gt;  2      1537.564           1.0   1370 17:50:46    0.3</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='va'>m0</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m0</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:50:46 2020
+#&gt; Spline: design points closer than 0.006 have been merged.
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      1537.564           1.0   1370 17:50:47    0.4
+#&gt;  2      1537.564           1.0   1370 17:50:47    0.3</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='va'>m0</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m0</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:50:47 2020
+#&gt; Spline: design points closer than 0.006 have been merged.
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      1537.564           1.0   1370 17:50:47    0.4
+#&gt;  2      1537.564           1.0   1370 17:50:48    0.3</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='va'>m0</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m0</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:50:48 2020
+#&gt; Spline: design points closer than 0.006 have been merged.
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      1537.564           1.0   1370 17:50:48    0.4
+#&gt;  2      1537.564           1.0   1370 17:50:49    0.3</div><div class='input'>
+  <span class='co'># Variograms match Verbyla 1999 figure 7 (scale slightly different)</span>
+  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='fu'>varioGram</span><span class='op'>(</span><span class='va'>m0</span><span class='op'>)</span>, xlim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>19</span><span class='op'>)</span>, zlim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>2</span><span class='op'>)</span>,
+       main<span class='op'>=</span><span class='st'>"verbyla.lupin - variogram by site"</span><span class='op'>)</span>
+</div><div class='img'><img src='verbyla.lupin-3.png' alt='' width='700' height='433' /></div><div class='input'>  
+    <span class='co'># Sequence of models in Verbyla 1999 table 10</span>
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m0</span>, fixed<span class='op'>=</span> <span class='op'>~</span> <span class='va'>.</span>
+               <span class='op'>+</span> <span class='fu'>at</span><span class='op'>(</span><span class='va'>site</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span>,<span class='fl'>5</span>,<span class='fl'>6</span>,<span class='fl'>8</span>,<span class='fl'>9</span>,<span class='fl'>10</span><span class='op'>)</span><span class='op'>)</span><span class='op'>:</span><span class='va'>lincol</span>
+               <span class='op'>+</span> <span class='fu'>at</span><span class='op'>(</span><span class='va'>site</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>3</span>,<span class='fl'>5</span>,<span class='fl'>7</span>,<span class='fl'>8</span><span class='op'>)</span><span class='op'>)</span><span class='op'>:</span><span class='va'>linrow</span>
+               <span class='op'>+</span> <span class='fu'>at</span><span class='op'>(</span><span class='va'>site</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span>,<span class='fl'>3</span>,<span class='fl'>5</span>,<span class='fl'>7</span>,<span class='fl'>8</span>,<span class='fl'>9</span>,<span class='fl'>11</span><span class='op'>)</span><span class='op'>)</span><span class='op'>:</span><span class='va'>serp</span>
+               , random <span class='op'>=</span> <span class='op'>~</span> <span class='va'>.</span>
+               <span class='op'>+</span> <span class='fu'>at</span><span class='op'>(</span><span class='va'>site</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>3</span>,<span class='fl'>6</span>,<span class='fl'>7</span>,<span class='fl'>9</span><span class='op'>)</span><span class='op'>)</span><span class='op'>:</span><span class='va'>rowf</span>
+               <span class='op'>+</span> <span class='fu'>at</span><span class='op'>(</span><span class='va'>site</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>2</span>,<span class='fl'>3</span>,<span class='fl'>9</span>,<span class='fl'>10</span><span class='op'>)</span><span class='op'>)</span><span class='op'>:</span><span class='va'>colf</span>
+               <span class='op'>+</span> <span class='fu'>at</span><span class='op'>(</span><span class='va'>site</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>5</span>,<span class='fl'>7</span>,<span class='fl'>8</span>,<span class='fl'>10</span><span class='op'>)</span><span class='op'>)</span><span class='op'>:</span><span class='va'>units</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:50:49 2020
+#&gt; Spline: design points closer than 0.006 have been merged.</div><div class='output co'>#&gt; <span class='warning'>Warning: US updates modified 1 times in iteration 1 to remain positive definite.</span></div><div class='output co'>#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      1300.766           1.0   1339 17:50:50    0.8 (15 restrained)
+#&gt;  2      1373.661           1.0   1339 17:50:51    0.6 (11 restrained)</div><div class='output co'>#&gt; <span class='warning'>Warning: US updates modified 1 times in iteration 3 to remain positive definite.</span></div><div class='output co'>#&gt;  3      1521.164           1.0   1339 17:50:51    0.6 (12 restrained)</div><div class='output co'>#&gt; <span class='warning'>Warning: US updates modified 1 times in iteration 4 to remain positive definite.</span></div><div class='output co'>#&gt;  4      1550.613           1.0   1339 17:50:52    0.7 (7 restrained)
+#&gt;  5      1571.582           1.0   1339 17:50:53    0.7 (3 restrained)
+#&gt;  6      1578.652           1.0   1339 17:50:53    0.6 (2 restrained)
+#&gt;  7      1582.262           1.0   1339 17:50:54    0.6 (1 restrained)
+#&gt;  8      1582.866           1.0   1339 17:50:54    0.6
+#&gt;  9      1582.912           1.0   1339 17:50:55    0.6
+#&gt; 10      1582.921           1.0   1339 17:50:56    0.6
+#&gt; 11      1582.925           1.0   1339 17:50:56    0.6
+#&gt; 12      1582.928           1.0   1339 17:50:57    0.6
+#&gt; 13      1582.930           1.0   1339 17:50:57    0.6</div><div class='output co'>#&gt; <span class='warning'>Warning: US variance structures were modified in 3 instances to make them positive definite</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Log-likelihood not converged</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:50:58 2020
+#&gt; Spline: design points closer than 0.006 have been merged.
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      1582.932           1.0   1339 17:50:58    0.8
+#&gt;  2      1582.932           1.0   1339 17:50:59    0.6
+#&gt;  3      1582.933           1.0   1339 17:51:00    0.7
+#&gt;  4      1582.933           1.0   1339 17:51:00    0.7
+#&gt;  5      1582.934           1.0   1339 17:51:01    0.7
+#&gt;  6      1582.934           1.0   1339 17:51:02    0.7</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  
+  <span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m1</span>,
+               random <span class='op'>=</span> <span class='op'>~</span> <span class='va'>.</span>
+               <span class='op'>-</span> <span class='va'>site</span><span class='op'>:</span><span class='va'>gen</span><span class='op'>:</span><span class='fu'>spl</span><span class='op'>(</span><span class='va'>rate</span><span class='op'>)</span> <span class='op'>-</span> <span class='va'>site</span><span class='op'>:</span><span class='va'>gen</span><span class='op'>:</span><span class='fu'>dev</span><span class='op'>(</span><span class='va'>rate</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:51:02 2020
+#&gt; Spline: design points closer than 0.006 have been merged.
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      1582.935           1.0   1339 17:51:02    0.3 (1 restrained)
+#&gt;  2      1582.935           1.0   1339 17:51:03    0.2 (1 restrained)
+#&gt;  3      1582.935           1.0   1339 17:51:03    0.3</div><div class='input'>  
+  <span class='va'>m3</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m2</span>,
+               random <span class='op'>=</span> <span class='op'>~</span> <span class='va'>.</span>
+               <span class='op'>-</span> <span class='va'>site</span><span class='op'>:</span><span class='fu'>dev</span><span class='op'>(</span><span class='va'>rate</span><span class='op'>)</span> <span class='op'>-</span> <span class='va'>gen</span><span class='op'>:</span><span class='fu'>dev</span><span class='op'>(</span><span class='va'>rate</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:51:03 2020
+#&gt; Spline: design points closer than 0.006 have been merged.
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      1582.936           1.0   1339 17:51:03    0.2 (1 restrained)
+#&gt;  2      1582.936           1.0   1339 17:51:03    0.1 (1 restrained)
+#&gt;  3      1582.936           1.0   1339 17:51:03    0.1</div><div class='input'>  
+  <span class='va'>m4</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m3</span>,
+               random <span class='op'>=</span> <span class='op'>~</span> <span class='va'>.</span>
+               <span class='op'>-</span> <span class='fu'>dev</span><span class='op'>(</span><span class='va'>rate</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:51:04 2020
+#&gt; Spline: design points closer than 0.006 have been merged.
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      1582.936           1.0   1339 17:51:04    0.1 (1 restrained)
+#&gt;  2      1582.936           1.0   1339 17:51:04    0.1 (1 restrained)
+#&gt;  3      1582.936           1.0   1339 17:51:04    0.1</div><div class='input'>  
+  <span class='va'>m5</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m4</span>,
+               random <span class='op'>=</span> <span class='op'>~</span> <span class='va'>.</span>
+               <span class='op'>-</span> <span class='fu'>at</span><span class='op'>(</span><span class='va'>site</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>5</span>,<span class='fl'>7</span>,<span class='fl'>8</span>,<span class='fl'>10</span><span class='op'>)</span><span class='op'>)</span><span class='op'>:</span><span class='va'>units</span> <span class='op'>+</span> <span class='fu'>at</span><span class='op'>(</span><span class='va'>site</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>5</span>,<span class='fl'>7</span>,<span class='fl'>8</span><span class='op'>)</span><span class='op'>)</span><span class='op'>:</span><span class='va'>units</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:51:04 2020
+#&gt; Spline: design points closer than 0.006 have been merged.
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      1582.936           1.0   1339 17:51:04    0.1
+#&gt;  2      1582.936           1.0   1339 17:51:04    0.1</div><div class='input'>  
+  <span class='co'># Variance components are a pretty good match to Verbyla 1997, table 15</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lucid</span><span class='op'>)</span>
+  <span class='fu'>vc</span><span class='op'>(</span><span class='va'>m5</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;                               effect  component  std.error z.ratio bound %ch
+#&gt;                            spl(rate)  0.001288  0.001019     1.3       P 0  
+#&gt;                       spl(rate):site  0.0001556 0.0001227    1.3       P 0  
+#&gt;            gen+gen:linrate!us(2)_1:1  0.005445  0.003733     1.5       P 0  
+#&gt;            gen+gen:linrate!us(2)_2:1  0.001004  0.0007598    1.3       P 0  
+#&gt;            gen+gen:linrate!us(2)_2:2  0.0003661 0.0002168    1.7       P 0  
+#&gt;                        spl(rate):gen  0.0002057 0.0001326    1.6       P 0  
+#&gt;  site:gen+site:gen:linrate!us(2)_1:1  0.01881   0.003402     5.5       P 0  
+#&gt;  site:gen+site:gen:linrate!us(2)_2:1  0.00175   0.0004706    3.7       P 0  
+#&gt;  site:gen+site:gen:linrate!us(2)_2:2  0.000167  0.00008968   1.9       P 0  
+#&gt;                   at(site, S03):rowf  0.002594  0.006235     0.42      P 0  
+#&gt;                   at(site, S06):rowf  0.001127  0.00226      0.5       P 0  
+#&gt;                   at(site, S07):rowf  0.00019   0.002012     0.094     P 0.1
+#&gt;                   at(site, S09):rowf  0.004526  0.002323     1.9       P 0  
+#&gt;                   at(site, S01):colf  0.01041   0.00854      1.2       P 0  
+#&gt;                   at(site, S02):colf  0.02498   0.02076      1.2       P 0  
+#&gt;                   at(site, S03):colf  0.08167   0.07359      1.1       P 0  
+#&gt;                   at(site, S09):colf  0.004083  0.003688     1.1       P 0  
+#&gt;                   at(site, S10):colf  0.0004588 0.001058     0.43      P 0.2
+#&gt;                  at(site, S05):units  0.004378  0.007786     0.56      P 0  
+#&gt;                  at(site, S07):units  0.01323   0.002712     4.9       P 0  
+#&gt;                  at(site, S08):units  0.01302   0.004202     3.1       P 0  
+#&gt;                           site_S01!R  0.03273   0.005654     5.8       P 0  
+#&gt;                    site_S01!rowf!cor  0.1852    0.1417       1.3       U 0  
+#&gt;                    site_S01!colf!cor  0.1407    0.121        1.2       U 0  
+#&gt;                           site_S02!R  0.03999   0.00753      5.3       P 0  
+#&gt;                    site_S02!rowf!cor  0.3103    0.135        2.3       U 0  
+#&gt;                    site_S02!colf!cor  0.1673    0.1369       1.2       U 0  
+#&gt;                           site_S03!R  0.0505    0.0157       3.2       P 0  
+#&gt;                    site_S03!rowf!cor  0.4707    0.179        2.6       U 0  
+#&gt;                    site_S03!colf!cor -0.01851   0.2423      -0.076     U 0  
+#&gt;                           site_S04!R  0.03301   0.005216     6.3       P 0  
+#&gt;                    site_S04!rowf!cor -0.04041   0.1159      -0.35      U 0  
+#&gt;                    site_S04!colf!cor  0.1109    0.1261       0.88      U 0  
+#&gt;                           site_S05!R  0.01772   0.008592     2.1       P 0  
+#&gt;                    site_S05!rowf!cor  0.5623    0.2644       2.1       U 0  
+#&gt;                    site_S05!colf!cor  0.08337   0.2043       0.41      U 0  
+#&gt;                           site_S06!R  0.02409   0.003996     6         P 0  
+#&gt;                    site_S06!rowf!cor  0.3216    0.08428      3.8       U 0  
+#&gt;                    site_S06!colf!cor  0.2214    0.1186       1.9       U 0  
+#&gt;                           site_S07!R  0.03658   0.02023      1.8       P 0  
+#&gt;                    site_S07!rowf!cor  0.9019    0.06323     14         U 0  
+#&gt;                    site_S07!colf!cor  0.5703    0.2383       2.4       U 0  
+#&gt;                           site_S08!R  0.01813   0.006293     2.9       P 0  
+#&gt;                    site_S08!rowf!cor  0.7429    0.1436       5.2       U 0  
+#&gt;                    site_S08!colf!cor  0.1768    0.2027       0.87      U 0  
+#&gt;                           site_S09!R  0.01725   0.002548     6.8       P 0  
+#&gt;                    site_S09!rowf!cor  0.2509    0.09548      2.6       U 0  
+#&gt;                    site_S09!colf!cor -0.03375   0.1213      -0.28      U 0  
+#&gt;                           site_S10!R  0.01035   0.001703     6.1       P 0  
+#&gt;                    site_S10!rowf!cor  0.5222    0.07746      6.7       U 0.1
+#&gt;                    site_S10!colf!cor  0.1709    0.09266      1.8       U 0  
+#&gt;                           site_S11!R  0.05398   0.006905     7.8       P 0  
+#&gt;                    site_S11!rowf!cor  0.1939    0.09649      2         U 0  
+#&gt;                    site_S11!colf!cor  0.1034    0.1002       1         U 0  </div><div class='input'>  <span class='fl'>.001004</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span><span class='op'>(</span><span class='fl'>.005446</span><span class='op'>*</span><span class='fl'>.0003662</span><span class='op'>)</span> <span class='co'># .711 correlation for RC1</span>
+</div><div class='output co'>#&gt; [1] 0.7109445</div><div class='input'>  <span class='fl'>.00175</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span><span class='op'>(</span><span class='fl'>.01881</span><span class='op'>*</span><span class='fl'>.000167</span><span class='op'>)</span> <span class='co'># .987 correlation for RC2</span>
+</div><div class='output co'>#&gt; [1] 0.9873825</div><div class='input'>  
+  <span class='co'># Matches Verbyla 1999 figure 5</span>
+  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='fu'>varioGram</span><span class='op'>(</span><span class='va'>m5</span><span class='op'>)</span>,
+       main<span class='op'>=</span><span class='st'>"verbyla.lupin - final model variograms"</span>,
+       xlim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>19</span><span class='op'>)</span>, zlim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>1.5</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='verbyla.lupin-4.png' alt='' width='700' height='433' /></div><div class='input'>  
+<span class='co'># }</span>
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -353,7 +484,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

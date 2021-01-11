@@ -27,7 +27,7 @@
   Johnson, D.A. and Alldredge, J.R. and Vakoch, D.L. (1996).
   Potato late blight forecasting models for the semiarid environment of
   south-central Washington. \emph{Phytopathology}, 86, 480--484.
-  http://doi.org/10.1094/Phyto-86-480
+  https://doi.org/10.1094/Phyto-86-480
 }
 
 \references{

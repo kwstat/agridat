@@ -41,7 +41,7 @@
   J. Jansen, 1990.
   On the statistical analysis of ordinal data when extravariation is present.
   Applied Statistics, 39, 75-84, Table 1.
-  http://doi.org/10.2307/2347813
+  https://doi.org/10.2307/2347813
 }
 
 \examples{

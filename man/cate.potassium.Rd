@@ -30,7 +30,7 @@
   A simple statistical procedure for partitioning soil test correlation
   data into two classes.
   \emph{Soil Science Society of America Journal}, 35, 658--660.
-  http://doi.org/10.2136/sssaj1971.03615995003500040048x
+  https://doi.org/10.2136/sssaj1971.03615995003500040048x
 }
 
 \examples{

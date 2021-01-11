@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,15 +45,14 @@
 
 
 
-<meta property="og:title" content="Multi-environment trial of corn &amp; soybean, 1930-1962, with temperature and precipitation — thompson.cornsoy" />
 
+<meta property="og:title" content="Multi-environment trial of corn &amp; soybean, 1930-1962, with temperature and precipitation — thompson.cornsoy" />
 <meta property="og:description" content="Average yield of corn and soybeans in five U.S. states
   (IA, IL, IN, MO, OH) during the years 1930-1962.
   Pre-season precipitation and average temperature and precipitation
   during each month of the growing season is included." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -64,7 +69,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -78,7 +83,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -107,7 +112,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -115,10 +120,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -142,18 +146,17 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Average yield of corn and soybeans in five U.S. states
   (IA, IL, IN, MO, OH) during the years 1930-1962.
   Pre-season precipitation and average temperature and precipitation
   during each month of the growing season is included.</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p></p><dl class='dl-horizontal'>
+    <p></p><dl>
     <dt><code>state</code></dt><dd><p>state</p></dd>
     <dt><code>year</code></dt><dd><p>year, 1930-1962</p></dd>
     <dt><code>rain0</code></dt><dd><p>pre-season precipitation in inches</p></dd>
@@ -166,9 +169,9 @@
     <dt><code>temp8</code></dt><dd><p>august temp</p></dd>
     <dt><code>corn</code></dt><dd><p>corn yield, bu/acre</p></dd>
     <dt><code>soy</code></dt><dd><p>soybean yield, bu/acre</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Note: The Iowa corn data has sometimes been identified (in other
@@ -190,7 +193,7 @@
   driest on record.</p>
 <p>Some relevant maps of yield, heat, and precipitation can be found in
   <em>Atlas of crop yield and summer weather patterns, 1931-1975</em>,
-  http://www.isws.illinois.edu/pubdoc/C/ISWSC-150.pdf</p>
+  https://www.isws.illinois.edu/pubdoc/C/ISWSC-150.pdf</p>
 <p>The following notes pertain to the Iowa data.</p>
 <p>The 1947 June precipitation of 10.33 inches was the wettest June on
   record (a new Iowa June record of 10.34 inches was set in 2010).
@@ -208,76 +211,68 @@
   "The year 1949 saw the greatest infestation of corn borer in the
   history of corn in Iowa".</p>
 <p>1955 yields were reduced due to dry weather in late July and August.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Thompson, L.M., 1963. <em>Weather and technology in the production
     of corn and soybeans</em>. CAED Report 17. The Center for Agriculture
   and Economic Development, Iowa State University, Ames, Iowa.</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Draper, N. R. and Smith, H. (1981).  <em>Applied Regression Analysis</em>,
   second ed., Wiley, New York.</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>thompson.cornsoy</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>thompson.cornsoy</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>thompson.cornsoy</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>thompson.cornsoy</span>
 
 <span class='co'># The droughts of 1934/36 were severe in IA/MO. Less so in OH.</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'>xyplot</span>(<span class='no'>corn</span>+<span class='no'>soy</span>~<span class='no'>year</span><span class='kw'>|</span><span class='no'>state</span>, <span class='no'>dat</span>,
-       <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'p'</span>,<span class='st'>'l'</span>,<span class='st'>'r'</span>), <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>2</span>),
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"thompson.cornsoy"</span>,
-       <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>5</span>,<span class='fl'>1</span>),<span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>'yield'</span>)</div><div class='img'><img src='thompson.cornsoy-1.png' alt='' width='700' height='433' /></div><div class='input'>
-# In 1954, only Missouri suffered very hot, dry weather
-## xyplot(corn~year, dat,
-##        groups=state, type=c('p','l'),
-##        main="thompson.cornsoy",
-##        auto.key=list(columns=5), ylab='corn yield')
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>corn</span><span class='op'>+</span><span class='va'>soy</span><span class='op'>~</span><span class='va'>year</span><span class='op'>|</span><span class='va'>state</span>, <span class='va'>dat</span>,
+       type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'p'</span>,<span class='st'>'l'</span>,<span class='st'>'r'</span><span class='op'>)</span>, auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>2</span><span class='op'>)</span>,
+       main<span class='op'>=</span><span class='st'>"thompson.cornsoy"</span>,
+       layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>5</span>,<span class='fl'>1</span><span class='op'>)</span>,ylab<span class='op'>=</span><span class='st'>'yield'</span><span class='op'>)</span>
+</div><div class='img'><img src='thompson.cornsoy-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># In 1954, only Missouri suffered very hot, dry weather</span>
+<span class='co'>## xyplot(corn~year, dat,</span>
+<span class='co'>##        groups=state, type=c('p','l'),</span>
+<span class='co'>##        main="thompson.cornsoy",</span>
+<span class='co'>##        auto.key=list(columns=5), ylab='corn yield')</span>
 
-# Rain and temperature have negative correlation in each month.
-# July is a critical month: temp and yield are negatively correlated,
-# while rain and yield are positively correlated.
-# splom(~dat[-1,-1], col=dat$state, cex=.5, main="thompson.cornsoy")
+<span class='co'># Rain and temperature have negative correlation in each month.</span>
+<span class='co'># July is a critical month: temp and yield are negatively correlated,</span>
+<span class='co'># while rain and yield are positively correlated.</span>
+<span class='co'># splom(~dat[-1,-1], col=dat$state, cex=.5, main="thompson.cornsoy")</span>
 
-</div><div class='input'>  <span class='co'># Plots similar to those in Venables' Exegeses paper.</span>
+<span class='co'># \dontrun{</span>
+  <span class='co'># Plots similar to those in Venables' Exegeses paper.</span>
 
-  <span class='no'>dat.ia</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, <span class='no'>state</span><span class='kw'>==</span><span class='st'>"Iowa"</span>)
+  <span class='va'>dat.ia</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>state</span><span class='op'>==</span><span class='st'>"Iowa"</span><span class='op'>)</span>
 
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>splines</span>)
-  <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>(<span class='no'>corn</span> ~ <span class='fu'>ns</span>(<span class='no'>rain0</span>, <span class='fl'>3</span>) + <span class='fu'>ns</span>(<span class='no'>rain7</span>, <span class='fl'>3</span>) +
-              <span class='fu'>ns</span>(<span class='no'>temp8</span>, <span class='fl'>3</span>) + <span class='fu'>ns</span>(<span class='no'>year</span>,<span class='fl'>3</span>), <span class='no'>dat.ia</span>)
-  <span class='no'>op</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span>(<span class='kw'>mfrow</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>2</span>,<span class='fl'>2</span>))
-  <span class='fu'><a href='https://rdrr.io/r/stats/termplot.html'>termplot</a></span>(<span class='no'>m2</span>, <span class='kw'>se</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>rug</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>partial</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='img'><img src='thompson.cornsoy-2.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span>(<span class='no'>op</span>)
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>splines</span><span class='op'>)</span>
+  <span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span><span class='op'>(</span><span class='va'>corn</span> <span class='op'>~</span> <span class='fu'>ns</span><span class='op'>(</span><span class='va'>rain0</span>, <span class='fl'>3</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>ns</span><span class='op'>(</span><span class='va'>rain7</span>, <span class='fl'>3</span><span class='op'>)</span> <span class='op'>+</span>
+              <span class='fu'>ns</span><span class='op'>(</span><span class='va'>temp8</span>, <span class='fl'>3</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>ns</span><span class='op'>(</span><span class='va'>year</span>,<span class='fl'>3</span><span class='op'>)</span>, <span class='va'>dat.ia</span><span class='op'>)</span>
+  <span class='va'>op</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mfrow<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span>,<span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/termplot.html'>termplot</a></span><span class='op'>(</span><span class='va'>m2</span>, se<span class='op'>=</span><span class='cn'>TRUE</span>, rug<span class='op'>=</span><span class='cn'>TRUE</span>, partial<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+</div><div class='img'><img src='thompson.cornsoy-2.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span><span class='va'>op</span><span class='op'>)</span>
 
   <span class='co'># do NOT use gam package</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>mgcv</span>)
-  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>gam</span>(<span class='no'>corn</span> ~ <span class='fu'>s</span>(<span class='no'>year</span>, <span class='kw'>k</span><span class='kw'>=</span><span class='fl'>5</span>) + <span class='fu'>s</span>(<span class='no'>rain0</span>, <span class='kw'>k</span><span class='kw'>=</span><span class='fl'>5</span>) +
-              <span class='fu'>s</span>(<span class='no'>rain7</span>, <span class='kw'>k</span><span class='kw'>=</span><span class='fl'>5</span>) + <span class='fu'>s</span>(<span class='no'>temp8</span>, <span class='kw'>k</span><span class='kw'>=</span><span class='fl'>5</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat.ia</span>)
-  <span class='no'>op</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span>(<span class='kw'>mfrow</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>2</span>,<span class='fl'>2</span>))
-  <span class='fu'>plot.gam</span>(<span class='no'>m1</span>, <span class='kw'>residuals</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>se</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>2</span>)</div><div class='img'><img src='thompson.cornsoy-3.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span>(<span class='no'>op</span>)</div><div class='input'>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>mgcv</span><span class='op'>)</span>
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>gam</span><span class='op'>(</span><span class='va'>corn</span> <span class='op'>~</span> <span class='fu'>s</span><span class='op'>(</span><span class='va'>year</span>, k<span class='op'>=</span><span class='fl'>5</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>s</span><span class='op'>(</span><span class='va'>rain0</span>, k<span class='op'>=</span><span class='fl'>5</span><span class='op'>)</span> <span class='op'>+</span>
+              <span class='fu'>s</span><span class='op'>(</span><span class='va'>rain7</span>, k<span class='op'>=</span><span class='fl'>5</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>s</span><span class='op'>(</span><span class='va'>temp8</span>, k<span class='op'>=</span><span class='fl'>5</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat.ia</span><span class='op'>)</span>
+  <span class='va'>op</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mfrow<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span>,<span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='fu'>plot.gam</span><span class='op'>(</span><span class='va'>m1</span>, residuals<span class='op'>=</span><span class='cn'>TRUE</span>, se<span class='op'>=</span><span class='cn'>TRUE</span>, cex<span class='op'>=</span><span class='fl'>2</span><span class='op'>)</span>
+</div><div class='img'><img src='thompson.cornsoy-3.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span><span class='va'>op</span><span class='op'>)</span>
+<span class='co'># }</span>
+
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -288,7 +283,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

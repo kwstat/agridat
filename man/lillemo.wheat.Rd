@@ -53,7 +53,7 @@
   Identification of Stable Resistance to Powdery Mildew in Wheat Based
   on Parametric and Nonparametric Methods
   Crop Sci. 50:478-485.
-  http://doi.org/10.2135/cropsci2009.03.0116
+  https://doi.org/10.2135/cropsci2009.03.0116
 }
 \references{
   None.

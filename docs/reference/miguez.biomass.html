@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Biomass of 3 crops in Greece — miguez.biomass" />
-
 <meta property="og:description" content="Biomass of 3 crops in Greece" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,24 +143,23 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Biomass of 3 crops in Greece</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"miguez.biomass"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"miguez.biomass"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 212 observations on the following 5 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 212 observations on the following 5 variables.</p><dl>
     <dt><code>doy</code></dt><dd><p>day of year</p></dd>
     <dt><code>block</code></dt><dd><p>block, 1-4</p></dd>
     <dt><code>input</code></dt><dd><p>management input, Lo/Hi</p></dd>
     <dt><code>crop</code></dt><dd><p>crop type</p></dd>
     <dt><code>yield</code></dt><dd><p>yield tons/ha</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Experiment was conducted in Greece in 2009. Yield values are
@@ -166,120 +169,81 @@
   Lo management refers to bi-weekly irrigation and low nitrogen.</p>
 <p>The experiment had 4 blocks.</p>
 <p>Crops were planted on DOY 141 with 0 yield.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p>Fernando E. Miguez. R package nlraa
-  https://r-forge.r-project.org/projects/nlraa/</p>
-    
+    <p>Fernando E. Miguez. R package nlraa.
+  https://github.com/femiguez/nlraa</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Sotirios V. Archontoulis and Fernando E. Miguez (2013).
   Nonlinear Regression Models and Applications in Agricultural Research.
   <em>Agron. Journal</em>, 105:1-13.
-  http://doi.org/10.2134/agronj2012.0506</p>
+  https://doi.org/10.2134/agronj2012.0506</p>
 <p>Hamze Dokoohaki.
-  http://www.rpubs.com/Para2x/100378
+  https://www.rpubs.com/Para2x/100378
   https://rstudio-pubs-static.s3.amazonaws.com/100440_26eb9108524c4cc99071b0db8e648e7d.html</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>miguez.biomass</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>miguez.biomass</span>
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, <span class='no'>doy</span> <span class='kw'>&gt;</span> <span class='fl'>141</span>)
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>miguez.biomass</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>miguez.biomass</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>doy</span> <span class='op'>&gt;</span> <span class='fl'>141</span><span class='op'>)</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'>xyplot</span>(<span class='no'>yield</span> ~ <span class='no'>doy</span> <span class='kw'>|</span> <span class='no'>crop</span>*<span class='no'>input</span>,  <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>dat</span>,
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"miguez.biomass"</span>,
-       <span class='kw'>groups</span> <span class='kw'>=</span> <span class='no'>crop</span>,
-       <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'p'</span>,<span class='st'>'smooth'</span>),
-       <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='img'><img src='miguez.biomass-1.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='co'># ----------------------------------------------------------------------------</span>
-<span class='co'># Archontoulis et al fit some nonlinear models.</span>
-<span class='co'># Here is a simple example which does NOT account for crop/input</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>doy</span> <span class='op'>|</span> <span class='va'>crop</span><span class='op'>*</span><span class='va'>input</span>,  data <span class='op'>=</span> <span class='va'>dat</span>,
+         main<span class='op'>=</span><span class='st'>"miguez.biomass"</span>,
+         groups <span class='op'>=</span> <span class='va'>crop</span>,
+         type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'p'</span>,<span class='st'>'smooth'</span><span class='op'>)</span>,
+         auto.key<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+</div><div class='img'><img src='miguez.biomass-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
-<span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>eu</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='no'>block</span>, <span class='no'>input</span>, <span class='no'>crop</span>))
-<span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>groupedData</span>(<span class='no'>yield</span> ~ <span class='no'>doy</span> <span class='kw'>|</span> <span class='no'>eu</span>, <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>dat2</span>)
-<span class='no'>fit.lis</span> <span class='kw'>&lt;-</span> <span class='fu'>nlsList</span>(<span class='no'>yield</span> ~ <span class='fu'><a href='https://rdrr.io/r/stats/SSfpl.html'>SSfpl</a></span>(<span class='no'>doy</span>, <span class='no'>A</span>, <span class='no'>B</span>, <span class='no'>xmid</span>, <span class='no'>scal</span>), <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>dat2</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: 2 errors caught in nls(y ~ cbind(1, 1/(1 + exp((xmid - x)/exp(lscal)))), data = xy, </span>
-#&gt; <span class='warning'>    start = list(xmid = ir[1L], lscal = log(abs(ir[2L]))), algorithm = "plinear").  The error messages and their frequencies are</span>
-#&gt; <span class='warning'></span>
-#&gt; <span class='warning'>                     number of iterations exceeded maximum of 50 </span>
-#&gt; <span class='warning'>                                                               1 </span>
-#&gt; <span class='warning'>step factor 0.000488281 reduced below 'minFactor' of 0.000976562 </span>
-#&gt; <span class='warning'>                                                               1 </span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='fu'>intervals</span>(<span class='no'>fit.lis</span>)))</div><div class='img'><img src='miguez.biomass-2.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>nlme</span>)
-<span class='co'># use all data to get initial values</span>
-<span class='no'>inits</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/getInitial.html'>getInitial</a></span>(<span class='no'>yield</span> ~ <span class='fu'><a href='https://rdrr.io/r/stats/SSfpl.html'>SSfpl</a></span>(<span class='no'>doy</span>, <span class='no'>A</span>, <span class='no'>B</span>, <span class='no'>xmid</span>, <span class='no'>scal</span>), <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>dat2</span>)
-<span class='no'>inits</span></div><div class='output co'>#&gt;          A          B       xmid       scal 
-#&gt;  -1.533879  29.605749 218.475113  18.647521 </div><div class='input'><span class='no'>xvals</span> <span class='kw'>&lt;-</span> <span class='fl'>150</span>:<span class='fl'>325</span>
-<span class='no'>y1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/list.html'>as.list</a></span>(<span class='no'>inits</span>), <span class='fu'><a href='https://rdrr.io/r/stats/SSfpl.html'>SSfpl</a></span>(<span class='no'>xvals</span>, <span class='no'>A</span>, <span class='no'>B</span>, <span class='no'>xmid</span>, <span class='no'>scal</span>))
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>yield</span> ~ <span class='no'>doy</span>, <span class='no'>dat2</span>)</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/lines.html'>lines</a></span>(<span class='no'>xvals</span>,<span class='no'>y1</span>)</div><div class='img'><img src='miguez.biomass-3.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='co'># must have groupedData object to use augPred</span>
-<span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>groupedData</span>(<span class='no'>yield</span> ~ <span class='no'>doy</span><span class='kw'>|</span><span class='no'>eu</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat2</span>)
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>dat2</span>)</div><div class='img'><img src='miguez.biomass-4.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='co'># without 'random', all effects are included in 'random'</span>
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>nlme</span>(<span class='no'>yield</span> ~ <span class='fu'><a href='https://rdrr.io/r/stats/SSfpl.html'>SSfpl</a></span>(<span class='no'>doy</span>, <span class='no'>A</span>, <span class='no'>B</span>, <span class='no'>xmid</span>,<span class='no'>scale</span>),
-           <span class='kw'>data</span><span class='kw'>=</span> <span class='no'>dat2</span>,
-           <span class='kw'>fixed</span><span class='kw'>=</span> <span class='no'>A</span> + <span class='no'>B</span> + <span class='no'>xmid</span> + <span class='no'>scale</span> ~ <span class='fl'>1</span>,
-           <span class='co'># random = B ~ 1|eu, # to make only B random</span>
-           <span class='kw'>random</span> <span class='kw'>=</span> <span class='no'>A</span> + <span class='no'>B</span> + <span class='no'>xmid</span> + <span class='no'>scale</span> ~ <span class='fl'>1</span><span class='kw'>|</span><span class='no'>eu</span>,
-           <span class='kw'>start</span><span class='kw'>=</span><span class='no'>inits</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: Iteration 1, LME step: nlminb() did not converge (code = 1). Do increase 'msMaxIter'!</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Iteration 2, LME step: nlminb() did not converge (code = 1). Do increase 'msMaxIter'!</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Iteration 3, LME step: nlminb() did not converge (code = 1). Do increase 'msMaxIter'!</span></div><div class='input'><span class='fu'>fixef</span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt;            A            B         xmid        scale 
-#&gt;   0.09825105  25.78793521 213.40157041  12.87242161 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt; Nonlinear mixed-effects model fit by maximum likelihood
-#&gt;   Model: yield ~ SSfpl(doy, A, B, xmid, scale) 
-#&gt;  Data: dat2 
-#&gt;        AIC      BIC    logLik
-#&gt;   1185.665 1236.013 -577.8323
-#&gt; 
-#&gt; Random effects:
-#&gt;  Formula: list(A ~ 1, B ~ 1, xmid ~ 1, scale ~ 1)
-#&gt;  Level: eu
-#&gt;  Structure: General positive-definite, Log-Cholesky parametrization
-#&gt;          StdDev    Corr                
-#&gt; A        0.7683561 A      B      xmid  
-#&gt; B        8.1056194  0.454              
-#&gt; xmid     6.0833535  0.269  0.980       
-#&gt; scale    2.3036178 -0.926 -0.085  0.113
-#&gt; Residual 3.0442053                     
-#&gt; 
-#&gt; Fixed effects: A + B + xmid + scale ~ 1 
-#&gt;           Value Std.Error  DF   t-value p-value
-#&gt; A       0.09825 0.6543924 185   0.15014  0.8808
-#&gt; B      25.78794 1.7318383 185  14.89050  0.0000
-#&gt; xmid  213.40157 1.7318568 185 123.22125  0.0000
-#&gt; scale  12.87242 1.2476055 185  10.31770  0.0000
-#&gt;  Correlation: 
-#&gt;       A      B      xmid  
-#&gt; B      0.026              
-#&gt; xmid   0.402  0.743       
-#&gt; scale -0.706  0.104 -0.050
-#&gt; 
-#&gt; Standardized Within-Group Residuals:
-#&gt;         Min          Q1         Med          Q3         Max 
-#&gt; -2.69357507 -0.37156874 -0.06058247  0.40247140  3.47313898 
-#&gt; 
-#&gt; Number of Observations: 212
-#&gt; Number of Groups: 24 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='fu'>augPred</span>(<span class='no'>m1</span>, <span class='kw'>level</span><span class='kw'>=</span><span class='fl'>0</span>:<span class='fl'>1</span>),
-     <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"miguez.biomass - observed/predicted data"</span>) <span class='co'># only works with groupedData object</span></div><div class='output co'>#&gt; <span class='error'>Error in eval(object$call$data): object 'dat2' not found</span></div><div class='input'>  
+  <span class='co'># ----------</span>
+  <span class='co'># Archontoulis et al fit some nonlinear models.</span>
+  <span class='co'># Here is a simple example which does NOT account for crop/input</span>
+  <span class='co'># Slow, so dont run</span>
+  <span class='kw'>if</span><span class='op'>(</span><span class='fl'>0</span><span class='op'>)</span><span class='op'>{</span>
+    <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, eu <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>block</span>, <span class='va'>input</span>, <span class='va'>crop</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>groupedData</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>doy</span> <span class='op'>|</span> <span class='va'>eu</span>, data <span class='op'>=</span> <span class='va'>dat2</span><span class='op'>)</span>
+    <span class='va'>fit.lis</span> <span class='op'>&lt;-</span> <span class='fu'>nlsList</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fu'><a href='https://rdrr.io/r/stats/SSfpl.html'>SSfpl</a></span><span class='op'>(</span><span class='va'>doy</span>, <span class='va'>A</span>, <span class='va'>B</span>, <span class='va'>xmid</span>, <span class='va'>scal</span><span class='op'>)</span>,
+                       data <span class='op'>=</span> <span class='va'>dat2</span>,
+                       control<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/nls.control.html'>nls.control</a></span><span class='op'>(</span>maxiter<span class='op'>=</span><span class='fl'>100</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='fu'>intervals</span><span class='op'>(</span><span class='va'>fit.lis</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+    
+    <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>nlme</span><span class='op'>)</span>
+    <span class='co'># use all data to get initial values</span>
+    <span class='va'>inits</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/getInitial.html'>getInitial</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fu'><a href='https://rdrr.io/r/stats/SSfpl.html'>SSfpl</a></span><span class='op'>(</span><span class='va'>doy</span>, <span class='va'>A</span>, <span class='va'>B</span>, <span class='va'>xmid</span>, <span class='va'>scal</span><span class='op'>)</span>, data <span class='op'>=</span> <span class='va'>dat2</span><span class='op'>)</span>
+    <span class='va'>inits</span>
+    <span class='va'>xvals</span> <span class='op'>&lt;-</span> <span class='fl'>150</span><span class='op'>:</span><span class='fl'>325</span>
+    <span class='va'>y1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>as.list</a></span><span class='op'>(</span><span class='va'>inits</span><span class='op'>)</span>, <span class='fu'><a href='https://rdrr.io/r/stats/SSfpl.html'>SSfpl</a></span><span class='op'>(</span><span class='va'>xvals</span>, <span class='va'>A</span>, <span class='va'>B</span>, <span class='va'>xmid</span>, <span class='va'>scal</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>doy</span>, <span class='va'>dat2</span><span class='op'>)</span>
+    <span class='fu'><a href='https://rdrr.io/r/graphics/lines.html'>lines</a></span><span class='op'>(</span><span class='va'>xvals</span>,<span class='va'>y1</span><span class='op'>)</span>
+    
+    <span class='co'># must have groupedData object to use augPred</span>
+    <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>groupedData</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>doy</span><span class='op'>|</span><span class='va'>eu</span>, data<span class='op'>=</span><span class='va'>dat2</span><span class='op'>)</span>
+    <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>dat2</span><span class='op'>)</span>
+    
+    <span class='co'># without 'random', all effects are included in 'random'</span>
+    <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>nlme</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fu'><a href='https://rdrr.io/r/stats/SSfpl.html'>SSfpl</a></span><span class='op'>(</span><span class='va'>doy</span>, <span class='va'>A</span>, <span class='va'>B</span>, <span class='va'>xmid</span>,<span class='va'>scale</span><span class='op'>)</span>,
+               data<span class='op'>=</span> <span class='va'>dat2</span>,
+               fixed<span class='op'>=</span> <span class='va'>A</span> <span class='op'>+</span> <span class='va'>B</span> <span class='op'>+</span> <span class='va'>xmid</span> <span class='op'>+</span> <span class='va'>scale</span> <span class='op'>~</span> <span class='fl'>1</span>,
+               <span class='co'># random = B ~ 1|eu, # to make only B random</span>
+               random <span class='op'>=</span> <span class='va'>A</span> <span class='op'>+</span> <span class='va'>B</span> <span class='op'>+</span> <span class='va'>xmid</span> <span class='op'>+</span> <span class='va'>scale</span> <span class='op'>~</span> <span class='fl'>1</span><span class='op'>|</span><span class='va'>eu</span>,
+               start<span class='op'>=</span><span class='va'>inits</span><span class='op'>)</span>
+    <span class='fu'>fixef</span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+    <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='fu'>augPred</span><span class='op'>(</span><span class='va'>m1</span>, level<span class='op'>=</span><span class='fl'>0</span><span class='op'>:</span><span class='fl'>1</span><span class='op'>)</span>,
+         main<span class='op'>=</span><span class='st'>"miguez.biomass - observed/predicted data"</span><span class='op'>)</span> <span class='co'># only works with groupedData object</span>
+  <span class='op'>}</span>
+  
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -290,7 +254,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

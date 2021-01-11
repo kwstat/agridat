@@ -37,7 +37,7 @@
   of field experiments.
   \emph{Journal of Agricultural, Biological, and Environmental
     Statistics}, 2, 269-293.
-  http://doi.org/10.2307/1400446
+  https://doi.org/10.2307/1400446
 }
 
 \references{
@@ -58,55 +58,26 @@
 
   # ----------------------------------------------------------------------------
 
-  libs(asreml,lucid)
-  if( utils::packageVersion("asreml") < "4") {
-    # asreml3
+  libs(asreml,lucid) # asreml4
 
-    # Model 4 of Gilmour et al 1997
-    dat <- transform(dat, xf=factor(col), yf=factor(row))
-    dat <- dat[order(dat$xf, dat$yf), ]
-    m4 <- asreml(yield ~ gen + lin(row), data=dat,
-                 random = ~ dev(row) + dev(col),
-                 rcov = ~ ar1(xf):ar1(yf))
-    # coef(m4)$fixed[1] # linear row
-    # [1] 31.72252 # (sign switch due to row ordering)
+  # Model 4 of Gilmour et al 1997
+  dat <- transform(dat, xf=factor(col), yf=factor(row))
+  dat <- dat[order(dat$xf, dat$yf), ]
+  m4 <- asreml(yield ~ gen + lin(row), data=dat,
+               random = ~ dev(row) + dev(col),
+               resid = ~ ar1(xf):ar1(yf))
+  # coef(m4)$fixed[1] # linear row
+  # [1] 31.72252 # (sign switch due to row ordering)
+
+  vc(m4)
+  ##       effect component std.error z.ratio bound %ch
+  ##     dev(col)  2519      1959         1.3     P   0
+  ##     dev(row) 20290     10260         2       P   0
+  ##     xf:yf(R) 23950      4616         5.2     P   0
+  ## xf:yf!xf!cor     0.439     0.113     3.9     U   0
+  ## xf:yf!yf!cor     0.125     0.117     1.1     U   0
   
-    vc(m4)
-    ##      effect component std.error z.ratio constr
-    ##    dev(row) 20290     10260         2      pos
-    ##    dev(col)  2519      1959         1.3    pos
-    ##  R!variance 23950      4616         5.2    pos
-    ##    R!xf.cor     0.439     0.113     3.9  uncon
-    ##    R!yf.cor     0.125     0.117     1.1  uncon
-  
-    plot(variogram(m4), main="gilmour.slatehall")
-  }
-  
-  # ----------------------------------------------------------------------------
-
-  libs(asreml,lucid)
-  if( utils::packageVersion("asreml") > "4") {
-    # asreml4
-
-    # Model 4 of Gilmour et al 1997
-    dat <- transform(dat, xf=factor(col), yf=factor(row))
-    dat <- dat[order(dat$xf, dat$yf), ]
-    m4 <- asreml(yield ~ gen + lin(row), data=dat,
-                 random = ~ dev(row) + dev(col),
-                 resid = ~ ar1(xf):ar1(yf))
-    # coef(m4)$fixed[1] # linear row
-    # [1] 31.72252 # (sign switch due to row ordering)
-
-    vc(m4)
-    ##       effect component std.error z.ratio bound %ch
-    ##     dev(col)  2519      1959         1.3     P   0
-    ##     dev(row) 20290     10260         2       P   0
-    ##     xf:yf(R) 23950      4616         5.2     P   0
-    ## xf:yf!xf!cor     0.439     0.113     3.9     U   0
-    ## xf:yf!yf!cor     0.125     0.117     1.1     U   0
-    
-    plot(varioGram(m4), main="gilmour.slatehall")
-  }
+  plot(varioGram(m4), main="gilmour.slatehall")
 
 }
 }

@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Uniformity trial of wheat — kalamkar.wheat.uniformity" />
-
 <meta property="og:description" content="Uniformity trial of wheat at Rothamsted, UK in 1931." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,23 +143,22 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Uniformity trial of wheat at Rothamsted, UK in 1931.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"kalamkar.wheat.uniformity"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"kalamkar.wheat.uniformity"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 1280 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 1280 observations on the following 4 variables.</p><dl>
     <dt><code>row</code></dt><dd><p>row</p></dd>
     <dt><code>col</code></dt><dd><p>column</p></dd>
     <dt><code>yield</code></dt><dd><p>yield, grams/half-meter</p></dd>
     <dt><code>ears</code></dt><dd><p>ears per half-meter</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     
@@ -177,63 +180,71 @@
   During the year three workers (F. R. Immer, S. H. Justensen and
   R. J. Kalamkar) have taken up the question of the most efficient use
   of land in experiments in which an edge row must be discarded...</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Kalamkar, R. J (1932).
   A Study in Sampling Technique with Wheat.
   The Journal of Agricultural Science, Vol.22(4), pp.783-796.
   https://doi.org/10.1017/S0021859600054599</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>None.</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>kalamkar.wheat.uniformity</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>kalamkar.wheat.uniformity</span>
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>yield</span> ~ <span class='no'>ears</span>, <span class='no'>dat</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"kalamkar.wheat.uniformity"</span>)</div><div class='img'><img src='kalamkar.wheat.uniformity-1.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='co'># totals match Kalamkar</span>
-<span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='no'>dat</span>$<span class='no'>yield</span>)</div><div class='output co'>#&gt; [1] 24112.5</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='no'>dat</span>$<span class='no'>ears</span>)</div><div class='output co'>#&gt; [1] 25850</div><div class='input'>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='fu'>desplot</span>(<span class='no'>ears</span> ~ <span class='no'>col</span>*<span class='no'>row</span>, <span class='no'>dat</span>,
-        <span class='kw'>flip</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>aspect</span><span class='kw'>=</span>(<span class='fl'>80</span>*<span class='fl'>0.5</span>)/(<span class='fl'>16</span>*<span class='fl'>1.64042</span>), <span class='co'># true aspect</span>
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"kalamkar.wheat.uniformity - ears"</span>)</div><div class='img'><img src='kalamkar.wheat.uniformity-2.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>desplot</span>(<span class='no'>yield</span> ~ <span class='no'>col</span>*<span class='no'>row</span>, <span class='no'>dat</span>,
-        <span class='kw'>flip</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>aspect</span><span class='kw'>=</span>(<span class='fl'>80</span>*<span class='fl'>0.5</span>)/(<span class='fl'>16</span>*<span class='fl'>1.64042</span>), <span class='co'># true aspect</span>
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"kalamkar.wheat.uniformity - yield"</span>)</div><div class='img'><img src='kalamkar.wheat.uniformity-3.png' alt='' width='700' height='433' /></div><div class='input'>
-# Show the negative correlation between rows
-## libs(asreml)
-## libs(lucid)
-## dat <- dat <!-- %&gt;% mutate(rowf=factor(row), colf=factor(col)) %&gt;% -->
-##   arrange(rowf,colf)
-## m1=asreml(yield ~ 1, data=dat, rcov= ~ ar1(rowf):ar1(colf))
-## vc(m1)
-##  ##     effect component std.error z.ratio constr
-##  ## R!variance  81.54      3.527      23        P
-##  ## R!rowf.cor  -0.09465   0.0277     -3.4      U
-##  ## R!colf.cor   0.2977    0.02628    11        U
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>kalamkar.wheat.uniformity</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>kalamkar.wheat.uniformity</span>
   
+  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>ears</span>, <span class='va'>dat</span>, main<span class='op'>=</span><span class='st'>"kalamkar.wheat.uniformity"</span><span class='op'>)</span>
+</div><div class='img'><img src='kalamkar.wheat.uniformity-1.png' alt='' width='700' height='433' /></div><div class='input'>  
+  <span class='co'># totals match Kalamkar</span>
+  <span class='co'># sum(dat$yield) # 24112.5</span>
+  <span class='co'># sum(dat$ears) # 25850</span>
+  
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+  <span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>ears</span> <span class='op'>~</span> <span class='va'>col</span><span class='op'>*</span><span class='va'>row</span>,
+          flip<span class='op'>=</span><span class='cn'>TRUE</span>, aspect<span class='op'>=</span><span class='op'>(</span><span class='fl'>80</span><span class='op'>*</span><span class='fl'>0.5</span><span class='op'>)</span><span class='op'>/</span><span class='op'>(</span><span class='fl'>16</span><span class='op'>*</span><span class='fl'>1.64042</span><span class='op'>)</span>, <span class='co'># true aspect</span>
+          main<span class='op'>=</span><span class='st'>"kalamkar.wheat.uniformity - ears"</span><span class='op'>)</span>
+</div><div class='img'><img src='kalamkar.wheat.uniformity-2.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>yield</span> <span class='op'>~</span> <span class='va'>col</span><span class='op'>*</span><span class='va'>row</span>,
+          flip<span class='op'>=</span><span class='cn'>TRUE</span>, aspect<span class='op'>=</span><span class='op'>(</span><span class='fl'>80</span><span class='op'>*</span><span class='fl'>0.5</span><span class='op'>)</span><span class='op'>/</span><span class='op'>(</span><span class='fl'>16</span><span class='op'>*</span><span class='fl'>1.64042</span><span class='op'>)</span>, <span class='co'># true aspect</span>
+          main<span class='op'>=</span><span class='st'>"kalamkar.wheat.uniformity - yield"</span><span class='op'>)</span>
+</div><div class='img'><img src='kalamkar.wheat.uniformity-3.png' alt='' width='700' height='433' /></div><div class='input'>  
+  <span class='co'># ----------</span>
+  
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span>,<span class='va'>lucid</span><span class='op'>)</span> <span class='co'># asreml4</span>
+    
+  <span class='co'># Show the negative correlation between rows</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>,
+                   rowf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>row</span><span class='op'>)</span>, colf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>col</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>rowf</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>colf</span><span class='op'>)</span>,<span class='op'>]</span>
+  <span class='va'>m1</span> <span class='op'>=</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>1</span>, data<span class='op'>=</span><span class='va'>dat</span>, resid<span class='op'>=</span> <span class='op'>~</span> <span class='fu'>ar1</span><span class='op'>(</span><span class='va'>rowf</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>colf</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:08:47 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1     -3434.313       80.1883   1279 17:08:47    0.0
+#&gt;  2     -3416.532       78.3967   1279 17:08:47    0.0
+#&gt;  3     -3401.703       78.3835   1279 17:08:47    0.0
+#&gt;  4     -3396.808       79.9191   1279 17:08:47    0.0
+#&gt;  5     -3396.034       81.2062   1279 17:08:47    0.0
+#&gt;  6     -3396.011       81.4745   1279 17:08:47    0.0
+#&gt;  7     -3396.010       81.5251   1279 17:08:47    0.0</div><div class='input'>  <span class='fu'>vc</span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;              effect component std.error z.ratio bound %ch
+#&gt;         rowf:colf!R  81.53      3.525      23       P 0  
+#&gt;  rowf:colf!rowf!cor  -0.09464   0.0277     -3.4     U 0.1
+#&gt;  rowf:colf!colf!cor   0.2976    0.02629    11       U 0.1</div><div class='input'>  <span class='co'>##             effect component std.error z.ratio bound pctch</span>
+  <span class='co'>##        rowf:colf!R  81.53      3.525      23       P 0  </span>
+  <span class='co'>## rowf:colf!rowf!cor  -0.09464   0.0277     -3.4     U 0.1</span>
+  <span class='co'>## rowf:colf!colf!cor   0.2976    0.02629    11       U 0.1</span>
+
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -244,7 +255,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

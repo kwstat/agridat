@@ -30,7 +30,7 @@
   Hans-Pieter Piepho, 1994.
   Missing observations in the analysis of stability.
   \emph{Heredity}, 72, 141--145.
-  http://doi.org/10.1038/hdy.1994.20
+  https://doi.org/10.1038/hdy.1994.20
 }
 
 \examples{

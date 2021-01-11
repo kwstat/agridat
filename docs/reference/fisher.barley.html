@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -146,12 +146,12 @@
     <p>Multi-environment trial of 5 barley varieties, 6 locations, 2 years</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"fisher.barley"</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"fisher.barley"</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 60 observations on the following 4 variables.</p><dl'>
+    <p>A data frame with 60 observations on the following 4 variables.</p><dl>
     <dt><code>yield</code></dt><dd><p>yield, bu/ac</p></dd>
     <dt><code>gen</code></dt><dd><p>genotype/variety, 5 levels</p></dd>
     <dt><code>env</code></dt><dd><p>environment/location, 2 levels</p></dd>
@@ -181,103 +181,152 @@
 <p>F. Yates &amp; W. G. Cochran (1938).
   The Analysis of Groups of Experiments.
   <em>Journal of Agricultural Science</em>, 28, 556-580, table 1.
-  http://doi.org/10.1017/S0021859600050978</p>
+  https://doi.org/10.1017/S0021859600050978</p>
 <p>G. K. Shukla, 1972.
   Some statistical aspects of partitioning of genotype-environmental
   components of variability.
   <em>Heredity</em>, 29, 237-245. Table 1.
-  http://doi.org/10.1038/hdy.1972.87</p>
+  https://doi.org/10.1038/hdy.1972.87</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>fisher.barley</span>)
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>fisher.barley</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>fisher.barley</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>fisher.barley</span>
 
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>dplyr</span>,<span class='no'>lattice</span>)
-  <span class='co'># Yates 1938 figure 1. Regression on env mean</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>dplyr</span>,<span class='va'>lattice</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Attaching package: 'dplyr'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:nlme':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    collapse</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from 'package:stats':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    filter, lag</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from 'package:base':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    intersect, setdiff, setequal, union</span></div><div class='input'>  <span class='co'># Yates 1938 figure 1. Regression on env mean</span>
   <span class='co'># Sum years within loc</span>
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span>(<span class='no'>yield</span> ~ <span class='no'>gen</span> + <span class='no'>env</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>FUN</span><span class='kw'>=</span><span class='no'>sum</span>)
+  <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>env</span>, data<span class='op'>=</span><span class='va'>dat</span>, FUN<span class='op'>=</span><span class='va'>sum</span><span class='op'>)</span>
   <span class='co'># Avg within env</span>
-  <span class='no'>emn</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span>(<span class='no'>yield</span> ~ <span class='no'>env</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat2</span>, <span class='kw'>FUN</span><span class='kw'>=</span><span class='no'>mean</span>)
-  <span class='no'>dat2</span>$<span class='no'>envmn</span> <span class='kw'>&lt;-</span> <span class='no'>emn</span>$<span class='no'>yield</span>[<span class='fu'><a href='https://rdrr.io/r/base/match.html'>match</a></span>(<span class='no'>dat2</span>$<span class='no'>env</span>, <span class='no'>emn</span>$<span class='no'>env</span>)]
-  <span class='fu'>xyplot</span>(<span class='no'>yield</span> ~ <span class='no'>envmn</span>, <span class='no'>dat2</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>gen</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'p'</span>,<span class='st'>'r'</span>),
-         <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"fisher.barley - stability regression"</span>,
-         <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Environment total"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Variety mean"</span>,
-         <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>3</span>))</div><div class='img'><img src='fisher.barley-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='va'>emn</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>env</span>, data<span class='op'>=</span><span class='va'>dat2</span>, FUN<span class='op'>=</span><span class='va'>mean</span><span class='op'>)</span>
+  <span class='va'>dat2</span><span class='op'>$</span><span class='va'>envmn</span> <span class='op'>&lt;-</span> <span class='va'>emn</span><span class='op'>$</span><span class='va'>yield</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/match.html'>match</a></span><span class='op'>(</span><span class='va'>dat2</span><span class='op'>$</span><span class='va'>env</span>, <span class='va'>emn</span><span class='op'>$</span><span class='va'>env</span><span class='op'>)</span><span class='op'>]</span>
+  <span class='fu'>xyplot</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>envmn</span>, <span class='va'>dat2</span>, group<span class='op'>=</span><span class='va'>gen</span>, type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'p'</span>,<span class='st'>'r'</span><span class='op'>)</span>,
+         main<span class='op'>=</span><span class='st'>"fisher.barley - stability regression"</span>,
+         xlab<span class='op'>=</span><span class='st'>"Environment total"</span>, ylab<span class='op'>=</span><span class='st'>"Variety mean"</span>,
+         auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='fisher.barley-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
-  <span class='kw'>if</span>(<span class='fl'>0</span>){
+  <span class='kw'>if</span><span class='op'>(</span><span class='fl'>0</span><span class='op'>)</span><span class='op'>{</span>
     <span class='co'># calculate stability according to the sum-of-squares approach used by</span>
     <span class='co'># Shukla (1972), eqn 11. match to Shukla, Table 4, M.S. column</span>
     <span class='co'># also matches fernandez, table 3, stabvar column</span>
-    <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>dplyr</span>)
-    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>
-    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>group_by</span>(<span class='no'>dat2</span>, <span class='no'>gen</span>,<span class='no'>env</span>)
-    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>summarize</span>(<span class='no'>dat2</span>, <span class='kw'>yield</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='no'>yield</span>)) <span class='co'># means across years</span>
-    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>group_by</span>(<span class='no'>dat2</span>, <span class='no'>env</span>)
-    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>mutate</span>(<span class='no'>dat2</span>, <span class='kw'>envmn</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>yield</span>)) <span class='co'># env means</span>
-    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>group_by</span>(<span class='no'>dat2</span>, <span class='no'>gen</span>)
-    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>mutate</span>(<span class='no'>dat2</span>, <span class='kw'>genmn</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>yield</span>)) <span class='co'># gen means</span>
-    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>ungroup</span>(<span class='no'>dat2</span>)
-    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>mutate</span>(<span class='no'>dat2</span>, <span class='kw'>grandmn</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>yield</span>)) <span class='co'># grand mean</span>
+    <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>dplyr</span><span class='op'>)</span>
+    <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='va'>dat</span>
+    <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>dat2</span>, <span class='va'>gen</span>,<span class='va'>env</span><span class='op'>)</span>
+    <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>summarize</span><span class='op'>(</span><span class='va'>dat2</span>, yield<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># means across years</span>
+    <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>dat2</span>, <span class='va'>env</span><span class='op'>)</span>
+    <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>mutate</span><span class='op'>(</span><span class='va'>dat2</span>, envmn<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># env means</span>
+    <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>dat2</span>, <span class='va'>gen</span><span class='op'>)</span>
+    <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>mutate</span><span class='op'>(</span><span class='va'>dat2</span>, genmn<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># gen means</span>
+    <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>ungroup</span><span class='op'>(</span><span class='va'>dat2</span><span class='op'>)</span>
+    <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>mutate</span><span class='op'>(</span><span class='va'>dat2</span>, grandmn<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># grand mean</span>
     <span class='co'># correction factor overall</span>
-    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>mutate</span>(<span class='no'>dat2</span>, <span class='kw'>cf</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>((<span class='no'>yield</span> - <span class='no'>genmn</span> - <span class='no'>envmn</span> + <span class='no'>grandmn</span>)^<span class='fl'>2</span>))
-    <span class='no'>t</span><span class='kw'>=</span><span class='fl'>5</span>; <span class='no'>s</span><span class='kw'>=</span><span class='fl'>6</span> <span class='co'># t genotypes, s environments</span>
-    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>group_by</span>(<span class='no'>dat2</span>, <span class='no'>gen</span>)
-    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>mutate</span>(<span class='no'>dat2</span>, <span class='kw'>ss</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>((<span class='no'>yield</span>-<span class='no'>genmn</span>-<span class='no'>envmn</span>+<span class='no'>grandmn</span>)^<span class='fl'>2</span>))
+    <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>mutate</span><span class='op'>(</span><span class='va'>dat2</span>, cf <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>-</span> <span class='va'>genmn</span> <span class='op'>-</span> <span class='va'>envmn</span> <span class='op'>+</span> <span class='va'>grandmn</span><span class='op'>)</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='va'>t</span><span class='op'>=</span><span class='fl'>5</span>; <span class='va'>s</span><span class='op'>=</span><span class='fl'>6</span> <span class='co'># t genotypes, s environments</span>
+    <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>dat2</span>, <span class='va'>gen</span><span class='op'>)</span>
+    <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>mutate</span><span class='op'>(</span><span class='va'>dat2</span>, ss<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='op'>(</span><span class='va'>yield</span><span class='op'>-</span><span class='va'>genmn</span><span class='op'>-</span><span class='va'>envmn</span><span class='op'>+</span><span class='va'>grandmn</span><span class='op'>)</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
     <span class='co'># divide by 6 to scale down to plot-level</span>
-    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>mutate</span>(<span class='no'>dat2</span>, <span class='kw'>sig2i</span> <span class='kw'>=</span> <span class='fl'>1</span>/((<span class='no'>s</span>-<span class='fl'>1</span>)*(<span class='no'>t</span>-<span class='fl'>1</span>)*(<span class='no'>t</span>-<span class='fl'>2</span>)) * (<span class='no'>t</span>*(<span class='no'>t</span>-<span class='fl'>1</span>)*<span class='no'>ss</span>-<span class='no'>cf</span>)/<span class='fl'>6</span>)
-    <span class='no'>dat2</span>[!<span class='fu'><a href='https://rdrr.io/r/base/duplicated.html'>duplicated</a></span>(<span class='no'>dat2</span>$<span class='no'>gen</span>),<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'gen'</span>,<span class='st'>'sig2i'</span>)]
+    <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>mutate</span><span class='op'>(</span><span class='va'>dat2</span>, sig2i <span class='op'>=</span> <span class='fl'>1</span><span class='op'>/</span><span class='op'>(</span><span class='op'>(</span><span class='va'>s</span><span class='op'>-</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>*</span><span class='op'>(</span><span class='va'>t</span><span class='op'>-</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>*</span><span class='op'>(</span><span class='va'>t</span><span class='op'>-</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>*</span> <span class='op'>(</span><span class='va'>t</span><span class='op'>*</span><span class='op'>(</span><span class='va'>t</span><span class='op'>-</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>*</span><span class='va'>ss</span><span class='op'>-</span><span class='va'>cf</span><span class='op'>)</span><span class='op'>/</span><span class='fl'>6</span><span class='op'>)</span>
+    <span class='va'>dat2</span><span class='op'>[</span><span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/duplicated.html'>duplicated</a></span><span class='op'>(</span><span class='va'>dat2</span><span class='op'>$</span><span class='va'>gen</span><span class='op'>)</span>,<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'gen'</span>,<span class='st'>'sig2i'</span><span class='op'>)</span><span class='op'>]</span>    
     <span class='co'>##       &lt;chr&gt;     &lt;dbl&gt;</span>
     <span class='co'>## 1 Manchuria  25.87912</span>
     <span class='co'>## 2  Peatland  75.68001</span>
     <span class='co'>## 3  Svansota  19.59984</span>
     <span class='co'>## 4     Trebi 225.52866</span>
     <span class='co'>## 5    Velvet  22.73051</span>
-  }
+  <span class='op'>}</span>
 
 
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>,<span class='no'>lucid</span>)
-  <span class='kw'>if</span>( <span class='kw pkg'>utils</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/r/utils/packageDescription.html'>packageVersion</a></span>(<span class='st'>"asreml"</span>) <span class='kw'>&lt;</span> <span class='st'>"4"</span>) {
-    <span class='co'># asreml3</span>
-    <span class='co'># mixed model approach gives similar results (but not identical)</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span>,<span class='va'>lucid</span><span class='op'>)</span> <span class='co'># asreml3</span>
+  <span class='co'># mixed model approach gives similar results (but not identical)</span>
 
-    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>
-    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span>(<span class='no'>dat2</span>, <span class='no'>gen</span>,<span class='no'>env</span>)
-    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>dplyr</span><span class='kw ns'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span>(<span class='no'>dat2</span>, <span class='kw'>yield</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='no'>yield</span>)) <span class='co'># means across years</span>
-    <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='no'>dat2</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat2</span>$<span class='no'>gen</span>),]
-
+  <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='va'>dat</span>
+  <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>dplyr</span><span class='fu'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>dat2</span>, <span class='va'>gen</span>,<span class='va'>env</span><span class='op'>)</span>
+  <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>dplyr</span><span class='fu'>::</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/summarise.html'>summarize</a></span><span class='op'>(</span><span class='va'>dat2</span>, yield<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># means across years</span>
+</div><div class='output co'>#&gt; <span class='message'>`summarise()` regrouping output by 'gen' (override with `.groups` argument)</span></div><div class='input'>  <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='va'>dat2</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>dat2</span><span class='op'>$</span><span class='va'>gen</span><span class='op'>)</span>,<span class='op'>]</span>
+  
   <span class='co'># G-side</span>
-  <span class='no'>m1g</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat2</span>,
-                  <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='no'>env</span> + <span class='fu'>at</span>(<span class='no'>gen</span>):<span class='no'>units</span>,
-                  <span class='kw'>family</span><span class='kw'>=</span><span class='fu'>asreml.gaussian</span>(<span class='kw'>dispersion</span><span class='kw'>=</span><span class='fl'>1.0</span>))
-  <span class='no'>m1g</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span>(<span class='no'>m1g</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>m1g</span>)$<span class='no'>varcomp</span>[-<span class='fl'>1</span>,<span class='fl'>1</span>:<span class='fl'>2</span>]/<span class='fl'>6</span>
-  <span class='co'>##                                          gamma   component</span>
-  <span class='co'>## at(gen, Manchuria):units!units.var  33.8318944  33.8318944</span>
-  <span class='co'>## at(gen, Peatland):units!units.var   70.4838297  70.4838297</span>
-  <span class='co'>## at(gen, Svansota):units!units.var   25.2558315  25.2558315</span>
-  <span class='co'>## at(gen, Trebi):units!units.var     231.6923935 231.6923935</span>
-  <span class='co'>## at(gen, Velvet):units!units.var     13.9189381  13.9189381</span>
-  <span class='co'>## R!variance                           0.1666667   0.1666667</span>
+  <span class='va'>m1g</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat2</span>,
+                random <span class='op'>=</span> <span class='op'>~</span> <span class='va'>env</span> <span class='op'>+</span> <span class='fu'>at</span><span class='op'>(</span><span class='va'>gen</span><span class='op'>)</span><span class='op'>:</span><span class='va'>units</span>,
+                family<span class='op'>=</span><span class='fu'>asr_gaussian</span><span class='op'>(</span>dispersion<span class='op'>=</span><span class='fl'>1.0</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the sigma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:08:37 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -141.646           1.0     25 17:08:37    0.0
+#&gt;  2      -128.547           1.0     25 17:08:37    0.0
+#&gt;  3      -114.150           1.0     25 17:08:37    0.0
+#&gt;  4      -104.133           1.0     25 17:08:37    0.0
+#&gt;  5       -98.582           1.0     25 17:08:37    0.0
+#&gt;  6       -96.781           1.0     25 17:08:37    0.0
+#&gt;  7       -96.398           1.0     25 17:08:37    0.0
+#&gt;  8       -96.355           1.0     25 17:08:37    0.0
+#&gt;  9       -96.349           1.0     25 17:08:37    0.0
+#&gt; 10       -96.348           1.0     25 17:08:37    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='va'>m1g</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m1g</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the sigma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:08:37 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -96.3476           1.0     25 17:08:37    0.0
+#&gt;  2      -96.3476           1.0     25 17:08:37    0.0</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>m1g</span><span class='op'>)</span><span class='op'>$</span><span class='va'>varcomp</span><span class='op'>[</span><span class='op'>-</span><span class='fl'>1</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span><span class='op'>]</span><span class='op'>/</span><span class='fl'>6</span>
+</div><div class='output co'>#&gt;                            component std.error
+#&gt; at(gen, Manchuria):units  33.8145031  27.22721
+#&gt; at(gen, Peatland):units   70.4489092  50.52680
+#&gt; at(gen, Svansota):units   25.2728568  21.92919
+#&gt; at(gen, Trebi):units     231.6981702 150.80464
+#&gt; at(gen, Velvet):units     13.9325646  16.58571
+#&gt; units!R                    0.1666667        NA</div><div class='input'>  <span class='co'>#                            component std.error</span>
+  <span class='co'># at(gen, Manchuria):units  33.8145031  27.22721</span>
+  <span class='co'># at(gen, Peatland):units   70.4489092  50.52680</span>
+  <span class='co'># at(gen, Svansota):units   25.2728568  21.92919</span>
+  <span class='co'># at(gen, Trebi):units     231.6981702 150.80464</span>
+  <span class='co'># at(gen, Velvet):units     13.9325646  16.58571</span>
+  <span class='co'># units!R                    0.1666667        NA</span>
 
   <span class='co'># R-side estimates = G-side estimate + 0.1666 (resid variance)</span>
-  <span class='no'>m1r</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat2</span>,
-                 <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='no'>env</span>,
-                 <span class='kw'>rcov</span> <span class='kw'>=</span> ~ <span class='fu'>at</span>(<span class='no'>gen</span>):<span class='no'>units</span>) <span class='co'># or diag(gen):units</span>
-  <span class='no'>m1r</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span>(<span class='no'>m1r</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>m1r</span>)$<span class='no'>varcomp</span>[-<span class='fl'>1</span>,<span class='fl'>1</span>:<span class='fl'>2</span>]/<span class='fl'>6</span>
-  <span class='co'>##                            gamma component</span>
-  <span class='co'>## gen_Manchuria!variance  34.03643  34.03643</span>
-  <span class='co'>## gen_Peatland!variance   70.72723  70.72723</span>
-  <span class='co'>## gen_Svansota!variance   25.38494  25.38494</span>
-  <span class='co'>## gen_Trebi!variance     231.84662 231.84662</span>
-  <span class='co'>## gen_Velvet!variance     14.05591  14.05591</span>
+  <span class='va'>m1r</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat2</span>,
+                random <span class='op'>=</span> <span class='op'>~</span> <span class='va'>env</span>,
+                residual <span class='op'>=</span> <span class='op'>~</span> <span class='fu'>dsum</span><span class='op'>(</span> <span class='op'>~</span> <span class='va'>units</span><span class='op'>|</span><span class='va'>gen</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:08:37 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -106.401           1.0     25 17:08:37    0.0 (1 restrained)
+#&gt;  2      -102.077           1.0     25 17:08:37    0.0
+#&gt;  3      -100.377           1.0     25 17:08:37    0.0
+#&gt;  4       -98.882           1.0     25 17:08:37    0.0
+#&gt;  5       -97.150           1.0     25 17:08:37    0.0
+#&gt;  6       -96.577           1.0     25 17:08:37    0.0
+#&gt;  7       -96.413           1.0     25 17:08:37    0.0
+#&gt;  8       -96.363           1.0     25 17:08:37    0.0
+#&gt;  9       -96.351           1.0     25 17:08:37    0.0
+#&gt; 10       -96.348           1.0     25 17:08:37    0.0
+#&gt; 11       -96.348           1.0     25 17:08:37    0.0</div><div class='input'>  <span class='va'>m1r</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m1r</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:08:37 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -96.3476           1.0     25 17:08:37    0.0
+#&gt;  2      -96.3476           1.0     25 17:08:37    0.0</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>m1r</span><span class='op'>)</span><span class='op'>$</span><span class='va'>varcomp</span><span class='op'>[</span><span class='op'>-</span><span class='fl'>1</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span><span class='op'>]</span><span class='op'>/</span><span class='fl'>6</span>
+</div><div class='output co'>#&gt;                 component std.error
+#&gt; gen_Manchuria!R  34.00058  27.24871
+#&gt; gen_Peatland!R   70.65501  50.58925
+#&gt; gen_Svansota!R   25.42022  21.88606
+#&gt; gen_Trebi!R     231.85846 150.78756
+#&gt; gen_Velvet!R     14.08405  16.55558</div><div class='input'>  <span class='co'>#                     component std.error</span>
+  <span class='co'># gen_Manchuria!R  34.00058  27.24871</span>
+  <span class='co'># gen_Peatland!R   70.65501  50.58925</span>
+  <span class='co'># gen_Svansota!R   25.42022  21.88606</span>
+  <span class='co'># gen_Trebi!R     231.85846 150.78756</span>
+  <span class='co'># gen_Velvet!R     14.08405  16.55558</span>
 
-}
-
-<span class='co'># }</span></div></pre>
+<span class='co'># }</span>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -293,7 +342,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

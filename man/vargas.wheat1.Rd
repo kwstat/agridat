@@ -76,7 +76,7 @@ data("vargas.wheat1.traits")
   Martha E Ramirez and Mike Talbot, 1998.
   Interpreting Genotype x Environment Interaction in Wheat by
   Partial Least Squares Regression, \emph{Crop Science}, 38, 679--689.
-  http://doi.org/10.2135/cropsci1998.0011183X003800030010x
+  https://doi.org/10.2135/cropsci1998.0011183X003800030010x
   
   Data provided by Jose Crossa.
 }

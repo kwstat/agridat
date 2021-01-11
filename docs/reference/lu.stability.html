@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Multi-environment trial of maize, to illustrate stability statistics — lu.stability" />
-
 <meta property="og:description" content="Multi-environment trial to illustrate stability statistics" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,34 +143,31 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Multi-environment trial to illustrate stability statistics</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"lu.stability"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"lu.stability"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 120 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 120 observations on the following 4 variables.</p><dl>
     <dt><code>yield</code></dt><dd><p>yield</p></dd>
     <dt><code>gen</code></dt><dd><p>genotype factor, 5 levels</p></dd>
     <dt><code>env</code></dt><dd><p>environment factor, 6 levels</p></dd>
     <dt><code>block</code></dt><dd><p>block factor, 4 levels</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Data for 5 maize genotypes in 2 years x 3 sites = 6 environments.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>H.Y. Lu and C. T. Tien. (1993)
   Studies on nonparametric method of phenotypic stability: II. Selection
   for stability of agroeconomic concept.
   J. Agric. Assoc. China 164:1-17.</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     
@@ -179,30 +180,35 @@
   Stability Analysis Using Multiple Environment Trials Data by Linear
   Regression. (In Chinese)
   Crop, Environment &amp; Bioinformatics 10:131-142.</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+  
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>lu.stability</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>lu.stability</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>lu.stability</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>lu.stability</span></div><div class='input'>
-<span class='co'># GxE means. Match Lu 1995 table 1</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>reshape2</span>)
-<span class='no'>datm</span> <span class='kw'>&lt;-</span> <span class='fu'>acast</span>(<span class='no'>dat</span>, <span class='no'>gen</span>~<span class='no'>env</span>, <span class='kw'>fun</span><span class='kw'>=</span><span class='no'>mean</span>, <span class='kw'>value.var</span><span class='kw'>=</span><span class='st'>'yield'</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='no'>datm</span>, <span class='fl'>2</span>)</div><div class='output co'>#&gt;         E1      E2      E3      E4      E5      E6
+  <span class='co'># GxE means. Match Lu 1995 table 1</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>reshape2</span><span class='op'>)</span>
+  <span class='va'>datm</span> <span class='op'>&lt;-</span> <span class='fu'>acast</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>gen</span><span class='op'>~</span><span class='va'>env</span>, fun<span class='op'>=</span><span class='va'>mean</span>, value.var<span class='op'>=</span><span class='st'>'yield'</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>datm</span>, <span class='fl'>2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;         E1      E2      E3      E4      E5      E6
 #&gt; G1 3288.75 2162.50 3692.75 3920.75 1588.75 1805.25
 #&gt; G2 3487.25 1659.50 3148.25 3897.25 1936.50 1404.00
 #&gt; G3 2651.25 1996.25 2374.50 2919.75  982.50 1158.00
 #&gt; G4 2467.00 2095.25 2574.50 3743.00 1845.75 1488.75
-#&gt; G5 2752.50 1761.25 3912.75 4178.75 1889.50 1678.00</div><div class='input'><span class='co'># Gen/Env means. Match Lu 1995 table 3</span>
-<span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='no'>datm</span>, <span class='fl'>1</span>, <span class='no'>mean</span>)</div><div class='output co'>#&gt;       G1       G2       G3       G4       G5 
-#&gt; 2743.125 2588.792 2013.708 2369.042 2695.458 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='no'>datm</span>, <span class='fl'>2</span>, <span class='no'>mean</span>)</div><div class='output co'>#&gt;      E1      E2      E3      E4      E5      E6 
-#&gt; 2929.35 1934.95 3140.55 3731.90 1648.60 1506.80 </div><div class='input'>
-
-<span class='co'># Traditional ANOVA. Match Hwu table 2</span>
-<span class='co'># F value for gen,env</span>
-<span class='no'>m1</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>(<span class='no'>yield</span>~<span class='no'>env</span>+<span class='no'>gen</span>+<span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>Error</a></span>(<span class='no'>block</span>:<span class='no'>env</span>+<span class='no'>env</span>:<span class='no'>gen</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: Error() model is singular</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt; 
+#&gt; G5 2752.50 1761.25 3912.75 4178.75 1889.50 1678.00</div><div class='input'>  <span class='co'># Gen/Env means. Match Lu 1995 table 3</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>datm</span>, <span class='fl'>1</span>, <span class='va'>mean</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;       G1       G2       G3       G4       G5 
+#&gt; 2743.125 2588.792 2013.708 2369.042 2695.458 </div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>datm</span>, <span class='fl'>2</span>, <span class='va'>mean</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;      E1      E2      E3      E4      E5      E6 
+#&gt; 2929.35 1934.95 3140.55 3731.90 1648.60 1506.80 </div><div class='input'>  
+  
+  <span class='co'># Traditional ANOVA. Match Hwu table 2</span>
+  <span class='co'># F value for gen,env</span>
+  <span class='va'>m1</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>~</span><span class='va'>env</span><span class='op'>+</span><span class='va'>gen</span><span class='op'>+</span><span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>Error</a></span><span class='op'>(</span><span class='va'>block</span><span class='op'>:</span><span class='va'>env</span><span class='op'>+</span><span class='va'>env</span><span class='op'>:</span><span class='va'>gen</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='warning'>Warning: Error() model is singular</span></div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>   
+</div><div class='output co'>#&gt; 
 #&gt; Error: block:env
 #&gt;           Df   Sum Sq  Mean Sq F value   Pr(&gt;F)    
 #&gt; env        5 82817889 16563578   102.9 1.36e-12 ***
@@ -219,9 +225,10 @@
 #&gt; 
 #&gt; Error: Within
 #&gt;           Df   Sum Sq Mean Sq F value Pr(&gt;F)
-#&gt; Residuals 72 12912246  179337               </div><div class='input'><span class='co'># F value for gen:env, block:env</span>
-<span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>(<span class='no'>yield</span> ~ <span class='no'>gen</span> + <span class='no'>env</span> + <span class='no'>gen</span>:<span class='no'>env</span> + <span class='no'>block</span>:<span class='no'>env</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>m2</span>)</div><div class='output co'>#&gt;             Df   Sum Sq  Mean Sq F value   Pr(&gt;F)    
+#&gt; Residuals 72 12912246  179337               </div><div class='input'>  <span class='co'># F value for gen:env, block:env</span>
+  <span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>env</span> <span class='op'>+</span> <span class='va'>gen</span><span class='op'>:</span><span class='va'>env</span> <span class='op'>+</span> <span class='va'>block</span><span class='op'>:</span><span class='va'>env</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span> 
+  <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>m2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;             Df   Sum Sq  Mean Sq F value   Pr(&gt;F)    
 #&gt; gen          4  8573084  2143271  11.951 1.68e-07 ***
 #&gt; env          5 82817889 16563578  92.360  &lt; 2e-16 ***
 #&gt; gen:env     20  9662873   483144   2.694  0.00114 ** 
@@ -229,45 +236,49 @@
 #&gt; Residuals   72 12912246   179337                     
 #&gt; ---
 #&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'>
-<span class='co'># Finlay Wilkinson regression coefficients</span>
-<span class='co'># First, calculate env mean, merge in</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>dplyr</span>)
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>group_by</span>(<span class='no'>dat</span>, <span class='no'>env</span>)
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>mutate</span>(<span class='no'>dat2</span>, <span class='kw'>loc.mean</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>yield</span>))
-<span class='no'>m4</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>yield</span> ~ <span class='no'>gen</span> -<span class='fl'>1</span> + <span class='no'>gen</span>:<span class='no'>loc.mean</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat2</span>)
-<span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m4</span>) <span class='co'># Match Hwu table 4</span></div><div class='output co'>#&gt;          genG1          genG2          genG3          genG4          genG5 
-#&gt;     24.4698520   -176.3280420      0.5186791    366.5962974   -215.2567865 
-#&gt; genG1:loc.mean genG2:loc.mean genG3:loc.mean genG4:loc.mean genG5:loc.mean 
-#&gt;      1.0953375      1.1140580      0.8111077      0.8067789      1.1727179 </div><div class='input'>
+  <span class='co'># Finlay Wilkinson regression coefficients</span>
+  <span class='co'># First, calculate env mean, merge in</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>dplyr</span><span class='op'>)</span>
+  <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>env</span><span class='op'>)</span>
+  <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>mutate</span><span class='op'>(</span><span class='va'>dat2</span>, locmn<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>m4</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>gen</span> <span class='op'>-</span><span class='fl'>1</span> <span class='op'>+</span> <span class='va'>gen</span><span class='op'>:</span><span class='va'>locmn</span>, data<span class='op'>=</span><span class='va'>dat2</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>m4</span><span class='op'>)</span> <span class='co'># Match Hwu table 4</span>
+</div><div class='output co'>#&gt;        genG1        genG2        genG3        genG4        genG5  genG1:locmn 
+#&gt;   24.4698520 -176.3280420    0.5186791  366.5962974 -215.2567865    1.0953375 
+#&gt;  genG2:locmn  genG3:locmn  genG4:locmn  genG5:locmn 
+#&gt;    1.1140580    0.8111077    0.8067789    1.1727179 </div><div class='input'>
 <span class='co'># Table 6: Shukla's heterogeneity test</span>
-<span class='no'>dat2</span>$<span class='no'>ge</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/gl.html'>gl</a></span>(<span class='fl'>5</span>,<span class='fl'>6</span>) <span class='co'># Create a separate ge interaction term  </span>
-<span class='no'>m6</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>yield</span> ~ <span class='no'>gen</span> + <span class='no'>env</span> + <span class='no'>ge</span> + <span class='no'>ge</span>:<span class='no'>loc.mean</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat2</span>)
-<span class='no'>m6b</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>( <span class='no'>yield</span> ~ <span class='no'>gen</span> + <span class='no'>env</span> + <span class='no'>ge</span> + <span class='no'>loc.mean</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat2</span>)
-<span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m6</span>, <span class='no'>m6b</span>) <span class='co'># Non-significant difference</span></div><div class='output co'>#&gt; Analysis of Variance Table
+  <span class='va'>dat2</span><span class='op'>$</span><span class='va'>ge</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='va'>dat2</span><span class='op'>$</span><span class='va'>gen</span>, <span class='va'>dat2</span><span class='op'>$</span><span class='va'>env</span><span class='op'>)</span> <span class='co'># Create a separate ge interaction term  </span>
+  <span class='va'>m6</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>env</span> <span class='op'>+</span> <span class='va'>ge</span> <span class='op'>+</span> <span class='va'>ge</span><span class='op'>:</span><span class='va'>locmn</span>, data<span class='op'>=</span><span class='va'>dat2</span><span class='op'>)</span>
+  <span class='va'>m6b</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span> <span class='va'>yield</span> <span class='op'>~</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>env</span> <span class='op'>+</span> <span class='va'>ge</span> <span class='op'>+</span> <span class='va'>locmn</span>, data<span class='op'>=</span><span class='va'>dat2</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>m6</span>, <span class='va'>m6b</span><span class='op'>)</span> <span class='co'># Non-significant difference</span>
+</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
-#&gt; Model 1: yield ~ gen + env + ge + ge:loc.mean
-#&gt; Model 2: yield ~ gen + env + ge + loc.mean
-#&gt;   Res.Df      RSS Df Sum of Sq      F Pr(&gt;F)
-#&gt; 1    102 23440123                           
-#&gt; 2    106 25229756 -4  -1789633 1.9469 0.1083</div><div class='input'>
-<span class='co'># Table 7 - Shukla stability</span>
-<span class='co'># First, environment means</span>
-  <span class='no'>emn</span> <span class='kw'>&lt;-</span> <span class='fu'>group_by</span>(<span class='no'>dat2</span>, <span class='no'>env</span>)
-  <span class='no'>emn</span> <span class='kw'>&lt;-</span> <span class='fu'>summarize</span>(<span class='no'>emn</span>, <span class='kw'>ymn</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>yield</span>))
-<span class='co'># Regress GxE terms on envt means</span>
-<span class='no'>getab</span> <span class='kw'>=</span> (<span class='fu'><a href='https://rdrr.io/r/stats/model.tables.html'>model.tables</a></span>(<span class='no'>m2</span>,<span class='st'>"effects"</span>)$<span class='no'>tables</span>)$<span class='st'>'gen:env'</span>
-<span class='no'>getab</span></div><div class='output co'>#&gt;     env
+#&gt; Model 1: yield ~ gen + env + ge + ge:locmn
+#&gt; Model 2: yield ~ gen + env + ge + locmn
+#&gt;   Res.Df      RSS Df Sum of Sq F Pr(&gt;F)
+#&gt; 1     90 15810067                      
+#&gt; 2     90 15810067  0         0         </div><div class='input'>
+  <span class='co'># Table 7 - Shukla stability</span>
+  <span class='co'># First, environment means</span>
+  <span class='va'>emn</span> <span class='op'>&lt;-</span> <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>dat2</span>, <span class='va'>env</span><span class='op'>)</span>
+  <span class='va'>emn</span> <span class='op'>&lt;-</span> <span class='fu'>summarize</span><span class='op'>(</span><span class='va'>emn</span>, ymn<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>`summarise()` ungrouping output (override with `.groups` argument)</span></div><div class='input'>  <span class='co'># Regress GxE terms on envt means</span>
+  <span class='va'>getab</span> <span class='op'>=</span> <span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/model.tables.html'>model.tables</a></span><span class='op'>(</span><span class='va'>m2</span>,<span class='st'>"effects"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>tables</span><span class='op'>)</span><span class='op'>$</span><span class='st'>'gen:env'</span>
+  <span class='va'>getab</span>
+</div><div class='output co'>#&gt;     env
 #&gt; gen  E1        E2        E3        E4        E5        E6       
 #&gt;   G1   98.3000  -33.5500  291.1000  -72.2500 -320.9500   37.3500
 #&gt;   G2  451.1333 -382.2167  -99.0667   58.5833  181.1333 -209.5667
 #&gt;   G3  190.2167  529.6167 -297.7333 -343.8333 -197.7833  119.5167
 #&gt;   G4 -349.3667  273.2833 -453.0667  124.0833  310.1333   94.9333
-#&gt;   G5 -390.2833 -387.1333  558.7667  233.4167   27.4667  -42.2333</div><div class='input'><span class='kw'>for</span> (<span class='no'>ll</span> <span class='kw'>in</span> <span class='fl'>1</span>:<span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span>(<span class='no'>getab</span>)){
-  <span class='no'>m7l</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>getab</span>[<span class='no'>ll</span>, ] ~ <span class='no'>emn</span>$<span class='no'>ymn</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span>(<span class='st'>"\n\n*************** Gen "</span>,<span class='no'>ll</span>,<span class='st'>" ***************\n"</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span>(<span class='st'>"Regression coefficient: "</span>,<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coefficients</a></span>(<span class='no'>m7l</span>)[<span class='fl'>2</span>],<span class='fl'>5</span>),<span class='st'>"\n"</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m7l</span>))
-} <span class='co'># Match Hwu table 7.</span></div><div class='output co'>#&gt; 
+#&gt;   G5 -390.2833 -387.1333  558.7667  233.4167   27.4667  -42.2333</div><div class='input'>  <span class='kw'>for</span> <span class='op'>(</span><span class='va'>ll</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>getab</span><span class='op'>)</span><span class='op'>)</span><span class='op'>{</span>
+    <span class='va'>m7l</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>getab</span><span class='op'>[</span><span class='va'>ll</span>, <span class='op'>]</span> <span class='op'>~</span> <span class='va'>emn</span><span class='op'>$</span><span class='va'>ymn</span><span class='op'>)</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"\n\n*************** Gen "</span>,<span class='va'>ll</span>,<span class='st'>" ***************\n"</span><span class='op'>)</span> 
+    <span class='fu'><a href='https://rdrr.io/r/base/cat.html'>cat</a></span><span class='op'>(</span><span class='st'>"Regression coefficient: "</span>,<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coefficients</a></span><span class='op'>(</span><span class='va'>m7l</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span>,<span class='fl'>5</span><span class='op'>)</span>,<span class='st'>"\n"</span><span class='op'>)</span> 
+    <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>m7l</span><span class='op'>)</span><span class='op'>)</span> 
+  <span class='op'>}</span> <span class='co'># Match Hwu table 7.</span>
+</div><div class='output co'>#&gt; 
 #&gt; 
 #&gt; *************** Gen  1  ***************
 #&gt; Regression coefficient:  0.09534 
@@ -317,25 +328,13 @@
 #&gt;           Df Sum Sq Mean Sq F value Pr(&gt;F)
 #&gt; emn$ymn    1 123529  123529  0.9018 0.3961
 #&gt; Residuals  4 547906  136976               </div><div class='input'>
-</div><div class='input'> # dontrun
-
+<span class='co'># } # dontrun</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -346,7 +345,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -31,8 +31,8 @@
   
 }
 \source{
-  Tigist Mideksa Damesa, Jens Möhring, Mosisa Worku, Hans‐Peter Piepho (2017).
-  One Step at a Time: Stage‐Wise Analysis of a Series of Experiments.
+  Tigist Mideksa Damesa, Jens Möhring, Mosisa Worku, Hans-Peter Piepho (2017).
+  One Step at a Time: Stage-Wise Analysis of a Series of Experiments.
   Agronomy J, 109, 845-857.
   https://doi.org/10.2134/agronj2016.07.0395
 }

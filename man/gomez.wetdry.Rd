@@ -32,7 +32,7 @@
   Rong-Cai Yang, Patricia Juskiw. (2011).
   Analysis of covariance in agronomy and crop research.
   Canadian Journal of Plant Science, 91:621-641.
-  http://doi.org/10.4141/cjps2010-032
+  https://doi.org/10.4141/cjps2010-032
 }
 
 \examples{

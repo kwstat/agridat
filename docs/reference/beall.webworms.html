@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -146,12 +146,12 @@
     <p>Counts of webworms in a beet field, with insecticide treatments.</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"beall.webworms"</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"beall.webworms"</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 1300 observations on the following 7 variables.</p><dl'>
+    <p>A data frame with 1300 observations on the following 7 variables.</p><dl>
     <dt><code>row</code></dt><dd><p>row</p></dd>
     <dt><code>col</code></dt><dd><p>column</p></dd>
     <dt><code>y</code></dt><dd><p>count of webworms</p></dd>
@@ -183,56 +183,59 @@
   The fit and significance of contagious distributions when applied to
   observations on larval insects.
   <em>Ecology</em>, 21, 460-474. Table 6.
-  http://doi.org/10.2307/1930285</p>
+  https://doi.org/10.2307/1930285</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Michal Kosma et al. (2019).
   Over-dispersed count data in crop and agronomy research.
   <em>Journal of Agronomy and Crop Science</em>.
-  http://doi.org/10.1111/jac.12333</p>
+  https://doi.org/10.1111/jac.12333</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>beall.webworms</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>beall.webworms</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>beall.webworms</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>beall.webworms</span>
 
 <span class='co'># Match Beall table 1</span>
 <span class='co'># with(dat, table(y,trt))</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'>histogram</span>(~<span class='no'>y</span><span class='kw'>|</span><span class='no'>trt</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>4</span>), <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>,
-          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"beall.webworms"</span>)</div><div class='img'><img src='beall.webworms-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='fu'>histogram</span><span class='op'>(</span><span class='op'>~</span><span class='va'>y</span><span class='op'>|</span><span class='va'>trt</span>, data<span class='op'>=</span><span class='va'>dat</span>, layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>4</span><span class='op'>)</span>, as.table<span class='op'>=</span><span class='cn'>TRUE</span>,
+          main<span class='op'>=</span><span class='st'>"beall.webworms"</span><span class='op'>)</span>
+</div><div class='img'><img src='beall.webworms-1.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Visualize Beall table 6.  Block effects may exist, but barely.</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='no'>grays</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"white"</span>,<span class='st'>"#252525"</span>))
-<span class='fu'>desplot</span>(<span class='no'>dat</span>, <span class='no'>y</span> ~ <span class='no'>col</span>*<span class='no'>row</span>,
-        <span class='kw'>col.regions</span><span class='kw'>=</span><span class='fu'>grays</span>(<span class='fl'>10</span>),
-        <span class='kw'>at</span><span class='kw'>=</span><span class='fl'>0</span>:<span class='fl'>10</span>-<span class='fl'>0.5</span>,
-        <span class='kw'>out1</span><span class='kw'>=</span><span class='no'>block</span>, <span class='kw'>out2</span><span class='kw'>=</span><span class='no'>trt</span>, <span class='kw'>num</span><span class='kw'>=</span><span class='no'>trt</span>, <span class='kw'>flip</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='co'># aspect unknown</span>
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"beall.webworms (count of worms)"</span>)</div><div class='img'><img src='beall.webworms-2.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+<span class='va'>grays</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"white"</span>,<span class='st'>"#252525"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>y</span> <span class='op'>~</span> <span class='va'>col</span><span class='op'>*</span><span class='va'>row</span>,
+        col.regions<span class='op'>=</span><span class='fu'>grays</span><span class='op'>(</span><span class='fl'>10</span><span class='op'>)</span>,
+        at<span class='op'>=</span><span class='fl'>0</span><span class='op'>:</span><span class='fl'>10</span><span class='op'>-</span><span class='fl'>0.5</span>,
+        out1<span class='op'>=</span><span class='va'>block</span>, out2<span class='op'>=</span><span class='va'>trt</span>, num<span class='op'>=</span><span class='va'>trt</span>, flip<span class='op'>=</span><span class='cn'>TRUE</span>, <span class='co'># aspect unknown</span>
+        main<span class='op'>=</span><span class='st'>"beall.webworms (count of worms)"</span><span class='op'>)</span>
+</div><div class='img'><img src='beall.webworms-2.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Following plot suggests interaction is needed</span>
 <span class='co'># with(dat, interaction.plot(spray, lead, y))</span>
 
 <span class='co'># Try the models of Kosma et al, Table 1.</span>
 
 <span class='co'># Poisson model</span>
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/glm.html'>glm</a></span>(<span class='no'>y</span> ~ <span class='no'>block</span> + <span class='no'>spray</span>*<span class='no'>lead</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>family</span><span class='kw'>=</span><span class='st'>"poisson"</span>)
-<span class='fu'><a href='https://rdrr.io/r/stats/logLik.html'>logLik</a></span>(<span class='no'>m1</span>) <span class='co'># -1497.719 (df=16)</span></div><div class='output co'>#&gt; 'log Lik.' -1497.719 (df=16)</div><div class='input'>
-# Negative binomial model
-# libs(MASS)
-# m2 &lt;- glm.nb(y ~ block + spray*lead, data=dat)
-# logLik(m2) # -1478.341 (df=17)
+<span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/glm.html'>glm</a></span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='va'>block</span> <span class='op'>+</span> <span class='va'>spray</span><span class='op'>*</span><span class='va'>lead</span>, data<span class='op'>=</span><span class='va'>dat</span>, family<span class='op'>=</span><span class='st'>"poisson"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/stats/logLik.html'>logLik</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span> <span class='co'># -1497.719 (df=16)</span>
+</div><div class='output co'>#&gt; 'log Lik.' -1497.719 (df=16)</div><div class='input'>
+<span class='co'># Negative binomial model</span>
+<span class='co'># libs(MASS)</span>
+<span class='co'># m2 &lt;- glm.nb(y ~ block + spray*lead, data=dat)</span>
+<span class='co'># logLik(m2) # -1478.341 (df=17)</span>
 
-# # Conway=Maxwell-Poisson model (takes several minutes)
-# libs(spaMM)
-# # estimate nu parameter
-# m3 &lt;- fitme(y ~ block + spray*lead, data=dat, family = COMPoisson())
-# logLik(m3) # -1475.999 
-# # Kosma logLik(m3)=-1717 seems too big. Typo? Different model?
+<span class='co'># # Conway=Maxwell-Poisson model (takes several minutes)</span>
+<span class='co'># libs(spaMM)</span>
+<span class='co'># # estimate nu parameter</span>
+<span class='co'># m3 &lt;- fitme(y ~ block + spray*lead, data=dat, family = COMPoisson())</span>
+<span class='co'># logLik(m3) # -1475.999 </span>
+<span class='co'># # Kosma logLik(m3)=-1717 seems too big. Typo? Different model?</span>
 
-# }
+<span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -249,7 +252,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

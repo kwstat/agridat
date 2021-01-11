@@ -50,7 +50,7 @@
   set of 150 lines was developed.
   
   Phenotypic values for the parents Steptoe and Morex are here:
-  http://wheat.pw.usda.gov/ggpages/SxM/parental_values.html
+  https://wheat.pw.usda.gov/ggpages/SxM/parental_values.html
   
   There are 16 locations, The average across locations is in column 17.  Not all
   traits were collected at every location.  At each location, all 150 lines were
@@ -66,16 +66,16 @@
   Grain Yield (Mt/Ha).
   
   Phenotypic values of the 150 lines in the F1 population are here:
-  http://wheat.pw.usda.gov/ggpages/SxM/phenotypes.html
+  https://wheat.pw.usda.gov/ggpages/SxM/phenotypes.html
   
   Each trait is in a different file, in which each block of numbers
   represents one location.
   
   The 223-markers Steptoe/Morex base map is here:
-  http://wheat.pw.usda.gov/ggpages/SxM/smbasev2.map
+  https://wheat.pw.usda.gov/ggpages/SxM/smbasev2.map
 
   The data for these markers on the 150 lines is
-  http://wheat.pw.usda.gov/ggpages/SxM/smbasev2.mrk
+  https://wheat.pw.usda.gov/ggpages/SxM/smbasev2.mrk
   
   These were hand-assembled (e.g. marker distances were cumulated to
   marker positions) into a .csv file which was then imported into
@@ -85,14 +85,14 @@
   The marker data is coded as A = Steptoe, B = Morex, - = missing.
   
   The pedigrees for the 150 lines are found here:
-  http://wheat.pw.usda.gov/ggpages/SxM/pedigrees.html
+  https://wheat.pw.usda.gov/ggpages/SxM/pedigrees.html
 
 }
 
 \source{
   The Steptoe x Morex Barley Mapping Population.
   Map: Version 2, August 1, 1995
-  http://wheat.pw.usda.gov/ggpages/SxM.  Accessed Jan 2015.
+  https://wheat.pw.usda.gov/ggpages/SxM.  Accessed Jan 2015.
 
   Data provided by the United States Department of Agriculture.
 }
@@ -104,13 +104,13 @@
   Quantitative trait locus effects and environmental interaction in a sample of
   North American barley germplasm.
   \emph{Theoretical and Applied Genetics}, 87, 392--401.
-  http://doi.org/10.1007/BF01184929
+  https://doi.org/10.1007/BF01184929
 
   Ignacio Romagosa, Steven E. Ullrich, Feng Han, Patrick M. Hayes. 1996.
   Use of the additive main effects and multiplicative interaction model
   in QTL mapping for adaptation in barley.
   \emph{Theor Appl Genet}, 93, 30-37.
-  http://doi.org/10.1007/BF00225723
+  https://doi.org/10.1007/BF00225723
 
   Piepho, Hans-Peter. 2000.
   A mixed-model approach to mapping quantitative trait loci in barley on
@@ -121,7 +121,7 @@
   Mixed models including environmental covariables for studying QTL by
   environment interaction.
   \emph{Euphytica}, 137, 139-145.
-  http://doi.org/10.1023/B:EUPH.0000040511.4638
+  https://doi.org/10.1023/B:EUPH.0000040511.4638
 
 }
 

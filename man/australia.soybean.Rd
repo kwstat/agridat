@@ -77,7 +77,7 @@ the data set made available here, these values have been corrected.
   Chapman and Hall/CRC.
 
   Retrieved from:
-  http://three-mode.leidenuniv.nl/data/soybeaninf.htm
+  https://three-mode.leidenuniv.nl/data/soybeaninf.htm
 }
 \references{  
   K E Basford (1982). The Use of Multidimensional Scaling in Analysing

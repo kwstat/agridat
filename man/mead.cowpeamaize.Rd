@@ -26,7 +26,7 @@
 \source{
   Roger Mead. 1990. A Review of Methodology For The Analysis of Intercropping
   Experiments.   Training Working Document No. 6.  CIMMYT.
-  http://repository.cimmyt.org/xmlui/handle/10883/868
+  https://repository.cimmyt.org/xmlui/handle/10883/868
 }
 \references{
   Roger Mead, Robert N Curnow, Anne M Hasted. 2002.

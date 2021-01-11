@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,13 +45,12 @@
 
 
 
-<meta property="og:title" content="Wheat yields in a line-source sprinkler experiment — hanks.sprinkler" />
 
+<meta property="og:title" content="Wheat yields in a line-source sprinkler experiment — hanks.sprinkler" />
 <meta property="og:description" content="Three wheat varieties planted in 3 blocks, with a line sprinkler
   crossing all whole plots." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -62,7 +67,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -76,7 +81,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -105,7 +110,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -113,10 +118,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -140,16 +144,15 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Three wheat varieties planted in 3 blocks, with a line sprinkler
   crossing all whole plots.</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 108 observations on the following 7 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 108 observations on the following 7 variables.</p><dl>
     <dt><code>block</code></dt><dd><p>block</p></dd>
     <dt><code>row</code></dt><dd><p>row</p></dd>
     <dt><code>subplot</code></dt><dd><p>column</p></dd>
@@ -157,9 +160,9 @@
     <dt><code>yield</code></dt><dd><p>yield (tons/ha)</p></dd>
     <dt><code>irr</code></dt><dd><p>irrigation level, 1..6</p></dd>
     <dt><code>dir</code></dt><dd><p>direction from sprinkler, N/S</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>A line-source sprinkler is placed through the middle of the experiment
@@ -168,15 +171,13 @@
   have the lowest yields.</p>
 <p>One data value was modified from the original (following
   the example of other authors).</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Hanks, R.J., Sisson, D.V., Hurst, R.L, and Hubbard K.G. (1980).
   Statistical Analysis of Results from Irrigation Experiments Using the
   Line-Source Sprinkler System.
   <em>Soil Science Society of America Journal</em>, 44, 886-888.
-  http://doi.org/10.2136/sssaj1980.03615995004400040048x</p>
-    
+  https://doi.org/10.2136/sssaj1980.03615995004400040048x</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Johnson, D. E., Chaudhuri, U. N., and Kanemasu, E. T. (1983).
@@ -189,132 +190,112 @@
   <em>Applications of Mixed Models in Agriculture and Related
     Disciplines, Southern Cooperative Series Bulletin No. 343</em>, 104-122.</p>
 <p>SAS Stat User's Guide.
-  http://support.sas.com/documentation/cdl/en/statug/63347/HTML/default/viewer.htm#statug_mixed_sect038.htm</p>
-    
+  https://support.sas.com/documentation/cdl/en/statug/63347/HTML/default/viewer.htm#statug_mixed_sect038.htm</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>hanks.sprinkler</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>hanks.sprinkler</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+  
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>hanks.sprinkler</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>hanks.sprinkler</span>
 
-<span class='co'># The line sprinkler is vertical between subplots 6 &amp; 7</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='fu'>desplot</span>(<span class='no'>yield</span>~<span class='no'>subplot</span>*<span class='no'>row</span>, <span class='no'>dat</span>,
-        <span class='kw'>out1</span><span class='kw'>=</span><span class='no'>block</span>, <span class='kw'>out2</span><span class='kw'>=</span><span class='no'>irr</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>1</span>, <span class='co'># aspect unknown</span>
-        <span class='kw'>num</span><span class='kw'>=</span><span class='no'>gen</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"hanks.sprinkler"</span>)</div><div class='img'><img src='hanks.sprinkler-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='co'># The line sprinkler is vertical between subplots 6 &amp; 7</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+  <span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>yield</span><span class='op'>~</span><span class='va'>subplot</span><span class='op'>*</span><span class='va'>row</span>,
+          out1<span class='op'>=</span><span class='va'>block</span>, out2<span class='op'>=</span><span class='va'>irr</span>, cex<span class='op'>=</span><span class='fl'>1</span>, <span class='co'># aspect unknown</span>
+          num<span class='op'>=</span><span class='va'>gen</span>, main<span class='op'>=</span><span class='st'>"hanks.sprinkler"</span><span class='op'>)</span>
+</div><div class='img'><img src='hanks.sprinkler-1.png' alt='' width='700' height='433' /></div><div class='input'>  
+  
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+  <span class='fu'>xyplot</span><span class='op'>(</span><span class='va'>yield</span><span class='op'>~</span><span class='va'>subplot</span><span class='op'>|</span><span class='va'>block</span>, <span class='va'>dat</span>, type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'b'</span><span class='op'>)</span>, group<span class='op'>=</span><span class='va'>gen</span>,
+         layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>3</span><span class='op'>)</span>, auto.key<span class='op'>=</span><span class='cn'>TRUE</span>,
+         main<span class='op'>=</span><span class='st'>"hanks.sprinkler"</span>,
+         panel<span class='op'>=</span><span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span>,<span class='va'>y</span>,<span class='va'>...</span><span class='op'>)</span><span class='op'>{</span>
+           <span class='fu'>panel.xyplot</span><span class='op'>(</span><span class='va'>x</span>,<span class='va'>y</span>,<span class='va'>...</span><span class='op'>)</span>
+           <span class='fu'>panel.abline</span><span class='op'>(</span>v<span class='op'>=</span><span class='fl'>6.5</span>, col<span class='op'>=</span><span class='st'>'wheat'</span><span class='op'>)</span>
+         <span class='op'>}</span><span class='op'>)</span>
+</div><div class='img'><img src='hanks.sprinkler-2.png' alt='' width='700' height='433' /></div><div class='input'>  
+  <span class='co'># ----------------------------------------------------------------------------</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'>xyplot</span>(<span class='no'>yield</span>~<span class='no'>subplot</span><span class='kw'>|</span><span class='no'>block</span>, <span class='no'>dat</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'b'</span>), <span class='kw'>group</span><span class='kw'>=</span><span class='no'>gen</span>,
-       <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>3</span>), <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fl'>TRUE</span>,
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"hanks.sprinkler"</span>,
-       <span class='kw'>panel</span><span class='kw'>=</span><span class='kw'>function</span>(<span class='no'>x</span>,<span class='no'>y</span>,<span class='no'>...</span>){
-         <span class='fu'>panel.xyplot</span>(<span class='no'>x</span>,<span class='no'>y</span>,<span class='no'>...</span>)
-         <span class='fu'>panel.abline</span>(<span class='kw'>v</span><span class='kw'>=</span><span class='fl'>6.5</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='st'>'wheat'</span>)
-       })</div><div class='img'><img src='hanks.sprinkler-2.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='co'># ----------------------------------------------------------------------------</span>
+  <span class='co'>## This is the model from the SAS documentation</span>
+  <span class='co'>## proc mixed;</span>
+  <span class='co'>## class block gen dir irr;</span>
+  <span class='co'>## model yield = gen|dir|irr@2;</span>
+  <span class='co'>## random block block*dir block*irr;</span>
+  <span class='co'>## repeated / type=toep(4) sub=block*gen r;</span>
+  
+  <span class='co'># ----------------------------------------------------------------------------</span>
 
-<span class='co'>## This is the model from the SAS documentation</span>
-<span class='co'>## proc mixed;</span>
-<span class='co'>## class block gen dir irr;</span>
-<span class='co'>## model yield = gen|dir|irr@2;</span>
-<span class='co'>## random block block*dir block*irr;</span>
-<span class='co'>## repeated / type=toep(4) sub=block*gen r;</span>
+  <span class='co'># asreml 3</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span>,<span class='va'>lucid</span><span class='op'>)</span>
+  <span class='kw'>if</span><span class='op'>(</span> <span class='fu'>utils</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/r/utils/packageDescription.html'>packageVersion</a></span><span class='op'>(</span><span class='st'>"asreml"</span><span class='op'>)</span> <span class='op'>&lt;</span> <span class='st'>"4"</span><span class='op'>)</span> <span class='op'>{</span>
+    <span class='co'># asreml3</span>
 
-<span class='co'># ----------------------------------------------------------------------------</span>
+    <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, subf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>subplot</span><span class='op'>)</span>,
+                     irrf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>irr</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>block</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>gen</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>subplot</span><span class='op'>)</span>,<span class='op'>]</span>
+    
+    <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>dir</span> <span class='op'>+</span> <span class='va'>irrf</span> <span class='op'>+</span> <span class='va'>gen</span><span class='op'>:</span><span class='va'>dir</span> <span class='op'>+</span> <span class='va'>gen</span><span class='op'>:</span><span class='va'>irrf</span> <span class='op'>+</span> <span class='va'>dir</span><span class='op'>:</span><span class='va'>irrf</span>,
+                 data<span class='op'>=</span><span class='va'>dat</span>,
+                 random<span class='op'>=</span> <span class='op'>~</span> <span class='va'>block</span> <span class='op'>+</span> <span class='va'>block</span><span class='op'>:</span><span class='va'>dir</span> <span class='op'>+</span> <span class='va'>block</span><span class='op'>:</span><span class='va'>irrf</span>,
+                 rcov<span class='op'>=</span> <span class='op'>~</span> <span class='va'>block</span><span class='op'>:</span><span class='va'>gen</span><span class='op'>:</span><span class='fu'>corb</span><span class='op'>(</span><span class='va'>subf</span>, k<span class='op'>=</span><span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
+    
+    <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lucid</span><span class='op'>)</span>
+    <span class='fu'>vc</span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+    <span class='co'>##                effect component std.error z.ratio constr</span>
+    <span class='co'>##       block!block.var  0.2194     0.2393     0.92    pos</span>
+    <span class='co'>##   block:dir!block.var  0.01768    0.03154    0.56    pos</span>
+    <span class='co'>##  block:irrf!block.var  0.03539    0.03617    0.98    pos</span>
+    <span class='co'>##            R!variance  0.285      0.05086    5.6     pos</span>
+    <span class='co'>##                R!cor1  0.02802    0.1143     0.25  uncon</span>
+    <span class='co'>##                R!cor2  0.005095   0.1278     0.04  uncon</span>
+    <span class='co'>##                R!cor3 -0.3246     0.0905    -3.6   uncon</span>
+    
+    <span class='co'>## # convert asreml correlations to SAS covariances</span>
+    <span class='co'>## round(.2850 * c(1, .02802, .005095, -.3246),4) # res var * (cor1, cor2, cor3)</span>
+    <span class='co'>## [1]  0.2850  0.0080  0.0015 -0.0925</span>
+  <span class='op'>}</span>
 
-<span class='co'># asreml3</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
+  <span class='co'># asreml 4</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span>,<span class='va'>lucid</span><span class='op'>)</span>
+  <span class='kw'>if</span><span class='op'>(</span> <span class='fu'>utils</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/r/utils/packageDescription.html'>packageVersion</a></span><span class='op'>(</span><span class='st'>"asreml"</span><span class='op'>)</span> <span class='op'>&gt;</span> <span class='st'>"4"</span><span class='op'>)</span> <span class='op'>{</span>
 
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>subf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>subplot</span>),
-                 <span class='kw'>irrf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>irr</span>))
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>block</span>, <span class='no'>dat</span>$<span class='no'>gen</span>, <span class='no'>dat</span>$<span class='no'>subplot</span>),]
+    <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, subf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>subplot</span><span class='op'>)</span>,
+                     irrf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>irr</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>block</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>gen</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>subplot</span><span class='op'>)</span>,<span class='op'>]</span>
 
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span> + <span class='no'>dir</span> + <span class='no'>irrf</span> + <span class='no'>gen</span>:<span class='no'>dir</span> + <span class='no'>gen</span>:<span class='no'>irrf</span> + <span class='no'>dir</span>:<span class='no'>irrf</span>,
-             <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-             <span class='kw'>random</span><span class='kw'>=</span> ~ <span class='no'>block</span> + <span class='no'>block</span>:<span class='no'>dir</span> + <span class='no'>block</span>:<span class='no'>irrf</span>,
-             <span class='kw'>rcov</span><span class='kw'>=</span> ~ <span class='no'>block</span>:<span class='no'>gen</span>:<span class='fu'>corb</span>(<span class='no'>subf</span>, <span class='kw'>k</span><span class='kw'>=</span><span class='fl'>3</span>))</div><div class='output co'>#&gt; ASReml: Fri Aug 16 14:58:39 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;     -24.8922      0.3585    82  14:58:39     0.0
-#&gt;     -18.8998      0.2965    82  14:58:39     0.0
-#&gt;     -16.5987      0.2841    82  14:58:39     0.0
-#&gt;     -16.2975      0.2881    82  14:58:39     0.0
-#&gt;     -16.2671      0.2851    82  14:58:39     0.0
-#&gt;     -16.2660      0.2851    82  14:58:39     0.0
-#&gt;     -16.2660      0.2850    82  14:58:39     0.0
-#&gt;     -16.2660      0.2850    82  14:58:39     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 14:58:39 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='input'>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lucid</span>)
-<span class='fu'>vc</span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt;                effect component std.error z.ratio constr
-#&gt;       block!block.var  0.2194     0.2393     0.92      P
-#&gt;   block:dir!block.var  0.01768    0.03154    0.56      P
-#&gt;  block:irrf!block.var  0.03539    0.03617    0.98      P
-#&gt;            R!variance  0.285      0.05086    5.6       P
-#&gt;                R!cor1  0.02802    0.1143     0.25      U
-#&gt;                R!cor2  0.005095   0.1278     0.04      U
-#&gt;                R!cor3 -0.3246     0.0905    -3.6       U</div><div class='input'><span class='co'>##                effect component std.error z.ratio constr</span>
-<span class='co'>##       block!block.var  0.2194     0.2393     0.92    pos</span>
-<span class='co'>##   block:dir!block.var  0.01768    0.03154    0.56    pos</span>
-<span class='co'>##  block:irrf!block.var  0.03539    0.03617    0.98    pos</span>
-<span class='co'>##            R!variance  0.285      0.05086    5.6     pos</span>
-<span class='co'>##                R!cor1  0.02802    0.1143     0.25  uncon</span>
-<span class='co'>##                R!cor2  0.005095   0.1278     0.04  uncon</span>
-<span class='co'>##                R!cor3 -0.3246     0.0905    -3.6   uncon</span>
+    <span class='co'># In asreml3, we can specify corb(subf, 3)</span>
+    <span class='co'># In asreml4, only corb(subf, 1) runs.  corb(subf, 3) says:</span>
+    <span class='co'># Correlation structure is not positive definite</span>
+    <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>dir</span> <span class='op'>+</span> <span class='va'>irrf</span> <span class='op'>+</span> <span class='va'>gen</span><span class='op'>:</span><span class='va'>dir</span> <span class='op'>+</span> <span class='va'>gen</span><span class='op'>:</span><span class='va'>irrf</span> <span class='op'>+</span> <span class='va'>dir</span><span class='op'>:</span><span class='va'>irrf</span>,
+                 data<span class='op'>=</span><span class='va'>dat</span>,
+                 random<span class='op'>=</span> <span class='op'>~</span> <span class='va'>block</span> <span class='op'>+</span> <span class='va'>block</span><span class='op'>:</span><span class='va'>dir</span> <span class='op'>+</span> <span class='va'>block</span><span class='op'>:</span><span class='va'>irrf</span>,
+                 resid <span class='op'>=</span> <span class='op'>~</span> <span class='va'>block</span><span class='op'>:</span><span class='va'>gen</span><span class='op'>:</span><span class='fu'>corb</span><span class='op'>(</span><span class='va'>subf</span>, <span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='co'>## # convert asreml correlations to SAS covariances</span>
-<span class='co'>## round(.2850 * c(1, .02802, .005095, -.3246),4) # res var * (cor1, cor2, cor3)</span>
-<span class='co'>## [1]  0.2850  0.0080  0.0015 -0.0925</span>
+    <span class='fu'>lucid</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/lucid/man/vc.html'>vc</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+    <span class='co'>#                   effect component std.error z.ratio bound </span>
+    <span class='co'>#                    block   0.194     0.2231     0.87     P 0.5</span>
+    <span class='co'>#                block:dir   0.02729   0.04959    0.55     P 0  </span>
+    <span class='co'>#               block:irrf   0.02275   0.0347     0.66     P 0.1</span>
+    <span class='co'>#         block:gen:subf!R   0.3234    0.05921    5.5      P 0  </span>
+    <span class='co'># block:gen:subf!subf!cor1   0.169     0.09906    1.7      P 0.1</span>
 
-
-<span class='kw'>if</span>(<span class='fl'>0</span>){
-  <span class='co'>## libs(asreml4)</span>
-
-  <span class='co'>## dat &lt;- transform(dat, subf=factor(subplot),</span>
-  <span class='co'>##                  irrf=factor(irr))</span>
-  <span class='co'>## dat &lt;- dat[order(dat$block, dat$gen, dat$subplot),]</span>
-
-  <span class='co'>## # FIXME asreml4</span>
-  <span class='co'>## m1 &lt;- asreml(yield ~ gen + dir + irrf + gen:dir + gen:irrf + dir:irrf,</span>
-  <span class='co'>##              data=dat,</span>
-  <span class='co'>##              random= ~ block + block:dir + block:irrf,</span>
-  <span class='co'>##              resid = ~ block:gen:corb(subf, b=3))</span>
-
-  <span class='co'>## libs(lucid)</span>
-  <span class='co'>## vc(m1)</span>
-  <span class='co'>## ##                effect component std.error z.ratio constr</span>
-  <span class='co'>## ##       block!block.var  0.2194     0.2393     0.92    pos</span>
-  <span class='co'>## ##   block:dir!block.var  0.01768    0.03154    0.56    pos</span>
-  <span class='co'>## ##  block:irrf!block.var  0.03539    0.03617    0.98    pos</span>
-  <span class='co'>## ##            R!variance  0.285      0.05086    5.6     pos</span>
-  <span class='co'>## ##                R!cor1  0.02802    0.1143     0.25  uncon</span>
-  <span class='co'>## ##                R!cor2  0.005095   0.1278     0.04  uncon</span>
-  <span class='co'>## ##                R!cor3 -0.3246     0.0905    -3.6   uncon</span>
-
-  <span class='co'>## ## # convert asreml correlations to SAS covariances</span>
-  <span class='co'>## ## round(.2850 * c(1, .02802, .005095, -.3246),4) # res var * (cor1, cor2, cor3)</span>
-  <span class='co'>## ## [1]  0.2850  0.0080  0.0015 -0.0925</span>
-
-  <span class='co'>## detach(package:asreml4)</span>
-}</div></pre>
+  <span class='op'>}</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:08:44 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -22.0631      0.331054     82 17:08:44    0.0
+#&gt;  2      -20.5511      0.353273     82 17:08:44    0.0
+#&gt;  3      -20.8457      0.496038     82 17:08:44    0.0
+#&gt;  4      -30.1543      0.850251     82 17:08:44    0.0 (3 restrained)
+#&gt; Likelihood evaluation failed with fault 1005 ; trying with reduced updates</div><div class='output co'>#&gt; <span class='error'>Error in asreml(yield ~ gen + dir + irrf + gen:dir + gen:irrf + dir:irrf,     data = dat, random = ~block + block:dir + block:irrf, resid = ~block:gen:corb(subf,         2)): Correlation structure is not positive definite</span></div><div class='input'>
+<span class='co'># }</span>
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -325,7 +306,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

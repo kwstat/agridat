@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,13 +45,12 @@
 
 
 
-<meta property="og:title" content="RCB experiment of wheat at the Nebraska Intrastate Nursery — stroup.nin" />
 
+<meta property="og:title" content="RCB experiment of wheat at the Nebraska Intrastate Nursery — stroup.nin" />
 <meta property="og:description" content="The yield data from an advanced Nebraska Intrastate Nursery (NIN) breeding
   trial conducted at Alliance, Nebraska, in 1988/89." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -62,7 +67,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -76,7 +81,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -105,7 +110,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -113,10 +118,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -140,24 +144,23 @@
     </div>
 
     <div class="ref-description">
-    
     <p>The yield data from an advanced Nebraska Intrastate Nursery (NIN) breeding
   trial conducted at Alliance, Nebraska, in 1988/89.</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p></p><dl class='dl-horizontal'>
+    <p></p><dl>
     <dt>gen</dt><dd><p>genotype, 56 levels</p></dd>
     <dt>rep</dt><dd><p>replicate, 4 levels</p></dd>
     <dt>yield</dt><dd><p>yield, bu/ac</p></dd>
     <dt>col</dt><dd><p>column</p></dd>
     <dt>row</dt><dd><p>row</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     
@@ -170,7 +173,7 @@
   Plots were trimmed down to 2.4 m in length before harvest.  The
   orientation of the plots is not clear from the paper, but the data in
   Littel et al are given in meters and make the orientation clear.</p>
-<p>Field length: 11 plots * 4.3 m = 47.3 m</p>  
+<p>Field length: 11 plots * 4.3 m = 47.3 m</p>
 <p>Field width: 22 plots * 1.2 m = 26.4 m</p>
 <p>All plots with missing data are coded as being gen = "Lancer".
   (For ASREML, missing plots need to be included for spatial analysis and the
@@ -203,14 +206,12 @@
 <p>Note that the figures in Stroup 2002 claim to be based on this data,
   but the number of rows and columns are both off by 1 and the positions
   of Buckskin as shown in Stroup 2002 do not appear to be quite right.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Stroup, Walter W., P Stephen Baenziger, Dieter K Mulitze (1994)
   Removing Spatial Variation from Wheat Yield Trials: A Comparison of Methods.
   <em>Crop Science</em>, 86:62--66.
-  http://doi.org/10.2135/cropsci1994.0011183X003400010011x</p>
-    
+  https://doi.org/10.2135/cropsci1994.0011183X003400010011x</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     
@@ -226,77 +227,76 @@
   Comparing Design and Analysis Strategies in the Presence of Spatial
   Variability. <em>Journal of Agricultural, Biological, and
     Environmental Statistics</em>, 7(4), 491-511.
-  http://doi.org/10.1198/108571102780</p>
-    
+  https://doi.org/10.1198/108571102780</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p>Identical data (except for the missing values) are available
   in the <code>nlme</code> package as <code><a href='https://rdrr.io/pkg/nlme/man/Wheat2.html'>Wheat2</a></code>.</p></div>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>stroup.nin</span>)
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>stroup.nin</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-  <span class='co'># Experiment layout. All "Buckskin" plots are near left side</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-  <span class='fu'>desplot</span>(<span class='no'>yield</span>~<span class='no'>col</span>*<span class='no'>row</span>, <span class='no'>dat</span>,
-          <span class='kw'>aspect</span><span class='kw'>=</span><span class='fl'>47.3</span>/<span class='fl'>26.4</span>, <span class='kw'>out1</span><span class='kw'>=</span><span class='st'>"rep"</span>, <span class='kw'>num</span><span class='kw'>=</span><span class='no'>gen</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>0.6</span>, <span class='co'># true aspect</span>
-          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"stroup.nin - yield heatmap (true shape)"</span>)</div><div class='img'><img src='stroup.nin-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>stroup.nin</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>stroup.nin</span>
 
-  <span class='co'># ----- nlme -----</span>
+  <span class='co'># Experiment layout. All "Buckskin" plots are near left side and suffer</span>
+  <span class='co'># from poor fertility in two of the reps.</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+  <span class='fu'><a href='http://kwstat.github.io/desplot/reference/desplot.html'>desplot</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>yield</span><span class='op'>~</span><span class='va'>col</span><span class='op'>*</span><span class='va'>row</span>,
+          aspect<span class='op'>=</span><span class='fl'>47.3</span><span class='op'>/</span><span class='fl'>26.4</span>, out1<span class='op'>=</span><span class='st'>"rep"</span>, num<span class='op'>=</span><span class='va'>gen</span>, cex<span class='op'>=</span><span class='fl'>0.6</span>, <span class='co'># true aspect</span>
+          main<span class='op'>=</span><span class='st'>"stroup.nin - yield heatmap (true shape)"</span><span class='op'>)</span>
+</div><div class='img'><img src='stroup.nin-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='co'># Dataframe to hold model predictions</span>
+  <span class='va'>preds</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>gen<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>gen</span><span class='op'>)</span><span class='op'>)</span>
 
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>nlme</span>)
+
+  <span class='co'># -----</span>
+  <span class='co'># nlme</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>nlme</span><span class='op'>)</span>
   <span class='co'># Random RCB model</span>
-  <span class='no'>lme1</span> <span class='kw'>&lt;-</span> <span class='fu'>lme</span>(<span class='no'>yield</span> ~ <span class='fl'>0</span> + <span class='no'>gen</span>, <span class='kw'>random</span><span class='kw'>=</span>~<span class='fl'>1</span><span class='kw'>|</span><span class='no'>rep</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>na.action</span><span class='kw'>=</span><span class='no'>na.omit</span>)
+  <span class='va'>lme1</span> <span class='op'>&lt;-</span> <span class='fu'>lme</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>0</span> <span class='op'>+</span> <span class='va'>gen</span>, random<span class='op'>=</span><span class='op'>~</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>rep</span>, data<span class='op'>=</span><span class='va'>dat</span>, na.action<span class='op'>=</span><span class='va'>na.omit</span><span class='op'>)</span>
+  <span class='va'>preds</span><span class='op'>$</span><span class='va'>lme1</span> <span class='op'>&lt;-</span> <span class='fu'>fixef</span><span class='op'>(</span><span class='va'>lme1</span><span class='op'>)</span>
 
   <span class='co'># Linear (Manhattan distance) correlation model</span>
-  <span class='no'>lme2</span> <span class='kw'>&lt;-</span> <span class='fu'>gls</span>(<span class='no'>yield</span> ~ <span class='fl'>0</span> + <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-              <span class='kw'>correlation</span> <span class='kw'>=</span> <span class='fu'>corLin</span>(<span class='kw'>form</span> <span class='kw'>=</span> ~ <span class='no'>col</span> + <span class='no'>row</span>, <span class='kw'>nugget</span><span class='kw'>=</span><span class='fl'>TRUE</span>),
-              <span class='kw'>na.action</span><span class='kw'>=</span><span class='no'>na.omit</span>)
+  <span class='va'>lme2</span> <span class='op'>&lt;-</span> <span class='fu'>gls</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>0</span> <span class='op'>+</span> <span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+              correlation <span class='op'>=</span> <span class='fu'>corLin</span><span class='op'>(</span>form <span class='op'>=</span> <span class='op'>~</span> <span class='va'>col</span> <span class='op'>+</span> <span class='va'>row</span>, nugget<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>,
+              na.action<span class='op'>=</span><span class='va'>na.omit</span><span class='op'>)</span>
+  <span class='va'>preds</span><span class='op'>$</span><span class='va'>lme2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>lme2</span><span class='op'>)</span>
 
   <span class='co'># Random block and spatial correlation.</span>
   <span class='co'># Note: corExp and corSpher give nearly identical results</span>
-  <span class='no'>lme3</span> <span class='kw'>&lt;-</span> <span class='fu'>lme</span>(<span class='no'>yield</span> ~ <span class='fl'>0</span> + <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-              <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='fl'>1</span> <span class='kw'>|</span> <span class='no'>rep</span>,
-              <span class='kw'>correlation</span> <span class='kw'>=</span> <span class='fu'>corExp</span>(<span class='kw'>form</span> <span class='kw'>=</span> ~ <span class='no'>col</span> + <span class='no'>row</span>),
-              <span class='kw'>na.action</span><span class='kw'>=</span><span class='no'>na.omit</span>)
+  <span class='va'>lme3</span> <span class='op'>&lt;-</span> <span class='fu'>lme</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>0</span> <span class='op'>+</span> <span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+              random <span class='op'>=</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>|</span> <span class='va'>rep</span>,
+              correlation <span class='op'>=</span> <span class='fu'>corExp</span><span class='op'>(</span>form <span class='op'>=</span> <span class='op'>~</span> <span class='va'>col</span> <span class='op'>+</span> <span class='va'>row</span><span class='op'>)</span>,
+              na.action<span class='op'>=</span><span class='va'>na.omit</span><span class='op'>)</span>
+  <span class='va'>preds</span><span class='op'>$</span><span class='va'>lme3</span> <span class='op'>&lt;-</span> <span class='fu'>fixef</span><span class='op'>(</span><span class='va'>lme3</span><span class='op'>)</span>
 
-  <span class='fu'><a href='https://rdrr.io/r/stats/AIC.html'>AIC</a></span>(<span class='no'>lme1</span>,<span class='no'>lme2</span>,<span class='no'>lme3</span>) <span class='co'># lme2 is lowest</span></div><div class='output co'>#&gt;      df      AIC
-#&gt; lme1 58 1333.702
-#&gt; lme2 59 1189.135
-#&gt; lme3 59 1216.704</div><div class='input'>  <span class='co'>##      df      AIC</span>
+  <span class='co'># AIC(lme1,lme2,lme3) # lme2 is lowest</span>
+  <span class='co'>##      df      AIC</span>
   <span class='co'>## lme1 58 1333.702</span>
   <span class='co'>## lme2 59 1189.135</span>
   <span class='co'>## lme3 59 1216.704</span>
 
-  <span class='co'># Compare the estimates from the two methods</span>
-  <span class='no'>eff</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(<span class='kw'>ranblock</span><span class='kw'>=</span><span class='fu'>fixef</span>(<span class='no'>lme1</span>), <span class='kw'>corLin</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>lme2</span>),
-                   <span class='kw'>corExp</span> <span class='kw'>=</span> <span class='fu'>fixef</span>(<span class='no'>lme3</span>))
-  <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>eff</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/grep.html'>gsub</a></span>(<span class='st'>"gen"</span>, <span class='st'>""</span>, <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>eff</span>))
-  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>eff</span>$<span class='no'>ranblock</span>, <span class='no'>eff</span>$<span class='no'>corLin</span>, <span class='kw'>xlim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>13</span>,<span class='fl'>37</span>), <span class='kw'>ylim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>13</span>,<span class='fl'>37</span>),
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"stroup.nin - Gen estimates (intercepts differ)"</span>,
-       <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"RCB (random block)"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"corLin"</span>,<span class='kw'>type</span><span class='kw'>=</span><span class='st'>'n'</span>)</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/text.html'>text</a></span>(<span class='no'>eff</span>$<span class='no'>ranblock</span>, <span class='no'>eff</span>$<span class='no'>corLin</span>, <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>eff</span>), <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>0.5</span>)</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span>(<span class='fl'>0</span>,<span class='fl'>1</span>)</div><div class='img'><img src='stroup.nin-2.png' alt='' width='700' height='433' /></div><div class='input'>
-  <span class='co'># ----------------------------------------------------------------------------</span>
 
-
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>SpATS</span>)</div><div class='output co'>#&gt; <span class='message'></span>
+  <span class='co'># -----</span>
+  <span class='co'># SpATS</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>SpATS</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'></span>
 #&gt; <span class='message'>Attaching package: 'SpATS'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:gstat':</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    variogram</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:asreml':</span>
-#&gt; <span class='message'></span>
 #&gt; <span class='message'>    variogram</span></div><div class='input'>
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>yf</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span>(<span class='no'>row</span>), <span class='kw'>xf</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span>(<span class='no'>col</span>))
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, yf <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>row</span><span class='op'>)</span>, xf <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>col</span><span class='op'>)</span><span class='op'>)</span>
 
-  <span class='no'>sp1</span> <span class='kw'>&lt;-</span> <span class='fu'>SpATS</span>(<span class='kw'>response</span> <span class='kw'>=</span> <span class='st'>"yield"</span>,
-               <span class='kw'>spatial</span> <span class='kw'>=</span> ~ <span class='fu'>SAP</span>(<span class='no'>col</span>, <span class='no'>row</span>, <span class='kw'>nseg</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>10</span>,<span class='fl'>20</span>), <span class='kw'>degree</span> <span class='kw'>=</span> <span class='fl'>3</span>, <span class='kw'>pord</span> <span class='kw'>=</span> <span class='fl'>2</span>),
-               <span class='kw'>genotype</span> <span class='kw'>=</span> <span class='st'>"gen"</span>,
+  <span class='co'># what are colcode and rowcode???</span>
+  <span class='va'>sp1</span> <span class='op'>&lt;-</span> <span class='fu'>SpATS</span><span class='op'>(</span>response <span class='op'>=</span> <span class='st'>"yield"</span>,
+               spatial <span class='op'>=</span> <span class='op'>~</span> <span class='fu'>SAP</span><span class='op'>(</span><span class='va'>col</span>, <span class='va'>row</span>, nseg <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>10</span>,<span class='fl'>20</span><span class='op'>)</span>, degree <span class='op'>=</span> <span class='fl'>3</span>, pord <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span>,
+               genotype <span class='op'>=</span> <span class='st'>"gen"</span>,
                <span class='co'>#fixed = ~ colcode + rowcode,</span>
-               <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='no'>yf</span> + <span class='no'>xf</span>,
-               <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>dat</span>,
-               <span class='kw'>control</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>tolerance</span> <span class='kw'>=</span> <span class='fl'>1e-03</span>))</div><div class='output co'>#&gt; Effective dimensions
+               random <span class='op'>=</span> <span class='op'>~</span> <span class='va'>yf</span> <span class='op'>+</span> <span class='va'>xf</span>,
+               data <span class='op'>=</span> <span class='va'>dat</span>,
+               control <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>tolerance <span class='op'>=</span> <span class='fl'>1e-03</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Effective dimensions
 #&gt; -------------------------
 #&gt; It.     Deviance          yf          xff(col,row)|colf(col,row)|row
 #&gt;   1  2608.971235       0.495       1.195      10.143      13.395
@@ -317,158 +317,131 @@
 #&gt;  16   736.959818       0.003       5.938       9.402      11.720
 #&gt;  17   736.959154       0.002       5.975       9.408      11.725
 #&gt; Timings:
-#&gt; SpATS 0.33 seconds
-#&gt; All process 0.39 seconds</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>sp1</span>)</div><div class='img'><img src='stroup.nin-3.png' alt='' width='700' height='433' /></div><div class='input'>
-  <span class='no'>eff</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span>(<span class='no'>eff</span>, <span class='kw'>spats</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>sp1</span>, <span class='kw'>which</span><span class='kw'>=</span><span class='st'>"gen"</span>)$<span class='no'>predicted.values</span>)
-  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>eff</span>$<span class='no'>ranblock</span>, <span class='no'>eff</span>$<span class='no'>spats</span>, <span class='kw'>xlim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>13</span>,<span class='fl'>37</span>), <span class='kw'>ylim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>13</span>,<span class='fl'>37</span>),
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"stroup.nin - Gen estimates"</span>,
-       <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"RCB (random block)"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"SpATS"</span>,<span class='kw'>type</span><span class='kw'>=</span><span class='st'>'n'</span>)</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/text.html'>text</a></span>(<span class='no'>eff</span>$<span class='no'>ranblock</span>, <span class='no'>eff</span>$<span class='no'>spats</span>, <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>eff</span>), <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>0.5</span>)</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span>(<span class='fl'>0</span>,<span class='fl'>1</span>)</div><div class='img'><img src='stroup.nin-4.png' alt='' width='700' height='433' /></div><div class='input'>
+#&gt; SpATS 0.36 seconds
+#&gt; All process 0.42 seconds</div><div class='input'>  <span class='co'>#plot(sp1)</span>
+  <span class='va'>preds</span><span class='op'>$</span><span class='va'>spats</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>sp1</span>, which<span class='op'>=</span><span class='st'>"gen"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>predicted.value</span>
 
-  <span class='co'># ----------------------------------------------------------------------------</span>
-  <span class='co'># TMB = Template Model Builder could do this.  See the ar1xar1 example:</span>
+
+  <span class='co'># -----</span>
+  <span class='co'># Template Model Builder</span>
+  <span class='co'># See the ar1xar1 example:</span>
   <span class='co'># https://github.com/kaskr/adcomp/tree/master/TMB/inst/examples</span>
   <span class='co'># This example uses dpois() in the cpp file to model a Poisson response</span>
   <span class='co'># with separable AR1xAR1.  I think this example could be used for the</span>
   <span class='co'># stroup.nin data, changing dpois() to something Normal.</span>
-  <span class='co'># ----------------------------------------------------------------------------</span>
 
 
-  <span class='co'># asreml3</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
+  <span class='co'># -----</span>
+  <span class='co'># asreml4</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span>,<span class='va'>lucid</span><span class='op'>)</span>
 
   <span class='co'># RCB analysis</span>
-  <span class='no'>dat.rcb</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span>, <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='no'>rep</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-                    <span class='kw'>na.method.X</span><span class='kw'>=</span><span class='st'>"omit"</span>)</div><div class='output co'>#&gt; ASReml: Fri Aug 16 15:02:19 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;    -454.8069     50.3285   168  15:02:19     0.0
-#&gt;    -454.6631     50.1197   168  15:02:19     0.0
-#&gt;    -454.5323     49.8682   168  15:02:19     0.0
-#&gt;    -454.4718     49.6374   168  15:02:19     0.0
-#&gt;    -454.4691     49.5854   168  15:02:19     0.0
-#&gt;    -454.4691     49.5824   168  15:02:19     0.0
-#&gt;    -454.4691     49.5824   168  15:02:19     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 15:02:19 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='input'>  <span class='no'>pred.rcb</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>dat.rcb</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>classify</span><span class='kw'>=</span><span class='st'>"gen"</span>)$<span class='no'>predictions</span></div><div class='output co'>#&gt; ASReml: Fri Aug 16 15:02:20 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;    -454.4691     49.5824   168  15:02:20     0.0
-#&gt;    -454.4691     49.5824   168  15:02:20     0.0
-#&gt;    -454.4691     49.5824   168  15:02:20     0.0
-#&gt;    -454.4691     49.5824   168  15:02:20     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 15:02:20 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='input'>
+  <span class='va'>as1</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>gen</span>, random <span class='op'>=</span> <span class='op'>~</span> <span class='va'>rep</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+                na.action<span class='op'>=</span><span class='fu'>na.method</span><span class='op'>(</span>x<span class='op'>=</span><span class='st'>"omit"</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:50:20 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -454.807       50.3285    168 17:50:20    0.0
+#&gt;  2      -454.663       50.1198    168 17:50:20    0.0
+#&gt;  3      -454.532       49.8684    168 17:50:20    0.0
+#&gt;  4      -454.472       49.6374    168 17:50:20    0.0
+#&gt;  5      -454.469       49.5854    168 17:50:20    0.0</div><div class='input'>  <span class='va'>preds</span><span class='op'>$</span><span class='va'>asreml1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>as1</span>, data<span class='op'>=</span><span class='va'>dat</span>, classify<span class='op'>=</span><span class='st'>"gen"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>pvals</span><span class='op'>$</span><span class='va'>predicted.value</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:50:20 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -454.469       49.5824    168 17:50:20    0.0
+#&gt;  2      -454.469       49.5824    168 17:50:20    0.0
+#&gt;  3      -454.469       49.5824    168 17:50:20    0.0</div><div class='input'>
   <span class='co'># Two-dimensional AR1xAR1 spatial model</span>
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>xf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>col</span>), <span class='kw'>yf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>))
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>xf</span>, <span class='no'>dat</span>$<span class='no'>yf</span>),]
-  <span class='no'>dat.sp</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span>~<span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-                   <span class='kw'>rcov</span><span class='kw'>=</span>~<span class='fu'>ar1</span>(<span class='no'>xf</span>):<span class='fu'>ar1</span>(<span class='no'>yf</span>),
-                   <span class='kw'>na.method.X</span><span class='kw'>=</span><span class='st'>'ignore'</span>)</div><div class='output co'>#&gt; ASReml: Fri Aug 16 15:02:20 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;    -449.8184     49.7753   168  15:02:20     0.0
-#&gt;    -424.2977     40.2289   168  15:02:20     0.0
-#&gt;    -405.4111     38.9239   168  15:02:20     0.0
-#&gt;    -399.5515     45.6023   168  15:02:20     0.0
-#&gt;    -399.3356     47.9863   168  15:02:20     0.0
-#&gt;    -399.3245     48.5462   168  15:02:20     0.0
-#&gt;    -399.3238     48.6725   168  15:02:20     0.0
-#&gt;    -399.3238     48.7026   168  15:02:20     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 15:02:20 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='input'>  <span class='no'>pred.sp</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>dat.sp</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>classify</span><span class='kw'>=</span><span class='st'>"gen"</span>)$<span class='no'>predictions</span></div><div class='output co'>#&gt; ASReml: Fri Aug 16 15:02:20 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;    -399.3238     48.7102   168  15:02:20     0.0
-#&gt;    -399.3238     48.7108   168  15:02:20     0.0
-#&gt;    -399.3238     48.7116   168  15:02:20     0.0
-#&gt;    -399.3238     48.7125   168  15:02:20     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 15:02:20 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='input'>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lucid</span>)
-  <span class='fu'>vc</span>(<span class='no'>dat.sp</span>)</div><div class='output co'>#&gt;      effect component std.error z.ratio constr
-#&gt;  R!variance   48.7      7.155       6.8      P
-#&gt;    R!xf.cor    0.6555   0.05638    12        U
-#&gt;    R!yf.cor    0.4375   0.0806      5.4      U</div><div class='input'>  <span class='co'>##     effect component std.error z.ratio constr</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, xf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>col</span><span class='op'>)</span>, yf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>row</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>xf</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>yf</span><span class='op'>)</span>,<span class='op'>]</span>
+  <span class='va'>as2</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span><span class='op'>~</span><span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+                residual <span class='op'>=</span> <span class='op'>~</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>xf</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span>,
+                na.action<span class='op'>=</span><span class='fu'>na.method</span><span class='op'>(</span>x<span class='op'>=</span><span class='st'>"omit"</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:50:21 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -449.818       49.7753    168 17:50:21    0.0
+#&gt;  2      -424.315       40.2331    168 17:50:21    0.0
+#&gt;  3      -405.419       38.9218    168 17:50:21    0.0
+#&gt;  4      -400.288       43.0115    168 17:50:21    0.0
+#&gt;  5      -399.368       47.2602    168 17:50:21    0.0
+#&gt;  6      -399.326       48.3882    168 17:50:21    0.0
+#&gt;  7      -399.324       48.6371    168 17:50:21    0.0
+#&gt;  8      -399.324       48.6942    168 17:50:21    0.0</div><div class='input'>  <span class='va'>preds</span><span class='op'>$</span><span class='va'>asreml2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>as2</span>, data<span class='op'>=</span><span class='va'>dat</span>, classify<span class='op'>=</span><span class='st'>"gen"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>pvals</span><span class='op'>$</span><span class='va'>predicted.value</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:50:21 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -399.324       48.7081    168 17:50:21    0.0
+#&gt;  2      -399.324       48.7092    168 17:50:21    0.0
+#&gt;  3      -399.324       48.7119    168 17:50:21    0.0</div><div class='input'>
+  <span class='fu'>lucid</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/lucid/man/vc.html'>vc</a></span><span class='op'>(</span><span class='va'>as2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;        effect component std.error z.ratio bound %ch
+#&gt;       xf:yf!R   48.69     7.152       6.8     P   0
+#&gt;  xf:yf!xf!cor    0.6554   0.05638    12       U   0
+#&gt;  xf:yf!yf!cor    0.4375   0.0806      5.4     U   0</div><div class='input'>  <span class='co'>##     effect component std.error z.ratio constr</span>
   <span class='co'>## R!variance   48.7      7.155       6.8    pos</span>
   <span class='co'>##   R!xf.cor    0.6555   0.05638    12      unc</span>
   <span class='co'>##   R!yf.cor    0.4375   0.0806      5.4    unc</span>
 
-  <span class='co'># Compare the estimates from the two methods</span>
-  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>pred.rcb</span>$<span class='no'>pvals</span>[,<span class='fl'>2</span>], <span class='no'>pred.sp</span>$<span class='no'>pvals</span>[,<span class='fl'>2</span>], <span class='kw'>xlim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>13</span>,<span class='fl'>37</span>), <span class='kw'>ylim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>13</span>,<span class='fl'>37</span>),
-       <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"RCB"</span>,<span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"AR1xAR1"</span>,<span class='kw'>type</span><span class='kw'>=</span><span class='st'>'n'</span>)</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/title.html'>title</a></span>(<span class='st'>"stroup.nin: Comparison of predicted values"</span>)</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/text.html'>text</a></span>(<span class='no'>pred.rcb</span>$<span class='no'>pvals</span>[,<span class='fl'>2</span>],<span class='no'>pred.sp</span>$<span class='no'>pvals</span>[,<span class='fl'>2</span>],
-       <span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span>(<span class='no'>pred.rcb</span>$<span class='no'>pvals</span>[,<span class='fl'>1</span>]),<span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>0.5</span>)</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span>(<span class='fl'>0</span>,<span class='fl'>1</span>)</div><div class='img'><img src='stroup.nin-5.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='co'># Compare the estimates from the two asreml models.</span>
+  <span class='co'># We see that Buckskin has correctly been shifted upward by the spatial model</span>
+  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>preds</span><span class='op'>$</span><span class='va'>as1</span>, <span class='va'>preds</span><span class='op'>$</span><span class='va'>as2</span>, xlim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>13</span>,<span class='fl'>37</span><span class='op'>)</span>, ylim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>13</span>,<span class='fl'>37</span><span class='op'>)</span>,
+       xlab<span class='op'>=</span><span class='st'>"RCB"</span>, ylab<span class='op'>=</span><span class='st'>"AR1xAR1"</span>, type<span class='op'>=</span><span class='st'>'n'</span><span class='op'>)</span>
+</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/title.html'>title</a></span><span class='op'>(</span><span class='st'>"stroup.nin: Comparison of predicted values"</span><span class='op'>)</span>
+</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/text.html'>text</a></span><span class='op'>(</span><span class='va'>preds</span><span class='op'>$</span><span class='va'>asreml1</span>, <span class='va'>preds</span><span class='op'>$</span><span class='va'>asreml2</span>, <span class='va'>preds</span><span class='op'>$</span><span class='va'>gen</span>, cex<span class='op'>=</span><span class='fl'>0.5</span><span class='op'>)</span>
+</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>1</span><span class='op'>)</span>
+</div><div class='img'><img src='stroup.nin-2.png' alt='' width='700' height='433' /></div><div class='input'>
 
-<span class='co'># ----------------------------------------------------------------------------</span>
+  <span class='co'># -----</span>
+  <span class='co'># sommer</span>
+  <span class='co'># Fixed gen, random row, col, 2D spline</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>sommer</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>Loading required package: crayon</span></div><div class='output co'>#&gt; <span class='message'>Registered S3 method overwritten by 'sommer':</span>
+#&gt; <span class='message'>  method          from</span>
+#&gt; <span class='message'>  print.wald.test aod </span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Attaching package: 'sommer'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:aod':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    wald.test</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:spaMM':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    AR1</span></div><div class='input'>  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, yf <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>row</span><span class='op'>)</span>, xf <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>col</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>so1</span> <span class='op'>&lt;-</span> <span class='fu'>mmer</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>0</span><span class='op'>+</span><span class='va'>gen</span>,
+              random <span class='op'>=</span> <span class='op'>~</span> <span class='fu'>vs</span><span class='op'>(</span><span class='va'>xf</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>vs</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>vs</span><span class='op'>(</span><span class='fu'>spl2D</span><span class='op'>(</span><span class='va'>row</span>,<span class='va'>col</span><span class='op'>)</span><span class='op'>)</span>,
+              data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; iteration    LogLik     wall    cpu(sec)   restrained
+#&gt;     1      -52.5235   17:50:21      0           0
+#&gt;     2      -25.4345   17:50:21      0           0
+#&gt;     3      -24.9668   17:50:21      0           0
+#&gt;     4      -24.523   17:50:21      0           0
+#&gt;     5      -24.1879   17:50:21      0           0
+#&gt;     6      -23.9594   17:50:21      0           0
+#&gt;     7      -23.8243   17:50:21      0           0
+#&gt;     8      -23.7531   17:50:21      0           0
+#&gt;     9      -23.7166   17:50:21      0           0
+#&gt;     10      -23.6964   17:50:21      0           0
+#&gt;     11      -23.6839   17:50:22      1           0
+#&gt;     12      -23.6751   17:50:22      1           0
+#&gt;     13      -23.6684   17:50:22      1           0
+#&gt;     14      -23.663   17:50:22      1           0
+#&gt;     15      -23.6586   17:50:22      1           0
+#&gt;     16      -23.6548   17:50:22      1           0
+#&gt;     17      -23.6515   17:50:22      1           0
+#&gt;     18      -23.6486   17:50:22      1           0
+#&gt;     19      -23.646   17:50:22      1           0
+#&gt;     20      -23.6436   17:50:22      1           0</div><div class='input'>  <span class='va'>preds</span><span class='op'>$</span><span class='va'>so1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>so1</span><span class='op'>)</span><span class='op'>[</span>,<span class='st'>"Estimate"</span><span class='op'>]</span>
+  <span class='co'># spatPlot</span>
 
-<span class='kw'>if</span>(<span class='fl'>0</span>){
-  <span class='co'># asreml4</span>
-
-  <span class='co'>## library(agridat)</span>
-  <span class='co'>## data(stroup.nin)</span>
-  <span class='co'>## dat &lt;- stroup.nin</span>
-
-  <span class='co'>## # Note, ASREML4 stand-alone might not need a completely-filled rectangle</span>
-  <span class='co'>## # of plots to perform AR1xAR1 analysis.  It might be able to fill in missing</span>
-  <span class='co'>## # combinations of rows/columns. The R version asreml4 still seems to require</span>
-  <span class='co'>## # rectangles.</span>
-
-  <span class='co'>## libs(asreml)</span>
-
-  <span class='co'>## # RCB analysis</span>
-  <span class='co'>## dat.rcb &lt;- asreml(yield ~ gen, random = ~ rep, data=dat,</span>
-  <span class='co'>##                   na.action=na.method(x="omit"))</span>
-  <span class='co'>## pred.rcb &lt;- predict(dat.rcb, data=dat, classify="gen")</span>
-
-  <span class='co'>## # Two-dimensional AR1xAR1 spatial model</span>
-  <span class='co'>## dat &lt;- transform(dat, xf=factor(col), yf=factor(row))</span>
-  <span class='co'>## #dat &lt;- dat[order(dat$xf, dat$yf),]</span>
-  <span class='co'>## dat.sp &lt;- asreml(yield~gen, data=dat,</span>
-  <span class='co'>##                  residual = ~ar1(xf):ar1(yf),</span>
-  <span class='co'>##                  na.action=na.method(x="omit"))</span>
-  <span class='co'>## pred.sp &lt;- predict(dat.sp, data=dat, classify="gen")</span>
-
-  <span class='co'>## libs(lucid)</span>
-  <span class='co'>## vc(dat.sp)</span>
-  <span class='co'>## ##     effect component std.error z.ratio constr</span>
-  <span class='co'>## ## R!variance   48.7      7.155       6.8    pos</span>
-  <span class='co'>## ##   R!xf.cor    0.6555   0.05638    12      unc</span>
-  <span class='co'>## ##   R!yf.cor    0.4375   0.0806      5.4    unc</span>
-
-  <span class='co'>## # Compare the estimates from the two methods</span>
-  <span class='co'>## plot(pred.rcb$pvals[,2], pred.sp$pvals[,2], xlim=c(13,37), ylim=c(13,37),</span>
-  <span class='co'>##      xlab="RCB", ylab="AR1xAR1", type='n')</span>
-  <span class='co'>## title("stroup.nin: Comparison of predicted values")</span>
-  <span class='co'>## text(pred.rcb$pvals[,2],pred.sp$pvals[,2],</span>
-  <span class='co'>##      as.character(pred.rcb$pvals[,1]),cex=0.5)</span>
-  <span class='co'>## abline(0,1)</span>
-
-}</div></pre>
+  <span class='co'># -----</span>
+  <span class='co'># compare variety effects from different packages</span>
+  <span class='fu'>lattice</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/lattice/man/splom.html'>splom</a></span><span class='op'>(</span><span class='va'>preds</span><span class='op'>[</span>,<span class='op'>-</span><span class='fl'>1</span><span class='op'>]</span>, main<span class='op'>=</span><span class='st'>"stroup.nin"</span><span class='op'>)</span>
+</div><div class='img'><img src='stroup.nin-3.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># }</span>
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-
-      <li><a href="#see-also">See also</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -479,7 +452,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

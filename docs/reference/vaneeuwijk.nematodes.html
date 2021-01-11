@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,13 +45,12 @@
 
 
 
-<meta property="og:title" content="Number of cysts on 11 potato genotypes for 5 potato cyst nematode populations. — vaneeuwijk.nematodes" />
 
+<meta property="og:title" content="Number of cysts on 11 potato genotypes for 5 potato cyst nematode populations. — vaneeuwijk.nematodes" />
 <meta property="og:description" content="The number of cysts on 11 potato genotypes for 5 potato cyst nematode
   populations." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -62,7 +67,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -76,7 +81,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -105,7 +110,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -113,10 +118,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -140,23 +144,22 @@
     </div>
 
     <div class="ref-description">
-    
     <p>The number of cysts on 11 potato genotypes for 5 potato cyst nematode
   populations.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"vaneeuwijk.nematodes"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"vaneeuwijk.nematodes"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 55 observations on the following 3 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 55 observations on the following 3 variables.</p><dl>
     <dt><code>gen</code></dt><dd><p>potato genotype</p></dd>
     <dt><code>pop</code></dt><dd><p>nematode population</p></dd>
     <dt><code>y</code></dt><dd><p>number of cysts</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>The number of cysts on 11 potato genotypes for 5 potato cyst nematode
@@ -165,40 +168,43 @@
   five replicates.</p>
 <p>Van Eeuwijk used this data to illustrate fitting a generalized linear
   model.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Fred A. van Eeuwijk, (1995).
   Multiplicative Interaction in Generalized Linear Models.
   <em>Biometrics</em>, 51, 1017-1032.
-  http://doi.org/10.2307/2533001</p>
-    
+  https://doi.org/10.2307/2533001</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Arntzen, F.K. &amp; van Eeuwijk (1992).
   Variation in resistance level of potato genotypes and virulence level of
   potato cyst nematode populations.
   <em>Euphytica</em>, 62, 135-143.
-  http://doi.org/10.1007/BF00037939</p>
-    
+  https://doi.org/10.1007/BF00037939</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>vaneeuwijk.nematodes</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>vaneeuwijk.nematodes</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>vaneeuwijk.nematodes</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>vaneeuwijk.nematodes</span>
 
 <span class='co'># show non-normality</span>
-<span class='no'>op</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span>(<span class='kw'>mfrow</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>2</span>,<span class='fl'>1</span>), <span class='kw'>mar</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>5</span>,<span class='fl'>4</span>,<span class='fl'>3</span>,<span class='fl'>2</span>))
-<span class='fu'><a href='https://rdrr.io/r/graphics/boxplot.html'>boxplot</a></span>(<span class='no'>y</span> ~ <span class='no'>pop</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>las</span><span class='kw'>=</span><span class='fl'>2</span>,
-        <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"number of cysts"</span>)
-<span class='fu'><a href='https://rdrr.io/r/graphics/title.html'>title</a></span>(<span class='st'>"vaneeuwijk.nematodes - cysts per nematode pop"</span>)
-<span class='fu'><a href='https://rdrr.io/r/graphics/boxplot.html'>boxplot</a></span>(<span class='no'>y</span> ~ <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>las</span><span class='kw'>=</span><span class='fl'>2</span>)</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/title.html'>title</a></span>(<span class='st'>"vaneeuwijk.nematodes - cysts per potato"</span>)</div><div class='img'><img src='vaneeuwijk.nematodes-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span>(<span class='no'>op</span>)</div><div class='input'>  <span class='co'># normal distribution</span>
-  <span class='no'>lm1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>y</span> ~ <span class='no'>gen</span> + <span class='no'>pop</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
+<span class='va'>op</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mfrow<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span>,<span class='fl'>1</span><span class='op'>)</span>, mar<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>5</span>,<span class='fl'>4</span>,<span class='fl'>3</span>,<span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/boxplot.html'>boxplot</a></span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='va'>pop</span>, data<span class='op'>=</span><span class='va'>dat</span>, las<span class='op'>=</span><span class='fl'>2</span>,
+        ylab<span class='op'>=</span><span class='st'>"number of cysts"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/title.html'>title</a></span><span class='op'>(</span><span class='st'>"vaneeuwijk.nematodes - cysts per nematode pop"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/boxplot.html'>boxplot</a></span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>, las<span class='op'>=</span><span class='fl'>2</span><span class='op'>)</span>
+</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/title.html'>title</a></span><span class='op'>(</span><span class='st'>"vaneeuwijk.nematodes - cysts per potato"</span><span class='op'>)</span>
+</div><div class='img'><img src='vaneeuwijk.nematodes-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span><span class='va'>op</span><span class='op'>)</span>
+
+<span class='co'># \dontrun{</span>
+  <span class='co'># normal distribution</span>
+  <span class='va'>lm1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>pop</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
 
   <span class='co'># poisson distribution</span>
-  <span class='no'>glm1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/glm.html'>glm</a></span>(<span class='no'>y</span> ~ <span class='no'>gen</span>+<span class='no'>pop</span>,<span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,<span class='kw'>family</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/family.html'>quasipoisson</a></span>(<span class='kw'>link</span><span class='kw'>=</span><span class='no'>log</span>))
-  <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>glm1</span>)</div><div class='output co'>#&gt; Analysis of Deviance Table
+  <span class='va'>glm1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/glm.html'>glm</a></span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='va'>gen</span><span class='op'>+</span><span class='va'>pop</span>,data<span class='op'>=</span><span class='va'>dat</span>,family<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/family.html'>quasipoisson</a></span><span class='op'>(</span>link<span class='op'>=</span><span class='va'>log</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>glm1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Analysis of Deviance Table
 #&gt; 
 #&gt; Model: quasipoisson, link: log
 #&gt; 
@@ -211,21 +217,23 @@
 #&gt; NULL                    54     8947.4
 #&gt; gen  10   7111.4        44     1836.0
 #&gt; pop   4    690.6        40     1145.4</div><div class='input'>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>gnm</span>)
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>gnm</span><span class='op'>)</span>
 
   <span class='co'># main-effects non-interaction model</span>
-  <span class='no'>gnm0</span> <span class='kw'>&lt;-</span> <span class='fu'>gnm</span>(<span class='no'>y</span> ~ <span class='no'>pop</span> + <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-              <span class='kw'>family</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/family.html'>quasipoisson</a></span>(<span class='kw'>link</span><span class='kw'>=</span><span class='no'>log</span>))
+  <span class='va'>gnm0</span> <span class='op'>&lt;-</span> <span class='fu'>gnm</span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='va'>pop</span> <span class='op'>+</span> <span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+              family<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/family.html'>quasipoisson</a></span><span class='op'>(</span>link<span class='op'>=</span><span class='va'>log</span><span class='op'>)</span><span class='op'>)</span>
   <span class='co'># one interaction</span>
-  <span class='no'>gnm1</span> <span class='kw'>&lt;-</span> <span class='fu'>gnm</span>(<span class='no'>y</span> ~ <span class='no'>pop</span> + <span class='no'>gen</span> + <span class='fu'>Mult</span>(<span class='no'>pop</span>,<span class='no'>gen</span>,<span class='kw'>inst</span><span class='kw'>=</span><span class='fl'>1</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-              <span class='kw'>family</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/family.html'>quasipoisson</a></span>(<span class='kw'>link</span><span class='kw'>=</span><span class='no'>log</span>))</div><div class='output co'>#&gt; Initialising
+  <span class='va'>gnm1</span> <span class='op'>&lt;-</span> <span class='fu'>gnm</span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='va'>pop</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='fu'>Mult</span><span class='op'>(</span><span class='va'>pop</span>,<span class='va'>gen</span>,inst<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+              family<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/family.html'>quasipoisson</a></span><span class='op'>(</span>link<span class='op'>=</span><span class='va'>log</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Initialising
 #&gt; Running start-up iterations..
 #&gt; Running main iterations.........................................................
-#&gt; .........................
+#&gt; ..........................
 #&gt; Done</div><div class='input'>  <span class='co'># two interactions</span>
-  <span class='no'>gnm2</span> <span class='kw'>&lt;-</span> <span class='fu'>gnm</span>(<span class='no'>y</span> ~ <span class='no'>pop</span> + <span class='no'>gen</span> + <span class='fu'>Mult</span>(<span class='no'>pop</span>,<span class='no'>gen</span>,<span class='kw'>inst</span><span class='kw'>=</span><span class='fl'>1</span>) + <span class='fu'>Mult</span>(<span class='no'>pop</span>,<span class='no'>gen</span>,<span class='kw'>inst</span><span class='kw'>=</span><span class='fl'>2</span>),
-              <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-              <span class='kw'>family</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/family.html'>quasipoisson</a></span>(<span class='kw'>link</span><span class='kw'>=</span><span class='no'>log</span>))</div><div class='output co'>#&gt; Initialising
+  <span class='va'>gnm2</span> <span class='op'>&lt;-</span> <span class='fu'>gnm</span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='va'>pop</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='fu'>Mult</span><span class='op'>(</span><span class='va'>pop</span>,<span class='va'>gen</span>,inst<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>Mult</span><span class='op'>(</span><span class='va'>pop</span>,<span class='va'>gen</span>,inst<span class='op'>=</span><span class='fl'>2</span><span class='op'>)</span>,
+              data<span class='op'>=</span><span class='va'>dat</span>,
+              family<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/family.html'>quasipoisson</a></span><span class='op'>(</span>link<span class='op'>=</span><span class='va'>log</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Initialising
 #&gt; Running start-up iterations..
 #&gt; Running main iterations.............
 #&gt; Done</div><div class='input'>
@@ -233,7 +241,8 @@
   <span class='co'># only 2, not 3 axes needed</span>
 
   <span class='co'># match vaneeuwijk table 2</span>
-  <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>gnm2</span>)</div><div class='output co'>#&gt; <span class='error'>Error in terms.formula(formula, specials = "instances", simplify = TRUE,     keep.order = TRUE, data = data): object 'dat' not found</span></div><div class='input'>  <span class='co'>##                          Df Deviance Resid. Df Resid. Dev</span>
+  <span class='co'># anova(gnm2)</span>
+  <span class='co'>##                          Df Deviance Resid. Df Resid. Dev</span>
   <span class='co'>## NULL                                        54     8947.4</span>
   <span class='co'>## pop                       4    690.6        50     8256.8</span>
   <span class='co'>## gen                      10   7111.4        40     1145.4</span>
@@ -241,42 +250,34 @@
   <span class='co'>## Mult(pop, gen, inst = 2) 11    351.1        16       78.3</span>
 
   <span class='co'># compare residual qq plots from models</span>
-  <span class='no'>op</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span>(<span class='kw'>mfrow</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>2</span>,<span class='fl'>2</span>))
-  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>lm1</span>, <span class='kw'>which</span><span class='kw'>=</span><span class='fl'>2</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"LM"</span>)
-  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>glm1</span>, <span class='kw'>which</span><span class='kw'>=</span><span class='fl'>2</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"GLM"</span>)
-  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>gnm0</span>, <span class='kw'>which</span><span class='kw'>=</span><span class='fl'>2</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"GNM, no interaction"</span>)
-  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>gnm2</span>, <span class='kw'>which</span><span class='kw'>=</span><span class='fl'>2</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"GNM, 2 interactions"</span>)</div><div class='img'><img src='vaneeuwijk.nematodes-2.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span>(<span class='no'>op</span>)
+  <span class='va'>op</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mfrow<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span>,<span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>lm1</span>, which<span class='op'>=</span><span class='fl'>2</span>, main<span class='op'>=</span><span class='st'>"LM"</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>glm1</span>, which<span class='op'>=</span><span class='fl'>2</span>, main<span class='op'>=</span><span class='st'>"GLM"</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>gnm0</span>, which<span class='op'>=</span><span class='fl'>2</span>, main<span class='op'>=</span><span class='st'>"GNM, no interaction"</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>gnm2</span>, which<span class='op'>=</span><span class='fl'>2</span>, main<span class='op'>=</span><span class='st'>"GNM, 2 interactions"</span><span class='op'>)</span>
+</div><div class='img'><img src='vaneeuwijk.nematodes-2.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span><span class='va'>op</span><span class='op'>)</span>
 
   <span class='co'># extract interaction-term coefficients, make a biplot</span>
-  <span class='no'>pops</span> <span class='kw'>&lt;-</span> <span class='fu'>pickCoef</span>(<span class='no'>gnm2</span>, <span class='st'>"[.]pop"</span>)
-  <span class='no'>gens</span> <span class='kw'>&lt;-</span> <span class='fu'>pickCoef</span>(<span class='no'>gnm2</span>, <span class='st'>"[.]gen"</span>)
-  <span class='no'>coefs</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>gnm2</span>)
-  <span class='no'>A</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='no'>coefs</span>[<span class='no'>pops</span>], <span class='kw'>nc</span> <span class='kw'>=</span> <span class='fl'>2</span>)
-  <span class='no'>B</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='no'>coefs</span>[<span class='no'>gens</span>], <span class='kw'>nc</span> <span class='kw'>=</span> <span class='fl'>2</span>)
-  <span class='no'>A2</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/scale.html'>scale</a></span>(<span class='no'>A</span>)
-  <span class='no'>B2</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/scale.html'>scale</a></span>(<span class='no'>B</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>A2</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span>(<span class='no'>dat</span>$<span class='no'>pop</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>B2</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span>(<span class='no'>dat</span>$<span class='no'>gen</span>)
+  <span class='va'>pops</span> <span class='op'>&lt;-</span> <span class='fu'>pickCoef</span><span class='op'>(</span><span class='va'>gnm2</span>, <span class='st'>"[.]pop"</span><span class='op'>)</span>
+  <span class='va'>gens</span> <span class='op'>&lt;-</span> <span class='fu'>pickCoef</span><span class='op'>(</span><span class='va'>gnm2</span>, <span class='st'>"[.]gen"</span><span class='op'>)</span>
+  <span class='va'>coefs</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>gnm2</span><span class='op'>)</span>
+  <span class='va'>A</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='va'>coefs</span><span class='op'>[</span><span class='va'>pops</span><span class='op'>]</span>, nc <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span>
+  <span class='va'>B</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='va'>coefs</span><span class='op'>[</span><span class='va'>gens</span><span class='op'>]</span>, nc <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span>
+  <span class='va'>A2</span><span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/scale.html'>scale</a></span><span class='op'>(</span><span class='va'>A</span><span class='op'>)</span>
+  <span class='va'>B2</span><span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/scale.html'>scale</a></span><span class='op'>(</span><span class='va'>B</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>A2</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>pop</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>B2</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>gen</span><span class='op'>)</span>
   <span class='co'># near-match with vaneeuwijk figure 1</span>
-  <span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span>(<span class='no'>A2</span>,<span class='no'>B2</span>, <span class='kw'>expand</span><span class='kw'>=</span><span class='fl'>2.5</span>,<span class='kw'>xlim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(-<span class='fl'>2</span>,<span class='fl'>2</span>),<span class='kw'>ylim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(-<span class='fl'>2</span>,<span class='fl'>2</span>),
-         <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"vaneeuwijk.nematodes - GAMMI biplot"</span>)</div><div class='img'><img src='vaneeuwijk.nematodes-3.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span><span class='op'>(</span><span class='va'>A2</span>,<span class='va'>B2</span>, expand<span class='op'>=</span><span class='fl'>2.5</span>,xlim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>2</span>,<span class='fl'>2</span><span class='op'>)</span>,ylim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>2</span>,<span class='fl'>2</span><span class='op'>)</span>,
+         main<span class='op'>=</span><span class='st'>"vaneeuwijk.nematodes - GAMMI biplot"</span><span class='op'>)</span>
+</div><div class='img'><img src='vaneeuwijk.nematodes-3.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -287,7 +288,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

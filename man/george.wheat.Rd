@@ -42,7 +42,7 @@
   Nicholas George and Mark Lundy (2019).
   Quantifying Genotype x Environment Effects in Long-Term Common Wheat Yield Trials from an Agroecologically Diverse Production Region.
   Crop Science, 59, 1960-1972.
-  http://doi.org/10.2135/cropsci2019.01.0010
+  https://doi.org/10.2135/cropsci2019.01.0010
 }
 \references{
   None

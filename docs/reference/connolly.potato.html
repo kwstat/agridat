@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -146,12 +146,12 @@
     <p>Potato yields in single-drill plots</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"connolly.potato"</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"connolly.potato"</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 80 observations on the following 6 variables.</p><dl'>
+    <p>A data frame with 80 observations on the following 6 variables.</p><dl>
     <dt><code>rep</code></dt><dd><p>block</p></dd>
     <dt><code>gen</code></dt><dd><p>variety</p></dd>
     <dt><code>row</code></dt><dd><p>row</p></dd>
@@ -178,7 +178,7 @@
   section (i.e. rep) mean.</p>
 <p>It would be interesting to fit a model that uses differences in
   maturity between a plot and its neighbor as the actual covariate.</p>
-<p>http://doi.org/10.1111/j.1744-7348.1993.tb04099.x</p>  
+<p>https://doi.org/10.1111/j.1744-7348.1993.tb04099.x</p>  
 <p>Used with permission of Iain Currie.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
@@ -190,23 +190,26 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>connolly.potato</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>connolly.potato</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>connolly.potato</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>connolly.potato</span>
 
 <span class='co'># Field plan</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='fu'>desplot</span>(<span class='no'>dat</span>, <span class='no'>yield</span>~<span class='no'>col</span>*<span class='no'>row</span>,
-        <span class='kw'>out1</span><span class='kw'>=</span><span class='no'>rep</span>, <span class='co'># aspect unknown</span>
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"connolly.potato yields (reps not contiguous)"</span>)</div><div class='img'><img src='connolly.potato-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+<span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>yield</span><span class='op'>~</span><span class='va'>col</span><span class='op'>*</span><span class='va'>row</span>,
+        out1<span class='op'>=</span><span class='va'>rep</span>, <span class='co'># aspect unknown</span>
+        main<span class='op'>=</span><span class='st'>"connolly.potato yields (reps not contiguous)"</span><span class='op'>)</span>
+</div><div class='img'><img src='connolly.potato-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
 <span class='co'># Later maturities are higher yielding</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'>bwplot</span>(<span class='no'>yield</span>~<span class='no'>matur</span>, <span class='no'>dat</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"connolly.potato yield by maturity"</span>)</div><div class='img'><img src='connolly.potato-2.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>bwplot</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>~</span><span class='va'>matur</span>, <span class='va'>dat</span>, main<span class='op'>=</span><span class='st'>"connolly.potato yield by maturity"</span><span class='op'>)</span>
+</div><div class='img'><img src='connolly.potato-2.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Observed raw means. Matches Connolly table 2.</span>
-<span class='no'>mn</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span>(<span class='no'>yield</span>~<span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>FUN</span><span class='kw'>=</span><span class='no'>mean</span>)
-<span class='no'>mn</span>[<span class='fu'><a href='https://rdrr.io/r/base/rev.html'>rev</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>mn</span>$<span class='no'>yield</span>)),]</div><div class='output co'>#&gt;    gen  yield
+<span class='va'>mn</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>~</span><span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>, FUN<span class='op'>=</span><span class='va'>mean</span><span class='op'>)</span>
+<span class='va'>mn</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/rev.html'>rev</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>mn</span><span class='op'>$</span><span class='va'>yield</span><span class='op'>)</span><span class='op'>)</span>,<span class='op'>]</span>
+</div><div class='output co'>#&gt;    gen  yield
 #&gt; 8  V08 16.200
 #&gt; 19 V19 14.450
 #&gt; 10 V10 13.925
@@ -228,38 +231,40 @@
 #&gt; 4  V04  9.425
 #&gt; 5  V05  9.275</div><div class='input'>
 <span class='co'># Create a covariate which is the average of neighboring plot yields</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>reshape2</span>)
-<span class='no'>mat</span> <span class='kw'>&lt;-</span> <span class='fu'>acast</span>(<span class='no'>dat</span>, <span class='no'>row</span>~<span class='no'>col</span>, <span class='kw'>value.var</span><span class='kw'>=</span><span class='st'>'yield'</span>)
-<span class='no'>mat2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='fl'>NA</span>, <span class='kw'>nrow</span><span class='kw'>=</span><span class='fl'>4</span>, <span class='kw'>ncol</span><span class='kw'>=</span><span class='fl'>20</span>)
-<span class='no'>mat2</span>[,<span class='fl'>2</span>:<span class='fl'>19</span>] <span class='kw'>&lt;-</span> (<span class='no'>mat</span>[ , <span class='fl'>1</span>:<span class='fl'>18</span>] + <span class='no'>mat</span>[ , <span class='fl'>3</span>:<span class='fl'>20</span>])/<span class='fl'>2</span>
-<span class='no'>mat2</span>[ , <span class='fl'>1</span>] <span class='kw'>&lt;-</span> (<span class='no'>mat</span>[ , <span class='fl'>1</span>] + <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='no'>mat</span>, <span class='fl'>1</span>, <span class='no'>mean</span>))/<span class='fl'>2</span>
-<span class='no'>mat2</span>[ , <span class='fl'>20</span>] <span class='kw'>&lt;-</span> (<span class='no'>mat</span>[ , <span class='fl'>20</span>] + <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='no'>mat</span>, <span class='fl'>1</span>, <span class='no'>mean</span>))/<span class='fl'>2</span>
-<span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>melt</span>(<span class='no'>mat2</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span>(<span class='no'>dat2</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'row'</span>,<span class='st'>'col'</span>,<span class='st'>'cov'</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/merge.html'>merge</a></span>(<span class='no'>dat</span>, <span class='no'>dat2</span>)
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>reshape2</span><span class='op'>)</span>
+<span class='va'>mat</span> <span class='op'>&lt;-</span> <span class='fu'>acast</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>row</span><span class='op'>~</span><span class='va'>col</span>, value.var<span class='op'>=</span><span class='st'>'yield'</span><span class='op'>)</span>
+<span class='va'>mat2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='cn'>NA</span>, nrow<span class='op'>=</span><span class='fl'>4</span>, ncol<span class='op'>=</span><span class='fl'>20</span><span class='op'>)</span>
+<span class='va'>mat2</span><span class='op'>[</span>,<span class='fl'>2</span><span class='op'>:</span><span class='fl'>19</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='op'>(</span><span class='va'>mat</span><span class='op'>[</span> , <span class='fl'>1</span><span class='op'>:</span><span class='fl'>18</span><span class='op'>]</span> <span class='op'>+</span> <span class='va'>mat</span><span class='op'>[</span> , <span class='fl'>3</span><span class='op'>:</span><span class='fl'>20</span><span class='op'>]</span><span class='op'>)</span><span class='op'>/</span><span class='fl'>2</span>
+<span class='va'>mat2</span><span class='op'>[</span> , <span class='fl'>1</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='op'>(</span><span class='va'>mat</span><span class='op'>[</span> , <span class='fl'>1</span><span class='op'>]</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>mat</span>, <span class='fl'>1</span>, <span class='va'>mean</span><span class='op'>)</span><span class='op'>)</span><span class='op'>/</span><span class='fl'>2</span>
+<span class='va'>mat2</span><span class='op'>[</span> , <span class='fl'>20</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='op'>(</span><span class='va'>mat</span><span class='op'>[</span> , <span class='fl'>20</span><span class='op'>]</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>mat</span>, <span class='fl'>1</span>, <span class='va'>mean</span><span class='op'>)</span><span class='op'>)</span><span class='op'>/</span><span class='fl'>2</span>
+<span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>melt</span><span class='op'>(</span><span class='va'>mat2</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>dat2</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'row'</span>,<span class='st'>'col'</span>,<span class='st'>'cov'</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/merge.html'>merge</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>dat2</span><span class='op'>)</span>
 <span class='co'># xyplot(yield ~ cov, data=dat, type=c('p','r'))</span>
 
 <span class='co'># Connolly et al fit a model with avg neighbor yield as a covariate</span>
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>yield</span> ~ <span class='fl'>0</span> + <span class='no'>gen</span> + <span class='no'>rep</span> + <span class='no'>cov</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-<span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m1</span>)[<span class='st'>'cov'</span>] <span class='co'># = -.303  (Connolly obtained -.31)</span></div><div class='output co'>#&gt;        cov 
+<span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>0</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>rep</span> <span class='op'>+</span> <span class='va'>cov</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span><span class='op'>[</span><span class='st'>'cov'</span><span class='op'>]</span> <span class='co'># = -.303  (Connolly obtained -.31)</span>
+</div><div class='output co'>#&gt;        cov 
 #&gt; -0.3030545 </div><div class='input'>
 <span class='co'># Block names and effects</span>
-<span class='no'>bnm</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"R1"</span>,<span class='st'>"R2"</span>,<span class='st'>"R3"</span>,<span class='st'>"R4"</span>)
-<span class='no'>beff</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0</span>, <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m1</span>)[<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'repR2'</span>,<span class='st'>'repR3'</span>,<span class='st'>'repR4'</span>)])
+<span class='va'>bnm</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"R1"</span>,<span class='st'>"R2"</span>,<span class='st'>"R3"</span>,<span class='st'>"R4"</span><span class='op'>)</span>
+<span class='va'>beff</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'repR2'</span>,<span class='st'>'repR3'</span>,<span class='st'>'repR4'</span><span class='op'>)</span><span class='op'>]</span><span class='op'>)</span>
 <span class='co'># Variety names and effects</span>
-<span class='no'>vnm</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span>(<span class='st'>"V"</span>, <span class='fu'><a href='https://rdrr.io/r/base/formatc.html'>formatC</a></span>(<span class='fl'>1</span>:<span class='fl'>20</span>, <span class='kw'>width</span><span class='kw'>=</span><span class='fl'>2</span>, <span class='kw'>flag</span><span class='kw'>=</span><span class='st'>'0'</span>))
-<span class='no'>veff</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m1</span>)[<span class='fl'>1</span>:<span class='fl'>20</span>]
+<span class='va'>vnm</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='st'>"V"</span>, <span class='fu'><a href='https://rdrr.io/r/base/formatc.html'>formatC</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>20</span>, width<span class='op'>=</span><span class='fl'>2</span>, flag<span class='op'>=</span><span class='st'>'0'</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>veff</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>20</span><span class='op'>]</span>
 
 <span class='co'># Adjust yield for variety and block effects</span>
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>yadj</span> <span class='kw'>=</span> <span class='no'>yield</span> - <span class='no'>beff</span>[<span class='fu'><a href='https://rdrr.io/r/base/match.html'>match</a></span>(<span class='no'>rep</span>,<span class='no'>bnm</span>)]
-                - <span class='no'>veff</span>[<span class='fu'><a href='https://rdrr.io/r/base/match.html'>match</a></span>(<span class='no'>gen</span>,<span class='no'>vnm</span>)])
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, yadj <span class='op'>=</span> <span class='va'>yield</span> <span class='op'>-</span> <span class='va'>beff</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/match.html'>match</a></span><span class='op'>(</span><span class='va'>rep</span>,<span class='va'>bnm</span><span class='op'>)</span><span class='op'>]</span>
+                <span class='op'>-</span> <span class='va'>veff</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/match.html'>match</a></span><span class='op'>(</span><span class='va'>gen</span>,<span class='va'>vnm</span><span class='op'>)</span><span class='op'>]</span><span class='op'>)</span>
 
 <span class='co'># Similar to Connolly Fig 1.  Point pattern doesn't quite match</span>
-<span class='fu'>xyplot</span>(<span class='no'>yadj</span>~<span class='no'>cov</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'p'</span>,<span class='st'>'r'</span>),
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"connolly.potato"</span>,
-       <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Avg yield of nearest neighbors"</span>,
-       <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Yield, adjusted for variety and block effects"</span>)</div><div class='img'><img src='connolly.potato-3.png' alt='' width='700' height='433' /></div><div class='input'>
-# }
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>yadj</span><span class='op'>~</span><span class='va'>cov</span>, data<span class='op'>=</span><span class='va'>dat</span>, type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'p'</span>,<span class='st'>'r'</span><span class='op'>)</span>,
+       main<span class='op'>=</span><span class='st'>"connolly.potato"</span>,
+       xlab<span class='op'>=</span><span class='st'>"Avg yield of nearest neighbors"</span>,
+       ylab<span class='op'>=</span><span class='st'>"Yield, adjusted for variety and block effects"</span><span class='op'>)</span>
+</div><div class='img'><img src='connolly.potato-3.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -276,7 +281,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

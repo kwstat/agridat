@@ -31,7 +31,7 @@
   Beitrage zur Erfassung der phanotypischen Stabilitat I.
   Vorschlag einiger auf Ranginformationen beruhenden Stabilitatsparameter.
   \emph{EDV in Medizin und Biologie}, 10 (4), 112-117.  Table 1.
-  http://nbn-resolving.de/urn:nbn:de:bsz:15-qucosa-145979
+  https://nbn-resolving.de/urn:nbn:de:bsz:15-qucosa-145979
 }
 
 \references{

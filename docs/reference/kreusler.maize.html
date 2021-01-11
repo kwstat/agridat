@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Growth of maize plants in Germany during 1875-1878 — kreusler.maize" />
-
 <meta property="og:description" content="Growth of maize plants in Germany during 1875-1878." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,16 +143,15 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Growth of maize plants in Germany during 1875-1878.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"kreusler.maize"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"kreusler.maize"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 165 observations on the following 17 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 165 observations on the following 17 variables.</p><dl>
     <dt><code>gen</code></dt><dd><p>genotype</p></dd>
     <dt><code>year</code></dt><dd><p>year</p></dd>
     <dt><code>date</code></dt><dd><p>calendar date</p></dd>
@@ -165,9 +168,9 @@
     <dt><code>plantheight</code></dt><dd><p>plant height (cm) (mittlere hohe der pflanzen)</p></dd>
     <dt><code>leafcount</code></dt><dd><p>number of leaves (anzahl der blatter)</p></dd>
     <dt><code>leafarea</code></dt><dd><p>leaf area (cm^2) (flachenmaass der blatter)</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     
@@ -192,7 +195,6 @@ complete.</p>
 1876, and degrees Celsius in 1877 and 1878.  All temperatures in this
 data are degrees Celsius.  Note: deg C = 1.25 deg R.  Briggs, Kidd &amp;
 West (1920) give all temperature in Celsius.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     
@@ -217,74 +219,80 @@ West (1920) give all temperature in Celsius.</p>
 <p>G. E. Briggs, Franklin Kidd, Cyril West. (1920).
   A Quantitative Analysis of Plant Growth. Part II.
   <em>Annals of Applied Biology</em>, 7, 202-223.</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Roderick Hunt, G. Clifford Evans. 1980.
   Classical Data on the Growth of Maize: Curve Fitting With Statistical Analysis.
   <em>New Phytol</em>, 86, 155-180.</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>kreusler.maize</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>kreusler.maize</span>
-<span class='no'>dat</span>$<span class='no'>date2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span>(<span class='no'>dat</span>$<span class='no'>date</span>,<span class='st'>"%d %b %Y"</span>)
-<span class='no'>dat</span>$<span class='no'>doy</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/strptime.html'>strftime</a></span>(<span class='no'>dat</span>$<span class='no'>date2</span>, <span class='kw'>format</span><span class='kw'>=</span><span class='st'>"%j"</span>))
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>kreusler.maize</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>kreusler.maize</span>
+<span class='va'>dat</span><span class='op'>$</span><span class='va'>date2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.Date.html'>as.Date</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>date</span>,<span class='st'>"%d %b %Y"</span><span class='op'>)</span>
+<span class='va'>dat</span><span class='op'>$</span><span class='va'>doy</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/strptime.html'>strftime</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>date2</span>, format<span class='op'>=</span><span class='st'>"%j"</span><span class='op'>)</span><span class='op'>)</span>
 
 <span class='co'># Hunt &amp; Evans Fig 2a</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'>xyplot</span>(<span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log10</a></span>(<span class='no'>plantweight</span>)~<span class='no'>doy</span><span class='kw'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>year</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>gen</span>,
-       <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'p'</span>,<span class='st'>'smooth'</span>), <span class='kw'>span</span><span class='kw'>=</span><span class='fl'>.4</span>, <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>,
-       <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Day of year"</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"kreusler.maize - growth of maize"</span>,
-       <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>5</span>))</div><div class='img'><img src='kreusler.maize-1.png' alt='' width='700' height='433' /></div><div class='input'>
-</div><div class='input'>
-<span class='co'># Hunt &amp; Evans Fig 2b</span>
-<span class='fu'>xyplot</span>(<span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log10</a></span>(<span class='no'>plantweight</span>)~<span class='no'>doy</span><span class='kw'>|</span><span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>year</span>),
-       <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'p'</span>,<span class='st'>'smooth'</span>), <span class='kw'>span</span><span class='kw'>=</span><span class='fl'>.5</span>, <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>,
-       <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Day of year"</span>,
-       <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>4</span>))</div><div class='img'><img src='kreusler.maize-2.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'># Hunt &amp; Evans Fig 3a</span>
-<span class='fu'>xyplot</span>(<span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log10</a></span>(<span class='no'>leafarea</span>)~<span class='no'>doy</span><span class='kw'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>year</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>gen</span>,
-       <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'p'</span>,<span class='st'>'smooth'</span>), <span class='kw'>span</span><span class='kw'>=</span><span class='fl'>.5</span>, <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>,
-       <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Day of year"</span>,
-       <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>5</span>))</div><div class='img'><img src='kreusler.maize-3.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'># Hunt &amp; Evans Fig 3a</span>
-<span class='fu'>xyplot</span>(<span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log10</a></span>(<span class='no'>leafarea</span>)~<span class='no'>doy</span><span class='kw'>|</span><span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>year</span>),
-       <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'p'</span>,<span class='st'>'smooth'</span>), <span class='kw'>span</span><span class='kw'>=</span><span class='fl'>.5</span>, <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>,
-       <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Day of year"</span>,
-       <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>4</span>))</div><div class='img'><img src='kreusler.maize-4.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='co'># All traits</span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log10</a></span><span class='op'>(</span><span class='va'>plantweight</span><span class='op'>)</span><span class='op'>~</span><span class='va'>doy</span><span class='op'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>, group<span class='op'>=</span><span class='va'>gen</span>,
+       type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'p'</span>,<span class='st'>'smooth'</span><span class='op'>)</span>, span<span class='op'>=</span><span class='fl'>.4</span>, as.table<span class='op'>=</span><span class='cn'>TRUE</span>, 
+       xlab<span class='op'>=</span><span class='st'>"Day of year"</span>, main<span class='op'>=</span><span class='st'>"kreusler.maize - growth of maize"</span>,
+       auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>5</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='kreusler.maize-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># \dontrun{</span>
 
-<span class='fu'>xyplot</span>(<span class='no'>raindays</span>~<span class='no'>doy</span><span class='kw'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>year</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>gen</span>,
-       <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'l'</span>, <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>5</span>), <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>4</span>))</div><div class='img'><img src='kreusler.maize-5.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>xyplot</span>(<span class='no'>rain</span>~<span class='no'>doy</span><span class='kw'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>year</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>gen</span>,
-       <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'l'</span>, <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>5</span>), <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>4</span>))</div><div class='img'><img src='kreusler.maize-6.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>xyplot</span>(<span class='no'>temp</span>~<span class='no'>doy</span><span class='kw'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>year</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>gen</span>,
-       <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'l'</span>, <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>5</span>), <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>4</span>))</div><div class='img'><img src='kreusler.maize-7.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>xyplot</span>(<span class='no'>parentseed</span>~<span class='no'>doy</span><span class='kw'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>year</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>gen</span>,
-       <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'l'</span>, <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>5</span>), <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>4</span>))</div><div class='img'><img src='kreusler.maize-8.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>xyplot</span>(<span class='no'>roots</span>~<span class='no'>doy</span><span class='kw'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>year</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>gen</span>,
-       <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'l'</span>, <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>5</span>), <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>4</span>))</div><div class='img'><img src='kreusler.maize-9.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>xyplot</span>(<span class='no'>leaves</span>~<span class='no'>doy</span><span class='kw'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>year</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>gen</span>,
-       <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'l'</span>, <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>5</span>), <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>4</span>))</div><div class='img'><img src='kreusler.maize-10.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>xyplot</span>(<span class='no'>stem</span>~<span class='no'>doy</span><span class='kw'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>year</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>gen</span>,
-       <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'l'</span>, <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>5</span>), <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>4</span>))</div><div class='img'><img src='kreusler.maize-11.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>xyplot</span>(<span class='no'>grain</span>~<span class='no'>doy</span><span class='kw'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>year</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>gen</span>,
-       <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'l'</span>, <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>5</span>), <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>4</span>))</div><div class='img'><img src='kreusler.maize-12.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>xyplot</span>(<span class='no'>plantweight</span>~<span class='no'>doy</span><span class='kw'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>year</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>gen</span>,
-       <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'l'</span>, <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>5</span>), <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>4</span>))</div><div class='img'><img src='kreusler.maize-13.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>xyplot</span>(<span class='no'>plantheight</span>~<span class='no'>doy</span><span class='kw'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>year</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>gen</span>,
-       <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'l'</span>, <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>5</span>), <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>4</span>))</div><div class='img'><img src='kreusler.maize-14.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>xyplot</span>(<span class='no'>leafcount</span>~<span class='no'>doy</span><span class='kw'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>year</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>gen</span>,
-       <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'l'</span>, <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>5</span>), <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>4</span>))</div><div class='img'><img src='kreusler.maize-15.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>xyplot</span>(<span class='no'>leafarea</span>~<span class='no'>doy</span><span class='kw'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>year</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>gen</span>,
-       <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'l'</span>, <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>5</span>), <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>4</span>))</div><div class='img'><img src='kreusler.maize-16.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'>xyplot</span>(<span class='no'>tassel</span>~<span class='no'>doy</span><span class='kw'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>year</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>gen</span>,
-       <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'l'</span>, <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>5</span>), <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>4</span>))</div><div class='img'><img src='kreusler.maize-17.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># Hunt &amp; Evans Fig 2b</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log10</a></span><span class='op'>(</span><span class='va'>plantweight</span><span class='op'>)</span><span class='op'>~</span><span class='va'>doy</span><span class='op'>|</span><span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>, group<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span>,
+       type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'p'</span>,<span class='st'>'smooth'</span><span class='op'>)</span>, span<span class='op'>=</span><span class='fl'>.5</span>, as.table<span class='op'>=</span><span class='cn'>TRUE</span>, 
+       xlab<span class='op'>=</span><span class='st'>"Day of year"</span>,
+       auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='kreusler.maize-2.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'># Hunt &amp; Evans Fig 3a</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log10</a></span><span class='op'>(</span><span class='va'>leafarea</span><span class='op'>)</span><span class='op'>~</span><span class='va'>doy</span><span class='op'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>, group<span class='op'>=</span><span class='va'>gen</span>,
+       type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'p'</span>,<span class='st'>'smooth'</span><span class='op'>)</span>, span<span class='op'>=</span><span class='fl'>.5</span>, as.table<span class='op'>=</span><span class='cn'>TRUE</span>, 
+       xlab<span class='op'>=</span><span class='st'>"Day of year"</span>,
+       auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>5</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='kreusler.maize-3.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'># Hunt &amp; Evans Fig 3a</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log10</a></span><span class='op'>(</span><span class='va'>leafarea</span><span class='op'>)</span><span class='op'>~</span><span class='va'>doy</span><span class='op'>|</span><span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>, group<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span>,
+       type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'p'</span>,<span class='st'>'smooth'</span><span class='op'>)</span>, span<span class='op'>=</span><span class='fl'>.5</span>, as.table<span class='op'>=</span><span class='cn'>TRUE</span>, 
+       xlab<span class='op'>=</span><span class='st'>"Day of year"</span>,
+       auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='kreusler.maize-4.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># All traits</span>
+  
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>raindays</span><span class='op'>~</span><span class='va'>doy</span><span class='op'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>, group<span class='op'>=</span><span class='va'>gen</span>,
+       type<span class='op'>=</span><span class='st'>'l'</span>, auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>5</span><span class='op'>)</span>, as.table<span class='op'>=</span><span class='cn'>TRUE</span>, layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='kreusler.maize-5.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>rain</span><span class='op'>~</span><span class='va'>doy</span><span class='op'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>, group<span class='op'>=</span><span class='va'>gen</span>,
+       type<span class='op'>=</span><span class='st'>'l'</span>, auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>5</span><span class='op'>)</span>, as.table<span class='op'>=</span><span class='cn'>TRUE</span>, layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='kreusler.maize-6.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>temp</span><span class='op'>~</span><span class='va'>doy</span><span class='op'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>, group<span class='op'>=</span><span class='va'>gen</span>,
+       type<span class='op'>=</span><span class='st'>'l'</span>, auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>5</span><span class='op'>)</span>, as.table<span class='op'>=</span><span class='cn'>TRUE</span>, layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='kreusler.maize-7.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>parentseed</span><span class='op'>~</span><span class='va'>doy</span><span class='op'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>, group<span class='op'>=</span><span class='va'>gen</span>,
+       type<span class='op'>=</span><span class='st'>'l'</span>, auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>5</span><span class='op'>)</span>, as.table<span class='op'>=</span><span class='cn'>TRUE</span>, layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='kreusler.maize-8.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>roots</span><span class='op'>~</span><span class='va'>doy</span><span class='op'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>, group<span class='op'>=</span><span class='va'>gen</span>,
+       type<span class='op'>=</span><span class='st'>'l'</span>, auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>5</span><span class='op'>)</span>, as.table<span class='op'>=</span><span class='cn'>TRUE</span>, layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='kreusler.maize-9.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>leaves</span><span class='op'>~</span><span class='va'>doy</span><span class='op'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>, group<span class='op'>=</span><span class='va'>gen</span>,
+       type<span class='op'>=</span><span class='st'>'l'</span>, auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>5</span><span class='op'>)</span>, as.table<span class='op'>=</span><span class='cn'>TRUE</span>, layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='kreusler.maize-10.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>stem</span><span class='op'>~</span><span class='va'>doy</span><span class='op'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>, group<span class='op'>=</span><span class='va'>gen</span>,
+       type<span class='op'>=</span><span class='st'>'l'</span>, auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>5</span><span class='op'>)</span>, as.table<span class='op'>=</span><span class='cn'>TRUE</span>, layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='kreusler.maize-11.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>grain</span><span class='op'>~</span><span class='va'>doy</span><span class='op'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>, group<span class='op'>=</span><span class='va'>gen</span>,
+       type<span class='op'>=</span><span class='st'>'l'</span>, auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>5</span><span class='op'>)</span>, as.table<span class='op'>=</span><span class='cn'>TRUE</span>, layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='kreusler.maize-12.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>plantweight</span><span class='op'>~</span><span class='va'>doy</span><span class='op'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>, group<span class='op'>=</span><span class='va'>gen</span>,
+       type<span class='op'>=</span><span class='st'>'l'</span>, auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>5</span><span class='op'>)</span>, as.table<span class='op'>=</span><span class='cn'>TRUE</span>, layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='kreusler.maize-13.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>plantheight</span><span class='op'>~</span><span class='va'>doy</span><span class='op'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>, group<span class='op'>=</span><span class='va'>gen</span>,
+       type<span class='op'>=</span><span class='st'>'l'</span>, auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>5</span><span class='op'>)</span>, as.table<span class='op'>=</span><span class='cn'>TRUE</span>, layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='kreusler.maize-14.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>leafcount</span><span class='op'>~</span><span class='va'>doy</span><span class='op'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>, group<span class='op'>=</span><span class='va'>gen</span>,
+       type<span class='op'>=</span><span class='st'>'l'</span>, auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>5</span><span class='op'>)</span>, as.table<span class='op'>=</span><span class='cn'>TRUE</span>, layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='kreusler.maize-15.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>leafarea</span><span class='op'>~</span><span class='va'>doy</span><span class='op'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>, group<span class='op'>=</span><span class='va'>gen</span>,
+       type<span class='op'>=</span><span class='st'>'l'</span>, auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>5</span><span class='op'>)</span>, as.table<span class='op'>=</span><span class='cn'>TRUE</span>, layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='kreusler.maize-16.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>tassel</span><span class='op'>~</span><span class='va'>doy</span><span class='op'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>, group<span class='op'>=</span><span class='va'>gen</span>,
+       type<span class='op'>=</span><span class='st'>'l'</span>, auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>5</span><span class='op'>)</span>, as.table<span class='op'>=</span><span class='cn'>TRUE</span>, layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='kreusler.maize-17.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'># }</span>
+
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -295,7 +303,7 @@ West (1920) give all temperature in Celsius.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

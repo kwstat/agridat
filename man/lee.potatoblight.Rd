@@ -46,7 +46,7 @@ Note, in plant-breeding, it is common to use a "breeder code" for each genotype,
 which after several years of testing is changed to a registered
 commercial variety name.
 For this R package, the Potato Pedigree Database,
-http://www.plantbreeding.wur.nl/potatopedigree/reverselookup.php,
+https://www.plantbreeding.wur.nl/potatopedigree/reverselookup.php,
 was used to change breeder codes (in early testing) to the variety names
 used in later testing.  For example, among the changes made were the
 following:
@@ -71,7 +71,7 @@ following:
   https://researchspace.auckland.ac.nz/handle/2292/5240.
   
   Licensed via Open Database License 1.0. (allows sub-licensing).
-  See: http://opendatacommons.org/licenses/dbcl/1.0/
+  See: https://opendatacommons.org/licenses/dbcl/1.0/
 }
 \source{
   Lee, Arier Chi-Lun (2009).
@@ -88,7 +88,7 @@ data(lee.potatoblight)
 dat <- lee.potatoblight
 
 # Common cultivars across years.
-# Based on code from here: http://stackoverflow.com/questions/20709808
+# Based on code from here: https://stackoverflow.com/questions/20709808
 gg <- tapply(dat$gen, dat$year, function(x) as.character(unique(x)))
 tab <- outer(1:11, 1:11,
              Vectorize(function(a, b) length(Reduce(intersect, gg[c(a, b)]))))

@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Factorial experiment of cotton in Sudan. — gregory.cotton" />
-
 <meta property="og:description" content="Factorial experiment of cotton in Sudan." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,25 +143,24 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Factorial experiment of cotton in Sudan.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"gregory.cotton"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"gregory.cotton"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 144 observations on the following 6 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 144 observations on the following 6 variables.</p><dl>
     <dt><code>yield</code></dt><dd><p>a numeric vector</p></dd>
     <dt><code>year</code></dt><dd><p>year</p></dd>
     <dt><code>nitrogen</code></dt><dd><p>nitrogen level</p></dd>
     <dt><code>date</code></dt><dd><p>sowing date</p></dd>
     <dt><code>water</code></dt><dd><p>irrigation amount</p></dd>
     <dt><code>spacing</code></dt><dd><p>spacing between plants</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Experiment conducted in Sudan at the Gezira Research Farm in 1929-1930
@@ -173,7 +176,6 @@
 <p>Gregory (1932) has two interesting graphics:
   1. radial bar plot
   2. photographs of 3D model of treatment means.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     
@@ -183,79 +185,69 @@
   under irrigation in the Sudan.
   <em>The Journal of Agricultural Science</em>, 22, 617-638. Table 1, 10.
   https://doi.org/10.1017/S0021859600054137</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Paterson, D. Statistical Technique in Agricultural Research, p. 211.</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>gregory.cotton</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>gregory.cotton</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>gregory.cotton</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>gregory.cotton</span>
 
 <span class='co'># Main effect means, Gregory table 2</span>
 <span class='co'>## libs(dplyr)</span>
-<span class='co'>## dat &lt;!-- %&amp;gt;% group_by(year,date) %&amp;gt;% summarise(yield=mean(yield)) --&gt;</span>
-<span class='co'>## dat &lt;!-- %&amp;gt;% group_by(year,spacing) %&amp;gt;% summarise(yield=mean(yield)) --&gt;</span>
-<span class='co'>## dat &lt;!-- %&amp;gt;% group_by(year,water) %&amp;gt;% summarise(yield=mean(yield)) --&gt;</span>
-<span class='co'>## dat &lt;!-- %&amp;gt;% group_by(year,nitrogen) %&amp;gt;% summarise(yield=mean(yield)) --&gt;</span>
+<span class='co'>## dat </span>
+<span class='co'>## dat </span>
+<span class='co'>## dat </span>
+<span class='co'>## dat </span>
 
 
 <span class='co'># Figure 2 of Gregory. Not recommended, but an interesting exercise.</span>
-<span class='co'># http://stackoverflow.com/questions/13887365</span>
-<span class='kw'>if</span>(<span class='fl'>FALSE</span>){
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>ggplot2</span>)
-  <span class='no'>d1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, <span class='no'>year</span><span class='kw'>==</span><span class='st'>"Y1"</span>)
-  <span class='no'>d1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>d1</span>, <span class='kw'>grp</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='no'>date</span>,<span class='no'>nitrogen</span>,<span class='no'>water</span>,<span class='no'>spacing</span>)))
-  <span class='no'>d1</span> <span class='kw'>&lt;-</span> <span class='no'>d1</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>d1</span>$<span class='no'>grp</span>),] <span class='co'># for angles</span>
+<span class='co'># https://stackoverflow.com/questions/13887365</span>
+<span class='kw'>if</span><span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>ggplot2</span><span class='op'>)</span>
+  <span class='va'>d1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>year</span><span class='op'>==</span><span class='st'>"Y1"</span><span class='op'>)</span>
+  <span class='va'>d1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>d1</span>, grp<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>date</span>,<span class='va'>nitrogen</span>,<span class='va'>water</span>,<span class='va'>spacing</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>d1</span> <span class='op'>&lt;-</span> <span class='va'>d1</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>d1</span><span class='op'>$</span><span class='va'>grp</span><span class='op'>)</span>,<span class='op'>]</span> <span class='co'># for angles</span>
   <span class='co'># Rotate labels on the left half 180 deg. First 18, last 18 labels</span>
-  <span class='no'>d1</span>$<span class='no'>ang</span> <span class='kw'>&lt;-</span> <span class='fl'>90</span>+<span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span>(<span class='kw'>from</span><span class='kw'>=</span>(<span class='fl'>360</span>/<span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span>(<span class='no'>d1</span>))/<span class='fl'>1.5</span>, <span class='kw'>to</span><span class='kw'>=</span>(<span class='fl'>1.5</span>*(<span class='fl'>360</span>/<span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span>(<span class='no'>d1</span>)))-<span class='fl'>360</span>,
-                   <span class='kw'>length.out</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span>(<span class='no'>d1</span>))+<span class='fl'>80</span>
-  <span class='no'>d1</span>$<span class='no'>ang</span>[<span class='fl'>1</span>:<span class='fl'>18</span>] <span class='kw'>&lt;-</span> <span class='no'>d1</span>$<span class='no'>ang</span>[<span class='fl'>1</span>:<span class='fl'>18</span>] + <span class='fl'>180</span>
-  <span class='no'>d1</span>$<span class='no'>ang</span>[<span class='fl'>55</span>:<span class='fl'>72</span>] <span class='kw'>&lt;-</span> <span class='no'>d1</span>$<span class='no'>ang</span>[<span class='fl'>55</span>:<span class='fl'>72</span>] + <span class='fl'>180</span>
+  <span class='va'>d1</span><span class='op'>$</span><span class='va'>ang</span> <span class='op'>&lt;-</span> <span class='fl'>90</span><span class='op'>+</span><span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span>from<span class='op'>=</span><span class='op'>(</span><span class='fl'>360</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>d1</span><span class='op'>)</span><span class='op'>)</span><span class='op'>/</span><span class='fl'>1.5</span>, to<span class='op'>=</span><span class='op'>(</span><span class='fl'>1.5</span><span class='op'>*</span><span class='op'>(</span><span class='fl'>360</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>d1</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>-</span><span class='fl'>360</span>,
+                   length.out<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>d1</span><span class='op'>)</span><span class='op'>)</span><span class='op'>+</span><span class='fl'>80</span>
+  <span class='va'>d1</span><span class='op'>$</span><span class='va'>ang</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>18</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>d1</span><span class='op'>$</span><span class='va'>ang</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>18</span><span class='op'>]</span> <span class='op'>+</span> <span class='fl'>180</span>
+  <span class='va'>d1</span><span class='op'>$</span><span class='va'>ang</span><span class='op'>[</span><span class='fl'>55</span><span class='op'>:</span><span class='fl'>72</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>d1</span><span class='op'>$</span><span class='va'>ang</span><span class='op'>[</span><span class='fl'>55</span><span class='op'>:</span><span class='fl'>72</span><span class='op'>]</span> <span class='op'>+</span> <span class='fl'>180</span>
   <span class='co'># Lables on left half to right-adjusted</span>
-  <span class='no'>d1</span>$<span class='no'>hjust</span> <span class='kw'>&lt;-</span> <span class='fl'>0</span>
-  <span class='no'>d1</span>$<span class='no'>hjust</span>[<span class='fl'>1</span>:<span class='fl'>18</span>] <span class='kw'>&lt;-</span> <span class='no'>d1</span>$<span class='no'>hjust</span>[<span class='fl'>55</span>:<span class='fl'>72</span>] <span class='kw'>&lt;-</span> <span class='fl'>1</span>
-
-  <span class='no'>gg</span> <span class='kw'>&lt;-</span> <span class='fu'>ggplot</span>(<span class='no'>d1</span>, <span class='fu'>aes</span>(<span class='kw'>x</span><span class='kw'>=</span><span class='no'>grp</span>,<span class='kw'>y</span><span class='kw'>=</span><span class='no'>yield</span>,<span class='kw'>fill</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>spacing</span>))) +
-    <span class='fu'>geom_col</span>() +
-    <span class='fu'>guides</span>(<span class='kw'>fill</span><span class='kw'>=</span><span class='fl'>FALSE</span>) + <span class='co'># no legend for 'spacing'</span>
-    <span class='fu'>coord_polar</span>(<span class='kw'>start</span><span class='kw'>=</span>-<span class='no'>pi</span>/<span class='fl'>2</span>) + <span class='co'># default is to start at top</span>
-    <span class='fu'>labs</span>(<span class='kw'>title</span><span class='kw'>=</span><span class='st'>"gregory.cotton 1929"</span>,<span class='kw'>x</span><span class='kw'>=</span><span class='st'>""</span>,<span class='kw'>y</span><span class='kw'>=</span><span class='st'>""</span>,<span class='kw'>label</span><span class='kw'>=</span><span class='st'>""</span>) +
+  <span class='va'>d1</span><span class='op'>$</span><span class='va'>hjust</span> <span class='op'>&lt;-</span> <span class='fl'>0</span>
+  <span class='va'>d1</span><span class='op'>$</span><span class='va'>hjust</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>18</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>d1</span><span class='op'>$</span><span class='va'>hjust</span><span class='op'>[</span><span class='fl'>55</span><span class='op'>:</span><span class='fl'>72</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fl'>1</span>
+  
+  <span class='va'>gg</span> <span class='op'>&lt;-</span> <span class='fu'>ggplot</span><span class='op'>(</span><span class='va'>d1</span>, <span class='fu'>aes</span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>grp</span>,y<span class='op'>=</span><span class='va'>yield</span>,fill<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>spacing</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+    <span class='fu'>geom_col</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span>
+    <span class='fu'>guides</span><span class='op'>(</span>fill<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>+</span> <span class='co'># no legend for 'spacing'</span>
+    <span class='fu'>coord_polar</span><span class='op'>(</span>start<span class='op'>=</span><span class='op'>-</span><span class='va'>pi</span><span class='op'>/</span><span class='fl'>2</span><span class='op'>)</span> <span class='op'>+</span> <span class='co'># default is to start at top</span>
+    <span class='fu'>labs</span><span class='op'>(</span>title<span class='op'>=</span><span class='st'>"gregory.cotton 1929"</span>,x<span class='op'>=</span><span class='st'>""</span>,y<span class='op'>=</span><span class='st'>""</span>,label<span class='op'>=</span><span class='st'>""</span><span class='op'>)</span> <span class='op'>+</span>
     <span class='co'># The bar columns are centered on 1:72, subtract 0.5 to add radial axes</span>
-    <span class='fu'>geom_vline</span>(<span class='kw'>xintercept</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span>(<span class='fl'>1</span>, <span class='fl'>72</span>, <span class='kw'>by</span><span class='kw'>=</span><span class='fl'>3</span>)-<span class='fl'>0.5</span>, <span class='kw'>color</span><span class='kw'>=</span><span class='st'>"gray"</span>, <span class='kw'>size</span><span class='kw'>=</span><span class='fl'>.25</span>) +
-    <span class='fu'>geom_vline</span>(<span class='kw'>xintercept</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span>(<span class='fl'>1</span>, <span class='fl'>72</span>, <span class='kw'>by</span><span class='kw'>=</span><span class='fl'>18</span>)-<span class='fl'>0.5</span>, <span class='kw'>size</span><span class='kw'>=</span><span class='fl'>1</span>) +
-    <span class='fu'>geom_vline</span>(<span class='kw'>xintercept</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span>(<span class='fl'>1</span>, <span class='fl'>72</span>, <span class='kw'>by</span><span class='kw'>=</span><span class='fl'>9</span>)-<span class='fl'>0.5</span>, <span class='kw'>size</span><span class='kw'>=</span><span class='fl'>.5</span>) +
-    <span class='fu'>geom_hline</span>(<span class='kw'>yintercept</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>2</span>,<span class='fl'>3</span>)) +
-    <span class='fu'>geom_text</span>(<span class='kw'>data</span><span class='kw'>=</span><span class='no'>d1</span>, <span class='fu'>aes</span>(<span class='kw'>x</span><span class='kw'>=</span><span class='no'>grp</span>, <span class='kw'>y</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span>(<span class='no'>yield</span>), <span class='kw'>label</span><span class='kw'>=</span><span class='no'>grp</span>, <span class='kw'>angle</span><span class='kw'>=</span><span class='no'>ang</span>, <span class='kw'>hjust</span><span class='kw'>=</span><span class='no'>hjust</span>),
-              <span class='kw'>size</span><span class='kw'>=</span><span class='fl'>2</span>) +
-    <span class='fu'>theme</span>(<span class='kw'>panel.background</span><span class='kw'>=</span><span class='fu'>element_blank</span>(),
-          <span class='kw'>axis.title</span><span class='kw'>=</span><span class='fu'>element_blank</span>(),
-          <span class='kw'>panel.grid</span><span class='kw'>=</span><span class='fu'>element_blank</span>(),
-          <span class='kw'>axis.text.x</span><span class='kw'>=</span><span class='fu'>element_blank</span>(),
-          <span class='kw'>axis.text.y</span><span class='kw'>=</span><span class='fu'>element_blank</span>(),
-          <span class='kw'>axis.ticks</span><span class='kw'>=</span><span class='fu'>element_blank</span>() )
-  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>gg</span>)
-
-}</div></pre>
+    <span class='fu'>geom_vline</span><span class='op'>(</span>xintercept <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>72</span>, by<span class='op'>=</span><span class='fl'>3</span><span class='op'>)</span><span class='op'>-</span><span class='fl'>0.5</span>, color<span class='op'>=</span><span class='st'>"gray"</span>, size<span class='op'>=</span><span class='fl'>.25</span><span class='op'>)</span> <span class='op'>+</span>
+    <span class='fu'>geom_vline</span><span class='op'>(</span>xintercept <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>72</span>, by<span class='op'>=</span><span class='fl'>18</span><span class='op'>)</span><span class='op'>-</span><span class='fl'>0.5</span>, size<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span> <span class='op'>+</span>
+    <span class='fu'>geom_vline</span><span class='op'>(</span>xintercept <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fl'>72</span>, by<span class='op'>=</span><span class='fl'>9</span><span class='op'>)</span><span class='op'>-</span><span class='fl'>0.5</span>, size<span class='op'>=</span><span class='fl'>.5</span><span class='op'>)</span> <span class='op'>+</span>
+    <span class='fu'>geom_hline</span><span class='op'>(</span>yintercept<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>2</span>,<span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> 
+    <span class='fu'>geom_text</span><span class='op'>(</span>data<span class='op'>=</span><span class='va'>d1</span>, <span class='fu'>aes</span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>grp</span>, y<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>)</span>, label<span class='op'>=</span><span class='va'>grp</span>, angle<span class='op'>=</span><span class='va'>ang</span>, hjust<span class='op'>=</span><span class='va'>hjust</span><span class='op'>)</span>,
+              size<span class='op'>=</span><span class='fl'>2</span><span class='op'>)</span> <span class='op'>+</span>
+    <span class='fu'>theme</span><span class='op'>(</span>panel.background<span class='op'>=</span><span class='fu'>element_blank</span><span class='op'>(</span><span class='op'>)</span>,
+          axis.title<span class='op'>=</span><span class='fu'>element_blank</span><span class='op'>(</span><span class='op'>)</span>,
+          panel.grid<span class='op'>=</span><span class='fu'>element_blank</span><span class='op'>(</span><span class='op'>)</span>,
+          axis.text.x<span class='op'>=</span><span class='fu'>element_blank</span><span class='op'>(</span><span class='op'>)</span>,
+          axis.text.y<span class='op'>=</span><span class='fu'>element_blank</span><span class='op'>(</span><span class='op'>)</span>,
+          axis.ticks<span class='op'>=</span><span class='fu'>element_blank</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='va'>gg</span><span class='op'>)</span>
+  
+<span class='op'>}</span>
+<span class='co'># }</span>
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -266,7 +258,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

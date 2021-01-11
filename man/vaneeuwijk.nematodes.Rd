@@ -34,7 +34,7 @@
   Fred A. van Eeuwijk, (1995).
   Multiplicative Interaction in Generalized Linear Models.
   \emph{Biometrics}, 51, 1017-1032.
-  http://doi.org/10.2307/2533001
+  https://doi.org/10.2307/2533001
 }
 
 \references{
@@ -42,7 +42,7 @@
   Variation in resistance level of potato genotypes and virulence level of
   potato cyst nematode populations.
   \emph{Euphytica}, 62, 135-143.
-  http://doi.org/10.1007/BF00037939
+  https://doi.org/10.1007/BF00037939
 }
 
 \examples{

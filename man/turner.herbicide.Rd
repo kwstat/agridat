@@ -27,7 +27,7 @@
   David L. Turner and Michael H. Ralphs and John O. Evans (1992).
   Logistic Analysis for Monitoring and Assessing Herbicide Efficacy.
   \emph{Weed Technology}, 6, 424-430.
-  http://www.jstor.org/stable/3987312
+  https://www.jstor.org/stable/3987312
 }
 
 \references{

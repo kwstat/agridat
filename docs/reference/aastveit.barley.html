@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,13 +45,12 @@
 
 
 
-<meta property="og:title" content="Barley heights and environmental covariates in Norway — aastveit.barley" />
 
+<meta property="og:title" content="Barley heights and environmental covariates in Norway — aastveit.barley" />
 <meta property="og:description" content="Average height for 15 genotypes of barley in each of 9 years.
   Also 19 covariates in each of the 9 years." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -62,7 +67,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -76,7 +81,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -105,7 +110,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -113,10 +118,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -140,20 +144,19 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Average height for 15 genotypes of barley in each of 9 years.
   Also 19 covariates in each of the 9 years.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"aastveit.barley.covs"</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"aastveit.barley.height"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"aastveit.barley.covs"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"aastveit.barley.height"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
     
 
-<p>The 'aastveit.barley.covs' dataframe has 9 observations on the following 20 variables.</p><dl class='dl-horizontal'>
+<p>The 'aastveit.barley.covs' dataframe has 9 observations on the following 20 variables.</p><dl>
     <dt><code>year</code></dt><dd><p>year</p></dd>
     <dt><code>R1</code></dt><dd><p>avg rainfall (mm/day) in period 1</p></dd>
     <dt><code>R2</code></dt><dd><p>avg rainfall (mm/day) in period 2</p></dd>
@@ -175,17 +178,18 @@
     <dt><code>T5</code></dt><dd><p>avg temp (deg Celsius) in period 5</p></dd>
     <dt><code>T6</code></dt><dd><p>avg temp (deg Celsius) in period 6</p></dd>
     <dt><code>value</code></dt><dd><p>value of the covariate</p></dd>
-  </dl>
+  
+</dl>
 
 <p>The 'aastveit.barley.height' dataframe has 135 observations on the
-  following 3 variables.</p><dl class='dl-horizontal'>
+  following 3 variables.</p><dl>
     <dt><code>year</code></dt><dd><p>year, 9</p></dd>
     <dt><code>gen</code></dt><dd><p>genotype, 15 levels</p></dd>
     <dt><code>height</code></dt><dd><p>height (cm)</p></dd>
-  </dl>
+  
+</dl>
 
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     
@@ -196,52 +200,56 @@
 <p>The growth season of each year was divided into eight periods from
   sowing to harvest.  Because the plant stop growing about 20 days after
   ear emergence, only the first 6 periods are included here.</p>
-    
+<p>Used with permission of Harald Martens.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Aastveit, A. H. and Martens, H. (1986).
   ANOVA interactions interpreted by partial least squares regression.
-  <em>Biometrics</em>, 42, 829--844.
-  http://doi.org/10.2307/2530697</p>
-<p>Used with permission of Harald Martens.</p>
-    
+  Biometrics, 42, 829--844.
+  https://doi.org/10.2307/2530697</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>J. Chadoeuf and J. B. Denis (1991).
   Asymptotic variances for the multiplicative interaction model.
-  <em>J. App. Stat.</em> 18, 331-353.
-  http://doi.org/10.1080/02664769100000032</p>
-    
+  J. App. Stat., 18, 331-353.
+  https://doi.org/10.1080/02664769100000032</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"aastveit.barley.covs"</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"aastveit.barley.height"</span>)
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>reshape2</span>, <span class='no'>pls</span>)</div><div class='output co'>#&gt; <span class='message'></span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"aastveit.barley.covs"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"aastveit.barley.height"</span><span class='op'>)</span>
+
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>reshape2</span>, <span class='va'>pls</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'></span>
 #&gt; <span class='message'>Attaching package: 'pls'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:stats':</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    loadings</span></div><div class='input'>
+#&gt; <span class='message'>    loadings</span></div><div class='input'>  
   <span class='co'># First, PCA of each matrix separately</span>
 
-  <span class='no'>Z</span> <span class='kw'>&lt;-</span> <span class='fu'>acast</span>(<span class='no'>aastveit.barley.height</span>, <span class='no'>year</span> ~ <span class='no'>gen</span>, <span class='kw'>value.var</span><span class='kw'>=</span><span class='st'>"height"</span>)
-  <span class='no'>Z</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sweep.html'>sweep</a></span>(<span class='no'>Z</span>, <span class='fl'>1</span>, <span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>rowMeans</a></span>(<span class='no'>Z</span>))
-  <span class='no'>Z</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sweep.html'>sweep</a></span>(<span class='no'>Z</span>, <span class='fl'>2</span>, <span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>colMeans</a></span>(<span class='no'>Z</span>)) <span class='co'># Double-centered</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='no'>Z</span>^<span class='fl'>2</span>)*<span class='fl'>4</span> <span class='co'># Total SS = 10165</span></div><div class='output co'>#&gt; [1] 10165.55</div><div class='input'>  <span class='no'>sv</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/svd.html'>svd</a></span>(<span class='no'>Z</span>)$<span class='no'>d</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fl'>100</span> * <span class='no'>sv</span>^<span class='fl'>2</span>/<span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='no'>sv</span>^<span class='fl'>2</span>),<span class='fl'>1</span>) <span class='co'># Prop of variance each axis</span></div><div class='output co'>#&gt; [1] 74.4  7.9  5.0  4.8  3.6  2.1  1.4  0.7  0.0</div><div class='input'>  <span class='co'># Aastveit Figure 1.  PCA of height</span>
-  <span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/prcomp.html'>prcomp</a></span>(<span class='no'>Z</span>),
-         <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"aastveit.barley - height"</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>0.5</span>)</div><div class='img'><img src='aastveit.barley-1.png' alt='' width='700' height='433' /></div><div class='input'>
-  <span class='no'>U</span> <span class='kw'>&lt;-</span> <span class='no'>aastveit.barley.covs</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>U</span>) <span class='kw'>&lt;-</span> <span class='no'>U</span>$<span class='no'>year</span>
-  <span class='no'>U</span>$<span class='no'>year</span> <span class='kw'>&lt;-</span> <span class='kw'>NULL</span>
-  <span class='no'>U</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/scale.html'>scale</a></span>(<span class='no'>U</span>) <span class='co'># Standardized covariates</span>
-  <span class='no'>sv</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/svd.html'>svd</a></span>(<span class='no'>U</span>)$<span class='no'>d</span>
+  <span class='va'>Z</span> <span class='op'>&lt;-</span> <span class='fu'>acast</span><span class='op'>(</span><span class='va'>aastveit.barley.height</span>, <span class='va'>year</span> <span class='op'>~</span> <span class='va'>gen</span>, value.var<span class='op'>=</span><span class='st'>"height"</span><span class='op'>)</span>
+  <span class='va'>Z</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sweep.html'>sweep</a></span><span class='op'>(</span><span class='va'>Z</span>, <span class='fl'>1</span>, <span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>rowMeans</a></span><span class='op'>(</span><span class='va'>Z</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>Z</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sweep.html'>sweep</a></span><span class='op'>(</span><span class='va'>Z</span>, <span class='fl'>2</span>, <span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>colMeans</a></span><span class='op'>(</span><span class='va'>Z</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># Double-centered</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>Z</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>*</span><span class='fl'>4</span> <span class='co'># Total SS = 10165</span>
+</div><div class='output co'>#&gt; [1] 10165.55</div><div class='input'>  <span class='va'>sv</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/svd.html'>svd</a></span><span class='op'>(</span><span class='va'>Z</span><span class='op'>)</span><span class='op'>$</span><span class='va'>d</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='fl'>100</span> <span class='op'>*</span> <span class='va'>sv</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>sv</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>)</span>,<span class='fl'>1</span><span class='op'>)</span> <span class='co'># Prop of variance each axis</span>
+</div><div class='output co'>#&gt; [1] 74.4  7.9  5.0  4.8  3.6  2.1  1.4  0.7  0.0</div><div class='input'>  <span class='co'># Aastveit Figure 1.  PCA of height</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/prcomp.html'>prcomp</a></span><span class='op'>(</span><span class='va'>Z</span><span class='op'>)</span>,
+         main<span class='op'>=</span><span class='st'>"aastveit.barley - height"</span>, cex<span class='op'>=</span><span class='fl'>0.5</span><span class='op'>)</span>
+</div><div class='img'><img src='aastveit.barley-1.png' alt='' width='700' height='433' /></div><div class='input'>  
+  <span class='va'>U</span> <span class='op'>&lt;-</span> <span class='va'>aastveit.barley.covs</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>U</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='va'>U</span><span class='op'>$</span><span class='va'>year</span>
+  <span class='va'>U</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>&lt;-</span> <span class='cn'>NULL</span>
+  <span class='va'>U</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/scale.html'>scale</a></span><span class='op'>(</span><span class='va'>U</span><span class='op'>)</span> <span class='co'># Standardized covariates</span>
+  <span class='va'>sv</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/svd.html'>svd</a></span><span class='op'>(</span><span class='va'>U</span><span class='op'>)</span><span class='op'>$</span><span class='va'>d</span>
   <span class='co'># Proportion of variance on each axis</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fl'>100</span> * <span class='no'>sv</span>^<span class='fl'>2</span>/<span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='no'>sv</span>^<span class='fl'>2</span>),<span class='fl'>1</span>)</div><div class='output co'>#&gt; [1] 33.5 18.4 16.5 13.9  8.8  4.4  2.4  2.1  0.0</div><div class='input'>
+  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='fl'>100</span> <span class='op'>*</span> <span class='va'>sv</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>sv</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>)</span>,<span class='fl'>1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 33.5 18.4 16.5 13.9  8.8  4.4  2.4  2.1  0.0</div><div class='input'>
   <span class='co'># Now, PLS relating the two matrices</span>
-  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>plsr</span>(<span class='no'>Z</span>~<span class='no'>U</span>)
-  <span class='fu'><a href='https://rdrr.io/r/stats/loadings.html'>loadings</a></span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt; 
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>plsr</span><span class='op'>(</span><span class='va'>Z</span><span class='op'>~</span><span class='va'>U</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/loadings.html'>loadings</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt; Loadings:
 #&gt;    Comp 1 Comp 2 Comp 3 Comp 4 Comp 5 Comp 6 Comp 7 Comp 8
 #&gt; R1 -0.131  0.232 -0.345  0.411         0.140 -0.157  0.130
@@ -268,37 +276,42 @@
 #&gt; SS loadings     1.025  1.024  1.020  1.230  1.013  1.055  1.000  1.000
 #&gt; Proportion Var  0.054  0.054  0.054  0.065  0.053  0.056  0.053  0.053
 #&gt; Cumulative Var  0.054  0.108  0.162  0.226  0.280  0.335  0.388  0.440</div><div class='input'>  <span class='co'># Aastveit Fig 2a (genotypes), but rotated differently</span>
-  <span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span>(<span class='no'>m1</span>, <span class='kw'>which</span><span class='kw'>=</span><span class='st'>"y"</span>, <span class='kw'>var.axes</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='img'><img src='aastveit.barley-2.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='co'># Fig 2b, 2c (not rotated)</span>
-  <span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span>(<span class='no'>m1</span>, <span class='kw'>which</span><span class='kw'>=</span><span class='st'>"x"</span>, <span class='kw'>var.axes</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='input'>
+  <span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span><span class='op'>(</span><span class='va'>m1</span>, which<span class='op'>=</span><span class='st'>"y"</span>, var.axes<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+</div><div class='img'><img src='aastveit.barley-2.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='co'># Fig 2b, 2c (not rotated)</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span><span class='op'>(</span><span class='va'>m1</span>, which<span class='op'>=</span><span class='st'>"x"</span>, var.axes<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+</div><div class='input'>
   <span class='co'># Adapted from section 7.4 of Turner &amp; Firth,</span>
   <span class='co'># "Generalized nonlinear models in R: An overview of the gnm package"</span>
   <span class='co'># who in turn reproduce the analysis of Chadoeuf &amp; Denis (1991),</span>
   <span class='co'># "Asymptotic variances for the multiplicative interaction model"</span>
 
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>gnm</span>)</div><div class='img'><img src='aastveit.barley-3.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='no'>dath</span> <span class='kw'>&lt;-</span> <span class='no'>aastveit.barley.height</span>
-  <span class='no'>dath</span>$<span class='no'>year</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>dath</span>$<span class='no'>year</span>)
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>gnm</span><span class='op'>)</span>
+</div><div class='img'><img src='aastveit.barley-3.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='va'>dath</span> <span class='op'>&lt;-</span> <span class='va'>aastveit.barley.height</span>
+  <span class='va'>dath</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>dath</span><span class='op'>$</span><span class='va'>year</span><span class='op'>)</span>
 
-  <span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span>(<span class='fl'>42</span>)
-  <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'>gnm</span>(<span class='no'>height</span> ~ <span class='no'>year</span> + <span class='no'>gen</span> + <span class='fu'>Mult</span>(<span class='no'>year</span>, <span class='no'>gen</span>), <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>dath</span>)</div><div class='output co'>#&gt; Initialising
+  <span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>42</span><span class='op'>)</span>
+  <span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'>gnm</span><span class='op'>(</span><span class='va'>height</span> <span class='op'>~</span> <span class='va'>year</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='fu'>Mult</span><span class='op'>(</span><span class='va'>year</span>, <span class='va'>gen</span><span class='op'>)</span>, data <span class='op'>=</span> <span class='va'>dath</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Initialising
 #&gt; Running start-up iterations..
 #&gt; Running main iterations........
 #&gt; Done</div><div class='input'>  <span class='co'># Turner: "To obtain parameterization of equation 1, in which sig_k is the</span>
   <span class='co'># singular value for component k, the row and column scores must be constrained</span>
   <span class='co'># so that the scores sum to zero and the squared scores sum to one.</span>
   <span class='co'># These contrasts can be obtained using getContrasts"</span>
-  <span class='no'>gamma</span> <span class='kw'>&lt;-</span> <span class='fu'>getContrasts</span>(<span class='no'>m2</span>, <span class='fu'>pickCoef</span>(<span class='no'>m2</span>, <span class='st'>"[.]y"</span>),
-                        <span class='kw'>ref</span> <span class='kw'>=</span> <span class='st'>"mean"</span>, <span class='kw'>scaleWeights</span> <span class='kw'>=</span> <span class='st'>"unit"</span>)
-  <span class='no'>delta</span> <span class='kw'>&lt;-</span> <span class='fu'>getContrasts</span>(<span class='no'>m2</span>, <span class='fu'>pickCoef</span>(<span class='no'>m2</span>, <span class='st'>"[.]g"</span>),
-                        <span class='kw'>ref</span> <span class='kw'>=</span> <span class='st'>"mean"</span>, <span class='kw'>scaleWeights</span> <span class='kw'>=</span> <span class='st'>"unit"</span>)
+  <span class='va'>gamma</span> <span class='op'>&lt;-</span> <span class='fu'>getContrasts</span><span class='op'>(</span><span class='va'>m2</span>, <span class='fu'>pickCoef</span><span class='op'>(</span><span class='va'>m2</span>, <span class='st'>"[.]y"</span><span class='op'>)</span>,
+                        ref <span class='op'>=</span> <span class='st'>"mean"</span>, scaleWeights <span class='op'>=</span> <span class='st'>"unit"</span><span class='op'>)</span>
+  <span class='va'>delta</span> <span class='op'>&lt;-</span> <span class='fu'>getContrasts</span><span class='op'>(</span><span class='va'>m2</span>, <span class='fu'>pickCoef</span><span class='op'>(</span><span class='va'>m2</span>, <span class='st'>"[.]g"</span><span class='op'>)</span>,
+                        ref <span class='op'>=</span> <span class='st'>"mean"</span>, scaleWeights <span class='op'>=</span> <span class='st'>"unit"</span><span class='op'>)</span>
   <span class='co'># estimate &amp; std err</span>
-  <span class='no'>gamma</span> <span class='kw'>&lt;-</span> <span class='no'>gamma</span>$<span class='no'>qvframe</span>
-  <span class='no'>delta</span> <span class='kw'>&lt;-</span> <span class='no'>delta</span>$<span class='no'>qvframe</span>
+  <span class='va'>gamma</span> <span class='op'>&lt;-</span> <span class='va'>gamma</span><span class='op'>$</span><span class='va'>qvframe</span>
+  <span class='va'>delta</span> <span class='op'>&lt;-</span> <span class='va'>delta</span><span class='op'>$</span><span class='va'>qvframe</span>
   <span class='co'># change sign of estimate</span>
-  <span class='no'>gamma</span>[,<span class='fl'>1</span>] <span class='kw'>&lt;-</span> -<span class='fl'>1</span> * <span class='no'>gamma</span>[,<span class='fl'>1</span>]
-  <span class='no'>delta</span>[,<span class='fl'>1</span>] <span class='kw'>&lt;-</span> -<span class='fl'>1</span> * <span class='no'>delta</span>[,<span class='fl'>1</span>]
+  <span class='va'>gamma</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='op'>-</span><span class='fl'>1</span> <span class='op'>*</span> <span class='va'>gamma</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>]</span>
+  <span class='va'>delta</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='op'>-</span><span class='fl'>1</span> <span class='op'>*</span> <span class='va'>delta</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>]</span>
   <span class='co'># conf limits based on asymptotic normality, Chadoeuf table 8, p. 350, </span>
-  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span>(<span class='no'>gamma</span>[,<span class='fl'>1</span>], <span class='no'>gamma</span>[, <span class='fl'>1</span>] +
-                           <span class='fu'><a href='https://rdrr.io/r/base/outer.html'>outer</a></span>(<span class='no'>gamma</span>[, <span class='fl'>2</span>], <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(-<span class='fl'>1.96</span>, <span class='fl'>1.96</span>))) ,<span class='fl'>3</span>)</div><div class='output co'>#&gt;         [,1]   [,2]   [,3]
+  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>gamma</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>]</span>, <span class='va'>gamma</span><span class='op'>[</span>, <span class='fl'>1</span><span class='op'>]</span> <span class='op'>+</span>
+                           <span class='fu'><a href='https://rdrr.io/r/base/outer.html'>outer</a></span><span class='op'>(</span><span class='va'>gamma</span><span class='op'>[</span>, <span class='fl'>2</span><span class='op'>]</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>1.96</span>, <span class='fl'>1.96</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> ,<span class='fl'>3</span><span class='op'>)</span>  
+</div><div class='output co'>#&gt;         [,1]   [,2]   [,3]
 #&gt;  [1,] -0.227 -0.337 -0.116
 #&gt;  [2,] -0.514 -0.609 -0.418
 #&gt;  [3,] -0.439 -0.539 -0.339
@@ -307,8 +320,9 @@
 #&gt;  [6,] -0.142 -0.254 -0.030
 #&gt;  [7,]  0.332  0.226  0.439
 #&gt;  [8,]  0.176  0.064  0.287
-#&gt;  [9,]  0.079 -0.034  0.192</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span>(<span class='no'>delta</span>[,<span class='fl'>1</span>], <span class='no'>delta</span>[, <span class='fl'>1</span>] +
-                           <span class='fu'><a href='https://rdrr.io/r/base/outer.html'>outer</a></span>(<span class='no'>delta</span>[, <span class='fl'>2</span>], <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(-<span class='fl'>1.96</span>, <span class='fl'>1.96</span>))) ,<span class='fl'>3</span>)</div><div class='output co'>#&gt;         [,1]   [,2]   [,3]
+#&gt;  [9,]  0.079 -0.034  0.192</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>delta</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>]</span>, <span class='va'>delta</span><span class='op'>[</span>, <span class='fl'>1</span><span class='op'>]</span> <span class='op'>+</span>
+                           <span class='fu'><a href='https://rdrr.io/r/base/outer.html'>outer</a></span><span class='op'>(</span><span class='va'>delta</span><span class='op'>[</span>, <span class='fl'>2</span><span class='op'>]</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>1.96</span>, <span class='fl'>1.96</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> ,<span class='fl'>3</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;         [,1]   [,2]   [,3]
 #&gt;  [1,] -0.079 -0.195  0.037
 #&gt;  [2,] -0.008 -0.124  0.109
 #&gt;  [3,] -0.170 -0.284 -0.055
@@ -323,23 +337,13 @@
 #&gt; [12,] -0.285 -0.396 -0.174
 #&gt; [13,]  0.168  0.054  0.283
 #&gt; [14,] -0.293 -0.404 -0.182
-#&gt; [15,] -0.460 -0.563 -0.358</div></pre>
+#&gt; [15,] -0.460 -0.563 -0.358</div><div class='input'><span class='co'># }</span>
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -350,7 +354,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

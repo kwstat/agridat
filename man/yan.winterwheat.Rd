@@ -42,7 +42,7 @@
   Weikai Yan and Manjit S. Kang and Baoluo Ma and Sheila Woods, 2007,
   GGE Biplot vs. AMMI Analysis of Genotype-by-Environment Data,
   Crop Science, 2007, 47, 641--653.
-  http://doi.org/10.2135/cropsci2006.06.0374
+  https://doi.org/10.2135/cropsci2006.06.0374
 
 }
 

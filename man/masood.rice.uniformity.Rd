@@ -46,7 +46,7 @@
   Estimation of optimum field plot size and shape in paddy yield trial.
   American-Eurasian Journal of Scientific Research, 7, 264-269.
   Table 1.
-  http://doi.org/10.5829/idosi.aejsr.2012.7.6.1926
+  https://doi.org/10.5829/idosi.aejsr.2012.7.6.1926
 }
 \examples{
 \dontrun{

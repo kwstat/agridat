@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -146,12 +146,12 @@
     <p>Height of barley plants in a study of non-normal data.</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"eden.nonnormal"</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"eden.nonnormal"</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 256 observations on the following 3 variables.</p><dl'>
+    <p>A data frame with 256 observations on the following 3 variables.</p><dl>
     <dt><code>pos</code></dt><dd><p>position within block</p></dd>
     <dt><code>block</code></dt><dd><p>block (numeric)</p></dd>
     <dt><code>height</code></dt><dd><p>height of wheat plant</p></dd>
@@ -164,7 +164,7 @@
 
 <p>This data was used in a very early example of a permutation test.</p>  
 <p>Eden &amp; Yates used this data to consider the impact of non-normal data
-  on the validitiy of a hypothesis test that assumes normality.  They
+  on the validity of a hypothesis test that assumes normality.  They
   concluded that the skew data did not negatively affect the analysis of
   variance.</p>
 <p>Grown at Rothamsted. Eight blocks of Yeoman II wheat.  Sampling of the
@@ -186,54 +186,57 @@
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>eden.nonnormal</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>eden.nonnormal</span>
-<span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>dat</span>$<span class='no'>height</span>) <span class='co'># 55.23 matches Eden table 1</span></div><div class='output co'>#&gt; [1] 55.23242</div><div class='input'>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>eden.nonnormal</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>eden.nonnormal</span>
+<span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>height</span><span class='op'>)</span> <span class='co'># 55.23 matches Eden table 1</span>
+</div><div class='output co'>#&gt; [1] 55.23242</div><div class='input'>
 <span class='co'># Eden figure 2</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>dplyr</span>, <span class='no'>lattice</span>)
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>dplyr</span>, <span class='va'>lattice</span><span class='op'>)</span>
 <span class='co'># Blocks had different means, so substract block mean from each datum</span>
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'>group_by</span>(<span class='no'>dat</span>, <span class='no'>block</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'>mutate</span>(<span class='no'>dat</span>, <span class='kw'>blkmn</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>height</span>))
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>dev</span><span class='kw'>=</span><span class='no'>height</span>-<span class='no'>blkmn</span>)
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>block</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'>mutate</span><span class='op'>(</span><span class='va'>dat</span>, blkmn<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>height</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, dev<span class='op'>=</span><span class='va'>height</span><span class='op'>-</span><span class='va'>blkmn</span><span class='op'>)</span>
 
-<span class='fu'>histogram</span>( ~ <span class='no'>dev</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>breaks</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span>(<span class='kw'>from</span><span class='kw'>=</span>-<span class='fl'>40</span>, <span class='kw'>to</span><span class='kw'>=</span><span class='fl'>30</span>, <span class='kw'>by</span><span class='kw'>=</span><span class='fl'>2.5</span>),
-          <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Deviations from block means"</span>,
-          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"eden.nonnormal - heights skewed left"</span>)</div><div class='img'><img src='eden.nonnormal-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/histogram.html'>histogram</a></span><span class='op'>(</span> <span class='op'>~</span> <span class='va'>dev</span>, data<span class='op'>=</span><span class='va'>dat</span>, breaks<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span>from<span class='op'>=</span><span class='op'>-</span><span class='fl'>40</span>, to<span class='op'>=</span><span class='fl'>30</span>, by<span class='op'>=</span><span class='fl'>2.5</span><span class='op'>)</span>,
+          xlab<span class='op'>=</span><span class='st'>"Deviations from block means"</span>,
+          main<span class='op'>=</span><span class='st'>"eden.nonnormal - heights skewed left"</span><span class='op'>)</span>
+</div><div class='img'><img src='eden.nonnormal-1.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># \dontrun{</span>
 
   <span class='co'># calculate skewness, permutation </span>
-
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>dplyr</span>, <span class='no'>lattice</span>, <span class='no'>latticeExtra</span>)
-
+  
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>dplyr</span>, <span class='va'>lattice</span>, <span class='va'>latticeExtra</span><span class='op'>)</span>
+  
   <span class='co'># Eden table 1</span>
   <span class='co'># anova(aov(height ~ factor(block), data=dat))</span>
-
+  
   <span class='co'># Eden table 2,3. Note, this may be a different definition of skewness</span>
   <span class='co'># than is commonly used today (e.g. e1071::skewness).</span>
-  <span class='no'>skew</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>x</span>){
-    <span class='no'>n</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='no'>x</span>)
-    <span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='no'>x</span> - <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>x</span>)
-    <span class='no'>s1</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='no'>x</span>)
-    <span class='no'>s2</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='no'>x</span>^<span class='fl'>2</span>)
-    <span class='no'>s3</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='no'>x</span>^<span class='fl'>3</span>)
-    <span class='no'>k3</span><span class='kw'>=</span><span class='no'>n</span>/((<span class='no'>n</span>-<span class='fl'>1</span>)*(<span class='no'>n</span>-<span class='fl'>2</span>)) * <span class='no'>s3</span> -<span class='fl'>3</span>/<span class='no'>n</span>*<span class='no'>s2</span>*<span class='no'>s1</span> + <span class='fl'>2</span>/<span class='no'>n</span>^<span class='fl'>2</span> * <span class='no'>s1</span>^<span class='fl'>3</span>
-    <span class='fu'><a href='https://rdrr.io/r/base/function.html'>return</a></span>(<span class='no'>k3</span>)
-  }
+  <span class='va'>skew</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>{</span>
+    <span class='va'>n</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
+    <span class='va'>x</span> <span class='op'>&lt;-</span> <span class='va'>x</span> <span class='op'>-</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
+    <span class='va'>s1</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
+    <span class='va'>s2</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>)</span>
+    <span class='va'>s3</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>^</span><span class='fl'>3</span><span class='op'>)</span>
+    <span class='va'>k3</span><span class='op'>=</span><span class='va'>n</span><span class='op'>/</span><span class='op'>(</span><span class='op'>(</span><span class='va'>n</span><span class='op'>-</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>*</span><span class='op'>(</span><span class='va'>n</span><span class='op'>-</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>*</span> <span class='va'>s3</span> <span class='op'>-</span><span class='fl'>3</span><span class='op'>/</span><span class='va'>n</span><span class='op'>*</span><span class='va'>s2</span><span class='op'>*</span><span class='va'>s1</span> <span class='op'>+</span> <span class='fl'>2</span><span class='op'>/</span><span class='va'>n</span><span class='op'>^</span><span class='fl'>2</span> <span class='op'>*</span> <span class='va'>s1</span><span class='op'>^</span><span class='fl'>3</span>
+    <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='va'>k3</span><span class='op'>)</span>
+  <span class='op'>}</span>
   <span class='co'># Negative values indicate data are skewed left</span>
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'>group_by</span>(<span class='no'>dat</span>, <span class='no'>block</span>)
-  <span class='fu'>summarize</span>(<span class='no'>dat</span>, <span class='kw'>s1</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='no'>height</span>),<span class='kw'>s2</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='no'>height</span>^<span class='fl'>2</span>), <span class='kw'>mean2</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>var</a></span>(<span class='no'>height</span>), <span class='kw'>k3</span><span class='kw'>=</span><span class='fu'>skew</span>(<span class='no'>height</span>))</div><div class='output co'>#&gt; <span class='message'>`summarise()` ungrouping output (override with `.groups` argument)</span></div><div class='output co'>#&gt; # A tibble: 8 x 5
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'>group_by</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>block</span><span class='op'>)</span>
+  <span class='fu'>summarize</span><span class='op'>(</span><span class='va'>dat</span>, s1<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>height</span><span class='op'>)</span>,s2<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>height</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>)</span>, mean2<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>var</a></span><span class='op'>(</span><span class='va'>height</span><span class='op'>)</span>, k3<span class='op'>=</span><span class='fu'>skew</span><span class='op'>(</span><span class='va'>height</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>`summarise()` ungrouping output (override with `.groups` argument)</span></div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 8 x 5</span><span>
 #&gt;   block    s1      s2 mean2     k3
-#&gt;   &lt;int&gt; &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;
-#&gt; 1     1 1682   95930. 243.  -1269.
-#&gt; 2     2 1858  111662. 122.  -1752.
-#&gt; 3     3 1810. 108967. 214.  -3173.
-#&gt; 4     4 1912  121748. 242.  -2548.
-#&gt; 5     5 1722   99026. 205.   -559.
-#&gt; 6     6 1339   63077  227.   -801.
-#&gt; 7     7 1963  123052.  85.0  -713.
-#&gt; 8     8 1854  112366  160.  -1062.</div><div class='input'>  <span class='co'>##   block     s1       s2     mean2         k3</span>
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #555555;'>1</span><span>     1 </span><span style='text-decoration: underline;'>1</span><span>682   </span><span style='text-decoration: underline;'>95</span><span>930. 243.  -</span><span style='color: #BB0000;text-decoration: underline;'>1</span><span style='color: #BB0000;'>269.</span><span>
+#&gt; </span><span style='color: #555555;'>2</span><span>     2 </span><span style='text-decoration: underline;'>1</span><span>858  </span><span style='text-decoration: underline;'>111</span><span>662. 122.  -</span><span style='color: #BB0000;text-decoration: underline;'>1</span><span style='color: #BB0000;'>752.</span><span>
+#&gt; </span><span style='color: #555555;'>3</span><span>     3 </span><span style='text-decoration: underline;'>1</span><span>810. </span><span style='text-decoration: underline;'>108</span><span>967. 214.  -</span><span style='color: #BB0000;text-decoration: underline;'>3</span><span style='color: #BB0000;'>173.</span><span>
+#&gt; </span><span style='color: #555555;'>4</span><span>     4 </span><span style='text-decoration: underline;'>1</span><span>912  </span><span style='text-decoration: underline;'>121</span><span>748. 242.  -</span><span style='color: #BB0000;text-decoration: underline;'>2</span><span style='color: #BB0000;'>548.</span><span>
+#&gt; </span><span style='color: #555555;'>5</span><span>     5 </span><span style='text-decoration: underline;'>1</span><span>722   </span><span style='text-decoration: underline;'>99</span><span>026. 205.   -</span><span style='color: #BB0000;'>559.</span><span>
+#&gt; </span><span style='color: #555555;'>6</span><span>     6 </span><span style='text-decoration: underline;'>1</span><span>339   </span><span style='text-decoration: underline;'>63</span><span>077  227.   -</span><span style='color: #BB0000;'>801.</span><span>
+#&gt; </span><span style='color: #555555;'>7</span><span>     7 </span><span style='text-decoration: underline;'>1</span><span>963  </span><span style='text-decoration: underline;'>123</span><span>052.  85.0  -</span><span style='color: #BB0000;'>713.</span><span>
+#&gt; </span><span style='color: #555555;'>8</span><span>     8 </span><span style='text-decoration: underline;'>1</span><span>854  </span><span style='text-decoration: underline;'>112</span><span>366  160.  -</span><span style='color: #BB0000;text-decoration: underline;'>1</span><span style='color: #BB0000;'>062.</span><span></div><div class='input'>  <span class='co'>##   block     s1       s2     mean2         k3</span>
   <span class='co'>##   &lt;int&gt;  &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;</span>
   <span class='co'>## 1     1 1682.0  95929.5 242.56048 -1268.5210</span>
   <span class='co'>## 2     2 1858.0 111661.5 121.97984 -1751.9919</span>
@@ -245,44 +248,46 @@
   <span class='co'>## 8     8 1854.0 112366.0 159.67339 -1061.9919</span>
 
   <span class='co'># Another way to view skewness with qq plot. Panel 3 most skewed.</span>
-  <span class='fu'>qqmath</span>( ~ <span class='no'>dev</span><span class='kw'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>block</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-         <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>,
-         <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Deviations from block means"</span>,
-         <span class='kw'>panel</span> <span class='kw'>=</span> <span class='kw'>function</span>(<span class='no'>x</span>, <span class='no'>...</span>) {
-           <span class='fu'>panel.qqmathline</span>(<span class='no'>x</span>, <span class='no'>...</span>)
-           <span class='fu'>panel.qqmath</span>(<span class='no'>x</span>, <span class='no'>...</span>)
-         })</div><div class='img'><img src='eden.nonnormal-2.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/qqmath.html'>qqmath</a></span><span class='op'>(</span> <span class='op'>~</span> <span class='va'>dev</span><span class='op'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>block</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+         as.table<span class='op'>=</span><span class='cn'>TRUE</span>,
+         ylab<span class='op'>=</span><span class='st'>"Deviations from block means"</span>,
+         panel <span class='op'>=</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span> <span class='op'>{</span>
+           <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/panel.qqmathline.html'>panel.qqmathline</a></span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span>
+           <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/panel.qqmath.html'>panel.qqmath</a></span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span>
+         <span class='op'>}</span><span class='op'>)</span>
+</div><div class='img'><img src='eden.nonnormal-2.png' alt='' width='700' height='433' /></div><div class='input'>
   <span class='co'># Now, permutation test.</span>
   <span class='co'># Eden: "By a process of amalgamation the eight sets of 32 observations were</span>
   <span class='co'># reduced to eight sets of four and the data treated as a potential</span>
   <span class='co'># layout for a 32-plot trial".</span>
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>grp</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='fl'>1</span>:<span class='fl'>4</span>, <span class='kw'>each</span><span class='kw'>=</span><span class='fl'>8</span>))
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span>(<span class='no'>height</span> ~ <span class='no'>grp</span>+<span class='no'>block</span>, <span class='no'>dat2</span>, <span class='no'>sum</span>)
-  <span class='no'>dat2</span>$<span class='no'>trt</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='no'>letters</span>[<span class='fl'>1</span>:<span class='fl'>4</span>], <span class='fl'>8</span>)
-  <span class='no'>dat2</span>$<span class='no'>block</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>dat2</span>$<span class='no'>block</span>)
+  <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, grp <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>4</span>, each<span class='op'>=</span><span class='fl'>8</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span><span class='op'>(</span><span class='va'>height</span> <span class='op'>~</span> <span class='va'>grp</span><span class='op'>+</span><span class='va'>block</span>, <span class='va'>dat2</span>, <span class='va'>sum</span><span class='op'>)</span>
+  <span class='va'>dat2</span><span class='op'>$</span><span class='va'>trt</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='va'>letters</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>4</span><span class='op'>]</span>, <span class='fl'>8</span><span class='op'>)</span>
+  <span class='va'>dat2</span><span class='op'>$</span><span class='va'>block</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>dat2</span><span class='op'>$</span><span class='va'>block</span><span class='op'>)</span>
 
   <span class='co'># Treatments were assigned at random 1000 times</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span>(<span class='fl'>54323</span>)
-  <span class='no'>fobs</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='fl'>NA</span>, <span class='fl'>1000</span>)
-  <span class='kw'>for</span>(<span class='no'>i</span> <span class='kw'>in</span> <span class='fl'>1</span>:<span class='fl'>1000</span>){
+  <span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>54323</span><span class='op'>)</span>
+  <span class='va'>fobs</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='cn'>NA</span>, <span class='fl'>1000</span><span class='op'>)</span>
+  <span class='kw'>for</span><span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='fl'>1000</span><span class='op'>)</span><span class='op'>{</span>
     <span class='co'># randomize treatments within each block</span>
-    <span class='co'># trick from http://stackoverflow.com/questions/25085537</span>
-    <span class='no'>dat2</span>$<span class='no'>trt</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='no'>dat2</span>, <span class='fu'><a href='https://rdrr.io/r/stats/ave.html'>ave</a></span>(<span class='no'>trt</span>, <span class='no'>block</span>, <span class='kw'>FUN</span> <span class='kw'>=</span> <span class='no'>sample</span>))
-    <span class='no'>fobs</span>[<span class='no'>i</span>] <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>(<span class='no'>height</span> ~ <span class='no'>block</span> + <span class='no'>trt</span>, <span class='no'>dat2</span>))[<span class='st'>"trt"</span>,<span class='st'>"F value"</span>]
-  }
+    <span class='co'># trick from https://stackoverflow.com/questions/25085537</span>
+    <span class='va'>dat2</span><span class='op'>$</span><span class='va'>trt</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>dat2</span>, <span class='fu'><a href='https://rdrr.io/r/stats/ave.html'>ave</a></span><span class='op'>(</span><span class='va'>trt</span>, <span class='va'>block</span>, FUN <span class='op'>=</span> <span class='va'>sample</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='va'>fobs</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span><span class='op'>(</span><span class='va'>height</span> <span class='op'>~</span> <span class='va'>block</span> <span class='op'>+</span> <span class='va'>trt</span>, <span class='va'>dat2</span><span class='op'>)</span><span class='op'>)</span><span class='op'>[</span><span class='st'>"trt"</span>,<span class='st'>"F value"</span><span class='op'>]</span>
+  <span class='op'>}</span>
 
   <span class='co'># F distribution with 3,21 deg freedom</span>
   <span class='co'># Similar to Eden's figure 4, but on a different horizontal scale</span>
-  <span class='no'>xval</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span>(<span class='kw'>from</span><span class='kw'>=</span><span class='fl'>0</span>,<span class='kw'>to</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span>(<span class='no'>fobs</span>), <span class='kw'>length</span><span class='kw'>=</span><span class='fl'>50</span>)
-  <span class='no'>yval</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Fdist.html'>df</a></span>(<span class='no'>xval</span>, <span class='kw'>df1</span> <span class='kw'>=</span> <span class='fl'>3</span>, <span class='kw'>df2</span> <span class='kw'>=</span> <span class='fl'>21</span>)
+  <span class='va'>xval</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span>from<span class='op'>=</span><span class='fl'>0</span>,to<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span><span class='op'>(</span><span class='va'>fobs</span><span class='op'>)</span>, length<span class='op'>=</span><span class='fl'>50</span><span class='op'>)</span>
+  <span class='va'>yval</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Fdist.html'>df</a></span><span class='op'>(</span><span class='va'>xval</span>, df1 <span class='op'>=</span> <span class='fl'>3</span>, df2 <span class='op'>=</span> <span class='fl'>21</span><span class='op'>)</span>
   <span class='co'># Re-scale, 10 = max of historgram, 0.7 = max of density</span>
-  <span class='fu'>histogram</span>( ~ <span class='no'>fobs</span>, <span class='kw'>breaks</span><span class='kw'>=</span><span class='no'>xval</span>,
-            <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"F value"</span>,
-            <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Observed (histogram) &amp; theoretical (line) F values"</span>) +
-    <span class='fu'>xyplot</span>((<span class='fl'>10</span>/<span class='fl'>.7</span>)* <span class='no'>yval</span> ~ <span class='no'>xval</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>"l"</span>, <span class='kw'>lwd</span><span class='kw'>=</span><span class='fl'>2</span>)</div><div class='img'><img src='eden.nonnormal-3.png' alt='' width='700' height='433' /></div><div class='input'>
-# }
+  <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/histogram.html'>histogram</a></span><span class='op'>(</span> <span class='op'>~</span> <span class='va'>fobs</span>, breaks<span class='op'>=</span><span class='va'>xval</span>,
+            xlab<span class='op'>=</span><span class='st'>"F value"</span>,
+            main<span class='op'>=</span><span class='st'>"Observed (histogram) &amp; theoretical (line) F values"</span><span class='op'>)</span> <span class='op'>+</span>
+    <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='op'>(</span><span class='fl'>10</span><span class='op'>/</span><span class='fl'>.7</span><span class='op'>)</span><span class='op'>*</span> <span class='va'>yval</span> <span class='op'>~</span> <span class='va'>xval</span>, type<span class='op'>=</span><span class='st'>"l"</span>, lwd<span class='op'>=</span><span class='fl'>2</span><span class='op'>)</span>
+</div><div class='img'><img src='eden.nonnormal-3.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># }</span>
 
-</div></pre>
+</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -298,7 +303,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

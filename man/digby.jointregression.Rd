@@ -25,16 +25,16 @@
   Digby, P.G.N. (1979). Modified joint regression analysis for
   incomplete variety x environment data.
   \emph{Journal of Agricultural Science}, 93, 81-86.
-  http://doi.org/10.1017/S0021859600086159
+  https://doi.org/10.1017/S0021859600086159
 }
 \references{
   Hans-Pieter Piepho, 1997.
   Analyzing Genotype-Environment Data by Mixed-Models with
   Multiplicative Terms. \emph{Biometrics}, 53, 761-766.
-  http://doi.org/10.2307/2533976
+  https://doi.org/10.2307/2533976
 
   RJOINT procedure in GenStat.
-  http://www.vsni.co.uk/software/genstat/htmlhelp/server/RJOINT.htm
+  https://www.vsni.co.uk/software/genstat/htmlhelp/server/RJOINT.htm
 }
 
 \examples{

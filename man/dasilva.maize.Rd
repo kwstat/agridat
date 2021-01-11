@@ -43,7 +43,7 @@
   Carlos Pereira da Silva, Luciano Antonio de Oliveira, Joel Jorge
   Nuvunga, Andrezza Kellen Alves Pamplona, Marcio Balestre.
   Plos One. Supplemental material.
-  http://doi.org/10.1371/journal.pone.0131414
+  https://doi.org/10.1371/journal.pone.0131414
 
   Used via Creative Commons Attribution License.
 }

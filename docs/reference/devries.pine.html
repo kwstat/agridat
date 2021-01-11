@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -146,12 +146,12 @@
     <p>Graeco-Latin Square experiment in pine</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"devries.pine"</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"devries.pine"</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 36 observations on the following 6 variables.</p><dl'>
+    <p>A data frame with 36 observations on the following 6 variables.</p><dl>
     <dt><code>block</code></dt><dd><p>block</p></dd>
     <dt><code>row</code></dt><dd><p>row</p></dd>
     <dt><code>col</code></dt><dd><p>column</p></dd>
@@ -180,7 +180,7 @@
     <p>P.G. De Vries, J.W. Hildebrand, N.R. De Graaf. (1978).
   Analysis of 11 years growth of carribbean pine in a replicated
   Graeco-Latin square spacing-thinning experiment in Surinam. Page 46, 51.
-  http://edepot.wur.nl/287590</p>
+  https://edepot.wur.nl/287590</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>None</p>
@@ -188,21 +188,24 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>devries.pine</span>)
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>devries.pine</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>devries.pine</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>devries.pine</span>
 
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-  <span class='fu'>desplot</span>(<span class='no'>dat</span>, <span class='no'>volume</span> ~ <span class='no'>col</span>*<span class='no'>row</span>,
-          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"devries.pine - expt design and tree volume"</span>,
-          <span class='kw'>col</span><span class='kw'>=</span><span class='no'>spacing</span>, <span class='kw'>num</span><span class='kw'>=</span><span class='no'>thinning</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>1</span>, <span class='kw'>out1</span><span class='kw'>=</span><span class='no'>block</span>, <span class='kw'>aspect</span><span class='kw'>=</span><span class='fl'>200</span>/<span class='fl'>720</span>)</div><div class='img'><img src='devries.pine-1.png' alt='' width='700' height='433' /></div><div class='input'>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>HH</span>)
-  <span class='kw pkg'>HH</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/HH/man/interaction2wt.html'>interaction2wt</a></span>(<span class='no'>volume</span> ~ <span class='no'>spacing</span>+<span class='no'>thinning</span>, <span class='no'>dat</span>,
-                     <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"devries.pine"</span>)</div><div class='img'><img src='devries.pine-2.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+  <span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>volume</span> <span class='op'>~</span> <span class='va'>col</span><span class='op'>*</span><span class='va'>row</span>,
+          main<span class='op'>=</span><span class='st'>"devries.pine - expt design and tree volume"</span>,
+          col<span class='op'>=</span><span class='va'>spacing</span>, num<span class='op'>=</span><span class='va'>thinning</span>, cex<span class='op'>=</span><span class='fl'>1</span>, out1<span class='op'>=</span><span class='va'>block</span>, aspect<span class='op'>=</span><span class='fl'>200</span><span class='op'>/</span><span class='fl'>720</span><span class='op'>)</span>
+</div><div class='img'><img src='devries.pine-1.png' alt='' width='700' height='433' /></div><div class='input'>  
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>HH</span><span class='op'>)</span>
+  <span class='fu'>HH</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/HH/man/interaction2wt.html'>interaction2wt</a></span><span class='op'>(</span><span class='va'>volume</span> <span class='op'>~</span> <span class='va'>spacing</span><span class='op'>+</span><span class='va'>thinning</span>, <span class='va'>dat</span>,
+                     main<span class='op'>=</span><span class='st'>"devries.pine"</span><span class='op'>)</span>
+</div><div class='img'><img src='devries.pine-2.png' alt='' width='700' height='433' /></div><div class='input'>
   <span class='co'># ANOVA matches appendix 5 of DeVries</span>
-  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>(<span class='no'>volume</span> ~ <span class='no'>block</span> + <span class='no'>spacing</span> + <span class='no'>thinning</span> + <span class='no'>block</span>:<span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>) +
-              <span class='no'>block</span>:<span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>col</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-  <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt; Analysis of Variance Table
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span><span class='op'>(</span><span class='va'>volume</span> <span class='op'>~</span> <span class='va'>block</span> <span class='op'>+</span> <span class='va'>spacing</span> <span class='op'>+</span> <span class='va'>thinning</span> <span class='op'>+</span> <span class='va'>block</span><span class='op'>:</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>row</span><span class='op'>)</span> <span class='op'>+</span>
+              <span class='va'>block</span><span class='op'>:</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>col</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
 #&gt; Response: volume
 #&gt;                   Df  Sum Sq Mean Sq F value    Pr(&gt;F)    
@@ -214,7 +217,7 @@
 #&gt; Residuals         12  1016.9    84.7                      
 #&gt; ---
 #&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'>
-# }
+<span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -231,7 +234,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -50,7 +50,7 @@
   Rong-Cai Yang (2007).
   Mixed-Model Analysis of Crossover Genotype-Environment Interactions.
   Crop Science, 47, 1051-1062.
-  http://doi.org/10.2135/cropsci2006.09.0611
+  https://doi.org/10.2135/cropsci2006.09.0611
 }
 
 \references{
@@ -58,7 +58,7 @@
   Improved Statistical Inference for Graphical Description and
   Interpretation of Genotype x Environment Interaction.
   Crop Science, 53, 2400-2410.
-  http://doi.org/10.2135/cropsci2013.04.0218 
+  https://doi.org/10.2135/cropsci2013.04.0218 
 }
 
 \examples{
@@ -73,9 +73,9 @@ dat <- acast(dat, gen~site, value.var='yield')
 
   ## For bootstrapping of a biplot, see the non-cran packages:
   ## 'bbplot' and 'distfree.cr'
-  ## http://statgen.ualberta.ca/index.html?open=software.html
-  ## install.packages("http://statgen.ualberta.ca/download/software/bbplot_1.0.zip")
-  ## install.packages("http://statgen.ualberta.ca/download/software/distfree.cr_1.5.zip")
+  ## https://statgen.ualberta.ca/index.html?open=software.html
+  ## install.packages("https://statgen.ualberta.ca/download/software/bbplot_1.0.zip")
+  ## install.packages("https://statgen.ualberta.ca/download/software/distfree.cr_1.5.zip")
 
   ## libs(SDMTools)
   ## libs(distfree.cr)

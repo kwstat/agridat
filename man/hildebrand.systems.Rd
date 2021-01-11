@@ -37,7 +37,7 @@
   H. P. Piepho, 1998.
   Methods for Comparing the Yield Stability of Cropping Systems.
   \emph{Journal of Agronomy and Crop Science}, 180, 193--213.
-  http://doi.org/10.1111/j.1439-037X.1998.tb00526.x
+  https://doi.org/10.1111/j.1439-037X.1998.tb00526.x
 }
 
 \examples{
@@ -72,48 +72,45 @@
 
   # ----------
 
-  libs(asreml,lucid)
-  if( utils::packageVersion("asreml") > "4") {
-    # asreml4
+  libs(asreml,lucid) # asreml4
 
-    # Environmental variance model, unstructured correlations
+  # Environmental variance model, unstructured correlations
   
-    dat <- dat[order(dat$system, dat$farm),]
-    m1 <- asreml(yield ~ system, data=dat,
-                 resid = ~us(system):farm)
+  dat <- dat[order(dat$system, dat$farm),]
+  m1 <- asreml(yield ~ system, data=dat,
+               resid = ~us(system):farm)
   
-    # Means, table 5
-    ## predict(m1, data=dat, classify="system")$pvals
-    ##  system pred.value std.error  est.stat
-    ##     CCA      1.164    0.2816 Estimable
-    ##    CCAF      2.657    0.3747 Estimable
-    ##      LM      1.35     0.1463 Estimable
-    ##     LMF      2.7      0.2561 Estimable
+  # Means, table 5
+  ## predict(m1, data=dat, classify="system")$pvals
+  ##  system pred.value std.error  est.stat
+  ##     CCA      1.164    0.2816 Estimable
+  ##    CCAF      2.657    0.3747 Estimable
+  ##      LM      1.35     0.1463 Estimable
+  ##     LMF      2.7      0.2561 Estimable
   
-    # Variances, table 5
-    # vc(m1)[c(2,4,7,11),]
-    ##              effect component std.error z.ratio constr
-    ##    R!system.CCA:CCA    1.11      0.4354     2.5    pos
-    ##  R!system.CCAF:CCAF    1.966     0.771      2.5    pos
-    ##      R!system.LM:LM    0.2996    0.1175     2.5    pos
-    ##    R!system.LMF:LMF    0.9185    0.3603     2.5    pos
+  # Variances, table 5
+  # vc(m1)[c(2,4,7,11),]
+  ##              effect component std.error z.ratio constr
+  ##    R!system.CCA:CCA    1.11      0.4354     2.5    pos
+  ##  R!system.CCAF:CCAF    1.966     0.771      2.5    pos
+  ##      R!system.LM:LM    0.2996    0.1175     2.5    pos
+  ##    R!system.LMF:LMF    0.9185    0.3603     2.5    pos
   
-    # Stability variance model
-    m2 <- asreml(yield ~ system, data=dat,
-                 random = ~ farm,
-                 resid = ~ dsum( ~ units|system))
-    m2 <- update(m2)
-    # predict(m2, data=dat, classify="system")$pvals
+  # Stability variance model
+  m2 <- asreml(yield ~ system, data=dat,
+               random = ~ farm,
+               resid = ~ dsum( ~ units|system))
+  m2 <- update(m2)
+  # predict(m2, data=dat, classify="system")$pvals
   
-    ## # Variances, table 6
-    # vc(m2)
-    ##        effect component std.error z.ratio bound %ch
-    ##          farm 0.2998      0.1187   2.5        P 0  
-    ##  system_CCA!R 0.4133      0.1699   2.4        P 0  
-    ## system_CCAF!R 1.265       0.5152   2.5        P 0  
-    ##   system_LM!R 0.0003805   0.05538  0.0069     P 1.5
-    ##  system_LMF!R 0.5294      0.2295   2.3        P 0  
-}
+  ## # Variances, table 6
+  # vc(m2)
+  ##        effect component std.error z.ratio bound %ch
+  ##          farm 0.2998      0.1187   2.5        P 0  
+  ##  system_CCA!R 0.4133      0.1699   2.4        P 0  
+  ## system_CCAF!R 1.265       0.5152   2.5        P 0  
+  ##   system_LM!R 0.0003805   0.05538  0.0069     P 1.5
+  ##  system_LMF!R 0.5294      0.2295   2.3        P 0  
 
 }
 }

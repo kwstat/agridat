@@ -22,7 +22,7 @@
   C.R. Rao (1948).
   Tests of significance in multivariate analysis. 
   \emph{Biometrika}, 35, 58-79.
-  http://doi.org/10.2307/2332629
+  https://doi.org/10.2307/2332629
   
 }
 

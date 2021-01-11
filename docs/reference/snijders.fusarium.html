@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Fusarium infection in wheat varieties — snijders.fusarium" />
-
 <meta property="og:description" content="Infection in wheat by different strains of Fusarium." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,22 +143,21 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Infection in wheat by different strains of Fusarium.</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 204 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 204 observations on the following 4 variables.</p><dl>
     <dt><code>gen</code></dt><dd><p>wheat genotype</p></dd>
     <dt><code>strain</code></dt><dd><p>fusarium strain</p></dd>
     <dt><code>year</code></dt><dd><p>year</p></dd>
     <dt><code>y</code></dt><dd><p>percent infected</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     
@@ -169,32 +172,31 @@
 <p>Note, the value for strain F348 in 1988, gen SVP75059-32 should be
   28.3 (as shown in VanEeuwijk 1995) and not 38.3 (as shown in Snijders
   1991).</p>
-    
+
+<p>Used with permission of Fred van Eeuwijk.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Snijders, CHA and Van Eeuwijk, FA. 1991.
   Genotype x strain interactions for resistance to Fusarium head blight
   caused by Fusarium culmorum in winter wheat.
-  <em>Theoretical and Applied Genetics</em>, 81, 239--244. Table 1.
-  http://doi.org/10.1007/BF00215729</p>
-<p>Used with permission of Fred van Eeuwijk.</p>
-    
+  Theoretical and Applied Genetics, 81, 239--244. Table 1.
+  https://doi.org/10.1007/BF00215729</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Fred A van Eeuwijk. 1995.
   Multiplicative interaction in generalized linear models.
   <em>Biometrics</em>, 51, 1017-1032.
-  http://doi.org/10.2307/2533001</p>
-    
+  https://doi.org/10.2307/2533001</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>snijders.fusarium</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>snijders.fusarium</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>snijders.fusarium</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>snijders.fusarium</span>
 
-<span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span>(<span class='no'>y</span> ~ <span class='no'>strain</span> + <span class='no'>year</span>, <span class='no'>dat</span>, <span class='kw'>FUN</span><span class='kw'>=</span><span class='no'>mean</span>) <span class='co'># Match means in Snijders table 1</span></div><div class='output co'>#&gt;    strain year         y
+<span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='va'>strain</span> <span class='op'>+</span> <span class='va'>year</span>, <span class='va'>dat</span>, FUN<span class='op'>=</span><span class='va'>mean</span><span class='op'>)</span> <span class='co'># Match means in Snijders table 1</span>
+</div><div class='output co'>#&gt;    strain year         y
 #&gt; 1    F329 1986  7.617647
 #&gt; 2    F348 1986  8.117647
 #&gt; 3     F39 1986 28.000000
@@ -207,18 +209,20 @@
 #&gt; 10   F348 1988  7.611765
 #&gt; 11    F39 1988 14.117647
 #&gt; 12   F436 1988 11.276471</div><div class='input'>
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>y</span><span class='kw'>=</span><span class='no'>y</span>/<span class='fl'>100</span>, <span class='kw'>year</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>year</span>), <span class='kw'>yrstr</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span>(<span class='no'>year</span>,<span class='st'>"-"</span>,<span class='no'>strain</span>)))
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, y<span class='op'>=</span><span class='va'>y</span><span class='op'>/</span><span class='fl'>100</span>, year<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span>, yrstr<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='va'>year</span>,<span class='st'>"-"</span>,<span class='va'>strain</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
 
 <span class='co'># Strain F329 shows little variation across years. F39 shows a lot.</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'><a href='https://rdrr.io/r/graphics/graphics-defunct.html'>dotplot</a></span>(<span class='no'>gen</span>~<span class='no'>y</span><span class='kw'>|</span><span class='no'>strain</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>year</span>,
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"snijders.fusarium : infection by strain"</span>,
-        <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Fraction infected"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"variety"</span>,
-        <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>3</span>))</div><div class='img'><img src='snijders.fusarium-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>dotplot</a></span><span class='op'>(</span><span class='va'>gen</span><span class='op'>~</span><span class='va'>y</span><span class='op'>|</span><span class='va'>strain</span>, data<span class='op'>=</span><span class='va'>dat</span>, group<span class='op'>=</span><span class='va'>year</span>,
+        main<span class='op'>=</span><span class='st'>"snijders.fusarium : infection by strain"</span>,
+        xlab<span class='op'>=</span><span class='st'>"Fraction infected"</span>, ylab<span class='op'>=</span><span class='st'>"variety"</span>,
+        auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='snijders.fusarium-1.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Logit transform</span>
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>logit</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span>(<span class='no'>y</span>/(<span class='fl'>1</span>-<span class='no'>y</span>)))
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>(<span class='no'>logit</span> ~ <span class='no'>yrstr</span> + <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>) <span class='co'># Match SS in VanEeuwijk table 4</span>
-<span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m1</span>)  <span class='co'># Match SS in VanEeuwijk table 4</span></div><div class='output co'>#&gt; Analysis of Variance Table
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, logit<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span><span class='op'>(</span><span class='va'>y</span><span class='op'>/</span><span class='op'>(</span><span class='fl'>1</span><span class='op'>-</span><span class='va'>y</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span><span class='op'>(</span><span class='va'>logit</span> <span class='op'>~</span> <span class='va'>yrstr</span> <span class='op'>+</span> <span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span> <span class='co'># Match SS in VanEeuwijk table 4</span>
+<span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>  <span class='co'># Match SS in VanEeuwijk table 4</span>
+</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
 #&gt; Response: logit
 #&gt;            Df  Sum Sq Mean Sq F value    Pr(&gt;F)    
@@ -226,8 +230,9 @@
 #&gt; gen        16 171.600 10.7250  20.725 &lt; 2.2e-16 ***
 #&gt; Residuals 176  91.079  0.5175                      
 #&gt; ---
-#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'><span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>(<span class='no'>logit</span> ~ <span class='no'>year</span>*<span class='no'>strain</span> + <span class='no'>gen</span> + <span class='no'>gen</span>:<span class='no'>year</span> + <span class='no'>gen</span>:<span class='no'>strain</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-<span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m2</span>) <span class='co'># Match to VanEeuwijk table 5</span></div><div class='output co'>#&gt; Analysis of Variance Table
+#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'><span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span><span class='op'>(</span><span class='va'>logit</span> <span class='op'>~</span> <span class='va'>year</span><span class='op'>*</span><span class='va'>strain</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>gen</span><span class='op'>:</span><span class='va'>year</span> <span class='op'>+</span> <span class='va'>gen</span><span class='op'>:</span><span class='va'>strain</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>m2</span><span class='op'>)</span> <span class='co'># Match to VanEeuwijk table 5</span>
+</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
 #&gt; Response: logit
 #&gt;             Df  Sum Sq Mean Sq  F value    Pr(&gt;F)    
@@ -240,11 +245,18 @@
 #&gt; Residuals   96  31.914   0.332                       
 #&gt; ---
 #&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'>
-</div><div class='input'>
+<span class='co'># \dontrun{</span>
+
 <span class='co'># GLM on untransformed data using logit link, variance mu^2(1-mu)^2</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>gnm</span>) <span class='co'># for 'wedderburn' family</span>
-<span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/glm.html'>glm</a></span>(<span class='no'>y</span> ~ <span class='no'>yrstr</span> + <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>family</span><span class='kw'>=</span><span class='st'>"wedderburn"</span>)
-<span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m2</span>) <span class='co'># Main effects match VanEeuwijk table 6</span></div><div class='output co'>#&gt; Analysis of Deviance Table
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>gnm</span><span class='op'>)</span> <span class='co'># for 'wedderburn' family</span>
+</div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Attaching package: 'gnm'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:asreml':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    wheat</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:lattice':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    barley</span></div><div class='input'><span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/glm.html'>glm</a></span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='va'>yrstr</span> <span class='op'>+</span> <span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>, family<span class='op'>=</span><span class='st'>"wedderburn"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>m2</span><span class='op'>)</span> <span class='co'># Main effects match VanEeuwijk table 6</span>
+</div><div class='output co'>#&gt; Analysis of Deviance Table
 #&gt; 
 #&gt; Model: wedderburn, link: logit
 #&gt; 
@@ -258,10 +270,11 @@
 #&gt; yrstr 11   150.85       192     218.60
 #&gt; gen   16   145.27       176      73.33</div><div class='input'>
 <span class='co'># Generalized AMMI-2 model. Matches VanEeuwijk table 6</span>
-<span class='no'>bilin2</span> <span class='kw'>&lt;-</span> <span class='fu'>gnm</span>(<span class='no'>y</span> ~ <span class='no'>yrstr</span> + <span class='no'>gen</span> + <span class='fu'>instances</span>(<span class='fu'>Mult</span>(<span class='no'>yrstr</span>, <span class='no'>gen</span>), <span class='fl'>2</span>),
-              <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>family</span> <span class='kw'>=</span> <span class='no'>wedderburn</span>)</div><div class='output co'>#&gt; Initialising
+<span class='va'>bilin2</span> <span class='op'>&lt;-</span> <span class='fu'>gnm</span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='va'>yrstr</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='fu'>instances</span><span class='op'>(</span><span class='fu'>Mult</span><span class='op'>(</span><span class='va'>yrstr</span>, <span class='va'>gen</span><span class='op'>)</span>, <span class='fl'>2</span><span class='op'>)</span>,
+              data<span class='op'>=</span><span class='va'>dat</span>, family <span class='op'>=</span> <span class='va'>wedderburn</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Initialising
 #&gt; Running start-up iterations..
-#&gt; Running main iterations...............................................
+#&gt; Running main iterations.......................................................
 #&gt; Done</div><div class='input'><span class='co'># plot(bilin2,1) # Resid vs fitted plot matches VanEeuwijk figure 3c</span>
 <span class='co'>## anova(bilin2)</span>
 <span class='co'>##                            Df Deviance Resid. Df Resid. Dev</span>
@@ -272,38 +285,29 @@
 <span class='co'>## Mult(yrstr, gen, inst = 2) 24   19.485       126      27.72</span>
 
 <span class='co'># Manually extract coordinates for biplot</span>
-<span class='no'>cof</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>bilin2</span>)
-<span class='no'>y1</span> <span class='kw'>&lt;-</span> <span class='no'>cof</span>[<span class='fl'>29</span>:<span class='fl'>40</span>]
-<span class='no'>g1</span> <span class='kw'>&lt;-</span> <span class='no'>cof</span>[<span class='fl'>41</span>:<span class='fl'>57</span>]
-<span class='no'>y2</span> <span class='kw'>&lt;-</span> <span class='no'>cof</span>[<span class='fl'>58</span>:<span class='fl'>69</span>]
-<span class='no'>g2</span> <span class='kw'>&lt;-</span> <span class='no'>cof</span>[<span class='fl'>70</span>:<span class='fl'>86</span>]
-<span class='no'>g12</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span>(<span class='no'>g1</span>,<span class='no'>g2</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>g12</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/substr.html'>substring</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>g12</span>), <span class='fl'>29</span>)
-<span class='no'>y12</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span>(<span class='no'>y1</span>,<span class='no'>y2</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>y12</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/substr.html'>substring</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>y12</span>), <span class='fl'>31</span>)
-<span class='no'>g12</span>[,<span class='fl'>1</span>] <span class='kw'>&lt;-</span> -<span class='fl'>1</span> * <span class='no'>g12</span>[,<span class='fl'>1</span>]
-<span class='no'>y12</span>[,<span class='fl'>1</span>] <span class='kw'>&lt;-</span> -<span class='fl'>1</span> * <span class='no'>y12</span>[,<span class='fl'>1</span>]
+<span class='va'>cof</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>bilin2</span><span class='op'>)</span>
+<span class='va'>y1</span> <span class='op'>&lt;-</span> <span class='va'>cof</span><span class='op'>[</span><span class='fl'>29</span><span class='op'>:</span><span class='fl'>40</span><span class='op'>]</span>
+<span class='va'>g1</span> <span class='op'>&lt;-</span> <span class='va'>cof</span><span class='op'>[</span><span class='fl'>41</span><span class='op'>:</span><span class='fl'>57</span><span class='op'>]</span>
+<span class='va'>y2</span> <span class='op'>&lt;-</span> <span class='va'>cof</span><span class='op'>[</span><span class='fl'>58</span><span class='op'>:</span><span class='fl'>69</span><span class='op'>]</span>
+<span class='va'>g2</span> <span class='op'>&lt;-</span> <span class='va'>cof</span><span class='op'>[</span><span class='fl'>70</span><span class='op'>:</span><span class='fl'>86</span><span class='op'>]</span>
+<span class='va'>g12</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>g1</span>,<span class='va'>g2</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>g12</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/substr.html'>substring</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>g12</span><span class='op'>)</span>, <span class='fl'>29</span><span class='op'>)</span>
+<span class='va'>y12</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>y1</span>,<span class='va'>y2</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>y12</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/substr.html'>substring</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>y12</span><span class='op'>)</span>, <span class='fl'>31</span><span class='op'>)</span>
+<span class='va'>g12</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='op'>-</span><span class='fl'>1</span> <span class='op'>*</span> <span class='va'>g12</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>]</span>
+<span class='va'>y12</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='op'>-</span><span class='fl'>1</span> <span class='op'>*</span> <span class='va'>y12</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>]</span>
 <span class='co'># GAMMI biplot.  Inner-products of points projected onto</span>
 <span class='co'># arrows match VanEeuwijk figure 4.  Slight rotation of graph is ignorable.</span>
-<span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span>(<span class='no'>y12</span>, <span class='no'>g12</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>.75</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"snijders.fusarium"</span>) <span class='co'># Arrows to genotypes.</span></div><div class='img'><img src='snijders.fusarium-2.png' alt='' width='700' height='433' /></div><div class='input'>
-</div><div class='input'>
+<span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span><span class='op'>(</span><span class='va'>y12</span>, <span class='va'>g12</span>, cex<span class='op'>=</span><span class='fl'>.75</span>, main<span class='op'>=</span><span class='st'>"snijders.fusarium"</span><span class='op'>)</span> <span class='co'># Arrows to genotypes.</span>
+</div><div class='img'><img src='snijders.fusarium-2.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># }</span>
+
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -314,7 +318,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

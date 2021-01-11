@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Multi-environment trial of 33 barley genotypes in 12 locations — lin.superiority" />
-
 <meta property="og:description" content="Multi-environment trial of 33 barley genotypes in 12 locations" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,69 +143,67 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Multi-environment trial of 33 barley genotypes in 12 locations</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"lin.superiority"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"lin.superiority"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 396 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 396 observations on the following 4 variables.</p><dl>
     <dt><code>gen</code></dt><dd><p>genotype/cultivar</p></dd>
     <dt><code>region</code></dt><dd><p>region</p></dd>
     <dt><code>loc</code></dt><dd><p>location</p></dd>
     <dt><code>yield</code></dt><dd><p>yield (kg/ha)</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Yield of six-row barley from the 1983 annual report of Eastern
   Cooperative Test in Canada.</p>
 <p>The named cultivars Bruce, Conquest, Laurier, Leger are checks, while
   the other cultivars were tests.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>C. S. Lin, M. R. Binns (1985).
   Procedural approach for assessing cultivar-location data: Pairwise genotype-environment interactions of test cultivars with checks
   <em>Canadian Journal of Plant Science</em>, 1985, 65(4): 1065-1071. Table 1.
-  http://doi.org/10.4141/cjps85-136</p>
-    
+  https://doi.org/10.4141/cjps85-136</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>C. S. Lin, M. R. Binns (1988).
   A Superiority Measure Of Cultivar Performance For Cultivar x Location Data.
   <em>Canadian Journal of Plant Science</em>, 68, 193-198.
-  http://doi.org/10.4141/cjps88-018</p>
+  https://doi.org/10.4141/cjps88-018</p>
 <p>Mohammed Ali Hussein, Asmund Bjornstad, and A. H. Aastveit (2000).
   SASG x ESTAB: A SAS Program for Computing Genotype x Environment
   Stability Statistics.
   <em>Agronomy Journal</em>, 92; 454-459.
-  http://doi.org/10.2134/agronj2000.923454x</p>
-    
+  https://doi.org/10.2134/agronj2000.923454x</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>lin.superiority</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>lin.superiority</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>latticeExtra</span>)
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>reshape2</span>)
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>lin.superiority</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>lin.superiority</span>
+
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>latticeExtra</span><span class='op'>)</span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>reshape2</span><span class='op'>)</span>
 <span class='co'># calculate the superiority measure of Lin &amp; Binns 1988</span>
 
-<span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>acast</span>(<span class='no'>dat</span>, <span class='no'>gen</span> ~ <span class='no'>loc</span>, <span class='kw'>value.var</span><span class='kw'>=</span><span class='st'>"yield"</span>)
-<span class='no'>locmean</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='no'>dat2</span>, <span class='fl'>2</span>, <span class='no'>mean</span>)
-<span class='no'>locmax</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='no'>dat2</span>, <span class='fl'>2</span>, <span class='no'>max</span>)
-<span class='no'>P</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='no'>dat2</span>, <span class='fl'>1</span>, <span class='kw'>function</span>(<span class='no'>x</span>) {
-  <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>((<span class='no'>x</span>-<span class='no'>locmax</span>)^<span class='fl'>2</span>)/(<span class='fl'>2</span>*<span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='no'>x</span>))
-})/<span class='fl'>1000</span>
-<span class='no'>P</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span>(<span class='no'>P</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='no'>P</span>) <span class='co'># match Lin &amp; Binns 1988 table 2, column Pi</span></div><div class='output co'>#&gt;    Leger      T14      T07      T13      T06      T03      T25      T05 
+<span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>acast</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>gen</span> <span class='op'>~</span> <span class='va'>loc</span>, value.var<span class='op'>=</span><span class='st'>"yield"</span><span class='op'>)</span>
+<span class='va'>locmean</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>dat2</span>, <span class='fl'>2</span>, <span class='va'>mean</span><span class='op'>)</span>
+<span class='va'>locmax</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>dat2</span>, <span class='fl'>2</span>, <span class='va'>max</span><span class='op'>)</span>
+<span class='va'>P</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>dat2</span>, <span class='fl'>1</span>, <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>{</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='op'>(</span><span class='va'>x</span><span class='op'>-</span><span class='va'>locmax</span><span class='op'>)</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>/</span><span class='op'>(</span><span class='fl'>2</span><span class='op'>*</span><span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>)</span>
+<span class='op'>}</span><span class='op'>)</span><span class='op'>/</span><span class='fl'>1000</span>
+<span class='va'>P</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sort.html'>sort</a></span><span class='op'>(</span><span class='va'>P</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>P</span><span class='op'>)</span> <span class='co'># match Lin &amp; Binns 1988 table 2, column Pi</span>
+</div><div class='output co'>#&gt;    Leger      T14      T07      T13      T06      T03      T25      T05 
 #&gt;       36      102      107      137      165      182      185      200 
 #&gt;      T27      T10      T01      T29      T09      T20      T26    Bruce 
 #&gt;      220      235      247      248      254      256      283      298 
@@ -213,41 +215,32 @@
 #&gt;      720 </div><div class='input'>
 <span class='co'># atlantic &amp; quebec regions overlap</span>
 <span class='co'># libs(gge)</span>
-<span class='co'># m1 &lt;- gge(yield ~ gen*loc, env.group=region, data=dat,</span>
+<span class='co'># m1 &lt;- gge(dat, yield ~ gen*loc, env.group=region,</span>
 <span class='co'>#           main="lin.superiority")</span>
 <span class='co'># biplot(m1)</span>
 
 <span class='co'># create a figure similar to Lin &amp; Binns 1988</span>
 
 <span class='co'># add P, locmean, locmax back into the data</span>
-<span class='no'>dat</span>$<span class='no'>locmean</span> <span class='kw'>&lt;-</span> <span class='no'>locmean</span>[<span class='fu'><a href='https://rdrr.io/r/base/match.html'>match</a></span>(<span class='no'>dat</span>$<span class='no'>loc</span>, <span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='no'>locmean</span>))]
-<span class='no'>dat</span>$<span class='no'>locmax</span> <span class='kw'>&lt;-</span> <span class='no'>locmax</span>[<span class='fu'><a href='https://rdrr.io/r/base/match.html'>match</a></span>(<span class='no'>dat</span>$<span class='no'>loc</span>, <span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='no'>locmax</span>))]
-<span class='no'>dat</span>$<span class='no'>P</span> <span class='kw'>&lt;-</span> <span class='no'>P</span>[<span class='fu'><a href='https://rdrr.io/r/base/match.html'>match</a></span>(<span class='no'>dat</span>$<span class='no'>gen</span>, <span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='no'>P</span>))]
-<span class='no'>dat</span>$<span class='no'>gen</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/reorder.factor.html'>reorder</a></span>(<span class='no'>dat</span>$<span class='no'>gen</span>, <span class='no'>dat</span>$<span class='no'>P</span>)
-<span class='fu'>xyplot</span>(<span class='no'>locmax</span> ~ <span class='no'>locmean</span><span class='kw'>|</span><span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-       <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'p'</span>,<span class='st'>'r'</span>), <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='st'>"gray"</span>,
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"lin.superiority - Superiority index"</span>,
-       <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Location Mean"</span>,
-       <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Yield of single cultivars (blue) &amp; Maximum (gray)"</span>) +
-  <span class='fu'>xyplot</span>(<span class='no'>yield</span> ~ <span class='no'>locmean</span><span class='kw'>|</span><span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-         <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'p'</span>,<span class='st'>'r'</span>), <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>pch</span><span class='kw'>=</span><span class='fl'>19</span>)</div><div class='img'><img src='lin.superiority-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='va'>dat</span><span class='op'>$</span><span class='va'>locmean</span> <span class='op'>&lt;-</span> <span class='va'>locmean</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/match.html'>match</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>loc</span>, <span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>locmean</span><span class='op'>)</span><span class='op'>)</span><span class='op'>]</span>
+<span class='va'>dat</span><span class='op'>$</span><span class='va'>locmax</span> <span class='op'>&lt;-</span> <span class='va'>locmax</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/match.html'>match</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>loc</span>, <span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>locmax</span><span class='op'>)</span><span class='op'>)</span><span class='op'>]</span>
+<span class='va'>dat</span><span class='op'>$</span><span class='va'>P</span> <span class='op'>&lt;-</span> <span class='va'>P</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/match.html'>match</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>gen</span>, <span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>P</span><span class='op'>)</span><span class='op'>)</span><span class='op'>]</span>
+<span class='va'>dat</span><span class='op'>$</span><span class='va'>gen</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/reorder.factor.html'>reorder</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>gen</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>P</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>locmax</span> <span class='op'>~</span> <span class='va'>locmean</span><span class='op'>|</span><span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+       type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'p'</span>,<span class='st'>'r'</span><span class='op'>)</span>, as.table<span class='op'>=</span><span class='cn'>TRUE</span>, col<span class='op'>=</span><span class='st'>"gray"</span>,
+       main<span class='op'>=</span><span class='st'>"lin.superiority - Superiority index"</span>,
+       xlab<span class='op'>=</span><span class='st'>"Location Mean"</span>,
+       ylab<span class='op'>=</span><span class='st'>"Yield of single cultivars (blue) &amp; Maximum (gray)"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>locmean</span><span class='op'>|</span><span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+         type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'p'</span>,<span class='st'>'r'</span><span class='op'>)</span>, as.table<span class='op'>=</span><span class='cn'>TRUE</span>, pch<span class='op'>=</span><span class='fl'>19</span><span class='op'>)</span>
+</div><div class='img'><img src='lin.superiority-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -258,7 +251,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

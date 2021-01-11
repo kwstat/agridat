@@ -41,7 +41,7 @@
 	\emph{Data: A Collection of Problems from Many Fields for the Student
 	  and Research Worker}.
 
-  Retrieved from http://lib.stat.cmu.edu/datasets/Andrews/
+  Retrieved from https://lib.stat.cmu.edu/datasets/Andrews/
 }
 \references{
   Also in the DAAG package as data sets antigua, stVincent.

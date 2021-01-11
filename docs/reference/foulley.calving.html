@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Calving difficulty by calf sex and age of dam — foulley.calving" />
-
 <meta property="og:description" content="Calving difficulty by calf sex and age of dam" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,23 +143,22 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Calving difficulty by calf sex and age of dam</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"foulley.calving"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"foulley.calving"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 54 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 54 observations on the following 4 variables.</p><dl>
     <dt><code>sex</code></dt><dd><p>calf gender</p></dd>
     <dt><code>age</code></dt><dd><p>dam age factor, 9 levels</p></dd>
     <dt><code>score</code></dt><dd><p>score for birthing difficulty, S1 &lt; S2 &lt; S3</p></dd>
     <dt><code>count</code></dt><dd><p>count of births for each category</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>These data are calving difficulty scores for purebred US Simmental
@@ -167,49 +170,52 @@
   of dam.</p>
 <p>Note: The paper by Foulley and Gianola has '21943' as the count for
   score 1, F, &gt;8.  This data uses '20943' so that the marginal totals
-  from this data match the marginal totals given in the paper.</p>
-    
+  from this data match the marginal totals given in the paper.</p>  
+<p>Used with permission of Jean-Louis Foulley.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>JL Foulley, D Gianola (1996).
   Statistical Analysis of Ordered Categorical Data via a Structured
-  Heteroskedastic Threshold Model. <em>Genet Sel Evol</em>, 28, 249--273.
-  http://doi.org/10.1051/gse:19960304</p>  
-<p>Used with permission of Jean-Louis Foulley.</p>
-    
+  Heteroskedastic Threshold Model.
+  Genet Sel Evol, 28, 249--273.
+  https://doi.org/10.1051/gse:19960304</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>foulley.calving</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>foulley.calving</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>foulley.calving</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>foulley.calving</span>
 
 <span class='co'>## Plot</span>
-<span class='no'>d2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>,
-                <span class='kw'>age</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>ordered</a></span>(<span class='no'>age</span>, <span class='kw'>levels</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"0.0-2.0"</span>,<span class='st'>"2.0-2.5"</span>,<span class='st'>"2.5-3.0"</span>,
+<span class='va'>d2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>,
+                age<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>ordered</a></span><span class='op'>(</span><span class='va'>age</span>, levels<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"0.0-2.0"</span>,<span class='st'>"2.0-2.5"</span>,<span class='st'>"2.5-3.0"</span>,
                                           <span class='st'>"3.0-3.5"</span>,<span class='st'>"3.5-4.0"</span>,
-                                          <span class='st'>"4.0-4.5"</span>,<span class='st'>"4.5-5.0"</span>,<span class='st'>"5.0-8.0"</span>,<span class='st'>"8.0+"</span>)),
-                <span class='kw'>score</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>ordered</a></span>(<span class='no'>score</span>, <span class='kw'>levels</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'S1'</span>,<span class='st'>'S2'</span>,<span class='st'>'S3'</span>)))
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>reshape2</span>)
-<span class='no'>d2</span> <span class='kw'>&lt;-</span> <span class='fu'>acast</span>(<span class='no'>dat</span>, <span class='no'>sex</span>+<span class='no'>age</span>~<span class='no'>score</span>, <span class='kw'>value.var</span><span class='kw'>=</span><span class='st'>'count'</span>)
-<span class='no'>d2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/prop.table.html'>prop.table</a></span>(<span class='no'>d2</span>, <span class='kw'>margin</span><span class='kw'>=</span><span class='fl'>1</span>)
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='no'>thm</span> <span class='kw'>&lt;-</span> <span class='fu'>simpleTheme</span>(<span class='kw'>col</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'skyblue'</span>,<span class='st'>'gray'</span>,<span class='st'>'pink'</span>))
-<span class='fu'>barchart</span>(<span class='no'>d2</span>, <span class='kw'>par.settings</span><span class='kw'>=</span><span class='no'>thm</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"foulley.calving"</span>,
-         <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Frequency of calving difficulty"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Calf gender and dam age"</span>,
-         <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>3</span>, <span class='kw'>text</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Easy"</span>,<span class='st'>"Assited"</span>,<span class='st'>"Difficult"</span>)))</div><div class='img'><img src='foulley.calving-1.png' alt='' width='700' height='433' /></div><div class='input'>
+                                          <span class='st'>"4.0-4.5"</span>,<span class='st'>"4.5-5.0"</span>,<span class='st'>"5.0-8.0"</span>,<span class='st'>"8.0+"</span><span class='op'>)</span><span class='op'>)</span>,
+                score<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>ordered</a></span><span class='op'>(</span><span class='va'>score</span>, levels<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'S1'</span>,<span class='st'>'S2'</span>,<span class='st'>'S3'</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>reshape2</span><span class='op'>)</span>
+<span class='va'>d2</span> <span class='op'>&lt;-</span> <span class='fu'>acast</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>sex</span><span class='op'>+</span><span class='va'>age</span><span class='op'>~</span><span class='va'>score</span>, value.var<span class='op'>=</span><span class='st'>'count'</span><span class='op'>)</span>
+<span class='va'>d2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/proportions.html'>prop.table</a></span><span class='op'>(</span><span class='va'>d2</span>, margin<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='va'>thm</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/simpleTheme.html'>simpleTheme</a></span><span class='op'>(</span>col<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'skyblue'</span>,<span class='st'>'gray'</span>,<span class='st'>'pink'</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>barchart</a></span><span class='op'>(</span><span class='va'>d2</span>, par.settings<span class='op'>=</span><span class='va'>thm</span>, main<span class='op'>=</span><span class='st'>"foulley.calving"</span>,
+         xlab<span class='op'>=</span><span class='st'>"Frequency of calving difficulty"</span>, ylab<span class='op'>=</span><span class='st'>"Calf gender and dam age"</span>,
+         auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>3</span>, text<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Easy"</span>,<span class='st'>"Assited"</span>,<span class='st'>"Difficult"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='foulley.calving-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
 <span class='co'>## Ordinal multinomial model</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>ordinal</span>)</div><div class='output co'>#&gt; <span class='message'></span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>ordinal</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'></span>
 #&gt; <span class='message'>Attaching package: 'ordinal'</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from 'package:nlme':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    ranef, VarCorr</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from 'package:lme4':</span>
 #&gt; <span class='message'></span>
 #&gt; <span class='message'>    ranef, VarCorr</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:dplyr':</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    slice</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from 'package:lme4':</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    ranef, VarCorr</span></div><div class='input'><span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'>clm</span>(<span class='no'>score</span> ~ <span class='no'>sex</span>*<span class='no'>age</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>weights</span><span class='kw'>=</span><span class='no'>count</span>, <span class='kw'>link</span><span class='kw'>=</span><span class='st'>'probit'</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>m2</span>)</div><div class='output co'>#&gt; formula: score ~ sex * age
+#&gt; <span class='message'>    slice</span></div><div class='input'><span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'>clm</span><span class='op'>(</span><span class='va'>score</span> <span class='op'>~</span> <span class='va'>sex</span><span class='op'>*</span><span class='va'>age</span>, data<span class='op'>=</span><span class='va'>dat</span>, weights<span class='op'>=</span><span class='va'>count</span>, link<span class='op'>=</span><span class='st'>'probit'</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>m2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; formula: score ~ sex * age
 #&gt; data:    dat
 #&gt; 
 #&gt;  link   threshold nobs   logLik     AIC       niter max.grad cond.H 
@@ -270,7 +276,8 @@
 
 <span class='co'>## Note 1.52017 - 0.82504 = 0.695 matches Foulley's '2-3' threshold estimate</span>
 
-<span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m2</span>) <span class='co'># probability of each category</span></div><div class='output co'>#&gt; $fit
+<span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>m2</span><span class='op'>)</span> <span class='co'># probability of each category</span>
+</div><div class='output co'>#&gt; $fit
 #&gt;  [1] 0.627195037 0.711933503 0.860542204 0.913436999 0.938551496 0.944707720
 #&gt;  [7] 0.955306699 0.959118319 0.962397773 0.218838605 0.183177857 0.101747212
 #&gt; [13] 0.066737379 0.048833512 0.044302103 0.036355388 0.033449788 0.030928311
@@ -283,21 +290,13 @@
 #&gt; </div><div class='input'>
 
 
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -308,7 +307,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

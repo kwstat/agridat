@@ -37,7 +37,7 @@
   On testing varieties of cereals.
   \emph{Biometrika}, 271-293.
   
-  http://doi.org/10.1093/biomet/15.3-4.271
+  https://doi.org/10.1093/biomet/15.3-4.271
 
 }
 \references{

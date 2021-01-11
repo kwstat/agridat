@@ -41,7 +41,7 @@
   P.G. De Vries, J.W. Hildebrand, N.R. De Graaf. (1978).
   Analysis of 11 years growth of carribbean pine in a replicated
   Graeco-Latin square spacing-thinning experiment in Surinam. Page 46, 51.
-  http://edepot.wur.nl/287590
+  https://edepot.wur.nl/287590
 }
 \references{
   None

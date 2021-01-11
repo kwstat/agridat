@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Impact of Bt corn on non-target species — gathmann.bt" />
-
 <meta property="og:description" content="Impact of Bt corn on non-target species" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,110 +143,101 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Impact of Bt corn on non-target species</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 16 observations on the following 3 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 16 observations on the following 3 variables.</p><dl>
     <dt><code>gen</code></dt><dd><p>genotype/maize, <code>Bt</code> <code>ISO</code></p></dd>
     <dt><code>thysan</code></dt><dd><p>thysan abundance</p></dd>
     <dt><code>aranei</code></dt><dd><p>aranei abundance</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>The experiment involved comparing a Bt maize and a near-isogenic
   control variety.</p>
 <p>Species abundances were measured for <em>Thysanoptera</em> (thrips) and
   <em>Araneida</em> (spiders) in 8 different plots.</p>
-<p>Each response is probably a mean across repeated measurements.</p>
-    
+<p>Each response is probably a mean across repeated measurements.</p>  
+<p>Used with permission of Achim Gathmann.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    
-
-<p>L. A. Hothorn, 2005.
+    <p>L. A. Hothorn, 2005.
   Evaluation of Bt-Maize Field Trials by a Proof of Safety.
-  http://www.seedtest.org/upload/cms/user/presentation7Hothorn.pdf</p>
-<p>Used with permission of Achim Gathmann.</p>
-    
+  https://www.seedtest.org/upload/cms/user/presentation7Hothorn.pdf</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>gathmann.bt</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>gathmann.bt</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>gathmann.bt</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>gathmann.bt</span>
 
 
 <span class='co'># EDA suggests Bt vs ISO is significant for thysan, not for aranei</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>reshape2</span>)
-<span class='no'>d2</span> <span class='kw'>&lt;-</span> <span class='fu'>melt</span>(<span class='no'>dat</span>, <span class='kw'>id.var</span><span class='kw'>=</span><span class='st'>'gen'</span>)
-<span class='fu'>bwplot</span>(<span class='no'>value</span> ~ <span class='no'>gen</span><span class='kw'>|</span><span class='no'>variable</span>, <span class='no'>d2</span>,
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"gathmann.bt"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Insect abundance"</span>,
-       <span class='kw'>panel</span><span class='kw'>=</span><span class='kw'>function</span>(<span class='no'>x</span>,<span class='no'>y</span>,<span class='no'>...</span>){
-         <span class='fu'>panel.xyplot</span>(<span class='fu'><a href='https://rdrr.io/r/base/jitter.html'>jitter</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span>(<span class='no'>x</span>)),<span class='no'>y</span>,<span class='no'>...</span>)
-         <span class='fu'>panel.bwplot</span>(<span class='no'>x</span>,<span class='no'>y</span>,<span class='no'>...</span>)
-       },
-       <span class='kw'>scales</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>relation</span><span class='kw'>=</span><span class='st'>"free"</span>))</div><div class='img'><img src='gathmann.bt-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>reshape2</span><span class='op'>)</span>
+<span class='va'>d2</span> <span class='op'>&lt;-</span> <span class='fu'>melt</span><span class='op'>(</span><span class='va'>dat</span>, id.var<span class='op'>=</span><span class='st'>'gen'</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>bwplot</a></span><span class='op'>(</span><span class='va'>value</span> <span class='op'>~</span> <span class='va'>gen</span><span class='op'>|</span><span class='va'>variable</span>, <span class='va'>d2</span>,
+       main<span class='op'>=</span><span class='st'>"gathmann.bt"</span>, ylab<span class='op'>=</span><span class='st'>"Insect abundance"</span>,
+       panel<span class='op'>=</span><span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span>,<span class='va'>y</span>,<span class='va'>...</span><span class='op'>)</span><span class='op'>{</span>
+         <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/panel.xyplot.html'>panel.xyplot</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/jitter.html'>jitter</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>)</span>,<span class='va'>y</span>,<span class='va'>...</span><span class='op'>)</span>
+         <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/panel.bwplot.html'>panel.bwplot</a></span><span class='op'>(</span><span class='va'>x</span>,<span class='va'>y</span>,<span class='va'>...</span><span class='op'>)</span>
+       <span class='op'>}</span>,
+       scales<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>relation<span class='op'>=</span><span class='st'>"free"</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='gathmann.bt-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
-<span class='kw'>if</span>(<span class='fl'>0</span>){
+<span class='kw'>if</span><span class='op'>(</span><span class='fl'>0</span><span class='op'>)</span><span class='op'>{</span>
 
   <span class='co'># ----- Parametric CI.  Thysan significant, aranei not significant.</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>equivalence</span>)
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>equivalence</span><span class='op'>)</span>
 
-  <span class='no'>th0</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='no'>dat</span>, <span class='fu'>tost</span>(<span class='no'>thysan</span>[<span class='fl'>1</span>:<span class='fl'>8</span>], <span class='no'>thysan</span>[<span class='fl'>9</span>:<span class='fl'>16</span>], <span class='kw'>alpha</span><span class='kw'>=</span><span class='fl'>.05</span>, <span class='kw'>paired</span><span class='kw'>=</span><span class='fl'>FALSE</span>))
-  <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span>(<span class='no'>th0</span>[<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"estimate"</span>,<span class='st'>"tost.interval"</span>)], <span class='no'>round</span>, <span class='fl'>2</span>)
+  <span class='va'>th0</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='fu'>tost</span><span class='op'>(</span><span class='va'>thysan</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>8</span><span class='op'>]</span>, <span class='va'>thysan</span><span class='op'>[</span><span class='fl'>9</span><span class='op'>:</span><span class='fl'>16</span><span class='op'>]</span>, alpha<span class='op'>=</span><span class='fl'>.05</span>, paired<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span><span class='op'>(</span><span class='va'>th0</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"estimate"</span>,<span class='st'>"tost.interval"</span><span class='op'>)</span><span class='op'>]</span>, <span class='va'>round</span>, <span class='fl'>2</span><span class='op'>)</span>
   <span class='co'># 14.28-8.72=5.56, (2.51, 8.59) # match Gathmann p. 11</span>
 
-  <span class='no'>ar0</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='no'>dat</span>, <span class='fu'>tost</span>(<span class='no'>aranei</span>[<span class='fl'>1</span>:<span class='fl'>8</span>], <span class='no'>aranei</span>[<span class='fl'>9</span>:<span class='fl'>16</span>], <span class='kw'>alpha</span><span class='kw'>=</span><span class='fl'>.05</span>, <span class='kw'>epsilon</span><span class='kw'>=</span><span class='fl'>.4</span>))
-  <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span>(<span class='no'>ar0</span>[<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"estimate"</span>,<span class='st'>"tost.interval"</span>)], <span class='no'>round</span>, <span class='fl'>2</span>)
+  <span class='va'>ar0</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='fu'>tost</span><span class='op'>(</span><span class='va'>aranei</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>8</span><span class='op'>]</span>, <span class='va'>aranei</span><span class='op'>[</span><span class='fl'>9</span><span class='op'>:</span><span class='fl'>16</span><span class='op'>]</span>, alpha<span class='op'>=</span><span class='fl'>.05</span>, epsilon<span class='op'>=</span><span class='fl'>.4</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span><span class='op'>(</span><span class='va'>ar0</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"estimate"</span>,<span class='st'>"tost.interval"</span><span class='op'>)</span><span class='op'>]</span>, <span class='va'>round</span>, <span class='fl'>2</span><span class='op'>)</span>
   <span class='co'># .57-.47=.10, (-0.19, 0.40) # match Gathmann p. 11</span>
 
   <span class='co'># ----- Non-parametric exact CI.  Same result.</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>coin</span>)
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>coin</span><span class='op'>)</span>
 
-  <span class='no'>th1</span> <span class='kw'>&lt;-</span> <span class='fu'>wilcox_test</span>(<span class='no'>thysan</span> ~ <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>conf.int</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>conf.level</span><span class='kw'>=</span><span class='fl'>0.90</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/confint.html'>confint</a></span>(<span class='no'>th1</span>), <span class='no'>round</span>, <span class='fl'>2</span>)
+  <span class='va'>th1</span> <span class='op'>&lt;-</span> <span class='fu'>wilcox_test</span><span class='op'>(</span><span class='va'>thysan</span> <span class='op'>~</span> <span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>, conf.int<span class='op'>=</span><span class='cn'>TRUE</span>, conf.level<span class='op'>=</span><span class='fl'>0.90</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/confint.html'>confint</a></span><span class='op'>(</span><span class='va'>th1</span><span class='op'>)</span>, <span class='va'>round</span>, <span class='fl'>2</span><span class='op'>)</span>
   <span class='co'># 6.36, (2.8, 9.2) # Match Gathmann p. 11</span>
 
-  <span class='no'>ar1</span> <span class='kw'>&lt;-</span> <span class='fu'>wilcox_test</span>(<span class='no'>aranei</span> ~ <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>conf.int</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>conf.level</span><span class='kw'>=</span><span class='fl'>0.90</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/confint.html'>confint</a></span>(<span class='no'>ar1</span>), <span class='no'>round</span>, <span class='fl'>2</span>)
+  <span class='va'>ar1</span> <span class='op'>&lt;-</span> <span class='fu'>wilcox_test</span><span class='op'>(</span><span class='va'>aranei</span> <span class='op'>~</span> <span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>, conf.int<span class='op'>=</span><span class='cn'>TRUE</span>, conf.level<span class='op'>=</span><span class='fl'>0.90</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/confint.html'>confint</a></span><span class='op'>(</span><span class='va'>ar1</span><span class='op'>)</span>, <span class='va'>round</span>, <span class='fl'>2</span><span class='op'>)</span>
   <span class='co'># .05 (-.2, .4)</span>
-
-
+  
+  
   <span class='co'># ----- Log-transformed exact CI. Same result.</span>
-  <span class='no'>th2</span> <span class='kw'>&lt;-</span> <span class='fu'>wilcox_test</span>(<span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span>(<span class='no'>thysan</span>) ~ <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>alternative</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"two.sided"</span>),
-                     <span class='kw'>conf.int</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>conf.level</span><span class='kw'>=</span><span class='fl'>0.9</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/confint.html'>confint</a></span>(<span class='no'>th2</span>), <span class='kw'>function</span>(<span class='no'>x</span>) <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span>(<span class='no'>x</span>),<span class='fl'>2</span>))
+  <span class='va'>th2</span> <span class='op'>&lt;-</span> <span class='fu'>wilcox_test</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span><span class='op'>(</span><span class='va'>thysan</span><span class='op'>)</span> <span class='op'>~</span> <span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>, alternative<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"two.sided"</span><span class='op'>)</span>,
+                     conf.int<span class='op'>=</span><span class='cn'>TRUE</span>, conf.level<span class='op'>=</span><span class='fl'>0.9</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/confint.html'>confint</a></span><span class='op'>(</span><span class='va'>th2</span><span class='op'>)</span>, <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>,<span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
   <span class='co'># 1.66, (1.38, 2.31) # Match Gathmann p 11</span>
-
+  
   <span class='co'># ----- Log-transform doesn't work on aranei, but asinh(x/2) does</span>
-  <span class='no'>ar2</span> <span class='kw'>&lt;-</span> <span class='fu'>wilcox_test</span>(<span class='fu'><a href='https://rdrr.io/r/base/Hyperbolic.html'>asinh</a></span>(<span class='no'>aranei</span>/<span class='fl'>2</span>) ~ <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-                     <span class='kw'>alternative</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"two.sided"</span>),
-                     <span class='kw'>conf.int</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>conf.level</span><span class='kw'>=</span><span class='fl'>0.9</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/confint.html'>confint</a></span>(<span class='no'>ar2</span>), <span class='kw'>function</span>(<span class='no'>x</span>) <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/Hyperbolic.html'>sinh</a></span>(<span class='no'>x</span>)*<span class='fl'>2</span>,<span class='fl'>1</span>))
+  <span class='va'>ar2</span> <span class='op'>&lt;-</span> <span class='fu'>wilcox_test</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/Hyperbolic.html'>asinh</a></span><span class='op'>(</span><span class='va'>aranei</span><span class='op'>/</span><span class='fl'>2</span><span class='op'>)</span> <span class='op'>~</span> <span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+                     alternative<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"two.sided"</span><span class='op'>)</span>,
+                     conf.int<span class='op'>=</span><span class='cn'>TRUE</span>, conf.level<span class='op'>=</span><span class='fl'>0.9</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>lapply</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/confint.html'>confint</a></span><span class='op'>(</span><span class='va'>ar2</span><span class='op'>)</span>, <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/Hyperbolic.html'>sinh</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>*</span><span class='fl'>2</span>,<span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span>
 
-}</div></pre>
+<span class='op'>}</span>
+
+<span class='co'># }</span>
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -253,7 +248,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

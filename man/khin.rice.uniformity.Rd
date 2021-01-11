@@ -31,7 +31,7 @@
   efficiency of designs.
   Dissertation: Imperial College of Tropical Agriculture (ICTA).
   Appendix XV.
-  http://hdl.handle.net/2139/42422
+  https://hdl.handle.net/2139/42422
 }
 \references{
  None.

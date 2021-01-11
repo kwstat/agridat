@@ -39,7 +39,7 @@ Bodyweight of cows in a 2-by-2 factorial experiment
   \emph{Analysis of Longitudinal Data}. Page 100-101.
 
   Retrieved Oct 2011 from
-  http://www.maths.lancs.ac.uk/~diggle/lda/Datasets/
+  https://www.maths.lancs.ac.uk/~diggle/lda/Datasets/
 }
 
 \references{
@@ -55,7 +55,7 @@ Bodyweight of cows in a 2-by-2 factorial experiment
   48, 269--311.
 
   SAS/STAT(R) 9.2 User's Guide, Second Edition.
-  http://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.htm#statug_glimmix_sect018.htm
+  https://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.htm#statug_glimmix_sect018.htm
 
 }
 
@@ -76,30 +76,7 @@ Bodyweight of cows in a 2-by-2 factorial experiment
   dat <- transform(dat, time = (day-122)/10)
 
 
-  libs(asreml)
-  if( utils::packageVersion("asreml") < "4") {
-    # asreml3
-    
-  
-    # Smooth for each animal.  No treatment effects. Similar to SAS Output 38.6.9
-
-    m1 <- asreml(weight ~ 1 + lin(time) + animal + animal:lin(time),
-                 data=dat,
-                 random = ~ animal:spl(time))
-    p1 <- predict(m1, data=dat, classify="animal:time",
-                  predictpoints=list(time=seq(0,65.9, length=50)))
-    p1 <- p1$pred$pval
-    p1 <- merge(dat, p1, all=TRUE) # to get iron/infect merged in
-    foo1 <- xyplot(weight ~ day|iron*infect, dat, group=animal)
-    foo2 <- xyplot(predicted.value ~ day|iron*infect, p1,
-                   type='l', group=animal)
-    print(foo1+foo2)
-
-  }
-
-  libs(asreml)
-  if( utils::packageVersion("asreml") > "4") {
-    # asreml4
+  libs(asreml) # asreml4
   ## libs(latticeExtra)
   
   ## # Smooth for each animal.  No treatment effects. Similar to SAS Output 38.6.9
@@ -113,7 +90,6 @@ Bodyweight of cows in a 2-by-2 factorial experiment
   foo1 <- xyplot(weight ~ day|iron*infect, dat, group=animal)
   foo2 <- xyplot(predicted.value ~ day|iron*infect, p1, type='l', group=animal)
   print(foo1+foo2)
-  }
 
 }
 }

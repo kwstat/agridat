@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Uniformity trial of cotton — williams.cotton.uniformity" />
-
 <meta property="og:description" content="Uniformity trial of cotton at Narrabri, New South Wales, 1984." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,21 +143,20 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Uniformity trial of cotton at Narrabri, New South Wales, 1984.</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 288 observations on the following 3 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 288 observations on the following 3 variables.</p><dl>
     <dt><code>row</code></dt><dd><p>row</p></dd>
     <dt><code>col</code></dt><dd><p>column</p></dd>
     <dt><code>yield</code></dt><dd><p>lint yield, kg/ha divided by 10</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Cotton uniformity trial grown at Narrabri, New South Wales, 1984-1985.
@@ -161,37 +164,39 @@
   irrigation furrow between columns.</p>
 <p>Field width: 24 plots * 1 m = 24 m</p>
 <p>Field length: 12 plots * 12 m = 144 m</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Williams, ER and Luckett, DJ. 1988.
   The use of uniformity data in the design and analysis of cotton and barley variety trials.
-  <em>Australian Journal of Agricultural Research</em>, 39, 339-350.
-  http://doi.org/10.1071/AR9880339</p>
-    
+  Australian Journal of Agricultural Research, 39, 339-350.
+  https://doi.org/10.1071/AR9880339</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>williams.cotton.uniformity</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>williams.cotton.uniformity</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='fu'>desplot</span>(<span class='no'>yield</span> ~ <span class='no'>col</span>*<span class='no'>row</span>, <span class='no'>dat</span>,
-        <span class='kw'>aspect</span><span class='kw'>=</span><span class='fl'>144</span>/<span class='fl'>24</span>, <span class='co'># true aspect</span>
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"williams.cotton.uniformity"</span>)</div><div class='img'><img src='williams.cotton.uniformity-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>williams.cotton.uniformity</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>williams.cotton.uniformity</span>
+
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+<span class='fu'><a href='http://kwstat.github.io/desplot/reference/desplot.html'>desplot</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>yield</span> <span class='op'>~</span> <span class='va'>col</span><span class='op'>*</span><span class='va'>row</span>,
+        aspect<span class='op'>=</span><span class='fl'>144</span><span class='op'>/</span><span class='fl'>24</span>, <span class='co'># true aspect</span>
+        main<span class='op'>=</span><span class='st'>"williams.cotton.uniformity"</span><span class='op'>)</span>
+</div><div class='img'><img src='williams.cotton.uniformity-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
 <span class='co'># Smoothed contour/persp plot like Williams 1988 Fig 1a, 2a</span>
-<span class='no'>dat</span>$<span class='no'>fit</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/fitted.values.html'>fitted</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/loess.html'>loess</a></span>(<span class='no'>yield</span>~<span class='no'>col</span>*<span class='no'>row</span>, <span class='no'>dat</span>, <span class='kw'>span</span><span class='kw'>=</span><span class='fl'>.5</span>))
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='st'>"lattice"</span>)
-<span class='fu'>contourplot</span>(<span class='no'>fit</span>~<span class='no'>col</span>*<span class='no'>row</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-            <span class='kw'>aspect</span><span class='kw'>=</span><span class='fl'>144</span>/<span class='fl'>24</span>,
-            <span class='kw'>region</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>cuts</span><span class='kw'>=</span><span class='fl'>6</span>, <span class='kw'>col.regions</span><span class='kw'>=</span><span class='no'>RedGrayBlue</span>,
-            <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"williams.cotton.uniformity"</span>)</div><div class='img'><img src='williams.cotton.uniformity-2.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'># wireframe(fit~col*row, data=dat, zlim=c(100, 250),</span>
+<span class='va'>dat</span><span class='op'>$</span><span class='va'>fit</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/fitted.values.html'>fitted</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/loess.html'>loess</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>~</span><span class='va'>col</span><span class='op'>*</span><span class='va'>row</span>, <span class='va'>dat</span>, span<span class='op'>=</span><span class='fl'>.5</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='st'>"lattice"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/levelplot.html'>contourplot</a></span><span class='op'>(</span><span class='va'>fit</span><span class='op'>~</span><span class='va'>col</span><span class='op'>*</span><span class='va'>row</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+            aspect<span class='op'>=</span><span class='fl'>144</span><span class='op'>/</span><span class='fl'>24</span>,
+            region<span class='op'>=</span><span class='cn'>TRUE</span>, cuts<span class='op'>=</span><span class='fl'>6</span>, col.regions<span class='op'>=</span><span class='va'>RedGrayBlue</span>,
+            main<span class='op'>=</span><span class='st'>"williams.cotton.uniformity"</span><span class='op'>)</span>
+</div><div class='img'><img src='williams.cotton.uniformity-2.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'># wireframe(fit~col*row, data=dat, zlim=c(100, 250),</span>
 <span class='co'>#           main="williams.cotton.uniformity")</span>
 
 <span class='co'># Williams table 1</span>
-<span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>(<span class='no'>yield</span> ~ <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>) + <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>col</span>), <span class='no'>dat</span>))</div><div class='output co'>#&gt; Analysis of Variance Table
+<span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>row</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>col</span><span class='op'>)</span>, <span class='va'>dat</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
 #&gt; Response: yield
 #&gt;              Df Sum Sq Mean Sq F value    Pr(&gt;F)    
@@ -199,21 +204,13 @@
 #&gt; factor(col)  23  44762 1946.16  10.074 &lt; 2.2e-16 ***
 #&gt; Residuals   253  48875  193.18                      
 #&gt; ---
-#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div></pre>
+#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'><span class='co'># }</span>
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -224,7 +221,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

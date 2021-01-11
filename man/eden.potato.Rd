@@ -50,7 +50,7 @@
   Evidence for conformal invariance of crop yields,
   \emph{Proceedings of the Royal Society A: Mathematical, Physical and
     Engineering Science}, 462, 2119--2143.
-  http://doi.org/10.1098/rspa.2006.1667 
+  https://doi.org/10.1098/rspa.2006.1667 
 }
 
 \examples{

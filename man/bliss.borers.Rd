@@ -30,12 +30,12 @@
   C. Bliss and R. A. Fisher. (1953).
   Fitting the Negative Binomial Distribution to Biological Data.
   \emph{Biometrics}, 9, 176--200.  Table 3.
-  http://doi.org/10.2307/3001850
+  https://doi.org/10.2307/3001850
 
   Geoffrey Beall. 1940. The Fit and Significance of Contagious
   Distributions when Applied to Observations on Larval Insects.
   \emph{Ecology}, 21, 460-474.  Page 463.
-  http://doi.org/10.2307/1930285
+  https://doi.org/10.2307/1930285
 }
 
 \examples{

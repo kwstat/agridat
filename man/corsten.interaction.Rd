@@ -31,7 +31,7 @@
   L C A Corsten and J B Denis, (1990).
   Structuring Interaction in Two-Way Tables By Clustering.
   Biometrics, 46, 207--215. Table 1.
-  http://doi.org/10.2307/2531644
+  https://doi.org/10.2307/2531644
 }
 
 \examples{

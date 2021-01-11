@@ -41,7 +41,7 @@
   S.C. Salmon, 1938.
   Generalized standard errors for evaluating bunt experiments with wheat.
   \emph{Agronomy Journal}, 30, 647--663.  Table 1.
-  http://doi.org/10.2134/agronj1938.00021962003000080003x
+  https://doi.org/10.2134/agronj1938.00021962003000080003x
 }
 
 \references{

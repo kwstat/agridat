@@ -28,7 +28,7 @@ The value of this package is:
 
 White and van Evert (2008) present some guidelines for publication of data.
 
-Some of the examples use the `asreml` package since it is the _only_ R tool for fitting mixed models with complex variance structures to large datasets, and the best option for modelling AR1xAR1 residual variance structures.  Commercial use of `asreml` requires a license: http://www.vsni.co.uk/downloads/asreml.
+Some of the examples use the `asreml` package since it is the _only_ R tool for fitting mixed models with complex variance structures to large datasets, and the best option for modelling AR1xAR1 residual variance structures.  Commercial use of `asreml` requires a license: https://www.vsni.co.uk/downloads/asreml.
 
 # Comments on the package structure
 
@@ -54,8 +54,8 @@ Transactions of the American Society for Quality Control.
 J. White and Frits van Evert. (2008).
 Publishing Agronomic Data.
 Agronomy Journal, 100, 1396-1400.
-http://doi.org/10.2134/agronj2008.0080F
+https://doi.org/10.2134/agronj2008.0080F
 
 Stephen Wolfram (2017).
 Launching the Wolfram Data Repository: Data Publishing that Really Works.
-http://blog.stephenwolfram.com/2017/04/launching-the-wolfram-data-repository-data-publishing-that-really-works/
+https://writings.stephenwolfram.com/2017/04/launching-the-wolfram-data-repository-data-publishing-that-really-works/

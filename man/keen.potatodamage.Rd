@@ -44,7 +44,7 @@
   A. Keen and B. Engel.
   Analysis of a mixed model for ordinal data by iterative re-weighted REML.
   Statistica Neerlandica, 51, 129--144. Table 2.
-  http://doi.org/10.1111/1467-9574.00044
+  https://doi.org/10.1111/1467-9574.00044
 }
 
 \examples{

@@ -81,7 +81,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -152,7 +152,7 @@
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 1454 observations on the following 4 variables.</p><dl'>
+    <p>A data frame with 1454 observations on the following 4 variables.</p><dl>
     <dt><code>yield</code></dt><dd><p>yield, kg/ha</p></dd>
     <dt><code>rep</code></dt><dd><p>repeated measurement</p></dd>
     <dt><code>gen</code></dt><dd><p>genotype, 7 levels</p></dd>
@@ -182,7 +182,7 @@
 <p>The gen x env means of Table 1 (Zobel et al 1998) are least-squares
   means (personal communication).</p>
 <p>Retrieved Sep 2011 from
-  http://www.microcomputerpower.com/matmodel/matmodelmatmodel_sample_.html</p>
+  https://www.microcomputerpower.com/matmodel/matmodelmatmodel_sample_.html</p>
 <p>Used with permission of Hugh Gauch.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
@@ -197,27 +197,29 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>gauch.soy</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>gauch.soy</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>gauch.soy</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>gauch.soy</span>
 
 <span class='co'>## dat &lt;- transform(dat,</span>
 <span class='co'>##                  year = substring(env, 2),</span>
 <span class='co'>##                  loc = substring(env, 1, 1))</span>
 
 <span class='co'># AMMI biplot</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>agricolae</span>)
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>agricolae</span><span class='op'>)</span>
 <span class='co'># Figure 1 of Zobel et al 1988, means vs PC1 score</span>
-<span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/droplevels.html'>droplevels</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, <span class='fu'><a href='https://rdrr.io/r/base/sets.html'>is.element</a></span>(<span class='no'>env</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"A77"</span>,<span class='st'>"C77"</span>,<span class='st'>"V77"</span>,
+<span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/droplevels.html'>droplevels</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='fu'><a href='https://rdrr.io/r/base/sets.html'>is.element</a></span><span class='op'>(</span><span class='va'>env</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"A77"</span>,<span class='st'>"C77"</span>,<span class='st'>"V77"</span>,
 <span class='st'>"V78"</span>,<span class='st'>"A79"</span>,<span class='st'>"C79"</span>,<span class='st'>"G79"</span>,<span class='st'>"R79"</span>,<span class='st'>"V79"</span>,<span class='st'>"A80"</span>,<span class='st'>"C80"</span>,<span class='st'>"G80"</span>,<span class='st'>"L80"</span>,<span class='st'>"D80"</span>,
 <span class='st'>"R80"</span>,<span class='st'>"V80"</span>,<span class='st'>"A81"</span>,<span class='st'>"C81"</span>,<span class='st'>"G81"</span>,<span class='st'>"L81"</span>,<span class='st'>"D81"</span>,<span class='st'>"R81"</span>,<span class='st'>"V81"</span>,<span class='st'>"A82"</span>,<span class='st'>"L82"</span>,
-<span class='st'>"G82"</span>,<span class='st'>"V82"</span>,<span class='st'>"A83"</span>,<span class='st'>"I83"</span>,<span class='st'>"G83"</span>,<span class='st'>"A84"</span>,<span class='st'>"N84"</span>,<span class='st'>"C84"</span>,<span class='st'>"I84"</span>,<span class='st'>"G84"</span>))))
+<span class='st'>"G82"</span>,<span class='st'>"V82"</span>,<span class='st'>"A83"</span>,<span class='st'>"I83"</span>,<span class='st'>"G83"</span>,<span class='st'>"A84"</span>,<span class='st'>"N84"</span>,<span class='st'>"C84"</span>,<span class='st'>"I84"</span>,<span class='st'>"G84"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='no'>dat2</span>, <span class='fu'>AMMI</span>(<span class='no'>env</span>, <span class='no'>gen</span>, <span class='no'>rep</span>, <span class='no'>yield</span>))
-<span class='no'>bip</span> <span class='kw'>&lt;-</span> <span class='no'>m2</span>$<span class='no'>biplot</span>
-<span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='no'>bip</span>, <span class='fu'><a href='https://rdrr.io/r/base/plot.html'>plot</a></span>(<span class='no'>yield</span>, <span class='no'>PC1</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'n'</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"gauch.soy -- AMMI biplot"</span>))</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='no'>bip</span>, <span class='fu'><a href='https://rdrr.io/r/graphics/text.html'>text</a></span>(<span class='no'>yield</span>, <span class='no'>PC1</span>, <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>bip</span>),
-               <span class='kw'>col</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='no'>bip</span>$<span class='no'>type</span><span class='kw'>==</span><span class='st'>"GEN"</span>, <span class='st'>"darkgreen"</span>, <span class='st'>"blue"</span>),
-               <span class='kw'>cex</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='no'>bip</span>$<span class='no'>type</span><span class='kw'>==</span><span class='st'>"GEN"</span>, <span class='fl'>1.5</span>, <span class='fl'>.75</span>)))</div><div class='img'><img src='gauch.soy-1.png' alt='' width='700' height='433' /></div><div class='input'># }
+<span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>dat2</span>, <span class='fu'>AMMI</span><span class='op'>(</span><span class='va'>env</span>, <span class='va'>gen</span>, <span class='va'>rep</span>, <span class='va'>yield</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>bip</span> <span class='op'>&lt;-</span> <span class='va'>m2</span><span class='op'>$</span><span class='va'>biplot</span>
+<span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>bip</span>, <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>yield</span>, <span class='va'>PC1</span>, type<span class='op'>=</span><span class='st'>'n'</span>, main<span class='op'>=</span><span class='st'>"gauch.soy -- AMMI biplot"</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>bip</span>, <span class='fu'><a href='https://rdrr.io/r/graphics/text.html'>text</a></span><span class='op'>(</span><span class='va'>yield</span>, <span class='va'>PC1</span>, <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>bip</span><span class='op'>)</span>,
+               col<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>bip</span><span class='op'>$</span><span class='va'>type</span><span class='op'>==</span><span class='st'>"GEN"</span>, <span class='st'>"darkgreen"</span>, <span class='st'>"blue"</span><span class='op'>)</span>,
+               cex<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>bip</span><span class='op'>$</span><span class='va'>type</span><span class='op'>==</span><span class='st'>"GEN"</span>, <span class='fl'>1.5</span>, <span class='fl'>.75</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='gauch.soy-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -234,7 +236,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

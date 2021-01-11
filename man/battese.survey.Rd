@@ -40,10 +40,10 @@
   An error-components model for prediction of county crop areas using
   survey and satellite data.
   emph{Journal of the American Statistical Association}, 83, 28-36.
-  http://doi.org/10.2307/2288915
+  https://doi.org/10.2307/2288915
 
   Battese (1982) preprint version.
-  http://www.une.edu.au/__data/assets/pdf_file/0017/15542/emetwp15.pdf
+  https://www.une.edu.au/__data/assets/pdf_file/0017/15542/emetwp15.pdf
   
 }
 \references{

@@ -39,10 +39,10 @@
   Sotirios V. Archontoulis and Fernando E. Miguez (2013).
   Nonlinear Regression Models and Applications in Agricultural Research.
   \emph{Agron. Journal}, 105:1-13.
-  http://doi.org/10.2134/agronj2012.0506
+  https://doi.org/10.2134/agronj2012.0506
 
   Hamze Dokoohaki.
-  http://www.rpubs.com/Para2x/100378
+  https://www.rpubs.com/Para2x/100378
   https://rstudio-pubs-static.s3.amazonaws.com/100440_26eb9108524c4cc99071b0db8e648e7d.html
 }
 \examples{

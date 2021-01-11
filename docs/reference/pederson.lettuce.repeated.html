@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Repeated measurements of lettuce growth — pederson.lettuce.repeated" />
-
 <meta property="og:description" content="Repeated measurements of lettuce growth for 3 treatments." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,65 +143,64 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Repeated measurements of lettuce growth for 3 treatments.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"pederson.lettuce.repeated"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"pederson.lettuce.repeated"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 594 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 594 observations on the following 4 variables.</p><dl>
     <dt><code>plant</code></dt><dd><p>plant number</p></dd>
     <dt><code>day</code></dt><dd><p>day of observation</p></dd>
     <dt><code>trt</code></dt><dd><p>treatment</p></dd>
     <dt><code>weight</code></dt><dd><p>weight</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Experiment conducted in a greenhouse in Silver Bay, Minnesota. Plants were grown hydroponically.
 Treatment 1 had 9 plants per raft. Treatment 2 had 18 plants, treatment 3 had 36 plants.
 The response variable is weight of plant, roots, soil, cup, and water. The plants were measured repeatedly beginning Dec 1, and ending Jan 9, when the plants were harvested.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Levi Dawson Pederson (2015).
 Mixed Model Analysis for Repeated Measures of Lettuce Growth
 Thesis at University of Minnesota. Appendix C.
 https://scse.d.umn.edu/sites/scse.d.umn.edu/files/pedersonprojectthesis.pdf</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>None</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>pederson.lettuce.repeated</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>pederson.lettuce.repeated</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>pederson.lettuce.repeated</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>pederson.lettuce.repeated</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>day</span>),]
-<span class='fu'>xyplot</span>(<span class='no'>weight</span> ~ <span class='no'>day</span><span class='kw'>|</span><span class='no'>trt</span>, <span class='no'>dat</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'l'</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>plant</span>, <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>3</span>,<span class='fl'>1</span>),
-<span class='kw'>main</span><span class='kw'>=</span><span class='st'>"pederson.lettuce.repeated"</span>)</div><div class='img'><img src='pederson.lettuce.repeated-1.png' alt='' width='700' height='433' /></div><div class='input'>
-</div><div class='input'><span class='co'># Pederson used this SAS MIXED model for unstructured covariance</span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>day</span><span class='op'>)</span>,<span class='op'>]</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>weight</span> <span class='op'>~</span> <span class='va'>day</span><span class='op'>|</span><span class='va'>trt</span>, <span class='va'>dat</span>, type<span class='op'>=</span><span class='st'>'l'</span>, group<span class='op'>=</span><span class='va'>plant</span>, layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>3</span>,<span class='fl'>1</span><span class='op'>)</span>,
+main<span class='op'>=</span><span class='st'>"pederson.lettuce.repeated"</span><span class='op'>)</span>
+</div><div class='img'><img src='pederson.lettuce.repeated-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># \dontrun{</span>
+<span class='co'># Pederson used this SAS MIXED model for unstructured covariance</span>
 <span class='co'># proc mixed data=Project.Spacingdata; </span>
 <span class='co'># class trt plant day; </span>
 <span class='co'># model weight=trt day trt*day; </span>
 <span class='co'># repeated day / subject=plant type=un r rcorr;   </span>
 
 <span class='co'># This should give the same results as SAS, but does not.</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>nlme</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>plant</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>plant</span>), <span class='kw'>day</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>day</span>))
-<span class='no'>datg</span> <span class='kw'>&lt;-</span> <span class='fu'>groupedData</span>(<span class='no'>weight</span> ~ <span class='no'>day</span><span class='kw'>|</span><span class='no'>plant</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-<span class='no'>un1</span> <span class='kw'>&lt;-</span> <span class='fu'>gls</span>(<span class='no'>weight</span> ~ <span class='no'>trt</span> * <span class='no'>day</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>datg</span>,
-           <span class='kw'>correlation</span><span class='kw'>=</span><span class='fu'>corSymm</span>(<span class='kw'>value</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='fl'>.6</span>,<span class='fl'>55</span>), <span class='kw'>form</span> <span class='kw'>=</span> ~ <span class='fl'>1</span> <span class='kw'>|</span> <span class='no'>plant</span>),
-           <span class='kw'>control</span><span class='kw'>=</span><span class='fu'>lmeControl</span>(<span class='kw'>opt</span><span class='kw'>=</span><span class='st'>"optim"</span>, <span class='kw'>msVerbose</span><span class='kw'>=</span><span class='fl'>TRUE</span>,
-                              <span class='kw'>maxIter</span><span class='kw'>=</span><span class='fl'>500</span>, <span class='kw'>msMaxIter</span><span class='kw'>=</span><span class='fl'>500</span>))</div><div class='output co'>#&gt; initial  value 2429.796794 
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>nlme</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, plant<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>plant</span><span class='op'>)</span>, day<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>day</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>datg</span> <span class='op'>&lt;-</span> <span class='fu'>groupedData</span><span class='op'>(</span><span class='va'>weight</span> <span class='op'>~</span> <span class='va'>day</span><span class='op'>|</span><span class='va'>plant</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+<span class='va'>un1</span> <span class='op'>&lt;-</span> <span class='fu'>gls</span><span class='op'>(</span><span class='va'>weight</span> <span class='op'>~</span> <span class='va'>trt</span> <span class='op'>*</span> <span class='va'>day</span>, data<span class='op'>=</span><span class='va'>datg</span>,
+           correlation<span class='op'>=</span><span class='fu'>corSymm</span><span class='op'>(</span>value<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>.6</span>,<span class='fl'>55</span><span class='op'>)</span>, form <span class='op'>=</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>|</span> <span class='va'>plant</span><span class='op'>)</span>,
+           control<span class='op'>=</span><span class='fu'>lmeControl</span><span class='op'>(</span>opt<span class='op'>=</span><span class='st'>"optim"</span>, msVerbose<span class='op'>=</span><span class='cn'>TRUE</span>,
+                              maxIter<span class='op'>=</span><span class='fl'>500</span>, msMaxIter<span class='op'>=</span><span class='fl'>500</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; initial  value 2429.796794 
 #&gt; iter  10 value 2043.265582
 #&gt; iter  20 value 2026.878345
 #&gt; iter  30 value 1991.844910
@@ -205,12 +208,14 @@ https://scse.d.umn.edu/sites/scse.d.umn.edu/files/pedersonprojectthesis.pdf</p>
 #&gt; iter  50 value 1962.086595
 #&gt; iter  60 value 1957.390081
 #&gt; final  value 1957.093673 
-#&gt; converged</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/logLik.html'>logLik</a></span>(<span class='no'>un1</span>)*<span class='fl'>2</span> <span class='co'># nlme has 1955, SAS had 1898.6</span></div><div class='output co'>#&gt; 'log Lik.' -1955.263 (df=89)</div><div class='input'>
+#&gt; converged</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/logLik.html'>logLik</a></span><span class='op'>(</span><span class='va'>un1</span><span class='op'>)</span><span class='op'>*</span><span class='fl'>2</span> <span class='co'># nlme has 1955, SAS had 1898.6</span>
+</div><div class='output co'>#&gt; 'log Lik.' -1955.263 (df=89)</div><div class='input'>
 <span class='co'># Comparing the SAS results in Pederson (page 16) and the nlme results, we notice</span>
 <span class='co'># the SAS correlations in table 5.2 are unusually low for the first</span>
 <span class='co'># column. The nlme results have a higher correlation in the first column</span>
 <span class='co'># and just "look" better</span>
-<span class='no'>un1</span></div><div class='output co'>#&gt; Generalized least squares fit by REML
+<span class='va'>un1</span>
+</div><div class='output co'>#&gt; Generalized least squares fit by REML
 #&gt;   Model: weight ~ trt * day 
 #&gt;   Data: datg 
 #&gt;   Log-restricted-likelihood: -977.6315
@@ -246,23 +251,13 @@ https://scse.d.umn.edu/sites/scse.d.umn.edu/files/pedersonprojectthesis.pdf</p>
 #&gt; 11 0.537 0.551 0.587 0.633 0.657 0.683 0.763 0.864 0.929 0.963
 #&gt; Degrees of freedom: 594 total; 561 residual
 #&gt; Residual standard error: 5.564987 </div><div class='input'>
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -273,7 +268,7 @@ https://scse.d.umn.edu/sites/scse.d.umn.edu/files/pedersonprojectthesis.pdf</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

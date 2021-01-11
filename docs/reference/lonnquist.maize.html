@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Multi-environment trial of maize, half diallel — lonnquist.maize" />
-
 <meta property="og:description" content="Half diallel of maize" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,158 +143,116 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Half diallel of maize</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"lonnquist.maize"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"lonnquist.maize"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 78 observations on the following 3 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 78 observations on the following 3 variables.</p><dl>
     <dt><code>p1</code></dt><dd><p>parent 1 factor</p></dd>
     <dt><code>p2</code></dt><dd><p>parent 2 factor</p></dd>
     <dt><code>yield</code></dt><dd><p>yield</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     
 
-<p>Twelve hybrids were selfed/crossed in a half-diallel design planted in
-  3 reps at 2 locations in 2 years.  The data here are means adjusted
-  for block effects.</p>
-    
+<p>Twelve hybrids were selfed/crossed in a half-diallel design.
+  The data here are means adjusted for block effects.
+  Original experiment was 3 reps at 2 locations in 2 years.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>J. H. Lonnquist, C. O. Gardner. (1961)
   Heterosis in Intervarietal Crosses in Maize and Its Implication in
   Breeding Procedures.
-  <em>Crop Science</em>, 1, 179-183.  Table 1.</p>
-    
+  Crop Science, 1, 179-183.  Table 1.</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Mohring, Melchinger, Piepho. (2011).
   REML-Based Diallel Analysis.
   <em>Crop Science</em>, 51, 470-478.
-  http://doi.org/10.2135/cropsci2010.05.0272</p>
+  https://doi.org/10.2135/cropsci2010.05.0272</p>
 <p>C. O. Gardner and S. A. Eberhart. 1966.
   Analysis and Interpretation of the Variety Cross Diallel and Related
   Populations. <em>Biometrics</em>, 22, 439-452.
-  http://doi.org/10.2307/2528181</p>
-    
+  https://doi.org/10.2307/2528181</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>lonnquist.maize</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>lonnquist.maize</span>
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>,
-                 <span class='kw'>p1</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>p1</span>,
-                   <span class='kw'>levels</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"C"</span>,<span class='st'>"L"</span>,<span class='st'>"M"</span>,<span class='st'>"H"</span>,<span class='st'>"G"</span>,<span class='st'>"P"</span>,<span class='st'>"B"</span>,<span class='st'>"RM"</span>,<span class='st'>"N"</span>,<span class='st'>"K"</span>,<span class='st'>"R2"</span>,<span class='st'>"K2"</span>)),
-                 <span class='kw'>p2</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>p2</span>,
-                   <span class='kw'>levels</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"C"</span>,<span class='st'>"L"</span>,<span class='st'>"M"</span>,<span class='st'>"H"</span>,<span class='st'>"G"</span>,<span class='st'>"P"</span>,<span class='st'>"B"</span>,<span class='st'>"RM"</span>,<span class='st'>"N"</span>,<span class='st'>"K"</span>,<span class='st'>"R2"</span>,<span class='st'>"K2"</span>)))
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='no'>redblue</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"firebrick"</span>, <span class='st'>"lightgray"</span>, <span class='st'>"#375997"</span>))
-<span class='fu'>levelplot</span>(<span class='no'>yield</span> ~ <span class='no'>p1</span>*<span class='no'>p2</span>, <span class='no'>dat</span>, <span class='kw'>col.regions</span><span class='kw'>=</span><span class='no'>redblue</span>,
-          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"lonnquist.maize - yield of diallel cross"</span>)</div><div class='img'><img src='lonnquist.maize-1.png' alt='' width='700' height='433' /></div><div class='input'>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='co'># Calculate the F1 means in Lonnquist, table 1</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>reshape2</span>)
-<span class='no'>mat</span> <span class='kw'>&lt;-</span> <span class='fu'>acast</span>(<span class='no'>dat</span>, <span class='no'>p1</span>~<span class='no'>p2</span>)</div><div class='output co'>#&gt; <span class='message'>Using yield as value column: use value.var to override.</span></div><div class='input'><span class='no'>mat</span>[<span class='fu'><a href='https://rdrr.io/r/base/lower.tri.html'>upper.tri</a></span>(<span class='no'>mat</span>)] <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span>(<span class='no'>mat</span>)[<span class='fu'><a href='https://rdrr.io/r/base/lower.tri.html'>upper.tri</a></span>(<span class='no'>mat</span>)] <span class='co'># make symmetric</span>
-<span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span>(<span class='no'>mat</span>) <span class='kw'>&lt;-</span> <span class='fl'>NA</span>
-<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>rowMeans</a></span>(<span class='no'>mat</span>, <span class='kw'>na.rm</span><span class='kw'>=</span><span class='fl'>TRUE</span>),<span class='fl'>1</span>)</div><div class='output co'>#&gt;     C     L     M     H     G     P     B    RM     N     K    R2    K2 
-#&gt;  94.8  89.2  95.0  96.4  95.3  95.2  97.3  93.7  95.0  94.0  98.9 102.4 </div><div class='input'><span class='co'>##    C     L     M     H     G     P     B    RM     N     K    R2    K2</span>
-<span class='co'>## 94.8  89.2  95.0  96.4  95.3  95.2  97.3  93.7  95.0  94.0  98.9 102.4</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>lonnquist.maize</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>lonnquist.maize</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>,
+                   p1<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>p1</span>,
+                             levels<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"C"</span>,<span class='st'>"L"</span>,<span class='st'>"M"</span>,<span class='st'>"H"</span>,<span class='st'>"G"</span>,<span class='st'>"P"</span>,<span class='st'>"B"</span>,<span class='st'>"RM"</span>,<span class='st'>"N"</span>,<span class='st'>"K"</span>,<span class='st'>"R2"</span>,<span class='st'>"K2"</span><span class='op'>)</span><span class='op'>)</span>,
+                   p2<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>p2</span>,
+                             levels<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"C"</span>,<span class='st'>"L"</span>,<span class='st'>"M"</span>,<span class='st'>"H"</span>,<span class='st'>"G"</span>,<span class='st'>"P"</span>,<span class='st'>"B"</span>,<span class='st'>"RM"</span>,<span class='st'>"N"</span>,<span class='st'>"K"</span>,<span class='st'>"R2"</span>,<span class='st'>"K2"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+  
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+  <span class='va'>redblue</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"firebrick"</span>, <span class='st'>"lightgray"</span>, <span class='st'>"#375997"</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/levelplot.html'>levelplot</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>p1</span><span class='op'>*</span><span class='va'>p2</span>, <span class='va'>dat</span>, col.regions<span class='op'>=</span><span class='va'>redblue</span>,
+            main<span class='op'>=</span><span class='st'>"lonnquist.maize - yield of diallel cross"</span><span class='op'>)</span>
+</div><div class='img'><img src='lonnquist.maize-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
-
-
-<span class='co'># Mohring 2011 used 6 varieties to calculate GCA &amp; SCA</span>
-<span class='co'># Matches Table 3, column 2</span>
-<span class='no'>d2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, <span class='fu'><a href='https://rdrr.io/r/base/sets.html'>is.element</a></span>(<span class='no'>p1</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"M"</span>,<span class='st'>"H"</span>,<span class='st'>"G"</span>,<span class='st'>"B"</span>,<span class='st'>"K"</span>,<span class='st'>"K2"</span>)) <span class='kw'>&amp;</span>
-                    <span class='fu'><a href='https://rdrr.io/r/base/sets.html'>is.element</a></span>(<span class='no'>p2</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"M"</span>,<span class='st'>"H"</span>,<span class='st'>"G"</span>,<span class='st'>"B"</span>,<span class='st'>"K"</span>,<span class='st'>"K2"</span>)))
-<span class='no'>d2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/droplevels.html'>droplevels</a></span>(<span class='no'>d2</span>)
-<span class='co'># asreml4</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
-<span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span>~ <span class='fl'>1</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>d2</span>, <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='no'>p1</span> + <span class='fu'>and</span>(<span class='no'>p2</span>))</div><div class='output co'>#&gt; ASReml: Fri Aug 16 15:00:16 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;     -42.1442     18.4535    20  15:00:16     0.0
-#&gt;     -42.0278     17.6439    20  15:00:16     0.0
-#&gt;     -41.9342     16.7446    20  15:00:16     0.0
-#&gt;     -41.9011     16.0176    20  15:00:16     0.0
-#&gt;     -41.9007     15.9308    20  15:00:16     0.0
-#&gt;     -41.9007     15.9294    20  15:00:16     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 15:00:16 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='input'><span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lucid</span>)
-<span class='fu'>vc</span>(<span class='no'>m2</span>)</div><div class='output co'>#&gt;      effect component std.error z.ratio constr
-#&gt;   p1!p1.var     3.865     3.774     1        P
-#&gt;  R!variance    15.93      5.817     2.7      P</div><div class='input'><span class='co'>##     effect component std.error z.ratio      con</span>
-<span class='co'>##  p1!p1.var     3.865     3.774     1   Positive</span>
-<span class='co'>## R!variance    15.93      5.817     2.7 Positive</span>
+  <span class='co'># Calculate the F1 means in Lonnquist, table 1</span>
+  <span class='co'># libs(reshape2)</span>
+  <span class='co'># mat &lt;- acast(dat, p1~p2)</span>
+  <span class='co'># mat[upper.tri(mat)] &lt;- t(mat)[upper.tri(mat)] # make symmetric</span>
+  <span class='co'># diag(mat) &lt;- NA</span>
+  <span class='co'># round(rowMeans(mat, na.rm=TRUE),1)</span>
+  <span class='co'>##    C     L     M     H     G     P     B    RM     N     K    R2    K2</span>
+  <span class='co'>## 94.8  89.2  95.0  96.4  95.3  95.2  97.3  93.7  95.0  94.0  98.9 102.4</span>
 
 
-<span class='co'># Calculate GCA effects</span>
-<span class='no'>m3</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span>~ <span class='no'>p1</span> + <span class='fu'>and</span>(<span class='no'>p2</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>d2</span>)</div><div class='output co'>#&gt; ASReml: Fri Aug 16 15:00:16 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;     -34.0862     15.9294    15  15:00:16     0.0
-#&gt;     -34.0862     15.9294    15  15:00:16     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 15:00:16 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m3</span>)$<span class='no'>fixed</span>-<span class='fl'>1.462</span></div><div class='output co'>#&gt;               effect
+  <span class='co'># ----------</span>
+
+  <span class='co'># asreml4</span>
+  <span class='co'># Mohring 2011 used 6 varieties to calculate GCA &amp; SCA</span>
+  <span class='co'># Matches Table 3, column 2</span>
+  <span class='va'>d2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='fu'><a href='https://rdrr.io/r/base/sets.html'>is.element</a></span><span class='op'>(</span><span class='va'>p1</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"M"</span>,<span class='st'>"H"</span>,<span class='st'>"G"</span>,<span class='st'>"B"</span>,<span class='st'>"K"</span>,<span class='st'>"K2"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>&amp;</span>
+                      <span class='fu'><a href='https://rdrr.io/r/base/sets.html'>is.element</a></span><span class='op'>(</span><span class='va'>p2</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"M"</span>,<span class='st'>"H"</span>,<span class='st'>"G"</span>,<span class='st'>"B"</span>,<span class='st'>"K"</span>,<span class='st'>"K2"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>d2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/droplevels.html'>droplevels</a></span><span class='op'>(</span><span class='va'>d2</span><span class='op'>)</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span>,<span class='va'>lucid</span><span class='op'>)</span>
+  <span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span><span class='op'>~</span> <span class='fl'>1</span>, data<span class='op'>=</span><span class='va'>d2</span>, random <span class='op'>=</span> <span class='op'>~</span> <span class='va'>p1</span> <span class='op'>+</span> <span class='fu'>and</span><span class='op'>(</span><span class='va'>p2</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:48:48 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -42.1442       18.4535     20 17:48:48    0.0
+#&gt;  2      -42.0279       17.6444     20 17:48:48    0.0
+#&gt;  3      -41.9054       16.2198     20 17:48:48    0.0
+#&gt;  4      -41.9007       15.9433     20 17:48:48    0.0</div><div class='input'>  <span class='co'># vc(m2)</span>
+  <span class='co'>##     effect component std.error z.ratio      con</span>
+  <span class='co'>##  p1!p1.var     3.865     3.774     1   Positive</span>
+  <span class='co'>## R!variance    15.93      5.817     2.7 Positive</span>
+  
+  <span class='co'># Calculate GCA effects</span>
+  <span class='va'>m3</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span><span class='op'>~</span> <span class='va'>p1</span> <span class='op'>+</span> <span class='fu'>and</span><span class='op'>(</span><span class='va'>p2</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>d2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:48:48 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -34.0862       15.9294     15 17:48:48    0.0</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>m3</span><span class='op'>)</span><span class='op'>$</span><span class='va'>fixed</span><span class='op'>-</span><span class='fl'>1.462</span>
+</div><div class='output co'>#&gt;               effect
 #&gt; p1_M        -1.46200
 #&gt; p1_H        -0.19950
 #&gt; p1_G        -2.16200
 #&gt; p1_B         1.48800
 #&gt; p1_K        -1.78700
 #&gt; p1_K2        4.12550
-#&gt; (Intercept) 91.77014</div><div class='input'><span class='co'># Matches Gardner 1966, Table 5, Griffing method</span>
+#&gt; (Intercept) 91.77014</div><div class='input'>  <span class='co'># Matches Gardner 1966, Table 5, Griffing method</span>
 
-
-<span class='co'># ----------------------------------------------------------------------------</span>
-
-<span class='kw'>if</span>(<span class='fl'>0</span>){
-  <span class='co'># Mohring 2011 used 6 varieties to calculate GCA &amp; SCA</span>
-  <span class='co'># Matches Table 3, column 2</span>
-  <span class='co'>## d2 &lt;- subset(dat, p1 &lt;!-- %in% c("M","H","G","B","K","K2") &amp;amp; --&gt;</span>
-  <span class='co'>##                     p2 &lt;!-- %in% c("M","H","G","B","K","K2")) --&gt;</span>
-  <span class='co'>## d2 &lt;- droplevels(d2)</span>
-  <span class='co'>## libs(asreml4)</span>
-  <span class='co'>## m2 &lt;- asreml(yield~ 1, data=d2, random = ~ p1 + and(p2))</span>
-  <span class='co'>## libs(lucid)</span>
-  <span class='co'>## vc(m2)</span>
-  <span class='co'>## ##     effect component std.error z.ratio      con</span>
-  <span class='co'>## ##  p1!p1.var     3.865     3.774     1   Positive</span>
-  <span class='co'>## ## R!variance    15.93      5.817     2.7 Positive</span>
-
-
-  <span class='co'>## # Calculate GCA effects</span>
-  <span class='co'>## m3 &lt;- asreml(yield~ p1 + and(p2), data=d2)</span>
-  <span class='co'>## coef(m3)$fixed-1.462</span>
-  <span class='co'>## # Matches Gardner 1966, Table 5, Griffing method</span>
-}</div></pre>
+<span class='co'># }</span>
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -301,7 +263,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

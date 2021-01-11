@@ -30,7 +30,7 @@
 
 
   Electronic version from:
-  http://www.uiweb.uidaho.edu/ag/statprog/ammi/yld.data
+  https://www.uiweb.uidaho.edu/ag/statprog/ammi/yld.data
 
   Used with permission of Bill Price.
 }
@@ -40,7 +40,7 @@
   Additive Main Effects and Multiplicative Interaction Model
   and Stability Estimates.
   JABES, 3, 335--345.
-  http://doi.org/10.2307/1400587
+  https://doi.org/10.2307/1400587
 }
 \references{
   Matthew Kramer (2018).

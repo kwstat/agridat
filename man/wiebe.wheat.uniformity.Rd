@@ -38,14 +38,14 @@
   Variation and Correlation in Grain Yield among 1,500 Wheat
   Nursery Plots.
   Journal of Agricultural Research, 50, 331-357.
-  http://naldc.nal.usda.gov/download/IND43968632/PDF
+  https://naldc.nal.usda.gov/download/IND43968632/PDF
 }
 
 \references{
   D.A. Preece, 1981,
   Distributions of final digits in data,
   \emph{The Statistician}, 30, 31--60.
-  http://doi.org/10.2307/2987702
+  https://doi.org/10.2307/2987702
 
   Wilkinson et al. (1983).
   Nearest Neighbour (NN) Analysis of Field Experiments.

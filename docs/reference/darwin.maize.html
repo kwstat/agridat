@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -150,7 +150,7 @@
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 30 observations on the following 4 variables.</p><dl'>
+    <p>A data frame with 30 observations on the following 4 variables.</p><dl>
     <dt><code>pot</code></dt><dd><p>Pot factor, 4 levels</p></dd>
     <dt><code>pair</code></dt><dd><p>Pair factor, 12 levels</p></dd>
     <dt><code>type</code></dt><dd><p>Type factor, self-pollinated, cross-pollinated</p></dd>
@@ -193,26 +193,29 @@
 
     <p>Darwin, C. R. 1876. <em>The effects of cross and self fertilisation in the
   vegetable kingdom</em>. London: John Murray. Page 16.
-  http://darwin-online.org.uk/converted/published/1881_Worms_F1357/1876_CrossandSelfFertilisation_F1249/1876_CrossandSelfFertilisation_F1249.html</p>
+  https://darwin-online.org.uk/converted/published/1881_Worms_F1357/1876_CrossandSelfFertilisation_F1249/1876_CrossandSelfFertilisation_F1249.html</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>R. A. Fisher, (1935) <em>The Design of Experiments</em>,  Oliver and Boyd. Page 30.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>darwin.maize</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>darwin.maize</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>darwin.maize</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>darwin.maize</span>
 
 <span class='co'># Compare self-pollination with cross-pollination</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'>bwplot</span>(<span class='no'>height</span>~<span class='no'>type</span>, <span class='no'>dat</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"darwin.maize"</span>)</div><div class='img'><img src='darwin.maize-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>bwplot</a></span><span class='op'>(</span><span class='va'>height</span><span class='op'>~</span><span class='va'>type</span>, <span class='va'>dat</span>, main<span class='op'>=</span><span class='st'>"darwin.maize"</span><span class='op'>)</span>
+</div><div class='img'><img src='darwin.maize-1.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># \dontrun{</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>reshape2</span>)
-  <span class='no'>dm</span> <span class='kw'>&lt;-</span> <span class='fu'>melt</span>(<span class='no'>dat</span>)</div><div class='output co'>#&gt; <span class='message'>Using pot, pair, type as id variables</span></div><div class='input'>  <span class='no'>d2</span> <span class='kw'>&lt;-</span> <span class='fu'>dcast</span>(<span class='no'>dm</span>, <span class='no'>pot</span>+<span class='no'>pair</span>~<span class='no'>type</span>)
-  <span class='no'>d2</span>$<span class='no'>diff</span> <span class='kw'>&lt;-</span> <span class='no'>d2</span>$<span class='no'>cross</span>-<span class='no'>d2</span>$<span class='no'>self</span>
-  <span class='fu'><a href='https://rdrr.io/r/stats/t.test.html'>t.test</a></span>(<span class='no'>d2</span>$<span class='no'>diff</span>)</div><div class='output co'>#&gt; 
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>reshape2</span><span class='op'>)</span>
+  <span class='va'>dm</span> <span class='op'>&lt;-</span> <span class='fu'>melt</span><span class='op'>(</span><span class='va'>dat</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>Using pot, pair, type as id variables</span></div><div class='input'>  <span class='va'>d2</span> <span class='op'>&lt;-</span> <span class='fu'>dcast</span><span class='op'>(</span><span class='va'>dm</span>, <span class='va'>pot</span><span class='op'>+</span><span class='va'>pair</span><span class='op'>~</span><span class='va'>type</span><span class='op'>)</span>
+  <span class='va'>d2</span><span class='op'>$</span><span class='va'>diff</span> <span class='op'>&lt;-</span> <span class='va'>d2</span><span class='op'>$</span><span class='va'>cross</span><span class='op'>-</span><span class='va'>d2</span><span class='op'>$</span><span class='va'>self</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/t.test.html'>t.test</a></span><span class='op'>(</span><span class='va'>d2</span><span class='op'>$</span><span class='va'>diff</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt; 	One Sample t-test
 #&gt; 
 #&gt; data:  d2$diff
@@ -223,12 +226,12 @@
 #&gt; sample estimates:
 #&gt; mean of x 
 #&gt;  2.616667 
-#&gt; </div><div class='input'>  ## 	One Sample t-test
-  ## t = 2.148, df = 14, p-value = 0.0497
-  ## alternative hypothesis: true mean is not equal to 0
-  ## 95 percent confidence interval:
-  ##  0.003899165 5.229434169
-# }
+#&gt; </div><div class='input'>  <span class='co'>##   One Sample t-test</span>
+  <span class='co'>## t = 2.148, df = 14, p-value = 0.0497</span>
+  <span class='co'>## alternative hypothesis: true mean is not equal to 0</span>
+  <span class='co'>## 95 percent confidence interval:</span>
+  <span class='co'>##  0.003899165 5.229434169</span>
+<span class='co'># }</span>
 
 
 </div></pre>
@@ -247,7 +250,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -48,9 +48,9 @@
 \source{
 
   Originally from University of Minnesota Precision Agriculture Center.
-  http://www.soils.umn.edu/academics/classes/soil4111/hw/
+  https://www.soils.umn.edu/academics/classes/soil4111/hw/
 
-  Retrieved 27 Aug 2015 from https://web.archive.org/web/20100717003256/http://www.soils.umn.edu/academics/classes/soil4111/files/yield_a.xls
+  Retrieved 27 Aug 2015 from https://web.archive.org/web/20100717003256/https://www.soils.umn.edu/academics/classes/soil4111/files/yield_a.xls
 
   Used under Creative Commons BY-SA 3.0 license.
 }
@@ -86,7 +86,7 @@ yldbrks <- brks + medy
 dat <- transform(dat, yldbin = as.numeric(cut(yield, breaks= yldbrks)))
 
 # Add polygons for soil map units
-# Go to: http://websoilsurvey.nrcs.usda.gov/app/WebSoilSurvey.aspx
+# Go to: https://websoilsurvey.nrcs.usda.gov/app/WebSoilSurvey.aspx
 # Click: Lat and Long. 43.924, -93.975
 # Click the little AOI rectangle icon.  Drag around the field
 # In the AOI Properties, enter the Name: Gartner

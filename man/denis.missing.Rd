@@ -28,7 +28,7 @@
 \references{
   H P Piepho, (1999) Stability analysis using the SAS system,
   Agron Journal, 91, 154--160.
-  http://doi.og/10.2134/agronj1999.00021962009100010024x
+  https://doi.og/10.2134/agronj1999.00021962009100010024x
 }
 
 \examples{

@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Iowa farmland values by county in 1925 — wallace.iowaland" />
-
 <meta property="og:description" content="Iowa farmland values by county in 1925" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,16 +143,15 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Iowa farmland values by county in 1925</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"wallace.iowaland"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"wallace.iowaland"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 99 observations on the following 10 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 99 observations on the following 10 variables.</p><dl>
     <dt><code>county</code></dt><dd><p>county factor, 99 levels</p></dd>
     <dt><code>fips</code></dt><dd><p>FIPS code (state+county)</p></dd>
     <dt><code>lat</code></dt><dd><p>latitude</p></dd>
@@ -159,50 +162,51 @@
     <dt><code>untillable</code></dt><dd><p>percent of land untillable</p></dd>
     <dt><code>fedval</code></dt><dd><p>land value (excluding buildings) per acre, 1925 federal census</p></dd>
     <dt><code>stval</code></dt><dd><p>land value (excluding buildings) per acre, 1925 state census</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>None.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>H.A. Wallace (1926). Comparative Farm-Land Values in Iowa.
   <em>The Journal of Land &amp; Public Utility Economics</em>, 2, 385-392.
   Page 387-388.
-  http://doi.org/10.2307/3138610</p>
-    
+  https://doi.org/10.2307/3138610</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Larry Winner. Spatial Data Analysis.
-  http://www.stat.ufl.edu/~winner/data/iowaland.txt</p>
-    
+  https://www.stat.ufl.edu/~winner/data/iowaland.txt</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>wallace.iowaland</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>wallace.iowaland</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>wallace.iowaland</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>wallace.iowaland</span>
 
 <span class='co'># Interesting trends involving latitude</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'>splom</span>(~<span class='no'>dat</span>[,-<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>:<span class='fl'>2</span>)], <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'p'</span>,<span class='st'>'smooth'</span>), <span class='kw'>lwd</span><span class='kw'>=</span><span class='fl'>2</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"wallace.iowaland"</span>)</div><div class='img'><img src='wallace.iowaland-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/splom.html'>splom</a></span><span class='op'>(</span><span class='op'>~</span><span class='va'>dat</span><span class='op'>[</span>,<span class='op'>-</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>]</span>, type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'p'</span>,<span class='st'>'smooth'</span><span class='op'>)</span>, lwd<span class='op'>=</span><span class='fl'>2</span>, main<span class='op'>=</span><span class='st'>"wallace.iowaland"</span><span class='op'>)</span>
+</div><div class='img'><img src='wallace.iowaland-1.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Means. Similar to Wallace table 1</span>
-<span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='no'>dat</span>[, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'yield'</span>,<span class='st'>'corn'</span>,<span class='st'>'grain'</span>,<span class='st'>'untillable'</span>,<span class='st'>'fedval'</span>)], <span class='fl'>2</span>, <span class='no'>mean</span>)</div><div class='output co'>#&gt;      yield       corn      grain untillable     fedval 
+<span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>[</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'yield'</span>,<span class='st'>'corn'</span>,<span class='st'>'grain'</span>,<span class='st'>'untillable'</span>,<span class='st'>'fedval'</span><span class='op'>)</span><span class='op'>]</span>, <span class='fl'>2</span>, <span class='va'>mean</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;      yield       corn      grain untillable     fedval 
 #&gt;   39.11111   32.47475   21.55556   18.84848  118.67677 </div><div class='input'>
 <span class='co'># Correlations.  Similar to Wallace table 2</span>
-<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>cor</a></span>(<span class='no'>dat</span>[, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'yield'</span>,<span class='st'>'corn'</span>,<span class='st'>'grain'</span>,<span class='st'>'untillable'</span>,<span class='st'>'fedval'</span>)]),<span class='fl'>2</span>)</div><div class='output co'>#&gt;            yield  corn grain untillable fedval
+<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>cor</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>[</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'yield'</span>,<span class='st'>'corn'</span>,<span class='st'>'grain'</span>,<span class='st'>'untillable'</span>,<span class='st'>'fedval'</span><span class='op'>)</span><span class='op'>]</span><span class='op'>)</span>,<span class='fl'>2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;            yield  corn grain untillable fedval
 #&gt; yield       1.00  0.30  0.27      -0.16   0.61
 #&gt; corn        0.30  1.00  0.61      -0.82   0.81
 #&gt; grain       0.27  0.61  1.00      -0.59   0.62
 #&gt; untillable -0.16 -0.82 -0.59       1.00  -0.69
 #&gt; fedval      0.61  0.81  0.62      -0.69   1.00</div><div class='input'>
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>fedval</span> ~ <span class='no'>yield</span> + <span class='no'>corn</span> + <span class='no'>grain</span> + <span class='no'>untillable</span>, <span class='no'>dat</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>m1</span>) <span class='co'># estimates similar to Wallace, top of p. 389</span></div><div class='output co'>#&gt; 
+<span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>fedval</span> <span class='op'>~</span> <span class='va'>yield</span> <span class='op'>+</span> <span class='va'>corn</span> <span class='op'>+</span> <span class='va'>grain</span> <span class='op'>+</span> <span class='va'>untillable</span>, <span class='va'>dat</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span> <span class='co'># estimates similar to Wallace, top of p. 389</span>
+</div><div class='output co'>#&gt; 
 #&gt; Call:
-#&gt; lm.default(formula = fedval ~ yield + corn + grain + untillable, 
-#&gt;     data = dat)
+#&gt; lm(formula = fedval ~ yield + corn + grain + untillable, data = dat)
 #&gt; 
 #&gt; Residuals:
 #&gt;     Min      1Q  Median      3Q     Max 
@@ -223,35 +227,26 @@
 #&gt; F-statistic: 106.3 on 4 and 94 DF,  p-value: &lt; 2.2e-16
 #&gt; </div><div class='input'>
 <span class='co'># Choropleth map</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>maps</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>county.fips</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>polnm</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span>(<span class='st'>'iowa,'</span>,<span class='no'>county</span>)) <span class='co'># polnm example: iowa,adair</span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>maps</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>county.fips</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, polnm <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='st'>'iowa,'</span>,<span class='va'>county</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># polnm example: iowa,adair</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='st'>"latticeExtra"</span>) <span class='co'># for mapplot</span>
-<span class='no'>redblue</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"firebrick"</span>, <span class='st'>"lightgray"</span>, <span class='st'>"#375997"</span>))
-<span class='fu'>mapplot</span>(<span class='no'>polnm</span>~<span class='no'>fedval</span> , <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>colramp</span><span class='kw'>=</span><span class='no'>redblue</span>,
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"wallace.iowaland - Federal land values"</span>,
-        <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Land value, dollars per acre"</span>,
-        <span class='kw'>scales</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>draw</span><span class='kw'>=</span><span class='fl'>FALSE</span>),
-        <span class='kw'>map</span><span class='kw'>=</span><span class='fu'>map</span>(<span class='st'>'county'</span>, <span class='st'>'iowa'</span>, <span class='kw'>plot</span><span class='kw'>=</span><span class='fl'>FALSE</span>,
-          <span class='kw'>fill</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>projection</span><span class='kw'>=</span><span class='st'>"mercator"</span>))</div><div class='output co'>#&gt; <span class='warning'>Warning: 6 unmatched regions: iowa,blackhawk, iowa,buenavista, iowa,cerrogordo, iowa,d....</span></div><div class='img'><img src='wallace.iowaland-2.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='st'>"latticeExtra"</span><span class='op'>)</span> <span class='co'># for mapplot</span>
+<span class='va'>redblue</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"firebrick"</span>, <span class='st'>"lightgray"</span>, <span class='st'>"#375997"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'>mapplot</span><span class='op'>(</span><span class='va'>polnm</span><span class='op'>~</span><span class='va'>fedval</span> , data<span class='op'>=</span><span class='va'>dat</span>, colramp<span class='op'>=</span><span class='va'>redblue</span>,
+        main<span class='op'>=</span><span class='st'>"wallace.iowaland - Federal land values"</span>,
+        xlab<span class='op'>=</span><span class='st'>"Land value, dollars per acre"</span>,
+        scales<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>draw<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span>,
+        map<span class='op'>=</span><span class='fu'>map</span><span class='op'>(</span><span class='st'>'county'</span>, <span class='st'>'iowa'</span>, plot<span class='op'>=</span><span class='cn'>FALSE</span>,
+          fill<span class='op'>=</span><span class='cn'>TRUE</span>, projection<span class='op'>=</span><span class='st'>"mercator"</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='warning'>Warning: 6 unmatched regions: iowa,blackhawk, iowa,buenavista, iowa,cerrogordo, iowa,d....</span></div><div class='img'><img src='wallace.iowaland-2.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -262,7 +257,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

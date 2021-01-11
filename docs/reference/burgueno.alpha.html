@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -146,12 +146,12 @@
     <p>Incomplete block alpha design</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"burgueno.alpha"</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"burgueno.alpha"</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 48 observations on the following 6 variables.</p><dl'>
+    <p>A data frame with 48 observations on the following 6 variables.</p><dl>
     <dt><code>rep</code></dt><dd><p>rep, 3 levels</p></dd>
     <dt><code>block</code></dt><dd><p>block, 12 levels</p></dd>
     <dt><code>row</code></dt><dd><p>row</p></dd>
@@ -178,20 +178,22 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>burgueno.alpha</span>)
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>burgueno.alpha</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>burgueno.alpha</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>burgueno.alpha</span>
 
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-  <span class='fu'>desplot</span>(<span class='no'>dat</span>, <span class='no'>yield</span>~<span class='no'>col</span>*<span class='no'>row</span>,
-          <span class='kw'>out1</span><span class='kw'>=</span><span class='no'>rep</span>, <span class='kw'>out2</span><span class='kw'>=</span><span class='no'>block</span>, <span class='co'># aspect unknown</span>
-          <span class='kw'>text</span><span class='kw'>=</span><span class='no'>gen</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>1</span>,<span class='kw'>shorten</span><span class='kw'>=</span><span class='st'>"none"</span>,
-          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>'burgueno.alpha'</span>)</div><div class='img'><img src='burgueno.alpha-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+  <span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>yield</span><span class='op'>~</span><span class='va'>col</span><span class='op'>*</span><span class='va'>row</span>,
+          out1<span class='op'>=</span><span class='va'>rep</span>, out2<span class='op'>=</span><span class='va'>block</span>, <span class='co'># aspect unknown</span>
+          text<span class='op'>=</span><span class='va'>gen</span>, cex<span class='op'>=</span><span class='fl'>1</span>,shorten<span class='op'>=</span><span class='st'>"none"</span>,
+          main<span class='op'>=</span><span class='st'>'burgueno.alpha'</span><span class='op'>)</span>
+</div><div class='img'><img src='burgueno.alpha-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lme4</span>,<span class='no'>lucid</span>)
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lme4</span>,<span class='va'>lucid</span><span class='op'>)</span>
   <span class='co'># Inc block model</span>
-  <span class='no'>m0</span> <span class='kw'>&lt;-</span> <span class='fu'>lmer</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span> + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>rep</span>/<span class='no'>block</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-  <span class='fu'>vc</span>(<span class='no'>m0</span>) <span class='co'># Matches Burgueno p. 26</span></div><div class='output co'>#&gt;        grp        var1 var2   vcov sdcor
+  <span class='va'>m0</span> <span class='op'>&lt;-</span> <span class='fu'>lmer</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>rep</span><span class='op'>/</span><span class='va'>block</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+  <span class='fu'>vc</span><span class='op'>(</span><span class='va'>m0</span><span class='op'>)</span> <span class='co'># Matches Burgueno p. 26</span>
+</div><div class='output co'>#&gt;        grp        var1 var2   vcov sdcor
 #&gt;  block:rep (Intercept) &lt;NA&gt;  86900 294.8
 #&gt;        rep (Intercept) &lt;NA&gt; 200900 448.2
 #&gt;   Residual        &lt;NA&gt; &lt;NA&gt; 133200 365  </div><div class='input'>  <span class='co'>##        grp        var1 var2   vcov sdcor</span>
@@ -200,204 +202,247 @@
   <span class='co'>##   Residual        &lt;NA&gt; &lt;NA&gt; 133200 365  </span>
 
 
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
-  <span class='kw'>if</span>( <span class='kw pkg'>utils</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/r/utils/packageDescription.html'>packageVersion</a></span>(<span class='st'>"asreml"</span>) <span class='kw'>&gt;</span> <span class='st'>"4"</span>) {
-    <span class='co'># asreml4</span>
-
-    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>xf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>col</span>), <span class='kw'>yf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>))
-    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>xf</span>, <span class='no'>dat</span>$<span class='no'>yf</span>),]
-
-    <span class='co'># Sequence of models on page 36</span>
-
-    <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~  <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-    <span class='no'>m1</span>$<span class='no'>loglik</span> <span class='co'># -232.13</span>
-
-    <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~  <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-                 <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='no'>rep</span>)
-    <span class='no'>m2</span>$<span class='no'>loglik</span> <span class='co'># -223.48</span>
-
-    <span class='co'># Inc Block model</span>
-    <span class='no'>m3</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~  <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-                 <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='no'>rep</span>/<span class='no'>block</span>)
-    <span class='no'>m3</span>$<span class='no'>loglik</span> <span class='co'># -221.42</span>
-    <span class='no'>m3</span>$<span class='no'>coef</span>$<span class='no'>fixed</span> <span class='co'># Matches solution on p. 27</span>
-
-    <span class='co'># AR1xAR1 model</span>
-    <span class='no'>m4</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='fl'>1</span> + <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-                 <span class='kw'>resid</span> <span class='kw'>=</span> ~<span class='fu'>ar1</span>(<span class='no'>xf</span>):<span class='fu'>ar1</span>(<span class='no'>yf</span>))
-    <span class='no'>m4</span>$<span class='no'>loglik</span> <span class='co'># -221.47</span>
-    <span class='fu'><a href='https://rdrr.io/r/base/plot.html'>plot</a></span>(<span class='fu'>varioGram</span>(<span class='no'>m4</span>), <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"burgueno.alpha"</span>) <span class='co'># Figure 1</span>
-
-    <span class='no'>m5</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='fl'>1</span> + <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-                 <span class='kw'>random</span><span class='kw'>=</span> ~ <span class='no'>yf</span>, <span class='kw'>resid</span> <span class='kw'>=</span> ~<span class='fu'>ar1</span>(<span class='no'>xf</span>):<span class='fu'>ar1</span>(<span class='no'>yf</span>))
-    <span class='no'>m5</span>$<span class='no'>loglik</span> <span class='co'># -220.07</span>
-
-    <span class='no'>m6</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='fl'>1</span> + <span class='no'>gen</span> + <span class='fu'>pol</span>(<span class='no'>yf</span>,-<span class='fl'>2</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-                 <span class='kw'>resid</span> <span class='kw'>=</span> ~<span class='fu'>ar1</span>(<span class='no'>xf</span>):<span class='fu'>ar1</span>(<span class='no'>yf</span>))
-    <span class='no'>m6</span>$<span class='no'>loglik</span> <span class='co'># -204.64</span>
-
-  <span class='no'>m7</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='fl'>1</span> + <span class='no'>gen</span> + <span class='fu'>lin</span>(<span class='no'>yf</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-               <span class='kw'>random</span><span class='kw'>=</span> ~ <span class='fu'>spl</span>(<span class='no'>yf</span>), <span class='kw'>resid</span> <span class='kw'>=</span> ~<span class='fu'>ar1</span>(<span class='no'>xf</span>):<span class='fu'>ar1</span>(<span class='no'>yf</span>))
-  <span class='no'>m7</span>$<span class='no'>loglik</span> <span class='co'># -212.51</span>
-
-  <span class='no'>m8</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='fl'>1</span> + <span class='no'>gen</span> + <span class='fu'>lin</span>(<span class='no'>yf</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-               <span class='kw'>random</span><span class='kw'>=</span> ~ <span class='fu'>spl</span>(<span class='no'>yf</span>))
-  <span class='no'>m8</span>$<span class='no'>loglik</span> <span class='co'># -213.91</span>
-
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span><span class='op'>)</span> <span class='co'># asreml4</span>
+    
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, xf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>col</span><span class='op'>)</span>, yf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>row</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>xf</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>yf</span><span class='op'>)</span>,<span class='op'>]</span>                 
+  
+  <span class='co'># Sequence of models on page 36</span>
+  
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span>  <span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:56 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -232.128      424504.3     32 17:07:56    0.0</div><div class='input'>  <span class='va'>m1</span><span class='op'>$</span><span class='va'>loglik</span> <span class='co'># -232.13</span>
+</div><div class='output co'>#&gt; [1] -232.1277</div><div class='input'>  
+  <span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span>  <span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+               random <span class='op'>=</span> <span class='op'>~</span> <span class='va'>rep</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:56 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -226.562      282408.0     32 17:07:56    0.0
+#&gt;  2      -225.458      258453.6     32 17:07:56    0.0
+#&gt;  3      -224.388      235077.8     32 17:07:56    0.0
+#&gt;  4      -223.676      216846.8     32 17:07:56    0.0
+#&gt;  5      -223.503      209444.3     32 17:07:56    0.0
+#&gt;  6      -223.483      206934.7     32 17:07:56    0.0
+#&gt;  7      -223.482      206516.9     32 17:07:56    0.0</div><div class='input'>  <span class='va'>m2</span><span class='op'>$</span><span class='va'>loglik</span> <span class='co'># -223.48</span>
+</div><div class='output co'>#&gt; [1] -223.4824</div><div class='input'>  
+  <span class='co'># Inc Block model</span>
+  <span class='va'>m3</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span>  <span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+               random <span class='op'>=</span> <span class='op'>~</span> <span class='va'>rep</span><span class='op'>/</span><span class='va'>block</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:56 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -225.610      246800.7     32 17:07:56    0.0
+#&gt;  2      -223.872      199712.8     32 17:07:56    0.0
+#&gt;  3      -222.453      162923.0     32 17:07:56    0.0
+#&gt;  4      -221.644      140326.6     32 17:07:56    0.0
+#&gt;  5      -221.443      135401.9     32 17:07:56    0.0
+#&gt;  6      -221.417      133560.7     32 17:07:56    0.0
+#&gt;  7      -221.417      133229.8     32 17:07:56    0.0</div><div class='input'>  <span class='va'>m3</span><span class='op'>$</span><span class='va'>loglik</span> <span class='co'># -221.42</span>
+</div><div class='output co'>#&gt; [1] -221.4167</div><div class='input'>  <span class='va'>m3</span><span class='op'>$</span><span class='va'>coef</span><span class='op'>$</span><span class='va'>fixed</span> <span class='co'># Matches solution on p. 27</span>
+</div><div class='output co'>#&gt;                     bu
+#&gt; gen_G01        0.00000
+#&gt; gen_G02     -284.28340
+#&gt; gen_G03      493.85828
+#&gt; gen_G04      699.29379
+#&gt; gen_G05      863.39910
+#&gt; gen_G06       30.97441
+#&gt; gen_G07     -115.81504
+#&gt; gen_G08      157.76411
+#&gt; gen_G09      407.24195
+#&gt; gen_G10      777.17723
+#&gt; gen_G11     1038.46296
+#&gt; gen_G12      648.02712
+#&gt; gen_G13      248.18656
+#&gt; gen_G14      405.45778
+#&gt; gen_G15      942.48436
+#&gt; gen_G16      453.78449
+#&gt; (Intercept)  907.97831
+#&gt; attr(,"terms")
+#&gt;                   tname  n
+#&gt; gen                 gen 16
+#&gt; (Intercept) (Intercept)  1</div><div class='input'>  
+  <span class='co'># AR1xAR1 model</span>
+  <span class='va'>m4</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>+</span> <span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+               resid <span class='op'>=</span> <span class='op'>~</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>xf</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:56 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -229.632      369295.0     32 17:07:56    0.0
+#&gt;  2      -225.313      310549.6     32 17:07:56    0.0
+#&gt;  3      -222.576      315026.1     32 17:07:56    0.0
+#&gt;  4      -221.714      350768.1     32 17:07:56    0.0
+#&gt;  5      -221.498      390126.2     32 17:07:56    0.0
+#&gt;  6      -221.475      406435.9     32 17:07:56    0.0
+#&gt;  7      -221.473      412526.0     32 17:07:56    0.0
+#&gt;  8      -221.472      414688.0     32 17:07:56    0.0</div><div class='input'>  <span class='va'>m4</span><span class='op'>$</span><span class='va'>loglik</span> <span class='co'># -221.47</span>
+</div><div class='output co'>#&gt; [1] -221.4725</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='fu'>varioGram</span><span class='op'>(</span><span class='va'>m4</span><span class='op'>)</span>, main<span class='op'>=</span><span class='st'>"burgueno.alpha"</span><span class='op'>)</span> <span class='co'># Figure 1</span>
+</div><div class='img'><img src='burgueno.alpha-2.png' alt='' width='700' height='433' /></div><div class='input'>  
+  <span class='va'>m5</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>+</span> <span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+               random<span class='op'>=</span> <span class='op'>~</span> <span class='va'>yf</span>, resid <span class='op'>=</span> <span class='op'>~</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>xf</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:56 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -226.301      279679.7     32 17:07:56    0.0
+#&gt;  2      -223.503      233517.8     32 17:07:56    0.0
+#&gt;  3      -221.336      202245.4     32 17:07:56    0.0
+#&gt;  4      -220.254      181270.7     32 17:07:56    0.0
+#&gt;  5      -220.081      172053.0     32 17:07:56    0.0
+#&gt;  6      -220.068      170878.3     32 17:07:56    0.0
+#&gt;  7      -220.068      170961.0     32 17:07:56    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='va'>m5</span><span class='op'>$</span><span class='va'>loglik</span> <span class='co'># -220.07</span>
+</div><div class='output co'>#&gt; [1] -220.0677</div><div class='input'>  
+  <span class='va'>m6</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='fu'>pol</span><span class='op'>(</span><span class='va'>yf</span>,<span class='op'>-</span><span class='fl'>2</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+               resid <span class='op'>=</span> <span class='op'>~</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>xf</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:56 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -205.690      156958.0     30 17:07:56    0.0
+#&gt;  2      -205.189      156511.0     30 17:07:56    0.0
+#&gt;  3      -204.651      170349.2     30 17:07:56    0.0
+#&gt;  4      -204.640      171539.3     30 17:07:56    0.0
+#&gt;  5      -204.639      171955.1     30 17:07:56    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='va'>m6</span><span class='op'>$</span><span class='va'>loglik</span> <span class='co'># -204.64</span>
+</div><div class='output co'>#&gt; [1] -204.6394</div><div class='input'>  
+  <span class='va'>m7</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='fu'>lin</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+               random<span class='op'>=</span> <span class='op'>~</span> <span class='fu'>spl</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span>, resid <span class='op'>=</span> <span class='op'>~</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>xf</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:56 2021
+#&gt; Spline: design points closer than 0.0005 have been merged.
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -213.764      161236.1     31 17:07:57    0.0
+#&gt;  2      -213.161      158001.3     31 17:07:57    0.0
+#&gt;  3      -212.686      158486.3     31 17:07:57    0.0
+#&gt;  4      -212.518      161586.3     31 17:07:57    0.0
+#&gt;  5      -212.512      160691.0     31 17:07:57    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='va'>m7</span><span class='op'>$</span><span class='va'>loglik</span> <span class='co'># -212.51</span>
+</div><div class='output co'>#&gt; [1] -212.5125</div><div class='input'>  
+  <span class='va'>m8</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='fu'>lin</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+               random<span class='op'>=</span> <span class='op'>~</span> <span class='fu'>spl</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:57 2021
+#&gt; Spline: design points closer than 0.0005 have been merged.
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -214.401      162571.5     31 17:07:57    0.0
+#&gt;  2      -214.190      158323.8     31 17:07:57    0.0
+#&gt;  3      -214.000      153413.7     31 17:07:57    0.0
+#&gt;  4      -213.916      149071.2     31 17:07:57    0.0
+#&gt;  5      -213.914      148249.7     31 17:07:57    0.0</div><div class='input'>  <span class='va'>m8</span><span class='op'>$</span><span class='va'>loglik</span> <span class='co'># -213.91</span>
+</div><div class='output co'>#&gt; [1] -213.9141</div><div class='input'>  
   <span class='co'># Polynomial model with predictions</span>
-  <span class='no'>m9</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='fl'>1</span> + <span class='no'>gen</span> + <span class='fu'>pol</span>(<span class='no'>yf</span>,-<span class='fl'>2</span>) + <span class='fu'>pol</span>(<span class='no'>xf</span>,-<span class='fl'>2</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-               <span class='kw'>random</span><span class='kw'>=</span> ~ <span class='fu'>spl</span>(<span class='no'>yf</span>),
-               <span class='kw'>resid</span> <span class='kw'>=</span> ~<span class='fu'>ar1</span>(<span class='no'>xf</span>):<span class='fu'>ar1</span>(<span class='no'>yf</span>))
-  <span class='no'>m9</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span>(<span class='no'>m9</span>)
-  <span class='no'>m9</span>$<span class='no'>loglik</span> <span class='co'># -191.44 vs -189.61</span>
-  <span class='no'>p9</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m9</span>, <span class='kw'>classify</span><span class='kw'>=</span><span class='st'>"gen:xf:yf"</span>, <span class='kw'>levels</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>xf</span><span class='kw'>=</span><span class='fl'>1</span>,<span class='kw'>yf</span><span class='kw'>=</span><span class='fl'>1</span>))
-  <span class='no'>p9</span>
-
-  <span class='no'>m10</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='fl'>1</span> + <span class='no'>gen</span> + <span class='fu'>lin</span>(<span class='no'>yf</span>)+<span class='fu'>lin</span>(<span class='no'>xf</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-                <span class='kw'>resid</span> <span class='kw'>=</span> ~<span class='fu'>ar1</span>(<span class='no'>xf</span>):<span class='fu'>ar1</span>(<span class='no'>yf</span>))
-  <span class='no'>m10</span>$<span class='no'>loglik</span> <span class='co'># -211.56</span>
-
-  <span class='no'>m11</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='fl'>1</span> + <span class='no'>gen</span> + <span class='fu'>lin</span>(<span class='no'>yf</span>)+<span class='fu'>lin</span>(<span class='no'>xf</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-                <span class='kw'>random</span><span class='kw'>=</span> ~ <span class='fu'>spl</span>(<span class='no'>yf</span>),
-                <span class='kw'>resid</span> <span class='kw'>=</span> ~<span class='fu'>ar1</span>(<span class='no'>xf</span>):<span class='fu'>ar1</span>(<span class='no'>yf</span>))
-  <span class='no'>m11</span>$<span class='no'>loglik</span> <span class='co'># -208.90</span>
-
-  <span class='no'>m12</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='fl'>1</span> + <span class='no'>gen</span> + <span class='fu'>lin</span>(<span class='no'>yf</span>)+<span class='fu'>lin</span>(<span class='no'>xf</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-                <span class='kw'>random</span><span class='kw'>=</span> ~ <span class='fu'>spl</span>(<span class='no'>yf</span>)+<span class='fu'>spl</span>(<span class='no'>xf</span>),
-                <span class='kw'>resid</span> <span class='kw'>=</span> ~<span class='fu'>ar1</span>(<span class='no'>xf</span>):<span class='fu'>ar1</span>(<span class='no'>yf</span>))
-  <span class='no'>m12</span>$<span class='no'>loglik</span> <span class='co'># -206.82</span>
-
-  <span class='no'>m13</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='fl'>1</span> + <span class='no'>gen</span> + <span class='fu'>lin</span>(<span class='no'>yf</span>)+<span class='fu'>lin</span>(<span class='no'>xf</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-                <span class='kw'>random</span><span class='kw'>=</span> ~ <span class='fu'>spl</span>(<span class='no'>yf</span>)+<span class='fu'>spl</span>(<span class='no'>xf</span>))
-  <span class='no'>m13</span>$<span class='no'>loglik</span> <span class='co'># -207.52</span>
-
-  }</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:44 2020
-#&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -232.128      424504.3     32 15:47:44    0.0
-#&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:44 2020
-#&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -226.562      282408.0     32 15:47:44    0.0
-#&gt;  2      -225.458      258453.6     32 15:47:44    0.0
-#&gt;  3      -224.388      235077.8     32 15:47:44    0.0
-#&gt;  4      -223.676      216846.8     32 15:47:44    0.0
-#&gt;  5      -223.503      209444.3     32 15:47:44    0.0
-#&gt;  6      -223.483      206934.7     32 15:47:44    0.0
-#&gt;  7      -223.482      206516.9     32 15:47:44    0.0
-#&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:44 2020
-#&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -225.610      246800.7     32 15:47:44    0.0
-#&gt;  2      -223.872      199712.8     32 15:47:44    0.0
-#&gt;  3      -222.453      162923.0     32 15:47:44    0.0
-#&gt;  4      -221.644      140326.6     32 15:47:44    0.0
-#&gt;  5      -221.443      135401.9     32 15:47:44    0.0
-#&gt;  6      -221.417      133560.7     32 15:47:44    0.0
-#&gt;  7      -221.417      133229.8     32 15:47:44    0.0
-#&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:44 2020
-#&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -229.632      369295.0     32 15:47:44    0.0
-#&gt;  2      -225.313      310549.6     32 15:47:44    0.0
-#&gt;  3      -222.576      315026.1     32 15:47:44    0.0
-#&gt;  4      -221.714      350768.1     32 15:47:44    0.0
-#&gt;  5      -221.498      390126.2     32 15:47:44    0.0
-#&gt;  6      -221.475      406435.9     32 15:47:44    0.0
-#&gt;  7      -221.473      412526.0     32 15:47:44    0.0
-#&gt;  8      -221.472      414688.0     32 15:47:44    0.0</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:45 2020
-#&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -226.301      279679.7     32 15:47:45    0.0
-#&gt;  2      -223.503      233517.8     32 15:47:45    0.0
-#&gt;  3      -221.336      202245.4     32 15:47:45    0.0
-#&gt;  4      -220.254      181270.7     32 15:47:45    0.0
-#&gt;  5      -220.081      172053.0     32 15:47:45    0.0
-#&gt;  6      -220.068      170878.3     32 15:47:45    0.0
-#&gt;  7      -220.068      170961.0     32 15:47:45    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:45 2020
-#&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -205.690      156958.0     30 15:47:45    0.0
-#&gt;  2      -205.189      156511.0     30 15:47:45    0.0
-#&gt;  3      -204.651      170349.2     30 15:47:45    0.0
-#&gt;  4      -204.640      171539.3     30 15:47:45    0.0
-#&gt;  5      -204.639      171955.1     30 15:47:45    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:45 2020
+  <span class='va'>m9</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='fu'>pol</span><span class='op'>(</span><span class='va'>yf</span>,<span class='op'>-</span><span class='fl'>2</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>pol</span><span class='op'>(</span><span class='va'>xf</span>,<span class='op'>-</span><span class='fl'>2</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+               random<span class='op'>=</span> <span class='op'>~</span> <span class='fu'>spl</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span>,
+               resid <span class='op'>=</span> <span class='op'>~</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>xf</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:57 2021
 #&gt; Spline: design points closer than 0.0005 have been merged.
 #&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -213.764      161236.1     31 15:47:45    0.0
-#&gt;  2      -213.161      158001.3     31 15:47:45    0.0
-#&gt;  3      -212.686      158486.3     31 15:47:45    0.0
-#&gt;  4      -212.518      161586.3     31 15:47:45    0.0
-#&gt;  5      -212.512      160691.0     31 15:47:45    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:45 2020
+#&gt;  1      -192.357      124656.6     28 17:07:57    0.0 (1 restrained)
+#&gt;  2      -191.606      114513.8     28 17:07:57    0.0
+#&gt;  3      -191.493      114311.7     28 17:07:57    0.0
+#&gt;  4      -191.452      115391.7     28 17:07:57    0.0
+#&gt;  5      -191.446      114966.4     28 17:07:57    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='va'>m9</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m9</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:57 2021
 #&gt; Spline: design points closer than 0.0005 have been merged.
 #&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -214.401      162571.5     31 15:47:45    0.0
-#&gt;  2      -214.190      158323.8     31 15:47:45    0.0
-#&gt;  3      -214.000      153413.7     31 15:47:45    0.0
-#&gt;  4      -213.916      149071.2     31 15:47:45    0.0
-#&gt;  5      -213.914      148249.7     31 15:47:45    0.0
-#&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:45 2020
+#&gt;  1      -191.443      115328.5     28 17:07:57    0.0
+#&gt;  2      -191.443      115251.7     28 17:07:57    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='va'>m9</span><span class='op'>$</span><span class='va'>loglik</span> <span class='co'># -191.44 vs -189.61</span>
+</div><div class='output co'>#&gt; [1] -191.4426</div><div class='input'>  <span class='va'>p9</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>m9</span>, classify<span class='op'>=</span><span class='st'>"gen:xf:yf"</span>, levels<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>xf<span class='op'>=</span><span class='fl'>1</span>,yf<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span> 
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:57 2021
 #&gt; Spline: design points closer than 0.0005 have been merged.
 #&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -192.357      124656.6     28 15:47:45    0.0 (1 restrained)
-#&gt;  2      -191.606      114513.8     28 15:47:45    0.0
-#&gt;  3      -191.493      114311.7     28 15:47:45    0.0
-#&gt;  4      -191.452      115391.7     28 15:47:45    0.0
-#&gt;  5      -191.446      114966.4     28 15:47:45    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:45 2020
+#&gt;  1      -191.442      115160.3     28 17:07:57    0.0
+#&gt;  2      -191.442      115178.5     28 17:07:57    0.0
+#&gt;  3      -191.442      115210.1     28 17:07:57    0.0</div><div class='input'>  <span class='va'>p9</span>
+</div><div class='output co'>#&gt; $pvals
+#&gt; 
+#&gt; Notes:
+#&gt; <span style='color: #0000BB;'>- The predictions are obtained by averaging across the hypertable
+#&gt;   calculated from model terms constructed solely from factors in
+#&gt;   the averaging and classify sets.</span><span>
+#&gt; </span><span style='color: #0000BB;'>- Use 'average' to move ignored factors into the averaging set.</span><span>
+#&gt; </span><span style='color: #0000BB;'>
+#&gt; </span><span>
+#&gt;    gen     xf     yf predicted.value std.error    status
+#&gt; 1  G01 order1 order1        1967.154  265.0976 Estimable
+#&gt; 2  G02 order1 order1        2018.990  282.6813 Estimable
+#&gt; 3  G03 order1 order1        2374.678  233.9746 Estimable
+#&gt; 4  G04 order1 order1        2539.440  238.5453 Estimable
+#&gt; 5  G05 order1 order1        2817.841  261.9213 Estimable
+#&gt; 6  G06 order1 order1        2134.310  260.1078 Estimable
+#&gt; 7  G07 order1 order1        2028.879  287.5826 Estimable
+#&gt; 8  G08 order1 order1        2205.963  271.0232 Estimable
+#&gt; 9  G09 order1 order1        2346.313  251.1598 Estimable
+#&gt; 10 G10 order1 order1        2831.710  233.6259 Estimable
+#&gt; 11 G11 order1 order1        2868.783  238.5870 Estimable
+#&gt; 12 G12 order1 order1        2685.266  246.1334 Estimable
+#&gt; 13 G13 order1 order1        2202.347  277.7411 Estimable
+#&gt; 14 G14 order1 order1        2633.541  285.9366 Estimable
+#&gt; 15 G15 order1 order1        2798.175  270.0601 Estimable
+#&gt; 16 G16 order1 order1        2365.906  238.3437 Estimable
+#&gt; 
+#&gt; $avsed
+#&gt;  overall 
+#&gt; 275.0335 
+#&gt; </div><div class='input'>  
+  <span class='va'>m10</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='fu'>lin</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span><span class='op'>+</span><span class='fu'>lin</span><span class='op'>(</span><span class='va'>xf</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+                resid <span class='op'>=</span> <span class='op'>~</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>xf</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:57 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -218.438      319937.6     30 17:07:57    0.0
+#&gt;  2      -214.809      284438.5     30 17:07:57    0.0
+#&gt;  3      -212.478      301889.6     30 17:07:57    0.0
+#&gt;  4      -211.749      343343.7     30 17:07:57    0.0
+#&gt;  5      -211.575      384479.3     30 17:07:57    0.0
+#&gt;  6      -211.559      399834.4     30 17:07:57    0.0
+#&gt;  7      -211.557      405022.4     30 17:07:57    0.0</div><div class='input'>  <span class='va'>m10</span><span class='op'>$</span><span class='va'>loglik</span> <span class='co'># -211.56</span>
+</div><div class='output co'>#&gt; [1] -211.5574</div><div class='input'>  
+  <span class='va'>m11</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='fu'>lin</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span><span class='op'>+</span><span class='fu'>lin</span><span class='op'>(</span><span class='va'>xf</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+                random<span class='op'>=</span> <span class='op'>~</span> <span class='fu'>spl</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span>,
+                resid <span class='op'>=</span> <span class='op'>~</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>xf</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:57 2021
 #&gt; Spline: design points closer than 0.0005 have been merged.
 #&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -191.443      115328.5     28 15:47:45    0.0
-#&gt;  2      -191.443      115251.7     28 15:47:45    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:45 2020
-#&gt; Spline: design points closer than 0.0005 have been merged.
-#&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -191.442      115160.3     28 15:47:45    0.0
-#&gt;  2      -191.442      115178.5     28 15:47:45    0.0
-#&gt;  3      -191.442      115210.1     28 15:47:45    0.0
-#&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:45 2020
-#&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -218.438      319937.6     30 15:47:45    0.0
-#&gt;  2      -214.809      284438.5     30 15:47:45    0.0
-#&gt;  3      -212.478      301889.6     30 15:47:45    0.0
-#&gt;  4      -211.749      343343.7     30 15:47:45    0.0
-#&gt;  5      -211.575      384479.3     30 15:47:45    0.0
-#&gt;  6      -211.559      399834.4     30 15:47:45    0.0
-#&gt;  7      -211.557      405022.4     30 15:47:45    0.0
-#&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:45 2020
-#&gt; Spline: design points closer than 0.0005 have been merged.
-#&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -210.199      166458.9     30 15:47:45    0.0
-#&gt;  2      -209.562      164032.3     30 15:47:45    0.0
-#&gt;  3      -209.064      166788.1     30 15:47:45    0.0
-#&gt;  4      -208.901      173307.2     30 15:47:45    0.0
-#&gt;  5      -208.898      172903.8     30 15:47:45    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:45 2020
+#&gt;  1      -210.199      166458.9     30 17:07:57    0.0
+#&gt;  2      -209.562      164032.3     30 17:07:57    0.0
+#&gt;  3      -209.064      166788.1     30 17:07:57    0.0
+#&gt;  4      -208.901      173307.2     30 17:07:57    0.0
+#&gt;  5      -208.898      172903.8     30 17:07:57    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='va'>m11</span><span class='op'>$</span><span class='va'>loglik</span> <span class='co'># -208.90</span>
+</div><div class='output co'>#&gt; [1] -208.8981</div><div class='input'>  
+  <span class='va'>m12</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='fu'>lin</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span><span class='op'>+</span><span class='fu'>lin</span><span class='op'>(</span><span class='va'>xf</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+                random<span class='op'>=</span> <span class='op'>~</span> <span class='fu'>spl</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span><span class='op'>+</span><span class='fu'>spl</span><span class='op'>(</span><span class='va'>xf</span><span class='op'>)</span>,
+                resid <span class='op'>=</span> <span class='op'>~</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>xf</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:57 2021
 #&gt; Spline: design points closer than 0.0005 have been merged.
 #&gt; Spline: design points closer than 0.0007 have been merged.
 #&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -208.573      135590.1     30 15:47:45    0.0 (1 restrained)
-#&gt;  2      -207.575      121857.9     30 15:47:45    0.0
-#&gt;  3      -207.068      114896.2     30 15:47:45    0.0
-#&gt;  4      -206.844      112501.6     30 15:47:45    0.0
-#&gt;  5      -206.826      111035.7     30 15:47:45    0.0
-#&gt;  6      -206.825      111519.0     30 15:47:45    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='img'><img src='burgueno.alpha-2.png' alt='' width='700' height='433' /></div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:45 2020
+#&gt;  1      -208.573      135590.1     30 17:07:57    0.0 (1 restrained)
+#&gt;  2      -207.575      121857.9     30 17:07:57    0.0
+#&gt;  3      -207.068      114896.2     30 17:07:57    0.0
+#&gt;  4      -206.844      112501.6     30 17:07:57    0.0
+#&gt;  5      -206.826      111035.7     30 17:07:57    0.0
+#&gt;  6      -206.825      111519.0     30 17:07:57    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='va'>m12</span><span class='op'>$</span><span class='va'>loglik</span> <span class='co'># -206.82</span>
+</div><div class='output co'>#&gt; [1] -206.8252</div><div class='input'>  
+  <span class='va'>m13</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='fu'>lin</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span><span class='op'>+</span><span class='fu'>lin</span><span class='op'>(</span><span class='va'>xf</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+                random<span class='op'>=</span> <span class='op'>~</span> <span class='fu'>spl</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span><span class='op'>+</span><span class='fu'>spl</span><span class='op'>(</span><span class='va'>xf</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:57 2021
 #&gt; Spline: design points closer than 0.0005 have been merged.
 #&gt; Spline: design points closer than 0.0007 have been merged.
 #&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -208.583      129506.5     30 15:47:45    0.0
-#&gt;  2      -208.160      124731.6     30 15:47:45    0.0
-#&gt;  3      -207.765      118920.6     30 15:47:45    0.0
-#&gt;  4      -207.541      113114.9     30 15:47:45    0.0
-#&gt;  5      -207.517      111017.9     30 15:47:45    0.0
-#&gt;  6      -207.516      110690.9     30 15:47:45    0.0</div><div class='output co'>#&gt; [1] -207.5164</div><div class='input'># }
-</div></pre>
+#&gt;  1      -208.583      129506.5     30 17:07:57    0.0
+#&gt;  2      -208.160      124731.6     30 17:07:57    0.0
+#&gt;  3      -207.765      118920.6     30 17:07:57    0.0
+#&gt;  4      -207.541      113114.9     30 17:07:57    0.0
+#&gt;  5      -207.517      111017.9     30 17:07:57    0.0
+#&gt;  6      -207.516      110690.9     30 17:07:57    0.0</div><div class='input'>  <span class='va'>m13</span><span class='op'>$</span><span class='va'>loglik</span> <span class='co'># -207.52</span>
+</div><div class='output co'>#&gt; [1] -207.5164</div><div class='input'>
+<span class='co'># }</span>
+</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -413,7 +458,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

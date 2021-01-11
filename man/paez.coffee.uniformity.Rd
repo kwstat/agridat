@@ -36,7 +36,7 @@
   Gilberto Paez Bogarin (1962).
   Estudios sobre tamano y forma de parcela para ensayos en cafe.
   Instituto Interamericano de Ciencias Agricolas de la O.E.A. Centro Tropical de Investigacion y Ensenanza para Graduados. Costa Rica.
-  http://hdl.handle.net/11554/1892
+  https://hdl.handle.net/11554/1892
 }
 \references{
   None

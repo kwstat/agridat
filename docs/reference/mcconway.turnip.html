@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="RCB experiment of turnips — mcconway.turnip" />
-
 <meta property="og:description" content="RCB experiment of turnips, 2 treatments for planting date and density" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,23 +143,22 @@
     </div>
 
     <div class="ref-description">
-    
     <p>RCB experiment of turnips, 2 treatments for planting date and density</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 64 observations on the following 6 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 64 observations on the following 6 variables.</p><dl>
     <dt><code>gen</code></dt><dd><p>genotype</p></dd>
     <dt><code>date</code></dt><dd><p>planting date, levels <code>21Aug1990</code> <code>28Aug1990</code></p></dd>
     <dt><code>density</code></dt><dd><p>planting density, 1, 2, 4, 8 kg/ha</p></dd>
     <dt><code>block</code></dt><dd><p>block, 4 levels</p></dd>
     <dt><code>yield</code></dt><dd><p>yield</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>This is a randomized block experiment with 16 treatments
@@ -165,37 +168,38 @@
 <p>Lee et al (2008) proposed an analysis using mixed models with changing
   treatment variances.</p>
 <p>Piepho (2009) proposed an ordinary ANOVA using transformed data.</p>
-    
+<p>Used with permission of Kevin McConway.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p>Statistical Modelling Using Genstat, K. J. McConway, M. C. Jones,
-  P. C. Taylor.</p>
-<p>Used with permission of Kevin McConway.</p>
-    
+    <p>K. J. McConway, M. C. Jones, P. C. Taylor.
+  Statistical Modelling Using Genstat.</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Michael Berthold, D. J. Hand.
-  <em>Intelligent data analysis: an introduction</em>, 1998.
+  Intelligent data analysis: an introduction, 1998.
   Pages 75--82.</p>
 <p>Lee, C.J. and O Donnell, M. and O Neill, M. (2008).
   Statistical analysis of field trials with changing treatment
-  variance. <em>Agronomy Journal</em>, 100, 484--489.</p>
+  variance.
+  Agronomy Journal, 100, 484--489.</p>
 <p>Piepho, H.P. (2009),
   Data transformation in statistical analysis of field trials
   with changing treatment variance.
-  <em>Agronomy Journal</em>, 101, 865--869.</p>
-    
+  Agronomy Journal, 101, 865--869.
+  https://doi.org/10.2134/agronj2008.0226x</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>mcconway.turnip</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>mcconway.turnip</span>
-<span class='no'>dat</span>$<span class='no'>densf</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>dat</span>$<span class='no'>density</span>)
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>mcconway.turnip</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>mcconway.turnip</span>
+<span class='va'>dat</span><span class='op'>$</span><span class='va'>densf</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>density</span><span class='op'>)</span>
 
 <span class='co'># Table 2 of Lee et al.</span>
-<span class='no'>m0</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>( <span class='no'>yield</span> ~ <span class='no'>gen</span> * <span class='no'>densf</span> * <span class='no'>date</span> + <span class='no'>block</span>, <span class='no'>dat</span> )
-<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>m0</span>)</div><div class='output co'>#&gt;                Df Sum Sq Mean Sq F value   Pr(&gt;F)    
+<span class='va'>m0</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span><span class='op'>(</span> <span class='va'>yield</span> <span class='op'>~</span> <span class='va'>gen</span> <span class='op'>*</span> <span class='va'>densf</span> <span class='op'>*</span> <span class='va'>date</span> <span class='op'>+</span> <span class='va'>block</span>, <span class='va'>dat</span> <span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>m0</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;                Df Sum Sq Mean Sq F value   Pr(&gt;F)    
 #&gt; gen             1   84.0   83.95   8.753  0.00491 ** 
 #&gt; densf           3  470.4  156.79  16.347 2.51e-07 ***
 #&gt; date            1  233.7  233.71  24.367 1.14e-05 ***
@@ -220,15 +224,17 @@
 <span class='co'>## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
 
 <span class='co'># Boxplots suggest heteroskedasticity for date, density</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='st'>"HH"</span>)
-<span class='fu'>interaction2wt</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span> + <span class='no'>date</span> + <span class='no'>densf</span> +<span class='no'>block</span>, <span class='no'>dat</span>,
-               <span class='kw'>x.between</span><span class='kw'>=</span><span class='fl'>0</span>, <span class='kw'>y.between</span><span class='kw'>=</span><span class='fl'>0</span>,
-               <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"mcconway.turnip - yield"</span>)</div><div class='img'><img src='mcconway.turnip-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='st'>"HH"</span><span class='op'>)</span>
+<span class='fu'>interaction2wt</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>date</span> <span class='op'>+</span> <span class='va'>densf</span> <span class='op'>+</span><span class='va'>block</span>, <span class='va'>dat</span>,
+               x.between<span class='op'>=</span><span class='fl'>0</span>, y.between<span class='op'>=</span><span class='fl'>0</span>,
+               main<span class='op'>=</span><span class='st'>"mcconway.turnip - yield"</span><span class='op'>)</span>
+</div><div class='img'><img src='mcconway.turnip-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>nlme</span>)
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>nlme</span><span class='op'>)</span>
 <span class='co'># Random block model</span>
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>lme</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span> * <span class='no'>date</span> * <span class='no'>densf</span>, <span class='kw'>random</span><span class='kw'>=</span> ~<span class='fl'>1</span><span class='kw'>|</span><span class='no'>block</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt; Linear mixed-effects model fit by REML
+<span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>lme</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>gen</span> <span class='op'>*</span> <span class='va'>date</span> <span class='op'>*</span> <span class='va'>densf</span>, random<span class='op'>=</span> <span class='op'>~</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>block</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Linear mixed-effects model fit by REML
 #&gt;  Data: dat 
 #&gt;        AIC      BIC    logLik
 #&gt;   308.1365 341.8181 -136.0683
@@ -311,7 +317,8 @@
 #&gt; -2.95673473 -0.47103959 -0.08756561  0.45826905  2.90356710 
 #&gt; 
 #&gt; Number of Observations: 64
-#&gt; Number of Groups: 4 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt;                numDF denDF  F-value p-value
+#&gt; Number of Groups: 4 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;                numDF denDF  F-value p-value
 #&gt; (Intercept)        1    45 33.89726  &lt;.0001
 #&gt; gen                1    45  8.75282  0.0049
 #&gt; date               1    45 24.36650  &lt;.0001
@@ -321,10 +328,11 @@
 #&gt; date:densf         3    45  5.37960  0.0030
 #&gt; gen:date:densf     3    45  0.62554  0.6022</div><div class='input'>
 <span class='co'># Multiplicative variance model over densities and dates</span>
-<span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span>(<span class='no'>m1</span>,
-             <span class='kw'>weights</span><span class='kw'>=</span><span class='fu'>varComb</span>(<span class='fu'>varIdent</span>(<span class='kw'>form</span><span class='kw'>=</span>~<span class='fl'>1</span><span class='kw'>|</span><span class='no'>densf</span>),
-               <span class='fu'>varIdent</span>(<span class='kw'>form</span><span class='kw'>=</span>~<span class='fl'>1</span><span class='kw'>|</span><span class='no'>date</span>)))
-<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>m2</span>)</div><div class='output co'>#&gt; Linear mixed-effects model fit by REML
+<span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m1</span>,
+             weights<span class='op'>=</span><span class='fu'>varComb</span><span class='op'>(</span><span class='fu'>varIdent</span><span class='op'>(</span>form<span class='op'>=</span><span class='op'>~</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>densf</span><span class='op'>)</span>,
+               <span class='fu'>varIdent</span><span class='op'>(</span>form<span class='op'>=</span><span class='op'>~</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>date</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>m2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Linear mixed-effects model fit by REML
 #&gt;  Data: dat 
 #&gt;        AIC      BIC    logLik
 #&gt;   294.2643 335.4307 -125.1322
@@ -418,7 +426,8 @@
 #&gt; -1.94246823 -0.54962541 -0.01044348  0.47135647  2.10724103 
 #&gt; 
 #&gt; Number of Observations: 64
-#&gt; Number of Groups: 4 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m2</span>)</div><div class='output co'>#&gt;                numDF denDF  F-value p-value
+#&gt; Number of Groups: 4 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>m2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;                numDF denDF  F-value p-value
 #&gt; (Intercept)        1    45 84.42187  &lt;.0001
 #&gt; gen                1    45  9.35277  0.0037
 #&gt; date               1    45  7.85586  0.0074
@@ -428,8 +437,9 @@
 #&gt; date:densf         3    45  4.83297  0.0053
 #&gt; gen:date:densf     3    45  0.47936  0.6983</div><div class='input'>
 <span class='co'># Unstructured variance model over densities and dates</span>
-<span class='no'>m3</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span>(<span class='no'>m1</span>, <span class='kw'>weights</span><span class='kw'>=</span><span class='fu'>varIdent</span>(<span class='kw'>form</span><span class='kw'>=</span>~<span class='fl'>1</span><span class='kw'>|</span><span class='no'>densf</span>*<span class='no'>date</span>))
-<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>m3</span>)</div><div class='output co'>#&gt; Linear mixed-effects model fit by REML
+<span class='va'>m3</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m1</span>, weights<span class='op'>=</span><span class='fu'>varIdent</span><span class='op'>(</span>form<span class='op'>=</span><span class='op'>~</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>densf</span><span class='op'>*</span><span class='va'>date</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>m3</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Linear mixed-effects model fit by REML
 #&gt;  Data: dat 
 #&gt;        AIC      BIC    logLik
 #&gt;   298.2036 344.9836 -124.1018
@@ -520,7 +530,8 @@
 #&gt; -1.69200677 -0.60443077 -0.08494936  0.54315774  1.88973883 
 #&gt; 
 #&gt; Number of Observations: 64
-#&gt; Number of Groups: 4 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m3</span>)</div><div class='output co'>#&gt;                numDF denDF   F-value p-value
+#&gt; Number of Groups: 4 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>m3</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;                numDF denDF   F-value p-value
 #&gt; (Intercept)        1    45 108.51118  &lt;.0001
 #&gt; gen                1    45   9.22296  0.0040
 #&gt; date               1    45   9.82424  0.0030
@@ -530,8 +541,9 @@
 #&gt; date:densf         3    45   4.71544  0.0060
 #&gt; gen:date:densf     3    45   0.42959  0.7328</div><div class='input'>
 <span class='co'># Table 3 of Piepho, using transformation</span>
-<span class='no'>m4</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>( <span class='no'>yield</span>^<span class='fl'>.235</span> ~ <span class='no'>gen</span> * <span class='no'>date</span> * <span class='no'>densf</span> + <span class='no'>block</span>, <span class='no'>dat</span> )
-<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>m4</span>)</div><div class='output co'>#&gt;                Df Sum Sq Mean Sq F value   Pr(&gt;F)    
+<span class='va'>m4</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span><span class='op'>(</span> <span class='va'>yield</span><span class='op'>^</span><span class='fl'>.235</span> <span class='op'>~</span> <span class='va'>gen</span> <span class='op'>*</span> <span class='va'>date</span> <span class='op'>*</span> <span class='va'>densf</span> <span class='op'>+</span> <span class='va'>block</span>, <span class='va'>dat</span> <span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>m4</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;                Df Sum Sq Mean Sq F value   Pr(&gt;F)    
 #&gt; gen             1 0.3677  0.3677  10.203 0.002562 ** 
 #&gt; date            1 0.5873  0.5873  16.294 0.000208 ***
 #&gt; densf           3 2.0902  0.6967  19.330 3.37e-08 ***
@@ -543,23 +555,13 @@
 #&gt; Residuals      45 1.6220  0.0360                     
 #&gt; ---
 #&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'>
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -570,7 +572,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

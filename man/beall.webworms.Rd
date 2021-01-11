@@ -42,14 +42,14 @@
   The fit and significance of contagious distributions when applied to
   observations on larval insects.
   \emph{Ecology}, 21, 460-474. Table 6.
-  http://doi.org/10.2307/1930285
+  https://doi.org/10.2307/1930285
 }
 
 \references{
   Michal Kosma et al. (2019).
   Over-dispersed count data in crop and agronomy research.
   \emph{Journal of Agronomy and Crop Science}.
-  http://doi.org/10.1111/jac.12333
+  https://doi.org/10.1111/jac.12333
 }
 
 \examples{

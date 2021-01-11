@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -150,7 +150,7 @@
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 540 observations on the following 9 variables.</p><dl'>
+    <p>A data frame with 540 observations on the following 9 variables.</p><dl>
     <dt><code>loc</code></dt><dd><p>location, 9 levels</p></dd>
     <dt><code>gen</code></dt><dd><p>gen, 60 levels</p></dd>
     <dt><code>yield</code></dt><dd><p>yield, bu/ac</p></dd>
@@ -182,22 +182,26 @@
   Agricultural Research Service Special Report 502.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+  
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>ars.earlywhitecorn96</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>ars.earlywhitecorn96</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>ars.earlywhitecorn96</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>ars.earlywhitecorn96</span>
-
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='co'># These views emphasize differences between locations</span>
-<span class='fu'><a href='https://rdrr.io/r/graphics/graphics-defunct.html'>dotplot</a></span>(<span class='no'>gen</span>~<span class='no'>yield</span>, <span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>loc</span>, <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>3</span>),
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"ars.earlywhitecorn96"</span>)</div><div class='img'><img src='ars.earlywhitecorn96-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'>## dotplot(gen~stalklodge, dat, group=loc, auto.key=list(columns=3),</span>
-<span class='co'>##         main="ars.earlywhitecorn96")</span>
-<span class='fu'>splom</span>(~<span class='no'>dat</span>[,<span class='fl'>3</span>:<span class='fl'>9</span>], <span class='kw'>group</span><span class='kw'>=</span><span class='no'>dat</span>$<span class='no'>loc</span>, <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>3</span>),
-      <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"ars.earlywhitecorn96"</span>)</div><div class='img'><img src='ars.earlywhitecorn96-2.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='co'># MANOVA</span>
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/manova.html'>manova</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span>(<span class='no'>yield</span>,<span class='no'>earht</span>,<span class='no'>moisture</span>) ~ <span class='no'>gen</span> + <span class='no'>loc</span>, <span class='no'>dat</span>)
-<span class='no'>m1</span></div><div class='output co'>#&gt; Call:
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+  <span class='co'># These views emphasize differences between locations</span>
+  <span class='fu'><a href='https://rdrr.io/r/graphics/graphics-defunct.html'>dotplot</a></span><span class='op'>(</span><span class='va'>gen</span><span class='op'>~</span><span class='va'>yield</span>, <span class='va'>dat</span>, group<span class='op'>=</span><span class='va'>loc</span>, auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>3</span><span class='op'>)</span>,
+          main<span class='op'>=</span><span class='st'>"ars.earlywhitecorn96"</span><span class='op'>)</span>
+</div><div class='img'><img src='ars.earlywhitecorn96-1.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='co'>## dotplot(gen~stalklodge, dat, group=loc, auto.key=list(columns=3),</span>
+  <span class='co'>##         main="ars.earlywhitecorn96")</span>
+  <span class='fu'>splom</span><span class='op'>(</span><span class='op'>~</span><span class='va'>dat</span><span class='op'>[</span>,<span class='fl'>3</span><span class='op'>:</span><span class='fl'>9</span><span class='op'>]</span>, group<span class='op'>=</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>loc</span>, auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>3</span><span class='op'>)</span>,
+        main<span class='op'>=</span><span class='st'>"ars.earlywhitecorn96"</span><span class='op'>)</span>
+</div><div class='img'><img src='ars.earlywhitecorn96-2.png' alt='' width='700' height='433' /></div><div class='input'>  
+  <span class='co'># MANOVA</span>
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/manova.html'>manova</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>yield</span>,<span class='va'>earht</span>,<span class='va'>moisture</span><span class='op'>)</span> <span class='op'>~</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>loc</span>, <span class='va'>dat</span><span class='op'>)</span>
+  <span class='va'>m1</span>
+</div><div class='output co'>#&gt; Call:
 #&gt;    manova(cbind(yield, earht, moisture) ~ gen + loc, dat)
 #&gt; 
 #&gt; Terms:
@@ -209,12 +213,14 @@
 #&gt; 
 #&gt; Residual standard errors: 14.82596 2.645798 1.046639
 #&gt; Estimated effects may be unbalanced
-#&gt; 240 observations deleted due to missingness</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt;            Df Pillai approx F num Df den Df    Pr(&gt;F)    
+#&gt; 240 observations deleted due to missingness</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;            Df Pillai approx F num Df den Df    Pr(&gt;F)    
 #&gt; gen        59 1.6158    4.669    177    708 &lt; 2.2e-16 ***
 #&gt; loc         4 2.1686  153.898     12    708 &lt; 2.2e-16 ***
 #&gt; Residuals 236                                            
 #&gt; ---
-#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'>
+#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'>  
+<span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -231,7 +237,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

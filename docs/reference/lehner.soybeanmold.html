@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Yield, white mold, and sclerotia for soybeans in Brazil — lehner.soybeanmold" />
-
 <meta property="og:description" content="Yield, white mold, and sclerotia for soybeans in Brazil" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,16 +143,15 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Yield, white mold, and sclerotia for soybeans in Brazil</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"lehner.soybeanmold"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"lehner.soybeanmold"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 382 observations on the following 9 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 382 observations on the following 9 variables.</p><dl>
     <dt><code>study</code></dt><dd><p>study number</p></dd>
     <dt><code>year</code></dt><dd><p>year of harvest</p></dd>
     <dt><code>loc</code></dt><dd><p>location name</p></dd>
@@ -158,16 +161,15 @@
     <dt><code>yield</code></dt><dd><p>crop yield, kg/ha</p></dd>
     <dt><code>mold</code></dt><dd><p>white mold incidence, percent</p></dd>
     <dt><code>sclerotia</code></dt><dd><p>weight of sclerotia g/ha</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Data are the mean of 4 reps.</p>
 <p>Original source (Portuguese)
-  <a href='http://ainfo.cnptia.embrapa.br/digital/bitstream/item/101371/1/Ensaios-cooperativos-de-controle-quimico-de-mofo-branco-na-cultura-da-soja-safras-2009-a-2012.pdf'>http://ainfo.cnptia.embrapa.br/digital/bitstream/item/101371/1/Ensaios-cooperativos-de-controle-quimico-de-mofo-branco-na-cultura-da-soja-safras-2009-a-2012.pdf</a></p>
+  <a href='https://ainfo.cnptia.embrapa.br/digital/bitstream/item/101371/1/Ensaios-cooperativos-de-controle-quimico-de-mofo-branco-na-cultura-da-soja-safras-2009-a-2012.pdf'>https://ainfo.cnptia.embrapa.br/digital/bitstream/item/101371/1/Ensaios-cooperativos-de-controle-quimico-de-mofo-branco-na-cultura-da-soja-safras-2009-a-2012.pdf</a></p>
 <p>Data included here via GPL3 license.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Lehner, M. S., Pethybridge, S. J., Meyer, M. C., &amp; Del Ponte,
@@ -176,34 +178,35 @@
   incidence-sclerotial production relationships in soybean white mould
   epidemics.
   <em>Plant Pathology</em>. doi:10.1111/ppa.12590</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Full commented code and analysis
   https://emdelponte.github.io/paper-white-mold-meta-analysis/</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>lehner.soybeanmold</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>lehner.soybeanmold</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='kw'>if</span>(<span class='fl'>0</span>){
-  <span class='no'>op</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span>(<span class='kw'>mfrow</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>2</span>,<span class='fl'>2</span>))
-  <span class='fu'><a href='https://rdrr.io/r/graphics/hist.html'>hist</a></span>(<span class='no'>dat</span>$<span class='no'>mold</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"White mold incidence"</span>)
-  <span class='fu'><a href='https://rdrr.io/r/graphics/hist.html'>hist</a></span>(<span class='no'>dat</span>$<span class='no'>yield</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Yield"</span>)
-  <span class='fu'><a href='https://rdrr.io/r/graphics/hist.html'>hist</a></span>(<span class='no'>dat</span>$<span class='no'>sclerotia</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Sclerotia weight"</span>)
-  <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span>(<span class='no'>op</span>)
-}
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>lehner.soybeanmold</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>lehner.soybeanmold</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'>xyplot</span>(<span class='no'>yield</span> ~ <span class='no'>mold</span><span class='kw'>|</span><span class='no'>study</span>, <span class='no'>dat</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'p'</span>,<span class='st'>'r'</span>),
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"lehner.soybeanmold"</span>)</div><div class='img'><img src='lehner.soybeanmold-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'># xyplot(sclerotia ~ mold|study, dat, type=c('p','r'))</span>
+<span class='kw'>if</span><span class='op'>(</span><span class='fl'>0</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='va'>op</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mfrow<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span>,<span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/graphics/hist.html'>hist</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>mold</span>, main<span class='op'>=</span><span class='st'>"White mold incidence"</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/graphics/hist.html'>hist</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>yield</span>, main<span class='op'>=</span><span class='st'>"Yield"</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/graphics/hist.html'>hist</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>sclerotia</span>, main<span class='op'>=</span><span class='st'>"Sclerotia weight"</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span><span class='va'>op</span><span class='op'>)</span>
+<span class='op'>}</span>
+
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>mold</span><span class='op'>|</span><span class='va'>study</span>, <span class='va'>dat</span>, type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'p'</span>,<span class='st'>'r'</span><span class='op'>)</span>,
+       main<span class='op'>=</span><span class='st'>"lehner.soybeanmold"</span><span class='op'>)</span>
+</div><div class='img'><img src='lehner.soybeanmold-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'># xyplot(sclerotia ~ mold|study, dat, type=c('p','r'))</span>
 
 <span class='co'># meta-analysis. Could use metafor package to construct the forest plot,</span>
 <span class='co'># but latticeExtra is easy; ggplot is slow/clumsy</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>latticeExtra</span>, <span class='no'>metafor</span>)</div><div class='output co'>#&gt; <span class='message'>Loading 'metafor' package (version 2.1-0). For an overview </span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>latticeExtra</span>, <span class='va'>metafor</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>Loading 'metafor' package (version 2.4-0). For an overview </span>
 #&gt; <span class='message'>and introduction to the package please type: help(metafor).</span></div><div class='output co'>#&gt; <span class='message'></span>
 #&gt; <span class='message'>Attaching package: 'metafor'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:ordinal':</span>
 #&gt; <span class='message'></span>
@@ -212,48 +215,51 @@
 #&gt; <span class='message'>    vif</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:car':</span>
 #&gt; <span class='message'></span>
 #&gt; <span class='message'>    vif</span></div><div class='input'><span class='co'># calculate correlation &amp; confidence for each loc</span>
-<span class='no'>cors</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/split.html'>split</a></span>(<span class='no'>dat</span>, <span class='no'>dat</span>$<span class='no'>study</span>)
-<span class='no'>cors</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span>(<span class='no'>cors</span>,
-               <span class='kw'>FUN</span><span class='kw'>=</span><span class='kw'>function</span>(<span class='no'>X</span>){
-                 <span class='no'>res</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/cor.test.html'>cor.test</a></span>(<span class='no'>X</span>$<span class='no'>yield</span>, <span class='no'>X</span>$<span class='no'>mold</span>)
-                 <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='no'>res</span>$<span class='no'>estimate</span>, <span class='no'>res</span>$<span class='no'>parameter</span>[<span class='fl'>1</span>],
-                   <span class='kw'>conf.low</span><span class='kw'>=</span><span class='no'>res</span>$<span class='no'>conf.int</span>[<span class='fl'>1</span>], <span class='kw'>conf.high</span><span class='kw'>=</span><span class='no'>res</span>$<span class='no'>conf.int</span>[<span class='fl'>2</span>])
-               })
-<span class='no'>cors</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>as.matrix</a></span>(<span class='no'>cors</span>)))
-<span class='no'>cors</span>$<span class='no'>study</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>cors</span>)
+<span class='va'>cors</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/split.html'>split</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>study</span><span class='op'>)</span>
+<span class='va'>cors</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>sapply</a></span><span class='op'>(</span><span class='va'>cors</span>,
+               FUN<span class='op'>=</span><span class='kw'>function</span><span class='op'>(</span><span class='va'>X</span><span class='op'>)</span><span class='op'>{</span>
+                 <span class='va'>res</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/cor.test.html'>cor.test</a></span><span class='op'>(</span><span class='va'>X</span><span class='op'>$</span><span class='va'>yield</span>, <span class='va'>X</span><span class='op'>$</span><span class='va'>mold</span><span class='op'>)</span>
+                 <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>res</span><span class='op'>$</span><span class='va'>estimate</span>, <span class='va'>res</span><span class='op'>$</span><span class='va'>parameter</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>,
+                   conf.low<span class='op'>=</span><span class='va'>res</span><span class='op'>$</span><span class='va'>conf.int</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span>, conf.high<span class='op'>=</span><span class='va'>res</span><span class='op'>$</span><span class='va'>conf.int</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span><span class='op'>)</span>
+               <span class='op'>}</span><span class='op'>)</span>
+<span class='va'>cors</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>as.matrix</a></span><span class='op'>(</span><span class='va'>cors</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>cors</span><span class='op'>$</span><span class='va'>study</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>cors</span><span class='op'>)</span>
 <span class='co'># Fisher Z transform</span>
-<span class='no'>cors</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>cors</span>, <span class='kw'>ri</span> <span class='kw'>=</span> <span class='no'>cor</span>)
-<span class='no'>cors</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>cors</span>, <span class='kw'>ni</span> <span class='kw'>=</span> <span class='no'>df</span> + <span class='fl'>2</span>)
-<span class='no'>cors</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>cors</span>,
-                  <span class='kw'>yi</span> <span class='kw'>=</span> <span class='fl'>1</span>/<span class='fl'>2</span> * <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span>((<span class='fl'>1</span> + <span class='no'>ri</span>)/(<span class='fl'>1</span> - <span class='no'>ri</span>)),
-                  <span class='kw'>vi</span> <span class='kw'>=</span> <span class='fl'>1</span>/(<span class='no'>ni</span> - <span class='fl'>3</span>))
+<span class='va'>cors</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>cors</span>, ri <span class='op'>=</span> <span class='va'>cor</span><span class='op'>)</span>
+<span class='va'>cors</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>cors</span>, ni <span class='op'>=</span> <span class='va'>df</span> <span class='op'>+</span> <span class='fl'>2</span><span class='op'>)</span>
+<span class='va'>cors</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>cors</span>,
+                  yi <span class='op'>=</span> <span class='fl'>1</span><span class='op'>/</span><span class='fl'>2</span> <span class='op'>*</span> <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span><span class='op'>(</span><span class='op'>(</span><span class='fl'>1</span> <span class='op'>+</span> <span class='va'>ri</span><span class='op'>)</span><span class='op'>/</span><span class='op'>(</span><span class='fl'>1</span> <span class='op'>-</span> <span class='va'>ri</span><span class='op'>)</span><span class='op'>)</span>,
+                  vi <span class='op'>=</span> <span class='fl'>1</span><span class='op'>/</span><span class='op'>(</span><span class='va'>ni</span> <span class='op'>-</span> <span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span>
 <span class='co'># Overall correlation across studies</span>
-<span class='no'>overall</span> <span class='kw'>&lt;-</span> <span class='fu'>rma.uni</span>(<span class='no'>yi</span>, <span class='no'>vi</span>, <span class='kw'>method</span><span class='kw'>=</span><span class='st'>"ML"</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>cors</span>) <span class='co'># metafor package</span>
+<span class='va'>overall</span> <span class='op'>&lt;-</span> <span class='fu'>rma.uni</span><span class='op'>(</span><span class='va'>yi</span>, <span class='va'>vi</span>, method<span class='op'>=</span><span class='st'>"ML"</span>, data<span class='op'>=</span><span class='va'>cors</span><span class='op'>)</span> <span class='co'># metafor package</span>
 <span class='co'># back transform</span>
-<span class='no'>overall</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>overall</span>, <span class='kw'>transf</span><span class='kw'>=</span><span class='no'>transf.ztor</span>)
+<span class='va'>overall</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>overall</span>, transf<span class='op'>=</span><span class='va'>transf.ztor</span><span class='op'>)</span>
 
 <span class='co'># weight and size for forest plot</span>
-<span class='no'>wi</span>    <span class='kw'>&lt;-</span> <span class='fl'>1</span>/<span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span>(<span class='no'>cors</span>$<span class='no'>vi</span>)
-<span class='no'>size</span>  <span class='kw'>&lt;-</span> <span class='fl'>0.5</span> + <span class='fl'>3.0</span> * (<span class='no'>wi</span> - <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span>(<span class='no'>wi</span>))/(<span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span>(<span class='no'>wi</span>) - <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span>(<span class='no'>wi</span>))
+<span class='va'>wi</span>    <span class='op'>&lt;-</span> <span class='fl'>1</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span><span class='op'>(</span><span class='va'>cors</span><span class='op'>$</span><span class='va'>vi</span><span class='op'>)</span>
+<span class='va'>size</span>  <span class='op'>&lt;-</span> <span class='fl'>0.5</span> <span class='op'>+</span> <span class='fl'>3.0</span> <span class='op'>*</span> <span class='op'>(</span><span class='va'>wi</span> <span class='op'>-</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span><span class='op'>(</span><span class='va'>wi</span><span class='op'>)</span><span class='op'>)</span><span class='op'>/</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>max</a></span><span class='op'>(</span><span class='va'>wi</span><span class='op'>)</span> <span class='op'>-</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span><span class='op'>(</span><span class='va'>wi</span><span class='op'>)</span><span class='op'>)</span>
 
 <span class='co'># now the forest plot</span>
 <span class='co'># must use latticeExtra::layer in case ggplot2 is also loaded</span>
-<span class='fu'>segplot</span>(<span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>study</span>) ~ <span class='no'>conf.low</span>+<span class='no'>conf.high</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>cors</span>,
-        <span class='kw'>draw.bands</span><span class='kw'>=</span><span class='fl'>FALSE</span>, <span class='kw'>level</span><span class='kw'>=</span><span class='no'>size</span>, <span class='kw'>centers</span><span class='kw'>=</span><span class='no'>ri</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='no'>size</span>,
-        <span class='kw'>col.regions</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"gray85"</span>, <span class='st'>"dodgerblue4"</span>)),
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"White mold vs. soybean yield"</span>,
-        <span class='kw'>xlab</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='st'>"Study correlation, confidence, and study weight (blues)\n"</span>,
-                   <span class='st'>"Overall (black)"</span>),
-        <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Study ID"</span>) +
-  <span class='kw pkg'>latticeExtra</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/latticeExtra/man/layer.html'>layer</a></span>(<span class='fu'>panel.abline</span>(<span class='kw'>v</span><span class='kw'>=</span><span class='no'>overall</span>$<span class='no'>pred</span>, <span class='kw'>lwd</span><span class='kw'>=</span><span class='fl'>2</span>)) +
-  <span class='kw pkg'>latticeExtra</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/latticeExtra/man/layer.html'>layer</a></span>(<span class='fu'>panel.abline</span>(<span class='kw'>v</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='no'>overall</span>$<span class='no'>cr.lb</span>, <span class='no'>overall</span>$<span class='no'>cr.ub</span>), <span class='kw'>lty</span><span class='kw'>=</span><span class='fl'>2</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='st'>"gray"</span>))</div><div class='img'><img src='lehner.soybeanmold-2.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'>segplot</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>study</span><span class='op'>)</span> <span class='op'>~</span> <span class='va'>conf.low</span><span class='op'>+</span><span class='va'>conf.high</span>, data<span class='op'>=</span><span class='va'>cors</span>,
+        draw.bands<span class='op'>=</span><span class='cn'>FALSE</span>, level<span class='op'>=</span><span class='va'>size</span>, centers<span class='op'>=</span><span class='va'>ri</span>, cex<span class='op'>=</span><span class='va'>size</span>,
+        col.regions<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"gray85"</span>, <span class='st'>"dodgerblue4"</span><span class='op'>)</span><span class='op'>)</span>,
+        main<span class='op'>=</span><span class='st'>"White mold vs. soybean yield"</span>,
+        xlab<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"Study correlation, confidence, and study weight (blues)\n"</span>,
+                   <span class='st'>"Overall (black)"</span><span class='op'>)</span>,
+        ylab<span class='op'>=</span><span class='st'>"Study ID"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>latticeExtra</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/latticeExtra/man/layer.html'>layer</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/lattice/man/panel.functions.html'>panel.abline</a></span><span class='op'>(</span>v<span class='op'>=</span><span class='va'>overall</span><span class='op'>$</span><span class='va'>pred</span>, lwd<span class='op'>=</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'>latticeExtra</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/latticeExtra/man/layer.html'>layer</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/lattice/man/panel.functions.html'>panel.abline</a></span><span class='op'>(</span>v<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>overall</span><span class='op'>$</span><span class='va'>cr.lb</span>, <span class='va'>overall</span><span class='op'>$</span><span class='va'>cr.ub</span><span class='op'>)</span>, lty<span class='op'>=</span><span class='fl'>2</span>, col<span class='op'>=</span><span class='st'>"gray"</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='lehner.soybeanmold-2.png' alt='' width='700' height='433' /></div><div class='input'>
 
 <span class='co'># Meta-analyses are typically used when the original data is not available.</span>
 <span class='co'># Since the original data is available, a mixed model is probably better.</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lme4</span>)
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>lmer</span>(<span class='no'>yield</span> ~ <span class='no'>mold</span> <span class='co'># overall slope</span>
-           + (<span class='fl'>1</span>+<span class='no'>mold</span> <span class='kw'>|</span><span class='no'>study</span>), <span class='co'># random intercept &amp; slope per study</span>
-           <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00587194 (tol = 0.002, component 1)</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt; Linear mixed model fit by REML ['lmerMod']
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lme4</span><span class='op'>)</span>
+<span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>lmer</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>mold</span> <span class='co'># overall slope</span>
+           <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>+</span><span class='va'>mold</span> <span class='op'>|</span><span class='va'>study</span><span class='op'>)</span>, <span class='co'># random intercept &amp; slope per study</span>
+           data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00587194 (tol = 0.002, component 1)</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Linear mixed model fit by REML ['lmerMod']
 #&gt; Formula: yield ~ mold + (1 + mold | study)
 #&gt;    Data: dat
 #&gt; 
@@ -281,23 +287,13 @@
 #&gt; convergence code: 0
 #&gt; Model failed to converge with max|grad| = 0.00587194 (tol = 0.002, component 1)
 #&gt; </div><div class='input'>
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -308,7 +304,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

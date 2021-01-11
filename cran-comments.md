@@ -1,3 +1,26 @@
+# agridat 1.18
+
+This release fixes the vignettes to conditionally load "Suggests" packages.
+
+## CRAN package status check
+
+https://cran.r-project.org/web/checks/check_results_kw.stat_at_gmail.com.html
+Current CRAN status: OK: 12
+
+## Test environments and results
+
+1. local: R 4.0.3 on Windows 10
+2. Win-Builder: R devel
+3. Win-Builder: R old release
+
+Status: OK
+
+## Downstream dependencies
+
+revdep() # desplot, gge
+
+Checked OK.
+
 
 # agridat 1.17
 

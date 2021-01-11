@@ -49,7 +49,7 @@
 \source{ 
   Case Study 4: Mixed model analysis for the estimation of components of genetic
   variation in lamb weaning weight. International Livestock Research Institute.
-  http://www.ilri.org/biometrics/CS/case\%20study\%204/case\%20study\%204.1.htm
+  https://www.ilri.org/biometrics/CS/case\%20study\%204/case\%20study\%204.1.htm
   Retrieved Dec 2011.
 
   Licensed with Creative Commons BY-NC-SA 3.0 Unported license.  

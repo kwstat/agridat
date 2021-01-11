@@ -37,7 +37,7 @@
   van Eeuwijk, Fred A. and Pieter M. Kroonenberg (1998).
   Multiplicative Models for Interaction in Three-Way ANOVA, with Applications to Plant Breeding
   Biometrics, 54, 1315-1333.
-  http://doi.org/10.2307/2533660
+  https://doi.org/10.2307/2533660
 }
 
 \references{
@@ -49,7 +49,7 @@
   F. graminearum and F. nivale using a multiplicative model for
   interaction.
   Theor Appl Genet. 90(2), 221-8. 
-  http://doi.org/10.1007/BF00222205
+  https://doi.org/10.1007/BF00222205
 }
 
 \examples{

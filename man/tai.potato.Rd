@@ -33,7 +33,7 @@
   G.C.C. Tai, 1971.
   Genotypic stability analysis and its application to potato regional trials.
   Crop Sci 11, 184-190.  Table 2, p. 187.
-  http://doi.org/10.2135/cropsci1971.0011183X001100020006x
+  https://doi.org/10.2135/cropsci1971.0011183X001100020006x
 }
 
 \references{

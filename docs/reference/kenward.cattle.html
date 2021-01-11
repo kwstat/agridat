@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,13 +45,12 @@
 
 
 
-<meta property="og:title" content="Repeated measurement of weights of calves with two treatments. — kenward.cattle" />
 
+<meta property="og:title" content="Repeated measurement of weights of calves with two treatments. — kenward.cattle" />
 <meta property="og:description" content="Repeated measurements of the weights of calves from a trial on the
   control of intestinal parasites." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -62,7 +67,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -76,7 +81,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -105,7 +110,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -113,10 +118,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -140,24 +144,23 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Repeated measurements of the weights of calves from a trial on the
   control of intestinal parasites.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"kenward.cattle"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"kenward.cattle"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 660 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 660 observations on the following 4 variables.</p><dl>
     <dt><code>animal</code></dt><dd><p>animal factor</p></dd>
     <dt><code>trt</code></dt><dd><p>treatment factor, A or B</p></dd>
     <dt><code>day</code></dt><dd><p>day, numberic, 0-133</p></dd>
     <dt><code>weight</code></dt><dd><p>bodyweight, kg</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     
@@ -171,217 +174,137 @@
   between the final two measurements).</p>
 <p>Is there a difference in treatments, and when does that difference
   first become manifest?</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Kenward, Michael G. (1987).
   A Method for Comparing Profiles of Repeated Measurements.
   <em>Applied Statistics</em>, 36, 296-308.  Table 1.  
-  http://doi.org/10.2307/2347788</p>
-    
+  https://doi.org/10.2307/2347788</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>W. Zhang, C. Leng and C. Y. Tang (2015).
   A joint modelling approach for longitudinal studies
   <em>J. R. Statist. Soc. B</em>, 77 (2015), 219--238.
-  http://doi.org/10.1111/rssb.12065</p>
-    
+  https://doi.org/10.1111/rssb.12065</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+  
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>kenward.cattle</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>kenward.cattle</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>kenward.cattle</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>kenward.cattle</span>
+  <span class='co'># Profile plots</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+  <span class='va'>foo1</span> <span class='op'>&lt;-</span> <span class='fu'>xyplot</span><span class='op'>(</span><span class='va'>weight</span><span class='op'>~</span><span class='va'>day</span><span class='op'>|</span><span class='va'>trt</span>, data<span class='op'>=</span><span class='va'>dat</span>, type<span class='op'>=</span><span class='st'>'l'</span>, group<span class='op'>=</span><span class='va'>animal</span>,
+                 xlab<span class='op'>=</span><span class='st'>"Day"</span>, ylab<span class='op'>=</span><span class='st'>"Animal weight"</span>, main<span class='op'>=</span><span class='st'>"kenward.cattle"</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='va'>foo1</span><span class='op'>)</span>
+</div><div class='img'><img src='kenward.cattle-1.png' alt='' width='700' height='433' /></div><div class='input'>  
+  <span class='co'># ----------</span>
 
-<span class='co'># Profile plots</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='no'>foo1</span> <span class='kw'>&lt;-</span> <span class='fu'>xyplot</span>(<span class='no'>weight</span>~<span class='no'>day</span><span class='kw'>|</span><span class='no'>trt</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'l'</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>animal</span>,
-               <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Day"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Animal weight"</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"kenward.cattle"</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>foo1</span>)</div><div class='img'><img src='kenward.cattle-1.png' alt='' width='700' height='433' /></div><div class='input'>
-# ----------------------------------------------------------------------------
-
-</div><div class='input'>
   <span class='co'># lme4. Fixed treatment intercepts, treatment polynomial trend.</span>
   <span class='co'># Random deviation for each animal</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lme4</span>)
-  <span class='no'>m1a</span> <span class='kw'>&lt;-</span><span class='fu'>lmer</span>(<span class='no'>weight</span> ~ <span class='no'>trt</span>*<span class='fu'><a href='https://rdrr.io/r/stats/poly.html'>poly</a></span>(<span class='no'>day</span>, <span class='fl'>4</span>) + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>animal</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-             <span class='kw'>REML</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lme4</span><span class='op'>)</span>
+  <span class='va'>m1a</span> <span class='op'>&lt;-</span><span class='fu'>lmer</span><span class='op'>(</span><span class='va'>weight</span> <span class='op'>~</span> <span class='va'>trt</span><span class='op'>*</span><span class='fu'><a href='https://rdrr.io/r/stats/poly.html'>poly</a></span><span class='op'>(</span><span class='va'>day</span>, <span class='fl'>4</span><span class='op'>)</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>animal</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+             REML <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
   <span class='co'># Change separate polynomials into common polynomial</span>
-  <span class='no'>m1b</span> <span class='kw'>&lt;-</span><span class='fu'>lmer</span>(<span class='no'>weight</span> ~ <span class='no'>trt</span> + <span class='fu'><a href='https://rdrr.io/r/stats/poly.html'>poly</a></span>(<span class='no'>day</span>, <span class='fl'>4</span>) + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>animal</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-             <span class='kw'>REML</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)
+  <span class='va'>m1b</span> <span class='op'>&lt;-</span><span class='fu'>lmer</span><span class='op'>(</span><span class='va'>weight</span> <span class='op'>~</span> <span class='va'>trt</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/stats/poly.html'>poly</a></span><span class='op'>(</span><span class='va'>day</span>, <span class='fl'>4</span><span class='op'>)</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>animal</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+             REML <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
   <span class='co'># Drop treatment differences</span>
-  <span class='no'>m1c</span> <span class='kw'>&lt;-</span><span class='fu'>lmer</span>(<span class='no'>weight</span> ~ <span class='fu'><a href='https://rdrr.io/r/stats/poly.html'>poly</a></span>(<span class='no'>day</span>, <span class='fl'>4</span>) + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>animal</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-             <span class='kw'>REML</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)
-  <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m1a</span>, <span class='no'>m1b</span>, <span class='no'>m1c</span>) <span class='co'># Significant differences between trt polynomials</span></div><div class='output co'>#&gt; Data: dat
+  <span class='va'>m1c</span> <span class='op'>&lt;-</span><span class='fu'>lmer</span><span class='op'>(</span><span class='va'>weight</span> <span class='op'>~</span> <span class='fu'><a href='https://rdrr.io/r/stats/poly.html'>poly</a></span><span class='op'>(</span><span class='va'>day</span>, <span class='fl'>4</span><span class='op'>)</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>animal</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+             REML <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>m1a</span>, <span class='va'>m1b</span>, <span class='va'>m1c</span><span class='op'>)</span> <span class='co'># Significant differences between trt polynomials</span>
+</div><div class='output co'>#&gt; Data: dat
 #&gt; Models:
 #&gt; m1c: weight ~ poly(day, 4) + (1 | animal)
 #&gt; m1b: weight ~ trt + poly(day, 4) + (1 | animal)
 #&gt; m1a: weight ~ trt * poly(day, 4) + (1 | animal)
-#&gt;     Df    AIC    BIC  logLik deviance   Chisq Chi Df Pr(&gt;Chisq)    
-#&gt; m1c  7 4901.2 4932.6 -2443.6   4887.2                              
-#&gt; m1b  8 4903.0 4938.9 -2443.5   4887.0  0.2047      1     0.6509    
-#&gt; m1a 12 4885.7 4939.6 -2430.9   4861.7 25.2640      4  4.452e-05 ***
+#&gt;     npar    AIC    BIC  logLik deviance   Chisq Df Pr(&gt;Chisq)    
+#&gt; m1c    7 4901.2 4932.6 -2443.6   4887.2                          
+#&gt; m1b    8 4903.0 4938.9 -2443.5   4887.0  0.2047  1     0.6509    
+#&gt; m1a   12 4885.7 4939.6 -2430.9   4861.7 25.2640  4  4.452e-05 ***
 #&gt; ---
 #&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'>
   <span class='co'># Overlay polynomial predictions on plot</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>latticeExtra</span>)
-  <span class='no'>dat</span>$<span class='no'>pred</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m1a</span>, <span class='kw'>re.form</span><span class='kw'>=</span><span class='fl'>NA</span>)
-  <span class='no'>foo1</span> + <span class='fu'>xyplot</span>(<span class='no'>pred</span> ~ <span class='no'>day</span><span class='kw'>|</span><span class='no'>trt</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-                <span class='kw'>lwd</span><span class='kw'>=</span><span class='fl'>2</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='st'>"black"</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'l'</span>)</div><div class='img'><img src='kenward.cattle-2.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>latticeExtra</span><span class='op'>)</span>
+  <span class='va'>dat</span><span class='op'>$</span><span class='va'>pred</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>m1a</span>, re.form<span class='op'>=</span><span class='cn'>NA</span><span class='op'>)</span>
+  <span class='va'>foo1</span> <span class='op'>+</span> <span class='fu'>xyplot</span><span class='op'>(</span><span class='va'>pred</span> <span class='op'>~</span> <span class='va'>day</span><span class='op'>|</span><span class='va'>trt</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+                lwd<span class='op'>=</span><span class='fl'>2</span>, col<span class='op'>=</span><span class='st'>"black"</span>, type<span class='op'>=</span><span class='st'>'l'</span><span class='op'>)</span>
+</div><div class='img'><img src='kenward.cattle-2.png' alt='' width='700' height='433' /></div><div class='input'>  
   <span class='co'># A Kenward-Roger Approximation and Parametric Bootstrap</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>pbkrtest</span>)
-  <span class='fu'>KRmodcomp</span>(<span class='no'>m1b</span>, <span class='no'>m1c</span>) <span class='co'># Non-signif</span></div><div class='output co'>#&gt; F-test with Kenward-Roger approximation; computing time: 0.36 sec.
-#&gt; large : weight ~ trt + poly(day, 4) + (1 | animal)
-#&gt; small : weight ~ poly(day, 4) + (1 | animal)
-#&gt;          stat     ndf     ddf F.scaling p.value
-#&gt; Ftest  0.1982  1.0000 58.0000         1  0.6578</div><div class='input'>  # Model comparison of nested models using parametric bootstrap methods
-  # PBmodcomp(m1b, m1c, nsim=500)
-  ## Parametric bootstrap test; time: 13.20 sec; samples: 500 extremes: 326;
-  ## large : weight ~ trt + poly(day, 4) + (1 | animal)
-  ## small : weight ~ poly(day, 4) + (1 | animal)
-  ##          stat df p.value
-  ## LRT    0.2047  1  0.6509
-  ## PBtest 0.2047     0.6527
+  <span class='co'># libs(pbkrtest)</span>
+  <span class='co'># KRmodcomp(m1b, m1c) # Non-signif</span>
+  <span class='co'># Model comparison of nested models using parametric bootstrap methods</span>
+  <span class='co'># PBmodcomp(m1b, m1c, nsim=500)</span>
+  <span class='co'>## Parametric bootstrap test; time: 13.20 sec; samples: 500 extremes: 326;</span>
+  <span class='co'>## large : weight ~ trt + poly(day, 4) + (1 | animal)</span>
+  <span class='co'>## small : weight ~ poly(day, 4) + (1 | animal)</span>
+  <span class='co'>##          stat df p.value</span>
+  <span class='co'>## LRT    0.2047  1  0.6509</span>
+  <span class='co'>## PBtest 0.2047     0.6527</span>
 
-</div><div class='input'>
-# ----------------------------------------------------------------------------
+  <span class='co'># -----------</span>
 
-</div><div class='input'>  <span class='co'># ASREML approach to model. Not final by any means.</span>
+  <span class='co'># asreml3 &amp; asreml4</span>
+  
+  <span class='co'># ASREML approach to model. Not final by any means.</span>
   <span class='co'># Maybe a spline curve for each treatment, plus random deviations for each time</span>
-  <span class='co'># asreml3</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
-  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>weight</span> ~  <span class='fl'>1</span> + <span class='fu'>lin</span>(<span class='no'>day</span>) +    <span class='co'># overall line</span>
-                 <span class='no'>trt</span> + <span class='no'>trt</span>:<span class='fu'>lin</span>(<span class='no'>day</span>),       <span class='co'># different line for each treatment</span>
-               <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-               <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='fu'>spl</span>(<span class='no'>day</span>) +       <span class='co'># overall spline</span>
-                 <span class='no'>trt</span>:<span class='fu'>spl</span>(<span class='no'>day</span>) +            <span class='co'># different spline for each treatment</span>
-                 <span class='fu'>dev</span>(<span class='no'>day</span>) + <span class='no'>trt</span>:<span class='fu'>dev</span>(<span class='no'>day</span>) ) <span class='co'># non-spline deviation at each time*trt</span></div><div class='output co'>#&gt; ASReml: Fri Aug 16 14:59:53 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;   -2194.7439    261.7679   656  14:59:54     0.0 (3 restrained)
-#&gt;   -2187.3696    267.4909   656  14:59:54     0.0 (2 restrained)
-#&gt;   -2186.4658    267.8054   656  14:59:54     0.0 (1 restrained)
-#&gt;   -2186.3376    267.4100   656  14:59:54     0.0 (2 restrained)
-#&gt;   -2186.2058    267.1965   656  14:59:54     0.0 (1 restrained)
-#&gt;   -2186.1923    267.0994   656  14:59:54     0.0 (2 restrained)
-#&gt;   -2186.1824    267.0330   656  14:59:54     0.0 (1 restrained)
-#&gt;   -2186.1813    267.0151   656  14:59:54     0.0
-#&gt;   -2186.1810    267.0018   656  14:59:54     0.0
-#&gt;   -2186.1810    266.9960   656  14:59:54     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 14:59:54 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='input'>
-  <span class='no'>p1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m1</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>classify</span><span class='kw'>=</span><span class='st'>"trt:day"</span>)</div><div class='output co'>#&gt; ASReml: Fri Aug 16 14:59:54 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;   -2186.1810    266.9959   656  14:59:54     0.0
-#&gt;   -2186.1810    266.9959   656  14:59:54     0.0
-#&gt;   -2186.1810    266.9959   656  14:59:54     0.0
-#&gt;   -2186.1810    266.9959   656  14:59:54     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 14:59:54 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='input'>  <span class='no'>p1</span> <span class='kw'>&lt;-</span> <span class='no'>p1</span>$<span class='no'>predictions</span>$<span class='no'>pvals</span>
-  <span class='no'>foo2</span> <span class='kw'>&lt;-</span> <span class='fu'>xyplot</span>(<span class='no'>predicted.value</span> ~ <span class='no'>day</span><span class='kw'>|</span><span class='no'>trt</span>, <span class='no'>p1</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'l'</span>, <span class='kw'>lwd</span><span class='kw'>=</span><span class='fl'>2</span>, <span class='kw'>lty</span><span class='kw'>=</span><span class='fl'>1</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='st'>"black"</span>)
-
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>latticeExtra</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>foo1</span> + <span class='no'>foo2</span>)</div><div class='img'><img src='kenward.cattle-3.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span><span class='op'>)</span>
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>weight</span> <span class='op'>~</span>  <span class='fl'>1</span> <span class='op'>+</span> <span class='fu'>lin</span><span class='op'>(</span><span class='va'>day</span><span class='op'>)</span> <span class='op'>+</span>    <span class='co'># overall line</span>
+                 <span class='va'>trt</span> <span class='op'>+</span> <span class='va'>trt</span><span class='op'>:</span><span class='fu'>lin</span><span class='op'>(</span><span class='va'>day</span><span class='op'>)</span>,       <span class='co'># different line for each treatment</span>
+               data<span class='op'>=</span><span class='va'>dat</span>,
+               random <span class='op'>=</span> <span class='op'>~</span> <span class='fu'>spl</span><span class='op'>(</span><span class='va'>day</span><span class='op'>)</span> <span class='op'>+</span>       <span class='co'># overall spline</span>
+                 <span class='va'>trt</span><span class='op'>:</span><span class='fu'>spl</span><span class='op'>(</span><span class='va'>day</span><span class='op'>)</span> <span class='op'>+</span>            <span class='co'># different spline for each treatment</span>
+                 <span class='fu'>dev</span><span class='op'>(</span><span class='va'>day</span><span class='op'>)</span> <span class='op'>+</span> <span class='va'>trt</span><span class='op'>:</span><span class='fu'>dev</span><span class='op'>(</span><span class='va'>day</span><span class='op'>)</span> <span class='op'>)</span> <span class='co'># non-spline deviation at each time*trt</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:08:49 2021
+#&gt; Spline: design points closer than 0.0133 have been merged.
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1     -2194.744       261.768    656 17:08:49    0.0 (3 restrained)
+#&gt;  2     -2187.368       267.488    656 17:08:49    0.0 (2 restrained)
+#&gt;  3     -2186.465       267.804    656 17:08:49    0.0 (2 restrained)
+#&gt;  4     -2186.238       267.347    656 17:08:49    0.0 (2 restrained)
+#&gt;  5     -2186.185       267.055    656 17:08:49    0.0 (2 restrained)
+#&gt;  6     -2186.181       267.001    656 17:08:49    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  
+  <span class='va'>p1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>m1</span>, data<span class='op'>=</span><span class='va'>dat</span>, classify<span class='op'>=</span><span class='st'>"trt:day"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:08:49 2021
+#&gt; Spline: design points closer than 0.0133 have been merged.
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1     -2186.181       266.996    656 17:08:49    0.0
+#&gt;  2     -2186.181       266.996    656 17:08:49    0.0
+#&gt;  3     -2186.181       266.996    656 17:08:49    0.0</div><div class='input'>  <span class='va'>p1</span> <span class='op'>&lt;-</span> <span class='va'>p1</span><span class='op'>$</span><span class='va'>pvals</span>
+  
+  <span class='va'>foo2</span> <span class='op'>&lt;-</span> <span class='fu'>xyplot</span><span class='op'>(</span><span class='va'>predicted.value</span> <span class='op'>~</span> <span class='va'>day</span><span class='op'>|</span><span class='va'>trt</span>, <span class='va'>p1</span>, type<span class='op'>=</span><span class='st'>'l'</span>, lwd<span class='op'>=</span><span class='fl'>2</span>, lty<span class='op'>=</span><span class='fl'>1</span>, col<span class='op'>=</span><span class='st'>"black"</span><span class='op'>)</span>
+  
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>latticeExtra</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='va'>foo1</span> <span class='op'>+</span> <span class='va'>foo2</span><span class='op'>)</span>
+</div><div class='img'><img src='kenward.cattle-3.png' alt='' width='700' height='433' /></div><div class='input'>
   <span class='co'># Not much evidence for treatment differences</span>
-
-  <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt; Wald tests for fixed effects
-#&gt; 
-#&gt; Response: weight
-#&gt; 
-#&gt; Terms added sequentially; adjusted for those above
-#&gt; 
-#&gt;               Df Sum of Sq Wald statistic Pr(Chisq)    
-#&gt; (Intercept)    1  37128459         139060    &lt;2e-16 ***
-#&gt; lin(day)       1    570798           2138    &lt;2e-16 ***
-#&gt; trt            1       455              2    0.1917    
-#&gt; trt:lin(day)   1       283              1    0.3031    
-#&gt; residual (MS)          267                             
-#&gt; ---
-#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'>  <span class='co'>##               Df Sum of Sq Wald statistic Pr(Chisq)    </span>
+  
+  <span class='co'># wald(m1)</span>
+  <span class='co'>##               Df Sum of Sq Wald statistic Pr(Chisq)    </span>
   <span class='co'>## (Intercept)    1  37128459         139060    &lt;2e-16 ***</span>
   <span class='co'>## trt            1       455              2    0.1917    </span>
   <span class='co'>## lin(day)       1    570798           2138    &lt;2e-16 ***</span>
   <span class='co'>## trt:lin(day)   1       283              1    0.3031    </span>
   <span class='co'>## residual (MS)          267                             </span>
-
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lucid</span>)
-  <span class='fu'>vc</span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt;                effect component std.error z.ratio constr
-#&gt;              spl(day)  25.29    24.09        1         P
-#&gt;              dev(day)   1.902    4.923       0.39      P
-#&gt;  trt:spl(day)!trt.var   0.00003  0.000002   18         B
-#&gt;  trt:dev(day)!trt.var   0.00003  0.000002   18         B
-#&gt;            R!variance 267       14.84       18         P</div><div class='input'>  ##               effect component std.error z.ratio constr
-  ##             spl(day)  25.29    24.09        1       pos
-  ##             dev(day)   1.902    4.923       0.39    pos
-  ## trt:spl(day)!trt.var   0.00003  0.000002   18      bnd 
-  ## trt:dev(day)!trt.var   0.00003  0.000002   18      bnd 
-  ##           R!variance 267       14.84       18       pos
-</div><div class='input'>
-# ----------------------------------------------------------------------------
-
-</div><div class='input'>  # ASREML approach to model. Not final by any means.
-  # Maybe a spline curve for each treatment, plus random deviations for each time
-  ## libs(asreml4)
-  ## m1 <- asreml(weight ~  1 + lin(day) +    # overall line
-  ##                trt + trt:lin(day),       # different line for each treatment
-  ##              data=dat,
-  ##              random = ~ spl(day) +       # overall spline
-  ##                trt:spl(day) +            # different spline for each treatment
-  ##                dev(day) + trt:dev(day) ) # non-spline deviation at each time*trt
   
-  ## p1 <- predict(m1, data=dat, classify="trt:day",
-  ##               design.points=list(day=0:133))
-  ## p1 <- p1$pvals
-  ## foo2 <- xyplot(predicted.value ~ day|trt, p1, type='l', lwd=2, lty=1, col="black")
+  <span class='co'># vc(m1)</span>
+  <span class='co'>##               effect component std.error z.ratio constr</span>
+  <span class='co'>##             spl(day)  25.29    24.09        1       pos</span>
+  <span class='co'>##             dev(day)   1.902    4.923       0.39    pos</span>
+  <span class='co'>## trt:spl(day)!trt.var   0.00003  0.000002   18      bnd </span>
+  <span class='co'>## trt:dev(day)!trt.var   0.00003  0.000002   18      bnd </span>
+  <span class='co'>##           R!variance 267       14.84       18       pos</span>
   
-  ## libs(latticeExtra)
-  ## print(foo1 + foo2)
-
-  ## # Not much evidence for treatment differences
-  
-  ## wald(m1)
-  ## ##               Df Sum of Sq Wald statistic Pr(Chisq)    
-  ## ## (Intercept)    1  37128459         139060    <2e-16 ***
-  ## ## trt            1       455              2    0.1917    
-  ## ## lin(day)       1    570798           2138    <2e-16 ***
-  ## ## trt:lin(day)   1       283              1    0.3031    
-  ## ## residual (MS)          267                             
-  
-  ## libs(lucid)
-  ## vc(m1)
-  ## ##               effect component std.error z.ratio constr
-  ## ##             spl(day)  25.29    24.09        1       pos
-  ## ##             dev(day)   1.902    4.923       0.39    pos
-  ## ## trt:spl(day)!trt.var   0.00003  0.000002   18      bnd 
-  ## ## trt:dev(day)!trt.var   0.00003  0.000002   18      bnd 
-  ## ##           R!variance 267       14.84       18       pos
-
-</div><div class='input'>
-# ----------------------------------------------------------------------------
-
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -392,7 +315,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

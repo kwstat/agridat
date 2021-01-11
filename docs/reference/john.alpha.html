@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Alpha lattice design of spring oats — john.alpha" />
-
 <meta property="og:description" content="Alpha lattice design of spring oats" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,23 +143,22 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Alpha lattice design of spring oats</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 72 observations on the following 5 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 72 observations on the following 5 variables.</p><dl>
     <dt><code>plot</code></dt><dd><p>plot number</p></dd>
     <dt><code>rep</code></dt><dd><p>replicate</p></dd>
     <dt><code>block</code></dt><dd><p>incomplete block</p></dd>
     <dt><code>gen</code></dt><dd><p>genotype (variety)</p></dd>
     <dt><code>yield</code></dt><dd><p>dry matter yield (tonnes/ha)</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     
@@ -164,34 +167,33 @@
   There were 24 varieties in 3 replicates, each consisting
   of 6 incomplete blocks of 4 plots.  Planted in a resolvable
   alpha design.  The plots were laid out in a single line.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>J. A. John &amp; E. R. Williams (1995).
   <em>Cyclic and computer generated designs</em>,
   Chapman and Hall, London.  Page 146.</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Piepho, H.P. and Mohring, J. (2007),
   Computing heritability and selection response from unbalanced
   plant breeding trials,
   <em>Genetics</em>, 177, 1881-1888.
-  http://doi.org/10.1534/genetics.107.074229</p>
-    
+  https://doi.org/10.1534/genetics.107.074229</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>john.alpha</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>john.alpha</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='co'># RCB (no incomplete block)</span>
-<span class='no'>m0</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>yield</span> ~ <span class='fl'>0</span> + <span class='no'>gen</span> + <span class='no'>rep</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>john.alpha</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>john.alpha</span>
+  
+  <span class='co'># RCB (no incomplete block)</span>
+  <span class='va'>m0</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>0</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>rep</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
 
-<span class='co'># Block fixed (intra-block analysis) (bottom of table 7.4 in John)</span>
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>yield</span> ~ <span class='fl'>0</span> + <span class='no'>gen</span> + <span class='no'>rep</span> + <span class='no'>rep</span>:<span class='no'>block</span>, <span class='no'>dat</span>)
-<span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt; Analysis of Variance Table
+  <span class='co'># Block fixed (intra-block analysis) (bottom of table 7.4 in John)</span>
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>0</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>rep</span> <span class='op'>+</span> <span class='va'>rep</span><span class='op'>:</span><span class='va'>block</span>, <span class='va'>dat</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
 #&gt; Response: yield
 #&gt;           Df  Sum Sq Mean Sq  F value    Pr(&gt;F)    
@@ -201,218 +203,172 @@
 #&gt; Residuals 31    2.59   0.083                       
 #&gt; ---
 #&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'>
-<span class='co'># Block random (combined inter-intra block analysis)</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lme4</span>, <span class='no'>lucid</span>)
-<span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'>lmer</span>(<span class='no'>yield</span> ~ <span class='fl'>0</span> + <span class='no'>gen</span> + <span class='no'>rep</span> + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>rep</span>:<span class='no'>block</span>), <span class='no'>dat</span>)
+  <span class='co'># Block random (combined inter-intra block analysis)</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lme4</span>, <span class='va'>lucid</span><span class='op'>)</span>
+  <span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'>lmer</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>0</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>rep</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>rep</span><span class='op'>:</span><span class='va'>block</span><span class='op'>)</span>, <span class='va'>dat</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m2</span>)</div><div class='output co'>#&gt; Analysis of Variance Table
-#&gt;     Df Sum Sq Mean Sq  F value
-#&gt; gen 24 380.44 15.8515 185.9959
-#&gt; rep  2   1.57  0.7851   9.2124</div><div class='input'><span class='co'>## Analysis of Variance Table</span>
-<span class='co'>##     Df Sum Sq Mean Sq  F value</span>
-<span class='co'>## gen 24 380.43 15.8513 185.9942</span>
-<span class='co'>## rep  2   1.57  0.7851   9.2123</span>
-<span class='fu'>vc</span>(<span class='no'>m2</span>)</div><div class='output co'>#&gt;        grp        var1 var2    vcov  sdcor
+  <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>m2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Analysis of Variance Table
+#&gt;     npar Sum Sq Mean Sq  F value
+#&gt; gen   24 380.44 15.8515 185.9959
+#&gt; rep    2   1.57  0.7851   9.2124</div><div class='input'>  <span class='co'>## Analysis of Variance Table</span>
+  <span class='co'>##     Df Sum Sq Mean Sq  F value</span>
+  <span class='co'>## gen 24 380.43 15.8513 185.9942</span>
+  <span class='co'>## rep  2   1.57  0.7851   9.2123</span>
+  <span class='fu'>vc</span><span class='op'>(</span><span class='va'>m2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;        grp        var1 var2    vcov  sdcor
 #&gt;  rep:block (Intercept) &lt;NA&gt; 0.06194 0.2489
-#&gt;   Residual        &lt;NA&gt; &lt;NA&gt; 0.08523 0.2919</div><div class='input'><span class='co'>##        grp        var1 var2    vcov  sdcor</span>
-<span class='co'>##  rep:block (Intercept) &lt;NA&gt; 0.06194 0.2489</span>
-<span class='co'>##   Residual        &lt;NA&gt; &lt;NA&gt; 0.08523 0.2919</span>
+#&gt;   Residual        &lt;NA&gt; &lt;NA&gt; 0.08523 0.2919</div><div class='input'>  <span class='co'>##        grp        var1 var2    vcov  sdcor</span>
+  <span class='co'>##  rep:block (Intercept) &lt;NA&gt; 0.06194 0.2489</span>
+  <span class='co'>##   Residual        &lt;NA&gt; &lt;NA&gt; 0.08523 0.2919</span>
 
 
-<span class='co'># Variety means.  John and Williams table 7.5.  Slight, constant</span>
-<span class='co'># difference for each method as compared to John and Williams.</span>
-<span class='no'>means</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(<span class='kw'>rcb</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m0</span>)[<span class='fl'>1</span>:<span class='fl'>24</span>],
-                    <span class='kw'>ib</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m1</span>)[<span class='fl'>1</span>:<span class='fl'>24</span>],
-                    <span class='kw'>intra</span><span class='kw'>=</span><span class='fu'>fixef</span>(<span class='no'>m2</span>)[<span class='fl'>1</span>:<span class='fl'>24</span>])
-<span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>means</span>)</div><div class='output co'>#&gt;             rcb       ib    intra
+  <span class='co'># Variety means.  John and Williams table 7.5.  Slight, constant</span>
+  <span class='co'># difference for each method as compared to John and Williams.</span>
+  <span class='va'>means</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>rcb<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>m0</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>24</span><span class='op'>]</span>,
+                      ib<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>24</span><span class='op'>]</span>,
+                      intra<span class='op'>=</span><span class='fu'>fixef</span><span class='op'>(</span><span class='va'>m2</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>24</span><span class='op'>]</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>means</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;             rcb       ib    intra
 #&gt; genG01 5.201233 5.268742 5.146433
 #&gt; genG02 4.552933 4.665389 4.517265
 #&gt; genG03 3.381800 3.803790 3.537933
 #&gt; genG04 4.439400 4.728175 4.528828
 #&gt; genG05 5.103100 5.225708 5.075944
-#&gt; genG06 4.749067 4.618234 4.575395</div><div class='input'><span class='co'>##             rcb       ib    intra</span>
-<span class='co'>## genG01 5.201233 5.268742 5.146433</span>
-<span class='co'>## genG02 4.552933 4.665389 4.517265</span>
-<span class='co'>## genG03 3.381800 3.803790 3.537934</span>
-<span class='co'>## genG04 4.439400 4.728175 4.528828</span>
-<span class='co'>## genG05 5.103100 5.225708 5.075944</span>
-<span class='co'>## genG06 4.749067 4.618234 4.575394</span>
+#&gt; genG06 4.749067 4.618234 4.575395</div><div class='input'>  <span class='co'>##             rcb       ib    intra</span>
+  <span class='co'>## genG01 5.201233 5.268742 5.146433</span>
+  <span class='co'>## genG02 4.552933 4.665389 4.517265</span>
+  <span class='co'>## genG03 3.381800 3.803790 3.537934</span>
+  <span class='co'>## genG04 4.439400 4.728175 4.528828</span>
+  <span class='co'>## genG05 5.103100 5.225708 5.075944</span>
+  <span class='co'>## genG06 4.749067 4.618234 4.575394</span>
+  
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/splom.html'>splom</a></span><span class='op'>(</span><span class='va'>means</span>, main<span class='op'>=</span><span class='st'>"john.alpha - means for RCB, IB, Intra-block"</span><span class='op'>)</span>
+</div><div class='img'><img src='john.alpha-1.png' alt='' width='700' height='433' /></div><div class='input'>  
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'>splom</span>(<span class='no'>means</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"john.alpha - means for RCB, IB, Intra-block"</span>)</div><div class='img'><img src='john.alpha-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='co'># ----------</span>
+  <span class='co'># asreml4</span>
 
-<span class='co'># ----------------------------------------------------------------------------</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span>,<span class='va'>lucid</span><span class='op'>)</span>
 
-<span class='co'># asreml3</span>
-<span class='co'># Heritability calculation of Piepho &amp; Mohring, Example 1</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
-<span class='no'>m3</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='fl'>1</span> + <span class='no'>rep</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>random</span><span class='kw'>=</span>~ <span class='no'>gen</span> + <span class='no'>rep</span>:<span class='no'>block</span>)</div><div class='output co'>#&gt; ASReml: Fri Aug 16 14:59:38 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;       7.3479      0.2216    69  14:59:38     0.0
-#&gt;      12.0860      0.1569    69  14:59:38     0.0
-#&gt;      15.5332      0.1107    69  14:59:38     0.0
-#&gt;      16.7695      0.0851    69  14:59:38     0.0
-#&gt;      16.8098      0.0816    69  14:59:38     0.0
-#&gt;      16.8098      0.0816    69  14:59:38     0.0
-#&gt;      16.8098      0.0816    69  14:59:38     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 14:59:38 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='input'><span class='no'>sg2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>m3</span>)$<span class='no'>varcomp</span>[<span class='st'>'gen!gen.var'</span>,<span class='st'>'component'</span>] <span class='co'># .142902</span>
+  <span class='co'># Heritability calculation of Piepho &amp; Mohring, Example 1</span>
 
-<span class='co'># Average variance of a difference of two adjusted means (BLUP)</span>
+  <span class='va'>m3</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>+</span> <span class='va'>rep</span>, data<span class='op'>=</span><span class='va'>dat</span>, random<span class='op'>=</span><span class='op'>~</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>rep</span><span class='op'>:</span><span class='va'>block</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:48:15 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1       7.34791      0.221592     69 17:48:15    0.0
+#&gt;  2      12.08376      0.156976     69 17:48:15    0.0
+#&gt;  3      15.53184      0.110746     69 17:48:15    0.0
+#&gt;  4      16.65758      0.089647     69 17:48:15    0.0
+#&gt;  5      16.80904      0.081946     69 17:48:15    0.0
+#&gt;  6      16.80985      0.081598     69 17:48:15    0.0</div><div class='input'>  <span class='va'>sg2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>m3</span><span class='op'>)</span><span class='op'>$</span><span class='va'>varcomp</span><span class='op'>[</span><span class='st'>'gen'</span>,<span class='st'>'component'</span><span class='op'>]</span> <span class='co'># .142902</span>
+  
+  <span class='co'># Average variance of a difference of two adjusted means (BLUP)</span>
+  
+  <span class='va'>p3</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>m3</span>, data<span class='op'>=</span><span class='va'>dat</span>, classify<span class='op'>=</span><span class='st'>"gen"</span>, sed<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:48:16 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1       16.8098     0.0816175     69 17:48:16    0.0
+#&gt;  2       16.8098     0.0816174     69 17:48:16    0.0
+#&gt;  3       16.8098     0.0816172     69 17:48:16    0.0</div><div class='input'>  <span class='co'># Matrix of pair-wise SED values, squared</span>
+  <span class='va'>vdiff</span> <span class='op'>&lt;-</span> <span class='va'>p3</span><span class='op'>$</span><span class='va'>sed</span><span class='op'>^</span><span class='fl'>2</span>
+  <span class='co'># Average variance of two DIFFERENT means (using lower triangular of vdiff)</span>
+  <span class='va'>vblup</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>vdiff</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/lower.tri.html'>lower.tri</a></span><span class='op'>(</span><span class='va'>vdiff</span><span class='op'>)</span><span class='op'>]</span><span class='op'>)</span> <span class='co'># .05455038</span>
+  
+  <span class='co'># Note that without sed=TRUE, asreml reports square root of the average variance</span>
+  <span class='co'># of a difference between the variety means, so the following gives the same value</span>
+  <span class='co'># predict(m3, data=dat, classify="gen")$avsed ^ 2 # .05455038</span>
+  
+  <span class='co'># Average variance of a difference of two adjusted means (BLUE)</span>
+  <span class='va'>m4</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>rep</span>, data<span class='op'>=</span><span class='va'>dat</span>, random <span class='op'>=</span> <span class='op'>~</span> <span class='va'>rep</span><span class='op'>:</span><span class='va'>block</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:48:16 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1       8.27642      0.119546     46 17:48:16    0.0
+#&gt;  2       8.94241      0.108572     46 17:48:16    0.0
+#&gt;  3       9.53543      0.096936     46 17:48:16    0.0
+#&gt;  4       9.80736      0.087555     46 17:48:16    0.0
+#&gt;  5       9.82176      0.085478     46 17:48:16    0.0
+#&gt;  6       9.82194      0.085243     46 17:48:16    0.0</div><div class='input'>  <span class='va'>p4</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>m4</span>, data<span class='op'>=</span><span class='va'>dat</span>, classify<span class='op'>=</span><span class='st'>"gen"</span>, sed<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:48:16 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1       9.82194     0.0852263     46 17:48:16    0.0
+#&gt;  2       9.82194     0.0852260     46 17:48:16    0.0
+#&gt;  3       9.82194     0.0852252     46 17:48:16    0.0</div><div class='input'>  <span class='va'>vdiff</span> <span class='op'>&lt;-</span> <span class='va'>p4</span><span class='op'>$</span><span class='va'>sed</span><span class='op'>^</span><span class='fl'>2</span>
+  <span class='va'>vblue</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>vdiff</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/lower.tri.html'>lower.tri</a></span><span class='op'>(</span><span class='va'>vdiff</span><span class='op'>)</span><span class='op'>]</span><span class='op'>)</span> <span class='co'># .07010875</span>
+  <span class='co'># Again, could use predict(m4, data=dat, classify="gen")$avsed ^ 2</span>
+  
+  <span class='co'># H^2 Ad-hoc measure of heritability</span>
+  <span class='va'>sg2</span> <span class='op'>/</span> <span class='op'>(</span><span class='va'>sg2</span> <span class='op'>+</span> <span class='va'>vblue</span><span class='op'>/</span><span class='fl'>2</span><span class='op'>)</span> <span class='co'># .803</span>
+</div><div class='output co'>#&gt; [1] 0.8029759</div><div class='input'>  
+  <span class='co'># H^2c Similar measure proposed by Cullis.</span>
+  <span class='fl'>1</span><span class='op'>-</span><span class='op'>(</span><span class='va'>vblup</span> <span class='op'>/</span> <span class='fl'>2</span> <span class='op'>/</span> <span class='va'>sg2</span><span class='op'>)</span> <span class='co'># .809</span>
+</div><div class='output co'>#&gt; [1] 0.8090841</div><div class='input'>
 
-<span class='no'>p3</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m3</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>classify</span><span class='kw'>=</span><span class='st'>"gen"</span>, <span class='kw'>sed</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; ASReml: Fri Aug 16 14:59:38 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;      16.8098      0.0816    69  14:59:38     0.0
-#&gt;      16.8098      0.0816    69  14:59:38     0.0
-#&gt;      16.8098      0.0816    69  14:59:38     0.0
-#&gt;      16.8098      0.0816    69  14:59:38     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 14:59:38 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='input'><span class='co'># Matrix of pair-wise SED values, squared</span>
-<span class='no'>vdiff</span> <span class='kw'>&lt;-</span> <span class='no'>p3</span>$<span class='no'>predictions</span>$<span class='no'>sed</span>^<span class='fl'>2</span>
-<span class='co'># Average variance of two DIFFERENT means (using lower triangular of vdiff)</span>
-<span class='no'>vblup</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>vdiff</span>[<span class='fu'><a href='https://rdrr.io/r/base/lower.tri.html'>lower.tri</a></span>(<span class='no'>vdiff</span>)]) <span class='co'># .05455038</span>
-
-<span class='co'># Note that without sed=TRUE, asreml reports square root of the average variance</span>
-<span class='co'># of a difference between the variety means, so the following gives the same value</span>
-<span class='co'># predict(m3, data=dat, classify="gen")$pred$avsed ^ 2 # .05455038</span>
-
-<span class='co'># Average variance of a difference of two adjusted means (BLUE)</span>
-<span class='no'>m4</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='fl'>1</span> + <span class='no'>gen</span> + <span class='no'>rep</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='no'>rep</span>:<span class='no'>block</span>)</div><div class='output co'>#&gt; ASReml: Fri Aug 16 14:59:38 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;       8.2764      0.1195    46  14:59:38     0.0
-#&gt;       8.9428      0.1086    46  14:59:38     0.0
-#&gt;       9.5357      0.0969    46  14:59:38     0.0
-#&gt;       9.8074      0.0876    46  14:59:38     0.0
-#&gt;       9.8218      0.0855    46  14:59:38     0.0
-#&gt;       9.8219      0.0852    46  14:59:38     0.0
-#&gt;       9.8219      0.0852    46  14:59:38     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 14:59:38 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='input'><span class='no'>p4</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m4</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>classify</span><span class='kw'>=</span><span class='st'>"gen"</span>, <span class='kw'>sed</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; ASReml: Fri Aug 16 14:59:38 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;       9.8219      0.0852    46  14:59:38     0.0
-#&gt;       9.8219      0.0852    46  14:59:38     0.0
-#&gt;       9.8219      0.0852    46  14:59:38     0.0
-#&gt;       9.8219      0.0852    46  14:59:38     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 14:59:38 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='input'><span class='no'>vdiff</span> <span class='kw'>&lt;-</span> <span class='no'>p4</span>$<span class='no'>predictions</span>$<span class='no'>sed</span>^<span class='fl'>2</span>
-<span class='no'>vblue</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>vdiff</span>[<span class='fu'><a href='https://rdrr.io/r/base/lower.tri.html'>lower.tri</a></span>(<span class='no'>vdiff</span>)]) <span class='co'># .07010875</span>
-<span class='co'># Again, could use predict(m4, data=dat, classify="gen")$pred$avsed ^ 2</span>
-
-<span class='co'># H^2 Ad-hoc measure of heritability</span>
-<span class='no'>sg2</span> / (<span class='no'>sg2</span> + <span class='no'>vblue</span>/<span class='fl'>2</span>) <span class='co'># .803</span></div><div class='output co'>#&gt; [1] 0.803017</div><div class='input'>
-<span class='co'># H^2c Similar measure proposed by Cullis.</span>
-<span class='fl'>1</span>-(<span class='no'>vblup</span> / <span class='fl'>2</span> / <span class='no'>sg2</span>) <span class='co'># .809</span></div><div class='output co'>#&gt; [1] 0.8091336</div><div class='input'>
-<span class='co'># ----------------------------------------------------------------------------</span>
-
-<span class='kw'>if</span>(<span class='fl'>0</span>){
-  <span class='co'>## # Heritability calculation of Piepho &amp; Mohring, Example 1</span>
-  <span class='co'>## libs(asreml4)</span>
-  <span class='co'>## m3 &lt;- asreml(yield ~ 1 + rep, data=dat, random=~ gen + rep:block)</span>
-  <span class='co'>## sg2 &lt;- summary(m3)$varcomp['gen','component'] # .142902</span>
-
-  <span class='co'>## # Average variance of a difference of two adjusted means (BLUP)</span>
-
-  <span class='co'>## p3 &lt;- predict(m3, data=dat, classify="gen", sed=TRUE)</span>
-  <span class='co'>## # Matrix of pair-wise SED values, squared</span>
-  <span class='co'>## vdiff &lt;- p3$sed^2</span>
-  <span class='co'>## # Average variance of two DIFFERENT means (using lower triangular of vdiff)</span>
-  <span class='co'>## vblup &lt;- mean(vdiff[lower.tri(vdiff)]) # .05455038</span>
-
-  <span class='co'>## # Note that without sed=TRUE, asreml reports square root of the average variance</span>
-  <span class='co'>## # of a difference between the variety means, so the following gives the same value</span>
-  <span class='co'>## # predict(m3, data=dat, classify="gen")$pred$avsed ^ 2 # .05455038</span>
-
-  <span class='co'>## # Average variance of a difference of two adjusted means (BLUE)</span>
-  <span class='co'>## m4 &lt;- asreml(yield ~ 1 + gen + rep, data=dat, random = ~ rep:block)</span>
-  <span class='co'>## p4 &lt;- predict(m4, data=dat, classify="gen", sed=TRUE)</span>
-  <span class='co'>## vdiff &lt;- p4$sed^2</span>
-  <span class='co'>## vblue &lt;- mean(vdiff[lower.tri(vdiff)]) # .07010875</span>
-  <span class='co'>## # Again, could use predict(m4, data=dat, classify="gen")$pred$avsed ^ 2</span>
-
-  <span class='co'>## # H^2 Ad-hoc measure of heritability</span>
-  <span class='co'>## sg2 / (sg2 + vblue/2) # .803</span>
-
-  <span class='co'>## # H^2c Similar measure proposed by Cullis.</span>
-  <span class='co'>## 1-(vblup / 2 / sg2) # .809</span>
-}
-
-<span class='co'># ----------------------------------------------------------------------------</span>
-
-<span class='kw'>if</span>(<span class='fl'>0</span>){
+  <span class='co'># ----------</span>
 
   <span class='co'># Illustrate how to do the same calculations with lme4</span>
-  <span class='co'># http://stackoverflow.com/questions/38697477</span>
-
- <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lme4</span>)
-
-  <span class='no'>cov2sed</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>x</span>){
+  <span class='co'># https://stackoverflow.com/questions/38697477</span>
+  
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lme4</span><span class='op'>)</span>
+  
+  <span class='va'>cov2sed</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>{</span>
     <span class='co'># Convert var-cov matrix to SED matrix</span>
     <span class='co'># sed[i,j] = sqrt( x[i,i] + x[j,j]- 2*x[i,j] )</span>
-    <span class='no'>n</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span>(<span class='no'>x</span>)
-    <span class='no'>vars</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span>(<span class='no'>x</span>)
-    <span class='no'>sed</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span>( <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='no'>vars</span>, <span class='no'>n</span>, <span class='no'>n</span>, <span class='kw'>byrow</span><span class='kw'>=</span><span class='fl'>TRUE</span>) +
-                   <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='no'>vars</span>, <span class='no'>n</span>, <span class='no'>n</span>, <span class='kw'>byrow</span><span class='kw'>=</span><span class='fl'>FALSE</span>) - <span class='fl'>2</span>*<span class='no'>x</span> )
-    <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span>(<span class='no'>sed</span>) <span class='kw'>&lt;-</span> <span class='fl'>0</span>
-    <span class='fu'><a href='https://rdrr.io/r/base/function.html'>return</a></span>(<span class='no'>sed</span>)
-  }
-
+    <span class='va'>n</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
+    <span class='va'>vars</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span>
+    <span class='va'>sed</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span><span class='op'>(</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='va'>vars</span>, <span class='va'>n</span>, <span class='va'>n</span>, byrow<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span> <span class='op'>+</span>
+                   <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='va'>vars</span>, <span class='va'>n</span>, <span class='va'>n</span>, byrow<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>-</span> <span class='fl'>2</span><span class='op'>*</span><span class='va'>x</span> <span class='op'>)</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='va'>sed</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fl'>0</span>
+    <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='va'>sed</span><span class='op'>)</span>
+  <span class='op'>}</span>
+  
   <span class='co'># Same as asreml model m4. Note 'gen' must be first term</span>
-  <span class='no'>m5blue</span> <span class='kw'>&lt;-</span> <span class='fu'>lmer</span>(<span class='no'>yield</span> ~ <span class='fl'>0</span> + <span class='no'>gen</span> + <span class='no'>rep</span> + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>rep</span>:<span class='no'>block</span>), <span class='no'>dat</span>)
-
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>emmeans</span>)
-  <span class='no'>ls5blue</span> <span class='kw'>&lt;-</span> <span class='fu'>emmeans</span>(<span class='no'>m5blue</span>, <span class='st'>"gen"</span>)
-  <span class='no'>con</span> <span class='kw'>&lt;-</span> <span class='no'>ls5blue</span>@<span class='kw'>linfct</span>[,<span class='fl'>1</span>:<span class='fl'>24</span>] <span class='co'># contrast matrix for genotypes</span>
+  <span class='va'>m5blue</span> <span class='op'>&lt;-</span> <span class='fu'>lmer</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>0</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>rep</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>rep</span><span class='op'>:</span><span class='va'>block</span><span class='op'>)</span>, <span class='va'>dat</span><span class='op'>)</span>
+  
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>emmeans</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Attaching package: 'emmeans'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:HH':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    as.glht</span></div><div class='input'>  <span class='va'>ls5blue</span> <span class='op'>&lt;-</span> <span class='fu'>emmeans</span><span class='op'>(</span><span class='va'>m5blue</span>, <span class='st'>"gen"</span><span class='op'>)</span>
+  <span class='va'>con</span> <span class='op'>&lt;-</span> <span class='va'>ls5blue</span><span class='op'>@</span><span class='va'>linfct</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>24</span><span class='op'>]</span> <span class='co'># contrast matrix for genotypes</span>
   <span class='co'># The 'con' matrix is identity diagonal, so we don't need to multiply,</span>
   <span class='co'># but do so for a generic approach</span>
-  <span class='co'># sed5blue &lt;- cov2sed(con &lt;!-- %*% vcov(m5blue)[1:24,1:24] %*% t(con)) --&gt;</span>
-  <span class='no'>tmp</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/crossprod.html'>tcrossprod</a></span>( <span class='fu'><a href='https://rdrr.io/r/base/crossprod.html'>crossprod</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span>(<span class='no'>con</span>), <span class='fu'><a href='https://rdrr.io/r/stats/vcov.html'>vcov</a></span>(<span class='no'>m5blue</span>)[<span class='fl'>1</span>:<span class='fl'>24</span>,<span class='fl'>1</span>:<span class='fl'>24</span>]), <span class='no'>con</span>)
-  <span class='no'>sed5blue</span> <span class='kw'>&lt;-</span> <span class='fu'>cov2sed</span>(<span class='no'>tmp</span>)
+  <span class='co'># sed5blue &lt;- cov2sed(con </span>
+  <span class='va'>tmp</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/crossprod.html'>tcrossprod</a></span><span class='op'>(</span> <span class='fu'><a href='https://rdrr.io/r/base/crossprod.html'>crossprod</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span><span class='op'>(</span><span class='va'>con</span><span class='op'>)</span>, <span class='fu'><a href='https://rdrr.io/r/stats/vcov.html'>vcov</a></span><span class='op'>(</span><span class='va'>m5blue</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>24</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>24</span><span class='op'>]</span><span class='op'>)</span>, <span class='va'>con</span><span class='op'>)</span>
+  <span class='va'>sed5blue</span> <span class='op'>&lt;-</span> <span class='fu'>cov2sed</span><span class='op'>(</span><span class='va'>tmp</span><span class='op'>)</span>
 
-
+  
   <span class='co'># vblue Average variance of difference between genotypes</span>
-  <span class='no'>vblue</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>sed5blue</span>[<span class='fu'><a href='https://rdrr.io/r/base/lower.tri.html'>upper.tri</a></span>(<span class='no'>sed5blue</span>)]^<span class='fl'>2</span>) <span class='co'># .07010875 matches 'vblue' from asreml</span>
-
+  <span class='va'>vblue</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>sed5blue</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/lower.tri.html'>upper.tri</a></span><span class='op'>(</span><span class='va'>sed5blue</span><span class='op'>)</span><span class='op'>]</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>)</span>
+  <span class='va'>vblue</span> <span class='co'># .07010875 matches 'vblue' from asreml</span>
+</div><div class='output co'>#&gt; [1] 0.07010875</div><div class='input'>  
   <span class='co'># Now blups</span>
-  <span class='no'>m5blup</span> <span class='kw'>&lt;-</span> <span class='fu'>lmer</span>(<span class='no'>yield</span> ~ <span class='fl'>0</span> + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>gen</span>) + <span class='no'>rep</span> + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>rep</span>:<span class='no'>block</span>), <span class='no'>dat</span>)
-  <span class='no'>re5</span> <span class='kw'>&lt;-</span> <span class='fu'>ranef</span>(<span class='no'>m5blup</span>,<span class='kw'>condVar</span><span class='kw'>=</span><span class='fl'>TRUE</span>)
-  <span class='no'>vv1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/attr.html'>attr</a></span>(<span class='no'>re5</span>$<span class='no'>gen</span>,<span class='st'>"postVar"</span>)
-  <span class='no'>vblup</span> <span class='kw'>&lt;-</span> <span class='fl'>2</span>*<span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>vv1</span>) <span class='co'># .0577 not exactly same as 'vblup' above</span>
-
+  <span class='va'>m5blup</span> <span class='op'>&lt;-</span> <span class='fu'>lmer</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>0</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>gen</span><span class='op'>)</span> <span class='op'>+</span> <span class='va'>rep</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>rep</span><span class='op'>:</span><span class='va'>block</span><span class='op'>)</span>, <span class='va'>dat</span><span class='op'>)</span>
+  <span class='co'># Need lme4::ranef in case ordinal is loaded</span>
+  <span class='va'>re5</span> <span class='op'>&lt;-</span> <span class='fu'>lme4</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/lme4/man/ranef.html'>ranef</a></span><span class='op'>(</span><span class='va'>m5blup</span>,condVar<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+  <span class='va'>vv1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/attr.html'>attr</a></span><span class='op'>(</span><span class='va'>re5</span><span class='op'>$</span><span class='va'>gen</span>,<span class='st'>"postVar"</span><span class='op'>)</span>  
+  <span class='va'>vblup</span> <span class='op'>&lt;-</span> <span class='fl'>2</span><span class='op'>*</span><span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>vv1</span><span class='op'>)</span> <span class='co'># .0577 not exactly same as 'vblup' above</span>
+  <span class='va'>vblup</span>
+</div><div class='output co'>#&gt; [1] 0.0577334</div><div class='input'>  
   <span class='co'># H^2 Ad-hoc measure of heritability</span>
-  <span class='no'>sg2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='kw pkg'>lme4</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/lme4/man/VarCorr.html'>VarCorr</a></span>(<span class='no'>m5blup</span>)<span class='kw'>[[</span><span class='st'>"gen"</span>]])  <span class='co'># 0.142902</span>
-  <span class='no'>sg2</span> / (<span class='no'>sg2</span> + <span class='no'>vblue</span>/<span class='fl'>2</span>) <span class='co'># .803 matches asreml</span>
-
+  <span class='va'>sg2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fu'>lme4</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/lme4/man/VarCorr.html'>VarCorr</a></span><span class='op'>(</span><span class='va'>m5blup</span><span class='op'>)</span><span class='op'>[[</span><span class='st'>"gen"</span><span class='op'>]</span><span class='op'>]</span><span class='op'>)</span>  <span class='co'># 0.142902</span>
+  <span class='va'>sg2</span> <span class='op'>/</span> <span class='op'>(</span><span class='va'>sg2</span> <span class='op'>+</span> <span class='va'>vblue</span><span class='op'>/</span><span class='fl'>2</span><span class='op'>)</span> <span class='co'># .803 matches asreml</span>
+</div><div class='output co'>#&gt; [1] 0.8030173</div><div class='input'>
   <span class='co'># H^2c Similar measure proposed by Cullis.</span>
-  <span class='fl'>1</span>-(<span class='no'>vblup</span> / <span class='fl'>2</span> / <span class='no'>sg2</span>) <span class='co'># .809 from asreml, .800 from lme4</span>
-}</div></pre>
+  <span class='fl'>1</span><span class='op'>-</span><span class='op'>(</span><span class='va'>vblup</span> <span class='op'>/</span> <span class='fl'>2</span> <span class='op'>/</span> <span class='va'>sg2</span><span class='op'>)</span> <span class='co'># .809 from asreml, .800 from lme4</span>
+</div><div class='output co'>#&gt; [1] 0.7979969</div><div class='input'>
+<span class='co'># }</span>
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -423,7 +379,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

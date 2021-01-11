@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -150,7 +150,7 @@
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 225 observations on the following 4 variables.</p><dl'>
+    <p>A data frame with 225 observations on the following 4 variables.</p><dl>
     <dt><code>col</code></dt><dd><p>column (also blocking factor)</p></dd>
     <dt><code>row</code></dt><dd><p>row</p></dd>
     <dt><code>yield</code></dt><dd><p>yield</p></dd>
@@ -167,7 +167,7 @@
     <p>Besag, J. E., Green, P. J., Higdon, D. and Mengersen, K. (1995).
   Bayesian computation and stochastic systems.
   Statistical Science, 10, 3-66.
-  http://www.jstor.org/stable/2246224</p>
+  https://www.jstor.org/stable/2246224</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Davison, A. C. 2003.
@@ -176,77 +176,82 @@
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
-
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>besag.bayesian</span>)
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>besag.bayesian</span>
+  
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>besag.bayesian</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>besag.bayesian</span>
 
   <span class='co'># Yield values were scaled to unit variance</span>
   <span class='co'># var(dat$yield, na.rm=TRUE)</span>
   <span class='co'># .999</span>
 
   <span class='co'># Besag Fig 2. Reverse row numbers to match Besag, Davison</span>
-  <span class='no'>dat</span>$<span class='no'>rrow</span> <span class='kw'>&lt;-</span> <span class='fl'>76</span> - <span class='no'>dat</span>$<span class='no'>row</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-  <span class='fu'>xyplot</span>(<span class='no'>yield</span> ~ <span class='no'>rrow</span><span class='kw'>|</span><span class='no'>col</span>, <span class='no'>dat</span>, <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>3</span>), <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'s'</span>,
-         <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"row"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"yield"</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"besag.bayesian"</span>)</div><div class='img'><img src='besag.bayesian-1.png' alt='' width='700' height='433' /></div><div class='input'>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)</div><div class='output co'>#&gt; <span class='message'></span>
-#&gt; <span class='message'>Attaching package: 'asreml'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:gnm':</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    wheat</span></div><div class='input'>  <span class='co'># same code for asreml3 and asreml4</span>
-
+  <span class='va'>dat</span><span class='op'>$</span><span class='va'>rrow</span> <span class='op'>&lt;-</span> <span class='fl'>76</span> <span class='op'>-</span> <span class='va'>dat</span><span class='op'>$</span><span class='va'>row</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+  <span class='fu'>xyplot</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>rrow</span><span class='op'>|</span><span class='va'>col</span>, <span class='va'>dat</span>, layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>3</span><span class='op'>)</span>, type<span class='op'>=</span><span class='st'>'s'</span>,
+         xlab<span class='op'>=</span><span class='st'>"row"</span>, ylab<span class='op'>=</span><span class='st'>"yield"</span>, main<span class='op'>=</span><span class='st'>"besag.bayesian"</span><span class='op'>)</span>
+</div><div class='img'><img src='besag.bayesian-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>Loading required package: Matrix</span></div><div class='output co'>#&gt; Offline License checked out Mon Jan 11 17:07:42 2021</div><div class='input'>
   <span class='co'># Use asreml to fit a model with AR1 gradient in rows  </span>
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>cf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>col</span>), <span class='kw'>rf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>rrow</span>))
-  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ -<span class='fl'>1</span> + <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>random</span><span class='kw'>=</span> ~ <span class='fu'>ar1v</span>(<span class='no'>rf</span>))</div><div class='output co'>#&gt; License check Thu Jul 30 15:47:19 2020
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, cf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>col</span><span class='op'>)</span>, rf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>rrow</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='op'>-</span><span class='fl'>1</span> <span class='op'>+</span> <span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>, random<span class='op'>=</span> <span class='op'>~</span> <span class='fu'>ar1v</span><span class='op'>(</span><span class='va'>rf</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Offline License checked out Mon Jan 11 17:07:43 2021
 #&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:20 2020
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:43 2021
 #&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -94.4798      0.689559    149 15:47:20    0.0 (2 restrained)
-#&gt;  2      -95.8277      0.763261    149 15:47:20    0.0 (2 restrained)
-#&gt;  3      -96.2472      0.772025    149 15:47:20    0.0 (2 restrained)
-#&gt;  4      -95.2684      0.758604    149 15:47:20    0.0 (1 restrained)
-#&gt;  5      -88.7865      0.645542    149 15:47:20    0.0 (2 restrained)
-#&gt;  6      -95.1889      0.757622    149 15:47:20    0.0 (1 restrained)
-#&gt;  7      -90.7329      0.677440    149 15:47:20    0.0 (2 restrained)</div><div class='output co'>#&gt; <span class='warning'>Warning: Oscillating parameter(s) reset to average value (iteration 7).</span></div><div class='output co'>#&gt;  8      -95.6188      0.762867    149 15:47:20    0.0 (1 restrained)
-#&gt;  9      -91.3575      0.705741    149 15:47:20    0.0
-#&gt; 10      -87.7909      0.644795    149 15:47:20    0.0 (1 restrained)
-#&gt; 11      -83.9513      0.601796    149 15:47:20    0.0
-#&gt; 12      -81.8901      0.548584    149 15:47:20    0.0 (1 restrained)
-#&gt; 13      -82.1499      0.568466    149 15:47:20    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Log-likelihood not converged</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:20 2020
+#&gt;  1      -94.4798      0.689559    149 17:07:43    0.0 (2 restrained)
+#&gt;  2      -95.8277      0.763261    149 17:07:43    0.0 (2 restrained)
+#&gt;  3      -96.2472      0.772025    149 17:07:43    0.0 (2 restrained)
+#&gt;  4      -95.2684      0.758604    149 17:07:43    0.0 (1 restrained)
+#&gt;  5      -88.7865      0.645542    149 17:07:43    0.0 (2 restrained)
+#&gt;  6      -95.1889      0.757622    149 17:07:43    0.0 (1 restrained)
+#&gt;  7      -90.7329      0.677440    149 17:07:43    0.0 (2 restrained)</div><div class='output co'>#&gt; <span class='warning'>Warning: Oscillating parameter(s) reset to average value (iteration 7).</span></div><div class='output co'>#&gt;  8      -95.6188      0.762867    149 17:07:43    0.0 (1 restrained)
+#&gt;  9      -91.3575      0.705741    149 17:07:43    0.0
+#&gt; 10      -87.7909      0.644795    149 17:07:43    0.0 (1 restrained)
+#&gt; 11      -83.9513      0.601796    149 17:07:43    0.0
+#&gt; 12      -81.8901      0.548584    149 17:07:43    0.0 (1 restrained)
+#&gt; 13      -82.1499      0.568466    149 17:07:43    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Log-likelihood not converged</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:43 2021
 #&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -82.2785      0.567157    149 15:47:20    0.0
-#&gt;  2      -81.8595      0.561558    149 15:47:20    0.0
-#&gt;  3      -81.3047      0.543601    149 15:47:20    0.0
-#&gt;  4      -81.2374      0.541386    149 15:47:20    0.0
-#&gt;  5      -81.1807      0.538231    149 15:47:20    0.0
-#&gt;  6      -81.1162      0.532665    149 15:47:20    0.0
-#&gt;  7      -81.1079      0.528363    149 15:47:20    0.0
-#&gt;  8      -81.1147      0.531189    149 15:47:20    0.0
-#&gt;  9      -81.1090      0.530548    149 15:47:20    0.0
-#&gt; 10      -81.1089      0.530215    149 15:47:20    0.0
-#&gt; 11      -81.1068      0.529576    149 15:47:20    0.0
-#&gt; 12      -81.1077      0.529867    149 15:47:20    0.0
-#&gt; 13      -81.1065      0.529367    149 15:47:20    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Log-likelihood not converged</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:20 2020
+#&gt;  1      -82.2785      0.567157    149 17:07:43    0.0
+#&gt;  2      -81.8595      0.561558    149 17:07:43    0.0
+#&gt;  3      -81.3047      0.543601    149 17:07:43    0.0
+#&gt;  4      -81.2374      0.541386    149 17:07:43    0.0
+#&gt;  5      -81.1807      0.538231    149 17:07:43    0.0
+#&gt;  6      -81.1162      0.532665    149 17:07:43    0.0
+#&gt;  7      -81.1079      0.528363    149 17:07:43    0.0
+#&gt;  8      -81.1147      0.531189    149 17:07:43    0.0
+#&gt;  9      -81.1090      0.530548    149 17:07:43    0.0
+#&gt; 10      -81.1089      0.530215    149 17:07:43    0.0
+#&gt; 11      -81.1068      0.529576    149 17:07:43    0.0
+#&gt; 12      -81.1077      0.529867    149 17:07:43    0.0
+#&gt; 13      -81.1065      0.529367    149 17:07:43    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Log-likelihood not converged</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:43 2021
 #&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -81.1071      0.529705    149 15:47:20    0.0
-#&gt;  2      -81.1062      0.529401    149 15:47:20    0.0</div><div class='input'>  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:20 2020
+#&gt;  1      -81.1071      0.529705    149 17:07:43    0.0
+#&gt;  2      -81.1062      0.529401    149 17:07:43    0.0</div><div class='input'>  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:43 2021
 #&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -81.1063      0.529138    149 15:47:20    0.0
-#&gt;  2      -81.1062      0.529216    149 15:47:20    0.0</div><div class='input'>
+#&gt;  1      -81.1063      0.529138    149 17:07:43    0.0
+#&gt;  2      -81.1062      0.529216    149 17:07:43    0.0</div><div class='input'>    
   <span class='co'># Visualize trends, similar to Besag figure 2.</span>
   <span class='co'># Need 'as.vector' because asreml4 uses a named vector</span>
-  <span class='no'>dat</span>$<span class='no'>res</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/unname.html'>unname</a></span>(<span class='no'>m1</span>$<span class='no'>resid</span>)
-  <span class='no'>dat</span>$<span class='no'>geneff</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m1</span>)$<span class='no'>fixed</span>[<span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span>(<span class='no'>dat</span>$<span class='no'>gen</span>)]
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>fert</span><span class='kw'>=</span><span class='no'>yield</span>-<span class='no'>geneff</span>-<span class='no'>res</span>)
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-  <span class='fu'>xyplot</span>(<span class='no'>geneff</span> ~ <span class='no'>rrow</span><span class='kw'>|</span><span class='no'>col</span>, <span class='no'>dat</span>, <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>3</span>), <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'s'</span>,
-         <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"besag.bayesian - Variety effects"</span>, <span class='kw'>ylim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>5</span>,<span class='fl'>15</span> ))</div><div class='img'><img src='besag.bayesian-2.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='fu'>xyplot</span>(<span class='no'>fert</span> ~ <span class='no'>rrow</span><span class='kw'>|</span><span class='no'>col</span>, <span class='no'>dat</span>, <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>3</span>), <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'s'</span>,
-         <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"besag.bayesian - Fertility"</span>, <span class='kw'>ylim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(-<span class='fl'>2</span>,<span class='fl'>2</span>))</div><div class='img'><img src='besag.bayesian-3.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='fu'>xyplot</span>(<span class='no'>res</span> ~ <span class='no'>rrow</span><span class='kw'>|</span><span class='no'>col</span>, <span class='no'>dat</span>, <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>3</span>), <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'s'</span>,
-         <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"besag.bayesian - Residuals"</span>, <span class='kw'>ylim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(-<span class='fl'>4</span>,<span class='fl'>4</span>))</div><div class='img'><img src='besag.bayesian-4.png' alt='' width='700' height='433' /></div><div class='input'>
-# } 
+  <span class='va'>dat</span><span class='op'>$</span><span class='va'>res</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/unname.html'>unname</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>$</span><span class='va'>resid</span><span class='op'>)</span>
+  <span class='va'>dat</span><span class='op'>$</span><span class='va'>geneff</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span><span class='op'>$</span><span class='va'>fixed</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>gen</span><span class='op'>)</span><span class='op'>]</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, fert<span class='op'>=</span><span class='va'>yield</span><span class='op'>-</span><span class='va'>geneff</span><span class='op'>-</span><span class='va'>res</span><span class='op'>)</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+  <span class='fu'>xyplot</span><span class='op'>(</span><span class='va'>geneff</span> <span class='op'>~</span> <span class='va'>rrow</span><span class='op'>|</span><span class='va'>col</span>, <span class='va'>dat</span>, layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>3</span><span class='op'>)</span>, type<span class='op'>=</span><span class='st'>'s'</span>,
+         main<span class='op'>=</span><span class='st'>"besag.bayesian - Variety effects"</span>, ylim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>5</span>,<span class='fl'>15</span> <span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='besag.bayesian-2.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='fu'>xyplot</span><span class='op'>(</span><span class='va'>fert</span> <span class='op'>~</span> <span class='va'>rrow</span><span class='op'>|</span><span class='va'>col</span>, <span class='va'>dat</span>, layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>3</span><span class='op'>)</span>, type<span class='op'>=</span><span class='st'>'s'</span>,
+         main<span class='op'>=</span><span class='st'>"besag.bayesian - Fertility"</span>, ylim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>2</span>,<span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='besag.bayesian-3.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='fu'>xyplot</span><span class='op'>(</span><span class='va'>res</span> <span class='op'>~</span> <span class='va'>rrow</span><span class='op'>|</span><span class='va'>col</span>, <span class='va'>dat</span>, layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>3</span><span class='op'>)</span>, type<span class='op'>=</span><span class='st'>'s'</span>,
+         main<span class='op'>=</span><span class='st'>"besag.bayesian - Residuals"</span>, ylim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>4</span>,<span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='besag.bayesian-4.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># } </span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -263,7 +268,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -32,7 +32,7 @@
   Confidence Intervals for a Variance Ratio, or for Heritability, in an
   Unbalanced Mixed Linear Model.
   \emph{Biometrics}, 41, 137-152.
-  http://doi.org/10.2307/2530650
+  https://doi.org/10.2307/2530650
 }
 \references{
   Jiming Jiang,

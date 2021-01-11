@@ -22,7 +22,7 @@
   Yield of 8 durum winter wheat varieties across 7 years with 3 reps.
 
   Downloaded electronic version from here Nov 2015:
-  http://www.casaonofri.it/Biometry/index.html
+  https://www.casaonofri.it/Biometry/index.html
 
   Used with permission of Andrea Onofri.
 }
@@ -36,10 +36,10 @@
 \references{
   F. Mendiburu.
   AMMI.
-  http://tarwi.lamolina.edu.pe/~fmendiburu/AMMI.htm
+  https://tarwi.lamolina.edu.pe/~fmendiburu/AMMI.htm
 
   A. Onofri.
-  http://accounts.unipg.it/~onofri/RTutorial/CaseStudies/WinterWheat.htm
+  https://accounts.unipg.it/~onofri/RTutorial/CaseStudies/WinterWheat.htm
 }
 
 \examples{

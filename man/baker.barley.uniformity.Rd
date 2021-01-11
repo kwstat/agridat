@@ -33,7 +33,7 @@
   Baker, GA and Huberty, MR and Veihmeyer, FJ.  (1952)
   A uniformity trial on unirrigated barley of ten years' duration.
   \emph{Agronomy Journal}, 44, 267-270.
-  http://doi.org/10.2134/agronj1952.00021962004400050011x
+  https://doi.org/10.2134/agronj1952.00021962004400050011x
 }
 
 \examples{

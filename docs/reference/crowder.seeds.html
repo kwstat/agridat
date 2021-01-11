@@ -81,7 +81,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -152,7 +152,7 @@
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p></p><dl'>
+    <p></p><dl>
     <dt><code>plate</code></dt><dd><p>Factor for replication</p></dd>
     <dt><code>gen</code></dt><dd><p>Factor for genotype with levels <code>O73</code>, <code>O75</code></p></dd>
     <dt><code>extract</code></dt><dd><p>Factor for extract from <code>bean</code>, <code>cucumber</code></p></dd>
@@ -181,7 +181,7 @@
 <p>Crowder, M.J., 1978.
   Beta-binomial anova for proportions.
   <em>Appl. Statist.</em>, 27, 34-37.
-  http://doi.org/10.2307/2346223</p>
+  https://doi.org/10.2307/2346223</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     
@@ -189,7 +189,7 @@
 <p>N. E. Breslow and D. G. Clayton. 1993.
   Approximate inference in generalized linear mixed models.
   <em>Journal of the American Statistical Association</em>, 88:9-25.
-  http://doi.org/10.2307/2290687</p>  
+  https://doi.org/10.2307/2290687</p>  
 <p>Y. Lee and J. A. Nelder. 1996.
   Hierarchical generalized linear models with discussion.
   <em>J. R. Statist. Soc. B</em>, 58:619-678.</p>
@@ -197,25 +197,27 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>crowder.seeds</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>crowder.seeds</span>
-<span class='no'>m1.glm</span> <span class='kw'>&lt;-</span> <span class='no'>m1.glmm</span> <span class='kw'>&lt;-</span> <span class='no'>m1.bb</span> <span class='kw'>&lt;-</span> <span class='no'>m1.hglm</span> <span class='kw'>&lt;-</span> <span class='fl'>NA</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>crowder.seeds</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>crowder.seeds</span>
+  <span class='va'>m1.glm</span> <span class='op'>&lt;-</span> <span class='va'>m1.glmm</span> <span class='op'>&lt;-</span> <span class='va'>m1.bb</span> <span class='op'>&lt;-</span> <span class='va'>m1.hglm</span> <span class='op'>&lt;-</span> <span class='cn'>NA</span>
 
 
-<span class='co'># ----- Graphic</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'><a href='https://rdrr.io/r/graphics/graphics-defunct.html'>dotplot</a></span>(<span class='no'>germ</span>/<span class='no'>n</span>~<span class='no'>gen</span><span class='kw'>|</span><span class='no'>extract</span>, <span class='no'>dat</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"crowder.seeds"</span>)</div><div class='img'><img src='crowder.seeds-1.png' alt='' width='700' height='433' /></div><div class='input'>
-
-<span class='co'># ----- GLM.</span>
-<span class='co'># family=binomial() fixes dispersion at 1</span>
-<span class='co'># family=quasibinomial() estimates dispersion, had larger std errors</span>
-<span class='no'>m1.glm</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/glm.html'>glm</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span>(<span class='no'>germ</span>,<span class='no'>n</span>-<span class='no'>germ</span>) ~ <span class='no'>gen</span>*<span class='no'>extract</span>,
-              <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-              <span class='co'>#family="binomial",</span>
-              <span class='kw'>family</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/family.html'>quasibinomial</a></span>()
-              )
-<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>m1.glm</span>)</div><div class='output co'>#&gt; 
+  <span class='co'># ----- Graphic</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>dotplot</a></span><span class='op'>(</span><span class='va'>germ</span><span class='op'>/</span><span class='va'>n</span><span class='op'>~</span><span class='va'>gen</span><span class='op'>|</span><span class='va'>extract</span>, <span class='va'>dat</span>, main<span class='op'>=</span><span class='st'>"crowder.seeds"</span><span class='op'>)</span>
+</div><div class='img'><img src='crowder.seeds-1.png' alt='' width='700' height='433' /></div><div class='input'>
+ 
+  <span class='co'># ----- GLM.</span>
+  <span class='co'># family=binomial() fixes dispersion at 1</span>
+  <span class='co'># family=quasibinomial() estimates dispersion, had larger std errors</span>
+  <span class='va'>m1.glm</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/glm.html'>glm</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>germ</span>,<span class='va'>n</span><span class='op'>-</span><span class='va'>germ</span><span class='op'>)</span> <span class='op'>~</span> <span class='va'>gen</span><span class='op'>*</span><span class='va'>extract</span>,
+                data<span class='op'>=</span><span class='va'>dat</span>,
+                <span class='co'>#family="binomial",</span>
+                family<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/family.html'>quasibinomial</a></span><span class='op'>(</span><span class='op'>)</span>
+                <span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>m1.glm</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt; Call:
 #&gt; glm(formula = cbind(germ, n - germ) ~ gen * extract, family = quasibinomial(), 
 #&gt;     data = dat)
@@ -240,12 +242,14 @@
 #&gt; AIC: NA
 #&gt; 
 #&gt; Number of Fisher Scoring iterations: 4
-#&gt; </div><div class='input'>
-
-<span class='co'># --- GLMM.  Assumes Gaussian random effects</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>MASS</span>)
-<span class='no'>m1.glmm</span> <span class='kw'>&lt;-</span> <span class='fu'>glmmPQL</span>(<span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span>(<span class='no'>germ</span>, <span class='no'>n</span>-<span class='no'>germ</span>) ~ <span class='no'>gen</span>*<span class='no'>extract</span>, <span class='kw'>random</span><span class='kw'>=</span> ~<span class='fl'>1</span><span class='kw'>|</span><span class='no'>plate</span>,
-  <span class='kw'>family</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/family.html'>binomial</a></span>(), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)</div><div class='output co'>#&gt; <span class='message'>iteration 1</span></div><div class='output co'>#&gt; <span class='message'>iteration 2</span></div><div class='output co'>#&gt; <span class='message'>iteration 3</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>m1.glmm</span>)</div><div class='output co'>#&gt; Linear mixed-effects model fit by maximum likelihood
+#&gt; </div><div class='input'>  
+  
+  <span class='co'># --- GLMM.  Assumes Gaussian random effects</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>MASS</span><span class='op'>)</span>
+  <span class='va'>m1.glmm</span> <span class='op'>&lt;-</span> <span class='fu'>glmmPQL</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>germ</span>, <span class='va'>n</span><span class='op'>-</span><span class='va'>germ</span><span class='op'>)</span> <span class='op'>~</span> <span class='va'>gen</span><span class='op'>*</span><span class='va'>extract</span>, random<span class='op'>=</span> <span class='op'>~</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>plate</span>,
+                     family<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/family.html'>binomial</a></span><span class='op'>(</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>iteration 1</span></div><div class='output co'>#&gt; <span class='message'>iteration 2</span></div><div class='output co'>#&gt; <span class='message'>iteration 3</span></div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>m1.glmm</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Linear mixed-effects model fit by maximum likelihood
 #&gt;  Data: dat 
 #&gt;   AIC BIC logLik
 #&gt;    NA  NA     NA
@@ -275,12 +279,7 @@
 #&gt; -1.59952544 -0.85340590  0.03919434  0.71649291  1.30878355 
 #&gt; 
 #&gt; Number of Observations: 21
-#&gt; Number of Groups: 21 </div><div class='input'>
-
-<span class='co'># ----- AODS3 package</span>
-<span class='co'># libs(aods3)</span>
-<span class='co'># m1.bb &lt;- aodml(cbind(germ, n-germ) ~ gen * extract, data=dat, family="bb")</span>
-
+#&gt; Number of Groups: 21 </div><div class='input'>  
 
 <span class='co'># ----- HGML package. Beta-binomial with beta-distributed random effects</span>
 <span class='co'># libs(hglm)</span>
@@ -335,25 +334,40 @@
 <span class='co'>## extractcucumber         0.53 0.32      -0.12     0.53       1.17  0.53   0</span>
 <span class='co'>## genO75:extractcucumber  0.82 0.42       0.01     0.82       1.66  0.81   0</span>
 
-<span class='kw'>if</span>(<span class='fl'>0</span>) {
+  
+  <span class='co'># ----- Stan using pre-built models from rstanarm</span>
+  <span class='co'>## libs(tidyverse, rstan, rstanarm)</span>
+  <span class='co'>## m1.stan &lt;- stan_glm(</span>
+  <span class='co'>##   cbind(germ,n-germ) ~ gen*extract,</span>
+  <span class='co'>##   data=dat,</span>
+  <span class='co'>##   family = binomial(link="logit")  )</span>
+  <span class='co'>## round(posterior_interval(m1.stan, prob=.90),3)</span>
+  <span class='co'>## #                            5</span>
+  <span class='co'>## # (Intercept)            -0.715 -0.111</span>
+  <span class='co'>## # genO75                 -0.512  0.228</span>
+  <span class='co'>## # extractcucumber         0.123  0.977</span>
+  <span class='co'>## # genO75:extractcucumber  0.248  1.284</span>
+
+
+<span class='kw'>if</span><span class='op'>(</span><span class='fl'>0</span><span class='op'>)</span> <span class='op'>{</span>
 
   <span class='co'># --- rjags version ---</span>
 
-<span class='co'># JAGS/BUGS.  See http://mathstat.helsinki.fi/openbugs/Examples/Seeds.html</span>
+<span class='co'># JAGS/BUGS.  See https://mathstat.helsinki.fi/openbugs/Examples/Seeds.html</span>
 <span class='co'># Germination rate depends on p, which is a logit of a linear predictor</span>
 <span class='co'># based on genotype and extract, plus random deviation to intercept</span>
 
 <span class='co'># To match the output on the BUGS web page, use: dat$gen=="O73".</span>
 <span class='co'># We use dat$gen=="O75" to compare with the parameterization above.</span>
-<span class='no'>jdat</span> <span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>germ</span> <span class='kw'>=</span> <span class='no'>dat</span>$<span class='no'>germ</span>, <span class='kw'>n</span> <span class='kw'>=</span> <span class='no'>dat</span>$<span class='no'>n</span>,
-           <span class='kw'>root</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span>(<span class='no'>dat</span>$<span class='no'>extract</span><span class='kw'>==</span><span class='st'>"cucumber"</span>),
-           <span class='kw'>gen</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span>(<span class='no'>dat</span>$<span class='no'>gen</span><span class='kw'>==</span><span class='st'>"O75"</span>),
-           <span class='kw'>nobs</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span>(<span class='no'>dat</span>))
+<span class='va'>jdat</span> <span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>germ <span class='op'>=</span> <span class='va'>dat</span><span class='op'>$</span><span class='va'>germ</span>, n <span class='op'>=</span> <span class='va'>dat</span><span class='op'>$</span><span class='va'>n</span>,
+           root <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>extract</span><span class='op'>==</span><span class='st'>"cucumber"</span><span class='op'>)</span>,
+           gen <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>gen</span><span class='op'>==</span><span class='st'>"O75"</span><span class='op'>)</span>,
+           nobs <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='no'>jinit</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>int</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>genO75</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>extcuke</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>g75ecuke</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>tau</span> <span class='kw'>=</span> <span class='fl'>10</span>)
+<span class='va'>jinit</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>int <span class='op'>=</span> <span class='fl'>0</span>, genO75 <span class='op'>=</span> <span class='fl'>0</span>, extcuke <span class='op'>=</span> <span class='fl'>0</span>, g75ecuke <span class='op'>=</span> <span class='fl'>0</span>, tau <span class='op'>=</span> <span class='fl'>10</span><span class='op'>)</span>
 
 <span class='co'># Use logical names (unlike BUGS documentation)</span>
-<span class='no'>mod.bug</span> <span class='kw'>=</span>
+<span class='va'>mod.bug</span> <span class='op'>=</span>
 <span class='st'>"model {
   for(i in 1:nobs) {
     germ[i] ~ dbin(p[i], n[i])
@@ -369,14 +383,14 @@
   sigma &lt;- 1 / sqrt(tau)
 }"</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>rjags</span>)
-<span class='no'>oo</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/textconnections.html'>textConnection</a></span>(<span class='no'>mod.bug</span>)
-<span class='no'>j1</span> <span class='kw'>&lt;-</span> <span class='fu'>jags.model</span>(<span class='no'>oo</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>jdat</span>, <span class='kw'>inits</span><span class='kw'>=</span><span class='no'>jinit</span>, <span class='kw'>n.chains</span><span class='kw'>=</span><span class='fl'>1</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/connections.html'>close</a></span>(<span class='no'>oo</span>)
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>rjags</span><span class='op'>)</span>
+<span class='va'>oo</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/textconnections.html'>textConnection</a></span><span class='op'>(</span><span class='va'>mod.bug</span><span class='op'>)</span>
+<span class='va'>j1</span> <span class='op'>&lt;-</span> <span class='fu'>jags.model</span><span class='op'>(</span><span class='va'>oo</span>, data<span class='op'>=</span><span class='va'>jdat</span>, inits<span class='op'>=</span><span class='va'>jinit</span>, n.chains<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/connections.html'>close</a></span><span class='op'>(</span><span class='va'>oo</span><span class='op'>)</span>
 
-<span class='no'>c1</span> <span class='kw'>&lt;-</span> <span class='fu'>coda.samples</span>(<span class='no'>j1</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"int"</span>,<span class='st'>"genO75"</span>,<span class='st'>"g75ecuke"</span>,<span class='st'>"extcuke"</span>,<span class='st'>"sigma"</span>),
-                   <span class='kw'>n.iter</span><span class='kw'>=</span><span class='fl'>20000</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>c1</span>) <span class='co'># Medians are very similar to estimates from hglm</span>
+<span class='va'>c1</span> <span class='op'>&lt;-</span> <span class='fu'>coda.samples</span><span class='op'>(</span><span class='va'>j1</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"int"</span>,<span class='st'>"genO75"</span>,<span class='st'>"g75ecuke"</span>,<span class='st'>"extcuke"</span>,<span class='st'>"sigma"</span><span class='op'>)</span>,
+                   n.iter<span class='op'>=</span><span class='fl'>20000</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>c1</span><span class='op'>)</span> <span class='co'># Medians are very similar to estimates from hglm</span>
 <span class='co'># libs(lucid)</span>
 <span class='co'># print(vc(c1),3)</span>
 <span class='co'>##             Mean    SD    2.5</span>
@@ -387,53 +401,53 @@
 <span class='co'>## sigma     0.289  0.142  0.0505  0.279   0.596 </span>
 
 <span class='co'># Plot observed data with HPD intervals for germination probability</span>
-<span class='no'>c2</span> <span class='kw'>&lt;-</span> <span class='fu'>coda.samples</span>(<span class='no'>j1</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"p"</span>), <span class='kw'>n.iter</span><span class='kw'>=</span><span class='fl'>20000</span>)
-<span class='no'>hpd</span> <span class='kw'>&lt;-</span> <span class='fu'>HPDinterval</span>(<span class='no'>c2</span>)<span class='kw'>[[</span><span class='fl'>1</span>]]
-<span class='no'>med</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>c2</span>, <span class='kw'>quantiles</span><span class='kw'>=</span><span class='fl'>.5</span>)$<span class='no'>quantiles</span>
-<span class='no'>fit</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(<span class='no'>med</span>, <span class='no'>hpd</span>)
+<span class='va'>c2</span> <span class='op'>&lt;-</span> <span class='fu'>coda.samples</span><span class='op'>(</span><span class='va'>j1</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"p"</span><span class='op'>)</span>, n.iter<span class='op'>=</span><span class='fl'>20000</span><span class='op'>)</span>
+<span class='va'>hpd</span> <span class='op'>&lt;-</span> <span class='fu'>HPDinterval</span><span class='op'>(</span><span class='va'>c2</span><span class='op'>)</span><span class='op'>[[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>]</span>
+<span class='va'>med</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>c2</span>, quantiles<span class='op'>=</span><span class='fl'>.5</span><span class='op'>)</span><span class='op'>$</span><span class='va'>quantiles</span>
+<span class='va'>fit</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='va'>med</span>, <span class='va'>hpd</span><span class='op'>)</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>latticeExtra</span>)
-<span class='no'>obs</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/graphics-defunct.html'>dotplot</a></span>(<span class='fl'>1</span>:<span class='fl'>21</span> ~ <span class='no'>germ</span>/<span class='no'>n</span>, <span class='no'>dat</span>,
-               <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"crowder.seeds"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"plate"</span>,
-               <span class='kw'>col</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span>(<span class='no'>dat</span>$<span class='no'>gen</span>), <span class='kw'>pch</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/substr.html'>substring</a></span>(<span class='no'>dat</span>$<span class='no'>extract</span>,<span class='fl'>1</span>))
-<span class='no'>obs</span> + <span class='fu'>segplot</span>(<span class='fl'>1</span>:<span class='fl'>21</span> ~ <span class='no'>lower</span> + <span class='no'>upper</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>fit</span>, <span class='kw'>centers</span><span class='kw'>=</span><span class='no'>med</span>)
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>latticeExtra</span><span class='op'>)</span>
+<span class='va'>obs</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>dotplot</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>21</span> <span class='op'>~</span> <span class='va'>germ</span><span class='op'>/</span><span class='va'>n</span>, <span class='va'>dat</span>,
+               main<span class='op'>=</span><span class='st'>"crowder.seeds"</span>, ylab<span class='op'>=</span><span class='st'>"plate"</span>,
+               col<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>gen</span><span class='op'>)</span>, pch<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/substr.html'>substring</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>extract</span>,<span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>obs</span> <span class='op'>+</span> <span class='fu'>segplot</span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>21</span> <span class='op'>~</span> <span class='va'>lower</span> <span class='op'>+</span> <span class='va'>upper</span>, data<span class='op'>=</span><span class='va'>fit</span>, centers<span class='op'>=</span><span class='va'>med</span><span class='op'>)</span>
 
 
 <span class='co'>## --- R2jags version ---</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='st'>"agridat"</span>)
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='st'>"R2jags"</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>crowder.seeds</span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='st'>"agridat"</span><span class='op'>)</span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='st'>"R2jags"</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>crowder.seeds</span>
 
 <span class='co'># To match the output on the BUGS web page, use: dat$gen=="O73".</span>
 <span class='co'># We use dat$gen=="O75" to compare with the parameterization above.</span>
-<span class='no'>jdat</span> <span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>germ</span> <span class='kw'>=</span> <span class='no'>dat</span>$<span class='no'>germ</span>, <span class='kw'>n</span> <span class='kw'>=</span> <span class='no'>dat</span>$<span class='no'>n</span>,
-           <span class='kw'>root</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span>(<span class='no'>dat</span>$<span class='no'>extract</span><span class='kw'>==</span><span class='st'>"cucumber"</span>),
-           <span class='kw'>gen</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span>(<span class='no'>dat</span>$<span class='no'>gen</span><span class='kw'>==</span><span class='st'>"O75"</span>),
-           <span class='kw'>nobs</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span>(<span class='no'>dat</span>))
+<span class='va'>jdat</span> <span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>germ <span class='op'>=</span> <span class='va'>dat</span><span class='op'>$</span><span class='va'>germ</span>, n <span class='op'>=</span> <span class='va'>dat</span><span class='op'>$</span><span class='va'>n</span>,
+           root <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>extract</span><span class='op'>==</span><span class='st'>"cucumber"</span><span class='op'>)</span>,
+           gen <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>gen</span><span class='op'>==</span><span class='st'>"O75"</span><span class='op'>)</span>,
+           nobs <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='no'>jinit</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>int</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>genO75</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>extcuke</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>g75ecuke</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>tau</span> <span class='kw'>=</span> <span class='fl'>10</span>))
+<span class='va'>jinit</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>int <span class='op'>=</span> <span class='fl'>0</span>, genO75 <span class='op'>=</span> <span class='fl'>0</span>, extcuke <span class='op'>=</span> <span class='fl'>0</span>, g75ecuke <span class='op'>=</span> <span class='fl'>0</span>, tau <span class='op'>=</span> <span class='fl'>10</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='no'>mod.bug</span> <span class='kw'>=</span> <span class='kw'>function</span>() {
-  <span class='kw'>for</span>(<span class='no'>i</span> <span class='kw'>in</span> <span class='fl'>1</span>:<span class='no'>nobs</span>) {
-    <span class='no'>germ</span>[<span class='no'>i</span>] ~ <span class='fu'>dbin</span>(<span class='no'>p</span>[<span class='no'>i</span>], <span class='no'>n</span>[<span class='no'>i</span>])
-    <span class='no'>b</span>[<span class='no'>i</span>] ~ <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>dnorm</a></span>(<span class='fl'>0.0</span>, <span class='no'>tau</span>)
-    <span class='fu'>logit</span>(<span class='no'>p</span>[<span class='no'>i</span>]) <span class='kw'>&lt;-</span> <span class='no'>int</span> + <span class='no'>genO75</span> * <span class='no'>gen</span>[<span class='no'>i</span>] + <span class='no'>extcuke</span> * <span class='no'>root</span>[<span class='no'>i</span>] +
-      <span class='no'>g75ecuke</span> * <span class='no'>gen</span>[<span class='no'>i</span>] * <span class='no'>root</span>[<span class='no'>i</span>] + <span class='no'>b</span>[<span class='no'>i</span>]
-  }
-  <span class='no'>int</span> ~ <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>dnorm</a></span>(<span class='fl'>0.0</span>, <span class='fl'>1.0E-6</span>)
-  <span class='no'>genO75</span> ~ <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>dnorm</a></span>(<span class='fl'>0.0</span>, <span class='fl'>1.0E-6</span>)
-  <span class='no'>extcuke</span> ~ <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>dnorm</a></span>(<span class='fl'>0.0</span>, <span class='fl'>1.0E-6</span>)
-  <span class='no'>g75ecuke</span> ~ <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>dnorm</a></span>(<span class='fl'>0.0</span>, <span class='fl'>1.0E-6</span>)
-  <span class='no'>tau</span> ~ <span class='fu'><a href='https://rdrr.io/r/stats/GammaDist.html'>dgamma</a></span>(<span class='fl'>0.001</span>, <span class='fl'>0.001</span>)
-  <span class='no'>sigma</span> <span class='kw'>&lt;-</span> <span class='fl'>1</span> / <span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span>(<span class='no'>tau</span>)
-}
+<span class='va'>mod.bug</span> <span class='op'>=</span> <span class='kw'>function</span><span class='op'>(</span><span class='op'>)</span> <span class='op'>{</span>
+  <span class='kw'>for</span><span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>nobs</span><span class='op'>)</span> <span class='op'>{</span>
+    <span class='va'>germ</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>~</span> <span class='fu'>dbin</span><span class='op'>(</span><span class='va'>p</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span>, <span class='va'>n</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>)</span>
+    <span class='va'>b</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>~</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>dnorm</a></span><span class='op'>(</span><span class='fl'>0.0</span>, <span class='va'>tau</span><span class='op'>)</span>
+    <span class='fu'>logit</span><span class='op'>(</span><span class='va'>p</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='va'>int</span> <span class='op'>+</span> <span class='va'>genO75</span> <span class='op'>*</span> <span class='va'>gen</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>+</span> <span class='va'>extcuke</span> <span class='op'>*</span> <span class='va'>root</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>+</span>
+      <span class='va'>g75ecuke</span> <span class='op'>*</span> <span class='va'>gen</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>*</span> <span class='va'>root</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span> <span class='op'>+</span> <span class='va'>b</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span>
+  <span class='op'>}</span>
+  <span class='va'>int</span> <span class='op'>~</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>dnorm</a></span><span class='op'>(</span><span class='fl'>0.0</span>, <span class='fl'>1.0E-6</span><span class='op'>)</span>
+  <span class='va'>genO75</span> <span class='op'>~</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>dnorm</a></span><span class='op'>(</span><span class='fl'>0.0</span>, <span class='fl'>1.0E-6</span><span class='op'>)</span>
+  <span class='va'>extcuke</span> <span class='op'>~</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>dnorm</a></span><span class='op'>(</span><span class='fl'>0.0</span>, <span class='fl'>1.0E-6</span><span class='op'>)</span>
+  <span class='va'>g75ecuke</span> <span class='op'>~</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>dnorm</a></span><span class='op'>(</span><span class='fl'>0.0</span>, <span class='fl'>1.0E-6</span><span class='op'>)</span>
+  <span class='va'>tau</span> <span class='op'>~</span> <span class='fu'><a href='https://rdrr.io/r/stats/GammaDist.html'>dgamma</a></span><span class='op'>(</span><span class='fl'>0.001</span>, <span class='fl'>0.001</span><span class='op'>)</span>
+  <span class='va'>sigma</span> <span class='op'>&lt;-</span> <span class='fl'>1</span> <span class='op'>/</span> <span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span><span class='op'>(</span><span class='va'>tau</span><span class='op'>)</span>
+<span class='op'>}</span>
 
-<span class='no'>parms</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"int"</span>,<span class='st'>"genO75"</span>,<span class='st'>"g75ecuke"</span>,<span class='st'>"extcuke"</span>,<span class='st'>"sigma"</span>)
+<span class='va'>parms</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"int"</span>,<span class='st'>"genO75"</span>,<span class='st'>"g75ecuke"</span>,<span class='st'>"extcuke"</span>,<span class='st'>"sigma"</span><span class='op'>)</span>
 
-<span class='no'>j1</span> <span class='kw'>&lt;-</span> <span class='fu'>jags</span>(<span class='kw'>data</span><span class='kw'>=</span><span class='no'>jdat</span>, <span class='kw'>inits</span><span class='kw'>=</span><span class='no'>jinit</span>, <span class='no'>parms</span>, <span class='kw'>model.file</span><span class='kw'>=</span><span class='no'>mod.bug</span>,
-           <span class='kw'>n.iter</span><span class='kw'>=</span><span class='fl'>20000</span>, <span class='kw'>n.chains</span><span class='kw'>=</span><span class='fl'>1</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>j1</span>)
+<span class='va'>j1</span> <span class='op'>&lt;-</span> <span class='fu'>jags</span><span class='op'>(</span>data<span class='op'>=</span><span class='va'>jdat</span>, inits<span class='op'>=</span><span class='va'>jinit</span>, <span class='va'>parms</span>, model.file<span class='op'>=</span><span class='va'>mod.bug</span>,
+           n.iter<span class='op'>=</span><span class='fl'>20000</span>, n.chains<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='va'>j1</span><span class='op'>)</span>
 <span class='co'>##          mu.vect sd.vect   2.5</span>
 <span class='co'>## extcuke    0.519   0.325 -0.140  0.325   0.531   0.728   1.158</span>
 <span class='co'>## g75ecuke   0.834   0.429 -0.019  0.552   0.821   1.101   1.710</span>
@@ -442,13 +456,14 @@
 <span class='co'>## sigma      0.255   0.148  0.033  0.140   0.240   0.352   0.572</span>
 <span class='co'>## deviance 103.319   7.489 90.019 98.010 102.770 108.689 117.288</span>
 
-<span class='fu'>traceplot</span>(<span class='fu'>as.mcmc</span>(<span class='no'>j1</span>))
-<span class='fu'>densityplot</span>(<span class='fu'>as.mcmc</span>(<span class='no'>j1</span>))
-<span class='fu'>HPDinterval</span>(<span class='fu'>as.mcmc</span>(<span class='no'>j1</span>))
+<span class='fu'>traceplot</span><span class='op'>(</span><span class='fu'>as.mcmc</span><span class='op'>(</span><span class='va'>j1</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/histogram.html'>densityplot</a></span><span class='op'>(</span><span class='fu'>as.mcmc</span><span class='op'>(</span><span class='va'>j1</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'>HPDinterval</span><span class='op'>(</span><span class='fu'>as.mcmc</span><span class='op'>(</span><span class='va'>j1</span><span class='op'>)</span><span class='op'>)</span>
 
-}
+<span class='op'>}</span>
 
-<span class='co'># }</span></div></pre>
+<span class='co'># }</span>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -464,7 +479,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

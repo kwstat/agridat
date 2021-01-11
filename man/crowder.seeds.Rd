@@ -38,7 +38,7 @@
   Crowder, M.J., 1978.
   Beta-binomial anova for proportions.
   \emph{Appl. Statist.}, 27, 34-37.
-  http://doi.org/10.2307/2346223
+  https://doi.org/10.2307/2346223
 
 }
 
@@ -47,7 +47,7 @@
   N. E. Breslow and D. G. Clayton. 1993.
   Approximate inference in generalized linear mixed models.
   \emph{Journal of the American Statistical Association}, 88:9-25.
-  http://doi.org/10.2307/2290687
+  https://doi.org/10.2307/2290687
   
   Y. Lee and J. A. Nelder. 1996.
   Hierarchical generalized linear models with discussion.
@@ -159,7 +159,7 @@ if(0) {
 
   # --- rjags version ---
 
-# JAGS/BUGS.  See http://mathstat.helsinki.fi/openbugs/Examples/Seeds.html
+# JAGS/BUGS.  See https://mathstat.helsinki.fi/openbugs/Examples/Seeds.html
 # Germination rate depends on p, which is a logit of a linear predictor
 # based on genotype and extract, plus random deviation to intercept
 

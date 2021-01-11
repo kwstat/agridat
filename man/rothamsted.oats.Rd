@@ -33,7 +33,7 @@
 }
 \source{
   Rothamsted Report 1925-26, p. 146.
-  http://www.era.rothamsted.ac.uk/eradoc/article/ResReport1925-26-138-155
+  https://www.era.rothamsted.ac.uk/eradoc/article/ResReport1925-26-138-155
   Electronic version of data supplied by David Clifford.
 }
 \references{
@@ -41,7 +41,7 @@
   Evidence for conformal invariance of crop yields,
   \emph{Proceedings of the Royal Society A: Mathematical, Physical and
     Engineering Science}, 462, 2119--2143.
-  http://doi.org/10.1098/rspa.2006.1667 
+  https://doi.org/10.1098/rspa.2006.1667 
 }
 \examples{
 \dontrun{

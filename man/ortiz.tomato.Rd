@@ -83,7 +83,7 @@
   Studying the Effect of Environmental Variables On the Genotype x
   Environment Interaction of Tomato.
   Euphytica, 153, 119--134.
-  http://doi.org/10.1007/s10681-006-9248-7
+  https://doi.org/10.1007/s10681-006-9248-7
 }
 
 \examples{

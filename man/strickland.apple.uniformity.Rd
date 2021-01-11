@@ -27,7 +27,7 @@
   A. G. Strickland (1935).
   Error in horticultural experiments.
   Journal of Agriculture, Victoria, 33, 408-416.
-  http://handle.slv.vic.gov.au/10381/386642
+  https://handle.slv.vic.gov.au/10381/386642
 }
 \references{
   None

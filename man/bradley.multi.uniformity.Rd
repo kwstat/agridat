@@ -72,7 +72,7 @@
   P. L. Bradley (1941).
   A study of the variation in productivity over a number of fixed plots in field 2.
   Dissertation: The University of the West Indies. Appendix 1a, 1b, 1c, 1d.
-  http://hdl.handle.net/2139/41264
+  https://hdl.handle.net/2139/41264
 
   The data are repeated in:
   C. E. Wilson.
@@ -80,7 +80,7 @@
   plot-fertility data for use in future experiments on these plots,
   season 1940-41.
   Dissertation: The University of the West Indies.  Page 36-39.
-  http://uwispace.sta.uwi.edu/dspace/handle/2139/43658
+  https://uwispace.sta.uwi.edu/dspace/handle/2139/43658
 }
 \references{
   None

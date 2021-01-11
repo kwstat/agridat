@@ -48,7 +48,7 @@
 \references{
   Shaw (1935).
   Handbook of Statistics for Use in Plant-Breeding and Agricultural Problems, p. 149-170.
-  http://krishikosh.egranth.ac.in/handle/1/21153
+  https://krishikosh.egranth.ac.in/handle/1/21153
 }
 \examples{
 \dontrun{

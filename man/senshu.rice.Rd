@@ -30,7 +30,7 @@
   Seshu, D. V. and Cady, F. B. 1984.
   Response of rice to solar radiation and temperature estimated from international yield trials.
   \emph{Crop Science}, 24, 649-654.
-  http://doi.org/10.2135/cropsci1984.0011183X002400040006x
+  https://doi.org/10.2135/cropsci1984.0011183X002400040006x
 }
 
 \references{

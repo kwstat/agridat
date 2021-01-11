@@ -34,7 +34,7 @@
 }
 \source{
   U.S. Department of Agriculture-National Agriculture Statistics
-  Service. http://censtats.census.gov/usa/usa.shtml
+  Service. https://censtats.census.gov/usa/usa.shtml
 }
 \examples{
 \dontrun{

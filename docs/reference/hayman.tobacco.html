@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Diallel cross of Aztec tobacco — hayman.tobacco" />
-
 <meta property="og:description" content="Diallel cross of Aztec tobacco in 2 reps" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,25 +143,24 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Diallel cross of Aztec tobacco in 2 reps</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
     
 
-<p></p><dl class='dl-horizontal'>
+<p></p><dl>
     <dt><code>year</code></dt><dd><p>year</p></dd>
     <dt><code>block</code></dt><dd><p>block factor, 2 levels</p></dd>
     <dt><code>male</code></dt><dd><p>male parent, 8 levels</p></dd>
     <dt><code>female</code></dt><dd><p>female parent</p></dd>
     <dt><code>day</code></dt><dd><p>mean flowering time (days)</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     
@@ -174,18 +177,16 @@
   This seems to indicate that the varieties are the same in 1951 and
   1952.  Calculating the GCA effects separately for 1951 and 1952 and
   then comparing these estimates shows that they are highly correlated.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     
 
 <p>B. I. Hayman (1954a). The Analysis of Variance of Diallel Tables.
   <em>Biometrics</em>, 10, 235-244.  Table 5, page 241.
-  http://doi.org/10.2307/3001877</p>
+  https://doi.org/10.2307/3001877</p>
 <p>Hayman, B.I. (1954b). The theory and analysis of diallel crosses.
   <em>Genetics</em>, 39, 789-809.  Table 3, page 805.
-  http://www.genetics.org/content/39/6/789.full.pdf</p>
-    
+  https://www.genetics.org/content/39/6/789.full.pdf</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     
@@ -198,29 +199,47 @@
 <p>C. Clark Cockerham and B. S. Weir. (1977).
   Quadratic analyses of reciprocal crosses.
   <em>Biometrics</em> 33, 187-203.  Appendix C.</p>
-    
+<p>Andrea Onofri, Niccolo Terzaroli, Luigi Russi (2020).
+  Linear models for diallel crosses: A review with R functions.
+  Theoretical and Applied Genetics.
+  https://doi.org/10.1007/s00122-020-03716-8</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+  
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  
+  <span class='co'># 1951 data.  Fit the first REML model of Mohring 2011 Supplement.  </span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>hayman.tobacco</span><span class='op'>)</span>
+  <span class='va'>dat1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>hayman.tobacco</span>, <span class='va'>year</span><span class='op'>==</span><span class='fl'>1951</span><span class='op'>)</span>
 
-  <span class='co'># 1951 data.  Fit the first REML model of Mohring 2011 Supplement.</span>
-
-  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>hayman.tobacco</span>)
-  <span class='no'>dat1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>hayman.tobacco</span>, <span class='no'>year</span><span class='kw'>==</span><span class='fl'>1951</span>)
-
+  <span class='co'># libs(lmDiallel)</span>
+  <span class='co'># m1  &lt;- lm.diallel(day ~ male+female, Block=block, data=dat1, fct="HAYMAN2")</span>
+  <span class='co'># anova(m1) # Similar to table 7 of Hayman 1954a</span>
+  <span class='co'>## Response: day</span>
+  <span class='co'>##                Df  Sum Sq Mean Sq F value    Pr(&gt;F)    </span>
+  <span class='co'>## Block           1    1.42    1.42  0.3416   0.56100    </span>
+  <span class='co'>## Mean Dom. Dev.  1  307.97  307.97 73.8840 3.259e-12 ***</span>
+  <span class='co'>## GCA             7 2777.17  396.74 95.1805 &lt; 2.2e-16 ***</span>
+  <span class='co'>## Dom. Dev.       7  341.53   48.79 11.7050 1.957e-09 ***</span>
+  <span class='co'>## SCA            20  372.89   18.64  4.4729 2.560e-06 ***</span>
+  <span class='co'>## RGCA            7   67.39    9.63  2.3097   0.03671 *  </span>
+  <span class='co'>## RSCA           21  123.73    5.89  1.4135   0.14668    </span>
+  <span class='co'>## Residuals      63  262.60                              </span>
+  
   <span class='co'># Make a factor 'comb' in which G1xG2 is the same cross as G2xG1</span>
-  <span class='no'>dat1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat1</span>, <span class='kw'>comb</span> <span class='kw'>=</span>
-                            <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span>(<span class='no'>male</span>) <span class='kw'>&lt;</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span>(<span class='no'>female</span>),
-                                   <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span>(<span class='no'>male</span>,<span class='no'>female</span>), <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span>(<span class='no'>female</span>,<span class='no'>male</span>)))
+  <span class='va'>dat1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat1</span>,
+                    comb <span class='op'>=</span>
+                      <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span><span class='op'>(</span><span class='va'>male</span><span class='op'>)</span> <span class='op'>&lt;</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span><span class='op'>(</span><span class='va'>female</span><span class='op'>)</span>,
+                             <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='va'>male</span>,<span class='va'>female</span><span class='op'>)</span>, <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='va'>female</span>,<span class='va'>male</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
   <span class='co'># 'dr' is the direction of the cross, 0 for self</span>
-  <span class='no'>dat1</span>$<span class='no'>dr</span> <span class='kw'>&lt;-</span> <span class='fl'>1</span>
-  <span class='no'>dat1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat1</span>,
-                    <span class='kw'>dr</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span>(<span class='no'>male</span>) <span class='kw'>&lt;</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span>(<span class='no'>female</span>), -<span class='fl'>1</span>, <span class='no'>dr</span>))
-  <span class='no'>dat1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat1</span>,
-                    <span class='kw'>dr</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span>(<span class='no'>male</span>) <span class='kw'>==</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span>(<span class='no'>female</span>), <span class='fl'>0</span>, <span class='no'>dr</span>))
-
-  <span class='co'># ASREML code for Mixed Griffing.</span>
+  <span class='va'>dat1</span><span class='op'>$</span><span class='va'>dr</span> <span class='op'>&lt;-</span> <span class='fl'>1</span>
+  <span class='va'>dat1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat1</span>,
+                    dr <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span><span class='op'>(</span><span class='va'>male</span><span class='op'>)</span> <span class='op'>&lt;</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span><span class='op'>(</span><span class='va'>female</span><span class='op'>)</span>, <span class='op'>-</span><span class='fl'>1</span>, <span class='va'>dr</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>dat1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat1</span>,
+                    dr <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span><span class='op'>(</span><span class='va'>male</span><span class='op'>)</span> <span class='op'>==</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span><span class='op'>(</span><span class='va'>female</span><span class='op'>)</span>, <span class='fl'>0</span>, <span class='va'>dr</span><span class='op'>)</span><span class='op'>)</span>
+  
+  <span class='co'># asreml r version 3 &amp; 4 code for Mixed Griffing.</span>
   <span class='co'># Mohring Table 2, column 2 (after dividing by 10^2) gives variances:</span>
   <span class='co'># GCA 12.77, SCA 11.09, RSCA .65, Error 4.23.</span>
   <span class='co'># Mohring Supplement ASREML code part1 model is:</span>
@@ -229,69 +248,64 @@
   <span class='co'># and(female) term tells asreml to use the same levels (or, equivalently,</span>
   <span class='co'># fix the correlation of the male/female levels to be 1.</span>
   <span class='co'># The block effect is minimial and therefore ignored.</span>
+  <span class='co'>## libs(asreml, lucid)</span>
   <span class='co'>## m1 &lt;- asreml(day~1, data=dat1,</span>
   <span class='co'>##              random = ~ male + and(female) + comb + comb:dr)</span>
-  <span class='co'>## libs(lucid)</span>
   <span class='co'>## vc(m1)</span>
   <span class='co'>##           effect component std.error z.ratio      con</span>
   <span class='co'>##    male!male.var   12.77      7.502      1.7 Positive</span>
   <span class='co'>##    comb!comb.var   11.11      3.353      3.3 Positive</span>
   <span class='co'>## comb:dr!comb.var    0.6603    0.4926     1.3 Positive</span>
   <span class='co'>##       R!variance    4.185     0.7449     5.6 Positive</span>
-
-  <span class='co'># --------------------</span>
-
+  
+  <span class='co'># ----------</span>
+  
   <span class='co'># 1952 data. Reproduce table 3 and figure 2 of Hayman 1954b.</span>
-
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>hayman.tobacco</span>, <span class='no'>year</span><span class='kw'>==</span><span class='fl'>1952</span>)
-
+  
+  <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>hayman.tobacco</span>, <span class='va'>year</span><span class='op'>==</span><span class='fl'>1952</span><span class='op'>)</span>
+  
   <span class='co'># Does flowering date follow a gamma distn?  Maybe.</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-  <span class='fu'>densityplot</span>(~<span class='no'>day</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat2</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"hayman.tobacco"</span>,
-              <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"flowering date"</span>)</div><div class='img'><img src='hayman.tobacco-1.png' alt='' width='700' height='433' /></div><div class='input'>
-
-  <span class='no'>d1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat2</span>, <span class='no'>block</span><span class='kw'>==</span><span class='st'>'B1'</span>)
-  <span class='no'>d2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat2</span>, <span class='no'>block</span><span class='kw'>==</span><span class='st'>'B2'</span>)
-
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>reshape2</span>)
-  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>acast</span>(<span class='no'>d1</span>, <span class='no'>male</span>~<span class='no'>female</span>, <span class='kw'>value.var</span><span class='kw'>=</span><span class='st'>'day'</span>)
-  <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'>acast</span>(<span class='no'>d2</span>, <span class='no'>male</span>~<span class='no'>female</span>, <span class='kw'>value.var</span><span class='kw'>=</span><span class='st'>'day'</span>)
-
-  <span class='no'>mn1</span> <span class='kw'>&lt;-</span> (<span class='no'>m1</span>+<span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span>(<span class='no'>m1</span>))/<span class='fl'>2</span>
-  <span class='no'>mn2</span> <span class='kw'>&lt;-</span> (<span class='no'>m2</span>+<span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span>(<span class='no'>m2</span>))/<span class='fl'>2</span>
-
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/histogram.html'>densityplot</a></span><span class='op'>(</span><span class='op'>~</span><span class='va'>day</span>, data<span class='op'>=</span><span class='va'>dat2</span>, main<span class='op'>=</span><span class='st'>"hayman.tobacco"</span>,
+              xlab<span class='op'>=</span><span class='st'>"flowering date"</span><span class='op'>)</span>
+</div><div class='img'><img src='hayman.tobacco-1.png' alt='' width='700' height='433' /></div><div class='input'>  
+  
+  <span class='va'>d1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat2</span>, <span class='va'>block</span><span class='op'>==</span><span class='st'>'B1'</span><span class='op'>)</span>
+  <span class='va'>d2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat2</span>, <span class='va'>block</span><span class='op'>==</span><span class='st'>'B2'</span><span class='op'>)</span>
+  
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>reshape2</span><span class='op'>)</span>
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>acast</span><span class='op'>(</span><span class='va'>d1</span>, <span class='va'>male</span><span class='op'>~</span><span class='va'>female</span>, value.var<span class='op'>=</span><span class='st'>'day'</span><span class='op'>)</span>
+  <span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'>acast</span><span class='op'>(</span><span class='va'>d2</span>, <span class='va'>male</span><span class='op'>~</span><span class='va'>female</span>, value.var<span class='op'>=</span><span class='st'>'day'</span><span class='op'>)</span>
+  
+  <span class='va'>mn1</span> <span class='op'>&lt;-</span> <span class='op'>(</span><span class='va'>m1</span><span class='op'>+</span><span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span><span class='op'>)</span><span class='op'>/</span><span class='fl'>2</span>
+  <span class='va'>mn2</span> <span class='op'>&lt;-</span> <span class='op'>(</span><span class='va'>m2</span><span class='op'>+</span><span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span><span class='op'>(</span><span class='va'>m2</span><span class='op'>)</span><span class='op'>)</span><span class='op'>/</span><span class='fl'>2</span>
+  
   <span class='co'># Variance and covariance of 'rth' offspring</span>
-  <span class='no'>vr1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='no'>mn1</span>, <span class='fl'>1</span>, <span class='no'>var</span>)
-  <span class='no'>vr2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='no'>mn2</span>, <span class='fl'>1</span>, <span class='no'>var</span>)
-  <span class='no'>wr1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='no'>mn1</span>, <span class='fl'>1</span>, <span class='no'>cov</span>, <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span>(<span class='no'>mn1</span>))
-  <span class='no'>wr2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='no'>mn2</span>, <span class='fl'>1</span>, <span class='no'>cov</span>, <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span>(<span class='no'>mn2</span>))
+  <span class='va'>vr1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>mn1</span>, <span class='fl'>1</span>, <span class='va'>var</span><span class='op'>)</span>
+  <span class='va'>vr2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>mn2</span>, <span class='fl'>1</span>, <span class='va'>var</span><span class='op'>)</span>
+  <span class='va'>wr1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>mn1</span>, <span class='fl'>1</span>, <span class='va'>cov</span>, <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='va'>mn1</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>wr2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>mn2</span>, <span class='fl'>1</span>, <span class='va'>cov</span>, <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='va'>mn2</span><span class='op'>)</span><span class='op'>)</span>
   <span class='co'># Remove row names to prevent a mild warning</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>mn1</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>mn2</span>) <span class='kw'>&lt;-</span> <span class='kw'>NULL</span>
-  <span class='no'>summ</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span>(<span class='no'>mn1</span>,<span class='no'>mn2</span>))
-  <span class='no'>summ</span>$<span class='no'>block</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'B1'</span>,<span class='st'>'B2'</span>), <span class='kw'>each</span><span class='kw'>=</span><span class='fl'>8</span>)
-  <span class='no'>summ</span>$<span class='no'>vr</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='no'>vr1</span>,<span class='no'>vr2</span>)
-  <span class='no'>summ</span>$<span class='no'>wr</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='no'>wr1</span>,<span class='no'>wr2</span>)
-  <span class='no'>summ</span>$<span class='no'>male</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='fl'>1</span>:<span class='fl'>8</span>,<span class='fl'>2</span>) <span class='co'># Vr and Wr match Hayman table 3</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>mn1</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>mn2</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='cn'>NULL</span>
+  <span class='va'>summ</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span><span class='op'>(</span><span class='va'>mn1</span>,<span class='va'>mn2</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>summ</span><span class='op'>$</span><span class='va'>block</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'B1'</span>,<span class='st'>'B2'</span><span class='op'>)</span>, each<span class='op'>=</span><span class='fl'>8</span><span class='op'>)</span>
+  <span class='va'>summ</span><span class='op'>$</span><span class='va'>vr</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>vr1</span>,<span class='va'>vr2</span><span class='op'>)</span>
+  <span class='va'>summ</span><span class='op'>$</span><span class='va'>wr</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>wr1</span>,<span class='va'>wr2</span><span class='op'>)</span>
+  <span class='va'>summ</span><span class='op'>$</span><span class='va'>male</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>8</span>,<span class='fl'>2</span><span class='op'>)</span> <span class='co'># Vr and Wr match Hayman table 3</span>
+  
+  <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>summ</span>, <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>wr</span><span class='op'>~</span><span class='va'>vr</span>, type<span class='op'>=</span><span class='st'>'n'</span>, main<span class='op'>=</span><span class='st'>"hayman.tobacco"</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>summ</span>, <span class='fu'><a href='https://rdrr.io/r/graphics/text.html'>text</a></span><span class='op'>(</span><span class='va'>vr</span>, <span class='va'>wr</span>, <span class='va'>male</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># Match Hayman figure 2</span>
+</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>1</span>,col<span class='op'>=</span><span class='st'>"gray"</span><span class='op'>)</span>
+</div><div class='img'><img src='hayman.tobacco-2.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='co'># Hayman notes that 1 and 3 do not lie along the line,</span>
+  <span class='co'># so modifies them and re-analyzes.</span>
 
-  <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='no'>summ</span>, <span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>wr</span>~<span class='no'>vr</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'n'</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"hayman.tobacco"</span>))</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='no'>summ</span>, <span class='fu'><a href='https://rdrr.io/r/graphics/text.html'>text</a></span>(<span class='no'>vr</span>, <span class='no'>wr</span>, <span class='no'>male</span>)) <span class='co'># Match Hayman figure 2</span></div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span>(<span class='fl'>0</span>,<span class='fl'>1</span>,<span class='kw'>col</span><span class='kw'>=</span><span class='st'>"gray"</span>)</div><div class='img'><img src='hayman.tobacco-2.png' alt='' width='700' height='433' /></div><div class='input'>  # Hayman notes that 1 and 3 do not lie along the line,
-  # so modifies them and re-analyzes.
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -302,7 +316,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

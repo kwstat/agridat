@@ -41,7 +41,7 @@
   Assessment of yield stability in sorghum using
   univariate and multivariate statistical approaches.
   Hereditas, 145, 28--37.  
-  http://doi.org/10.1111/j.0018-0661.2008.2023.x
+  https://doi.org/10.1111/j.0018-0661.2008.2023.x
 }
 
 \examples{

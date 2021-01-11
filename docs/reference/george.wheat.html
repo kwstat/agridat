@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -146,12 +146,12 @@
     <p>Multi-location/year breeding trial in California</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"george.wheat"</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"george.wheat"</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 13996 observations on the following 5 variables.</p><dl'>
+    <p>A data frame with 13996 observations on the following 5 variables.</p><dl>
     <dt><code>gen</code></dt><dd><p>genotype number</p></dd>
     <dt><code>year</code></dt><dd><p>year</p></dd>
     <dt><code>loc</code></dt><dd><p>location</p></dd>
@@ -181,25 +181,26 @@
     <p>Nicholas George and Mark Lundy (2019).
   Quantifying Genotype x Environment Effects in Long-Term Common Wheat Yield Trials from an Agroecologically Diverse Production Region.
   Crop Science, 59, 1960-1972.
-  http://doi.org/10.2135/cropsci2019.01.0010</p>
+  https://doi.org/10.2135/cropsci2019.01.0010</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>None</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>, <span class='no'>reshape2</span>)
-  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>george.wheat</span>)
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>george.wheat</span>
-
-  <span class='no'>dat</span>$<span class='no'>env</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span>(<span class='no'>dat</span>$<span class='no'>year</span>, <span class='st'>"."</span>, <span class='no'>dat</span>$<span class='no'>loc</span>)
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span>, <span class='va'>reshape2</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>george.wheat</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>george.wheat</span>
+  
+  <span class='va'>dat</span><span class='op'>$</span><span class='va'>env</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>year</span>, <span class='st'>"."</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>loc</span><span class='op'>)</span>
   <span class='co'># average reps, cast to matrix</span>
-  <span class='no'>mat</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>reshape2</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/reshape2/man/cast.html'>acast</a></span>(<span class='no'>dat</span>, <span class='no'>gen</span> ~ <span class='no'>env</span>, <span class='kw'>value.var</span><span class='kw'>=</span><span class='st'>"yield"</span>, <span class='kw'>fun</span><span class='kw'>=</span><span class='no'>mean</span>, <span class='kw'>na.rm</span><span class='kw'>=</span><span class='fl'>TRUE</span>)
-  <span class='kw pkg'>lattice</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/lattice/man/levelplot.html'>levelplot</a></span>(<span class='no'>mat</span>, <span class='kw'>aspect</span><span class='kw'>=</span><span class='st'>"m"</span>,
-                     <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"george.wheat"</span>, <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"genotype"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"environment"</span>,
-                     <span class='kw'>scales</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>x</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>.3</span>,<span class='kw'>rot</span><span class='kw'>=</span><span class='fl'>90</span>),<span class='kw'>y</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>.5</span>)))</div><div class='img'><img src='george.wheat-1.png' alt='' width='700' height='433' /></div><div class='input'>
-# }
+  <span class='va'>mat</span> <span class='op'>&lt;-</span> <span class='fu'>reshape2</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/reshape2/man/cast.html'>acast</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>gen</span> <span class='op'>~</span> <span class='va'>env</span>, value.var<span class='op'>=</span><span class='st'>"yield"</span>, fun<span class='op'>=</span><span class='va'>mean</span>, na.rm<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+  <span class='fu'>lattice</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/lattice/man/levelplot.html'>levelplot</a></span><span class='op'>(</span><span class='va'>mat</span>, aspect<span class='op'>=</span><span class='st'>"m"</span>, 
+                     main<span class='op'>=</span><span class='st'>"george.wheat"</span>, xlab<span class='op'>=</span><span class='st'>"genotype"</span>, ylab<span class='op'>=</span><span class='st'>"environment"</span>,
+                     scales<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>cex<span class='op'>=</span><span class='fl'>.3</span>,rot<span class='op'>=</span><span class='fl'>90</span><span class='op'>)</span>,y<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>cex<span class='op'>=</span><span class='fl'>.5</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='george.wheat-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -216,7 +217,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

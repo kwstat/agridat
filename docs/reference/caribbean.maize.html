@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -150,7 +150,7 @@
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 612 observations on the following 7 variables.</p><dl'>
+    <p>A data frame with 612 observations on the following 7 variables.</p><dl>
     <dt><code>isle</code></dt><dd><p>island, 2 levels</p></dd>
     <dt><code>site</code></dt><dd><p>site</p></dd>
     <dt><code>block</code></dt><dd><p>block</p></dd>
@@ -178,33 +178,36 @@
     <p>D.F. Andrews and A.M. Herzberg. 1985.
 	<em>Data: A Collection of Problems from Many Fields for the Student
 	  and Research Worker</em>.</p>
-<p>Retrieved from http://lib.stat.cmu.edu/datasets/Andrews/</p>
+<p>Retrieved from https://lib.stat.cmu.edu/datasets/Andrews/</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Also in the DAAG package as data sets antigua, stVincent.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>caribbean.maize</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>caribbean.maize</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>caribbean.maize</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>caribbean.maize</span>
 
 <span class='co'># Yield and ears are correlated</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'>xyplot</span>(<span class='no'>yield</span>~<span class='no'>ears</span><span class='kw'>|</span><span class='no'>site</span>, <span class='no'>dat</span>, <span class='kw'>ylim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0</span>,<span class='fl'>10</span>), <span class='kw'>subset</span><span class='kw'>=</span><span class='no'>isle</span><span class='kw'>==</span><span class='st'>"Antigua"</span>,
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"caribbean.maize - Antiqua"</span>)</div><div class='img'><img src='caribbean.maize-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>~</span><span class='va'>ears</span><span class='op'>|</span><span class='va'>site</span>, <span class='va'>dat</span>, ylim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>10</span><span class='op'>)</span>, subset<span class='op'>=</span><span class='va'>isle</span><span class='op'>==</span><span class='st'>"Antigua"</span>,
+       main<span class='op'>=</span><span class='st'>"caribbean.maize - Antiqua"</span><span class='op'>)</span>
+</div><div class='img'><img src='caribbean.maize-1.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Some locs show large response to nitrogen (as expected), e.g. UISV, OOSV</span>
-<span class='fu'><a href='https://rdrr.io/r/graphics/graphics-defunct.html'>dotplot</a></span>(<span class='no'>trt</span>~<span class='no'>yield</span><span class='kw'>|</span><span class='no'>site</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"caribbean.maize treatment response"</span>)</div><div class='img'><img src='caribbean.maize-2.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>dotplot</a></span><span class='op'>(</span><span class='va'>trt</span><span class='op'>~</span><span class='va'>yield</span><span class='op'>|</span><span class='va'>site</span>, data<span class='op'>=</span><span class='va'>dat</span>, main<span class='op'>=</span><span class='st'>"caribbean.maize treatment response"</span><span class='op'>)</span>
+</div><div class='img'><img src='caribbean.maize-2.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># The pattern is a bit hard to see, so we split the treatment factor</span>
 <span class='co'># into separate factors, and group sites by island</span>
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>N</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/substr.html'>substring</a></span>(<span class='no'>trt</span>,<span class='fl'>2</span>,<span class='fl'>2</span>)),
-                      <span class='kw'>P</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/substr.html'>substring</a></span>(<span class='no'>trt</span>,<span class='fl'>3</span>,<span class='fl'>3</span>)),
-                      <span class='kw'>K</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/substr.html'>substring</a></span>(<span class='no'>trt</span>,<span class='fl'>4</span>,<span class='fl'>4</span>)))
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>env</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/substr.html'>substring</a></span>(<span class='no'>isle</span>,<span class='fl'>1</span>,<span class='fl'>1</span>),<span class='no'>site</span>,<span class='kw'>sep</span><span class='kw'>=</span><span class='st'>"-"</span>))
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, N<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/substr.html'>substring</a></span><span class='op'>(</span><span class='va'>trt</span>,<span class='fl'>2</span>,<span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>,
+                      P<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/substr.html'>substring</a></span><span class='op'>(</span><span class='va'>trt</span>,<span class='fl'>3</span>,<span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span>,
+                      K<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/substr.html'>substring</a></span><span class='op'>(</span><span class='va'>trt</span>,<span class='fl'>4</span>,<span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, env<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/substr.html'>substring</a></span><span class='op'>(</span><span class='va'>isle</span>,<span class='fl'>1</span>,<span class='fl'>1</span><span class='op'>)</span>,<span class='va'>site</span>,sep<span class='op'>=</span><span class='st'>"-"</span><span class='op'>)</span><span class='op'>)</span>
 <span class='co'># Now we can see the strong N*site interaction</span>
-<span class='fu'>bwplot</span>(<span class='no'>yield</span>~<span class='no'>N</span><span class='kw'>|</span><span class='no'>env</span>, <span class='no'>dat</span>,
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"caribbean.maize"</span>, <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"nitrogen"</span>)</div><div class='img'><img src='caribbean.maize-3.png' alt='' width='700' height='433' /></div></pre>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>bwplot</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>~</span><span class='va'>N</span><span class='op'>|</span><span class='va'>env</span>, <span class='va'>dat</span>,
+       main<span class='op'>=</span><span class='st'>"caribbean.maize"</span>, xlab<span class='op'>=</span><span class='st'>"nitrogen"</span><span class='op'>)</span>
+</div><div class='img'><img src='caribbean.maize-3.png' alt='' width='700' height='433' /></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -220,7 +223,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

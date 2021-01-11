@@ -40,13 +40,13 @@
   F. Yates & W. G. Cochran (1938).
   The Analysis of Groups of Experiments.
   \emph{Journal of Agricultural Science}, 28, 556-580, table 1.
-  http://doi.org/10.1017/S0021859600050978
+  https://doi.org/10.1017/S0021859600050978
 
   G. K. Shukla, 1972.
   Some statistical aspects of partitioning of genotype-environmental
   components of variability.
   \emph{Heredity}, 29, 237-245. Table 1.
-  http://doi.org/10.1038/hdy.1972.87
+  https://doi.org/10.1038/hdy.1972.87
   
 }
 \examples{
@@ -100,44 +100,40 @@
   }
 
 
-  libs(asreml,lucid)
-  if( utils::packageVersion("asreml") < "4") {
-    # asreml3
-    # mixed model approach gives similar results (but not identical)
+  libs(asreml,lucid) # asreml3
+  # mixed model approach gives similar results (but not identical)
 
-    dat2 <- dat
-    dat2 <- dplyr::group_by(dat2, gen,env)
-    dat2 <- dplyr::summarize(dat2, yield=sum(yield)) # means across years
-    dat2 <- dat2[order(dat2$gen),]
-
+  dat2 <- dat
+  dat2 <- dplyr::group_by(dat2, gen,env)
+  dat2 <- dplyr::summarize(dat2, yield=sum(yield)) # means across years
+  dat2 <- dat2[order(dat2$gen),]
+  
   # G-side
   m1g <- asreml(yield ~ gen, data=dat2,
-                  random = ~ env + at(gen):units,
-                  family=asreml.gaussian(dispersion=1.0))
+                random = ~ env + at(gen):units,
+                family=asr_gaussian(dispersion=1.0))
   m1g <- update(m1g)
   summary(m1g)$varcomp[-1,1:2]/6
-  ##                                          gamma   component
-  ## at(gen, Manchuria):units!units.var  33.8318944  33.8318944
-  ## at(gen, Peatland):units!units.var   70.4838297  70.4838297
-  ## at(gen, Svansota):units!units.var   25.2558315  25.2558315
-  ## at(gen, Trebi):units!units.var     231.6923935 231.6923935
-  ## at(gen, Velvet):units!units.var     13.9189381  13.9189381
-  ## R!variance                           0.1666667   0.1666667
+  #                            component std.error
+  # at(gen, Manchuria):units  33.8145031  27.22721
+  # at(gen, Peatland):units   70.4489092  50.52680
+  # at(gen, Svansota):units   25.2728568  21.92919
+  # at(gen, Trebi):units     231.6981702 150.80464
+  # at(gen, Velvet):units     13.9325646  16.58571
+  # units!R                    0.1666667        NA
 
   # R-side estimates = G-side estimate + 0.1666 (resid variance)
   m1r <- asreml(yield ~ gen, data=dat2,
-                 random = ~ env,
-                 rcov = ~ at(gen):units) # or diag(gen):units
+                random = ~ env,
+                residual = ~ dsum( ~ units|gen))
   m1r <- update(m1r)
   summary(m1r)$varcomp[-1,1:2]/6
-  ##                            gamma component
-  ## gen_Manchuria!variance  34.03643  34.03643
-  ## gen_Peatland!variance   70.72723  70.72723
-  ## gen_Svansota!variance   25.38494  25.38494
-  ## gen_Trebi!variance     231.84662 231.84662
-  ## gen_Velvet!variance     14.05591  14.05591
-  
-}
+  #                     component std.error
+  # gen_Manchuria!R  34.00058  27.24871
+  # gen_Peatland!R   70.65501  50.58925
+  # gen_Svansota!R   25.42022  21.88606
+  # gen_Trebi!R     231.85846 150.78756
+  # gen_Velvet!R     14.08405  16.55558
 
 }
 }

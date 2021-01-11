@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -146,12 +146,12 @@
     <p>Survey and satellite data for corn and soy areas in Iowa</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"battese.survey"</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"battese.survey"</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 37 observations on the following 9 variables.</p><dl'>
+    <p>A data frame with 37 observations on the following 9 variables.</p><dl>
     <dt><code>county</code></dt><dd><p>county name</p></dd>
     <dt><code>segment</code></dt><dd><p>sample segment number (within county)</p></dd>
     <dt><code>countysegs</code></dt><dd><p>number of segments in county</p></dd>
@@ -180,9 +180,9 @@
   An error-components model for prediction of county crop areas using
   survey and satellite data.
   emphJournal of the American Statistical Association, 83, 28-36.
-  http://doi.org/10.2307/2288915</p>
+  https://doi.org/10.2307/2288915</p>
 <p>Battese (1982) preprint version.
-  http://www.une.edu.au/__data/assets/pdf_file/0017/15542/emetwp15.pdf</p>
+  https://www.une.edu.au/__data/assets/pdf_file/0017/15542/emetwp15.pdf</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Pushpal K Mukhopadhyay and Allen McDowell. (2011).
@@ -192,73 +192,91 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>battese.survey</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>battese.survey</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>battese.survey</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>battese.survey</span>
 
 <span class='co'># Battese fig 1 &amp; 2.  Corn plot shows outlier in Hardin county</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>cornpix</span>),]
-<span class='fu'>xyplot</span>(<span class='no'>cornhect</span> ~ <span class='no'>cornpix</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>county</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'p'</span>,<span class='st'>'l'</span>),
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"battese.survey"</span>, <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Pixels of corn"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Hectares of corn"</span>,
-       <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>3</span>))</div><div class='img'><img src='battese.survey-1.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>soypix</span>),]
-<span class='fu'>xyplot</span>(<span class='no'>soyhect</span> ~ <span class='no'>soypix</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>county</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'p'</span>,<span class='st'>'l'</span>),
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"battese.survey"</span>, <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Pixels of soy"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Hectares of soy"</span>,
-       <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>3</span>))</div><div class='img'><img src='battese.survey-2.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lme4</span>, <span class='no'>lucid</span>)
-
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>cornpix</span><span class='op'>)</span>,<span class='op'>]</span>
+<span class='fu'>xyplot</span><span class='op'>(</span><span class='va'>cornhect</span> <span class='op'>~</span> <span class='va'>cornpix</span>, data<span class='op'>=</span><span class='va'>dat</span>, group<span class='op'>=</span><span class='va'>county</span>, type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'p'</span>,<span class='st'>'l'</span><span class='op'>)</span>,
+       main<span class='op'>=</span><span class='st'>"battese.survey"</span>, xlab<span class='op'>=</span><span class='st'>"Pixels of corn"</span>, ylab<span class='op'>=</span><span class='st'>"Hectares of corn"</span>,
+       auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='battese.survey-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>soypix</span><span class='op'>)</span>,<span class='op'>]</span>
+<span class='fu'>xyplot</span><span class='op'>(</span><span class='va'>soyhect</span> <span class='op'>~</span> <span class='va'>soypix</span>, data<span class='op'>=</span><span class='va'>dat</span>, group<span class='op'>=</span><span class='va'>county</span>, type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'p'</span>,<span class='st'>'l'</span><span class='op'>)</span>,
+       main<span class='op'>=</span><span class='st'>"battese.survey"</span>, xlab<span class='op'>=</span><span class='st'>"Pixels of soy"</span>, ylab<span class='op'>=</span><span class='st'>"Hectares of soy"</span>,
+       auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='battese.survey-2.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lme4</span>, <span class='va'>lucid</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>Loading required package: Matrix</span></div><div class='output co'>#&gt; <span class='message'>Registered S3 methods overwritten by 'lme4':</span>
+#&gt; <span class='message'>  method                          from</span>
+#&gt; <span class='message'>  cooks.distance.influence.merMod car </span>
+#&gt; <span class='message'>  influence.merMod                car </span>
+#&gt; <span class='message'>  dfbeta.influence.merMod         car </span>
+#&gt; <span class='message'>  dfbetas.influence.merMod        car </span></div><div class='input'>  
 <span class='co'># Fit the models of Battese 1982, p.18.  Results match</span>
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>lmer</span>(<span class='no'>cornhect</span> ~ <span class='fl'>1</span> + <span class='no'>cornpix</span> + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>county</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-<span class='fu'>fixef</span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt; (Intercept)     cornpix 
+<span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>lmer</span><span class='op'>(</span><span class='va'>cornhect</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>+</span> <span class='va'>cornpix</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>county</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+<span class='fu'>fixef</span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; (Intercept)     cornpix 
 #&gt;   5.4661899   0.3878358 </div><div class='input'><span class='co'>## (Intercept)     cornpix </span>
 <span class='co'>##   5.4661899   0.3878358 </span>
-<span class='fu'>vc</span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt;       grp        var1 var2   vcov  sdcor
+<span class='fu'>vc</span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;       grp        var1 var2   vcov  sdcor
 #&gt;    county (Intercept) &lt;NA&gt;  62.83  7.926
 #&gt;  Residual        &lt;NA&gt; &lt;NA&gt; 290.4  17.04 </div><div class='input'><span class='co'>##      grp        var1 var2   vcov  sdcor</span>
 <span class='co'>##   county (Intercept) &lt;NA&gt;  62.83  7.926</span>
 <span class='co'>## Residual        &lt;NA&gt; &lt;NA&gt; 290.4  17.04 </span>
-<span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'>lmer</span>(<span class='no'>soyhect</span> ~ <span class='fl'>1</span> + <span class='no'>soypix</span> + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>county</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-<span class='fu'>fixef</span>(<span class='no'>m2</span>)</div><div class='output co'>#&gt; (Intercept)      soypix 
+<span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'>lmer</span><span class='op'>(</span><span class='va'>soyhect</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>+</span> <span class='va'>soypix</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>county</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+<span class='fu'>fixef</span><span class='op'>(</span><span class='va'>m2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; (Intercept)      soypix 
 #&gt;  -3.8223566   0.4756781 </div><div class='input'><span class='co'>## (Intercept)      soypix </span>
 <span class='co'>##  -3.8223566   0.4756781 </span>
-<span class='fu'>vc</span>(<span class='no'>m2</span>)</div><div class='output co'>#&gt;       grp        var1 var2  vcov sdcor
+<span class='fu'>vc</span><span class='op'>(</span><span class='va'>m2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;       grp        var1 var2  vcov sdcor
 #&gt;    county (Intercept) &lt;NA&gt; 239.2 15.47
 #&gt;  Residual        &lt;NA&gt; &lt;NA&gt; 180   13.42</div><div class='input'><span class='co'>##      grp        var1 var2  vcov sdcor</span>
 <span class='co'>##   county (Intercept) &lt;NA&gt; 239.2 15.47</span>
 <span class='co'>## Residual        &lt;NA&gt; &lt;NA&gt; 180   13.42</span>
-
+  
 <span class='co'># Predict for Humboldt county as in Battese 1982 table 2</span>
-<span class='fl'>5.4662</span>+<span class='fl'>.3878</span>*<span class='fl'>290.74</span></div><div class='output co'>#&gt; [1] 118.2152</div><div class='input'><span class='co'># 118.2152 # mu_i^0</span>
-<span class='fl'>5.4662</span>+<span class='fl'>.3878</span>*<span class='fl'>290.74</span>+ -<span class='fl'>2.8744</span></div><div class='output co'>#&gt; [1] 115.3408</div><div class='input'><span class='co'># 115.3408 # mu_i^gamma</span>
-(<span class='fl'>185.35</span>+<span class='fl'>116.43</span>)/<span class='fl'>2</span></div><div class='output co'>#&gt; [1] 150.89</div><div class='input'><span class='co'># 150.89 # y_i bar</span>
-
+<span class='fl'>5.4662</span><span class='op'>+</span><span class='fl'>.3878</span><span class='op'>*</span><span class='fl'>290.74</span>
+</div><div class='output co'>#&gt; [1] 118.2152</div><div class='input'><span class='co'># 118.2152 # mu_i^0</span>
+<span class='fl'>5.4662</span><span class='op'>+</span><span class='fl'>.3878</span><span class='op'>*</span><span class='fl'>290.74</span><span class='op'>+</span> <span class='op'>-</span><span class='fl'>2.8744</span>
+</div><div class='output co'>#&gt; [1] 115.3408</div><div class='input'><span class='co'># 115.3408 # mu_i^gamma</span>
+<span class='op'>(</span><span class='fl'>185.35</span><span class='op'>+</span><span class='fl'>116.43</span><span class='op'>)</span><span class='op'>/</span><span class='fl'>2</span>
+</div><div class='output co'>#&gt; [1] 150.89</div><div class='input'><span class='co'># 150.89 # y_i bar</span>
+  
 <span class='co'># Survey regression estimator of Battese 1988</span>
-
+  
 <span class='co'># Delete the outlier</span>
-<span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, !(<span class='no'>county</span><span class='kw'>==</span><span class='st'>"Hardin"</span> <span class='kw'>&amp;</span> <span class='no'>soyhect</span> <span class='kw'>&lt;</span> <span class='fl'>30</span>))
-
+<span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='op'>!</span><span class='op'>(</span><span class='va'>county</span><span class='op'>==</span><span class='st'>"Hardin"</span> <span class='op'>&amp;</span> <span class='va'>soyhect</span> <span class='op'>&lt;</span> <span class='fl'>30</span><span class='op'>)</span><span class='op'>)</span>
+  
 <span class='co'># Results match top-right of Battese 1988, p. 33</span>
-<span class='no'>m3</span> <span class='kw'>&lt;-</span> <span class='fu'>lmer</span>(<span class='no'>cornhect</span> ~ <span class='no'>cornpix</span> + <span class='no'>soypix</span> + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>county</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat2</span>)
-<span class='fu'>fixef</span>(<span class='no'>m3</span>)</div><div class='output co'>#&gt; (Intercept)     cornpix      soypix 
+<span class='va'>m3</span> <span class='op'>&lt;-</span> <span class='fu'>lmer</span><span class='op'>(</span><span class='va'>cornhect</span> <span class='op'>~</span> <span class='va'>cornpix</span> <span class='op'>+</span> <span class='va'>soypix</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>county</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat2</span><span class='op'>)</span>
+<span class='fu'>fixef</span><span class='op'>(</span><span class='va'>m3</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; (Intercept)     cornpix      soypix 
 #&gt;  51.0703979   0.3287217  -0.1345684 </div><div class='input'><span class='co'>## (Intercept)     cornpix      soypix </span>
 <span class='co'>##  51.0703979   0.3287217  -0.1345684 </span>
-<span class='fu'>vc</span>(<span class='no'>m3</span>)</div><div class='output co'>#&gt;       grp        var1 var2  vcov sdcor
+<span class='fu'>vc</span><span class='op'>(</span><span class='va'>m3</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;       grp        var1 var2  vcov sdcor
 #&gt;    county (Intercept) &lt;NA&gt; 140   11.83
 #&gt;  Residual        &lt;NA&gt; &lt;NA&gt; 147.3 12.14</div><div class='input'><span class='co'>##      grp        var1 var2  vcov sdcor</span>
 <span class='co'>##   county (Intercept) &lt;NA&gt; 140   11.83</span>
 <span class='co'>## Residual        &lt;NA&gt; &lt;NA&gt; 147.3 12.14</span>
-<span class='no'>m4</span> <span class='kw'>&lt;-</span> <span class='fu'>lmer</span>(<span class='no'>soyhect</span> ~ <span class='no'>cornpix</span> + <span class='no'>soypix</span> + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>county</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat2</span>)
-<span class='fu'>fixef</span>(<span class='no'>m4</span>)</div><div class='output co'>#&gt;  (Intercept)      cornpix       soypix 
+<span class='va'>m4</span> <span class='op'>&lt;-</span> <span class='fu'>lmer</span><span class='op'>(</span><span class='va'>soyhect</span> <span class='op'>~</span> <span class='va'>cornpix</span> <span class='op'>+</span> <span class='va'>soypix</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>county</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat2</span><span class='op'>)</span>
+<span class='fu'>fixef</span><span class='op'>(</span><span class='va'>m4</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;  (Intercept)      cornpix       soypix 
 #&gt; -15.59027112   0.02717639   0.49439320 </div><div class='input'><span class='co'>##  (Intercept)      cornpix       soypix </span>
 <span class='co'>## -15.59027098   0.02717639   0.49439320 </span>
-<span class='fu'>vc</span>(<span class='no'>m4</span>)</div><div class='output co'>#&gt;       grp        var1 var2  vcov sdcor
+<span class='fu'>vc</span><span class='op'>(</span><span class='va'>m4</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;       grp        var1 var2  vcov sdcor
 #&gt;    county (Intercept) &lt;NA&gt; 247.5 15.73
-#&gt;  Residual        &lt;NA&gt; &lt;NA&gt; 190.5 13.8 </div><div class='input'>##      grp        var1 var2  vcov sdcor
-##   county (Intercept) &lt;NA&gt; 247.5 15.73
-## Residual        &lt;NA&gt; &lt;NA&gt; 190.5 13.8 
+#&gt;  Residual        &lt;NA&gt; &lt;NA&gt; 190.5 13.8 </div><div class='input'><span class='co'>##      grp        var1 var2  vcov sdcor</span>
+<span class='co'>##   county (Intercept) &lt;NA&gt; 247.5 15.73</span>
+<span class='co'>## Residual        &lt;NA&gt; &lt;NA&gt; 190.5 13.8 </span>
 
-# }
+<span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -275,7 +293,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

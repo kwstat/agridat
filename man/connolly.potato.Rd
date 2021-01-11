@@ -39,7 +39,7 @@
   It would be interesting to fit a model that uses differences in
   maturity between a plot and its neighbor as the actual covariate.
 
-  http://doi.org/10.1111/j.1744-7348.1993.tb04099.x
+  https://doi.org/10.1111/j.1744-7348.1993.tb04099.x
   
   Used with permission of Iain Currie.
 

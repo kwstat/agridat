@@ -36,7 +36,7 @@ rep (instead of across reps).
  Balanced Incomplete Block and Lattice Square Designs for Testing Yield
  Differences Among Large Numbers of Soybean Varieties.  Table 5.
  \emph{Agricultural Research Bulletins, Nos. 251-259}.
- http://lib.dr.iastate.edu/ag_researchbulletins/24/
+ https://lib.dr.iastate.edu/ag_researchbulletins/24/
 }
 
 \examples{
@@ -65,17 +65,11 @@ rep (instead of across reps).
   
   # ----------
 
-  # asreml3 & asreml4
-  libs(asreml)
+  libs(asreml) # asreml4
   m2 <- asreml(yield ~ rep + rep:xf + rep:yf + gen, data=dat)
   # Weiss table 6 means
-  if( utils::packageVersion("asreml") < "4") {
-    anova(m2)
-    predict(m2, data=dat, classify="gen")$predictions$pvals
-  } else {
-    wald(m2)
-    predict(m2, data=dat, classify="gen")$pvals
-  }
+  wald(m2)
+  predict(m2, data=dat, classify="gen")$pvals
   
   ##  gen pred.value std.error  est.stat
   ##  G01      27.74     1.461 Estimable

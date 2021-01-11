@@ -33,7 +33,7 @@
   A Bayesian Approach to Regional and Local-Area Prediction From Crop
   Variety Trials.
   Journ Agric Biol Env Sciences, 7, 403--419.
-  http://doi.org/10.1198/108571102230
+  https://doi.org/10.1198/108571102230
 }
 
 \examples{

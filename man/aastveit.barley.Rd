@@ -71,13 +71,13 @@ data("aastveit.barley.height")
   Aastveit, A. H. and Martens, H. (1986).
   ANOVA interactions interpreted by partial least squares regression.
   Biometrics, 42, 829--844.
-  http://doi.org/10.2307/2530697
+  https://doi.org/10.2307/2530697
 }
 \references{
   J. Chadoeuf and J. B. Denis (1991).
   Asymptotic variances for the multiplicative interaction model.
   J. App. Stat., 18, 331-353.
-  http://doi.org/10.1080/02664769100000032
+  https://doi.org/10.1080/02664769100000032
 }
 \examples{
 \dontrun{

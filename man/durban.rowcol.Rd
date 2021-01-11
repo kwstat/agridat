@@ -37,7 +37,7 @@
   Newton, Adrian and Thomas, William and Currie, Iain. 2003.
   The practical use of semiparametric models in field trials,
   Journal of Agric Biological and Envir Stats, 8, 48-66.
-  http://doi.org/10.1198/1085711031265
+  https://doi.org/10.1198/1085711031265
 }
 \references{
   Edmondson, Rodney (2020).
@@ -85,9 +85,7 @@
   wireframe(p1lo~row+bed, new1, aspect=c(1,.5), main="Field trend")
 
 
-  libs(asreml)
-  if( utils::packageVersion("asreml") > "4") {
-    # asreml4
+  libs(asreml) # asreml4
 
   dat <- transform(dat, rowf=factor(row), bedf=factor(bed))
   dat <- dat[order(dat$rowf, dat$bedf),]
@@ -112,7 +110,6 @@
   
   v7c <- asr_varioGram(x=dat$bedf, y=dat$rowf, z=m1lo$residuals)
   wireframe(gamma ~ x*y, v7c, aspect=c(1,.5)) # Fig 7c
-  }
 
 }
 }

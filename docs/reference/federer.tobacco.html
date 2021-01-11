@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -150,7 +150,7 @@
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 56 observations on the following 4 variables.</p><dl'>
+    <p>A data frame with 56 observations on the following 4 variables.</p><dl>
     <dt><code>row</code></dt><dd><p>row</p></dd>
     <dt><code>block</code></dt><dd><p>block, numeric</p></dd>
     <dt><code>dose</code></dt><dd><p>radiation dose, roentgens</p></dd>
@@ -173,7 +173,7 @@
     <p>Walter T Federer and C S Schlottfeldt, 1954.
   The use of covariance to control gradients in experiments.
   <em>Biometrics</em>, 10, 282--290.
-  http://doi.org/10.2307/3001881</p>
+  https://doi.org/10.2307/3001881</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>R. D. Cook and S. Weisberg (1999).
@@ -191,16 +191,17 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>federer.tobacco</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>federer.tobacco</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>federer.tobacco</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>federer.tobacco</span>
 
 <span class='co'># RCB analysis.  Treatment factor not signficant.</span>
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>dosef</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>dose</span>), <span class='kw'>rowf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>),
-                 <span class='kw'>blockf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>block</span>))
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>height</span> ~ <span class='no'>blockf</span> + <span class='no'>dosef</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-<span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt; Analysis of Variance Table
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, dosef<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>dose</span><span class='op'>)</span>, rowf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>row</span><span class='op'>)</span>,
+                 blockf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>block</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>height</span> <span class='op'>~</span> <span class='va'>blockf</span> <span class='op'>+</span> <span class='va'>dosef</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
 #&gt; Response: height
 #&gt;           Df  Sum Sq Mean Sq F value Pr(&gt;F)
@@ -208,15 +209,17 @@
 #&gt; dosef      6  273875   45646  1.5100 0.1985
 #&gt; Residuals 42 1269586   30228               </div><div class='input'>
 <span class='co'># RCB residuals show strong spatial trends</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='no'>dat</span>$<span class='no'>resid</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/residuals.html'>resid</a></span>(<span class='no'>m1</span>)
-<span class='fu'>desplot</span>(<span class='no'>dat</span>, <span class='no'>resid</span> ~ <span class='no'>row</span> * <span class='no'>block</span>,
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+<span class='va'>dat</span><span class='op'>$</span><span class='va'>resid</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/residuals.html'>resid</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+<span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>resid</span> <span class='op'>~</span> <span class='va'>row</span> <span class='op'>*</span> <span class='va'>block</span>,
         <span class='co'># aspect unknown</span>
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"federer.tobacco"</span>)</div><div class='img'><img src='federer.tobacco-1.png' alt='' width='700' height='433' /></div><div class='input'>
+        main<span class='op'>=</span><span class='st'>"federer.tobacco"</span><span class='op'>)</span>
+</div><div class='img'><img src='federer.tobacco-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
 <span class='co'># Row-column analysis.  Treatment now significant</span>
-<span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>height</span> ~ <span class='no'>rowf</span> + <span class='no'>blockf</span> + <span class='no'>dosef</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-<span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m2</span>)</div><div class='output co'>#&gt; Analysis of Variance Table
+<span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>height</span> <span class='op'>~</span> <span class='va'>rowf</span> <span class='op'>+</span> <span class='va'>blockf</span> <span class='op'>+</span> <span class='va'>dosef</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>m2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
 #&gt; Response: height
 #&gt;           Df  Sum Sq Mean Sq F value    Pr(&gt;F)    
@@ -226,7 +229,7 @@
 #&gt; Residuals 36  264666    7352                      
 #&gt; ---
 #&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'>
-# }
+<span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -243,7 +246,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,14 +45,13 @@
 
 
 
-<meta property="og:title" content="Concentrations of herbicides in streams in the United States — usgs.herbicides" />
 
+<meta property="og:title" content="Concentrations of herbicides in streams in the United States — usgs.herbicides" />
 <meta property="og:description" content="Concentrations of selected herbicides and degradation products
   determined by laboratory method analysis code GCS for water samples
   collected from 51 streams in nine Midwestern States,2002" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -63,7 +68,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -77,7 +82,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -106,7 +111,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -114,10 +119,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -141,18 +145,17 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Concentrations of selected herbicides and degradation products
   determined by laboratory method analysis code GCS for water samples
   collected from 51 streams in nine Midwestern States,2002</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"usgs.herbicides"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"usgs.herbicides"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 184 observations on the following 19 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 184 observations on the following 19 variables.</p><dl>
     <dt><code>mapnum</code></dt><dd><p>map number</p></dd>
     <dt><code>usgsid</code></dt><dd><p>USGS ID</p></dd>
     <dt><code>long</code></dt><dd><p>longitude</p></dd>
@@ -172,9 +175,9 @@
     <dt><code>CAM</code></dt><dd><p>concentration as character</p></dd>
     <dt><code>dimethenamid</code></dt><dd><p>concentration as character</p></dd>
     <dt><code>flufenacet</code></dt><dd><p>concentration as character</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     
@@ -183,7 +186,6 @@
 <p>All concentrations are micrograms/liter, "&lt;" means "less than". The data are in character format to allow for "&lt;".</p>
 <p>The original report contains data for more herbicides. This data is for illustrative purposes.</p>
 <p>Sample types: CR = concurrent replicate sample, FB = field blank, LD = laboratory duplicate, S1 = sample from pre-emergence runoff, S2 = sample from post-emergence runoff, S3 = sample from harvest-season runoff.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Scribner, E.A., Battaglin, W.A., Dietze, J.E., and Thurman, E.M.,
@@ -191,29 +193,30 @@
   U.S. Geological Survey Open File Report 03-217.
   Herbicide data from table 5, page 30-37. Site coordinates page 7-8.
   https://ks.water.usgs.gov/pubs/reports/ofr.03-217.html</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>None.</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>usgs.herbicides</span>)
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>usgs.herbicides</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+  
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>usgs.herbicides</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>usgs.herbicides</span>
+  
 
-
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>NADA</span>)</div><div class='output co'>#&gt; <span class='message'></span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>NADA</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'></span>
 #&gt; <span class='message'>Attaching package: 'NADA'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:stats':</span>
 #&gt; <span class='message'></span>
 #&gt; <span class='message'>    cor</span></div><div class='input'>  <span class='co'># create censored data for one trait</span>
-  <span class='no'>dat</span>$<span class='no'>y</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span>(<span class='no'>dat</span>$<span class='no'>atrazine</span>)
-  <span class='no'>dat</span>$<span class='no'>ycen</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span>(<span class='no'>dat</span>$<span class='no'>y</span>)
-  <span class='no'>dat</span>$<span class='no'>y</span>[<span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span>(<span class='no'>dat</span>$<span class='no'>y</span>)] <span class='kw'>&lt;-</span> <span class='fl'>.05</span>
-
+  <span class='va'>dat</span><span class='op'>$</span><span class='va'>y</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>atrazine</span><span class='op'>)</span>
+  <span class='va'>dat</span><span class='op'>$</span><span class='va'>ycen</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>y</span><span class='op'>)</span>
+  <span class='va'>dat</span><span class='op'>$</span><span class='va'>y</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>y</span><span class='op'>)</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fl'>.05</span>
+  
   <span class='co'># percent censored</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='no'>dat</span>, <span class='fu'>censummary</span>(<span class='no'>y</span>, <span class='kw'>censored</span><span class='kw'>=</span><span class='no'>ycen</span>))</div><div class='output co'>#&gt; all:
+  <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='fu'>censummary</span><span class='op'>(</span><span class='va'>y</span>, censored<span class='op'>=</span><span class='va'>ycen</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; all:
 #&gt;       n   n.cen pct.cen     min     max 
 #&gt;     184       0       0       1     101 
 #&gt; 
@@ -221,40 +224,36 @@
 #&gt;   limit n uncen pexceed
 #&gt; 1     0 0   184       1
 #&gt; </div><div class='input'>  <span class='co'># median/mean</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='no'>dat</span>, <span class='fu'>cenmle</span>(<span class='no'>y</span>, <span class='no'>ycen</span>, <span class='kw'>dist</span><span class='kw'>=</span><span class='st'>"lognormal"</span>))</div><div class='output co'>#&gt;         n     n.cen    median      mean        sd 
-#&gt; 184.00000   0.00000  21.96596  57.17202 137.38347 </div><div class='input'>  <span class='co'># boxplot</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='no'>dat</span>, <span class='fu'>cenboxplot</span>(<span class='kw'>obs</span><span class='kw'>=</span><span class='no'>y</span>, <span class='kw'>cen</span><span class='kw'>=</span><span class='no'>ycen</span>, <span class='kw'>log</span><span class='kw'>=</span><span class='fl'>FALSE</span>))</div><div class='output co'>#&gt; <span class='warning'>Warning: no non-missing arguments to max; returning -Inf</span></div><div class='img'><img src='usgs.herbicides-1.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='co'># with(dat, boxplot(y))</span>
-  <span class='no'>pp</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='no'>dat</span>, <span class='fu'>ros</span>(<span class='kw'>obs</span><span class='kw'>=</span><span class='no'>y</span>, <span class='kw'>censored</span><span class='kw'>=</span><span class='no'>ycen</span>, <span class='kw'>forwardT</span><span class='kw'>=</span><span class='st'>"log"</span>)) <span class='co'># default lognormal</span>
-  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>pp</span>)</div><div class='img'><img src='usgs.herbicides-2.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='fu'>cenmle</span><span class='op'>(</span><span class='va'>y</span>, <span class='va'>ycen</span>, dist<span class='op'>=</span><span class='st'>"lognormal"</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;         n     n.cen    median      mean        sd 
+#&gt; 184.00000   0.00000  30.63365  60.32547 102.33953 </div><div class='input'>  <span class='co'># boxplot</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='fu'>cenboxplot</span><span class='op'>(</span>obs<span class='op'>=</span><span class='va'>y</span>, cen<span class='op'>=</span><span class='va'>ycen</span>, log<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='warning'>Warning: no non-missing arguments to max; returning -Inf</span></div><div class='img'><img src='usgs.herbicides-1.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='co'># with(dat, boxplot(y))</span>
+  <span class='va'>pp</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='fu'>ros</span><span class='op'>(</span>obs<span class='op'>=</span><span class='va'>y</span>, censored<span class='op'>=</span><span class='va'>ycen</span>, forwardT<span class='op'>=</span><span class='st'>"log"</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># default lognormal</span>
+  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>pp</span><span class='op'>)</span>
+</div><div class='img'><img src='usgs.herbicides-2.png' alt='' width='700' height='433' /></div><div class='input'>
 
-  <span class='no'>plotfun</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>vv</span>){
-    <span class='no'>dat</span>$<span class='no'>y</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span>(<span class='no'>dat</span><span class='kw'>[[</span><span class='no'>vv</span>]])
-    <span class='no'>dat</span>$<span class='no'>ycen</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span>(<span class='no'>dat</span>$<span class='no'>y</span>)
-    <span class='no'>dat</span>$<span class='no'>y</span>[<span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span>(<span class='no'>dat</span>$<span class='no'>y</span>)] <span class='kw'>&lt;-</span> <span class='fl'>.01</span>
+  <span class='va'>plotfun</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>vv</span><span class='op'>)</span><span class='op'>{</span>
+    <span class='va'>dat</span><span class='op'>$</span><span class='va'>y</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>[[</span><span class='va'>vv</span><span class='op'>]</span><span class='op'>]</span><span class='op'>)</span>
+    <span class='va'>dat</span><span class='op'>$</span><span class='va'>ycen</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>y</span><span class='op'>)</span>
+    <span class='va'>dat</span><span class='op'>$</span><span class='va'>y</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>y</span><span class='op'>)</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fl'>.01</span>
     <span class='co'># qqnorm(log(dat$y), main=vv) # ordinary qq plot shows censored values</span>
-    <span class='no'>pp</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='no'>dat</span>, <span class='fu'>ros</span>(<span class='kw'>obs</span><span class='kw'>=</span><span class='no'>y</span>, <span class='kw'>censored</span><span class='kw'>=</span><span class='no'>ycen</span>, <span class='kw'>forwardT</span><span class='kw'>=</span><span class='st'>"log"</span>))
-    <span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>pp</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='no'>vv</span>) <span class='co'># omits censored values</span>
-  }
-  <span class='no'>op</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span>(<span class='kw'>mfrow</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>3</span>,<span class='fl'>3</span>))
-  <span class='no'>vnames</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"acetochlor"</span>, <span class='st'>"alachlor"</span>, <span class='st'>"ametryn"</span>, <span class='st'>"atrazine"</span>,<span class='st'>"CIAT"</span>, <span class='st'>"CEAT"</span>, <span class='st'>"cyanazine"</span>, <span class='co'>#"CAM",</span>
-              <span class='st'>"dimethenamid"</span>, <span class='st'>"flufenacet"</span>)
-  <span class='kw'>for</span>(<span class='no'>vv</span> <span class='kw'>in</span> <span class='no'>vnames</span>) <span class='fu'>plotfun</span>(<span class='no'>vv</span>)</div><div class='img'><img src='usgs.herbicides-3.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span>(<span class='no'>op</span>)</div></pre>
+    <span class='va'>pp</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='fu'>ros</span><span class='op'>(</span>obs<span class='op'>=</span><span class='va'>y</span>, censored<span class='op'>=</span><span class='va'>ycen</span>, forwardT<span class='op'>=</span><span class='st'>"log"</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>pp</span>, main<span class='op'>=</span><span class='va'>vv</span><span class='op'>)</span> <span class='co'># omits censored values</span>
+  <span class='op'>}</span>
+  <span class='va'>op</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span>mfrow<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>3</span>,<span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>vnames</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"acetochlor"</span>, <span class='st'>"alachlor"</span>, <span class='st'>"ametryn"</span>, <span class='st'>"atrazine"</span>,<span class='st'>"CIAT"</span>, <span class='st'>"CEAT"</span>, <span class='st'>"cyanazine"</span>, <span class='co'>#"CAM",</span>
+              <span class='st'>"dimethenamid"</span>, <span class='st'>"flufenacet"</span><span class='op'>)</span>
+  <span class='kw'>for</span><span class='op'>(</span><span class='va'>vv</span> <span class='kw'>in</span> <span class='va'>vnames</span><span class='op'>)</span> <span class='fu'>plotfun</span><span class='op'>(</span><span class='va'>vv</span><span class='op'>)</span>
+</div><div class='img'><img src='usgs.herbicides-3.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/par.html'>par</a></span><span class='op'>(</span><span class='va'>op</span><span class='op'>)</span>
+  
+<span class='co'># }</span>
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -265,7 +264,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

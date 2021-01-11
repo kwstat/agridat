@@ -48,7 +48,7 @@
   Used with permission of Walmes Zeviani.
 
   Electronic version from:
-  http://www.leg.ufpr.br/~walmes/data/desfolha_algodao.txt
+  https://www.leg.ufpr.br/~walmes/data/desfolha_algodao.txt
 
 }
 \source{
@@ -56,18 +56,18 @@
   Fernandes, Marcos Gino; & Zeviani, Walmes Marques. (2012).
   Impacto de diferentes niveis de desfolha artificial nos estadios fenologicos do algodoeiro.
   Revista de Ciencias Agrarias, 35(1), 163-172.
-  http://www.scielo.mec.pt/scielo.php?script=sci_arttext&pid=S0871-018X2012000100016&lng=pt&tlng=pt.
+  https://www.scielo.mec.pt/scielo.php?script=sci_arttext&pid=S0871-018X2012000100016&lng=pt&tlng=pt.
 }
 \references{
 
   Zeviani, W. M., Ribeiro, P. J., Bonat, W. H., Shimakura, S. E., Muniz, J. A. (2014).
   The Gamma-count distribution in the analysis of experimental underdispersed data.
   \emph{Journal of Applied Statistics}, 41(12), 1-11.
-  http://doi.org/10.1080/02664763.2014.922168
-  Online supplement: http://leg.ufpr.br/doku.php/publications:papercompanions:zeviani-jas2014
+  https://doi.org/10.1080/02664763.2014.922168
+  Online supplement: https://leg.ufpr.br/doku.php/publications:papercompanions:zeviani-jas2014
 
   Regression Models for Count Data.
-  http://cursos.leg.ufpr.br/rmcd/applications.html#cotton-bolls
+  https://cursos.leg.ufpr.br/rmcd/applications.html#cotton-bolls
 
   Wagner Hugo Bonat & Walmes Marques Zeviani (2017).
   Multivariate Covariance Generalized Linear Models for the Analysis of

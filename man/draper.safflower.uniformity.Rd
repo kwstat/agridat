@@ -59,7 +59,7 @@
   Arlen D. Draper. (1959).
   Optimum plot size and shape for safflower yield tests.
   Dissertation. University of Arizona. 
-  http://hdl.handle.net/10150/319371
+  https://hdl.handle.net/10150/319371
 }
 \references{
   None

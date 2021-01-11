@@ -81,13 +81,13 @@
   Harris, J Arthur and Scofield, CS. (1920).
   Permanence of differences in the plats of an experimental field.
   Jour. Agr. Res, 20, 335-356.
-  http://naldc.nal.usda.gov/catalog/IND43966236
+  https://naldc.nal.usda.gov/catalog/IND43966236
 
   Harris, J Arthur and Scofield, CS. (1928).
   Further studies on the permanence of differences in the plots of an
   experimental field.
   Jour. Agr. Res, 36, 15--40.
-  http://naldc.nal.usda.gov/catalog/IND43967538
+  https://naldc.nal.usda.gov/catalog/IND43967538
 }
 
 \examples{

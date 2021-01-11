@@ -42,7 +42,7 @@
   means (personal communication).
 
   Retrieved Sep 2011 from
-  http://www.microcomputerpower.com/matmodel/matmodelmatmodel_sample_.html
+  https://www.microcomputerpower.com/matmodel/matmodelmatmodel_sample_.html
 
   Used with permission of Hugh Gauch.
 }

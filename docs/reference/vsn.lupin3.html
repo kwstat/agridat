@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Multi-environment trial of lupin, early generation trial — vsn.lupin3" />
-
 <meta property="og:description" content="Early generation lupin trial with 3 sites, 330 test lines, 6 check lines." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,153 +143,223 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Early generation lupin trial with 3 sites, 330 test lines, 6 check lines.</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 1236 observations on the following 5 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 1236 observations on the following 5 variables.</p><dl>
     <dt><code>site</code></dt><dd><p>site, levels <code>S1</code> <code>S2</code> <code>S3</code></p></dd>
     <dt><code>col</code></dt><dd><p>column</p></dd>
     <dt><code>row</code></dt><dd><p>row</p></dd>
     <dt><code>gen</code></dt><dd><p>genotype</p></dd>
     <dt><code>yield</code></dt><dd><p>yield</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>An early-stage multi-environment trial, with 6 check lines and 300
   test lines.  The 6 check lines were replicated in each environment.</p>
-    
+<p>Used with permission of Arthur Gilmour, Brian Cullis, Robin Thompson.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Multi-Environment Trials - Lupins.
-  http://www.vsni.co.uk/software/asreml/htmlhelp/asreml/xlupin.htm</p>
-<p>Used with permission of Arthur Gilmour, Brian Cullis, Robin Thompson.</p>
-    
+  https://www.vsni.co.uk/software/asreml/htmlhelp/asreml/xlupin.htm</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>vsn.lupin3</span>)
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>vsn.lupin3</span>
-
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+  
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>vsn.lupin3</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>vsn.lupin3</span>
+  
   <span class='co'># Split gen into check/test, make factors</span>
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>within</a></span>(<span class='no'>dat</span>, {
-    <span class='no'>check</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='no'>gen</span><span class='kw'>&gt;</span><span class='fl'>336</span>, <span class='fl'>0</span>, <span class='no'>gen</span>)
-    <span class='no'>check</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='no'>check</span><span class='kw'>&lt;</span><span class='fl'>7</span>, <span class='no'>check</span>, <span class='fl'>7</span>)
-    <span class='no'>check</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>check</span>)
-    <span class='no'>test</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='no'>gen</span><span class='kw'>&gt;</span><span class='fl'>6</span> <span class='kw'>&amp;</span> <span class='no'>gen</span><span class='kw'>&lt;</span><span class='fl'>337</span>, <span class='no'>gen</span>, <span class='fl'>0</span>))
-    <span class='no'>gen</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>gen</span>)
-  })
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>within</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='op'>{</span>
+    <span class='va'>check</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>gen</span><span class='op'>&gt;</span><span class='fl'>336</span>, <span class='fl'>0</span>, <span class='va'>gen</span><span class='op'>)</span>
+    <span class='va'>check</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>check</span><span class='op'>&lt;</span><span class='fl'>7</span>, <span class='va'>check</span>, <span class='fl'>7</span><span class='op'>)</span>
+    <span class='va'>check</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>check</span><span class='op'>)</span>
+    <span class='va'>test</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>gen</span><span class='op'>&gt;</span><span class='fl'>6</span> <span class='op'>&amp;</span> <span class='va'>gen</span><span class='op'>&lt;</span><span class='fl'>337</span>, <span class='va'>gen</span>, <span class='fl'>0</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='va'>gen</span><span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>gen</span><span class='op'>)</span>
+  <span class='op'>}</span><span class='op'>)</span>
 
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-  <span class='fu'>desplot</span>(<span class='no'>yield</span>~ <span class='no'>col</span>*<span class='no'>row</span><span class='kw'>|</span><span class='no'>site</span>, <span class='no'>dat</span>,
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+  <span class='fu'><a href='http://kwstat.github.io/desplot/reference/desplot.html'>desplot</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>yield</span><span class='op'>~</span> <span class='va'>col</span><span class='op'>*</span><span class='va'>row</span><span class='op'>|</span><span class='va'>site</span>,
           <span class='co'># midpoint="midrange",</span>
           <span class='co'># aspect unknown</span>
-          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"vsn.lupin3 - yield"</span>)</div><div class='img'><img src='vsn.lupin3-1.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='fu'>desplot</span>(<span class='no'>check</span>~ <span class='no'>col</span>*<span class='no'>row</span><span class='kw'>|</span><span class='no'>site</span>, <span class='no'>dat</span>,
-          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"vsn.lupin3: check plot placement"</span>) <span class='co'># Site 1 &amp; 2 used same randomization</span></div><div class='img'><img src='vsn.lupin3-2.png' alt='' width='700' height='433' /></div><div class='input'>
+          main<span class='op'>=</span><span class='st'>"vsn.lupin3 - yield"</span><span class='op'>)</span>
+</div><div class='img'><img src='vsn.lupin3-1.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='co'># Site 1 &amp; 2 used same randomization</span>
+  <span class='fu'><a href='http://kwstat.github.io/desplot/reference/desplot.html'>desplot</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>check</span><span class='op'>~</span> <span class='va'>col</span><span class='op'>*</span><span class='va'>row</span><span class='op'>|</span><span class='va'>site</span>,
+          main<span class='op'>=</span><span class='st'>"vsn.lupin3: check plot placement"</span><span class='op'>)</span> 
+</div><div class='img'><img src='vsn.lupin3-2.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='co'># asreml 4</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span>,<span class='va'>lucid</span><span class='op'>)</span>
+     
+  <span class='co'># Single-site analyses suggested random row term for site 3,</span>
+  <span class='co'># random column terms for all sites,</span>
+  <span class='co'># AR1 was unnecessary for the col dimension of site 3</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, colf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>col</span><span class='op'>)</span>, rowf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>row</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>site</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>colf</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>rowf</span><span class='op'>)</span>,<span class='op'>]</span> <span class='co'># Sort for asreml</span>
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>site</span> <span class='op'>+</span> <span class='va'>check</span><span class='op'>:</span><span class='va'>site</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+               random <span class='op'>=</span> <span class='op'>~</span> <span class='fu'>at</span><span class='op'>(</span><span class='va'>site</span><span class='op'>)</span><span class='op'>:</span><span class='va'>colf</span> <span class='op'>+</span> <span class='fu'>at</span><span class='op'>(</span><span class='va'>site</span>,<span class='fl'>3</span><span class='op'>)</span><span class='op'>:</span><span class='va'>rowf</span> <span class='op'>+</span> <span class='va'>test</span>,
+               residual <span class='op'>=</span> <span class='op'>~</span> <span class='fu'>dsum</span><span class='op'>(</span> <span class='op'>~</span> <span class='fu'>ar1</span><span class='op'>(</span><span class='va'>colf</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>rowf</span><span class='op'>)</span> <span class='op'>+</span>
+                                    <span class='fu'>id</span><span class='op'>(</span><span class='va'>colf</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>rowf</span><span class='op'>)</span> <span class='op'>|</span> <span class='va'>site</span>,
+                                 levels<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span>, <span class='fl'>3</span><span class='op'>)</span>
+                                 <span class='op'>)</span> <span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:51:09 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -615.620           1.0   1213 17:51:09    0.0 (3 restrained)
+#&gt;  2      -424.081           1.0   1213 17:51:09    0.0
+#&gt;  3      -355.609           1.0   1213 17:51:09    0.0
+#&gt;  4      -325.217           1.0   1213 17:51:09    0.0
+#&gt;  5      -315.664           1.0   1213 17:51:10    0.0
+#&gt;  6      -314.402           1.0   1213 17:51:10    0.0
+#&gt;  7      -314.276           1.0   1213 17:51:10    0.0
+#&gt;  8      -314.263           1.0   1213 17:51:10    0.0
+#&gt;  9      -314.262           1.0   1213 17:51:10    0.0</div><div class='input'>  <span class='va'>m1</span><span class='op'>$</span><span class='va'>loglik</span>
+</div><div class='output co'>#&gt; [1] -314.2617</div><div class='input'>  <span class='co'>## [1] -314.2616</span>
+  
+  <span class='fu'>vc</span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;             effect component std.error z.ratio bound %ch
+#&gt;  at(site, S1):colf   0.6234   0.4287       1.5     P 0.3
+#&gt;  at(site, S2):colf   0.1592   0.1141       1.4     P 0.2
+#&gt;  at(site, S3):colf   0.04832  0.02618      1.8     P 0  
+#&gt;  at(site, S3):rowf   0.0235   0.008483     2.8     P 0  
+#&gt;               test   0.1031   0.01468      7       P 0  
+#&gt;          site_S1!R   2.77     0.313        8.8     P 0.1
+#&gt;   site_S1!colf!cor   0.196    0.05375      3.6     U 0.1
+#&gt;   site_S1!rowf!cor   0.6501   0.03873     17       U 0.1
+#&gt;          site_S2!R   0.9924   0.1078       9.2     P 0  
+#&gt;   site_S2!colf!cor   0.2868   0.05246      5.5     U 0  
+#&gt;   site_S2!rowf!cor   0.5743   0.04209     14       U 0  
+#&gt;          site_S3!R   0.1204   0.01875      6.4     P 0  
+#&gt;   site_S3!rowf!cor   0.6394   0.06324     10       U 0  </div><div class='input'>  <span class='co'>##                      effect component std.error z.ratio constr</span>
+  <span class='co'>##  at(site, S1):colf!colf.var   0.6228   0.4284       1.5    pos</span>
+  <span class='co'>##  at(site, S2):colf!colf.var   0.159    0.1139       1.4    pos</span>
+  <span class='co'>##  at(site, S3):colf!colf.var   0.04832  0.02618      1.8    pos</span>
+  <span class='co'>##  at(site, S3):rowf!rowf.var   0.0235   0.008483     2.8    pos</span>
+  <span class='co'>##               test!test.var   0.1031   0.01468      7      pos</span>
+  <span class='co'>##            site_S1!variance   2.771    0.314        8.8    pos</span>
+  <span class='co'>##            site_S1!colf.cor   0.1959   0.05375      3.6  uncon</span>
+  <span class='co'>##            site_S1!rowf.cor   0.6503   0.03873     17    uncon</span>
+  <span class='co'>##            site_S2!variance   0.9926   0.1079       9.2    pos</span>
+  <span class='co'>##            site_S2!colf.cor   0.2868   0.05246      5.5  uncon</span>
+  <span class='co'>##            site_S2!rowf.cor   0.5744   0.0421      14    uncon</span>
+  <span class='co'>##            site_S3!variance   0.1205   0.01875      6.4    pos</span>
+  <span class='co'>##            site_S3!rowf.cor   0.6394   0.06323     10    uncon</span>
+  
+  <span class='co'># Add site:test</span>
+  <span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m1</span>, random<span class='op'>=</span><span class='op'>~</span><span class='va'>.</span> <span class='op'>+</span> <span class='va'>site</span><span class='op'>:</span><span class='va'>test</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:51:10 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -733.725           1.0   1213 17:51:10    0.1 (7 restrained)
+#&gt;  2      -389.989           1.0   1213 17:51:10    0.1
+#&gt;  3      -342.919           1.0   1213 17:51:10    0.1
+#&gt;  4      -319.635           1.0   1213 17:51:11    0.1
+#&gt;  5      -311.958           1.0   1213 17:51:11    0.1
+#&gt;  6      -310.972           1.0   1213 17:51:11    0.1
+#&gt;  7      -310.889           1.0   1213 17:51:11    0.1
+#&gt;  8      -310.881           1.0   1213 17:51:11    0.1
+#&gt;  9      -310.880           1.0   1213 17:51:11    0.1</div><div class='input'>  <span class='va'>m2</span><span class='op'>$</span><span class='va'>loglik</span>
+</div><div class='output co'>#&gt; [1] -310.8795</div><div class='input'>  <span class='co'>## [1] -310.8794</span>
+  
+  <span class='co'># CORUH structure on the site component of site:test</span>
+  <span class='va'>m3</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>site</span> <span class='op'>+</span> <span class='va'>check</span><span class='op'>:</span><span class='va'>site</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+               random <span class='op'>=</span> <span class='op'>~</span> <span class='fu'>at</span><span class='op'>(</span><span class='va'>site</span><span class='op'>)</span><span class='op'>:</span><span class='va'>colf</span> <span class='op'>+</span> <span class='fu'>at</span><span class='op'>(</span><span class='va'>site</span>,<span class='fl'>3</span><span class='op'>)</span><span class='op'>:</span><span class='va'>rowf</span> <span class='op'>+</span> <span class='fu'>corh</span><span class='op'>(</span><span class='va'>site</span><span class='op'>)</span><span class='op'>:</span><span class='va'>test</span>,
+               residual <span class='op'>=</span> <span class='op'>~</span> <span class='fu'>dsum</span><span class='op'>(</span> <span class='op'>~</span> <span class='fu'>ar1</span><span class='op'>(</span><span class='va'>colf</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>rowf</span><span class='op'>)</span> <span class='op'>+</span>
+                                    <span class='fu'>id</span><span class='op'>(</span><span class='va'>colf</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>rowf</span><span class='op'>)</span> <span class='op'>|</span> <span class='va'>site</span>,
+                                 levels<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span>, <span class='fl'>3</span><span class='op'>)</span>  <span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:51:11 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -532.783           1.0   1213 17:51:11    0.1 (2 restrained)
+#&gt;  2      -411.201           1.0   1213 17:51:11    0.0
+#&gt;  3      -335.554           1.0   1213 17:51:11    0.0
+#&gt;  4      -303.565           1.0   1213 17:51:11    0.0
+#&gt;  5      -292.148           1.0   1213 17:51:12    0.0
+#&gt;  6      -289.310           1.0   1213 17:51:12    0.1 (1 restrained)
+#&gt;  7      -288.550           1.0   1213 17:51:12    0.1 (1 restrained)
+#&gt;  8      -288.487           1.0   1213 17:51:12    0.0 (1 restrained)
+#&gt;  9      -288.484           1.0   1213 17:51:12    0.0 (1 restrained)
+#&gt; 10      -288.484           1.0   1213 17:51:12    0.0 (1 restrained)</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='va'>m3</span><span class='op'>$</span><span class='va'>loglik</span>
+</div><div class='output co'>#&gt; [1] -288.4837</div><div class='input'>  <span class='co'>## [1] -288.4837</span>
+  
+  <span class='co'># Unstructured genetic variance matrix</span>
+  <span class='va'>m4</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>site</span> <span class='op'>+</span> <span class='va'>check</span><span class='op'>:</span><span class='va'>site</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+               random <span class='op'>=</span> <span class='op'>~</span> <span class='fu'>at</span><span class='op'>(</span><span class='va'>site</span><span class='op'>)</span><span class='op'>:</span><span class='va'>colf</span> <span class='op'>+</span> <span class='fu'>at</span><span class='op'>(</span><span class='va'>site</span>,<span class='fl'>3</span><span class='op'>)</span><span class='op'>:</span><span class='va'>rowf</span> <span class='op'>+</span> <span class='fu'>us</span><span class='op'>(</span><span class='va'>site</span><span class='op'>)</span><span class='op'>:</span><span class='va'>test</span>,
+               residual <span class='op'>=</span> <span class='op'>~</span> <span class='fu'>dsum</span><span class='op'>(</span> <span class='op'>~</span> <span class='fu'>ar1</span><span class='op'>(</span><span class='va'>colf</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>rowf</span><span class='op'>)</span> <span class='op'>+</span>
+                                    <span class='fu'>id</span><span class='op'>(</span><span class='va'>colf</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>rowf</span><span class='op'>)</span> <span class='op'>|</span> <span class='va'>site</span>,
+                                 levels<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span>, <span class='fl'>3</span><span class='op'>)</span>  <span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:51:12 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -531.256           1.0   1213 17:51:12    0.1 (2 restrained)</div><div class='output co'>#&gt; <span class='warning'>Warning: US updates modified 1 times in iteration 2 to remain positive definite.</span></div><div class='output co'>#&gt;  2      -411.627           1.0   1213 17:51:12    0.0 (6 restrained)</div><div class='output co'>#&gt; <span class='warning'>Warning: US updates modified 1 times in iteration 3 to remain positive definite.</span></div><div class='output co'>#&gt;  3      -333.071           1.0   1213 17:51:12    0.1 (6 restrained)</div><div class='output co'>#&gt; <span class='warning'>Warning: US updates modified 1 times in iteration 4 to remain positive definite.</span></div><div class='output co'>#&gt;  4      -302.555           1.0   1213 17:51:12    0.1 (6 restrained)</div><div class='output co'>#&gt; <span class='warning'>Warning: US updates modified 1 times in iteration 5 to remain positive definite.</span></div><div class='output co'>#&gt;  5      -291.384           1.0   1213 17:51:12    0.1 (6 restrained)
+#&gt;  6      -288.359           1.0   1213 17:51:12    0.1 (1 restrained)
+#&gt;  7      -286.890           1.0   1213 17:51:12    0.0 (1 restrained)
+#&gt;  8      -286.828           1.0   1213 17:51:12    0.1 (1 restrained)
+#&gt;  9      -286.825           1.0   1213 17:51:12    0.1 (1 restrained)
+#&gt; 10      -286.824           1.0   1213 17:51:12    0.1 (1 restrained)</div><div class='output co'>#&gt; <span class='warning'>Warning: US variance structures were modified in 4 instances to make them positive definite</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='va'>m4</span><span class='op'>$</span><span class='va'>loglik</span>
+</div><div class='output co'>#&gt; [1] -286.8242</div><div class='input'>  <span class='co'>## [1] -286.8239</span>
+  
+  <span class='co'># Note that a 3x3 unstructured matrix can be written LL'+Psi with 1 factor L</span>
+  <span class='co'># Explicitly fit the factor analytic model</span>
+  <span class='va'>m5</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>site</span> <span class='op'>+</span> <span class='va'>check</span><span class='op'>:</span><span class='va'>site</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+               random <span class='op'>=</span> <span class='op'>~</span> <span class='fu'>at</span><span class='op'>(</span><span class='va'>site</span><span class='op'>)</span><span class='op'>:</span><span class='va'>colf</span> <span class='op'>+</span> <span class='fu'>at</span><span class='op'>(</span><span class='va'>site</span>,<span class='fl'>3</span><span class='op'>)</span><span class='op'>:</span><span class='va'>rowf</span>
+               <span class='op'>+</span> <span class='fu'>fa</span><span class='op'>(</span><span class='va'>site</span>,<span class='fl'>1</span>, init<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>.7</span>,<span class='fl'>.1</span>,<span class='fl'>.1</span>,<span class='fl'>.5</span>,<span class='fl'>.3</span>,<span class='fl'>.2</span><span class='op'>)</span><span class='op'>)</span><span class='op'>:</span><span class='va'>test</span>,
+               residual <span class='op'>=</span> <span class='op'>~</span> <span class='fu'>dsum</span><span class='op'>(</span> <span class='op'>~</span> <span class='fu'>ar1</span><span class='op'>(</span><span class='va'>colf</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>rowf</span><span class='op'>)</span> <span class='op'>+</span>
+                                    <span class='fu'>id</span><span class='op'>(</span><span class='va'>colf</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>rowf</span><span class='op'>)</span> <span class='op'>|</span> <span class='va'>site</span>,
+                                 levels<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span>, <span class='fl'>3</span><span class='op'>)</span>  <span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:51:12 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -530.602           1.0   1213 17:51:13    0.1 (4 restrained)
+#&gt;  2      -380.673           1.0   1213 17:51:13    0.1 (2 restrained)
+#&gt;  3      -310.637           1.0   1213 17:51:13    0.1 (1 restrained)
+#&gt;  4      -294.195           1.0   1213 17:51:13    0.1 (1 restrained)
+#&gt;  5      -288.494           1.0   1213 17:51:13    0.1 (2 restrained)
+#&gt;  6      -287.011           1.0   1213 17:51:13    0.1 (1 restrained)
+#&gt;  7      -286.855           1.0   1213 17:51:13    0.1 (1 restrained)
+#&gt;  8      -286.849           1.0   1213 17:51:13    0.1 (1 restrained)
+#&gt;  9      -286.848           1.0   1213 17:51:13    0.1 (1 restrained)</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='va'>m5</span><span class='op'>$</span><span class='va'>loglik</span> <span class='co'># Same as m4</span>
+</div><div class='output co'>#&gt; [1] -286.8484</div><div class='input'>  <span class='co'>## [1] -286.8484</span>
+  
+  <span class='co'># Model 4, Unstructured (symmetric) genetic variance matrix</span>
+  <span class='va'>un</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='fl'>3</span><span class='op'>)</span>
+  <span class='va'>un</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/lower.tri.html'>upper.tri</a></span><span class='op'>(</span><span class='va'>un</span>,<span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>m4</span><span class='op'>$</span><span class='va'>vparameters</span><span class='op'>[</span><span class='fl'>5</span><span class='op'>:</span><span class='fl'>10</span><span class='op'>]</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>un</span><span class='op'>+</span><span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span><span class='op'>(</span><span class='va'>un</span><span class='op'>)</span><span class='op'>-</span><span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='va'>un</span><span class='op'>)</span><span class='op'>)</span>,<span class='fl'>3</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;       [,1]  [,2]  [,3]
+#&gt; [1,] 0.992 0.158 0.132
+#&gt; [2,] 0.158 0.072 0.078
+#&gt; [3,] 0.132 0.078 0.122</div><div class='input'>  <span class='co'>##       [,1]  [,2]  [,3]</span>
+  <span class='co'>## [1,] 0.992 0.158 0.132</span>
+  <span class='co'>## [2,] 0.158 0.073 0.078</span>
+  <span class='co'>## [3,] 0.132 0.078 0.122</span>
+  
+  <span class='co'># Model 5, FA matrix = LL'+Psi.  Not quite the same as unstructured,</span>
+  <span class='co'># since the FA model fixes site 2 variance at 0.</span>
+  <span class='va'>psi</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span><span class='op'>(</span><span class='va'>m5</span><span class='op'>$</span><span class='va'>vparameters</span><span class='op'>[</span><span class='fl'>5</span><span class='op'>:</span><span class='fl'>7</span><span class='op'>]</span><span class='op'>)</span>
+  <span class='va'>lam</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='va'>m5</span><span class='op'>$</span><span class='va'>vparameters</span><span class='op'>[</span><span class='fl'>8</span><span class='op'>:</span><span class='fl'>10</span><span class='op'>]</span>, ncol<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/crossprod.html'>tcrossprod</a></span><span class='op'>(</span><span class='va'>lam</span>,<span class='va'>lam</span><span class='op'>)</span><span class='op'>+</span><span class='va'>psi</span>,<span class='fl'>3</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;       [,1]  [,2]  [,3]
+#&gt; [1,] 0.991 0.156 0.133
+#&gt; [2,] 0.156 0.092 0.078
+#&gt; [3,] 0.133 0.078 0.122</div><div class='input'>  <span class='co'>##       [,1]  [,2]  [,3]</span>
+  <span class='co'>## [1,] 0.991 0.156 0.133</span>
+  <span class='co'>## [2,] 0.156 0.092 0.078</span>
+  <span class='co'>## [3,] 0.133 0.078 0.122</span>
 
-  <span class='kw'>if</span>(<span class='fl'>0</span>){
-    <span class='co'># asreml3</span>
-    <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
-
-    <span class='co'># Single-site analyses suggested random row term for site 3, random column terms</span>
-    <span class='co'># for all sites, AR1 was unnecessary for the col dimension of site 3</span>
-    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>colf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>col</span>), <span class='kw'>rowf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>))
-    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>site</span>, <span class='no'>dat</span>$<span class='no'>colf</span>, <span class='no'>dat</span>$<span class='no'>rowf</span>),] <span class='co'># Sort for asreml</span>
-    <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>site</span> + <span class='no'>check</span>:<span class='no'>site</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-                 <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='fu'>at</span>(<span class='no'>site</span>):<span class='no'>colf</span> + <span class='fu'>at</span>(<span class='no'>site</span>,<span class='fl'>3</span>):<span class='no'>rowf</span> + <span class='no'>test</span>,
-                 <span class='kw'>rcov</span> <span class='kw'>=</span> ~ <span class='fu'>at</span>(<span class='no'>site</span>,<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>2</span>)):<span class='fu'>ar1</span>(<span class='no'>colf</span>):<span class='fu'>ar1</span>(<span class='no'>rowf</span>)
-                 + <span class='fu'>at</span>(<span class='no'>site</span>,<span class='fl'>3</span>):<span class='fu'>id</span>(<span class='no'>colf</span>):<span class='fu'>ar1</span>(<span class='no'>rowf</span>))
-    <span class='no'>m1</span>$<span class='no'>loglik</span>
-    <span class='co'>## [1] -314.2616</span>
-
-    <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lucid</span>)
-    <span class='fu'>vc</span>(<span class='no'>m1</span>)
-    <span class='co'>##                      effect component std.error z.ratio constr</span>
-    <span class='co'>##  at(site, S1):colf!colf.var   0.6228   0.4284       1.5    pos</span>
-    <span class='co'>##  at(site, S2):colf!colf.var   0.159    0.1139       1.4    pos</span>
-    <span class='co'>##  at(site, S3):colf!colf.var   0.04832  0.02618      1.8    pos</span>
-    <span class='co'>##  at(site, S3):rowf!rowf.var   0.0235   0.008483     2.8    pos</span>
-    <span class='co'>##               test!test.var   0.1031   0.01468      7      pos</span>
-    <span class='co'>##            site_S1!variance   2.771    0.314        8.8    pos</span>
-    <span class='co'>##            site_S1!colf.cor   0.1959   0.05375      3.6  uncon</span>
-    <span class='co'>##            site_S1!rowf.cor   0.6503   0.03873     17    uncon</span>
-    <span class='co'>##            site_S2!variance   0.9926   0.1079       9.2    pos</span>
-    <span class='co'>##            site_S2!colf.cor   0.2868   0.05246      5.5  uncon</span>
-    <span class='co'>##            site_S2!rowf.cor   0.5744   0.0421      14    uncon</span>
-    <span class='co'>##            site_S3!variance   0.1205   0.01875      6.4    pos</span>
-    <span class='co'>##            site_S3!rowf.cor   0.6394   0.06323     10    uncon</span>
-
-    <span class='co'># Add site:test</span>
-    <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span>(<span class='no'>m1</span>, <span class='kw'>random</span><span class='kw'>=</span>~<span class='no'>.</span> + <span class='no'>site</span>:<span class='no'>test</span>)
-    <span class='no'>m2</span>$<span class='no'>loglik</span>
-    <span class='co'>## [1] -310.8794</span>
-
-    <span class='co'># CORUH structure on the site component of site:test</span>
-    <span class='no'>m3</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>site</span> + <span class='no'>check</span>:<span class='no'>site</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-                 <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='fu'>at</span>(<span class='no'>site</span>):<span class='no'>colf</span> + <span class='fu'>at</span>(<span class='no'>site</span>,<span class='fl'>3</span>):<span class='no'>rowf</span> + <span class='fu'>corh</span>(<span class='no'>site</span>):<span class='no'>test</span>,
-                 <span class='kw'>rcov</span> <span class='kw'>=</span> ~ <span class='fu'>at</span>(<span class='no'>site</span>,<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>2</span>)):<span class='fu'>ar1</span>(<span class='no'>colf</span>):<span class='fu'>ar1</span>(<span class='no'>rowf</span>)
-                 + <span class='fu'>at</span>(<span class='no'>site</span>,<span class='fl'>3</span>):<span class='fu'>id</span>(<span class='no'>colf</span>):<span class='fu'>ar1</span>(<span class='no'>rowf</span>))
-    <span class='no'>m3</span>$<span class='no'>loglik</span>
-    <span class='co'>## [1] -288.4837</span>
-
-    <span class='co'># Unstructured genetic variance matrix</span>
-    <span class='no'>m4</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>site</span> + <span class='no'>check</span>:<span class='no'>site</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-                 <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='fu'>at</span>(<span class='no'>site</span>):<span class='no'>colf</span> + <span class='fu'>at</span>(<span class='no'>site</span>,<span class='fl'>3</span>):<span class='no'>rowf</span> + <span class='fu'>us</span>(<span class='no'>site</span>):<span class='no'>test</span>,
-                 <span class='kw'>rcov</span> <span class='kw'>=</span> ~ <span class='fu'>at</span>(<span class='no'>site</span>,<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>2</span>)):<span class='fu'>ar1</span>(<span class='no'>colf</span>):<span class='fu'>ar1</span>(<span class='no'>rowf</span>)
-                 + <span class='fu'>at</span>(<span class='no'>site</span>,<span class='fl'>3</span>):<span class='fu'>id</span>(<span class='no'>colf</span>):<span class='fu'>ar1</span>(<span class='no'>rowf</span>))
-    <span class='no'>m4</span>$<span class='no'>loglik</span>
-    <span class='co'>## [1] -286.8239</span>
-
-    <span class='co'># Note that a 3x3 unstructured matrix can be written LL'+Psi with 1 factor L</span>
-    <span class='co'># Explicitly fit the factor analytic model</span>
-    <span class='no'>m5</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>site</span> + <span class='no'>check</span>:<span class='no'>site</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-                 <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='fu'>at</span>(<span class='no'>site</span>):<span class='no'>colf</span> + <span class='fu'>at</span>(<span class='no'>site</span>,<span class='fl'>3</span>):<span class='no'>rowf</span>
-                 + <span class='fu'>fa</span>(<span class='no'>site</span>,<span class='fl'>1</span>, <span class='kw'>init</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>.7</span>,<span class='fl'>.1</span>,<span class='fl'>.1</span>,<span class='fl'>.5</span>,<span class='fl'>.3</span>,<span class='fl'>.2</span>)):<span class='no'>test</span>,
-                 <span class='kw'>rcov</span> <span class='kw'>=</span> ~ <span class='fu'>at</span>(<span class='no'>site</span>,<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>2</span>)):<span class='fu'>ar1</span>(<span class='no'>colf</span>):<span class='fu'>ar1</span>(<span class='no'>rowf</span>)
-                 + <span class='fu'>at</span>(<span class='no'>site</span>,<span class='fl'>3</span>):<span class='fu'>id</span>(<span class='no'>colf</span>):<span class='fu'>ar1</span>(<span class='no'>rowf</span>))
-    <span class='no'>m5</span>$<span class='no'>loglik</span> <span class='co'># Same as m4</span>
-    <span class='co'>## [1] -286.8484</span>
-
-    <span class='co'># Model 4, Unstructured (symmetric) genetic variance matrix</span>
-    <span class='no'>un</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span>(<span class='fl'>3</span>)
-    <span class='no'>un</span>[<span class='fu'><a href='https://rdrr.io/r/base/lower.tri.html'>upper.tri</a></span>(<span class='no'>un</span>,<span class='fl'>TRUE</span>)] <span class='kw'>&lt;-</span> <span class='no'>m4</span>$<span class='no'>gammas</span>[<span class='fl'>5</span>:<span class='fl'>10</span>]
-    <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='no'>un</span>+<span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span>(<span class='no'>un</span>)-<span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span>(<span class='no'>un</span>)),<span class='fl'>3</span>)
-    <span class='co'>##       [,1]  [,2]  [,3]</span>
-    <span class='co'>## [1,] 0.992 0.158 0.132</span>
-    <span class='co'>## [2,] 0.158 0.073 0.078</span>
-    <span class='co'>## [3,] 0.132 0.078 0.122</span>
-
-    <span class='co'># Model 5, FA matrix = LL'+Psi.  Not quite the same as unstructured,</span>
-    <span class='co'># since the FA model fixes site 2 variance at 0.</span>
-    <span class='no'>psi</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span>(<span class='no'>m5</span>$<span class='no'>gammas</span>[<span class='fl'>5</span>:<span class='fl'>7</span>])
-    <span class='no'>lam</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='no'>m5</span>$<span class='no'>gammas</span>[<span class='fl'>8</span>:<span class='fl'>10</span>], <span class='kw'>ncol</span><span class='kw'>=</span><span class='fl'>1</span>)
-    <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/crossprod.html'>tcrossprod</a></span>(<span class='no'>lam</span>,<span class='no'>lam</span>)+<span class='no'>psi</span>,<span class='fl'>3</span>)
-    <span class='co'>##       [,1]  [,2]  [,3]</span>
-    <span class='co'>## [1,] 0.991 0.156 0.133</span>
-    <span class='co'>## [2,] 0.156 0.092 0.078</span>
-    <span class='co'>## [3,] 0.133 0.078 0.122</span>
-  }</div></pre>
+  
+<span class='co'># }</span>
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -296,7 +370,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -39,7 +39,7 @@
   Computing heritability and selection response from unbalanced
   plant breeding trials,
   \emph{Genetics}, 177, 1881-1888.
-  http://doi.org/10.1534/genetics.107.074229
+  https://doi.org/10.1534/genetics.107.074229
 }
 
 \examples{
@@ -128,7 +128,7 @@
   # ----------
 
   # Illustrate how to do the same calculations with lme4
-  # http://stackoverflow.com/questions/38697477
+  # https://stackoverflow.com/questions/38697477
   
   libs(lme4)
   

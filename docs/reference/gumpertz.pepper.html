@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Phytophtera disease incidence in a pepper field — gumpertz.pepper" />
-
 <meta property="og:description" content="Phytophtera disease incidence in a pepper field" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,24 +143,23 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Phytophtera disease incidence in a pepper field</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 800 observations on the following 6 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 800 observations on the following 6 variables.</p><dl>
     <dt><code>field</code></dt><dd><p>field factor, 2 levels</p></dd>
     <dt><code>row</code></dt><dd><p>x ordinate</p></dd>
     <dt><code>quadrat</code></dt><dd><p>y ordinate</p></dd>
     <dt><code>disease</code></dt><dd><p>presence (Y) or absence (N) of disease</p></dd>
     <dt><code>water</code></dt><dd><p>soil moisture percent</p></dd>
     <dt><code>leaf</code></dt><dd><p>leaf assay count</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Each field is 20 rows by 20 quadrates, with 2 to 3 bell pepper plants
@@ -169,77 +172,74 @@
 <p>Gumpertz et al. model the presence of disease  using soil moisture and
   leaf assay as covariates, and using disease presence of neighboring
   plots as covariates in an autologistic model.</p>
-    
+<p>Used with permission of Marcia Gumpertz.  Research funded by USDA.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Marcia L. Gumpertz; Jonathan M. Graham; Jean B. Ristaino (1997).
   Autologistic Model of Spatial Pattern of Phytophthora Epidemic
   in Bell Pepper: Effects of Soil Variables on Disease Presence.
-  <em>Journal of Agricultural, Biological, and Environmental
-    Statistics</em>, Vol. 2, No. 2., pp. 131-156.</p>
-<p>Used with permission of Marcia Gumpertz.  Research funded by USDA.</p>
-    
+  Journal of Agricultural, Biological, and Environmental
+    Statistics, Vol. 2, No. 2., pp. 131-156.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>gumpertz.pepper</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>gumpertz.pepper</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>gumpertz.pepper</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>gumpertz.pepper</span>
 
 <span class='co'># Gumpertz deletes two outliers</span>
-<span class='no'>dat</span>[ <span class='no'>dat</span>$<span class='no'>field</span> <span class='kw'>==</span><span class='st'>"F1"</span> <span class='kw'>&amp;</span> <span class='no'>dat</span>$<span class='no'>row</span><span class='kw'>==</span><span class='fl'>20</span> <span class='kw'>&amp;</span> <span class='no'>dat</span>$<span class='no'>quadrat</span><span class='kw'>==</span><span class='fl'>10</span>, <span class='st'>'water'</span>] <span class='kw'>&lt;-</span> <span class='fl'>NA</span>
-<span class='no'>dat</span>[ <span class='no'>dat</span>$<span class='no'>field</span> <span class='kw'>==</span><span class='st'>"F2"</span> <span class='kw'>&amp;</span> <span class='no'>dat</span>$<span class='no'>row</span><span class='kw'>==</span><span class='fl'>5</span> <span class='kw'>&amp;</span> <span class='no'>dat</span>$<span class='no'>quadrat</span><span class='kw'>==</span><span class='fl'>4</span>, <span class='st'>'water'</span>] <span class='kw'>&lt;-</span> <span class='fl'>NA</span>
+<span class='va'>dat</span><span class='op'>[</span> <span class='va'>dat</span><span class='op'>$</span><span class='va'>field</span> <span class='op'>==</span><span class='st'>"F1"</span> <span class='op'>&amp;</span> <span class='va'>dat</span><span class='op'>$</span><span class='va'>row</span><span class='op'>==</span><span class='fl'>20</span> <span class='op'>&amp;</span> <span class='va'>dat</span><span class='op'>$</span><span class='va'>quadrat</span><span class='op'>==</span><span class='fl'>10</span>, <span class='st'>'water'</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='cn'>NA</span>
+<span class='va'>dat</span><span class='op'>[</span> <span class='va'>dat</span><span class='op'>$</span><span class='va'>field</span> <span class='op'>==</span><span class='st'>"F2"</span> <span class='op'>&amp;</span> <span class='va'>dat</span><span class='op'>$</span><span class='va'>row</span><span class='op'>==</span><span class='fl'>5</span> <span class='op'>&amp;</span> <span class='va'>dat</span><span class='op'>$</span><span class='va'>quadrat</span><span class='op'>==</span><span class='fl'>4</span>, <span class='st'>'water'</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='cn'>NA</span>
 
 <span class='co'># Horizontal flip</span>
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>row</span><span class='kw'>=</span><span class='fl'>21</span>-<span class='no'>row</span>)
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, row<span class='op'>=</span><span class='fl'>21</span><span class='op'>-</span><span class='va'>row</span><span class='op'>)</span>
 
 <span class='co'># Disease presence.  Gumpertz fig 1a, 2a.</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='no'>grays</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"#d9d9d9"</span>,<span class='st'>"#252525"</span>))
-<span class='fu'>desplot</span>(<span class='no'>disease</span> ~ <span class='no'>row</span>*<span class='no'>quadrat</span><span class='kw'>|</span><span class='no'>field</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-        <span class='kw'>col.regions</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'white'</span>,<span class='st'>'black'</span>), <span class='kw'>aspect</span><span class='kw'>=</span><span class='fl'>1</span>, <span class='co'># uncertain aspect</span>
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"gumpertz.pepper disease presence"</span>, )</div><div class='img'><img src='gumpertz.pepper-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+<span class='va'>grays</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"#d9d9d9"</span>,<span class='st'>"#252525"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>disease</span> <span class='op'>~</span> <span class='va'>row</span><span class='op'>*</span><span class='va'>quadrat</span><span class='op'>|</span><span class='va'>field</span>,
+        col.regions<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'white'</span>,<span class='st'>'black'</span><span class='op'>)</span>, aspect<span class='op'>=</span><span class='fl'>1</span>, <span class='co'># uncertain aspect</span>
+        main<span class='op'>=</span><span class='st'>"gumpertz.pepper disease presence"</span>, <span class='op'>)</span>
+</div><div class='img'><img src='gumpertz.pepper-1.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Soil water.  Gumpertz fig 1b, 2b</span>
-<span class='fu'>desplot</span>(<span class='no'>water</span> ~ <span class='no'>row</span>*<span class='no'>quadrat</span><span class='kw'>|</span><span class='no'>field</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-        <span class='kw'>col.regions</span><span class='kw'>=</span><span class='fu'>grays</span>(<span class='fl'>5</span>), <span class='kw'>aspect</span><span class='kw'>=</span><span class='fl'>1</span>, <span class='co'># uncertain aspect</span>
-        <span class='kw'>at</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>5</span>,<span class='fl'>7.5</span>,<span class='fl'>10</span>,<span class='fl'>12.5</span>,<span class='fl'>15</span>,<span class='fl'>18</span>),
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"gumpertz.pepper soil moisture"</span>)</div><div class='img'><img src='gumpertz.pepper-2.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>water</span> <span class='op'>~</span> <span class='va'>row</span><span class='op'>*</span><span class='va'>quadrat</span><span class='op'>|</span><span class='va'>field</span>,
+        col.regions<span class='op'>=</span><span class='fu'>grays</span><span class='op'>(</span><span class='fl'>5</span><span class='op'>)</span>, aspect<span class='op'>=</span><span class='fl'>1</span>, <span class='co'># uncertain aspect</span>
+        at<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>5</span>,<span class='fl'>7.5</span>,<span class='fl'>10</span>,<span class='fl'>12.5</span>,<span class='fl'>15</span>,<span class='fl'>18</span><span class='op'>)</span>,
+        main<span class='op'>=</span><span class='st'>"gumpertz.pepper soil moisture"</span><span class='op'>)</span>
+</div><div class='img'><img src='gumpertz.pepper-2.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Leaf assay.  Gumpertz fig 1c, 2c</span>
-<span class='fu'>desplot</span>(<span class='no'>leaf</span> ~ <span class='no'>row</span>*<span class='no'>quadrat</span><span class='kw'>|</span><span class='no'>field</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-        <span class='kw'>col.regions</span><span class='kw'>=</span><span class='fu'>grays</span>(<span class='fl'>6</span>),
-        <span class='kw'>at</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0</span>,<span class='fl'>1</span>,<span class='fl'>2</span>,<span class='fl'>3</span>,<span class='fl'>4</span>,<span class='fl'>5</span>,<span class='fl'>6</span>)-<span class='fl'>.5</span>, <span class='kw'>aspect</span><span class='kw'>=</span><span class='fl'>1</span>, <span class='co'># uncertain aspect</span>
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"gumpertz.pepper leaf assay"</span>, )</div><div class='img'><img src='gumpertz.pepper-3.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>leaf</span> <span class='op'>~</span> <span class='va'>row</span><span class='op'>*</span><span class='va'>quadrat</span><span class='op'>|</span><span class='va'>field</span>,
+        col.regions<span class='op'>=</span><span class='fu'>grays</span><span class='op'>(</span><span class='fl'>6</span><span class='op'>)</span>,
+        at<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>1</span>,<span class='fl'>2</span>,<span class='fl'>3</span>,<span class='fl'>4</span>,<span class='fl'>5</span>,<span class='fl'>6</span><span class='op'>)</span><span class='op'>-</span><span class='fl'>.5</span>, aspect<span class='op'>=</span><span class='fl'>1</span>, <span class='co'># uncertain aspect</span>
+        main<span class='op'>=</span><span class='st'>"gumpertz.pepper leaf assay"</span>, <span class='op'>)</span>
+</div><div class='img'><img src='gumpertz.pepper-3.png' alt='' width='700' height='433' /></div><div class='input'>
 
 <span class='co'># Use the inner 16x16 grid of plots in field 2</span>
-<span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/droplevels.html'>droplevels</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, <span class='no'>field</span><span class='kw'>==</span><span class='st'>"F2"</span> <span class='kw'>&amp;</span> !<span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span>(<span class='no'>water</span>) <span class='kw'>&amp;</span>
-                          <span class='no'>row</span> <span class='kw'>&gt;</span> <span class='fl'>2</span> <span class='kw'>&amp;</span> <span class='no'>row</span> <span class='kw'>&lt;</span> <span class='fl'>19</span> <span class='kw'>&amp;</span> <span class='no'>quadrat</span> <span class='kw'>&gt;</span> <span class='fl'>2</span> <span class='kw'>&amp;</span> <span class='no'>quadrat</span> <span class='kw'>&lt;</span> <span class='fl'>19</span>))
+<span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/droplevels.html'>droplevels</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>field</span><span class='op'>==</span><span class='st'>"F2"</span> <span class='op'>&amp;</span> <span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>water</span><span class='op'>)</span> <span class='op'>&amp;</span>
+                          <span class='va'>row</span> <span class='op'>&gt;</span> <span class='fl'>2</span> <span class='op'>&amp;</span> <span class='va'>row</span> <span class='op'>&lt;</span> <span class='fl'>19</span> <span class='op'>&amp;</span> <span class='va'>quadrat</span> <span class='op'>&gt;</span> <span class='fl'>2</span> <span class='op'>&amp;</span> <span class='va'>quadrat</span> <span class='op'>&lt;</span> <span class='fl'>19</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='no'>m21</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/glm.html'>glm</a></span>(<span class='no'>disease</span> ~ <span class='no'>water</span> + <span class='no'>leaf</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat2</span>, <span class='kw'>family</span><span class='kw'>=</span><span class='no'>binomial</span>)
-<span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m21</span>) <span class='co'># These match Gumpertz et al table 4, model 1</span></div><div class='output co'>#&gt; (Intercept)       water        leaf 
+<span class='va'>m21</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/glm.html'>glm</a></span><span class='op'>(</span><span class='va'>disease</span> <span class='op'>~</span> <span class='va'>water</span> <span class='op'>+</span> <span class='va'>leaf</span>, data<span class='op'>=</span><span class='va'>dat2</span>, family<span class='op'>=</span><span class='va'>binomial</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>m21</span><span class='op'>)</span> <span class='co'># These match Gumpertz et al table 4, model 1</span>
+</div><div class='output co'>#&gt; (Intercept)       water        leaf 
 #&gt;  -9.1019623   0.7059993   0.4603931 </div><div class='input'><span class='co'>## (Intercept)       water        leaf</span>
 <span class='co'>##  -9.1019623   0.7059993   0.4603931</span>
-<span class='no'>dat2</span>$<span class='no'>res21</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/residuals.html'>resid</a></span>(<span class='no'>m21</span>)
-<span class='kw'>if</span>(<span class='fl'>0</span>){
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-  <span class='fu'>desplot</span>(<span class='no'>res21</span> ~ <span class='no'>row</span>*<span class='no'>quadrat</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat2</span>,
-          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"gumpertz.pepper field 2, model 1 residuals"</span>)
+<span class='va'>dat2</span><span class='op'>$</span><span class='va'>res21</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/residuals.html'>resid</a></span><span class='op'>(</span><span class='va'>m21</span><span class='op'>)</span>
+<span class='kw'>if</span><span class='op'>(</span><span class='fl'>0</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+  <span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat2</span>, <span class='va'>res21</span> <span class='op'>~</span> <span class='va'>row</span><span class='op'>*</span><span class='va'>quadrat</span>,
+          main<span class='op'>=</span><span class='st'>"gumpertz.pepper field 2, model 1 residuals"</span><span class='op'>)</span>
   <span class='co'># Still shows obvious trends.  Gumpertz et al add spatial covariates for</span>
   <span class='co'># neighboring plots, but with only minor improvement in misclassification</span>
-}</div></pre>
+<span class='op'>}</span>
+
+<span class='co'># }</span>
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -250,7 +250,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Uniformity trial of barley — kempton.barley.uniformity" />
-
 <meta property="og:description" content="Uniformity trial of barley at Cambridge, England, 1978." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,12 +143,11 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Uniformity trial of barley at Cambridge, England, 1978.</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>A uniformity trial of spring barley planted in 1978.  Conducted by the
@@ -152,127 +155,97 @@
 <p>Each plot is 5 feet wide, 14 feet long.</p>
 <p>Field width: 7 plots * 14 feet = 98 feet</p>
 <p>Field length: 28 plots * 5 feet = 140 feet</p>
-    
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 196 observations on the following 3 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 196 observations on the following 3 variables.</p><dl>
     <dt><code>row</code></dt><dd><p>row</p></dd>
     <dt><code>col</code></dt><dd><p>column</p></dd>
     <dt><code>yield</code></dt><dd><p>grain yield, kg</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>R. A. Kempton and C. W. Howes (1981).
   The use of neighbouring plot values in the analysis of variety trials.
-  <em>Applied Statistics</em>, 30, 59--70.
-  http://doi.org/10.2307/2346657</p>
-    
+  Applied Statistics, 30, 59--70.
+  https://doi.org/10.2307/2346657</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>McCullagh, P. and Clifford, D., (2006).
   Evidence for conformal invariance of crop yields,
-  <em>Proceedings of the Royal Society A: Mathematical, Physical and
-    Engineering Science</em>. 462, 2119--2143.
-  http://doi.org/10.1098/rspa.2006.1667</p>
-    
+  Proceedings of the Royal Society A: Mathematical, Physical and
+    Engineering Science. 462, 2119--2143.
+  https://doi.org/10.1098/rspa.2006.1667</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>kempton.barley.uniformity</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>kempton.barley.uniformity</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='fu'>desplot</span>(<span class='no'>yield</span>~<span class='no'>col</span>*<span class='no'>row</span>, <span class='no'>dat</span>,
-        <span class='kw'>aspect</span><span class='kw'>=</span><span class='fl'>140</span>/<span class='fl'>98</span>, <span class='kw'>tick</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='co'># true aspect</span>
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"kempton.barley.uniformity"</span>)</div><div class='img'><img src='kempton.barley.uniformity-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>kempton.barley.uniformity</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>kempton.barley.uniformity</span>
 
-<span class='co'># Kempton estimated auto-regression coefficients b1=0.10, b2=0.91</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+  <span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>yield</span><span class='op'>~</span><span class='va'>col</span><span class='op'>*</span><span class='va'>row</span>,
+          aspect<span class='op'>=</span><span class='fl'>140</span><span class='op'>/</span><span class='fl'>98</span>, tick<span class='op'>=</span><span class='cn'>TRUE</span>, <span class='co'># true aspect</span>
+          main<span class='op'>=</span><span class='st'>"kempton.barley.uniformity"</span><span class='op'>)</span>
+</div><div class='img'><img src='kempton.barley.uniformity-1.png' alt='' width='700' height='433' /></div><div class='input'>  
+  
+  <span class='co'># Kempton estimated auto-regression coefficients b1=0.10, b2=0.91</span>
+  
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, xf <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>col</span><span class='op'>)</span>, yf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>row</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>xf</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>col</span>), <span class='kw'>yf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>))
-<span class='co'># asreml3</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='fl'>1</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>rcov</span><span class='kw'>=</span>~<span class='fu'>ar1</span>(<span class='no'>xf</span>):<span class='fu'>ar1</span>(<span class='no'>yf</span>))</div><div class='output co'>#&gt; ASReml: Fri Aug 16 14:59:49 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;     138.7683      0.0880   195  14:59:49     0.0 (1 restrained)
-#&gt;     190.2120      0.0625   195  14:59:49     0.0
-#&gt;     224.6680      0.0667   195  14:59:49     0.0
-#&gt;     231.1991      0.0928   195  14:59:49     0.0
-#&gt;     231.4210      0.1026   195  14:59:49     0.0
-#&gt;     231.4251      0.1042   195  14:59:49     0.0
-#&gt;     231.4252      0.1044   195  14:59:49     0.0
-#&gt;     231.4252      0.1044   195  14:59:49     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 14:59:49 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='input'>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lucid</span>)
-<span class='fu'>vc</span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt;      effect component std.error z.ratio constr
-#&gt;  R!variance    0.1044   0.022       4.7      P
-#&gt;    R!xf.cor    0.2458   0.07484     3.3      U
-#&gt;    R!yf.cor    0.8186   0.03822    21        U</div><div class='input'><span class='co'>##      effect component std.error z.ratio constr</span>
-<span class='co'>##  R!variance    0.1044   0.022       4.7    pos</span>
-<span class='co'>##    R!xf.cor    0.2458   0.07484     3.3  uncon</span>
-<span class='co'>##    R!yf.cor    0.8186   0.03822    21    uncon</span>
+  <span class='co'># ----------</span>
 
-<span class='co'># asreml estimates auto-regression correlations of 0.25, 0.82</span>
-<span class='co'># Kempton estimated auto-regression coefficients b1=0.10, b2=0.91</span>
-
-<span class='kw'>if</span>(<span class='fl'>0</span>){
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span>,<span class='va'>lucid</span><span class='op'>)</span> <span class='co'># asreml4</span>
+  
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, xf <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>col</span><span class='op'>)</span>, yf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>row</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>1</span>, data<span class='op'>=</span><span class='va'>dat</span>, resid <span class='op'>=</span> <span class='op'>~</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>xf</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:08:48 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1       138.768     0.0880303    195 17:08:48    0.0 (1 restrained)
+#&gt;  2       190.210     0.0624855    195 17:08:48    0.0
+#&gt;  3       224.660     0.0667102    195 17:08:48    0.0
+#&gt;  4       230.382     0.0828740    195 17:08:48    0.0
+#&gt;  5       231.397     0.0999127    195 17:08:48    0.0
+#&gt;  6       231.425     0.1038940    195 17:08:48    0.0
+#&gt;  7       231.425     0.1043644    195 17:08:48    0.0</div><div class='input'>  
+  <span class='co'># vc(m1)</span>
+  <span class='co'>##       effect component std.error z.ratio bound </span>
+  <span class='co'>##      xf:yf!R    0.1044   0.02197     4.7     P   0</span>
+  <span class='co'>## xf:yf!xf!cor    0.2458   0.07484     3.3     U   0</span>
+  <span class='co'>## xf:yf!yf!cor    0.8186   0.03821    21       U   0</span>
+  
+  <span class='co'># asreml estimates auto-regression correlations of 0.25, 0.82</span>
   <span class='co'># Kempton estimated auto-regression coefficients b1=0.10, b2=0.91</span>
 
-  <span class='co'>## dat &lt;- transform(dat, xf = factor(col), yf=factor(row))</span>
-  <span class='co'>## libs(asreml4)</span>
-  <span class='co'>## m1 &lt;- asreml(yield ~ 1, data=dat, residual = ~ar1(xf):ar1(yf))</span>
+  <span class='co'># ----------</span>
 
-  <span class='co'>## libs(lucid)</span>
-  <span class='co'>## vc(m1)</span>
-  <span class='co'>## ##       effect component std.error z.ratio bound &lt;!-- %ch --&gt;</span>
-  <span class='co'>## ##     xf:yf(R)    0.1044   0.022       4.7     P   0</span>
-  <span class='co'>## ## xf:yf!xf!cor    0.2458   0.07484     3.3     U   0</span>
-  <span class='co'>## ## xf:yf!yf!cor    0.8186   0.03822    21       U   0</span>
+  <span class='kw'>if</span><span class='op'>(</span><span class='fl'>0</span><span class='op'>)</span><span class='op'>{</span>
+    <span class='co'># Kempton defines 4 blocks, randomly assigns variety codes 1-49 in each block, fits</span>
+    <span class='co'># RCB model, computes mean squares for variety and residual.  Repeat 40 times.</span>
+    <span class='co'># Kempton's estimate: variety = 1032, residual = 1013</span>
+    <span class='co'># Our estimate: variety = 825, residual = 1080</span>
+    <span class='va'>fitfun</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>dat</span><span class='op'>)</span><span class='op'>{</span>
+      <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, block<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/Round.html'>ceiling</a></span><span class='op'>(</span><span class='va'>row</span><span class='op'>/</span><span class='fl'>7</span><span class='op'>)</span><span class='op'>)</span>,
+                       gen<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>49</span><span class='op'>)</span>,<span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>49</span><span class='op'>)</span>,<span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>49</span><span class='op'>)</span>,<span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>49</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+      <span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>*</span><span class='fl'>100</span> <span class='op'>~</span> <span class='va'>block</span> <span class='op'>+</span> <span class='va'>gen</span>, <span class='va'>dat</span><span class='op'>)</span>
+      <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>m2</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>:</span><span class='fl'>3</span>,<span class='st'>'Mean Sq'</span><span class='op'>]</span>
+    <span class='op'>}</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>251</span><span class='op'>)</span>
+    <span class='va'>out</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>replicate</a></span><span class='op'>(</span><span class='fl'>50</span>, <span class='fu'>fitfun</span><span class='op'>(</span><span class='va'>dat</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>rowMeans</a></span><span class='op'>(</span><span class='va'>out</span><span class='op'>)</span> <span class='co'># 826 1079</span>
+  <span class='op'>}</span>
 
-  <span class='co'>## # asreml estimates auto-regression correlations of 0.25, 0.82</span>
-  <span class='co'>## # Kempton estimated auto-regression coefficients b1=0.10, b2=0.91</span>
 
-}
-
-<span class='co'># ----------------------------------------------------------------------------</span>
-
-<span class='co'># Kempton defines 4 blocks, randomly assigns variety codes 1-49 in each block, fits</span>
-<span class='co'># RCB model, computes mean squares for variety and residual.  Repeat 40 times.</span>
-<span class='co'># Kempton's estimate: variety = 1032, residual = 1013</span>
-<span class='co'># Our estimate: variety = 825, residual = 1080</span>
-<span class='no'>fitfun</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>dat</span>){
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>block</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>ceiling</a></span>(<span class='no'>row</span>/<span class='fl'>7</span>)),
-                   <span class='kw'>gen</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span>(<span class='fl'>1</span>:<span class='fl'>49</span>),<span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span>(<span class='fl'>1</span>:<span class='fl'>49</span>),<span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span>(<span class='fl'>1</span>:<span class='fl'>49</span>),<span class='fu'><a href='https://rdrr.io/r/base/sample.html'>sample</a></span>(<span class='fl'>1</span>:<span class='fl'>49</span>))))
-  <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>yield</span>*<span class='fl'>100</span> ~ <span class='no'>block</span> + <span class='no'>gen</span>, <span class='no'>dat</span>)
-  <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m2</span>)[<span class='fl'>2</span>:<span class='fl'>3</span>,<span class='st'>'Mean Sq'</span>]
-}
-<span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span>(<span class='fl'>251</span>)
-<span class='no'>out</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/lapply.html'>replicate</a></span>(<span class='fl'>50</span>, <span class='fu'>fitfun</span>(<span class='no'>dat</span>))
-<span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>rowMeans</a></span>(<span class='no'>out</span>) <span class='co'># 826 1079</span></div><div class='output co'>#&gt; [1]  818.8405 1081.5152</div><div class='input'>
-
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -283,7 +256,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

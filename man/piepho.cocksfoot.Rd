@@ -31,7 +31,7 @@
   Fitting a Regression Model for Genotype-by-Environment Data on Heading
   Dates in Grasses by Methods for Nonlinear Mixed Models.
   \emph{Biometrics}, 55, 1120-1128.
-  http://doi.org/10.1111/j.0006-341X.1999.01120.x  
+  https://doi.org/10.1111/j.0006-341X.1999.01120.x  
 }
 
 \examples{

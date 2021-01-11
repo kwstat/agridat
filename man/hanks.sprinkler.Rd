@@ -35,7 +35,7 @@
   Statistical Analysis of Results from Irrigation Experiments Using the
   Line-Source Sprinkler System.
   \emph{Soil Science Society of America Journal}, 44, 886-888.
-  http://doi.org/10.2136/sssaj1980.03615995004400040048x
+  https://doi.org/10.2136/sssaj1980.03615995004400040048x
 }
 \references{
   Johnson, D. E., Chaudhuri, U. N., and Kanemasu, E. T. (1983).
@@ -50,7 +50,7 @@
     Disciplines, Southern Cooperative Series Bulletin No. 343}, 104-122.
 
   SAS Stat User's Guide.
-  http://support.sas.com/documentation/cdl/en/statug/63347/HTML/default/viewer.htm#statug_mixed_sect038.htm
+  https://support.sas.com/documentation/cdl/en/statug/63347/HTML/default/viewer.htm#statug_mixed_sect038.htm
 }
 
 \examples{
@@ -131,7 +131,7 @@
     m1 <- asreml(yield ~ gen + dir + irrf + gen:dir + gen:irrf + dir:irrf,
                  data=dat,
                  random= ~ block + block:dir + block:irrf,
-                 resid = ~ block:gen:corb(subf, 1))
+                 resid = ~ block:gen:corb(subf, 2))
 
     lucid::vc(m1)
     #                   effect component std.error z.ratio bound %ch

@@ -53,7 +53,7 @@
 
   Some relevant maps of yield, heat, and precipitation can be found in
   \emph{Atlas of crop yield and summer weather patterns, 1931-1975},
-  http://www.isws.illinois.edu/pubdoc/C/ISWSC-150.pdf
+  https://www.isws.illinois.edu/pubdoc/C/ISWSC-150.pdf
 
   The following notes pertain to the Iowa data.
 

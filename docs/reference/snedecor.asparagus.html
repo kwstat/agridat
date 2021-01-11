@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Asparagus yields for different cutting treatments — snedecor.asparagus" />
-
 <meta property="og:description" content="Asparagus yields for different cutting treatments, in 4 years." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,22 +143,21 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Asparagus yields for different cutting treatments, in 4 years.</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 64 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 64 observations on the following 4 variables.</p><dl>
     <dt><code>block</code></dt><dd><p>block factor, 4 levels</p></dd>
     <dt><code>year</code></dt><dd><p>year, numeric</p></dd>
     <dt><code>trt</code></dt><dd><p>treatment factor of final cutting date</p></dd>
     <dt><code>yield</code></dt><dd><p>yield, ounces</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Planted in 1927.  Cutting began in 1929.  Yield is the weight of
@@ -163,215 +166,122 @@
 <p>In the past, repeated-measurement experiments like this were sometimes
   analyzed as if they were a split-plot experiment.  This violates some
   indpendence assumptions.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Snedecor and Cochran, 1989. <em>Statistical Methods</em>.</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Mick O'Neill, 2010.
   <em>A Guide To Linear Mixed Models In An Experimental Design Context</em>.
   Statistical Advisory &amp; Training Service Pty Ltd.</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+  
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>snedecor.asparagus</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>snedecor.asparagus</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>snedecor.asparagus</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>snedecor.asparagus</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, year<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>dat</span><span class='op'>$</span><span class='va'>trt</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>trt</span>,
+                    levels<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Jun-01"</span>, <span class='st'>"Jun-15"</span>, <span class='st'>"Jul-01"</span>, <span class='st'>"Jul-15"</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>year</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>year</span>))
-<span class='no'>dat</span>$<span class='no'>trt</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>dat</span>$<span class='no'>trt</span>,
-                  <span class='kw'>levels</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Jun-01"</span>, <span class='st'>"Jun-15"</span>, <span class='st'>"Jul-01"</span>, <span class='st'>"Jul-15"</span>))
-<span class='co'># Continued cutting reduces plant vigor and yield</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'><a href='https://rdrr.io/r/graphics/graphics-defunct.html'>dotplot</a></span>(<span class='no'>yield</span> ~ <span class='no'>trt</span><span class='kw'>|</span><span class='no'>year</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-        <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Cutting treatment"</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"snedecor.asparagus"</span>)</div><div class='img'><img src='snedecor.asparagus-1.png' alt='' width='700' height='433' /></div><div class='input'>
-# Split-plot
-</div><div class='input'>  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lme4</span>)
-  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>lmer</span>(<span class='no'>yield</span> ~ <span class='no'>trt</span> + <span class='no'>year</span> + <span class='no'>trt</span>:<span class='no'>year</span> + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>block</span>) + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>block</span>:<span class='no'>trt</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)</div><div class='input'>
-# ----------------------------------------------------------------------------
+  <span class='co'># Continued cutting reduces plant vigor and yield</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/graphics/graphics-defunct.html'>dotplot</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>trt</span><span class='op'>|</span><span class='va'>year</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+          xlab<span class='op'>=</span><span class='st'>"Cutting treatment"</span>, main<span class='op'>=</span><span class='st'>"snedecor.asparagus"</span><span class='op'>)</span>
+</div><div class='img'><img src='snedecor.asparagus-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='co'># Split-plot</span>
+  <span class='kw'>if</span><span class='op'>(</span><span class='fl'>0</span><span class='op'>)</span><span class='op'>{</span>
+    <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lme4</span><span class='op'>)</span>
+    <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>lmer</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>trt</span> <span class='op'>+</span> <span class='va'>year</span> <span class='op'>+</span> <span class='va'>trt</span><span class='op'>:</span><span class='va'>year</span> <span class='op'>+</span>
+                 <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>block</span><span class='op'>)</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>block</span><span class='op'>:</span><span class='va'>trt</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+  <span class='op'>}</span>
 
-</div><div class='input'>  <span class='co'># Split-plot with asreml</span>
-  <span class='co'># asreml3</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
-  <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>trt</span> + <span class='no'>year</span> + <span class='no'>trt</span>:<span class='no'>year</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-               <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='no'>block</span> + <span class='no'>block</span>:<span class='no'>trt</span>)</div><div class='output co'>#&gt; ASReml: Fri Aug 16 15:02:08 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;    -245.5888    735.6371    60  15:02:08     0.0
-#&gt;    -242.0117    605.5420    60  15:02:08     0.0
-#&gt;    -239.0555    499.9978    60  15:02:08     0.0
-#&gt;    -237.5238    429.6526    60  15:02:08     0.0
-#&gt;    -237.3182    408.7932    60  15:02:08     0.0
-#&gt;    -237.3070    404.9197    60  15:02:08     0.0
-#&gt;    -237.3068    404.6548    60  15:02:08     0.0
-#&gt;    -237.3068    404.6521    60  15:02:08     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 15:02:08 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='input'>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lucid</span>)
-  <span class='fu'>vc</span>(<span class='no'>m2</span>)</div><div class='output co'>#&gt;               effect component std.error z.ratio constr
-#&gt;      block!block.var     354.3     405.3    0.87      P
-#&gt;  block:trt!block.var     462.8     256.8    1.8       P
-#&gt;           R!variance     404.7      82.6    4.9       P</div><div class='input'>  <span class='co'>##               effect component std.error z.ratio constr</span>
-  <span class='co'>##      block!block.var     476.7     518.2    0.92    pos</span>
-  <span class='co'>##  block:trt!block.var     499.7     287.4    1.7     pos</span>
-  <span class='co'>##           R!variance     430.2     101.4    4.2     pos</span>
+  <span class='co'># ----------</span>
 
-  <span class='co'># Antedependence with asreml.  See O'Neill (2010).</span>
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>block</span>, <span class='no'>dat</span>$<span class='no'>trt</span>), ]
-  <span class='no'>m3</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>year</span> * <span class='no'>trt</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-               <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='no'>block</span>,
-               <span class='kw'>rcov</span> <span class='kw'>=</span> ~ <span class='no'>block</span>:<span class='no'>trt</span>:<span class='fu'>ante</span>(<span class='no'>year</span>,<span class='fl'>1</span>))</div><div class='output co'>#&gt; ASReml: Fri Aug 16 15:02:09 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;    -255.1403      1.0000    60  15:02:09     0.0 (1 restrained)
-#&gt;    -244.5549      1.0000    60  15:02:09     0.0
-#&gt;    -233.9922      1.0000    60  15:02:09     0.0
-#&gt;    -222.7028      1.0000    60  15:02:09     0.0
-#&gt;    -220.3322      1.0000    60  15:02:09     0.0
-#&gt;    -220.0886      1.0000    60  15:02:09     0.0
-#&gt;    -220.0761      1.0000    60  15:02:09     0.0
-#&gt;    -220.0754      1.0000    60  15:02:09     0.0
-#&gt;    -220.0752      1.0000    60  15:02:09     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 15:02:09 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='input'>
-  <span class='co'># Extract the covariance matrix for years and convert to correlation</span>
-  <span class='no'>covmat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span>(<span class='fl'>4</span>)
-  <span class='no'>covmat</span>[<span class='fu'><a href='https://rdrr.io/r/base/lower.tri.html'>upper.tri</a></span>(<span class='no'>covmat</span>,<span class='kw'>diag</span><span class='kw'>=</span><span class='fl'>TRUE</span>)] <span class='kw'>&lt;-</span> <span class='no'>m3</span>$<span class='no'>R.param</span>$<span class='no'>R</span>$<span class='no'>year</span>$<span class='no'>initial</span></div><div class='output co'>#&gt; <span class='warning'>Warning: number of items to replace is not a multiple of replacement length</span></div><div class='input'>  <span class='no'>covmat</span>[<span class='fu'><a href='https://rdrr.io/r/base/lower.tri.html'>lower.tri</a></span>(<span class='no'>covmat</span>)] <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span>(<span class='no'>covmat</span>)[<span class='fu'><a href='https://rdrr.io/r/base/lower.tri.html'>lower.tri</a></span>(<span class='no'>covmat</span>)]
-  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>cov2cor</a></span>(<span class='no'>covmat</span>),<span class='fl'>2</span>) <span class='co'># correlation among the 4 years</span></div><div class='output co'>#&gt;      [,1] [,2] [,3] [,4]
-#&gt; [1,] 1.00 0.94 0.43 0.37
-#&gt; [2,] 0.94 1.00 0.46 0.40
-#&gt; [3,] 0.43 0.46 1.00 0.87
-#&gt; [4,] 0.37 0.40 0.87 1.00</div><div class='input'>  <span class='co'>#      [,1] [,2] [,3] [,4]</span>
-  <span class='co'># [1,] 1.00 0.45 0.39 0.31</span>
-  <span class='co'># [2,] 0.45 1.00 0.86 0.69</span>
-  <span class='co'># [3,] 0.39 0.86 1.00 0.80</span>
-  <span class='co'># [4,] 0.31 0.69 0.80 1.00</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span>,<span class='va'>lucid</span><span class='op'>)</span> <span class='co'># asreml4</span>
 
-  <span class='co'># We can also build the covariance Sigma by hand from the estimated</span>
-  <span class='co'># variance components via: Sigma^-1 = U D^-1 U'</span>
-  <span class='no'>vv</span> <span class='kw'>&lt;-</span> <span class='fu'>vc</span>(<span class='no'>m3</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>vv</span>)</div><div class='output co'>#&gt;            effect component std.error z.ratio constr
-#&gt;   block!block.var  70.1     144.1        0.49      P
-#&gt;        R!variance   1              NA      NA      F
-#&gt;  R!year.1929:1929   0.00231   0.00103    2.2       U
-#&gt;  R!year.1930:1929  -0.9393    0.1132    -8.3       U
-#&gt;  R!year.1930:1930   0.01823   0.00758    2.4       U
-#&gt;  R!year.1931:1930  -0.7288    0.4671    -1.6       U
-#&gt;  R!year.1931:1931   0.00116   0.00048    2.4       U
-#&gt;  R!year.1932:1931  -1.143     0.1944    -5.9       U
-#&gt;  R!year.1932:1932   0.00209   0.00085    2.4       U
-#&gt;  R!year.1933:1932  -0.6833    0.1561    -4.4       U
-#&gt;  R!year.1933:1933   0.002     0.00082    2.4       U</div><div class='input'>  <span class='co'>##            effect component std.error z.ratio constr</span>
-  <span class='co'>##   block!block.var  86.56    156.9        0.55    pos</span>
-  <span class='co'>##        R!variance   1              NA      NA    fix</span>
-  <span class='co'>##  R!year.1930:1930   0.00233   0.00106    2.2   uncon</span>
-  <span class='co'>##  R!year.1931:1930  -0.7169    0.4528    -1.6   uncon</span>
-  <span class='co'>##  R!year.1931:1931   0.00116   0.00048    2.4   uncon</span>
-  <span class='co'>##  R!year.1932:1931  -1.139     0.1962    -5.8   uncon</span>
-  <span class='co'>##  R!year.1932:1932   0.00208   0.00085    2.4   uncon</span>
-  <span class='co'>##  R!year.1933:1932  -0.6782    0.1555    -4.4   uncon</span>
-  <span class='co'>##  R!year.1933:1933   0.00201   0.00083    2.4   uncon</span>
+  <span class='co'># Split-plot with asreml</span>
+  <span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>trt</span> <span class='op'>+</span> <span class='va'>year</span> <span class='op'>+</span> <span class='va'>trt</span><span class='op'>:</span><span class='va'>year</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+               random <span class='op'>=</span> <span class='op'>~</span> <span class='va'>block</span> <span class='op'>+</span> <span class='va'>block</span><span class='op'>:</span><span class='va'>trt</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:08:50 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -245.589       735.637     60 17:08:51    0.0
+#&gt;  2      -242.013       605.606     60 17:08:51    0.0
+#&gt;  3      -239.057       500.049     60 17:08:51    0.0
+#&gt;  4      -237.707       441.384     60 17:08:51    0.0
+#&gt;  5      -237.333       411.824     60 17:08:51    0.0
+#&gt;  6      -237.307       405.253     60 17:08:51    0.0
+#&gt;  7      -237.307       404.663     60 17:08:51    0.0</div><div class='input'>  <span class='co'># vc(m2)</span>
+  <span class='co'>##    effect component std.error z.ratio bound </span>
+  <span class='co'>##     block     354.3     405      0.87     P 0.1</span>
+  <span class='co'>## block:trt     462.8     256.9    1.8      P 0  </span>
+  <span class='co'>##   units!R     404.7      82.6    4.9      P 0  </span>
 
-  <span class='no'>U</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span>(<span class='fl'>4</span>)
-  <span class='no'>U</span>[<span class='fl'>1</span>,<span class='fl'>2</span>] <span class='kw'>&lt;-</span> <span class='no'>vv</span>[<span class='fl'>4</span>,<span class='fl'>2</span>] ; <span class='no'>U</span>[<span class='fl'>2</span>,<span class='fl'>3</span>] <span class='kw'>&lt;-</span> <span class='no'>vv</span>[<span class='fl'>6</span>,<span class='fl'>2</span>] ; <span class='no'>U</span>[<span class='fl'>3</span>,<span class='fl'>4</span>] <span class='kw'>&lt;-</span> <span class='no'>vv</span>[<span class='fl'>8</span>,<span class='fl'>2</span>]
-  <span class='no'>Dinv</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/diag.html'>diag</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='no'>vv</span>[<span class='fl'>3</span>,<span class='fl'>2</span>], <span class='no'>vv</span>[<span class='fl'>5</span>,<span class='fl'>2</span>], <span class='no'>vv</span>[<span class='fl'>7</span>,<span class='fl'>2</span>], <span class='no'>vv</span>[<span class='fl'>9</span>,<span class='fl'>2</span>]))
-  <span class='co'># solve(U &lt;!-- %*% Dinv %*% t(U)) # same as 'covmat' above --&gt;</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/solve.html'>solve</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/crossprod.html'>crossprod</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span>(<span class='no'>U</span>), <span class='fu'><a href='https://rdrr.io/r/base/crossprod.html'>tcrossprod</a></span>(<span class='no'>Dinv</span>, <span class='no'>U</span>)) )</div><div class='output co'>#&gt;          [,1]     [,2]      [,3]      [,4]
-#&gt; [1,] 433.3047 407.0146  296.6240  338.9877
-#&gt; [2,] 407.0146 437.1682  318.5994  364.1015
-#&gt; [3,] 296.6240 318.5994 1097.4218 1254.1548
-#&gt; [4,] 338.9877 364.1015 1254.1548 1912.1998</div><div class='input'>  ##          [,1]      [,2]      [,3]      [,4]
-  ## [1,] 428.4310  307.1478  349.8152  237.2453
-  ## [2,] 307.1478 1083.9717 1234.5516  837.2751
-  ## [3,] 349.8152 1234.5516 1886.5150 1279.4378
-  ## [4,] 237.2453  837.2751 1279.4378 1364.8446
-</div><div class='input'>
-# ----------------------------------------------------------------------------
+  <span class='co'>## # Antedependence with asreml.  See O'Neill (2010).</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>block</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>trt</span><span class='op'>)</span>, <span class='op'>]</span>
+  <span class='va'>m3</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>year</span> <span class='op'>*</span> <span class='va'>trt</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+               random <span class='op'>=</span> <span class='op'>~</span> <span class='va'>block</span>,
+               residual <span class='op'>=</span> <span class='op'>~</span> <span class='va'>block</span><span class='op'>:</span><span class='va'>trt</span><span class='op'>:</span><span class='fu'>ante</span><span class='op'>(</span><span class='va'>year</span>,<span class='fl'>1</span><span class='op'>)</span>,
+               max<span class='op'>=</span><span class='fl'>50</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the sigma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:08:51 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -239.093           1.0     60 17:08:51    0.0
+#&gt;  2      -237.801           1.0     60 17:08:51    0.0
+#&gt;  3      -233.259           1.0     60 17:08:51    0.0
+#&gt;  4      -223.667           1.0     60 17:08:51    0.0
+#&gt;  5      -220.355           1.0     60 17:08:51    0.0
+#&gt;  6      -220.139           1.0     60 17:08:51    0.0
+#&gt;  7      -220.091           1.0     60 17:08:51    0.0
+#&gt;  8      -220.079           1.0     60 17:08:51    0.0
+#&gt;  9      -220.076           1.0     60 17:08:51    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>
+  <span class='co'>## # Extract the covariance matrix for years and convert to correlation</span>
+  <span class='co'>## covmat &lt;- diag(4)</span>
+  <span class='co'>## covmat[upper.tri(covmat,diag=TRUE)] &lt;- m3$R.param$`block:trt:year`$year$initial</span>
+  <span class='co'>## covmat[lower.tri(covmat)] &lt;- t(covmat)[lower.tri(covmat)]</span>
+  <span class='co'>## round(cov2cor(covmat),2) # correlation among the 4 years</span>
+  <span class='co'>## #      [,1] [,2] [,3] [,4]</span>
+  <span class='co'>## # [1,] 1.00 0.45 0.39 0.31</span>
+  <span class='co'>## # [2,] 0.45 1.00 0.86 0.69</span>
+  <span class='co'>## # [3,] 0.39 0.86 1.00 0.80</span>
+  <span class='co'>## # [4,] 0.31 0.69 0.80 1.00</span>
 
-</div><div class='input'>  # Split-plot with asreml
-  ## libs(asreml4)
-  ## m2 <- asreml(yield ~ trt + year + trt:year, data=dat,
-  ##            random = ~ block + block:trt)
+  <span class='co'>## # We can also build the covariance Sigma by hand from the estimated</span>
+  <span class='co'>## # variance components via: Sigma^-1 = U D^-1 U'</span>
+  <span class='co'>## vv &lt;- vc(m3)</span>
+  <span class='co'>## print(vv)</span>
+  <span class='co'>## ##            effect component std.error z.ratio constr</span>
+  <span class='co'>## ##   block!block.var  86.56    156.9        0.55    pos</span>
+  <span class='co'>## ##        R!variance   1              NA      NA    fix</span>
+  <span class='co'>## ##  R!year.1930:1930   0.00233   0.00106    2.2   uncon</span>
+  <span class='co'>## ##  R!year.1931:1930  -0.7169    0.4528    -1.6   uncon</span>
+  <span class='co'>## ##  R!year.1931:1931   0.00116   0.00048    2.4   uncon</span>
+  <span class='co'>## ##  R!year.1932:1931  -1.139     0.1962    -5.8   uncon</span>
+  <span class='co'>## ##  R!year.1932:1932   0.00208   0.00085    2.4   uncon</span>
+  <span class='co'>## ##  R!year.1933:1932  -0.6782    0.1555    -4.4   uncon</span>
+  <span class='co'>## ##  R!year.1933:1933   0.00201   0.00083    2.4   uncon</span>
+  
+  <span class='co'>## U &lt;- diag(4)</span>
+  <span class='co'>## U[1,2] &lt;- vv[4,2] ; U[2,3] &lt;- vv[6,2] ; U[3,4] &lt;- vv[8,2]</span>
+  <span class='co'>## Dinv &lt;- diag(c(vv[3,2], vv[5,2], vv[7,2], vv[9,2]))</span>
+  <span class='co'>## # solve(U </span>
+  <span class='co'>## solve(crossprod(t(U), tcrossprod(Dinv, U)) )</span>
+  <span class='co'>## ##          [,1]      [,2]      [,3]      [,4]</span>
+  <span class='co'>## ## [1,] 428.4310  307.1478  349.8152  237.2453</span>
+  <span class='co'>## ## [2,] 307.1478 1083.9717 1234.5516  837.2751</span>
+  <span class='co'>## ## [3,] 349.8152 1234.5516 1886.5150 1279.4378</span>
+  <span class='co'>## ## [4,] 237.2453  837.2751 1279.4378 1364.8446</span>
 
-  ## libs(lucid)
-  ## vc(m2)
-  ## ##    effect component std.error z.ratio bound <!-- %ch -->
-  ## ##     block     476.7     518.2    0.92     P   0
-  ## ## block:trt     499.7     287.4    1.7      P   0
-  ## ##  units(R)     430.2     101.4    4.2      P   0
-
-  ## # Antedependence with asreml.  See O'Neill (2010).
-  ## dat <- dat[order(dat$block, dat$trt), ]
-  ## m3 <- asreml(yield ~ year * trt, data=dat,
-  ##              random = ~ block,
-  ##              residual = ~ block:trt:ante(year,1),
-  ##              max=50)
-
-  ## # Extract the covariance matrix for years and convert to correlation
-  ## covmat <- diag(4)
-  ## covmat[upper.tri(covmat,diag=TRUE)] <- m3$R.param$`block:trt:year`$year$initial
-  ## covmat[lower.tri(covmat)] <- t(covmat)[lower.tri(covmat)]
-  ## round(cov2cor(covmat),2) # correlation among the 4 years
-  ## #      [,1] [,2] [,3] [,4]
-  ## # [1,] 1.00 0.45 0.39 0.31
-  ## # [2,] 0.45 1.00 0.86 0.69
-  ## # [3,] 0.39 0.86 1.00 0.80
-  ## # [4,] 0.31 0.69 0.80 1.00
-
-  ## # We can also build the covariance Sigma by hand from the estimated
-  ## # variance components via: Sigma^-1 = U D^-1 U'
-  ## vv <- vc(m3)
-  ## print(vv)
-  ## ##            effect component std.error z.ratio constr
-  ## ##   block!block.var  86.56    156.9        0.55    pos
-  ## ##        R!variance   1              NA      NA    fix
-  ## ##  R!year.1930:1930   0.00233   0.00106    2.2   uncon
-  ## ##  R!year.1931:1930  -0.7169    0.4528    -1.6   uncon
-  ## ##  R!year.1931:1931   0.00116   0.00048    2.4   uncon
-  ## ##  R!year.1932:1931  -1.139     0.1962    -5.8   uncon
-  ## ##  R!year.1932:1932   0.00208   0.00085    2.4   uncon
-  ## ##  R!year.1933:1932  -0.6782    0.1555    -4.4   uncon
-  ## ##  R!year.1933:1933   0.00201   0.00083    2.4   uncon
-
-  ## U <- diag(4)
-  ## U[1,2] <- vv[4,2] ; U[2,3] <- vv[6,2] ; U[3,4] <- vv[8,2]
-  ## Dinv <- diag(c(vv[3,2], vv[5,2], vv[7,2], vv[9,2]))
-  ## # solve(U <!-- %*% Dinv %*% t(U)) # same as 'covmat' above -->
-  ## solve(crossprod(t(U), tcrossprod(Dinv, U)) )
-  ## ##          [,1]      [,2]      [,3]      [,4]
-  ## ## [1,] 428.4310  307.1478  349.8152  237.2453
-  ## ## [2,] 307.1478 1083.9717 1234.5516  837.2751
-  ## ## [3,] 349.8152 1234.5516 1886.5150 1279.4378
-  ## ## [4,] 237.2453  837.2751 1279.4378 1364.8446
-
-</div><div class='input'>
-# ----------------------------------------------------------------------------
-
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -382,7 +292,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

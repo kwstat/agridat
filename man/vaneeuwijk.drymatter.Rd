@@ -35,7 +35,7 @@
   van Eeuwijk, Fred A. and Pieter M. Kroonenberg (1998).
   Multiplicative Models for Interaction in Three-Way ANOVA, with Applications to Plant Breeding
   Biometrics, 54, 1315-1333.
-  http://doi.org/10.2307/2533660
+  https://doi.org/10.2307/2533660
 }
 
 \references{
@@ -43,13 +43,13 @@
   Kroonenberg, P.M., Basford, K.E. & Ebskamp, A.G.M. (1995).
   Three-way cluster and component analysis of maize variety trials.
   Euphytica, 84(1):31-42.
-  http://doi.org/10.1007/BF01677554
+  https://doi.org/10.1007/BF01677554
 
   van Eeuwijk, F.A., Keizer, L.C.P. & Bakker, J.J. Van Eeuwijk. (1995b).
   Linear and bilinear models for the analysis of multi-environment trials: 
   II. An application to data from the Dutch Maize Variety Trials
   Euphytica, 84(1):9-22.
-  http://doi.org/10.1007/BF01677552
+  https://doi.org/10.1007/BF01677552
 
   Hardeo Sahai, Mario M. Ojeda.
   Analysis of Variance for Random Models, Volume 1. Page 261.

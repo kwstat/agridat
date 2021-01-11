@@ -23,10 +23,10 @@
 }
 \source{
   William Cleveland, (1993), \emph{Visualizing Data}.
-  Electronic version from StatLib: http://lib.stat.cmu.edu/datasets/
+  Electronic version from StatLib: https://lib.stat.cmu.edu/datasets/
 
   Cleaned version from Luke Tierney
-  http://homepage.stat.uiowa.edu/~luke/classes/248/examples/soil
+  https://homepage.stat.uiowa.edu/~luke/classes/248/examples/soil
 }
 
 \examples{

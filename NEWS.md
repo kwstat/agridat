@@ -1,8 +1,9 @@
-# agridat 1.18 (Dec 2020)
+# agridat 1.18 (Jan 2021)
 
 ## New data
 
 damesa.maize, jayaraman.bamboo, nair.turmeric.uniformity, shafi.tomato.uniformity
+
 
 # agridat 1.17 - Jul 2020
 

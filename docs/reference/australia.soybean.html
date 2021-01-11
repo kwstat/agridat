@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,14 +45,13 @@
 
 
 
-<meta property="og:title" content="Multi-environment trial of soybean in Australia — australia.soybean" />
 
+<meta property="og:title" content="Multi-environment trial of soybean in Australia — australia.soybean" />
 <meta property="og:description" content="Yield and other traits of 58 varieties of soybeans, grown in four
   locations across two years in Australia.  This is four-way data of
   Year x Loc x Gen x Trait." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -63,7 +68,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -77,7 +82,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -106,7 +111,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -114,10 +119,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -141,17 +145,16 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Yield and other traits of 58 varieties of soybeans, grown in four
   locations across two years in Australia.  This is four-way data of
   Year x Loc x Gen x Trait.</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 464 observations on the following 10 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 464 observations on the following 10 variables.</p><dl>
     <dt><code>env</code></dt><dd><p>environment, 8 levels, first character of location
       and last two characters of year</p></dd>
     <dt><code>loc</code></dt><dd><p>location</p></dd>
@@ -163,9 +166,9 @@
     <dt><code>size</code></dt><dd><p>seed size, (millimeters)</p></dd>
     <dt><code>protein</code></dt><dd><p>protein (percentage)</p></dd>
     <dt><code>oil</code></dt><dd><p>oil (percentage)</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     
@@ -206,79 +209,71 @@
 Nambour 1970 and Redland Bay 1971 are incorrectly listed on page 477 as
 20.490 and 15.070. They should be 17.350 and 13.000, respectively. In
 the data set made available here, these values have been corrected.</p>
-    
+<p>Used with permission of Kaye Basford, Pieter Kroonenberg.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p>Basford, K. E., and Tukey, J. W. (1999). Graphical analysis of multiresponse
-  data illustrated with a plant breeding trial. Chapman and Hall/CRC.</p>
+    <p>Basford, K. E., and Tukey, J. W. (1999).
+  Graphical analysis of multiresponse data illustrated with a plant breeding trial.
+  Chapman and Hall/CRC.</p>
 <p>Retrieved from:
-  http://three-mode.leidenuniv.nl/data/soybeaninf.htm</p>
-<p>Used with permission of Kaye Basford, Pieter Kroonenberg.</p>
-    
+  https://three-mode.leidenuniv.nl/data/soybeaninf.htm</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
-    <p>K E Basford. 1982. The Use of Multidimensional Scaling in Analysing
+    <p>K E Basford (1982). The Use of Multidimensional Scaling in Analysing
   Multi-Attribute Genotype Response Across Environments,
-  <em>Aust J Agric Res</em>, 33, 473--480.</p>
+  Aust J Agric Res, 33, 473--480.</p>
 <p>Kroonenberg, P. M., &amp; Basford, K. E. B. (1989). An investigation of
   multi-attribute genotype response across environments using three-mode
   principal component analysis.
-  <em>Euphytica</em>, 44, 109--123.</p>
+  Euphytica, 44, 109--123.</p>
 <p>Marcin Kozak (2010).
   Use of parallel coordinate plots in multi-response selection of
   interesting genotypes.
-  <em>Communications in Biometry and Crop Science</em>, 5, 83-95.</p>
-    
+  Communications in Biometry and Crop Science, 5, 83-95.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>australia.soybean</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>australia.soybean</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>reshape2</span>)
-<span class='no'>dm</span> <span class='kw'>&lt;-</span> <span class='fu'>melt</span>(<span class='no'>dat</span>, <span class='kw'>id.var</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'env'</span>, <span class='st'>'year'</span>,<span class='st'>'loc'</span>,<span class='st'>'gen'</span>))
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>australia.soybean</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>australia.soybean</span>
+
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>reshape2</span><span class='op'>)</span>
+<span class='va'>dm</span> <span class='op'>&lt;-</span> <span class='fu'>melt</span><span class='op'>(</span><span class='va'>dat</span>, id.var<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'env'</span>, <span class='st'>'year'</span>,<span class='st'>'loc'</span>,<span class='st'>'gen'</span><span class='op'>)</span><span class='op'>)</span>
 
 <span class='co'># Joint plot of genotypes &amp; traits. Similar to Figure 1 of Kroonenberg 1989</span>
-<span class='no'>dmat</span> <span class='kw'>&lt;-</span> <span class='fu'>acast</span>(<span class='no'>dm</span>, <span class='no'>gen</span>~<span class='no'>variable</span>, <span class='kw'>fun</span><span class='kw'>=</span><span class='no'>mean</span>)
-<span class='no'>dmat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/scale.html'>scale</a></span>(<span class='no'>dmat</span>)
-<span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/princomp.html'>princomp</a></span>(<span class='no'>dmat</span>), <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"australia.soybean trait x gen biplot"</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>.75</span>)</div><div class='img'><img src='australia.soybean-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='va'>dmat</span> <span class='op'>&lt;-</span> <span class='fu'>acast</span><span class='op'>(</span><span class='va'>dm</span>, <span class='va'>gen</span><span class='op'>~</span><span class='va'>variable</span>, fun<span class='op'>=</span><span class='va'>mean</span><span class='op'>)</span>
+<span class='va'>dmat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/scale.html'>scale</a></span><span class='op'>(</span><span class='va'>dmat</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/princomp.html'>princomp</a></span><span class='op'>(</span><span class='va'>dmat</span><span class='op'>)</span>, main<span class='op'>=</span><span class='st'>"australia.soybean trait x gen biplot"</span>, cex<span class='op'>=</span><span class='fl'>.75</span><span class='op'>)</span>
+</div><div class='img'><img src='australia.soybean-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
 <span class='co'># Figure 1 of Kozak 2010, lines 44-58</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>reshape2</span>, <span class='no'>lattice</span>, <span class='no'>latticeExtra</span>)</div><div class='output co'>#&gt; <span class='message'>Loading required package: RColorBrewer</span></div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>australia.soybean</span>)
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>australia.soybean</span>
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'>melt</span>(<span class='no'>dat</span>, <span class='kw'>id.var</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'env'</span>, <span class='st'>'year'</span>,<span class='st'>'loc'</span>,<span class='st'>'gen'</span>))
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'>acast</span>(<span class='no'>dat</span>, <span class='no'>gen</span>~<span class='no'>variable</span>, <span class='kw'>fun</span><span class='kw'>=</span><span class='no'>mean</span>)
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/scale.html'>scale</a></span>(<span class='no'>dat</span>)
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span>(<span class='no'>dat</span>)[,<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>2</span>:<span class='fl'>6</span>,<span class='fl'>1</span>)]
-  <span class='no'>dat</span>$<span class='no'>gen</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>dat</span>)
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>reshape2</span>, <span class='va'>lattice</span>, <span class='va'>latticeExtra</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>australia.soybean</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>australia.soybean</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'>melt</span><span class='op'>(</span><span class='va'>dat</span>, id.var<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'env'</span>, <span class='st'>'year'</span>,<span class='st'>'loc'</span>,<span class='st'>'gen'</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'>acast</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>gen</span><span class='op'>~</span><span class='va'>variable</span>, fun<span class='op'>=</span><span class='va'>mean</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/scale.html'>scale</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/as.data.frame.html'>as.data.frame</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>)</span><span class='op'>[</span>,<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>2</span><span class='op'>:</span><span class='fl'>6</span>,<span class='fl'>1</span><span class='op'>)</span><span class='op'>]</span>
+  <span class='va'>dat</span><span class='op'>$</span><span class='va'>gen</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>)</span>
   <span class='co'># data for the graphic by Kozak</span>
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fl'>44</span>:<span class='fl'>58</span>,]
-  <span class='no'>dat3</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat2</span>, <span class='fu'><a href='https://rdrr.io/r/base/sets.html'>is.element</a></span>(<span class='no'>gen</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"G48"</span>,<span class='st'>"G49"</span>,<span class='st'>"G50"</span>,<span class='st'>"G51"</span>)))
-
-  <span class='fu'>parallelplot</span>( ~ <span class='no'>dat3</span>[,<span class='fl'>1</span>:<span class='fl'>6</span>]<span class='kw'>|</span><span class='no'>dat3</span>$<span class='no'>gen</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"australia.soybean"</span>,
-               <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>horiz</span><span class='kw'>=</span><span class='fl'>FALSE</span>) +
-    <span class='fu'>parallelplot</span>( ~ <span class='no'>dat2</span>[,<span class='fl'>1</span>:<span class='fl'>6</span>], <span class='kw'>horiz</span><span class='kw'>=</span><span class='fl'>FALSE</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='st'>"gray80"</span>) +
-    <span class='fu'>parallelplot</span>( ~ <span class='no'>dat3</span>[,<span class='fl'>1</span>:<span class='fl'>6</span>]<span class='kw'>|</span><span class='no'>dat3</span>$<span class='no'>gen</span>,
-                 <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>horiz</span><span class='kw'>=</span><span class='fl'>FALSE</span>, <span class='kw'>lwd</span><span class='kw'>=</span><span class='fl'>2</span>)</div><div class='img'><img src='australia.soybean-2.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>[</span><span class='fl'>44</span><span class='op'>:</span><span class='fl'>58</span>,<span class='op'>]</span>
+  <span class='va'>dat3</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat2</span>, <span class='fu'><a href='https://rdrr.io/r/base/sets.html'>is.element</a></span><span class='op'>(</span><span class='va'>gen</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"G48"</span>,<span class='st'>"G49"</span>,<span class='st'>"G50"</span>,<span class='st'>"G51"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+  
+  <span class='fu'>parallelplot</span><span class='op'>(</span> <span class='op'>~</span> <span class='va'>dat3</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>6</span><span class='op'>]</span><span class='op'>|</span><span class='va'>dat3</span><span class='op'>$</span><span class='va'>gen</span>, main<span class='op'>=</span><span class='st'>"australia.soybean"</span>,
+               as.table<span class='op'>=</span><span class='cn'>TRUE</span>, horiz<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>+</span>
+    <span class='fu'>parallelplot</span><span class='op'>(</span> <span class='op'>~</span> <span class='va'>dat2</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>6</span><span class='op'>]</span>, horiz<span class='op'>=</span><span class='cn'>FALSE</span>, col<span class='op'>=</span><span class='st'>"gray80"</span><span class='op'>)</span> <span class='op'>+</span>
+    <span class='fu'>parallelplot</span><span class='op'>(</span> <span class='op'>~</span> <span class='va'>dat3</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>6</span><span class='op'>]</span><span class='op'>|</span><span class='va'>dat3</span><span class='op'>$</span><span class='va'>gen</span>,
+                 as.table<span class='op'>=</span><span class='cn'>TRUE</span>, horiz<span class='op'>=</span><span class='cn'>FALSE</span>, lwd<span class='op'>=</span><span class='fl'>2</span><span class='op'>)</span>
+</div><div class='img'><img src='australia.soybean-2.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -289,7 +284,7 @@ the data set made available here, these values have been corrected.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

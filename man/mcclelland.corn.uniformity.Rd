@@ -34,7 +34,7 @@
   McClelland, Chalmer Kirk (1926).
   Some determinations of plat variability.
   Agronomy Journal, 18, 819-823.
-  http://doi.org/10.2134/agronj1926.00021962001800090009x
+  https://doi.org/10.2134/agronj1926.00021962001800090009x
 }
 \references{
   None

@@ -50,7 +50,7 @@
   Yield evaluation of maize cultivars across environments with different
   levels of pink stem borer infestation.
   Crop Science, 44, 741-747.
-  http://doi.org/10.2135/cropsci2004.7410
+  https://doi.org/10.2135/cropsci2004.7410
 }
 
 \examples{

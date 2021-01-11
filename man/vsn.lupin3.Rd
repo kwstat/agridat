@@ -27,7 +27,7 @@
 
 \source{
   Multi-Environment Trials - Lupins.
-  http://www.vsni.co.uk/software/asreml/htmlhelp/asreml/xlupin.htm
+  https://www.vsni.co.uk/software/asreml/htmlhelp/asreml/xlupin.htm
 }
 
 \examples{

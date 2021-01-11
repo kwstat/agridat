@@ -40,7 +40,7 @@
   larvae, and its practical applications.
   \emph{Annals of Applied Biology}, 100, 229-244.  Table 2.
   
-  http://doi.org/10.1111/j.1744-7348.1982.tb01935.x
+  https://doi.org/10.1111/j.1744-7348.1982.tb01935.x
 }
 
 \references{

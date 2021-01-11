@@ -39,14 +39,14 @@
   Kenward, Michael G. (1987).
   A Method for Comparing Profiles of Repeated Measurements.
   \emph{Applied Statistics}, 36, 296-308.  Table 1.  
-  http://doi.org/10.2307/2347788
+  https://doi.org/10.2307/2347788
 }
 
 \references{
   W. Zhang, C. Leng and C. Y. Tang (2015).
   A joint modelling approach for longitudinal studies
   \emph{J. R. Statist. Soc. B}, 77 (2015), 219--238.
-  http://doi.org/10.1111/rssb.12065
+  https://doi.org/10.1111/rssb.12065
 }
 
 \examples{
@@ -110,11 +110,8 @@
                  dev(day) + trt:dev(day) ) # non-spline deviation at each time*trt
   
   p1 <- predict(m1, data=dat, classify="trt:day")
-  if( utils::packageVersion("asreml") < "4") {
-    p1 <- p1$predictions$pvals
-  } else {
-    p1 <- p1$pvals
-  }
+  p1 <- p1$pvals
+  
   foo2 <- xyplot(predicted.value ~ day|trt, p1, type='l', lwd=2, lty=1, col="black")
   
   libs(latticeExtra)

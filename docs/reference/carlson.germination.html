@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -146,12 +146,12 @@
     <p>Germination of alfalfa seeds at various salt concentrations</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"carlson.germination"</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"carlson.germination"</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 120 observations on the following 3 variables.</p><dl'>
+    <p>A data frame with 120 observations on the following 3 variables.</p><dl>
     <dt><code>gen</code></dt><dd><p>genotype factor, 15 levels</p></dd>
     <dt><code>germ</code></dt><dd><p>germination percent, 0-100</p></dd>
     <dt><code>nacl</code></dt><dd><p>salt concentration percent, 0-2</p></dd>
@@ -169,45 +169,46 @@
   RE. (1983).
   Alfalfa Seed Germination in Antibiotic Agar Containing NaCl.
   <em>Crop science</em>, 23, 882-885.
-  http://doi.org/10.2135/cropsci1983.0011183X002300050016x</p>
+  https://doi.org/10.2135/cropsci1983.0011183X002300050016x</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>carlson.germination</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>carlson.germination</span>
-<span class='no'>dat</span>$<span class='no'>germ</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>$<span class='no'>germ</span>/<span class='fl'>100</span> <span class='co'># Convert to percent</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>carlson.germination</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>carlson.germination</span>
+<span class='va'>dat</span><span class='op'>$</span><span class='va'>germ</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>$</span><span class='va'>germ</span><span class='op'>/</span><span class='fl'>100</span> <span class='co'># Convert to percent</span>
 
 <span class='co'># Separate response curve for each genotype.</span>
 <span class='co'># Really, we should use a glmm with random int/slope for each genotype</span>
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/glm.html'>glm</a></span>(<span class='no'>germ</span>~ <span class='fl'>0</span> + <span class='no'>gen</span>*<span class='no'>nacl</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>family</span><span class='kw'>=</span><span class='no'>quasibinomial</span>)
+<span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/glm.html'>glm</a></span><span class='op'>(</span><span class='va'>germ</span><span class='op'>~</span> <span class='fl'>0</span> <span class='op'>+</span> <span class='va'>gen</span><span class='op'>*</span><span class='va'>nacl</span>, data<span class='op'>=</span><span class='va'>dat</span>, family<span class='op'>=</span><span class='va'>quasibinomial</span><span class='op'>)</span>
 
 <span class='co'># Plot data and fitted model</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>latticeExtra</span>)
-<span class='no'>newd</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/expand.grid.html'>expand.grid</a></span>(<span class='kw'>gen</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span>(<span class='no'>dat</span>$<span class='no'>gen</span>), <span class='kw'>nacl</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span>(<span class='fl'>0</span>,<span class='fl'>2</span>,<span class='kw'>length</span><span class='kw'>=</span><span class='fl'>100</span>)))
-<span class='no'>newd</span>$<span class='no'>pred</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m1</span>, <span class='no'>newd</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>"response"</span>)
-<span class='fu'>xyplot</span>(<span class='no'>germ</span>~<span class='no'>nacl</span><span class='kw'>|</span><span class='no'>gen</span>, <span class='no'>dat</span>, <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"carlson.germination"</span>,
-       <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Percent NaCl"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Fraction germinated"</span>) +
-<span class='fu'>xyplot</span>(<span class='no'>pred</span>~<span class='no'>nacl</span><span class='kw'>|</span><span class='no'>gen</span>, <span class='no'>newd</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'l'</span>, <span class='kw'>grid</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>h</span><span class='kw'>=</span><span class='fl'>1</span>,<span class='kw'>v</span><span class='kw'>=</span><span class='fl'>0</span>))</div><div class='img'><img src='carlson.germination-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>latticeExtra</span><span class='op'>)</span>
+<span class='va'>newd</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/expand.grid.html'>expand.grid</a></span><span class='op'>(</span>gen<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>gen</span><span class='op'>)</span>, nacl<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>2</span>,length<span class='op'>=</span><span class='fl'>100</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>newd</span><span class='op'>$</span><span class='va'>pred</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>m1</span>, <span class='va'>newd</span>, type<span class='op'>=</span><span class='st'>"response"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>germ</span><span class='op'>~</span><span class='va'>nacl</span><span class='op'>|</span><span class='va'>gen</span>, <span class='va'>dat</span>, as.table<span class='op'>=</span><span class='cn'>TRUE</span>, main<span class='op'>=</span><span class='st'>"carlson.germination"</span>,
+       xlab<span class='op'>=</span><span class='st'>"Percent NaCl"</span>, ylab<span class='op'>=</span><span class='st'>"Fraction germinated"</span><span class='op'>)</span> <span class='op'>+</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>pred</span><span class='op'>~</span><span class='va'>nacl</span><span class='op'>|</span><span class='va'>gen</span>, <span class='va'>newd</span>, type<span class='op'>=</span><span class='st'>'l'</span>, grid<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>h<span class='op'>=</span><span class='fl'>1</span>,v<span class='op'>=</span><span class='fl'>0</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='carlson.germination-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
-# Calculate LD50 values.  Note, Carlson et al used quadratics, not glm.
-# MASS::dose.p cannot handle multiple slopes, so do a separate fit for
-# each genotype.  Results are vaguely similar to Carlson table 5.
-## libs(MASS)
-## for(ii in unique(dat$gen)){
-##   cat("\n", ii, "\n")
-##   mm &lt;- glm(germ ~ 1 + nacl, data=dat, subset=gen==ii, family=quasibinomial(link="probit"))
-##   print(dose.p(mm))
-## }
-##              Dose         SE
-## Anchor    1.445728  0.05750418
-## Apollo    1.305804  0.04951644
-## Baker     1.444153  0.07653989
-## Drylander 1.351201  0.03111795
-## Grimm     1.395735  0.04206377
+<span class='co'># Calculate LD50 values.  Note, Carlson et al used quadratics, not glm.</span>
+<span class='co'># MASS::dose.p cannot handle multiple slopes, so do a separate fit for</span>
+<span class='co'># each genotype.  Results are vaguely similar to Carlson table 5.</span>
+<span class='co'>## libs(MASS)</span>
+<span class='co'>## for(ii in unique(dat$gen)){</span>
+<span class='co'>##   cat("\n", ii, "\n")</span>
+<span class='co'>##   mm &lt;- glm(germ ~ 1 + nacl, data=dat, subset=gen==ii, family=quasibinomial(link="probit"))</span>
+<span class='co'>##   print(dose.p(mm))</span>
+<span class='co'>## }</span>
+<span class='co'>##              Dose         SE</span>
+<span class='co'>## Anchor    1.445728  0.05750418</span>
+<span class='co'>## Apollo    1.305804  0.04951644</span>
+<span class='co'>## Baker     1.444153  0.07653989</span>
+<span class='co'>## Drylander 1.351201  0.03111795</span>
+<span class='co'>## Grimm     1.395735  0.04206377</span>
 
-# }
+<span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -224,7 +225,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

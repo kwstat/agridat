@@ -17,23 +17,27 @@
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -44,7 +48,6 @@
 
 <meta property="og:title" content="Changelog" />
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
 
 
 
@@ -62,7 +65,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-news">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -76,7 +79,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -105,7 +108,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -114,7 +117,12 @@
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/kwstat/agridat/">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
       </ul>
       
     </div><!--/.nav-collapse -->
@@ -128,32 +136,45 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Changelog <small></small></h1>
-      
+      <h1 data-toc-skip>Changelog <small></small></h1>
+      <small>Source: <a href='https://github.com/kwstat/agridat/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
-    <div id="agridat-117---aug-2019" class="section level1">
-<h1 class="page-header">
-<a href="#agridat-117---aug-2019" class="anchor"></a>agridat 1.17 - Aug 2019<small> Unreleased </small>
+    <div id="agridat-118-jan-2021" class="section level1">
+<h1 class="page-header" data-toc-text="1.18">
+<a href="#agridat-118-jan-2021" class="anchor"></a>agridat 1.18 (Jan 2021)<small> Unreleased </small>
 </h1>
 <div id="new-data" class="section level2">
 <h2 class="hasAnchor">
 <a href="#new-data" class="anchor"></a>New data</h2>
-<p>alwan.lamb, baker.strawberry.uniformity, davidian.soybean, devries.pine, edwards.oats, hartman.tomato.uniformity, johnson.douglasfir, kayad.alfalfa, kerr.sugarcane.uniformity, laycock.tea.uniformity, lehmann.millet.uniformity, linder.wheat, miguez.biomass, obsi.potato.uniformity, paez.coffee.uniformity, pederson.lettuce.repeated, rothamsted.oats, shaw.oats, wyatt.multi.uniformity</p>
+<p>damesa.maize, jayaraman.bamboo, nair.turmeric.uniformity, shafi.tomato.uniformity</p>
 </div>
-<div id="other" class="section level2">
+</div>
+    <div id="agridat-117---jul-2020" class="section level1">
+<h1 class="page-header" data-toc-text="1.17">
+<a href="#agridat-117---jul-2020" class="anchor"></a>agridat 1.17 - Jul 2020<small> 2020-08-03 </small>
+</h1>
+<div id="new-data-1" class="section level2">
 <h2 class="hasAnchor">
-<a href="#other" class="anchor"></a>Other</h2>
+<a href="#new-data-1" class="anchor"></a>New data</h2>
+<p>alwan.lamb, baker.strawberry.uniformity, besag.checks, bryan.corn.uniformity, davidian.soybean, devries.pine, edwards.oats, george.wheat, hartman.tomato.uniformity, heath.raddish.uniformity, johnson.douglasfir, kayad.alfalfa, kerr.sugarcane.uniformity, laycock.tea.uniformity, lehmann.millet.uniformity, linder.wheat, loesell.bean.uniformity, miguez.biomass, obsi.potato.uniformity, paez.coffee.uniformity, pederson.lettuce.repeated, piepho.barley.uniformity, rothamsted.oats, shaw.oats, wyatt.multi.uniformity</p>
+</div>
+<div id="other-notes" class="section level2">
+<h2 class="hasAnchor">
+<a href="#other-notes" class="anchor"></a>Other notes</h2>
 <ul>
-<li><p>Re-named hutchinson.cotton.uniformity to panse.cotton.uniformity.</p></li>
-<li><p>Added INLA example to crowder.seeds.</p></li>
-<li><p>Wrapped most examples with dontrun.</p></li>
-<li><p>Change <code>library</code> and <code>require</code> to <code><a href="https://rdrr.io/pkg/pacman/man/p_load.html">pacman::p_load</a></code>.</p></li>
+<li><p>Examples using <code>asreml()</code> are using asreml version 4. Some examples also have asreml 3 code.</p></li>
+<li><p>Re-named <code>hutchinson.cotton.uniformity</code> to <code>panse.cotton.uniformity</code>.</p></li>
+<li><p>Added INLA example to <code>crowder.seeds</code>.</p></li>
+<li><p>Wrapped most example sections with <code>dontrun</code>.</p></li>
+<li><p>New function <code><a href="../reference/libs.html">libs()</a></code>, which is basically the same as <code><a href="https://rdrr.io/pkg/pacman/man/p_load.html">pacman::p_load()</a></code>, but without the dependency on <code>pacman</code>.</p></li>
+<li><p>Example sections now use <code><a href="http://kwstat.github.io/agridat/">library(agridat)</a></code> and then <code><a href="../reference/libs.html">libs()</a></code> to load all other packages on the fly if needed.</p></li>
+<li><p>Website built with <code>pkgdown</code>.</p></li>
 </ul>
 </div>
 </div>
     <div id="agridat-116---jul-2018" class="section level1">
-<h1 class="page-header">
+<h1 class="page-header" data-toc-text="1.16">
 <a href="#agridat-116---jul-2018" class="anchor"></a>agridat 1.16 - Jul 2018<small> 2018-07-06 </small>
 </h1>
 <ul>
@@ -161,27 +182,27 @@
 </ul>
 </div>
     <div id="agridat-115---jun-2018" class="section level1">
-<h1 class="page-header">
+<h1 class="page-header" data-toc-text="1.15">
 <a href="#agridat-115---jun-2018" class="anchor"></a>agridat 1.15 - Jun 2018<small> 2018-06-27 </small>
 </h1>
-<div id="new-data-1" class="section level2">
+<div id="new-data-2" class="section level2">
 <h2 class="hasAnchor">
-<a href="#new-data-1" class="anchor"></a>New data</h2>
-<p>ansari.wheat.uniformity, baker.wheat.uniformity, bancroft.peanut.uniformity, bose.multi.uniformity, christidis.cotton.uniformity, correa.soybean.uniformity, davies.pasture.uniformity, eden.tea.uniformity, hutchinson.cotton.uniformity, igue.sugarcane.uniformity, kulkarni.sorghum.uniformity, lander.multi.uniformity, lord.rice.uniformity, magistad.pineapple.uniformity, nagai.strawberry.uniformity, narain.sorghum.unifomity, robinson.peanut.uniformity, sayer.sugarcane.uniformity, strickland.apple.uniformity, strickland.grape.uniformity, strickland.peach.uniformity, strickland.tomato.uniformity</p>
+<a href="#new-data-2" class="anchor"></a>New data</h2>
+<p>ansari.wheat.uniformity, baker.wheat.uniformity, bancroft.peanut.uniformity, bose.multi.uniformity, christidis.cotton.uniformity, correa.soybean.uniformity, davies.pasture.uniformity, eden.tea.uniformity, hutchinson.cotton.uniformity, igue.sugarcane.uniformity, kulkarni.sorghum.uniformity, lander.multi.uniformity, lord.rice.uniformity, magistad.pineapple.uniformity, nagai.strawberry.uniformity, narain.sorghum.uniformity, robinson.peanut.uniformity, sayer.sugarcane.uniformity, strickland.apple.uniformity, strickland.grape.uniformity, strickland.peach.uniformity, strickland.tomato.uniformity</p>
 <p>dasilva.maize, mead.turnip</p>
 </div>
-<div id="other-1" class="section level2">
+<div id="other-notes-1" class="section level2">
 <h2 class="hasAnchor">
-<a href="#other-1" class="anchor"></a>Other</h2>
+<a href="#other-notes-1" class="anchor"></a>Other notes</h2>
 <ul>
-<li>nonnecke.corn.uniformity is renamed nonnecke.sweetcorn.uniformity</li>
-<li>moore.carrots.uniformity is renamed moore.carrot.uniformity</li>
-<li>Switch from <code>lsmeans</code> to <code>emmeans</code> in examples.</li>
+<li><p>nonnecke.corn.uniformity is renamed nonnecke.sweetcorn.uniformity</p></li>
+<li><p>moore.carrots.uniformity is renamed moore.carrot.uniformity</p></li>
+<li><p>Switch from <code>lsmeans</code> to <code>emmeans</code> in examples.</p></li>
 </ul>
 </div>
 </div>
     <div id="agridat-113---nov-2017" class="section level1">
-<h1 class="page-header">
+<h1 class="page-header" data-toc-text="1.13">
 <a href="#agridat-113---nov-2017" class="anchor"></a>agridat 1.13 - Nov 2017<small> 2017-11-29 </small>
 </h1>
 <div id="new-data-for-uniformity-trials" class="section level2">
@@ -194,14 +215,14 @@
 <a href="#new-data-for-stability" class="anchor"></a>New data for stability</h2>
 <p>fisher.barley, lu.stability, tai.potato</p>
 </div>
-<div id="new-data-2" class="section level2">
+<div id="new-data-3" class="section level2">
 <h2 class="hasAnchor">
-<a href="#new-data-2" class="anchor"></a>New data</h2>
+<a href="#new-data-3" class="anchor"></a>New data</h2>
 <p>acorsi.grayleafspot, becker.chicken, chinloy.fractionalfactorial, cramer.cucumber, crampton.pig, battese.survey, christidis.competition, depalluel.sheep. eden.nonnormal, gartner.corn, giles.wheat, gomez.heteroskedastic, gomez.nonnormal1, gomez.nonnormal2, gomez.nonnormal3, gomez.wetdry, goulden.eggs, goulden.splitsplit, gregory.cotton, hanover.whitepine, harvey.lsmeans, harville.lamb, huehn.wheat, kenward.cattle, kreusler.maize, lehner.soybeanmold, lillemo.wheat, lin.superiority, lin.unbalanced, little.splitblock, mead.lambs, omer.sorghum, onofri.winterwheat, reid.grasses, silva.cotton, urquhart.feedlot, usgs.herbicides, vaneeuwijk.fusarium, vaneeuwijk.nematodes, vaneeuwijk.drymatter, wheatley.carrot</p>
 </div>
-<div id="other-notes" class="section level2">
+<div id="other-notes-2" class="section level2">
 <h2 class="hasAnchor">
-<a href="#other-notes" class="anchor"></a>Other notes</h2>
+<a href="#other-notes-2" class="anchor"></a>Other notes</h2>
 <ul>
 <li><p>The following data objects have been changed from lists of 2 matrices into tidy dataframes: aastveit.barley, box.cork, ortiz.tomato, talbot.potato, vargas.txe, vargas.wheat1, vargas.wheat2</p></li>
 <li><p>Moved <code>desplot()</code> function to package <code>desplot</code>.</p></li>
@@ -209,8 +230,7 @@
 <li><p>Changed license to CC BY-SA 4.0, file LICENSE.note (similar to igraphdata).</p></li>
 <li><p>Titles in Rd pages are more consistent.</p></li>
 <li><p>Checked aspect ratio of field plot heatmaps where possible.</p></li>
-<li><p><code><a href="https://rdrr.io/pkg/devtools/man/run_examples.html">devtools::run_examples()</a></code> now works even without suggested packages installed.</p></li>
-<li><p>Fixed <code>dontrun</code> sections to work with <code><a href="https://rdrr.io/pkg/devtools/man/run_examples.html">devtools::run_examples(run=FALSE)</a></code></p></li>
+<li><p><code><a href="https://devtools.r-lib.org//reference/run_examples.html">devtools::run_examples()</a></code> now works even without suggested packages installed.</p></li>
 <li><p>Changed extensions in inst/files from .bug to .jag .</p></li>
 <li><p>Added DOIs for most source references.</p></li>
 <li><p>Changed all hyperlinks to plain text (for faster checking, avoids re-direct errors).</p></li>
@@ -222,61 +242,61 @@
 </div>
 </div>
     <div id="agridat-112---jun-2015" class="section level1">
-<h1 class="page-header">
+<h1 class="page-header" data-toc-text="1.12">
 <a href="#agridat-112---jun-2015" class="anchor"></a>agridat 1.12 - Jun 2015<small> 2015-06-29 </small>
-</h1>
-<div id="new-data-3" class="section level2">
-<h2 class="hasAnchor">
-<a href="#new-data-3" class="anchor"></a>New data</h2>
-<p>cochran.beets, cochran.lattice, jansen.apple, jansen.carrot</p>
-</div>
-</div>
-    <div id="agridat-111---mar-2015" class="section level1">
-<h1 class="page-header">
-<a href="#agridat-111---mar-2015" class="anchor"></a>agridat 1.11 - Mar 2015<small> 2015-03-03 </small>
 </h1>
 <div id="new-data-4" class="section level2">
 <h2 class="hasAnchor">
 <a href="#new-data-4" class="anchor"></a>New data</h2>
+<p>cochran.beets, cochran.lattice, jansen.apple, jansen.carrot</p>
+</div>
+</div>
+    <div id="agridat-111---mar-2015" class="section level1">
+<h1 class="page-header" data-toc-text="1.11">
+<a href="#agridat-111---mar-2015" class="anchor"></a>agridat 1.11 - Mar 2015<small> 2015-03-03 </small>
+</h1>
+<div id="new-data-5" class="section level2">
+<h2 class="hasAnchor">
+<a href="#new-data-5" class="anchor"></a>New data</h2>
 <p>besag.beans, besag.triticale, burgeuno.alpha, burgueno.rowcol, burgueno.unreplicated, steptoe.morex.pheno</p>
 </div>
-<div id="other-2" class="section level2">
+<div id="other" class="section level2">
 <h2 class="hasAnchor">
-<a href="#other-2" class="anchor"></a>Other</h2>
+<a href="#other" class="anchor"></a>Other</h2>
 <ul>
 <li>Removed <code>asreml</code> package from Suggests (due to CRAN check problems).</li>
 </ul>
 </div>
 </div>
     <div id="agridat-110---nov-2014" class="section level1">
-<h1 class="page-header">
+<h1 class="page-header" data-toc-text="1.10">
 <a href="#agridat-110---nov-2014" class="anchor"></a>agridat 1.10 - Nov 2014<small> 2014-11-26 </small>
 </h1>
-<div id="new-data-5" class="section level2">
+<div id="new-data-6" class="section level2">
 <h2 class="hasAnchor">
-<a href="#new-data-5" class="anchor"></a>New data</h2>
+<a href="#new-data-6" class="anchor"></a>New data</h2>
 <p>beaven.barley, perry.springwheat, ridout.appleshoots</p>
 </div>
-<div id="other-3" class="section level2">
+<div id="other-1" class="section level2">
 <h2 class="hasAnchor">
-<a href="#other-3" class="anchor"></a>Other</h2>
+<a href="#other-1" class="anchor"></a>Other</h2>
 <ul>
 <li>Move packages from Depends to Imports.</li>
 </ul>
 </div>
 </div>
     <div id="agridat-19---jul-2014" class="section level1">
-<h1 class="page-header">
+<h1 class="page-header" data-toc-text="1.9">
 <a href="#agridat-19---jul-2014" class="anchor"></a>agridat 1.9 - Jul 2014<small> 2014-07-02 </small>
 </h1>
-<div id="new-data-6" class="section level2">
+<div id="new-data-7" class="section level2">
 <h2 class="hasAnchor">
-<a href="#new-data-6" class="anchor"></a>New data</h2>
+<a href="#new-data-7" class="anchor"></a>New data</h2>
 <p>beall.webworms, besag.endive, brandt.switchback, butron.maize, carlson.germination, cochran.factorial, connolly.potato, cornelius.maize, cullis.earlygen, fisher.latin, foulley.calving, fox.wheat, gomez.splitplot.subsample, goulden.latin, gumpertz.pepper, harrison.priors, hazell.vegetables, heady.fertilizer, holland.arthropods, hunter.corn, jansen.strawberry, kalamkar.potato.uniformity, kang.maize, kang.peanut, karcher.turfgrass, keen.potatodamage, lasrosas.corn, lee.potatoblight, lonnquist.maize, lucas.switchback, maindonald.barley, mead.cauliflower, mercer.mangold.uniformity, patterson.switchback, piepho.cocksfoot, sinclair.clover, snijders.fusarium, stirret.borers, theobald.barley, turner.herbicide, vargas.txe, vold.longterm, wallace.iowaland, walsh.cottonprice, wassom.brome.uniformity, welch.bermudagrass, weiss.incblock, weiss.lattice, yang.barley</p>
 </div>
-<div id="other-4" class="section level2">
+<div id="other-2" class="section level2">
 <h2 class="hasAnchor">
-<a href="#other-4" class="anchor"></a>Other</h2>
+<a href="#other-2" class="anchor"></a>Other</h2>
 <ul>
 <li><p>Use <code>if(require(lme4))</code> in examples. B.Ripley request.</p></li>
 <li><p>All data (almost) now have an example graphic.</p></li>
@@ -284,91 +304,91 @@
 </div>
 </div>
     <div id="agridat-18---sep-2013" class="section level1">
-<h1 class="page-header">
+<h1 class="page-header" data-toc-text="1.8">
 <a href="#agridat-18---sep-2013" class="anchor"></a>agridat 1.8 - Sep 2013<small> 2013-09-23 </small>
-</h1>
-<div id="new-data-7" class="section level2">
-<h2 class="hasAnchor">
-<a href="#new-data-7" class="anchor"></a>New data</h2>
-<p>brandle.rape, salmon.bunt</p>
-</div>
-</div>
-    <div id="agridat-17---sep-2013" class="section level1">
-<h1 class="page-header">
-<a href="#agridat-17---sep-2013" class="anchor"></a>agridat 1.7 - Sep 2013<small> 2013-09-06 </small>
 </h1>
 <div id="new-data-8" class="section level2">
 <h2 class="hasAnchor">
 <a href="#new-data-8" class="anchor"></a>New data</h2>
-<p>baker.barley.uniformity, bliss.borers, bond.diallel, harris.wateruse, hayman.tobacco, holshouser.splitstrip, pearce.apple, waynick.soil</p>
+<p>brandle.rape, salmon.bunt</p>
 </div>
 </div>
-    <div id="agridat-16---june-2013" class="section level1">
-<h1 class="page-header">
-<a href="#agridat-16---june-2013" class="anchor"></a>agridat 1.6 - June 2013<small> 2013-06-04 </small>
+    <div id="agridat-17---sep-2013" class="section level1">
+<h1 class="page-header" data-toc-text="1.7">
+<a href="#agridat-17---sep-2013" class="anchor"></a>agridat 1.7 - Sep 2013<small> 2013-09-06 </small>
 </h1>
 <div id="new-data-9" class="section level2">
 <h2 class="hasAnchor">
 <a href="#new-data-9" class="anchor"></a>New data</h2>
-<p>crossa.wheat, garber.multi.uniformity, gomez.nitrogen, harris.multi.uniformity, hughes.grapes, li.millet.uniformity, odland.soybean.uniformity, odland.soyhay.uniformity, ratkowsky.onions, stephens.sorghum.uniformity</p>
+<p>baker.barley.uniformity, bliss.borers, bond.diallel, harris.wateruse, hayman.tobacco, holshouser.splitstrip, pearce.apple, waynick.soil</p>
 </div>
 </div>
-    <div id="agridat-15---apr-2013" class="section level1">
-<h1 class="page-header">
-<a href="#agridat-15---apr-2013" class="anchor"></a>agridat 1.5 - Apr 2013<small> 2013-04-26 </small>
+    <div id="agridat-16---june-2013" class="section level1">
+<h1 class="page-header" data-toc-text="1.6">
+<a href="#agridat-16---june-2013" class="anchor"></a>agridat 1.6 - June 2013<small> 2013-06-04 </small>
 </h1>
 <div id="new-data-10" class="section level2">
 <h2 class="hasAnchor">
 <a href="#new-data-10" class="anchor"></a>New data</h2>
-<p>adugna.sorghum, ars.earlywhitecorn96, besag.bayesian, box.cork, broadbalk.wheat, byers.apple, caribbean.maize, carmer.density, cate.potassium, cleveland.soil, cochran.eelworms, cochran.wireworms, fan.stability, gomez.seedrate, gotway.hessianfly, goulden.barley.uniformity, henderson.milkfat, hernandez.nitrogen, hessling.argentina, immer.sugarbeet.uniformity, ivins.herbs, jenkyn.mildew, johnson.blight, lambert.soiltemp, lavoranti.eucalyptus, lyon.potato.uniformity, lyons.wheat, mead.cowpeamaize, mead.germination, minnesota.barley.weather, minnesota.barley.yield, nebraska.farmincome, nass.barley, nass.corn, nass.cotton, nass.hay, nass.rice, nass.sorghum, nass.soybean, nass.wheat, ortiz.tomato, pacheco.soybean, senshu.rice, snedecor.asparagus, streibig.competition, zuidhof.broiler</p>
+<p>crossa.wheat, garber.multi.uniformity, gomez.nitrogen, harris.multi.uniformity, hughes.grapes, li.millet.uniformity, odland.soybean.uniformity, odland.soyhay.uniformity, ratkowsky.onions, stephens.sorghum.uniformity</p>
 </div>
 </div>
-    <div id="agridat-14---mar-2012" class="section level1">
-<h1 class="page-header">
-<a href="#agridat-14---mar-2012" class="anchor"></a>agridat 1.4 - Mar 2012<small> 2012-03-14 </small>
+    <div id="agridat-15---apr-2013" class="section level1">
+<h1 class="page-header" data-toc-text="1.5">
+<a href="#agridat-15---apr-2013" class="anchor"></a>agridat 1.5 - Apr 2013<small> 2013-04-26 </small>
 </h1>
 <div id="new-data-11" class="section level2">
 <h2 class="hasAnchor">
 <a href="#new-data-11" class="anchor"></a>New data</h2>
-<p>archbold.apple, blackman.wheat, cochran.crd, cochran.latin, darwin.maize, denis.ryegrass, digby.jointregression, engelstad.nitro, federer.diagcheck, gilmour.slatehall, john.alpha, ilra.sheep, kempton.slatehall, ryder.groundnut, vsn.lupin3</p>
+<p>adugna.sorghum, ars.earlywhitecorn96, besag.bayesian, box.cork, broadbalk.wheat, byers.apple, caribbean.maize, carmer.density, cate.potassium, cleveland.soil, cochran.eelworms, cochran.wireworms, fan.stability, gomez.seedrate, gotway.hessianfly, goulden.barley.uniformity, henderson.milkfat, hernandez.nitrogen, hessling.argentina, immer.sugarbeet.uniformity, ivins.herbs, jenkyn.mildew, johnson.blight, lambert.soiltemp, lavoranti.eucalyptus, lyon.potato.uniformity, lyons.wheat, mead.cowpeamaize, mead.germination, minnesota.barley.weather, minnesota.barley.yield, nebraska.farmincome, nass.barley, nass.corn, nass.cotton, nass.hay, nass.rice, nass.sorghum, nass.soybean, nass.wheat, ortiz.tomato, pacheco.soybean, senshu.rice, snedecor.asparagus, streibig.competition, zuidhof.broiler</p>
 </div>
 </div>
-    <div id="agridat-13---sep-2011" class="section level1">
-<h1 class="page-header">
-<a href="#agridat-13---sep-2011" class="anchor"></a>agridat 1.3 - Sep 2011<small> 2011-10-20 </small>
+    <div id="agridat-14---mar-2012" class="section level1">
+<h1 class="page-header" data-toc-text="1.4">
+<a href="#agridat-14---mar-2012" class="anchor"></a>agridat 1.4 - Mar 2012<small> 2012-03-14 </small>
 </h1>
 <div id="new-data-12" class="section level2">
 <h2 class="hasAnchor">
 <a href="#new-data-12" class="anchor"></a>New data</h2>
-<p>bridges.cucumber, cox.stripsplit, diggle.cow, eden.potato, gauch.soy, graybill.heteroskedastic, hildebrand.systems, hanks.sprinkler, mcconway.turnip, pearl.kernels, williams.barley.uniformity, williams.cotton.uniformity</p>
+<p>archbold.apple, blackman.wheat, cochran.crd, cochran.latin, darwin.maize, denis.ryegrass, digby.jointregression, engelstad.nitro, federer.diagcheck, gilmour.slatehall, john.alpha, ilra.sheep, kempton.slatehall, ryder.groundnut, vsn.lupin3</p>
 </div>
 </div>
-    <div id="agridat-12---jun-2011" class="section level1">
-<h1 class="page-header">
-<a href="#agridat-12---jun-2011" class="anchor"></a>agridat 1.2 - Jun 2011<small> 2011-06-30 </small>
+    <div id="agridat-13---sep-2011" class="section level1">
+<h1 class="page-header" data-toc-text="1.3">
+<a href="#agridat-13---sep-2011" class="anchor"></a>agridat 1.3 - Sep 2011<small> 2011-10-20 </small>
 </h1>
 <div id="new-data-13" class="section level2">
 <h2 class="hasAnchor">
 <a href="#new-data-13" class="anchor"></a>New data</h2>
+<p>bridges.cucumber, cox.stripsplit, diggle.cow, eden.potato, gauch.soy, graybill.heteroskedastic, hildebrand.systems, hanks.sprinkler, mcconway.turnip, pearl.kernels, williams.barley.uniformity, williams.cotton.uniformity</p>
+</div>
+</div>
+    <div id="agridat-12---jun-2011" class="section level1">
+<h1 class="page-header" data-toc-text="1.2">
+<a href="#agridat-12---jun-2011" class="anchor"></a>agridat 1.2 - Jun 2011<small> 2011-06-30 </small>
+</h1>
+<div id="new-data-14" class="section level2">
+<h2 class="hasAnchor">
+<a href="#new-data-14" class="anchor"></a>New data</h2>
 <p>aastveit.barley, gathmann.bt, kempton.competition, wedderburn.barley</p>
 </div>
 </div>
     <div id="agridat-10---apr-2011" class="section level1">
-<h1 class="page-header">
+<h1 class="page-header" data-toc-text="1.0">
 <a href="#agridat-10---apr-2011" class="anchor"></a>agridat 1.0 - Apr 2011<small> Unreleased </small>
 </h1>
 <div id="first-release-to-cran" class="section level2">
 <h2 class="hasAnchor">
 <a href="#first-release-to-cran" class="anchor"></a>First release to CRAN</h2>
 </div>
-<div id="new-data-14" class="section level2">
+<div id="new-data-15" class="section level2">
 <h2 class="hasAnchor">
-<a href="#new-data-14" class="anchor"></a>New data</h2>
+<a href="#new-data-15" class="anchor"></a>New data</h2>
 <p>allcroft.lodging, australia.soybean, batchelor.apple.uniformity, batchelor.lemon.uniformity, batchelor.navel1.uniformity, batchelor.navel2.uniformity, batchelor.valencia.uniformity, batchelor.walnut.uniformity, besag.elbatan, besag.met, cochran.bib, corsten.interaction, crowder.germination, denis.missing, durban.competition, durban.rowcol, durban.splitplot, federer.tobacco, gilmour.serpentine, gomez.fractionalfactorial, gomez.groupsplit, gomez.multilocsplitplot, gomez.splitsplit, gomez.stripplot, gomez.stripsplitplot, gomez.rice.uniformity, hughes.grapes, kempton.rowcol, kempton.barley.uniformity, mead.strawberry, mercer.wheat.uniformity, rothamsted.brussels, shafii.rapeseed, smith.uniformity3, stroup.nin, stroup.splitplot, student.barley, talbot.potato, theobald.covariate, thompson.cornsoy, vargas.wheat1, vargas.wheat2, verbyla.lupin, williams.trees, wiebe.wheat.uniformity, yan.winterwheat, yates.missing, yates.oats</p>
 </div>
 </div>
     <div id="agridat-00---oct-2010" class="section level1">
-<h1 class="page-header">
+<h1 class="page-header" data-toc-text="0.0">
 <a href="#agridat-00---oct-2010" class="anchor"></a>agridat 0.0 - Oct 2010<small> Unreleased </small>
 </h1>
 <ul>
@@ -377,29 +397,10 @@
 </div>
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <div id="tocnav">
-      <h2>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-        <li><a href="#agridat-117---aug-2019">1.17</a></li>
-        <li><a href="#agridat-116---jul-2018">1.16</a></li>
-        <li><a href="#agridat-115---jun-2018">1.15</a></li>
-        <li><a href="#agridat-113---nov-2017">1.13</a></li>
-        <li><a href="#agridat-112---jun-2015">1.12</a></li>
-        <li><a href="#agridat-111---mar-2015">1.11</a></li>
-        <li><a href="#agridat-110---nov-2014">1.10</a></li>
-        <li><a href="#agridat-19---jul-2014">1.9</a></li>
-        <li><a href="#agridat-18---sep-2013">1.8</a></li>
-        <li><a href="#agridat-17---sep-2013">1.7</a></li>
-        <li><a href="#agridat-16---june-2013">1.6</a></li>
-        <li><a href="#agridat-15---apr-2013">1.5</a></li>
-        <li><a href="#agridat-14---mar-2012">1.4</a></li>
-        <li><a href="#agridat-13---sep-2011">1.3</a></li>
-        <li><a href="#agridat-12---jun-2011">1.2</a></li>
-        <li><a href="#agridat-10---apr-2011">1.0</a></li>
-        <li><a href="#agridat-00---oct-2010">0.0</a></li>
-      </ul>
-    </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 
 </div>
@@ -411,7 +412,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.4.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

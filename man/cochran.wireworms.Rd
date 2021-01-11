@@ -31,7 +31,7 @@
   Ron Snee (1980). Graphical Display of Means.
   \emph{The American Statistician}, 34, 195-199.
   https://www.jstor.org/stable/2684060 
-  http://doi.org/10.1080/00031305.1980.10483028
+  https://doi.org/10.1080/00031305.1980.10483028
   
   W. Cochran (1940). The analysis of variance when experimental errors
   follow the Poisson or binomial laws.

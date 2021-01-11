@@ -50,7 +50,7 @@ skp <- c(rep(0,10),
          rep(0,5),1,1,1,1,1,
          rep(0,5),1,1,1,1,1,
          rep(0,5),1,1,1,1,1)
-if(require(desplot)){
+if(require("desplot")){
   desplot(dat, y ~ col*row|date,
           main="lee.potatoblight", #col.regions=RedGrayBlue,
           between=list(y=.3), strip.cex =.6,
@@ -69,7 +69,7 @@ library(agridat)
 dat <- lee.potatoblight
 dat$dd <- as.Date(dat$date)
 d83 <- droplevels(subset(dat, year==1983))
-if(require(latticeExtra)){
+if(require("latticeExtra")){
   foo <- xyplot(y ~ dd|gen, d83, group=rep,
          xlab="Date", ylab="Blight resistance score",
          main="lee.potatoblight 1983", as.table=TRUE,
@@ -105,7 +105,7 @@ for(ii in 1:nrow(d1)){
   out <- rbind(out, data.frame(source=d1[ii,'source'], vals=vals))
 }
 out <- droplevels(out) # Extra levels exist in d1
-if(require(latticeExtra)) {
+if(require("latticeExtra")) {
   foo0 <- dotplot(source ~ vals, out, 
                   main="harrison.priors", xlab="Daidzein level",
                   panel=function(x,y,...){
@@ -165,7 +165,7 @@ m6 <- glm(cbind(germ, seeds-germ) ~ temp + temp:logconc, data=dat,
 newb <- expand.grid(temp=c('T1','T2','T3','T4'), logconc=log(c(0,.1,1,10)+.01))
 newb$pct <- predict(m6, new=newb, type='response')
 # Binomial density
-if(require(latticeExtra)){
+if(require("latticeExtra")){
   foob <- xyplot(pct~logconc |temp, newb,
                  xlim=c(-5.5, 4.5), ylim=c(-2, 53), as.table=TRUE,
                  xlab="Log concentration",
@@ -214,7 +214,7 @@ data(gomez.stripsplitplot)
 dat <- gomez.stripsplitplot
 
 # Layout
-if(require(desplot)){
+if(require("desplot")){
   desplot(dat, gen~col*row,
           out1=rep, col=nitro, text=planting, cex=1,
           main="gomez.stripsplitplot")
@@ -234,7 +234,7 @@ library(agridat)
 data(gomez.splitsplit)
 dat <- gomez.splitsplit
 dat$nitrogen <- factor(dat$nitro)
-if(require(HH)){
+if(require("HH")){
   #position(dat$rep) <- position(dat$management) <-
   #  position(dat$gen) <- c(10,70,130)
   #position(dat$nitrogen) <- c(0,50,80,110,140)
@@ -359,7 +359,7 @@ library(agridat)
 # Specify env.group as column in data frame
 data(crossa.wheat)
 dat2 <- crossa.wheat
-if(require(gge)){
+if(require("gge")){
   m4 <- gge(yield~gen*loc, dat2, env.group=locgroup, scale=FALSE)
   # plot(m4)
   biplot(m4, lab.env=TRUE, main="crossa.wheat")

@@ -39,7 +39,7 @@
   G. A. Baker and R. E. Baker (1953).
   Strawberry Uniformity Yield Trials.
   \emph{Biometrics}, 9, 412-421.
-  http://doi.org/10.2307/3001713
+  https://doi.org/10.2307/3001713
 }
 \references{
   None

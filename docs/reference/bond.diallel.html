@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -150,7 +150,7 @@
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 36 observations on the following 3 variables.</p><dl'>
+    <p>A data frame with 36 observations on the following 3 variables.</p><dl>
     <dt><code>female</code></dt><dd><p>female parent</p></dd>
     <dt><code>male</code></dt><dd><p>male parent</p></dd>
     <dt><code>yield</code></dt><dd><p>yield, grams/plot</p></dd>
@@ -167,30 +167,71 @@
 
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>Yield in grams/plot for diallel crosses between inbred lines of winter
-  beans.  Values are means over two years.</p>
+    <p>Yield in grams/plot for full diallel cross between 6 inbred lines
+  of winter beans.  Values are means over two years.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>D. A. Bond (1966). Yield and components of yield in diallel crosses
   between inbred lines of winter beans (Viciafaba).
   <em>The Journal of Agricultural Science</em>, 67, 325--336.
-  http://doi.org/10.1017/S0021859600017329</p>
+  https://doi.org/10.1017/S0021859600017329</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Peter John, <em>Statistical Design and Analysis of Experiments</em>, p. 85.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>bond.diallel</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>bond.diallel</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+  
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>bond.diallel</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>bond.diallel</span>
+  
+  <span class='co'># Because these data are means, we will not be able to reproduce</span>
+  <span class='co'># the anova table in Bond. More useful as a multivariate example.</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'>splom</span>(<span class='no'>dat</span>[,<span class='fl'>3</span>:<span class='fl'>11</span>], <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"bond.diallel"</span>)</div><div class='img'><img src='bond.diallel-1.png' alt='' width='700' height='433' /></div><div class='input'>
-# Needs an example.  Bond says yield heterosis of F1 hybrids over parent
-# means is 22.56, but I cannot match.
-
-# See man page for FDdata in R package sommer
-
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>corrgram</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Attaching package: 'corrgram'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:latticeExtra':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    panel.ellipse</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:lattice':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    panel.fill</span></div><div class='input'>  <span class='fu'>corrgram</span><span class='op'>(</span><span class='va'>dat</span><span class='op'>[</span> , <span class='fl'>3</span><span class='op'>:</span><span class='fl'>11</span><span class='op'>]</span>, main<span class='op'>=</span><span class='st'>"bond.diallel"</span>,
+           lower<span class='op'>=</span><span class='va'>panel.pts</span><span class='op'>)</span>
+</div><div class='img'><img src='bond.diallel-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='co'># Multivariate example from sommer package</span>
+  <span class='fu'>corrgram</span><span class='op'>(</span><span class='va'>dat</span><span class='op'>[</span>,<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"stems"</span>,<span class='st'>"pods"</span>,<span class='st'>"seeds"</span><span class='op'>)</span><span class='op'>]</span>,
+           lower<span class='op'>=</span><span class='va'>panel.pts</span>, upper<span class='op'>=</span><span class='va'>panel.conf</span>, main<span class='op'>=</span><span class='st'>"bond.diallel"</span><span class='op'>)</span>
+</div><div class='img'><img src='bond.diallel-2.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>sommer</span><span class='op'>)</span>           
+</div><div class='output co'>#&gt; <span class='message'>Loading required package: crayon</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Attaching package: 'crayon'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:lmtest':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    reset</span></div><div class='input'>  
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>mmer</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>stems</span>,<span class='va'>pods</span>,<span class='va'>seeds</span><span class='op'>)</span> <span class='op'>~</span> <span class='fl'>1</span>,
+             random<span class='op'>=</span> <span class='op'>~</span> <span class='fu'>vs</span><span class='op'>(</span><span class='va'>female</span><span class='op'>)</span><span class='op'>+</span><span class='fu'>vs</span><span class='op'>(</span><span class='va'>male</span><span class='op'>)</span>,
+             rcov<span class='op'>=</span> <span class='op'>~</span> <span class='fu'>vs</span><span class='op'>(</span><span class='va'>units</span><span class='op'>)</span>,
+             <span class='va'>dat</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; iteration    LogLik     wall    cpu(sec)   restrained
+#&gt;     1      -63.6729   17:31:55      0           0
+#&gt;     2      -40.8016   17:31:55      0           0
+#&gt;     3      -27.2147   17:31:55      0           0
+#&gt;     4      -24.2403   17:31:55      0           0
+#&gt;     5      -24.1945   17:31:55      0           0
+#&gt;     6      -24.194   17:31:55      0           0</div><div class='input'>
+  <span class='co'>#### genetic variance covariance</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>cov2cor</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>$</span><span class='va'>sigma</span><span class='op'>$</span><span class='va'>`u:female`</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;            stems       pods      seeds
+#&gt; stems  1.0000000  0.5745963 -0.8714338
+#&gt; pods   0.5745963  1.0000000 -0.7946327
+#&gt; seeds -0.8714338 -0.7946327  1.0000000</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>cov2cor</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>$</span><span class='va'>sigma</span><span class='op'>$</span><span class='va'>`u:male`</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;            stems       pods      seeds
+#&gt; stems  1.0000000  0.3173646 -0.6610472
+#&gt; pods   0.3173646  1.0000000 -0.4276277
+#&gt; seeds -0.6610472 -0.4276277  1.0000000</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>cov2cor</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>$</span><span class='va'>sigma</span><span class='op'>$</span><span class='va'>`u:units`</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;            stems       pods     seeds
+#&gt; stems  1.0000000 -0.3354943 0.2294149
+#&gt; pods  -0.3354943  1.0000000 0.1294200
+#&gt; seeds  0.2294149  0.1294200 1.0000000</div><div class='input'>
+<span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -207,7 +248,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

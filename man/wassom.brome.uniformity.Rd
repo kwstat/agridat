@@ -50,7 +50,7 @@
   Wassom and R.R. Kalton. (1953).
   Estimations of Optimum Plot Size Using Data from Bromegrass Uniformity
   Trials. Agricultural Experiment Station, Iowa State College, Bulletin 396.
-  http://lib.dr.iastate.edu/ag_researchbulletins/32/
+  https://lib.dr.iastate.edu/ag_researchbulletins/32/
 }
 
 \examples{

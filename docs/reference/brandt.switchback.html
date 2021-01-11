@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -146,12 +146,12 @@
     <p>Switchback experiment on dairy cattle, milk yield for two treatments</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"brandt.switchback"</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"brandt.switchback"</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 30 observations on the following 5 variables.</p><dl'>
+    <p>A data frame with 30 observations on the following 5 variables.</p><dl>
     <dt><code>group</code></dt><dd><p>group: A,B</p></dd>
     <dt><code>cow</code></dt><dd><p>cow, 10 levels</p></dd>
     <dt><code>trt</code></dt><dd><p>treatment, 2 levels</p></dd>
@@ -187,14 +187,15 @@
 
     <p>A.E. Brandt (1938). Tests of Significance in Reversal or Switchback Trials
   Iowa State College, Agricultural Research Bulletins. Bulletin 234. Book 22.
-  http://lib.dr.iastate.edu/ag_researchbulletins/22/</p>
+  https://lib.dr.iastate.edu/ag_researchbulletins/22/</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+  
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>brandt.switchback</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>brandt.switchback</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>brandt.switchback</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>brandt.switchback</span>
 
 <span class='co'># In each period, treatment 2 is slightly higher</span>
 <span class='co'># bwplot(yield~trt|period,dat, layout=c(3,1), main="brandt.switchback",</span>
@@ -203,14 +204,16 @@
 <span class='co'># Yield at period 2 (trt T2) is above the trend in group A,</span>
 <span class='co'># below the trend (trt T1) in group B.</span>
 <span class='co'># Equivalently, treatment T2 is above the trend line</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'>xyplot</span>(<span class='no'>yield</span>~<span class='no'>period</span><span class='kw'>|</span><span class='no'>group</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>cow</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'l'</span>,<span class='st'>'r'</span>),
-    <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>5</span>), <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"brandt.switchback"</span>,
-    <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Period.  Group A: T1,T2,T1.  Group B: T2,T1,T2"</span>,
-    <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Milk yield (observed and trend) per cow"</span>)</div><div class='img'><img src='brandt.switchback-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>~</span><span class='va'>period</span><span class='op'>|</span><span class='va'>group</span>, data<span class='op'>=</span><span class='va'>dat</span>, group<span class='op'>=</span><span class='va'>cow</span>, type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'l'</span>,<span class='st'>'r'</span><span class='op'>)</span>,
+    auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>5</span><span class='op'>)</span>, main<span class='op'>=</span><span class='st'>"brandt.switchback"</span>,
+    xlab<span class='op'>=</span><span class='st'>"Period.  Group A: T1,T2,T1.  Group B: T2,T1,T2"</span>,
+    ylab<span class='op'>=</span><span class='st'>"Milk yield (observed and trend) per cow"</span><span class='op'>)</span>
+</div><div class='img'><img src='brandt.switchback-1.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Similar to Brandt Table 10</span>
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>(<span class='no'>yield</span>~<span class='no'>period</span>+<span class='no'>group</span>+<span class='no'>cow</span>:<span class='no'>group</span>+<span class='no'>period</span>:<span class='no'>group</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-<span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt; Analysis of Variance Table
+<span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>~</span><span class='va'>period</span><span class='op'>+</span><span class='va'>group</span><span class='op'>+</span><span class='va'>cow</span><span class='op'>:</span><span class='va'>group</span><span class='op'>+</span><span class='va'>period</span><span class='op'>:</span><span class='va'>group</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
 #&gt; Response: yield
 #&gt;              Df Sum Sq Mean Sq F value    Pr(&gt;F)    
@@ -221,6 +224,7 @@
 #&gt; Residuals    16  27819    1739                      
 #&gt; ---
 #&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'>
+<span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -237,7 +241,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

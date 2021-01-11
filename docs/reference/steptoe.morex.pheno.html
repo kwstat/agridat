@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,14 +45,13 @@
 
 
 
-<meta property="og:title" content="Multi-environment trial of barley, phenotypic and genotypic data for a population of Steptoe x Morex — steptoe.morex.pheno" />
 
+<meta property="og:title" content="Multi-environment trial of barley, phenotypic and genotypic data for a population of Steptoe x Morex — steptoe.morex.pheno" />
 <meta property="og:description" content="Phenotypic and genotypic data for a barley population of Steptoe x
     Morex.  There were 150 doubled haploid crosses, evaluated at 223
     markers.  Phenotypic data wascollected on 8 traits at 16 environments." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -63,7 +68,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -77,7 +82,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -106,7 +111,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -114,10 +119,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -141,21 +145,20 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Phenotypic and genotypic data for a barley population of Steptoe x
     Morex.  There were 150 doubled haploid crosses, evaluated at 223
     markers.  Phenotypic data wascollected on 8 traits at 16 environments.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"steptoe.morex.pheno"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"steptoe.morex.pheno"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
     
 
 <p><code>steptoe.morex.pheno</code> is a data.frame of phenotypic data
-  with 2432 observations on 10 variables:</p><dl class='dl-horizontal'>
+  with 2432 observations on 10 variables:</p><dl>
     <dt><code>gen</code></dt><dd><p>genotype factor with parents Steptoe and Morex,
       and 150 crosses SM1, SM2, ..., SM200. Not all 200 numbers were used.</p></dd>
     <dt><code>env</code></dt><dd><p>environment, 16 levels</p></dd>
@@ -167,61 +170,58 @@
     <dt><code>height</code></dt><dd><p>plant height (centimeters)</p></dd>
     <dt><code>protein</code></dt><dd><p>grain protein (percent)</p></dd>
     <dt><code>yield</code></dt><dd><p>grain yield (Mt/Ha)</p></dd>
-  </dl>
+  
+</dl>
 
 <p><code>steptoe.morex.geno</code> is a <code>cross</code> object from the
   <code>qtl</code> package with genotypic data of the 223
   markers for the 150 crosses of Steptoe x Morex.</p>
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     
 
 <p>As described by Hayes et al (1993), a population of 150 barley doubled
-haploid (DH) lines was developed by the Oregon State University Barley
-Breeding Program for the North American Barley Genome Mapping
-Project. The parentage of the population is Steptoe / Morex.</p>
-<p>Steptoe is the dominant feed barley in the northwestern U.S.</p>
-<p>Morex is the spring U.S. malting quality standard.</p>
+  haploid (DH) lines was developed by the Oregon State University Barley
+  Breeding Program for the North American Barley Genome Mapping
+  Project. The parentage of the population is Steptoe / Morex.</p>  
+<p>Steptoe is the dominant feed barley in the northwestern U.S.</p>  
+<p>Morex is the spring U.S. malting quality standard.</p>  
 <p>Seed from a single head of each parent was used to create the F1, from which a
-set of 150 lines was developed.</p>
+  set of 150 lines was developed.</p>  
 <p>Phenotypic values for the parents Steptoe and Morex are here:
-http://wheat.pw.usda.gov/ggpages/SxM/parental_values.html</p>
+  https://wheat.pw.usda.gov/ggpages/SxM/parental_values.html</p>  
 <p>There are 16 locations, The average across locations is in column 17.  Not all
-traits were collected at every location.  At each location, all 150 lines were
-included in block 1, a random subset of 50 lines was used in block 2.</p>
+  traits were collected at every location.  At each location, all 150 lines were
+  included in block 1, a random subset of 50 lines was used in block 2.</p>  
 <p>The traits are:
-Alpha Amylase (20 Deg Units),
-Diastatic Power (Deg Units),
-Heading Date (Julian Days),
-Lodging (percent),
-Malt Extract (percent),
-Grain Protein (percent),
-Grain Yield (Mt/Ha).</p>
+  Alpha Amylase (20 Deg Units),
+  Diastatic Power (Deg Units),
+  Heading Date (Julian Days),
+  Lodging (percent),
+  Malt Extract (percent),
+  Grain Protein (percent),
+  Grain Yield (Mt/Ha).</p>  
 <p>Phenotypic values of the 150 lines in the F1 population are here:
-http://wheat.pw.usda.gov/ggpages/SxM/phenotypes.html</p>
-<p>Each trait is in a different file, in which each block of numbers represents
-one location.</p>
+  https://wheat.pw.usda.gov/ggpages/SxM/phenotypes.html</p>  
+<p>Each trait is in a different file, in which each block of numbers
+  represents one location.</p>  
 <p>The 223-markers Steptoe/Morex base map is here:
-http://wheat.pw.usda.gov/ggpages/SxM/smbasev2.map
-.
-The data for these markers on the 150 lines is
-http://wheat.pw.usda.gov/ggpages/SxM/smbasev2.mrk</p>
+  https://wheat.pw.usda.gov/ggpages/SxM/smbasev2.map</p>
+<p>The data for these markers on the 150 lines is
+  https://wheat.pw.usda.gov/ggpages/SxM/smbasev2.mrk</p>  
 <p>These were hand-assembled (e.g. marker distances were cumulated to
-marker positions) into a .csv file which was then imported into
-R using <code><a href='https://rdrr.io/pkg/qtl/man/read.cross.html'>qtl::read.cross</a></code>.  The class was manually changed from
-c('bc','cross') to c('dh','cross').</p>
-<p>The marker data is coded as A = Steptoe, B = Morex, - = missing.</p>
+  marker positions) into a .csv file which was then imported into
+  R using <code><a href='https://rdrr.io/pkg/qtl/man/read.cross.html'>qtl::read.cross</a></code>.  The class was manually changed from
+  c('bc','cross') to c('dh','cross').</p>  
+<p>The marker data is coded as A = Steptoe, B = Morex, - = missing.</p>  
 <p>The pedigrees for the 150 lines are found here:
-http://wheat.pw.usda.gov/ggpages/SxM/pedigrees.html</p>
-    
+  https://wheat.pw.usda.gov/ggpages/SxM/pedigrees.html</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>The Steptoe x Morex Barley Mapping Population.
   Map: Version 2, August 1, 1995
-  http://wheat.pw.usda.gov/ggpages/SxM.  Accessed Jan 2015.</p>
+  https://wheat.pw.usda.gov/ggpages/SxM.  Accessed Jan 2015.</p>
 <p>Data provided by the United States Department of Agriculture.</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     
@@ -231,12 +231,12 @@ http://wheat.pw.usda.gov/ggpages/SxM/pedigrees.html</p>
   Quantitative trait locus effects and environmental interaction in a sample of
   North American barley germplasm.
   <em>Theoretical and Applied Genetics</em>, 87, 392--401.
-  http://doi.org/10.1007/BF01184929</p>
+  https://doi.org/10.1007/BF01184929</p>
 <p>Ignacio Romagosa, Steven E. Ullrich, Feng Han, Patrick M. Hayes. 1996.
   Use of the additive main effects and multiplicative interaction model
   in QTL mapping for adaptation in barley.
   <em>Theor Appl Genet</em>, 93, 30-37.
-  http://doi.org/10.1007/BF00225723</p>
+  https://doi.org/10.1007/BF00225723</p>
 <p>Piepho, Hans-Peter. 2000.
   A mixed-model approach to mapping quantitative trait loci in barley on
   the basis of multiple environment data.
@@ -245,20 +245,21 @@ http://wheat.pw.usda.gov/ggpages/SxM/pedigrees.html</p>
   Mixed models including environmental covariables for studying QTL by
   environment interaction.
   <em>Euphytica</em>, 137, 139-145.
-  http://doi.org/10.1023/B:EUPH.0000040511.4638</p>
-    
+  https://doi.org/10.1023/B:EUPH.0000040511.4638</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>steptoe.morex.pheno</span>)
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>steptoe.morex.pheno</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+  
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>steptoe.morex.pheno</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>steptoe.morex.pheno</span>
 
   <span class='co'># Visualize GxE of traits</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-  <span class='no'>redblue</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"firebrick"</span>, <span class='st'>"lightgray"</span>, <span class='st'>"#375997"</span>))
-  <span class='fu'>levelplot</span>(<span class='no'>amylase</span>~<span class='no'>env</span>*<span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>col.regions</span><span class='kw'>=</span><span class='no'>redblue</span>,
-            <span class='kw'>scales</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>x</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>rot</span><span class='kw'>=</span><span class='fl'>90</span>)), <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"amylase"</span>)</div><div class='img'><img src='steptoe.morex.pheno-1.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='co'>## levelplot(diapow~env*gen, data=dat, col.regions=redblue,</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+  <span class='va'>redblue</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"firebrick"</span>, <span class='st'>"lightgray"</span>, <span class='st'>"#375997"</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/levelplot.html'>levelplot</a></span><span class='op'>(</span><span class='va'>amylase</span><span class='op'>~</span><span class='va'>env</span><span class='op'>*</span><span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>, col.regions<span class='op'>=</span><span class='va'>redblue</span>,
+            scales<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>rot<span class='op'>=</span><span class='fl'>90</span><span class='op'>)</span><span class='op'>)</span>, main<span class='op'>=</span><span class='st'>"amylase"</span><span class='op'>)</span>
+</div><div class='img'><img src='steptoe.morex.pheno-1.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='co'>## levelplot(diapow~env*gen, data=dat, col.regions=redblue,</span>
   <span class='co'>##           scales=list(x=list(rot=90)), main="diapow")</span>
   <span class='co'>## levelplot(hddate~env*gen, data=dat, col.regions=redblue,</span>
   <span class='co'>##           scales=list(x=list(rot=90)), main="hddate")</span>
@@ -279,81 +280,49 @@ http://wheat.pw.usda.gov/ggpages/SxM/pedigrees.html</p>
   <span class='co'># SKo92,SKg92 means in table 3 are switched.  Who is right, him or me?</span>
 
   <span class='co'># Draw marker map</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>qtl</span>)
-  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>steptoe.morex.geno</span>)
-  <span class='no'>datg</span> <span class='kw'>&lt;-</span> <span class='no'>steptoe.morex.geno</span>
-  <span class='fu'>plot.map</span>(<span class='no'>datg</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"steptoe.morex.pheno"</span>)  <span class='co'># or just use plot()</span></div><div class='img'><img src='steptoe.morex.pheno-2.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>qtl</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>steptoe.morex.geno</span><span class='op'>)</span>
+  <span class='va'>datg</span> <span class='op'>&lt;-</span> <span class='va'>steptoe.morex.geno</span>
+  <span class='fu'>plot.map</span><span class='op'>(</span><span class='va'>datg</span>, main<span class='op'>=</span><span class='st'>"steptoe.morex.pheno"</span><span class='op'>)</span>  <span class='co'># or just use plot()</span>
+</div><div class='img'><img src='steptoe.morex.pheno-2.png' alt='' width='700' height='433' /></div><div class='input'>
 
-<span class='kw'>if</span>(<span class='fl'>0</span>){
   <span class='co'># This is a very rudimentary example.</span>
+    
   <span class='co'># Fit a simple multi-environment mixed model</span>
-  <span class='co'># asreml3</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
-  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>env</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>random</span><span class='kw'>=</span>~<span class='no'>gen</span>)
-
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>wgaim</span>)
-  <span class='kw pkg'>qtl</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qtl/man/plot.missing.html'>plotMissing</a></span>(<span class='no'>datg</span>)
-  <span class='fu'>link.map</span>(<span class='no'>datg</span>)
-  <span class='co'># Create an interval object for wgaim</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/class.html'>class</a></span>(<span class='no'>datg</span>)[<span class='fl'>1</span>] <span class='kw'>&lt;-</span> <span class='st'>"bc"</span>
-  <span class='no'>dati</span> <span class='kw'>&lt;-</span> <span class='fu'>cross2int</span>(<span class='no'>datg</span>, <span class='kw'>id</span><span class='kw'>=</span><span class='st'>"gen"</span>)
-
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span><span class='op'>)</span>
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>env</span>, data<span class='op'>=</span><span class='va'>dat</span>, random<span class='op'>=</span><span class='op'>~</span><span class='va'>gen</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:50:12 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -826.109      0.664231   2416 17:50:13    0.0
+#&gt;  2      -821.409      0.656597   2416 17:50:13    0.0
+#&gt;  3      -817.325      0.647509   2416 17:50:13    0.0
+#&gt;  4      -815.816      0.641196   2416 17:50:13    0.0
+#&gt;  5      -815.601      0.638204   2416 17:50:13    0.0
+#&gt;  6      -815.600      0.637998   2416 17:50:13    0.0</div><div class='input'>  
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>wgaim</span><span class='op'>)</span>
+  <span class='fu'>qtl</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/qtl/man/plot.missing.html'>plotMissing</a></span><span class='op'>(</span><span class='va'>datg</span><span class='op'>)</span>
+</div><div class='img'><img src='steptoe.morex.pheno-3.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='fu'>wgaim</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/wgaim/man/linkMap.cross.html'>linkMap</a></span><span class='op'>(</span><span class='va'>datg</span><span class='op'>)</span>
+</div><div class='img'><img src='steptoe.morex.pheno-4.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='co'># Create an interval object for wgaim</span>
+  <span class='va'>dati</span> <span class='op'>&lt;-</span> <span class='fu'>wgaim</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/wgaim/man/cross2int.html'>cross2int</a></span><span class='op'>(</span><span class='va'>datg</span>, id<span class='op'>=</span><span class='st'>"gen"</span><span class='op'>)</span>
+  
   <span class='co'># Whole genome qtl</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/assign.html'>assign</a></span>(<span class='st'>"dat"</span>, <span class='no'>dat</span>, <span class='fl'>1</span>) <span class='co'># Needed for wgaim in script mode</span>
-  <span class='no'>q1</span> <span class='kw'>&lt;-</span> <span class='fu'>wgaim</span>(<span class='no'>m1</span>, <span class='no'>dat</span>, <span class='no'>dati</span>, <span class='kw'>merge.by</span><span class='kw'>=</span><span class='st'>"gen"</span>, <span class='kw'>na.method.X</span><span class='kw'>=</span><span class='st'>'include'</span>)
-  <span class='fu'>link.map</span>(<span class='no'>q1</span>, <span class='no'>dati</span>) <span class='co'># Visualize</span>
-  <span class='fu'>out.stat</span>(<span class='no'>q1</span>, <span class='no'>dati</span>) <span class='co'># outlier statistic</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>q1</span>, <span class='no'>dati</span>)  <span class='co'># Table of important intervals</span>
-  <span class='co'># Chrom Left Marker dist(cM) Right Marker dist(cM)   Size Pvalue &lt;!-- % Var --&gt;</span>
+  <span class='va'>q1</span> <span class='op'>&lt;-</span> <span class='fu'>wgaim</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/wgaim/man/wgaim.asreml.html'>wgaim</a></span><span class='op'>(</span><span class='va'>m1</span>, intervalObj<span class='op'>=</span><span class='va'>dati</span>, merge.by<span class='op'>=</span><span class='st'>"gen"</span>, na.action<span class='op'>=</span><span class='fu'>na.method</span><span class='op'>(</span>x<span class='op'>=</span><span class='st'>"include"</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='error'>Error in eval(baseModel$call$data): object 'dat' not found</span></div><div class='input'>  <span class='co'>#wgaim::linkMap(q1, dati) # Visualize</span>
+  <span class='fu'>wgaim</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/wgaim/man/outStat.html'>outStat</a></span><span class='op'>(</span><span class='va'>q1</span>, <span class='va'>dati</span><span class='op'>)</span> <span class='co'># outlier statistic</span>
+</div><div class='output co'>#&gt; <span class='error'>Error in wgaim::outStat(q1, dati): object 'q1' not found</span></div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>q1</span>, <span class='va'>dati</span><span class='op'>)</span>  <span class='co'># Table of important intervals</span>
+</div><div class='output co'>#&gt; <span class='error'>Error in h(simpleError(msg, call)): error in evaluating the argument 'object' in selecting a method for function 'summary': object 'q1' not found</span></div><div class='input'>  <span class='co'># Chrom Left Marker dist(cM) Right Marker dist(cM)   Size Pvalue </span>
   <span class='co'>#     3      ABG399     52.6       BCD828     56.1  0.254  0.000  45.0</span>
   <span class='co'>#     5      MWG912      148      ABG387A    151.2  0.092  0.001   5.9</span>
   <span class='co'>#     6     ABC169B     64.8       CDO497     67.5 -0.089  0.001   5.6</span>
-}
-
-<span class='co'># ----------------------------------------------------------------------------</span>
-
-<span class='kw'>if</span>(<span class='fl'>0</span>){
-  <span class='co'># This is a very rudimentary example.</span>
-
-  <span class='co'># Fit a simple multi-environment mixed model</span>
-  <span class='co'>## libs(asreml4)</span>
-  <span class='co'>## m1 &lt;- asreml(yield ~ env, data=dat, random=~gen)</span>
-
-  <span class='co'>## libs(wgaim)</span>
-  <span class='co'>## plotMissing(datg)</span>
-  <span class='co'>## link.map(datg)</span>
-  <span class='co'>## # Create an interval object for wgaim</span>
-  <span class='co'>## class(datg)[1] &lt;- "bc"</span>
-  <span class='co'>## dati &lt;- cross2int(datg, id="gen")</span>
-
-  <span class='co'>## # Whole genome qtl</span>
-  <span class='co'>## assign("dat", dat, 1) # Needed for wgaim in script mode</span>
-  <span class='co'>## q1 &lt;- wgaim(m1, dat, dati, merge.by="gen", na.method.X='include')</span>
-  <span class='co'>## link.map(q1, dati) # Visualize</span>
-  <span class='co'>## out.stat(q1, dati) # outlier statistic</span>
-  <span class='co'>## summary(q1, dati)  # Table of important intervals</span>
-  <span class='co'>## # Chrom Left Marker dist(cM) Right Marker dist(cM)   Size Pvalue &lt;!-- % Var --&gt;</span>
-  <span class='co'>## #     3      ABG399     52.6       BCD828     56.1  0.254  0.000  45.0</span>
-  <span class='co'>## #     5      MWG912      148      ABG387A    151.2  0.092  0.001   5.9</span>
-  <span class='co'>## #     6     ABC169B     64.8       CDO497     67.5 -0.089  0.001   5.6</span>
-
-}</div></pre>
+  
+<span class='co'># }</span>
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -364,7 +333,7 @@ http://wheat.pw.usda.gov/ggpages/SxM/pedigrees.html</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

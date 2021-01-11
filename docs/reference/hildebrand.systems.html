@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Multi-environment trial of maize for four cropping systems — hildebrand.systems" />
-
 <meta property="og:description" content="Maize yields for four cropping systems at 14 on-farm trials." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,22 +143,21 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Maize yields for four cropping systems at 14 on-farm trials.</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 56 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 56 observations on the following 4 variables.</p><dl>
     <dt><code>village</code></dt><dd><p>village, 2 levels</p></dd>
     <dt><code>farm</code></dt><dd><p>farm, 14 levels</p></dd>
     <dt><code>system</code></dt><dd><p>cropping system</p></dd>
     <dt><code>yield</code></dt><dd><p>yield, t/ha</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Yields from 14 on-farm trials in Phalombe Project region of
@@ -164,203 +167,119 @@
   systems were:
   LM = Local Maize, LMF = Local Maize with Fertilizer,
   CCA = Improved Composite, CCAF = Improved Composite with Fertilizer.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>P. E. Hildebrand, 1984.
   Modified Stability Analysis of Farmer Managed, On-Farm Trials.
   <em>Agronomy Journal</em>, 76, 271--274.
   https://doi.org/10.2134/agronj1984.00021962007600020023x</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>H. P. Piepho, 1998.
   Methods for Comparing the Yield Stability of Cropping Systems.
   <em>Journal of Agronomy and Crop Science</em>, 180, 193--213.
-  http://doi.org/10.1111/j.1439-037X.1998.tb00526.x</p>
-    
+  https://doi.org/10.1111/j.1439-037X.1998.tb00526.x</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>hildebrand.systems</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>hildebrand.systems</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+  
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>hildebrand.systems</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>hildebrand.systems</span>
 
-<span class='co'># Piepho 1998 Fig 1</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'><a href='https://rdrr.io/r/graphics/graphics-defunct.html'>dotplot</a></span>(<span class='no'>yield</span> ~ <span class='no'>system</span>, <span class='no'>dat</span>, <span class='kw'>groups</span><span class='kw'>=</span><span class='no'>village</span>, <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fl'>TRUE</span>,
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"hildebrand.systems"</span>, <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"cropping system by village"</span>)</div><div class='img'><img src='hildebrand.systems-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='co'># Piepho 1998 Fig 1</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/graphics/graphics-defunct.html'>dotplot</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>system</span>, <span class='va'>dat</span>, groups<span class='op'>=</span><span class='va'>village</span>, auto.key<span class='op'>=</span><span class='cn'>TRUE</span>,
+          main<span class='op'>=</span><span class='st'>"hildebrand.systems"</span>, xlab<span class='op'>=</span><span class='st'>"cropping system by village"</span><span class='op'>)</span>
+</div><div class='img'><img src='hildebrand.systems-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
-<span class='co'># Plot of risk of 'failure' of System 2 vs System 1</span>
-<span class='no'>s11</span> <span class='kw'>=</span> <span class='fl'>.30</span>;  <span class='no'>s22</span> <span class='kw'>&lt;-</span> <span class='fl'>.92</span>; <span class='no'>s12</span> <span class='kw'>=</span> <span class='fl'>.34</span>
-<span class='no'>mu1</span> <span class='kw'>=</span> <span class='fl'>1.35</span>; <span class='no'>mu2</span> <span class='kw'>=</span> <span class='fl'>2.70</span>
-<span class='no'>lambda</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span>(<span class='kw'>from</span><span class='kw'>=</span><span class='fl'>0</span>, <span class='kw'>to</span><span class='kw'>=</span><span class='fl'>5</span>, <span class='kw'>length</span><span class='kw'>=</span><span class='fl'>20</span>)
-<span class='no'>system1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>pnorm</a></span>((<span class='no'>lambda</span>-<span class='no'>mu1</span>)/<span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span>(<span class='no'>s11</span>))
-<span class='no'>system2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>pnorm</a></span>((<span class='no'>lambda</span>-<span class='no'>mu2</span>)/<span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span>(<span class='no'>s22</span>))
+  <span class='co'># Plot of risk of 'failure' of System 2 vs System 1</span>
+  <span class='va'>s11</span> <span class='op'>=</span> <span class='fl'>.30</span>;  <span class='va'>s22</span> <span class='op'>&lt;-</span> <span class='fl'>.92</span>; <span class='va'>s12</span> <span class='op'>=</span> <span class='fl'>.34</span>
+  <span class='va'>mu1</span> <span class='op'>=</span> <span class='fl'>1.35</span>; <span class='va'>mu2</span> <span class='op'>=</span> <span class='fl'>2.70</span>
+  <span class='va'>lambda</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span>from<span class='op'>=</span><span class='fl'>0</span>, to<span class='op'>=</span><span class='fl'>5</span>, length<span class='op'>=</span><span class='fl'>20</span><span class='op'>)</span>
+  <span class='va'>system1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>pnorm</a></span><span class='op'>(</span><span class='op'>(</span><span class='va'>lambda</span><span class='op'>-</span><span class='va'>mu1</span><span class='op'>)</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span><span class='op'>(</span><span class='va'>s11</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>system2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>pnorm</a></span><span class='op'>(</span><span class='op'>(</span><span class='va'>lambda</span><span class='op'>-</span><span class='va'>mu2</span><span class='op'>)</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span><span class='op'>(</span><span class='va'>s22</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='co'># A simpler view</span>
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>lambda</span>, <span class='no'>system1</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>"l"</span>, <span class='kw'>xlim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0</span>,<span class='fl'>5</span>), <span class='kw'>ylim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0</span>,<span class='fl'>1</span>),
-     <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Yield level"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Prob(yield &lt; level)"</span>,
-     <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"hildebrand.systems - risk of failure for each system"</span>)</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/lines.html'>lines</a></span>(<span class='no'>lambda</span>, <span class='no'>system2</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='st'>"red"</span>)</div><div class='img'><img src='hildebrand.systems-2.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='co'># Prob of system 1 outperforming system 2. Table 8</span>
-<span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>pnorm</a></span>((<span class='no'>mu1</span>-<span class='no'>mu2</span>)/<span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span>(<span class='no'>s11</span>+<span class='no'>s22</span>-<span class='fl'>2</span>*<span class='no'>s12</span>))</div><div class='output co'>#&gt; [1] 0.03309629</div><div class='input'># .0331
+  <span class='co'># A simpler view</span>
+  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>lambda</span>, <span class='va'>system1</span>, type<span class='op'>=</span><span class='st'>"l"</span>, xlim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>5</span><span class='op'>)</span>, ylim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>1</span><span class='op'>)</span>,
+       xlab<span class='op'>=</span><span class='st'>"Yield level"</span>, ylab<span class='op'>=</span><span class='st'>"Prob(yield &lt; level)"</span>,
+       main<span class='op'>=</span><span class='st'>"hildebrand.systems - risk of failure for each system"</span><span class='op'>)</span>
+</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/lines.html'>lines</a></span><span class='op'>(</span><span class='va'>lambda</span>, <span class='va'>system2</span>, col<span class='op'>=</span><span class='st'>"red"</span><span class='op'>)</span>
+</div><div class='img'><img src='hildebrand.systems-2.png' alt='' width='700' height='433' /></div><div class='input'>  
+  <span class='co'># Prob of system 1 outperforming system 2. Table 8</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>pnorm</a></span><span class='op'>(</span><span class='op'>(</span><span class='va'>mu1</span><span class='op'>-</span><span class='va'>mu2</span><span class='op'>)</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>sqrt</a></span><span class='op'>(</span><span class='va'>s11</span><span class='op'>+</span><span class='va'>s22</span><span class='op'>-</span><span class='fl'>2</span><span class='op'>*</span><span class='va'>s12</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 0.03309629</div><div class='input'>  <span class='co'># .0331</span>
 
-# ----------------------------------------------------------------------------
+  <span class='co'># ----------</span>
 
-</div><div class='input'>  <span class='co'># asreml3</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span>,<span class='va'>lucid</span><span class='op'>)</span> <span class='co'># asreml4</span>
+
   <span class='co'># Environmental variance model, unstructured correlations</span>
-
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>system</span>, <span class='no'>dat</span>$<span class='no'>farm</span>),]
-  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>system</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>rcov</span> <span class='kw'>=</span> ~<span class='fu'>us</span>(<span class='no'>system</span>):<span class='no'>farm</span>)</div><div class='output co'>#&gt; ASReml: Fri Aug 16 14:59:14 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;    -175.0601      1.0000    52  14:59:14     0.0
-#&gt;    -127.1858      1.0000    52  14:59:14     0.0
-#&gt;     -73.9484      1.0000    52  14:59:14     0.0
-#&gt;     -29.5286      1.0000    52  14:59:14     0.0
-#&gt;     -11.0057      1.0000    52  14:59:14     0.0
-#&gt;      -4.3504      1.0000    52  14:59:14     0.0
-#&gt;      -2.5482      1.0000    52  14:59:14     0.0
-#&gt;      -2.2646      1.0000    52  14:59:14     0.0
-#&gt;      -2.2510      1.0000    52  14:59:14     0.0
-#&gt;      -2.2510      1.0000    52  14:59:14     0.0
-#&gt;      -2.2510      1.0000    52  14:59:14     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 14:59:14 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='input'>
+  
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>system</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>farm</span><span class='op'>)</span>,<span class='op'>]</span>
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>system</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+               resid <span class='op'>=</span> <span class='op'>~</span><span class='fu'>us</span><span class='op'>(</span><span class='va'>system</span><span class='op'>)</span><span class='op'>:</span><span class='va'>farm</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the sigma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:08:45 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -10.2291           1.0     52 17:08:45    0.0
+#&gt;  2       -6.9482           1.0     52 17:08:45    0.0
+#&gt;  3       -3.8775           1.0     52 17:08:45    0.0
+#&gt;  4       -2.3455           1.0     52 17:08:45    0.0
+#&gt;  5       -2.2515           1.0     52 17:08:45    0.0
+#&gt;  6       -2.2510           1.0     52 17:08:45    0.0</div><div class='input'>  
   <span class='co'># Means, table 5</span>
-  <span class='no'>p1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m1</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>classify</span><span class='kw'>=</span><span class='st'>"system"</span>)$<span class='no'>predictions</span>$<span class='no'>pvals</span></div><div class='output co'>#&gt; ASReml: Fri Aug 16 14:59:14 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;      -2.2510      1.0000    52  14:59:14     0.0
-#&gt;      -2.2510      1.0000    52  14:59:14     0.0
-#&gt;      -2.2510      1.0000    52  14:59:14     0.0
-#&gt;      -2.2510      1.0000    52  14:59:14     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 14:59:14 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='input'>  <span class='co'>##  system pred.value std.error  est.stat</span>
+  <span class='co'>## predict(m1, data=dat, classify="system")$pvals</span>
+  <span class='co'>##  system pred.value std.error  est.stat</span>
   <span class='co'>##     CCA      1.164    0.2816 Estimable</span>
   <span class='co'>##    CCAF      2.657    0.3747 Estimable</span>
   <span class='co'>##      LM      1.35     0.1463 Estimable</span>
   <span class='co'>##     LMF      2.7      0.2561 Estimable</span>
-
+  
   <span class='co'># Variances, table 5</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lucid</span>)
-  <span class='fu'>vc</span>(<span class='no'>m1</span>)[<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>2</span>,<span class='fl'>4</span>,<span class='fl'>7</span>,<span class='fl'>11</span>),]</div><div class='output co'>#&gt;              effect component std.error z.ratio constr
-#&gt;    R!system.CCA:CCA    1.11      0.4354     2.5      P
-#&gt;  R!system.CCAF:CCAF    1.966     0.771      2.5      P
-#&gt;      R!system.LM:LM    0.2996    0.1175     2.5      P
-#&gt;    R!system.LMF:LMF    0.9185    0.3603     2.5      P</div><div class='input'>  <span class='co'>##              effect component std.error z.ratio constr</span>
+  <span class='co'># vc(m1)[c(2,4,7,11),]</span>
+  <span class='co'>##              effect component std.error z.ratio constr</span>
   <span class='co'>##    R!system.CCA:CCA    1.11      0.4354     2.5    pos</span>
   <span class='co'>##  R!system.CCAF:CCAF    1.966     0.771      2.5    pos</span>
   <span class='co'>##      R!system.LM:LM    0.2996    0.1175     2.5    pos</span>
   <span class='co'>##    R!system.LMF:LMF    0.9185    0.3603     2.5    pos</span>
-
+  
   <span class='co'># Stability variance model</span>
-  <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>system</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-               <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='no'>farm</span>,
-               <span class='kw'>rcov</span> <span class='kw'>=</span> ~ <span class='fu'>at</span>(<span class='no'>system</span>):<span class='no'>units</span>)</div><div class='output co'>#&gt; ASReml: Fri Aug 16 14:59:14 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;     -22.5014      1.0000    52  14:59:14     0.0
-#&gt;     -18.0882      1.0000    52  14:59:14     0.0
-#&gt;     -15.9705      1.0000    52  14:59:14     0.0 (1 restrained)
-#&gt;     -15.2534      1.0000    52  14:59:14     0.0 (1 restrained)
-#&gt;     -15.1354      1.0000    52  14:59:14     0.0 (1 restrained)
-#&gt;     -15.1225      1.0000    52  14:59:14     0.0 (1 restrained)
-#&gt;     -15.1214      1.0000    52  14:59:14     0.0
-#&gt;     -15.1214      1.0000    52  14:59:14     0.0
-#&gt;     -15.1214      1.0000    52  14:59:14     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 14:59:14 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='input'>  <span class='no'>p2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m2</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>classify</span><span class='kw'>=</span><span class='st'>"system"</span>)$<span class='no'>predictions</span>$<span class='no'>pvals</span></div><div class='output co'>#&gt; ASReml: Fri Aug 16 14:59:14 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;     -15.1214      1.0000    52  14:59:14     0.0
-#&gt;     -15.1214      1.0000    52  14:59:14     0.0
-#&gt;     -15.1214      1.0000    52  14:59:14     0.0
-#&gt;     -15.1214      1.0000    52  14:59:14     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 14:59:14 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='input'>
-  <span class='co'># Variances, table 6</span>
-  <span class='fu'>vc</span>(<span class='no'>m2</span>)</div><div class='output co'>#&gt;                effect component std.error z.ratio constr
-#&gt;         farm!farm.var 0.2996       0.1175     2.5      P
-#&gt;   system_CCA!variance 0.4136       0.1622     2.5      P
-#&gt;  system_CCAF!variance 1.267        0.4969     2.5      P
-#&gt;    system_LM!variance 0.0000002        NA      NA      B
-#&gt;   system_LMF!variance 0.5304       0.208      2.5      P</div><div class='input'>  ##                effect component std.error z.ratio constr
-  ##         farm!farm.var 0.2996       0.1175     2.5    pos
-  ##   system_CCA!variance 0.4136       0.1622     2.5    pos
-  ##  system_CCAF!variance 1.267        0.4969     2.5    pos
-  ##    system_LM!variance 0.0000002        NA      NA  bound
-  ##   system_LMF!variance 0.5304       0.208      2.5    pos
-</div><div class='input'>
-# ----------------------------------------------------------------------------
+  <span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>system</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+               random <span class='op'>=</span> <span class='op'>~</span> <span class='va'>farm</span>,
+               resid <span class='op'>=</span> <span class='op'>~</span> <span class='fu'>dsum</span><span class='op'>(</span> <span class='op'>~</span> <span class='va'>units</span><span class='op'>|</span><span class='va'>system</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:08:46 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -22.5014           1.0     52 17:08:46    0.0
+#&gt;  2      -18.0904           1.0     52 17:08:46    0.0
+#&gt;  3      -15.9713           1.0     52 17:08:46    0.0 (1 restrained)
+#&gt;  4      -15.2537           1.0     52 17:08:46    0.0 (1 restrained)
+#&gt;  5      -15.1232           1.0     52 17:08:46    0.0 (1 restrained)
+#&gt;  6      -15.1214           1.0     52 17:08:46    0.0 (1 restrained)
+#&gt;  7      -15.1214           1.0     52 17:08:46    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:08:46 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -15.1214           1.0     52 17:08:46    0.0
+#&gt;  2      -15.1214           1.0     52 17:08:46    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='co'># predict(m2, data=dat, classify="system")$pvals</span>
+  
+  <span class='co'>## # Variances, table 6</span>
+  <span class='co'># vc(m2)</span>
+  <span class='co'>##        effect component std.error z.ratio bound </span>
+  <span class='co'>##          farm 0.2998      0.1187   2.5        P 0  </span>
+  <span class='co'>##  system_CCA!R 0.4133      0.1699   2.4        P 0  </span>
+  <span class='co'>## system_CCAF!R 1.265       0.5152   2.5        P 0  </span>
+  <span class='co'>##   system_LM!R 0.0003805   0.05538  0.0069     P 1.5</span>
+  <span class='co'>##  system_LMF!R 0.5294      0.2295   2.3        P 0  </span>
 
-</div><div class='input'>  ## libs(asreml4)
-  ## # Environmental variance model, unstructured correlations
-  
-  ## dat <- dat[order(dat$system, dat$farm),]
-  ## m1 <- asreml(yield ~ system, data=dat,
-  ##              resid = ~us(system):farm)
-  
-  ## # Means, table 5
-  ## p1 <- predict(m1, data=dat, classify="system")$pvals
-  ## ##  system pred.value std.error  est.stat
-  ## ##     CCA      1.164    0.2816 Estimable
-  ## ##    CCAF      2.657    0.3747 Estimable
-  ## ##      LM      1.35     0.1463 Estimable
-  ## ##     LMF      2.7      0.2561 Estimable
-  
-  ## # Variances, table 5
-  ## libs(lucid)
-  ## vc(m1)[c(2,4,7,11),]
-  ## ##              effect component std.error z.ratio constr
-  ## ##    R!system.CCA:CCA    1.11      0.4354     2.5    pos
-  ## ##  R!system.CCAF:CCAF    1.966     0.771      2.5    pos
-  ## ##      R!system.LM:LM    0.2996    0.1175     2.5    pos
-  ## ##    R!system.LMF:LMF    0.9185    0.3603     2.5    pos
-  
-  ## # Stability variance model
-  ## m2 <- asreml(yield ~ system, data=dat,
-  ##              random = ~ farm,
-  ##              resid = ~ dsum( ~ units|system))
-  ## m2 <- update(m2)
-  ## p2 <- predict(m2, data=dat, classify="system")$pvals
-  
-  ## # Variances, table 6
-  ## vc(m2)
-  ## ##                effect component std.error z.ratio constr
-  ## ##         farm!farm.var 0.2996       0.1175     2.5    pos
-  ## ##   system_CCA!variance 0.4136       0.1622     2.5    pos
-  ## ##  system_CCAF!variance 1.267        0.4969     2.5    pos
-  ## ##    system_LM!variance 0.0000002        NA      NA  bound
-  ## ##   system_LMF!variance 0.5304       0.208      2.5    pos
-</div><div class='input'>
-
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -371,7 +290,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

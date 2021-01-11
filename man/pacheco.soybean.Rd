@@ -25,7 +25,7 @@
   R M Pacheco, J B Duarte, R Vencovsky, J B Pinheiro, A B Oliveira,
   (2005). Use of supplementary genotypes in AMMI analysis.
   Theor Appl Genet, 110, 812-818.
-  http://doi.org/10.1007/s00122-004-1822-6
+  https://doi.org/10.1007/s00122-004-1822-6
 }
 
 \examples{

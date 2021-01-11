@@ -38,14 +38,14 @@
   Ib Libner Nonnecke. 1958.
   Yield variability of sweet corn and canning peas as affected by plot size and shape.
   Thesis at Oregon State College.
-  http://hdl.handle.net/1957/23367
+  https://hdl.handle.net/1957/23367
 }
 
 \references{
   I. L. Nonnecke, 1959.
   The precision of field experiments with vegetable crops as influenced by plot and block size and shape: I. Sweet corn.
   Canadian Journal of Plant Science, 39(4): 443-457. Tables 1-7.
-  http://doi.org/10.4141/cjps59-061
+  https://doi.org/10.4141/cjps59-061
 }
 
 \examples{

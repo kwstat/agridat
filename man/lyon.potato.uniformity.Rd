@@ -38,7 +38,7 @@
   Lyon, T.L. (1911).
   Some experiments to estimate errors in field plat tests.
   Proc. Amer. Soc. Agron, 3, 89-114. Table III.
-  http://doi.org/10.2134/agronj1911.00021962000300010016x
+  https://doi.org/10.2134/agronj1911.00021962000300010016x
 }
 \references{
   None.

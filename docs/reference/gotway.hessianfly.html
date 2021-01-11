@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Hessian fly damage to wheat varieties — gotway.hessianfly" />
-
 <meta property="og:description" content="Hessian fly damage to wheat varieties" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,112 +143,154 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Hessian fly damage to wheat varieties</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p></p><dl class='dl-horizontal'>
+    <p></p><dl>
     <dt><code>block</code></dt><dd><p>block factor, 4 levels</p></dd>
     <dt><code>genotype factor, 16 wheat varieties</code></dt><dd><p></p></dd>
     <dt><code>lat</code></dt><dd><p>latitude, numeric</p></dd>
     <dt><code>long</code></dt><dd><p>longitude, numeric</p></dd>
     <dt><code>y</code></dt><dd><p>number of damaged plants</p></dd>
     <dt><code>n</code></dt><dd><p>number of total plants</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>The response is binomial.</p>
 <p>Each plot was square.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>C. A. Gotway and W. W. Stroup.
   A Generalized Linear Model Approach to Spatial Data Analysis and Prediction
   <em>Journal of Agricultural, Biological, and Environmental
     Statistics</em>, 2, 157-178.</p>
-<p>http://doi.org/10.2307/1400401</p>
-    
+<p>https://doi.org/10.2307/1400401</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
-    <p>The GLIMMIX procedure. http://www.ats.ucla.edu/stat/SAS/glimmix.pdf</p>
-    
+    <p>The GLIMMIX procedure. https://www.ats.ucla.edu/stat/SAS/glimmix.pdf</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>gotway.hessianfly</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>gotway.hessianfly</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>gotway.hessianfly</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>gotway.hessianfly</span>
+  
+  <span class='va'>dat</span><span class='op'>$</span><span class='va'>prop</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>$</span><span class='va'>y</span> <span class='op'>/</span> <span class='va'>dat</span><span class='op'>$</span><span class='va'>n</span>
+  
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+  <span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>prop</span><span class='op'>~</span><span class='va'>long</span><span class='op'>*</span><span class='va'>lat</span>,
+          aspect<span class='op'>=</span><span class='fl'>1</span>, <span class='co'># true aspect</span>
+          out1<span class='op'>=</span><span class='va'>block</span>, num<span class='op'>=</span><span class='va'>gen</span>, cex<span class='op'>=</span><span class='fl'>.75</span>,
+          main<span class='op'>=</span><span class='st'>"gotway.hessianfly"</span><span class='op'>)</span>
+</div><div class='img'><img src='gotway.hessianfly-1.png' alt='' width='700' height='433' /></div><div class='input'>  
 
-<span class='no'>dat</span>$<span class='no'>prop</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>$<span class='no'>y</span> / <span class='no'>dat</span>$<span class='no'>n</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='fu'>desplot</span>(<span class='no'>prop</span>~<span class='no'>long</span>*<span class='no'>lat</span>, <span class='no'>dat</span>,
-        <span class='kw'>aspect</span><span class='kw'>=</span><span class='fl'>1</span>, <span class='co'># true aspect</span>
-        <span class='kw'>out1</span><span class='kw'>=</span><span class='no'>block</span>, <span class='kw'>text</span><span class='kw'>=</span><span class='no'>gen</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>1</span>, <span class='kw'>shorten</span><span class='kw'>=</span><span class='st'>'no'</span>,
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"gotway.hessianfly"</span>)</div><div class='img'><img src='gotway.hessianfly-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='co'># ----------------------------------------------------------------------------</span>
 
-<span class='co'># ----------------------------------------------------------------------------</span>
+  <span class='co'># spaMM package example</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>spaMM</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>Registered S3 methods overwritten by 'registry':</span>
+#&gt; <span class='message'>  method               from </span>
+#&gt; <span class='message'>  print.registry_field proxy</span>
+#&gt; <span class='message'>  print.registry_entry proxy</span></div><div class='output co'>#&gt; <span class='message'>spaMM (Rousset &amp; Ferdy, 2014, version 3.5.0) is loaded.</span>
+#&gt; <span class='message'>Type 'help(spaMM)' for a short introduction,</span>
+#&gt; <span class='message'>'news(package='spaMM')' for news,</span>
+#&gt; <span class='message'>and 'citation(spaMM)' for proper citation.</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Attaching package: 'spaMM'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:mgcv':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    negbin</span></div><div class='input'>  <span class='va'>m1</span> <span class='op'>=</span> <span class='fu'>HLCor</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>y</span>, <span class='va'>n</span><span class='op'>-</span><span class='va'>y</span><span class='op'>)</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>block</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>Matern</span><span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>long</span><span class='op'>+</span><span class='va'>lat</span><span class='op'>)</span>,
+             data<span class='op'>=</span><span class='va'>dat</span>, family<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/stats/family.html'>binomial</a></span><span class='op'>(</span><span class='op'>)</span>, ranPars<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>nu<span class='op'>=</span><span class='fl'>0.5</span>, rho<span class='op'>=</span><span class='fl'>1</span><span class='op'>/</span><span class='fl'>.7</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; formula: cbind(y, n - y) ~ 1 + gen + (1 | block) + Matern(1 | long + lat)
+#&gt; Estimation of lambda by Laplace REML approximation (p_bv).
+#&gt; Estimation of fixed effects by Laplace ML approximation (p_v).
+#&gt; Family: binomial ( link = logit ) 
+#&gt;  ------------ Fixed effects (beta) ------------
+#&gt;             Estimate Cond. SE t-value
+#&gt; (Intercept)   2.1958   0.6424  3.4181
+#&gt; genG02       -0.5166   0.8296 -0.6227
+#&gt; genG03       -0.9161   0.8380 -1.0932
+#&gt; genG04       -1.8245   0.8010 -2.2777
+#&gt; genG05       -0.7466   0.8636 -0.8645
+#&gt; genG06       -1.5772   0.8311 -1.8977
+#&gt; genG07       -1.1878   0.8337 -1.4248
+#&gt; genG08       -2.2601   0.8212 -2.7523
+#&gt; genG09       -2.0346   0.7992 -2.5457
+#&gt; genG10       -1.2166   0.8583 -1.4175
+#&gt; genG11       -2.3692   0.8228 -2.8794
+#&gt; genG12       -1.9480   0.8070 -2.4139
+#&gt; genG13       -4.6014   0.9629 -4.7785
+#&gt; genG14       -3.2362   0.8525 -3.7960
+#&gt; genG15       -3.0618   0.8279 -3.6984
+#&gt; genG16       -4.1374   0.8887 -4.6554
+#&gt;  --------------- Random effects ---------------
+#&gt; Family: gaussian ( link = identity ) 
+#&gt;                    --- Correlation parameters:
+#&gt;    2.rho     2.nu 
+#&gt; 1.428571 0.500000 
+#&gt;            --- Variance parameters ('lambda'):
+#&gt; lambda = var(u) for u ~ Gaussian; 
+#&gt;    block  :  4.807e-08 
+#&gt;    long + lat  :  0.8619  
+#&gt;              --- Coefficients for log(lambda):
+#&gt;       Group        Term Estimate Cond.SE
+#&gt;       block (Intercept)   -16.85   932.1
+#&gt;  long + lat (Intercept)  -0.1486  0.2781
+#&gt; # of obs: 64; # of groups: block, 4; long + lat, 64 
+#&gt;  ------------- Likelihood values  -------------
+#&gt;                        logLik
+#&gt; p_v(h) (marginal L): -129.594
+#&gt;   p_beta,v(h) (ReL): -123.561</div><div class='input'>  <span class='fu'>fixef</span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; (Intercept)      genG02      genG03      genG04      genG05      genG06 
+#&gt;   2.1957920  -0.5166378  -0.9160873  -1.8245162  -0.7466366  -1.5771913 
+#&gt;      genG07      genG08      genG09      genG10      genG11      genG12 
+#&gt;  -1.1877620  -2.2600861  -2.0345601  -1.2165977  -2.3692284  -1.9480056 
+#&gt;      genG13      genG14      genG15      genG16 
+#&gt;  -4.6014047  -3.2361680  -3.0618020  -4.1374257 </div><div class='input'>  <span class='co'># The following line fails with "Invalid graphics state"</span>
+  <span class='co'># when trying to use pkgdown::build_site</span>
+  <span class='co'># filled.mapMM(m1)</span>
 
-<span class='co'># spaMM package example</span>
-<span class='co'># libs(spaMM)</span>
-<span class='co'># m1 = HLCor(cbind(y, n-y) ~ 1 + gen + (1|block) + Matern(1|long+lat),</span>
-<span class='co'>#            data=dat, family=binomial(), ranPars=list(nu=0.5, rho=1/.7))</span>
-<span class='co'># summary(m1)</span>
-<span class='co'># fixef(m1)</span>
-<span class='co'># filled.mapMM(m1)</span>
+  <span class='co'># ----------------------------------------------------------------------------</span>
 
-<span class='co'># ----------------------------------------------------------------------------</span>
-
-<span class='co'># Block random.  See Glimmix manual, output 1.18.</span>
-<span class='co'># Note: (Different parameterization)</span>
-
-<span class='co'># libs(lme4)</span>
-<span class='co'># l2 &lt;- glmer(cbind(y, n-y) ~ gen + (1|block), data=dat, family=binomial,</span>
-<span class='co'>#   control=glmerControl(check.nlev.gtr.1="ignore"))</span>
-<span class='co'># coef(l2)</span>
-
-<span class='co'># ----------------------------------------------------------------------------</span>
-
-<span class='kw'>if</span>(<span class='fl'>0</span>){
-  <span class='co'># asreml3</span>
-  <span class='co'># libs(asreml)</span>
-  <span class='co'># a2 &lt;- asreml(prop ~ gen, data=dat, random=~block,</span>
-  <span class='co'>#              family=asreml.binomial(),</span>
-  <span class='co'>#              weights=n)</span>
-  <span class='co'># coef(a2)</span>
-}
-
-<span class='co'># ----------------------------------------------------------------------------</span>
-
-<span class='kw'>if</span>(<span class='fl'>0</span>){
-  <span class='co'>## libs(asreml4)</span>
-  <span class='co'>## a2 &lt;- asreml(prop ~ gen, data=dat, random=~block,</span>
-  <span class='co'>##              family=asr_binomial(),</span>
-  <span class='co'>##              weights=n)</span>
-  <span class='co'>## coef(a2)</span>
-}</div></pre>
+  <span class='co'># Block random.  See Glimmix manual, output 1.18.</span>
+  <span class='co'># Note: (Different parameterization)</span>
+  
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lme4</span><span class='op'>)</span>
+  <span class='va'>l2</span> <span class='op'>&lt;-</span> <span class='fu'>glmer</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>y</span>, <span class='va'>n</span><span class='op'>-</span><span class='va'>y</span><span class='op'>)</span> <span class='op'>~</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>block</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>, family<span class='op'>=</span><span class='va'>binomial</span>,
+    control<span class='op'>=</span><span class='fu'>glmerControl</span><span class='op'>(</span>check.nlev.gtr.1<span class='op'>=</span><span class='st'>"ignore"</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>l2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; $block
+#&gt;    (Intercept)     genG02     genG03    genG04     genG05     genG06     genG07
+#&gt; B1    1.507497 -0.1938602 -0.5408074 -1.434189 -0.2037025 -0.9783249 -0.6040858
+#&gt; B2    1.502923 -0.1938602 -0.5408074 -1.434189 -0.2037025 -0.9783249 -0.6040858
+#&gt; B3    1.493663 -0.1938602 -0.5408074 -1.434189 -0.2037025 -0.9783249 -0.6040858
+#&gt; B4    1.509754 -0.1938602 -0.5408074 -1.434189 -0.2037025 -0.9783249 -0.6040858
+#&gt;       genG08    genG09     genG10    genG11   genG12   genG13    genG14
+#&gt; B1 -1.677434 -1.398435 -0.6817111 -1.462973 -1.45909 -3.55288 -2.507322
+#&gt; B2 -1.677434 -1.398435 -0.6817111 -1.462973 -1.45909 -3.55288 -2.507322
+#&gt; B3 -1.677434 -1.398435 -0.6817111 -1.462973 -1.45909 -3.55288 -2.507322
+#&gt; B4 -1.677434 -1.398435 -0.6817111 -1.462973 -1.45909 -3.55288 -2.507322
+#&gt;       genG15    genG16
+#&gt; B1 -2.087175 -2.969689
+#&gt; B2 -2.087175 -2.969689
+#&gt; B3 -2.087175 -2.969689
+#&gt; B4 -2.087175 -2.969689
+#&gt; 
+#&gt; attr(,"class")
+#&gt; [1] "coef.mer"</div><div class='input'>
+<span class='co'># }</span>
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -255,7 +301,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

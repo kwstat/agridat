@@ -26,7 +26,7 @@
   Data are the mean of 4 reps.
 
   Original source (Portuguese)
-  \url{http://ainfo.cnptia.embrapa.br/digital/bitstream/item/101371/1/Ensaios-cooperativos-de-controle-quimico-de-mofo-branco-na-cultura-da-soja-safras-2009-a-2012.pdf}
+  \url{https://ainfo.cnptia.embrapa.br/digital/bitstream/item/101371/1/Ensaios-cooperativos-de-controle-quimico-de-mofo-branco-na-cultura-da-soja-safras-2009-a-2012.pdf}
 
   Data included here via GPL3 license.
 }

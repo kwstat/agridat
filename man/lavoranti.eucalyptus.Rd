@@ -48,7 +48,7 @@
   C.T. and Krzanowski, W.J. (2010). An alternative methodology for
   imputing missing data in trials with genotype-by-environment
   interaction, \emph{Biometrical Letters}, 47, 1-14.
-  http://doi.org/10.2478/bile-2014-0006
+  https://doi.org/10.2478/bile-2014-0006
 }
 
 \examples{

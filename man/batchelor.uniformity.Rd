@@ -125,14 +125,14 @@
   L. D. Batchelor and H. S. Reed. (1918).
   Relation of the variability of yields of fruit trees to the accuracy
   of field trials. \emph{J. Agric. Res}, 12, 245--283.
-  http://books.google.com/books?id=Lil6AAAAMAAJ&lr&pg=PA245
+  https://books.google.com/books?id=Lil6AAAAMAAJ&lr&pg=PA245
 }
 \references{
   McCullagh, P. and Clifford, D., (2006).
   Evidence for conformal invariance of crop yields,
   \emph{Proceedings of the Royal Society A: Mathematical, Physical and
     Engineering Science}, 462, 2119--2143.
-  http://doi.org/10.1098/rspa.2006.1667
+  https://doi.org/10.1098/rspa.2006.1667
 }
 \examples{
 \dontrun{

@@ -40,7 +40,7 @@
   Statistical design and analysis of dairy nutrition experiments to
   improve detection of milk response differences.
   \emph{Proceedings of the Conference on Applied Statistics in Agriculture}, 1989.
-  http://newprairiepress.org/agstatconference/1989/proceedings/7/
+  https://newprairiepress.org/agstatconference/1989/proceedings/7/
 }
 
 \examples{

@@ -75,7 +75,7 @@
   Stroup, Walter W., P Stephen Baenziger, Dieter K Mulitze (1994)
   Removing Spatial Variation from Wheat Yield Trials: A Comparison of Methods.
   \emph{Crop Science}, 86:62--66.
-  http://doi.org/10.2135/cropsci1994.0011183X003400010011x
+  https://doi.org/10.2135/cropsci1994.0011183X003400010011x
 }
 
 \references{
@@ -94,7 +94,7 @@
   Comparing Design and Analysis Strategies in the Presence of Spatial
   Variability. \emph{Journal of Agricultural, Biological, and
     Environmental Statistics}, 7(4), 491-511.
-  http://doi.org/10.1198/108571102780
+  https://doi.org/10.1198/108571102780
 
 }
 

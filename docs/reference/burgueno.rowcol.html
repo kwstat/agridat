@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -146,12 +146,12 @@
     <p>Row-column design</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"burgueno.rowcol"</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"burgueno.rowcol"</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 128 observations on the following 5 variables.</p><dl'>
+    <p>A data frame with 128 observations on the following 5 variables.</p><dl>
     <dt><code>rep</code></dt><dd><p>rep, 2 levels</p></dd>
     <dt><code>row</code></dt><dd><p>row</p></dd>
     <dt><code>col</code></dt><dd><p>column</p></dd>
@@ -176,18 +176,19 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>burgueno.rowcol</span>)
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>burgueno.rowcol</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>burgueno.rowcol</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>burgueno.rowcol</span>
 
   <span class='co'># Two contiguous reps in 8 rows, 16 columns</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-  <span class='fu'>desplot</span>(<span class='no'>dat</span>, <span class='no'>yield</span> ~ <span class='no'>col</span>*<span class='no'>row</span>,
-          <span class='kw'>out1</span><span class='kw'>=</span><span class='no'>rep</span>, <span class='co'># aspect unknown</span>
-          <span class='kw'>text</span><span class='kw'>=</span><span class='no'>gen</span>, <span class='kw'>shorten</span><span class='kw'>=</span><span class='st'>"none"</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>.75</span>,
-          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"burgueno.rowcol"</span>)</div><div class='img'><img src='burgueno.rowcol-1.png' alt='' width='700' height='433' /></div><div class='input'>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lme4</span>,<span class='no'>lucid</span>)
-
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+  <span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>yield</span> <span class='op'>~</span> <span class='va'>col</span><span class='op'>*</span><span class='va'>row</span>,
+          out1<span class='op'>=</span><span class='va'>rep</span>, <span class='co'># aspect unknown</span>
+          text<span class='op'>=</span><span class='va'>gen</span>, shorten<span class='op'>=</span><span class='st'>"none"</span>, cex<span class='op'>=</span><span class='fl'>.75</span>,
+          main<span class='op'>=</span><span class='st'>"burgueno.rowcol"</span><span class='op'>)</span>
+</div><div class='img'><img src='burgueno.rowcol-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lme4</span>,<span class='va'>lucid</span><span class='op'>)</span>
+  
   <span class='co'># Random rep, row and col within rep</span>
   <span class='co'># m1 &lt;- lmer(yield ~ gen + (1|rep) + (1|rep:row) + (1|rep:col), data=dat)</span>
   <span class='co'># vc(m1) # Match components of Burgueno p. 40</span>
@@ -196,48 +197,52 @@
   <span class='co'>##  rep:row (Intercept) &lt;NA&gt; 0.1646 0.4057</span>
   <span class='co'>##      rep (Intercept) &lt;NA&gt; 0.1916 0.4378</span>
   <span class='co'>## Residual        &lt;NA&gt; &lt;NA&gt; 0.1796 0.4238</span>
+  
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span><span class='op'>)</span> <span class='co'># asreml4</span>
 
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
-  <span class='kw'>if</span>( <span class='kw pkg'>utils</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/r/utils/packageDescription.html'>packageVersion</a></span>(<span class='st'>"asreml"</span>) <span class='kw'>&gt;</span> <span class='st'>"4"</span>) {
-    <span class='co'># asreml4</span>
-
-    <span class='co'># AR1 x AR1 with linear row/col effects, random spline row/col</span>
-    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>xf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>col</span>), <span class='kw'>yf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>))
-    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>xf</span>,<span class='no'>dat</span>$<span class='no'>yf</span>),]
-    <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span> + <span class='fu'>lin</span>(<span class='no'>yf</span>) + <span class='fu'>lin</span>(<span class='no'>xf</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-                 <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='fu'>spl</span>(<span class='no'>yf</span>) + <span class='fu'>spl</span>(<span class='no'>xf</span>),
-                 <span class='kw'>resid</span> <span class='kw'>=</span> ~ <span class='fu'>ar1</span>(<span class='no'>xf</span>):<span class='fu'>ar1</span>(<span class='no'>yf</span>))
-    <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span>(<span class='no'>m2</span>) <span class='co'># More iterations</span>
-
-    <span class='co'># Scaling of spl components has changed in asreml from old versions</span>
-    <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lucid</span>)
-    <span class='fu'>vc</span>(<span class='no'>m2</span>) <span class='co'># Match Burgueno p. 42</span>
-    <span class='co'>##       effect component std.error z.ratio bound </span>
-    <span class='co'>##      spl(yf)  0.09077    0.08252   1.1       P 0</span>
-    <span class='co'>##      spl(xf)  0.08107    0.08209   0.99      P 0</span>
-    <span class='co'>##     xf:yf(R)  0.1482     0.03119   4.8       P 0</span>
-    <span class='co'>## xf:yf!xf!cor  0.1152     0.2269    0.51      U 0.1</span>
-    <span class='co'>## xf:yf!yf!cor  0.009467   0.2414    0.039     U 0.9</span>
-
-    <span class='fu'><a href='https://rdrr.io/r/base/plot.html'>plot</a></span>(<span class='fu'>varioGram</span>(<span class='no'>m2</span>), <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"burgueno.rowcol"</span>)
-  }</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:47 2020
+  <span class='co'># AR1 x AR1 with linear row/col effects, random spline row/col</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, xf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>col</span><span class='op'>)</span>, yf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>row</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>xf</span>,<span class='va'>dat</span><span class='op'>$</span><span class='va'>yf</span><span class='op'>)</span>,<span class='op'>]</span>
+  <span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='fu'>lin</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>lin</span><span class='op'>(</span><span class='va'>xf</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+               random <span class='op'>=</span> <span class='op'>~</span> <span class='fu'>spl</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'>spl</span><span class='op'>(</span><span class='va'>xf</span><span class='op'>)</span>,
+               resid <span class='op'>=</span> <span class='op'>~</span> <span class='fu'>ar1</span><span class='op'>(</span><span class='va'>xf</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:59 2021
 #&gt; Spline: design points closer than 0.0007 have been merged.
 #&gt; Spline: design points closer than 0.0015 have been merged.
 #&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -11.7667      0.189040     62 15:47:47    0.0
-#&gt;  2      -10.9242      0.179307     62 15:47:47    0.0
-#&gt;  3      -10.0462      0.167806     62 15:47:47    0.0
-#&gt;  4       -9.4052      0.156150     62 15:47:47    0.0
-#&gt;  5       -9.2562      0.150710     62 15:47:47    0.0
-#&gt;  6       -9.2402      0.148710     62 15:47:47    0.0
-#&gt;  7       -9.2394      0.148344     62 15:47:47    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:47 2020
+#&gt;  1      -11.7667      0.189040     62 17:07:59    0.0
+#&gt;  2      -10.9242      0.179307     62 17:07:59    0.0
+#&gt;  3      -10.0462      0.167806     62 17:07:59    0.0
+#&gt;  4       -9.4052      0.156150     62 17:07:59    0.0
+#&gt;  5       -9.2562      0.150710     62 17:07:59    0.0
+#&gt;  6       -9.2402      0.148710     62 17:07:59    0.0
+#&gt;  7       -9.2394      0.148344     62 17:07:59    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m2</span><span class='op'>)</span> <span class='co'># More iterations</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:59 2021
 #&gt; Spline: design points closer than 0.0007 have been merged.
 #&gt; Spline: design points closer than 0.0015 have been merged.
 #&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -9.23934      0.148220     62 15:47:47    0.0
-#&gt;  2      -9.23934      0.148225     62 15:47:47    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='img'><img src='burgueno.rowcol-2.png' alt='' width='700' height='433' /></div><div class='input'># }
+#&gt;  1      -9.23934      0.148220     62 17:07:59    0.0
+#&gt;  2      -9.23934      0.148225     62 17:07:59    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  
+  <span class='co'># Scaling of spl components has changed in asreml from old versions</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lucid</span><span class='op'>)</span>
+  <span class='fu'>vc</span><span class='op'>(</span><span class='va'>m2</span><span class='op'>)</span> <span class='co'># Match Burgueno p. 42</span>
+</div><div class='output co'>#&gt;        effect component std.error z.ratio bound %ch
+#&gt;       spl(yf)   0.09077   0.08252   1.1       P 0  
+#&gt;       spl(xf)   0.08105   0.08198   0.99      P 0.1
+#&gt;       xf:yf!R   0.1482    0.03119   4.8       P 0  
+#&gt;  xf:yf!xf!cor   0.1153    0.2269    0.51      U 0.2
+#&gt;  xf:yf!yf!cor   0.00953   0.2414    0.039     U 1.9</div><div class='input'>  <span class='co'>##       effect component std.error z.ratio bound </span>
+  <span class='co'>##      spl(yf)  0.09077    0.08252   1.1       P 0</span>
+  <span class='co'>##      spl(xf)  0.08107    0.08209   0.99      P 0</span>
+  <span class='co'>##     xf:yf(R)  0.1482     0.03119   4.8       P 0</span>
+  <span class='co'>## xf:yf!xf!cor  0.1152     0.2269    0.51      U 0.1</span>
+  <span class='co'>## xf:yf!yf!cor  0.009467   0.2414    0.039     U 0.9</span>
+  
+  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='fu'>varioGram</span><span class='op'>(</span><span class='va'>m2</span><span class='op'>)</span>, main<span class='op'>=</span><span class='st'>"burgueno.rowcol"</span><span class='op'>)</span>
+</div><div class='img'><img src='burgueno.rowcol-2.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -254,7 +259,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

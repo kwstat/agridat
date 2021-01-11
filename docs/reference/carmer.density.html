@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -150,7 +150,7 @@
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 32 observations on the following 3 variables.</p><dl'>
+    <p>A data frame with 32 observations on the following 3 variables.</p><dl>
     <dt><code>gen</code></dt><dd><p>genotype/hybrid, 8 levels</p></dd>
     <dt><code>pop</code></dt><dd><p>population (plants)</p></dd>
     <dt><code>yield</code></dt><dd><p>yield, pounds per hill</p></dd>
@@ -171,33 +171,34 @@
     <p>S G Carmer and J A Jackobs (1965).
   An Exponential Model for Predicting Optimum Plant Density and Maximum
   Corn Yield. <em>Agronomy Journal</em>, 57, 241--244.
-  http://doi.org/10.2134/agronj1965.00021962005700030003x</p>
+  https://doi.org/10.2134/agronj1965.00021962005700030003x</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>carmer.density</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>carmer.density</span>
-<span class='no'>dat</span>$<span class='no'>gen</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>dat</span>$<span class='no'>gen</span>, <span class='kw'>levels</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'Hy2x0h7'</span>,<span class='st'>'WF9xC103'</span>,<span class='st'>'R61x187-2'</span>,
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>carmer.density</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>carmer.density</span>
+<span class='va'>dat</span><span class='op'>$</span><span class='va'>gen</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>gen</span>, levels<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'Hy2x0h7'</span>,<span class='st'>'WF9xC103'</span>,<span class='st'>'R61x187-2'</span>,
                              <span class='st'>'WF9x38-11'</span>,<span class='st'>'WF9xB14'</span>,<span class='st'>'C103xB14'</span>,
-                             <span class='st'>'0h43xB37'</span>,<span class='st'>'WF9xH60'</span>))
+                             <span class='st'>'0h43xB37'</span>,<span class='st'>'WF9xH60'</span><span class='op'>)</span><span class='op'>)</span>
 
 <span class='co'># Separate analysis for each hybrid</span>
 <span class='co'># Model: y = x * a * k^x.  Table 1 of Carmer and Jackobs.</span>
-<span class='no'>out</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(<span class='kw'>a</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='fl'>NA</span>,<span class='fl'>8</span>), <span class='kw'>k</span><span class='kw'>=</span><span class='fl'>NA</span>)
-<span class='no'>preds</span> <span class='kw'>&lt;-</span> <span class='kw'>NULL</span>
-<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>out</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span>(<span class='no'>dat</span>$<span class='no'>gen</span>)
-<span class='no'>newdat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(<span class='kw'>pop</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span>(<span class='fl'>2</span>,<span class='fl'>8</span>,<span class='kw'>by</span><span class='kw'>=</span><span class='fl'>.1</span>))
-<span class='kw'>for</span>(<span class='no'>i</span> <span class='kw'>in</span> <span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span>(<span class='no'>dat</span>$<span class='no'>gen</span>)){
-  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>i</span>)
-  <span class='no'>dati</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, <span class='no'>gen</span><span class='kw'>==</span><span class='no'>i</span>)
-  <span class='no'>mi</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/nls.html'>nls</a></span>(<span class='no'>yield</span> ~ <span class='no'>pop</span> * <span class='no'>a</span> * <span class='no'>k</span>^<span class='no'>pop</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dati</span>, <span class='kw'>start</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>a</span><span class='kw'>=</span><span class='fl'>10</span>,<span class='kw'>k</span><span class='kw'>=</span><span class='fl'>1</span>))
-  <span class='no'>out</span>[<span class='no'>i</span>, ] <span class='kw'>&lt;-</span> <span class='no'>mi</span>$<span class='no'>m</span>$<span class='fu'>getPars</span>()
+<span class='va'>out</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>a<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='cn'>NA</span>,<span class='fl'>8</span><span class='op'>)</span>, k<span class='op'>=</span><span class='cn'>NA</span><span class='op'>)</span>
+<span class='va'>preds</span> <span class='op'>&lt;-</span> <span class='cn'>NULL</span>
+<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>out</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>gen</span><span class='op'>)</span>
+<span class='va'>newdat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>pop<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>2</span>,<span class='fl'>8</span>,by<span class='op'>=</span><span class='fl'>.1</span><span class='op'>)</span><span class='op'>)</span>
+<span class='kw'>for</span><span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>gen</span><span class='op'>)</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='va'>i</span><span class='op'>)</span>
+  <span class='va'>dati</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>gen</span><span class='op'>==</span><span class='va'>i</span><span class='op'>)</span>
+  <span class='va'>mi</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/nls.html'>nls</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>pop</span> <span class='op'>*</span> <span class='va'>a</span> <span class='op'>*</span> <span class='va'>k</span><span class='op'>^</span><span class='va'>pop</span>, data<span class='op'>=</span><span class='va'>dati</span>, start<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>a<span class='op'>=</span><span class='fl'>10</span>,k<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>out</span><span class='op'>[</span><span class='va'>i</span>, <span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>mi</span><span class='op'>$</span><span class='va'>m</span><span class='op'>$</span><span class='fu'>getPars</span><span class='op'>(</span><span class='op'>)</span>
   <span class='co'># Predicted values</span>
-  <span class='no'>pi</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span>(<span class='kw'>gen</span><span class='kw'>=</span><span class='no'>i</span>, <span class='no'>newdat</span>, <span class='kw'>pred</span><span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>mi</span>, <span class='kw'>newdat</span><span class='kw'>=</span><span class='no'>newdat</span>))
-  <span class='no'>preds</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span>(<span class='no'>preds</span>, <span class='no'>pi</span>)
-}</div><div class='output co'>#&gt; [1] "Hy2x0h7"
+  <span class='va'>pi</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span>gen<span class='op'>=</span><span class='va'>i</span>, <span class='va'>newdat</span>, pred<span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>mi</span>, newdat<span class='op'>=</span><span class='va'>newdat</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>preds</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span><span class='op'>(</span><span class='va'>preds</span>, <span class='va'>pi</span><span class='op'>)</span>
+<span class='op'>}</span>
+</div><div class='output co'>#&gt; [1] "Hy2x0h7"
 #&gt; [1] "WF9xC103"
 #&gt; [1] "R61x187-2"
 #&gt; [1] "WF9x38-11"
@@ -205,8 +206,9 @@
 #&gt; [1] "C103xB14"
 #&gt; [1] "0h43xB37"
 #&gt; [1] "WF9xH60"</div><div class='input'><span class='co'># Optimum plant density is -1/log(k)</span>
-<span class='no'>out</span>$<span class='no'>pop.opt</span> <span class='kw'>&lt;-</span> -<span class='fl'>1</span>/<span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span>(<span class='no'>out</span>$<span class='no'>k</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='no'>out</span>, <span class='fl'>3</span>)</div><div class='output co'>#&gt;               a     k pop.opt
+<span class='va'>out</span><span class='op'>$</span><span class='va'>pop.opt</span> <span class='op'>&lt;-</span> <span class='op'>-</span><span class='fl'>1</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/Log.html'>log</a></span><span class='op'>(</span><span class='va'>out</span><span class='op'>$</span><span class='va'>k</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>out</span>, <span class='fl'>3</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;               a     k pop.opt
 #&gt; Hy2x0h7   0.782 0.865   6.875
 #&gt; WF9xC103  1.039 0.825   5.192
 #&gt; R61x187-2 0.998 0.798   4.441
@@ -226,27 +228,28 @@
 
 
 <span class='co'># Fit an overall fixed-effect with random deviations for each hybrid.</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>nlme</span>)
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>nlme</span>(<span class='no'>yield</span> ~ <span class='no'>pop</span> * <span class='no'>a</span> * <span class='no'>k</span>^<span class='no'>pop</span>,
-           <span class='kw'>fixed</span> <span class='kw'>=</span> <span class='no'>a</span> + <span class='no'>k</span> ~ <span class='fl'>1</span>,
-           <span class='kw'>random</span> <span class='kw'>=</span> <span class='no'>a</span> + <span class='no'>k</span> ~ <span class='fl'>1</span><span class='kw'>|</span><span class='no'>gen</span>,
-           <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>start</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='kw'>a</span><span class='kw'>=</span><span class='fl'>10</span>,<span class='kw'>k</span><span class='kw'>=</span><span class='fl'>1</span>))
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>nlme</span><span class='op'>)</span>
+<span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>nlme</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>pop</span> <span class='op'>*</span> <span class='va'>a</span> <span class='op'>*</span> <span class='va'>k</span><span class='op'>^</span><span class='va'>pop</span>,
+           fixed <span class='op'>=</span> <span class='va'>a</span> <span class='op'>+</span> <span class='va'>k</span> <span class='op'>~</span> <span class='fl'>1</span>,
+           random <span class='op'>=</span> <span class='va'>a</span> <span class='op'>+</span> <span class='va'>k</span> <span class='op'>~</span> <span class='fl'>1</span><span class='op'>|</span><span class='va'>gen</span>,
+           data<span class='op'>=</span><span class='va'>dat</span>, start<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span>a<span class='op'>=</span><span class='fl'>10</span>,k<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span>
 <span class='co'># summary(m1) # Random effect for 'a' probably not needed</span>
 
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>latticeExtra</span>)
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>latticeExtra</span><span class='op'>)</span>
 <span class='co'># Plot Data, fixed-effect prediction, random-effect prediction.</span>
-<span class='no'>pdat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/expand.grid.html'>expand.grid</a></span>(<span class='kw'>gen</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span>(<span class='no'>dat</span>$<span class='no'>gen</span>), <span class='kw'>pop</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span>(<span class='fl'>2</span>,<span class='fl'>8</span>,<span class='kw'>length</span><span class='kw'>=</span><span class='fl'>50</span>))
-<span class='no'>pdat</span>$<span class='no'>pred</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m1</span>, <span class='no'>pdat</span>)
-<span class='no'>pdat</span>$<span class='no'>predf</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m1</span>, <span class='no'>pdat</span>, <span class='kw'>level</span><span class='kw'>=</span><span class='fl'>0</span>)
+<span class='va'>pdat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/expand.grid.html'>expand.grid</a></span><span class='op'>(</span>gen<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>gen</span><span class='op'>)</span>, pop<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>2</span>,<span class='fl'>8</span>,length<span class='op'>=</span><span class='fl'>50</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>pdat</span><span class='op'>$</span><span class='va'>pred</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>m1</span>, <span class='va'>pdat</span><span class='op'>)</span>
+<span class='va'>pdat</span><span class='op'>$</span><span class='va'>predf</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>m1</span>, <span class='va'>pdat</span>, level<span class='op'>=</span><span class='fl'>0</span><span class='op'>)</span>
 
-<span class='fu'>xyplot</span>(<span class='no'>yield</span>~<span class='no'>pop</span><span class='kw'>|</span><span class='no'>gen</span>, <span class='no'>dat</span>, <span class='kw'>pch</span><span class='kw'>=</span><span class='fl'>16</span>, <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>,
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"carmer.density models"</span>,
-       <span class='kw'>key</span><span class='kw'>=</span><span class='fu'>simpleKey</span>(<span class='kw'>text</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Data"</span>, <span class='st'>"Fixed effect"</span>,<span class='st'>"Random effect"</span>),
-         <span class='kw'>col</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"blue"</span>, <span class='st'>"red"</span>,<span class='st'>"darkgreen"</span>), <span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>3</span>, <span class='kw'>points</span><span class='kw'>=</span><span class='fl'>FALSE</span>)) +
-  <span class='fu'>xyplot</span>(<span class='no'>predf</span>~<span class='no'>pop</span><span class='kw'>|</span><span class='no'>gen</span>, <span class='no'>pdat</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'l'</span>, <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='st'>"red"</span>) +
-  <span class='fu'>xyplot</span>(<span class='no'>pred</span>~<span class='no'>pop</span><span class='kw'>|</span><span class='no'>gen</span>, <span class='no'>pdat</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'l'</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='st'>"darkgreen"</span>, <span class='kw'>lwd</span><span class='kw'>=</span><span class='fl'>2</span>)</div><div class='img'><img src='carmer.density-1.png' alt='' width='700' height='433' /></div><div class='input'>
-# }
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>~</span><span class='va'>pop</span><span class='op'>|</span><span class='va'>gen</span>, <span class='va'>dat</span>, pch<span class='op'>=</span><span class='fl'>16</span>, as.table<span class='op'>=</span><span class='cn'>TRUE</span>,
+       main<span class='op'>=</span><span class='st'>"carmer.density models"</span>,
+       key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/pkg/lattice/man/simpleKey.html'>simpleKey</a></span><span class='op'>(</span>text<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Data"</span>, <span class='st'>"Fixed effect"</span>,<span class='st'>"Random effect"</span><span class='op'>)</span>,
+         col<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"blue"</span>, <span class='st'>"red"</span>,<span class='st'>"darkgreen"</span><span class='op'>)</span>, columns<span class='op'>=</span><span class='fl'>3</span>, points<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>predf</span><span class='op'>~</span><span class='va'>pop</span><span class='op'>|</span><span class='va'>gen</span>, <span class='va'>pdat</span>, type<span class='op'>=</span><span class='st'>'l'</span>, as.table<span class='op'>=</span><span class='cn'>TRUE</span>, col<span class='op'>=</span><span class='st'>"red"</span><span class='op'>)</span> <span class='op'>+</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>pred</span><span class='op'>~</span><span class='va'>pop</span><span class='op'>|</span><span class='va'>gen</span>, <span class='va'>pdat</span>, type<span class='op'>=</span><span class='st'>'l'</span>, col<span class='op'>=</span><span class='st'>"darkgreen"</span>, lwd<span class='op'>=</span><span class='fl'>2</span><span class='op'>)</span>
+</div><div class='img'><img src='carmer.density-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -263,7 +266,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -31,7 +31,7 @@
   Interpretation of Adjusted Treatment Means and Regressions in Analysis
   of Covariance.
   \emph{Biometrics}, 13, 282-308.
-  http://doi.org/10.2307/2527917
+  https://doi.org/10.2307/2527917
 }
 \examples{
 

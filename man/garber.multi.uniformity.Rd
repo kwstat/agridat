@@ -56,7 +56,7 @@
   Garber, RJ and Mcllvaine, TC and Hoover, MM. 1926.
   A study of soil heterogeneity in experiment plots.
   Jour Agr Res, 33, 255-268. Tables 3, 5.
-  http://naldc.nal.usda.gov/download/IND43967148/PDF
+  https://naldc.nal.usda.gov/download/IND43967148/PDF
 }
 
 \examples{

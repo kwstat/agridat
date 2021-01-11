@@ -36,7 +36,7 @@
   Estimation of Optimum Size, Shape, and Replicate Number of Safflower Plots for Yield Trials.
   Utah State University, All Graduate Theses and Dissertations, 2979.
   Table 6.
-  http://digitalcommons.usu.edu/etd/2979
+  https://digitalcommons.usu.edu/etd/2979
 }
 
 \references{

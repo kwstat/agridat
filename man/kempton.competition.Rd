@@ -29,7 +29,7 @@
   R Kempton, 1982.
   Adjustment for competition between varieties in plant breeding trials,
   \emph{Journal of Agricultural Science}, 98, 599-611.
-  http://doi.org/10.1017/S0021859600054381
+  https://doi.org/10.1017/S0021859600054381
 }
 
 \examples{

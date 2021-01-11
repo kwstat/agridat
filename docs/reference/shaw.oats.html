@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,13 +45,12 @@
 
 
 
-<meta property="og:title" content="Multi-environment trial of oats in India — shaw.oats" />
 
+<meta property="og:title" content="Multi-environment trial of oats in India — shaw.oats" />
 <meta property="og:description" content="Multi-environment trial of oats in India, 13 genotypes, 3 year, 2 loc,
   5 reps" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -62,7 +67,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -76,7 +81,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -105,7 +110,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -113,10 +118,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -140,25 +144,24 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Multi-environment trial of oats in India, 13 genotypes, 3 year, 2 loc,
   5 reps</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"shaw.oats"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"shaw.oats"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 390 observations on the following 5 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 390 observations on the following 5 variables.</p><dl>
     <dt><code>env</code></dt><dd><p>environment, 2 levels</p></dd>
     <dt><code>year</code></dt><dd><p>year, 3 levels</p></dd>
     <dt><code>block</code></dt><dd><p>block, 5 levels</p></dd>
     <dt><code>gen</code></dt><dd><p>genotype variety, 13 levels</p></dd>
     <dt><code>yield</code></dt><dd><p>yield of oats, pounds per plot</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>An oat trial in India of 11 hybrid oats compared to 2 established
@@ -170,7 +173,6 @@
   feet. In 1932, variety L was high-yielding at Pusa, but low-yielding
   at Karnal.</p>
 <p>Shaw used this data to illustrate ANOVA for a multi-environment trial.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>F.J.F. Shaw (1936).
@@ -178,38 +180,38 @@
   The Imperial Council of Agricultural Research, India.
   https://archive.org/details/HandbookStatistics1936/page/n12
   P. 126</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>None</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>shaw.oats</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>shaw.oats</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>shaw.oats</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>shaw.oats</span>
 <span class='co'># sum(dat$yield) # 16309 matches Shaw p. 125</span>
 <span class='co'># sum( (dat$yield-mean(dat$yield)) ^2) # total SS matches Shaw p. 141</span>
 
-<span class='no'>dat</span>$<span class='no'>year</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>dat</span>$<span class='no'>year</span>)
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
+<span class='va'>dat</span><span class='op'>$</span><span class='va'>year</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>year</span><span class='op'>)</span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/graphics/graphics-defunct.html'>dotplot</a></span>(<span class='no'>yield</span> ~ <span class='no'>gen</span><span class='kw'>|</span><span class='no'>env</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>groups</span><span class='kw'>=</span><span class='no'>year</span>,
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"shaw.oats"</span>,
-        <span class='kw'>par.settings</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>superpose.symbol</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>pch</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'2'</span>,<span class='st'>'3'</span>,<span class='st'>'4'</span>))),
-        <span class='kw'>panel</span><span class='kw'>=</span><span class='kw'>function</span>(<span class='no'>x</span>,<span class='no'>y</span>,<span class='no'>...</span>){
-          <span class='fu'>panel.dotplot</span>(<span class='no'>x</span>,<span class='no'>y</span>,<span class='no'>...</span>)
-          <span class='fu'>panel.superpose</span>(<span class='no'>x</span>,<span class='no'>y</span>,<span class='no'>...</span>, <span class='kw'>panel.groups</span><span class='kw'>=</span><span class='kw'>function</span>(<span class='no'>x</span>,<span class='no'>y</span>,<span class='no'>col.line</span>,<span class='no'>...</span>) {
-            <span class='no'>dd</span><span class='kw'>&lt;-</span><span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span>(<span class='no'>y</span>~<span class='no'>x</span>,<span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(<span class='no'>x</span>,<span class='no'>y</span>),<span class='no'>mean</span>)
-            <span class='fu'>panel.xyplot</span>(<span class='kw'>x</span><span class='kw'>=</span><span class='no'>dd</span>$<span class='no'>x</span>, <span class='kw'>y</span><span class='kw'>=</span><span class='no'>dd</span>$<span class='no'>y</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='no'>col.line</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>"l"</span>)
-          })},
-        <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='img'><img src='shaw.oats-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>dotplot</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>gen</span><span class='op'>|</span><span class='va'>env</span>, data<span class='op'>=</span><span class='va'>dat</span>, groups<span class='op'>=</span><span class='va'>year</span>,
+        main<span class='op'>=</span><span class='st'>"shaw.oats"</span>,
+        par.settings<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>superpose.symbol<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>pch<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'2'</span>,<span class='st'>'3'</span>,<span class='st'>'4'</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>,
+        panel<span class='op'>=</span><span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span>,<span class='va'>y</span>,<span class='va'>...</span><span class='op'>)</span><span class='op'>{</span>
+          <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/panel.dotplot.html'>panel.dotplot</a></span><span class='op'>(</span><span class='va'>x</span>,<span class='va'>y</span>,<span class='va'>...</span><span class='op'>)</span>
+          <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/panel.superpose.html'>panel.superpose</a></span><span class='op'>(</span><span class='va'>x</span>,<span class='va'>y</span>,<span class='va'>...</span>, panel.groups<span class='op'>=</span><span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span>,<span class='va'>y</span>,<span class='va'>col.line</span>,<span class='va'>...</span><span class='op'>)</span> <span class='op'>{</span>
+            <span class='va'>dd</span><span class='op'>&lt;-</span><span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span><span class='op'>(</span><span class='va'>y</span><span class='op'>~</span><span class='va'>x</span>,<span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='va'>x</span>,<span class='va'>y</span><span class='op'>)</span>,<span class='va'>mean</span><span class='op'>)</span>
+            <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/panel.xyplot.html'>panel.xyplot</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>dd</span><span class='op'>$</span><span class='va'>x</span>, y<span class='op'>=</span><span class='va'>dd</span><span class='op'>$</span><span class='va'>y</span>, col<span class='op'>=</span><span class='va'>col.line</span>, type<span class='op'>=</span><span class='st'>"l"</span><span class='op'>)</span>
+          <span class='op'>}</span><span class='op'>)</span><span class='op'>}</span>,
+        auto.key<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+</div><div class='img'><img src='shaw.oats-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
 
 <span class='co'># Shaw &amp; Bose meticulously calculate the ANOVA table, p. 141</span>
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>(<span class='no'>yield</span> ~ <span class='no'>year</span>*<span class='no'>env</span>*<span class='no'>block</span>*<span class='no'>gen</span> - <span class='no'>year</span>:<span class='no'>env</span>:<span class='no'>block</span>:<span class='no'>gen</span>, <span class='no'>dat</span>)
-<span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt; Analysis of Variance Table
+<span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>year</span><span class='op'>*</span><span class='va'>env</span><span class='op'>*</span><span class='va'>block</span><span class='op'>*</span><span class='va'>gen</span> <span class='op'>-</span> <span class='va'>year</span><span class='op'>:</span><span class='va'>env</span><span class='op'>:</span><span class='va'>block</span><span class='op'>:</span><span class='va'>gen</span>, <span class='va'>dat</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
 #&gt; Response: yield
 #&gt;                Df  Sum Sq Mean Sq  F value    Pr(&gt;F)    
@@ -232,21 +234,10 @@
 #&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -257,7 +248,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

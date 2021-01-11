@@ -25,7 +25,7 @@
   Besag, J. E., Green, P. J., Higdon, D. and Mengersen, K. (1995).
   Bayesian computation and stochastic systems.
   Statistical Science, 10, 3-66.
-  http://www.jstor.org/stable/2246224
+  https://www.jstor.org/stable/2246224
 }
 \references{
   Davison, A. C. 2003.
@@ -50,7 +50,6 @@
          xlab="row", ylab="yield", main="besag.bayesian")
 
   libs(asreml)
-  # same code for asreml3 and asreml4
 
   # Use asreml to fit a model with AR1 gradient in rows  
   dat <- transform(dat, cf=factor(col), rf=factor(rrow))

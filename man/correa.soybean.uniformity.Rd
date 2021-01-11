@@ -28,7 +28,7 @@
   Estudo do tamanho e forma de parcelas para experimentos de soja (Plot size and shape for soybean yield trials).
   Pesquisa Agropecuaria Brasileira, Serie Agronomia, 9,  49-59. Table 3,
   page 52-53.
-  http://seer.sct.embrapa.br/index.php/pab/article/view/17250
+  https://seer.sct.embrapa.br/index.php/pab/article/view/17250
 }
 \references{
   None

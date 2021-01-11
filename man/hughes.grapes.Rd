@@ -43,7 +43,7 @@
   Some methods allowing for aggregated patterns of disease incidence in
   the analysis of data from designed experiments.
   Plant Pathology, 44, 927--943.
-  http://doi.org/10.1111/j.1365-3059.1995.tb02651.x
+  https://doi.org/10.1111/j.1365-3059.1995.tb02651.x
 }
 
 \references{
@@ -51,7 +51,7 @@
   Analysing disease incidence data from designed experiments by
   generalized linear mixed models.
   Plant Pathology, 48, 668--684.
-  http://doi.org/10.1046/j.1365-3059.1999.00383.x
+  https://doi.org/10.1046/j.1365-3059.1999.00383.x
 }
 
 \examples{

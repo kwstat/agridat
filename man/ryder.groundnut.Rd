@@ -30,7 +30,7 @@
   K. Ryder (1981). Field plans: why the biometrician finds them useful,
   \emph{Experimental Agriculture}, 17, 243--256.
 
-  http://doi.org/10.1017/S0014479700011601
+  https://doi.org/10.1017/S0014479700011601
 }
 
 \examples{

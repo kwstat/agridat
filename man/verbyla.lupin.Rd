@@ -61,7 +61,7 @@
     Myallie \tab 1995\cr
   }
   
-  Data retrieved Oct 2010 from http://www.blackwellpublishers.co.uk/rss.
+  Data retrieved Oct 2010 from https://www.blackwellpublishers.co.uk/rss.
   (No longer available).
 
   Used with permission of Blackwell Publishing.
@@ -74,7 +74,7 @@
   The analysis of designed experiments and longitudinal data by using
   smoothing splines. 
   Appl. Statist., 48, 269--311.
-  http://doi.org/10.1111/1467-9876.00154
+  https://doi.org/10.1111/1467-9876.00154
 
   Arunas P. Verbyla and Brian R. Cullis and Michael G. Kenward
   and Sue J. Welham, (1997).
@@ -82,7 +82,7 @@
   smoothing splines.
   University of Adelaide, Department of Statistics, Research Report
   97/4.
-  http://http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.56.808
+  https://https://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.56.808
 }
 
 \examples{

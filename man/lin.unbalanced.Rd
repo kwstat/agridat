@@ -30,7 +30,7 @@
   A Method for Assessing Regional Trial Data When The Test Cultivars Are
   Unbalanced With Respect to Locations.
   \emph{Canadian Journal of Plant Science}, 68(4): 1103-1110.
-  http://doi.org/10.4141/cjps88-130
+  https://doi.org/10.4141/cjps88-130
 }
 
 \references{

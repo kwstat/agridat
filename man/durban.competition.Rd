@@ -34,7 +34,7 @@
   
   Field length: 3 blocks * 12m + 2*0.5m spacing = 37m
   Retrieved from
-  http://www.ma.hw.ac.uk/~iain/research/JAgSciData/data/Trial1.dat
+  https://www.ma.hw.ac.uk/~iain/research/JAgSciData/data/Trial1.dat
 
   Used with permission of Iain Currie.
 }

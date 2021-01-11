@@ -31,7 +31,7 @@
   Arild Vold (1998).
   A generalization of ordinary yield response functions.
   \emph{Ecological modelling}, 108, 227-236.
-  http://doi.org/10.1016/S0304-3800(98)00031-3
+  https://doi.org/10.1016/S0304-3800(98)00031-3
 }
 
 \references{

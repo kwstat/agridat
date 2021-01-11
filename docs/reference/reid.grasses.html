@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,13 +45,12 @@
 
 
 
-<meta property="og:title" content="Yields of four grasses for a wide range of nitrogen fertilizer — reid.grasses" />
 
+<meta property="og:title" content="Yields of four grasses for a wide range of nitrogen fertilizer — reid.grasses" />
 <meta property="og:description" content="Yields of four grasses for a wide range of nitrogen fertilizer,
   conducted over 3 years." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -62,7 +67,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -76,7 +81,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -105,7 +110,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -113,10 +118,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -140,25 +144,24 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Yields of four grasses for a wide range of nitrogen fertilizer,
   conducted over 3 years.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"reid.grasses"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"reid.grasses"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 210 observations on the following 5 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 210 observations on the following 5 variables.</p><dl>
     <dt><code>nitro</code></dt><dd><p>nitrogen, 21 numeric levels</p></dd>
     <dt><code>year</code></dt><dd><p>Y1, Y2, or Y3</p></dd>
     <dt><code>gen</code></dt><dd><p>genotype</p></dd>
     <dt><code>drymatter</code></dt><dd><p>dry matter content</p></dd>
     <dt><code>protein</code></dt><dd><p>protein content</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Experiment at the Hannah Research Institute, Ayr.</p>
@@ -166,109 +169,69 @@
   each plot, 21 nitrogen treatments were randomized.</p>
 <p>Reid modeled the dry matter yield with four-parameter logistic curves
   of the form y = a - b exp(-cx^d).</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>D. Reid (1985).
   A comparison of the yield responses of four grasses to a wide range of nitrogen application rates.
   <em>J. Agric. Sci.</em>, 105, 381-387. Table 1 &amp; 3.  
   https://doi.org/10.1017/S0021859600056434</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>None</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>reid.grasses</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>reid.grasses</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+  
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>reid.grasses</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>reid.grasses</span>
 
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>latticeExtra</span>)
-  <span class='no'>foo</span> <span class='kw'>&lt;-</span> <span class='fu'>xyplot</span>(<span class='no'>drymatter</span> + <span class='no'>protein</span> ~ <span class='no'>nitro</span><span class='kw'>|</span><span class='no'>year</span>, <span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>gen</span>,
-                <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>4</span>),
-                <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'p'</span>,<span class='st'>'l'</span>),
-                <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"reid.grasses"</span>,<span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"drymatter/protein trait value"</span>,
-                <span class='kw'>scales</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>y</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>relation</span><span class='kw'>=</span><span class='st'>"free"</span>)))
-  <span class='fu'>combineLimits</span>(<span class='no'>foo</span>)</div><div class='img'><img src='reid.grasses-1.png' alt='' width='700' height='433' /></div><div class='input'>
-
-
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>nlme</span>)
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>
-  <span class='no'>dat2</span>$<span class='no'>indiv</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='no'>dat</span>$<span class='no'>year</span>, <span class='no'>dat</span>$<span class='no'>gen</span>) <span class='co'># individual year+genotype curves</span>
-
-  <span class='co'># use all data to get initial values</span>
-  <span class='no'>inits</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/getInitial.html'>getInitial</a></span>(<span class='no'>drymatter</span> ~ <span class='fu'><a href='https://rdrr.io/r/stats/SSfpl.html'>SSfpl</a></span>(<span class='no'>nitro</span>, <span class='no'>A</span>, <span class='no'>B</span>, <span class='no'>xmid</span>, <span class='no'>scal</span>), <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>dat2</span>)
-  <span class='no'>inits</span></div><div class='output co'>#&gt;          A          B       xmid       scal 
-#&gt;  -4.167902  12.139796  68.764796 128.313106 </div><div class='input'>  <span class='co'>##         A          B       xmid       scal </span>
-  <span class='co'>## -4.167902  12.139796  68.764796 128.313106 </span>
-  <span class='no'>xvals</span> <span class='kw'>&lt;-</span> <span class='fl'>0</span>:<span class='fl'>800</span>
-  <span class='no'>y1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/list.html'>as.list</a></span>(<span class='no'>inits</span>), <span class='fu'><a href='https://rdrr.io/r/stats/SSfpl.html'>SSfpl</a></span>(<span class='no'>xvals</span>, <span class='no'>A</span>, <span class='no'>B</span>, <span class='no'>xmid</span>, <span class='no'>scal</span>))
-  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>drymatter</span> ~ <span class='no'>nitro</span>, <span class='no'>dat2</span>)</div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/lines.html'>lines</a></span>(<span class='no'>xvals</span>,<span class='no'>y1</span>)</div><div class='img'><img src='reid.grasses-2.png' alt='' width='700' height='433' /></div><div class='input'>
-  <span class='co'># must have groupedData object to use augPred</span>
-  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>groupedData</span>(<span class='no'>drymatter</span> ~ <span class='no'>nitro</span><span class='kw'>|</span><span class='no'>indiv</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat2</span>)
-  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>dat2</span>)</div><div class='img'><img src='reid.grasses-3.png' alt='' width='700' height='433' /></div><div class='input'>
-  <span class='co'># without 'random', all effects are included in 'random'</span>
-  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>nlme</span>(<span class='no'>drymatter</span> ~ <span class='fu'><a href='https://rdrr.io/r/stats/SSfpl.html'>SSfpl</a></span>(<span class='no'>nitro</span>, <span class='no'>A</span>, <span class='no'>B</span>, <span class='no'>xmid</span>,<span class='no'>scale</span>),
-             <span class='kw'>data</span><span class='kw'>=</span> <span class='no'>dat2</span>,
-             <span class='kw'>fixed</span><span class='kw'>=</span> <span class='no'>A</span> + <span class='no'>B</span> + <span class='no'>xmid</span> + <span class='no'>scale</span> ~ <span class='fl'>1</span>,
-             <span class='co'># random = B ~ 1|indiv, # to make only B random</span>
-             <span class='kw'>random</span> <span class='kw'>=</span> <span class='no'>A</span> + <span class='no'>B</span> + <span class='no'>xmid</span> + <span class='no'>scale</span> ~ <span class='fl'>1</span><span class='kw'>|</span><span class='no'>indiv</span>,
-             <span class='kw'>start</span><span class='kw'>=</span><span class='no'>inits</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: Iteration 1, LME step: nlminb() did not converge (code = 1). Do increase 'msMaxIter'!</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Iteration 2, LME step: nlminb() did not converge (code = 1). Do increase 'msMaxIter'!</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Iteration 3, LME step: nlminb() did not converge (code = 1). PORT message: false convergence (8)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Iteration 4, LME step: nlminb() did not converge (code = 1). Do increase 'msMaxIter'!</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Iteration 5, LME step: nlminb() did not converge (code = 1). Do increase 'msMaxIter'!</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Iteration 8, LME step: nlminb() did not converge (code = 1). PORT message: false convergence (8)</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Iteration 9, LME step: nlminb() did not converge (code = 1). PORT message: false convergence (8)</span></div><div class='input'>  <span class='fu'>fixef</span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt;          A          B       xmid      scale 
-#&gt;  -4.651036  12.144995  66.331663 125.980816 </div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt; Nonlinear mixed-effects model fit by maximum likelihood
-#&gt;   Model: drymatter ~ SSfpl(nitro, A, B, xmid, scale) 
-#&gt;  Data: dat2 
-#&gt;        AIC      BIC    logLik
-#&gt;   458.6758 508.8824 -214.3379
-#&gt; 
-#&gt; Random effects:
-#&gt;  Formula: list(A ~ 1, B ~ 1, xmid ~ 1, scale ~ 1)
-#&gt;  Level: indiv
-#&gt;  Structure: General positive-definite, Log-Cholesky parametrization
-#&gt;          StdDev     Corr                
-#&gt; A         2.5780579 A      B      xmid  
-#&gt; B         1.9281826 -0.944              
-#&gt; xmid     40.6267422  0.958 -0.810       
-#&gt; scale    22.0497812 -0.996  0.971 -0.927
-#&gt; Residual  0.5855829                     
-#&gt; 
-#&gt; Fixed effects: A + B + xmid + scale ~ 1 
-#&gt;           Value Std.Error  DF   t-value p-value
-#&gt; A      -4.65104  1.026159 197 -4.532469   0e+00
-#&gt; B      12.14499  0.622496 197 19.510164   0e+00
-#&gt; xmid   66.33166 16.336177 197  4.060415   1e-04
-#&gt; scale 125.98082  8.846947 197 14.240033   0e+00
-#&gt;  Correlation: 
-#&gt;       A      B      xmid  
-#&gt; B     -0.782              
-#&gt; xmid   0.959 -0.659       
-#&gt; scale -0.918  0.823 -0.870
-#&gt; 
-#&gt; Standardized Within-Group Residuals:
-#&gt;         Min          Q1         Med          Q3         Max 
-#&gt; -2.81231749 -0.62731278 -0.09808307  0.57749179  4.05242676 
-#&gt; 
-#&gt; Number of Observations: 210
-#&gt; Number of Groups: 10 </div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='fu'>augPred</span>(<span class='no'>m1</span>, <span class='kw'>level</span><span class='kw'>=</span><span class='fl'>0</span>:<span class='fl'>1</span>),
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"reid.grasses - observed/predicted data"</span>) <span class='co'># only works with groupedData object</span></div><div class='output co'>#&gt; <span class='error'>Error in eval(object$call$data): object 'dat2' not found</span></div><div class='input'>  
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>latticeExtra</span><span class='op'>)</span>
+  <span class='va'>foo</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>drymatter</span> <span class='op'>+</span> <span class='va'>protein</span> <span class='op'>~</span> <span class='va'>nitro</span><span class='op'>|</span><span class='va'>year</span>, <span class='va'>dat</span>, group<span class='op'>=</span><span class='va'>gen</span>,
+                auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>4</span><span class='op'>)</span>,
+                as.table<span class='op'>=</span><span class='cn'>TRUE</span>, type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'p'</span>,<span class='st'>'l'</span><span class='op'>)</span>,
+                main<span class='op'>=</span><span class='st'>"reid.grasses"</span>,ylab<span class='op'>=</span><span class='st'>"drymatter/protein trait value"</span>,
+                scales<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>y<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>relation<span class='op'>=</span><span class='st'>"free"</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='fu'>combineLimits</span><span class='op'>(</span><span class='va'>foo</span><span class='op'>)</span>
+</div><div class='img'><img src='reid.grasses-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='co'># devtools::run_examples does NOT like groupedData</span>
+  <span class='kw'>if</span> <span class='op'>(</span><span class='fl'>0</span><span class='op'>)</span><span class='op'>{</span>
+    <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>nlme</span><span class='op'>)</span>
+    <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='va'>dat</span>
+    <span class='va'>dat2</span><span class='op'>$</span><span class='va'>indiv</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>year</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>gen</span><span class='op'>)</span> <span class='co'># individual year+genotype curves</span>
+    
+    <span class='co'># use all data to get initial values</span>
+    <span class='va'>inits</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/getInitial.html'>getInitial</a></span><span class='op'>(</span><span class='va'>drymatter</span> <span class='op'>~</span> <span class='fu'><a href='https://rdrr.io/r/stats/SSfpl.html'>SSfpl</a></span><span class='op'>(</span><span class='va'>nitro</span>, <span class='va'>A</span>, <span class='va'>B</span>, <span class='va'>xmid</span>, <span class='va'>scal</span><span class='op'>)</span>, data <span class='op'>=</span> <span class='va'>dat2</span><span class='op'>)</span>
+    <span class='va'>inits</span>
+    <span class='co'>##         A          B       xmid       scal </span>
+    <span class='co'>## -4.167902  12.139796  68.764796 128.313106 </span>
+    <span class='va'>xvals</span> <span class='op'>&lt;-</span> <span class='fl'>0</span><span class='op'>:</span><span class='fl'>800</span>
+    <span class='va'>y1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>as.list</a></span><span class='op'>(</span><span class='va'>inits</span><span class='op'>)</span>, <span class='fu'><a href='https://rdrr.io/r/stats/SSfpl.html'>SSfpl</a></span><span class='op'>(</span><span class='va'>xvals</span>, <span class='va'>A</span>, <span class='va'>B</span>, <span class='va'>xmid</span>, <span class='va'>scal</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>drymatter</span> <span class='op'>~</span> <span class='va'>nitro</span>, <span class='va'>dat2</span><span class='op'>)</span>
+    <span class='fu'><a href='https://rdrr.io/r/graphics/lines.html'>lines</a></span><span class='op'>(</span><span class='va'>xvals</span>,<span class='va'>y1</span><span class='op'>)</span>
+    
+    <span class='co'># must have groupedData object to use augPred</span>
+    <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>groupedData</span><span class='op'>(</span><span class='va'>drymatter</span> <span class='op'>~</span> <span class='va'>nitro</span><span class='op'>|</span><span class='va'>indiv</span>, data<span class='op'>=</span><span class='va'>dat2</span><span class='op'>)</span>
+    <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>dat2</span><span class='op'>)</span>
+    
+    <span class='co'># without 'random', all effects are included in 'random'</span>
+    <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>nlme</span><span class='op'>(</span><span class='va'>drymatter</span> <span class='op'>~</span> <span class='fu'><a href='https://rdrr.io/r/stats/SSfpl.html'>SSfpl</a></span><span class='op'>(</span><span class='va'>nitro</span>, <span class='va'>A</span>, <span class='va'>B</span>, <span class='va'>xmid</span>,<span class='va'>scale</span><span class='op'>)</span>,
+               data<span class='op'>=</span> <span class='va'>dat2</span>,
+               fixed<span class='op'>=</span> <span class='va'>A</span> <span class='op'>+</span> <span class='va'>B</span> <span class='op'>+</span> <span class='va'>xmid</span> <span class='op'>+</span> <span class='va'>scale</span> <span class='op'>~</span> <span class='fl'>1</span>,
+               random <span class='op'>=</span> <span class='va'>A</span> <span class='op'>+</span> <span class='va'>B</span> <span class='op'>+</span> <span class='va'>xmid</span> <span class='op'>+</span> <span class='va'>scale</span> <span class='op'>~</span> <span class='fl'>1</span><span class='op'>|</span><span class='va'>indiv</span>,
+               start<span class='op'>=</span><span class='va'>inits</span><span class='op'>)</span>
+    <span class='fu'>fixef</span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+    <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='fu'>augPred</span><span class='op'>(</span><span class='va'>m1</span>, level<span class='op'>=</span><span class='fl'>0</span><span class='op'>:</span><span class='fl'>1</span><span class='op'>)</span>,
+         main<span class='op'>=</span><span class='st'>"reid.grasses - observed/predicted data"</span><span class='op'>)</span> <span class='co'># only works with groupedData object</span>
+  <span class='op'>}</span> <span class='co'># if(0)  </span>
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -279,7 +242,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -33,7 +33,7 @@
   interaction in Thailand.  Chapter 14 of \emph{Trees for the
     Tropics: Growing Australian Multipurpose Trees and Shrubs in
     Developing Countries}. Pages 145--152.
-  http://aciar.gov.au/publication/MN010
+  https://aciar.gov.au/publication/MN010
 }
 
 \references{

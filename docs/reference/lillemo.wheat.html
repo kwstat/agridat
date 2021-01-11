@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Multi-environment trial of wheat susceptibile to powdery mildew — lillemo.wheat" />
-
 <meta property="og:description" content="Resistance of wheat to powdery mildew" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,23 +143,22 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Resistance of wheat to powdery mildew</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"lillemo.wheat"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"lillemo.wheat"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 408 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 408 observations on the following 4 variables.</p><dl>
     <dt><code>gen</code></dt><dd><p>genotype, 24 levels</p></dd>
     <dt><code>env</code></dt><dd><p>environrment, 13 levels</p></dd>
     <dt><code>score</code></dt><dd><p>score</p></dd>
     <dt><code>scale</code></dt><dd><p>scale used for score</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     
@@ -178,7 +181,9 @@
   data table being rounded to 1 decimal place.  For example, environment
   'Aa03' had 3 reps and so the mean for genotype 1 was probably 16.333,
   not 16.3.</p>
-    
+  
+<p>Used with permission of Morten Lillemo.</p>
+<p>Electronic data supplied by Miroslav Zoric.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     
@@ -187,96 +192,99 @@
   Identification of Stable Resistance to Powdery Mildew in Wheat Based
   on Parametric and Nonparametric Methods
   Crop Sci. 50:478-485.
-  http://doi.org/10.2135/cropsci2009.03.0116</p>  
-<p>Used with permission of Morten Lillemo.</p>
-<p>Electronic data supplied by Miroslav Zoric.</p>
-    
+  https://doi.org/10.2135/cropsci2009.03.0116</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>None.</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>lillemo.wheat</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>lillemo.wheat</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>lillemo.wheat</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>lillemo.wheat</span>
 
 <span class='co'># Change factor levels to match Lillemo</span>
-<span class='no'>dat</span>$<span class='no'>env</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span>(<span class='no'>dat</span>$<span class='no'>env</span>)
-<span class='no'>dat</span>$<span class='no'>env</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>dat</span>$<span class='no'>env</span>,
-                  <span class='kw'>levels</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Bj03"</span>,<span class='st'>"Bj05"</span>,<span class='st'>"CA03"</span>,<span class='st'>"Ba04"</span>,<span class='st'>"Ma04"</span>,
+<span class='va'>dat</span><span class='op'>$</span><span class='va'>env</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>env</span><span class='op'>)</span>
+<span class='va'>dat</span><span class='op'>$</span><span class='va'>env</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>env</span>,
+                  levels<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Bj03"</span>,<span class='st'>"Bj05"</span>,<span class='st'>"CA03"</span>,<span class='st'>"Ba04"</span>,<span class='st'>"Ma04"</span>,
                            <span class='st'>"Kh06"</span>,<span class='st'>"Gl05"</span>,<span class='st'>"BT06"</span>,<span class='st'>"Ch04"</span>,<span class='st'>"Ce04"</span>,
-                           <span class='st'>"Ha03"</span>,<span class='st'>"Ha04"</span>,<span class='st'>"Ha05"</span>,<span class='st'>"Ha07"</span>,<span class='st'>"Aa03"</span>,<span class='st'>"Aa04"</span>,<span class='st'>"Aa05"</span>))
+                           <span class='st'>"Ha03"</span>,<span class='st'>"Ha04"</span>,<span class='st'>"Ha05"</span>,<span class='st'>"Ha07"</span>,<span class='st'>"Aa03"</span>,<span class='st'>"Aa04"</span>,<span class='st'>"Aa05"</span><span class='op'>)</span><span class='op'>)</span>
 <span class='co'># Interesting look at different measurement scales by environment</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'>qqmath</span>(~<span class='no'>score</span><span class='kw'>|</span><span class='no'>env</span>, <span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>scale</span>,
-       <span class='kw'>as.table</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>scales</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>y</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>relation</span><span class='kw'>=</span><span class='st'>"free"</span>)),
-       <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>4</span>),
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"lillemo.wheat - QQ plots by environment"</span>)</div><div class='img'><img src='lillemo.wheat-1.png' alt='' width='700' height='433' /></div><div class='input'>
-# ----------------------------------------------------------------------------
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/qqmath.html'>qqmath</a></span><span class='op'>(</span><span class='op'>~</span><span class='va'>score</span><span class='op'>|</span><span class='va'>env</span>, <span class='va'>dat</span>, group<span class='op'>=</span><span class='va'>scale</span>,
+       as.table<span class='op'>=</span><span class='cn'>TRUE</span>, scales<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>y<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>relation<span class='op'>=</span><span class='st'>"free"</span><span class='op'>)</span><span class='op'>)</span>,
+       auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>4</span><span class='op'>)</span>,
+       main<span class='op'>=</span><span class='st'>"lillemo.wheat - QQ plots by environment"</span><span class='op'>)</span>
+</div><div class='img'><img src='lillemo.wheat-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># ----------------------------------------------------------------------------</span>
 
-</div><div class='input'>  <span class='co'># Change data to matrix format</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>reshape2</span>)
-  <span class='no'>datm</span> <span class='kw'>&lt;-</span> <span class='fu'>acast</span>(<span class='no'>dat</span>, <span class='no'>gen</span>~<span class='no'>env</span>, <span class='kw'>value.var</span><span class='kw'>=</span><span class='st'>'score'</span>)
-
+<span class='co'># \dontrun{</span>
+  <span class='co'># Change data to matrix format</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>reshape2</span><span class='op'>)</span>
+  <span class='va'>datm</span> <span class='op'>&lt;-</span> <span class='fu'>acast</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>gen</span><span class='op'>~</span><span class='va'>env</span>, value.var<span class='op'>=</span><span class='st'>'score'</span><span class='op'>)</span>
+  
   <span class='co'># Environment means. Matches Lillemo Table 3</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='no'>datm</span>, <span class='fl'>2</span>, <span class='no'>mean</span>)</div><div class='output co'>#&gt;      Bj03      Bj05      CA03      Ba04      Ma04      Kh06      Gl05      BT06 
+  <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>datm</span>, <span class='fl'>2</span>, <span class='va'>mean</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;      Bj03      Bj05      CA03      Ba04      Ma04      Kh06      Gl05      BT06 
 #&gt;  3.750000  4.729167  1.854167  4.362500  5.208333 17.875000 16.479167 14.708333 
 #&gt;      Ch04      Ce04      Ha03      Ha04      Ha05      Ha07      Aa03      Aa04 
 #&gt;  4.750000  4.416667 14.504167 18.416667 21.354167 16.270833 23.012500 12.833333 
 #&gt;      Aa05 
-#&gt; 24.062500 </div><div class='input'>
+#&gt; 24.062500 </div><div class='input'>  
   <span class='co'># Two different transforms within envts to approximate 0-9 scale</span>
-  <span class='no'>datt</span> <span class='kw'>&lt;-</span> <span class='no'>datm</span>
-  <span class='no'>datt</span>[,<span class='st'>"CA03"</span>] <span class='kw'>&lt;-</span> <span class='fl'>1.8</span> * <span class='no'>datt</span>[,<span class='st'>"CA03"</span>]
-  <span class='no'>ix</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Ba04"</span>,<span class='st'>"Kh06"</span>,<span class='st'>"Gl05"</span>,<span class='st'>"BT06"</span>,<span class='st'>"Ha03"</span>,<span class='st'>"Ha04"</span>,<span class='st'>"Ha05"</span>,<span class='st'>"Ha07"</span>,<span class='st'>"Aa03"</span>,<span class='st'>"Aa04"</span>,<span class='st'>"Aa05"</span>)
-  <span class='no'>datt</span>[,<span class='no'>ix</span>] <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='no'>datt</span>[,<span class='no'>ix</span>],<span class='fl'>2</span>,<span class='no'>sqrt</span>)
+  <span class='va'>datt</span> <span class='op'>&lt;-</span> <span class='va'>datm</span>
+  <span class='va'>datt</span><span class='op'>[</span>,<span class='st'>"CA03"</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fl'>1.8</span> <span class='op'>*</span> <span class='va'>datt</span><span class='op'>[</span>,<span class='st'>"CA03"</span><span class='op'>]</span>
+  <span class='va'>ix</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Ba04"</span>,<span class='st'>"Kh06"</span>,<span class='st'>"Gl05"</span>,<span class='st'>"BT06"</span>,<span class='st'>"Ha03"</span>,<span class='st'>"Ha04"</span>,<span class='st'>"Ha05"</span>,<span class='st'>"Ha07"</span>,<span class='st'>"Aa03"</span>,<span class='st'>"Aa04"</span>,<span class='st'>"Aa05"</span><span class='op'>)</span>
+  <span class='va'>datt</span><span class='op'>[</span>,<span class='va'>ix</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>datt</span><span class='op'>[</span>,<span class='va'>ix</span><span class='op'>]</span>,<span class='fl'>2</span>,<span class='va'>sqrt</span><span class='op'>)</span>
 
   <span class='co'># Genotype means of transformed data. Matches Lillemo table 3.</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>rowMeans</a></span>(<span class='no'>datt</span>),<span class='fl'>2</span>)</div><div class='output co'>#&gt;  G01  G02  G03  G04  G05  G06  G07  G08  G09  G10  G11  G12  G13  G14  G15  G16 
+  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>rowMeans</a></span><span class='op'>(</span><span class='va'>datt</span><span class='op'>)</span>,<span class='fl'>2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;  G01  G02  G03  G04  G05  G06  G07  G08  G09  G10  G11  G12  G13  G14  G15  G16 
 #&gt; 3.24 2.40 2.96 3.05 3.76 3.38 3.74 4.66 2.34 2.64 3.97 4.61 4.47 4.85 3.83 2.95 
 #&gt;  G17  G18  G19  G20  G21  G22  G23  G24 
 #&gt; 3.45 4.61 3.34 4.08 2.91 3.79 7.72 7.46 </div><div class='input'>
   <span class='co'># Biplot of transformed data like Lillemo Fig 2</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>gge</span>)
-  <span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span>(<span class='fu'>gge</span>(<span class='no'>datt</span>, <span class='kw'>scale</span><span class='kw'>=</span><span class='fl'>FALSE</span>), <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"lillemo.wheat"</span>)</div><div class='img'><img src='lillemo.wheat-2.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>gge</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span><span class='op'>(</span><span class='fu'>gge</span><span class='op'>(</span><span class='va'>datt</span>, scale<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span>, main<span class='op'>=</span><span class='st'>"lillemo.wheat"</span><span class='op'>)</span>
+</div><div class='img'><img src='lillemo.wheat-2.png' alt='' width='700' height='433' /></div><div class='input'>  
   <span class='co'># Median polish of transformed table</span>
-  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/medpolish.html'>medpolish</a></span>(<span class='no'>datt</span>)</div><div class='output co'>#&gt; 1: 337.6127
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/medpolish.html'>medpolish</a></span><span class='op'>(</span><span class='va'>datt</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 1: 337.6127
 #&gt; 2: 325.4158
 #&gt; Final: 324.2539</div><div class='input'>  <span class='co'># Half-normal prob plot like Fig 1</span>
   <span class='co'># libs(faraway)</span>
   <span class='co'># halfnorm(abs(as.vector(m1$resid)))</span>
 
   <span class='co'># Nonparametric stability statistics. Lillemo Table 4.</span>
-  <span class='no'>huehn</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>mat</span>){
+  <span class='va'>huehn</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>mat</span><span class='op'>)</span><span class='op'>{</span>
     <span class='co'># Gen in rows, Env in cols  </span>
-    <span class='no'>nenv</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>ncol</a></span>(<span class='no'>mat</span>)
+    <span class='va'>nenv</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>ncol</a></span><span class='op'>(</span><span class='va'>mat</span><span class='op'>)</span>
     <span class='co'># Corrected yield. Remove genotype effects</span>
     <span class='co'># Remove the following line to match Table 4 of Lillemo</span>
-    <span class='no'>mat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sweep.html'>sweep</a></span>(<span class='no'>mat</span>, <span class='fl'>1</span>, <span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>rowMeans</a></span>(<span class='no'>mat</span>)) + <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>mat</span>)
+    <span class='va'>mat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sweep.html'>sweep</a></span><span class='op'>(</span><span class='va'>mat</span>, <span class='fl'>1</span>, <span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>rowMeans</a></span><span class='op'>(</span><span class='va'>mat</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>mat</span><span class='op'>)</span>
     <span class='co'># Ranks in each environment</span>
-    <span class='no'>rmat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='no'>mat</span>, <span class='fl'>2</span>, <span class='no'>rank</span>)
-
+    <span class='va'>rmat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>mat</span>, <span class='fl'>2</span>, <span class='va'>rank</span><span class='op'>)</span>
+    
     <span class='co'># Mean genotype rank across envts</span>
-    <span class='no'>MeanRank</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='no'>rmat</span>, <span class='fl'>1</span>, <span class='no'>mean</span>)
-
+    <span class='va'>MeanRank</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>rmat</span>, <span class='fl'>1</span>, <span class='va'>mean</span><span class='op'>)</span>
+    
     <span class='co'># Huehn S1</span>
-    <span class='no'>gfun</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>x</span>){
-      <span class='no'>oo</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/outer.html'>outer</a></span>(<span class='no'>x</span>,<span class='no'>x</span>,<span class='st'>"-"</span>)
-      <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>abs</a></span>(<span class='no'>oo</span>)) <span class='co'># sum of all absolute pairwise differences</span>
-    }
-    <span class='no'>S1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='no'>rmat</span>, <span class='fl'>1</span>, <span class='no'>gfun</span>)/(<span class='no'>nenv</span>*(<span class='no'>nenv</span>-<span class='fl'>1</span>))
-
+    <span class='va'>gfun</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>{</span>
+      <span class='va'>oo</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/outer.html'>outer</a></span><span class='op'>(</span><span class='va'>x</span>,<span class='va'>x</span>,<span class='st'>"-"</span><span class='op'>)</span>
+      <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/MathFun.html'>abs</a></span><span class='op'>(</span><span class='va'>oo</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># sum of all absolute pairwise differences</span>
+    <span class='op'>}</span>
+    <span class='va'>S1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>rmat</span>, <span class='fl'>1</span>, <span class='va'>gfun</span><span class='op'>)</span><span class='op'>/</span><span class='op'>(</span><span class='va'>nenv</span><span class='op'>*</span><span class='op'>(</span><span class='va'>nenv</span><span class='op'>-</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span>
+    
     <span class='co'># Huehn S2</span>
-    <span class='no'>S2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>((<span class='no'>rmat</span>-<span class='no'>MeanRank</span>)^<span class='fl'>2</span>,<span class='fl'>1</span>,<span class='no'>sum</span>)/(<span class='no'>nenv</span>-<span class='fl'>1</span>)
-
-    <span class='no'>out</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(<span class='no'>MeanRank</span>,<span class='no'>S1</span>,<span class='no'>S2</span>)
-    <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>out</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>mat</span>)
-    <span class='fu'><a href='https://rdrr.io/r/base/function.html'>return</a></span>(<span class='no'>out</span>)
-  }
-  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fu'>huehn</span>(<span class='no'>datm</span>),<span class='fl'>2</span>) <span class='co'># Matches table 4</span></div><div class='output co'>#&gt;     MeanRank    S1     S2
+    <span class='va'>S2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='op'>(</span><span class='va'>rmat</span><span class='op'>-</span><span class='va'>MeanRank</span><span class='op'>)</span><span class='op'>^</span><span class='fl'>2</span>,<span class='fl'>1</span>,<span class='va'>sum</span><span class='op'>)</span><span class='op'>/</span><span class='op'>(</span><span class='va'>nenv</span><span class='op'>-</span><span class='fl'>1</span><span class='op'>)</span>
+    
+    <span class='va'>out</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='va'>MeanRank</span>,<span class='va'>S1</span>,<span class='va'>S2</span><span class='op'>)</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>out</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>mat</span><span class='op'>)</span>
+    <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='va'>out</span><span class='op'>)</span>
+  <span class='op'>}</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='fu'>huehn</span><span class='op'>(</span><span class='va'>datm</span><span class='op'>)</span>,<span class='fl'>2</span><span class='op'>)</span> <span class='co'># Matches table 4</span>
+</div><div class='output co'>#&gt;     MeanRank    S1     S2
 #&gt; G01    12.00  7.01  36.12
 #&gt; G02    14.53  9.66  71.51
 #&gt; G03    13.29  7.59  41.72
@@ -301,27 +309,17 @@
 #&gt; G22    11.35  9.00  59.87
 #&gt; G23    13.00 11.85 117.12
 #&gt; G24    12.71 11.29 102.22</div><div class='input'>  
-  # I do not think phenability package gives correct values for S1
-  # libs(phenability)
-  # nahu(datm)
+  <span class='co'># I do not think phenability package gives correct values for S1</span>
+  <span class='co'># libs(phenability)</span>
+  <span class='co'># nahu(datm)</span>
   
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -332,7 +330,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

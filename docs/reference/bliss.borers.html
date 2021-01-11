@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -150,7 +150,7 @@
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 48 observations on the following 3 variables.</p><dl'>
+    <p>A data frame with 48 observations on the following 3 variables.</p><dl>
     <dt><code>borers</code></dt><dd><p>number of borers per hill</p></dd>
     <dt><code>treat</code></dt><dd><p>treatment factor</p></dd>
     <dt><code>freq</code></dt><dd><p>frequency of the borer count</p></dd>
@@ -170,63 +170,71 @@
     <p>C. Bliss and R. A. Fisher. (1953).
   Fitting the Negative Binomial Distribution to Biological Data.
   <em>Biometrics</em>, 9, 176--200.  Table 3.
-  http://doi.org/10.2307/3001850</p>
+  https://doi.org/10.2307/3001850</p>
 <p>Geoffrey Beall. 1940. The Fit and Significance of Contagious
   Distributions when Applied to Observations on Larval Insects.
   <em>Ecology</em>, 21, 460-474.  Page 463.
-  http://doi.org/10.2307/1930285</p>
+  https://doi.org/10.2307/1930285</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>bliss.borers</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>bliss.borers</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>bliss.borers</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>bliss.borers</span>
 
 <span class='co'># Add 0 frequencies</span>
-<span class='no'>dat0</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/expand.grid.html'>expand.grid</a></span>(<span class='kw'>borers</span><span class='kw'>=</span><span class='fl'>0</span>:<span class='fl'>26</span>, <span class='kw'>treat</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'T1'</span>,<span class='st'>'T2'</span>,<span class='st'>'T3'</span>,<span class='st'>'T4'</span>))
-<span class='no'>dat0</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/merge.html'>merge</a></span>(<span class='no'>dat0</span>,<span class='no'>dat</span>, <span class='kw'>all</span><span class='kw'>=</span><span class='fl'>TRUE</span>)
-<span class='no'>dat0</span>$<span class='no'>freq</span>[<span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span>(<span class='no'>dat0</span>$<span class='no'>freq</span>)] <span class='kw'>&lt;-</span> <span class='fl'>0</span>
+<span class='va'>dat0</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/expand.grid.html'>expand.grid</a></span><span class='op'>(</span>borers<span class='op'>=</span><span class='fl'>0</span><span class='op'>:</span><span class='fl'>26</span>, treat<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'T1'</span>,<span class='st'>'T2'</span>,<span class='st'>'T3'</span>,<span class='st'>'T4'</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>dat0</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/merge.html'>merge</a></span><span class='op'>(</span><span class='va'>dat0</span>,<span class='va'>dat</span>, all<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+<span class='va'>dat0</span><span class='op'>$</span><span class='va'>freq</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>dat0</span><span class='op'>$</span><span class='va'>freq</span><span class='op'>)</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fl'>0</span>
 
 <span class='co'># Expand to individual (non-aggregated) counts for each hill</span>
-<span class='no'>dd</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(<span class='kw'>borers</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='no'>dat0</span>$<span class='no'>borers</span>, <span class='kw'>times</span><span class='kw'>=</span><span class='no'>dat0</span>$<span class='no'>freq</span>),
-                 <span class='kw'>treat</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='no'>dat0</span>$<span class='no'>treat</span>, <span class='kw'>times</span><span class='kw'>=</span><span class='no'>dat0</span>$<span class='no'>freq</span>))
+<span class='va'>dd</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>borers <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='va'>dat0</span><span class='op'>$</span><span class='va'>borers</span>, times<span class='op'>=</span><span class='va'>dat0</span><span class='op'>$</span><span class='va'>freq</span><span class='op'>)</span>,
+                 treat <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='va'>dat0</span><span class='op'>$</span><span class='va'>treat</span>, times<span class='op'>=</span><span class='va'>dat0</span><span class='op'>$</span><span class='va'>freq</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'>histogram</span>(~<span class='no'>borers</span><span class='kw'>|</span><span class='no'>treat</span>, <span class='no'>dd</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'count'</span>, <span class='kw'>breaks</span><span class='kw'>=</span><span class='fl'>0</span>:<span class='fl'>27</span>-<span class='fl'>.5</span>,
-          <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>4</span>), <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"bliss.borers"</span>, <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Borers per hill"</span>)</div><div class='img'><img src='bliss.borers-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/histogram.html'>histogram</a></span><span class='op'>(</span><span class='op'>~</span><span class='va'>borers</span><span class='op'>|</span><span class='va'>treat</span>, <span class='va'>dd</span>, type<span class='op'>=</span><span class='st'>'count'</span>, breaks<span class='op'>=</span><span class='fl'>0</span><span class='op'>:</span><span class='fl'>27</span><span class='op'>-</span><span class='fl'>.5</span>,
+          layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>4</span><span class='op'>)</span>, main<span class='op'>=</span><span class='st'>"bliss.borers"</span>, xlab<span class='op'>=</span><span class='st'>"Borers per hill"</span><span class='op'>)</span>
+</div><div class='img'><img src='bliss.borers-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>MASS</span>)</div><div class='output co'>#&gt; <span class='message'></span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>MASS</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'></span>
 #&gt; <span class='message'>Attaching package: 'MASS'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:asreml':</span>
 #&gt; <span class='message'></span>
 #&gt; <span class='message'>    oats</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:dplyr':</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    select</span></div><div class='input'>  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>glm.nb</span>(<span class='no'>borers</span>~<span class='fl'>0</span>+<span class='no'>treat</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dd</span>)
+#&gt; <span class='message'>    select</span></div><div class='input'>  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>glm.nb</span><span class='op'>(</span><span class='va'>borers</span><span class='op'>~</span><span class='fl'>0</span><span class='op'>+</span><span class='va'>treat</span>, data<span class='op'>=</span><span class='va'>dd</span><span class='op'>)</span>
   <span class='co'># Bliss, table 3, presents treatment means, which are matched by:</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m1</span>)) <span class='co'># 4.033333 3.166667 1.483333 1.508333</span></div><div class='output co'>#&gt;  treatT1  treatT2  treatT3  treatT4 
+  <span class='fu'><a href='https://rdrr.io/r/base/Log.html'>exp</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># 4.033333 3.166667 1.483333 1.508333</span>
+</div><div class='output co'>#&gt;  treatT1  treatT2  treatT3  treatT4 
 #&gt; 4.033333 3.166667 1.483333 1.508333 </div><div class='input'>  <span class='co'># Bliss gives treatment values k = c(1.532,1.764,1.333,1.190).</span>
   <span class='co'># The mean of these is 1.45, similar to this across-treatment estimate</span>
-  <span class='no'>m1</span>$<span class='no'>theta</span> <span class='co'># 1.47</span></div><div class='output co'>#&gt; [1] 1.47145</div><div class='input'>
+  <span class='va'>m1</span><span class='op'>$</span><span class='va'>theta</span> <span class='co'># 1.47</span>
+</div><div class='output co'>#&gt; [1] 1.47145</div><div class='input'>
 
 <span class='co'># Plot observed and expected distributions for treatment 2</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>latticeExtra</span>)
-  <span class='no'>xx</span> <span class='kw'>&lt;-</span> <span class='fl'>0</span>:<span class='fl'>26</span>
-  <span class='no'>yy</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/NegBinomial.html'>dnbinom</a></span>(<span class='fl'>0</span>:<span class='fl'>26</span>, <span class='kw'>mu</span><span class='kw'>=</span><span class='fl'>3.17</span>, <span class='kw'>size</span><span class='kw'>=</span><span class='fl'>1.47</span>)*<span class='fl'>120</span> <span class='co'># estimates are from glm.nb</span>
-  <span class='fu'>histogram</span>(~<span class='no'>borers</span>, <span class='no'>dd</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'count'</span>, <span class='kw'>subset</span><span class='kw'>=</span><span class='no'>treat</span><span class='kw'>==</span><span class='st'>'T2'</span>,
-            <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"bliss.borers - trt T2 observed and expected"</span>,
-            <span class='kw'>breaks</span><span class='kw'>=</span><span class='fl'>0</span>:<span class='fl'>27</span>-<span class='fl'>.5</span>) +
-              <span class='fu'>xyplot</span>(<span class='no'>yy</span>~<span class='no'>xx</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='st'>'navy'</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'b'</span>)</div><div class='img'><img src='bliss.borers-2.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>latticeExtra</span><span class='op'>)</span>
+  <span class='va'>xx</span> <span class='op'>&lt;-</span> <span class='fl'>0</span><span class='op'>:</span><span class='fl'>26</span>
+  <span class='va'>yy</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/NegBinomial.html'>dnbinom</a></span><span class='op'>(</span><span class='fl'>0</span><span class='op'>:</span><span class='fl'>26</span>, mu<span class='op'>=</span><span class='fl'>3.17</span>, size<span class='op'>=</span><span class='fl'>1.47</span><span class='op'>)</span><span class='op'>*</span><span class='fl'>120</span> <span class='co'># estimates are from glm.nb</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/histogram.html'>histogram</a></span><span class='op'>(</span><span class='op'>~</span><span class='va'>borers</span>, <span class='va'>dd</span>, type<span class='op'>=</span><span class='st'>'count'</span>, subset<span class='op'>=</span><span class='va'>treat</span><span class='op'>==</span><span class='st'>'T2'</span>,
+            main<span class='op'>=</span><span class='st'>"bliss.borers - trt T2 observed and expected"</span>,
+            breaks<span class='op'>=</span><span class='fl'>0</span><span class='op'>:</span><span class='fl'>27</span><span class='op'>-</span><span class='fl'>.5</span><span class='op'>)</span> <span class='op'>+</span>
+              <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>yy</span><span class='op'>~</span><span class='va'>xx</span>, col<span class='op'>=</span><span class='st'>'navy'</span>, type<span class='op'>=</span><span class='st'>'b'</span><span class='op'>)</span>
+</div><div class='img'><img src='bliss.borers-2.png' alt='' width='700' height='433' /></div><div class='input'>
 
 <span class='co'># "Poissonness"-type plot</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>vcd</span>)</div><div class='output co'>#&gt; <span class='message'>Loading required package: grid</span></div><div class='output co'>#&gt; <span class='message'></span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>vcd</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>Loading required package: grid</span></div><div class='output co'>#&gt; <span class='message'></span>
 #&gt; <span class='message'>Attaching package: 'vcd'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:latticeExtra':</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    rootogram</span></div><div class='input'>  <span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/droplevels.html'>droplevels</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, <span class='no'>treat</span><span class='kw'>==</span><span class='st'>'T2'</span>))
-  <span class='kw pkg'>vcd</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/vcd/man/distplot.html'>distplot</a></span>(<span class='no'>dat2</span>$<span class='no'>borers</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"nbinomial"</span>,
-           <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"bliss.borers neg binomialness plot"</span>)</div><div class='img'><img src='bliss.borers-3.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='co'># Better way is a rootogram</span>
-  <span class='no'>g1</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>vcd</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/vcd/man/goodfit.html'>goodfit</a></span>(<span class='no'>dat2</span>$<span class='no'>borers</span>, <span class='st'>"nbinomial"</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/plot.html'>plot</a></span>(<span class='no'>g1</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"bliss.borers - Treatment 2"</span>)</div><div class='img'><img src='bliss.borers-4.png' alt='' width='700' height='433' /></div><div class='input'>
-# }
+#&gt; <span class='message'>    rootogram</span></div><div class='input'>  <span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/droplevels.html'>droplevels</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>treat</span><span class='op'>==</span><span class='st'>'T2'</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='fu'>vcd</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/vcd/man/distplot.html'>distplot</a></span><span class='op'>(</span><span class='va'>dat2</span><span class='op'>$</span><span class='va'>borers</span>, type <span class='op'>=</span> <span class='st'>"nbinomial"</span>,
+           main<span class='op'>=</span><span class='st'>"bliss.borers neg binomialness plot"</span><span class='op'>)</span>
+</div><div class='img'><img src='bliss.borers-3.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='co'># Better way is a rootogram</span>
+  <span class='va'>g1</span> <span class='op'>&lt;-</span> <span class='fu'>vcd</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/vcd/man/goodfit.html'>goodfit</a></span><span class='op'>(</span><span class='va'>dat2</span><span class='op'>$</span><span class='va'>borers</span>, <span class='st'>"nbinomial"</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>g1</span>, main<span class='op'>=</span><span class='st'>"bliss.borers - Treatment 2"</span><span class='op'>)</span>
+</div><div class='img'><img src='bliss.borers-4.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -243,7 +251,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

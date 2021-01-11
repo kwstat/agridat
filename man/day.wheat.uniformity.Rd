@@ -46,7 +46,7 @@ Uniformity trial of wheat in 1903 in Missouri.
   The relation of size, shape, and number of replications of plats to
   probable error in field experimentation.
   \emph{Agronomy Journal}, 12, 100-105.
-  http://doi.org/10.2134/agronj1920.00021962001200030002x
+  https://doi.org/10.2134/agronj1920.00021962001200030002x
 }
 \examples{
 \dontrun{

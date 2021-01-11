@@ -31,7 +31,7 @@ Field length: 24 rows * 8 inches = 16 feet
   Christidis, Basil G (1931).
   The importance of the shape of plots in field experimentation.
   \emph{The Journal of Agricultural Science}, 21, 14-37. Table VI, p. 28.
-  http://dx.doi.org/10.1017/S0021859600007942
+  https://dx.doi.org/10.1017/S0021859600007942
 }
 \references{
   None

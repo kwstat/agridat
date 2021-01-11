@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,13 +45,12 @@
 
 
 
-<meta property="og:title" content="RCB experiment of grape, disease incidence — hughes.grapes" />
 
+<meta property="og:title" content="RCB experiment of grape, disease incidence — hughes.grapes" />
 <meta property="og:description" content="Disease incidence on grape leaves in RCB experiment with 6 different
   treatments." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -62,7 +67,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -76,7 +81,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -105,7 +110,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -113,10 +118,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -140,25 +144,24 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Disease incidence on grape leaves in RCB experiment with 6 different
   treatments.</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 270 observations on the following 6 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 270 observations on the following 6 variables.</p><dl>
     <dt><code>block</code></dt><dd><p>Block factor, 1-3</p></dd>
     <dt><code>trt</code></dt><dd><p>Treatment factor, 1-6</p></dd>
     <dt><code>vine</code></dt><dd><p>Vine factor, 1-3</p></dd>
     <dt><code>shoot</code></dt><dd><p>Shoot factor, 1-5</p></dd>
     <dt><code>diseased</code></dt><dd><p>Number of diseased leaves per shoot</p></dd>
     <dt><code>total</code></dt><dd><p>Number of total leaves per shoot</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     
@@ -172,52 +175,56 @@
   measured.  For each plot, 5 randomly chosen shoots on each of the 3
   vines were observed.  The canopy was closed and shoots could be
   intertwined.  On each shoot, the total number of leaves and the number
-  of infected leaves were recorded.</p>
-    
+  of infected leaves were recorded.</p>  
+
+<p>Used with permission of Larry Madden.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Hughes, G. and Madden, LV. 1995.
   Some methods allowing for aggregated patterns of disease incidence in
   the analysis of data from designed experiments.
-  <em>Plant Pathology</em>, 44, 927--943.
-  http://doi.org/10.1111/j.1365-3059.1995.tb02651.x</p>
-<p>Used with permission of Larry Madden.</p>
-    
+  Plant Pathology, 44, 927--943.
+  https://doi.org/10.1111/j.1365-3059.1995.tb02651.x</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Hans-Pieter Piepho. 1999.
   Analysing disease incidence data from designed experiments by
   generalized linear mixed models.
-  <em>Plant Pathology</em>, 48, 668--684.
-  http://doi.org/10.1046/j.1365-3059.1999.00383.x</p>
-    
+  Plant Pathology, 48, 668--684.
+  https://doi.org/10.1046/j.1365-3059.1999.00383.x</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>hughes.grapes</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>hughes.grapes</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+  
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>hughes.grapes</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>hughes.grapes</span>
 
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>rate</span> <span class='kw'>=</span> <span class='no'>diseased</span>/<span class='no'>total</span>, <span class='kw'>plot</span><span class='kw'>=</span><span class='no'>trt</span>:<span class='no'>block</span>)
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, rate <span class='op'>=</span> <span class='va'>diseased</span><span class='op'>/</span><span class='va'>total</span>, plot<span class='op'>=</span><span class='va'>trt</span><span class='op'>:</span><span class='va'>block</span><span class='op'>)</span>
 
   <span class='co'># Trt 1 has higher rate, more variable, Trt 3 lower rate, less variable</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-  <span class='no'>foo</span> <span class='kw'>&lt;-</span> <span class='fu'>bwplot</span>(<span class='no'>rate</span> ~ <span class='no'>vine</span><span class='kw'>|</span><span class='no'>block</span>*<span class='no'>trt</span>, <span class='no'>dat</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"hughes.grapes"</span>,
-                <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"vine"</span>)
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>latticeExtra</span>)
-  <span class='fu'>useOuterStrips</span>(<span class='no'>foo</span>)</div><div class='img'><img src='hughes.grapes-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+  <span class='va'>foo</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>bwplot</a></span><span class='op'>(</span><span class='va'>rate</span> <span class='op'>~</span> <span class='va'>vine</span><span class='op'>|</span><span class='va'>block</span><span class='op'>*</span><span class='va'>trt</span>, <span class='va'>dat</span>, main<span class='op'>=</span><span class='st'>"hughes.grapes"</span>,
+                xlab<span class='op'>=</span><span class='st'>"vine"</span><span class='op'>)</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>latticeExtra</span><span class='op'>)</span>
+  <span class='fu'>useOuterStrips</span><span class='op'>(</span><span class='va'>foo</span><span class='op'>)</span>
+</div><div class='img'><img src='hughes.grapes-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
   <span class='co'># Table 1 of Piepho 1999</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/tapply.html'>tapply</a></span>(<span class='no'>dat</span>$<span class='no'>rate</span>, <span class='no'>dat</span>$<span class='no'>trt</span>, <span class='no'>mean</span>) <span class='co'># trt 1 does not match Piepho</span></div><div class='output co'>#&gt;         T1         T2         T3         T4         T5         T6 
-#&gt; 0.67389080 0.07451458 0.02532236 0.04157511 0.03550864 0.07506862 </div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/base/tapply.html'>tapply</a></span>(<span class='no'>dat</span>$<span class='no'>rate</span>, <span class='no'>dat</span>$<span class='no'>trt</span>, <span class='no'>max</span>)</div><div class='output co'>#&gt;        T1        T2        T3        T4        T5        T6 
+  <span class='fu'><a href='https://rdrr.io/r/base/tapply.html'>tapply</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>rate</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>trt</span>, <span class='va'>mean</span><span class='op'>)</span> <span class='co'># trt 1 does not match Piepho</span>
+</div><div class='output co'>#&gt;         T1         T2         T3         T4         T5         T6 
+#&gt; 0.67389080 0.07451458 0.02532236 0.04157511 0.03550864 0.07506862 </div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/base/tapply.html'>tapply</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>rate</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>trt</span>, <span class='va'>max</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;        T1        T2        T3        T4        T5        T6 
 #&gt; 1.0000000 0.4545455 0.1000000 0.2727273 0.3750000 0.4666667 </div><div class='input'>
 
   <span class='co'># Piepho model 3.  Binomial data.  May not be exactly the same model</span>
-
+  
   <span class='co'># Use the binomial count data with lme4</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lme4</span>)
-  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>glmer</span>(<span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span>(<span class='no'>diseased</span>, <span class='no'>total</span>-<span class='no'>diseased</span>) ~ <span class='no'>trt</span> + <span class='no'>block</span> + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>plot</span>/<span class='no'>vine</span>),
-              <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>family</span><span class='kw'>=</span><span class='no'>binomial</span>)</div><div class='output co'>#&gt; <span class='message'>boundary (singular) fit: see ?isSingular</span></div><div class='input'>  <span class='no'>m1</span></div><div class='output co'>#&gt; Generalized linear mixed model fit by maximum likelihood (Laplace
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lme4</span><span class='op'>)</span>
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>glmer</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>diseased</span>, <span class='va'>total</span><span class='op'>-</span><span class='va'>diseased</span><span class='op'>)</span> <span class='op'>~</span> <span class='va'>trt</span> <span class='op'>+</span> <span class='va'>block</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>plot</span><span class='op'>/</span><span class='va'>vine</span><span class='op'>)</span>,
+              data<span class='op'>=</span><span class='va'>dat</span>, family<span class='op'>=</span><span class='va'>binomial</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>boundary (singular) fit: see ?isSingular</span></div><div class='input'>  <span class='va'>m1</span>
+</div><div class='output co'>#&gt; Generalized linear mixed model fit by maximum likelihood (Laplace
 #&gt;   Approximation) [glmerMod]
 #&gt;  Family: binomial  ( logit )
 #&gt; Formula: cbind(diseased, total - diseased) ~ trt + block + (1 | plot/vine)
@@ -234,19 +241,27 @@
 #&gt;     0.65868     -3.24235     -4.31193     -3.88553     -4.05726     -3.25889  
 #&gt;     blockB2      blockB3  
 #&gt;    -0.09745      0.21429  
-#&gt; convergence code 0; 1 optimizer warnings; 0 lme4 warnings </div><div class='input'>
+#&gt; convergence code 0; 0 optimizer warnings; 1 lme4 warnings </div><div class='input'>
   <span class='co'># Switch from binomial counts to bernoulli data</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>aod</span>)</div><div class='output co'>#&gt; <span class='message'></span>
-#&gt; <span class='message'>Attaching package: 'aod'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:mgcv':</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>aod</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Attaching package: 'aod'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:survival':</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    negbin</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:survival':</span>
+#&gt; <span class='message'>    rats</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:mgcv':</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    rats</span></div><div class='input'>  <span class='no'>bdat</span> <span class='kw'>&lt;-</span> <span class='fu'>splitbin</span>(<span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span>(<span class='no'>diseased</span>, <span class='no'>total</span>-<span class='no'>diseased</span>) ~ <span class='no'>block</span>+<span class='no'>trt</span>+<span class='no'>plot</span>+<span class='no'>vine</span>+<span class='no'>shoot</span>,
-                   <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)$<span class='no'>tab</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='no'>bdat</span>)[<span class='fl'>2</span>] <span class='kw'>&lt;-</span> <span class='st'>'y'</span>
-
+#&gt; <span class='message'>    negbin</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:asreml':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    rats</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:spaMM':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    negbin</span></div><div class='input'>  <span class='va'>bdat</span> <span class='op'>&lt;-</span> <span class='fu'>splitbin</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>diseased</span>, <span class='va'>total</span><span class='op'>-</span><span class='va'>diseased</span><span class='op'>)</span> <span class='op'>~</span> <span class='va'>block</span><span class='op'>+</span><span class='va'>trt</span><span class='op'>+</span><span class='va'>plot</span><span class='op'>+</span><span class='va'>vine</span><span class='op'>+</span><span class='va'>shoot</span>,
+                   data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span><span class='op'>$</span><span class='va'>tab</span>
+</div><div class='output co'>#&gt; <span class='warning'>Warning: Using formula(x) is deprecated when x is a character vector of length &gt; 1.</span>
+#&gt; <span class='warning'>  Consider formula(paste(x, collapse = " ")) instead.</span></div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>bdat</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='st'>'y'</span>
+  
   <span class='co'># Using lme4</span>
-  <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'>glmer</span>(<span class='no'>y</span> ~ <span class='no'>trt</span> + <span class='no'>block</span> + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>plot</span>/<span class='no'>vine</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>bdat</span>, <span class='kw'>family</span><span class='kw'>=</span><span class='no'>binomial</span>)</div><div class='output co'>#&gt; <span class='message'>boundary (singular) fit: see ?isSingular</span></div><div class='input'>  <span class='no'>m2</span></div><div class='output co'>#&gt; Generalized linear mixed model fit by maximum likelihood (Laplace
+  <span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'>glmer</span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='va'>trt</span> <span class='op'>+</span> <span class='va'>block</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>plot</span><span class='op'>/</span><span class='va'>vine</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>bdat</span>, family<span class='op'>=</span><span class='va'>binomial</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>boundary (singular) fit: see ?isSingular</span></div><div class='input'>  <span class='va'>m2</span>
+</div><div class='output co'>#&gt; Generalized linear mixed model fit by maximum likelihood (Laplace
 #&gt;   Approximation) [glmerMod]
 #&gt;  Family: binomial  ( logit )
 #&gt; Formula: y ~ trt + block + (1 | plot/vine)
@@ -263,11 +278,13 @@
 #&gt;     0.65870     -3.24234     -4.31194     -3.88552     -4.05723     -3.25895  
 #&gt;     blockB2      blockB3  
 #&gt;    -0.09749      0.21426  
-#&gt; convergence code 0; 1 optimizer warnings; 0 lme4 warnings </div><div class='input'>
+#&gt; convergence code 0; 0 optimizer warnings; 1 lme4 warnings </div><div class='input'>  
   <span class='co'># Now using MASS:::glmmPQL</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>MASS</span>)
-  <span class='no'>m3</span> <span class='kw'>&lt;-</span> <span class='fu'>glmmPQL</span>(<span class='no'>y</span> ~ <span class='no'>trt</span> + <span class='no'>block</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>bdat</span>,
-                <span class='kw'>random</span><span class='kw'>=</span>~<span class='fl'>1</span><span class='kw'>|</span><span class='no'>plot</span>/<span class='no'>vine</span>, <span class='kw'>family</span><span class='kw'>=</span><span class='no'>binomial</span>)</div><div class='output co'>#&gt; <span class='message'>iteration 1</span></div><div class='output co'>#&gt; <span class='message'>iteration 2</span></div><div class='output co'>#&gt; <span class='message'>iteration 3</span></div><div class='input'>  <span class='no'>m3</span></div><div class='output co'>#&gt; Linear mixed-effects model fit by maximum likelihood
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>MASS</span><span class='op'>)</span>
+  <span class='va'>m3</span> <span class='op'>&lt;-</span> <span class='fu'>glmmPQL</span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='va'>trt</span> <span class='op'>+</span> <span class='va'>block</span>, data<span class='op'>=</span><span class='va'>bdat</span>,
+                random<span class='op'>=</span><span class='op'>~</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>plot</span><span class='op'>/</span><span class='va'>vine</span>, family<span class='op'>=</span><span class='va'>binomial</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>iteration 1</span></div><div class='output co'>#&gt; <span class='message'>iteration 2</span></div><div class='output co'>#&gt; <span class='message'>iteration 3</span></div><div class='input'>  <span class='va'>m3</span>
+</div><div class='output co'>#&gt; Linear mixed-effects model fit by maximum likelihood
 #&gt;   Data: bdat 
 #&gt;   Log-likelihood: NA
 #&gt;   Fixed: y ~ trt + block 
@@ -292,23 +309,13 @@
 #&gt; Number of Groups: 
 #&gt;           plot vine %in% plot 
 #&gt;             18             54 </div><div class='input'>
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -319,7 +326,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

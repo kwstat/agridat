@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,13 +45,12 @@
 
 
 
-<meta property="og:title" content="Birth weight and weaning weight of Dorper x Red Maasi lambs — ilri.sheep" />
 
+<meta property="og:title" content="Birth weight and weaning weight of Dorper x Red Maasi lambs — ilri.sheep" />
 <meta property="og:description" content="Birth weight and weaning weight of 882 lambs from a partial diallel
   cross of Dorper and Red Maasi breeds." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -62,7 +67,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -76,7 +81,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -105,7 +110,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -113,10 +118,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -140,16 +144,15 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Birth weight and weaning weight of 882 lambs from a partial diallel
   cross of Dorper and Red Maasi breeds.</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 882 observations on the following 12 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 882 observations on the following 12 variables.</p><dl>
     <dt><code>year</code></dt><dd><p>year of lamb birth, 1991-1996</p></dd>
     <dt><code>lamb</code></dt><dd><p>lamb id</p></dd>
     <dt><code>sex</code></dt><dd><p>sex of lamb, M=Male/F=Female</p></dd>
@@ -162,9 +165,9 @@
     <dt><code>damage</code></dt><dd><p>ewe (dam) age in years</p></dd>
     <dt><code>ram</code></dt><dd><p>ram id</p></dd>
     <dt><code>ramgen</code></dt><dd><p>ram genotype: D, R</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     
@@ -182,15 +185,13 @@
   of this example, only the following four offspring genotypes are
   considered (Sire x Dam): D x D, D x R, R x D and R x R.</p>
 <p>Records are missing in 182 of the lambs, mostly because of earlier death.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Case Study 4: Mixed model analysis for the estimation of components of genetic
   variation in lamb weaning weight. International Livestock Research Institute.
-  http://www.ilri.org/biometrics/CS/case%20study%204/case%20study%204.1.htm
+  https://www.ilri.org/biometrics/CS/case%20study%204/case%20study%204.1.htm
   Retrieved Dec 2011.</p>
 <p>Licensed with Creative Commons BY-NC-SA 3.0 Unported license.</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Baker, RL and Nagda, S. and Rodriguez-Zas, SL and Southey, BR and
@@ -198,41 +199,43 @@
   to gastro-intestinal nematode parasites and relationships with
   productivity of Red Maasai, Dorper and Red Maasai x Dorper crossbred
   lambs in the sub-humid tropics.  <em>Animal Science</em>, 76, 119-136.</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+  
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>ilri.sheep</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>ilri.sheep</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, lamb<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>lamb</span><span class='op'>)</span>, ewe<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>ewe</span><span class='op'>)</span>, ram<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>ram</span><span class='op'>)</span>,
+                   year<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='co'># dl is linear covariate, same as damage, but truncated to [2,8]</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>within</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='op'>{</span>
+    <span class='va'>dl</span> <span class='op'>&lt;-</span> <span class='va'>damage</span>
+    <span class='va'>dl</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>dl</span> <span class='op'>&lt;</span> <span class='fl'>3</span>, <span class='fl'>2</span>, <span class='va'>dl</span><span class='op'>)</span>
+    <span class='va'>dl</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>dl</span> <span class='op'>&gt;</span> <span class='fl'>7</span>, <span class='fl'>8</span>, <span class='va'>dl</span><span class='op'>)</span>
+    <span class='va'>dq</span> <span class='op'>&lt;-</span> <span class='va'>dl</span><span class='op'>^</span><span class='fl'>2</span>
+  <span class='op'>}</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>ilri.sheep</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>ilri.sheep</span>
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>lamb</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>lamb</span>), <span class='kw'>ewe</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>ewe</span>), <span class='kw'>ram</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>ram</span>),
-                 <span class='kw'>year</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>year</span>))
-<span class='co'># dl is linear covariate, same as damage, but truncated to [2,8]</span>
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/with.html'>within</a></span>(<span class='no'>dat</span>, {
-  <span class='no'>dl</span> <span class='kw'>&lt;-</span> <span class='no'>damage</span>
-  <span class='no'>dl</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='no'>dl</span> <span class='kw'>&lt;</span> <span class='fl'>3</span>, <span class='fl'>2</span>, <span class='no'>dl</span>)
-  <span class='no'>dl</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='no'>dl</span> <span class='kw'>&gt;</span> <span class='fl'>7</span>, <span class='fl'>8</span>, <span class='no'>dl</span>)
-  <span class='no'>dq</span> <span class='kw'>&lt;-</span> <span class='no'>dl</span>^<span class='fl'>2</span>
-})
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='op'>!</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>weanage</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, !<span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span>(<span class='no'>weanage</span>))
-
-<span class='co'># EDA</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='co'>## bwplot(weanwt ~ year, dat, main="ilri.sheep", xlab="year", ylab="Wean weight",</span>
-<span class='co'>##        panel=panel.violin) # Year effect</span>
-<span class='fu'>bwplot</span>(<span class='no'>weanwt</span> ~ <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>dl</span>), <span class='no'>dat</span>,
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"ilri.sheep"</span>, <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Dam age"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Wean weight"</span>) <span class='co'># Dam age effect</span></div><div class='img'><img src='ilri.sheep-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'># bwplot(weanwt ~ gen, dat,</span>
-<span class='co'>#        main="ilri.sheep", xlab="Genotype", ylab="Wean weight") # Genotype differences</span>
-<span class='fu'>xyplot</span>(<span class='no'>weanwt</span> ~ <span class='no'>weanage</span>, <span class='no'>dat</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'p'</span>,<span class='st'>'smooth'</span>),
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"ilri.sheep"</span>, <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Wean age"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Wean weight"</span>) <span class='co'># Age covariate</span></div><div class='img'><img src='ilri.sheep-2.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='co'># case study page 4.18</span>
-<span class='no'>lm1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>weanwt</span> ~ <span class='no'>year</span> + <span class='no'>sex</span> + <span class='no'>weanage</span> + <span class='no'>dl</span> + <span class='no'>dq</span> + <span class='no'>ewegen</span> + <span class='no'>ramgen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>lm1</span>)</div><div class='output co'>#&gt; 
+  <span class='co'># EDA</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+  <span class='co'>## bwplot(weanwt ~ year, dat, main="ilri.sheep", xlab="year", ylab="Wean weight",</span>
+  <span class='co'>##        panel=panel.violin) # Year effect</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>bwplot</a></span><span class='op'>(</span><span class='va'>weanwt</span> <span class='op'>~</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>dl</span><span class='op'>)</span>, <span class='va'>dat</span>,
+         main<span class='op'>=</span><span class='st'>"ilri.sheep"</span>, xlab<span class='op'>=</span><span class='st'>"Dam age"</span>, ylab<span class='op'>=</span><span class='st'>"Wean weight"</span><span class='op'>)</span> <span class='co'># Dam age effect</span>
+</div><div class='img'><img src='ilri.sheep-1.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='co'># bwplot(weanwt ~ gen, dat,</span>
+  <span class='co'>#        main="ilri.sheep", xlab="Genotype", ylab="Wean weight") # Genotype differences</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>weanwt</span> <span class='op'>~</span> <span class='va'>weanage</span>, <span class='va'>dat</span>, type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'p'</span>,<span class='st'>'smooth'</span><span class='op'>)</span>,
+         main<span class='op'>=</span><span class='st'>"ilri.sheep"</span>, xlab<span class='op'>=</span><span class='st'>"Wean age"</span>, ylab<span class='op'>=</span><span class='st'>"Wean weight"</span><span class='op'>)</span> <span class='co'># Age covariate</span>
+</div><div class='img'><img src='ilri.sheep-2.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='co'># case study page 4.18</span>
+  <span class='va'>lm1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>weanwt</span> <span class='op'>~</span> <span class='va'>year</span> <span class='op'>+</span> <span class='va'>sex</span> <span class='op'>+</span> <span class='va'>weanage</span> <span class='op'>+</span> <span class='va'>dl</span> <span class='op'>+</span> <span class='va'>dq</span> <span class='op'>+</span> <span class='va'>ewegen</span> <span class='op'>+</span> <span class='va'>ramgen</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>lm1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt; Call:
-#&gt; lm.default(formula = weanwt ~ year + sex + weanage + dl + dq + 
-#&gt;     ewegen + ramgen, data = dat)
+#&gt; lm(formula = weanwt ~ year + sex + weanage + dl + dq + ewegen + 
+#&gt;     ramgen, data = dat)
 #&gt; 
 #&gt; Residuals:
 #&gt;     Min      1Q  Median      3Q     Max 
@@ -259,7 +262,8 @@
 #&gt;   (7 observations deleted due to missingness)
 #&gt; Multiple R-squared:  0.3835,	Adjusted R-squared:  0.3736 
 #&gt; F-statistic:  38.9 on 11 and 688 DF,  p-value: &lt; 2.2e-16
-#&gt; </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>lm1</span>)</div><div class='output co'>#&gt; Analysis of Variance Table
+#&gt; </div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>lm1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
 #&gt; Response: weanwt
 #&gt;            Df Sum Sq Mean Sq F value    Pr(&gt;F)    
@@ -273,12 +277,13 @@
 #&gt; Residuals 688 3393.7    4.93                      
 #&gt; ---
 #&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'>
-# ----------------------------------------------------------------------------
+  <span class='co'># ----------</span>
 
-</div><div class='input'>  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lme4</span>)
-  <span class='no'>lme1</span> <span class='kw'>&lt;-</span> <span class='fu'>lmer</span>(<span class='no'>weanwt</span> ~ <span class='no'>year</span> + <span class='no'>sex</span> + <span class='no'>weanage</span> + <span class='no'>dl</span> + <span class='no'>dq</span> + <span class='no'>ewegen</span> + <span class='no'>ramgen</span> +
-                 (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>ewe</span>) + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>ram</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>lme1</span>, <span class='kw'>corr</span><span class='kw'>=</span><span class='fl'>FALSE</span>)</div><div class='output co'>#&gt; Linear mixed model fit by REML ['lmerMod']
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lme4</span><span class='op'>)</span>
+  <span class='va'>lme1</span> <span class='op'>&lt;-</span> <span class='fu'>lmer</span><span class='op'>(</span><span class='va'>weanwt</span> <span class='op'>~</span> <span class='va'>year</span> <span class='op'>+</span> <span class='va'>sex</span> <span class='op'>+</span> <span class='va'>weanage</span> <span class='op'>+</span> <span class='va'>dl</span> <span class='op'>+</span> <span class='va'>dq</span> <span class='op'>+</span> <span class='va'>ewegen</span> <span class='op'>+</span> <span class='va'>ramgen</span> <span class='op'>+</span>
+                 <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>ewe</span><span class='op'>)</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>ram</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='va'>lme1</span>, corr<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Linear mixed model fit by REML ['lmerMod']
 #&gt; Formula: weanwt ~ year + sex + weanage + dl + dq + ewegen + ramgen + (1 |  
 #&gt;     ewe) + (1 | ram)
 #&gt;    Data: dat
@@ -291,13 +296,14 @@
 #&gt; Number of obs: 700, groups:  ewe, 358; ram, 74
 #&gt; Fixed Effects:
 #&gt; (Intercept)       year92       year93       year94       year95       year96  
-#&gt;     0.18579     -1.57091     -1.07663     -3.00251     -3.28832     -2.45008  
+#&gt;     0.18579     -1.57090     -1.07663     -3.00251     -3.28832     -2.45008  
 #&gt;        sexM      weanage           dl           dq      ewegenR      ramgenR  
-#&gt;     0.40381      0.06593      2.92233     -0.28997     -0.45429     -0.41304  </div><div class='input'>  <span class='no'>lme2</span> <span class='kw'>&lt;-</span> <span class='fu'>lmer</span>(<span class='no'>weanwt</span> ~ <span class='no'>year</span> + <span class='no'>sex</span> + <span class='no'>weanage</span> + <span class='no'>dl</span> + <span class='no'>dq</span> + <span class='no'>ewegen</span> + <span class='no'>ramgen</span> +
-                 (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>ewe</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-  <span class='no'>lme3</span> <span class='kw'>&lt;-</span> <span class='fu'>lmer</span>(<span class='no'>weanwt</span> ~ <span class='no'>year</span> + <span class='no'>sex</span> + <span class='no'>weanage</span> + <span class='no'>dl</span> + <span class='no'>dq</span> + <span class='no'>ewegen</span> + <span class='no'>ramgen</span> +
-                 (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>ram</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-  <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>lme1</span>, <span class='no'>lme2</span>,  <span class='no'>lme3</span>)</div><div class='output co'>#&gt; <span class='message'>refitting model(s) with ML (instead of REML)</span></div><div class='output co'>#&gt; Data: dat
+#&gt;     0.40381      0.06593      2.92232     -0.28997     -0.45429     -0.41304  </div><div class='input'>  <span class='va'>lme2</span> <span class='op'>&lt;-</span> <span class='fu'>lmer</span><span class='op'>(</span><span class='va'>weanwt</span> <span class='op'>~</span> <span class='va'>year</span> <span class='op'>+</span> <span class='va'>sex</span> <span class='op'>+</span> <span class='va'>weanage</span> <span class='op'>+</span> <span class='va'>dl</span> <span class='op'>+</span> <span class='va'>dq</span> <span class='op'>+</span> <span class='va'>ewegen</span> <span class='op'>+</span> <span class='va'>ramgen</span> <span class='op'>+</span>
+                 <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>ewe</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+  <span class='va'>lme3</span> <span class='op'>&lt;-</span> <span class='fu'>lmer</span><span class='op'>(</span><span class='va'>weanwt</span> <span class='op'>~</span> <span class='va'>year</span> <span class='op'>+</span> <span class='va'>sex</span> <span class='op'>+</span> <span class='va'>weanage</span> <span class='op'>+</span> <span class='va'>dl</span> <span class='op'>+</span> <span class='va'>dq</span> <span class='op'>+</span> <span class='va'>ewegen</span> <span class='op'>+</span> <span class='va'>ramgen</span> <span class='op'>+</span>
+                 <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>ram</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>lme1</span>, <span class='va'>lme2</span>,  <span class='va'>lme3</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>refitting model(s) with ML (instead of REML)</span></div><div class='output co'>#&gt; Data: dat
 #&gt; Models:
 #&gt; lme2: weanwt ~ year + sex + weanage + dl + dq + ewegen + ramgen + (1 | 
 #&gt; lme2:     ewe)
@@ -305,156 +311,57 @@
 #&gt; lme3:     ram)
 #&gt; lme1: weanwt ~ year + sex + weanage + dl + dq + ewegen + ramgen + (1 | 
 #&gt; lme1:     ewe) + (1 | ram)
-#&gt;      Df    AIC    BIC  logLik deviance  Chisq Chi Df Pr(&gt;Chisq)    
-#&gt; lme2 14 3081.0 3144.7 -1526.5   3053.0                             
-#&gt; lme3 14 3119.4 3183.1 -1545.7   3091.4  0.000      0          1    
-#&gt; lme1 15 3082.6 3150.9 -1526.3   3052.6 38.735      1  4.853e-10 ***
+#&gt;      npar    AIC    BIC  logLik deviance  Chisq Df Pr(&gt;Chisq)    
+#&gt; lme2   14 3081.0 3144.7 -1526.5   3053.0                         
+#&gt; lme3   14 3119.4 3183.1 -1545.7   3091.4  0.000  0          1    
+#&gt; lme1   15 3082.6 3150.9 -1526.3   3052.6 38.735  1  4.853e-10 ***
 #&gt; ---
 #&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'>
-# ----------------------------------------------------------------------------
+  <span class='co'># ----------</span>
 
-</div><div class='input'>  <span class='co'># asreml3</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span>,<span class='va'>lucid</span><span class='op'>)</span>
+  <span class='co'># asreml3 and asreml4</span>
+
   <span class='co'># case study page 4.20</span>
-  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>weanwt</span> ~ <span class='no'>year</span> + <span class='no'>sex</span> + <span class='no'>weanage</span> + <span class='no'>dl</span> + <span class='no'>dq</span> + <span class='no'>ramgen</span> + <span class='no'>ewegen</span>,
-               <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)</div><div class='output co'>#&gt; ASReml: Fri Aug 16 14:59:30 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;    -927.9005      4.9327   688  14:59:30     0.0
-#&gt;    -927.9005      4.9327   688  14:59:30     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 14:59:30 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt; Wald tests for fixed effects
-#&gt; 
-#&gt; Response: weanwt
-#&gt; 
-#&gt; Terms added sequentially; adjusted for those above
-#&gt; 
-#&gt;               Df Sum of Sq Wald statistic Pr(Chisq)    
-#&gt; (Intercept)    1     86240        17483.4 &lt; 2.2e-16 ***
-#&gt; year           5      1208          244.9 &lt; 2.2e-16 ***
-#&gt; sex            1        56           11.3 0.0007547 ***
-#&gt; weanage        1       344           69.8 &lt; 2.2e-16 ***
-#&gt; dl             1       152           30.7 2.987e-08 ***
-#&gt; dq             1       276           55.9 7.583e-14 ***
-#&gt; ramgen         1        45            9.1 0.0025580 ** 
-#&gt; ewegen         1        30            6.1 0.0133135 *  
-#&gt; residual (MS)            5                             
-#&gt; ---
-#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'>
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>weanwt</span> <span class='op'>~</span> <span class='va'>year</span> <span class='op'>+</span> <span class='va'>sex</span> <span class='op'>+</span> <span class='va'>weanage</span> <span class='op'>+</span> <span class='va'>dl</span> <span class='op'>+</span> <span class='va'>dq</span> <span class='op'>+</span> <span class='va'>ramgen</span> <span class='op'>+</span> <span class='va'>ewegen</span>,
+               data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:48:09 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -927.900       4.93270    688 17:48:09    0.0</div><div class='input'>  <span class='co'># anova(m1) # asreml3</span>
+  <span class='co'># wald(m1) # asreml4</span>
+  
   <span class='co'># case study page 4.26</span>
-  <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>weanwt</span> ~ <span class='no'>year</span> + <span class='no'>sex</span> + <span class='no'>weanage</span> + <span class='no'>dl</span> + <span class='no'>dq</span> + <span class='no'>ramgen</span> + <span class='no'>ewegen</span>,
-               <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='no'>ram</span> + <span class='no'>ewe</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)</div><div class='output co'>#&gt; ASReml: Fri Aug 16 14:59:30 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;    -920.9391      4.1648   688  14:59:30     0.0
-#&gt;    -914.3891      3.9524   688  14:59:30     0.0
-#&gt;    -909.8340      3.6935   688  14:59:30     0.0
-#&gt;    -908.5601      3.4583   688  14:59:30     0.0
-#&gt;    -908.5476      3.4282   688  14:59:30     0.0
-#&gt;    -908.5476      3.4272   688  14:59:30     0.0
-#&gt;    -908.5476      3.4272   688  14:59:30     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 14:59:30 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m2</span>)</div><div class='output co'>#&gt; Wald tests for fixed effects
-#&gt; 
-#&gt; Response: weanwt
-#&gt; 
-#&gt; Terms added sequentially; adjusted for those above
-#&gt; 
-#&gt;               Df Sum of Sq Wald statistic Pr(Chisq)    
-#&gt; (Intercept)    1     38898        11349.7 &lt; 2.2e-16 ***
-#&gt; year           5       789          230.3 &lt; 2.2e-16 ***
-#&gt; sex            1        33            9.7  0.001883 ** 
-#&gt; weanage        1       219           63.8 1.332e-15 ***
-#&gt; dl             1       104           30.4 3.441e-08 ***
-#&gt; dq             1       269           78.4 &lt; 2.2e-16 ***
-#&gt; ramgen         1        23            6.6  0.009997 ** 
-#&gt; ewegen         1        10            2.9  0.088194 .  
-#&gt; residual (MS)            3                             
-#&gt; ---
-#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'>
+  <span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>weanwt</span> <span class='op'>~</span> <span class='va'>year</span> <span class='op'>+</span> <span class='va'>sex</span> <span class='op'>+</span> <span class='va'>weanage</span> <span class='op'>+</span> <span class='va'>dl</span> <span class='op'>+</span> <span class='va'>dq</span> <span class='op'>+</span> <span class='va'>ramgen</span> <span class='op'>+</span> <span class='va'>ewegen</span>,
+               random <span class='op'>=</span> <span class='op'>~</span> <span class='va'>ram</span> <span class='op'>+</span> <span class='va'>ewe</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:48:09 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -920.939       4.16476    688 17:48:09    0.0
+#&gt;  2      -914.393       3.95256    688 17:48:09    0.0
+#&gt;  3      -909.836       3.69363    688 17:48:09    0.0
+#&gt;  4      -908.663       3.51028    688 17:48:09    0.0
+#&gt;  5      -908.548       3.43112    688 17:48:09    0.0
+#&gt;  6      -908.548       3.42731    688 17:48:09    0.0</div><div class='input'>  <span class='co'># anova(m2)</span>
+  <span class='co'># wald(m2)</span>
+  
   <span class='co'># case study page 4.37, year means</span>
-  <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m2</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>classify</span><span class='kw'>=</span><span class='st'>"year"</span>)$<span class='no'>predictions</span></div><div class='output co'>#&gt; ASReml: Fri Aug 16 14:59:30 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;    -908.5476      3.4272   688  14:59:30     0.0
-#&gt;    -908.5476      3.4272   688  14:59:30     0.0
-#&gt;    -908.5476      3.4272   688  14:59:30     0.0
-#&gt;    -908.5476      3.4272   688  14:59:30     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 14:59:30 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='output co'>#&gt; $pvals
-#&gt; 
-#&gt; Notes:
-#&gt; - The predictions are obtained by averaging across the hypertable
-#&gt;   calculated from model terms constructed solely from factors in
-#&gt;   the averaging and classify sets.
-#&gt; - Use "average" to move ignored factors into the averaging set.
-#&gt; 
-#&gt; - weanage evaluated at average value of 92.596888
-#&gt; - dl evaluated at average value of 4.330976
-#&gt; - dq evaluated at average value of 20.956153
-#&gt; - The SIMPLE averaging set:  sex ramgen ewegen mv 
-#&gt; - The ignored set:  ram ewe 
-#&gt; - ewegen is included in the prediction
-#&gt; - ramgen is included in the prediction
-#&gt; - dq is included in the prediction
-#&gt; - dl is included in the prediction
-#&gt; - weanage is included in the prediction
-#&gt; - sex is included in the prediction
-#&gt; - year is included in the prediction
-#&gt; - (Intercept) is included in the prediction
-#&gt; - mv is ignored in this prediction
-#&gt; 
-#&gt;   year predicted.value standard.error est.status
-#&gt; 1   91       12.638564      0.2363652  Estimable
-#&gt; 2   92       11.067659      0.2285252  Estimable
-#&gt; 3   93       11.561932      0.1809891  Estimable
-#&gt; 4   94        9.636058      0.2505478  Estimable
-#&gt; 5   95        9.350247      0.2346849  Estimable
-#&gt; 6   96       10.188482      0.2755387  Estimable
-#&gt; 
-#&gt; $avsed
-#&gt;   overall 
-#&gt; 0.3249651 
-#&gt; </div><div class='input'>
-# ----------------------------------------------------------------------------
-
-</div><div class='input'>  ## libs(asreml4)
-  ## # case study page 4.20
-  ## m1 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
-  ##              data=dat)
-  ## wald(m1)
-  
-  ## # case study page 4.26
-  ## m2 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
-  ##              random = ~ ram + ewe, data=dat)
-  ## wald(m2)
-  
-  ## # case study page 4.37, year means
-  ## predict(m2, data=dat, classify="year")  
-</div><div class='input'>
+  <span class='co'># predict(m2, data=dat, classify="year")</span>
+  <span class='co'>##   year predicted.value standard.error est.status</span>
+  <span class='co'>## 1   91       12.638564      0.2363652  Estimable</span>
+  <span class='co'>## 2   92       11.067659      0.2285252  Estimable</span>
+  <span class='co'>## 3   93       11.561932      0.1809891  Estimable</span>
+  <span class='co'>## 4   94        9.636058      0.2505478  Estimable</span>
+  <span class='co'>## 5   95        9.350247      0.2346849  Estimable</span>
+  <span class='co'>## 6   96       10.188482      0.2755387  Estimable</span>
+    
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -465,7 +372,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

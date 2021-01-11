@@ -39,7 +39,7 @@
   Statistical Analysis of Ordered Categorical Data via a Structured
   Heteroskedastic Threshold Model.
   Genet Sel Evol, 28, 249--273.
-  http://doi.org/10.1051/gse:19960304
+  https://doi.org/10.1051/gse:19960304
 }
 
 \examples{

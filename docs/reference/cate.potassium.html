@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -150,7 +150,7 @@
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 24 observations on the following 2 variables.</p><dl'>
+    <p>A data frame with 24 observations on the following 2 variables.</p><dl>
     <dt><code>yield</code></dt><dd><p>Relative yield</p></dd>
     <dt><code>potassium</code></dt><dd><p>Soil potassium, ppm</p></dd>
   
@@ -171,49 +171,54 @@
   A simple statistical procedure for partitioning soil test correlation
   data into two classes.
   <em>Soil Science Society of America Journal</em>, 35, 658--660.
-  http://doi.org/10.2136/sssaj1971.03615995003500040048x</p>
+  https://doi.org/10.2136/sssaj1971.03615995003500040048x</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>cate.potassium</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>cate.potassium</span>
-<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='no'>dat</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'y'</span>,<span class='st'>'x'</span>)
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>cate.potassium</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>cate.potassium</span>
+<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'y'</span>,<span class='st'>'x'</span><span class='op'>)</span>
 
-<span class='no'>CateNelson</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>dat</span>){
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>x</span>),] <span class='co'># Sort the data by x</span>
-  <span class='no'>x</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>$<span class='no'>x</span>
-  <span class='no'>y</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>$<span class='no'>y</span>
+<span class='va'>CateNelson</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>dat</span><span class='op'>)</span><span class='op'>{</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>x</span><span class='op'>)</span>,<span class='op'>]</span> <span class='co'># Sort the data by x</span>
+  <span class='va'>x</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>$</span><span class='va'>x</span>
+  <span class='va'>y</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>$</span><span class='va'>y</span>
 
   <span class='co'># Create a data.frame to store the results</span>
-  <span class='no'>out</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(<span class='kw'>x</span><span class='kw'>=</span><span class='fl'>NA</span>, <span class='kw'>mean1</span><span class='kw'>=</span><span class='fl'>NA</span>, <span class='kw'>css1</span><span class='kw'>=</span><span class='fl'>NA</span>, <span class='kw'>mean2</span><span class='kw'>=</span><span class='fl'>NA</span>, <span class='kw'>css2</span><span class='kw'>=</span><span class='fl'>NA</span>, <span class='kw'>r2</span><span class='kw'>=</span><span class='fl'>NA</span>)
+  <span class='va'>out</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='cn'>NA</span>, mean1<span class='op'>=</span><span class='cn'>NA</span>, css1<span class='op'>=</span><span class='cn'>NA</span>, mean2<span class='op'>=</span><span class='cn'>NA</span>, css2<span class='op'>=</span><span class='cn'>NA</span>, r2<span class='op'>=</span><span class='cn'>NA</span><span class='op'>)</span>
 
-  <span class='no'>css</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>x</span>) { <span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>var</a></span>(<span class='no'>x</span>) * (<span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='no'>x</span>)-<span class='fl'>1</span>) }
-  <span class='no'>tcss</span> <span class='kw'>&lt;-</span> <span class='fu'>css</span>(<span class='no'>y</span>) <span class='co'># Total corrected sum of squares</span>
+  <span class='va'>css</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>{</span> <span class='fu'><a href='https://rdrr.io/r/stats/cor.html'>var</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>*</span> <span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>-</span><span class='fl'>1</span><span class='op'>)</span> <span class='op'>}</span>
+  <span class='va'>tcss</span> <span class='op'>&lt;-</span> <span class='fu'>css</span><span class='op'>(</span><span class='va'>y</span><span class='op'>)</span> <span class='co'># Total corrected sum of squares</span>
 
-  <span class='kw'>for</span>(<span class='no'>i</span> <span class='kw'>in</span> <span class='fl'>2</span>:(<span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='no'>y</span>)-<span class='fl'>2</span>)){
-    <span class='no'>y1</span> <span class='kw'>&lt;-</span> <span class='no'>y</span>[<span class='fl'>1</span>:<span class='no'>i</span>]
-    <span class='no'>y2</span> <span class='kw'>&lt;-</span> <span class='no'>y</span>[-(<span class='fl'>1</span>:<span class='no'>i</span>)]
+  <span class='kw'>for</span><span class='op'>(</span><span class='va'>i</span> <span class='kw'>in</span> <span class='fl'>2</span><span class='op'>:</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>y</span><span class='op'>)</span><span class='op'>-</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span><span class='op'>{</span>
+    <span class='va'>y1</span> <span class='op'>&lt;-</span> <span class='va'>y</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='va'>i</span><span class='op'>]</span>
+    <span class='va'>y2</span> <span class='op'>&lt;-</span> <span class='va'>y</span><span class='op'>[</span><span class='op'>-</span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='va'>i</span><span class='op'>)</span><span class='op'>]</span>
 
-    <span class='no'>out</span>[<span class='no'>i</span>, <span class='st'>'x'</span>] <span class='kw'>&lt;-</span> <span class='no'>x</span>[<span class='no'>i</span>]
-    <span class='no'>out</span>[<span class='no'>i</span>, <span class='st'>'mean1'</span>] <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>y1</span>)
-    <span class='no'>out</span>[<span class='no'>i</span>, <span class='st'>'mean2'</span>] <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>y2</span>)
-    <span class='no'>out</span>[<span class='no'>i</span>, <span class='st'>'css1'</span>] <span class='kw'>&lt;-</span> <span class='no'>css1</span> <span class='kw'>&lt;-</span> <span class='fu'>css</span>(<span class='no'>y1</span>)
-    <span class='no'>out</span>[<span class='no'>i</span>, <span class='st'>'css2'</span>] <span class='kw'>&lt;-</span> <span class='no'>css2</span> <span class='kw'>&lt;-</span> <span class='fu'>css</span>(<span class='no'>y2</span>)
-    <span class='no'>out</span>[<span class='no'>i</span>, <span class='st'>'r2'</span>] <span class='kw'>&lt;-</span>  ( <span class='no'>tcss</span> - (<span class='no'>css1</span>+<span class='no'>css2</span>)) / <span class='no'>tcss</span>
-  }
-  <span class='fu'><a href='https://rdrr.io/r/base/function.html'>return</a></span>(<span class='no'>out</span>)
-}
+    <span class='va'>out</span><span class='op'>[</span><span class='va'>i</span>, <span class='st'>'x'</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>x</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span>
+    <span class='va'>out</span><span class='op'>[</span><span class='va'>i</span>, <span class='st'>'mean1'</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>y1</span><span class='op'>)</span>
+    <span class='va'>out</span><span class='op'>[</span><span class='va'>i</span>, <span class='st'>'mean2'</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>y2</span><span class='op'>)</span>
+    <span class='va'>out</span><span class='op'>[</span><span class='va'>i</span>, <span class='st'>'css1'</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>css1</span> <span class='op'>&lt;-</span> <span class='fu'>css</span><span class='op'>(</span><span class='va'>y1</span><span class='op'>)</span>
+    <span class='va'>out</span><span class='op'>[</span><span class='va'>i</span>, <span class='st'>'css2'</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>css2</span> <span class='op'>&lt;-</span> <span class='fu'>css</span><span class='op'>(</span><span class='va'>y2</span><span class='op'>)</span>
+    <span class='va'>out</span><span class='op'>[</span><span class='va'>i</span>, <span class='st'>'r2'</span><span class='op'>]</span> <span class='op'>&lt;-</span>  <span class='op'>(</span> <span class='va'>tcss</span> <span class='op'>-</span> <span class='op'>(</span><span class='va'>css1</span><span class='op'>+</span><span class='va'>css2</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>/</span> <span class='va'>tcss</span>
+  <span class='op'>}</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='va'>out</span><span class='op'>)</span>
+<span class='op'>}</span>
 
-<span class='no'>cn</span> <span class='kw'>&lt;-</span> <span class='fu'>CateNelson</span>(<span class='no'>dat</span>)
-<span class='no'>ix</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/which.min.html'>which.max</a></span>(<span class='no'>cn</span>$<span class='no'>r2</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span>(<span class='no'>dat</span>, <span class='fu'><a href='https://rdrr.io/r/base/plot.html'>plot</a></span>(<span class='no'>y</span>~<span class='no'>x</span>, <span class='kw'>ylim</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0</span>,<span class='fl'>110</span>), <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Potassium"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Yield"</span>))</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/title.html'>title</a></span>(<span class='st'>"cate.potassium - Cate-Nelson analysis"</span>)</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span>(<span class='kw'>v</span><span class='kw'>=</span><span class='no'>dat</span>$<span class='no'>x</span>[<span class='no'>ix</span>], <span class='kw'>col</span><span class='kw'>=</span><span class='st'>"skyblue"</span>)</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span>(<span class='kw'>h</span><span class='kw'>=</span>(<span class='no'>dat</span>$<span class='no'>y</span>[<span class='no'>ix</span>] + <span class='no'>dat</span>$<span class='no'>y</span>[<span class='no'>ix</span>+<span class='fl'>1</span>])/<span class='fl'>2</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='st'>"skyblue"</span>)</div><div class='img'><img src='cate.potassium-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='va'>cn</span> <span class='op'>&lt;-</span> <span class='fu'>CateNelson</span><span class='op'>(</span><span class='va'>dat</span><span class='op'>)</span>
+<span class='va'>ix</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/which.min.html'>which.max</a></span><span class='op'>(</span><span class='va'>cn</span><span class='op'>$</span><span class='va'>r2</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/with.html'>with</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>y</span><span class='op'>~</span><span class='va'>x</span>, ylim<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>0</span>,<span class='fl'>110</span><span class='op'>)</span>, xlab<span class='op'>=</span><span class='st'>"Potassium"</span>, ylab<span class='op'>=</span><span class='st'>"Yield"</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/title.html'>title</a></span><span class='op'>(</span><span class='st'>"cate.potassium - Cate-Nelson analysis"</span><span class='op'>)</span>
+</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span><span class='op'>(</span>v<span class='op'>=</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>x</span><span class='op'>[</span><span class='va'>ix</span><span class='op'>]</span>, col<span class='op'>=</span><span class='st'>"skyblue"</span><span class='op'>)</span>
+</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/graphics/abline.html'>abline</a></span><span class='op'>(</span>h<span class='op'>=</span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>y</span><span class='op'>[</span><span class='va'>ix</span><span class='op'>]</span> <span class='op'>+</span> <span class='va'>dat</span><span class='op'>$</span><span class='va'>y</span><span class='op'>[</span><span class='va'>ix</span><span class='op'>+</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>)</span><span class='op'>/</span><span class='fl'>2</span>, col<span class='op'>=</span><span class='st'>"skyblue"</span><span class='op'>)</span>
+</div><div class='img'><img src='cate.potassium-1.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># \dontrun{</span>
   <span class='co'># another approach with similar results</span>
   <span class='co'># https://joe.org/joe/2013october/tt1.php</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='st'>"rcompanion"</span>)
-  <span class='fu'>cateNelson</span>(<span class='no'>dat</span>$<span class='no'>x</span>, <span class='no'>dat</span>$<span class='no'>y</span>, <span class='kw'>plotit</span><span class='kw'>=</span><span class='fl'>0</span>)</div><div class='output co'>#&gt; ....................
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='st'>"rcompanion"</span><span class='op'>)</span>
+  <span class='fu'>cateNelson</span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>x</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>y</span>, plotit<span class='op'>=</span><span class='fl'>0</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; ....................
 #&gt; 
 #&gt; Critical x that maximize sum of squares: 
 #&gt;  
@@ -245,7 +250,7 @@
 #&gt;  </div><div class='output co'>#&gt;    n  CLx       SS  CLy Q.I Q.II Q.III Q.IV Q.Model   p.Model Q.Error
 #&gt; 1 24 46.5 5374.217 82.4   0   15     1    8      23 0.9583333       1
 #&gt;      p.Error Fisher.p.value Cramer.V
-#&gt; 1 0.04166667   1.223706e-05   0.9129</div><div class='input'># }
+#&gt; 1 0.04166667   1.223706e-05   0.9129</div><div class='input'><span class='co'># }</span>
 
 </div></pre>
   </div>
@@ -263,7 +268,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

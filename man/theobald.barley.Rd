@@ -33,7 +33,7 @@
   Chris M. Theobald and Mike Talbot, (2002).
   The Bayesian choice of crop variety and fertilizer dose.
   \emph{Appl Statistics}, 51, 23-36.
-  http://doi.org/10.1111/1467-9876.04863
+  https://doi.org/10.1111/1467-9876.04863
 
   Data provided by Chris Theobald and Mike Talbot.
 }

@@ -38,7 +38,7 @@
 \source{
   Mohammed Alwan (1983).
   Studies of the flock mating performance of Booroola merino crossbred ram lambs, and the foot conditions in Booroola merino crossbreds and Perendale sheep grazed on hill country.
-  Thesis, Massey University. http://hdl.handle.net/10179/5900
+  Thesis, Massey University. https://hdl.handle.net/10179/5900
   Appendix I, II.
 }
 \references{

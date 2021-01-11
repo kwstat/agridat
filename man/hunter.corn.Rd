@@ -28,7 +28,7 @@
   Variations in Fertility Levels Upon the Yield and Protein
   Content of Field Corn in Eastern Oregon.
   \emph{Soil Science Society of America Journal}, 19, 214-218.
-  http://doi.org/10.2136/sssaj1955.03615995001900020027x
+  https://doi.org/10.2136/sssaj1955.03615995001900020027x
 }
 \references{
   James Leo Paschal, Burton Leroy French (1956).

@@ -32,14 +32,14 @@
   Lucas, HL. 1956.
   Switchback trials for more than two treatments.
   Journal of Dairy Science, 39, 146-154.
-  http://doi.org/10.3168/jds.S0022-0302(56)94721-X
+  https://doi.org/10.3168/jds.S0022-0302(56)94721-X
 }
 
 \references{
   Sanders, WL and Gaynor, PJ. 1987.
   Analysis of Switchback Data Using Statistical Analysis System.
   Journal of Dairy Science, 70, 2186-2191.
-  http://doi.org/10.3168/jds.S0022-0302(87)80273-4
+  https://doi.org/10.3168/jds.S0022-0302(87)80273-4
 }
 
 \examples{

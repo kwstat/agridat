@@ -46,7 +46,7 @@
   Walter Federer.
   Combining Standard Block Analyses With Spatial Analyses Under a Random
   Effects Model. Cornell Univ Tech Report BU-1373-MA.
-  http://hdl.handle.net/1813/31971
+  https://hdl.handle.net/1813/31971
 
 }
 \examples{

@@ -81,7 +81,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -152,7 +152,7 @@
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p></p><dl'>
+    <p></p><dl>
     <dt><code>env</code></dt><dd><p>environment, 26 levels</p></dd>
     <dt><code>gen</code></dt><dd><p>genotype factor, 5 levels</p></dd>
     <dt><code>yield</code></dt><dd><p>yield</p></dd>
@@ -169,18 +169,19 @@
 
     <p>H P Piepho, (1999) Stability analysis using the SAS system,
   Agron Journal, 91, 154--160.
-  http://doi.og/10.2134/agronj1999.00021962009100010024x</p>
+  https://doi.og/10.2134/agronj1999.00021962009100010024x</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>denis.missing</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>denis.missing</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>denis.missing</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>denis.missing</span>
 
 <span class='co'># view missingness structure</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>reshape2</span>)
-<span class='fu'>acast</span>(<span class='no'>dat</span>, <span class='no'>env</span>~<span class='no'>gen</span>, <span class='kw'>value.var</span><span class='kw'>=</span><span class='st'>'yield'</span>)</div><div class='output co'>#&gt;     G1 G2 G3 G4 G5
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>reshape2</span><span class='op'>)</span>
+<span class='fu'>acast</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>env</span><span class='op'>~</span><span class='va'>gen</span>, value.var<span class='op'>=</span><span class='st'>'yield'</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;     G1 G2 G3 G4 G5
 #&gt; E01 NA NA NA 66 49
 #&gt; E02 NA NA NA 59 40
 #&gt; E03 NA NA NA 67 57
@@ -208,22 +209,24 @@
 #&gt; E25 70 66 NA NA NA
 #&gt; E26 70 65 NA 60 NA</div><div class='input'>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='no'>redblue</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"firebrick"</span>, <span class='st'>"lightgray"</span>, <span class='st'>"#375997"</span>))
-<span class='fu'>levelplot</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span>*<span class='no'>env</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-          <span class='kw'>col.regions</span><span class='kw'>=</span><span class='no'>redblue</span>,
-          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"denis.missing - incidence heatmap"</span>)</div><div class='img'><img src='denis.missing-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='va'>redblue</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"firebrick"</span>, <span class='st'>"lightgray"</span>, <span class='st'>"#375997"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/levelplot.html'>levelplot</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>gen</span><span class='op'>*</span><span class='va'>env</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+          col.regions<span class='op'>=</span><span class='va'>redblue</span>,
+          main<span class='op'>=</span><span class='st'>"denis.missing - incidence heatmap"</span><span class='op'>)</span>
+</div><div class='img'><img src='denis.missing-1.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># stability variance (Table 3 in Piepho)</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>nlme</span>)
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>lme</span>(<span class='no'>yield</span> ~ -<span class='fl'>1</span> + <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>random</span><span class='kw'>=</span> ~ <span class='fl'>1</span><span class='kw'>|</span><span class='no'>env</span>,
-          <span class='kw'>weights</span> <span class='kw'>=</span> <span class='fu'>varIdent</span>(<span class='kw'>form</span><span class='kw'>=</span> ~ <span class='fl'>1</span><span class='kw'>|</span><span class='no'>gen</span>),
-          <span class='kw'>na.action</span><span class='kw'>=</span><span class='no'>na.omit</span>)
-<span class='no'>svar</span> <span class='kw'>&lt;-</span> <span class='no'>m1</span>$<span class='no'>sigma</span>^<span class='fl'>2</span> * <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>, <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m1</span>$<span class='no'>modelStruct</span>$<span class='no'>varStruct</span>, <span class='kw'>unc</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>))^<span class='fl'>2</span>
-<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='no'>svar</span>, <span class='fl'>2</span>)</div><div class='output co'>#&gt;          G5    G3    G1    G2 
-#&gt; 39.25 22.95 54.36 12.17 23.77 </div><div class='input'>##          G5    G3    G1    G2
-## 39.25 22.95 54.36 12.17 23.77
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>nlme</span><span class='op'>)</span>
+<span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>lme</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='op'>-</span><span class='fl'>1</span> <span class='op'>+</span> <span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>, random<span class='op'>=</span> <span class='op'>~</span> <span class='fl'>1</span><span class='op'>|</span><span class='va'>env</span>,
+          weights <span class='op'>=</span> <span class='fu'>varIdent</span><span class='op'>(</span>form<span class='op'>=</span> <span class='op'>~</span> <span class='fl'>1</span><span class='op'>|</span><span class='va'>gen</span><span class='op'>)</span>,
+          na.action<span class='op'>=</span><span class='va'>na.omit</span><span class='op'>)</span>
+<span class='va'>svar</span> <span class='op'>&lt;-</span> <span class='va'>m1</span><span class='op'>$</span><span class='va'>sigma</span><span class='op'>^</span><span class='fl'>2</span> <span class='op'>*</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>, <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>$</span><span class='va'>modelStruct</span><span class='op'>$</span><span class='va'>varStruct</span>, unc <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span><span class='op'>)</span><span class='op'>^</span><span class='fl'>2</span>
+<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>svar</span>, <span class='fl'>2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;          G5    G3    G1    G2 
+#&gt; 39.25 22.95 54.36 12.17 23.77 </div><div class='input'><span class='co'>##          G5    G3    G1    G2</span>
+<span class='co'>## 39.25 22.95 54.36 12.17 23.77</span>
 
-# }
+<span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -240,7 +243,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

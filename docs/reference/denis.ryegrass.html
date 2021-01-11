@@ -81,7 +81,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -152,7 +152,7 @@
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 147 observations on the following 3 variables.</p><dl'>
+    <p>A data frame with 147 observations on the following 3 variables.</p><dl>
     <dt><code>gen</code></dt><dd><p>genotype, 21 levels</p></dd>
     <dt><code>loc</code></dt><dd><p>location, 7 levels</p></dd>
     <dt><code>strength</code></dt><dd><p>average plant strength * 100</p></dd>
@@ -174,7 +174,7 @@
   Asymptotic confidence regions for biadditive models:
   interpreting genotype-environment interaction,
   <em>Applied Statistics</em>, 45, 479-493.
-  http://doi.org/10.2307/2986069</p>
+  https://doi.org/10.2307/2986069</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Gower, J.C. and Hand, D.J., 1996.  Biplots.
@@ -183,15 +183,16 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>denis.ryegrass</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>denis.ryegrass</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>denis.ryegrass</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>denis.ryegrass</span>
 
 <span class='co'># biplots (without ellipses) similar to Denis figure 1</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>gge</span>)
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>gge</span>(<span class='no'>dat</span>, <span class='no'>strength</span> ~ <span class='no'>gen</span>*<span class='no'>loc</span>, <span class='kw'>scale</span><span class='kw'>=</span><span class='fl'>FALSE</span>)
-<span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span>(<span class='no'>m1</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"denis.ryegrass biplot"</span>)</div><div class='img'><img src='denis.ryegrass-1.png' alt='' width='700' height='433' /></div><div class='input'>
-# }
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>gge</span><span class='op'>)</span>
+<span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>gge</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>strength</span> <span class='op'>~</span> <span class='va'>gen</span><span class='op'>*</span><span class='va'>loc</span>, scale<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span><span class='op'>(</span><span class='va'>m1</span>, main<span class='op'>=</span><span class='st'>"denis.ryegrass biplot"</span><span class='op'>)</span>
+</div><div class='img'><img src='denis.ryegrass-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -208,7 +209,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

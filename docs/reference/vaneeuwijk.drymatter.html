@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Multi-environment trial of maize, dry matter content — vaneeuwijk.drymatter" />
-
 <meta property="og:description" content="Multi-environment trial of maize, dry matter content" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,23 +143,22 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Multi-environment trial of maize, dry matter content</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"vaneeuwijk.drymatter"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"vaneeuwijk.drymatter"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 168 observations on the following 5 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 168 observations on the following 5 variables.</p><dl>
     <dt><code>year</code></dt><dd><p>year</p></dd>
     <dt><code>site</code></dt><dd><p>site, 4 levels</p></dd>
     <dt><code>variety</code></dt><dd><p>variety, 6 levels</p></dd>
     <dt><code>y</code></dt><dd><p>dry matter percent</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     
@@ -165,57 +168,59 @@
   SS=Southern Sand, CS=Central Sand, NS=Northern Sand, RC=River Clay.</p>
 <p>These data are a balanced subset of the data analyzed in
   van Eeuwijk, Keizer, and Bakker (1995b) and
-  Kroonenberg, Basford, and Ebskamp (1995).</p>
-    
+  Kroonenberg, Basford, and Ebskamp (1995).</p>  
+  
+<p>Used with permission of Fred van Eeuwijk.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>van Eeuwijk, Fred A. and Pieter M. Kroonenberg (1998).
   Multiplicative Models for Interaction in Three-Way ANOVA, with Applications to Plant Breeding
-  <em>Biometrics</em>, 54, 1315-1333.
-  http://doi.org/10.2307/2533660</p>  
-<p>Used with permission of Fred van Eeuwijk.</p>
-    
+  Biometrics, 54, 1315-1333.
+  https://doi.org/10.2307/2533660</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     
   
 <p>Kroonenberg, P.M., Basford, K.E. &amp; Ebskamp, A.G.M. (1995).
   Three-way cluster and component analysis of maize variety trials.
-  <em>Euphytica</em>, 84(1):31-42.
-  http://doi.org/10.1007/BF01677554</p>
+  Euphytica, 84(1):31-42.
+  https://doi.org/10.1007/BF01677554</p>
 <p>van Eeuwijk, F.A., Keizer, L.C.P. &amp; Bakker, J.J. Van Eeuwijk. (1995b).
   Linear and bilinear models for the analysis of multi-environment trials: 
   II. An application to data from the Dutch Maize Variety Trials
-  <em>Euphytica</em>, 84(1):9-22.
-  http://doi.org/10.1007/BF01677552</p>
+  Euphytica, 84(1):9-22.
+  https://doi.org/10.1007/BF01677552</p>
 <p>Hardeo Sahai, Mario M. Ojeda.
-  <em>Analysis of Variance for Random Models</em>, Volume 1. Page 261.</p>
-    
+  Analysis of Variance for Random Models, Volume 1. Page 261.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>vaneeuwijk.drymatter</span>)
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>vaneeuwijk.drymatter</span>
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>year</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>year</span>))
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>env</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='no'>year</span>,<span class='no'>site</span>)))
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+  
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>vaneeuwijk.drymatter</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>vaneeuwijk.drymatter</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, year<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, env<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>year</span>,<span class='va'>site</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
 
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>HH</span>)
-  <span class='kw pkg'>HH</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/HH/man/interaction2wt.html'>interaction2wt</a></span>(<span class='no'>y</span> ~ <span class='no'>year</span>+<span class='no'>site</span>+<span class='no'>variety</span>,<span class='no'>dat</span>,<span class='kw'>rot</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>90</span>,<span class='fl'>0</span>),
-                     <span class='kw'>x.between</span><span class='kw'>=</span><span class='fl'>0</span>, <span class='kw'>y.between</span><span class='kw'>=</span><span class='fl'>0</span>,
-                     <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"vaneeuwijk.drymatter"</span>)</div><div class='img'><img src='vaneeuwijk.drymatter-1.png' alt='' width='700' height='433' /></div><div class='input'>
-
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>HH</span><span class='op'>)</span>
+  <span class='fu'>HH</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/HH/man/interaction2wt.html'>interaction2wt</a></span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='va'>year</span><span class='op'>+</span><span class='va'>site</span><span class='op'>+</span><span class='va'>variety</span>,<span class='va'>dat</span>,rot<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>90</span>,<span class='fl'>0</span><span class='op'>)</span>,
+                     x.between<span class='op'>=</span><span class='fl'>0</span>, y.between<span class='op'>=</span><span class='fl'>0</span>,
+                     main<span class='op'>=</span><span class='st'>"vaneeuwijk.drymatter"</span><span class='op'>)</span>
+</div><div class='img'><img src='vaneeuwijk.drymatter-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  
   <span class='co'># anova model</span>
-  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>(<span class='no'>y</span> ~ <span class='no'>variety</span>+<span class='no'>env</span>+<span class='no'>variety</span>:<span class='no'>env</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-  <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m1</span>) <span class='co'># Similar to VanEeuwijk table 2</span></div><div class='output co'>#&gt; <span class='warning'>Warning: ANOVA F-tests on an essentially perfect fit are unreliable</span></div><div class='output co'>#&gt; Analysis of Variance Table
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='va'>variety</span><span class='op'>+</span><span class='va'>env</span><span class='op'>+</span><span class='va'>variety</span><span class='op'>:</span><span class='va'>env</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span> <span class='co'># Similar to VanEeuwijk table 2</span>
+</div><div class='output co'>#&gt; <span class='warning'>Warning: ANOVA F-tests on an essentially perfect fit are unreliable</span></div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
 #&gt; Response: y
 #&gt;              Df  Sum Sq Mean Sq F value Pr(&gt;F)
 #&gt; variety       5   80.18  16.036               
 #&gt; env          27 3008.21 111.415               
 #&gt; variety:env 135  161.87   1.199               
-#&gt; Residuals     0    0.00                       </div><div class='input'>  <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>(<span class='no'>y</span> ~ <span class='no'>year</span>*<span class='no'>site</span>*<span class='no'>variety</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-  <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m2</span>) <span class='co'># matches Sahai table 5.5</span></div><div class='output co'>#&gt; <span class='warning'>Warning: ANOVA F-tests on an essentially perfect fit are unreliable</span></div><div class='output co'>#&gt; Analysis of Variance Table
+#&gt; Residuals     0    0.00                       </div><div class='input'>  <span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='va'>year</span><span class='op'>*</span><span class='va'>site</span><span class='op'>*</span><span class='va'>variety</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>m2</span><span class='op'>)</span> <span class='co'># matches Sahai table 5.5</span>
+</div><div class='output co'>#&gt; <span class='warning'>Warning: ANOVA F-tests on an essentially perfect fit are unreliable</span></div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
 #&gt; Response: y
 #&gt;                   Df  Sum Sq Mean Sq F value Pr(&gt;F)
@@ -226,45 +231,37 @@
 #&gt; year:variety      30   64.90    2.16               
 #&gt; site:variety      15   17.01    1.13               
 #&gt; year:site:variety 90   79.97    0.89               
-#&gt; Residuals          0    0.00                       </div><div class='input'>
+#&gt; Residuals          0    0.00                       </div><div class='input'>  
   <span class='co'># variance components model</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lme4</span>)
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lucid</span>)
-  <span class='no'>m3</span> <span class='kw'>&lt;-</span> <span class='fu'>lmer</span>(<span class='no'>y</span> ~ (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>year</span>) + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>site</span>) + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>variety</span>) +
-               (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>year</span>:<span class='no'>site</span>) + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>year</span>:<span class='no'>variety</span>) + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>site</span>:<span class='no'>variety</span>),
-             <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.00280756 (tol = 0.002, component 1)</span></div><div class='input'>  <span class='fu'>vc</span>(<span class='no'>m3</span>) <span class='co'># matches Sahai page 266</span></div><div class='output co'>#&gt;           grp        var1 var2    vcov  sdcor
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lme4</span><span class='op'>)</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lucid</span><span class='op'>)</span>
+  <span class='va'>m3</span> <span class='op'>&lt;-</span> <span class='fu'>lmer</span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>year</span><span class='op'>)</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>site</span><span class='op'>)</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>variety</span><span class='op'>)</span> <span class='op'>+</span>
+               <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>year</span><span class='op'>:</span><span class='va'>site</span><span class='op'>)</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>year</span><span class='op'>:</span><span class='va'>variety</span><span class='op'>)</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>site</span><span class='op'>:</span><span class='va'>variety</span><span class='op'>)</span>,
+             data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+  <span class='fu'>vc</span><span class='op'>(</span><span class='va'>m3</span><span class='op'>)</span> <span class='co'># matches Sahai page 266</span>
+</div><div class='output co'>#&gt;           grp        var1 var2    vcov  sdcor
 #&gt;  year:variety (Intercept) &lt;NA&gt; 0.3187  0.5645
-#&gt;     year:site (Intercept) &lt;NA&gt; 7.73    2.78  
-#&gt;  site:variety (Intercept) &lt;NA&gt; 0.03507 0.1873
-#&gt;          year (Intercept) &lt;NA&gt; 6.274   2.505 
-#&gt;       variety (Intercept) &lt;NA&gt; 0.487   0.6978
-#&gt;          site (Intercept) &lt;NA&gt; 6.517   2.553 
-#&gt;      Residual        &lt;NA&gt; &lt;NA&gt; 0.8885  0.9426</div><div class='input'>  ##          grp        var1 var2    vcov  sdcor
-  ## year:variety (Intercept) <NA> 0.3187  0.5645
-  ##    year:site (Intercept) <NA> 7.735   2.781 
-  ## site:variety (Intercept) <NA> 0.03502 0.1871
-  ##         year (Intercept) <NA> 6.272   2.504 
-  ##      variety (Intercept) <NA> 0.4867  0.6976
-  ##         site (Intercept) <NA> 6.504   2.55  
-  ##     Residual        <NA> <NA> 0.8885  0.9426
+#&gt;     year:site (Intercept) &lt;NA&gt; 7.734   2.781 
+#&gt;  site:variety (Intercept) &lt;NA&gt; 0.03503 0.1872
+#&gt;          year (Intercept) &lt;NA&gt; 6.273   2.505 
+#&gt;       variety (Intercept) &lt;NA&gt; 0.4867  0.6976
+#&gt;          site (Intercept) &lt;NA&gt; 6.504   2.55  
+#&gt;      Residual        &lt;NA&gt; &lt;NA&gt; 0.8886  0.9426</div><div class='input'>  <span class='co'>##          grp        var1 var2    vcov  sdcor</span>
+  <span class='co'>## year:variety (Intercept) &lt;NA&gt; 0.3187  0.5645</span>
+  <span class='co'>##    year:site (Intercept) &lt;NA&gt; 7.735   2.781 </span>
+  <span class='co'>## site:variety (Intercept) &lt;NA&gt; 0.03502 0.1871</span>
+  <span class='co'>##         year (Intercept) &lt;NA&gt; 6.272   2.504 </span>
+  <span class='co'>##      variety (Intercept) &lt;NA&gt; 0.4867  0.6976</span>
+  <span class='co'>##         site (Intercept) &lt;NA&gt; 6.504   2.55  </span>
+  <span class='co'>##     Residual        &lt;NA&gt; &lt;NA&gt; 0.8885  0.9426</span>
   
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -275,7 +272,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -39,7 +39,7 @@
   trend analysis for field plot data.
   \emph{Agronomy Journal}, 80, 712-718.
   
-  http://doi.org/10.2134/agronj1988.00021962008000050003x
+  https://doi.org/10.2134/agronj1988.00021962008000050003x
 }
 \examples{
 \dontrun{

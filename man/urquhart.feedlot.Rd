@@ -45,13 +45,13 @@
   N. Scott Urquhart (1982).
   Adjustment in Covariance when One Factor Affects the Covariate
   Biometrics, 38, 651-660.  Table 4, p. 659.
-  http://doi.org/10.2307/2530046
+  https://doi.org/10.2307/2530046
 }
 \references{
   N. Scott Urquhart and David L. Weeks (1978).
   Linear Models in Messy Data: Some Problems and Alternatives
   Biometrics, 34, 696-705.
-  http://doi.org/10.2307/2530391
+  https://doi.org/10.2307/2530391
 
   Also available in the 'emmeans' package as the 'feedlot' data.
 }

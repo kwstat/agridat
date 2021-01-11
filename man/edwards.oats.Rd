@@ -50,7 +50,7 @@
   Jode W. Edwards, Jean-Luc Jannink (2006).
   Bayesian Modeling of Heterogeneous Error and Genotype x Environment Interaction Variances.
   Crop Science, 46, 820-833.
-  http://dx.doi.org/10.2135/cropsci2005.0164
+  https://dx.doi.org/10.2135/cropsci2005.0164
 }
 \references{
   None

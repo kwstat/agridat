@@ -39,9 +39,9 @@
 
 \source{
   Johann Heinrich Lambert (1779), \emph{Pyrometrie}.  Page 358.
-  http://books.google.com/books?id=G5I_AAAAcAAJ&pg=PA358
+  https://books.google.com/books?id=G5I_AAAAcAAJ&pg=PA358
   
-  Graph: http://www.fisme.science.uu.nl/wiskrant/artikelen/hist_grafieken/begin/images/pyrometrie.gif
+  Graph: https://www.fisme.science.uu.nl/wiskrant/artikelen/hist_grafieken/begin/images/pyrometrie.gif
 }
 
 \examples{

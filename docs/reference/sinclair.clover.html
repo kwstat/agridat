@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Clover yields in a factorial fertilizer experiment — sinclair.clover" />
-
 <meta property="og:description" content="Clover yields in a factorial fertilizer experiment" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,71 +143,69 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Clover yields in a factorial fertilizer experiment</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"sinclair.clover"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"sinclair.clover"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 25 observations on the following 3 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 25 observations on the following 3 variables.</p><dl>
     <dt><code>yield</code></dt><dd><p>yield t/ha</p></dd>
     <dt><code>P</code></dt><dd><p>phosphorous fertilizer kg/ha</p></dd>
     <dt><code>S</code></dt><dd><p>sulfur fertilizer kg/ha</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>A phosphorous by sulfur factorial experiment at Dipton in Southland,
   New Zealand.  There were 3 reps.  Plots were harvested repeatedly from
   Dec 1992 to Mar 1994.  Yields reported are the total dry matter across
   all cuttings.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Sinclair AG, Risk WH, Smith LC, Morrison JD &amp; Dodds KG (1994)
   Sulphur and phosphorus in balanced pasture nutrition.
   <em>Proc N Z Grass Assoc</em>, 56, 13-16.</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Dodds, KG and Sinclair, AG and Morrison, JD. (1995).
   A bivariate response surface for growth data.
   <em>Fertilizer research</em>, 45, 117-122.
-  http://doi.org/10.1007/BF00790661</p>
-    
+  https://doi.org/10.1007/BF00790661</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>sinclair.clover</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>sinclair.clover</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>sinclair.clover</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>sinclair.clover</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'>xyplot</span>(<span class='no'>yield</span>~<span class='no'>P</span><span class='kw'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>S</span>), <span class='no'>dat</span>, <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>5</span>,<span class='fl'>1</span>),
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"sinclair.clover - Yield by sulfur levels"</span>,
-       <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Phosphorous"</span>)</div><div class='img'><img src='sinclair.clover-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>~</span><span class='va'>P</span><span class='op'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>S</span><span class='op'>)</span>, <span class='va'>dat</span>, layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>5</span>,<span class='fl'>1</span><span class='op'>)</span>,
+       main<span class='op'>=</span><span class='st'>"sinclair.clover - Yield by sulfur levels"</span>,
+       xlab<span class='op'>=</span><span class='st'>"Phosphorous"</span><span class='op'>)</span>
+</div><div class='img'><img src='sinclair.clover-1.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Dodds fits a two-dimensional Mitscherlich-like model:</span>
 <span class='co'># z = a*(1+b*{(s+t*x)/(x+1)}^y) * (1+d*{(th+r*y)/(y+1)}^x)</span>
 
 <span class='co'># First, re-scale the problem to a more stable part of the parameter space</span>
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>x</span><span class='kw'>=</span><span class='no'>P</span>/<span class='fl'>10</span>, <span class='kw'>y</span><span class='kw'>=</span><span class='no'>S</span>/<span class='fl'>10</span>)
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, x<span class='op'>=</span><span class='va'>P</span><span class='op'>/</span><span class='fl'>10</span>, y<span class='op'>=</span><span class='va'>S</span><span class='op'>/</span><span class='fl'>10</span><span class='op'>)</span>
 
 <span class='co'># Response value for (x=0, y=maximal), (x=maximal, y=0), (x=max, y=max)</span>
-<span class='no'>z0m</span> <span class='kw'>&lt;-</span> <span class='fl'>5</span>
-<span class='no'>zm0</span> <span class='kw'>&lt;-</span> <span class='fl'>5</span>
-<span class='no'>zmm</span> <span class='kw'>&lt;-</span> <span class='fl'>10.5</span>
+<span class='va'>z0m</span> <span class='op'>&lt;-</span> <span class='fl'>5</span>
+<span class='va'>zm0</span> <span class='op'>&lt;-</span> <span class='fl'>5</span>
+<span class='va'>zmm</span> <span class='op'>&lt;-</span> <span class='fl'>10.5</span>
 <span class='co'># The parameters are somewhat sensitive to starting values.</span>
 <span class='co'># I had to try a couple different initial values to match the paper by Dodds</span>
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/nls.html'>nls</a></span>(<span class='no'>yield</span> ~ <span class='no'>alpha</span>*(<span class='fl'>1</span> + <span class='no'>beta</span>*{(<span class='no'>sig</span>+<span class='no'>tau</span>*<span class='no'>x</span>)/(<span class='no'>x</span>+<span class='fl'>1</span>)}^<span class='no'>y</span>) * (<span class='fl'>1</span> + <span class='no'>del</span>*{(<span class='no'>th</span>+<span class='no'>rho</span>*<span class='no'>y</span>)/(<span class='no'>y</span>+<span class='fl'>1</span>)}^<span class='no'>x</span>),
-          <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='co'># trace=TRUE,</span>
-          <span class='kw'>start</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>alpha</span><span class='kw'>=</span><span class='no'>zmm</span>, <span class='kw'>beta</span><span class='kw'>=</span>(<span class='no'>zm0</span>/<span class='no'>zmm</span>)-<span class='fl'>1</span>, <span class='kw'>del</span><span class='kw'>=</span>(<span class='no'>z0m</span>/<span class='no'>zmm</span>)-<span class='fl'>1</span>,
-                     <span class='kw'>sig</span><span class='kw'>=</span><span class='fl'>.51</span>, <span class='kw'>tau</span><span class='kw'>=</span><span class='fl'>.6</span>, <span class='kw'>th</span><span class='kw'>=</span><span class='fl'>.5</span>, <span class='kw'>rho</span><span class='kw'>=</span><span class='fl'>.7</span>))
-<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>m1</span>) <span class='co'># Match Dodds Table 2</span></div><div class='output co'>#&gt; 
+<span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/nls.html'>nls</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>alpha</span><span class='op'>*</span><span class='op'>(</span><span class='fl'>1</span> <span class='op'>+</span> <span class='va'>beta</span><span class='op'>*</span><span class='op'>{</span><span class='op'>(</span><span class='va'>sig</span><span class='op'>+</span><span class='va'>tau</span><span class='op'>*</span><span class='va'>x</span><span class='op'>)</span><span class='op'>/</span><span class='op'>(</span><span class='va'>x</span><span class='op'>+</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>}</span><span class='op'>^</span><span class='va'>y</span><span class='op'>)</span> <span class='op'>*</span> <span class='op'>(</span><span class='fl'>1</span> <span class='op'>+</span> <span class='va'>del</span><span class='op'>*</span><span class='op'>{</span><span class='op'>(</span><span class='va'>th</span><span class='op'>+</span><span class='va'>rho</span><span class='op'>*</span><span class='va'>y</span><span class='op'>)</span><span class='op'>/</span><span class='op'>(</span><span class='va'>y</span><span class='op'>+</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>}</span><span class='op'>^</span><span class='va'>x</span><span class='op'>)</span>,
+          data<span class='op'>=</span><span class='va'>dat</span>, <span class='co'># trace=TRUE,</span>
+          start<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>alpha<span class='op'>=</span><span class='va'>zmm</span>, beta<span class='op'>=</span><span class='op'>(</span><span class='va'>zm0</span><span class='op'>/</span><span class='va'>zmm</span><span class='op'>)</span><span class='op'>-</span><span class='fl'>1</span>, del<span class='op'>=</span><span class='op'>(</span><span class='va'>z0m</span><span class='op'>/</span><span class='va'>zmm</span><span class='op'>)</span><span class='op'>-</span><span class='fl'>1</span>,
+                     sig<span class='op'>=</span><span class='fl'>.51</span>, tau<span class='op'>=</span><span class='fl'>.6</span>, th<span class='op'>=</span><span class='fl'>.5</span>, rho<span class='op'>=</span><span class='fl'>.7</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span> <span class='co'># Match Dodds Table 2</span>
+</div><div class='output co'>#&gt; 
 #&gt; Formula: yield ~ alpha * (1 + beta * {
 #&gt;     (sig + tau * x)/(x + 1)
 #&gt; }^y) * (1 + del * {
@@ -226,56 +228,48 @@
 #&gt; 
 #&gt; Number of iterations to convergence: 7 
 #&gt; Achieved convergence tolerance: 3.913e-06
-#&gt; </div><div class='input'>## Parameters:
-##       Estimate Std. Error t value Pr(>|t|)
-## alpha 11.15148    0.66484  16.773 1.96e-12 ***
-## beta  -0.61223    0.03759 -16.286 3.23e-12 ***
-## del   -0.48781    0.04046 -12.057 4.68e-10 ***
-## sig    0.26783    0.16985   1.577  0.13224
-## tau    0.68030    0.06333  10.741 2.94e-09 ***
-## th     0.59656    0.16716   3.569  0.00219 **
-## rho    0.83273    0.06204  13.421 8.16e-11 ***
-## ---
-## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-## Residual standard error: 0.5298 on 18 degrees of freedom
+#&gt; </div><div class='input'><span class='co'>## Parameters:</span>
+<span class='co'>##       Estimate Std. Error t value Pr(&gt;|t|)</span>
+<span class='co'>## alpha 11.15148    0.66484  16.773 1.96e-12 ***</span>
+<span class='co'>## beta  -0.61223    0.03759 -16.286 3.23e-12 ***</span>
+<span class='co'>## del   -0.48781    0.04046 -12.057 4.68e-10 ***</span>
+<span class='co'>## sig    0.26783    0.16985   1.577  0.13224</span>
+<span class='co'>## tau    0.68030    0.06333  10.741 2.94e-09 ***</span>
+<span class='co'>## th     0.59656    0.16716   3.569  0.00219 **</span>
+<span class='co'>## rho    0.83273    0.06204  13.421 8.16e-11 ***</span>
+<span class='co'>## ---</span>
+<span class='co'>## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</span>
+<span class='co'>## Residual standard error: 0.5298 on 18 degrees of freedom</span>
 
-</div><div class='input'>
-<span class='no'>pred</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/expand.grid.html'>expand.grid</a></span>(<span class='kw'>x</span><span class='kw'>=</span><span class='fl'>0</span>:<span class='fl'>17</span>, <span class='kw'>y</span><span class='kw'>=</span><span class='fl'>0</span>:<span class='fl'>9</span>)
-<span class='no'>pred</span>$<span class='no'>z</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m1</span>, <span class='no'>pred</span>)
+<span class='co'># \dontrun{</span>
+
+<span class='va'>pred</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/expand.grid.html'>expand.grid</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='fl'>0</span><span class='op'>:</span><span class='fl'>17</span>, y<span class='op'>=</span><span class='fl'>0</span><span class='op'>:</span><span class='fl'>9</span><span class='op'>)</span>
+<span class='va'>pred</span><span class='op'>$</span><span class='va'>z</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>m1</span>, <span class='va'>pred</span><span class='op'>)</span>
 
 <span class='co'># 3D plot of data with fitted surface.  Matches Dodds figure 2.</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>rgl</span>)
-<span class='fu'>bg3d</span>(<span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"white"</span>)
-<span class='fu'>clear3d</span>()
-<span class='fu'>spheres3d</span>(<span class='no'>dat</span>$<span class='no'>x</span>, <span class='no'>dat</span>$<span class='no'>y</span>, <span class='no'>dat</span>$<span class='no'>yield</span>,
-         <span class='kw'>radius</span><span class='kw'>=</span><span class='fl'>.2</span>, <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='st'>"navy"</span>, <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span>(<span class='no'>dat</span>)))
-<span class='fu'>surface3d</span>(<span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span>(<span class='fl'>0</span>, <span class='fl'>17</span>, <span class='kw'>by</span> <span class='kw'>=</span> <span class='fl'>1</span>), <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span>(<span class='fl'>0</span>, <span class='fl'>9</span>, <span class='kw'>by</span> <span class='kw'>=</span> <span class='fl'>1</span>), <span class='no'>pred</span>$<span class='no'>z</span>,
-          <span class='kw'>alpha</span><span class='kw'>=</span><span class='fl'>0.9</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='st'>"wheat"</span>,
-          <span class='kw'>front</span><span class='kw'>=</span><span class='st'>"fill"</span>, <span class='kw'>back</span><span class='kw'>=</span><span class='st'>"fill"</span>)
-<span class='fu'>axes3d</span>()
-<span class='fu'>title3d</span>(<span class='st'>"sinclair.clover - yield"</span>,<span class='st'>""</span>, <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Phosphorous/10"</span>,
-        <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Sulfur/10"</span>, <span class='kw'>zlab</span><span class='kw'>=</span><span class='st'>""</span>, <span class='kw'>line</span><span class='kw'>=</span><span class='fl'>3</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>1.5</span>)
-<span class='fu'>view3d</span>(<span class='kw'>userMatrix</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>.7</span>,<span class='fl'>.2</span>,-<span class='fl'>.7</span>,<span class='fl'>0</span>, -<span class='fl'>.7</span>,<span class='fl'>.2</span>,-<span class='fl'>.6</span>,<span class='fl'>0</span>, <span class='fl'>0</span>,<span class='fl'>.9</span>,<span class='fl'>.3</span>,<span class='fl'>0</span>, <span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>1</span>),<span class='kw'>ncol</span><span class='kw'>=</span><span class='fl'>4</span>))
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>rgl</span><span class='op'>)</span>
+<span class='fu'>bg3d</span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>"white"</span><span class='op'>)</span>
+<span class='fu'>clear3d</span><span class='op'>(</span><span class='op'>)</span>
+<span class='fu'>spheres3d</span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>x</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>y</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>yield</span>,
+         radius<span class='op'>=</span><span class='fl'>.2</span>, col <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='st'>"navy"</span>, <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'>surface3d</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>17</span>, by <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>, <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>0</span>, <span class='fl'>9</span>, by <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span>, <span class='va'>pred</span><span class='op'>$</span><span class='va'>z</span>,
+          alpha<span class='op'>=</span><span class='fl'>0.9</span>, col<span class='op'>=</span><span class='st'>"wheat"</span>,
+          front<span class='op'>=</span><span class='st'>"fill"</span>, back<span class='op'>=</span><span class='st'>"fill"</span><span class='op'>)</span>
+<span class='fu'>axes3d</span><span class='op'>(</span><span class='op'>)</span>
+<span class='fu'>title3d</span><span class='op'>(</span><span class='st'>"sinclair.clover - yield"</span>,<span class='st'>""</span>, xlab<span class='op'>=</span><span class='st'>"Phosphorous/10"</span>,
+        ylab<span class='op'>=</span><span class='st'>"Sulfur/10"</span>, zlab<span class='op'>=</span><span class='st'>""</span>, line<span class='op'>=</span><span class='fl'>3</span>, cex<span class='op'>=</span><span class='fl'>1.5</span><span class='op'>)</span>
+<span class='fu'>view3d</span><span class='op'>(</span>userMatrix<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>.7</span>,<span class='fl'>.2</span>,<span class='op'>-</span><span class='fl'>.7</span>,<span class='fl'>0</span>, <span class='op'>-</span><span class='fl'>.7</span>,<span class='fl'>.2</span>,<span class='op'>-</span><span class='fl'>.6</span>,<span class='fl'>0</span>, <span class='fl'>0</span>,<span class='fl'>.9</span>,<span class='fl'>.3</span>,<span class='fl'>0</span>, <span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>0</span>,<span class='fl'>1</span><span class='op'>)</span>,ncol<span class='op'>=</span><span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
   <span class='co'># snapshot3d(file, "png")</span>
 
-<span class='fu'>rgl.close</span>()</div><div class='input'>
+<span class='fu'>rgl.close</span><span class='op'>(</span><span class='op'>)</span>
+<span class='co'># }</span>
+
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -286,7 +280,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -42,7 +42,7 @@
   Federer, Walter T. 1998. Recovery of interblock, intergradient, and
   intervariety information in incomplete block and lattice rectangle
   design experiments. \emph{Biometrics}, 54, 471--481.
-  http://doi.org/10.2307/3109756
+  https://doi.org/10.2307/3109756
 }
 \references{
   Walter T Federer and Russell D Wolfinger, 2003.
@@ -161,54 +161,12 @@
   ##  one.13   r1           10360   101.8
   ##  Residual               4127    64.24
   
-  libs(asreml,lucid)
-  if( utils::packageVersion("asreml") < "4") {
-    # asreml3
-
-    m3 <- asreml(yield ~ -1 + trtn, data=dat,
-                 random = ~ r1 + r2 + r4 + r8 + r10 +
-                   c1 + c2 + c3 + c4 + c6 + c8 +
-                   r1:c1 + r1:c2 + r1:c3 + new:gen)
-  ## coef(m3)
-  # REML cultivar means.  Very similar to Federer table 2.
-  ## rev(sort(round(coef(m3)$fixed[3] + coef(m3)$random[137:256,],0)))
-  ## gen_G060 gen_G021 gen_G011 gen_G099 gen_G002
-  ##      974      949      945      944      942
-  ## gen_G118 gen_G058 gen_G035 gen_G111 gen_G120
-  ##      938      937      937      933      932
-  ## gen_G046 gen_G061 gen_G082 gen_G038 gen_G090
-  ##      932      931      927      927      926
-
-  vc(m3)
-  ##           effect component std.error z.ratio constr
-  ##        r1!r1.var   9201        13720    0.67    pos
-  ##        r2!r2.var    241.7       1059    0.23    pos
-  ##        r4!r4.var   2269         3915    0.58    pos
-  ##        r8!r8.var   1355         2627    0.52    pos
-  ##      r10!r10.var   1133         2312    0.49    pos
-  ##        c1!c1.var      0.01         0    4.8   bound
-  ##        c2!c2.var   5942         8969    0.66    pos
-  ##        c3!c3.var   2549         4177    0.61    pos
-  ##        c4!c4.var   1792         3106    0.58    pos
-  ##        c6!c6.var   1400         2551    0.55    pos
-  ##        c8!c8.var   6456         9702    0.67    pos
-  ##     r1:c1!r1.var 128000       189700    0.67    pos
-  ##     r1:c2!r1.var  58230        90820    0.64    pos
-  ##     r1:c3!r1.var   5531        16550    0.33    pos
-  ##  new:gen!new.var   2869         1367    2.1     pos
-  ##       R!variance   4412          915    4.8     pos
-
-  }
-
-
-  libs(asreml,lucid)
-  if( utils::packageVersion("asreml") > "4") {
-    # asreml4
+  libs(asreml,lucid) # asreml4
     
-    m3 <- asreml(yield ~ -1 + trtn, data=dat,
-                 random = ~ r1 + r2 + r4 + r8 + r10 +
-                   c1 + c2 + c3 + c4 + c6 + c8 +
-                   r1:c1 + r1:c2 + r1:c3 + new:gen)
+  m3 <- asreml(yield ~ -1 + trtn, data=dat,
+               random = ~ r1 + r2 + r4 + r8 + r10 +
+                 c1 + c2 + c3 + c4 + c6 + c8 +
+                 r1:c1 + r1:c2 + r1:c3 + new:gen)
   ## coef(m3)
   ## # REML cultivar means.  Very similar to Federer table 2.
   ## rev(sort(round(coef(m3)$fixed[3] + coef(m3)$random[137:256,],0)))
@@ -237,7 +195,6 @@
   ## ##     r1:c3!r1.var   5531        16550    0.33    pos
   ## ##  new:gen!new.var   2869         1367    2.1     pos
   ## ##       R!variance   4412          915    4.8     pos
-}
 
 }
 }

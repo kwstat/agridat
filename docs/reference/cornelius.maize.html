@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -146,12 +146,12 @@
     <p>Maize yields for 9 cultivars at 20 locations.</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"cornelius.maize"</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"cornelius.maize"</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 180 observations on the following 3 variables.</p><dl'>
+    <p>A data frame with 180 observations on the following 3 variables.</p><dl>
     <dt><code>env</code></dt><dd><p>environment factor, 20 levels</p></dd>
     <dt><code>gen</code></dt><dd><p>genotype/cultivar, 9 levels</p></dd>
     <dt><code>yield</code></dt><dd><p>yield, kg/ha</p></dd>
@@ -172,71 +172,73 @@
     <p>Forkman, Johannes and Piepho, Hans-Peter. (2014).
   Parametric bootstrap methods for testing multiplicative terms in GGE
   and AMMI models. <em>Biometrics</em>, 70(3), 639-647.
-  http://doi.org/10.1111/biom.12162</p>
+  https://doi.org/10.1111/biom.12162</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>cornelius.maize</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>cornelius.maize</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>cornelius.maize</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>cornelius.maize</span>
 
 <span class='co'># dotplot(gen~yield|env,dat) # We cannot compare genotype yields easily</span>
 <span class='co'># Subtract environment mean from each observation</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>reshape2</span>)
-<span class='no'>mat</span> <span class='kw'>&lt;-</span> <span class='fu'>acast</span>(<span class='no'>dat</span>, <span class='no'>gen</span>~<span class='no'>env</span>)</div><div class='output co'>#&gt; <span class='message'>Using yield as value column: use value.var to override.</span></div><div class='input'><span class='no'>mat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/scale.html'>scale</a></span>(<span class='no'>mat</span>, <span class='kw'>scale</span><span class='kw'>=</span><span class='fl'>FALSE</span>)
-<span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>melt</span>(<span class='no'>mat</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span>(<span class='no'>dat2</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'gen'</span>,<span class='st'>'env'</span>,<span class='st'>'yield'</span>)
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'>bwplot</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span>, <span class='no'>dat2</span>,
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"cornelius.maize - environment centered yields"</span>)</div><div class='img'><img src='cornelius.maize-1.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='kw'>if</span>(<span class='fl'>0</span>){
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>reshape2</span><span class='op'>)</span>
+<span class='va'>mat</span> <span class='op'>&lt;-</span> <span class='fu'>acast</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>gen</span><span class='op'>~</span><span class='va'>env</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>Using yield as value column: use value.var to override.</span></div><div class='input'><span class='va'>mat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/scale.html'>scale</a></span><span class='op'>(</span><span class='va'>mat</span>, scale<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span>
+<span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>melt</span><span class='op'>(</span><span class='va'>mat</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/names.html'>names</a></span><span class='op'>(</span><span class='va'>dat2</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'gen'</span>,<span class='st'>'env'</span>,<span class='st'>'yield'</span><span class='op'>)</span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>bwplot</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>gen</span>, <span class='va'>dat2</span>,
+       main<span class='op'>=</span><span class='st'>"cornelius.maize - environment centered yields"</span><span class='op'>)</span>
+</div><div class='img'><img src='cornelius.maize-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='kw'>if</span><span class='op'>(</span><span class='fl'>0</span><span class='op'>)</span><span class='op'>{</span>
 <span class='co'># This reproduces the analysis of Forkman and Piepho.</span>
 
-<span class='no'>test.pc</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>Y0</span>, <span class='no'>type</span><span class='kw'>=</span><span class='st'>"AMMI"</span>, <span class='no'>n.boot</span><span class='kw'>=</span><span class='fl'>10000</span>, <span class='no'>maxpc</span><span class='kw'>=</span><span class='fl'>6</span>) {
+<span class='va'>test.pc</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>Y0</span>, <span class='va'>type</span><span class='op'>=</span><span class='st'>"AMMI"</span>, <span class='va'>n.boot</span><span class='op'>=</span><span class='fl'>10000</span>, <span class='va'>maxpc</span><span class='op'>=</span><span class='fl'>6</span><span class='op'>)</span> <span class='op'>{</span>
 
   <span class='co'># Test the significance of Principal Components in GGE/AMMI</span>
 
   <span class='co'># Singular value decomposition of centered/double-centered Y</span>
-  <span class='no'>Y</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sweep.html'>sweep</a></span>(<span class='no'>Y0</span>, <span class='fl'>1</span>, <span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>rowMeans</a></span>(<span class='no'>Y0</span>)) <span class='co'># subtract environment means</span>
-  <span class='kw'>if</span>(<span class='no'>type</span><span class='kw'>==</span><span class='st'>"AMMI"</span>) {
-    <span class='no'>Y</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sweep.html'>sweep</a></span>(<span class='no'>Y</span>, <span class='fl'>2</span>, <span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>colMeans</a></span>(<span class='no'>Y0</span>)) <span class='co'># subtract genotype means</span>
-    <span class='no'>Y</span> <span class='kw'>&lt;-</span> <span class='no'>Y</span> + <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>Y0</span>)
-  }
-  <span class='no'>lam</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/svd.html'>svd</a></span>(<span class='no'>Y</span>)$<span class='no'>d</span>
+  <span class='va'>Y</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sweep.html'>sweep</a></span><span class='op'>(</span><span class='va'>Y0</span>, <span class='fl'>1</span>, <span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>rowMeans</a></span><span class='op'>(</span><span class='va'>Y0</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># subtract environment means</span>
+  <span class='kw'>if</span><span class='op'>(</span><span class='va'>type</span><span class='op'>==</span><span class='st'>"AMMI"</span><span class='op'>)</span> <span class='op'>{</span>
+    <span class='va'>Y</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/sweep.html'>sweep</a></span><span class='op'>(</span><span class='va'>Y</span>, <span class='fl'>2</span>, <span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>colMeans</a></span><span class='op'>(</span><span class='va'>Y0</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># subtract genotype means</span>
+    <span class='va'>Y</span> <span class='op'>&lt;-</span> <span class='va'>Y</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>Y0</span><span class='op'>)</span>
+  <span class='op'>}</span>
+  <span class='va'>lam</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/svd.html'>svd</a></span><span class='op'>(</span><span class='va'>Y</span><span class='op'>)</span><span class='op'>$</span><span class='va'>d</span>
 
   <span class='co'># Observed value of test statistic.</span>
   <span class='co'># t.obs[k] is the proportion of variance explained by the kth term out of</span>
   <span class='co'># the k...M terms, e.g. t.obs[2] is lam[2]^2 / sum(lam[2:M]^2)</span>
-  <span class='no'>t.obs</span> <span class='kw'>&lt;-</span> { <span class='no'>lam</span>^<span class='fl'>2</span>/<span class='fu'><a href='https://rdrr.io/r/base/rev.html'>rev</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/cumsum.html'>cumsum</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/rev.html'>rev</a></span>(<span class='no'>lam</span>^<span class='fl'>2</span>))) } [<span class='fl'>1</span>:(<span class='no'>M</span>-<span class='fl'>1</span>)]
-  <span class='no'>t.boot</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='fl'>NA</span>, <span class='kw'>nrow</span><span class='kw'>=</span><span class='no'>n.boot</span>, <span class='kw'>ncol</span><span class='kw'>=</span><span class='no'>M</span>-<span class='fl'>1</span>)
+  <span class='va'>t.obs</span> <span class='op'>&lt;-</span> <span class='op'>{</span> <span class='va'>lam</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>/</span><span class='fu'><a href='https://rdrr.io/r/base/rev.html'>rev</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/cumsum.html'>cumsum</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/rev.html'>rev</a></span><span class='op'>(</span><span class='va'>lam</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>}</span> <span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='op'>(</span><span class='va'>M</span><span class='op'>-</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>]</span>
+  <span class='va'>t.boot</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='cn'>NA</span>, nrow<span class='op'>=</span><span class='va'>n.boot</span>, ncol<span class='op'>=</span><span class='va'>M</span><span class='op'>-</span><span class='fl'>1</span><span class='op'>)</span>
 
   <span class='co'># Centering rows/columns reduces the rank by 1 in each direction.</span>
-  <span class='no'>I</span> <span class='kw'>&lt;-</span> <span class='kw'>if</span>(<span class='no'>type</span><span class='kw'>==</span><span class='st'>"AMMI"</span>) <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span>(<span class='no'>Y0</span>)-<span class='fl'>1</span> <span class='kw'>else</span> <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span>(<span class='no'>Y0</span>)
-  <span class='no'>J</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>ncol</a></span>(<span class='no'>Y0</span>)-<span class='fl'>1</span>
-  <span class='no'>M</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span>(<span class='no'>I</span>, <span class='no'>J</span>) <span class='co'># rank of Y, maximum number of components</span>
-  <span class='no'>M</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span>(<span class='no'>M</span>, <span class='no'>maxpc</span>) <span class='co'># Optional step: No more than 5 components</span>
+  <span class='va'>I</span> <span class='op'>&lt;-</span> <span class='kw'>if</span><span class='op'>(</span><span class='va'>type</span><span class='op'>==</span><span class='st'>"AMMI"</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>Y0</span><span class='op'>)</span><span class='op'>-</span><span class='fl'>1</span> <span class='kw'>else</span> <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>Y0</span><span class='op'>)</span>
+  <span class='va'>J</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>ncol</a></span><span class='op'>(</span><span class='va'>Y0</span><span class='op'>)</span><span class='op'>-</span><span class='fl'>1</span>
+  <span class='va'>M</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span><span class='op'>(</span><span class='va'>I</span>, <span class='va'>J</span><span class='op'>)</span> <span class='co'># rank of Y, maximum number of components</span>
+  <span class='va'>M</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/Extremes.html'>min</a></span><span class='op'>(</span><span class='va'>M</span>, <span class='va'>maxpc</span><span class='op'>)</span> <span class='co'># Optional step: No more than 5 components</span>
 
-  <span class='kw'>for</span>(<span class='no'>K</span> <span class='kw'>in</span> <span class='fl'>0</span>:(<span class='no'>M</span>-<span class='fl'>2</span>)){ <span class='co'># 'K' multiplicative components in the svd</span>
+  <span class='kw'>for</span><span class='op'>(</span><span class='va'>K</span> <span class='kw'>in</span> <span class='fl'>0</span><span class='op'>:</span><span class='op'>(</span><span class='va'>M</span><span class='op'>-</span><span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span><span class='op'>{</span> <span class='co'># 'K' multiplicative components in the svd</span>
 
-    <span class='kw'>for</span>(<span class='no'>bb</span> <span class='kw'>in</span> <span class='fl'>1</span>:<span class='no'>n.boot</span>){
-      <span class='no'>E.b</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span>((<span class='no'>I</span>-<span class='no'>K</span>) * (<span class='no'>J</span>-<span class='no'>K</span>)), <span class='kw'>nrow</span> <span class='kw'>=</span> <span class='no'>I</span>-<span class='no'>K</span>, <span class='kw'>ncol</span> <span class='kw'>=</span> <span class='no'>J</span>-<span class='no'>K</span>)
-      <span class='no'>lam.b</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/svd.html'>svd</a></span>(<span class='no'>E.b</span>)$<span class='no'>d</span>
-      <span class='no'>t.boot</span>[<span class='no'>bb</span>, <span class='no'>K</span>+<span class='fl'>1</span>] <span class='kw'>&lt;-</span> <span class='no'>lam.b</span>[<span class='fl'>1</span>]^<span class='fl'>2</span> / <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>(<span class='no'>lam.b</span>^<span class='fl'>2</span>)
-    }
+    <span class='kw'>for</span><span class='op'>(</span><span class='va'>bb</span> <span class='kw'>in</span> <span class='fl'>1</span><span class='op'>:</span><span class='va'>n.boot</span><span class='op'>)</span><span class='op'>{</span>
+      <span class='va'>E.b</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/Normal.html'>rnorm</a></span><span class='op'>(</span><span class='op'>(</span><span class='va'>I</span><span class='op'>-</span><span class='va'>K</span><span class='op'>)</span> <span class='op'>*</span> <span class='op'>(</span><span class='va'>J</span><span class='op'>-</span><span class='va'>K</span><span class='op'>)</span><span class='op'>)</span>, nrow <span class='op'>=</span> <span class='va'>I</span><span class='op'>-</span><span class='va'>K</span>, ncol <span class='op'>=</span> <span class='va'>J</span><span class='op'>-</span><span class='va'>K</span><span class='op'>)</span>
+      <span class='va'>lam.b</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/svd.html'>svd</a></span><span class='op'>(</span><span class='va'>E.b</span><span class='op'>)</span><span class='op'>$</span><span class='va'>d</span>
+      <span class='va'>t.boot</span><span class='op'>[</span><span class='va'>bb</span>, <span class='va'>K</span><span class='op'>+</span><span class='fl'>1</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='va'>lam.b</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>^</span><span class='fl'>2</span> <span class='op'>/</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='va'>lam.b</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>)</span>
+    <span class='op'>}</span>
 
-  }
+  <span class='op'>}</span>
 
   <span class='co'># P-value for each additional multiplicative term in the SVD.</span>
   <span class='co'># P-value is the proportion of time bootstrap values exceed t.obs</span>
-  <span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>colMeans</a></span>(<span class='no'>t.boot</span> <span class='kw'>&gt;</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='no'>t.obs</span>, <span class='no'>n.boot</span>), <span class='kw'>nrow</span><span class='kw'>=</span><span class='no'>n.boot</span>, <span class='kw'>byrow</span><span class='kw'>=</span><span class='fl'>TRUE</span>))
-}
+  <span class='fu'><a href='https://rdrr.io/r/base/colSums.html'>colMeans</a></span><span class='op'>(</span><span class='va'>t.boot</span> <span class='op'>&gt;</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='va'>t.obs</span>, <span class='va'>n.boot</span><span class='op'>)</span>, nrow<span class='op'>=</span><span class='va'>n.boot</span>, byrow<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span><span class='op'>)</span>
+<span class='op'>}</span>
 
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>cornelius.maize</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>cornelius.maize</span>
 
 <span class='co'># Convert to matrix format</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>reshape2</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'>acast</span>(<span class='no'>dat</span>, <span class='no'>env</span>~<span class='no'>gen</span>, <span class='kw'>value.var</span><span class='kw'>=</span><span class='st'>'yield'</span>)
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>reshape2</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'>acast</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>env</span><span class='op'>~</span><span class='va'>gen</span>, value.var<span class='op'>=</span><span class='st'>'yield'</span><span class='op'>)</span>
 
 <span class='co'>## R&gt; test.pc(dat,"AMMI")</span>
 <span class='co'>## [1] 0.0000 0.1505 0.2659 0.0456 0.1086 # Forkman: .00 .156 .272 .046 .111</span>
@@ -244,8 +246,9 @@
 <span class='co'>## R&gt; test.pc(dat,"GGE")</span>
 <span class='co'>## [1] 0.0000 0.2934 0.1513 0.0461 0.2817 # Forkman: .00 .296 .148 .047 .285</span>
 
-}
-<span class='co'># }</span></div></pre>
+<span class='op'>}</span>
+<span class='co'># }</span>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -261,7 +264,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -32,7 +32,7 @@
 \references{
   SAS/STAT(R) 9.2 User's Guide, Second Edition.
   Example 23.5 Strip-Split Plot.
-  http://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.htm#statug_anova_sect030.htm
+  https://support.sas.com/documentation/cdl/en/statug/63033/HTML/default/viewer.htm#statug_anova_sect030.htm
 }
 
 \examples{

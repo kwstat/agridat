@@ -39,7 +39,7 @@
   N Friel & A. N Pettitt (2004). Likelihood Estimation and Inference
   for the Autologistic Model.
   \emph{Journal of Computational and Graphical Statistics}, 13:1, 232-246.
-  http://doi.org/10.1198/1061860043029
+  https://doi.org/10.1198/1061860043029
 }
 \examples{
 \dontrun{
@@ -76,30 +76,27 @@
 
 
   libs(asreml)
-  if( utils::packageVersion("asreml") >  "4" ) {
-    # asreml4
     
-    # Now try an AR1xAR1 model.
-    dat2 <- transform(dat, xf=factor(col), yf=factor(row),
-                      pres=as.numeric(disease=="Y"))
-    
-    m2 <- asreml(pres ~ 1, data=dat2,
-                 resid = ~ar1(xf):ar1(yf))
-    # The 0/1 response is arbitrary, but there is some suggestion
-    # of auto-correlation in the x (.17) and y (.10) directions,
-    # suggesting the pattern is more 'patchy' than just random noise,
-    # but is it meaningful?
-    
-    libs(lucid)
-    vc(m2)
-    ##       effect component std.error z.ratio bound %ch
-    ##     xf:yf(R)   0.1301   0.003798    34       P   0
-    ## xf:yf!xf!cor   0.1699   0.01942      8.7     U   0
-    ## xf:yf!yf!cor   0.09842  0.02038      4.8     U   0
-    
-  }
-}
+  # Now try an AR1xAR1 model.
+  dat2 <- transform(dat, xf=factor(col), yf=factor(row),
+                    pres=as.numeric(disease=="Y"))
+  
+  m2 <- asreml(pres ~ 1, data=dat2,
+               resid = ~ar1(xf):ar1(yf))
+  # The 0/1 response is arbitrary, but there is some suggestion
+  # of auto-correlation in the x (.17) and y (.10) directions,
+  # suggesting the pattern is more 'patchy' than just random noise,
+  # but is it meaningful?
+  
+  libs(lucid)
+  vc(m2)
+  ##       effect component std.error z.ratio bound %ch
+  ##     xf:yf(R)   0.1301   0.003798    34       P   0
+  ## xf:yf!xf!cor   0.1699   0.01942      8.7     U   0
+  ## xf:yf!yf!cor   0.09842  0.02038      4.8     U   0
+  
 
+}
 }
 
 \keyword{datasets}

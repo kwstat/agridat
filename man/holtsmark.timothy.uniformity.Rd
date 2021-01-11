@@ -31,7 +31,7 @@
   Om Muligheder for at indskraenke de Fejl, som ved Markforsog betinges af Jordens Uensartethed.
   Tidsskrift for Landbrugets Planteavl. 12, 330-351. (In Danish)
   https://books.google.com/books?id=MdM0AQAAMAAJ&pg=PA330
-  http://dca.au.dk/publikationer/historiske/planteavl/
+  https://dca.au.dk/publikationer/historiske/planteavl/
 
   Uber die Fehler, welche bei Feldversuchen, durch die Ungleichartigkeit des Bodens bedingt werden.
   Die Landwirtschaftlichen Versuchs-Stationen, 65, 1--22. (In German)

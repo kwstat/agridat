@@ -34,7 +34,7 @@
   Newton, Adrian and Thomas, William and Currie, Iain. 2003.
   The practical use of semiparametric models in field trials,
   Journal of Agric Biological and Envir Stats, 8, 48-66.
-  http://doi.org/10.1198/1085711031265.
+  https://doi.org/10.1198/1085711031265.
 }
 
 \examples{
@@ -76,30 +76,27 @@
   wireframe(p2lo~row+bed, new2, aspect=c(1,.5),
             main="durban.splitplot - Field trend")
 
-  libs(asreml)
-  if( utils::packageVersion("asreml") > "4") {
-    # asreml4
+  libs(asreml) # asreml4
     
-    # Table 5, variance components.  Table 6, F tests
-    dat <- transform(dat, rowf=factor(row), bedf=factor(bed))
-    dat <- dat[order(dat$rowf, dat$bedf),]
-    m2a2 <- asreml(yield ~ gen*fung, random=~block/fung+units, data=dat,
-                   resid =~ar1v(rowf):ar1(bedf))
-    m2a2 <- update(m2a2)
-    
-    libs(lucid)
-    vc(m2a2)
-    ##             effect component std.error z.ratio bound %ch
-    ##              block   0              NA      NA     B  NA
-    ##         block:fung   0.01206  0.01512      0.8     P   0
-    ##              units   0.02463  0.002465    10       P   0
-    ##       rowf:bedf(R)   1              NA      NA     F   0
-    ## rowf:bedf!rowf!cor   0.8836   0.03646     24       U   0
-    ## rowf:bedf!rowf!var   0.1261   0.04434      2.8     P   0
-    ## rowf:bedf!bedf!cor   0.9202   0.02846     32       U   0
-    
-    wald(m2a2)
-  }
+  # Table 5, variance components.  Table 6, F tests
+  dat <- transform(dat, rowf=factor(row), bedf=factor(bed))
+  dat <- dat[order(dat$rowf, dat$bedf),]
+  m2a2 <- asreml(yield ~ gen*fung, random=~block/fung+units, data=dat,
+                 resid =~ar1v(rowf):ar1(bedf))
+  m2a2 <- update(m2a2)
+  
+  libs(lucid)
+  vc(m2a2)
+  ##             effect component std.error z.ratio bound %ch
+  ##              block   0              NA      NA     B  NA
+  ##         block:fung   0.01206  0.01512      0.8     P   0
+  ##              units   0.02463  0.002465    10       P   0
+  ##       rowf:bedf(R)   1              NA      NA     F   0
+  ## rowf:bedf!rowf!cor   0.8836   0.03646     24       U   0
+  ## rowf:bedf!rowf!var   0.1261   0.04434      2.8     P   0
+  ## rowf:bedf!bedf!cor   0.9202   0.02846     32       U   0
+  
+  wald(m2a2)
   
 }
 }

@@ -43,7 +43,7 @@
   Nair, B. Gopakumaran  (1984).
   Optimum plot size for field experiments on turmeric.
   Thesis, Kerala Agriculture University.
-  http://krishikosh.egranth.ac.in/handle/1/5810147397
+  https://krishikosh.egranth.ac.in/handle/1/5810147397
 }
 \references{
   None.

@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -146,12 +146,12 @@
     <p>Uniformity trial of safflower in Arizona in 1958.</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"draper.safflower.uniformity"</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"draper.safflower.uniformity"</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 640 observations on the following 4 variables.</p><dl'>
+    <p>A data frame with 640 observations on the following 4 variables.</p><dl>
     <dt><code>expt</code></dt><dd><p>experiment</p></dd>
     <dt><code>row</code></dt><dd><p>row</p></dd>
     <dt><code>col</code></dt><dd><p>column</p></dd>
@@ -191,7 +191,7 @@
     <p>Arlen D. Draper. (1959).
   Optimum plot size and shape for safflower yield tests.
   Dissertation. University of Arizona. 
-  http://hdl.handle.net/10150/319371</p>
+  https://hdl.handle.net/10150/319371</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>None</p>
@@ -199,30 +199,34 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
- <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+ <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
 
-  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>draper.safflower.uniformity</span>)
-  <span class='no'>dat4</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>draper.safflower.uniformity</span>, <span class='no'>expt</span><span class='kw'>==</span><span class='st'>"E4"</span>)
-  <span class='no'>dat5</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>draper.safflower.uniformity</span>, <span class='no'>expt</span><span class='kw'>==</span><span class='st'>"E5"</span>)
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>draper.safflower.uniformity</span><span class='op'>)</span>
+  <span class='va'>dat4</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>draper.safflower.uniformity</span>, <span class='va'>expt</span><span class='op'>==</span><span class='st'>"E4"</span><span class='op'>)</span>
+  <span class='va'>dat5</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>draper.safflower.uniformity</span>, <span class='va'>expt</span><span class='op'>==</span><span class='st'>"E5"</span><span class='op'>)</span>
 
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-  <span class='fu'>desplot</span>(<span class='no'>dat4</span>, <span class='no'>yield</span>~<span class='no'>col</span>*<span class='no'>row</span>,
-          <span class='kw'>flip</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>tick</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>aspect</span><span class='kw'>=</span><span class='fl'>72</span>/<span class='fl'>53</span>, <span class='co'># true aspect</span>
-          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"draper.safflower.uniformity (four foot)"</span>)</div><div class='img'><img src='draper.safflower.uniformity-1.png' alt='' width='700' height='433' /></div><div class='input'>
-  <span class='fu'>desplot</span>(<span class='no'>dat5</span>, <span class='no'>yield</span>~<span class='no'>col</span>*<span class='no'>row</span>,
-          <span class='kw'>flip</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>tick</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>aspect</span><span class='kw'>=</span><span class='fl'>90</span>/<span class='fl'>46</span>, <span class='co'># true aspect</span>
-          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"draper.safflower.uniformity (five foot)"</span>)</div><div class='img'><img src='draper.safflower.uniformity-2.png' alt='' width='700' height='433' /></div><div class='input'>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>agricolae</span>)
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>reshape2</span>)
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+  <span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat4</span>, <span class='va'>yield</span><span class='op'>~</span><span class='va'>col</span><span class='op'>*</span><span class='va'>row</span>,
+          flip<span class='op'>=</span><span class='cn'>TRUE</span>, tick<span class='op'>=</span><span class='cn'>TRUE</span>, aspect<span class='op'>=</span><span class='fl'>72</span><span class='op'>/</span><span class='fl'>53</span>, <span class='co'># true aspect</span>
+          main<span class='op'>=</span><span class='st'>"draper.safflower.uniformity (four foot)"</span><span class='op'>)</span>
+</div><div class='img'><img src='draper.safflower.uniformity-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat5</span>, <span class='va'>yield</span><span class='op'>~</span><span class='va'>col</span><span class='op'>*</span><span class='va'>row</span>,
+          flip<span class='op'>=</span><span class='cn'>TRUE</span>, tick<span class='op'>=</span><span class='cn'>TRUE</span>, aspect<span class='op'>=</span><span class='fl'>90</span><span class='op'>/</span><span class='fl'>46</span>, <span class='co'># true aspect</span>
+          main<span class='op'>=</span><span class='st'>"draper.safflower.uniformity (five foot)"</span><span class='op'>)</span>
+</div><div class='img'><img src='draper.safflower.uniformity-2.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>agricolae</span><span class='op'>)</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>reshape2</span><span class='op'>)</span>
   <span class='co'># Remove border plots at either end and right side</span>
-  <span class='no'>dat4</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat4</span>, <span class='no'>row</span><span class='kw'>&gt;</span><span class='fl'>1</span> <span class='kw'>&amp;</span> <span class='no'>row</span><span class='kw'>&lt;</span><span class='fl'>20</span>)
-  <span class='no'>dat4</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat4</span>, <span class='no'>col</span><span class='kw'>&lt;</span><span class='fl'>17</span>)
-  <span class='no'>dat5</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat5</span>, <span class='no'>row</span><span class='kw'>&gt;</span><span class='fl'>1</span> <span class='kw'>&amp;</span> <span class='no'>row</span><span class='kw'>&lt;</span><span class='fl'>20</span>)
-  <span class='no'>dat5</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat5</span>, <span class='no'>col</span><span class='kw'>&lt;</span><span class='fl'>15</span>)
-
-  <span class='no'>s4</span> <span class='kw'>&lt;-</span> <span class='fu'>index.smith</span>(<span class='fu'>acast</span>(<span class='no'>dat4</span>, <span class='no'>row</span>~<span class='no'>col</span>, <span class='kw'>value.var</span><span class='kw'>=</span><span class='st'>'yield'</span>),
-                    <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"draper.safflower.uniformity (four foot)"</span>,
-                    <span class='kw'>col</span><span class='kw'>=</span><span class='st'>"red"</span>)$<span class='no'>uni</span></div><div class='img'><img src='draper.safflower.uniformity-3.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='no'>s4</span> <span class='co'># match Draper table 2, p 22</span></div><div class='output co'>#&gt;       Size Width Length plots        Vx   CV
+  <span class='va'>dat4</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat4</span>, <span class='va'>row</span><span class='op'>&gt;</span><span class='fl'>1</span> <span class='op'>&amp;</span> <span class='va'>row</span><span class='op'>&lt;</span><span class='fl'>20</span><span class='op'>)</span>
+  <span class='va'>dat4</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat4</span>, <span class='va'>col</span><span class='op'>&lt;</span><span class='fl'>17</span><span class='op'>)</span>
+  <span class='va'>dat5</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat5</span>, <span class='va'>row</span><span class='op'>&gt;</span><span class='fl'>1</span> <span class='op'>&amp;</span> <span class='va'>row</span><span class='op'>&lt;</span><span class='fl'>20</span><span class='op'>)</span>
+  <span class='va'>dat5</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat5</span>, <span class='va'>col</span><span class='op'>&lt;</span><span class='fl'>15</span><span class='op'>)</span>
+  
+  <span class='va'>s4</span> <span class='op'>&lt;-</span> <span class='fu'>index.smith</span><span class='op'>(</span><span class='fu'>acast</span><span class='op'>(</span><span class='va'>dat4</span>, <span class='va'>row</span><span class='op'>~</span><span class='va'>col</span>, value.var<span class='op'>=</span><span class='st'>'yield'</span><span class='op'>)</span>,
+                    main<span class='op'>=</span><span class='st'>"draper.safflower.uniformity (four foot)"</span>,
+                    col<span class='op'>=</span><span class='st'>"red"</span><span class='op'>)</span><span class='op'>$</span><span class='va'>uni</span>
+</div><div class='img'><img src='draper.safflower.uniformity-3.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='va'>s4</span> <span class='co'># match Draper table 2, p 22</span>
+</div><div class='output co'>#&gt;       Size Width Length plots        Vx   CV
 #&gt;  [1,]    1     1      1   288 2164.6567 22.5
 #&gt;  [2,]    2     1      2   144 1490.8710 18.7
 #&gt;  [3,]    2     2      1   144 1539.8152 19.0
@@ -243,12 +247,12 @@
 #&gt; [18,]   36     4      9     8  548.4288 11.3
 #&gt; [19,]   48     8      6     6  408.3539  9.8
 #&gt; [20,]   72     8      9     4  417.8544  9.9</div><div class='input'>  
-  ## s5 &lt;- index.smith(acast(dat5, row~col, value.var='yield'),
-  ##                   main="draper.safflower.uniformity (five foot)",
-  ##                   col="red")$uni
-  ## s5 # match Draper table 1, p 21
+  <span class='co'>## s5 &lt;- index.smith(acast(dat5, row~col, value.var='yield'),</span>
+  <span class='co'>##                   main="draper.safflower.uniformity (five foot)",</span>
+  <span class='co'>##                   col="red")$uni</span>
+  <span class='co'>## s5 # match Draper table 1, p 21</span>
   
-# }
+<span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -265,7 +269,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

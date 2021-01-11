@@ -34,7 +34,7 @@
   Williams, ER and Luckett, DJ. 1988.
   The use of uniformity data in the design and analysis of cotton and barley variety trials.
   Australian Journal of Agricultural Research, 39, 339-350.
-  http://doi.org/10.1071/AR9880339
+  https://doi.org/10.1071/AR9880339
 }
 \references{
   Maria Xose Rodriguez-Alvarez, Martin P. Boer, Fred A. van Eeuwijk, Paul

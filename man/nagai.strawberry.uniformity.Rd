@@ -31,7 +31,7 @@ Field width: 24 columns * 6 plants * 0.3 m = 43.2 m.
   Violeta Nagai (1978).
   Tamanho da parcela e numero de repeticoes em experimentos com morangueiro (Plot size and number of repetitions in experiments with strawberry).
   Bragantia, 37, 71-81. Table 2, page 75.
-  http://dx.doi.org/10.1590/S0006-87051978000100009
+  https://dx.doi.org/10.1590/S0006-87051978000100009
 }
 \references{
   None

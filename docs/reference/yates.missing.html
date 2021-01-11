@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Factorial experiment with missing values — yates.missing" />
-
 <meta property="og:description" content="Potato factorial experiment with missing values" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,73 +143,72 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Potato factorial experiment with missing values</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 80 observations on the following 3 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 80 observations on the following 3 variables.</p><dl>
     <dt><code>trt</code></dt><dd><p>treatment factor with levels <code>0</code> <code>K</code>
       <code>N</code> <code>P</code> <code>NK</code> <code>KP</code> <code>NP</code> <code>NKP</code></p></dd>
     <dt><code>block</code></dt><dd><p>block, 10 levels</p></dd>
     <dt><code>y</code></dt><dd><p>infection intensity</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>The response variable <code>y</code> is the intensity of infection of potato
   tubers innoculated with <em>Phytophthora Erythroseptica</em>.</p>
 <p>Yates (1933) presents an iterative algorithm to estimate missing
   values in a matrix, using this data as an example.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>F. Yates, 1933.
   The analysis of replicated experiments when the field results are incomplete.
   <em>Emp. J. Exp. Agric.</em>, 1, 129--142.</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Steel &amp; Torrie, 1980, Principles and Procedures of Statistics,
   2nd Edition, page 212.</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>yates.missing</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>yates.missing</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'>bwplot</span>(<span class='no'>y</span> ~ <span class='no'>trt</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-       <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Treatment"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Infection intensity"</span>,
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"yates.missing"</span>)</div><div class='img'><img src='yates.missing-1.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>reshape2</span>)
-<span class='no'>mat0</span> <span class='kw'>&lt;-</span> <span class='fu'>acast</span>(<span class='no'>dat</span>[, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'trt'</span>,<span class='st'>'block'</span>,<span class='st'>'y'</span>)], <span class='no'>trt</span>~<span class='no'>block</span>,
-               <span class='kw'>id.var</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'trt'</span>,<span class='st'>'block'</span>), <span class='kw'>value.var</span><span class='kw'>=</span><span class='st'>'y'</span>)
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>yates.missing</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>yates.missing</span>
+
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>bwplot</a></span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='va'>trt</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+       xlab<span class='op'>=</span><span class='st'>"Treatment"</span>, ylab<span class='op'>=</span><span class='st'>"Infection intensity"</span>,
+       main<span class='op'>=</span><span class='st'>"yates.missing"</span><span class='op'>)</span>
+</div><div class='img'><img src='yates.missing-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>reshape2</span><span class='op'>)</span>
+<span class='va'>mat0</span> <span class='op'>&lt;-</span> <span class='fu'>acast</span><span class='op'>(</span><span class='va'>dat</span><span class='op'>[</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'trt'</span>,<span class='st'>'block'</span>,<span class='st'>'y'</span><span class='op'>)</span><span class='op'>]</span>, <span class='va'>trt</span><span class='op'>~</span><span class='va'>block</span>,
+               id.var<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'trt'</span>,<span class='st'>'block'</span><span class='op'>)</span>, value.var<span class='op'>=</span><span class='st'>'y'</span><span class='op'>)</span>
 
 <span class='co'># Use lm to estimate missing values.  The estimated missing values</span>
 <span class='co'># are the same as in Yates (1933)</span>
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>y</span>~<span class='no'>trt</span>+<span class='no'>block</span>, <span class='no'>dat</span>)
-<span class='no'>dat</span>$<span class='no'>pred</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m1</span>, <span class='kw'>new</span><span class='kw'>=</span><span class='no'>dat</span>[, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'trt'</span>,<span class='st'>'block'</span>)])
-<span class='no'>dat</span>$<span class='no'>filled</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span>(<span class='no'>dat</span>$<span class='no'>y</span>), <span class='no'>dat</span>$<span class='no'>pred</span>, <span class='no'>dat</span>$<span class='no'>y</span>)
-<span class='no'>mat1</span> <span class='kw'>&lt;-</span> <span class='fu'>acast</span>(<span class='no'>dat</span>[, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'trt'</span>,<span class='st'>'block'</span>,<span class='st'>'pred'</span>)], <span class='no'>trt</span>~<span class='no'>block</span>,
-               <span class='kw'>id.var</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'trt'</span>,<span class='st'>'block'</span>), <span class='kw'>value.var</span><span class='kw'>=</span><span class='st'>'pred'</span>)
+<span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>y</span><span class='op'>~</span><span class='va'>trt</span><span class='op'>+</span><span class='va'>block</span>, <span class='va'>dat</span><span class='op'>)</span>
+<span class='va'>dat</span><span class='op'>$</span><span class='va'>pred</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>m1</span>, new<span class='op'>=</span><span class='va'>dat</span><span class='op'>[</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'trt'</span>,<span class='st'>'block'</span><span class='op'>)</span><span class='op'>]</span><span class='op'>)</span>
+<span class='va'>dat</span><span class='op'>$</span><span class='va'>filled</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>y</span><span class='op'>)</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>pred</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>y</span><span class='op'>)</span>
+<span class='va'>mat1</span> <span class='op'>&lt;-</span> <span class='fu'>acast</span><span class='op'>(</span><span class='va'>dat</span><span class='op'>[</span>, <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'trt'</span>,<span class='st'>'block'</span>,<span class='st'>'pred'</span><span class='op'>)</span><span class='op'>]</span>, <span class='va'>trt</span><span class='op'>~</span><span class='va'>block</span>,
+               id.var<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'trt'</span>,<span class='st'>'block'</span><span class='op'>)</span>, value.var<span class='op'>=</span><span class='st'>'pred'</span><span class='op'>)</span>
 
 
 <span class='co'># Another method to estimate missing values via PCA</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='st'>"nipals"</span>)
-<span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'>nipals</span>(<span class='no'>mat0</span>, <span class='kw'>center</span><span class='kw'>=</span><span class='fl'>FALSE</span>, <span class='kw'>ncomp</span><span class='kw'>=</span><span class='fl'>3</span>, <span class='kw'>fitted</span><span class='kw'>=</span><span class='fl'>TRUE</span>)
-<span class='co'># mat2 &lt;- m2$scores &lt;!-- %*% t(m2$loadings) --&gt;</span>
-<span class='no'>mat2</span> <span class='kw'>&lt;-</span> <span class='no'>m2</span>$<span class='no'>fitted</span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='st'>"nipals"</span><span class='op'>)</span>
+<span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'>nipals</span><span class='op'>(</span><span class='va'>mat0</span>, center<span class='op'>=</span><span class='cn'>FALSE</span>, ncomp<span class='op'>=</span><span class='fl'>3</span>, fitted<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+<span class='co'># mat2 &lt;- m2$scores </span>
+<span class='va'>mat2</span> <span class='op'>&lt;-</span> <span class='va'>m2</span><span class='op'>$</span><span class='va'>fitted</span>
 
 <span class='co'># Compare</span>
-<span class='no'>ord</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"0"</span>,<span class='st'>"N"</span>,<span class='st'>"K"</span>,<span class='st'>"P"</span>,<span class='st'>"NK"</span>,<span class='st'>"NP"</span>,<span class='st'>"KP"</span>,<span class='st'>"NKP"</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>mat0</span>[<span class='no'>ord</span>,], <span class='kw'>na.print</span><span class='kw'>=</span><span class='st'>"."</span>)</div><div class='output co'>#&gt;      B01  B02  B03  B04  B05  B06  B07  B08  B09  B10
+<span class='va'>ord</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"0"</span>,<span class='st'>"N"</span>,<span class='st'>"K"</span>,<span class='st'>"P"</span>,<span class='st'>"NK"</span>,<span class='st'>"NP"</span>,<span class='st'>"KP"</span>,<span class='st'>"NKP"</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='va'>mat0</span><span class='op'>[</span><span class='va'>ord</span>,<span class='op'>]</span>, na.print<span class='op'>=</span><span class='st'>"."</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;      B01  B02  B03  B04  B05  B06  B07  B08  B09  B10
 #&gt; 0   3.55 2.29    . 2.00 3.34 3.83 3.86 3.50 2.23 2.91
 #&gt; N   2.30 4.03 2.54 2.82 3.29 2.93    . 2.55 2.20 2.30
 #&gt; K   3.96 3.62 3.46 2.50 2.94 3.70 3.82 2.54 3.18 3.69
@@ -213,7 +216,8 @@
 #&gt; NK     . 3.07 3.49 1.07 3.99 3.48 3.80 3.68 3.24 2.70
 #&gt; NP  2.36 3.47 2.64 3.17 3.26 3.28    .    . 3.07 3.12
 #&gt; KP  2.16 2.34 1.96 2.60 3.77    . 3.20 3.47 2.67 3.33
-#&gt; NKP 3.16 2.52 2.39 3.68    .    . 3.85 3.36 2.50 4.13</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='no'>mat1</span>[<span class='no'>ord</span>,] ,<span class='fl'>2</span>)</div><div class='output co'>#&gt;      B01  B02  B03  B04  B05  B06  B07  B08  B09  B10
+#&gt; NKP 3.16 2.52 2.39 3.68    .    . 3.85 3.36 2.50 4.13</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>mat1</span><span class='op'>[</span><span class='va'>ord</span>,<span class='op'>]</span> ,<span class='fl'>2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;      B01  B02  B03  B04  B05  B06  B07  B08  B09  B10
 #&gt; 0   2.75 3.00 2.58 2.56 3.43 3.46 3.50 3.11 2.66 3.05
 #&gt; N   2.57 2.82 2.39 2.38 3.25 3.28 3.31 2.93 2.47 2.87
 #&gt; K   3.08 3.33 2.91 2.89 3.77 3.79 3.83 3.44 2.99 3.39
@@ -221,7 +225,8 @@
 #&gt; NK  2.88 3.13 2.71 2.69 3.57 3.59 3.63 3.24 2.79 3.18
 #&gt; NP  2.86 3.11 2.69 2.67 3.54 3.57 3.61 3.22 2.77 3.16
 #&gt; KP  2.63 2.87 2.45 2.43 3.31 3.33 3.37 2.98 2.53 2.93
-#&gt; NKP 3.05 3.30 2.88 2.86 3.73 3.76 3.79 3.41 2.95 3.35</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='no'>mat2</span>[<span class='no'>ord</span>,] ,<span class='fl'>2</span>)</div><div class='output co'>#&gt;      B01  B02  B03  B04  B05  B06  B07  B08  B09  B10
+#&gt; NKP 3.05 3.30 2.88 2.86 3.73 3.76 3.79 3.41 2.95 3.35</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>mat2</span><span class='op'>[</span><span class='va'>ord</span>,<span class='op'>]</span> ,<span class='fl'>2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;      B01  B02  B03  B04  B05  B06  B07  B08  B09  B10
 #&gt; 0   3.56 2.17 3.00 1.58 3.46 3.58 3.80 3.44 2.53 3.09
 #&gt; N   2.37 3.63 2.52 2.84 3.01 3.07 3.03 2.46 2.72 2.72
 #&gt; K   3.59 3.92 3.56 2.22 3.29 3.52 3.82 2.91 3.14 3.01
@@ -231,23 +236,15 @@
 #&gt; KP  2.23 2.29 1.92 3.03 3.69 3.56 3.26 3.35 2.41 3.25
 #&gt; NKP 2.77 2.60 2.39 3.12 4.07 3.98 3.75 3.75 2.74 3.60</div><div class='input'>
 <span class='co'># SVD with 3 components recovers original data better</span>
-<span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>((<span class='no'>mat0</span>-<span class='no'>mat1</span>)^<span class='fl'>2</span>, <span class='kw'>na.rm</span><span class='kw'>=</span><span class='fl'>TRUE</span>)</div><div class='output co'>#&gt; [1] 17.68986</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span>((<span class='no'>mat0</span>-<span class='no'>mat2</span>)^<span class='fl'>2</span>, <span class='kw'>na.rm</span><span class='kw'>=</span><span class='fl'>TRUE</span>) <span class='co'># Smaller SS =&gt; better fit</span></div><div class='output co'>#&gt; [1] 5.42107</div></pre>
+<span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='op'>(</span><span class='va'>mat0</span><span class='op'>-</span><span class='va'>mat1</span><span class='op'>)</span><span class='op'>^</span><span class='fl'>2</span>, na.rm<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 17.68986</div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='op'>(</span><span class='va'>mat0</span><span class='op'>-</span><span class='va'>mat2</span><span class='op'>)</span><span class='op'>^</span><span class='fl'>2</span>, na.rm<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span> <span class='co'># Smaller SS =&gt; better fit</span>
+</div><div class='output co'>#&gt; [1] 5.42107</div><div class='input'><span class='co'># }</span>
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -258,7 +255,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

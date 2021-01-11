@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Multi-environment trial of wheat to illustrate stability statistics — huehn.wheat" />
-
 <meta property="og:description" content="Multi-environment trial to illustrate stability statistics" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,65 +143,69 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Multi-environment trial to illustrate stability statistics</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"huehn.wheat"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"huehn.wheat"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 200 observations on the following 3 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 200 observations on the following 3 variables.</p><dl>
     <dt><code>gen</code></dt><dd><p>genotype</p></dd>
     <dt><code>env</code></dt><dd><p>environment</p></dd>
     <dt><code>yield</code></dt><dd><p>yield dt/ha</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Yields for a winter-wheat trial of 20 genotypes at 10 environments.</p>
 <p>Note: Huehn 1979 does not use genotype-centered data when calculating
   stability statistics.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Manfred Huehn (1979).
   Beitrage zur Erfassung der phanotypischen Stabilitat I.
   Vorschlag einiger auf Ranginformationen beruhenden Stabilitatsparameter.
   <em>EDV in Medizin und Biologie</em>, 10 (4), 112-117.  Table 1.
-  http://nbn-resolving.de/urn:nbn:de:bsz:15-qucosa-145979</p>
-    
+  https://nbn-resolving.de/urn:nbn:de:bsz:15-qucosa-145979</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Nassar, R and Huehn, M. (1987).
   Studies on estimation of phenotypic stability: Tests of significance
   for nonparametric measures of phenotypic stability.
   <em>Biometrics</em>, 43, 45-53.</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>huehn.wheat</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>huehn.wheat</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='co'># Nassar &amp; Huehn, p. 51 "there is no evidence for differences in stability</span>
-<span class='co'># among the 20 varieties".</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>gge</span>)
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>gge</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span>*<span class='no'>env</span>, <span class='no'>dat</span>)
-<span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span>(<span class='no'>m1</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"huehn.wheat"</span>)</div><div class='img'><img src='huehn.wheat-1.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>reshape2</span>)
-<span class='no'>datm</span> <span class='kw'>&lt;-</span> <span class='fu'>acast</span>(<span class='no'>dat</span>, <span class='no'>gen</span>~<span class='no'>env</span>, <span class='kw'>value.var</span><span class='kw'>=</span><span class='st'>'yield'</span>)
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>huehn.wheat</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>huehn.wheat</span>
+  
+  <span class='co'># Nassar &amp; Huehn, p. 51 "there is no evidence for differences in stability</span>
+  <span class='co'># among the 20 varieties".</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>gge</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Attaching package: 'gge'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:desplot':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    RedGrayBlue</span></div><div class='input'>  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>gge</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>yield</span> <span class='op'>~</span> <span class='va'>gen</span><span class='op'>*</span><span class='va'>env</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span><span class='op'>(</span><span class='va'>m1</span>, main<span class='op'>=</span><span class='st'>"huehn.wheat"</span><span class='op'>)</span>
+</div><div class='img'><img src='huehn.wheat-1.png' alt='' width='700' height='433' /></div><div class='input'>  
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>reshape2</span><span class='op'>)</span>
+  <span class='va'>datm</span> <span class='op'>&lt;-</span> <span class='fu'>acast</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>gen</span><span class='op'>~</span><span class='va'>env</span>, value.var<span class='op'>=</span><span class='st'>'yield'</span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='no'>datm</span>,<span class='fl'>1</span>,<span class='no'>mean</span>) <span class='co'># Gen means match Huehn 1979 table 1</span></div><div class='output co'>#&gt;   Ack712  Beun781  Breu737  Brnd758  Brnd759   Caribo   Cbc710 Diplomat 
+  <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>datm</span>,<span class='fl'>1</span>,<span class='va'>mean</span><span class='op'>)</span> <span class='co'># Gen means match Huehn 1979 table 1</span>
+</div><div class='output co'>#&gt;   Ack712  Beun781  Breu737  Brnd758  Brnd759   Caribo   Cbc710 Diplomat 
 #&gt;    65.11    74.87    63.29    67.29    67.55    69.04    71.03    67.10 
 #&gt;  Doer750  Firl777  Firl779  Firl780  Frah743  Jubilar  Loch744  Loch745 
 #&gt;    68.60    66.60    64.31    69.63    70.89    66.45    70.46    70.72 
 #&gt;     Pem2     Pem3  Ruem711  Stru721 
-#&gt;    71.72    72.15    69.06    71.13 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='no'>datm</span>,<span class='fl'>2</span>,<span class='no'>mean</span>) <span class='co'># Env means</span></div><div class='output co'>#&gt;    E01    E02    E03    E04    E05    E06    E07    E08    E09    E10 
-#&gt; 81.770 80.845 66.745 67.540 70.915 51.450 61.095 80.660 52.835 74.645 </div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='no'>datm</span>, <span class='fl'>2</span>, <span class='no'>rank</span>) <span class='co'># Ranks match Huehn table 1</span></div><div class='output co'>#&gt;           E01  E02  E03  E04  E05  E06 E07  E08  E09 E10
+#&gt;    71.72    72.15    69.06    71.13 </div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>datm</span>,<span class='fl'>2</span>,<span class='va'>mean</span><span class='op'>)</span> <span class='co'># Env means</span>
+</div><div class='output co'>#&gt;    E01    E02    E03    E04    E05    E06    E07    E08    E09    E10 
+#&gt; 81.770 80.845 66.745 67.540 70.915 51.450 61.095 80.660 52.835 74.645 </div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>datm</span>, <span class='fl'>2</span>, <span class='va'>rank</span><span class='op'>)</span> <span class='co'># Ranks match Huehn table 1</span>
+</div><div class='output co'>#&gt;           E01  E02  E03  E04  E05  E06 E07  E08  E09 E10
 #&gt; Ack712    6.5  7.0  9.0  8.0 11.0  4.0  12  1.0  1.0   5
 #&gt; Beun781  19.0 20.0 17.0 11.5 20.0  7.0  20 18.0 12.5  20
 #&gt; Breu737   1.0  2.0  1.0  7.0  9.0  2.0   7  4.0  2.0   2
@@ -218,48 +226,32 @@
 #&gt; Pem3     15.0 17.0 20.0 19.0 15.5 13.5  13 11.0  9.0  17
 #&gt; Ruem711  11.0  3.0 12.0  5.0 14.0 19.0   6  5.0 15.0  14
 #&gt; Stru721  16.0 19.0 13.0 20.0 13.0  6.0  15  9.5 14.0   8</div><div class='input'>
-<span class='co'># Huehn 1979 did not use genotype-centered data, and his definition</span>
-<span class='co'># of S2 is different from later papers.</span>
+  <span class='co'># Huehn 1979 did not use genotype-centered data, and his definition</span>
+  <span class='co'># of S2 is different from later papers.</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>stable</span>)</div><div class='output co'>#&gt; <span class='message'>Loading required package: rmutil</span></div><div class='output co'>#&gt; <span class='message'>Registered S3 method overwritten by 'rmutil':</span>
-#&gt; <span class='message'>  method         from</span>
-#&gt; <span class='message'>  print.response httr</span></div><div class='output co'>#&gt; <span class='message'></span>
-#&gt; <span class='message'>Attaching package: 'rmutil'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:gnm':</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    parameters</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:stats':</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    nobs</span></div><div class='output co'>#&gt; <span class='message'>The following objects are masked from 'package:base':</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    as.data.frame, units</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='fu'>huehn</span>(<span class='no'>datm</span>, <span class='kw'>corrected</span><span class='kw'>=</span><span class='fl'>FALSE</span>), <span class='fl'>2</span>, <span class='no'>round</span>,<span class='fl'>2</span>) <span class='co'># S1 matches Huehn</span></div><div class='output co'>#&gt; <span class='error'>Error in huehn(datm, corrected = FALSE): could not find function "huehn"</span></div><div class='input'><span class='co'>##          MeanRank   S1</span>
-<span class='co'>## Jubilar      6.70 3.62</span>
-<span class='co'>## Diplomat     8.35 5.61</span>
-<span class='co'>## Caribo      11.20 6.07</span>
-<span class='co'>## Cbc710      13.65 6.70</span>
+  <span class='co'># I'm not sure where 'huehn' function is found</span>
+  <span class='co'># apply(huehn(datm, corrected=FALSE), 2, round,2) # S1 matches Huehn</span>
+  <span class='co'>##          MeanRank   S1</span>
+  <span class='co'>## Jubilar      6.70 3.62</span>
+  <span class='co'>## Diplomat     8.35 5.61</span>
+  <span class='co'>## Caribo      11.20 6.07</span>
+  <span class='co'>## Cbc710      13.65 6.70</span>
 
-<span class='co'># Very close match to Nassar &amp; Huehn 1987 table 4.</span>
-<span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='fu'>huehn</span>(<span class='no'>datm</span>, <span class='kw'>corrected</span><span class='kw'>=</span><span class='fl'>TRUE</span>), <span class='fl'>2</span>, <span class='no'>round</span>,<span class='fl'>2</span>)</div><div class='output co'>#&gt; <span class='error'>Error in huehn(datm, corrected = TRUE): could not find function "huehn"</span></div><div class='input'>##          MeanRank   S1   Z1    S2   Z2
-## Jubilar      10.2 4.00 5.51 11.29 4.29
-## Diplomat     11.0 6.31 0.09 27.78 0.27
-## Caribo       10.6 6.98 0.08 34.49 0.01
-## Cbc710       10.9 8.16 1.78 47.21 1.73
+  <span class='co'># Very close match to Nassar &amp; Huehn 1987 table 4.</span>
+  <span class='co'># apply(huehn(datm, corrected=TRUE), 2, round,2)</span>
+  <span class='co'>##          MeanRank   S1   Z1    S2   Z2</span>
+  <span class='co'>## Jubilar      10.2 4.00 5.51 11.29 4.29</span>
+  <span class='co'>## Diplomat     11.0 6.31 0.09 27.78 0.27</span>
+  <span class='co'>## Caribo       10.6 6.98 0.08 34.49 0.01</span>
+  <span class='co'>## Cbc710       10.9 8.16 1.78 47.21 1.73</span>
 
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -270,7 +262,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -146,12 +146,12 @@
     <p>Uniformity trial of cotton in Greece, 1938</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"christidis.cotton.uniformity"</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"christidis.cotton.uniformity"</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 1024 observations on the following 4 variables.</p><dl'>
+    <p>A data frame with 1024 observations on the following 4 variables.</p><dl>
     <dt><code>col</code></dt><dd><p>column</p></dd>
     <dt><code>row</code></dt><dd><p>row</p></dd>
     <dt><code>yield</code></dt><dd><p>yield, kg/unit</p></dd>
@@ -164,7 +164,7 @@
     <p>The experiment was conducted in 1938 at Sindos by the Greek Cotton Research Institute.</p>
 <p>Each block consisted of 20 rows, 1 meter apart and 66 meters long. Two
   rows on each side and 1 meter on each end were removed for
-  borderr. Each row was divided into 4 meter-lengths and harvested
+  borderr Each row was divided into 4 meter-lengths and harvested
   separately.  There were 4 blocks, oriented at 0, 30, 60, 90 degrees.</p>
 <p>Each block contained 16 rows, each 64 meters long.</p>
 <p>Field width: 16 units * 4 m = 64 m</p>
@@ -181,19 +181,20 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>christidis.cotton.uniformity</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>christidis.cotton.uniformity</span>
-
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>christidis.cotton.uniformity</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>christidis.cotton.uniformity</span>
+  
 <span class='co'># Match the mean yields in table 2. Not sure why '16' is needed</span>
 <span class='co'># sapply(split(dat$yield, dat$block), mean)*16</span>
-
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='no'>dat</span>$<span class='no'>yld</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>$<span class='no'>yield</span>/<span class='fl'>4</span>*<span class='fl'>1000</span> <span class='co'># re-scale to match Christidis fig 1</span>
-<span class='fu'>desplot</span>(<span class='no'>dat</span>, <span class='no'>yld</span> ~ <span class='no'>col</span>*<span class='no'>row</span><span class='kw'>|</span><span class='no'>block</span>,
-        <span class='kw'>flip</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>aspect</span><span class='kw'>=</span>(<span class='fl'>16</span>)/(<span class='fl'>64</span>),
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"christidis.cotton.uniformity"</span>)</div><div class='img'><img src='christidis.cotton.uniformity-1.png' alt='' width='700' height='433' /></div><div class='input'>
-# }  
+  
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+<span class='va'>dat</span><span class='op'>$</span><span class='va'>yld</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>$</span><span class='va'>yield</span><span class='op'>/</span><span class='fl'>4</span><span class='op'>*</span><span class='fl'>1000</span> <span class='co'># re-scale to match Christidis fig 1</span>
+<span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>yld</span> <span class='op'>~</span> <span class='va'>col</span><span class='op'>*</span><span class='va'>row</span><span class='op'>|</span><span class='va'>block</span>,
+        flip<span class='op'>=</span><span class='cn'>TRUE</span>, aspect<span class='op'>=</span><span class='op'>(</span><span class='fl'>16</span><span class='op'>)</span><span class='op'>/</span><span class='op'>(</span><span class='fl'>64</span><span class='op'>)</span>,
+        main<span class='op'>=</span><span class='st'>"christidis.cotton.uniformity"</span><span class='op'>)</span>
+</div><div class='img'><img src='christidis.cotton.uniformity-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># }  </span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -210,7 +211,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

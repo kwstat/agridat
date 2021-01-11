@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -146,12 +146,12 @@
     <p>Uniformity trial of soybean in Brazil, 1970.</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"correa.soybean.uniformity"</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"correa.soybean.uniformity"</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 1152 observations on the following 3 variables.</p><dl'>
+    <p>A data frame with 1152 observations on the following 3 variables.</p><dl>
     <dt><code>row</code></dt><dd><p>row</p></dd>
     <dt><code>col</code></dt><dd><p>column</p></dd>
     <dt><code>yield</code></dt><dd><p>yield, grams/plot</p></dd>
@@ -170,7 +170,7 @@
   Estudo do tamanho e forma de parcelas para experimentos de soja (Plot size and shape for soybean yield trials).
   Pesquisa Agropecuaria Brasileira, Serie Agronomia, 9,  49-59. Table 3,
   page 52-53.
-  http://seer.sct.embrapa.br/index.php/pab/article/view/17250</p>
+  https://seer.sct.embrapa.br/index.php/pab/article/view/17250</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>None</p>
@@ -178,15 +178,16 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>correa.soybean.uniformity</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>correa.soybean.uniformity</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>correa.soybean.uniformity</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>correa.soybean.uniformity</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='fu'>desplot</span>(<span class='no'>dat</span>, <span class='no'>yield</span> ~ <span class='no'>col</span>*<span class='no'>row</span>,
-        <span class='kw'>flip</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>aspect</span><span class='kw'>=</span><span class='fl'>28.8</span>/<span class='fl'>14.4</span>,
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"correa.soybean.uniformity"</span>)</div><div class='img'><img src='correa.soybean.uniformity-1.png' alt='' width='700' height='433' /></div><div class='input'>  
-# }
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+<span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>yield</span> <span class='op'>~</span> <span class='va'>col</span><span class='op'>*</span><span class='va'>row</span>,
+        flip<span class='op'>=</span><span class='cn'>TRUE</span>, aspect<span class='op'>=</span><span class='fl'>28.8</span><span class='op'>/</span><span class='fl'>14.4</span>, 
+        main<span class='op'>=</span><span class='st'>"correa.soybean.uniformity"</span><span class='op'>)</span>
+</div><div class='img'><img src='correa.soybean.uniformity-1.png' alt='' width='700' height='433' /></div><div class='input'>  
+<span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -203,7 +204,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

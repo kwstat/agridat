@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Soil nitrogen and carbon in two fields — waynick.soil" />
-
 <meta property="og:description" content="Soil nitrogen and carbon in two fields" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,74 +143,67 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Soil nitrogen and carbon in two fields</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 200 observations on the following 6 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 200 observations on the following 6 variables.</p><dl>
     <dt><code>field</code></dt><dd><p>field name, 2 levels</p></dd>
     <dt><code>sample</code></dt><dd><p>sample number</p></dd>
     <dt><code>x</code></dt><dd><p>x ordinate</p></dd>
     <dt><code>y</code></dt><dd><p>y ordinate</p></dd>
     <dt><code>nitro</code></dt><dd><p>nitrogen content, percent</p></dd>
     <dt><code>carbon</code></dt><dd><p>carbon content, percent</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Two fields were studied, one at University Farm in Davis, the other
   near Oakley.  The Davis field is silty clay loam, the Oakley field is
   blow sand.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Waynick, Dean, and Sharp, Leslie. (1918).
   Variability in soils and its significance to past and future soil investigations, I-II.
   University of California press.
-  http://archive.org/details/variabilityinsoi45wayn</p>
-    
+  https://archive.org/details/variabilityinsoi45wayn</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>waynick.soil</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>waynick.soil</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>waynick.soil</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>waynick.soil</span>
 
 <span class='co'># Strong relationship between N,C</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'>xyplot</span>(<span class='no'>nitro</span>~<span class='no'>carbon</span><span class='kw'>|</span><span class='no'>field</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"waynick.soil"</span>)</div><div class='img'><img src='waynick.soil-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>nitro</span><span class='op'>~</span><span class='va'>carbon</span><span class='op'>|</span><span class='va'>field</span>, data<span class='op'>=</span><span class='va'>dat</span>, main<span class='op'>=</span><span class='st'>"waynick.soil"</span><span class='op'>)</span>
+</div><div class='img'><img src='waynick.soil-1.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Spatial plot</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>sp</span>, <span class='no'>gstat</span>)
-<span class='no'>d1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, <span class='no'>field</span><span class='kw'>==</span><span class='st'>"Davis"</span>)
-<span class='no'>d2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, <span class='no'>field</span><span class='kw'>==</span><span class='st'>"Oakley"</span>)
-<span class='fu'>coordinates</span>(<span class='no'>d1</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(<span class='kw'>x</span><span class='kw'>=</span><span class='no'>d1</span>$<span class='no'>x</span>, <span class='kw'>y</span><span class='kw'>=</span><span class='no'>d1</span>$<span class='no'>y</span>)
-<span class='fu'>coordinates</span>(<span class='no'>d2</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(<span class='kw'>x</span><span class='kw'>=</span><span class='no'>d2</span>$<span class='no'>x</span>, <span class='kw'>y</span><span class='kw'>=</span><span class='no'>d2</span>$<span class='no'>y</span>)
-<span class='fu'>spplot</span>(<span class='no'>d1</span>, <span class='kw'>zcol</span> <span class='kw'>=</span> <span class='st'>"nitro"</span>, <span class='kw'>cuts</span><span class='kw'>=</span><span class='fl'>8</span>, <span class='kw'>cex</span> <span class='kw'>=</span> <span class='fl'>1.6</span>,
-       <span class='kw'>main</span> <span class='kw'>=</span> <span class='st'>"waynick.soil - Davis field - nitrogen"</span>,
-       <span class='kw'>col.regions</span> <span class='kw'>=</span>  <span class='fu'>bpy.colors</span>(<span class='fl'>8</span>), <span class='kw'>key.space</span> <span class='kw'>=</span> <span class='st'>"right"</span>)</div><div class='img'><img src='waynick.soil-2.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>sp</span>, <span class='va'>gstat</span><span class='op'>)</span>
+<span class='va'>d1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>field</span><span class='op'>==</span><span class='st'>"Davis"</span><span class='op'>)</span>
+<span class='va'>d2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>field</span><span class='op'>==</span><span class='st'>"Oakley"</span><span class='op'>)</span>
+<span class='fu'>coordinates</span><span class='op'>(</span><span class='va'>d1</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>d1</span><span class='op'>$</span><span class='va'>x</span>, y<span class='op'>=</span><span class='va'>d1</span><span class='op'>$</span><span class='va'>y</span><span class='op'>)</span>
+<span class='fu'>coordinates</span><span class='op'>(</span><span class='va'>d2</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span>x<span class='op'>=</span><span class='va'>d2</span><span class='op'>$</span><span class='va'>x</span>, y<span class='op'>=</span><span class='va'>d2</span><span class='op'>$</span><span class='va'>y</span><span class='op'>)</span>
+<span class='fu'>spplot</span><span class='op'>(</span><span class='va'>d1</span>, zcol <span class='op'>=</span> <span class='st'>"nitro"</span>, cuts<span class='op'>=</span><span class='fl'>8</span>, cex <span class='op'>=</span> <span class='fl'>1.6</span>,
+       main <span class='op'>=</span> <span class='st'>"waynick.soil - Davis field - nitrogen"</span>,
+       col.regions <span class='op'>=</span>  <span class='fu'>bpy.colors</span><span class='op'>(</span><span class='fl'>8</span><span class='op'>)</span>, key.space <span class='op'>=</span> <span class='st'>"right"</span><span class='op'>)</span>
+</div><div class='img'><img src='waynick.soil-2.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Variogram</span>
-<span class='no'>v1</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>gstat</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/gstat/man/variogram.html'>variogram</a></span>(<span class='no'>nitro</span>~<span class='fl'>1</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>d1</span>)
-<span class='fu'><a href='https://rdrr.io/r/graphics/plot.html'>plot</a></span>(<span class='no'>v1</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"waynick.soil - Davis field - nitrogen"</span>) <span class='co'># Maybe hasn't reached sill</span></div><div class='img'><img src='waynick.soil-3.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='va'>v1</span> <span class='op'>&lt;-</span> <span class='fu'>gstat</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/gstat/man/variogram.html'>variogram</a></span><span class='op'>(</span><span class='va'>nitro</span><span class='op'>~</span><span class='fl'>1</span>, data<span class='op'>=</span><span class='va'>d1</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/graphics/plot.default.html'>plot</a></span><span class='op'>(</span><span class='va'>v1</span>, main<span class='op'>=</span><span class='st'>"waynick.soil - Davis field - nitrogen"</span><span class='op'>)</span> <span class='co'># Maybe hasn't reached sill</span>
+</div><div class='img'><img src='waynick.soil-3.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -217,7 +214,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

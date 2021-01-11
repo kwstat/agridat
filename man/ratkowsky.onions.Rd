@@ -25,7 +25,7 @@
 \references{
   Ruppert, D., Wand, M.P. and Carroll, R.J. (2003).
   \emph{Semiparametric Regression}. Cambridge University Press.
-  http://stat.tamu.edu/~carroll/semiregbook/
+  https://stat.tamu.edu/~carroll/semiregbook/
 }
 \examples{
 \dontrun{

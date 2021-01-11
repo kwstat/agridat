@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Multi-environment trial of peanuts for 10 genotypes in 15 environments — kang.peanut" />
-
 <meta property="og:description" content="Peanut yields for 10 genotypes in 15 environments" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,23 +143,22 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Peanut yields for 10 genotypes in 15 environments</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"kang.peanut"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"kang.peanut"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 590 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 590 observations on the following 4 variables.</p><dl>
     <dt><code>gen</code></dt><dd><p>genotype factor, 10 levels</p></dd>
     <dt><code>rep</code></dt><dd><p>replicate factor, 4 levels</p></dd>
     <dt><code>yield</code></dt><dd><p>yield</p></dd>
     <dt><code>env</code></dt><dd><p>environment factor, 15 levels</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Florman, Tegua, mf484, mf485, mf487, mf489 have a long crop cycle.
@@ -168,72 +171,62 @@
   (5 loc * (4-1) = 15, but the table has 14, and 98-99 had only 3 reps
   instead of 4 reps.)</p>
 <p>Data from National Institute of Agricultural Technology, Argentina.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>M. S. Kang, M. Balzarini, and J. L. L. Guerra
   (2004). Genotype-by-environment
   interaction". In: A. Saxton (2004). "Genetic Analysis of Complex
   Traits Using SAS".</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Johannes Forkman, Julie Josse, Hans-Peter Piepho (2019).
   Hypothesis Tests for Principal Component Analysis When Variables are Standardized.
   <em>JABES</em> https://doi.org/10.1007/s13253-019-00355-5</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>kang.peanut</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>kang.peanut</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>kang.peanut</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>kang.peanut</span>
 
 <span class='co'># Table 5.1 of Kang et al. (Chapter 5 of Saxton)</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>reshape2</span>)
-<span class='no'>Y0</span> <span class='kw'>&lt;-</span> <span class='fu'>acast</span>(<span class='no'>dat</span>, <span class='no'>env</span>~<span class='no'>gen</span>, <span class='kw'>value.var</span><span class='kw'>=</span><span class='st'>'yield'</span>, <span class='kw'>fun</span><span class='kw'>=</span><span class='no'>mean</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='no'>Y0</span>,<span class='fl'>2</span>)</div><div class='output co'>#&gt;     Florman manf393 mf447 mf478 mf480 mf484 mf485 mf487 mf489 Tegua
-#&gt; E01    0.80    1.24  0.95  1.37  1.41  1.16  1.12  0.87  1.11  0.96
-#&gt; E02    2.17    1.57  1.29  2.15  3.27  1.08  0.58  1.52  0.86  2.04
-#&gt; E03    2.43    2.47  2.34  2.19  2.19  2.64  2.24  2.30  2.20  2.58
-#&gt; E04    2.71    1.77  1.61  2.15  2.04  2.14  1.88  1.72  2.18  2.26
-#&gt; E05    1.13    1.55  1.86  1.98  1.61  1.71  0.85  1.24  1.21  1.14
-#&gt; E06    3.08    2.90  2.59  2.36  2.43  3.05  2.90  2.94  2.57  3.22
-#&gt; E07    2.81    2.96  3.41  3.20  2.96  2.91  2.53  2.73  2.90  2.88
-#&gt; E08    1.74    2.16  1.44  2.20  0.95  2.86  2.13  1.60  2.29  1.73
-#&gt; E09    2.16    3.30  3.01  3.37  2.53  2.73  3.00  3.18  3.25  2.44
-#&gt; E10    4.29    3.55  3.84  3.53  3.22  4.45  4.46  4.24  4.03  4.21
-#&gt; E11    1.82    2.16  1.88  2.09  1.91  2.53  1.86  1.71  2.27  1.71
-#&gt; E12    5.33    4.69  4.16  4.70  3.57  5.57  5.43  4.99  4.67  4.93
-#&gt; E13    1.18    2.24  1.63  1.54  1.15  2.45  1.78  1.54  2.00  1.32
-#&gt; E14    4.39    4.13  3.79  4.33  3.72  4.28  3.77  4.17  4.75  4.40
-#&gt; E15    3.41    2.22  2.46  3.09  2.61  2.81  3.15  3.84  3.54  3.45</div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>reshape2</span><span class='op'>)</span>
+<span class='va'>Y0</span> <span class='op'>&lt;-</span> <span class='fu'>acast</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>env</span><span class='op'>~</span><span class='va'>gen</span>, value.var<span class='op'>=</span><span class='st'>'yield'</span>, fun<span class='op'>=</span><span class='va'>mean</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>Y0</span>,<span class='fl'>2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;     Florman Tegua manf393 mf447 mf478 mf480 mf484 mf485 mf487 mf489
+#&gt; E01    0.80  0.96    1.24  0.95  1.37  1.41  1.16  1.12  0.87  1.11
+#&gt; E02    2.17  2.04    1.57  1.29  2.15  3.27  1.08  0.58  1.52  0.86
+#&gt; E03    2.43  2.58    2.47  2.34  2.19  2.19  2.64  2.24  2.30  2.20
+#&gt; E04    2.71  2.26    1.77  1.61  2.15  2.04  2.14  1.88  1.72  2.18
+#&gt; E05    1.13  1.14    1.55  1.86  1.98  1.61  1.71  0.85  1.24  1.21
+#&gt; E06    3.08  3.22    2.90  2.59  2.36  2.43  3.05  2.90  2.94  2.57
+#&gt; E07    2.81  2.88    2.96  3.41  3.20  2.96  2.91  2.53  2.73  2.90
+#&gt; E08    1.74  1.73    2.16  1.44  2.20  0.95  2.86  2.13  1.60  2.29
+#&gt; E09    2.16  2.44    3.30  3.01  3.37  2.53  2.73  3.00  3.18  3.25
+#&gt; E10    4.29  4.21    3.55  3.84  3.53  3.22  4.45  4.46  4.24  4.03
+#&gt; E11    1.82  1.71    2.16  1.88  2.09  1.91  2.53  1.86  1.71  2.27
+#&gt; E12    5.33  4.93    4.69  4.16  4.70  3.57  5.57  5.43  4.99  4.67
+#&gt; E13    1.18  1.32    2.24  1.63  1.54  1.15  2.45  1.78  1.54  2.00
+#&gt; E14    4.39  4.40    4.13  3.79  4.33  3.72  4.28  3.77  4.17  4.75
+#&gt; E15    3.41  3.45    2.22  2.46  3.09  2.61  2.81  3.15  3.84  3.54</div><div class='input'>
 <span class='co'># GGE biplot of Kang, p. 82.</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>gge</span>)
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>gge</span>(<span class='no'>yield</span>~<span class='no'>gen</span>*<span class='no'>env</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>scale</span><span class='kw'>=</span><span class='fl'>FALSE</span>)
-<span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span>(<span class='no'>m1</span>, <span class='kw'>flip</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>1</span>), <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"kang.peanut - GGE biplot"</span>)</div><div class='img'><img src='kang.peanut-1.png' alt='' width='700' height='433' /></div><div class='input'>
-# Forkman 2019, fig 2
-# m2 <- gge(yield~gen*env, data=dat, scale=TRUE)
-# biplot(m2, main="kang.peanut - GGE biplot")
-# biplot(m2, comps=3:4, main="kang.peanut - GGE biplot")
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>gge</span><span class='op'>)</span>
+<span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>gge</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>yield</span><span class='op'>~</span><span class='va'>gen</span><span class='op'>*</span><span class='va'>env</span>, scale<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span><span class='op'>(</span><span class='va'>m1</span>, flip<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>1</span><span class='op'>)</span>, main<span class='op'>=</span><span class='st'>"kang.peanut - GGE biplot"</span><span class='op'>)</span>
+</div><div class='img'><img src='kang.peanut-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='co'># Forkman 2019, fig 2</span>
+<span class='co'># m2 &lt;- gge(dat, yield~gen*env, scale=TRUE)</span>
+<span class='co'># biplot(m2, main="kang.peanut - GGE biplot")</span>
+<span class='co'># biplot(m2, comps=3:4, main="kang.peanut - GGE biplot")</span>
 
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -244,7 +237,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

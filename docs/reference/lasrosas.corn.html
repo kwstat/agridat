@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Yield monitor data for a corn field in Argentina with variable nitrogen. — lasrosas.corn" />
-
 <meta property="og:description" content="Yield monitor data for a corn field in Argentina with variable nitrogen." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,16 +143,15 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Yield monitor data for a corn field in Argentina with variable nitrogen.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"lasrosas.corn"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"lasrosas.corn"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 3443 observations on the following 8 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 3443 observations on the following 8 variables.</p><dl>
     <dt><code>year</code></dt><dd><p>year, 1999 or 2001</p></dd>
     <dt><code>lat</code></dt><dd><p>latitude</p></dd>
     <dt><code>long</code></dt><dd><p>longitude</p></dd>
@@ -158,9 +161,9 @@
     <dt><code>bv</code></dt><dd><p>brightness value (proxy for low organic matter content)</p></dd>
     <dt><code>rep</code></dt><dd><p>rep factor</p></dd>
     <dt><code>nf</code></dt><dd><p>nitrogen as a factor, N0-N4</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     
@@ -191,78 +194,77 @@
 <p>Anselin et al. found a significant response to nitrogen for slope.
   However, Bongiovanni and Lowenberg-DeBoer (2002) found that slope
   position was NOT significant in 2001.</p>
-    
+
+<p>Used with permission of the ASU GeoDa Center.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>The Las Rosas data files were obtained from
   https://geodacenter.asu.edu/sdata
   and converted from ESRI shape files to a flat data.frame.</p>
-<p>Used with permission of the ASU GeoDa Center.</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
-    
-
-<p>Bongiovanni and Lowenberg-DeBoer (2000).
+    <p>Bongiovanni and Lowenberg-DeBoer (2000).
   Nitrogen management in corn with a spatial regression model.
-  <em>Proceedings of the  Fifth International Conference on  Precision
-  Agriculture</em></p>
+  Proceedings of the Fifth International Conference on Precision
+  Agriculture.</p>
 <p>Anselin, L., R. Bongiovanni, J. Lowenberg-DeBoer (2004).
   A spatial econometric approach to the economics of site-specific
   nitrogen management in corn production.
-  <em>American Journal of Agricultural Economics</em>, 86, 675--687.</p>
+  American Journal of Agricultural Economics, 86, 675--687.
+  https://doi.org/10.1111/j.0002-9092.2004.00610.x</p>
 <p>Lambert, Lowenberg-Deboer, Bongiovanni (2004).
   A Comparison of Four Spatial Regression Models for Yield Monitor Data:
   A Case Study from Argentina.
-  <em>Precision Agriculture</em>, 5, 579-600.</p>
-    
+  Precision Agriculture, 5, 579-600.
+  https://doi.org/10.1007/s11119-004-6344-3</p>
+<p>Suman Rakshit, Adrian Baddeley, Katia Stefanova, Karyn Reeves, Kefei
+  Chen, Zhanglong Cao, Fiona Evans, Mark Gibberd (2020).
+  Novel approach to the analysis of spatially-varying treatment effects
+  in on-farm experiments.
+  Field Crops Research, 255, 15 September 2020, 107783.
+  https://doi.org/10.1016/j.fcr.2020.107783</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>lasrosas.corn</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>lasrosas.corn</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>lasrosas.corn</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>lasrosas.corn</span>
 
 <span class='co'># yield map</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>,<span class='no'>latticeExtra</span>)  <span class='co'># for panel.levelplot.points</span>
-<span class='no'>redblue</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"firebrick"</span>, <span class='st'>"lightgray"</span>, <span class='st'>"#375997"</span>))
-<span class='fu'>levelplot</span>(<span class='no'>yield</span> ~ <span class='no'>long</span>*<span class='no'>lat</span><span class='kw'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>year</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"lasrosas.corn grain yield"</span>, <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Longitude"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"Latitude"</span>,
-          <span class='kw'>scales</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>alternating</span><span class='kw'>=</span><span class='fl'>FALSE</span>),
-          <span class='kw'>prepanel</span> <span class='kw'>=</span> <span class='no'>prepanel.default.xyplot</span>,
-          <span class='kw'>panel</span> <span class='kw'>=</span> <span class='no'>panel.levelplot.points</span>,
-          <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"p"</span>, <span class='st'>"g"</span>), <span class='kw'>aspect</span> <span class='kw'>=</span> <span class='st'>"iso"</span>, <span class='kw'>col.regions</span><span class='kw'>=</span><span class='no'>redblue</span>)</div><div class='img'><img src='lasrosas.corn-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span>,<span class='va'>latticeExtra</span><span class='op'>)</span>  <span class='co'># for panel.levelplot.points</span>
+<span class='va'>redblue</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"firebrick"</span>, <span class='st'>"lightgray"</span>, <span class='st'>"#375997"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/levelplot.html'>levelplot</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>long</span><span class='op'>*</span><span class='va'>lat</span><span class='op'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>year</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span>, 
+          main<span class='op'>=</span><span class='st'>"lasrosas.corn grain yield"</span>, xlab<span class='op'>=</span><span class='st'>"Longitude"</span>, ylab<span class='op'>=</span><span class='st'>"Latitude"</span>,
+          scales<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>alternating<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span>,
+          prepanel <span class='op'>=</span> <span class='va'>prepanel.default.xyplot</span>,
+          panel <span class='op'>=</span> <span class='va'>panel.levelplot.points</span>,
+          type <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"p"</span>, <span class='st'>"g"</span><span class='op'>)</span>, aspect <span class='op'>=</span> <span class='st'>"iso"</span>, col.regions<span class='op'>=</span><span class='va'>redblue</span><span class='op'>)</span>
+</div><div class='img'><img src='lasrosas.corn-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
-<span class='no'>d1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, <span class='no'>year</span><span class='kw'>==</span><span class='fl'>1999</span>)
+<span class='va'>d1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>year</span><span class='op'>==</span><span class='fl'>1999</span><span class='op'>)</span>
 
 <span class='co'># Experiment design</span>
-<span class='fu'>xyplot</span>(<span class='no'>lat</span>~<span class='no'>long</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>d1</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span>(<span class='no'>d1</span>$<span class='no'>nitro</span>)), <span class='kw'>pch</span><span class='kw'>=</span><span class='no'>d1</span>$<span class='no'>topo</span>,
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"lasrosas.corn experiment layout 1999"</span>)</div><div class='img'><img src='lasrosas.corn-2.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>lat</span><span class='op'>~</span><span class='va'>long</span>, data<span class='op'>=</span><span class='va'>d1</span>, col<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/numeric.html'>as.numeric</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>as.factor</a></span><span class='op'>(</span><span class='va'>d1</span><span class='op'>$</span><span class='va'>nitro</span><span class='op'>)</span><span class='op'>)</span>, pch<span class='op'>=</span><span class='va'>d1</span><span class='op'>$</span><span class='va'>topo</span>,
+       main<span class='op'>=</span><span class='st'>"lasrosas.corn experiment layout 1999"</span><span class='op'>)</span>
+</div><div class='img'><img src='lasrosas.corn-2.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># A quadratic response to nitrogen is suggested</span>
-<span class='fu'>xyplot</span>(<span class='no'>yield</span>~<span class='no'>nitro</span><span class='kw'>|</span><span class='no'>topo</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>d1</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'p'</span>,<span class='st'>'smooth'</span>), <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>4</span>,<span class='fl'>1</span>),
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"lasrosas.corn yield by topographic zone 1999"</span>)</div><div class='img'><img src='lasrosas.corn-3.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>~</span><span class='va'>nitro</span><span class='op'>|</span><span class='va'>topo</span>, data<span class='op'>=</span><span class='va'>d1</span>, type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'p'</span>,<span class='st'>'smooth'</span><span class='op'>)</span>, layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>4</span>,<span class='fl'>1</span><span class='op'>)</span>,
+       main<span class='op'>=</span><span class='st'>"lasrosas.corn yield by topographic zone 1999"</span><span class='op'>)</span>
+</div><div class='img'><img src='lasrosas.corn-3.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Full-field quadratic response to nitrogen.  Similar to Bongiovanni 2000,</span>
 <span class='co'># table 1.</span>
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>yield</span> ~ <span class='fl'>1</span> + <span class='no'>nitro</span> + <span class='fu'><a href='https://rdrr.io/r/base/AsIs.html'>I</a></span>(<span class='no'>nitro</span>^<span class='fl'>2</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>d1</span>, <span class='kw'>subset</span><span class='kw'>=</span><span class='no'>year</span><span class='kw'>==</span><span class='fl'>1999</span>)
-<span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt;   (Intercept)         nitro    I(nitro^2) 
+<span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>+</span> <span class='va'>nitro</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/base/AsIs.html'>I</a></span><span class='op'>(</span><span class='va'>nitro</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>d1</span>, subset<span class='op'>=</span><span class='va'>year</span><span class='op'>==</span><span class='fl'>1999</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;   (Intercept)         nitro    I(nitro^2) 
 #&gt; 59.2533084708  0.1130069973 -0.0003204139 </div><div class='input'>
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -273,7 +275,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

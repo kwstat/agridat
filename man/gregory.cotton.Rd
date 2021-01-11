@@ -72,7 +72,7 @@ dat <- gregory.cotton
 
 
 # Figure 2 of Gregory. Not recommended, but an interesting exercise.
-# http://stackoverflow.com/questions/13887365
+# https://stackoverflow.com/questions/13887365
 if(FALSE){
   libs(ggplot2)
   d1 <- subset(dat, year=="Y1")

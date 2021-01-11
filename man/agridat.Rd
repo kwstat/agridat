@@ -429,6 +429,6 @@ Multi-environment trials with multi-genotype,loc,rep,year:
   J. White and Frits van Evert. (2008).
   Publishing Agronomic Data.
   \emph{Agron J.} 100, 1396-1400.
-  http://doi.org/10.2134/agronj2008.0080F
+  https://doi.org/10.2134/agronj2008.0080F
 }
 

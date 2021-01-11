@@ -59,11 +59,11 @@
 \source{
   Rothamsted Experimental Station, Report 1925-26.
   Lawes Agricultural Trust, p. 154-155.
-  http://www.era.rothamsted.ac.uk/eradoc/book/84
+  https://www.era.rothamsted.ac.uk/eradoc/book/84
 
   Rothamsted Experimental Station, Report 1927-1928.
   Lawes Agricultural Trust, p. 153.  
-  http://www.era.rothamsted.ac.uk/eradoc/article/ResReport1927-28-131-175
+  https://www.era.rothamsted.ac.uk/eradoc/article/ResReport1927-28-131-175
 }
 
 \references{
@@ -77,7 +77,7 @@
   Evidence for conformal invariance of crop yields,
   Proceedings of the Royal Society A: Mathematical, Physical and
     Engineering Science, 462, 2119--2143.
-  http://doi.org/10.1098/rspa.2006.1667
+  https://doi.org/10.1098/rspa.2006.1667
 
   Winifred A. Mackenzie. (1926)
   Note on a remarkable correlation between grain and straw, obtained at

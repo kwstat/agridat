@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Fungus infection in varieties of wheat — salmon.bunt" />
-
 <meta property="og:description" content="Fungus infection in varieties of wheat" />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,22 +143,21 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Fungus infection in varieties of wheat</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 400 observations on the following 4 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 400 observations on the following 4 variables.</p><dl>
     <dt><code>bunt</code></dt><dd><p>bunt factor, 20 levels</p></dd>
     <dt><code>pct</code></dt><dd><p>percent infected</p></dd>
     <dt><code>rep</code></dt><dd><p>rep factor, 2 levels</p></dd>
     <dt><code>gen</code></dt><dd><p>genotype factor, 10 levels</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Note: Salmon (1938) gives results for all 69 types of bunt, not just
@@ -171,14 +174,12 @@
 <p>Infection was recorded as a percentage of the total number of heads
   counted at or near harvest.  The number counted was seldom less than 200
   and sometimes more than 400 per row.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>S.C. Salmon, 1938.
   Generalized standard errors for evaluating bunt experiments with wheat.
   <em>Agronomy Journal</em>, 30, 647--663.  Table 1.
-  http://doi.org/10.2134/agronj1938.00021962003000080003x</p>
-    
+  https://doi.org/10.2134/agronj1938.00021962003000080003x</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Salmon says the data came from:</p>
@@ -186,64 +187,56 @@
   Physiologic races of Tilletia tritici and T. levis.
   <em>Journal of Agricultural Research</em>, 55, 483-496.
   naldc.nal.usda.gov/download/IND43969050/PDF</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>salmon.bunt</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>salmon.bunt</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+  
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>salmon.bunt</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>salmon.bunt</span>
 
-<span class='no'>d2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span>(<span class='no'>pct</span>~<span class='no'>bunt</span>+<span class='no'>gen</span>, <span class='no'>dat</span>, <span class='kw'>FUN</span><span class='kw'>=</span><span class='no'>mean</span>) <span class='co'># average reps</span>
-<span class='no'>d2</span>$<span class='no'>gen</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/reorder.factor.html'>reorder</a></span>(<span class='no'>d2</span>$<span class='no'>gen</span>, <span class='no'>d2</span>$<span class='no'>pct</span>)
-<span class='no'>d2</span>$<span class='no'>bunt</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/reorder.factor.html'>reorder</a></span>(<span class='no'>d2</span>$<span class='no'>bunt</span>, <span class='no'>d2</span>$<span class='no'>pct</span>)
+<span class='va'>d2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span><span class='op'>(</span><span class='va'>pct</span><span class='op'>~</span><span class='va'>bunt</span><span class='op'>+</span><span class='va'>gen</span>, <span class='va'>dat</span>, FUN<span class='op'>=</span><span class='va'>mean</span><span class='op'>)</span> <span class='co'># average reps</span>
+<span class='va'>d2</span><span class='op'>$</span><span class='va'>gen</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/reorder.factor.html'>reorder</a></span><span class='op'>(</span><span class='va'>d2</span><span class='op'>$</span><span class='va'>gen</span>, <span class='va'>d2</span><span class='op'>$</span><span class='va'>pct</span><span class='op'>)</span>
+<span class='va'>d2</span><span class='op'>$</span><span class='va'>bunt</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/reorder.factor.html'>reorder</a></span><span class='op'>(</span><span class='va'>d2</span><span class='op'>$</span><span class='va'>bunt</span>, <span class='va'>d2</span><span class='op'>$</span><span class='va'>pct</span><span class='op'>)</span>
 <span class='co'># Some wheat varieties (Hohenheimer) are resistant to all bunts, and some (Hybrid128)</span>
 <span class='co'># are susceptible to all bunts.  Note the groups of bunt races that are similar,</span>
 <span class='co'># such as the first 4 rows of this plot.  Also note the strong wheat*bunt interaction.</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='no'>redblue</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"firebrick"</span>, <span class='st'>"lightgray"</span>, <span class='st'>"#375997"</span>))
-<span class='fu'>levelplot</span>(<span class='no'>pct</span>~<span class='no'>gen</span>+<span class='no'>bunt</span>,<span class='no'>d2</span>, <span class='kw'>col.regions</span><span class='kw'>=</span><span class='no'>redblue</span>,
-          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"salmon.bunt percent of heads infected"</span>,
-          <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Wheat variety"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"bunt line"</span>)</div><div class='img'><img src='salmon.bunt-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='va'>redblue</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"firebrick"</span>, <span class='st'>"lightgray"</span>, <span class='st'>"#375997"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/levelplot.html'>levelplot</a></span><span class='op'>(</span><span class='va'>pct</span><span class='op'>~</span><span class='va'>gen</span><span class='op'>+</span><span class='va'>bunt</span>,<span class='va'>d2</span>, col.regions<span class='op'>=</span><span class='va'>redblue</span>,
+          main<span class='op'>=</span><span class='st'>"salmon.bunt percent of heads infected"</span>,
+          xlab<span class='op'>=</span><span class='st'>"Wheat variety"</span>, ylab<span class='op'>=</span><span class='st'>"bunt line"</span><span class='op'>)</span>
+</div><div class='img'><img src='salmon.bunt-1.png' alt='' width='700' height='433' /></div><div class='input'>
   <span class='co'># We don't have individual counts, so use beta regression</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>betareg</span>)
-  <span class='no'>dat</span>$<span class='no'>y</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>$<span class='no'>pct</span>/<span class='fl'>100</span> + <span class='fl'>.001</span> <span class='co'># Beta regression does not allow 0</span>
-  <span class='no'>dat</span>$<span class='no'>gen</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/reorder.factor.html'>reorder</a></span>(<span class='no'>dat</span>$<span class='no'>gen</span>, <span class='no'>dat</span>$<span class='no'>pct</span>) <span class='co'># For a prettier dot plot</span>
-
-  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>betareg</span>(<span class='no'>y</span> ~ <span class='no'>gen</span> + <span class='no'>bunt</span> + <span class='no'>gen</span>:<span class='no'>bunt</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>betareg</span><span class='op'>)</span>
+  <span class='va'>dat</span><span class='op'>$</span><span class='va'>y</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>$</span><span class='va'>pct</span><span class='op'>/</span><span class='fl'>100</span> <span class='op'>+</span> <span class='fl'>.001</span> <span class='co'># Beta regression does not allow 0</span>
+  <span class='va'>dat</span><span class='op'>$</span><span class='va'>gen</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/reorder.factor.html'>reorder</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>gen</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>pct</span><span class='op'>)</span> <span class='co'># For a prettier dot plot</span>
+  
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>betareg</span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>bunt</span> <span class='op'>+</span> <span class='va'>gen</span><span class='op'>:</span><span class='va'>bunt</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+  
   <span class='co'># Construct 95 percent confidence intervals</span>
-  <span class='no'>p1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span>(<span class='no'>dat</span>,
-              <span class='kw'>lo</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m1</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'quantile'</span>, <span class='kw'>at</span><span class='kw'>=</span><span class='fl'>.025</span>),
-              <span class='kw'>est</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m1</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'quantile'</span>, <span class='kw'>at</span><span class='kw'>=</span><span class='fl'>.5</span>),
-              <span class='kw'>up</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m1</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='st'>'quantile'</span>, <span class='kw'>at</span><span class='kw'>=</span><span class='fl'>.975</span>))
-  <span class='no'>p1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>p1</span>, <span class='no'>rep</span><span class='kw'>==</span><span class='st'>"R1"</span>)
-
+  <span class='va'>p1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>dat</span>,
+              lo <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>m1</span>, type<span class='op'>=</span><span class='st'>'quantile'</span>, at<span class='op'>=</span><span class='fl'>.025</span><span class='op'>)</span>,
+              est <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>m1</span>, type<span class='op'>=</span><span class='st'>'quantile'</span>, at<span class='op'>=</span><span class='fl'>.5</span><span class='op'>)</span>,
+              up <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>m1</span>, type<span class='op'>=</span><span class='st'>'quantile'</span>, at<span class='op'>=</span><span class='fl'>.975</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>p1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>p1</span>, <span class='va'>rep</span><span class='op'>==</span><span class='st'>"R1"</span><span class='op'>)</span>
+  
   <span class='co'># Plot the model intervals over the original data</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>latticeExtra</span>)
-  <span class='fu'><a href='https://rdrr.io/r/graphics/graphics-defunct.html'>dotplot</a></span>(<span class='no'>bunt</span>~<span class='no'>y</span><span class='kw'>|</span><span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>pch</span><span class='kw'>=</span><span class='st'>'x'</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='st'>'red'</span>,
-          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"Observed data and 95 pct intervals for bunt infection"</span>) +
-            <span class='fu'>segplot</span>(<span class='no'>bunt</span>~<span class='no'>lo</span>+<span class='no'>up</span><span class='kw'>|</span><span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>p1</span>, <span class='kw'>centers</span><span class='kw'>=</span><span class='no'>est</span>, <span class='kw'>draw.bands</span><span class='kw'>=</span><span class='fl'>FALSE</span>)</div><div class='img'><img src='salmon.bunt-2.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>latticeExtra</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>dotplot</a></span><span class='op'>(</span><span class='va'>bunt</span><span class='op'>~</span><span class='va'>y</span><span class='op'>|</span><span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>, pch<span class='op'>=</span><span class='st'>'x'</span>, col<span class='op'>=</span><span class='st'>'red'</span>,
+          main<span class='op'>=</span><span class='st'>"Observed data and 95 pct intervals for bunt infection"</span><span class='op'>)</span> <span class='op'>+</span>
+            <span class='fu'>segplot</span><span class='op'>(</span><span class='va'>bunt</span><span class='op'>~</span><span class='va'>lo</span><span class='op'>+</span><span class='va'>up</span><span class='op'>|</span><span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>p1</span>, centers<span class='op'>=</span><span class='va'>est</span>, draw.bands<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span>
+</div><div class='img'><img src='salmon.bunt-2.png' alt='' width='700' height='433' /></div><div class='input'>
 
-  # To evaluate wheat, we probably want to include bunt as a random effect...
+  <span class='co'># To evaluate wheat, we probably want to include bunt as a random effect...</span>
 
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -254,7 +247,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

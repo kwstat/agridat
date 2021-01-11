@@ -46,13 +46,13 @@
   No data is available for Duluth in Dec, 1931.
 }
 \source{
-  National Climate Data Center, http://www.ncdc.noaa.gov/.
+  National Climate Data Center, https://www.ncdc.noaa.gov/.
 }
 
 \references{
   Kevin Wright. 2013.  Revisiting Immer's Barley Data.
   \emph{The American Statistitician}, 67, 129-133.
-  http://doi.org/10.1080/00031305.2013.801783
+  https://doi.org/10.1080/00031305.2013.801783
 }
 
 \examples{

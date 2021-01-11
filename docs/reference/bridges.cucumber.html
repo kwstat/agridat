@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -150,7 +150,7 @@
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 32 observations on the following 5 variables.</p><dl'>
+    <p>A data frame with 32 observations on the following 5 variables.</p><dl>
     <dt><code>loc</code></dt><dd><p>location</p></dd>
     <dt><code>gen</code></dt><dd><p>genotype/cultivar</p></dd>
     <dt><code>row</code></dt><dd><p>row</p></dd>
@@ -181,151 +181,93 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>bridges.cucumber</span>)
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>bridges.cucumber</span>
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>rowf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>), <span class='kw'>colf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>col</span>))
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>bridges.cucumber</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>bridges.cucumber</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, rowf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>row</span><span class='op'>)</span>, colf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>col</span><span class='op'>)</span><span class='op'>)</span>
 
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-  <span class='fu'>desplot</span>(<span class='no'>dat</span>, <span class='no'>yield</span>~<span class='no'>col</span>*<span class='no'>row</span><span class='kw'>|</span><span class='no'>loc</span>,
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+  <span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>yield</span><span class='op'>~</span><span class='va'>col</span><span class='op'>*</span><span class='va'>row</span><span class='op'>|</span><span class='va'>loc</span>,
           <span class='co'># aspect unknown</span>
-          <span class='kw'>text</span><span class='kw'>=</span><span class='no'>gen</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>1</span>,
-          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"bridges.cucumber"</span>)</div><div class='img'><img src='bridges.cucumber-1.png' alt='' width='700' height='433' /></div><div class='input'>
+          text<span class='op'>=</span><span class='va'>gen</span>, cex<span class='op'>=</span><span class='fl'>1</span>,
+          main<span class='op'>=</span><span class='st'>"bridges.cucumber"</span><span class='op'>)</span>
+</div><div class='img'><img src='bridges.cucumber-1.png' alt='' width='700' height='433' /></div><div class='input'>
   <span class='co'># Graphical inference test for heterogenous variances</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>nullabor</span>)</div><div class='output co'>#&gt; <span class='message'></span>
-#&gt; <span class='message'>Attaching package: 'nullabor'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:vcd':</span>
-#&gt; <span class='message'></span>
-#&gt; <span class='message'>    distplot</span></div><div class='input'>  <span class='co'># Create a lineup of datasets</span>
-  <span class='no'>fun</span> <span class='kw'>&lt;-</span> <span class='fu'>null_permute</span>(<span class='st'>"loc"</span>)
-  <span class='no'>dat20</span> <span class='kw'>&lt;-</span> <span class='fu'>lineup</span>(<span class='no'>fun</span>, <span class='no'>dat</span>, <span class='kw'>n</span><span class='kw'>=</span><span class='fl'>20</span>, <span class='kw'>pos</span><span class='kw'>=</span><span class='fl'>9</span>)
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>nullabor</span><span class='op'>)</span>
+  <span class='co'># Create a lineup of datasets</span>
+  <span class='va'>fun</span> <span class='op'>&lt;-</span> <span class='fu'>null_permute</span><span class='op'>(</span><span class='st'>"loc"</span><span class='op'>)</span>
+  <span class='va'>dat20</span> <span class='op'>&lt;-</span> <span class='fu'>lineup</span><span class='op'>(</span><span class='va'>fun</span>, <span class='va'>dat</span>, n<span class='op'>=</span><span class='fl'>20</span>, pos<span class='op'>=</span><span class='fl'>9</span><span class='op'>)</span>
 
   <span class='co'># Now plot</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-  <span class='fu'>bwplot</span>(<span class='no'>yield</span> ~ <span class='no'>loc</span><span class='kw'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>.sample</span>), <span class='no'>dat20</span>,
-         <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"bridges.cucumber - graphical inference"</span>)</div><div class='img'><img src='bridges.cucumber-2.png' alt='' width='700' height='433' /></div><div class='input'>
-
-  <span class='co'>## libs(asreml)</span>
-  <span class='co'>## if( utils::packageVersion("asreml") &lt; "4") {</span>
-  <span class='co'>##   # asreml3</span>
-
-  <span class='co'>##   ## Random row/col/resid. Same as Bridges 1989, p. 147</span>
-  <span class='co'>##   m1 &lt;- asreml(yield ~ 1 + gen + loc + loc:gen,</span>
-  <span class='co'>##                random = ~ rowf:loc + colf:loc, data=dat)</span>
-
-  <span class='co'>##   libs(lucid)</span>
-  <span class='co'>##   vc(m1)</span>
-  <span class='co'>##   ##             effect component std.error z.ratio constr</span>
-  <span class='co'>##   ##  rowf:loc!rowf.var     31.62     23.02     1.4    pos</span>
-  <span class='co'>##   ##  colf:loc!colf.var     18.08     15.32     1.2    pos</span>
-  <span class='co'>##   ##         R!variance     31.48     12.85     2.4    pos</span>
-
-  <span class='co'>##   ## Random row/col/resid at each loc. Matches p. 147</span>
-  <span class='co'>##   m2 &lt;- asreml(yield ~ 1 + gen + loc + loc:gen,</span>
-  <span class='co'>##                random = ~ at(loc):rowf + at(loc):colf, data=dat,</span>
-  <span class='co'>##                rcov = ~at(loc):units)</span>
-  <span class='co'>##   vc(m2)</span>
-  <span class='co'>##   ##                          effect component std.error z.ratio constr</span>
-  <span class='co'>##   ##  at(loc, Clemson):rowf!rowf.var     32.32    36.58     0.88    pos</span>
-  <span class='co'>##   ##   at(loc, Tifton):rowf!rowf.var     30.92    28.63     1.1     pos</span>
-  <span class='co'>##   ##  at(loc, Clemson):colf!colf.var     22.55    28.78     0.78    pos</span>
-  <span class='co'>##   ##   at(loc, Tifton):colf!colf.var     13.62    14.59     0.93    pos</span>
-  <span class='co'>##   ##            loc_Clemson!variance     46.85    27.05     1.7     pos</span>
-  <span class='co'>##   ##             loc_Tifton!variance     16.11     9.299    1.7     pos</span>
-
-  <span class='co'>##   predict(m2, data=dat, classify='loc:gen')$predictions$pvals</span>
-  <span class='co'>##   ##     loc      gen Predicted Std Err    Status</span>
-  <span class='co'>##   ## Clemson   Dasher     45.55   5.043 Estimable</span>
-  <span class='co'>##   ## Clemson Guardian     31.62   5.043 Estimable</span>
-  <span class='co'>##   ## Clemson Poinsett     21.42   5.043 Estimable</span>
-  <span class='co'>##   ## Clemson   Sprint     25.95   5.043 Estimable</span>
-  <span class='co'>##   ##  Tifton   Dasher     50.48   3.894 Estimable</span>
-  <span class='co'>##   ##  Tifton Guardian     38.72   3.894 Estimable</span>
-  <span class='co'>##   ##  Tifton Poinsett     33.01   3.894 Estimable</span>
-  <span class='co'>##   ##  Tifton   Sprint     39.18   3.894 Estimable</span>
-
-  <span class='co'>##   # Is a heterogeneous model justified? Maybe not.</span>
-  <span class='co'>##   # m1$loglik</span>
-  <span class='co'>##   ## -67.35585</span>
-  <span class='co'>##   # m2$loglik</span>
-  <span class='co'>##   ## -66.35621</span>
-  <span class='co'>## }</span>
-
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
-  <span class='kw'>if</span>( <span class='kw pkg'>utils</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/r/utils/packageDescription.html'>packageVersion</a></span>(<span class='st'>"asreml"</span>) <span class='kw'>&gt;</span>  <span class='st'>"4"</span>) {
-    <span class='co'># asreml4</span>
-
-    <span class='co'>## Random row/col/resid. Same as Bridges 1989, p. 147</span>
-    <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='fl'>1</span> + <span class='no'>gen</span> + <span class='no'>loc</span> + <span class='no'>loc</span>:<span class='no'>gen</span>,
-                 <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='no'>rowf</span>:<span class='no'>loc</span> + <span class='no'>colf</span>:<span class='no'>loc</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lucid</span>)
-  <span class='kw pkg'>lucid</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/lucid/man/vc.html'>vc</a></span>(<span class='no'>m1</span>)
-  <span class='co'>##   effect component std.error z.ratio bound </span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+  <span class='fu'>bwplot</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>loc</span><span class='op'>|</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>.sample</span><span class='op'>)</span>, <span class='va'>dat20</span>,
+         main<span class='op'>=</span><span class='st'>"bridges.cucumber - graphical inference"</span><span class='op'>)</span>
+</div><div class='img'><img src='bridges.cucumber-2.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span><span class='op'>)</span> <span class='co'># asreml4</span>
+    
+  <span class='co'>## Random row/col/resid. Same as Bridges 1989, p. 147</span>
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>loc</span> <span class='op'>+</span> <span class='va'>loc</span><span class='op'>:</span><span class='va'>gen</span>,
+               random <span class='op'>=</span> <span class='op'>~</span> <span class='va'>rowf</span><span class='op'>:</span><span class='va'>loc</span> <span class='op'>+</span> <span class='va'>colf</span><span class='op'>:</span><span class='va'>loc</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:53 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -69.1828       62.4832     24 17:07:53    0.0
+#&gt;  2      -68.2565       48.7835     24 17:07:53    0.0
+#&gt;  3      -67.6053       38.4916     24 17:07:53    0.0
+#&gt;  4      -67.3668       32.3653     24 17:07:53    0.0
+#&gt;  5      -67.3559       31.5313     24 17:07:53    0.0
+#&gt;  6      -67.3558       31.4799     24 17:07:53    0.0</div><div class='input'>  
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lucid</span><span class='op'>)</span>
+  <span class='fu'>lucid</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/lucid/man/vc.html'>vc</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;    effect component std.error z.ratio bound %ch
+#&gt;  rowf:loc     31.62     23.02     1.4     P   0
+#&gt;  colf:loc     18.08     15.33     1.2     P   0
+#&gt;   units!R     31.48     12.85     2.4     P   0</div><div class='input'>  <span class='co'>##   effect component std.error z.ratio bound </span>
   <span class='co'>## rowf:loc     31.62     23.02     1.4     P   0</span>
   <span class='co'>## colf:loc     18.08     15.32     1.2     P   0</span>
   <span class='co'>## units(R)     31.48     12.85     2.4     P   0</span>
-
+  
   <span class='co'>## Random row/col/resid at each loc. Matches p. 147</span>
-  <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='fl'>1</span> + <span class='no'>gen</span> + <span class='no'>loc</span> + <span class='no'>loc</span>:<span class='no'>gen</span>,
-               <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='fu'>at</span>(<span class='no'>loc</span>):<span class='no'>rowf</span> + <span class='fu'>at</span>(<span class='no'>loc</span>):<span class='no'>colf</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-               <span class='kw'>resid</span> <span class='kw'>=</span> ~ <span class='fu'>dsum</span>( ~ <span class='no'>units</span><span class='kw'>|</span><span class='no'>loc</span>))
-  <span class='kw pkg'>lucid</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/lucid/man/vc.html'>vc</a></span>(<span class='no'>m2</span>)
-  <span class='co'>##                effect component std.error z.ratio bound </span>
+  <span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>loc</span> <span class='op'>+</span> <span class='va'>loc</span><span class='op'>:</span><span class='va'>gen</span>,
+               random <span class='op'>=</span> <span class='op'>~</span> <span class='fu'>at</span><span class='op'>(</span><span class='va'>loc</span><span class='op'>)</span><span class='op'>:</span><span class='va'>rowf</span> <span class='op'>+</span> <span class='fu'>at</span><span class='op'>(</span><span class='va'>loc</span><span class='op'>)</span><span class='op'>:</span><span class='va'>colf</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+               resid <span class='op'>=</span> <span class='op'>~</span> <span class='fu'>dsum</span><span class='op'>(</span> <span class='op'>~</span> <span class='va'>units</span><span class='op'>|</span><span class='va'>loc</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:54 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -68.5253           1.0     24 17:07:54    0.0
+#&gt;  2      -66.8318           1.0     24 17:07:54    0.0
+#&gt;  3      -66.4698           1.0     24 17:07:54    0.0
+#&gt;  4      -66.3601           1.0     24 17:07:54    0.0
+#&gt;  5      -66.3562           1.0     24 17:07:54    0.0</div><div class='input'>  <span class='fu'>lucid</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/lucid/man/vc.html'>vc</a></span><span class='op'>(</span><span class='va'>m2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;                 effect component std.error z.ratio bound %ch
+#&gt;  at(loc, Clemson):rowf     32.32    36.54     0.88     P 0.1
+#&gt;   at(loc, Tifton):rowf     30.92    28.46     1.1      P 0.4
+#&gt;  at(loc, Clemson):colf     22.55    28.78     0.78     P 0  
+#&gt;   at(loc, Tifton):colf     13.62    14.59     0.93     P 0  
+#&gt;          loc_Clemson!R     46.85    27.05     1.7      P 0  
+#&gt;           loc_Tifton!R     16.11     9.298    1.7      P 0  </div><div class='input'>  <span class='co'>##                effect component std.error z.ratio bound </span>
   <span class='co'>## at(loc, Clemson):rowf     32.32    36.58     0.88     P   0</span>
   <span class='co'>##  at(loc, Tifton):rowf     30.92    28.63     1.1      P   0</span>
   <span class='co'>## at(loc, Clemson):colf     22.55    28.78     0.78     P   0</span>
   <span class='co'>##  at(loc, Tifton):colf     13.62    14.59     0.93     P   0</span>
   <span class='co'>##        loc_Clemson(R)     46.85    27.05     1.7      P   0</span>
   <span class='co'>##         loc_Tifton(R)     16.11     9.299    1.7      P   0</span>
-
-  <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m2</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>classify</span><span class='kw'>=</span><span class='st'>'loc:gen'</span>)$<span class='no'>pvals</span>
-  <span class='co'>##       loc      gen predicted.value std.error    status</span>
-  <span class='co'>## 1 Clemson   Dasher            45.6      5.04 Estimable</span>
-  <span class='co'>## 2 Clemson Guardian            31.6      5.04 Estimable</span>
-  <span class='co'>## 3 Clemson Poinsett            21.4      5.04 Estimable</span>
-  <span class='co'>## 4 Clemson   Sprint            26        5.04 Estimable</span>
-  <span class='co'>## 5  Tifton   Dasher            50.5      3.89 Estimable</span>
-  <span class='co'>## 6  Tifton Guardian            38.7      3.89 Estimable</span>
-  <span class='co'>## 7  Tifton Poinsett            33        3.89 Estimable</span>
-  <span class='co'>## 8  Tifton   Sprint            39.2      3.89 Estimable</span>
-
-  <span class='co'># Is a heterogeneous model justified? Maybe not.</span>
-  <span class='co'># m1$loglik</span>
-  <span class='co'>## -67.35585</span>
-  <span class='co'># m2$loglik</span>
-  <span class='co'>## -66.35621</span>
-
-  }</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:42 2020
+  
+  <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>m2</span>, data<span class='op'>=</span><span class='va'>dat</span>, classify<span class='op'>=</span><span class='st'>'loc:gen'</span><span class='op'>)</span><span class='op'>$</span><span class='va'>pvals</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:54 2021
 #&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -69.1828       62.4832     24 15:47:42    0.0
-#&gt;  2      -68.2565       48.7835     24 15:47:42    0.0
-#&gt;  3      -67.6053       38.4916     24 15:47:42    0.0
-#&gt;  4      -67.3668       32.3653     24 15:47:42    0.0
-#&gt;  5      -67.3559       31.5313     24 15:47:42    0.0
-#&gt;  6      -67.3558       31.4799     24 15:47:42    0.0
-#&gt; Multi-section model using the sigma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:42 2020
-#&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -68.5253           1.0     24 15:47:42    0.0
-#&gt;  2      -66.8318           1.0     24 15:47:42    0.0
-#&gt;  3      -66.4698           1.0     24 15:47:42    0.0
-#&gt;  4      -66.3601           1.0     24 15:47:42    0.0
-#&gt;  5      -66.3562           1.0     24 15:47:42    0.0
-#&gt; Multi-section model using the sigma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:42 2020
-#&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1      -66.3562           1.0     24 15:47:42    0.0
-#&gt;  2      -66.3562           1.0     24 15:47:42    0.0
-#&gt;  3      -66.3562           1.0     24 15:47:42    0.0</div><div class='output co'>#&gt; 
+#&gt;  1      -66.3562           1.0     24 17:07:54    0.0
+#&gt;  2      -66.3562           1.0     24 17:07:54    0.0
+#&gt;  3      -66.3562           1.0     24 17:07:54    0.0</div><div class='output co'>#&gt; 
 #&gt; Notes:
-#&gt; - The predictions are obtained by averaging across the hypertable
+#&gt; <span style='color: #0000BB;'>- The predictions are obtained by averaging across the hypertable
 #&gt;   calculated from model terms constructed solely from factors in
-#&gt;   the averaging and classify sets.
-#&gt; - Use 'average' to move ignored factors into the averaging set.
-#&gt; - The ignored set: rowf,colf
-#&gt; 
-#&gt; 
+#&gt;   the averaging and classify sets.</span><span>
+#&gt; </span><span style='color: #0000BB;'>- Use 'average' to move ignored factors into the averaging set.</span><span>
+#&gt; </span><span style='color: #0000BB;'>- The ignored set: rowf,colf</span><span>
+#&gt; </span><span style='color: #0000BB;'>
+#&gt; </span><span>
 #&gt;       loc      gen predicted.value std.error    status
 #&gt; 1 Clemson   Dasher        45.55000  5.042806 Estimable
 #&gt; 2 Clemson Guardian        31.62500  5.042806 Estimable
@@ -334,8 +276,24 @@
 #&gt; 5  Tifton   Dasher        50.48460  3.893635 Estimable
 #&gt; 6  Tifton Guardian        38.71697  3.893635 Estimable
 #&gt; 7  Tifton Poinsett        33.01487  3.893635 Estimable
-#&gt; 8  Tifton   Sprint        39.17952  3.893635 Estimable</div><div class='input'># }
-</div></pre>
+#&gt; 8  Tifton   Sprint        39.17952  3.893635 Estimable</div><div class='input'>  <span class='co'>##       loc      gen predicted.value std.error    status</span>
+  <span class='co'>## 1 Clemson   Dasher            45.6      5.04 Estimable</span>
+  <span class='co'>## 2 Clemson Guardian            31.6      5.04 Estimable</span>
+  <span class='co'>## 3 Clemson Poinsett            21.4      5.04 Estimable</span>
+  <span class='co'>## 4 Clemson   Sprint            26        5.04 Estimable</span>
+  <span class='co'>## 5  Tifton   Dasher            50.5      3.89 Estimable</span>
+  <span class='co'>## 6  Tifton Guardian            38.7      3.89 Estimable</span>
+  <span class='co'>## 7  Tifton Poinsett            33        3.89 Estimable</span>
+  <span class='co'>## 8  Tifton   Sprint            39.2      3.89 Estimable</span>
+  
+  <span class='co'># Is a heterogeneous model justified? Maybe not.</span>
+  <span class='co'># m1$loglik</span>
+  <span class='co'>## -67.35585</span>
+  <span class='co'># m2$loglik</span>
+  <span class='co'>## -66.35621</span>
+
+<span class='co'># }</span>
+</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -351,7 +309,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

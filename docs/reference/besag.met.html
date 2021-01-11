@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -150,7 +150,7 @@
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 1152 observations on the following 7 variables.</p><dl'>
+    <p>A data frame with 1152 observations on the following 7 variables.</p><dl>
     <dt><code>county</code></dt><dd><p>county</p></dd>
     <dt><code>row</code></dt><dd><p>row</p></dd>
     <dt><code>col</code></dt><dd><p>column</p></dd>
@@ -180,7 +180,7 @@
 <p>Field width: 11 plots * 1 unit = 11 units.</p>
   
 <p>Retrieved from
-  http://web.archive.org/web/19990505223413/www.stat.duke.edu/~higdon/trials/nc.dat</p>
+  https://web.archive.org/web/19990505223413/www.stat.duke.edu/~higdon/trials/nc.dat</p>
 <p>Used with permission of David Higdon.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
@@ -188,24 +188,25 @@
   Bayesian Analysis of Agricultural Field Experiments,
   Journal of the Royal Statistical Society: Series B, 61, 691--746.
   Table 1.
-  http://doi.org/10.1111/1467-9868.00201</p>
+  https://doi.org/10.1111/1467-9868.00201</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>besag.met</span>)
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>besag.met</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>besag.met</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>besag.met</span>
 
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-  <span class='fu'>desplot</span>(<span class='no'>dat</span>, <span class='no'>yield</span> ~ <span class='no'>col</span>*<span class='no'>row</span><span class='kw'>|</span><span class='no'>county</span>,
-          <span class='kw'>aspect</span><span class='kw'>=</span><span class='fl'>36</span>/<span class='fl'>11</span>, <span class='co'># true aspect</span>
-          <span class='kw'>out1</span><span class='kw'>=</span><span class='no'>rep</span>, <span class='kw'>out2</span><span class='kw'>=</span><span class='no'>block</span>,
-          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"besag.met"</span>)</div><div class='img'><img src='besag.met-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+  <span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>yield</span> <span class='op'>~</span> <span class='va'>col</span><span class='op'>*</span><span class='va'>row</span><span class='op'>|</span><span class='va'>county</span>,
+          aspect<span class='op'>=</span><span class='fl'>36</span><span class='op'>/</span><span class='fl'>11</span>, <span class='co'># true aspect</span>
+          out1<span class='op'>=</span><span class='va'>rep</span>, out2<span class='op'>=</span><span class='va'>block</span>,
+          main<span class='op'>=</span><span class='st'>"besag.met"</span><span class='op'>)</span>
+</div><div class='img'><img src='besag.met-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
   <span class='co'># Average reps</span>
-  <span class='no'>datm</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span>(<span class='no'>yield</span> ~ <span class='no'>county</span> + <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>FUN</span><span class='kw'>=</span><span class='no'>mean</span>)
-
+  <span class='va'>datm</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>county</span> <span class='op'>+</span> <span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>, FUN<span class='op'>=</span><span class='va'>mean</span><span class='op'>)</span>
+  
   <span class='co'># Sections below fit heteroskedastic variance models (variance for each variety)</span>
   <span class='co'># asreml takes 1 second, lme 73 seconds, SAS PROC MIXED 30 minutes</span>
 
@@ -219,283 +220,206 @@
   <span class='co'>##           G02    G03    G04    G05    G06    G07    G08</span>
   <span class='co'>##  91.90 210.75  63.03 112.05  28.39 237.36  72.72  42.97</span>
   <span class='co'>## ... etc ...</span>
-
+  
 
   <span class='co'># Note, the FA biplots from asreml3 and asreml4 are surprisingly</span>
   <span class='co'># different from each other.  The predicted-value biplots are</span>
   <span class='co'># almost identical.</span>
+  
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span><span class='op'>)</span>
+  <span class='co'># asreml4</span>
 
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
-  <span class='kw'>if</span>( <span class='kw pkg'>utils</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/r/utils/packageDescription.html'>packageVersion</a></span>(<span class='st'>"asreml"</span>) <span class='kw'>&lt;</span> <span class='st'>"4"</span>) {
-    <span class='co'># asreml3</span>
+  <span class='co'># Average reps</span>
+  <span class='va'>datm</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>county</span> <span class='op'>+</span> <span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>dat</span>, FUN<span class='op'>=</span><span class='va'>mean</span><span class='op'>)</span>
+  <span class='co'># asreml Using 'rcov' ALWAYS requires sorting the data</span>
+  <span class='va'>datm</span> <span class='op'>&lt;-</span> <span class='va'>datm</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>datm</span><span class='op'>$</span><span class='va'>gen</span><span class='op'>)</span>,<span class='op'>]</span>
+  
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>gen</span>, data<span class='op'>=</span><span class='va'>datm</span>,
+               random <span class='op'>=</span> <span class='op'>~</span> <span class='va'>county</span>,
+               residual <span class='op'>=</span> <span class='op'>~</span> <span class='fu'>dsum</span><span class='op'>(</span> <span class='op'>~</span> <span class='va'>units</span><span class='op'>|</span><span class='va'>gen</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:47 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1     -1172.163           1.0    320 17:07:47    0.0 (60 restrained)
+#&gt;  2     -1011.805           1.0    320 17:07:47    0.0 (1 restrained)
+#&gt;  3      -970.591           1.0    320 17:07:47    0.0
+#&gt;  4      -940.691           1.0    320 17:07:47    0.0
+#&gt;  5      -927.170           1.0    320 17:07:47    0.0
+#&gt;  6      -923.727           1.0    320 17:07:47    0.0
+#&gt;  7      -923.239           1.0    320 17:07:47    0.0
+#&gt;  8      -922.976           1.0    320 17:07:47    0.0
+#&gt;  9      -922.903           1.0    320 17:07:47    0.0
+#&gt; 10      -922.899           1.0    320 17:07:47    0.0</div><div class='input'>  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lucid</span><span class='op'>)</span>
+  <span class='fu'>vc</span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>7</span>,<span class='op'>]</span>
+</div><div class='output co'>#&gt;     effect component std.error z.ratio bound %ch
+#&gt;     county   1324       836.1      1.6     P 0.2
+#&gt;  gen_G01!R     91.98     58.91     1.6     P 0.1
+#&gt;  gen_G02!R    210.6     133.6      1.6     P 0.1
+#&gt;  gen_G03!R     63.06     40.58     1.6     P 0.1
+#&gt;  gen_G04!R    112.1      71.59     1.6     P 0.1
+#&gt;  gen_G05!R     28.35     18.57     1.5     P 0.2
+#&gt;  gen_G06!R    237.4     150.8      1.6     P 0  </div><div class='input'>  <span class='co'>##      effect component std.error z.ratio bound </span>
+  <span class='co'>##    county   1324       836.1      1.6     P 0.2</span>
+  <span class='co'>## gen_G01!R     91.98     58.91     1.6     P 0.1</span>
+  <span class='co'>## gen_G02!R    210.6     133.6      1.6     P 0.1</span>
+  <span class='co'>## gen_G03!R     63.06     40.58     1.6     P 0.1</span>
+  <span class='co'>## gen_G04!R    112.1      71.59     1.6     P 0.1</span>
+  <span class='co'>## gen_G05!R     28.35     18.57     1.5     P 0.2</span>
+  <span class='co'>## gen_G06!R    237.4     150.8      1.6     P 0  </span>
+  
+  <span class='co'># We get the same results from asreml &amp; lme</span>
+  <span class='co'># plot(m1$vparameters[-1],</span>
+  <span class='co'>#      m1l$sigma^2 * c(1, coef(m1l$modelStruct$varStruct, unc = FALSE))^2)</span>
+  
+  <span class='co'># The following example shows how to construct a GxE biplot</span>
+  <span class='co'># from the FA2 model.</span>
 
-    <span class='co'># asreml Using 'rcov' ALWAYS requires sorting the data</span>
-    <span class='no'>datm</span> <span class='kw'>&lt;-</span> <span class='no'>datm</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>datm</span>$<span class='no'>gen</span>),]
-    <span class='no'>m1a</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>datm</span>,
-                  <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='no'>county</span>,
-                  <span class='kw'>rcov</span> <span class='kw'>=</span> ~ <span class='fu'>at</span>(<span class='no'>gen</span>):<span class='no'>units</span>)
+  
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>besag.met</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, xf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>col</span><span class='op'>)</span>, yf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>row</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>county</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>xf</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>yf</span><span class='op'>)</span>, <span class='op'>]</span>
 
-    <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lucid</span>)
-    <span class='fu'>vc</span>(<span class='no'>m1a</span>)[<span class='fl'>1</span>:<span class='fl'>7</span>,]
-    <span class='co'>##             effect component std.error z.ratio constr</span>
-    <span class='co'>##  county!county.var   1324       838.2      1.6    pos</span>
-    <span class='co'>##   gen_G01!variance     91.93     58.82     1.6    pos</span>
-    <span class='co'>##   gen_G02!variance    210.7     133.9      1.6    pos</span>
-    <span class='co'>##   gen_G03!variance     63.03     40.53     1.6    pos</span>
-    <span class='co'>##   gen_G04!variance    112.1      71.53     1.6    pos</span>
-    <span class='co'>##   gen_G05!variance     28.39     18.63     1.5    pos</span>
-    <span class='co'>##   gen_G06!variance    237.4     150.8      1.6    pos</span>
+  <span class='co'># First, AR1xAR1</span>
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>county</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+               random <span class='op'>=</span> <span class='op'>~</span> <span class='va'>gen</span><span class='op'>:</span><span class='va'>county</span>,
+               residual <span class='op'>=</span> <span class='op'>~</span> <span class='fu'>dsum</span><span class='op'>(</span> <span class='op'>~</span> <span class='fu'>ar1</span><span class='op'>(</span><span class='va'>xf</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span><span class='op'>|</span><span class='va'>county</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:47 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1     -3931.453           1.0   1146 17:07:47    0.0
+#&gt;  2     -3846.882           1.0   1146 17:07:47    0.0
+#&gt;  3     -3765.127           1.0   1146 17:07:47    0.0
+#&gt;  4     -3724.260           1.0   1146 17:07:47    0.0
+#&gt;  5     -3710.877           1.0   1146 17:07:47    0.0
+#&gt;  6     -3709.388           1.0   1146 17:07:47    0.0
+#&gt;  7     -3709.308           1.0   1146 17:07:47    0.0
+#&gt;  8     -3709.304           1.0   1146 17:07:47    0.0</div><div class='input'>  <span class='co'># Add FA1</span>
+  <span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m1</span>, random<span class='op'>=</span><span class='op'>~</span><span class='va'>gen</span><span class='op'>:</span><span class='fu'>fa</span><span class='op'>(</span><span class='va'>county</span>,<span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># rotate.FA=FALSE</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:47 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1     -3960.869           1.0   1146 17:07:47    0.0 (1 restrained)
+#&gt;  2     -3838.939           1.0   1146 17:07:47    0.0
+#&gt;  3     -3738.501           1.0   1146 17:07:48    0.0
+#&gt;  4     -3685.886           1.0   1146 17:07:48    0.0
+#&gt;  5     -3667.580           1.0   1146 17:07:48    0.0
+#&gt;  6     -3665.255           1.0   1146 17:07:48    0.0
+#&gt;  7     -3665.089           1.0   1146 17:07:48    0.0
+#&gt;  8     -3665.077           1.0   1146 17:07:48    0.0
+#&gt;  9     -3665.076           1.0   1146 17:07:48    0.0</div><div class='input'>  <span class='co'># FA2</span>
+  <span class='va'>m3</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m2</span>, random<span class='op'>=</span><span class='op'>~</span><span class='va'>gen</span><span class='op'>:</span><span class='fu'>fa</span><span class='op'>(</span><span class='va'>county</span>,<span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:48 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1     -3960.862           1.0   1146 17:07:48    0.0 (1 restrained)
+#&gt;  2     -3926.560           1.0   1146 17:07:48    0.0 (1 restrained)
+#&gt;  3     -3833.085           1.0   1146 17:07:48    0.0 (1 restrained)
+#&gt;  4     -3735.147           1.0   1146 17:07:48    0.0 (1 restrained)
+#&gt;  5     -3683.543           1.0   1146 17:07:48    0.0 (1 restrained)
+#&gt;  6     -3665.368           1.0   1146 17:07:48    0.0
+#&gt;  7     -3662.711           1.0   1146 17:07:48    0.0
+#&gt;  8     -3662.471           1.0   1146 17:07:48    0.0
+#&gt;  9     -3662.452           1.0   1146 17:07:48    0.0
+#&gt; 10     -3662.449           1.0   1146 17:07:48    0.0
+#&gt; 11     -3662.449           1.0   1146 17:07:48    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='fu'>asreml.options</span><span class='op'>(</span>extra<span class='op'>=</span><span class='fl'>50</span><span class='op'>)</span>
+  <span class='va'>m3</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m3</span>, maxit<span class='op'>=</span><span class='fl'>50</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:48 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1     -3662.448           1.0   1146 17:07:48    0.0
+#&gt;  2     -3662.448           1.0   1146 17:07:48    0.0
+#&gt;  3     -3662.448           1.0   1146 17:07:48    0.0
+#&gt;  4     -3662.448           1.0   1146 17:07:48    0.0
+#&gt;  5     -3662.448           1.0   1146 17:07:49    0.0
+#&gt;  6     -3662.448           1.0   1146 17:07:49    0.0
+#&gt;  7     -3662.448           1.0   1146 17:07:49    0.0
+#&gt;  8     -3662.448           1.0   1146 17:07:49    0.0
+#&gt;  9     -3662.448           1.0   1146 17:07:49    0.0
+#&gt; 10     -3662.448           1.0   1146 17:07:49    0.0
+#&gt; 11     -3662.448           1.0   1146 17:07:49    0.0
+#&gt; 12     -3662.448           1.0   1146 17:07:49    0.0
+#&gt; 13     -3662.448           1.0   1146 17:07:49    0.0
+#&gt; 14     -3662.448           1.0   1146 17:07:49    0.0
+#&gt; 15     -3662.448           1.0   1146 17:07:49    0.0
+#&gt; 16     -3662.448           1.0   1146 17:07:49    0.0
+#&gt; 17     -3662.448           1.0   1146 17:07:49    0.0
+#&gt; 18     -3662.448           1.0   1146 17:07:49    0.0
+#&gt; 19     -3662.448           1.0   1146 17:07:49    0.0
+#&gt; 20     -3662.448           1.0   1146 17:07:49    0.0
+#&gt; 21     -3662.448           1.0   1146 17:07:49    0.0
+#&gt; 22     -3662.448           1.0   1146 17:07:49    0.0
+#&gt; 23     -3662.447           1.0   1146 17:07:49    0.0
+#&gt; 24     -3662.447           1.0   1146 17:07:49    0.0
+#&gt; 25     -3662.447           1.0   1146 17:07:49    0.0
+#&gt; 26     -3662.447           1.0   1146 17:07:49    0.0
+#&gt; 27     -3662.447           1.0   1146 17:07:49    0.0
+#&gt; 28     -3662.447           1.0   1146 17:07:49    0.0
+#&gt; 29     -3662.447           1.0   1146 17:07:49    0.0
+#&gt; 30     -3662.447           1.0   1146 17:07:49    0.0
+#&gt; 31     -3662.447           1.0   1146 17:07:49    0.0
+#&gt; 32     -3662.447           1.0   1146 17:07:49    0.0
+#&gt; 33     -3662.447           1.0   1146 17:07:49    0.0
+#&gt; 34     -3662.447           1.0   1146 17:07:49    0.0
+#&gt; 35     -3662.447           1.0   1146 17:07:49    0.0
+#&gt; 36     -3662.447           1.0   1146 17:07:50    0.0
+#&gt; 37     -3662.447           1.0   1146 17:07:50    0.0
+#&gt; 38     -3662.447           1.0   1146 17:07:50    0.0
+#&gt; 39     -3662.447           1.0   1146 17:07:50    0.0
+#&gt; 40     -3662.447           1.0   1146 17:07:50    0.0
+#&gt; 41     -3662.447           1.0   1146 17:07:50    0.0
+#&gt; 42     -3662.447           1.0   1146 17:07:50    0.0
+#&gt; 43     -3662.447           1.0   1146 17:07:50    0.0
+#&gt; 44     -3662.447           1.0   1146 17:07:50    0.0
+#&gt; 45     -3662.447           1.0   1146 17:07:50    0.0
+#&gt; 46     -3662.447           1.0   1146 17:07:50    0.0
+#&gt; 47     -3662.447           1.0   1146 17:07:50    0.0
+#&gt; 48     -3662.446           1.0   1146 17:07:50    0.0
+#&gt; 49     -3662.446           1.0   1146 17:07:50    0.0
+#&gt; 50     -3662.446           1.0   1146 17:07:50    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='fu'>asreml.options</span><span class='op'>(</span>extra<span class='op'>=</span><span class='fl'>0</span><span class='op'>)</span>
 
+  <span class='co'># Use the loadings to make a biplot</span>
+  <span class='va'>vars</span> <span class='op'>&lt;-</span> <span class='fu'>vc</span><span class='op'>(</span><span class='va'>m3</span><span class='op'>)</span>
+  <span class='va'>psi</span> <span class='op'>&lt;-</span> <span class='va'>vars</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span><span class='op'>(</span><span class='st'>"!var$"</span>, <span class='va'>vars</span><span class='op'>$</span><span class='va'>effect</span><span class='op'>)</span>, <span class='st'>"component"</span><span class='op'>]</span>
+  <span class='va'>la1</span> <span class='op'>&lt;-</span> <span class='va'>vars</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span><span class='op'>(</span><span class='st'>"!fa1$"</span>, <span class='va'>vars</span><span class='op'>$</span><span class='va'>effect</span><span class='op'>)</span>, <span class='st'>"component"</span><span class='op'>]</span>
+  <span class='va'>la2</span> <span class='op'>&lt;-</span> <span class='va'>vars</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span><span class='op'>(</span><span class='st'>"!fa2$"</span>, <span class='va'>vars</span><span class='op'>$</span><span class='va'>effect</span><span class='op'>)</span>, <span class='st'>"component"</span><span class='op'>]</span>
+  <span class='va'>mat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>as.matrix</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span><span class='op'>(</span><span class='va'>psi</span>, <span class='va'>la1</span>, <span class='va'>la2</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='co'># I tried using rotate.fa=FALSE, but it did not seem to</span>
+  <span class='co'># give orthogonal vectors.  Rotate by hand.</span>
+  <span class='va'>rot</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/svd.html'>svd</a></span><span class='op'>(</span><span class='va'>mat</span><span class='op'>[</span>,<span class='op'>-</span><span class='fl'>1</span><span class='op'>]</span><span class='op'>)</span><span class='op'>$</span><span class='va'>v</span> <span class='co'># rotation matrix</span>
+  <span class='va'>lam</span> <span class='op'>&lt;-</span> <span class='va'>mat</span><span class='op'>[</span>,<span class='op'>-</span><span class='fl'>1</span><span class='op'>]</span> 
+  <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>lam</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"load1"</span>, <span class='st'>"load2"</span><span class='op'>)</span>
 
-    <span class='co'># We get the same results from asreml &amp; lme</span>
-    <span class='co'># plot(m1a$gammas[-1],</span>
-    <span class='co'>#      m1l$sigma^2 * c(1, coef(m1l$modelStruct$varStruct, unc = FALSE))^2)</span>
-
-
-    <span class='co'># The following example shows how to construct a GxE biplot</span>
-    <span class='co'># from the FA2 model.</span>
-
-    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>besag.met</span>
-    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>xf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>col</span>), <span class='kw'>yf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>))
-    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>county</span>, <span class='no'>dat</span>$<span class='no'>xf</span>, <span class='no'>dat</span>$<span class='no'>yf</span>), ]
-
-    <span class='co'># First, AR1xAR1</span>
-    <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>county</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-                 <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='no'>gen</span>:<span class='no'>county</span>,
-                 <span class='kw'>rcov</span> <span class='kw'>=</span> ~ <span class='fu'>at</span>(<span class='no'>county</span>):<span class='fu'>ar1</span>(<span class='no'>xf</span>):<span class='fu'>ar1</span>(<span class='no'>yf</span>))
-    <span class='co'># Add FA1.</span>
-    <span class='co'># For ASExtras:::summary.fa, use fa(county,1):gen, NOT gen:fa(county,1)</span>
-    <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span>(<span class='no'>m1</span>, <span class='kw'>random</span><span class='kw'>=</span>~ <span class='no'>gen</span>:<span class='fu'>fa</span>(<span class='no'>county</span>,<span class='fl'>1</span>))
-    <span class='co'># FA2</span>
-    <span class='no'>m3</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span>(<span class='no'>m2</span>, <span class='kw'>random</span><span class='kw'>=</span>~ <span class='no'>gen</span>:<span class='fu'>fa</span>(<span class='no'>county</span>,<span class='fl'>2</span>))
-    <span class='no'>m3</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span>(<span class='no'>m3</span>)
-
-    <span class='co'># Use the loadings to make a biplot</span>
-    <span class='no'>vars</span> <span class='kw'>&lt;-</span> <span class='fu'>vc</span>(<span class='no'>m3</span>)
-    <span class='no'>psi</span> <span class='kw'>&lt;-</span> <span class='no'>vars</span>[<span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span>(<span class='st'>".var$"</span>, <span class='no'>vars</span>$<span class='no'>effect</span>), <span class='st'>"component"</span>]
-    <span class='no'>la1</span> <span class='kw'>&lt;-</span> <span class='no'>vars</span>[<span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span>(<span class='st'>".fa1$"</span>, <span class='no'>vars</span>$<span class='no'>effect</span>), <span class='st'>"component"</span>]
-    <span class='no'>la2</span> <span class='kw'>&lt;-</span> <span class='no'>vars</span>[<span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span>(<span class='st'>".fa2$"</span>, <span class='no'>vars</span>$<span class='no'>effect</span>), <span class='st'>"component"</span>]
-    <span class='no'>mat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>as.matrix</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(<span class='no'>psi</span>, <span class='no'>la1</span>, <span class='no'>la2</span>))
-    <span class='no'>rot</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/svd.html'>svd</a></span>(<span class='no'>mat</span>[,-<span class='fl'>1</span>])$<span class='no'>v</span> <span class='co'># rotation matrix</span>
-    <span class='no'>lam</span> <span class='kw'>&lt;-</span> <span class='no'>mat</span>[,-<span class='fl'>1</span>]
-    <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span>(<span class='no'>lam</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"load1"</span>, <span class='st'>"load2"</span>)
-
-    <span class='no'>co3</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m3</span>)$<span class='no'>random</span> <span class='co'># Scores are the GxE coefficients</span>
-    <span class='no'>ix1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span>(<span class='st'>"_Comp1$"</span>, <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>co3</span>))
-    <span class='no'>ix2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span>(<span class='st'>"_Comp2$"</span>, <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>co3</span>))
-    <span class='no'>sco</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='no'>co3</span>[<span class='no'>ix1</span>], <span class='no'>co3</span>[<span class='no'>ix2</span>]), <span class='kw'>ncol</span><span class='kw'>=</span><span class='fl'>2</span>, <span class='kw'>byrow</span><span class='kw'>=</span><span class='fl'>FALSE</span>)
-    <span class='no'>sco</span> <span class='kw'>&lt;-</span> <span class='no'>sco</span>
-    <span class='fu'><a href='https://rdrr.io/r/base/dimnames.html'>dimnames</a></span>(<span class='no'>sco</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span>(<span class='no'>dat</span>$<span class='no'>gen</span>) , <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'load1'</span>,<span class='st'>'load2'</span>))
-    <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>lam</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span>(<span class='no'>dat</span>$<span class='no'>county</span>)
-    <span class='no'>sco</span>[,<span class='fl'>1</span>] <span class='kw'>&lt;-</span> -<span class='fl'>1</span> * <span class='no'>sco</span>[,<span class='fl'>1</span>]
-    <span class='no'>lam</span>[,<span class='fl'>1</span>] <span class='kw'>&lt;-</span> -<span class='fl'>1</span> * <span class='no'>lam</span>[,<span class='fl'>1</span>]
-    <span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span>(<span class='no'>sco</span>, <span class='no'>lam</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>.5</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"FA2 coefficient biplot (asreml3)"</span>)
-    <span class='co'># G variance matrix</span>
-    <span class='no'>gvar</span> <span class='kw'>&lt;-</span> <span class='no'>lam</span>
-
-    <span class='co'># Now get predictions and make an ordinary biplot</span>
-    <span class='no'>p3</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m3</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>classify</span><span class='kw'>=</span><span class='st'>"county:gen"</span>)
-    <span class='no'>p3</span> <span class='kw'>&lt;-</span> <span class='no'>p3</span>$<span class='no'>pred</span>$<span class='no'>pval</span>
-    <span class='fu'><a href='libs.html'>libs</a></span>(<span class='st'>"gge"</span>)
-    <span class='no'>bi3</span> <span class='kw'>&lt;-</span> <span class='fu'>gge</span>(<span class='no'>p3</span>, <span class='no'>predicted.value</span> ~ <span class='no'>gen</span>*<span class='no'>county</span>, <span class='kw'>scale</span><span class='kw'>=</span><span class='fl'>FALSE</span>)
-    <span class='kw'>if</span>(<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) <span class='fu'><a href='https://rdrr.io/r/grDevices/dev.html'>dev.new</a></span>()
-    <span class='co'># Very similar to the coefficient biplot</span>
-    <span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span>(<span class='no'>bi3</span>, <span class='kw'>stand</span><span class='kw'>=</span><span class='fl'>FALSE</span>, <span class='co'># what does 'stand' do?</span>
-         <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"SVD biplot of FA2 predictions"</span>)
-
-  }
-
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
-  <span class='kw'>if</span>( <span class='kw pkg'>utils</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/r/utils/packageDescription.html'>packageVersion</a></span>(<span class='st'>"asreml"</span>) <span class='kw'>&gt;</span>  <span class='st'>"4"</span>) {
-    <span class='co'># asreml4</span>
-
-    <span class='co'># Average reps</span>
-    <span class='no'>datm</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aggregate.html'>aggregate</a></span>(<span class='no'>yield</span> ~ <span class='no'>county</span> + <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>FUN</span><span class='kw'>=</span><span class='no'>mean</span>)
-    <span class='co'># asreml Using 'rcov' ALWAYS requires sorting the data</span>
-    <span class='no'>datm</span> <span class='kw'>&lt;-</span> <span class='no'>datm</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>datm</span>$<span class='no'>gen</span>),]
-
-    <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>datm</span>,
-                 <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='no'>county</span>,
-                 <span class='kw'>residual</span> <span class='kw'>=</span> ~ <span class='fu'>dsum</span>( ~ <span class='no'>units</span><span class='kw'>|</span><span class='no'>gen</span>))
-    <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lucid</span>)
-    <span class='fu'>vc</span>(<span class='no'>m1</span>)[<span class='fl'>1</span>:<span class='fl'>7</span>,]
-    <span class='co'>##      effect component std.error z.ratio bound </span>
-    <span class='co'>##    county   1324       836.1      1.6     P 0.2</span>
-    <span class='co'>## gen_G01!R     91.98     58.91     1.6     P 0.1</span>
-    <span class='co'>## gen_G02!R    210.6     133.6      1.6     P 0.1</span>
-    <span class='co'>## gen_G03!R     63.06     40.58     1.6     P 0.1</span>
-    <span class='co'>## gen_G04!R    112.1      71.59     1.6     P 0.1</span>
-    <span class='co'>## gen_G05!R     28.35     18.57     1.5     P 0.2</span>
-    <span class='co'>## gen_G06!R    237.4     150.8      1.6     P 0  </span>
-
-    <span class='co'># We get the same results from asreml &amp; lme</span>
-    <span class='co'># plot(m1$vparameters[-1],</span>
-    <span class='co'>#      m1l$sigma^2 * c(1, coef(m1l$modelStruct$varStruct, unc = FALSE))^2)</span>
-
-    <span class='co'># The following example shows how to construct a GxE biplot</span>
-    <span class='co'># from the FA2 model.</span>
-
-
-    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>besag.met</span>
-    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>xf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>col</span>), <span class='kw'>yf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>))
-    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>county</span>, <span class='no'>dat</span>$<span class='no'>xf</span>, <span class='no'>dat</span>$<span class='no'>yf</span>), ]
-
-    <span class='co'># First, AR1xAR1</span>
-    <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>county</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-                 <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='no'>gen</span>:<span class='no'>county</span>,
-                 <span class='kw'>residual</span> <span class='kw'>=</span> ~ <span class='fu'>dsum</span>( ~ <span class='fu'>ar1</span>(<span class='no'>xf</span>):<span class='fu'>ar1</span>(<span class='no'>yf</span>)<span class='kw'>|</span><span class='no'>county</span>))
-    <span class='co'># Add FA1</span>
-    <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span>(<span class='no'>m1</span>, <span class='kw'>random</span><span class='kw'>=</span>~<span class='no'>gen</span>:<span class='fu'>fa</span>(<span class='no'>county</span>,<span class='fl'>1</span>)) <span class='co'># rotate.FA=FALSE</span>
-    <span class='co'># FA2</span>
-    <span class='no'>m3</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span>(<span class='no'>m2</span>, <span class='kw'>random</span><span class='kw'>=</span>~<span class='no'>gen</span>:<span class='fu'>fa</span>(<span class='no'>county</span>,<span class='fl'>2</span>))
-    <span class='fu'>asreml.options</span>(<span class='kw'>extra</span><span class='kw'>=</span><span class='fl'>50</span>)
-    <span class='no'>m3</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span>(<span class='no'>m3</span>, <span class='kw'>maxit</span><span class='kw'>=</span><span class='fl'>50</span>)
-    <span class='fu'>asreml.options</span>(<span class='kw'>extra</span><span class='kw'>=</span><span class='fl'>0</span>)
-
-    <span class='co'># Use the loadings to make a biplot</span>
-    <span class='no'>vars</span> <span class='kw'>&lt;-</span> <span class='fu'>vc</span>(<span class='no'>m3</span>)
-    <span class='no'>psi</span> <span class='kw'>&lt;-</span> <span class='no'>vars</span>[<span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span>(<span class='st'>"!var$"</span>, <span class='no'>vars</span>$<span class='no'>effect</span>), <span class='st'>"component"</span>]
-    <span class='no'>la1</span> <span class='kw'>&lt;-</span> <span class='no'>vars</span>[<span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span>(<span class='st'>"!fa1$"</span>, <span class='no'>vars</span>$<span class='no'>effect</span>), <span class='st'>"component"</span>]
-    <span class='no'>la2</span> <span class='kw'>&lt;-</span> <span class='no'>vars</span>[<span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span>(<span class='st'>"!fa2$"</span>, <span class='no'>vars</span>$<span class='no'>effect</span>), <span class='st'>"component"</span>]
-    <span class='no'>mat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>as.matrix</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/data.frame.html'>data.frame</a></span>(<span class='no'>psi</span>, <span class='no'>la1</span>, <span class='no'>la2</span>))
-    <span class='co'># I tried using rotate.fa=FALSE, but it did not seem to</span>
-    <span class='co'># give orthogonal vectors.  Rotate by hand.</span>
-    <span class='no'>rot</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/svd.html'>svd</a></span>(<span class='no'>mat</span>[,-<span class='fl'>1</span>])$<span class='no'>v</span> <span class='co'># rotation matrix</span>
-    <span class='no'>lam</span> <span class='kw'>&lt;-</span> <span class='no'>mat</span>[,-<span class='fl'>1</span>]
-    <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span>(<span class='no'>lam</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"load1"</span>, <span class='st'>"load2"</span>)
-
-    <span class='no'>co3</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m3</span>)$<span class='no'>random</span> <span class='co'># Scores are the GxE coefficients</span>
-    <span class='no'>ix1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span>(<span class='st'>"_Comp1$"</span>, <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>co3</span>))
-    <span class='no'>ix2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span>(<span class='st'>"_Comp2$"</span>, <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>co3</span>))
-    <span class='no'>sco</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='no'>co3</span>[<span class='no'>ix1</span>], <span class='no'>co3</span>[<span class='no'>ix2</span>]), <span class='kw'>ncol</span><span class='kw'>=</span><span class='fl'>2</span>, <span class='kw'>byrow</span><span class='kw'>=</span><span class='fl'>FALSE</span>)
-    <span class='no'>sco</span> <span class='kw'>&lt;-</span> <span class='no'>sco</span>
-    <span class='fu'><a href='https://rdrr.io/r/base/dimnames.html'>dimnames</a></span>(<span class='no'>sco</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span>(<span class='no'>dat</span>$<span class='no'>gen</span>) , <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'load1'</span>,<span class='st'>'load2'</span>))
-    <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>lam</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span>(<span class='no'>dat</span>$<span class='no'>county</span>)
-    <span class='no'>sco</span>[,<span class='fl'>1</span>:<span class='fl'>2</span>] <span class='kw'>&lt;-</span> -<span class='fl'>1</span> * <span class='no'>sco</span>[,<span class='fl'>1</span>:<span class='fl'>2</span>]
-    <span class='no'>lam</span>[,<span class='fl'>1</span>:<span class='fl'>2</span>] <span class='kw'>&lt;-</span> -<span class='fl'>1</span> * <span class='no'>lam</span>[,<span class='fl'>1</span>:<span class='fl'>2</span>]
-    <span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span>(<span class='no'>sco</span>, <span class='no'>lam</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>.5</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"FA2 coefficient biplot (asreml4)"</span>)
-    <span class='co'># G variance matrix</span>
-    <span class='no'>gvar</span> <span class='kw'>&lt;-</span> <span class='no'>lam</span>
-
+  <span class='va'>co3</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>m3</span><span class='op'>)</span><span class='op'>$</span><span class='va'>random</span> <span class='co'># Scores are the GxE coefficients</span>
+  <span class='va'>ix1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span><span class='op'>(</span><span class='st'>"_Comp1$"</span>, <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>co3</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>ix2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/grep.html'>grepl</a></span><span class='op'>(</span><span class='st'>"_Comp2$"</span>, <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>co3</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>sco</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>co3</span><span class='op'>[</span><span class='va'>ix1</span><span class='op'>]</span>, <span class='va'>co3</span><span class='op'>[</span><span class='va'>ix2</span><span class='op'>]</span><span class='op'>)</span>, ncol<span class='op'>=</span><span class='fl'>2</span>, byrow<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span>
+  <span class='va'>sco</span> <span class='op'>&lt;-</span> <span class='va'>sco</span> 
+  <span class='fu'><a href='https://rdrr.io/r/base/dimnames.html'>dimnames</a></span><span class='op'>(</span><span class='va'>sco</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>gen</span><span class='op'>)</span> , <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'load1'</span>,<span class='st'>'load2'</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>lam</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/levels.html'>levels</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>county</span><span class='op'>)</span>
+  <span class='va'>sco</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='op'>-</span><span class='fl'>1</span> <span class='op'>*</span> <span class='va'>sco</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span><span class='op'>]</span>
+  <span class='va'>lam</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='op'>-</span><span class='fl'>1</span> <span class='op'>*</span> <span class='va'>lam</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>2</span><span class='op'>]</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span><span class='op'>(</span><span class='va'>sco</span>, <span class='va'>lam</span>, cex<span class='op'>=</span><span class='fl'>.5</span>, main<span class='op'>=</span><span class='st'>"FA2 coefficient biplot (asreml4)"</span><span class='op'>)</span>
+</div><div class='img'><img src='besag.met-2.png' alt='' width='700' height='433' /></div><div class='input'>  <span class='co'># G variance matrix</span>
+  <span class='va'>gvar</span> <span class='op'>&lt;-</span> <span class='va'>lam</span> 
+  
   <span class='co'># Now get predictions and make an ordinary biplot</span>
-  <span class='no'>p3</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m3</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>classify</span><span class='kw'>=</span><span class='st'>"county:gen"</span>)
-  <span class='no'>p3</span> <span class='kw'>&lt;-</span> <span class='no'>p3</span>$<span class='no'>pvals</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='st'>"gge"</span>)
-  <span class='no'>bi3</span> <span class='kw'>&lt;-</span> <span class='fu'>gge</span>(<span class='no'>p3</span>, <span class='no'>predicted.value</span> ~ <span class='no'>gen</span>*<span class='no'>county</span>, <span class='kw'>scale</span><span class='kw'>=</span><span class='fl'>FALSE</span>)
-  <span class='kw'>if</span>(<span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span>()) <span class='fu'><a href='https://rdrr.io/r/grDevices/dev.html'>dev.new</a></span>()
-  <span class='co'># Very similar to the coefficient biplot</span>
-  <span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span>(<span class='no'>bi3</span>, <span class='kw'>stand</span><span class='kw'>=</span><span class='fl'>FALSE</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"SVD biplot of FA2 predictions"</span>)
-
-}</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:27 2020
+  <span class='va'>p3</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>m3</span>, data<span class='op'>=</span><span class='va'>dat</span>, classify<span class='op'>=</span><span class='st'>"county:gen"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:07:50 2021
 #&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1     -1172.163           1.0    320 15:47:27    0.0 (60 restrained)
-#&gt;  2     -1011.805           1.0    320 15:47:27    0.0 (1 restrained)
-#&gt;  3      -970.591           1.0    320 15:47:27    0.0
-#&gt;  4      -940.691           1.0    320 15:47:27    0.0
-#&gt;  5      -927.170           1.0    320 15:47:27    0.0
-#&gt;  6      -923.727           1.0    320 15:47:27    0.0
-#&gt;  7      -923.239           1.0    320 15:47:27    0.0
-#&gt;  8      -922.976           1.0    320 15:47:27    0.0
-#&gt;  9      -922.903           1.0    320 15:47:27    0.0
-#&gt; 10      -922.899           1.0    320 15:47:27    0.0
-#&gt; Multi-section model using the sigma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:28 2020
-#&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1     -3931.453           1.0   1146 15:47:28    0.0
-#&gt;  2     -3846.882           1.0   1146 15:47:28    0.0
-#&gt;  3     -3765.127           1.0   1146 15:47:28    0.0
-#&gt;  4     -3724.260           1.0   1146 15:47:28    0.0
-#&gt;  5     -3710.877           1.0   1146 15:47:28    0.0
-#&gt;  6     -3709.388           1.0   1146 15:47:28    0.0
-#&gt;  7     -3709.308           1.0   1146 15:47:28    0.0
-#&gt;  8     -3709.304           1.0   1146 15:47:28    0.0
-#&gt; Multi-section model using the sigma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:28 2020
-#&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1     -3960.869           1.0   1146 15:47:28    0.1 (1 restrained)
-#&gt;  2     -3838.939           1.0   1146 15:47:28    0.0
-#&gt;  3     -3738.501           1.0   1146 15:47:28    0.0
-#&gt;  4     -3685.886           1.0   1146 15:47:28    0.0
-#&gt;  5     -3667.580           1.0   1146 15:47:28    0.0
-#&gt;  6     -3665.255           1.0   1146 15:47:28    0.0
-#&gt;  7     -3665.089           1.0   1146 15:47:28    0.0
-#&gt;  8     -3665.077           1.0   1146 15:47:28    0.1
-#&gt;  9     -3665.076           1.0   1146 15:47:28    0.0
-#&gt; Multi-section model using the sigma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:28 2020
-#&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1     -3960.862           1.0   1146 15:47:28    0.1 (1 restrained)
-#&gt;  2     -3926.560           1.0   1146 15:47:28    0.0 (1 restrained)
-#&gt;  3     -3833.085           1.0   1146 15:47:29    0.0 (1 restrained)
-#&gt;  4     -3735.147           1.0   1146 15:47:29    0.0 (1 restrained)
-#&gt;  5     -3683.543           1.0   1146 15:47:29    0.0 (1 restrained)
-#&gt;  6     -3665.368           1.0   1146 15:47:29    0.0
-#&gt;  7     -3662.711           1.0   1146 15:47:29    0.0
-#&gt;  8     -3662.471           1.0   1146 15:47:29    0.0
-#&gt;  9     -3662.452           1.0   1146 15:47:29    0.0
-#&gt; 10     -3662.449           1.0   1146 15:47:29    0.0
-#&gt; 11     -3662.449           1.0   1146 15:47:29    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:29 2020
-#&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1     -3662.448           1.0   1146 15:47:29    0.1
-#&gt;  2     -3662.448           1.0   1146 15:47:29    0.0
-#&gt;  3     -3662.448           1.0   1146 15:47:29    0.0
-#&gt;  4     -3662.448           1.0   1146 15:47:29    0.0
-#&gt;  5     -3662.448           1.0   1146 15:47:29    0.0
-#&gt;  6     -3662.448           1.0   1146 15:47:29    0.0
-#&gt;  7     -3662.448           1.0   1146 15:47:29    0.0
-#&gt;  8     -3662.448           1.0   1146 15:47:29    0.0
-#&gt;  9     -3662.448           1.0   1146 15:47:29    0.0
-#&gt; 10     -3662.448           1.0   1146 15:47:29    0.0
-#&gt; 11     -3662.448           1.0   1146 15:47:30    0.0
-#&gt; 12     -3662.448           1.0   1146 15:47:30    0.0
-#&gt; 13     -3662.448           1.0   1146 15:47:30    0.0
-#&gt; 14     -3662.448           1.0   1146 15:47:30    0.0
-#&gt; 15     -3662.448           1.0   1146 15:47:30    0.0
-#&gt; 16     -3662.448           1.0   1146 15:47:30    0.0
-#&gt; 17     -3662.448           1.0   1146 15:47:30    0.0
-#&gt; 18     -3662.448           1.0   1146 15:47:30    0.0
-#&gt; 19     -3662.448           1.0   1146 15:47:30    0.0
-#&gt; 20     -3662.448           1.0   1146 15:47:30    0.0
-#&gt; 21     -3662.448           1.0   1146 15:47:30    0.0
-#&gt; 22     -3662.448           1.0   1146 15:47:30    0.0
-#&gt; 23     -3662.447           1.0   1146 15:47:30    0.0
-#&gt; 24     -3662.447           1.0   1146 15:47:30    0.0
-#&gt; 25     -3662.447           1.0   1146 15:47:30    0.0
-#&gt; 26     -3662.447           1.0   1146 15:47:30    0.0
-#&gt; 27     -3662.447           1.0   1146 15:47:30    0.0
-#&gt; 28     -3662.447           1.0   1146 15:47:30    0.0
-#&gt; 29     -3662.447           1.0   1146 15:47:30    0.0
-#&gt; 30     -3662.447           1.0   1146 15:47:30    0.0
-#&gt; 31     -3662.447           1.0   1146 15:47:30    0.0
-#&gt; 32     -3662.447           1.0   1146 15:47:30    0.0
-#&gt; 33     -3662.447           1.0   1146 15:47:30    0.0
-#&gt; 34     -3662.447           1.0   1146 15:47:30    0.0
-#&gt; 35     -3662.447           1.0   1146 15:47:30    0.0
-#&gt; 36     -3662.447           1.0   1146 15:47:31    0.0
-#&gt; 37     -3662.447           1.0   1146 15:47:31    0.0
-#&gt; 38     -3662.447           1.0   1146 15:47:31    0.0
-#&gt; 39     -3662.447           1.0   1146 15:47:31    0.0
-#&gt; 40     -3662.447           1.0   1146 15:47:31    0.0
-#&gt; 41     -3662.447           1.0   1146 15:47:31    0.0
-#&gt; 42     -3662.447           1.0   1146 15:47:31    0.0
-#&gt; 43     -3662.447           1.0   1146 15:47:31    0.0
-#&gt; 44     -3662.447           1.0   1146 15:47:31    0.0
-#&gt; 45     -3662.447           1.0   1146 15:47:31    0.0
-#&gt; 46     -3662.447           1.0   1146 15:47:31    0.0
-#&gt; 47     -3662.447           1.0   1146 15:47:31    0.0
-#&gt; 48     -3662.446           1.0   1146 15:47:31    0.0
-#&gt; 49     -3662.446           1.0   1146 15:47:31    0.0
-#&gt; 50     -3662.446           1.0   1146 15:47:31    0.0</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='output co'>#&gt; Multi-section model using the sigma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:47:31 2020
-#&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1     -3662.446           1.0   1146 15:47:31    0.1
-#&gt;  2     -3662.446           1.0   1146 15:47:31    0.0
-#&gt;  3     -3662.446           1.0   1146 15:47:32    0.1</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt;  1     -3662.446           1.0   1146 17:07:50    0.1
+#&gt;  2     -3662.446           1.0   1146 17:07:50    0.0
+#&gt;  3     -3662.446           1.0   1146 17:07:50    0.1</div><div class='output co'>#&gt; <span class='warning'>Warning: Some components changed by more than 1% on the last iteration.</span></div><div class='input'>  <span class='va'>p3</span> <span class='op'>&lt;-</span> <span class='va'>p3</span><span class='op'>$</span><span class='va'>pvals</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='st'>"gge"</span><span class='op'>)</span>  
+</div><div class='output co'>#&gt; <span class='message'></span>
 #&gt; <span class='message'>Attaching package: 'gge'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:desplot':</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    RedGrayBlue</span></div><div class='img'><img src='besag.met-2.png' alt='' width='700' height='433' /></div><div class='img'><img src='besag.met-3.png' alt='' width='700' height='433' /></div><div class='input'># }
+#&gt; <span class='message'>    RedGrayBlue</span></div><div class='input'>  <span class='va'>bi3</span> <span class='op'>&lt;-</span> <span class='fu'>gge</span><span class='op'>(</span><span class='va'>p3</span>, <span class='va'>predicted.value</span> <span class='op'>~</span> <span class='va'>gen</span><span class='op'>*</span><span class='va'>county</span>, scale<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span>
+  <span class='kw'>if</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/interactive.html'>interactive</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/dev.html'>dev.new</a></span><span class='op'>(</span><span class='op'>)</span>
+  <span class='co'># Very similar to the coefficient biplot</span>
+  <span class='fu'><a href='https://rdrr.io/r/stats/biplot.html'>biplot</a></span><span class='op'>(</span><span class='va'>bi3</span>, stand<span class='op'>=</span><span class='cn'>FALSE</span>, main<span class='op'>=</span><span class='st'>"SVD biplot of FA2 predictions"</span><span class='op'>)</span>
+</div><div class='img'><img src='besag.met-3.png' alt='' width='700' height='433' /></div><div class='input'>  
+<span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -512,7 +436,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

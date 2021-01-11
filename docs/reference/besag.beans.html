@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -146,12 +146,12 @@
     <p>Competition experiment in beans with height measurements</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"besag.beans"</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"besag.beans"</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 152 observations on the following 6 variables.</p><dl'>
+    <p>A data frame with 152 observations on the following 6 variables.</p><dl>
     <dt><code>gen</code></dt><dd><p>genotype / variety</p></dd>
     <dt><code>height</code></dt><dd><p>plot height, cm</p></dd>
     <dt><code>yield</code></dt><dd><p>plot yield, g</p></dd>
@@ -181,7 +181,7 @@
     <p>Julian Besag and Rob Kempton (1986).
   Statistical Analysis of Field Experiments Using Neighbouring Plots.
   <em>Biometrics</em>, 42, 231-251.  Table 6.
-  http://doi.org/10.2307/2531047</p>
+  https://doi.org/10.2307/2531047</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Kempton, RA and Lockwood, G. (1984).
@@ -191,49 +191,54 @@
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>besag.beans</span>)
-<span class='no'>dat</span> <span class='kw'>=</span> <span class='no'>besag.beans</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>besag.beans</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>=</span> <span class='va'>besag.beans</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='fu'>desplot</span>(<span class='no'>dat</span>, <span class='no'>yield</span> ~ <span class='no'>col</span>*<span class='no'>row</span>,
-        <span class='kw'>aspect</span><span class='kw'>=</span><span class='fl'>12</span>/<span class='fl'>19</span>, <span class='kw'>out1</span><span class='kw'>=</span><span class='no'>row</span>, <span class='kw'>out2</span><span class='kw'>=</span><span class='no'>rep</span>, <span class='kw'>num</span><span class='kw'>=</span><span class='no'>gen</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>1</span>, <span class='co'># true aspect</span>
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"besag.beans"</span>)</div><div class='img'><img src='besag.beans-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+<span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>yield</span> <span class='op'>~</span> <span class='va'>col</span><span class='op'>*</span><span class='va'>row</span>,
+        aspect<span class='op'>=</span><span class='fl'>12</span><span class='op'>/</span><span class='fl'>19</span>, out1<span class='op'>=</span><span class='va'>row</span>, out2<span class='op'>=</span><span class='va'>rep</span>, num<span class='op'>=</span><span class='va'>gen</span>, cex<span class='op'>=</span><span class='fl'>1</span>, <span class='co'># true aspect</span>
+        main<span class='op'>=</span><span class='st'>"besag.beans"</span><span class='op'>)</span>
+</div><div class='img'><img src='besag.beans-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>reshape2</span>)
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>reshape2</span><span class='op'>)</span>
 <span class='co'># Add a covariate = excess height of neighbors</span>
-<span class='no'>mat</span> <span class='kw'>&lt;-</span> <span class='fu'>acast</span>(<span class='no'>dat</span>, <span class='no'>row</span>~<span class='no'>col</span>, <span class='kw'>value.var</span><span class='kw'>=</span><span class='st'>'height'</span>)
-<span class='no'>mat2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='fl'>NA</span>, <span class='kw'>nrow</span><span class='kw'>=</span><span class='fl'>4</span>, <span class='kw'>ncol</span><span class='kw'>=</span><span class='fl'>38</span>)
-<span class='no'>mat2</span>[,<span class='fl'>2</span>:<span class='fl'>37</span>] <span class='kw'>&lt;-</span> (<span class='no'>mat</span>[,<span class='fl'>1</span>:<span class='fl'>36</span>] + <span class='no'>mat</span>[,<span class='fl'>3</span>:<span class='fl'>38</span>] - <span class='fl'>2</span>*<span class='no'>mat</span>[,<span class='fl'>2</span>:<span class='fl'>37</span>])
-<span class='no'>dat2</span> <span class='kw'>&lt;-</span> <span class='fu'>melt</span>(<span class='no'>mat2</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span>(<span class='no'>dat2</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'row'</span>,<span class='st'>'col'</span>,<span class='st'>'cov'</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/merge.html'>merge</a></span>(<span class='no'>dat</span>, <span class='no'>dat2</span>)
-
+<span class='va'>mat</span> <span class='op'>&lt;-</span> <span class='fu'>acast</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>row</span><span class='op'>~</span><span class='va'>col</span>, value.var<span class='op'>=</span><span class='st'>'height'</span><span class='op'>)</span>
+<span class='va'>mat2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='cn'>NA</span>, nrow<span class='op'>=</span><span class='fl'>4</span>, ncol<span class='op'>=</span><span class='fl'>38</span><span class='op'>)</span>
+<span class='va'>mat2</span><span class='op'>[</span>,<span class='fl'>2</span><span class='op'>:</span><span class='fl'>37</span><span class='op'>]</span> <span class='op'>&lt;-</span> <span class='op'>(</span><span class='va'>mat</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>:</span><span class='fl'>36</span><span class='op'>]</span> <span class='op'>+</span> <span class='va'>mat</span><span class='op'>[</span>,<span class='fl'>3</span><span class='op'>:</span><span class='fl'>38</span><span class='op'>]</span> <span class='op'>-</span> <span class='fl'>2</span><span class='op'>*</span><span class='va'>mat</span><span class='op'>[</span>,<span class='fl'>2</span><span class='op'>:</span><span class='fl'>37</span><span class='op'>]</span><span class='op'>)</span>
+<span class='va'>dat2</span> <span class='op'>&lt;-</span> <span class='fu'>melt</span><span class='op'>(</span><span class='va'>mat2</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>dat2</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'row'</span>,<span class='st'>'col'</span>,<span class='st'>'cov'</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/merge.html'>merge</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>dat2</span><span class='op'>)</span>
+  
 <span class='co'># Drop border plots</span>
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, <span class='no'>rep</span> <span class='kw'>!=</span> <span class='st'>'R0'</span>)
-
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>rep</span> <span class='op'>!=</span> <span class='st'>'R0'</span><span class='op'>)</span>
+  
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
 <span class='co'># Plot yield vs neighbors height advantage</span>
-<span class='fu'>xyplot</span>(<span class='no'>yield</span>~<span class='no'>cov</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>group</span><span class='kw'>=</span><span class='no'>gen</span>,
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"besag.beans"</span>,
-       <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Mean excess heights of neighbor plots"</span>,
-       <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>3</span>))</div><div class='img'><img src='besag.beans-2.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'>xyplot</span><span class='op'>(</span><span class='va'>yield</span><span class='op'>~</span><span class='va'>cov</span>, data<span class='op'>=</span><span class='va'>dat</span>, group<span class='op'>=</span><span class='va'>gen</span>,
+       main<span class='op'>=</span><span class='st'>"besag.beans"</span>,
+       xlab<span class='op'>=</span><span class='st'>"Mean excess heights of neighbor plots"</span>,
+       auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>3</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='besag.beans-2.png' alt='' width='700' height='433' /></div><div class='input'>  
 <span class='co'># Trial mean.</span>
-<span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='no'>dat</span>$<span class='no'>yield</span>) <span class='co'># 391 matches Kempton table 3</span></div><div class='output co'>#&gt; [1] 390.9722</div><div class='input'>
+<span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>yield</span><span class='op'>)</span> <span class='co'># 391 matches Kempton table 3</span>
+</div><div class='output co'>#&gt; [1] 390.9722</div><div class='input'>  
 <span class='co'># Mean excess height of neighbors for each genotype</span>
 <span class='co'># tapply(dat$cov, dat$gen, mean)/2 # Matches Kempton table 4</span>
 
 <span class='co'># Variety means, matches Kempton table 4 mean yield</span>
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>yield</span> ~ -<span class='fl'>1</span> + <span class='no'>gen</span>, <span class='no'>dat</span>)
-<span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt;   genDwarf   genMaris genMetissa  genMinica  genStella genTopless 
+<span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='op'>-</span><span class='fl'>1</span> <span class='op'>+</span> <span class='va'>gen</span>, <span class='va'>dat</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;   genDwarf   genMaris genMetissa  genMinica  genStella genTopless 
 #&gt;   318.7500   434.1667   387.7083   456.2500   469.5833   279.3750 </div><div class='input'>
 <span class='co'># Full model used by Kempton, eqn 5.  Not perfectly clear.</span>
 <span class='co'># Appears to include rep term, perhaps within block</span>
-<span class='no'>dat</span>$<span class='no'>blk</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>dat</span>$<span class='no'>row</span>)
-<span class='no'>dat</span>$<span class='no'>blkrep</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='no'>dat</span>$<span class='no'>blk</span>, <span class='no'>dat</span>$<span class='no'>rep</span>))
-<span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>yield</span> ~ -<span class='fl'>1</span> + <span class='no'>gen</span> + <span class='no'>blkrep</span> + <span class='no'>cov</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-<span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m2</span>) <span class='co'># slope 'cov' = -.72, while Kempton says -.79</span></div><div class='output co'>#&gt;    genDwarf    genMaris  genMetissa   genMinica   genStella  genTopless 
+<span class='va'>dat</span><span class='op'>$</span><span class='va'>blk</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>row</span><span class='op'>)</span>
+<span class='va'>dat</span><span class='op'>$</span><span class='va'>blkrep</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>blk</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>rep</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='op'>-</span><span class='fl'>1</span> <span class='op'>+</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>blkrep</span> <span class='op'>+</span> <span class='va'>cov</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>m2</span><span class='op'>)</span> <span class='co'># slope 'cov' = -.72, while Kempton says -.79</span>
+</div><div class='output co'>#&gt;    genDwarf    genMaris  genMetissa   genMinica   genStella  genTopless 
 #&gt; 271.9249148 304.9869194 314.3474168 362.8740025 331.7998182 186.9650396 
 #&gt;  blkrep1 R2  blkrep1 R3  blkrep1 R4  blkrep1 R5  blkrep1 R6  blkrep2 R1 
 #&gt;   9.6257870  90.1207546 130.3503148 153.5628935 133.5867917  74.2635231 
@@ -243,7 +248,7 @@
 #&gt;  69.0339629 119.5169815  94.8792454 165.7974860  89.6616343  74.3962268 
 #&gt;  blkrep4 R2  blkrep4 R3  blkrep4 R4  blkrep4 R5  blkrep4 R6         cov 
 #&gt;  53.5509444  71.5578612  96.0150970 152.1855326  93.3094351  -0.7245278 </div><div class='input'>
-# }
+<span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -260,7 +265,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

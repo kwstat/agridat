@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Multi-environment trial of wheat cultivars introduced 1860-1982. — perry.springwheat" />
-
 <meta property="og:description" content="Yields of wheat cultivars introduced 1860-1982.  Grown in 20 environments." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,25 +143,24 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Yields of wheat cultivars introduced 1860-1982.  Grown in 20 environments.</p>
-    
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"perry.springwheat"</span>)</pre>
-        
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"perry.springwheat"</span><span class='op'>)</span></pre>
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 560 observations on the following 6 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 560 observations on the following 6 variables.</p><dl>
     <dt><code>yield</code></dt><dd><p>yield, kg/ha</p></dd>
     <dt><code>gen</code></dt><dd><p>genotype/cultivar factor, 28 levels</p></dd>
     <dt><code>env</code></dt><dd><p>environment factor, 20 levels</p></dd>
     <dt><code>site</code></dt><dd><p>site factor</p></dd>
     <dt><code>year</code></dt><dd><p>year, 1979-1982</p></dd>
     <dt><code>yor</code></dt><dd><p>year of release, 1860-1982</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     
@@ -170,47 +173,49 @@
   yields.</p>
 <p>Note: Although not indicated by the original paper, it may be that the
   Merredin site in 1979 also had early/late sowing dates.</p>
-    
+
+<p>Used with permission of Mario D'Antuono and CSIRO Publishing.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>MW Perry and MF D'Antuono. (1989).
   Yield improvement and associated characteristics of some Australian
   spring wheat cultivars introduced between 1860 and 1982.
-  <em>Australian Journal of Agricultural Research</em>, 40(3), 457--472.
-  http://www.publish.csiro.au/nid/43/issue/1237.htm</p>
-<p>Used with permission of Mario D'Antuono and CSIRO Publishing.</p>
-    
+  Australian Journal of Agricultural Research, 40(3), 457--472.
+  https://www.publish.csiro.au/nid/43/issue/1237.htm</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+  
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>perry.springwheat</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>perry.springwheat</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>perry.springwheat</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>perry.springwheat</span>
-
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'>xyplot</span>(<span class='no'>yield</span>~<span class='no'>yor</span><span class='kw'>|</span><span class='no'>env</span>, <span class='no'>dat</span>, <span class='kw'>type</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'p'</span>,<span class='st'>'r'</span>), <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"year of release"</span>,
-       <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"perry.springwheat"</span>)</div><div class='img'><img src='perry.springwheat-1.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='co'># Show a table of sites*year</span>
-<span class='co'># libs(latticeExtra)</span>
-<span class='co'># useOuterStrips(xyplot(yield~yor|site*factor(year), dat,</span>
-<span class='co'>#                       type=c('p','r')))</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>~</span><span class='va'>yor</span><span class='op'>|</span><span class='va'>env</span>, <span class='va'>dat</span>, type<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'p'</span>,<span class='st'>'r'</span><span class='op'>)</span>, xlab<span class='op'>=</span><span class='st'>"year of release"</span>,
+         main<span class='op'>=</span><span class='st'>"perry.springwheat"</span><span class='op'>)</span>
+</div><div class='img'><img src='perry.springwheat-1.png' alt='' width='700' height='433' /></div><div class='input'>  
+  <span class='co'># Show a table of sites*year</span>
+  <span class='co'># libs(latticeExtra)</span>
+  <span class='co'># useOuterStrips(xyplot(yield~yor|site*factor(year), dat,</span>
+  <span class='co'>#                       type=c('p','r')))</span>
 
 
-<span class='co'># Perry reports a rate of gain of 5.8 kg/ha/year.  No model is given.</span>
-<span class='co'># We fit a model with separate intercept/slope for each env</span>
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>yield</span> ~ <span class='no'>env</span> + <span class='no'>yor</span> + <span class='no'>env</span>:<span class='no'>yor</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
-<span class='co'># Average slope across environments</span>
-<span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m1</span>)[<span class='fl'>21</span>], <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m1</span>)[<span class='fl'>21</span>]+<span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>m1</span>)[<span class='fl'>22</span>:<span class='fl'>40</span>]))</div><div class='output co'>#&gt; [1] 5.496781</div><div class='input'>## [1] 5.496781
+  <span class='co'># Perry reports a rate of gain of 5.8 kg/ha/year.  No model is given.</span>
+  <span class='co'># We fit a model with separate intercept/slope for each env</span>
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>env</span> <span class='op'>+</span> <span class='va'>yor</span> <span class='op'>+</span> <span class='va'>env</span><span class='op'>:</span><span class='va'>yor</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+  <span class='co'># Average slope across environments</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/mean.html'>mean</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>21</span><span class='op'>]</span>, <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>21</span><span class='op'>]</span><span class='op'>+</span><span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span><span class='op'>[</span><span class='fl'>22</span><span class='op'>:</span><span class='fl'>40</span><span class='op'>]</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 5.496781</div><div class='input'>  <span class='co'>## [1] 5.496781</span>
 
-# ----------------------------------------------------------------------------
 
-</div><div class='input'>  <span class='co'># Now a mixed-effects model.  Fixed overall int/slope.  Random env int/slope.</span>
+  <span class='co'># ----------</span>
+
+  <span class='co'># Now a mixed-effects model.  Fixed overall int/slope.  Random env int/slope.</span>
 
   <span class='co'># First, re-scale response so we don't have huge variances</span>
-  <span class='no'>dat</span>$<span class='no'>y</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>$<span class='no'>yield</span> / <span class='fl'>100</span>
+  <span class='va'>dat</span><span class='op'>$</span><span class='va'>y</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>$</span><span class='va'>yield</span> <span class='op'>/</span> <span class='fl'>100</span>
 
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lme4</span>)
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lme4</span><span class='op'>)</span>
   <span class='co'># Use || for uncorrelated int/slope.  Bad model.  See below.</span>
   <span class='co'># m2 &lt;- lmer(y ~ 1 + yor + (1+yor||env), data=dat)</span>
   <span class='co'>## Warning messages:</span>
@@ -224,34 +229,30 @@
   <span class='co'># Looks like lme4 is having trouble with variance of intercepts</span>
   <span class='co'># There is nothing special about 1800 years, so change the</span>
   <span class='co'># intercept -- 'correct' yor by subtracting 1800 and try again.</span>
-  <span class='no'>dat</span>$<span class='no'>yorc</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>$<span class='no'>yor</span> - <span class='fl'>1800</span>
-  <span class='no'>m3</span> <span class='kw'>&lt;-</span> <span class='fu'>lmer</span>(<span class='no'>y</span> ~ <span class='fl'>1</span> + <span class='no'>yorc</span> + (<span class='fl'>1</span>+<span class='no'>yorc</span><span class='kw'>||</span><span class='no'>env</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 1.01901 (tol = 0.002, component 1)</span></div><div class='input'>
+  <span class='va'>dat</span><span class='op'>$</span><span class='va'>yorc</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>$</span><span class='va'>yor</span> <span class='op'>-</span> <span class='fl'>1800</span>
+  <span class='va'>m3</span> <span class='op'>&lt;-</span> <span class='fu'>lmer</span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>+</span> <span class='va'>yorc</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>+</span><span class='va'>yorc</span><span class='op'>||</span><span class='va'>env</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 1.01901 (tol = 0.002, component 1)</span></div><div class='input'>  
   <span class='co'># Now lme4 succeeds.  Rate of gain is 100*0.0549 = 5.49</span>
-  <span class='fu'>fixef</span>(<span class='no'>m3</span>)</div><div class='output co'>#&gt; (Intercept)        yorc 
+  <span class='fu'>fixef</span><span class='op'>(</span><span class='va'>m3</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; (Intercept)        yorc 
 #&gt;   5.8757200   0.0549384 </div><div class='input'>  <span class='co'>## (Intercept)        yorc</span>
   <span class='co'>##  5.87492444  0.05494464</span>
 
-  <span class='co'># asreml3</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
-  <span class='no'>m3a</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>y</span> ~ <span class='fl'>1</span> + <span class='no'>yorc</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='no'>env</span> + <span class='no'>env</span>:<span class='no'>yorc</span>)</div><div class='output co'>#&gt; ASReml: Fri Aug 16 15:01:41 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;    -762.2306      3.9764   544  15:01:41     0.0 (1 restrained)
-#&gt;    -727.9162      3.8247   544  15:01:41     0.0 (1 restrained)
-#&gt;    -697.9624      3.7160   544  15:01:41     0.0 (1 restrained)
-#&gt;    -705.9061      4.0673   544  15:01:41     0.0
-#&gt;    -693.1696      3.7595   544  15:01:41     0.0
-#&gt;    -689.2969      3.6182   544  15:01:41     0.0
-#&gt;    -688.6047      3.5648   544  15:01:41     0.0
-#&gt;    -688.5602      3.5521   544  15:01:41     0.0
-#&gt;    -688.5599      3.5510   544  15:01:41     0.0
-#&gt;    -688.5599      3.5510   544  15:01:41     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 15:01:41 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='input'>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lucid</span>)
-  <span class='fu'>vc</span>(<span class='no'>m3</span>)</div><div class='output co'>#&gt;       grp        var1 var2      vcov   sdcor
+  <span class='co'># asreml3 &amp; asreml4</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span>,<span class='va'>lucid</span><span class='op'>)</span>
+  <span class='va'>m3a</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>+</span> <span class='va'>yorc</span>, data<span class='op'>=</span><span class='va'>dat</span>, random <span class='op'>=</span> <span class='op'>~</span> <span class='va'>env</span> <span class='op'>+</span> <span class='va'>env</span><span class='op'>:</span><span class='va'>yorc</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:49:48 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -762.231       3.97642    544 17:49:48    0.0 (1 restrained)
+#&gt;  2      -727.921       3.82476    544 17:49:48    0.0 (1 restrained)
+#&gt;  3      -697.967       3.71607    544 17:49:48    0.0
+#&gt;  4      -694.459       3.81272    544 17:49:48    0.0
+#&gt;  5      -689.505       3.63995    544 17:49:48    0.0
+#&gt;  6      -688.610       3.56952    544 17:49:48    0.0
+#&gt;  7      -688.560       3.55226    544 17:49:48    0.0
+#&gt;  8      -688.560       3.55102    544 17:49:48    0.0</div><div class='input'>  <span class='fu'>vc</span><span class='op'>(</span><span class='va'>m3</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;       grp        var1 var2      vcov   sdcor
 #&gt;       env (Intercept) &lt;NA&gt; 15.09     3.885  
 #&gt;     env.1        yorc &lt;NA&gt;  0.000627 0.02504
 #&gt;  Residual        &lt;NA&gt; &lt;NA&gt;  3.525    1.877  </div><div class='input'>  <span class='co'>##      grp        var1 var2     vcov   sdcor</span>
@@ -259,32 +260,22 @@
   <span class='co'>##    env.1        yorc &lt;NA&gt;  0.00063 0.02511</span>
   <span class='co'>## Residual        &lt;NA&gt; &lt;NA&gt;  3.551   1.884</span>
 
-  <span class='fu'>vc</span>(<span class='no'>m3a</span>)</div><div class='output co'>#&gt;            effect component std.error z.ratio constr
-#&gt;       env!env.var  11.61     4.385        2.6      P
-#&gt;  env:yorc!env.var   0.00063  0.000236     2.7      P
-#&gt;        R!variance   3.551    0.2231      16        P</div><div class='input'>  ##           effect component std.error z.ratio      con
-  ##      env!env.var  11.61     4.385        2.6 Positive
-  ## env:yorc!env.var   0.00063  0.000236     2.7 Positive
-  ##       R!variance   3.551    0.2231      16   Positive
+  <span class='fu'>vc</span><span class='op'>(</span><span class='va'>m3a</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;    effect component std.error z.ratio bound %ch
+#&gt;       env  11.61     4.385        2.6     P   0
+#&gt;  env:yorc   0.00063  0.000236     2.7     P   0
+#&gt;   units!R   3.551    0.2231      16       P   0</div><div class='input'>  <span class='co'>##           effect component std.error z.ratio      con</span>
+  <span class='co'>##      env!env.var  11.61     4.385        2.6 Positive</span>
+  <span class='co'>## env:yorc!env.var   0.00063  0.000236     2.7 Positive</span>
+  <span class='co'>##       R!variance   3.551    0.2231      16   Positive</span>
 
-</div><div class='input'>
-# ----------------------------------------------------------------------------
-
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -295,7 +286,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

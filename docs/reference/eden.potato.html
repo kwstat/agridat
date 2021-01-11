@@ -82,7 +82,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -154,7 +154,7 @@
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 225 observations on the following 9 variables.</p><dl'>
+    <p>A data frame with 225 observations on the following 9 variables.</p><dl>
     <dt><code>year</code></dt><dd><p>year/type factor</p></dd>
     <dt><code>yield</code></dt><dd><p>yield, pounds per plot</p></dd>
     <dt><code>block</code></dt><dd><p>block</p></dd>
@@ -191,21 +191,23 @@
   Evidence for conformal invariance of crop yields,
   <em>Proceedings of the Royal Society A: Mathematical, Physical and
     Engineering Science</em>, 462, 2119--2143.
-  http://doi.org/10.1098/rspa.2006.1667</p>
+  https://doi.org/10.1098/rspa.2006.1667</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>eden.potato</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>eden.potato</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>eden.potato</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>eden.potato</span>
 
 <span class='co'># 1925 qualitative</span>
-<span class='no'>d5a</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, <span class='no'>year</span><span class='kw'>==</span><span class='st'>'1925a'</span>)
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='fu'>desplot</span>(<span class='no'>d5a</span>, <span class='no'>trt</span>~<span class='no'>col</span>*<span class='no'>row</span>,
-        <span class='kw'>text</span><span class='kw'>=</span><span class='no'>yield</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>1</span>, <span class='kw'>shorten</span><span class='kw'>=</span><span class='st'>'no'</span>, <span class='co'># aspect unknown</span>
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"eden.potato: 1925 qualitative"</span>)</div><div class='img'><img src='eden.potato-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m5a</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>(<span class='no'>yield</span>~<span class='no'>trt</span>+<span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>)+<span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>col</span>), <span class='no'>d5a</span>)) <span class='co'># table 2</span></div><div class='output co'>#&gt; Analysis of Variance Table
+<span class='va'>d5a</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>year</span><span class='op'>==</span><span class='st'>'1925a'</span><span class='op'>)</span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+<span class='fu'>desplot</span><span class='op'>(</span><span class='va'>d5a</span>, <span class='va'>trt</span><span class='op'>~</span><span class='va'>col</span><span class='op'>*</span><span class='va'>row</span>,
+        text<span class='op'>=</span><span class='va'>yield</span>, cex<span class='op'>=</span><span class='fl'>1</span>, shorten<span class='op'>=</span><span class='st'>'no'</span>, <span class='co'># aspect unknown</span>
+        main<span class='op'>=</span><span class='st'>"eden.potato: 1925 qualitative"</span><span class='op'>)</span>
+</div><div class='img'><img src='eden.potato-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>m5a</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>~</span><span class='va'>trt</span><span class='op'>+</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>row</span><span class='op'>)</span><span class='op'>+</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>col</span><span class='op'>)</span>, <span class='va'>d5a</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># table 2</span>
+</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
 #&gt; Response: yield
 #&gt;             Df Sum Sq Mean Sq  F value    Pr(&gt;F)    
@@ -216,11 +218,13 @@
 #&gt; ---
 #&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'>
 <span class='co'># 1926 qualitative</span>
-<span class='no'>d6a</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, <span class='no'>year</span><span class='kw'>==</span><span class='st'>'1926a'</span>)
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='fu'>desplot</span>(<span class='no'>d6a</span>, <span class='no'>trt</span>~<span class='no'>col</span>*<span class='no'>row</span>,
-        <span class='kw'>text</span><span class='kw'>=</span><span class='no'>yield</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>1</span>, <span class='kw'>shorten</span><span class='kw'>=</span><span class='st'>'no'</span>, <span class='co'># aspect unknown</span>
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"eden.potato: 1926 qualitative"</span>)</div><div class='img'><img src='eden.potato-2.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m6a</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>(<span class='no'>yield</span>~<span class='no'>trt</span>+<span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>)+<span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>col</span>), <span class='no'>d6a</span>)) <span class='co'># table 4</span></div><div class='output co'>#&gt; Analysis of Variance Table
+<span class='va'>d6a</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>year</span><span class='op'>==</span><span class='st'>'1926a'</span><span class='op'>)</span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+<span class='fu'>desplot</span><span class='op'>(</span><span class='va'>d6a</span>, <span class='va'>trt</span><span class='op'>~</span><span class='va'>col</span><span class='op'>*</span><span class='va'>row</span>,
+        text<span class='op'>=</span><span class='va'>yield</span>, cex<span class='op'>=</span><span class='fl'>1</span>, shorten<span class='op'>=</span><span class='st'>'no'</span>, <span class='co'># aspect unknown</span>
+        main<span class='op'>=</span><span class='st'>"eden.potato: 1926 qualitative"</span><span class='op'>)</span>
+</div><div class='img'><img src='eden.potato-2.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>m6a</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>~</span><span class='va'>trt</span><span class='op'>+</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>row</span><span class='op'>)</span><span class='op'>+</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>col</span><span class='op'>)</span>, <span class='va'>d6a</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># table 4</span>
+</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
 #&gt; Response: yield
 #&gt;             Df  Sum Sq Mean Sq F value   Pr(&gt;F)   
@@ -231,16 +235,19 @@
 #&gt; ---
 #&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'>
 <span class='co'># 1925 quantitative</span>
-<span class='no'>d5</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, <span class='no'>year</span><span class='kw'>==</span><span class='st'>'1925b'</span>)
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='fu'>desplot</span>(<span class='no'>d5</span>, <span class='no'>yield</span> ~ <span class='no'>col</span>*<span class='no'>row</span>,
-        <span class='kw'>out1</span><span class='kw'>=</span><span class='no'>block</span>, <span class='kw'>text</span><span class='kw'>=</span><span class='no'>trt</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>1</span>, <span class='co'># aspect unknown</span>
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"eden.potato: 1925 quantitative"</span>)</div><div class='img'><img src='eden.potato-3.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='va'>d5</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>year</span><span class='op'>==</span><span class='st'>'1925b'</span><span class='op'>)</span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+<span class='fu'>desplot</span><span class='op'>(</span><span class='va'>d5</span>, <span class='va'>yield</span> <span class='op'>~</span> <span class='va'>col</span><span class='op'>*</span><span class='va'>row</span>,
+        out1<span class='op'>=</span><span class='va'>block</span>, text<span class='op'>=</span><span class='va'>trt</span>, cex<span class='op'>=</span><span class='fl'>1</span>, <span class='co'># aspect unknown</span>
+        main<span class='op'>=</span><span class='st'>"eden.potato: 1925 quantitative"</span><span class='op'>)</span>
+</div><div class='img'><img src='eden.potato-3.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Trt 't' not defined, seems to be the same as 'a'</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'><a href='https://rdrr.io/r/graphics/graphics-defunct.html'>dotplot</a></span>(<span class='no'>trt</span>~<span class='no'>yield</span><span class='kw'>|</span><span class='no'>block</span>, <span class='no'>d5</span>,
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>dotplot</a></span><span class='op'>(</span><span class='va'>trt</span><span class='op'>~</span><span class='va'>yield</span><span class='op'>|</span><span class='va'>block</span>, <span class='va'>d5</span>,
         <span class='co'># aspect unknown</span>
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"eden.potato: 1925 quantitative"</span>)</div><div class='img'><img src='eden.potato-4.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m5</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>(<span class='no'>yield</span>~<span class='no'>trt</span>+<span class='no'>block</span>, <span class='no'>d5</span>)) <span class='co'># table 6</span></div><div class='output co'>#&gt; Analysis of Variance Table
+        main<span class='op'>=</span><span class='st'>"eden.potato: 1925 quantitative"</span><span class='op'>)</span>
+</div><div class='img'><img src='eden.potato-4.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>m5</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>~</span><span class='va'>trt</span><span class='op'>+</span><span class='va'>block</span>, <span class='va'>d5</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># table 6</span>
+</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
 #&gt; Response: yield
 #&gt;           Df Sum Sq Mean Sq F value    Pr(&gt;F)    
@@ -250,11 +257,13 @@
 #&gt; ---
 #&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'>
 <span class='co'># 1926 quantitative</span>
-<span class='no'>d6</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, <span class='no'>year</span><span class='kw'>==</span><span class='st'>'1926b'</span>)
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='fu'>desplot</span>(<span class='no'>d6</span>, <span class='no'>yield</span> ~ <span class='no'>col</span>*<span class='no'>row</span>,
-        <span class='kw'>out1</span><span class='kw'>=</span><span class='no'>block</span>, <span class='kw'>text</span><span class='kw'>=</span><span class='no'>trt</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>1</span>, <span class='co'># aspect unknown</span>
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"eden.potato: 1926 quantitative"</span>)</div><div class='img'><img src='eden.potato-5.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m6</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>(<span class='no'>yield</span>~<span class='no'>trt</span>+<span class='no'>block</span>, <span class='no'>d6</span>)) <span class='co'># table 7</span></div><div class='output co'>#&gt; Analysis of Variance Table
+<span class='va'>d6</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>year</span><span class='op'>==</span><span class='st'>'1926b'</span><span class='op'>)</span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+<span class='fu'>desplot</span><span class='op'>(</span><span class='va'>d6</span>, <span class='va'>yield</span> <span class='op'>~</span> <span class='va'>col</span><span class='op'>*</span><span class='va'>row</span>,
+        out1<span class='op'>=</span><span class='va'>block</span>, text<span class='op'>=</span><span class='va'>trt</span>, cex<span class='op'>=</span><span class='fl'>1</span>, <span class='co'># aspect unknown</span>
+        main<span class='op'>=</span><span class='st'>"eden.potato: 1926 quantitative"</span><span class='op'>)</span>
+</div><div class='img'><img src='eden.potato-5.png' alt='' width='700' height='433' /></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>m6</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>~</span><span class='va'>trt</span><span class='op'>+</span><span class='va'>block</span>, <span class='va'>d6</span><span class='op'>)</span><span class='op'>)</span> <span class='co'># table 7</span>
+</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
 #&gt; Response: yield
 #&gt;           Df Sum Sq Mean Sq F value    Pr(&gt;F)    
@@ -264,13 +273,15 @@
 #&gt; ---
 #&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'>
 <span class='co'># 1927 qualitative + quantitative</span>
-<span class='no'>d7</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/droplevels.html'>droplevels</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, <span class='no'>year</span><span class='kw'>==</span><span class='fl'>1927</span>))
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='fu'>desplot</span>(<span class='no'>d7</span>, <span class='no'>yield</span> ~ <span class='no'>col</span>*<span class='no'>row</span>,
-        <span class='kw'>out1</span><span class='kw'>=</span><span class='no'>block</span>, <span class='kw'>text</span><span class='kw'>=</span><span class='no'>trt</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>1</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='no'>ptype</span>, <span class='co'># aspect unknown</span>
-      <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"eden.potato: 1927 qualitative + quantitative"</span>)</div><div class='img'><img src='eden.potato-6.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='va'>d7</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/droplevels.html'>droplevels</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>year</span><span class='op'>==</span><span class='fl'>1927</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+<span class='fu'>desplot</span><span class='op'>(</span><span class='va'>d7</span>, <span class='va'>yield</span> <span class='op'>~</span> <span class='va'>col</span><span class='op'>*</span><span class='va'>row</span>,
+        out1<span class='op'>=</span><span class='va'>block</span>, text<span class='op'>=</span><span class='va'>trt</span>, cex<span class='op'>=</span><span class='fl'>1</span>, col<span class='op'>=</span><span class='va'>ptype</span>, <span class='co'># aspect unknown</span>
+      main<span class='op'>=</span><span class='st'>"eden.potato: 1927 qualitative + quantitative"</span><span class='op'>)</span>
+</div><div class='img'><img src='eden.potato-6.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># Table 8.  Anova, mean yield tons / acre</span>
-<span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span>(<span class='no'>m7</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span>(<span class='no'>yield</span>~<span class='no'>trt</span>+<span class='no'>block</span>+<span class='no'>ptype</span> + <span class='no'>ptype</span>:<span class='no'>potash</span>, <span class='no'>d7</span>))</div><div class='output co'>#&gt; Analysis of Variance Table
+<span class='fu'><a href='https://rdrr.io/r/stats/anova.html'>anova</a></span><span class='op'>(</span><span class='va'>m7</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/aov.html'>aov</a></span><span class='op'>(</span><span class='va'>yield</span><span class='op'>~</span><span class='va'>trt</span><span class='op'>+</span><span class='va'>block</span><span class='op'>+</span><span class='va'>ptype</span> <span class='op'>+</span> <span class='va'>ptype</span><span class='op'>:</span><span class='va'>potash</span>, <span class='va'>d7</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Analysis of Variance Table
 #&gt; 
 #&gt; Response: yield
 #&gt;              Df Sum Sq Mean Sq F value    Pr(&gt;F)    
@@ -280,12 +291,14 @@
 #&gt; ptype:potash  2   1007   503.5  0.9251    0.4021    
 #&gt; Residuals    60  32655   544.2                      
 #&gt; ---
-#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'><span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>reshape2</span>)
-<span class='no'>me7</span> <span class='kw'>&lt;-</span> <span class='fu'>melt</span>(<span class='no'>d7</span>, <span class='kw'>measure.vars</span><span class='kw'>=</span><span class='st'>'yield'</span>)
-<span class='fu'>acast</span>(<span class='no'>me7</span>, <span class='no'>potash</span>~<span class='no'>nitro</span>, <span class='kw'>fun</span><span class='kw'>=</span><span class='no'>mean</span>) * <span class='fl'>40</span>/<span class='fl'>2240</span> <span class='co'># English ton = 2240 pounds</span></div><div class='output co'>#&gt;          0        2        4
+#&gt; Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</div><div class='input'><span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>reshape2</span><span class='op'>)</span>
+<span class='va'>me7</span> <span class='op'>&lt;-</span> <span class='fu'>melt</span><span class='op'>(</span><span class='va'>d7</span>, measure.vars<span class='op'>=</span><span class='st'>'yield'</span><span class='op'>)</span>
+<span class='fu'>acast</span><span class='op'>(</span><span class='va'>me7</span>, <span class='va'>potash</span><span class='op'>~</span><span class='va'>nitro</span>, fun<span class='op'>=</span><span class='va'>mean</span><span class='op'>)</span> <span class='op'>*</span> <span class='fl'>40</span><span class='op'>/</span><span class='fl'>2240</span> <span class='co'># English ton = 2240 pounds</span>
+</div><div class='output co'>#&gt;          0        2        4
 #&gt; 0 6.544643 7.060516 7.157738
 #&gt; 2 6.513889 7.531746 7.357143
-#&gt; 4 6.193452 7.215278 7.435516</div><div class='input'><span class='fu'>acast</span>(<span class='no'>me7</span>, <span class='no'>potash</span>~<span class='no'>ptype</span>, <span class='kw'>fun</span><span class='kw'>=</span><span class='no'>mean</span>) * <span class='fl'>40</span>/<span class='fl'>2240</span></div><div class='output co'>#&gt;          M        N        P        S
+#&gt; 4 6.193452 7.215278 7.435516</div><div class='input'><span class='fu'>acast</span><span class='op'>(</span><span class='va'>me7</span>, <span class='va'>potash</span><span class='op'>~</span><span class='va'>ptype</span>, fun<span class='op'>=</span><span class='va'>mean</span><span class='op'>)</span> <span class='op'>*</span> <span class='fl'>40</span><span class='op'>/</span><span class='fl'>2240</span>
+</div><div class='output co'>#&gt;          M        N        P        S
 #&gt; 0      NaN 6.920966      NaN      NaN
 #&gt; 2 7.163690      NaN 6.856151 7.382937
 #&gt; 4 7.037698      NaN 6.458333 7.348214</div><div class='input'>
@@ -305,7 +318,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

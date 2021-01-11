@@ -46,14 +46,14 @@
 
 \source{
   Report for 1931. Rothamsted Experiment Station. Page 143.
-  http://www.era.rothamsted.ac.uk/eradoc/article/ResReport1931-141-159
+  https://www.era.rothamsted.ac.uk/eradoc/article/ResReport1931-141-159
 }
 
 \references{
   Yates, Frank (1935) Complex experiments,
   \emph{Journal of the Royal Statistical Society Suppl}
   2, 181-247. Figure 2.
-  http://doi.org/10.2307/2983638
+  https://doi.org/10.2307/2983638
 }
 
 \examples{
@@ -118,7 +118,7 @@
   # asreml r 4 has a bug with asreml( factor(nitro))
   dat2$nitrof <- factor(dat2$nitro)
 
-  # --- asreml3 & asreml4  ---
+  # --- asreml4  ---
   libs(asreml)
   m5a <- asreml(yield ~ nitrof + gen,
                 random = ~ block + block:gen, data=dat2)
@@ -127,11 +127,7 @@
   vc(m5a)
 
   emmeans::emmeans(m5l, "gen")
-  if( utils::packageVersion("asreml") < "4") {
-    predict(m5a, data=dat2, classify="gen")$predictions$pvals
-  } else {
-    predict(m5a, data=dat2, classify="gen")$pvals
-  }
+  predict(m5a, data=dat2, classify="gen")$pvals
 
   # ----------
 

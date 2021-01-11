@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Slate Hall Farm 1976 spring wheat — kempton.slatehall" />
-
 <meta property="og:description" content="Yields for a Slate Hall Farm 1976 spring wheat trial." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,23 +143,22 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Yields for a Slate Hall Farm 1976 spring wheat trial.</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 150 observations on the following 5 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 150 observations on the following 5 variables.</p><dl>
     <dt><code>rep</code></dt><dd><p>rep, 6 levels</p></dd>
     <dt><code>row</code></dt><dd><p>row</p></dd>
     <dt><code>col</code></dt><dd><p>column</p></dd>
     <dt><code>gen</code></dt><dd><p>genotype, 25 levels</p></dd>
     <dt><code>yield</code></dt><dd><p>yield (grams/plot)</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>The trial was a balanced lattice with 25 varieties in 6 replicates,
@@ -163,7 +166,6 @@
   Each row within a rep is an (incomplete) block.</p>
 <p>Field width: 15 columns * 1.5m = 22.5m</p>
 <p>Field length: 10 ranges * 4m = 40m</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>R A Kempton and P N Fox. (1997).
@@ -172,104 +174,87 @@
 <p>Julian Besag and David Higdon. 1993.
   Bayesian Inference for Agricultural Field Experiments.
   Bull. Int. Statist. Table 4.1.</p>
-    
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Gilmour, Arthur R and Robin Thompson and Brian R Cullis. (1994).
   Average Information REML: An Efficient Algorithm for Variance
   Parameter Estimation in Linear Mixed Models, <em>Biometrics</em>,
   51, 1440-1450.</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>kempton.slatehall</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>kempton.slatehall</span>
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='co'># Besag 1993 figure 4.1 (left panel)</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='no'>grays</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"#d9d9d9"</span>,<span class='st'>"#252525"</span>))
-<span class='fu'>desplot</span>(<span class='no'>yield</span> ~ <span class='no'>col</span> * <span class='no'>row</span>, <span class='no'>dat</span>,
-        <span class='kw'>aspect</span><span class='kw'>=</span><span class='fl'>40</span>/<span class='fl'>22.5</span>, <span class='co'># true aspect</span>
-        <span class='kw'>num</span><span class='kw'>=</span><span class='no'>gen</span>, <span class='kw'>out1</span><span class='kw'>=</span><span class='no'>rep</span>, <span class='kw'>col.regions</span><span class='kw'>=</span><span class='no'>grays</span>, <span class='co'># unknown aspect</span>
-        <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"kempton.slatehall - spring wheat yields"</span>)</div><div class='img'><img src='kempton.slatehall-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>kempton.slatehall</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>kempton.slatehall</span>
 
-<span class='co'># ----------------------------------------------------------------------------</span>
+  <span class='co'># Besag 1993 figure 4.1 (left panel)</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+  <span class='va'>grays</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"#d9d9d9"</span>,<span class='st'>"#252525"</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>yield</span> <span class='op'>~</span> <span class='va'>col</span> <span class='op'>*</span> <span class='va'>row</span>,
+          aspect<span class='op'>=</span><span class='fl'>40</span><span class='op'>/</span><span class='fl'>22.5</span>, <span class='co'># true aspect</span>
+          num<span class='op'>=</span><span class='va'>gen</span>, out1<span class='op'>=</span><span class='va'>rep</span>, col.regions<span class='op'>=</span><span class='va'>grays</span>, <span class='co'># unknown aspect</span>
+          main<span class='op'>=</span><span class='st'>"kempton.slatehall - spring wheat yields"</span><span class='op'>)</span>
+</div><div class='img'><img src='kempton.slatehall-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='co'># ----------</span>
 
-<span class='co'># Incomplete block model of Gilmour et al 1995</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lme4</span>, <span class='no'>lucid</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>xf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>col</span>), <span class='kw'>yf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>))
-<span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>lmer</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span> + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>rep</span>) + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>rep</span>:<span class='no'>yf</span>) + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>rep</span>:<span class='no'>xf</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: Model failed to converge with max|grad| = 0.0108138 (tol = 0.002, component 1)</span></div><div class='input'><span class='fu'>vc</span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt;       grp        var1 var2  vcov  sdcor
-#&gt;    rep:xf (Intercept) &lt;NA&gt; 14810 121.7 
-#&gt;    rep:yf (Intercept) &lt;NA&gt; 15560 124.7 
-#&gt;       rep (Intercept) &lt;NA&gt;  4298  65.56
-#&gt;  Residual        &lt;NA&gt; &lt;NA&gt;  8066  89.81</div><div class='input'><span class='co'>##    groups        name variance stddev</span>
-<span class='co'>##  rep:xf   (Intercept)    14810 121.7</span>
-<span class='co'>##  rep:yf   (Intercept)    15600 124.9</span>
-<span class='co'>##  rep      (Intercept)     4262  65.29</span>
-<span class='co'>##  Residual                 8062  89.79</span>
-
-
-<span class='co'># ----------------------------------------------------------------------------</span>
-
-<span class='kw'>if</span>(<span class='fl'>0</span>){
   <span class='co'># Incomplete block model of Gilmour et al 1995</span>
-  <span class='co'># asreml3</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
-  <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>gen</span>, <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='no'>rep</span>/(<span class='no'>xf</span>+<span class='no'>yf</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lme4</span>, <span class='va'>lucid</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, xf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>col</span><span class='op'>)</span>, yf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>row</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>lmer</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>rep</span><span class='op'>)</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>rep</span><span class='op'>:</span><span class='va'>yf</span><span class='op'>)</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>rep</span><span class='op'>:</span><span class='va'>xf</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+  <span class='fu'>vc</span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;       grp        var1 var2  vcov  sdcor
+#&gt;    rep:xf (Intercept) &lt;NA&gt; 14810 121.7 
+#&gt;    rep:yf (Intercept) &lt;NA&gt; 15600 124.9 
+#&gt;       rep (Intercept) &lt;NA&gt;  4263  65.29
+#&gt;  Residual        &lt;NA&gt; &lt;NA&gt;  8062  89.79</div><div class='input'>  <span class='co'>##    groups        name variance stddev</span>
+  <span class='co'>##  rep:xf   (Intercept)    14810 121.7</span>
+  <span class='co'>##  rep:yf   (Intercept)    15600 124.9</span>
+  <span class='co'>##  rep      (Intercept)     4262  65.29</span>
+  <span class='co'>##  Residual                 8062  89.79</span>
+  
+  
+  <span class='co'># ----------</span>
 
-  <span class='fu'>vc</span>(<span class='no'>m2</span>)
-  <span class='co'>##          effect component std.error z.ratio constr</span>
+  <span class='co'># asreml3 &amp; asreml4</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span>,<span class='va'>lucid</span><span class='op'>)</span>
+  
+  <span class='co'># Incomplete block model of Gilmour et al 1995</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, xf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>col</span><span class='op'>)</span>, yf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>row</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>gen</span>, random <span class='op'>=</span> <span class='op'>~</span> <span class='va'>rep</span><span class='op'>/</span><span class='op'>(</span><span class='va'>xf</span><span class='op'>+</span><span class='va'>yf</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:48:28 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -734.184      26778.41    125 17:48:28    0.0
+#&gt;  2      -720.066      16594.96    125 17:48:28    0.0
+#&gt;  3      -711.122      11175.53    125 17:48:28    0.0
+#&gt;  4      -708.253       8997.74    125 17:48:28    0.0
+#&gt;  5      -707.791       8149.58    125 17:48:28    0.0
+#&gt;  6      -707.786       8062.41    125 17:48:28    0.0</div><div class='input'>  
+  <span class='fu'>vc</span><span class='op'>(</span><span class='va'>m2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;   effect component std.error z.ratio bound %ch
+#&gt;      rep      4263      6877    0.62     P 0.4
+#&gt;   rep:yf     15600      5090    3.1      P 0  
+#&gt;   rep:xf     14810      4866    3        P 0  
+#&gt;  units!R      8062      1341    6        P 0  </div><div class='input'>  <span class='co'>##          effect component std.error z.ratio constr</span>
   <span class='co'>##     rep!rep.var      4262      6890    0.62    pos</span>
   <span class='co'>##  rep:xf!rep.var     14810      4865    3       pos</span>
   <span class='co'>##  rep:yf!rep.var     15600      5091    3.1     pos</span>
   <span class='co'>##      R!variance      8062      1340    6       pos</span>
-
+  
   <span class='co'># Table 4</span>
-  <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m2</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>classify</span><span class='kw'>=</span><span class='st'>"gen"</span>)$<span class='no'>predictions</span>$<span class='no'>pvals</span>
-}
+  <span class='co'># asreml3</span>
+  <span class='co'># predict(m2, data=dat, classify="gen")$predictions$pvals</span>
+  <span class='co'># asreml4</span>
+  <span class='co'># predict(m2, data=dat, classify="gen")$pvals</span>
 
-<span class='co'># ----------------------------------------------------------------------------</span>
-
-<span class='kw'>if</span>(<span class='fl'>0</span>){
-  <span class='co'># Incomplete block model of Gilmour et al 1995</span>
-  <span class='co'>## libs(asreml4)</span>
-  <span class='co'>## libs(lucid)</span>
-  <span class='co'>## m2 &lt;- asreml(yield ~ gen, random = ~ rep/(xf+yf), data=dat)</span>
-
-  <span class='co'>## vc(m2)</span>
-  <span class='co'>## ##   effect component std.error z.ratio bound &lt;!-- %ch --&gt;</span>
-  <span class='co'>## ##      rep      4262      6890    0.62     P   0</span>
-  <span class='co'>## ##   rep:yf     15600      5091    3.1      P   0</span>
-  <span class='co'>## ##   rep:xf     14810      4865    3        P   0</span>
-  <span class='co'>## ## units(R)      8062      1340    6        P   0</span>
-
-  <span class='co'>## # Table 4</span>
-  <span class='co'>## predict(m2, data=dat, classify="gen")$pvals</span>
-  <span class='co'>## ##    gen predicted.value std.error    status</span>
-  <span class='co'>## ## 1  G01            1280      60.2 Estimable</span>
-  <span class='co'>## ## 2  G02            1550      60.2 Estimable</span>
-  <span class='co'>## ## 3  G03            1420      60.2 Estimable</span>
-  <span class='co'>## ## 4  G04            1450      60.2 Estimable</span>
-  <span class='co'>## ## 5  G05            1530      60.2 Estimable</span>
-}</div></pre>
+<span class='co'># }</span>
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -280,7 +265,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

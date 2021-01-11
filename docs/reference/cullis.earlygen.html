@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -150,7 +150,7 @@
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 670 observations on the following 5 variables.</p><dl'>
+    <p>A data frame with 670 observations on the following 5 variables.</p><dl>
     <dt><code>gen</code></dt><dd><p>genotype factor</p></dd>
     <dt><code>row</code></dt><dd><p>row</p></dd>
     <dt><code>col</code></dt><dd><p>column</p></dd>
@@ -190,120 +190,102 @@
   A New Procedure for the Analysis of Early Generation Variety Trials.
   <em>Journal of the Royal Statistical Society. Series C (Applied
     Statistics)</em>, 38, 361-375.
-  http://doi.org/10.2307/2348066</p>
+  https://doi.org/10.2307/2348066</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Unreplicated early generation variety trial in Wheat.
-  http://www.vsni.co.uk/software/asreml/htmlhelp/asreml/xwheat.htm</p>
+  https://www.vsni.co.uk/software/asreml/htmlhelp/asreml/xwheat.htm</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-  <span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>cullis.earlygen</span>)
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>cullis.earlygen</span>
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>cullis.earlygen</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>cullis.earlygen</span>
 
   <span class='co'># Show field layout of checks.  Cullis Table 1.</span>
-  <span class='no'>dat</span>$<span class='no'>check</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span>(<span class='no'>dat</span>$<span class='no'>entry</span> <span class='kw'>&lt;</span> <span class='fl'>8</span>, <span class='no'>dat</span>$<span class='no'>entry</span>, <span class='fl'>NA</span>)
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-  <span class='fu'>desplot</span>(<span class='no'>dat</span>, <span class='no'>yield</span> ~ <span class='no'>col</span>*<span class='no'>row</span>,
-          <span class='kw'>col</span><span class='kw'>=</span><span class='st'>"check"</span>, <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>0.5</span>, <span class='kw'>flip</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>aspect</span><span class='kw'>=</span><span class='fl'>121</span>/<span class='fl'>150</span>, <span class='co'># true aspect</span>
-          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"cullis.earlygen (yield)"</span>)</div><div class='img'><img src='cullis.earlygen-1.png' alt='' width='700' height='433' /></div><div class='input'>
-  <span class='no'>grays</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"white"</span>,<span class='st'>"#252525"</span>))
-  <span class='fu'>desplot</span>(<span class='no'>dat</span>, <span class='no'>weed</span> ~ <span class='no'>col</span>*<span class='no'>row</span>,
-          <span class='kw'>at</span><span class='kw'>=</span><span class='fl'>0</span>:<span class='fl'>6</span>-<span class='fl'>0.5</span>, <span class='kw'>col.regions</span><span class='kw'>=</span><span class='fu'>grays</span>(<span class='fl'>7</span>)[-<span class='fl'>1</span>],
-          <span class='kw'>flip</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='kw'>aspect</span><span class='kw'>=</span><span class='fl'>121</span>/<span class='fl'>150</span>, <span class='co'># true aspect</span>
-          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"cullis.earlygen (weed)"</span>)</div><div class='img'><img src='cullis.earlygen-2.png' alt='' width='700' height='433' /></div><div class='input'>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-  <span class='fu'>bwplot</span>(<span class='no'>yield</span> ~ <span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span>(<span class='no'>weed</span>), <span class='no'>dat</span>,
-         <span class='kw'>horizontal</span><span class='kw'>=</span><span class='fl'>FALSE</span>,
-         <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"Weed score"</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"cullis.earlygen"</span>)</div><div class='img'><img src='cullis.earlygen-3.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='va'>dat</span><span class='op'>$</span><span class='va'>check</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/ifelse.html'>ifelse</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>entry</span> <span class='op'>&lt;</span> <span class='fl'>8</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>entry</span>, <span class='cn'>NA</span><span class='op'>)</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+  <span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>yield</span> <span class='op'>~</span> <span class='va'>col</span><span class='op'>*</span><span class='va'>row</span>,
+          col<span class='op'>=</span><span class='st'>"check"</span>, cex<span class='op'>=</span><span class='fl'>0.5</span>, flip<span class='op'>=</span><span class='cn'>TRUE</span>, aspect<span class='op'>=</span><span class='fl'>121</span><span class='op'>/</span><span class='fl'>150</span>, <span class='co'># true aspect</span>
+          main<span class='op'>=</span><span class='st'>"cullis.earlygen (yield)"</span><span class='op'>)</span>
+</div><div class='img'><img src='cullis.earlygen-1.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='va'>grays</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"white"</span>,<span class='st'>"#252525"</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>weed</span> <span class='op'>~</span> <span class='va'>col</span><span class='op'>*</span><span class='va'>row</span>,
+          at<span class='op'>=</span><span class='fl'>0</span><span class='op'>:</span><span class='fl'>6</span><span class='op'>-</span><span class='fl'>0.5</span>, col.regions<span class='op'>=</span><span class='fu'>grays</span><span class='op'>(</span><span class='fl'>7</span><span class='op'>)</span><span class='op'>[</span><span class='op'>-</span><span class='fl'>1</span><span class='op'>]</span>,
+          flip<span class='op'>=</span><span class='cn'>TRUE</span>, aspect<span class='op'>=</span><span class='fl'>121</span><span class='op'>/</span><span class='fl'>150</span>, <span class='co'># true aspect</span>
+          main<span class='op'>=</span><span class='st'>"cullis.earlygen (weed)"</span><span class='op'>)</span>
+</div><div class='img'><img src='cullis.earlygen-2.png' alt='' width='700' height='433' /></div><div class='input'>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+  <span class='fu'>bwplot</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='fu'><a href='https://rdrr.io/r/base/character.html'>as.character</a></span><span class='op'>(</span><span class='va'>weed</span><span class='op'>)</span>, <span class='va'>dat</span>,
+         horizontal<span class='op'>=</span><span class='cn'>FALSE</span>,
+         xlab<span class='op'>=</span><span class='st'>"Weed score"</span>, main<span class='op'>=</span><span class='st'>"cullis.earlygen"</span><span class='op'>)</span>
+</div><div class='img'><img src='cullis.earlygen-3.png' alt='' width='700' height='433' /></div><div class='input'>
   <span class='co'># Moving Grid</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>mvngGrAd</span>)
-  <span class='no'>shape</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>),
-                <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>),
-                <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>:<span class='fl'>4</span>),
-                <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>:<span class='fl'>4</span>))
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>mvngGrAd</span><span class='op'>)</span>
+  <span class='va'>shape</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>)</span>,
+                <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>)</span>,
+                <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>4</span><span class='op'>)</span>,
+                <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>:</span><span class='fl'>4</span><span class='op'>)</span><span class='op'>)</span>
   <span class='co'># sketchGrid(10,10,20,20,shapeCross=shape, layers=1, excludeCenter=TRUE)</span>
-  <span class='no'>m0</span> <span class='kw'>&lt;-</span> <span class='fu'>movingGrid</span>(<span class='kw'>rows</span><span class='kw'>=</span><span class='no'>dat</span>$<span class='no'>row</span>, <span class='kw'>columns</span><span class='kw'>=</span><span class='no'>dat</span>$<span class='no'>col</span>, <span class='kw'>obs</span><span class='kw'>=</span><span class='no'>dat</span>$<span class='no'>yield</span>,
-                   <span class='kw'>shapeCross</span><span class='kw'>=</span><span class='no'>shape</span>, <span class='kw'>layers</span><span class='kw'>=</span><span class='kw'>NULL</span>)
-  <span class='no'>dat</span>$<span class='no'>mov.avg</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/fitted.values.html'>fitted</a></span>(<span class='no'>m0</span>)
+  <span class='va'>m0</span> <span class='op'>&lt;-</span> <span class='fu'>movingGrid</span><span class='op'>(</span>rows<span class='op'>=</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>row</span>, columns<span class='op'>=</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>col</span>, obs<span class='op'>=</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>yield</span>,
+                   shapeCross<span class='op'>=</span><span class='va'>shape</span>, layers<span class='op'>=</span><span class='cn'>NULL</span><span class='op'>)</span>
+  <span class='va'>dat</span><span class='op'>$</span><span class='va'>mov.avg</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/fitted.values.html'>fitted</a></span><span class='op'>(</span><span class='va'>m0</span><span class='op'>)</span>
 
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
-  <span class='kw'>if</span>( <span class='kw pkg'>utils</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/r/utils/packageDescription.html'>packageVersion</a></span>(<span class='st'>"asreml"</span>) <span class='kw'>&lt;</span> <span class='st'>"4"</span>) {
-    <span class='co'># asreml3</span>
-
-    <span class='co'># Start with the standard AR1xAR1 analysis</span>
-    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>xf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>col</span>), <span class='kw'>yf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>))
-    <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>xf</span>, <span class='no'>dat</span>$<span class='no'>yf</span>),]
-    <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>weed</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>random</span><span class='kw'>=</span> ~<span class='no'>gen</span>,
-                 <span class='kw'>rcov</span> <span class='kw'>=</span> ~ <span class='fu'>ar1</span>(<span class='no'>xf</span>):<span class='fu'>ar1</span>(<span class='no'>yf</span>))
-
-    <span class='co'># Variogram suggests a polynomial trend</span>
-    <span class='no'>m3</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span>(<span class='no'>m2</span>, <span class='kw'>fixed</span><span class='kw'>=</span> <span class='no'>yield</span>~<span class='no'>weed</span>+<span class='fu'>pol</span>(<span class='no'>col</span>,-<span class='fl'>1</span>))
-
-    <span class='co'># Now add a nugget variance</span>
-    <span class='no'>m4</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span>(<span class='no'>m3</span>, <span class='kw'>random</span><span class='kw'>=</span> ~ <span class='no'>gen</span> + <span class='no'>units</span>)
-
-    <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lucid</span>)
-    <span class='fu'>vc</span>(<span class='no'>m4</span>)
-    <span class='co'>##           effect component std.error z.ratio constr</span>
-    <span class='co'>##      gen!gen.var  73770    10420         7.1    pos</span>
-    <span class='co'>##  units!units.var  30440     8074         3.8    pos</span>
-    <span class='co'>##       R!variance  54720    10630         5.1    pos</span>
-    <span class='co'>##         R!xf.cor      0.38     0.115     3.3  uncon</span>
-    <span class='co'>##         R!yf.cor      0.84     0.045    19    uncon</span>
-
-    <span class='co'># Predictions from models m3 and m4 are non-estimable.  Why?</span>
-    <span class='co'># Use model m2 for predictions</span>
-    <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m2</span>)$<span class='no'>pred</span>
-    <span class='co'>##         gen predicted.value standard.error est.status</span>
-    <span class='co'>## 1    Banks         2723.534       93.14633  Estimable</span>
-    <span class='co'>## 2    Eno008        2981.057      162.85053  Estimable</span>
-    <span class='co'>## 3    Eno009        2978.009      161.56930  Estimable</span>
-    <span class='co'>## 4    Eno010        2821.399      153.96697  Estimable</span>
-    <span class='co'>## 5    Eno011        2991.610      161.53308  Estimable</span>
-    <span class='co'>## 6    Eno012        2771.148      162.21897  Estimable</span>
-
-    <span class='no'>dat</span>$<span class='no'>ar1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/fitted.values.html'>fitted</a></span>(<span class='no'>m2</span>)
-    <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span>(<span class='no'>dat</span>[ , <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'yield'</span>,<span class='st'>'ar1'</span>,<span class='st'>'mov.avg'</span>)])
-    <span class='co'>##    yield      ar1       mg</span>
-    <span class='co'>## 1   2652 2467.980 2531.998</span>
-    <span class='co'>## 11  3394 3071.681 3052.160</span>
-    <span class='co'>## 21  3148 2826.188 2807.031</span>
-    <span class='co'>## 31  3426 3026.985 3183.649</span>
-    <span class='co'>## 41  3555 3070.102 3195.910</span>
-    <span class='co'>## 51  3453 3006.352 3510.511</span>
-    <span class='fu'><a href='https://rdrr.io/r/graphics/pairs.html'>pairs</a></span>(<span class='no'>dat</span>[ , <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>'yield'</span>,<span class='st'>'ar1'</span>,<span class='st'>'mov.avg'</span>)])
-
-  }
-
-
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
-  <span class='kw'>if</span>( <span class='kw pkg'>utils</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/r/utils/packageDescription.html'>packageVersion</a></span>(<span class='st'>"asreml"</span>) <span class='kw'>&gt;</span> <span class='st'>"4"</span>) {
-    <span class='co'># asreml4</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span><span class='op'>)</span> <span class='co'># asreml4</span>
 
   <span class='co'># Start with the standard AR1xAR1 analysis</span>
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>xf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>col</span>), <span class='kw'>yf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>))
-  <span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>dat</span>[<span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span>(<span class='no'>dat</span>$<span class='no'>xf</span>, <span class='no'>dat</span>$<span class='no'>yf</span>),]
-  <span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>yield</span> ~ <span class='no'>weed</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>random</span><span class='kw'>=</span> ~<span class='no'>gen</span>,
-               <span class='kw'>resid</span> <span class='kw'>=</span> ~ <span class='fu'>ar1</span>(<span class='no'>xf</span>):<span class='fu'>ar1</span>(<span class='no'>yf</span>))
-
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, xf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>col</span><span class='op'>)</span>, yf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>row</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>dat</span><span class='op'>[</span><span class='fu'><a href='https://rdrr.io/r/base/order.html'>order</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>xf</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>yf</span><span class='op'>)</span>,<span class='op'>]</span>
+  <span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>yield</span> <span class='op'>~</span> <span class='va'>weed</span>, data<span class='op'>=</span><span class='va'>dat</span>, random<span class='op'>=</span> <span class='op'>~</span><span class='va'>gen</span>,
+               resid <span class='op'>=</span> <span class='op'>~</span> <span class='fu'>ar1</span><span class='op'>(</span><span class='va'>xf</span><span class='op'>)</span><span class='op'>:</span><span class='fu'>ar1</span><span class='op'>(</span><span class='va'>yf</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:08:12 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1     -4277.990      128496.8    666 17:08:12    0.0
+#&gt;  2     -4266.138      120973.9    666 17:08:12    0.0
+#&gt;  3     -4253.062      107781.1    666 17:08:12    0.0
+#&gt;  4     -4241.333       87649.8    666 17:08:12    0.0
+#&gt;  5     -4235.061       79226.3    666 17:08:12    0.0
+#&gt;  6     -4233.865       81681.5    666 17:08:12    0.0
+#&gt;  7     -4233.681       82608.2    666 17:08:12    0.0
+#&gt;  8     -4233.652       82933.6    666 17:08:12    0.0
+#&gt;  9     -4233.648       83050.0    666 17:08:12    0.0
+#&gt; 10     -4233.647       83094.2    666 17:08:12    0.0</div><div class='input'>  
   <span class='co'># Variogram suggests a polynomial trend</span>
-  <span class='no'>m3</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span>(<span class='no'>m2</span>, <span class='kw'>fixed</span><span class='kw'>=</span> <span class='no'>yield</span>~<span class='no'>weed</span>+<span class='fu'>pol</span>(<span class='no'>col</span>,-<span class='fl'>1</span>))
-
+  <span class='va'>m3</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m2</span>, fixed<span class='op'>=</span> <span class='va'>yield</span><span class='op'>~</span><span class='va'>weed</span><span class='op'>+</span><span class='fu'>pol</span><span class='op'>(</span><span class='va'>col</span>,<span class='op'>-</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:08:12 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1     -4225.800      82257.80    665 17:08:12    0.0
+#&gt;  2     -4225.712      80790.06    665 17:08:12    0.0
+#&gt;  3     -4225.633      77826.53    665 17:08:12    0.0
+#&gt;  4     -4225.631      77839.46    665 17:08:12    0.0</div><div class='input'>  
   <span class='co'># Now add a nugget variance</span>
-  <span class='no'>m4</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span>(<span class='no'>m3</span>, <span class='kw'>random</span><span class='kw'>=</span> ~ <span class='no'>gen</span> + <span class='no'>units</span>)
-
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lucid</span>)
-  <span class='fu'>vc</span>(<span class='no'>m4</span>)
-  <span class='co'>##       effect component std.error z.ratio bound </span>
+  <span class='va'>m4</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/update.html'>update</a></span><span class='op'>(</span><span class='va'>m3</span>, random<span class='op'>=</span> <span class='op'>~</span> <span class='va'>gen</span> <span class='op'>+</span> <span class='va'>units</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Mon Jan 11 17:08:12 2021
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1     -4224.105      75223.42    665 17:08:12    0.0
+#&gt;  2     -4222.648      68685.54    665 17:08:12    0.0
+#&gt;  3     -4221.139      61207.50    665 17:08:12    0.0
+#&gt;  4     -4220.317      55446.36    665 17:08:12    0.0
+#&gt;  5     -4220.264      54939.35    665 17:08:12    0.0
+#&gt;  6     -4220.261      54773.48    665 17:08:12    0.0</div><div class='input'>  
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lucid</span><span class='op'>)</span>
+  <span class='fu'>vc</span><span class='op'>(</span><span class='va'>m4</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;        effect component std.error z.ratio bound %ch
+#&gt;           gen  73850    10410         7.1     P 0  
+#&gt;         units  30450     8064         3.8     P 0.4
+#&gt;       xf:yf!R  54770    10630         5.2     P 0  
+#&gt;  xf:yf!xf!cor      0.38     0.115     3.3     U 0  
+#&gt;  xf:yf!yf!cor      0.84     0.045    19       U 0.1</div><div class='input'>  <span class='co'>##       effect component std.error z.ratio bound </span>
   <span class='co'>##          gen  73780    10420         7.1     P 0  </span>
   <span class='co'>##        units  30440     8073         3.8     P 0.1</span>
   <span class='co'>##     xf:yf(R)  54730    10630         5.1     P 0  </span>
   <span class='co'>## xf:yf!xf!cor      0.38     0.115     3.3     U 0  </span>
   <span class='co'>## xf:yf!yf!cor      0.84     0.045    19       U 0  </span>
-
+  
   <span class='co'>## # Predictions from models m3 and m4 are non-estimable.  Why?</span>
   <span class='co'>## # Use model m2 for predictions</span>
   <span class='co'>## predict(m2, classify="gen")$pvals</span>
@@ -313,7 +295,7 @@
   <span class='co'>## ## 3    Eno009        2978.008 161.57129 Estimable</span>
   <span class='co'>## ## 4    Eno010        2821.399 153.96943 Estimable</span>
   <span class='co'>## ## 5    Eno011        2991.612 161.53507 Estimable</span>
-
+  
 
   <span class='co'>## # Compare AR1 with Moving Grid</span>
   <span class='co'>## dat$ar1 &lt;- fitted(m2)</span>
@@ -327,41 +309,7 @@
   <span class='co'>## ## 51  3453 3006.352 3510.511</span>
   <span class='co'>## pairs(dat[ , c('yield','ar1','mg')])</span>
 
-  }</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:48:32 2020
-#&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1     -4277.990      128496.8    666 15:48:32    0.0
-#&gt;  2     -4266.138      120973.9    666 15:48:32    0.0
-#&gt;  3     -4253.062      107781.1    666 15:48:32    0.0
-#&gt;  4     -4241.333       87649.8    666 15:48:32    0.0
-#&gt;  5     -4235.061       79226.3    666 15:48:32    0.0
-#&gt;  6     -4233.865       81681.5    666 15:48:32    0.0
-#&gt;  7     -4233.681       82608.2    666 15:48:32    0.0
-#&gt;  8     -4233.652       82933.6    666 15:48:32    0.0
-#&gt;  9     -4233.648       83050.0    666 15:48:32    0.0
-#&gt; 10     -4233.647       83094.2    666 15:48:32    0.0
-#&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:48:32 2020
-#&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1     -4225.800      82257.80    665 15:48:32    0.0
-#&gt;  2     -4225.712      80790.06    665 15:48:32    0.0
-#&gt;  3     -4225.633      77826.53    665 15:48:32    0.0
-#&gt;  4     -4225.631      77839.46    665 15:48:32    0.0
-#&gt; Model fitted using the gamma parameterization.
-#&gt; ASReml 4.1.0 Thu Jul 30 15:48:32 2020
-#&gt;           LogLik        Sigma2     DF     wall    cpu
-#&gt;  1     -4224.105      75223.42    665 15:48:32    0.0
-#&gt;  2     -4222.648      68685.54    665 15:48:32    0.0
-#&gt;  3     -4221.139      61207.50    665 15:48:32    0.0
-#&gt;  4     -4220.317      55446.36    665 15:48:32    0.0
-#&gt;  5     -4220.264      54939.35    665 15:48:32    0.0
-#&gt;  6     -4220.261      54773.48    665 15:48:32    0.0</div><div class='output co'>#&gt;        effect component std.error z.ratio bound %ch
-#&gt;           gen  73850    10410         7.1     P 0  
-#&gt;         units  30450     8064         3.8     P 0.4
-#&gt;       xf:yf!R  54770    10630         5.2     P 0  
-#&gt;  xf:yf!xf!cor      0.38     0.115     3.3     U 0  
-#&gt;  xf:yf!yf!cor      0.84     0.045    19       U 0.1</div><div class='input'>
-# }
+<span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -378,7 +326,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

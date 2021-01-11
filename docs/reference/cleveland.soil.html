@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -150,7 +150,7 @@
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 8641 observations on the following 5 variables.</p><dl'>
+    <p>A data frame with 8641 observations on the following 5 variables.</p><dl>
     <dt><code>northing</code></dt><dd><p>y ordinate</p></dd>
     <dt><code>easting</code></dt><dd><p>x ordinate</p></dd>
     <dt><code>resistivity</code></dt><dd><p>Soil resistivity, ohms</p></dd>
@@ -165,16 +165,16 @@
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>William Cleveland, (1993), <em>Visualizing Data</em>.
-  Electronic version from StatLib: http://lib.stat.cmu.edu/datasets/</p>
+  Electronic version from StatLib: https://lib.stat.cmu.edu/datasets/</p>
 <p>Cleaned version from Luke Tierney
-  http://homepage.stat.uiowa.edu/~luke/classes/248/examples/soil</p>
+  https://homepage.stat.uiowa.edu/~luke/classes/248/examples/soil</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>cleveland.soil</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>cleveland.soil</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>cleveland.soil</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>cleveland.soil</span>
 
 <span class='co'># Similar to Cleveland fig 4.64</span>
 <span class='co'>## libs(latticeExtra)</span>
@@ -186,34 +186,37 @@
 <span class='co'>##           main="cleveland")</span>
 
 <span class='co'># 2D loess plot. Cleveland fig 4.68</span>
-<span class='no'>sg1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/expand.grid.html'>expand.grid</a></span>(<span class='kw'>easting</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span>(<span class='fl'>.15</span>, <span class='fl'>1.410</span>, <span class='kw'>by</span> <span class='kw'>=</span> <span class='fl'>.02</span>),
-                   <span class='kw'>northing</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span>(<span class='fl'>.150</span>, <span class='fl'>3.645</span>, <span class='kw'>by</span> <span class='kw'>=</span> <span class='fl'>.02</span>))
-<span class='no'>lo1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/loess.html'>loess</a></span>(<span class='no'>resistivity</span>~<span class='no'>easting</span>*<span class='no'>northing</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>span</span> <span class='kw'>=</span> <span class='fl'>0.1</span>, <span class='kw'>degree</span> <span class='kw'>=</span> <span class='fl'>2</span>)
-<span class='no'>fit1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>lo1</span>, <span class='no'>sg1</span>)
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='no'>redblue</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"firebrick"</span>, <span class='st'>"lightgray"</span>, <span class='st'>"#375997"</span>))
-<span class='fu'>levelplot</span>(<span class='no'>fit1</span> ~ <span class='no'>sg1</span>$<span class='no'>easting</span> * <span class='no'>sg1</span>$<span class='no'>northing</span>,
-          <span class='kw'>col.regions</span><span class='kw'>=</span><span class='no'>redblue</span>,
-          <span class='kw'>cuts</span> <span class='kw'>=</span> <span class='fl'>9</span>,
-          <span class='kw'>aspect</span><span class='kw'>=</span><span class='fl'>2.4</span>, <span class='kw'>xlab</span> <span class='kw'>=</span> <span class='st'>"Easting (km)"</span>, <span class='kw'>ylab</span> <span class='kw'>=</span> <span class='st'>"Northing (km)"</span>,
-          <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"cleveland.soil - 2D smooth of Resistivity"</span>)</div><div class='img'><img src='cleveland.soil-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='va'>sg1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/expand.grid.html'>expand.grid</a></span><span class='op'>(</span>easting <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>.15</span>, <span class='fl'>1.410</span>, by <span class='op'>=</span> <span class='fl'>.02</span><span class='op'>)</span>,
+                   northing <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>.150</span>, <span class='fl'>3.645</span>, by <span class='op'>=</span> <span class='fl'>.02</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>lo1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/loess.html'>loess</a></span><span class='op'>(</span><span class='va'>resistivity</span><span class='op'>~</span><span class='va'>easting</span><span class='op'>*</span><span class='va'>northing</span>, data<span class='op'>=</span><span class='va'>dat</span>, span <span class='op'>=</span> <span class='fl'>0.1</span>, degree <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span>
+<span class='va'>fit1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>lo1</span>, <span class='va'>sg1</span><span class='op'>)</span>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+<span class='va'>redblue</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/grDevices/colorRamp.html'>colorRampPalette</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"firebrick"</span>, <span class='st'>"lightgray"</span>, <span class='st'>"#375997"</span><span class='op'>)</span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/pkg/lattice/man/levelplot.html'>levelplot</a></span><span class='op'>(</span><span class='va'>fit1</span> <span class='op'>~</span> <span class='va'>sg1</span><span class='op'>$</span><span class='va'>easting</span> <span class='op'>*</span> <span class='va'>sg1</span><span class='op'>$</span><span class='va'>northing</span>,
+          col.regions<span class='op'>=</span><span class='va'>redblue</span>,
+          cuts <span class='op'>=</span> <span class='fl'>9</span>,
+          aspect<span class='op'>=</span><span class='fl'>2.4</span>, xlab <span class='op'>=</span> <span class='st'>"Easting (km)"</span>, ylab <span class='op'>=</span> <span class='st'>"Northing (km)"</span>,
+          main<span class='op'>=</span><span class='st'>"cleveland.soil - 2D smooth of Resistivity"</span><span class='op'>)</span>
+</div><div class='img'><img src='cleveland.soil-1.png' alt='' width='700' height='433' /></div><div class='input'>
 <span class='co'># ----------------------------------------------------------------------------</span>
 
 <span class='co'># \dontrun{</span>
   <span class='co'># 3D loess plot with data overlaid</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>rgl</span>)</div><div class='output co'>#&gt; <span class='message'></span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>rgl</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'></span>
 #&gt; <span class='message'>Attaching package: 'rgl'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:plotrix':</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    mtext3d</span></div><div class='input'>  <span class='fu'>bg3d</span>(<span class='kw'>color</span> <span class='kw'>=</span> <span class='st'>"white"</span>)
-  <span class='fu'>clear3d</span>()
-  <span class='fu'>points3d</span>(<span class='no'>dat</span>$<span class='no'>easting</span>, <span class='no'>dat</span>$<span class='no'>northing</span>, <span class='no'>dat</span>$<span class='no'>resistivity</span> / <span class='fl'>100</span>,
-           <span class='kw'>col</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='st'>"gray50"</span>, <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span>(<span class='no'>dat</span>)))
-  <span class='kw pkg'>rgl</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/rgl/man/surface3d.html'>surface3d</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span>(<span class='fl'>.15</span>, <span class='fl'>1.410</span>, <span class='kw'>by</span> <span class='kw'>=</span> <span class='fl'>.02</span>),
-                 <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span>(<span class='fl'>.150</span>, <span class='fl'>3.645</span>, <span class='kw'>by</span> <span class='kw'>=</span> <span class='fl'>.02</span>),
-                 <span class='no'>fit1</span>/<span class='fl'>100</span>, <span class='kw'>alpha</span><span class='kw'>=</span><span class='fl'>0.9</span>, <span class='kw'>col</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span>(<span class='st'>"wheat"</span>, <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='no'>fit1</span>)),
-                 <span class='kw'>front</span><span class='kw'>=</span><span class='st'>"fill"</span>, <span class='kw'>back</span><span class='kw'>=</span><span class='st'>"fill"</span>)
-  <span class='fu'>rgl.close</span>()
-<span class='co'># }</span></div></pre>
+#&gt; <span class='message'>    mtext3d</span></div><div class='input'>  <span class='fu'>bg3d</span><span class='op'>(</span>color <span class='op'>=</span> <span class='st'>"white"</span><span class='op'>)</span>
+  <span class='fu'>clear3d</span><span class='op'>(</span><span class='op'>)</span>
+  <span class='fu'>points3d</span><span class='op'>(</span><span class='va'>dat</span><span class='op'>$</span><span class='va'>easting</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>northing</span>, <span class='va'>dat</span><span class='op'>$</span><span class='va'>resistivity</span> <span class='op'>/</span> <span class='fl'>100</span>,
+           col <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='st'>"gray50"</span>, <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>dat</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='fu'>rgl</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/rgl/man/surface3d.html'>surface3d</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>.15</span>, <span class='fl'>1.410</span>, by <span class='op'>=</span> <span class='fl'>.02</span><span class='op'>)</span>,
+                 <span class='fu'><a href='https://rdrr.io/r/base/seq.html'>seq</a></span><span class='op'>(</span><span class='fl'>.150</span>, <span class='fl'>3.645</span>, by <span class='op'>=</span> <span class='fl'>.02</span><span class='op'>)</span>,
+                 <span class='va'>fit1</span><span class='op'>/</span><span class='fl'>100</span>, alpha<span class='op'>=</span><span class='fl'>0.9</span>, col<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='st'>"wheat"</span>, <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='va'>fit1</span><span class='op'>)</span><span class='op'>)</span>,
+                 front<span class='op'>=</span><span class='st'>"fill"</span>, back<span class='op'>=</span><span class='st'>"fill"</span><span class='op'>)</span>
+  <span class='fu'>rgl.close</span><span class='op'>(</span><span class='op'>)</span>
+<span class='co'># }</span>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -229,7 +232,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

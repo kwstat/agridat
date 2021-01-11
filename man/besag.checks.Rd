@@ -39,7 +39,7 @@
   Besag, J.E. & Kempton R.A. (1986).
   Statistical analysis of field experiments using neighbouring plots.
   Biometrics, 42, 231-251.
-  http://doi.org/10.2307/2531047 
+  https://doi.org/10.2307/2531047 
 }
 \references{
   Kempton, Statistical Methods for Plant Variety Evaluation, page 91--92

@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,12 +45,11 @@
 
 
 
+
 <meta property="og:title" content="Multi-environment trial of corn with nitrogen fertilizer at 5 sites. — hernandez.nitrogen" />
-
 <meta property="og:description" content="Corn response to nitrogen fertilizer at 5 sites." />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -61,7 +66,7 @@
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -104,7 +109,7 @@
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -112,10 +117,9 @@
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -139,27 +143,25 @@
     </div>
 
     <div class="ref-description">
-    
     <p>Corn response to nitrogen fertilizer at 5 sites.</p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 136 observations on the following 5 variables.</p><dl class='dl-horizontal'>
+    <p>A data frame with 136 observations on the following 5 variables.</p><dl>
     <dt><code>site</code></dt><dd><p>site factor, 5 levels</p></dd>
     <dt><code>loc</code></dt><dd><p>location name</p></dd>
     <dt><code>rep</code></dt><dd><p>rep, 4 levels</p></dd>
     <dt><code>nitro</code></dt><dd><p>nitrogen, kg/ha</p></dd>
     <dt><code>yield</code></dt><dd><p>yield, Mg/ha</p></dd>
-  </dl>
+  
+</dl>
 
-    
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p>Experiment was conducted in 2006 at 5 sites in Minnesota.</p>
-    
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Hernandez, J.A. and Mulla, D.J. 2008.
@@ -167,48 +169,59 @@
   <em>Agronomy Journal</em>, 100, 1221-1229.
   https://doi.org/10.2134/agronj2007.0273</p>
 <p>Electronic data kindly supplied by Jose Hernandez.</p>
-    
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>hernandez.nitrogen</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>hernandez.nitrogen</span>
-<span class='no'>cprice</span> <span class='kw'>&lt;-</span> <span class='fl'>118.1</span> <span class='co'># $118.1/Mg or $3/bu</span>
-<span class='no'>nprice</span> <span class='kw'>&lt;-</span> <span class='fl'>0.6615</span> <span class='co'># $0.66/kg N or $0.30/lb N</span>
-
-<span class='co'># Hernandez optimized yield with a constraint on the ratio of the prices.</span>
-<span class='co'># Simpler to just calculate the income and optimize that.</span>
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>inc</span> <span class='kw'>=</span> <span class='no'>yield</span> * <span class='no'>cprice</span> - <span class='no'>nitro</span> * <span class='no'>nprice</span>)
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lattice</span>)
-<span class='fu'>xyplot</span>(<span class='no'>inc</span> ~ <span class='no'>nitro</span><span class='kw'>|</span><span class='no'>site</span>, <span class='no'>dat</span>, <span class='kw'>groups</span><span class='kw'>=</span><span class='no'>rep</span>, <span class='kw'>auto.key</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>columns</span><span class='kw'>=</span><span class='fl'>4</span>),
-       <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"nitrogen"</span>, <span class='kw'>ylab</span><span class='kw'>=</span><span class='st'>"income"</span>, <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"hernandez.nitrogen"</span>)</div><div class='img'><img src='hernandez.nitrogen-1.png' alt='' width='700' height='433' /></div><div class='input'>
-<span class='co'># Site 5 only</span>
-<span class='no'>dat1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>dat</span>, <span class='no'>site</span><span class='kw'>==</span><span class='st'>'S5'</span>)
-
-<span class='co'># When we optimize on income, a simple quadratic model works just fine,</span>
-<span class='co'># and matches the results of the nls model below.</span>
-<span class='co'># Note, 'poly(nitro)' gives weird coefs</span>
-<span class='no'>lm1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span>(<span class='no'>inc</span> ~ <span class='fl'>1</span> + <span class='no'>nitro</span> + <span class='fu'><a href='https://rdrr.io/r/base/AsIs.html'>I</a></span>(<span class='no'>nitro</span>^<span class='fl'>2</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat1</span>)
-<span class='no'>c1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>lm1</span>)
--<span class='no'>c1</span>[<span class='fl'>2</span>] / (<span class='fl'>2</span>*<span class='no'>c1</span>[<span class='fl'>3</span>])</div><div class='output co'>#&gt;    nitro 
-#&gt; 191.7198 </div><div class='input'>##    nitro
-## 191.7198    # Optimum nitrogen is 192 for site 5
-
-
-</div><div class='input'><span class='co'># Use the delta method to get a conf int</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='st'>"car"</span>)
-<span class='no'>del1</span> <span class='kw'>&lt;-</span> <span class='fu'>deltaMethod</span>(<span class='no'>lm1</span>, <span class='st'>"-b1/(2*b2)"</span>, <span class='kw'>parameterNames</span><span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='st'>"b"</span>, <span class='fl'>0</span>:<span class='fl'>2</span>, <span class='kw'>sep</span><span class='kw'>=</span><span class='st'>""</span>))
-<span class='co'># Simple Wald-type conf int for optimum</span>
-<span class='no'>del1</span>$<span class='no'>Est</span> +  <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(-<span class='fl'>1</span>,<span class='fl'>1</span>) * <span class='no'>del1</span>$<span class='no'>SE</span> * <span class='fu'><a href='https://rdrr.io/r/stats/TDist.html'>qt</a></span>(<span class='fl'>1</span>-<span class='fl'>.1</span>/<span class='fl'>2</span>, <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span>(<span class='no'>dat1</span>)-<span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>lm1</span>)))</div><div class='output co'>#&gt; [1] 118.9329 264.5067</div><div class='input'><span class='co'>## 118.9329 264.5067</span>
-
-
-<span class='co'># Nonlinear regression</span>
-<span class='co'># Reparameterize b0 + b1*x + b2*x^2 using th2 = -b1/2b2 so that th2 is optimum</span>
-<span class='no'>nls1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/nls.html'>nls</a></span>(<span class='no'>inc</span> ~ <span class='no'>th11</span>- (<span class='fl'>2</span>*<span class='no'>th2</span>*<span class='no'>th12</span>)*<span class='no'>nitro</span> + <span class='no'>th12</span>*<span class='no'>nitro</span>^<span class='fl'>2</span>,
-          <span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>dat1</span>, <span class='kw'>start</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>th11</span> <span class='kw'>=</span> <span class='fl'>5</span>, <span class='kw'>th2</span> <span class='kw'>=</span> <span class='fl'>150</span>, <span class='kw'>th12</span> <span class='kw'>=</span>-<span class='fl'>0.1</span>),)
-<span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>nls1</span>)</div><div class='output co'>#&gt; 
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+  
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>hernandez.nitrogen</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>hernandez.nitrogen</span>
+  <span class='va'>cprice</span> <span class='op'>&lt;-</span> <span class='fl'>118.1</span> <span class='co'># $118.1/Mg or $3/bu</span>
+  <span class='va'>nprice</span> <span class='op'>&lt;-</span> <span class='fl'>0.6615</span> <span class='co'># $0.66/kg N or $0.30/lb N</span>
+  
+  <span class='co'># Hernandez optimized yield with a constraint on the ratio of the prices.</span>
+  <span class='co'># Simpler to just calculate the income and optimize that.</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, inc <span class='op'>=</span> <span class='va'>yield</span> <span class='op'>*</span> <span class='va'>cprice</span> <span class='op'>-</span> <span class='va'>nitro</span> <span class='op'>*</span> <span class='va'>nprice</span><span class='op'>)</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/pkg/lattice/man/xyplot.html'>xyplot</a></span><span class='op'>(</span><span class='va'>inc</span> <span class='op'>~</span> <span class='va'>nitro</span><span class='op'>|</span><span class='va'>site</span>, <span class='va'>dat</span>, groups<span class='op'>=</span><span class='va'>rep</span>, auto.key<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>columns<span class='op'>=</span><span class='fl'>4</span><span class='op'>)</span>,
+         xlab<span class='op'>=</span><span class='st'>"nitrogen"</span>, ylab<span class='op'>=</span><span class='st'>"income"</span>, main<span class='op'>=</span><span class='st'>"hernandez.nitrogen"</span><span class='op'>)</span>
+</div><div class='img'><img src='hernandez.nitrogen-1.png' alt='' width='700' height='433' /></div><div class='input'>  
+  <span class='co'># Site 5 only</span>
+  <span class='va'>dat1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>site</span><span class='op'>==</span><span class='st'>'S5'</span><span class='op'>)</span>
+  
+  <span class='co'># When we optimize on income, a simple quadratic model works just fine,</span>
+  <span class='co'># and matches the results of the nls model below.</span>
+  <span class='co'># Note, 'poly(nitro)' gives weird coefs</span>
+  <span class='va'>lm1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/lm.html'>lm</a></span><span class='op'>(</span><span class='va'>inc</span> <span class='op'>~</span> <span class='fl'>1</span> <span class='op'>+</span> <span class='va'>nitro</span> <span class='op'>+</span> <span class='fu'><a href='https://rdrr.io/r/base/AsIs.html'>I</a></span><span class='op'>(</span><span class='va'>nitro</span><span class='op'>^</span><span class='fl'>2</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat1</span><span class='op'>)</span> 
+  <span class='va'>c1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>lm1</span><span class='op'>)</span>
+  <span class='op'>-</span><span class='va'>c1</span><span class='op'>[</span><span class='fl'>2</span><span class='op'>]</span> <span class='op'>/</span> <span class='op'>(</span><span class='fl'>2</span><span class='op'>*</span><span class='va'>c1</span><span class='op'>[</span><span class='fl'>3</span><span class='op'>]</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;    nitro 
+#&gt; 191.7198 </div><div class='input'>  <span class='co'>##    nitro</span>
+  <span class='co'>## 191.7198    # Optimum nitrogen is 192 for site 5</span>
+  
+  
+  <span class='co'># Use the delta method to get a conf int</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='st'>"car"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>Loading required package: carData</span></div><div class='output co'>#&gt; <span class='message'>Registered S3 methods overwritten by 'car':</span>
+#&gt; <span class='message'>  method                          from</span>
+#&gt; <span class='message'>  influence.merMod                lme4</span>
+#&gt; <span class='message'>  cooks.distance.influence.merMod lme4</span>
+#&gt; <span class='message'>  dfbeta.influence.merMod         lme4</span>
+#&gt; <span class='message'>  dfbetas.influence.merMod        lme4</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Attaching package: 'car'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:dplyr':</span>
+#&gt; <span class='message'></span>
+#&gt; <span class='message'>    recode</span></div><div class='input'>  <span class='va'>del1</span> <span class='op'>&lt;-</span> <span class='fu'>deltaMethod</span><span class='op'>(</span><span class='va'>lm1</span>, <span class='st'>"-b1/(2*b2)"</span>, parameterNames<span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='st'>"b"</span>, <span class='fl'>0</span><span class='op'>:</span><span class='fl'>2</span>, sep<span class='op'>=</span><span class='st'>""</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='co'># Simple Wald-type conf int for optimum</span>
+  <span class='va'>del1</span><span class='op'>$</span><span class='va'>Est</span> <span class='op'>+</span>  <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='op'>-</span><span class='fl'>1</span>,<span class='fl'>1</span><span class='op'>)</span> <span class='op'>*</span> <span class='va'>del1</span><span class='op'>$</span><span class='va'>SE</span> <span class='op'>*</span> <span class='fu'><a href='https://rdrr.io/r/stats/TDist.html'>qt</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>-</span><span class='fl'>.1</span><span class='op'>/</span><span class='fl'>2</span>, <span class='fu'><a href='https://rdrr.io/r/base/nrow.html'>nrow</a></span><span class='op'>(</span><span class='va'>dat1</span><span class='op'>)</span><span class='op'>-</span><span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>lm1</span><span class='op'>)</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; [1] 118.9329 264.5067</div><div class='input'>  <span class='co'>## 118.9329 264.5067</span>
+  
+  
+  <span class='co'># Nonlinear regression</span>
+  <span class='co'># Reparameterize b0 + b1*x + b2*x^2 using th2 = -b1/2b2 so that th2 is optimum</span>
+  <span class='va'>nls1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/nls.html'>nls</a></span><span class='op'>(</span><span class='va'>inc</span> <span class='op'>~</span> <span class='va'>th11</span><span class='op'>-</span> <span class='op'>(</span><span class='fl'>2</span><span class='op'>*</span><span class='va'>th2</span><span class='op'>*</span><span class='va'>th12</span><span class='op'>)</span><span class='op'>*</span><span class='va'>nitro</span> <span class='op'>+</span> <span class='va'>th12</span><span class='op'>*</span><span class='va'>nitro</span><span class='op'>^</span><span class='fl'>2</span>,
+              data <span class='op'>=</span> <span class='va'>dat1</span>, start <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>th11 <span class='op'>=</span> <span class='fl'>5</span>, th2 <span class='op'>=</span> <span class='fl'>150</span>, th12 <span class='op'>=</span><span class='op'>-</span><span class='fl'>0.1</span><span class='op'>)</span>,<span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>nls1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; 
 #&gt; Formula: inc ~ th11 - (2 * th2 * th12) * nitro + th12 * nitro^2
 #&gt; 
 #&gt; Parameters:
@@ -223,69 +236,76 @@
 #&gt; 
 #&gt; Number of iterations to convergence: 2 
 #&gt; Achieved convergence tolerance: 1.789e-07
-#&gt; </div><div class='input'><span class='co'># Wald conf int</span>
-<span class='no'>wald</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>object</span>, <span class='no'>alpha</span><span class='kw'>=</span><span class='fl'>0.1</span>){
-  <span class='no'>nobs</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/residuals.html'>resid</a></span>(<span class='no'>object</span>))
-  <span class='no'>npar</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>object</span>))
-  <span class='no'>est</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>object</span>)
-  <span class='no'>stderr</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>object</span>)$<span class='no'>parameters</span>[,<span class='fl'>2</span>]
-  <span class='no'>tval</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/TDist.html'>qt</a></span>(<span class='fl'>1</span>-<span class='no'>alpha</span>/<span class='fl'>2</span>, <span class='no'>nobs</span>-<span class='no'>npar</span>)
-  <span class='no'>ci</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span>(<span class='no'>est</span> - <span class='no'>tval</span> * <span class='no'>stderr</span>, <span class='no'>est</span> + <span class='no'>tval</span> * <span class='no'>stderr</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span>(<span class='no'>ci</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fl'>100</span>*<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='no'>alpha</span>/<span class='fl'>2</span>, <span class='fl'>1</span>-<span class='no'>alpha</span>/<span class='fl'>2</span>), <span class='fl'>1</span>), <span class='st'>"pct"</span>, <span class='kw'>sep</span><span class='kw'>=</span> <span class='st'>""</span>)
-  <span class='fu'><a href='https://rdrr.io/r/base/function.html'>return</a></span>(<span class='no'>ci</span>)
-}
-<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fu'>wald</span>(<span class='no'>nls1</span>),<span class='fl'>2</span>)</div><div class='output co'>#&gt;        5pct   95pct
+#&gt; </div><div class='input'>  <span class='co'># Wald conf int</span>
+  <span class='va'>wald</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>object</span>, <span class='va'>alpha</span><span class='op'>=</span><span class='fl'>0.1</span><span class='op'>)</span><span class='op'>{</span>
+    <span class='va'>nobs</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/residuals.html'>resid</a></span><span class='op'>(</span><span class='va'>object</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='va'>npar</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/length.html'>length</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>object</span><span class='op'>)</span><span class='op'>)</span>
+    <span class='va'>est</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>object</span><span class='op'>)</span>
+    <span class='va'>stderr</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>object</span><span class='op'>)</span><span class='op'>$</span><span class='va'>parameters</span><span class='op'>[</span>,<span class='fl'>2</span><span class='op'>]</span>
+    <span class='va'>tval</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/TDist.html'>qt</a></span><span class='op'>(</span><span class='fl'>1</span><span class='op'>-</span><span class='va'>alpha</span><span class='op'>/</span><span class='fl'>2</span>, <span class='va'>nobs</span><span class='op'>-</span><span class='va'>npar</span><span class='op'>)</span>
+    <span class='va'>ci</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>cbind</a></span><span class='op'>(</span><span class='va'>est</span> <span class='op'>-</span> <span class='va'>tval</span> <span class='op'>*</span> <span class='va'>stderr</span>, <span class='va'>est</span> <span class='op'>+</span> <span class='va'>tval</span> <span class='op'>*</span> <span class='va'>stderr</span><span class='op'>)</span>
+    <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>ci</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='fl'>100</span><span class='op'>*</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>alpha</span><span class='op'>/</span><span class='fl'>2</span>, <span class='fl'>1</span><span class='op'>-</span><span class='va'>alpha</span><span class='op'>/</span><span class='fl'>2</span><span class='op'>)</span>, <span class='fl'>1</span><span class='op'>)</span>, <span class='st'>"pct"</span>, sep<span class='op'>=</span> <span class='st'>""</span><span class='op'>)</span>
+    <span class='kw'><a href='https://rdrr.io/r/base/function.html'>return</a></span><span class='op'>(</span><span class='va'>ci</span><span class='op'>)</span>
+  <span class='op'>}</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='fu'>wald</span><span class='op'>(</span><span class='va'>nls1</span><span class='op'>)</span>,<span class='fl'>2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;        5pct   95pct
 #&gt; th11 936.44 1081.93
 #&gt; th2  118.93  264.51
-#&gt; th12  -0.03   -0.01</div><div class='input'><span class='co'>##          5&lt;!-- %     95% --&gt;</span>
-<span class='co'>## th11 936.44 1081.93</span>
-<span class='co'>## th2  118.93  264.51   # th2 is the optimum</span>
-<span class='co'>## th12  -0.03   -0.01</span>
-
-
-<span class='co'># Likelihood conf int</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>MASS</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/confint.html'>confint</a></span>(<span class='no'>nls1</span>, <span class='st'>"th2"</span>, <span class='kw'>level</span> <span class='kw'>=</span> <span class='fl'>0.9</span>),<span class='fl'>2</span>)</div><div class='output co'>#&gt; <span class='message'>Waiting for profiling to be done...</span></div><div class='output co'>#&gt;     5%    95% 
-#&gt; 147.96 401.65 </div><div class='input'><span class='co'>##       5&lt;!-- %      95% --&gt;</span>
-<span class='co'>## 147.96 401.65</span>
-
-
-<span class='co'># Bootstrap conf int</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>boot</span>)</div><div class='output co'>#&gt; <span class='message'></span>
-#&gt; <span class='message'>Attaching package: 'boot'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:HH':</span>
+#&gt; th12  -0.03   -0.01</div><div class='input'>  <span class='co'>##          5</span>
+  <span class='co'>## th11 936.44 1081.93</span>
+  <span class='co'>## th2  118.93  264.51   # th2 is the optimum</span>
+  <span class='co'>## th12  -0.03   -0.01</span>
+  
+  
+  <span class='co'># Likelihood conf int</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>MASS</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Attaching package: 'MASS'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:dplyr':</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    logit</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:survival':</span>
+#&gt; <span class='message'>    select</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:asreml':</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    aml</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:car':</span>
+#&gt; <span class='message'>    oats</span></div><div class='input'>  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/confint.html'>confint</a></span><span class='op'>(</span><span class='va'>nls1</span>, <span class='st'>"th2"</span>, level <span class='op'>=</span> <span class='fl'>0.9</span><span class='op'>)</span>,<span class='fl'>2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>Waiting for profiling to be done...</span></div><div class='output co'>#&gt;     5%    95% 
+#&gt; 147.96 401.65 </div><div class='input'>  <span class='co'>##       5</span>
+  <span class='co'>## 147.96 401.65</span>
+  
+  
+  <span class='co'># Bootstrap conf int</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>boot</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>Attaching package: 'boot'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:car':</span>
 #&gt; <span class='message'></span>
 #&gt; <span class='message'>    logit</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:lattice':</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    melanoma</span></div><div class='input'><span class='no'>dat1</span>$<span class='no'>fit</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/fitted.values.html'>fitted</a></span>(<span class='no'>nls1</span>)
-<span class='no'>bootfun</span> <span class='kw'>&lt;-</span> <span class='kw'>function</span>(<span class='no'>rs</span>, <span class='no'>i</span>) { <span class='co'># bootstrap the residuals</span>
-  <span class='no'>dat1</span>$<span class='no'>y</span> <span class='kw'>&lt;-</span> <span class='no'>dat1</span>$<span class='no'>fit</span> + <span class='no'>rs</span>[<span class='no'>i</span>]
-  <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/nls.html'>nls</a></span>(<span class='no'>y</span> ~ <span class='no'>th11</span>- (<span class='fl'>2</span>*<span class='no'>th2</span>*<span class='no'>th12</span>)*<span class='no'>nitro</span> + <span class='no'>th12</span>*<span class='no'>nitro</span>^<span class='fl'>2</span>, <span class='no'>dat1</span>, <span class='kw'>start</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span>(<span class='no'>nls1</span>)))
-}
-<span class='no'>res1</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/scale.html'>scale</a></span>(<span class='fu'><a href='https://rdrr.io/r/stats/residuals.html'>resid</a></span>(<span class='no'>nls1</span>), <span class='kw'>scale</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>) <span class='co'># remove the mean.  Why? It is close to 0.</span>
-<span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span>(<span class='fl'>1</span>) <span class='co'># Sometime the bootstrap fails, but this seed works</span>
-<span class='no'>boot1</span> <span class='kw'>&lt;-</span> <span class='fu'>boot</span>(<span class='no'>res1</span>, <span class='no'>bootfun</span>, <span class='kw'>R</span> <span class='kw'>=</span> <span class='fl'>500</span>)</div><div class='output co'>#&gt; <span class='error'>Error in nls(y ~ th11 - (2 * th2 * th12) * nitro + th12 * nitro^2, dat1,     start = coef(nls1)): number of iterations exceeded maximum of 50</span></div><div class='input'><span class='fu'>boot.ci</span>(<span class='no'>boot1</span>, <span class='kw'>index</span> <span class='kw'>=</span> <span class='fl'>2</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"perc"</span>), <span class='kw'>conf</span> <span class='kw'>=</span> <span class='fl'>0.9</span>)</div><div class='output co'>#&gt; <span class='error'>Error in boot.ci(boot1, index = 2, type = c("perc"), conf = 0.9): object 'boot1' not found</span></div><div class='input'>## Level     Percentile
-## 90<!-- %   (149.8, 334.1 ) -->
+#&gt; <span class='message'>    melanoma</span></div><div class='input'>  <span class='va'>dat1</span><span class='op'>$</span><span class='va'>fit</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/stats/fitted.values.html'>fitted</a></span><span class='op'>(</span><span class='va'>nls1</span><span class='op'>)</span>
+  <span class='va'>bootfun</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>rs</span>, <span class='va'>i</span><span class='op'>)</span> <span class='op'>{</span> <span class='co'># bootstrap the residuals</span>
+    <span class='va'>dat1</span><span class='op'>$</span><span class='va'>y</span> <span class='op'>&lt;-</span> <span class='va'>dat1</span><span class='op'>$</span><span class='va'>fit</span> <span class='op'>+</span> <span class='va'>rs</span><span class='op'>[</span><span class='va'>i</span><span class='op'>]</span>
+    <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/nls.html'>nls</a></span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='va'>th11</span><span class='op'>-</span> <span class='op'>(</span><span class='fl'>2</span><span class='op'>*</span><span class='va'>th2</span><span class='op'>*</span><span class='va'>th12</span><span class='op'>)</span><span class='op'>*</span><span class='va'>nitro</span> <span class='op'>+</span> <span class='va'>th12</span><span class='op'>*</span><span class='va'>nitro</span><span class='op'>^</span><span class='fl'>2</span>, <span class='va'>dat1</span>,
+             start <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/stats/coef.html'>coef</a></span><span class='op'>(</span><span class='va'>nls1</span><span class='op'>)</span> <span class='op'>)</span><span class='op'>)</span>
+  <span class='op'>}</span>
+  <span class='va'>res1</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/scale.html'>scale</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/stats/residuals.html'>resid</a></span><span class='op'>(</span><span class='va'>nls1</span><span class='op'>)</span>, scale <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span> <span class='co'># remove the mean.  Why? It is close to 0.</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/Random.html'>set.seed</a></span><span class='op'>(</span><span class='fl'>5</span><span class='op'>)</span> <span class='co'># Sometime the bootstrap fails, but this seed works</span>
+  <span class='va'>boot1</span> <span class='op'>&lt;-</span> <span class='fu'>boot</span><span class='op'>(</span><span class='va'>res1</span>, <span class='va'>bootfun</span>, R <span class='op'>=</span> <span class='fl'>500</span><span class='op'>)</span>
+  <span class='fu'>boot.ci</span><span class='op'>(</span><span class='va'>boot1</span>, index <span class='op'>=</span> <span class='fl'>2</span>, type <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"perc"</span><span class='op'>)</span>, conf <span class='op'>=</span> <span class='fl'>0.9</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; BOOTSTRAP CONFIDENCE INTERVAL CALCULATIONS
+#&gt; Based on 500 bootstrap replicates
+#&gt; 
+#&gt; CALL : 
+#&gt; boot.ci(boot.out = boot1, conf = 0.9, type = c("perc"), index = 2)
+#&gt; 
+#&gt; Intervals : 
+#&gt; Level     Percentile     
+#&gt; 90%   (150.3, 359.7 )  
+#&gt; Calculations and Intervals on Original Scale</div><div class='input'>  <span class='co'>## Level     Percentile</span>
+  <span class='co'>## 90</span>
 
-</div><div class='input'>
+<span class='co'># }</span>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#details">Details</a></li>
-
-      <li><a href="#source">Source</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -296,7 +316,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

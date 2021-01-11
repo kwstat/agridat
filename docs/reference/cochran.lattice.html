@@ -80,7 +80,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -146,12 +146,12 @@
     <p>Balanced lattice experiment in cotton</p>
     </div>
 
-    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='st'>"cochran.lattice"</span>)</pre>
+    <pre class="usage"><span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='st'>"cochran.lattice"</span><span class='op'>)</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 80 observations on the following 5 variables.</p><dl'>
+    <p>A data frame with 80 observations on the following 5 variables.</p><dl>
     <dt><code>y</code></dt><dd><p>percent of affected flower buds</p></dd>
     <dt><code>rep</code></dt><dd><p>replicate</p></dd>
     <dt><code>row</code></dt><dd><p>row</p></dd>
@@ -188,24 +188,27 @@
 <p>Walter Federer.
   Combining Standard Block Analyses With Spatial Analyses Under a Random
   Effects Model. Cornell Univ Tech Report BU-1373-MA.
-  http://hdl.handle.net/1813/31971</p>
+  https://hdl.handle.net/1813/31971</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
 
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>cochran.lattice</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>cochran.lattice</span>
+<span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>cochran.lattice</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>cochran.lattice</span>
 
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>desplot</span>)
-<span class='fu'>desplot</span>(<span class='no'>dat</span>, <span class='no'>y</span>~<span class='no'>row</span>*<span class='no'>col</span><span class='kw'>|</span><span class='no'>rep</span>,
-        <span class='kw'>text</span><span class='kw'>=</span><span class='no'>trt</span>, <span class='co'># aspect unknown, should be 2 or .5</span>
-         <span class='kw'>main</span><span class='kw'>=</span><span class='st'>"cochran.lattice"</span>)</div><div class='img'><img src='cochran.lattice-1.png' alt='' width='700' height='433' /></div><div class='input'>
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>desplot</span><span class='op'>)</span>
+<span class='fu'>desplot</span><span class='op'>(</span><span class='va'>dat</span>, <span class='va'>y</span><span class='op'>~</span><span class='va'>row</span><span class='op'>*</span><span class='va'>col</span><span class='op'>|</span><span class='va'>rep</span>,
+        text<span class='op'>=</span><span class='va'>trt</span>, <span class='co'># aspect unknown, should be 2 or .5</span>
+         main<span class='op'>=</span><span class='st'>"cochran.lattice"</span><span class='op'>)</span>
+</div><div class='img'><img src='cochran.lattice-1.png' alt='' width='700' height='433' /></div><div class='input'>
 
 <span class='co'># Random rep,row,column model often used by Federer</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lme4</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span>(<span class='no'>dat</span>, <span class='kw'>rowf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>row</span>), <span class='kw'>colf</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span>(<span class='no'>col</span>))
-<span class='no'>m1</span> <span class='kw'>&lt;-</span>  <span class='fu'>lmer</span>(<span class='no'>y</span> ~ <span class='no'>trt</span> + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>rep</span>) + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>rep</span>:<span class='no'>row</span>) + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>rep</span>:<span class='no'>col</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)</div><div class='output co'>#&gt; <span class='message'>boundary (singular) fit: see ?isSingular</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span>(<span class='no'>m1</span>)</div><div class='output co'>#&gt; Linear mixed model fit by REML ['lmerMod']
+<span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lme4</span><span class='op'>)</span>
+<span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/transform.html'>transform</a></span><span class='op'>(</span><span class='va'>dat</span>, rowf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>row</span><span class='op'>)</span>, colf<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/factor.html'>factor</a></span><span class='op'>(</span><span class='va'>col</span><span class='op'>)</span><span class='op'>)</span>
+<span class='va'>m1</span> <span class='op'>&lt;-</span>  <span class='fu'>lmer</span><span class='op'>(</span><span class='va'>y</span> <span class='op'>~</span> <span class='va'>trt</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>rep</span><span class='op'>)</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>rep</span><span class='op'>:</span><span class='va'>row</span><span class='op'>)</span> <span class='op'>+</span> <span class='op'>(</span><span class='fl'>1</span><span class='op'>|</span><span class='va'>rep</span><span class='op'>:</span><span class='va'>col</span><span class='op'>)</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>boundary (singular) fit: see ?isSingular</span></div><div class='input'><span class='fu'><a href='https://rdrr.io/r/base/summary.html'>summary</a></span><span class='op'>(</span><span class='va'>m1</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Linear mixed model fit by REML ['lmerMod']
 #&gt; Formula: y ~ trt + (1 | rep) + (1 | rep:row) + (1 | rep:col)
 #&gt;    Data: dat
 #&gt; 
@@ -246,7 +249,7 @@
 #&gt; <span class='message'>    vcov(x)        if you need it</span></div><div class='output co'>#&gt; convergence code: 0
 #&gt; boundary (singular) fit: see ?isSingular
 #&gt; </div><div class='input'>
-# }
+<span class='co'># }</span>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -263,7 +266,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

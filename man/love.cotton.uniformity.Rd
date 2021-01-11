@@ -25,7 +25,7 @@
 
   Possibly more information would be in the collected papers of Harry
   Love at Cornell:
-  http://rmc.library.cornell.edu/EAD/htmldocs/RMA00890.html
+  https://rmc.library.cornell.edu/EAD/htmldocs/RMA00890.html
   Cotton - Plot Technic Study 1930-1932. Box 3, Folder 34
 }
 

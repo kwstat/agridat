@@ -15,23 +15,29 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
+
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <!-- Bootstrap -->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -39,17 +45,16 @@
 
 
 
-<meta property="og:title" content="Split-plot experiment of simulated data — stroup.splitplot" />
 
+<meta property="og:title" content="Split-plot experiment of simulated data — stroup.splitplot" />
 <meta property="og:description" content="A simulated dataset of a very simple split-plot experiment, used to
   illustrate the details of calculating predictable functions (broad
   space, narrow space, etc.).
 For example, the density of narrow, intermediate and broad-space
-  predictible function for factor level A1 is shown below (html help only)
+  predictable function for factor level A1 is shown below (html help only)
   " />
-
 <meta property="og:image" content="/logo.png" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -66,7 +71,7 @@ For example, the density of narrow, intermediate and broad-space
 
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -80,7 +85,7 @@ For example, the density of narrow, intermediate and broad-space
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.17</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
       </span>
     </div>
 
@@ -109,7 +114,7 @@ For example, the density of narrow, intermediate and broad-space
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
-      <a href="../articles/agridat_papadakis.html">Using Papadakis covariates for nearest neighbor analysis</a>
+      <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
     </li>
   </ul>
 </li>
@@ -117,10 +122,9 @@ For example, the density of narrow, intermediate and broad-space
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/kwstat/agridat">
+  <a href="https://github.com/kwstat/agridat/">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -144,235 +148,230 @@ For example, the density of narrow, intermediate and broad-space
     </div>
 
     <div class="ref-description">
-    
     <p>A simulated dataset of a very simple split-plot experiment, used to
   illustrate the details of calculating predictable functions (broad
   space, narrow space, etc.).</p>
 <p>For example, the density of narrow, intermediate and broad-space
-  predictible function for factor level A1 is shown below (html help only)
+  predictable function for factor level A1 is shown below (html help only)
   <img src='figures/stroupsplitplot.png' width=50% alt="Figure: stroup.splitplot.png" /></p>
-    
     </div>
 
-        
+
+
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p></p><dl class='dl-horizontal'>
+    <p></p><dl>
     <dt><code>y</code></dt><dd><p>simulated response</p></dd>
     <dt><code>rep</code></dt><dd><p>replicate, 4 levels</p></dd>
     <dt><code>b</code></dt><dd><p>sub-plot, 2 levels</p></dd>
     <dt><code>a</code></dt><dd><p>whole-plot, 3 levels</p></dd>
-  </dl>
+  
+</dl>
 
-    
+<p>Used with permission of Walt Stroup.</p>
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>Walter W. Stroup, 1989.
   Predictable functions and prediction space in the mixed model procedure.
-  <em>Applications of Mixed Models in Agriculture and Related
-    Disciplines</em>.</p>
-<p>Used with permission of Walt Stroup.</p>
-    
+  Applications of Mixed Models in Agriculture and Related Disciplines.</p>
     <h2 class="hasAnchor" id="references"><a class="anchor" href="#references"></a>References</h2>
 
     <p>Wolfinger, R.D. and Kass, R.E., 2000.
   Nonconjugate Bayesian analysis of variance component models,
-  <em>Biometrics</em>, 56, 768--774.
-  http://doi.org/10.1111/j.0006-341X.2000.00768.x</p>
-    
+  Biometrics, 56, 768--774.
+  https://doi.org/10.1111/j.0006-341X.2000.00768.x</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'>
-<span class='fu'><a href='https://rdrr.io/r/base/library.html'>library</a></span>(<span class='no'>agridat</span>)
+    <pre class="examples"><div class='input'><span class='co'># \dontrun{</span>
+  
+  <span class='kw'><a href='https://rdrr.io/r/base/library.html'>library</a></span><span class='op'>(</span><span class='va'><a href='http://kwstat.github.io/agridat/'>agridat</a></span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>stroup.splitplot</span><span class='op'>)</span>
+  <span class='va'>dat</span> <span class='op'>&lt;-</span> <span class='va'>stroup.splitplot</span>
 
-<span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span>(<span class='no'>stroup.splitplot</span>)
-<span class='no'>dat</span> <span class='kw'>&lt;-</span> <span class='no'>stroup.splitplot</span>
-
-<span class='co'># ----------------------------------------------------------------------------</span></div><div class='input'>
   <span class='co'># ---- lme4 -----</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lme4</span>)
-  <span class='no'>m0</span> <span class='kw'>&lt;-</span> <span class='fu'>lmer</span>(<span class='no'>y</span>~ -<span class='fl'>1</span> + <span class='no'>a</span> + <span class='no'>b</span> + <span class='no'>a</span>:<span class='no'>b</span> + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>rep</span>) + (<span class='fl'>1</span><span class='kw'>|</span><span class='no'>a</span>:<span class='no'>rep</span>), <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)
+  <span class='co'># libs(lme4)</span>
+  <span class='co'># m0 &lt;- lmer(y~ -1 + a + b + a:b + (1|rep) + (1|a:rep), data=dat)</span>
   <span class='co'># No predict function</span>
-
+  
   <span class='co'># ----- nlme -----</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>nlme</span>)
-  <span class='no'>m0</span> <span class='kw'>&lt;-</span> <span class='fu'>lme</span>(<span class='no'>y</span> ~ -<span class='fl'>1</span> + <span class='no'>a</span> + <span class='no'>b</span> + <span class='no'>a</span>:<span class='no'>b</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>random</span> <span class='kw'>=</span> ~ <span class='fl'>1</span><span class='kw'>|</span><span class='no'>rep</span>/<span class='no'>a</span>)
-
+  <span class='co'># libs(nlme)</span>
+  <span class='co'># m0 &lt;- lme(y ~ -1 + a + b + a:b, data=dat, random = ~ 1|rep/a)</span>
+  
   <span class='co'># ----- ASREML model -----</span>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>asreml</span>)
-  <span class='no'>m1</span> <span class='kw'>&lt;-</span> <span class='fu'>asreml</span>(<span class='no'>y</span>~ -<span class='fl'>1</span> + <span class='no'>a</span> + <span class='no'>b</span> + <span class='no'>a</span>:<span class='no'>b</span>, <span class='kw'>random</span><span class='kw'>=</span>~ <span class='no'>rep</span> + <span class='no'>a</span>:<span class='no'>rep</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>)</div><div class='output co'>#&gt; ASReml: Fri Aug 16 15:02:27 2019
-#&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;     -50.5227     54.2060    18  15:02:27     0.0
-#&gt;     -47.0099     23.4102    18  15:02:27     0.0
-#&gt;     -44.8598     14.0907    18  15:02:27     0.0
-#&gt;     -43.6235     10.6700    18  15:02:27     0.0
-#&gt;     -43.3658      9.7122    18  15:02:27     0.0
-#&gt;     -43.3405      9.4044    18  15:02:27     0.0
-#&gt;     -43.3400      9.3621    18  15:02:27     0.0
-#&gt;     -43.3400      9.3611    18  15:02:27     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 15:02:27 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='input'>
-  <span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>lucid</span>)
-  <span class='fu'>vc</span>(<span class='no'>m1</span>) <span class='co'># Variance components match Stroup p. 41</span></div><div class='output co'>#&gt;       effect component std.error z.ratio constr
-#&gt;  rep!rep.var    62.4      56.54      1.1      P
-#&gt;  a:rep!a.var    15.38     11.79      1.3      P
-#&gt;   R!variance     9.361     4.413     2.1      P</div><div class='input'>  <span class='co'>##   effect component std.error z.ratio bound &lt;!-- %ch --&gt;</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>asreml</span><span class='op'>)</span>
+  <span class='va'>m1</span> <span class='op'>&lt;-</span> <span class='fu'>asreml</span><span class='op'>(</span><span class='va'>y</span><span class='op'>~</span> <span class='op'>-</span><span class='fl'>1</span> <span class='op'>+</span> <span class='va'>a</span> <span class='op'>+</span> <span class='va'>b</span> <span class='op'>+</span> <span class='va'>a</span><span class='op'>:</span><span class='va'>b</span>, random<span class='op'>=</span><span class='op'>~</span> <span class='va'>rep</span> <span class='op'>+</span> <span class='va'>a</span><span class='op'>:</span><span class='va'>rep</span>, data<span class='op'>=</span><span class='va'>dat</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:50:27 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -50.5227       54.2060     18 17:50:27    0.0
+#&gt;  2      -47.0112       23.4186     18 17:50:27    0.0
+#&gt;  3      -44.8607       14.0938     18 17:50:27    0.0
+#&gt;  4      -43.7727       11.1500     18 17:50:27    0.0
+#&gt;  5      -43.3895        9.8532     18 17:50:27    0.0
+#&gt;  6      -43.3415        9.4390     18 17:50:27    0.0
+#&gt;  7      -43.3400        9.3641     18 17:50:27    0.0</div><div class='input'>  
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lucid</span><span class='op'>)</span>
+  <span class='co'># vc(m1) # Variance components match Stroup p. 41</span>
+  <span class='co'>##   effect component std.error z.ratio bound </span>
   <span class='co'>##      rep    62.4      56.54      1.1     P   0</span>
   <span class='co'>##    a:rep    15.38     11.79      1.3     P   0</span>
   <span class='co'>## units(R)     9.361     4.413     2.1     P   0</span>
-
+  
   <span class='co'># Narrow space predictions</span>
-  <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m1</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>classify</span><span class='kw'>=</span><span class='st'>"a"</span>, <span class='kw'>average</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>rep</span><span class='kw'>=</span><span class='kw'>NULL</span>))$<span class='no'>predictions</span>$<span class='no'>pvals</span></div><div class='output co'>#&gt; ASReml: Fri Aug 16 15:02:28 2019
+  <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>m1</span>, data<span class='op'>=</span><span class='va'>dat</span>, classify<span class='op'>=</span><span class='st'>"a"</span>, average<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>rep<span class='op'>=</span><span class='cn'>NULL</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:50:27 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -43.3400       9.36112     18 17:50:27    0.0
+#&gt;  2      -43.3400       9.36111     18 17:50:27    0.0
+#&gt;  3      -43.3400       9.36111     18 17:50:27    0.0</div><div class='output co'>#&gt; $pvals
 #&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;     -43.3400      9.3611    18  15:02:28     0.0
-#&gt;     -43.3400      9.3611    18  15:02:28     0.0
-#&gt;     -43.3400      9.3611    18  15:02:28     0.0
-#&gt;     -43.3400      9.3611    18  15:02:28     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 15:02:28 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='output co'>#&gt; 
 #&gt; Notes:
 #&gt; - The predictions are obtained by averaging across the hypertable
 #&gt;   calculated from model terms constructed solely from factors in
 #&gt;   the averaging and classify sets.
-#&gt; - Use "average" to move ignored factors into the averaging set.
+#&gt; - Use 'average' to move ignored factors into the averaging set.
+#&gt; - The simple averaging set: b,rep
 #&gt; 
-#&gt; - The SIMPLE averaging set:  b rep 
 #&gt; 
-#&gt;    a predicted.value standard.error est.status
-#&gt; 1 a1          32.875        1.08173  Estimable
-#&gt; 2 a2          34.125        1.08173  Estimable
-#&gt; 3 a3          25.750        1.08173  Estimable</div><div class='input'>  <span class='co'>#  a Predicted Std Err    Status</span>
+#&gt;    a predicted.value std.error    status
+#&gt; 1 a1          32.875   1.08173 Estimable
+#&gt; 2 a2          34.125   1.08173 Estimable
+#&gt; 3 a3          25.750   1.08173 Estimable
+#&gt; 
+#&gt; $avsed
+#&gt;  overall 
+#&gt; 1.529797 
+#&gt; </div><div class='input'>  <span class='co'>#  a Predicted Std Err    Status</span>
   <span class='co'># a1     32.88   1.082 Estimable</span>
   <span class='co'># a2     34.12   1.082 Estimable</span>
   <span class='co'># a3     25.75   1.082 Estimable</span>
 
   <span class='co'># Intermediate space predictions</span>
-  <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m1</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>classify</span><span class='kw'>=</span><span class='st'>"a"</span>, <span class='kw'>ignore</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='st'>"a:rep"</span>),
-          <span class='kw'>average</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>rep</span><span class='kw'>=</span><span class='kw'>NULL</span>))$<span class='no'>predictions</span>$<span class='no'>pvals</span></div><div class='output co'>#&gt; ASReml: Fri Aug 16 15:02:28 2019
+  <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>m1</span>, data<span class='op'>=</span><span class='va'>dat</span>, classify<span class='op'>=</span><span class='st'>"a"</span>, ignore<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span><span class='st'>"a:rep"</span><span class='op'>)</span>,
+          average<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>rep<span class='op'>=</span><span class='cn'>NULL</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:50:27 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -43.3400       9.36112     18 17:50:27    0.0
+#&gt;  2      -43.3400       9.36111     18 17:50:27    0.0
+#&gt;  3      -43.3400       9.36111     18 17:50:27    0.0</div><div class='output co'>#&gt; $pvals
 #&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;     -43.3400      9.3611    18  15:02:28     0.0
-#&gt;     -43.3400      9.3611    18  15:02:28     0.0
-#&gt;     -43.3400      9.3611    18  15:02:28     0.0
-#&gt;     -43.3400      9.3611    18  15:02:28     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 15:02:28 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='output co'>#&gt; 
 #&gt; Notes:
 #&gt; - The predictions are obtained by averaging across the hypertable
 #&gt;   calculated from model terms constructed solely from factors in
 #&gt;   the averaging and classify sets.
-#&gt; - Use "average" to move ignored factors into the averaging set.
-#&gt; 
-#&gt; - The SIMPLE averaging set:  b rep 
-#&gt; - a:b is included in the prediction
-#&gt; - b is included in the prediction
-#&gt; - a is included in the prediction
+#&gt; - Use 'average' to move ignored factors into the averaging set.
+#&gt; - The simple averaging set: b,rep
+#&gt; - a:b is included in this prediction
+#&gt; - b is included in this prediction
+#&gt; - a is included in this prediction
 #&gt; - a:rep is ignored in this prediction
 #&gt; 
-#&gt;    a predicted.value standard.error est.status
-#&gt; 1 a1          32.875       2.239559  Estimable
-#&gt; 2 a2          34.125       2.239559  Estimable
-#&gt; 3 a3          25.750       2.239559  Estimable</div><div class='input'>  <span class='co'>#  a Predicted Std Err    Status</span>
+#&gt; 
+#&gt;    a predicted.value std.error    status
+#&gt; 1 a1          32.875  2.239559 Estimable
+#&gt; 2 a2          34.125  2.239559 Estimable
+#&gt; 3 a3          25.750  2.239559 Estimable
+#&gt; 
+#&gt; $avsed
+#&gt;  overall 
+#&gt; 3.167215 
+#&gt; </div><div class='input'>  <span class='co'>#  a Predicted Std Err    Status</span>
   <span class='co'># a1     32.88    2.24 Estimable</span>
   <span class='co'># a2     34.12    2.24 Estimable</span>
   <span class='co'># a3     25.75    2.24 Estimable</span>
 
   <span class='co'># Broad space predictions</span>
-  <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span>(<span class='no'>m1</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>, <span class='kw'>classify</span><span class='kw'>=</span><span class='st'>"a"</span>)$<span class='no'>predictions</span>$<span class='no'>pvals</span></div><div class='output co'>#&gt; ASReml: Fri Aug 16 15:02:28 2019
+  <span class='fu'><a href='https://rdrr.io/r/stats/predict.html'>predict</a></span><span class='op'>(</span><span class='va'>m1</span>, data<span class='op'>=</span><span class='va'>dat</span>, classify<span class='op'>=</span><span class='st'>"a"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; Model fitted using the gamma parameterization.
+#&gt; ASReml 4.1.0 Fri Dec 11 17:50:27 2020
+#&gt;           LogLik        Sigma2     DF     wall    cpu
+#&gt;  1      -43.3400       9.36112     18 17:50:27    0.0
+#&gt;  2      -43.3400       9.36111     18 17:50:27    0.0
+#&gt;  3      -43.3400       9.36111     18 17:50:27    0.0</div><div class='output co'>#&gt; $pvals
 #&gt; 
-#&gt;      LogLik         S2      DF      wall     cpu
-#&gt;     -43.3400      9.3611    18  15:02:28     0.0
-#&gt;     -43.3400      9.3611    18  15:02:28     0.0
-#&gt;     -43.3400      9.3611    18  15:02:28     0.0
-#&gt;     -43.3400      9.3611    18  15:02:28     0.0
-#&gt; 
-#&gt; Finished on: Fri Aug 16 15:02:28 2019
-#&gt;  
-#&gt; LogLikelihood Converged </div><div class='output co'>#&gt; 
 #&gt; Notes:
 #&gt; - The predictions are obtained by averaging across the hypertable
 #&gt;   calculated from model terms constructed solely from factors in
 #&gt;   the averaging and classify sets.
-#&gt; - Use "average" to move ignored factors into the averaging set.
+#&gt; - Use 'average' to move ignored factors into the averaging set.
+#&gt; - The simple averaging set: b
+#&gt; - The ignored set: rep
 #&gt; 
-#&gt; - The SIMPLE averaging set:  b 
-#&gt; - The ignored set:  rep 
 #&gt; 
-#&gt;    a predicted.value standard.error est.status
-#&gt; 1 a1          32.875       4.540329  Estimable
-#&gt; 2 a2          34.125       4.540329  Estimable
-#&gt; 3 a3          25.750       4.540329  Estimable</div><div class='input'>  <span class='co'>#  a Predicted Std Err    Status</span>
+#&gt;    a predicted.value std.error    status
+#&gt; 1 a1          32.875  4.540329 Estimable
+#&gt; 2 a2          34.125  4.540329 Estimable
+#&gt; 3 a3          25.750  4.540329 Estimable
+#&gt; 
+#&gt; $avsed
+#&gt;  overall 
+#&gt; 3.167215 
+#&gt; </div><div class='input'>  <span class='co'>#  a Predicted Std Err    Status</span>
   <span class='co'># a1     32.88    4.54 Estimable</span>
   <span class='co'># a2     34.12    4.54 Estimable</span>
   <span class='co'># a3     25.75    4.54 Estimable</span>
 
 
-<span class='co'># ----- Mcmcglmm model -----</span>
-<span class='co'># Use the point estimates from REML with a prior distribution</span>
-<span class='fu'><a href='libs.html'>libs</a></span>(<span class='no'>MCMCglmm</span>)</div><div class='output co'>#&gt; <span class='message'>Loading required package: coda</span></div><div class='output co'>#&gt; <span class='message'></span>
+  <span class='co'># ----- Mcmcglmm model -----</span>
+  <span class='co'># Use the point estimates from REML with a prior distribution</span>
+  <span class='fu'><a href='libs.html'>libs</a></span><span class='op'>(</span><span class='va'>lattice</span>,<span class='va'>MCMCglmm</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span class='message'>Loading required package: coda</span></div><div class='output co'>#&gt; <span class='message'></span>
 #&gt; <span class='message'>Attaching package: 'coda'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:HH':</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    acfplot</span></div><div class='output co'>#&gt; <span class='message'>Loading required package: ape</span></div><div class='output co'>#&gt; <span class='message'>Registered S3 method overwritten by 'ape':</span>
-#&gt; <span class='message'>  method   from </span>
-#&gt; <span class='message'>  plot.mst spdep</span></div><div class='output co'>#&gt; <span class='message'></span>
+#&gt; <span class='message'>    acfplot</span></div><div class='output co'>#&gt; <span class='message'>Loading required package: ape</span></div><div class='output co'>#&gt; <span class='message'></span>
 #&gt; <span class='message'>Attaching package: 'ape'</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:agricolae':</span>
 #&gt; <span class='message'></span>
 #&gt; <span class='message'>    consensus</span></div><div class='output co'>#&gt; <span class='message'>The following object is masked from 'package:pls':</span>
 #&gt; <span class='message'></span>
-#&gt; <span class='message'>    mvr</span></div><div class='input'><span class='no'>prior2</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(
-  <span class='kw'>G</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>G1</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>V</span><span class='kw'>=</span><span class='fl'>62.40</span>, <span class='kw'>nu</span><span class='kw'>=</span><span class='fl'>1</span>),  <span class='kw'>G2</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>V</span><span class='kw'>=</span><span class='fl'>15.38</span>, <span class='kw'>nu</span><span class='kw'>=</span><span class='fl'>1</span>)),
-  <span class='kw'>R</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='kw'>V</span> <span class='kw'>=</span> <span class='fl'>9.4</span>, <span class='kw'>nu</span><span class='kw'>=</span><span class='fl'>1</span>)
-  )
-<span class='no'>m2</span> <span class='kw'>&lt;-</span> <span class='fu'>MCMCglmm</span>(<span class='no'>y</span>~ -<span class='fl'>1</span> + <span class='no'>a</span> + <span class='no'>b</span> + <span class='no'>a</span>:<span class='no'>b</span>,
-               <span class='kw'>random</span><span class='kw'>=</span>~ <span class='no'>rep</span> + <span class='no'>a</span>:<span class='no'>rep</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>dat</span>,
-               <span class='kw'>pr</span><span class='kw'>=</span><span class='fl'>TRUE</span>, <span class='co'># save random effects as columns of 'Sol'</span>
-               <span class='kw'>nitt</span><span class='kw'>=</span><span class='fl'>23000</span>, <span class='co'># double the default 13000</span>
-               <span class='kw'>prior</span><span class='kw'>=</span><span class='no'>prior2</span>, <span class='kw'>verbose</span><span class='kw'>=</span><span class='fl'>FALSE</span>)
-
-<span class='co'># Now create a matrix of coefficients for the prediction.</span>
-<span class='co'># Each column is for a different prediction.  For example,</span>
-<span class='co'># the values in the column called 'a1a2n' are multiplied times</span>
-<span class='co'># the model coefficients (identified at the right side) to create</span>
-<span class='co'># the linear contrast for the the narrow-space predictions</span>
-<span class='co'># (also called adjusted mean) for the a1:a2 interaction.</span>
-<span class='co'>#              a1n   a1i  a1b a1a2n a1a2ib</span>
-<span class='no'>cm</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(  <span class='fl'>1</span>,   <span class='fl'>1</span>,   <span class='fl'>1</span>,    <span class='fl'>1</span>,    <span class='fl'>1</span>,   <span class='co'># a1</span>
-                 <span class='fl'>0</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>,   -<span class='fl'>1</span>,   -<span class='fl'>1</span>,   <span class='co'># a2</span>
+#&gt; <span class='message'>    mvr</span></div><div class='input'>  <span class='va'>prior2</span> <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>
+    G <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>G1<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>V<span class='op'>=</span><span class='fl'>62.40</span>, nu<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span>,  G2<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>V<span class='op'>=</span><span class='fl'>15.38</span>, nu<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span><span class='op'>)</span>,
+    R <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>V <span class='op'>=</span> <span class='fl'>9.4</span>, nu<span class='op'>=</span><span class='fl'>1</span><span class='op'>)</span>
+  <span class='op'>)</span>
+  <span class='va'>m2</span> <span class='op'>&lt;-</span> <span class='fu'>MCMCglmm</span><span class='op'>(</span><span class='va'>y</span><span class='op'>~</span> <span class='op'>-</span><span class='fl'>1</span> <span class='op'>+</span> <span class='va'>a</span> <span class='op'>+</span> <span class='va'>b</span> <span class='op'>+</span> <span class='va'>a</span><span class='op'>:</span><span class='va'>b</span>,
+                 random<span class='op'>=</span><span class='op'>~</span> <span class='va'>rep</span> <span class='op'>+</span> <span class='va'>a</span><span class='op'>:</span><span class='va'>rep</span>, data<span class='op'>=</span><span class='va'>dat</span>,
+                 pr<span class='op'>=</span><span class='cn'>TRUE</span>, <span class='co'># save random effects as columns of 'Sol'</span>
+                 nitt<span class='op'>=</span><span class='fl'>23000</span>, <span class='co'># double the default 13000</span>
+                 prior<span class='op'>=</span><span class='va'>prior2</span>, verbose<span class='op'>=</span><span class='cn'>FALSE</span><span class='op'>)</span>
+  
+  <span class='co'># Now create a matrix of coefficients for the prediction.</span>
+  <span class='co'># Each column is for a different prediction.  For example,</span>
+  <span class='co'># the values in the column called 'a1a2n' are multiplied times</span>
+  <span class='co'># the model coefficients (identified at the right side) to create</span>
+  <span class='co'># the linear contrast for the the narrow-space predictions</span>
+  <span class='co'># (also called adjusted mean) for the a1:a2 interaction.</span>
+  <span class='co'>#              a1n   a1i  a1b a1a2n a1a2ib</span>
+  <span class='va'>cm</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/matrix.html'>matrix</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,   <span class='fl'>1</span>,   <span class='fl'>1</span>,    <span class='fl'>1</span>,    <span class='fl'>1</span>,   <span class='co'># a1</span>
+                 <span class='fl'>0</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>,   <span class='op'>-</span><span class='fl'>1</span>,   <span class='op'>-</span><span class='fl'>1</span>,   <span class='co'># a2</span>
                  <span class='fl'>0</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>,    <span class='fl'>0</span>,    <span class='fl'>0</span>,   <span class='co'># a3</span>
-               <span class='fl'>1</span>/<span class='fl'>2</span>, <span class='fl'>1</span>/<span class='fl'>2</span>, <span class='fl'>1</span>/<span class='fl'>2</span>,    <span class='fl'>0</span>,    <span class='fl'>0</span>,   <span class='co'># b2</span>
-                 <span class='fl'>0</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>,  -<span class='fl'>1</span>/<span class='fl'>2</span>,  -<span class='fl'>1</span>/<span class='fl'>2</span>, <span class='co'># a2:b2</span>
+                 <span class='fl'>1</span><span class='op'>/</span><span class='fl'>2</span>, <span class='fl'>1</span><span class='op'>/</span><span class='fl'>2</span>, <span class='fl'>1</span><span class='op'>/</span><span class='fl'>2</span>,    <span class='fl'>0</span>,    <span class='fl'>0</span>,   <span class='co'># b2</span>
+                 <span class='fl'>0</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>,  <span class='op'>-</span><span class='fl'>1</span><span class='op'>/</span><span class='fl'>2</span>,  <span class='op'>-</span><span class='fl'>1</span><span class='op'>/</span><span class='fl'>2</span>, <span class='co'># a2:b2</span>
                  <span class='fl'>0</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>,    <span class='fl'>0</span>,    <span class='fl'>0</span>,   <span class='co'># a3:b2</span>
-               <span class='fl'>1</span>/<span class='fl'>4</span>, <span class='fl'>1</span>/<span class='fl'>4</span>,   <span class='fl'>0</span>,    <span class='fl'>0</span>,    <span class='fl'>0</span>,   <span class='co'># r1</span>
-               <span class='fl'>1</span>/<span class='fl'>4</span>, <span class='fl'>1</span>/<span class='fl'>4</span>,   <span class='fl'>0</span>,    <span class='fl'>0</span>,    <span class='fl'>0</span>,   <span class='co'># r2</span>
-               <span class='fl'>1</span>/<span class='fl'>4</span>, <span class='fl'>1</span>/<span class='fl'>4</span>,   <span class='fl'>0</span>,    <span class='fl'>0</span>,    <span class='fl'>0</span>,   <span class='co'># r3</span>
-               <span class='fl'>1</span>/<span class='fl'>4</span>, <span class='fl'>1</span>/<span class='fl'>4</span>,   <span class='fl'>0</span>,    <span class='fl'>0</span>,    <span class='fl'>0</span>,   <span class='co'># r4</span>
-               <span class='fl'>1</span>/<span class='fl'>4</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>,  <span class='fl'>1</span>/<span class='fl'>4</span>,    <span class='fl'>0</span>,   <span class='co'># a1r1</span>
-                 <span class='fl'>0</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>, -<span class='fl'>1</span>/<span class='fl'>4</span>,    <span class='fl'>0</span>,   <span class='co'># a2r1</span>
+                 <span class='fl'>1</span><span class='op'>/</span><span class='fl'>4</span>, <span class='fl'>1</span><span class='op'>/</span><span class='fl'>4</span>,   <span class='fl'>0</span>,    <span class='fl'>0</span>,    <span class='fl'>0</span>,   <span class='co'># r1</span>
+                 <span class='fl'>1</span><span class='op'>/</span><span class='fl'>4</span>, <span class='fl'>1</span><span class='op'>/</span><span class='fl'>4</span>,   <span class='fl'>0</span>,    <span class='fl'>0</span>,    <span class='fl'>0</span>,   <span class='co'># r2</span>
+                 <span class='fl'>1</span><span class='op'>/</span><span class='fl'>4</span>, <span class='fl'>1</span><span class='op'>/</span><span class='fl'>4</span>,   <span class='fl'>0</span>,    <span class='fl'>0</span>,    <span class='fl'>0</span>,   <span class='co'># r3</span>
+                 <span class='fl'>1</span><span class='op'>/</span><span class='fl'>4</span>, <span class='fl'>1</span><span class='op'>/</span><span class='fl'>4</span>,   <span class='fl'>0</span>,    <span class='fl'>0</span>,    <span class='fl'>0</span>,   <span class='co'># r4</span>
+                 <span class='fl'>1</span><span class='op'>/</span><span class='fl'>4</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>,  <span class='fl'>1</span><span class='op'>/</span><span class='fl'>4</span>,    <span class='fl'>0</span>,   <span class='co'># a1r1</span>
+                 <span class='fl'>0</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>, <span class='op'>-</span><span class='fl'>1</span><span class='op'>/</span><span class='fl'>4</span>,    <span class='fl'>0</span>,   <span class='co'># a2r1</span>
                  <span class='fl'>0</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>,    <span class='fl'>0</span>,    <span class='fl'>0</span>,   <span class='co'># a3r1</span>
-               <span class='fl'>1</span>/<span class='fl'>4</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>,  <span class='fl'>1</span>/<span class='fl'>4</span>,    <span class='fl'>0</span>,   <span class='co'># a1r2</span>
-                 <span class='fl'>0</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>, -<span class='fl'>1</span>/<span class='fl'>4</span>,    <span class='fl'>0</span>,   <span class='co'># a2r2</span>
+               <span class='fl'>1</span><span class='op'>/</span><span class='fl'>4</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>,  <span class='fl'>1</span><span class='op'>/</span><span class='fl'>4</span>,    <span class='fl'>0</span>,   <span class='co'># a1r2</span>
+                 <span class='fl'>0</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>, <span class='op'>-</span><span class='fl'>1</span><span class='op'>/</span><span class='fl'>4</span>,    <span class='fl'>0</span>,   <span class='co'># a2r2</span>
                  <span class='fl'>0</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>,    <span class='fl'>0</span>,    <span class='fl'>0</span>,   <span class='co'># a3r2</span>
-               <span class='fl'>1</span>/<span class='fl'>4</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>,  <span class='fl'>1</span>/<span class='fl'>4</span>,    <span class='fl'>0</span>,   <span class='co'># a1r3</span>
-                 <span class='fl'>0</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>, -<span class='fl'>1</span>/<span class='fl'>4</span>,    <span class='fl'>0</span>,   <span class='co'># a2r3</span>
+               <span class='fl'>1</span><span class='op'>/</span><span class='fl'>4</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>,  <span class='fl'>1</span><span class='op'>/</span><span class='fl'>4</span>,    <span class='fl'>0</span>,   <span class='co'># a1r3</span>
+                 <span class='fl'>0</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>, <span class='op'>-</span><span class='fl'>1</span><span class='op'>/</span><span class='fl'>4</span>,    <span class='fl'>0</span>,   <span class='co'># a2r3</span>
                  <span class='fl'>0</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>,    <span class='fl'>0</span>,    <span class='fl'>0</span>,   <span class='co'># a3r3</span>
-               <span class='fl'>1</span>/<span class='fl'>4</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>,  <span class='fl'>1</span>/<span class='fl'>4</span>,    <span class='fl'>0</span>,   <span class='co'># a1r4</span>
-                 <span class='fl'>0</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>, -<span class='fl'>1</span>/<span class='fl'>4</span>,    <span class='fl'>0</span>,   <span class='co'># a2r4</span>
-                 <span class='fl'>0</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>,    <span class='fl'>0</span>,    <span class='fl'>0</span>),  <span class='co'># a3r4</span>
-             <span class='kw'>ncol</span><span class='kw'>=</span><span class='fl'>5</span>, <span class='kw'>byrow</span><span class='kw'>=</span><span class='fl'>TRUE</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span>(<span class='no'>cm</span>) <span class='kw'>&lt;-</span>   <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"a1"</span>, <span class='st'>"a2"</span>, <span class='st'>"a3"</span>, <span class='st'>"b2"</span>, <span class='st'>"a2:b2"</span>, <span class='st'>"a3:b2"</span>,
-                    <span class='st'>"r1"</span>, <span class='st'>"r2"</span>, <span class='st'>"r3"</span>, <span class='st'>"r4"</span>,
-                    <span class='st'>"a1r1"</span>, <span class='st'>"a1r2"</span>, <span class='st'>"a1r3"</span>, <span class='st'>"a1r4"</span>, <span class='st'>"a2r1"</span>, <span class='st'>"a2r2"</span>,
-                    <span class='st'>"a2r3"</span>, <span class='st'>"a2r4"</span>, <span class='st'>"a3r1"</span>, <span class='st'>"a3r2"</span>,  <span class='st'>"a3r3"</span>, <span class='st'>"a3r4"</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span>(<span class='no'>cm</span>) <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"A1n"</span>,<span class='st'>"A1i"</span>,<span class='st'>"A1b"</span>, <span class='st'>"A1-A2n"</span>, <span class='st'>"A1-A2ib"</span>)
-<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='no'>cm</span>)</div><div class='output co'>#&gt;        A1n  A1i A1b A1-A2n A1-A2ib
+               <span class='fl'>1</span><span class='op'>/</span><span class='fl'>4</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>,  <span class='fl'>1</span><span class='op'>/</span><span class='fl'>4</span>,    <span class='fl'>0</span>,   <span class='co'># a1r4</span>
+                 <span class='fl'>0</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>, <span class='op'>-</span><span class='fl'>1</span><span class='op'>/</span><span class='fl'>4</span>,    <span class='fl'>0</span>,   <span class='co'># a2r4</span>
+                 <span class='fl'>0</span>,   <span class='fl'>0</span>,   <span class='fl'>0</span>,    <span class='fl'>0</span>,    <span class='fl'>0</span><span class='op'>)</span>,  <span class='co'># a3r4</span>
+               ncol<span class='op'>=</span><span class='fl'>5</span>, byrow<span class='op'>=</span><span class='cn'>TRUE</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>rownames</a></span><span class='op'>(</span><span class='va'>cm</span><span class='op'>)</span> <span class='op'>&lt;-</span>   <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"a1"</span>, <span class='st'>"a2"</span>, <span class='st'>"a3"</span>, <span class='st'>"b2"</span>, <span class='st'>"a2:b2"</span>, <span class='st'>"a3:b2"</span>,
+                      <span class='st'>"r1"</span>, <span class='st'>"r2"</span>, <span class='st'>"r3"</span>, <span class='st'>"r4"</span>,
+                      <span class='st'>"a1r1"</span>, <span class='st'>"a1r2"</span>, <span class='st'>"a1r3"</span>, <span class='st'>"a1r4"</span>, <span class='st'>"a2r1"</span>, <span class='st'>"a2r2"</span>,
+                      <span class='st'>"a2r3"</span>, <span class='st'>"a2r4"</span>, <span class='st'>"a3r1"</span>, <span class='st'>"a3r2"</span>,  <span class='st'>"a3r3"</span>, <span class='st'>"a3r4"</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/colnames.html'>colnames</a></span><span class='op'>(</span><span class='va'>cm</span><span class='op'>)</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"A1n"</span>,<span class='st'>"A1i"</span>,<span class='st'>"A1b"</span>, <span class='st'>"A1-A2n"</span>, <span class='st'>"A1-A2ib"</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='va'>cm</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;        A1n  A1i A1b A1-A2n A1-A2ib
 #&gt; a1    1.00 1.00 1.0   1.00     1.0
 #&gt; a2    0.00 0.00 0.0  -1.00    -1.0
 #&gt; a3    0.00 0.00 0.0   0.00     0.0
@@ -394,45 +393,39 @@ For example, the density of narrow, intermediate and broad-space
 #&gt; a3r1  0.00 0.00 0.0   0.00     0.0
 #&gt; a3r2  0.25 0.00 0.0   0.25     0.0
 #&gt; a3r3  0.00 0.00 0.0  -0.25     0.0
-#&gt; a3r4  0.00 0.00 0.0   0.00     0.0</div><div class='input'><span class='co'># post2 &lt;- as.mcmc(m2$Sol &lt;!-- %*% cm) --&gt;</span>
-<span class='no'>post2</span> <span class='kw'>&lt;-</span> <span class='fu'>as.mcmc</span>(<span class='fu'><a href='https://rdrr.io/r/base/crossprod.html'>crossprod</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span>(<span class='no'>m2</span>$<span class='no'>Sol</span>), <span class='no'>cm</span>))
+#&gt; a3r4  0.00 0.00 0.0   0.00     0.0</div><div class='input'>  <span class='co'># post2 &lt;- as.mcmc(m2$Sol </span>
+  <span class='va'>post2</span> <span class='op'>&lt;-</span> <span class='fu'>as.mcmc</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/crossprod.html'>crossprod</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/t.html'>t</a></span><span class='op'>(</span><span class='va'>m2</span><span class='op'>$</span><span class='va'>Sol</span><span class='op'>)</span>, <span class='va'>cm</span><span class='op'>)</span><span class='op'>)</span>
 
-<span class='co'># Following table has columns for A1 estimate (narrow, intermediate, broad)</span>
-<span class='co'># A1-A2 estimate (narrow and intermediat/broad).</span>
-<span class='co'># The REML estimates are from Stroup 1989.</span>
-<span class='no'>est</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span>(<span class='st'>"REML est"</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>32.88</span>, <span class='fl'>32.88</span>, <span class='fl'>32.88</span>, -<span class='fl'>1.25</span>, -<span class='fl'>1.25</span>),
-             <span class='st'>"REML stderr"</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1.08</span>, <span class='fl'>2.24</span>, <span class='fl'>4.54</span>, <span class='fl'>1.53</span>, <span class='fl'>3.17</span>),
-             <span class='st'>"MCMC mode"</span><span class='kw'>=</span><span class='fu'>posterior.mode</span>(<span class='no'>post2</span>),
-             <span class='st'>"MCMC stderr"</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span>(<span class='no'>post2</span>, <span class='fl'>2</span>, <span class='no'>sd</span>))
-<span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span>(<span class='no'>est</span>,<span class='fl'>2</span>)</div><div class='output co'>#&gt;               A1n   A1i   A1b A1-A2n A1-A2ib
+  <span class='co'># Following table has columns for A1 estimate (narrow, intermediate, broad)</span>
+  <span class='co'># A1-A2 estimate (narrow and intermediat/broad).</span>
+  <span class='co'># The REML estimates are from Stroup 1989.</span>
+  <span class='va'>est</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span><span class='op'>(</span><span class='st'>"REML est"</span><span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>32.88</span>, <span class='fl'>32.88</span>, <span class='fl'>32.88</span>, <span class='op'>-</span><span class='fl'>1.25</span>, <span class='op'>-</span><span class='fl'>1.25</span><span class='op'>)</span>,
+               <span class='st'>"REML stderr"</span><span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1.08</span>, <span class='fl'>2.24</span>, <span class='fl'>4.54</span>, <span class='fl'>1.53</span>, <span class='fl'>3.17</span><span class='op'>)</span>,
+               <span class='st'>"MCMC mode"</span><span class='op'>=</span><span class='fu'>posterior.mode</span><span class='op'>(</span><span class='va'>post2</span><span class='op'>)</span>,
+               <span class='st'>"MCMC stderr"</span><span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/apply.html'>apply</a></span><span class='op'>(</span><span class='va'>post2</span>, <span class='fl'>2</span>, <span class='va'>sd</span><span class='op'>)</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/Round.html'>round</a></span><span class='op'>(</span><span class='va'>est</span>,<span class='fl'>2</span><span class='op'>)</span>
+</div><div class='output co'>#&gt;               A1n   A1i   A1b A1-A2n A1-A2ib
 #&gt; REML est    32.88 32.88 32.88  -1.25   -1.25
 #&gt; REML stderr  1.08  2.24  4.54   1.53    3.17
-#&gt; MCMC mode   33.07 32.90 31.33  -1.50   -1.61
-#&gt; MCMC stderr  1.23  2.76  6.26   1.75    3.92</div><div class='input'><span class='co'>#               A1n   A1i   A1b A1-A2n A1-A2ib</span>
-<span class='co'># REML est    32.88 32.88 32.88  -1.25   -1.25</span>
-<span class='co'># REML stderr  1.08  2.24  4.54   1.53    3.17</span>
-<span class='co'># MCMC mode   32.95 32.38 31.96  -1.07   -1.17</span>
-<span class='co'># MCMC stderr  1.23  2.64  5.93   1.72    3.73</span>
+#&gt; MCMC mode   32.72 32.87 31.24  -1.58   -1.94
+#&gt; MCMC stderr  1.24  2.59  6.29   1.71    3.71</div><div class='input'>  <span class='co'>#               A1n   A1i   A1b A1-A2n A1-A2ib</span>
+  <span class='co'># REML est    32.88 32.88 32.88  -1.25   -1.25</span>
+  <span class='co'># REML stderr  1.08  2.24  4.54   1.53    3.17</span>
+  <span class='co'># MCMC mode   32.95 32.38 31.96  -1.07   -1.17</span>
+  <span class='co'># MCMC stderr  1.23  2.64  5.93   1.72    3.73</span>
 
-<span class='no'>post22</span> <span class='kw'>&lt;-</span> <span class='fu'>make.groups</span>(<span class='kw'>Narrow</span><span class='kw'>=</span><span class='no'>post2</span>[,<span class='fl'>1</span>], <span class='kw'>Intermediate</span><span class='kw'>=</span><span class='no'>post2</span>[,<span class='fl'>2</span>],
-                      <span class='kw'>Broad</span><span class='kw'>=</span><span class='no'>post2</span>[,<span class='fl'>3</span>])
-<span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span>(<span class='fu'>densityplot</span>(~<span class='no'>data</span><span class='kw'>|</span><span class='no'>which</span>, <span class='kw'>data</span><span class='kw'>=</span><span class='no'>post22</span>, <span class='kw'>groups</span><span class='kw'>=</span><span class='no'>which</span>,
-      <span class='kw'>cex</span><span class='kw'>=</span><span class='fl'>.25</span>, <span class='kw'>lty</span><span class='kw'>=</span><span class='fl'>1</span>, <span class='kw'>layout</span><span class='kw'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>1</span>,<span class='fl'>3</span>),
-      <span class='kw'>xlab</span><span class='kw'>=</span><span class='st'>"MCMC model value of predictable function for A1"</span>))</div><div class='img'><img src='stroup.splitplot-1.png' alt='' width='700' height='433' /></div></pre>
+  <span class='va'>post22</span> <span class='op'>&lt;-</span> <span class='fu'>lattice</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/lattice/man/make.groups.html'>make.groups</a></span><span class='op'>(</span>
+    Narrow<span class='op'>=</span><span class='va'>post2</span><span class='op'>[</span>,<span class='fl'>1</span><span class='op'>]</span>, Intermediate<span class='op'>=</span><span class='va'>post2</span><span class='op'>[</span>,<span class='fl'>2</span><span class='op'>]</span>, Broad<span class='op'>=</span><span class='va'>post2</span><span class='op'>[</span>,<span class='fl'>3</span><span class='op'>]</span><span class='op'>)</span>
+  <span class='fu'><a href='https://rdrr.io/r/base/print.html'>print</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/pkg/lattice/man/histogram.html'>densityplot</a></span><span class='op'>(</span><span class='op'>~</span><span class='va'>data</span><span class='op'>|</span><span class='va'>which</span>, data<span class='op'>=</span><span class='va'>post22</span>, groups<span class='op'>=</span><span class='va'>which</span>,
+                    cex<span class='op'>=</span><span class='fl'>.25</span>, lty<span class='op'>=</span><span class='fl'>1</span>, layout<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>1</span>,<span class='fl'>3</span><span class='op'>)</span>,
+                    xlab<span class='op'>=</span><span class='st'>"MCMC model value of predictable function for A1"</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='img'><img src='stroup.splitplot-1.png' alt='' width='700' height='433' /></div><div class='input'><span class='co'># }</span>
+</div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      
-      <li><a href="#format">Format</a></li>
-
-      <li><a href="#source">Source</a></li>
-
-      <li><a href="#references">References</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
 
@@ -443,7 +436,7 @@ For example, the density of narrow, intermediate and broad-space
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
