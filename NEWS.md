@@ -1,4 +1,14 @@
-# agridat 1.18 (Jan 2021)
+# agridat 1.19 (unpublished)
+
+## New data
+
+hadasch.lettuce, hadasch.lettuce.markers, petersen.sorghum.cowpea
+
+## Other notes
+
+* Re-named `mead.cowpeamaize` to `mead.cowpea.maize`.
+
+# agridat 1.18 - Jan 2021
 
 ## New data
 

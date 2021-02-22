@@ -1,5 +1,5 @@
-\name{mead.cowpeamaize}
-\alias{mead.cowpeamaize}
+\name{mead.cowpea.maize}
+\alias{mead.cowpea.maize}
 \docType{data}
 \title{
   Intercropping experiment of maize/cowpea
@@ -38,13 +38,13 @@
 \dontrun{
 
 library(agridat)
-data(mead.cowpeamaize)
-dat <- mead.cowpeamaize
+data(mead.cowpea.maize)
+dat <- mead.cowpea.maize
 
 # Cowpea and maize yields are clearly in competition
 libs("latticeExtra")
 useOuterStrips(xyplot(myield ~ cyield|maize*cowpea, dat, group=nitro,
-                      main="mead.cowpeamaize - intercropping",
+                      main="mead.cowpea.maize - intercropping",
                       xlab="cowpea yield",
                       ylab="maize yield", auto.key=list(columns=4)))
 

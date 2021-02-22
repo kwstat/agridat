@@ -71,6 +71,26 @@
   ## 94.8  89.2  95.0  96.4  95.3  95.2  97.3  93.7  95.0  94.0  98.9 102.4
 
 
+  # Griffings method
+  # https://www.statforbiology.com/2021/stat_met_diallel_griffing/
+  # libs(lmDiallel)
+  # dat2 <- lonnquist.maize
+  # dat2 <- subset(dat2,
+  #                is.element(p1, c("M","H","G","B","K","K2")) &
+  #                is.element(p2, c("M","H","G","B","K","K2")))
+  # dat2 <- droplevels(dat2)
+  # dmod1 <- lm(yield ~ GCA(p1, p2) + tSCA(p1, p2),
+  #             data = dat2)
+  # dmod2 <- lm.diallel(yield ~ p1 + p2, 
+  #                     data = dat2, fct = "GRIFFING2")
+  # anova.diallel(dmod1, MSE=7.1, dfr=60)
+  ## Response: yield
+  ##              Df Sum Sq Mean Sq F value    Pr(>F)    
+  ## GCA(p1, p2)   5 234.23  46.846  6.5980 5.923e-05 ***
+  ## tSCA(p1, p2) 15 238.94  15.929  2.2436   0.01411 *  
+  ## Residuals    60          7.100                      
+
+  
   # ----------
 
   # asreml4

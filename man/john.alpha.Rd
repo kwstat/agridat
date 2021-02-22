@@ -30,16 +30,22 @@
 
 \source{  
   J. A. John & E. R. Williams (1995).
-  \emph{Cyclic and computer generated designs},
+  Cyclic and computer generated designs.
   Chapman and Hall, London.  Page 146.
 }
 
 \references{
   Piepho, H.P. and Mohring, J. (2007),
   Computing heritability and selection response from unbalanced
-  plant breeding trials,
-  \emph{Genetics}, 177, 1881-1888.
+  plant breeding trials.
+  Genetics, 177, 1881-1888.
   https://doi.org/10.1534/genetics.107.074229
+
+  Paul Schmidt, Jens Hartung, Jörn Bennewitz, and Hans-Peter Piepho
+  (2019).
+  Heritability in Plant Breeding on a Genotype-Difference Basis.
+  Genetics, 212, 991-1008.
+  https://doi.org/10.1534/genetics.119.302134
 }
 
 \examples{
@@ -122,12 +128,11 @@
   sg2 / (sg2 + vblue/2) # .803
   
   # H^2c Similar measure proposed by Cullis.
-  1-(vblup / 2 / sg2) # .809
+  1-(vblup / (2*sg2)) # .809
 
 
   # ----------
-
-  # Illustrate how to do the same calculations with lme4
+  # lme4 to calculate Cullis H2
   # https://stackoverflow.com/questions/38697477
   
   libs(lme4)
@@ -174,6 +179,25 @@
 
   # H^2c Similar measure proposed by Cullis.
   1-(vblup / 2 / sg2) # .809 from asreml, .800 from lme4
+
+  
+  # ----------
+  # Sommer to calculate Cullis H2
+  libs(sommer)
+  m2.ran <- mmer(fixed  = yield ~ rep,
+                 random =       ~ gen + rep:block,
+                 data   = dat)
+  
+  vc_g     <- m2.ran$sigma$gen       # genetic variance component
+  n_g      <- n_distinct(dat$gen)    # number of genotypes
+  C22_g    <- m2.ran$PevU$gen$yield  # Prediction error variance matrix for genotypic BLUPs
+  trC22_g  <- sum(diag(C22_g))       # trace
+  # Mean variance of a difference between genotypic BLUPs. Smith eqn 26
+  # I do not see the algebraic reason for this...2
+  av2 <- 2/n_g * (trC22_g - (sum(C22_g)-trC22_g) / (n_g-1))                      
+  
+  ### H2 Cullis
+  1-(av2 / (2 * vc_g)) #0.8091
 
 }
 }

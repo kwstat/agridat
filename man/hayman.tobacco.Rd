@@ -79,6 +79,9 @@
   data(hayman.tobacco)
   dat1 <- subset(hayman.tobacco, year==1951)
 
+  
+  # Hayman's model
+  # dat1 <- subset(hayman.tobacco, year==1951)
   # libs(lmDiallel)
   # m1  <- lm.diallel(day ~ male+female, Block=block, data=dat1, fct="HAYMAN2")
   # anova(m1) # Similar to table 7 of Hayman 1954a
@@ -92,6 +95,28 @@
   ## RGCA            7   67.39    9.63  2.3097   0.03671 *  
   ## RSCA           21  123.73    5.89  1.4135   0.14668    
   ## Residuals      63  262.60                              
+
+  
+  # Griffing's model
+  # https://www.statforbiology.com/2021/stat_met_diallel_griffing/
+  # dat1 <- subset(hayman.tobacco, year==1951)
+  # libs(lmDiallel)
+  # contrasts(dat1$block) <- "contr.sum"
+  # dmod1 and dmod2 are the same model with different syntax
+  # dmod1 <- lm(day ~ block + GCA(male, female) + tSCA(male, female) +
+  #               REC(male, female) , data = dat1)
+  # dmod2 <- lm.diallel(day ~ male + female, Block=block, 
+  #                     data = dat1, fct = "GRIFFING1")
+  # anova(dmod1)
+  # anova(dmod2)
+  ## Response: day
+  ##             Df  Sum Sq Mean Sq F value    Pr(>F)    
+  ## Block        1    1.42    1.42  0.3416   0.56100    
+  ## GCA          7 2777.17  396.74 95.1805 < 2.2e-16 ***
+  ## SCA         28 1022.38   36.51  8.7599 6.656e-13 ***
+  ## Reciprocals 28  191.12    6.83  1.6375   0.05369 .  
+  ## Residuals   63  262.60                              
+
   
   # Make a factor 'comb' in which G1xG2 is the same cross as G2xG1
   dat1 <- transform(dat1,

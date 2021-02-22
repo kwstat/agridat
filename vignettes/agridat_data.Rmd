@@ -267,6 +267,38 @@ https://archive.org/details/statisticaltechn031729mbp
 ```
 
 
+### Roger Petersen, *Agricultural Field Experiments*
+```
+8 Uniformity trial 18 * 6 plots
+56 RCB 4 rep, 5 trt
+71 Latin square 5x5
+86 Factorial 4x2, 3 rep
+97 Factorial 2x3x2, 3 rep
+125 Fertilizer trial, 3 rep, 5 levels
+136 Split plot variety x planting date, 3 rep
+148 Strip plot 2 potash x 3 potassium, 3 rep
+170 Augmented breeding trial with 3 checks, 6 inc blocks
+174 Inc Block
+182 Lattice 5x5, 2 rep
+192 GxE 10 gen, 12 env. Stability analysis.
+208 Factorial 2x3 at 8 locs, homogeneous variance, early lentils
+217 GxE 8 gen, 5 loc, heterogeneous variance
+232 Factorial 2x3 at 8 locs, late lentils (see also page 208)
+249 On-farm trial, 24 entries, 3 rep RCB
+257 Demonstration trials, 5 locs
+272 Covariance example, RCB 6 rep, 4rt
+278 Multi-year 2x2 factorial, 4 rep
+309 Pasture trial
+323 On-farm trial, 2 variety 8 loc
+327 On-farm trial 6 trt, 5 loc
+334 On-farm trial 4 trt, 6 loc
+343 On-farm trial 2x3 factorial, 3 loc
+351 Feeding trial, 2 trt, 2 periods
+357 Intercrop, 2 crops
+372 Intercrop, 2 crop, 4 mixtures, 4 rep. agridat::petersen.sorghum.cowpea
+```
+
+
 ### Arthur Asquith Rayner (1969). _A First Course In Biometry For Agriculture Students_.
 
 ```
