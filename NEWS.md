@@ -2,7 +2,7 @@
 
 ## New data
 
-hadasch.lettuce, hadasch.lettuce.markers, petersen.sorghum.cowpea
+hadasch.lettuce, hadasch.lettuce.markers, petersen.sorghum.cowpea, woodman.pig
 
 ## Other notes
 

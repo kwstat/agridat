@@ -230,7 +230,7 @@ https://books.google.com/books?id=_P3LBQAAQBAJ&pg=PA334
 https://archive.org/details/secondeditionsta001000mbp
 
 ```
-455 2 factors, 1 covariate
+455 2 factors, 1 covariate - agridat::woodman.pig
 458 1 factor, 2 covariates - agridat::crampton.pig
 ```
 

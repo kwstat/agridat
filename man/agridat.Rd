@@ -154,6 +154,7 @@ name                             \tab gen  \tab years \tab trt \tab other \tab m
 \link{mead.lamb}                 \tab 3    \tab    \tab 3      \tab \tab glm \cr
 \link{patterson.switchback}      \tab 12   \tab    \tab 4      \tab \tab aov \cr
 \link{urquhart.feedlot}          \tab 11   \tab    \tab 3      \tab  \tab lm \cr
+\link{woodman.pig}               \tab      \tab    \tab 3      \tab cov \tab lm \cr
 \link{zuidhof.broiler}           \tab      \tab    \tab        \tab ts \tab
 }
 

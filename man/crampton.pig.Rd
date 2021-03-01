@@ -32,36 +32,40 @@
 \source{
   Crampton, EW and Hopkins, JW. (1934).
   The Use of the Method of Partial Regression in the Analysis of Comparative Feeding Trial Data, Part II.
-  \emph{The Journal of Nutrition}, 8, 113-123.
+  The Journal of Nutrition, 8, 113-123.
+  https://doi.org/10.1093/jn/8.3.329
 }
 \references{
-  Bernard Ostle. \emph{Statistics in Research}
+  Bernard Ostle. Statistics in Research, Page 458.
+  https://archive.org/details/secondeditionsta001000mbp
 
-  Goulen. \emph{Methods of Statistical Analysis, 1st ed}. Page 256-259.
+  Goulden (1939). Methods of Statistical Analysis, 1st ed. Page 256-259.
+  https://archive.org/details/methodsofstatist031744mbp
 }
 \examples{
+\dontrun{
+  
+  library(agridat)
 
-library(agridat)
+  data(crampton.pig)
+  dat <- crampton.pig
 
-data(crampton.pig)
-dat <- crampton.pig
-
-dat <- transform(dat, gain=weight2-weight1)
-libs(lattice)
-# Trt 4 looks best
-xyplot(gain ~ feed, dat, group=treatment, type=c('p','r'),
-       auto.key=list(columns=5),
-       xlab="Feed eaten", ylab="Weight gain", main="crampton.pig")
-
-# Basic Anova without covariates
-m1 <- lm(weight2 ~ treatment + rep, data=dat)
-anova(m1)
-# Add covariates
-m2 <- lm(weight2 ~ treatment + rep + weight1 + feed, data=dat)
-anova(m2)
-# Remove treatment, test this nested model for significant treatments
-m3 <- lm(weight2 ~ rep + weight1 + feed, data=dat)
-anova(m2,m3) # p-value .07. F=2.34 matches Ostle
-
+  dat <- transform(dat, gain=weight2-weight1)
+  libs(lattice)
+  # Trt 4 looks best
+  xyplot(gain ~ feed, dat, group=treatment, type=c('p','r'),
+         auto.key=list(columns=5),
+         xlab="Feed eaten", ylab="Weight gain", main="crampton.pig")
+  
+  # Basic Anova without covariates
+  m1 <- lm(weight2 ~ treatment + rep, data=dat)
+  anova(m1)
+  # Add covariates
+  m2 <- lm(weight2 ~ treatment + rep + weight1 + feed, data=dat)
+  anova(m2)
+  # Remove treatment, test this nested model for significant treatments
+  m3 <- lm(weight2 ~ rep + weight1 + feed, data=dat)
+  anova(m2,m3) # p-value .07. F=2.34 matches Ostle
+}
 }
 \keyword{datasets}

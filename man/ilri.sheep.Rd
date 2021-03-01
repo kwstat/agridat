@@ -47,20 +47,30 @@
 }
 
 \source{ 
-  Case Study 4: Mixed model analysis for the estimation of components of genetic
+  Mixed model analysis for the estimation of components of genetic
   variation in lamb weaning weight. International Livestock Research Institute.
-  https://www.ilri.org/biometrics/CS/case\%20study\%204/case\%20study\%204.1.htm
+  Permanent link: https://hdl.handle.net/10568/10364
+  https://biometrics.ilri.org/CS/case%20study%204/DatafilesDocs/
   Retrieved Dec 2011.
-
+  
   Licensed with Creative Commons BY-NC-SA 3.0 Unported license.  
 }
 
 \references{
   Baker, RL and Nagda, S. and Rodriguez-Zas, SL and Southey, BR and
-  Audho, JO and Aduda, EO and Thorpe, W. 2003. Resistance and resilience
-  to gastro-intestinal nematode parasites and relationships with
-  productivity of Red Maasai, Dorper and Red Maasai x Dorper crossbred
-  lambs in the sub-humid tropics.  \emph{Animal Science}, 76, 119-136.
+  Audho, JO and Aduda, EO and Thorpe, W. (2003).
+  Resistance and resilience to gastro-intestinal nematode parasites and
+  relationships with productivity of Red Maasai, Dorper and Red Maasai x
+  Dorper crossbred lambs in the sub-humid tropics.
+  Animal Science, 76, 119-136.
+  https://doi.org/10.1017/S1357729800053388
+
+  Gota Morota, Hao Cheng, Dianne Cook, Emi Tanaka (2021).
+  ASAS-NANP SYMPOSIUM: prospects for interactive and dynamic graphics in
+  the era of data-rich animal science.
+  Journal of Animal Science, Volume 99, Issue 2, February 2021, skaa402.
+  https://doi.org/10.1093/jas/skaa402
+
 }
 
 \examples{
@@ -112,18 +122,14 @@
   # ----------
 
   libs(asreml,lucid)
-  # asreml3 and asreml4
-
   # case study page 4.20
   m1 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
                data=dat)
-  # anova(m1) # asreml3
-  # wald(m1) # asreml4
+  # wald(m1)
   
   # case study page 4.26
   m2 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
                random = ~ ram + ewe, data=dat)
-  # anova(m2)
   # wald(m2)
   
   # case study page 4.37, year means
