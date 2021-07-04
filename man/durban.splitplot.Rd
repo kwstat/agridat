@@ -25,8 +25,6 @@
   and 70 barley varieties or variety mixes.  Total area was 10 rows
   (north/south) by 56 beds (east/west).
 
-  Retrieved from: ftp://ftp.bioss.sari.ac.uk/pub/maria
-
   Used with permission of Maria Durban.
 }
 \source{

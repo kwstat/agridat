@@ -555,6 +555,12 @@ https://doi.org/10.2134/agronj2012.0411
 
 The data and R code appeared in the paper. Free access, but closed copyright.
 
+**Peixoto, Marco Antonio et al** (2020)
+Random regression for modeling yield genetic trajectories in Jatropha curcas breeding.
+https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0244021
+
+Repeated measurements over six years.  Data in supplemental Word doc.
+
 
 **Snedecor, George and E. S. Haber** (1946).
 Statistical Methods For an Incomplete Experiment on a Perennial Crop.

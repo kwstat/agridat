@@ -13,7 +13,7 @@ The datasets come from books, papers, and websites related to agriculture.
 Example graphics and analyses are included. Data come from small-plot trials,
 multi-environment trials, uniformity trials, yield monitors, and more.
    
-Key features:
+## Key features
 
 * Thorough documentation.
 

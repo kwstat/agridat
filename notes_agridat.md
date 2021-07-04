@@ -3,8 +3,6 @@
 
 ## To do
    
-* Need graphic for tai.potato
-* Need graphic for yang.barley
 * Figure out best way to use jags
 * JAGS code for edwards.oats
 * JAGS code for lee.potatoblight
@@ -22,13 +20,6 @@ This document lists notes about data sources searched and additional sources of 
 Although this is an .md file, the formatting is best viewed in plain text mode.
 
 ---
-
-
-rangaswamy groundnut uniformity trial 
-https://books.google.com/books?id=QDLWE4oakSgC&pg=PA231&lpg=PA231&dq=%22uniformity+trial%22&source=bl&ots=YlItaP9T0d&sig=ACfU3U3YVgplrlieEbI-O4TJe8M67BCAMw&hl=en&sa=X&ved=2ahUKEwjAjaDTxbTrAhUYCs0KHQqbAV44ChDoATAHegQICRAB#v=onepage&q=%22uniformity%20trial%22&f=false
-
----
-
 
 Henry Wallace archive at Univ Iowa Library
 http://www.lib.uiowa.edu/sc/location-and-hours/

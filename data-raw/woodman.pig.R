@@ -1,10 +1,5 @@
 # woodman.pig.R
-# Time-stamp: <01 Mar 2021 08:23:26 c:/x/rpack/agridat/data-raw/woodman.pig.R>
-
-Six pigs in each of 5 pens were fed individually. From each litter there were 3 males and 3 females chosen for a pen. Three different diet treatments were used.
-
-Note: Woodman gives the initial weights to the nearest 0.5 pounds.  Oddly, all later references use the nearest 1.0 pounds. The data here follow Woodman, so analysis results will differ compared to later authors.
-
+# Time-stamp: <01 Mar 2021 10:42:12 c:/x/rpack/agridat/data-raw/woodman.pig.R>
 
 
 library(pacman)

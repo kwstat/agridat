@@ -28,8 +28,6 @@
 
   Plot dimensions are not given.
   
-  Retrieved from: ftp://ftp.bioss.sari.ac.uk/pub/maria
-
   Used with permission of Maria Durban.
 }
 \source{

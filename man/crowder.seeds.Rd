@@ -86,7 +86,9 @@
                      family=binomial(), data=dat)
   summary(m1.glmm)
   
-
+  libs(brms)
+  m1.brms <- brm(
+  
 # ----- HGML package. Beta-binomial with beta-distributed random effects
 # libs(hglm)
 # m1.hglm <- hglm(fixed= germ/n ~ I(gen=="O75")*extract, weights=n, data=dat,
