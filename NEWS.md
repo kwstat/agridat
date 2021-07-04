@@ -2,7 +2,7 @@
 
 ## New data
 
-hadasch.lettuce, hadasch.lettuce.markers, petersen.sorghum.cowpea, woodman.pig
+arankacami.groundnut.uniformity, gomez.heterogeneity, hadasch.lettuce, hadasch.lettuce.markers, jones.corn.uniformity, petersen.sorghum.cowpea, woodman.pig
 
 ## Other notes
 
