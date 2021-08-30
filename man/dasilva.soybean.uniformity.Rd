@@ -1,5 +1,5 @@
-\name{correa.soybean.uniformity}
-\alias{correa.soybean.uniformity}
+\name{dasilva.soybean.uniformity}
+\alias{dasilva.soybean.uniformity}
 \docType{data}
 \title{
   Uniformity trial of soybean
@@ -7,7 +7,7 @@
 \description{
   Uniformity trial of soybean in Brazil, 1970.
 }
-\usage{data("correa.soybean.uniformity")}
+\usage{data("dasilva.soybean.uniformity")}
 \format{
   A data frame with 1152 observations on the following 3 variables.
   \describe{
@@ -37,13 +37,13 @@
 \dontrun{
 
 library(agridat)
-data(correa.soybean.uniformity)
-dat <- correa.soybean.uniformity
+data(dasilva.soybean.uniformity)
+dat <- dasilva.soybean.uniformity
 
 libs(desplot)
 desplot(dat, yield ~ col*row,
         flip=TRUE, aspect=28.8/14.4, 
-        main="correa.soybean.uniformity")
+        main="dasilva.soybean.uniformity")
   
 }
 }
