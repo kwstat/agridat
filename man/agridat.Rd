@@ -41,7 +41,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{bryan.corn.uniformity}              \tab 6 x 48 \tab xy \tab \cr
 \link{christidis.cotton.uniformity}       \tab 16 x 16 \tab xy, 4 blocks \tab \cr
 \link{christidis.wheat.uniformity}        \tab 12 x 24 \tab xy \tab \cr
-\link{correa.soybean.uniformity}          \tab 24 x 48 \tab xy \tab \cr
+\link{dasilva.soybean.uniformity}         \tab 24 x 48 \tab xy \tab \cr
 \link{davies.pasture.uniformity}          \tab 19 x 40 \tab xy \tab \cr
 \link{day.wheat.uniformity}               \tab 31 x 100 \tab xy \tab \cr
 \link{draper.safflower.uniformity}        \tab 18 x 16 \tab xy, 2 expt \tab smith\cr
@@ -273,6 +273,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{goulden.splitsplit}          \tab 2   \tab    \tab 4   \tab    \tab 2*5   \tab xy, split \tab aov \cr
 \link{graybill.heteroskedastic}    \tab 4   \tab 13 \tab     \tab    \tab       \tab hetero \tab \cr
 \link{gregory.cotton}              \tab     \tab    \tab     \tab 2  \tab 4*3*2*2 \tab polar \tab \cr
+\link{grover.rcb.subsample}        \tab     \tab    \tab 4   \tab 2  \tab 9     \tab subsample \tab aov \cr
 \link{gumpertz.pepper}             \tab     \tab    \tab     \tab    \tab       \tab xy \tab glm\cr
 \link{hadasch.lettuce}             \tab 89  \tab 3  \tab 3   \tab    \tab       \tab markers \tab asreml\cr
 \link{hanks.sprinkler}             \tab 3   \tab    \tab 3   \tab    \tab       \tab xy \tab asreml\cr
