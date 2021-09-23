@@ -46,6 +46,12 @@
   Statistica Neerlandica, 51, 129--144. Table 2.
   https://doi.org/10.1111/1467-9574.00044
 }
+\references{
+  R. Larsson & Jesper Ryden (2021).
+  Applications of discrete factor analysis.
+  Communications in Statistics - Simulation and Computation.
+  https://doi.org/10.1080/03610918.2021.1964528
+}
 
 \examples{
 \dontrun{

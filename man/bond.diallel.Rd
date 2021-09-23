@@ -54,8 +54,8 @@
   # Multivariate example from sommer package
   corrgram(dat[,c("stems","pods","seeds")],
            lower=panel.pts, upper=panel.conf, main="bond.diallel")
-  libs(sommer)           
   
+  libs(sommer)           
   m1 <- mmer(cbind(stems,pods,seeds) ~ 1,
              random= ~ vs(female)+vs(male),
              rcov= ~ vs(units),
