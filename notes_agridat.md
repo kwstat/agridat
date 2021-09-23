@@ -35,9 +35,10 @@ http://cucurbitbreeding.com/todd-wehner/publications/software-sas-r-project/
 
 # wanted
 
-Plant-level data for distinctness, uniformity and stability testing.  Most published data is for plot-means.
+* Plant-level data for distinctness, uniformity and stability testing.  Most published data is for plot-means.
 This page mentions an R version for DUS: http://www.bioss.ac.uk/knowledge/software.html
-
+* Yield-monitor data for a split-planter field
+* Yield-monitor data for a strip trial.
 
 # stability
 

@@ -273,6 +273,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{goulden.splitsplit}          \tab 2   \tab    \tab 4   \tab    \tab 2*5   \tab xy, split \tab aov \cr
 \link{graybill.heteroskedastic}    \tab 4   \tab 13 \tab     \tab    \tab       \tab hetero \tab \cr
 \link{gregory.cotton}              \tab     \tab    \tab     \tab 2  \tab 4*3*2*2 \tab polar \tab \cr
+\link{grover.diallel}              \tab     \tab    \tab 4   \tab    \tab 6*6   \tab diallel \tab lmDiallel \cr
 \link{grover.rcb.subsample}        \tab     \tab    \tab 4   \tab 2  \tab 9     \tab subsample \tab aov \cr
 \link{gumpertz.pepper}             \tab     \tab    \tab     \tab    \tab       \tab xy \tab glm\cr
 \link{hadasch.lettuce}             \tab 89  \tab 3  \tab 3   \tab    \tab       \tab markers \tab asreml\cr

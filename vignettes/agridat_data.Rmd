@@ -1,4 +1,4 @@
----
+--
 title: "Additional sources of agricultural data"
 author: "Kevin Wright"
 date: "`r Sys.Date()`"
@@ -98,6 +98,38 @@ https://www.wiley.com/WileyCDA/WileyTitle/productCd-1119945496.html
  7 291 wool fibers, 3 trt, 21 animals
  9 370 alphalpha design (row-column inc block), xy
 10 434 hollamby wheat trial, xy - agridat::gilmour.serpentine
+```
+
+
+### Grover, Deepak & Lajpat Rai. *Experimental Designing And Data Analysis In Agriculture And Biology*. 
+Agrotech Publishing Academy, 2010.
+https://archive.org/details/expldesnanddatanalinagblg00023
+```
+43 Percent insect survival in 12 rice varieties, 3 reps
+50 CRD
+57 RCBD
+67 Latin Square
+85 Sampling, 4 rep, 9 trt, 4 sub-samples agridat::grover.rcb.subsample
+88 Split-plot, 3 rep, 2 measurements/plot, plant height (unusual subsample example)
+97 Missing plot
+105 Latin square with missing plot
+115 2^2 factorial, 6 block
+118 2^3 factorial, 3 block
+120 Two factor asymmetrical, 5 rep
+140 2^3 fractional factorial, 3 rep
+160 Split-plot (planting date, variety), 3 rep
+168 Strip-plot, 3 rep 
+176 Milk yield with covariate
+188 Multi-year nitrogen treatment
+197 BIBD 13 varieties
+205 Lattice 4 blocks, 3 reps, 16 trt
+226 Augmented BIBD
+236 Group-divisible
+239 PBIB
+241 Augmented group-divisible
+245 Augmented PBIB
+250 6x6 full diallel, 4 rep   agridat::grover.diallel
+
 ```
 
 
@@ -297,6 +329,9 @@ https://archive.org/details/statisticaltechn031729mbp
 357 Intercrop, 2 crops
 372 Intercrop, 2 crop, 4 mixtures, 4 rep. agridat::petersen.sorghum.cowpea
 ```
+
+### Richard Plant, _Spatial Data Analysis in Ecology and Agriculture using R_
+https://psfaculty.plantsciences.ucdavis.edu/plant/
 
 
 ### Arthur Asquith Rayner (1969). _A First Course In Biometry For Agriculture Students_.
@@ -568,6 +603,13 @@ Biometrics Bulletin, 2, 61-67.
 https://doi.org/10.2307/3001959
 
 Harvest of asparagus over 10 years, three cutting dates per year, 6 blocks.
+
+**Tanaka, Takashi X. T.**
+Assessment of design and analysis frameworks for on-farm experimentation through a simulation study of wheat yield in Japan.
+https://github.com/takashit754/geostat
+
+Yield-monitor data for 3 fields.
+
 
 
 **Technow, Frank, et al.** (2014).
