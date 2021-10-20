@@ -727,7 +727,7 @@ Has phenotype data and marker data for 599 wheat lines in 4 environments.
 
 
 ### ggenealogy
-https://www.jstatsoft.org/article/view/v089i13
+https://doi.org/10.18637/jss.v089.i13
 
 Data `sbGeneal` contains a soybean pedigree with 230 varieties.
 

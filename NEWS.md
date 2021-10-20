@@ -1,15 +1,15 @@
 # agridat 1.19 (unpublished)
 
-
 ## New data
 
-arankacami.groundnut.uniformity, gomez.heterogeneity, grover.rcb.subsample, hadasch.lettuce, hadasch.lettuce.markers, jones.corn.uniformity, petersen.sorghum.cowpea, woodman.pig
+arankacami.groundnut.uniformity, gomez.heterogeneity, grover.diallel, grover.rcb.subsample, hadasch.lettuce, hadasch.lettuce.markers, jones.corn.uniformity, petersen.sorghum.cowpea, woodman.pig
 
 ## Other notes
 
 * Re-named `mead.cowpeamaize` to `mead.cowpea.maize`.
 
 * R-named `correa.soybean.uniformity` to `dasilva.soybean.uniformity`.
+
 
 # agridat 1.18 - Jan 2021
 
