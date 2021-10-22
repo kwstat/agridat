@@ -293,7 +293,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{jansen.strawberry}           \tab 12  \tab    \tab 4   \tab    \tab       \tab ordinal \tab mosaicplot\cr
 \link{jayaraman.bamboo}            \tab 6   \tab 2  \tab 3   \tab    \tab       \tab heritability \tab lmer \cr
 \link{jenkyn.mildew}               \tab     \tab    \tab 9   \tab    \tab 4     \tab \tab lm\cr
-\link{john.alpha}                  \tab 24  \tab    \tab 3   \tab    \tab       \tab alpha \tab lm, lmer \cr
+\link{john.alpha}                  \tab 24  \tab    \tab 3   \tab    \tab       \tab xy, alpha \tab lm, lmer \cr
 \link{johnson.blight}              \tab     \tab    \tab     \tab 2  \tab       \tab \tab logistic \cr
 \link{kang.maize}                  \tab 17  \tab 4  \tab     \tab 3  \tab 2,4   \tab \tab \cr
 \link{kang.peanut}                 \tab 10  \tab 15 \tab 4   \tab    \tab       \tab \tab gge \cr
