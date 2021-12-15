@@ -203,6 +203,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{bond.diallel}                \tab 6*6 \tab    \tab     \tab    \tab 9     \tab diallel \tab \cr
 \link{bridges.cucumber}            \tab 4   \tab 2  \tab 4   \tab    \tab       \tab xy, latin, hetero\tab asreml \cr
 \link{brandle.rape}                \tab 5   \tab 9  \tab     \tab 3  \tab       \tab \tab lmer \cr
+\link{buntaran.wheat}              \tab 30  \tab 18 \tab 2   \tab    \tab       \tab alpha \tab asreml \cr
 \link{burgueno.alpha}              \tab 15  \tab    \tab 3   \tab    \tab       \tab xy, alpha \tab asreml,lmer \cr
 \link{burgueno.rowcol}             \tab 64  \tab    \tab 2   \tab    \tab       \tab xy, row-col \tab asreml,lmer \cr
 \link{burgueno.unreplicated}       \tab 280 \tab    \tab     \tab    \tab       \tab xy \tab asreml \cr
