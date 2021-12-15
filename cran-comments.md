@@ -1,3 +1,13 @@
+# agridat 1.19
+
+## CRAN package status check
+
+https://cran.r-project.org/web/checks/check_results_kw.stat_at_gmail.com.html
+Current CRAN status: OK: 12
+
+## Test environments and results
+
+1. 
 # agridat 1.18
 
 This release fixes the vignettes to conditionally load "Suggests" packages.

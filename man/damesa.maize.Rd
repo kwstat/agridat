@@ -24,7 +24,7 @@
 \details{
   An experiment harvested in 2012, evaluating drought-tolerant maize
   hybrids at 4 sites in Ethiopia.
-  At each, an incomplete-block design was used.
+  At each site, an incomplete-block design was used.
 
   Damesa et al use this data to compare single-stage and two-stage
   analyses.
@@ -37,7 +37,7 @@
   https://doi.org/10.2134/agronj2016.07.0395
 }
 \references{
-  https://schmidtpaul.github.io/MMFAIR/weighted_two_stage.html
+  None
 }
 \examples{
 \dontrun{
