@@ -188,6 +188,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{archbold.apple}              \tab 2   \tab    \tab 5   \tab    \tab 24    \tab split-split \tab lmer \cr
 \link{ars.earlywhitecorn96}        \tab 60  \tab 9  \tab     \tab    \tab       \tab 6 traits \tab dotplot \cr
 \link{australia.soybean}           \tab 58  \tab 4  \tab     \tab 2  \tab       \tab 4-way, 6 traits \tab biplot \cr
+\link{barrero.maize}               \tab 847 \tab 16 \tab 4   \tab 11 \tab 6     \tab \tab asreml\cr
 \link{battese.survey}              \tab     \tab 12 \tab 1-5 \tab    \tab 2     \tab \tab lmer \cr
 \link{beall.webworms}              \tab     \tab    \tab 15  \tab    \tab 2,2   \tab xy, split-block \tab glm poisson,nb\cr
 \link{beaven.barley}               \tab  8  \tab    \tab 20  \tab    \tab       \tab xy \tab \cr
@@ -417,6 +418,7 @@ Summaries:
 Multi-environment trials with multi-genotype,loc,rep,year:
 \tabular{llllllll}{
   name                               \tab gen \tab loc\tab reps\tab years \tab trt \tab other \tab model \cr
+  \link{barrero.maize}               \tab 847  \tab 16 \tab 4  \tab 11  \tab 6  \tab \tab asreml\cr
   \link{edwards.oats}                \tab 80  \tab 5  \tab 3   \tab 7  \tab       \tab \tab \cr
   \link{gauch.soy}                   \tab 7   \tab 7  \tab 4   \tab 12 \tab       \tab \tab ammi \cr
   \link{george.wheat}                \tab 211 \tab 9  \tab 4   \tab 15 \tab       \tab \tab \cr

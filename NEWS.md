@@ -2,7 +2,7 @@
 
 ## New data
 
-arankacami.groundnut.uniformity, buntaran.wheat, gomez.heterogeneity, grover.diallel, grover.rcb.subsample, hadasch.lettuce, hadasch.lettuce.markers, jones.corn.uniformity, petersen.sorghum.cowpea, woodman.pig
+arankacami.groundnut.uniformity, barrero.maize, buntaran.wheat, gomez.heterogeneity, grover.diallel, grover.rcb.subsample, hadasch.lettuce, hadasch.lettuce.markers, jones.corn.uniformity, petersen.sorghum.cowpea, woodman.pig
 
 ## Other notes
 
