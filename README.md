@@ -12,7 +12,9 @@ The `agridat` package provides an extensive collection of datasets from agricult
 The datasets come from books, papers, and websites related to agriculture.
 Example graphics and analyses are included. Data come from small-plot trials,
 multi-environment trials, uniformity trials, yield monitors, and more.
-   
+
+This package tries to make data FAIR: Findable, Accessible, Interoperable, Reusable.
+
 ## Key features
 
 * Thorough documentation.

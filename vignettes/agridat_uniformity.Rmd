@@ -2,8 +2,11 @@
 title: "Notes on uniformity data"
 author: "Kevin Wright"
 date: "`r Sys.Date()`"
-output:
-  rmarkdown::html_vignette
+output: 
+  rmarkdown::html_vignette:
+    md_extensions: [ 
+      "-autolink_bare_uris" 
+    ]
 vignette: >
   %\VignetteIndexEntry{Notes on uniformity data}
   %\VignetteEngine{knitr::rmarkdown}
@@ -30,28 +33,29 @@ https://archive.org/details/in.ernet.dli.2015.271748
 Baker, GA and Huberty, MR and Veihmeyer, FJ.  (1952)
 A uniformity trial on unirrigated barley of ten years' duration.
 Agronomy Journal, 44, 267-270.
-http://doi.org/10.2134/agronj1952.00021962004400050011x
+DOI: 10.2134/agronj1952.00021962004400050011x
 
 Baker, G. A.; and R. E. Baker (1953).
 Strawberry Uniformity Yield Trials.
 Biometrics, 9, 412-421.
-http://doi.org/10.2307/3001713
+DOI: 10.2307/3001713
 
 G. A. Baker, E. B. Roessler (1957).
 Implications of a uniformity trial with small plots of wheat.
 Hilgardia, 27, 183-188.
-http://hilgardia.ucanr.edu/Abstract/?a=hilg.v27n05p183
+
+https://hilgardia.ucanr.edu/Abstract/?a=hilg.v27n05p183
 
 Bancroft, T. A. et a1., (1948).
 Size and Shape of Plots and Distribution of Plot Yield for Field Experiments with Peanuts.
 Alabama Agricultural Experiment Station Progress Report, sec. 39.
 Table 4, page 6.
-https://aurora.auburn.edu/bitstream/handle/11200/1345/0477PROG.pdf;sequence=1
+http://hdl.handle.net/11200/1345
 
 Batchelor, L. D.; and H. S. Reed. (1918).
 Relation of the variability of yields of fruit trees to the accuracy of field trials. 
 J. Agric. Res, 12, 245--283.
-http://books.google.com/books?id=Lil6AAAAMAAJ&lr&pg=PA245
+https://books.google.com/books?id=Lil6AAAAMAAJ&lr&pg=PA245
 
 Bose, R. D. (1935).
 Some soil heterogeneity trials at Pusa and the size and shape of experimental plots. 
@@ -61,7 +65,7 @@ https://archive.org/details/in.ernet.dli.2015.271739
 Bradley, P. L. (1941).
 A study of the variation in productivity over a number of fixed plots in field 2.
 Dissertation: The University of the West Indies. Appendix 1a, 1b, 1c, 1d.
-http://hdl.handle.net/2139/41264
+https://uwispace.sta.uwi.edu/dspace/handle/2139/41259
 
 The data are repeated in:
 C. E. Wilson.
@@ -69,7 +73,7 @@ Study of the plots laid out on field II with a view to obtaining
 plot-fertility data for use in future experiments on these plots,
 season 1940-41.
 Dissertation: The University of the West Indies.  Page 36-39.
-http://uwispace.sta.uwi.edu/dspace/handle/2139/43658
+https://uwispace.sta.uwi.edu/dspace/handle/2139/43658
 
 Christidis, B. G. (1939).
 Variability of Plots of Various Shapes as Affected by Plot Orientation.
@@ -78,13 +82,12 @@ Empire Journal of Experimental Agriculture 7: 330-342. Table 1.
 Christidis, Basil G (1931).
 The importance of the shape of plots in field experimentation.
 The Journal of Agricultural Science, 21, 14-37. Table VI, p. 28.
-http://dx.doi.org/10.1017/S0021859600007942
+DOI: 10.1017/S0021859600007942
 
 da Silva, Enedino Correa. (1974).
 Estudo do tamanho e forma de parcelas para experimentos de soja (Plot size and shape for soybean yield trials).
 Pesquisa Agropecuaria Brasileira, Serie Agronomia, 9, 49-59. Table 3,
 page 52-53.
-http://seer.sct.embrapa.br/index.php/pab/article/view/17250
 
 Davies, J. Griffiths (1931).
 The Experimental Error of the Yield from Small Plots of Natural Pasture.
@@ -99,17 +102,17 @@ https://hdl.handle.net/10355/56391
 Draper, Arlen D. (1959).
 Optimum plot size and shape for safflower yield tests.
 Dissertation. University of Arizona. 
-http://hdl.handle.net/10150/319371
+https://hdl.handle.net/10150/319371
 
 Edan, T. (1931).
 Studies in the yield of tea. 1. The experimental errors of field experiments with tea.
 Agricultural Science, 21, 547-573.
-https://doi.org/10.1017/S0021859600088511
+DOI: 10.1017/S0021859600088511
 
 Garber, RJ and Mcllvaine, TC and Hoover, MM. 1926.
 A study of soil heterogeneity in experiment plots.
 Jour Agr Res, 33, 255-268. Tables 3, 5.
-http://naldc.nal.usda.gov/download/IND43967148/PDF
+https://naldc.nal.usda.gov/download/IND43967148/PDF
 
 Gomez, K.A. and Gomez, A.A. (1984).
 Statistical Procedures for Agricultural Research.
@@ -122,17 +125,17 @@ https://archive.org/stream/methodsofstatist031744mbp
 Harris, J Arthur and Scofield, CS. (1920).
 Permanence of differences in the plats of an experimental field.
 Jour. Agr. Res., 20, 335-356.
-http://naldc.nal.usda.gov/catalog/IND43966236
+https://naldc.nal.usda.gov/catalog/IND43966236
 
 Harris, J. Arthur and Scofield, CS. (1928).
 Further studies on the permanence of differences in the plots of an experimental field.
 Jour. Agr. Res. 36, 15--40.
-http://naldc.nal.usda.gov/catalog/IND43967538
+https://naldc.nal.usda.gov/catalog/IND43967538
 
 Harris, J.A. 1920. 
 Practical universality of field heterogeneity as a factor influencing plot yields.
 Journal of Agricultural Research, 19, 279--314. Page 296-297.
-http://books.google.com/books?id=jyEXAAAAYAAJ&pg=PA279
+https://books.google.com/books?id=jyEXAAAAYAAJ&pg=PA279
 
 Hartman, J. D.; and E. C. Stair (1942).
 Proceedings Of The American Society For Horticultural Science, 41, 315-320.
@@ -146,22 +149,22 @@ Holtsmark, G and Larsen, BR (1905).
 Om Muligheder for at indskraenke de Fejl, som ved Markforsog betinges af Jordens Uensartethed.
 Tidsskrift for Landbrugets Planteavl. 12, 330-351. (In Danish)
 https://books.google.com/books?id=MdM0AQAAMAAJ&pg=PA330
-http://dca.au.dk/publikationer/historiske/planteavl/
+https://dca.au.dk/publikationer/historiske/planteavl/
 
 Igue, Toshio; Ademar Espironelo, Heitor Cantarella, Erseni Joao Nelli. (1991).
 Tamanho e forma de parcela experimental para cana-de-acucar (Plot size and shape for sugar cane experiments).
 Bragantia, 50, 163-180. Appendix, page 169-170.
-http://dx.doi.org/10.1590/S0006-87051991000100016
+DOI: 10.1590/S0006-87051991000100016
 
 Immer, F. R. (1932).
 Size and shape of plot in relation to field experiments with sugar beets.
 Jour. Agr. Research, 44, 649--668.
-http://naldc.nal.usda.gov/download/IND43968078/PDF
+https://naldc.nal.usda.gov/download/IND43968078/PDF
 
 Jones, Marcus; Marin Harbur, and Ken J. Moore (2021).
 Automating Uniformity Trials to Optimize Precision of Agronomic Field Trials.
 Agronomy 2021, 11, 1254.
-https://doi.org/10.3390/agronomy11061254
+DOI: 10.3390/agronomy11061254
 Data from 12x12 corn expt.
 
 Iyer, P. V. Krishna (1942).
@@ -177,17 +180,17 @@ https://archive.org/details/in.ernet.dli.2015.25282
 Kalamkar, R.J. (1932).
 Experimental Error and the Field-Plot Technique with Potatoes.
 The Journal of Agricultural Science, 22, 373-385.
-http://doi.org/10.1017/S0021859600053697
+DOI: 10.1017/S0021859600053697
 
 Kalamkar, R. J (1932).
 A Study in Sampling Technique with Wheat.
 The Journal of Agricultural Science, Vol.22(4), pp.783-796.
-https://doi.org/10.1017/S0021859600054599
+DOI: 10.1017/S0021859600054599
 
 Kempton, R. A. and C. W. Howes (1981).
 The use of neighbouring plot values in the analysis of variety trials.
 Applied Statistics, 30, 59--70.
-http://doi.org/10.2307/2346657
+DOI: 10.2307/2346657
 
 Kerr, H. W. (1939). Notes on plot technique.
 Proc. Internat. Soc. Sugarcane Technol. 6, 764-778.
@@ -196,20 +199,20 @@ Khin, San. 1950.
 Investigation into the relative costs of rice experiments based on the efficiency of designs.
 Dissertation: Imperial College of Tropical Agriculture (ICTA).
 Appendix XV.
-http://hdl.handle.net/2139/42422
+https://uwispace.sta.uwi.edu/dspace/handle/2139/42396
 
 Kiesselbach, Theodore A. (1917).
 Studies Concerning the Elimination of Experimental Error in Comparative Crop Tests.
 University of Nebraska Agricultural Experiment Station Research Bulletin No. 13.
 Pages 51-72.
 https://archive.org/details/StudiesConcerningTheEliminationOfExperimentalErrorInComparativeCrop
-http://digitalcommons.unl.edu/extensionhist/430/
+https://digitalcommons.unl.edu/extensionhist/430/
 
 Kristensen, R. K. (1925). 
 Anlaeg og Opgoerelse af Markforsoeg.
 Tidsskrift for landbrugets planteavl, Vol 31, 464-494.
 Fig 1, pg. 467.
-http://dca.au.dk/publikationer/historiske/planteavl/ 
+https://dca.au.dk/publikationer/historiske/planteavl/ 
 
 Kulkarni, R. K., Bose, S. S., and Mahalanobis, P. C.  (1936).
 The influence of shape and size of plots on the effective precision of field experiments with sorghum. 
@@ -232,12 +235,12 @@ Lessman, Koert James (1962).
 Comparisons of methods for testing grain yield of sorghum.
 Iowa State University.
 Retrospective Theses and Dissertations. Paper 2063. Appendix Table 17.
-https://lib.dr.iastate.edu/rtd/2063
+https://dr.lib.iastate.edu/handle/20.500.12876/73575
 
 Li, HW and Meng, CJ and Liu, TN. 1936.
 Field Results in a Millet Breeding Experiment.
 Agronomy Journal, 28, 1-15.  Table 1.
-http://doi.org/10.2134/agronj1936.00021962002800010001x
+DOI: 10.2134/agronj1936.00021962002800010001x
 
 Loesell, Clarence (1936). 
 Size of plot & number of replications necessary for varietal trials with white pea beans.
@@ -247,7 +250,7 @@ https://d.lib.msu.edu/etd/5271
 Lord, L. (1931).
 A Uniformity Trial with Irrigated Broadcast Rice.
 The Journal of Agricultural Science, 21(1), 178-188.
-https://doi.org/10.1017/S0021859600008029
+DOI: 10.1017/S0021859600008029
 
 Love, Harry (1937).
 Application of Statistical Methods to Agricultural Research.
@@ -257,12 +260,12 @@ https://archive.org/details/in.ernet.dli.2015.233346/page/n421
 Lucas, HL. 1956.
 Switchback trials for more than two treatments.
 Journal of Dairy Science, 39, 146-154.
-http://doi.org/10.3168/jds.S0022-0302(56)94721-X
+DOI: 10.3168/jds.S0022-0302(56)94721-X
 
 Lyon, T.L. (1911).
 Some experiments to estimate errors in field plat tests.
 Proc. Amer. Soc. Agron, 3, 89-114. Table III.
-http://doi.org/10.2134/agronj1911.00021962000300010016x
+DOI: 10.2134/agronj1911.00021962000300010016x
 
 Magistad, O. C.; & C. A. Farden (1934).
 Experimental Error In Field Experiments With Pineapples.
@@ -275,11 +278,11 @@ Pakistan J. Agric. Res., Vol. 25 No. 4, 2012
 McClelland, Chalmer Kirk (1926).
 Some determinations of plat variability.
 Agronomy Journal, 18, 819-823.
-http://doi.org/10.2134/agronj1926.00021962001800090009x
+DOI: 10.2134/agronj1926.00021962001800090009x
 
 Mercer, WB and Hall, AD, 1911. The experimental error of field trials
 The Journal of Agricultural Science, 4, 107-132. Table 1.
-http://doi.org/10.1017/S002185960000160X
+DOI: 10.1017/S002185960000160X
 
 Montgomery, E. G. (1912).
 Variation in Yield and Methods of Arranging Plats To Secure
@@ -292,7 +295,7 @@ Experiments in Wheat Breeding: Experimental Error In The Nursery and
 Variation in Nitrogen and Yield.
 U.S. Dept of Agriculture, Bureau of Plant Industry, Bulletin 269.
 Figure 10, page 37.
-http://doi.org/10.5962/bhl.title.43602
+DOI: 10.5962/bhl.title.43602
 
 Moore, John F and Darroch, JG. (1956).
 Field plot technique with Blue Lake pole beans, bush beans, carrots,
@@ -302,12 +305,12 @@ Washington Agricultural Experiment Stations, Institute of Agricultural Sciences,
 Nagai, Violeta (1978).
 Tamanho da parcela e numero de repeticoes em experimentos com morangueiro (Plot size and number of repetitions in experiments with strawberry).
 Bragantia, 37, 71-81. Table 2, page 75.
-http://dx.doi.org/10.1590/S0006-87051978000100009
+DOI: 10.1590/S0006-87051978000100009
 
 Nair, B. Gopakumaran Nair, (1984).
 Optimum plot size for field experiments on turmeric (Curcuma longa L)
 Thesis, Department of Statistics, College of Veterinary & Animal Sciences, Mannuthy.
-http://krishikosh.egranth.ac.in/handle/1/5810147397
+https://krishikosh.egranth.ac.in/handle/1/5810147397
 Appendix has data.
 
 Narain, R.; and A. Singh, (1940).
@@ -318,7 +321,7 @@ https://archive.org/stream/in.ernet.dli.2015.271745
 Nonnecke, Ib Libner. (1958).
 Yield variability of sweet corn and canning peas as affected by plot size and shape.
 Thesis at Oregon State College.
-http://hdl.handle.net/1957/23367
+https://hdl.handle.net/1957/23367
 
 Obsi, Dechassa (2008).
 Application of Spatial Modeling to the Study of Soil Fertility Pattern.
@@ -329,12 +332,12 @@ Odland, TE and Garber, RJ. (1928).
 Size of Plat and Number of Replications in Field Experiments with
 Soybeans.
 Agronomy Journal, 20, 93--108.
-http://doi.org/10.2134/agronj1928.00021962002000020002x
+DOI: 10.2134/agronj1928.00021962002000020002x
 
 Paez Bogarin, Gilberto (1962).
 Estudios sobre tamano y forma de parcela para ensayos en cafe.
 Instituto Interamericano de Ciencias Agricolas de la O.E.A. Centro Tropical de Investigacion y Ensenanza para Graduados. Costa Rica.
-http://hdl.handle.net/11554/1892
+https://www.google.com/books/edition/Estudio_Sobre_Tamano_Y_Forma_de_Parcela/7ScOAQAAIAAJ
 
 Panse, V. G. (1941).
 Studies in the technique of field experiments. V. Size and shape of
@@ -345,13 +348,13 @@ https://archive.org/details/in.ernet.dli.2015.271747/page/n955
 Parker, E. R.; & L. D. Batchelor. (1932).
 Variation in the Yields of Fruit Trees in Relation to the Planning of Future Experiments.
 Hilgardia, 7(2), 81-161. Tables 3-9.
-http://doi.org/10.3733/hilg.v07n02p081
+DOI: 10.3733/hilg.v07n02p081
 
 Polson, David (1964).
 Estimation of Optimum Size, Shape, and Replicate Number of Safflower Plots for Yield Trials.
 Utah State University, All Graduate Theses and Dissertations, 2979.
 Table 6.
-http://digitalcommons.usu.edu/etd/2979
+https://digitalcommons.usu.edu/etd/2979/
 
 Robinson, H.F.; and J.A.Rigney and P.H.Harvey (1948).
 Investigations In Peanut Plot Technique With Peanuts.
@@ -374,28 +377,28 @@ https://archive.org/details/in.ernet.dli.2015.271737
 Shafi, Sameera (2007).
 On Some Aspects of Plot Techniques in Field Experiments on Tomato (Lycopersicon esculentum mill.) in Soils of Kashmir.
 Thesis. Univ. of Ag. Sciences & Technology of Kashmir. Table 2.2.1.
-http://krishikosh.egranth.ac.in/handle/1/5810083035
+https://krishikosh.egranth.ac.in/handle/1/5810083035
 
 Shafi, Sameera; S.A.Mir, Nageena Nazir, and Anjum Rashid. (2010).
 Optimum plot size for tomato by using S-PLUS and R-software's in the soils of Kashmir.
 Asian J. Soil Sci., 4, 311-314.
-http://www.researchjournal.co.in/upload/assignments/4_311-314.pdf
+https://www.researchjournal.co.in/upload/assignments/4_311-314.pdf
 
 Smith, Francis L. (1958).
 Effects of plot size, plot shape, and number of replications on the
 efficacy of bean yield trials.
 Hilgardia, 28, 43-63.
-http://doi.org/10.3733/hilg.v28n02p043
+DOI: 10.3733/hilg.v28n02p043
 
 Smith, Louis H. 1910.
 Plot arrangement for variety experiments with corn.
 Agronomy Journal, 1, 84--89. Table 1.
-http://books.google.com/books?id=mQT0AAAAMAAJ&pg=PA84
+https://books.google.com/books?id=mQT0AAAAMAAJ&pg=PA84
 
 Stephens, Joseph C. 1928.
 Experimental methods and the probable error in field experiments with sorghum.
 Journal of Agricultural Research, 37, 629--646.
-http://naldc.nal.usda.gov/catalog/IND43967516
+https://naldc.nal.usda.gov/catalog/IND43967516
 
 Stickler, F. C. (1960).
 Estimates of Optimum Plot Size from Grain Sorghum Uniformity Trial Data.
@@ -404,43 +407,43 @@ Technical bulletin, Kansas Agricultural Experiment Station.
 Strickland, A. G. (1935).
 Error in horticultural experiments.
 Journal of Agriculture, Victoria, 33, 408-416.
-http://handle.slv.vic.gov.au/10381/386642
+
 
 A. G. Strickland (1932).
 A vine uniformity trial.
 Journal of Agriculture, Victoria, 30, 584-593.
-http://handle.slv.vic.gov.au/10381/386462
+
 
 A. G. Strickland (1935).
 Error in horticultural experiments.
 Journal of Agriculture, Victoria, 33, 408-416.
-http://handle.slv.vic.gov.au/10381/386642
+
 
 Wassom and R.R. Kalton. (1953).
 Estimations of Optimum Plot Size Using Data from Bromegrass Uniformity
 Trials. Agricultural Experiment Station, Iowa State College, Bulletin 396.
-http://lib.dr.iastate.edu/ag_researchbulletins/32/
+https://lib.dr.iastate.edu/ag_researchbulletins/32/
 
 Wiebe, G.A. 1935.
 Variation and Correlation in Grain Yield among 1,500 Wheat
 Nursery Plots.
 Journal of Agricultural Research, 50, 331-357.
-http://naldc.nal.usda.gov/download/IND43968632/PDF
+https://naldc.nal.usda.gov/download/IND43968632/PDF
 
 Wiedemann, Alfred Max. 1962.
 Estimation of Optimum Plot Size and Shape for Use in Safflower Yield Trails. Table 5.
 All Graduate Theses and Dissertations. Paper 3600. Table 5.
-http://digitalcommons.usu.edu/etd/3600
+https://digitalcommons.usu.edu/etd/3600/
 
 Williams, ER and Luckett, DJ. 1988.
 The use of uniformity data in the design and analysis of cotton and barley variety trials.
 Australian Journal of Agricultural Research, 39, 339-350.
-http://doi.org/10.1071/AR9880339
+DOI: 10.1071/AR9880339
 
 F. A. Wyatt (1927).
 Variation in plot yields due to soil heterogeneity.
 Scientific Agriculture, 7, 248-256. Table 1.
-https://doi.org/10.4141/sa-1927-0020
+DOI: 10.4141/sa-1927-0020
 
 
 
@@ -460,7 +463,7 @@ Has data for 3 uniformity trials, but the data look strange. For example, in App
 Hansen, Niels Anton (1914).
 Provedyrkning paa Forsogsstationen ved Aarslev.
 Tidsskrift for landbrugets planteavl.
-http://dca.au.dk/publikationer/historiske/planteavl/ 
+https://dca.au.dk/publikationer/historiske/planteavl/ 
 Bind 21, page 553. In Danish. Page 557 might be the table referred to by Eden, except there are 30 plots, not 35. Yields appear to be given as percents.
 See comments by Eden & Maskell found here:
 https://archive.org/stream/in.ernet.dli.2015.25895/2015.25895.Journal-Of-Agricultural-Science-Vol-xviii-1928#page/n175
@@ -475,7 +478,7 @@ rye and roots 1908 and 1910 satisfactory.
 Hatton, R. G.; N. H. Grubb & R. C. Knight (1928) 
 Black Currant Variety Trials: Reliability of Results., 
 Journal of Pomology and Horticultural Science, 4:4, 200-220.
-https://doi.org/10.1080/03683621.1925.11513282
+DOI: 10.1080/03683621.1925.11513282
 Not used. Has data for 21 bushes * 4 years and 52 bushes * 4 years.
 
 
@@ -517,36 +520,35 @@ No data.
 Bose, S S; Khanna, K L; Mahalanobis, P C
 Note on the optimum shape and size of plots for sugarcane experiments in Bihar.
 India Journal of Agricultural Science 9, 807-816
-http://hdl.handle.net/10263/1896
+https://hdl.handle.net/10263/1896
+http://library.isical.ac.in:8080/jspui/handle/10263/1896
 No data.
 
 
 Boyhan, George E.; David B. Langston; Albert C. Purvis; C. Randell Hill. (2003).
 Research to determine suitable plot size and the number of replications in the field trials of sugarbeet.
 J. Amer. Soc. Hort. Sci., 128, 409-424.
-https://journal.ashs.org/downloadpdf/journals/jashs/128/3/article-p409.pdf
 No data. Compared Hatheway's method with Cochran and Cox's method, the latter gave smaller number of plots.
 
 
 Boyhan, George E. (2013).
 Optimum Plot Size and Number of Replications for Determining Watermelon Yield, Fruit Size, Fruit Firmness, and Soluble Solids.
 HortScience, 48, 1200-1208.
-https://doi.org/10.21273/HORTSCI.48.9.1200
-https://journals.ashs.org/hortsci/view/journals/hortsci/48/9/article-p1200.xml
+DOI: 10.21273/HORTSCI.48.9.1200
 No data.
 
 
 Brim, C. A. and D. D. Mason. (1959).
 Estimates of Optimum Plot Size for soybean Yield Trials. 
 Agron. Jour. 51: pp. 331-335·
-http://doi.org/10.2134/agronj1959.00021962005100060008x
+DOI: 10.2134/agronj1959.00021962005100060008x
 No data.
 
 
 Chaves, L. J.; J. B. Miranda Filho (1992).
 Plot size for progeny selection in maize (Zea maysL.).
 Theoretical and Applied Genetics, 84, 963–970.
-https://doi.org/10.1007/bf00227411
+DOI: 10.1007/bf00227411
 No data.
 
 
@@ -577,14 +579,14 @@ No data.
 da Silva, Willerson  Custódio; Mário  Puiatti; Paulo  Roberto  Cecon; Leandro  Roberto  de  Macedo;  Tocio  Sediyama. (2019)
 Estimation of optimum experimental plot size for taro culture.
 Ciência Rural, Santa Maria, v.49
-http://dx.doi.org/10.1590/0103-8478cr20180440
+DOI: 10.1590/0103-8478cr20180440
 No data.
 
 
 da Silva, Luiz Fernando de Oliveira; Katia Alves Campos; Augusto Ramalho de Morais; Franciane Diniz Cogo; Carolina Ruiz Zambon.
 Optimal plot size for experiments with radish.
 Revista Ceres 59(5):624-629
-http://doi.org/10.1590/S0034-737X2012000500007
+DOI: 10.1590/S0034-737X2012000500007
 No data.
 
 
@@ -606,7 +608,7 @@ Mentioned in Kristensen (2003).
 Elliot, F. C., Darroch, J.G. and Wang, H.L. (1952). 
 Uniformity trials with spring wheat. 
 Agronomy Journal, 44, 524-528.
-https://doi.org/10.2134/agronj1952.00021962004400100005x
+DOI: 10.2134/agronj1952.00021962004400100005x
 
 
 Facco, Giovani; Cargnelutti Filho Alberto; Mendonça Alves Bruna; et. al. February 2017.
@@ -619,21 +621,21 @@ No data.
 Filho, Alberto;  Cargnelutti; Marcos  Toebe; Cláudia  Burin; André  Luis  Fick; Gabriele  Casarotto. (2011).
 "Plot sizes and uniformity assays in turnip."
 Ciência Rural 41.9 (2011): 1517-1525.
-https://doi.org/10.1590/S0103-84782011005000119
+DOI: 10.1590/S0103-84782011005000119
 No data.
 
 
 Filho, Alberto Cargnelutti; Marcos Vinícius Loregian, Gabriel Elias Dumke, Felipe Manfio Somavilla, Samanta Luiza da Costa, Lucas Fillipin Osmari, Bruno Fillipin Osmari (2021).
 Optimal plot size in buckwheat.
-http://dx.doi.org/10.5433/1679-0359.2021v42n2p501
-http://www.uel.br/revistas/uel/index.php/semagrarias/article/view/39448/29330
+DOI: 10.5433/1679-0359.2021v42n2p501
+https://www.uel.br/revistas/uel/index.php/semagrarias/article/view/39448/29330
 No data
 
 
 Fleming, A.A., Roger, T.H. and Bancroft, T.A. (1957).
 Field plot technique with hybrid corn under Alabama conditions.
 Agronomy Journal, 49, 1-4.
-https://doi.org/10.2134/agronj1957.00021962004900010001x
+DOI: 10.2134/agronj1957.00021962004900010001x
 
 
 George, M. V.; M. Sannamarappa (1984).
@@ -646,7 +648,7 @@ No data.
 Gopalakrishna, S. (1992).
 Optimum plot size and shape, block size and shape and relative efficiency of designs for field experiments in navane (Setaria italica).
 Thesis.
-http://krishikosh.egranth.ac.in/handle/1/5810120871
+https://krishikosh.egranth.ac.in/handle/1/5810120871
 No data.
 
 
@@ -660,35 +662,35 @@ No data.
 Guimarães, Bruno Vinícius Castro, et al. (2020).
 "Optimal plot size for experimental trials with Opuntia cactus pear."
 Acta Scientiarum. Technology 42 (2020): e42579-e42579.
-https://doi.org/10.5539/jas.v11n18p206
+DOI: 10.5539/jas.v11n18p206
 No data.
 
 
 Gupton, C.L. (1972).
 Estimates of Optimum Plot Size and Shape from Uniformity Data in Burley Tobacco (Nicotiana tabacum L.).
 Agron J, 64, 678-682. 
-https://doi.org/10.2134/agronj1972.00021962006400050038x
+DOI: 10.2134/agronj1972.00021962006400050038x
 No data.
 
 
 Handa, D. P.; Sreenath, P. R., & Rajpali, S. K. (1995). 
 Uniformity trial with lucerne grown for fodder. 
 Grass and Forage Science, 50(3), 209–216. 
-http://doi.org/10.1111/j.1365-2494.1995.tb02316.x 
+DOI: 10.1111/j.1365-2494.1995.tb02316.x 
 No data.
 
 
 Hariharan, V., Jacob Thomas, M. George, K.C. (1986).
 Optimum size and shape of plots for field experiments in brinjal.
 Agricultural Research Journal of Kerala, 24(2), 189-194.
-http://krishikosh.egranth.ac.in/handle/1/5810100010
+https://krishikosh.egranth.ac.in/handle/1/5810100010
 No data.
 
 
 Hatheway, W. H., and E. J. Williams. (1958).
 "Efficient estimation of the relationship between plot size and the variability of crop yields."
 Biometrics, 14, 207-222.
-https://doi.org/10.2307/2527785
+DOI: 10.2307/2527785
 No data.
 
 
@@ -711,7 +713,7 @@ Mentioned in Kristensen (2003).
 Hidalgo, Eduardo Calero Calero (1965).
 Estudio Del Tamano Y Forma De La Parcela Experimental Para Ensayos De Campo En Frijol (Phaseolus vulgaris L.).
 Instituto Interamericano de Ciencias Agricolas de la OEA.
-http://hdl.handle.net/11554/1827
+https://www.google.com/books/edition/Estudio_Del_Tamano_Y_Forma_De_La_Parcela/rNIOAQAAIAAJ
 No data. In Spanish.
 
 
@@ -732,14 +734,14 @@ No data.
 Idrees, Nadia; and Muhammad Inayat Khan (2009).
 Design improvement using uniformity trials experimental data.
 Pak. J. Agri. Sci., Vol. 46(4), 2009.
-http://www.pakjas.com.pk 
+https://pakjas.com.pk 
 No data.
 
 
 Johnson, I.J. & Murphy, H.C. 1943.
 Lattice and lattice square designs with oat uniformity data and in varietal trials.
 J. Agric. Sci., 22, 366-372.
-https://doi.org/10.2134/agronj1943.00021962003500040004x
+DOI: 10.2134/agronj1943.00021962003500040004x
 No data. Has a contour map of fertility.
 
 
@@ -752,7 +754,7 @@ No data. Fruit yields are much more variable than quality factors.
 Jua, Junagadh.
 Optimum plot size for field experiments on tomato – A statistical investigation.
 Thesis, Junagadh Agricultural University.
-http://krishikosh.egranth.ac.in/handle/1/5810006490.
+https://krishikosh.egranth.ac.in/handle/1/5810006490.
 No data.
 
 
@@ -764,13 +766,13 @@ No data.
 
 Kavitha, B. (2010).
 Study on optimum plot size and optimum plot shape of soybean crop.
-http://krishikosh.egranth.ac.in/handle/1/84302
+https://krishikosh.egranth.ac.in/handle/1/84302
 No data.
 
 
 Keller, Kenneth R. (1949).
 Uniformity Trial on Hops, Humulus lupulus L., for Increasing the Precision of Field Experiments.
-https://doi.org/10.2134/agronj1949.00021962004100080011x
+DOI: 10.2134/agronj1949.00021962004100080011x
 No data.
 
 
@@ -790,13 +792,13 @@ No data. Refers to other papers with uniformity trials.
 
 Krysczun, Dionatan Ketzer; Lúcio, Alessandro Dal’Col; Sari, Bruno Giacomini; Diel, Maria Inês; Olivoto, Tiago; Santana, Cinthya Souza; Ubessi, Cassiane; Schabarum, Denison Esequiel  (2018).
 Sample size, plot size and number of replications for trials with  Solanum melongena  L.. Scientia Horticulturae, 233(), 220–224.
-doi:10.1016/j.scienta.2018.01.044
+DOI: 10.1016/j.scienta.2018.01.044
 No data.
 
 
 Kumar, Ajay. 1999.
 A study on uniformity trial in sesame (Til) Sesamum indicum.
-http://krishikosh.egranth.ac.in/handle/1/5810078711.
+https://krishikosh.egranth.ac.in/handle/1/5810078711.
 No data.
 
 
@@ -809,7 +811,6 @@ Not found, but Kumar's thesis was found, but had no data.
 Lakhera, M.L.; M.A. Ali (1996).
 Optimum plot size and shape estimates for sunflower yield trials.
 Journal of Maharashtra Agricultural Universities 21(3): 350-353
-http://14.139.56.90/displaybitstream?handle=1/65373
 No data. Optimum plot size was 20 units, 10 rows each 2 m long.
 
 
@@ -817,13 +818,13 @@ Lavezo, André; Alberto Cargnelutti Filho, Cláudia Marques de Bem, Cláudia Bur
 Jéssica Andiara Kleinpaul, Rafael Vieira Pezzini.
 Plot size and number of replications to evaluate the grain yield in oat cultivars.
 Bragantia, Campinas, v. 76, n. 4, p.512-520, 2017.
-http://dx.doi.org/10.1590/1678-4499.2016.410
+DOI: 10.1590/1678-4499.2016.410
 No data.
 
 
 Lizy, M.J. (1986).
 Uniformity trials on colocasia.
-http://krishikosh.egranth.ac.in/handle/1/5810113181
+https://krishikosh.egranth.ac.in/handle/1/5810113181
 No data.
 
 
@@ -837,7 +838,7 @@ Paper not found, but Lizy thesis was found, but had no data.
 Lohmor, Nishu (2015).
 Estimation of optimum plot size, shape and number of replications in sunflower (Helianthus annuus).
 Thesis.
-http://krishikosh.egranth.ac.in/handle/1/81261
+https://krishikosh.egranth.ac.in/handle/1/81261
 No data.
 
 Lohmor, Nishu; Mujahid Khan; Kiran Kapoor; and Nitin Tanwar (2017).
@@ -855,7 +856,7 @@ No data.
 Meier, V. D., and K. J. Lessman. 
 "Estimation of Optimum Field Plot Shape and Size for Testing Yield in Crambe abyssinica Hochst". 
 Crop Science 11, 648-650.
-https://doi.org/10.2135/cropsci1971.0011183X001100050013x
+DOI: 10.2135/cropsci1971.0011183X001100050013x
 No data.
 
 
@@ -869,14 +870,14 @@ No data.
 Miyaska, Susan C.; Charles E. McCulloch, Graham E. Fogg, James R. Hollyer.
 Optimum Plot Size for Field Trials of Taro (Colocasia esculenta).
 HortScience 48, 435-443.
-https://doi.org/10.21273/HORTSCI.48.4.435 
+DOI: 10.21273/HORTSCI.48.4.435 
 No data. Optimum plot size was 18-21 plants (4.9 - 5.7 m^2).
 
 
 Modjeska, J. S., & Rawlings, J. O. (1983). 
 Spatial Correlation Analysis of Uniformity Data. 
 Biometrics, 39(2), 373. 
-http://doi.org/10.2307/2531010 
+DOI: 10.2307/2531010 
 Used data from Batchelor & Reid.
 
 
@@ -888,20 +889,20 @@ No data.
 
 Nagardas, Motaka Ganapatlal (2006).
 PLOT SIZE STUDY FROM UNIFORMITY TRIAL DATA IN DURUM WHEAT FOR BHAL REGION.
-http://krishikosh.egranth.ac.in/handle/1/5810115906
+https://krishikosh.egranth.ac.in/handle/1/5810115906
 No data.
 
 
 Narayanan, R (1974).
 Estimation of optimum plot size for clone trials in hevea.
 Journal of the Rubber Research Institute of Malaysia 24(1): 54-67.
-http://rios.lgm.gov.my/cms/fedDigiJournalDetail.jsp?searchText=&selTab=digiCon&id=&type=JRR&issueYear=1974
+https://rios.lgm.gov.my/cms/fedDigiJournalDetail.jsp?searchText=&selTab=digiCon&id=&type=JRR&issueYear=1974
 No data.
 
 
 Narayanbhai, P.J. (2005).
 Plot size study from uniformity trial data of French bean.
-http://krishikosh.egranth.ac.in/handle/1/5810115923
+https://krishikosh.egranth.ac.in/handle/1/5810115923
 No data.
 
 
@@ -913,14 +914,13 @@ No data.
 
 Omanakuttan, Chithra (2015).
 Plot size study from uniformity trial data of mustard (Brassica juncea L.).
-http://krishikosh.egranth.ac.in/handle/1/5810116905
+https://krishikosh.egranth.ac.in/handle/1/5810116905
 No data.
 
 
 Onate, Burton. 1965.
 Size and Shape of Plot in Rice Replicated Field Experiments.
 Philippine Statistician.
-http://k-archive.pssc.org.ph/handle/0/2096
 No data. Results indicate that plot of dimensions 4 rows by 12 hills (3-5 sq m) will be relatively as efficient as bigger plots. The CV observed was about 10 percent, which implies 5 replicates are needed to detect a mean difference of 10 percent.
 
 
@@ -932,13 +932,13 @@ No data.
 Pal, Satyabrata; Goutam Mandal; Kajal Dihidar. 2015.
 Determination of robust optimum plot size and shape – a model-based approach.
 Biometrical Letters, 52, 13-22.
-http://pldml.icm.edu.pl/pldml/element/bwmeta1.element.doi-10_1515_bile-2015-0002
+DOI: 10.1515/bile-2015-0002
 No data.
 
 
 Patel, J.B. (2004).
 Estimation of Optimum Plot Size for Field Experiment on Green Gram (Phaseolus rediatus L.)
-http://krishikosh.egranth.ac.in/handle/1/5810072537
+https://krishikosh.egranth.ac.in/handle/1/5810072537
 No data.
 
 
@@ -951,13 +951,13 @@ No data.
 Patel, N.M. (1981).
 Plot size study in bidi tobacco (Nicotiana tabacum L.).
 Thesis.
-http://krishikosh.egranth.ac.in/handle/1/5810045267
+https://krishikosh.egranth.ac.in/handle/1/5810045267
 No data.
 
 
 Patil, N.M. (1995).
 Optimum plot size and shape, block size and shape and relative efficiency of designs for field experiments in cowpea (Vigna unguiculata).
-http://krishikosh.egranth.ac.in/handle/1/5810119241
+https://krishikosh.egranth.ac.in/handle/1/5810119241
 No data.
 
 
@@ -976,40 +976,40 @@ No data.
 Plaisted, Robert LeRoy (1954).
 Field plot techniques for estimating onion yields.
 Master's Thesis, Iowa State University.
-https://doi.org/10.31274/rtd-20200617-42
+DOI: 10.31274/rtd-20200617-42
 No data.
 
 
 Prabhakaran, P.V. (1978).
 Optimum plot size for field trials with banana.
 Agricultural Research Journal of Kerala, 16(1), 33-38.
-http://krishikosh.egranth.ac.in/handle/1/5810115813
+https://krishikosh.egranth.ac.in/handle/1/5810115813
 No data.
 
 
 Prajapati Rameshbhai, I. (2005).
 Optimum size and shape of plot for field experiments on potato.
 Thesis.
-http://krishikosh.egranth.ac.in/handle/1/5810115905
+https://krishikosh.egranth.ac.in/handle/1/5810115905
 No data.
 
 
 Ramani, C.V. (1995).
 Plot technique in Lucern.
-http://krishikosh.egranth.ac.in/handle/1/5810046435
+https://krishikosh.egranth.ac.in/handle/1/5810046435
 No data.
 
 
 Reddy, M. N., and C. K. Ramanatha Chetty
 Effect of Plot Shape on Variability in Smith's Variance Law.
 Experimental Agriculture, 18, 333-338.
-https://doi.org/10.1017/S0014479700000752
+DOI: 10.1017/S0014479700000752
 No data.
 
 
 Reddy, S.B.S. (1992).
 Uniformity trial on groundnut.
-http://krishikosh.egranth.ac.in/handle/1/5810000021
+https://krishikosh.egranth.ac.in/handle/1/5810000021
 No data for the uniformity trial? Small dataset on page 96, 20 plots with 5 plants/plot. Branches/plant, leaves/plant, height of the plant. 
 
 
@@ -1028,20 +1028,19 @@ No data. In Spanish.
 
 Rossetti, A.G.; Gomes, F.P. (1987).
 A method for the determination of optimum plot size in experiments with rubber trees (Hevea).
-J Nat Rubb Res (1987) 2(3):135-141 
-http://rios.lgm.gov.my/cms/fedDigiContentDetail.jsp?searchText=&selTab=digiCon&id=vital1:24082&type=Article
+J Nat Rubb Res (1987) 2(3):135-141
+http://agris.upm.edu.my:8080/dspace/handle/0/15652
 No data.
 
 
 Sagisi, Fancisca D.; Mariano B. de Ramos.
 Field Plot and Sampling Techniques on Virginia Tobacco.
-http://k-archive.pssc.org.ph/bitstream/handle/0/2407/07_Field%20Plot%20and%20Sampling%20Tecniques%20On%20Virginia%20Tobacco.pdf
 No data for the uniformity trial part of this report.
 
 
 Sands, Daniel E. (1954).
 A Determination of Optimum Plot Size for Estimating Mean Number of Bolls.
-USDA. http://www.nass.usda.gov/Education_and_Outreach/Reports,_Presentations_and_Conferences/Yield_Reports/A%20Determination%20of%20Optimum%20Plot%20Size%20for%20Estimating%20Mean%20Number%20of%20Bolls.pdf
+USDA. https://www.nass.usda.gov/Education_and_Outreach/Reports,_Presentations_and_Conferences/Yield_Reports/A%20Determination%20of%20Optimum%20Plot%20Size%20for%20Estimating%20Mean%20Number%20of%20Bolls.pdf
 No data.
 
 
@@ -1061,7 +1060,7 @@ No data. Optimum plot size if four plants by plot, using four replications.
 
 Sharma, Anju (1992).
 Determination of optimum plot size estimation of of tomato (Lycopersicon esculentum Mill.) yield in Saproon Valley of Solan District (H.P.).
-http://krishikosh.egranth.ac.in/handle/1/5810067799
+https://krishikosh.egranth.ac.in/handle/1/5810067799
 No data.
 
 
@@ -1074,32 +1073,38 @@ No data.
 Sheela, M A (1987).
 Optimum size of plots in cocoa (Theobroma cacoa L.) a multivariate case.
 Department of Statistics, College of Veterinary and Animal Sciences, Mannuthy
-http://krishikosh.egranth.ac.in/handle/1/5810142527
+https://krishikosh.egranth.ac.in/handle/1/5810142527
 No data.
 
 
 Shitap, Shri M.S. (2011).
 Plot technique in Brinjal (Solanum melongena L.)
-http://krishikosh.egranth.ac.in/handle/1/5810010600
+https://krishikosh.egranth.ac.in/handle/1/5810010600
 No data.  The table of contents suggests that the data appears in the appendix, but the pages are blank.
 
 
 Siao, F.U. 1935.
 Uniformity trials with cotton.
 J. Amer. Soc. Agron., 27, 974-979.
-https://doi.org/10.2134/agronj1935.00021962002700120004x
+DOI: 10.2134/agronj1935.00021962002700120004x
 No data.
 
 
 Sills, G. R., & Nienhuis, J. (1993).
 Field Plot Technique Affects Snap Bean Yield Evaluation.
-Journal of the American Society for Horticultural Science, 118(5), 672-674. https://doi.org/10.21273/JASHS.118.5.672
+Journal of the American Society for Horticultural Science, 118(5), 672-674. DOI: 10.21273/JASHS.118.5.672
+No data.
+
+
+Silva, Mauricio dos Santos da, et al. (2019)
+"Optimal size of experimental plots of papaya trees using a modified maximum curvature method." Ciência Rural 49 (2019).
+https://www.scielo.br/j/cr/a/CYZsbJzSD6SWpYB9X3WscqF/?lang=en
 No data.
 
 
 Sokhal, Urmil (1982).
 College on The Efficiency of Designs for Bajra in Relation to Shape and size of Plot And Block.
-http://krishikosh.egranth.ac.in/handle/1/5810055172
+https://krishikosh.egranth.ac.in/handle/1/5810055172
 No data. 
  
  
@@ -1119,7 +1124,7 @@ No data. Uniformity trial discussed on page 43.
 Storck, Lindolfo; Sidinei Lopes; Alessandro Dal'Col Lúcio; Alberto ​Cargnelutti Filho 2011.
 Optimum plot size and number of replications related to selective precision.
 Ciência Rural 41(3):390-396.
-http://doi.org/10.1590/S0103-84782011000300005
+DOI: 10.1590/S0103-84782011000300005
 https://www.researchgate.net/publication/270761907_Optimum_plot_size_and_number_of_replications_related_to_selective_precision
 No data
 
@@ -1127,14 +1132,14 @@ No data
 Swallow, William H.; Todd C. Wehner (1986).
 Optimum Plot Size Determination and Its Application to Cucumber Yield Trials.
 Euphytica, 35, 421-432.
-https://doi.org/10.1007/BF00021850
+DOI: 10.1007/BF00021850
 No data. For multiple-harvest yield trials, optimum plot sizes were estimated to be 6.4 to 10.3 m^2.
 
 
 Tartaglia, FdL, Lúcio, A, Diel, MI, et al. 
 Experimental Plan For Tests With Pea.
 Agronomy Journal. 2021; 113: 1394–1406.
-https://doi.org/10.1002/agj2.20575 
+DOI: 10.1002/agj2.20575 
 No data. 
 
 
@@ -1160,14 +1165,14 @@ No data given. Used data from a corn uniformity trial, oats uniformity, and the 
 
 
 Tedin, Olof (1931). The Influence of Systematic Plot Arrangement upon the Estimate of Error in field Experiments. J. Agric. Science, 21, 191-208.
-https://doi.org/10.1017/S0021859600008613
+DOI: 10.1017/S0021859600008613
 No data. Uses uniformity trials from other papers.
 
 
 Toebe, Marcos, et al. (2020).
 "Plot size and number of replications for ryegrass experiments."
 Ciência Rural 50.1.
-http://dx.doi.org/10.1590/0103-8478cr20190195
+DOI: 10.1590/0103-8478cr20190195
 No data.
 
 
@@ -1206,7 +1211,7 @@ https://www.semanticscholar.org/paper/Size-and-shape-of-the-experimental-unit-in
 Warren, J.A. and Mendez, I. (1981).
 Block Size and Orientation, and Allowance for Positional Effects, in Field Experiments.
 Experimental Agriculture, 17, 17 - 24.
-https://doi.org/10.1017/S0014479700011182
+DOI: 10.1017/S0014479700011182
 No data. Used a dozen existing datasets.
 
 # Paper not found
@@ -1245,6 +1250,12 @@ Optimum plot size and shape for trials of maize.
 Annals of Agricultural Science, Moshtohor 36(3): 1361-1372.
 https://eurekamag.com/research/012/808/012808132.php
 Not found. 
+
+Beckett, W.H.; Fletcher, S.R.B.
+A uniformity trial with maize.
+Gold Coast Dept Agric Bull 16: 222-226.
+https://eurekamag.com/research/029/823/029823954.php
+Not found.
 
 
 Bhatnagar, S.; Srivastava, O.P. and Lather, B. P. S.
@@ -1429,8 +1440,8 @@ J. of Agricultural Research of China, 44, 229-241.
 Mahalanobis, P C; Chakravorti, S C; Banerjee, E A R. 1934.
 Influence of shape and size of plots on the accuracy of field experiments with rice, Chinsurah, Bengal
 Procedings of Indian Science Congress (Bombay) Sec Agricultural Statistics 21, 71.
-http://hdl.handle.net/10263/1793
-Not found; only contains abstract.
+http://library.isical.ac.in:8080/xmlui/handle/10263/1793
+Not found; pdf only contains abstract.
 
 
 Mangat, N. S. (1984).
@@ -1477,7 +1488,7 @@ Pesq. agropec. bras., Brasilia (in press).
 Prabhakaran, P.V. (1974).
 Optimum plot size for field experiments with tapioca
 Agricultural Research Journal of Kerala, 12(1), 19-23.
-http://krishikosh.egranth.ac.in/handle/1/5810114240
+https://krishikosh.egranth.ac.in/handle/1/5810114240
 
 
 Rai, Lajpat Gupta, S.N. and Rai, L. (1994).
@@ -1558,7 +1569,6 @@ Univ of Illinois. Thesis.
 Webster, C. 1939.
 A note on a uniformity trial with oil palms.
 Tropical Agriculture, 16, 15-19.
-https://journals.sta.uwi.edu/ojs/index.php/ta/article/view/5464
 Behind paywall.
 
 

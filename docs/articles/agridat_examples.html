@@ -26,6 +26,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -38,18 +40,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.19</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
@@ -61,13 +57,16 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="../articles/agridat_data.html">Additional sources of agricultural data</a>
+      <a href="../articles/agridat_data.html">UNKNOWN TITLE</a>
     </li>
     <li>
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
       <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
+    </li>
+    <li>
+      <a href="../articles/agridat_uniformity.html">Notes on uniformity data</a>
     </li>
   </ul>
 </li>
@@ -77,8 +76,8 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/kwstat/agridat/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/kwstat/agridat/" class="external-link">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -92,120 +91,159 @@
 
       
 
-      </header><script src="agridat_examples_files/header-attrs-2.4/header-attrs.js"></script><script src="agridat_examples_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
-      <h1 data-toc-skip>Graphical Gems in the agridat Package</h1>
-                        <h4 class="author">Kevin Wright</h4>
+      <h1 data-toc-skip></h1>
             
-            <h4 class="date">2020-12-11</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/kwstat/agridat/blob/master/vignettes/agridat_examples.Rmd"><code>vignettes/agridat_examples.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/kwstat/agridat/blob/HEAD/../../../Users/wrightkevi/OneDrive/kw_work/rpack/agridat/vignettes/agridat_examples.Rmd" class="external-link"><code>../../../Users/wrightkevi/OneDrive/kw_work/rpack/agridat/vignettes/agridat_examples.Rmd</code></a></small>
       <div class="hidden name"><code>agridat_examples.Rmd</code></div>
 
     </div>
 
     
     
+<table class="table"><tbody>
+<tr class="odd">
+<td>title: “Graphical Gems in the agridat Package”</td>
+</tr>
+<tr class="even">
+<td>author: “Kevin Wright”</td>
+</tr>
+<tr class="odd">
+<td>date: “2021-12-17”</td>
+</tr>
+<tr class="even">
+<td>output:</td>
+</tr>
+<tr class="odd">
+<td>rmarkdown::html_vignette:</td>
+</tr>
+<tr class="even">
+<td>md_extensions: [</td>
+</tr>
+<tr class="odd">
+<td>“-autolink_bare_uris”</td>
+</tr>
+<tr class="even">
+<td>]</td>
+</tr>
+<tr class="odd">
+<td>bibliography: agridat.bib</td>
+</tr>
+<tr class="even">
+<td>vignette: &gt;</td>
+</tr>
+<tr class="odd">
+<td>%</td>
+</tr>
+<tr class="even">
+<td>%</td>
+</tr>
+<tr class="odd">
+<td>%</td>
+</tr>
+</tbody></table>
 <p>The <code>agridat</code> package is an extensive collection of data sets that have been previously published in books and journals, primarily from agricultural experiments.</p>
 <p>This vignette presents graphical views of a few of the datasets in this package.</p>
-<div id="setup" class="section level1">
-<h1 class="hasAnchor">
-<a href="#setup" class="anchor"></a>Setup</h1>
+<div class="section level1">
+<h1 id="setup">Setup<a class="anchor" aria-label="anchor" href="#setup"></a>
+</h1>
 <p>This exhibit of agricultural data uses the following packages: <code>agridat</code>, <code>desplot</code>, <code>gge</code>, <code>HH</code>, <code>lattice</code>, <code>latticeExtra</code>, <code>mapproj</code>, <code>maps</code>, <code>reshape2</code>.</p>
 </div>
-<div id="potato-blight-incidence-over-space-and-time" class="section level1">
-<h1 class="hasAnchor">
-<a href="#potato-blight-incidence-over-space-and-time" class="anchor"></a>Potato blight incidence over space and time</h1>
-<pre><code>## Loading required package: desplot</code></pre>
+<div class="section level1">
+<h1 id="potato-blight-incidence-over-space-and-time">Potato blight incidence over space and time<a class="anchor" aria-label="anchor" href="#potato-blight-incidence-over-space-and-time"></a>
+</h1>
+<pre><code><span class="co">## Loading required package: desplot</span></code></pre>
 <p><img src="agridat_examples_files/figure-html/lee1-1.png" width="480"></p>
-<p><span class="citation">Lee (2009)</span> analyzed a large dataset to evaluate the resistance of potato varieties to blight. This data contains evaluations of a changing set of varieties every two years, evaluated in 5 blocks, repeatedly throughout the growing season to track the progress of the disease. Each panel shows a field map on the given date, with a separate row of panels for each year.</p>
+<p><span class="citation">(<strong>lee2009random?</strong>)</span> analyzed a large dataset to evaluate the resistance of potato varieties to blight. This data contains evaluations of a changing set of varieties every two years, evaluated in 5 blocks, repeatedly throughout the growing season to track the progress of the disease. Each panel shows a field map on the given date, with a separate row of panels for each year.</p>
 <p>Would you include field spatial trends in a model for these data?</p>
-<pre><code>## Loading required package: latticeExtra</code></pre>
-<pre><code>## Loading required package: lattice</code></pre>
+<pre><code><span class="co">## Loading required package: latticeExtra</span></code></pre>
+<pre><code><span class="co">## Loading required package: lattice</span></code></pre>
 <p><img src="agridat_examples_files/figure-html/lee2-1.png" width="480"></p>
 <p>In 1983, 20 varieties were evaluated in 5 blocks (shown by colored numbers) throughout the growing season for disease resistance. Resistance scores start at 9 for all varieties (shown in panels). As the growing season progresses, the ‘I.HARDY’ variety succumbs quickly to blight, while ‘IWA’ succumbs steadily, and ‘064.1’ resists blight until near the end of the season.</p>
 <p>Does this view show differences between blocks?</p>
 </div>
-<div id="an-informative-prior" class="section level1">
-<h1 class="hasAnchor">
-<a href="#an-informative-prior" class="anchor"></a>An informative prior</h1>
+<div class="section level1">
+<h1 id="an-informative-prior">An informative prior<a class="anchor" aria-label="anchor" href="#an-informative-prior"></a>
+</h1>
 <p><img src="agridat_examples_files/figure-html/harrison-1.png" width="480"></p>
-<p><span class="citation">Harrison, Culp, and Harrigan (2012)</span> used a Bayesian approach to model daidzein levels in soybean samples. From 18 previous publications, they extracted the published minimum and maximum daidzein levels, and the number of samples tested. Each line in the dotplot shows large, dark dots for one published minimum and maximum. The small dots are imputed using a lognormal distribution.</p>
+<p><span class="citation">(<strong>harrison2012bayesian?</strong>)</span> used a Bayesian approach to model daidzein levels in soybean samples. From 18 previous publications, they extracted the published minimum and maximum daidzein levels, and the number of samples tested. Each line in the dotplot shows large, dark dots for one published minimum and maximum. The small dots are imputed using a lognormal distribution.</p>
 <p>All observed/imputed data were then used to fit a common lognormal distribution that can be used as an informative prior. The common prior is shown by the density at the top of the dotplot.</p>
 <p>Do you think it is better to use a non-informative prior, or this informative prior?</p>
 </div>
-<div id="data-densities-for-a-binomial-glm" class="section level1">
-<h1 class="hasAnchor">
-<a href="#data-densities-for-a-binomial-glm" class="anchor"></a>Data densities for a binomial GLM</h1>
+<div class="section level1">
+<h1 id="data-densities-for-a-binomial-glm">Data densities for a binomial GLM<a class="anchor" aria-label="anchor" href="#data-densities-for-a-binomial-glm"></a>
+</h1>
 <p><img src="agridat_examples_files/figure-html/mead-1.png" width="480"></p>
-<p><span class="citation">Mead, Curnow, and Hasted (2002)</span> present data for germination of seeds under four temperatures (T1-T4) and four chemical concentrations. For each of the 4*4=16 treatments, 50 seeds were tested in each of four reps. In the graphic, each point is one rep. The blue line is a fitted curve from a GLM with Temperature as a factor and log concentration as a covariate. The gray lines show the central 95 percent of the binomial density at that position.</p>
+<p><span class="citation">(<strong>mead2002statistical?</strong>)</span> present data for germination of seeds under four temperatures (T1-T4) and four chemical concentrations. For each of the 4*4=16 treatments, 50 seeds were tested in each of four reps. In the graphic, each point is one rep. The blue line is a fitted curve from a GLM with Temperature as a factor and log concentration as a covariate. The gray lines show the central 95 percent of the binomial density at that position.</p>
 <p>Does this display help you understand the logit link and changing shape of the binomial density?</p>
 </div>
-<div id="verification-of-experiment-layout" class="section level1">
-<h1 class="hasAnchor">
-<a href="#verification-of-experiment-layout" class="anchor"></a>Verification of experiment layout</h1>
+<div class="section level1">
+<h1 id="verification-of-experiment-layout">Verification of experiment layout<a class="anchor" aria-label="anchor" href="#verification-of-experiment-layout"></a>
+</h1>
 <p><img src="agridat_examples_files/figure-html/gomez-1.png" width="480"></p>
-<p><span class="citation">Gomez and Gomez (1984)</span> provide data for an experiment with 3 reps, 6 genotypes, 3 levels of nitrogen and 2 planting dates. The experiment layout is putatively a ‘’split strip-plot’’. To verify the design, the <code>desplot</code> package is used for plotting the design of field experiments.</p>
+<p><span class="citation">(<strong>gomez1984statistical?</strong>)</span> provide data for an experiment with 3 reps, 6 genotypes, 3 levels of nitrogen and 2 planting dates. The experiment layout is putatively a ‘’split strip-plot’’. To verify the design, the <code>desplot</code> package is used for plotting the design of field experiments.</p>
 <p>How is the design different from a ‘’split-split-plot’’ design?</p>
 </div>
-<div id="visualizing-main-effects-two-way-interactions" class="section level1">
-<h1 class="hasAnchor">
-<a href="#visualizing-main-effects-two-way-interactions" class="anchor"></a>Visualizing main effects, two-way interactions</h1>
-<pre><code>## Loading required package: HH</code></pre>
-<pre><code>## Loading required package: grid</code></pre>
-<pre><code>## Loading required package: multcomp</code></pre>
-<pre><code>## Loading required package: mvtnorm</code></pre>
-<pre><code>## Loading required package: survival</code></pre>
-<pre><code>## Loading required package: TH.data</code></pre>
-<pre><code>## Loading required package: MASS</code></pre>
-<pre><code>## 
-## Attaching package: 'TH.data'</code></pre>
-<pre><code>## The following object is masked from 'package:MASS':
-## 
-##     geyser</code></pre>
-<pre><code>## Loading required package: gridExtra</code></pre>
+<div class="section level1">
+<h1 id="visualizing-main-effects-two-way-interactions">Visualizing main effects, two-way interactions<a class="anchor" aria-label="anchor" href="#visualizing-main-effects-two-way-interactions"></a>
+</h1>
+<pre><code><span class="co">## Loading required package: HH</span></code></pre>
+<pre><code><span class="co">## Loading required package: grid</span></code></pre>
+<pre><code><span class="co">## Loading required package: multcomp</span></code></pre>
+<pre><code><span class="co">## Loading required package: mvtnorm</span></code></pre>
+<pre><code><span class="co">## Loading required package: survival</span></code></pre>
+<pre><code><span class="co">## Loading required package: TH.data</span></code></pre>
+<pre><code><span class="co">## Loading required package: MASS</span></code></pre>
+<pre><code><span class="co">## </span>
+<span class="co">## Attaching package: 'TH.data'</span></code></pre>
+<pre><code><span class="co">## The following object is masked from 'package:MASS':</span>
+<span class="co">## </span>
+<span class="co">##     geyser</span></code></pre>
+<pre><code><span class="co">## Loading required package: gridExtra</span></code></pre>
 <p><img src="agridat_examples_files/figure-html/gomez2-1.png" width="480"></p>
-<p><span class="citation">Heiberger and Holland (2004)</span> provide an interesting way to use lattice graphics to visualize the main effects (using boxplots) and interactions (using interaction plots) in data. Rice yield is plotted versus replication, nitrogen, management type, and genotype variety. Box plots show minor differences between reps, increaing yield due to nitrogen, high yield from intensive management, and large differences between varieties.</p>
+<p><span class="citation">(<strong>heiberger2004statistical?</strong>)</span> provide an interesting way to use lattice graphics to visualize the main effects (using boxplots) and interactions (using interaction plots) in data. Rice yield is plotted versus replication, nitrogen, management type, and genotype variety. Box plots show minor differences between reps, increaing yield due to nitrogen, high yield from intensive management, and large differences between varieties.</p>
 <p>Do you think interaction plots show interaction (lack of parallelism)?</p>
 </div>
-<div id="d-yield-response-to-fertilizers" class="section level1">
-<h1 class="hasAnchor">
-<a href="#d-yield-response-to-fertilizers" class="anchor"></a>3D yield response to fertilizers</h1>
+<div class="section level1">
+<h1 id="d-yield-response-to-fertilizers">3D yield response to fertilizers<a class="anchor" aria-label="anchor" href="#d-yield-response-to-fertilizers"></a>
+</h1>
 <p>Note: This image was created by manual manipulation of an <code>rgl</code> device. The manual manipulation makes this non-reproducible in an <code>Rmd</code> file. See the example for the <code>sinclair.clover</code> data for the code.</p>
 <p></p>
-<p><span class="citation">Sinclair et al. (1994)</span> examined clover yields as a function of sulfur and phosphorous fertilizer in a factorial-treatment experiment. <span class="citation">Dodds, Sinclair, and Morrison (1996)</span> modeled the yield response using a Mitzerlisch-like equation that allows interacting curvature in two dimensions <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>: <span class="math display">\[
+<p><span class="citation">(<strong>sinclair1994sulphur?</strong>)</span> examined clover yields as a function of sulfur and phosphorous fertilizer in a factorial-treatment experiment. <span class="citation">(<strong>dodds1996bivariate?</strong>)</span> modeled the yield response using a Mitzerlisch-like equation that allows interacting curvature in two dimensions <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>: <span class="math display">\[
 yield = \alpha * \left( 1 + \beta *\left(\frac{\sigma + \tau*x}{x+1}\right)^y\right) *
 \left( 1+\delta*\left(\frac{\theta + \rho *y}{y+1}\right)^x \right)
 \]</span></p>
 <p>The blue dots are observed data, and the tan surface is the fitted surface drawn by the <code>rgl</code> package).</p>
 <p>How would you decide the optimal fertilizer levels?</p>
 </div>
-<div id="mosaic-plot-of-potato-damage-from-harvesting" class="section level1">
-<h1 class="hasAnchor">
-<a href="#mosaic-plot-of-potato-damage-from-harvesting" class="anchor"></a>Mosaic plot of potato damage from harvesting</h1>
+<div class="section level1">
+<h1 id="mosaic-plot-of-potato-damage-from-harvesting">Mosaic plot of potato damage from harvesting<a class="anchor" aria-label="anchor" href="#mosaic-plot-of-potato-damage-from-harvesting"></a>
+</h1>
 <p><img src="agridat_examples_files/figure-html/keen-1.png" width="672"></p>
-<p><span class="citation">Keen and Engel (1997)</span> looked at damage to potatoes caused by lifting rods during harvest. In this experiment, eight types of lifting rods were compared. Two energy levels, six genotypes and three weight classes were used. For each combinations of treatments, about 20 potato tubers were rated as undamaged (D1, yellow) to severely damaged (D4, red). Counts per treatment are shown in a mosaic plot.</p>
+<p><span class="citation">(<strong>keen1997analysis?</strong>)</span> looked at damage to potatoes caused by lifting rods during harvest. In this experiment, eight types of lifting rods were compared. Two energy levels, six genotypes and three weight classes were used. For each combinations of treatments, about 20 potato tubers were rated as undamaged (D1, yellow) to severely damaged (D4, red). Counts per treatment are shown in a mosaic plot.</p>
 <p>Which style of lifting rods cause the least/most damage to potatoes?</p>
 </div>
-<div id="yield-vs-covariate-for-latticebarley" class="section level1">
-<h1 class="hasAnchor">
-<a href="#yield-vs-covariate-for-latticebarley" class="anchor"></a>Yield vs covariate for lattice::barley</h1>
+<div class="section level1">
+<h1 id="yield-vs-covariate-for-latticebarley">Yield vs covariate for lattice::barley<a class="anchor" aria-label="anchor" href="#yield-vs-covariate-for-latticebarley"></a>
+</h1>
 <p><img src="agridat_examples_files/figure-html/wright-1.png" width="480"></p>
-<p><span class="citation">Wright (2013)</span> investigated the <code><a href="https://rdrr.io/pkg/lattice/man/barley.html">lattice::barley</a></code> data. The original two years of data were extended to 10 years (from original source documents), and supplemented with weather covariates for the 6 locations and 10 years. Each panel shows a scatterplot and regression for average location yield verses the weather covariate. Horizontal strips are for locations, vertical strips are for covariates: cdd = Cooling Degree Days, hdd = Heating Degree Days, precip = Precipitation). Higher values of heating imply cooler weather. Each plotting symbol is the last digit of the year (1927-1936) for that location.</p>
+<p><span class="citation">(<strong>wright2013revisiting?</strong>)</span> investigated the <code><a href="https://rdrr.io/pkg/lattice/man/barley.html" class="external-link">lattice::barley</a></code> data. The original two years of data were extended to 10 years (from original source documents), and supplemented with weather covariates for the 6 locations and 10 years. Each panel shows a scatterplot and regression for average location yield verses the weather covariate. Horizontal strips are for locations, vertical strips are for covariates: cdd = Cooling Degree Days, hdd = Heating Degree Days, precip = Precipitation). Higher values of heating imply cooler weather. Each plotting symbol is the last digit of the year (1927-1936) for that location.</p>
 <p>Does barley yield better in cooler or warmer weather?</p>
 </div>
-<div id="gge-biplot" class="section level1">
-<h1 class="hasAnchor">
-<a href="#gge-biplot" class="anchor"></a>GGE biplot</h1>
-<p><span class="citation">Laffont, Wright, and Hanafi (2013)</span> developed a variation of the GGE (genotype plus genotype-by-environment) biplot to include auxiliary information about a block/group of environments. Each location is classified into one of two mega-environments (colored). The mosaic plots partition variation simultaneously by principal component axis and source (genotype, genotype-by-block, residual).</p>
+<div class="section level1">
+<h1 id="gge-biplot">GGE biplot<a class="anchor" aria-label="anchor" href="#gge-biplot"></a>
+</h1>
+<p><span class="citation">(<strong>laffont2013genotype?</strong>)</span> developed a variation of the GGE (genotype plus genotype-by-environment) biplot to include auxiliary information about a block/group of environments. Each location is classified into one of two mega-environments (colored). The mosaic plots partition variation simultaneously by principal component axis and source (genotype, genotype-by-block, residual).</p>
 <p>Which genotypes are best to each mega-environment?</p>
 </div>
-<div id="nebraska-farming-income-choropleth" class="section level1">
-<h1 class="hasAnchor">
-<a href="#nebraska-farming-income-choropleth" class="anchor"></a>Nebraska farming income choropleth</h1>
-<pre><code>## Loading required package: maps</code></pre>
-<pre><code>## Loading required package: mapproj</code></pre>
+<div class="section level1">
+<h1 id="nebraska-farming-income-choropleth">Nebraska farming income choropleth<a class="anchor" aria-label="anchor" href="#nebraska-farming-income-choropleth"></a>
+</h1>
+<pre><code><span class="co">## Loading required package: maps</span></code></pre>
+<pre><code><span class="co">## Loading required package: mapproj</span></code></pre>
 <p><img src="agridat_examples_files/figure-html/nebr1-1.png" width="480"></p>
 <p>The Red-Blue palette in the <code>RColorBrewer</code> package is a divergent palette with light colors near the middle of the scale. This can cause problems when there are missing values, which appear as white (technically, the background). In order to increase the visibility of missing values, the <code>agridat</code> package uses a Red-Gray-Blue palette, with a gray color that is dark enough to clearly distinguish missing values.</p>
 <p>How does the outlier county (Butler) in northeast Nebraska limit interpration of spatial patterns in the data?</p>
@@ -213,62 +251,24 @@ yield = \alpha * \left( 1 + \beta *\left(\frac{\sigma + \tau*x}{x+1}\right)^y\ri
 <p>Because counties are different sizes, the second graphic uses an income rate per square mile. Because of the outlier, it might be smart to use percentile break points, but doing so hides the outlier. Instead, the break points are calculated using a method called Fisher-Jenks. These break points show both the outlier and the spatial patterns. It is now easy to see that northwest (Sandhills) Nebraska has low farming income, especially for crops. Counties with missing data are white, which is easily distinguished from gray.</p>
 <p>Where are farm incomes highest? Why?</p>
 </div>
-<div id="las-rosas-yield-monitor" class="section level1">
-<h1 class="hasAnchor">
-<a href="#las-rosas-yield-monitor" class="anchor"></a>Las Rosas yield monitor</h1>
+<div class="section level1">
+<h1 id="las-rosas-yield-monitor">Las Rosas yield monitor<a class="anchor" aria-label="anchor" href="#las-rosas-yield-monitor"></a>
+</h1>
 <p><img src="agridat_examples_files/figure-html/lasrosas-1.png" width="480"></p>
-<p><span class="citation">Anselin, Bongiovanni, and Lowenberg-DeBoer (2004)</span> and <span class="citation">Lambert, Lowenberg-Deboer, and Bongiovanni (2004)</span> looked at yield monitor data collected from a corn field in Argentina in 1999 and 2001, to see how yield was affected by field topography and nitrogen fertilizer. The figures here show heatmaps for the yield each year, and also the experiment design (colors are reps, shades of color are nitrogen level, plotting character is topography).</p>
+<p><span class="citation">(<strong>anselin2004spatial?</strong>)</span> and <span class="citation">(<strong>lambert2004comparison?</strong>)</span> looked at yield monitor data collected from a corn field in Argentina in 1999 and 2001, to see how yield was affected by field topography and nitrogen fertilizer. The figures here show heatmaps for the yield each year, and also the experiment design (colors are reps, shades of color are nitrogen level, plotting character is topography).</p>
 <p>Which year showed greater spatial variation in yield?</p>
 </div>
-<div id="time-series-of-corn-yields-by-state" class="section level1">
-<h1 class="hasAnchor">
-<a href="#time-series-of-corn-yields-by-state" class="anchor"></a>Time series of corn yields by state</h1>
+<div class="section level1">
+<h1 id="time-series-of-corn-yields-by-state">Time series of corn yields by state<a class="anchor" aria-label="anchor" href="#time-series-of-corn-yields-by-state"></a>
+</h1>
 <p><img src="agridat_examples_files/figure-html/nass-1.png" width="480"></p>
 <p>The National Agricultural Statistics Service tracks the total number of acres planted to corn (and other crops) for each state in the U.S. There are large changes over the past century in corn acreage for selected states.</p>
 <p>Which states were in the corn belt in 1925?</p>
 <p>Which states were in the corn belt in 2000?</p>
 </div>
-<div id="references" class="section level1 unnumbered">
-<h1 class="hasAnchor">
-<a href="#references" class="anchor"></a>References</h1>
-<div id="refs" class="references hanging-indent">
-<div id="ref-anselin2004spatial">
-<p>Anselin, Luc, Rodolfo Bongiovanni, and Jess Lowenberg-DeBoer. 2004. “A Spatial Econometric Approach to the Economics of Site-Specific Nitrogen Management in Corn Production.” <em>American Journal of Agricultural Economics</em> 86 (3): 675–87. <a href="https://doi.org/10.1111/j.0002-9092.2004.00610.x">https://doi.org/10.1111/j.0002-9092.2004.00610.x</a>.</p>
-</div>
-<div id="ref-dodds1996bivariate">
-<p>Dodds, KG, AG Sinclair, and JD Morrison. 1996. “A Bivariate Response Surface for Growth Data.” <em>Fertilizer Research</em> 45 (2): 117–22. <a href="https://doi.org/10.1007/BF00790661">https://doi.org/10.1007/BF00790661</a>.</p>
-</div>
-<div id="ref-gomez1984statistical">
-<p>Gomez, K. A., and A. A. Gomez. 1984. <em>Statistical Procedures for Agricultural Research</em>. Wiley-Interscience.</p>
-</div>
-<div id="ref-harrison2012bayesian">
-<p>Harrison, J. M., D. Culp, and G. G. Harrigan. 2012. “Bayesian MCMC Analyses for Regulatory Assessments of Food Composition.” In <em>Kansas State University Conference on Applied Statistics in Agriculture, Manhattan, Kansas</em>.</p>
-</div>
-<div id="ref-heiberger2004statistical">
-<p>Heiberger, Richard M, and Burt Holland. 2004. <em>Statistical Analysis and Data Display: An Intermediate Course with Examples in S-Plus, R, and SAS</em>. Springer.</p>
-</div>
-<div id="ref-keen1997analysis">
-<p>Keen, A., and B. Engel. 1997. “Analysis of a Mixed Model for Ordinal Data by Iterative Re-Weighted REML.” <em>Statistica Neerlandica</em> 51 (2): 129–44. <a href="https://doi.org/10.1111/1467-9574.00044">https://doi.org/10.1111/1467-9574.00044</a>.</p>
-</div>
-<div id="ref-laffont2013genotype">
-<p>Laffont, Jean-Louis, Kevin Wright, and Mohamed Hanafi. 2013. “Genotype Plus Genotype<span class="math inline">\(\times\)</span> Block of Environments Biplots.” <em>Crop Science</em> 53 (6): 2332–41. <a href="https://doi.org/10.2135/cropsci2013.03.0178">https://doi.org/10.2135/cropsci2013.03.0178</a>.</p>
-</div>
-<div id="ref-lambert2004comparison">
-<p>Lambert, Dayton M, James Lowenberg-Deboer, and Rodolfo Bongiovanni. 2004. “A Comparison of Four Spatial Regression Models for Yield Monitor Data: A Case Study from Argentina.” <em>Precision Agriculture</em> 5 (6): 579–600. <a href="https://doi.org/10.1007/s11119-004-6344-3">https://doi.org/10.1007/s11119-004-6344-3</a>.</p>
-</div>
-<div id="ref-lee2009random">
-<p>Lee, Arier Chi-Lun. 2009. “Random Effects Models for Ordinal Data.” PhD thesis, University of Auckland.</p>
-</div>
-<div id="ref-mead2002statistical">
-<p>Mead, R., R. N. Curnow, and A. M. Hasted. 2002. <em>Statistical Methods in Agriculture and Experimental Biology</em>. 9th ed. CRC Press.</p>
-</div>
-<div id="ref-sinclair1994sulphur">
-<p>Sinclair, AG, WH Risk, LC Smith, JD Morrison, and KG Dodds. 1994. “Sulphur and Phosphorus in Balanced Pasture Nutrition.” In <em>Proceedings of the New Zealand Grassland Association</em>, 56:13–16.</p>
-</div>
-<div id="ref-wright2013revisiting">
-<p>Wright, Kevin. 2013. “Revisiting Immer’s Barley Data.” <em>The American Statistician</em> 67: 129–33. <a href="https://doi.org/10.1080/00031305.2013.801783">https://doi.org/10.1080/00031305.2013.801783</a>.</p>
-</div>
-</div>
+<div class="section level1">
+<h1 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+</h1>
 </div>
   </div>
 
@@ -283,11 +283,13 @@ yield = \alpha * \left( 1 + \beta *\left(\frac{\sigma + \tau*x}{x+1}\right)^y\ri
 
 
       <footer><div class="copyright">
-  <p>Developed by Kevin Wright.</p>
+  <p></p>
+<p>Developed by Kevin Wright.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
 </div>
 
       </footer>
@@ -295,6 +297,8 @@ yield = \alpha * \left( 1 + \beta *\left(\frac{\sigma + \tau*x}{x+1}\right)^y\ri
 
   
 
+
+  
 
   </body>
 </html>

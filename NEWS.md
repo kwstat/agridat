@@ -10,6 +10,8 @@ arankacami.groundnut.uniformity, barrero.maize, buntaran.wheat, gomez.heterogene
 
 * Re-named `correa.soybean.uniformity` to `dasilva.soybean.uniformity`.
 
+* There are more than 200 URLs in the vignettes and these were slow to check and generated too many false warnings. Stopped the Rmd to html conversion from creating URL links. 
+
 
 # agridat 1.18 - Jan 2021
 
@@ -27,7 +29,7 @@ alwan.lamb, baker.strawberry.uniformity, besag.checks, bryan.corn.uniformity, da
 
 ## Other notes
 
-* Examples using `asreml()` are using asreml version 4. Some examples also have asreml 3 code.
+* Examples using `asreml()` now asreml version 4.
 
 * Re-named `hutchinson.cotton.uniformity` to `panse.cotton.uniformity`.
 

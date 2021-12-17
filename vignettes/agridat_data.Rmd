@@ -2,8 +2,11 @@
 title: "Additional sources of agricultural data"
 author: "Kevin Wright"
 date: "`r Sys.Date()`"
-output:
-  rmarkdown::html_vignette
+output: 
+  rmarkdown::html_vignette:
+    md_extensions: [ 
+      "-autolink_bare_uris" 
+    ]
 vignette: >
   %\VignetteIndexEntry{Additional agricultural data} 
   %\VignetteEngine{knitr::rmarkdown}
@@ -60,7 +63,7 @@ Pig weight data is found in `SemiPar::pig.weights`
 Sitka spruce data is found in: `geepack::spruce`
 
 Milk protein data is found in: `nlme::Milk`.  A thorough description of this data can be found in Molenberghs & Kenward, _Missing Data in Clinical Studies_, p. 377.
-Original source: A. P. Verbyla and B. R. Cullis, Modelling in Repeated Measures Experiments. https://www.jstor.org/stable/2347384 
+Original source: A. P. Verbyla and B. R. Cullis, Modelling in Repeated Measures Experiments.
 
 
 ### Federer, Walt (1955). _Experimental Design_.
@@ -84,7 +87,7 @@ Small, mostly simulated data.
 
 
 ### Galwey, N.W. (2014). _Introduction to Mixed Modelling_, 2nd ed.
-https://www.wiley.com/WileyCDA/WileyTitle/productCd-1119945496.html
+https://www.wiley.com/en-us/Introduction+to+Mixed+Modelling%3A+Beyond+Regression+and+Analysis+of+Variance%2C+2nd+Edition-p-9781119945499
 
 ```
  2  83 variety x nitro split-plot - agridat::yates.oats
@@ -268,7 +271,6 @@ https://archive.org/details/secondeditionsta001000mbp
 
 
 ### V. G. Panse and P. V. Sukhatme (1957). _Statistical Methods for Agricultural Workers_.
-https://krishikosh.egranth.ac.in/handle/1/5810134296
 
 ```
   3 Length and number of grains per ear of wheat
@@ -496,18 +498,11 @@ Vol 35/503. North Central Regional Potassium Studies with Corn.
 # Papers
 
 **Xavier, Alencar et al.**.
-Genome-Wide Analysis of Grain Yield Stability and Environmental Interactions in a Multiparental Soybean Population,
-https://www.g3journal.org/content/8/2/519
+Genome-Wide Analysis of Grain Yield Stability and Environmental Interactions in a Multiparental Soybean Population.
+https://doi.org/10.1534/g3.117.300300
 
 Data are in the SoyNAM and NAM packages.
 
-**Barrero, Ivan D. et al**. (2013).
-A multi-environment trial analysis shows slight grain yield improvement in Texas commercial maize.
-Field Crops Research, 149, Pages 167-176.
-https://doi.org/10.1016/j.fcr.2013.04.017
-
-This is a large (14500 records), multi-year, multi-location, 10-trait data. Sent a note encouraging the authors to formally publish the data.
-Source: http://maizeandgenetics.tamu.edu/CTP/CTP.html
 
 
 **Cleveland, M.A. and John M. Hickey, Selma Forni** (2012).
@@ -520,7 +515,7 @@ The supplemental information for this paper contains data for 3534 pigs with hig
 
 **Daillant-Spinnler** (1996). Relationships between perceived sensory properties and major preference directions of 12 variaties of apples from the southern hemisphere.
 Food Quality and Preference, 7(2), 113-126.
-https://dx.doi.org/10.1016/0950-3293(95)00043-7
+https://doi.org/10.1016/0950-3293(95)00043-7
 
 The data are in `ClustVarLV::apples_sh$pref` and `ClustVarLV::apples_sh$senso`
 12 apple varieties, 43 traits, 60 consumers
@@ -600,7 +595,7 @@ Repeated measurements over six years.  Data in supplemental Word doc.
 **Snedecor, George and E. S. Haber** (1946).
 Statistical Methods For an Incomplete Experiment on a Perennial Crop.
 Biometrics Bulletin, 2, 61-67.
-https://doi.org/10.2307/3001959
+https://www.jstor.org/stable/3001959
 
 Harvest of asparagus over 10 years, three cutting dates per year, 6 blocks.
 
@@ -952,11 +947,6 @@ Year, page
 1937-1939
 1946-1953
 ```
-
-### SolCAP Solanaceae Coordinated Agricultural Project
-http://www.solcap.msu.edu/
-
-Potato and Tomato genotype and phenotype data.
 
 
 ### Statistical Analysis of Agricultural Experiments with R

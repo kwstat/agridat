@@ -17,8 +17,7 @@ For a quick overview of the datasets available in the package, type `?agridat` a
 
 When this project was first begun in the early 2000s, electronic versions of agricultural datasets were hard to find. Since then, there has been a revolution in the availability of datasets related to agriculture.  See the vignette which describes some data sources.
 
-Box (1957) said,
-"I had hoped that we had seen the end of the obscene tribal habit practiced by statisticians of continually exhuming and massaging dead data sets after their purpose in life has long since been forgotten and there was no possibility of doing anything useful as a result of this treatment."
+Box (1957) said, "I had hoped that we had seen the end of the obscene tribal habit practiced by statisticians of continually exhuming and massaging dead data sets after their purpose in life has long since been forgotten and there was no possibility of doing anything useful as a result of this treatment."
 
 Massaging these dead data sets will not lead to any of the genetics being released for commercial use.
 The value of this package is:
@@ -32,7 +31,7 @@ Some of the examples use the `asreml` package since it is the _only_ R tool for 
 
 # Comments on the package structure
 
-A large portion of these datasets appear in electronic form here for the first time.
+Many of these datasets appear in electronic form here for the first time.
 
 A tremendous amount of effort has been given to the curating process of identifying datasets, extracting the data from source materials, checking data values, and documenting the data.  In effect, to make the data somewhat 'computable' (Wolfram 2017).
 

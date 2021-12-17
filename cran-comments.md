@@ -7,7 +7,31 @@ Current CRAN status: OK: 12
 
 ## Test environments and results
 
-1. 
+1. R 4.1.1 on Windows 10
+2. WinBuilder: R devel
+3. Rhub: Windows Server 2022, R-devel, 64 bit
+
+Status.  OK on some platforms. WinBuilder has 2 notes.
+
+1. Found the following (possibly) invalid URLs:
+  URL: https://www.jstor.org/stable/3001959
+    From: inst/doc/agridat_data.html
+   
+Hand-checked that this is a valid URL.
+
+2. Examples with CPU (user + system) or elapsed time > 10s
+            user system elapsed
+
+This was caused by an example with a simple graphic that (on my computer) takes less than 1 second to draw.  I wrapped that example with dontrun{} and then this NOTE appeared for a DIFFERENT example.  I wonder if the NOTE really means that loading the graphics library for the first time  is slow???
+
+
+## Downstream dependencies
+
+revdep() # desplot, gge
+
+Checked OK.
+
+
 # agridat 1.18
 
 This release fixes the vignettes to conditionally load "Suggests" packages.

@@ -53,6 +53,11 @@
   library(agridat)  
   dat <- barrero.maize
 
+  library(lattice)
+  bwplot(yield ~ factor(year)|loc, dat,
+         main="barrero.maize - Yield trends by loc",
+         scales=list(x=list(rot=90)))
+  
   # Table 6 of Barrero. Model equation 1.
   pacman::p_load(dplyr, asreml, lucid)
   dat <- arrange(dat, env)

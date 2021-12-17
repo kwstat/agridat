@@ -60,13 +60,6 @@ kamidi 11g,7l
 lin.balanced 33g,12l 
 lin.unbalanced 33g,18l
 
-Meta analysis example
-Elisa Pellegrino, Stefano Bedini, Marco Nuti & Laura Ercoli (2018).
-Impact of genetically engineered maize on agronomic, environmental and toxicological traits: a meta-analysis of 21 years of field data.
-Scientific Reports, 8, Article 3113.
-https://www.nature.com/articles/s41598-018-21284-2#Sec18
-
-
 
 ---
 
@@ -258,7 +251,7 @@ http://newprairiepress.org/agstatconference/
 
 ## Computers and Electronics in Agriculture.
 http://www.sciencedirect.com/science/journal/01681699/103 
-Vol 1-110
+Vol 1-110 180-191
 
 
 ## Journal of Agricultural Science

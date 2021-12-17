@@ -3,7 +3,10 @@ title: "Graphical Gems in the agridat Package"
 author: "Kevin Wright"
 date: "`r Sys.Date()`"
 output: 
-  rmarkdown::html_vignette
+  rmarkdown::html_vignette:
+    md_extensions: [ 
+      "-autolink_bare_uris" 
+    ]
 bibliography: agridat.bib
 vignette: >
   %\VignetteIndexEntry{Graphical Gems in the agridat Package}
@@ -22,16 +25,7 @@ This vignette presents graphical views of a few of the datasets in this package.
 knitr::opts_chunk$set(echo=FALSE, fig.height = 5, fig.width = 5)
 options(width=90)
 ```
-This exhibit of agricultural data uses the following packages: 
-`agridat`,
-`desplot`,
-`gge`,
-`HH`,
-`lattice`,
-`latticeExtra`,
-`mapproj`,
-`maps`,
-`reshape2`.
+This exhibit of agricultural data uses the following packages: `agridat`, `desplot`, `gge`, `HH`, `lattice`, `latticeExtra`, `mapproj`, `maps`, `reshape2`.
 
 # Potato blight incidence over space and time
 

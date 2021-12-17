@@ -26,6 +26,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -38,18 +40,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">agridat</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.18</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">1.19</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
@@ -61,13 +57,16 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="../articles/agridat_data.html">Additional sources of agricultural data</a>
+      <a href="../articles/agridat_data.html">UNKNOWN TITLE</a>
     </li>
     <li>
       <a href="../articles/agridat_examples.html">Graphical Gems in the agridat Package</a>
     </li>
     <li>
       <a href="../articles/agridat_intro.html">Introduction to `agridat`</a>
+    </li>
+    <li>
+      <a href="../articles/agridat_uniformity.html">Notes on uniformity data</a>
     </li>
   </ul>
 </li>
@@ -77,8 +76,8 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/kwstat/agridat/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/kwstat/agridat/" class="external-link">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -92,16 +91,16 @@
 
       
 
-      </header><script src="agridat_intro_files/header-attrs-2.4/header-attrs.js"></script><script src="agridat_intro_files/accessible-code-block-0.0.1/empty-anchor.js"></script><div class="row">
+      </header><div class="row">
   <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1 data-toc-skip>Introduction to <code>agridat</code>
 </h1>
-                        <h4 class="author">Kevin Wright</h4>
+                        <h4 data-toc-skip class="author">Kevin Wright</h4>
             
-            <h4 class="date">2020-12-11</h4>
+            <h4 data-toc-skip class="date">2021-12-17</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/kwstat/agridat/blob/master/vignettes/agridat_intro.Rmd"><code>vignettes/agridat_intro.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/kwstat/agridat/blob/HEAD/../../../Users/wrightkevi/OneDrive/kw_work/rpack/agridat/vignettes/agridat_intro.Rmd" class="external-link"><code>../../../Users/wrightkevi/OneDrive/kw_work/rpack/agridat/vignettes/agridat_intro.Rmd</code></a></small>
       <div class="hidden name"><code>agridat_intro.Rmd</code></div>
 
     </div>
@@ -109,32 +108,32 @@
     
     
 <p>For a quick overview of the datasets available in the package, type <code><a href="../reference/agridat.html">?agridat</a></code> at the R prompt.</p>
-<div id="comments-on-the-package-purpose" class="section level1">
-<h1 class="hasAnchor">
-<a href="#comments-on-the-package-purpose" class="anchor"></a>Comments on the package purpose</h1>
+<div class="section level1">
+<h1 id="comments-on-the-package-purpose">Comments on the package purpose<a class="anchor" aria-label="anchor" href="#comments-on-the-package-purpose"></a>
+</h1>
 <p>When this project was first begun in the early 2000s, electronic versions of agricultural datasets were hard to find. Since then, there has been a revolution in the availability of datasets related to agriculture. See the vignette which describes some data sources.</p>
 <p>Box (1957) said, “I had hoped that we had seen the end of the obscene tribal habit practiced by statisticians of continually exhuming and massaging dead data sets after their purpose in life has long since been forgotten and there was no possibility of doing anything useful as a result of this treatment.”</p>
 <p>Massaging these dead data sets will not lead to any of the genetics being released for commercial use. The value of this package is: 1. Validating published analyses. 2. Providing data for testing new analysis methods. 3. Illustrating (and validating) the use of R packages.</p>
 <p>White and van Evert (2008) present some guidelines for publication of data.</p>
-<p>Some of the examples use the <code>asreml</code> package since it is the <em>only</em> R tool for fitting mixed models with complex variance structures to large datasets, and the best option for modelling AR1xAR1 residual variance structures. Commercial use of <code>asreml</code> requires a license: <a href="https://www.vsni.co.uk/downloads/asreml" class="uri">https://www.vsni.co.uk/downloads/asreml</a>.</p>
+<p>Some of the examples use the <code>asreml</code> package since it is the <em>only</em> R tool for fitting mixed models with complex variance structures to large datasets, and the best option for modelling AR1xAR1 residual variance structures. Commercial use of <code>asreml</code> requires a license: <a href="https://www.vsni.co.uk/downloads/asreml" class="external-link uri">https://www.vsni.co.uk/downloads/asreml</a>.</p>
 </div>
-<div id="comments-on-the-package-structure" class="section level1">
-<h1 class="hasAnchor">
-<a href="#comments-on-the-package-structure" class="anchor"></a>Comments on the package structure</h1>
-<p>A large portion of these datasets appear in electronic form here for the first time.</p>
+<div class="section level1">
+<h1 id="comments-on-the-package-structure">Comments on the package structure<a class="anchor" aria-label="anchor" href="#comments-on-the-package-structure"></a>
+</h1>
+<p>Many of these datasets appear in electronic form here for the first time.</p>
 <p>A tremendous amount of effort has been given to the curating process of identifying datasets, extracting the data from source materials, checking data values, and documenting the data. In effect, to make the data somewhat ‘computable’ (Wolfram 2017).</p>
 <p>The original sources for these data use different words to refer to genotypes including <code>accession</code>, <code>breed</code>, <code>cultivar</code>, <code>genotype</code>, <code>hybrid</code>, <code>line</code>, <code>progeny</code>, <code>stock</code>, <code>type</code>, and <code>variety</code>. For consistency, these datasets mostly use <code>gen</code> (genotype).</p>
 <p>Also for consistency, <code>row</code> and <code>col</code> are usually used for the field coordinates.</p>
 <p>In dataframes, <code>block</code>, <code>rep</code>, and similar terms are almost always coded like B1, B2, B3 instead of 1, 2, 3. This causes R to treat the data as a factor instead of a numeric covariate (which is a good thing).</p>
 <p>Almost all of the data are presented as ‘tidy’ dataframes with observations in rows and variables in columns.</p>
-<p>Although using <code><a href="https://rdrr.io/r/utils/data.html">data()</a></code> is not necessary to access the data files, the example sections do include the use of <code><a href="https://rdrr.io/r/utils/data.html">data()</a></code> because <code><a href="https://devtools.r-lib.org//reference/run_examples.html">devtools::run_examples()</a></code> needs it.</p>
+<p>Although using <code><a href="https://rdrr.io/r/utils/data.html" class="external-link">data()</a></code> is not necessary to access the data files, the example sections do include the use of <code><a href="https://rdrr.io/r/utils/data.html" class="external-link">data()</a></code> because <code><a href="https://devtools.r-lib.org/reference/run_examples.html" class="external-link">devtools::run_examples()</a></code> needs it.</p>
 </div>
-<div id="references" class="section level1">
-<h1 class="hasAnchor">
-<a href="#references" class="anchor"></a>References</h1>
+<div class="section level1">
+<h1 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
+</h1>
 <p>G. E. P. Box (1957). Integration of Techniques in Process Development, Transactions of the American Society for Quality Control.</p>
-<p>J. White and Frits van Evert. (2008). Publishing Agronomic Data. Agronomy Journal, 100, 1396-1400. <a href="https://doi.org/10.2134/agronj2008.0080F" class="uri">https://doi.org/10.2134/agronj2008.0080F</a></p>
-<p>Stephen Wolfram (2017). Launching the Wolfram Data Repository: Data Publishing that Really Works. <a href="https://writings.stephenwolfram.com/2017/04/launching-the-wolfram-data-repository-data-publishing-that-really-works/" class="uri">https://writings.stephenwolfram.com/2017/04/launching-the-wolfram-data-repository-data-publishing-that-really-works/</a></p>
+<p>J. White and Frits van Evert. (2008). Publishing Agronomic Data. Agronomy Journal, 100, 1396-1400. <a href="https://doi.org/10.2134/agronj2008.0080F" class="external-link uri">https://doi.org/10.2134/agronj2008.0080F</a></p>
+<p>Stephen Wolfram (2017). Launching the Wolfram Data Repository: Data Publishing that Really Works. <a href="https://writings.stephenwolfram.com/2017/04/launching-the-wolfram-data-repository-data-publishing-that-really-works/" class="external-link uri">https://writings.stephenwolfram.com/2017/04/launching-the-wolfram-data-repository-data-publishing-that-really-works/</a></p>
 </div>
   </div>
 
@@ -149,11 +148,13 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by Kevin Wright.</p>
+  <p></p>
+<p>Developed by Kevin Wright.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
 </div>
 
       </footer>
@@ -161,6 +162,8 @@
 
   
 
+
+  
 
   </body>
 </html>
