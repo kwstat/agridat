@@ -1,3 +1,9 @@
+# agridat 1.20 - unpublished
+
+## New data
+
+bachmaier.quadratic, kling.augmented
+
 # agridat 1.19 - Dec 2021
 
 ## New data
