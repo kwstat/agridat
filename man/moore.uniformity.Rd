@@ -89,8 +89,10 @@
 \source{  
   Moore, John F and Darroch, JG. (1956).
   Field plot technique with Blue Lake pole beans, bush beans, carrots,
-  sweet corn, spring and fall cauliflower.
-  Washington Agricultural Experiment Stations, Institute of Agricultural Sciences, State College of Washington.
+  sweet corn, spring and fall cauliflower, page 25-30.
+  Washington Agricultural Experiment Stations, Institute of Agricultural
+  Sciences, State College of Washington.
+  https://babel.hathitrust.org/cgi/pt?id=uiug.30112019919072&view=1up&seq=33&skin=2021
 }
 \references{
   None.

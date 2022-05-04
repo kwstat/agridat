@@ -41,7 +41,8 @@
 \source{  
   F. C. Stickler (1960).
   Estimates of Optimum Plot Size from Grain Sorghum Uniformity Trial Data.
-  Technical bulletin, Kansas Agricultural Experiment Station.
+  Technical bulletin, Kansas Agricultural Experiment Station, page 17-20.
+  https://babel.hathitrust.org/cgi/pt?id=uiug.30112019584322&view=1up&seq=21
 }
 
 \references{
@@ -50,8 +51,7 @@
 \examples{
 \dontrun{
 
-library(agridat)
-  
+  library(agridat)
   data(stickler.sorghum.uniformity)
   dat <- stickler.sorghum.uniformity
   

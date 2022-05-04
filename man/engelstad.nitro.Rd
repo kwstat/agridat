@@ -45,7 +45,6 @@
 \dontrun{
 
 library(agridat)
-
 data(engelstad.nitro)
 dat <- engelstad.nitro
 

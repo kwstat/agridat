@@ -1,4 +1,4 @@
---
+---
 title: "Additional sources of agricultural data"
 author: "Kevin Wright"
 date: "`r Sys.Date()`"
@@ -190,6 +190,7 @@ Second edition: `http://krishikosh.egranth.ac.in/handle/1/2034118` (broken)
 
 
 ### Erwin LeClerg, Warren Leonard, Andrew Clark (1962). _Field Plot Technique_
+https://archive.org/details/fieldplottechniq00leon
 
 Many small datasets.
 ```
@@ -211,7 +212,12 @@ Many small datasets.
  89 Split-plot 
 103 Split-split 
 117 Split-block - agridat::little.splitblock 
-126 Repeated harvests
+126 Repeated harvests.  In data-unused.
+144 Non-IID errors
+155 Square root transform
+158 Germination, 3 reps, 24 treatments
+261 Response surface, nitrogen, harvest
+277 Count data
 ```
 
 
@@ -497,15 +503,7 @@ Vol 35/503. North Central Regional Potassium Studies with Corn.
 
 # Papers
 
-**Xavier, Alencar et al.**.
-Genome-Wide Analysis of Grain Yield Stability and Environmental Interactions in a Multiparental Soybean Population.
-https://doi.org/10.1534/g3.117.300300
-
-Data are in the SoyNAM and NAM packages.
-
-
-
-**Cleveland, M.A. and John M. Hickey, Selma Forni** (2012).
+### Cleveland, M.A. and John M. Hickey, Selma Forni (2012).
 A Common Dataset for Genomic Analysis of Livestock Populations.
 G3, 2, 429-435.
 https://doi.org/10.1534/g3.111.001453
@@ -513,7 +511,7 @@ https://doi.org/10.1534/g3.111.001453
 The supplemental information for this paper contains data for 3534 pigs with high-density genotypes (50000 SNPs), and a pedigree including parents and grandparents of the animals.
 
 
-**Daillant-Spinnler** (1996). Relationships between perceived sensory properties and major preference directions of 12 variaties of apples from the southern hemisphere.
+### Daillant-Spinnler (1996). Relationships between perceived sensory properties and major preference directions of 12 variaties of apples from the southern hemisphere.
 Food Quality and Preference, 7(2), 113-126.
 https://doi.org/10.1016/0950-3293(95)00043-7
 
@@ -521,11 +519,11 @@ The data are in `ClustVarLV::apples_sh$pref` and `ClustVarLV::apples_sh$senso`
 12 apple varieties, 43 traits, 60 consumers
 
 
-**Gregory, Crowther & Lambert** (1932). The interrelation of factors controlling the production of cotton under irrigation in the Sudan.
+### Gregory, Crowther & Lambert (1932). The interrelation of factors controlling the production of cotton under irrigation in the Sudan.
 Jour Agric Sci, 22, p. 617.
 
 
-**Hedrick** (1920).
+### Hedrick (1920).
 Twenty years of fertilizers in an apple orchard.
 https://books.google.com/books?hl=en&lr=&id=SqlJAAAAMAAJ&oi=fnd&pg=PA446
 
@@ -533,14 +531,14 @@ The authors found no significant differences between fertilizer treatments.
 
 
 
-**Meehan & Gratton** (2016).
+### Meehan & Gratton (2016).
 A Landscape View of Agricultural Insecticide Use across the Conterminous US from 1997 through 2012.
 PLOS ONE, https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0166724
 
 Supplemental material contains county-level data for each of 4 years. Complete R-INLA code for analysis.
 
 
-**Monteverde et al**
+### Monteverde et al
 Integrating Molecular Markers and Environmental Covariates To Interpret Genotype by Environment Interaction in Rice (Oryza sativa L.) Grown in Subtropical Areas
 https://doi.org/10.1534/g3.119.400064 
 https://gsajournals.figshare.com/articles/dataset/Supplemental_Material_for_Monteverde_et_al_2019/7685636
@@ -548,22 +546,14 @@ https://gsajournals.figshare.com/articles/dataset/Supplemental_Material_for_Mont
 Supplemental information contains phenotypic data and markers and environmental covariates for PLS analysis.
 
 
-**Roger W. Hexem, Earl O.Heady, Metin Caglar** (1974)
-A compendium of experimental data for corn, wheat, cotton and sugar beets grown at selected sites in the western United States and alternative production functions fitted to these data.
-Technical report: Center for Agricultural and Rural Development, Iowa State University.
-https://babel.hathitrust.org/cgi/pt?id=wu.89031116783;view=1up;seq=3
-
-The technical report provides data from experiments on corn, wheat, cotton & sugar beets, each crop tested at several locations over two years, with a factorial structure on irrigation and nitrogen treatments, with replications.  Three polynomial functions were fit to the data for each location (quadratic, square root, three-halves).
-
-
-**Kenward, Michael G.** (1987).
+### Kenward, Michael G. (1987).
 A Method for Comparing Profiles of Repeated Measurements.
 Applied Statistics, 36, 296-308.
 
 An ante-dependence model is fit to repeated measures of cattle weight.
 
 
-**Klumper & Qaim** (2015).
+### Klumper & Qaim (2015).
 A Meta-Analysis of the Impacts of Genetically Modified Crops.
 https://doi.org/10.1371/journal.pone.0111629
 
@@ -571,35 +561,50 @@ Nice meta-analysis dataset.  Published data only include differences, not standa
 See the comments on PLOS article for some peculiarities in the data.
 
 
-**Lado, B. et al.** (2013). 
+### Lado, B. et al. (2013). 
 *Increased Genomic Prediction Accuracy in Wheat Breeding Through Spatial Adjustment of Field Trial Data*.  G3, 3, 2105-2114.
 https://doi.org/10.1534/g3.113.007807
 
 Has a large haplotype dataset (83 MB) and two-year phenotype data with multiple traits.
 
 
-**Payne, Roger** (2015). 
+### Oakey, Cullis, Thompson 2016
+Genomic Selection in Multi-environment Crop Trials
+https://www.g3journal.org/content/6/5/1313
+http://www.g3journal.org/content/6/5/1313/suppl/DC1
+648 genotypes planted in pots yr 1, 856 lines yr 2, 639 common to both years.
+7864 SNP markerks
+
+### Payne, Roger (2015). 
 The Design and Analysis of Long-Term Rotation Experiments.
 Agronomy Journal, 107, 772-784.
 https://doi.org/10.2134/agronj2012.0411
 
 The data and R code appeared in the paper. Free access, but closed copyright.
 
-**Peixoto, Marco Antonio et al** (2020)
+### Peixoto, Marco Antonio et al (2020)
 Random regression for modeling yield genetic trajectories in Jatropha curcas breeding.
 https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0244021
 
 Repeated measurements over six years.  Data in supplemental Word doc.
 
 
-**Snedecor, George and E. S. Haber** (1946).
+### Roger W. Hexem, Earl O.Heady, Metin Caglar (1974)
+A compendium of experimental data for corn, wheat, cotton and sugar beets grown at selected sites in the western United States and alternative production functions fitted to these data.
+Technical report: Center for Agricultural and Rural Development, Iowa State University.
+https://babel.hathitrust.org/cgi/pt?id=wu.89031116783;view=1up;seq=3
+
+The technical report provides data from experiments on corn, wheat, cotton & sugar beets, each crop tested at several locations over two years, with a factorial structure on irrigation and nitrogen treatments, with replications.  Three polynomial functions were fit to the data for each location (quadratic, square root, three-halves).
+
+
+### Snedecor, George and E. S. Haber (1946).
 Statistical Methods For an Incomplete Experiment on a Perennial Crop.
 Biometrics Bulletin, 2, 61-67.
 https://www.jstor.org/stable/3001959
 
 Harvest of asparagus over 10 years, three cutting dates per year, 6 blocks.
 
-**Tanaka, Takashi X. T.**
+### Tanaka, Takashi X. T.
 Assessment of design and analysis frameworks for on-farm experimentation through a simulation study of wheat yield in Japan.
 https://github.com/takashit754/geostat
 
@@ -607,7 +612,7 @@ Yield-monitor data for 3 fields.
 
 
 
-**Technow, Frank, et al.** (2014).
+### Technow, Frank, et al. (2014).
 Genome Properties and Prospects of Genomic Prediction of Hybrid Performance in a Breeding Program of Maize.
 August 1, 2014 vol. 197 no. 4 1343-1355.
 https://doi.org/10.1534/genetics.114.165860
@@ -615,27 +620,34 @@ https://doi.org/10.1534/genetics.114.165860
 Genotype and phenotype data appears in the sommer package.
 
 
-**Tian, Ting** (2015).
+### Tian, Ting (2015).
 Application of Multiple Imputation for Missing Values in Three-Way Three-Mode Multi-Environment Trial Data.
 https://doi.org/10.1371/journal.pone.0144370
 
 Uses `agridat::australia.soybean` data and one other real dataset with 4 traits that are not identified.  All data and code available.
 
 
-**Randall J. Wisser et al.** (2011). 
+### Randall J. Wisser et al. (2011). 
 Multivariate analysis of maize disease resistances suggests a pleiotropic genetic basis and implicates a GST gene. PNAS.  https://doi.org/10.1073/pnas.1011739108
 
 The supplement contains genotype data, but no phenotype data.
 
 
-**Rife et al.** (2018)
+### Rife et al. (2018)
 Genomic analysis and prediction within a US public collaborative winter wheat regional testing nursery.
 https://doi.org/10.5061/dryad.q968v83
 
 Large phenotypic dataset with 691 wheat lines, 33 years, 670 environments, 3-4 reps, 120000 datapoints. No genotypic data is included.
 
 
-**van der Voet et al.** (2017).
+### Schmitz Carley et al (2018)
+Genetic Covariance of Environments in the Potato National Chip Processing Trial
+https://dl.sciencesocieties.org/publications/cs/articles/59/1/107
+
+Supp 2 contains genomic data, but there is no easy way to find the phenotypic data.
+
+
+### van der Voet et al. (2017).
 Equivalence testing using existing reference data: An example with genetically modified and conventional crops in animal feeding studies.
 https://doi.org/10.1016/j.fct.2017.09.044
 
@@ -643,10 +655,20 @@ The full datasets for the GRACE studies A-E are available here: https://www.cadi
 CC license.
 
 
-**Yan, Weikei** (2002).
+### Xavier, Alencar et al..
+Genome-Wide Analysis of Grain Yield Stability and Environmental Interactions in a Multiparental Soybean Population.
+https://doi.org/10.1534/g3.117.300300
+
+Data are in the SoyNAM and NAM packages.
+
+
+
+### Yan, Weikei (2002).
 Singular value partitioning in biplots.  Agron Journal.
 
 Winter wheat, 31 gen in 8 loc. This data is different from Yan's earlier papers. Unfortunately, the data given in the paper are missing two rows. 
+
+
 
 
 
@@ -840,16 +862,30 @@ https://www.statforbiology.com/
 Blog posts with example analyses.
 
 
-### statgenSTA
-https://CRAN.R-project.org/package=statgenSTA
-See vignette: Modeling field trials using statgenSTA
+### Biometris - statgenGxE
+https://github.com/Biometris/statgenGxE
+https://biometris.github.io/statgenGxE/
 
+AMMI, FW, GGE stability analyses.
 
-### statgenGWAS
+### Biometris - statgenGWAS
+https://github.com/Biometris/statgenGWAS/
 https://CRAN.R-project.org/package=statgenGWAS
 
+This is a very nice package with full GxE data and marker data.
+256 hybrids, 29 envts across 2 years, multi-trait (yield, silking, pltht, earht, etc).
 Includes a worked example with data from:
 https://data.inra.fr/dataset.xhtml?persistentId=doi:10.15454/IASSTN 
+And publication:
+Millet 2016, Genome-Wide Analysis of Yield in Europe: Allelic Effects Vary with Drought and Heat Scenarios, https://academic.oup.com/plphys/article/172/2/749/6115953
+
+### Biometris - statgenSTA
+https://github.com/Biometris/statgenSTA/
+https://CRAN.R-project.org/package=statgenSTA
+
+Analysis of phenotypic data from field experiments using SpATS, lme4, or asreml.
+
+
 
 
 ### st4gi - Stat for genetic improvement
@@ -866,26 +902,7 @@ https://www.ars.usda.gov/Main/docs.htm?docid=8419&page=4
 https://data.cimmyt.org/dataverse/cimmytdatadvn
 
 
-
-### Genomes To Fields (G2F) 
-https://www.genomes2fields.org/publications/
-
-https://datacommons.cyverse.org/browse/iplant/home/shared/commons_repo/curated/Carolyn_Lawrence_Dill_G2F_Nov_2016_V.3
-    
-Very large GxE data here for 2014 and 2015. Hybrid & inbred phenotype data, weather data, genomic data.  Very nice.
-
-
-
-### GLTEN Global Long Term Metadal Portal
-https://glten.org/
-
-Links to long-term experiments.
-
-
-
-### Google dataset search
-https://datasetsearch.research.google.com/
-
+### Gardian Platform for Big Data in Agriculture
 
 ### Grain genes
 
@@ -899,6 +916,11 @@ The Harrington x TR306 Barley Mapping Population. The genotype and phenotype dat
 ### Ideals
 https://www.ideals.illinois.edu/handle/2142/3528
 Data File : Raw data from each ear analyzed each year of the Illinois long-term selection experiment for oil and protein in corn (1896-2004)
+
+
+### International Potato Center
+https://data.cipotato.org/dataverse.xhtml
+
 
 
 ### ILRI International Livestock Research Institute
@@ -915,6 +937,11 @@ The STAR user guide has well-documented data (even using 2 from agridat), but
 the PBTools user guide does not document the data.
 
 
+
+### MIAPPE Minimum Information About Plant Phenotyping Experiments
+https://www.miappe.org/
+
+Very limited data.
 
 
 ### Rothamsted Electronic Archive

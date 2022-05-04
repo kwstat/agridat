@@ -188,6 +188,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{archbold.apple}              \tab 2   \tab    \tab 5   \tab    \tab 24    \tab split-split \tab lmer \cr
 \link{ars.earlywhitecorn96}        \tab 60  \tab 9  \tab     \tab    \tab       \tab 6 traits \tab dotplot \cr
 \link{australia.soybean}           \tab 58  \tab 4  \tab     \tab 2  \tab       \tab 4-way, 6 traits \tab biplot \cr
+\link{bachmaier.nitrogen}          \tab     \tab    \tab 4   \tab    \tab 2,11  \tab \tab quadratic lm\cr
 \link{barrero.maize}               \tab 847 \tab 16 \tab 4   \tab 11 \tab 6     \tab \tab asreml\cr
 \link{battese.survey}              \tab     \tab 12 \tab 1-5 \tab    \tab 2     \tab \tab lmer \cr
 \link{beall.webworms}              \tab     \tab    \tab 15  \tab    \tab 2,2   \tab xy, split-block \tab glm poisson,nb\cr
@@ -303,6 +304,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{keen.potatodamage}           \tab 6   \tab    \tab 4   \tab    \tab 2,3,8 \tab ordinal \tab mosaicplot,clmm \cr
 \link{kempton.competition}         \tab 36  \tab    \tab 3   \tab    \tab       \tab xy, competition \tab lme AR1 \cr
 \link{kempton.rowcol}              \tab 35  \tab    \tab 2   \tab    \tab       \tab xy, row-col \tab lmer \cr
+\link{kling.augmented}             \tab 53  \tab    \tab 6   \tab    \tab       \tab xy, augmented \tab lmer\cr
 \link{kempton.slatehall}           \tab 25  \tab    \tab 6   \tab    \tab       \tab xy \tab asreml, lmer\cr
 \link{lee.potatoblight}            \tab 337 \tab    \tab 4   \tab 11 \tab       \tab xy, ordinal, repeated \tab \cr
 \link{lehner.soybeanmold}          \tab     \tab 35 \tab     \tab 4  \tab 11    \tab \tab metafor, lmer \cr

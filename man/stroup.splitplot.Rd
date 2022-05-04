@@ -46,26 +46,26 @@
   data(stroup.splitplot)
   dat <- stroup.splitplot
 
-  # ---- lme4 -----
+  # ---- lme4 ---
   # libs(lme4)
   # m0 <- lmer(y~ -1 + a + b + a:b + (1|rep) + (1|a:rep), data=dat)
   # No predict function
   
-  # ----- nlme -----
+  # ----- nlme ---
   # libs(nlme)
   # m0 <- lme(y ~ -1 + a + b + a:b, data=dat, random = ~ 1|rep/a)
   
-  # ----- ASREML model -----
+  # ----- ASREML model ---
   libs(asreml)
   m1 <- asreml(y~ -1 + a + b + a:b, random=~ rep + a:rep, data=dat)
   
   libs(lucid)
   # vc(m1) # Variance components match Stroup p. 41
-  ##   effect component std.error z.ratio bound %ch
-  ##      rep    62.4      56.54      1.1     P   0
-  ##    a:rep    15.38     11.79      1.3     P   0
-  ## units(R)     9.361     4.413     2.1     P   0
-  
+  ##   effect component std.error z.ratio bound
+  ##      rep    62.42     56.41      1.1     P
+  ##    a:rep    15.39     11.8       1.3     P
+  ## units(R)     9.364     4.415     2.1     P
+    
   # Narrow space predictions
   predict(m1, data=dat, classify="a", average=list(rep=NULL))
   #  a Predicted Std Err    Status
@@ -89,11 +89,12 @@
   # a3     25.75    4.54 Estimable
 
 
-  # ----- Mcmcglmm model -----
+  # ----- MCMCglmm model -----
   # Use the point estimates from REML with a prior distribution
   libs(lattice,MCMCglmm)
   prior2 = list(
-    G = list(G1=list(V=62.40, nu=1),  G2=list(V=15.38, nu=1)),
+    G = list(G1=list(V=62.40, nu=1),
+             G2=list(V=15.38, nu=1)),
     R = list(V = 9.4, nu=1)
   )
   m2 <- MCMCglmm(y~ -1 + a + b + a:b,
@@ -101,7 +102,12 @@
                  pr=TRUE, # save random effects as columns of 'Sol'
                  nitt=23000, # double the default 13000
                  prior=prior2, verbose=FALSE)
-  
+
+  # posterior.mode(m2$VCV)
+  #       rep     a:rep     units 
+  # 39.766020  9.617522  7.409334
+  # plot(m2$VCV)
+
   # Now create a matrix of coefficients for the prediction.
   # Each column is for a different prediction.  For example,
   # the values in the column called 'a1a2n' are multiplied times
@@ -109,7 +115,7 @@
   # the linear contrast for the the narrow-space predictions
   # (also called adjusted mean) for the a1:a2 interaction.
   #              a1n   a1i  a1b a1a2n a1a2ib
-  cm <- matrix(c(1,   1,   1,    1,    1,   # a1
+    cm <- matrix(c(1,   1,   1,    1,    1,   # a1
                  0,   0,   0,   -1,   -1,   # a2
                  0,   0,   0,    0,    0,   # a3
                  1/2, 1/2, 1/2,    0,    0,   # b2
@@ -153,8 +159,9 @@
   # REML est    32.88 32.88 32.88  -1.25   -1.25
   # REML stderr  1.08  2.24  4.54   1.53    3.17
   # MCMC mode   32.95 32.38 31.96  -1.07   -1.17
-  # MCMC stderr  1.23  2.64  5.93   1.72    3.73
-
+    # MCMC stderr  1.23  2.64  5.93   1.72    3.73
+    plot(post2)
+    
   post22 <- lattice::make.groups(
     Narrow=post2[,1], Intermediate=post2[,2], Broad=post2[,3])
   print(densityplot(~data|which, data=post22, groups=which,

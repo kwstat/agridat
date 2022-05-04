@@ -35,6 +35,7 @@
 None.
 }
 \examples{
+\dontrun{
 
 library(agridat)
 
@@ -74,6 +75,6 @@ vc(m3)
 ##   env:rep (Intercept) <NA>  1152  33.95
 ##       gen (Intercept) <NA>  1169  34.2
 ##  Residual        <NA> <NA> 24660 157
-
+}
 }
 \keyword{datasets}

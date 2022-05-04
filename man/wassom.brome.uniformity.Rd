@@ -49,15 +49,16 @@
 \source{
   Wassom and R.R. Kalton. (1953).
   Estimations of Optimum Plot Size Using Data from Bromegrass Uniformity
-  Trials. Agricultural Experiment Station, Iowa State College, Bulletin 396.
+  Trials. Agricultural Experiment Station, Iowa State College, Bulletin
+  396, page 314-319.
   https://lib.dr.iastate.edu/ag_researchbulletins/32/
+  https://babel.hathitrust.org/cgi/pt?id=uiug.30112019570701&view=1up&seq=26&skin=2021
 }
 
 \examples{
 \dontrun{
 
-library(agridat)
-  
+  library(agridat)
   data(wassom.brome.uniformity)
   dat <- wassom.brome.uniformity
 

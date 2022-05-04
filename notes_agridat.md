@@ -1,5 +1,7 @@
+---
+title: "agridat notes"
+---
 
-% agridat notes
 
 ## To do
    
@@ -28,9 +30,6 @@ http://aspace.lib.uiowa.edu/repositories/2/archival_objects/400608
 500 Ear experiment. Might be the data for "What is in the corn judge's mind" paper
 http://aspace.lib.uiowa.edu/repositories/2/archival_objects/400615
 
-
-rpathanalysis
-http://cucurbitbreeding.com/todd-wehner/publications/software-sas-r-project/
 
 
 # wanted
@@ -74,9 +73,6 @@ http://repository.cimmyt.org/xmlui/handle/10883/4128 http://repository.cimmyt.or
 
 Review of meta-analyses in agronomy http://www6.versailles-grignon.inra.fr/agronomie/Meta-analysis-in-agronomy/References
 
-Richard Plant http://www.plantsciences.ucdavis.edu/plant/qgislabs.htm CC-SA license
-
-
 
 # Papers
 
@@ -84,47 +80,26 @@ Biplot/StdErr/
 VanEeuwijk 1993 - Incorporating env info Biplot
 Bartkowiak GxE table GE folder: Crossa 1997
 
-Stability folder 
-Fan 2007 - Yield stability of maize GxE 
-Flores 1998 Flores 1998 - bean & pea yields, Flores 2012, Flores 2013
-
-
 ## Malosetti 2013
 F2 data.
 Folder: GE http://www.frontiersin.org/Plant_Physiology/10.3389/fphys.2013.00044/abstract CC license:
-
-
-## Oakey, Cullis, Thompson
-https://www.g3journal.org/content/6/5/1313
-http://www.g3journal.org/content/6/5/1313/suppl/DC1
 
 
 ## Perez
 Comparison Between Linear and Non-parametric Regression Models for Genome-Enabled Prediction in Wheat https://www.scienceopen.com/document/vid/4017fb51-381c-4374-93aa-608423df4004;jsessionid=0TLjjSbaooSUk1y3JKd4nUeb.master:so-app1-prd 
 Data: http://www.g3journal.org/content/suppl/2012/12/05/2.12.1595.DC1 All content has CC license
 
-## Carley et al (2018).
-Genetic Covariance of Environments in the Potato National Chip Processing Trial
-https://dl.sciencesocieties.org/publications/cs/articles/59/1/107
-
-## Endelman et al (2018)
-Genetic Variance Partitioning and Genome-Wide Prediction with Allele Dosage Information in Autotetraploid Potato
-https://www.genetics.org/content/209/1/77
-
-
 # Other
 
 # Extension
-http://articles.extension.org/plant_breeding_genomics 
-Many interesting pages.  License is not clear, but developed with help of USDA.
 
-1. http://articles.extension.org/pages/68660/plant-breeding-and-genomics-learning-lessons 
-2. http://articles.extension.org/pages/60430/introduction-to-the-augmented-experimental-design-webinar 
-3. http://articles.extension.org/pages/61006/estimating-heritability-and-blups-for-traits-using-tomato-phenotypic-data
-4. http://articles.extension.org/pages/68019/genomic-relationships-and-gblup  <--- review this
+https://plant-breeding-genomics.extension.org/plant-breeding-and-genomics-learning-lessons 
 
-Introduction to the rrBLUP Package in R for Genomewide Selection Webinar
-http://pbgworks.org/node/1440
+https://plant-breeding-genomics.extension.org/estimating-heritability-and-blups-for-traits-using-tomato-phenotypic-data/
+
+https://plant-breeding-genomics.extension.org/genomic-relationships-and-gblup  <--- review this
+
+https://plant-breeding-genomics.extension.org/rrblup-package-in-r-for-genomewide-selection/
 
 
 # Items below have been reviewed for data sources
@@ -156,7 +131,7 @@ http://www.iasri.res.in/NewsLetters/nl.HTM
 
 ## Indian Journal of Agricultural Science
 ```
-Vol 1. 309
+Vol 1. 309x
 Vol 2. 53 694
 Vol 3. 544 5 varieties, 2 blocks, 4 reps/block
 Vol 4. 
@@ -225,11 +200,6 @@ The effect of plot shape on experimental error. Master's Thesis.
 No data given. Used data from a corn uniformity trial, oats uniformity, and the data of Fairfield Smith. Smaller experimental errors were found for long narrow plots.
 
 # Classes
-
-
-## Hernandez
-http://www.soils.umn.edu/academics/classes/soil4111/hw/ 
-Available on Wayback. Yield monitor data for two fields with soils layer.
 
 
 ## Jack Weiss

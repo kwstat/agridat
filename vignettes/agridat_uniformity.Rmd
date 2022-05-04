@@ -23,6 +23,7 @@ https://krishikosh.egranth.ac.in/handle/1/5810142095
 Contact Rothamsted to scan uniformity trial papers.
 
 
+
 # Added to agridat
 
 Ansari, M. A. A., and G. K. Sant (1943).
@@ -298,9 +299,9 @@ Figure 10, page 37.
 DOI: 10.5962/bhl.title.43602
 
 Moore, John F and Darroch, JG. (1956).
-Field plot technique with Blue Lake pole beans, bush beans, carrots,
-sweet corn, spring and fall cauliflower.
+Field plot technique with Blue Lake pole beans, bush beans, carrots, sweet corn, spring and fall cauliflower.
 Washington Agricultural Experiment Stations, Institute of Agricultural Sciences, State College of Washington.
+https://babel.hathitrust.org/cgi/pt?id=uiug.30112019919072&view=1up&seq=33&skin=2021
 
 Nagai, Violeta (1978).
 Tamanho da parcela e numero de repeticoes em experimentos com morangueiro (Plot size and number of repetitions in experiments with strawberry).
@@ -402,7 +403,8 @@ https://naldc.nal.usda.gov/catalog/IND43967516
 
 Stickler, F. C. (1960).
 Estimates of Optimum Plot Size from Grain Sorghum Uniformity Trial Data.
-Technical bulletin, Kansas Agricultural Experiment Station.
+Technical bulletin, Kansas Agricultural Experiment Station. Page 17-20.
+https://babel.hathitrust.org/cgi/pt?id=uiug.30112019584322&view=1up&seq=21
 
 Strickland, A. G. (1935).
 Error in horticultural experiments.
@@ -421,8 +423,9 @@ Journal of Agriculture, Victoria, 33, 408-416.
 
 Wassom and R.R. Kalton. (1953).
 Estimations of Optimum Plot Size Using Data from Bromegrass Uniformity
-Trials. Agricultural Experiment Station, Iowa State College, Bulletin 396.
+Trials. Agricultural Experiment Station, Iowa State College, Bulletin 396, page 314-319.
 https://lib.dr.iastate.edu/ag_researchbulletins/32/
+https://babel.hathitrust.org/cgi/pt?id=uiug.30112019570701&view=1up&seq=26&skin=2021
 
 Wiebe, G.A. 1935.
 Variation and Correlation in Grain Yield among 1,500 Wheat
@@ -670,6 +673,12 @@ Gupton, C.L. (1972).
 Estimates of Optimum Plot Size and Shape from Uniformity Data in Burley Tobacco (Nicotiana tabacum L.).
 Agron J, 64, 678-682. 
 DOI: 10.2134/agronj1972.00021962006400050038x
+No data.
+
+
+Guimarães, B. V. C., de Carvalho, A. J., Aspiazú, I., da Silva, L. S., da Silva, R. R. P., Pimenta, A. M. L., & Moura, M. M. A. (2021). 
+Optimal plot size for experimentation of common beans (Phaseolus vulgaris L.) in the northern region of Minas Gerais, Brazil: Experimental plots. 
+Revista de la Facultad de Ciencias Agrarias UNCuyo, 55-63, 1853-8665.
 No data.
 
 
@@ -973,6 +982,12 @@ Revista do  IPEF,  Pirarcicaba, 31,  75.
 No data.
 
 
+Pointer, John Pate and E. James Koch (1961).
+Estimates of Optimum Plot Size from Uniformity Data in Maryland Tobacco.
+Tobacco Science, 5-27, p. 112-117.
+No data.
+
+
 Plaisted, Robert LeRoy (1954).
 Field plot techniques for estimating onion yields.
 Master's Thesis, Iowa State University.
@@ -1120,6 +1135,11 @@ University Of Missouri.
 https://hdl.handle.net/2027/umn.319510008017444
 No data. Uniformity trial discussed on page 43.
 
+
+Stockem, J.E., Korontzis, G., Wilson, S.E. et al. (2021)
+Optimal Plot Dimensions for Performance Testing of Hybrid Potato in the Field. Potato Res. (2021).
+https://doi.org/10.1007/s11540-021-09526-9
+No data.
 
 Storck, Lindolfo; Sidinei Lopes; Alessandro Dal'Col Lúcio; Alberto ​Cargnelutti Filho 2011.
 Optimum plot size and number of replications related to selective precision.
@@ -1429,7 +1449,8 @@ J. of Root Crops, 15, 25-27.
 
 
 Lopes, S. J. et al. (2005).
-Experimental plot size in grain sorghum in different plant densities. June 2005; Pesquisa Agropecuária Brasileira 40(6):525-530. 
+Experimental plot size in grain sorghum in different plant densities.
+June 2005; Pesquisa Agropecuária Brasileira 40(6):525-530. 
 
 
 Lu,  ChunTang et al (1995).
