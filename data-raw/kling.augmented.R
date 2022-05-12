@@ -43,3 +43,8 @@ m2 <- lmer(tsw ~ entryc + gen:new + (1|block), data=dat)
 
 anova(aov(tsw ~ block + gen, data=dat)) # Same Residual SS as Kling
 
+# Try the augmentedRCBD package
+libs(augmentedRCBD)
+dat <- mutate(dat, block=factor(block), gen=factor(gen))
+# Some of the anova table rows match the results from Kling
+out1 <- augmentedRCBD(dat$block, dat$gen, dat$tsw, checks=c("G89","G90","G91"))

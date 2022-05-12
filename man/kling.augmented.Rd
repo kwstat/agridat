@@ -38,7 +38,9 @@
 }
 \examples{
 \dontrun{
+
 library(agridat)
+data(kling.augmented)
 dat <- kling.augmented
 libs(desplot,lattice,lme4)
 # Layout and yields
