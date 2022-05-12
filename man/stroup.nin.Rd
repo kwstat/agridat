@@ -212,9 +212,10 @@
   # sommer
   # Fixed gen, random row, col, 2D spline
   libs(sommer)
+  dat <- stroup.nin
   dat <- transform(dat, yf = as.factor(row), xf = as.factor(col))
   so1 <- mmer(yield ~ 0+gen,
-              random = ~ vs(xf) + vs(yf) + vs(spl2D(row,col)),
+              random = ~ vs(xf) + vs(yf) + spl2Db(row,col),
               data=dat)
   preds$so1 <- coef(so1)[,"Estimate"]
   # spatPlot

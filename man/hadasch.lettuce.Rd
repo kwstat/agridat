@@ -20,13 +20,20 @@
 }
 \details{
 
-A biparental cross of 95 recombinant inbred lines of "Salinas 88" (susceptible) and "La Brillante" (highly resistant to downy mildew). The 89 RILs were evaluated in field experiments performed in 2010 and 2011 near Salinas, California. Each loc had a 2 or 3 rep RCB design. There were approximately 30 plants per plot. Plots were scored 0 (no disease) to 5 (severe disease).
+A biparental cross of 95 recombinant inbred lines of "Salinas 88"
+(susceptible) and "La Brillante" (highly resistant to downy mildew). The
+89 RILs were evaluated in field experiments performed in 2010 and 2011
+near Salinas, California. Each loc had a 2 or 3 rep RCB design. There
+were approximately 30 plants per plot. Plots were scored 0 (no disease)
+to 5 (severe disease).
 
-The authors used the following model in a first-stage analysis to compute adjusted means for each genotype:
+The authors used the following model in a first-stage analysis to
+compute adjusted means for each genotype:
 
 y = loc + gen + gen:loc + block:loc + error
 
-where gen was fixed and all other terms random.  The adjusted means were used as the response in a second stage:
+where gen was fixed and all other terms random.  The adjusted means were
+used as the response in a second stage:
 
   mn = 1 + Zu + error
 
@@ -60,6 +67,7 @@ https://doi.org/10.21273/JASHS.139.4.388
 \dontrun{
   library(agridat)
   data(hadasch.lettuce)
+  data(hadasch.lettuce.markers)
   dat <- hadasch.lettuce
   datm <- hadasch.lettuce.markers
   
@@ -75,12 +83,12 @@ https://doi.org/10.21273/JASHS.139.4.388
   libs(asreml)
   dat <- transform(dat, loc=factor(loc), gen=factor(gen), rep=factor(rep))
   m1 <- asreml(dmr ~ 1 + gen, data=dat,
-               random = ~ loc + gen:loc + rep%in%loc)
+               random = ~ loc + gen:loc + rep:loc)
   p1 <- predict(m1, classify="gen")$pvals
   
   libs(sommer)
   m2 <- mmer(dmr ~ 0 + gen, data=dat,
-             random = ~ loc + gen:loc + rep%in%loc)
+             random = ~ loc + gen:loc + rep:loc)
   p2 <- coef(m2)
   head(p1)
   head(p2)

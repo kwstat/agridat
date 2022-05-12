@@ -31,7 +31,6 @@
   Genotype x environment interaction in maize.
   Agronomy Journal, 81, 662-664.  Table 2.
 }
-
 \examples{
 \dontrun{
 
@@ -65,4 +64,3 @@ covs <- data.frame(env=c("AL85","AL86","AL87", "BR85","BR86","BR87",
 
 }
 }
-

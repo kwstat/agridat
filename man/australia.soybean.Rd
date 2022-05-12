@@ -98,21 +98,20 @@ the data set made available here, these values have been corrected.
 \examples{
 \dontrun{
 
-library(agridat)
+  library(agridat)
+  data(australia.soybean)
+  dat <- australia.soybean
 
-data(australia.soybean)
-dat <- australia.soybean
+  libs(reshape2)
+  dm <- melt(dat, id.var=c('env', 'year','loc','gen'))
 
-libs(reshape2)
-dm <- melt(dat, id.var=c('env', 'year','loc','gen'))
-
-# Joint plot of genotypes & traits. Similar to Figure 1 of Kroonenberg 1989
-dmat <- acast(dm, gen~variable, fun=mean)
-dmat <- scale(dmat)
-biplot(princomp(dmat), main="australia.soybean trait x gen biplot", cex=.75)
+  # Joint plot of genotypes & traits. Similar to Figure 1 of Kroonenberg 1989
+  dmat <- acast(dm, gen~variable, fun=mean)
+  dmat <- scale(dmat)
+  biplot(princomp(dmat), main="australia.soybean trait x gen biplot", cex=.75)
 
 
-# Figure 1 of Kozak 2010, lines 44-58
+  # Figure 1 of Kozak 2010, lines 44-58
   libs(reshape2, lattice, latticeExtra)
   data(australia.soybean)
   dat <- australia.soybean
@@ -124,7 +123,7 @@ biplot(princomp(dmat), main="australia.soybean trait x gen biplot", cex=.75)
   # data for the graphic by Kozak
   dat2 <- dat[44:58,]
   dat3 <- subset(dat2, is.element(gen, c("G48","G49","G50","G51")))
-  
+
   parallelplot( ~ dat3[,1:6]|dat3$gen, main="australia.soybean",
                as.table=TRUE, horiz=FALSE) +
     parallelplot( ~ dat2[,1:6], horiz=FALSE, col="gray80") +

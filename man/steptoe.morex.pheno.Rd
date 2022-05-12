@@ -87,18 +87,16 @@
   The pedigrees for the 150 lines are found here:
   https://wheat.pw.usda.gov/ggpages/SxM/pedigrees.html
 
+  Data provided by the United States Department of Agriculture.
 }
 
 \source{
   The Steptoe x Morex Barley Mapping Population.
   Map: Version 2, August 1, 1995
   https://wheat.pw.usda.gov/ggpages/SxM.  Accessed Jan 2015.
-
-  Data provided by the United States Department of Agriculture.
 }
 
-\references{
-  
+\references{  
   P.M. Hayes, B.H. Liu, S.J. Knapp, F. Chen, B. Jones, T. Blake,
   J. Franckowiak, D. Rasmusson, M. Sorrells, S.E. Ullrich, and others. 1993.
   Quantitative trait locus effects and environmental interaction in a sample of

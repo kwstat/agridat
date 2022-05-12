@@ -43,7 +43,7 @@
 
   # These effects match the GCA and SCA values in Grover table 3, page 253.
   
-  library(lmDiallel)
+  libs(lmDiallel)
   m2 <- lm.diallel(yield ~ parent1 + parent2, Block=rep,
                    data=dat, fct="GRIFFING1")
   library(multcomp)

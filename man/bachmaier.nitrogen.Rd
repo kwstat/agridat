@@ -78,7 +78,7 @@ p1$pred <- predict(m1, new=p1)
 lines(pred~nitro, p1)
 abline(v=opt.bach, col="blue")
 abline(v=ci.bach, col="skyblue")
-title("Economic optimum with 95% confidence interval")
+title("Economic optimum with 95 pct confidence interval")
 
 }
 }

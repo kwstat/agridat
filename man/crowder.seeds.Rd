@@ -34,16 +34,13 @@
   
 }
 \source{
-
   Crowder, M.J., 1978.
   Beta-binomial anova for proportions.
   \emph{Appl. Statist.}, 27, 34-37.
   https://doi.org/10.2307/2346223
-
 }
 
 \references{
-  
   N. E. Breslow and D. G. Clayton. 1993.
   Approximate inference in generalized linear mixed models.
   \emph{Journal of the American Statistical Association}, 88:9-25.
@@ -52,7 +49,6 @@
   Y. Lee and J. A. Nelder. 1996.
   Hierarchical generalized linear models with discussion.
   \emph{J. R. Statist. Soc. B}, 58:619-678.
-
 }
 
 \examples{
@@ -85,9 +81,6 @@
   m1.glmm <- glmmPQL(cbind(germ, n-germ) ~ gen*extract, random= ~1|plate,
                      family=binomial(), data=dat)
   summary(m1.glmm)
-  
-  libs(brms)
-  m1.brms <- brm(
   
     # ----- HGML package. Beta-binomial with beta-distributed random effects
     # libs(hglm)
@@ -158,7 +151,7 @@
   libs(bayesplot)
   mcmc_areas(m1.stan, prob = 0.9) +
     ggtitle("Posterior distributions",
-            "with medians and 95% intervals")
+            "with medians and 95 pct intervals")
 if(0) {
 
   # --- rjags version ---

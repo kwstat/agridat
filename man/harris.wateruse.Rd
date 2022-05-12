@@ -157,13 +157,7 @@
     m2a <- asreml(water ~ 1 + ti + ti2,
                   data=d22,
                   random = ~ tree,
-                  rcov=~tree:exp(day))
-    # code below is for asremlr 4
-    ## m2a <- asreml(water ~ 1 + ti + ti2,
-    ##               data=d22,
-    ##               random = ~ tree,
-    ##               resid= ~tree:exp(day))
-
+                  residual=~tree:exp(day))
     vc(m2a)
     ##         effect component std.error z.ratio constr
     ##  tree!tree.var    0.2656   0.1301      2      pos
@@ -200,7 +194,7 @@
     m3a <- asreml(water ~ 0 + age:species + age:species:ti + age:species:ti2,
                   data=dat,
                   random = ~ age:species:tree + age:species:tree:ti,
-                  rcov = ~ tree:exp(day) )
+                  residual = ~ tree:exp(day) )
     # code for asremlr 4
     ## m3a <- asreml(water ~ 0 + age:species + age:species:ti + age:species:ti2,
     ##               data=dat,

@@ -50,7 +50,8 @@
 }
 \examples{
 \dontrun{
-  library(agridat)  
+  library(agridat)
+  data(barrero.maize)
   dat <- barrero.maize
 
   library(lattice)

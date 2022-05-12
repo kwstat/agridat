@@ -42,6 +42,7 @@
 \examples{
 \dontrun{
   library(agridat)
+  data(damesa.maize)
   libs(desplot)
   desplot(damesa.maize,
           yield ~ col*row|site,

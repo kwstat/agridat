@@ -4,7 +4,9 @@ title: "agridat notes"
 
 
 ## To do
-   
+
+* change theobald.covariate from JAGS to brms?
+* brms examples for crowder.seeds
 * Figure out best way to use jags
 * JAGS code for edwards.oats
 * JAGS code for lee.potatoblight
@@ -39,27 +41,6 @@ This page mentions an R version for DUS: http://www.bioss.ac.uk/knowledge/softwa
 * Yield-monitor data for a split-planter field
 * Yield-monitor data for a strip trial.
 
-# stability
-
-
-# done
-adugna.sorghum 28g,13l,5y
-brandle.rape 5g,9l,3y
-denis.missing 5g,26e
-digby.jointregression 10g,17l
-fan.stability 13g,10l,2y
-hildebrand.systems
-huehn.wheat 20g,10e 
-lu.stability 5g,6e
-pieopho.cocksfoot 25g,7y
-williams.trees 37g,6l
-
-# todo ?
-kamidi 11g,7l 
-lin.balanced 33g,12l 
-lin.unbalanced 33g,18l
-
-
 ---
 
 Jose Crossa papers http://repository.cimmyt.org/xmlui/handle/10883/1/browse?value=Crossa,%20J.&type=author 
@@ -88,8 +69,6 @@ Folder: GE http://www.frontiersin.org/Plant_Physiology/10.3389/fphys.2013.00044/
 ## Perez
 Comparison Between Linear and Non-parametric Regression Models for Genome-Enabled Prediction in Wheat https://www.scienceopen.com/document/vid/4017fb51-381c-4374-93aa-608423df4004;jsessionid=0TLjjSbaooSUk1y3JKd4nUeb.master:so-app1-prd 
 Data: http://www.g3journal.org/content/suppl/2012/12/05/2.12.1595.DC1 All content has CC license
-
-# Other
 
 # Extension
 

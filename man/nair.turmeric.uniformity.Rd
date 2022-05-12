@@ -53,7 +53,7 @@
   
   library(agridat)
   data(nair.turmeric.uniformity)
-  dat <- gopakumaran.turmeric.uniformity
+  dat <- nair.turmeric.uniformity
   
   libs(desplot)
   desplot(dat, yield ~ col*row,

@@ -38,14 +38,15 @@
 
   # very surprising differences between locations
   libs(lattice)
-  bwplot(height ~ family|loc, d2, main="jayaraman.bamboo")
+  bwplot(height ~ family|loc, dat, main="jayaraman.bamboo")
   # match Jayarman's anova table 6.3, page 173
-  # m1 <- aov(height ~ loc+loc:block + family + family:loc + family:loc:block, data=d2)
+  # m1 <- aov(height ~ loc+loc:block + family + family:loc +
+  #  family:loc:block, data=dat)
   # anova(m1)
 
   # more modern approach with mixed model, match variance components needed
   # for equation 6.9, heritability of the half-sib averages as
-  m2 <- lme4::lmer(height ~ 1 + (1|loc/block) + (1|family/loc/block), data=d2)
+  m2 <- lme4::lmer(height ~ 1 + (1|loc/block) + (1|family/loc/block), data=dat)
   lucid::vc(m2)
 }
 }
