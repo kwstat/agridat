@@ -344,6 +344,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{senshu.rice}                 \tab     \tab 40 \tab     \tab    \tab       \tab \tab lm,Fieller \cr
 \link{shafii.rapeseed}             \tab 6   \tab 14 \tab 3   \tab 3  \tab       \tab \tab biplot \cr
 \link{shaw.oats}                   \tab 13  \tab 2  \tab 5   \tab 3  \tab       \tab \tab aov \cr
+\link{sharma.met}                  \tab 7   \tab 3  \tab 3   \tab 2  \tab       \tab \tab FinlayWilkinson \cr
 \link{silva.cotton}                \tab     \tab    \tab 5   \tab    \tab 5     \tab 5 traits \tab glm,poisson \cr
 \link{sinclair.clover}             \tab     \tab    \tab     \tab    \tab 5,5   \tab rsm2,mitzerlich \tab nls,rgl \cr
 \link{snedecor.asparagus}          \tab     \tab    \tab 4   \tab 4  \tab 4     \tab \tab split-plot, antedependence \cr
