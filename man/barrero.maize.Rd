@@ -24,7 +24,7 @@
     \item{\code{lodged}}{percent of plants lodged}
     \item{\code{moisture}}{moisture percent}
     \item{\code{testweight}}{test weight kg/ha}
-    \item{\code{yield}}{yield, kg/ha}
+    \item{\code{yield}}{yield, Mt/ha}
   }
 }
 \details{
@@ -37,7 +37,7 @@
   Barrero et al. used this data to estimate the genetic gain in maize
   hybrids over a 10-year period of time.
   
-  Used with permission of Seth Meyers.
+  Used with permission of Seth Murray.
 }
 \source{
   Barrero, Ivan D. et al. (2013).

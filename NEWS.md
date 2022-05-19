@@ -1,8 +1,10 @@
 # agridat 1.20 - unpublished
 
-## New data
+## New data with motivation
 
-bachmaier.quadratic, kling.augmented
+* bachmaier.quadratic (confidence intervals for optimum of quadratic)
+* kling.augmented (augmented design)
+* sharma.met (Finlay-Wilkinson regression)
 
 # agridat 1.19 - Dec 2021
 
@@ -16,7 +18,7 @@ arankacami.groundnut.uniformity, barrero.maize, buntaran.wheat, gomez.heterogene
 
 * Re-named `correa.soybean.uniformity` to `dasilva.soybean.uniformity`.
 
-* There are more than 200 URLs in the vignettes and these were slow to check and generated too many false warnings. Stopped the Rmd to html conversion from creating URL links. 
+* There are more than 200 URLs in the vignettes and these were slow to check and generated too many false warnings. Stopped the Rmd to html conversion from creating URL links via an option in the Rmd YAML.
 
 
 # agridat 1.18 - Jan 2021
