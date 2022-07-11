@@ -51,9 +51,9 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
-
 data(nass.corn)
 dat <- nass.corn
 
@@ -86,5 +86,6 @@ plot(yield ~ year, dil, main="nass.corn: piecewise linear model of Illinois corn
 lines(dil$year, fitted(m1))
 abline(v=c(1932,1959,1995), col="wheat")
 
+}
 }
 \keyword{datasets}

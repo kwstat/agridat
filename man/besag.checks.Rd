@@ -45,10 +45,10 @@
   Kempton, Statistical Methods for Plant Variety Evaluation, page 91--92
 }
 \examples{
+\dontrun{
 library(agridat)
 data(besag.checks)
 dat <- besag.checks
-\dontrun{
   libs(desplot)
   desplot(dat, yield~col*row,
           num=gen, aspect=234/46.5, # true aspect

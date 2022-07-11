@@ -26,9 +26,9 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
-
 data(cochran.latin)
 dat <- cochran.latin
 
@@ -42,5 +42,6 @@ dat <- transform(dat, rf=factor(row), cf=factor(col))
 aov.dat <- aov(diff ~ operator + Error(rf*cf), dat)
 summary(aov.dat)
 model.tables(aov.dat, type="means")
+}
 }
 \keyword{datasets}

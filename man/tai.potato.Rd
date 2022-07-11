@@ -43,6 +43,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 data(tai.potato)
@@ -55,6 +56,6 @@ dotplot(variety ~ yield|env, dat, main="tai.potato")
 
 # note, st4gi::tai assumes there are replications in the data
 # https://github.com/reyzaguirre/st4gi/blob/master/R/tai.R
-
+}
 }
 \keyword{datasets}

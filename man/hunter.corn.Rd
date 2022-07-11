@@ -39,6 +39,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 data(hunter.corn)
@@ -50,5 +51,6 @@ libs(lattice)
 xyplot(yield~nitro|env, dat, type='b',
 main="hunter.corn - nitrogen response curves")
 
+}
 }
 \keyword{datasets}

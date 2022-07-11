@@ -43,6 +43,7 @@
   None.
 }
 \examples{
+\dontrun{
 
 library(agridat)
 data(jansen.carrot)
@@ -53,7 +54,6 @@ dotplot(gen ~ y/n, data=dat, group=trt, auto.key=TRUE,
         main="jansen.carrot",
         xlab="Proportion of carrots infected per block", ylab="Genotype")
 
-\dontrun{
   # Not run because CRAN wants < 5 seconds per example.  This is close.
   libs(lme4)
   # Tentative model.  Needs improvement.

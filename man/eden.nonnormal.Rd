@@ -46,9 +46,9 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
-
 data(eden.nonnormal)
 dat <- eden.nonnormal
 mean(dat$height) # 55.23 matches Eden table 1
@@ -63,8 +63,6 @@ dat <- transform(dat, dev=height-blkmn)
 histogram( ~ dev, data=dat, breaks=seq(from=-40, to=30, by=2.5),
           xlab="Deviations from block means",
           main="eden.nonnormal - heights skewed left")
-
-\dontrun{
 
   # calculate skewness, permutation 
   
@@ -137,6 +135,5 @@ histogram( ~ dev, data=dat, breaks=seq(from=-40, to=30, by=2.5),
     xyplot((10/.7)* yval ~ xval, type="l", lwd=2)
 
 }
-
 }
 \keyword{datasets}

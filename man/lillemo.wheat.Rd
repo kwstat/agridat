@@ -59,9 +59,9 @@
   None.
 }
 \examples{
+\dontrun{
 
 library(agridat)
-
 data(lillemo.wheat)
 dat <- lillemo.wheat
 
@@ -78,9 +78,7 @@ qqmath(~score|env, dat, group=scale,
        auto.key=list(columns=4),
        main="lillemo.wheat - QQ plots by environment")
 
-# ----------------------------------------------------------------------------
 
-\dontrun{
   # Change data to matrix format
   libs(reshape2)
   datm <- acast(dat, gen~env, value.var='score')

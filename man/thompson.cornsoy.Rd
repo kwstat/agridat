@@ -89,6 +89,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 
@@ -113,7 +114,6 @@ xyplot(corn+soy~year|state, dat,
 # while rain and yield are positively correlated.
 # splom(~dat[-1,-1], col=dat$state, cex=.5, main="thompson.cornsoy")
 
-\dontrun{
   # Plots similar to those in Venables' Exegeses paper.
 
   dat.ia <- subset(dat, state=="Iowa")

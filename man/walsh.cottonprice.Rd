@@ -34,6 +34,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 
@@ -56,5 +57,6 @@ libs(lattice)
 xyplot(chga~chgp, dat, type=c('p','r'),
        main="walsh.cottonprice",
        xlab="Percent change in previous price", ylab="Percent change in acres")
+}
 }
 \keyword{datasets}

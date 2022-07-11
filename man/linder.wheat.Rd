@@ -32,11 +32,12 @@
   None.
 }
 \examples{
+\dontrun{
 
 library(agridat)
 data(linder.wheat)
 dat <- linder.wheat
-\dontrun{
+
 libs(gge)
 dat <- transform(dat, eb=paste0(env,block))
 m1 <- gge(dat, yield~gen*eb, env.group=env)

@@ -54,9 +54,9 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
-
 data(eden.potato)
 dat <- eden.potato
 
@@ -112,5 +112,6 @@ me7 <- melt(d7, measure.vars='yield')
 acast(me7, potash~nitro, fun=mean) * 40/2240 # English ton = 2240 pounds
 acast(me7, potash~ptype, fun=mean) * 40/2240
 
+}
 }
 \keyword{datasets}

@@ -29,9 +29,9 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
-
 data(lyons.wheat)
 dat <- lyons.wheat
 
@@ -39,5 +39,6 @@ libs(lattice)
 xyplot(yield~factor(year), dat, group=loc,
   main="lyons.wheat",
   auto.key=list(columns=4), type=c('p','l'))
+}
 }
 \keyword{datasets}

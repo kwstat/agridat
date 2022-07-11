@@ -46,6 +46,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 data(vaneeuwijk.nematodes)
@@ -60,7 +61,6 @@ boxplot(y ~ gen, data=dat, las=2)
 title("vaneeuwijk.nematodes - cysts per potato")
 par(op)
 
-\dontrun{
   # normal distribution
   lm1 <- lm(y ~ gen + pop, data=dat)
 

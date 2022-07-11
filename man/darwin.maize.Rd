@@ -61,6 +61,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 
@@ -71,7 +72,6 @@ dat <- darwin.maize
 libs(lattice)
 bwplot(height~type, dat, main="darwin.maize")
 
-\dontrun{
   libs(reshape2)
   dm <- melt(dat)
   d2 <- dcast(dm, pot+pair~type)
@@ -82,8 +82,7 @@ bwplot(height~type, dat, main="darwin.maize")
   ## alternative hypothesis: true mean is not equal to 0
   ## 95 percent confidence interval:
   ##  0.003899165 5.229434169
+
 }
-
-
 }
 \keyword{datasets}

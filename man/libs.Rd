@@ -2,13 +2,7 @@
 % Please edit documentation in R/libs.R
 \name{libs}
 \alias{libs}
-\title{Load multiple packages and install if needed
-
-The 'agridat' package uses dozens of packages in the examples for each dataset.
-The 'libs' function provides a simple way to load multiple packages at once,
-and can install any missing packages on-the-fly.
-
-This is very similar to the `pacman::p_load` function.}
+\title{Load multiple packages and install if needed}
 \usage{
 libs(...)
 }
@@ -19,8 +13,9 @@ libs(...)
 None
 }
 \description{
-Load multiple packages and install if needed
-
+Install and load packages "on the fly".
+}
+\details{
 The 'agridat' package uses dozens of packages in the examples for each dataset.
 The 'libs' function provides a simple way to load multiple packages at once,
 and can install any missing packages on-the-fly.

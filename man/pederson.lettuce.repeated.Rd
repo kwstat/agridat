@@ -32,6 +32,7 @@ https://scse.d.umn.edu/sites/scse.d.umn.edu/files/pedersonprojectthesis.pdf
   None
 }
 \examples{
+\dontrun{
 
 library(agridat)
 data(pederson.lettuce.repeated)
@@ -42,7 +43,6 @@ dat <- dat[order(dat$day),]
 xyplot(weight ~ day|trt, dat, type='l', group=plant, layout=c(3,1),
 main="pederson.lettuce.repeated")
 
-\dontrun{
 # Pederson used this SAS MIXED model for unstructured covariance
 # proc mixed data=Project.Spacingdata; 
 # class trt plant day; 

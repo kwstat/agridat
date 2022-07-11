@@ -34,9 +34,9 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
-
 data(cate.potassium)
 dat <- cate.potassium
 names(dat) <- c('y','x')
@@ -73,7 +73,6 @@ title("cate.potassium - Cate-Nelson analysis")
 abline(v=dat$x[ix], col="skyblue")
 abline(h=(dat$y[ix] + dat$y[ix+1])/2, col="skyblue")
 
-\dontrun{
   # another approach with similar results
   # https://joe.org/joe/2013october/tt1.php
   libs("rcompanion")

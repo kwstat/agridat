@@ -46,9 +46,9 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
-
 data(karcher.turfgrass)
 dat <- karcher.turfgrass
 
@@ -89,5 +89,6 @@ print(aggregate( . ~ manage, data=newd, mean), digits=2)
 ## 3     M3   1.5  3.5 0.0023    0.48 0.52    0.0042
 ## 4     M4   1.5  3.5 0.0086    0.57 0.42    0.0035
 
+}
 }
 \keyword{datasets}

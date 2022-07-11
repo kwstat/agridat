@@ -30,9 +30,9 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
-
 data(cleveland.soil)
 dat <- cleveland.soil
 
@@ -58,9 +58,6 @@ levelplot(fit1 ~ sg1$easting * sg1$northing,
           aspect=2.4, xlab = "Easting (km)", ylab = "Northing (km)",
           main="cleveland.soil - 2D smooth of Resistivity")
 
-# ----------------------------------------------------------------------------
-
-\dontrun{
   # 3D loess plot with data overlaid
   libs(rgl)
   bg3d(color = "white")

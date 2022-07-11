@@ -42,6 +42,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 
@@ -73,5 +74,6 @@ xyplot(yield +income +surviving +grains +weight +plants +tillers +heads ~ rate,
        xlab="Nitrogen rate", ylab="Trait value",
        main="mcleod.barley - nitrogen response curves"  )
 
+}
 }
 \keyword{datasets}

@@ -37,6 +37,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 
@@ -63,5 +64,6 @@ anova(m1,m2,m3,m4,m5)
 # Show logit and fitted values.  T2 has highest germination
 subset(cbind(dat, predict(m5), fitted(m5)), rep=="R1")
 
+}
 }
 \keyword{datasets}

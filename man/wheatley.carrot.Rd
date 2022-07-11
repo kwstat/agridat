@@ -53,6 +53,7 @@
 
 }
 \examples{
+\dontrun{
 
 library(agridat)
 
@@ -77,6 +78,6 @@ anova(m1)
 m2 <- glm(cbind(damaged,total-damaged) ~ rep + C(treatment, base=11),
           data=dat, family=binomial("cloglog"))
 summary(m2)
-
+}
 }
 \keyword{datasets}

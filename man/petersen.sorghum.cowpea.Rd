@@ -35,6 +35,8 @@
   None
 }
 \examples{
+\dontrun{
+
 libs(agridat)
 data(petersen.sorghum.cowpea)
 dat <- petersen.sorghum.cowpea
@@ -49,5 +51,6 @@ with(tmp, lines(srows, cyield, col="red") )
 title("Cow Pea (red), Sorghum (black), Total (blue)")
 title("petersen.sorghum.cowpea", line=0.5)
 
+}
 }
 \keyword{datasets}

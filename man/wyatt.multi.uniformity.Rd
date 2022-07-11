@@ -42,6 +42,7 @@
   None
 }
 \examples{
+\dontrun{
 
 library(agridat)
 data(wyatt.multi.uniformity)
@@ -64,7 +65,6 @@ xyplot(yield ~ col|factor(row), dat, group=crop,
        main="wyatt.multi.uniformity",
        type='l', layout=c(1,3), auto.key=TRUE )                
 
-\dontrun{
 libs(desplot)
 desplot(dat, yield ~ col*row, subset=crop=="oats",
         tick=TRUE,

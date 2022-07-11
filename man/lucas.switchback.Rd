@@ -43,6 +43,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 
@@ -73,5 +74,6 @@ anova(m1) # Match Sanders & Gaynor table 3
 
 coef(m1) # trtT2 and trtT3 match Sanders table 3 trt diffs
 
+}
 }
 \keyword{datasets}

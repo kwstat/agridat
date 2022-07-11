@@ -42,9 +42,9 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
-
 data(jenkyn.mildew)
 dat <- jenkyn.mildew
 
@@ -61,5 +61,6 @@ m1 <- lm(yield ~ trt + block, dat)
 xyplot(resid(m1)~plot, dat, ylab="Residual",
        main="jenkyn.mildew - block model")
 
+}
 }
 \keyword{datasets}

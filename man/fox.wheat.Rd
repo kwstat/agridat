@@ -38,6 +38,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 
@@ -63,5 +64,6 @@ xyplot(yield~genm|state, data=dat, type=c('p','r'), group=site,
        main="fox.wheat", xlab="Variety mean across all sites",
        ylab="Variety yield at each site within states")
 
+}
 }
 \keyword{datasets}

@@ -66,7 +66,7 @@ data("vargas.wheat1.traits")
 }
 
 \details{
-  
+
   Conducted in Ciudad Obregon, Mexico.
 
 }
@@ -77,22 +77,20 @@ data("vargas.wheat1.traits")
   Interpreting Genotype x Environment Interaction in Wheat by
   Partial Least Squares Regression, \emph{Crop Science}, 38, 679--689.
   https://doi.org/10.2135/cropsci1998.0011183X003800030010x
-  
+
   Data provided by Jose Crossa.
 }
 
 \examples{
-
-library(agridat)
-
 \dontrun{
 
+library(agridat)
   data(vargas.wheat1.covs)
   data(vargas.wheat1.traits)
 
   libs(pls)
   libs(reshape2)
-  
+
   # Yield as a function of non-yield traits
   Y0 <- vargas.wheat1.traits[,c('gen','rep','year','yield')]
   Y0 <- acast(Y0, gen ~ year, value.var='yield', fun=mean)
@@ -118,7 +116,7 @@ library(agridat)
   X2$year <- NULL
   Y2 <- scale(Y2)
   X2 <- scale(X2)
-  
+
   m2 <- plsr(Y2~X2)
   loadings(m2)[,1,drop=FALSE] # X loadings in Table 2 of Vargas
 }

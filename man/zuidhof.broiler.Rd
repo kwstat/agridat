@@ -34,9 +34,8 @@
 }
 
 \examples{
-
+\dontrun{
 library(agridat)
-
 data(zuidhof.broiler)
 dat <- zuidhof.broiler
 
@@ -67,6 +66,6 @@ legend(20, -40, c("Body weight", "Target BW", "Feed/day", "Gain/day", "Egg wt"),
        col=c("black","black","red","red","red"),
        lty=c(-1,1,2,1,1), lwd=c(1,1,1,2,1), pch=c(20,-1,-1,-1,-1))
 par(op)
-
+}
 }
 \keyword{datasets}

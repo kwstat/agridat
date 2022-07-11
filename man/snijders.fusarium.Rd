@@ -51,6 +51,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 
@@ -74,8 +75,6 @@ m1 <- aov(logit ~ yrstr + gen, data=dat) # Match SS in VanEeuwijk table 4
 anova(m1)  # Match SS in VanEeuwijk table 4
 m2 <- aov(logit ~ year*strain + gen + gen:year + gen:strain, data=dat)
 anova(m2) # Match to VanEeuwijk table 5
-
-\dontrun{
 
 # GLM on untransformed data using logit link, variance mu^2(1-mu)^2
 libs(gnm) # for 'wedderburn' family

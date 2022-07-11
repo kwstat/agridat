@@ -13,7 +13,7 @@
     \item{\code{gen}}{genotype, 17 levels}
     \item{\code{env}}{environment, 12 levels}
     \item{\code{yield}}{yield, tonnes/ha}
-    \item{\code{}}{environment, 13 levels}
+    \item{\code{environment}}{environment, 13 levels}
     \item{\code{year}}{year, 85-87}
     \item{\code{loc}}{location, 4 levels}
   }

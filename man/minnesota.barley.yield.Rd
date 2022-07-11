@@ -114,6 +114,7 @@
   https://doi.org/10.1080/00031305.2013.801783
 }
 \examples{
+\dontrun{
 
 library(agridat)
 
@@ -130,6 +131,7 @@ libs(lattice)
 dotplot(gen~yield|site, dat, groups=yr,
         main="minnesota.barley.yield",
         auto.key=list(columns=5), scales=list(y=list(cex=.5)))
+}
 }
 
 \keyword{datasets}

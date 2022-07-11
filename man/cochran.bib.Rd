@@ -32,6 +32,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 
@@ -55,5 +56,6 @@ summary(m1)
 libs(nlme)
 m2 = lme(yield ~ -1 + gen, data=dat, random=~1|loc)
 
+}
 }
 

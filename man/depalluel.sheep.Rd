@@ -48,6 +48,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 
@@ -60,5 +61,6 @@ libs(lattice)
 xyplot(weight ~ date|food, dat, group=animal, type='l', auto.key=list(columns=4),
        xlab="Months since start",
        main="depalluel.sheep")
+}
 }
 \keyword{datasets}

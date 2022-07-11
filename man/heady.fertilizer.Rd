@@ -53,9 +53,9 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
-
 data(heady.fertilizer)
 dat <- heady.fertilizer
 
@@ -94,14 +94,13 @@ d4 <- subset(dat, crop=="corn2")
 m4 <- lm(yield ~ N + P + sqrt(N) + sqrt(P) + sqrt(N*P), data=d4)
 summary(m4)
 
-\dontrun{
   libs(rgl)
   with(d1, plot3d(N,P,yield))
   with(d2, plot3d(K,P,yield))
   with(d3, plot3d(K,P,yield))
   with(d4, plot3d(N,P,yield)) # Mostly linear in both N and P
   rgl.close()
-}
 
+}
 }
 \keyword{datasets}

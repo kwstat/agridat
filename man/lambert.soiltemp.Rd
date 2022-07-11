@@ -45,6 +45,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 # Reproduce Lambert figure 39.
@@ -63,5 +64,6 @@ xyplot(temp ~ month, dat, group=depth, type=c('p','smooth'),
        span=.2, auto.key=list(columns=4))
 
 # To do: Find a good model for this data
+}
 }
 \keyword{datasets}

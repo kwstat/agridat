@@ -59,6 +59,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 
@@ -77,5 +78,6 @@ dat$pval <- apply(dat[, 3:6], 1, function(x)
 dotplot(pval~obs|ear, dat, layout=c(1,4), main="pearl.kernels",
         ylab="P-value for test of 9:3:3:1 distribution")
 
+}
 }
 

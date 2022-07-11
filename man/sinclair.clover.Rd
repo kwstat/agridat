@@ -37,6 +37,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 
@@ -77,8 +78,6 @@ summary(m1) # Match Dodds Table 2
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 ## Residual standard error: 0.5298 on 18 degrees of freedom
-
-\dontrun{
 
 pred <- expand.grid(x=0:17, y=0:9)
 pred$z <- predict(m1, pred)

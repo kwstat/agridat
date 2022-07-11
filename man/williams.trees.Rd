@@ -43,9 +43,9 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
-
 data(williams.trees)
 dat <- williams.trees
 
@@ -53,4 +53,4 @@ libs(lattice)
 xyplot(survival~height|env,dat, main="williams.trees", xlab="Height",
 ylab="Percent surviving")
 }
-
+}

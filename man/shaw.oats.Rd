@@ -43,6 +43,7 @@
   None
 }
 \examples{
+\dontrun{
 
 library(agridat)
 data(shaw.oats)
@@ -70,5 +71,6 @@ dotplot(yield ~ gen|env, data=dat, groups=year,
 m1 <- aov(yield ~ year*env*block*gen - year:env:block:gen, dat)
 anova(m1)
 
+}
 }
 \keyword{datasets}

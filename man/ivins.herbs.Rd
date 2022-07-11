@@ -75,9 +75,9 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
-
 data(ivins.herbs)
 dat <- ivins.herbs
 
@@ -99,5 +99,6 @@ anova(m1) # gen p-value is .041
 
 friedman.test(herb ~ gen|block, dat7) # gen p-value .056
 
+}
 }
 \keyword{datasets}

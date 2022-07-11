@@ -45,6 +45,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 
@@ -80,7 +81,6 @@ wedder <- list(varfun=function(mu) (mu*(1-mu))^2,
 m2 <- glm(y ~ gen + site, data=dat, family=quasi(link="logit", variance=wedder))
 #plot(m2)
 
-\dontrun{
 # Alternatively, the 'gnm' package has the 'wedderburn' family.
 libs(gnm)
 m3 <- glm(y ~ gen + site, data=dat, family="wedderburn")

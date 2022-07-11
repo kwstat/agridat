@@ -37,18 +37,17 @@
 }
 
 \examples{
-  
-library(agridat)
-
-data(byers.apple)
-dat <- byers.apple
-
-libs(lattice)
-xyplot(diameter ~ time | factor(appleid), data=dat, type=c('p','l'),
-       strip=strip.custom(par.strip.text=list(cex=.7)),
-       main="byers.apple")
-
 \dontrun{
+  
+  library(agridat)
+  data(byers.apple)
+  dat <- byers.apple
+
+  libs(lattice)
+  xyplot(diameter ~ time | factor(appleid), data=dat, type=c('p','l'),
+         strip=strip.custom(par.strip.text=list(cex=.7)),
+         main="byers.apple")
+
   # Overall fixed linear trend, plus random intercept/slope deviations
   # for each apple.  Observations within each apple are correlated.
   libs(nlme)

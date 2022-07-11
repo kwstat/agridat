@@ -63,28 +63,28 @@ West (1920) give all temperature in Celsius.
 
 }
 \source{
-  
+
   The 1875-1876 data are from:
-  
+
   A. Prehn & G. Becker. (1878)
   \emph{Jahresbericht fur Agrikultur-chemie}, Vol 20, p. 216-220.
   https://books.google.com/books?id=ZfxNAAAAYAAJ&pg=216
 
   The 1877 data are from:
-  
+
   A. Kreusler, A. Prehn, Hornberger. (1880)
   \emph{Jahresbericht fur Agrikultur-Chemie}, Vol 21, p 248.
   https://books.google.com/books?id=U3IYAQAAIAAJ&pg=248
 
   The 1878 data are from:
-  
+
   U. Kreusler, A. Prehn, R. Hornberger. (1880).
   \emph{Jahresbericht fur Agrikultur-Chemie}, Vol 22, p. 211.
   https://books.google.com/books?id=9HIYAQAAIAAJ&pg=211
 
   Dry plant weight and leaf area for all genotypes and years are
   repeated by:
-  
+
   G. E. Briggs, Franklin Kidd, Cyril West. (1920).
   A Quantitative Analysis of Plant Growth. Part I.
   \emph{Annals of Applied Biology}, 7, 103-123.
@@ -98,10 +98,11 @@ West (1920) give all temperature in Celsius.
 \references{
   Roderick Hunt, G. Clifford Evans. 1980.
   Classical Data on the Growth of Maize: Curve Fitting With Statistical Analysis.
-  \emph{New Phytol}, 86, 155-180.  
+  \emph{New Phytol}, 86, 155-180.
 }
 
 \examples{
+\dontrun{
 
 data(kreusler.maize)
 dat <- kreusler.maize
@@ -111,30 +112,28 @@ dat$doy <- as.numeric(strftime(dat$date2, format="\%j"))
 # Hunt & Evans Fig 2a
 libs(lattice)
 xyplot(log10(plantweight)~doy|factor(year), data=dat, group=gen,
-       type=c('p','smooth'), span=.4, as.table=TRUE, 
+       type=c('p','smooth'), span=.4, as.table=TRUE,
        xlab="Day of year", main="kreusler.maize - growth of maize",
        auto.key=list(columns=5))
 
-\dontrun{
-
 # Hunt & Evans Fig 2b
 xyplot(log10(plantweight)~doy|gen, data=dat, group=factor(year),
-       type=c('p','smooth'), span=.5, as.table=TRUE, 
+       type=c('p','smooth'), span=.5, as.table=TRUE,
        xlab="Day of year",
        auto.key=list(columns=4))
 # Hunt & Evans Fig 3a
 xyplot(log10(leafarea)~doy|factor(year), data=dat, group=gen,
-       type=c('p','smooth'), span=.5, as.table=TRUE, 
+       type=c('p','smooth'), span=.5, as.table=TRUE,
        xlab="Day of year",
        auto.key=list(columns=5))
 # Hunt & Evans Fig 3a
 xyplot(log10(leafarea)~doy|gen, data=dat, group=factor(year),
-       type=c('p','smooth'), span=.5, as.table=TRUE, 
+       type=c('p','smooth'), span=.5, as.table=TRUE,
        xlab="Day of year",
        auto.key=list(columns=4))
 
 # All traits
-  
+
 xyplot(raindays~doy|factor(year), data=dat, group=gen,
        type='l', auto.key=list(columns=5), as.table=TRUE, layout=c(1,4))
 xyplot(rain~doy|factor(year), data=dat, group=gen,

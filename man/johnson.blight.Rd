@@ -36,9 +36,9 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
-
 data(johnson.blight)
 dat <- johnson.blight
 
@@ -88,5 +88,6 @@ libs(lattice)
 splom(dat[,c('blight','rain.am','rain.ja','precip.m')],
       main="johnson.blight - indicator of blight")
 
+}
 }
 \keyword{datasets}

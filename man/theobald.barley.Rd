@@ -39,6 +39,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 
@@ -51,5 +52,6 @@ libs(lattice)
 xyplot(income~nitro|env, dat, groups=gen, type='b',
        auto.key=list(columns=3), main="theobald.barley")
 
+}
 }
 \keyword{datasets}

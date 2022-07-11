@@ -21,9 +21,10 @@
   }
 }
 \details{
-  Antigua is a coral island in the Caribbean with sufficient level land
-  for experiments and a semi-arid climate, while St. Vincent is
-  volcanic and level areas are uncommon, but the rainfall can be seasonally heavy.
+  Antigua is a coral island in the Caribbean with sufficient level
+  land for experiments and a semi-arid climate, while St. Vincent
+  is volcanic and level areas are uncommon, but the rainfall can
+  be seasonally heavy.
 
   Plots were 16 feet by 18 feet. A central area 12 feet by 12 feet was
   harvested and recorded.
@@ -48,9 +49,8 @@
 }
 
 \examples{
-
+\dontrun{
 library(agridat)
-
 data(caribbean.maize)
 dat <- caribbean.maize
 
@@ -71,5 +71,6 @@ dat <- transform(dat, env=paste(substring(isle,1,1),site,sep="-"))
 # Now we can see the strong N*site interaction
 bwplot(yield~N|env, dat,
        main="caribbean.maize", xlab="nitrogen")
+}
 }
 \keyword{datasets}

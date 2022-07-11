@@ -40,6 +40,8 @@
   None.
 }
 \examples{
+\dontrun{
+
 library(agridat)
 data(obsi.potato.uniformity)
 dat <- obsi.potato.uniformity
@@ -52,7 +54,6 @@ dat <- obsi.potato.uniformity
 ## 1 L1     2.54 # Obsi says 2.55
 ## 2 L2     5.31 # Obsi says 5.36
 
-\dontrun{
 libs(desplot)
 desplot(dat, yield ~ col*row, subset=loc=="L1",
   main="obsi.potato.uniformity - loc L1",

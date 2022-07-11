@@ -36,6 +36,7 @@ Multi-environment trial of wheat in Sweden in 2016.
   None.
 }
 \examples{
+\dontrun{
 data(buntaran.wheat)
 library(agridat)
 dat <- buntaran.wheat
@@ -43,5 +44,6 @@ library(lattice)
 bwplot(yield~loc|zone, dat, layout=c(1,3),
        scales=list(x=list(rot=90)),
        main="buntaran.wheat")
+}
 }
 \keyword{datasets}

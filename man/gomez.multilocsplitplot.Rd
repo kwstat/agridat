@@ -31,9 +31,9 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
-
 data(gomez.multilocsplitplot)
 dat <- gomez.multilocsplitplot
 dat$nf <- factor(dat$nitro)
@@ -51,7 +51,6 @@ t1 <- terms(yield ~ loc * nf * gen + Error(loc:rep:nf),
 m1 <- aov(t1, data=dat)
 summary(m1)
 
-\dontrun{
   # F values are somewhat similar to Gomez Table 8.21
   libs(lme4)
   m2 <- lmer(yield ~ loc*nf*gen + (1|loc/rep/nf), dat)
