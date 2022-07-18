@@ -1,10 +1,19 @@
-# agridat 1.20 - unpublished
+# agridat 1.22 - Unpublished
+
+## New data with motivation
+
+* smith.wheat.uniformity (classic data for measuring field heterogeneity)
+
+
+# agridat 1.21 - Jun 2022
 
 ## New data with motivation
 
 * bachmaier.quadratic (confidence intervals for optimum of quadratic)
+* ducker.groundnut.uniformity
 * kling.augmented (augmented design)
 * sharma.met (Finlay-Wilkinson regression)
+
 
 # agridat 1.19 - Dec 2021
 
@@ -37,7 +46,7 @@ alwan.lamb, baker.strawberry.uniformity, besag.checks, bryan.corn.uniformity, da
 
 ## Other notes
 
-* Examples using `asreml()` now asreml version 4.
+* Examples now use asreml version 4.
 
 * Re-named `hutchinson.cotton.uniformity` to `panse.cotton.uniformity`.
 

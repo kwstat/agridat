@@ -106,6 +106,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{shafi.tomato.uniformity}            \tab 10 x 20 \tab xy \tab \cr
 \link{smith.beans.uniformity}             \tab 18 x 12, 16 x 15 \tab xy, 2 yr, 2 crops \tab \cr
 \link{smith.corn.uniformity}              \tab 6 x 20 \tab xy, 3 years \tab rgl \cr
+\link{smith.wheat.uniformity}             \tab 36 x 30 \tab xy, 2 traits \tab \cr
 \link{stephens.sorghum.uniformity}        \tab 100 x 20 \tab xy \tab \cr
 \link{stickler.sorghum.uniformity}        \tab 20 x 20 \tab xy, 4 expts, 2 years \tab \cr
 \link{strickland.apple.uniformity}        \tab 11 x 18 \tab xy \tab \cr
