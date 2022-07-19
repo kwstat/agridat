@@ -4,9 +4,7 @@ author: "Kevin Wright"
 date: "`r Sys.Date()`"
 output: 
   rmarkdown::html_vignette:
-    md_extensions: [ 
-      "-autolink_bare_uris" 
-    ]
+    md_extensions: -autolink_bare_uris
 bibliography: agridat.bib
 vignette: >
   %\VignetteIndexEntry{Graphical Gems in the agridat Package}

@@ -3,8 +3,9 @@ title: "Introduction to `agridat`"
 author: "Kevin Wright"
 date: "`r Sys.Date()`"
 bibliography: agridat.bib
-output:
-  rmarkdown::html_vignette
+output: 
+  rmarkdown::html_vignette:
+    md_extensions: -autolink_bare_uris
 vignette: >
   %\VignetteIndexEntry{Introduction to agridat}
   %\VignetteEngine{knitr::rmarkdown}
@@ -27,7 +28,7 @@ The value of this package is:
 
 White and van Evert (2008) present some guidelines for publication of data.
 
-Some of the examples use the `asreml` package since it is the _only_ R tool for fitting mixed models with complex variance structures to large datasets, and the best option for modelling AR1xAR1 residual variance structures.  Commercial use of `asreml` requires a license: https://www.vsni.co.uk/downloads/asreml.
+Some of the examples use the `asreml` package since it is the _only_ R tool for fitting mixed models with complex variance structures to large datasets, and the best option for modelling AR1xAR1 residual variance structures.  Commercial use of `asreml` requires a license from VSN. (Use a search engine to find the latest version).
 
 # Comments on the package structure
 

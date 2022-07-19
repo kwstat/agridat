@@ -1,6 +1,6 @@
 Package: agridat
 Title: Agricultural Datasets
-Version: 1.20
+Version: 1.21
 Authors@R: person("Kevin","Wright", email="kw.stat@gmail.com",
                   comment=c(ORCID = "0000-0002-0617-8673"),
                   role=c("aut","cre"))
@@ -63,4 +63,4 @@ BugReports: https://github.com/kwstat/agridat/issues
 VignetteBuilder: knitr
 Language: en-US
 Encoding: UTF-8
-RoxygenNote: 7.1.2
+RoxygenNote: 7.2.0

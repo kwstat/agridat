@@ -1,3 +1,27 @@
+# agridat 1.21
+
+This release fixes a minor problem identified by CRAN.
+
+## Test environments and results
+
+1. R 4.1.3 on Windows 10, devtools::check()
+2. devtools::check_win_devel()
+3. devtools::check_win_release()
+4. devtools::check_win_oldrelease()
+
+Results:
+
+1. R-oldrelease was OK.
+
+2. There may be a NOTE about possibly invalid URLs.  I have checked the URLs by hand and they all work (but sometimes are slow).
+
+3. WinRelease gave many notes like this: 
+```
+aastveit.barley.Rd:17:1: Warning: <table> attribute "width" not allowed for HTML5.  
+```
+Other platforms did not give this warning, so I assume this is spurious. CRAN check page does not show this problem: https://cran.r-project.org/web/checks/check_results_kw.stat_at_gmail.com.html
+
+
 # agridat 1.19
 
 ## CRAN package status check

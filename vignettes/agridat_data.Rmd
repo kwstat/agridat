@@ -4,9 +4,7 @@ author: "Kevin Wright"
 date: "`r Sys.Date()`"
 output: 
   rmarkdown::html_vignette:
-    md_extensions: [ 
-      "-autolink_bare_uris" 
-    ]
+    md_extensions: -autolink_bare_uris
 vignette: >
   %\VignetteIndexEntry{Additional agricultural data} 
   %\VignetteEngine{knitr::rmarkdown}
@@ -1018,14 +1016,14 @@ Box of uniformity trial data
 ```
 STATS17  WG Cochran
  
-Uniformity trial data. 
-Genstat data. Data received since publication of the catalogue.  1935-1943. 
-Uniformity trial data.  1930-1936. 
-Uniformity trials.  1936-1938. 
-Uniformity trials.  R data.  1936-1937. 
-O. V. S. Heath.  Cotton uniformity trial data.  1934-1935. 
-Data.  Yields of grain per foot length.  1934. 
-Catalogue of field uniformity trial data.  N. d. 
-Demandt.  1931. One box 
+1. Uniformity trial data. 
+2. Genstat data. Data received since publication of the catalogue.  1935-1943. 
+3. Uniformity trial data.  1930-1936. 
+4. Uniformity trials.  1936-1938. 
+5. Uniformity trials.  R data.  1936-1937. 
+6. O. V. S. Heath.  Cotton uniformity trial data.  1934-1935. 
+7. Data.  Yields of grain per foot length.  1934. 
+8. Catalogue of field uniformity trial data.  N. d. 
+9. Demandt.  1931. One box 
 ```
 
