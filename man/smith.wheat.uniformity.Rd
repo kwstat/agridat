@@ -45,12 +45,12 @@
   and also the variance of the data matches the value in Smith (1938),
   which is 2201 on page 7.
 
-  This data was made available with special help from Catherine
-  Fearnhead at Rothamstead Research.
+  This data was made available with special help from the staff at
+  Rothamsted Research Library.
 
 }
 \source{
-  Rothamsted Archive, Box STATS17  WG Cochran, Folder 2.
+  Rothamsted Research Library, Box STATS17  WG Cochran, Folder 2.
 }
 \references{
   H. Fairfield Smith (1938).

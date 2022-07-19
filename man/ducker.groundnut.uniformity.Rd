@@ -30,12 +30,12 @@ Uniformity trial of groundnut.
   
   Field width: 44 plots, 1 yard each = 44 yards.
 
-  This data was made available with special help from Catherine
-  Fearnhead at Rothamstead Research.
+  This data was made available with special help from the staff at
+  Rothamsted Research Library.
 
 }
 \source{
-  Rothamsted Archive, Box STATS17  WG Cochran, Folder 2.
+    Rothamsted Research Library, Box STATS17  WG Cochran, Folder 2.
 }
 \references{
   None

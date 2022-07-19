@@ -48,7 +48,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{eden.tea.uniformity}                \tab 12 x 12 \tab xy \tab \cr
 \link{garber.multi.uniformity}            \tab 45 x 6 \tab xy, 2 years/crops \tab \cr
 \link{gomez.rice.uniformity}              \tab 18 x 36 \tab xy \tab aov,smith \cr
-\link{goulden.barley.uniformity}          \tab 20 x 20 \tab xy \tab \cr
+\link{goulden.barley.uniformity}          \tab 48 x 48 \tab xy \tab \cr
 \link{harris.multi.uniformity}            \tab 2 x 23 \tab xy, 23 crops \tab corrgram\cr
 \link{hartman.tomato.uniformity}          \tab 12 x 32 \tab xy \tab \cr
 \link{heath.raddish.uniformity}           \tab 10 x 10 \tab xy \tab \cr
