@@ -2,7 +2,8 @@
 
 ## New data with motivation
 
-* goulden.barley.uniformity (expanded from 20x20 to 48x48)
+* evans.sugarcane.uniformity
+* goulden.barley.uniformity (expanded from the original 20x20 to 48x48)
 * smith.wheat.uniformity (classic data for measuring field heterogeneity)
 
 

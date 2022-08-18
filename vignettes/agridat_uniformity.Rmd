@@ -14,8 +14,9 @@ vignette: >
 
 # Todo
 
-To do: Figure out appendix II.
-Mathew, Lucyamma. Standardization of field plot technique for cashew. Diss. Department of Statistics, College of Veterinary and Animal Sciences, Mannuthy.
+To do: Try to figure out appendix II.
+Mathew, Lucyamma. Standardization of field plot technique for cashew. Diss.
+Department of Statistics, College of Veterinary and Animal Sciences, Mannuthy.
 https://krishikosh.egranth.ac.in/handle/1/5810142095
 
 
@@ -822,6 +823,7 @@ No data. Refers to other papers with uniformity trials.
 Krysczun, Dionatan, Alessandro D. Lúcio, Bruno G. Sari, Maria I. Diel, Tiago Olivoto, José A. G. da Silva, Cinthya S. Santana, Patrícia J. Melo, & Sabrina M. Gomes.
 The Size of the Uniformity Trial Affects the Accuracy of Plot Size Estimation in Eggplant.
 Journal of Agricultural Science; Vol. 10, No. 11; 2018
+https://www.researchgate.net/publication/328291020_The_Size_of_the_Uniformity_Trial_Affects_the_Accuracy_of_Plot_Size_Estimation_in_Eggplant
 No data.
 
 Krysczun, Dionatan Ketzer; Lúcio, Alessandro Dal’Col; Sari, Bruno Giacomini; Diel, Maria Inês; Olivoto, Tiago; Santana, Cinthya Souza; Ubessi, Cassiane; Schabarum, Denison Esequiel  (2018).

@@ -2,6 +2,8 @@
 title: "agridat notes"
 ---
 
+# Cochran uniformity done
+
 goulden.barley.uniformity
 ducker.groundnut.uniformity
 smith.wheat.uniformity
@@ -14,13 +16,13 @@ smith.wheat.uniformity
 }
 
 
-data-raw/cochran_folder1_genstat_data/:
-total 2875
+## data-raw/cochran_folder1_genstat_data/:
+
 Genstat data 01.pdf
 Genstat data 02.pdf
-Genstat data 03.pdf # Same as goulden.barley.uniformity
+Genstat data 03.pdf # Done. Same as goulden.barley.uniformity
 Genstat data 04.pdf
-Genstat data 05.pdf
+Genstat data 05.pdf # Done. Same as panse.cotton.uniformity
 Genstat data 06.pdf
 Genstat data 07.pdf
 Genstat data 08.pdf
@@ -29,22 +31,22 @@ Genstat data 10.pdf # immer?
 Genstat data 11.pdf
 Genstat data 12.pdf # pusa sugarcane
 Genstat data 13.pdf
-Genstat data 14.pdf # smith.wheat.uniformity
+Genstat data 14.pdf # Done. Same as smith.wheat.uniformity
 
-data-raw/cochran_folder2_data_received_since_publiction/:
-total 8366
+## data-raw/cochran_folder2_data_received_since_publiction/:
+
 2632_001.pdf
 2633_001.pdf
 2634_001.pdf
 2635_001.pdf
-2636_001.pdf
-2637_001.pdf # cotton 1940
+2636_001.pdf # oats 1923
+2637_001.pdf # cotton 1940, 40 rows, 50 columns
 2638_001.pdf
 2639_ducker_groundnut.R
 2639_ducker_groundnut.pdf
 2639_ducker_groundnut.xlsx
 2640_001.pdf
-2641_001.pdf
+2641_001.pdf # letter summerby
 2642_001.pdf
 2643_001.pdf
 2644_001.pdf
@@ -55,14 +57,16 @@ total 8366
 2648_001.pdf
 2649_001.pdf
 
-data-raw/cochran_folder3/:
-total 804
+## data-raw/cochran_folder3/:
+
 Cochran links to journal articles in files - Archives STATS17.docx
 Journal of the american society of Agronomy 1930 Swanson Variety of grain p833.pdf
 Letter to Cochran from Freda Thurman April 91936.pdf
 
-data-raw/cochran_folder4_uniformity_trials_1936_1936/:
-total 9964
+## data-raw/cochran_folder4_uniformity_trials_1936_1936/
+
+This folder contains correspondence
+
 2652_001.pdf
 2653_001.pdf
 2654_001.pdf
@@ -84,29 +88,29 @@ total 9964
 2670_001.pdf
 2671_001.pdf
 
-data-raw/cochran_folder5_uniformity_data/:
-total 11217
+## data-raw/cochran_folder5_uniformity_data/:
+
 2705_metzger.pdf
 2706_001.pdf
 2707_001.pdf
-2708_goulden_barley.pdf
+2708_goulden_barley.pdf    # Done. goulden.barley.uniformity
 2709_beckett_coconut.pdf
 2710_001.pdf
 2711_001.pdf
 2712_001.pdf
-2713_pansee.pdf
-2714_christidis.pdf
-2715_singh.pdf
-2716_maize.pdf
+2713_pansee.pdf            # Done. Same as pansee.cotton.uniformity
+2714_christidis.pdf        # Done. Same as christidis.wheat.uniformity
+2715_singh.pdf           # 48 rows, 20 columns todo this is a 3rd year of sayer.sugarcane.uniformity
+2716_maize.pdf           # todo 5 col, 300 row = 1500 plots potchefstroom
 2717_maize.pdf
 2718_hastings.pdf
-2719_immer.pdf
+2719_immer.pdf #  60 row, 10 col todo todo 2nd year of data
 2720_sugarcane.pdf
 2721_macdonald_cotton.pdf
 2722_rothamsted.pdf
 
-data-raw/cochran_folder6_ovs_health_cotton_uniformity/:
-total 6030
+## data-raw/cochran_folder6_ovs_health_cotton_uniformity/:
+
 2679_001.pdf
 2680_001.pdf
 2681_001.pdf
@@ -117,8 +121,8 @@ total 6030
 2686_001.pdf
 2687_001.pdf
 
-data-raw/cochran_folder7_yield_of_grain_per_foot/:
-total 2822
+## data-raw/cochran_folder7_yield_of_grain_per_foot/:
+
 2672_smith_correspondence.pdf
 2673_smith_referece.pdf
 2674_smith_ears_copy_B.pdf
@@ -127,15 +131,15 @@ total 2822
 2677_smith_reference.pdf
 2678_smith_ears_copy_A.pdf
 
-data-raw/cochran_folder8_catalog_of_uniformity_data/:
-total 5032
+## data-raw/cochran_folder8_catalog_of_uniformity_data/:
+
 2688_001.pdf
 2689_001.pdf
 2690_001.pdf
 2691_001.pdf
 2692_001.pdf
-2693_001.pdf
-2694_001.pdf
+2693_evans_sugarcane_letter.pdf # done evans.sugarcane.uniformity
+2694_evans_sugarcane_data.pdf   # done evans.sugarcane.uniformity
 
 ---------------------------------------------------------------------------
 
