@@ -3,9 +3,9 @@
 ## New data with motivation
 
 * evans.sugarcane.uniformity
-* goulden.barley.uniformity (expanded from the original 20x20 to 48x48)
+* goulden.barley.uniformity (expanded from the previously published 20x20 to 48x48)
 * smith.wheat.uniformity (classic data for measuring field heterogeneity)
-
+* vishnaadevi.rice.uniformity
 
 # agridat 1.21 - Jun 2022
 
