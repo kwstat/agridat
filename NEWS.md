@@ -4,6 +4,7 @@
 
 * evans.sugarcane.uniformity
 * goulden.barley.uniformity (expanded from the previously published 20x20 to 48x48)
+* kirk.potato (20 varieties with 15 reps)
 * smith.wheat.uniformity (classic data for measuring field heterogeneity)
 * vishnaadevi.rice.uniformity
 
