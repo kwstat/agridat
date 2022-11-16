@@ -6,6 +6,7 @@ title: "agridat notes"
 
 goulden.barley.uniformity
 ducker.groundnut.uniformity
+immer.sugarbeet.uniformity (1931)
 smith.wheat.uniformity
 
   This data was made available with special help from the staff at
@@ -16,24 +17,24 @@ smith.wheat.uniformity
 }
 
 
-## data-raw/cochran_folder1_genstat_data/:
+## data-raw/cochran_folder1_genstat_data
 
-Genstat data 01.pdf
-Genstat data 02.pdf
+Genstat data 01.pdf    # series F multicrop 1925-1934
+Genstat data 02.pdf    # series G multicrop 1925-1934
 Genstat data 03.pdf # Done. Same as goulden.barley.uniformity
-Genstat data 04.pdf
+Genstat data 04.pdf    # nuts per plot 1919-1928
 Genstat data 05.pdf # Done. Same as panse.cotton.uniformity
-Genstat data 06.pdf
-Genstat data 07.pdf
-Genstat data 08.pdf
-Genstat data 09.pdf
-Genstat data 10.pdf # immer?
-Genstat data 11.pdf
-Genstat data 12.pdf # pusa sugarcane
-Genstat data 13.pdf
+Genstat data 06.pdf    # cotton, gatooma 480 plots
+Genstat data 07.pdf    # maize potchefstroom 1930
+Genstat data 08.pdf    # B5a B5a
+Genstat data 09.pdf    # maie potchefstroom 1929
+Genstat data 10.pdf # immer.sugarbeet.uniformity 1931
+Genstat data 11.pdf # Done. Sames as evans.sugarcane.uniformity SQUARED values
+Genstat data 12.pdf # Done. Same as sayer.sugarcane.uniformity 1932
+Genstat data 13.pdf # Done. Same as christidis.wheat.uniformity
 Genstat data 14.pdf # Done. Same as smith.wheat.uniformity
 
-## data-raw/cochran_folder2_data_received_since_publiction/:
+## data-raw/cochran_folder2_data_received_since_publiction
 
 2632_001.pdf
 2633_001.pdf
@@ -45,16 +46,16 @@ Genstat data 14.pdf # Done. Same as smith.wheat.uniformity
 2639_ducker_groundnut.R
 2639_ducker_groundnut.pdf
 2639_ducker_groundnut.xlsx
-2640_001.pdf
+2640_001.pdf # oats 1921
 2641_001.pdf # letter summerby
 2642_001.pdf
-2643_001.pdf
+2643_001.pdf # ribes
 2644_001.pdf
-2645_001.pdf
-2645_015.pdf
-2646_001.pdf
-2647_001.pdf # sugar beets MN 1937
-2648_001.pdf
+2645_001.pdf # green cloves, tree yields, 5 years
+2645_015.pdf # individual trees 1933-1938
+2646_001.pdf steiner wireworms
+2647_001.pdf # sugar beets MN 1937 LeClerg
+2648_001.pdf # sugar beet MN 1933 LeClerg
 2649_001.pdf
 
 ## data-raw/cochran_folder3/:
@@ -75,8 +76,8 @@ This folder contains correspondence
 2657_001.pdf
 2658_001.pdf
 2659_001.pdf
-2660_001.pdf
-2661_001.pdf
+2660_001.pdf konigsberger
+2661_001.pdf demandt
 2662_001.pdf
 2663_001.pdf
 2664_001.pdf
@@ -97,19 +98,19 @@ This folder contains correspondence
 2709_beckett_coconut.pdf
 2710_001.pdf
 2711_001.pdf
-2712_001.pdf
+2712_001.pdf                   # Gatooma
 2713_pansee.pdf            # Done. Same as pansee.cotton.uniformity
 2714_christidis.pdf        # Done. Same as christidis.wheat.uniformity
-2715_singh.pdf           # 48 rows, 20 columns todo this is a 3rd year of sayer.sugarcane.uniformity
-2716_maize.pdf           # todo 5 col, 300 row = 1500 plots potchefstroom
-2717_maize.pdf
-2718_hastings.pdf
+2715_singh.pdf             # Done. sayer.sugarcane.uniformity 1932, 48 rows, 20 columns
+2716_maize.pdf             # todo 5 col, 300 row = 1500 plots potchefstroom
+2717_maize.pdf             # todo potchefstroom 29-30  see folder 1, file 7
+2718_hastings.pdf          # todo potchefstroom 28-29  see folder 1, file 9
 2719_immer.pdf #  60 row, 10 col todo todo 2nd year of data
 2720_sugarcane.pdf
-2721_macdonald_cotton.pdf
+2721_macdonald_cotton.pdf  # field B2a B5b. See folder 1, file 8
 2722_rothamsted.pdf
 
-## data-raw/cochran_folder6_ovs_health_cotton_uniformity/:
+## data-raw/cochran_folder6_ovs_health_cotton_uniformity
 
 2679_001.pdf
 2680_001.pdf
@@ -121,17 +122,17 @@ This folder contains correspondence
 2686_001.pdf
 2687_001.pdf
 
-## data-raw/cochran_folder7_yield_of_grain_per_foot/:
+## data-raw/cochran_folder7_yield_of_grain_per_foot
 
-2672_smith_correspondence.pdf
-2673_smith_referece.pdf
-2674_smith_ears_copy_B.pdf
-2675_smith_grain_copy_B.pdf
-2676_smith_grain_copy_A.pdf
-2677_smith_reference.pdf
-2678_smith_ears_copy_A.pdf
+2672_smith_correspondence.pdf # done
+2673_smith_reference.pdf      # done
+2674_smith_ears_copy_B.pdf    # done
+2675_smith_grain_copy_B.pdf   # done
+2676_smith_grain_copy_A.pdf   # done
+2677_smith_reference.pdf      # done
+2678_smith_ears_copy_A.pdf    # done
 
-## data-raw/cochran_folder8_catalog_of_uniformity_data/:
+## data-raw/cochran_folder8_catalog_of_uniformity_data
 
 2688_001.pdf
 2689_001.pdf
@@ -251,17 +252,23 @@ http://www.iasri.res.in/NewsLetters/nl.HTM
 
 ## Indian Journal of Agricultural Science
 ```
-Vol 1. 309x
-Vol 2. 53 694
-Vol 3. 544 5 varieties, 2 blocks, 4 reps/block
+Vol 1.
+Vol 2.
+Vol 3. https://archive.org/details/in.ernet.dli.2015.271738/page/n653/mode/2up
+  544 5 varieties, 2 blocks, 4 reps/block
 Vol 4. 
-Vol 5. 579. Multi-year uniformity trial. agridat::bose.multi.uniformity
-Vol 6. Pg 85 has 4-way factorial with whole-plot date, but non-contiguous sub-plots.
+Vol 5.
+  579. agridat::bose.multi.uniformity
+Vol 6. 
+  34. 4-way factorial with whole-plot date, but non-contiguous sub-plots. todo fixme
+  460. agridat::kulkarni.sorghum.uniformity
+  917. agridat::sayer.sugarcane.uniformity
 Vol 9.
 Vol 10.
 Vol 11. 
-Vol 12. 240. Wheat uniformity trial. agridat::iyer.wheat.uniformity
-Vol 14. 315 
+Vol 12. 
+  240. Wheat uniformity trial. agridat::iyer.wheat.uniformity
+Vol 14.
 Vol 16.
 Vol 17.
 Vol 19.
