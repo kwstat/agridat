@@ -195,6 +195,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{battese.survey}              \tab     \tab 12 \tab 1-5 \tab    \tab 2     \tab \tab lmer \cr
 \link{beall.webworms}              \tab     \tab    \tab 15  \tab    \tab 2,2   \tab xy, split-block \tab glm poisson,nb\cr
 \link{beaven.barley}               \tab  8  \tab    \tab 20  \tab    \tab       \tab xy \tab \cr
+\link{belamkar.augmented}          \tab 273 \tab 8  \tab     \tab    \tab       \tab xy, incblock\tab asreml \cr
 \link{besag.bayesian}              \tab 75  \tab    \tab 3   \tab    \tab       \tab xy \tab asreml \cr
 \link{besag.beans}                 \tab 6   \tab    \tab 4*6 \tab    \tab       \tab xy \tab lm,competition \cr
 \link{besag.checks}                \tab 2   \tab    \tab     \tab    \tab       \tab xy \tab \cr

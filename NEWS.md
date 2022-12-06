@@ -2,6 +2,7 @@
 
 ## New data with motivation
 
+* belamkar.augmented (augmented design at multiple locations)
 * evans.sugarcane.uniformity
 * goulden.barley.uniformity (expanded from the previously published 20x20 to 48x48)
 * kirk.potato (20 varieties with 15 reps)
