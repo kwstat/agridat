@@ -51,6 +51,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{gomez.rice.uniformity}              \tab 18 x 36 \tab xy \tab aov,smith \cr
 \link{goulden.barley.uniformity}          \tab 48 x 48 \tab xy \tab \cr
 \link{harris.multi.uniformity}            \tab 2 x 23 \tab xy, 23 crops \tab corrgram\cr
+\link{hansen.multi.uniformity}            \tab 6 x 5, 16 x 8 \tab xy, 4-5 yr \tab splom\cr
 \link{hartman.tomato.uniformity}          \tab 12 x 32 \tab xy \tab \cr
 \link{heath.raddish.uniformity}           \tab 10 x 10 \tab xy \tab \cr
 \link{holtsmark.timothy.uniformity}       \tab 6 x 40 \tab xy \tab \cr
@@ -434,12 +435,9 @@ Multi-environment trials with multi-genotype,loc,rep,year:
   \link{verbyla.lupin}               \tab 9   \tab 8  \tab 3   \tab 2  \tab 7     \tab rsm1, xy, density\tab asreml
 }
 
-Data with markers:
-hadasch.lettuce.markers,
-steptoe.morex.geno
+Data with markers: hadasch.lettuce.markers, steptoe.morex.geno
 
-Data with pedigree:
-butron.maize
+Data with pedigree: butron.maize
 
 }
 

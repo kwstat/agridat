@@ -35,14 +35,17 @@
   phosphorus, and potassium fertilizer, respectively.
 
   The TEAN site suffered damage from goats on plot 27, 35 and 36.
-  The LFAN site suffered damage from cattle on one boundary--plots 9, 18, 27, 36.
+  The LFAN site suffered damage from cattle on one boundary--plots 9,
+  18, 27, 36.
+
+    Electronic version of the data was retrieved from http://lib.stat.cmu.edu/datasets/Andrews/
+
 }
 \source{
   D.F. Andrews and A.M. Herzberg. 1985.
-	\emph{Data: A Collection of Problems from Many Fields for the Student
-	  and Research Worker}.
-
-  Retrieved from https://lib.stat.cmu.edu/datasets/Andrews/
+	Data: A Collection of Problems from Many Fields for the Student
+	and Research Worker.
+  Springer.
 }
 \references{
   Also in the DAAG package as data sets antigua, stVincent.

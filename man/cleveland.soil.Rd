@@ -20,13 +20,16 @@
 }
 \details{
   Resistivity is related to soil salinity.
-}
-\source{
-  William Cleveland, (1993), \emph{Visualizing Data}.
-  Electronic version from StatLib: https://lib.stat.cmu.edu/datasets/
+
+  Electronic version of the data was retrieved from
+  http://lib.stat.cmu.edu/datasets/Andrews/
 
   Cleaned version from Luke Tierney
   https://homepage.stat.uiowa.edu/~luke/classes/248/examples/soil
+}
+\source{
+  William Cleveland, (1993).
+  Visualizing Data.
 }
 
 \examples{

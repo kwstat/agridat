@@ -21,7 +21,7 @@
   Madurai, India.
 }
 \source{
-  Vishnaadevi, S.; K. Prabakaran, E. Subramanian, P. Arunachalam.
+  Vishnaadevi, S.; K. Prabakaran, E. Subramanian, P. Arunachalam. (2019).
   Determination of fertility gradient direction and optimum plot shape of paddy crop in Madurai District.
   Green Farming, 10, 155-159.
   https://www.researchgate.net/publication/333892867

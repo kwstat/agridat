@@ -61,7 +61,6 @@
   However, Bongiovanni and Lowenberg-DeBoer (2002) found that slope
   position was NOT significant in 2001.
 
-
   Used with permission of the ASU GeoDa Center.
 }
 

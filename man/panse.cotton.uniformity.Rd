@@ -19,7 +19,8 @@
 \details{
   A uniformity trial of cotton at the Institute of Plant Industry, Indore, India.
   
-  The  trial consisted of 128 rows of cotton with a spacing of 14 in between rows and length 186 feet 8 in.
+  The  trial consisted of 128 rows of cotton with a spacing of 14 inches
+  between rows and length 186 feet 8 inches.
   
   Each harvested plot was 4 rows wide and  4 ft 8 in long, measuring 1/2000 acre.
   

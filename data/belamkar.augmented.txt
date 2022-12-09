@@ -1,0 +1,2701 @@
+"loc"	"rep"	"iblock"	"gen_new"	"gen_check"	"gen"	"col"	"row"	"yield"
+"Alliance"	"R1"	"I01"	0	"Camelot"	"Camelot"	1	16	71.4
+"Alliance"	"R1"	"I01"	1	"0"	"NE16471"	1	17	56.5
+"Alliance"	"R1"	"I01"	1	"0"	"NE16510"	1	18	50.8
+"Alliance"	"R1"	"I01"	1	"0"	"NE16516"	1	19	49.8
+"Alliance"	"R1"	"I01"	1	"0"	"NE16570"	1	20	52.2
+"Alliance"	"R1"	"I01"	1	"0"	"NE16650"	1	21	42
+"Alliance"	"R1"	"I01"	1	"0"	"NE16553"	1	22	57.4
+"Alliance"	"R1"	"I01"	1	"0"	"NE16482"	1	23	49.5
+"Alliance"	"R1"	"I01"	1	"0"	"NE16548"	1	24	74.9
+"Alliance"	"R1"	"I01"	1	"0"	"NE16649"	1	25	52.8
+"Alliance"	"R2"	"I01"	1	"0"	"NE16447"	1	26	76.8
+"Alliance"	"R2"	"I01"	1	"0"	"NE16405"	1	27	58.4
+"Alliance"	"R2"	"I01"	1	"0"	"NE16520"	1	28	60.6
+"Alliance"	"R2"	"I01"	1	"0"	"NE16448"	1	29	61
+"Alliance"	"R2"	"I01"	1	"0"	"NE16423"	1	30	65.1
+"Alliance"	"R2"	"I01"	1	"0"	"NE16496"	1	31	49.1
+"Alliance"	"R2"	"I01"	1	"0"	"NE16431"	1	32	59
+"Alliance"	"R2"	"I01"	1	"0"	"NE16677"	1	33	57.7
+"Alliance"	"R2"	"I01"	1	"0"	"NE16577"	1	34	57.3
+"Alliance"	"R2"	"I01"	1	"0"	"NE16451"	1	35	62.7
+"Alliance"	"R1"	"I01"	1	"0"	"NE16406"	2	16	69.7
+"Alliance"	"R1"	"I01"	1	"0"	"NE16615"	2	17	51.7
+"Alliance"	"R1"	"I01"	1	"0"	"NE16464"	2	18	50.4
+"Alliance"	"R1"	"I01"	1	"0"	"NE16588"	2	19	57.2
+"Alliance"	"R1"	"I01"	1	"0"	"NE16698"	2	20	35.3
+"Alliance"	"R1"	"I01"	1	"0"	"NE16599"	2	21	50
+"Alliance"	"R1"	"I01"	1	"0"	"NE16630"	2	22	50.5
+"Alliance"	"R1"	"I01"	1	"0"	"NE16594"	2	23	49.2
+"Alliance"	"R1"	"I01"	1	"0"	"NE16578"	2	24	63.4
+"Alliance"	"R1"	"I01"	1	"0"	"NE16627"	2	25	60.8
+"Alliance"	"R2"	"I01"	1	"0"	"NE16504"	2	26	67.7
+"Alliance"	"R2"	"I01"	1	"0"	"NE16637"	2	27	54.2
+"Alliance"	"R2"	"I01"	1	"0"	"NE16404"	2	28	52
+"Alliance"	"R2"	"I01"	1	"0"	"NE16435"	2	29	45.4
+"Alliance"	"R2"	"I01"	0	"Camelot"	"Camelot"	2	30	57
+"Alliance"	"R2"	"I01"	1	"0"	"NE16500"	2	31	58.7
+"Alliance"	"R2"	"I01"	1	"0"	"NE16474"	2	32	28.8
+"Alliance"	"R2"	"I01"	1	"0"	"NE16599"	2	33	64.1
+"Alliance"	"R2"	"I01"	1	"0"	"NE16613"	2	34	54.1
+"Alliance"	"R2"	"I01"	1	"0"	"NE16663"	2	35	59.9
+"Alliance"	"R1"	"I01"	1	"0"	"NE16538"	3	16	55.9
+"Alliance"	"R1"	"I01"	1	"0"	"NE16410"	3	17	49.7
+"Alliance"	"R1"	"I01"	1	"0"	"NE16417"	3	18	48.8
+"Alliance"	"R1"	"I01"	1	"0"	"NE16404"	3	19	48.8
+"Alliance"	"R1"	"I01"	1	"0"	"NE16489"	3	20	57.4
+"Alliance"	"R1"	"I01"	0	"Freeman"	"Freeman"	3	21	73.3
+"Alliance"	"R1"	"I01"	1	"0"	"NE16636"	3	22	57.7
+"Alliance"	"R1"	"I01"	0	"GOODSTREAK"	"GOODSTREAK"	3	23	52.1
+"Alliance"	"R1"	"I01"	1	"0"	"NE16469"	3	24	51.2
+"Alliance"	"R1"	"I01"	1	"0"	"NE16654"	3	25	45.9
+"Alliance"	"R2"	"I01"	0	"Freeman"	"Freeman"	3	26	78.3
+"Alliance"	"R2"	"I01"	1	"0"	"NE16563V"	3	27	62.6
+"Alliance"	"R2"	"I01"	1	"0"	"NE16671"	3	28	74.2
+"Alliance"	"R2"	"I01"	1	"0"	"NE16515"	3	29	69.8
+"Alliance"	"R2"	"I01"	1	"0"	"NE16489"	3	30	61
+"Alliance"	"R2"	"I01"	1	"0"	"NE16638"	3	31	55.6
+"Alliance"	"R2"	"I01"	1	"0"	"NE16540"	3	32	49.9
+"Alliance"	"R2"	"I01"	0	"GOODSTREAK"	"GOODSTREAK"	3	33	56.1
+"Alliance"	"R2"	"I01"	1	"0"	"NE16484"	3	34	48.2
+"Alliance"	"R2"	"I01"	1	"0"	"NE16579"	3	35	64.8
+"Alliance"	"R1"	"I02"	1	"0"	"NE16612"	4	16	56.4
+"Alliance"	"R1"	"I02"	1	"0"	"NE16525"	4	17	49.6
+"Alliance"	"R1"	"I02"	1	"0"	"NE16568"	4	18	42.1
+"Alliance"	"R1"	"I02"	1	"0"	"NE16665"	4	19	46.9
+"Alliance"	"R1"	"I02"	1	"0"	"NE16575"	4	20	57.5
+"Alliance"	"R1"	"I02"	1	"0"	"NE16572"	4	21	37.3
+"Alliance"	"R1"	"I02"	1	"0"	"NE16679"	4	22	56.2
+"Alliance"	"R1"	"I02"	1	"0"	"NE16403"	4	23	48.7
+"Alliance"	"R1"	"I02"	1	"0"	"NE16586"	4	24	56.4
+"Alliance"	"R1"	"I02"	1	"0"	"NE16558"	4	25	57.3
+"Alliance"	"R2"	"I02"	1	"0"	"NE16623"	4	26	52.2
+"Alliance"	"R2"	"I02"	1	"0"	"NE16538"	4	27	66.6
+"Alliance"	"R2"	"I02"	1	"0"	"NE16621"	4	28	45.1
+"Alliance"	"R2"	"I02"	1	"0"	"NE16513"	4	29	61.7
+"Alliance"	"R2"	"I02"	1	"0"	"NE16573"	4	30	47.6
+"Alliance"	"R2"	"I02"	1	"0"	"NE16570"	4	31	62.4
+"Alliance"	"R2"	"I02"	1	"0"	"NE16416"	4	32	58.2
+"Alliance"	"R2"	"I02"	1	"0"	"NE16445"	4	33	53.2
+"Alliance"	"R2"	"I02"	0	"GOODSTREAK"	"GOODSTREAK"	4	34	50.5
+"Alliance"	"R2"	"I02"	1	"0"	"NE16655"	4	35	58
+"Alliance"	"R1"	"I02"	1	"0"	"NE16428"	5	16	46.2
+"Alliance"	"R1"	"I02"	0	"GOODSTREAK"	"GOODSTREAK"	5	17	56.2
+"Alliance"	"R1"	"I02"	1	"0"	"NE16634"	5	18	59.9
+"Alliance"	"R1"	"I02"	1	"0"	"NE16423"	5	19	59.8
+"Alliance"	"R1"	"I02"	1	"0"	"NE16579"	5	20	68.3
+"Alliance"	"R1"	"I02"	1	"0"	"NE16521"	5	21	56.2
+"Alliance"	"R1"	"I02"	1	"0"	"NE16655"	5	22	64.8
+"Alliance"	"R1"	"I02"	1	"0"	"NE16663"	5	23	53
+"Alliance"	"R1"	"I02"	1	"0"	"NE16695"	5	24	64.4
+"Alliance"	"R1"	"I02"	1	"0"	"NE16500"	5	25	59.9
+"Alliance"	"R2"	"I02"	1	"0"	"NE16598"	5	26	73.1
+"Alliance"	"R2"	"I02"	0	"Camelot"	"Camelot"	5	27	67.5
+"Alliance"	"R2"	"I02"	1	"0"	"NE16458"	5	28	60.2
+"Alliance"	"R2"	"I02"	1	"0"	"NE16485"	5	29	61.7
+"Alliance"	"R2"	"I02"	1	"0"	"NE16661"	5	30	49.6
+"Alliance"	"R2"	"I02"	1	"0"	"NE16659"	5	31	77.4
+"Alliance"	"R2"	"I02"	1	"0"	"NE16468"	5	32	65
+"Alliance"	"R2"	"I02"	1	"0"	"NE16521"	5	33	60.6
+"Alliance"	"R2"	"I02"	1	"0"	"NE16507"	5	34	61.3
+"Alliance"	"R2"	"I02"	1	"0"	"NE16459"	5	35	55.5
+"Alliance"	"R1"	"I02"	1	"0"	"NE16653"	6	16	45.3
+"Alliance"	"R1"	"I02"	1	"0"	"NE16676"	6	17	47.9
+"Alliance"	"R1"	"I02"	1	"0"	"NE16600"	6	18	67.5
+"Alliance"	"R1"	"I02"	1	"0"	"NE16476"	6	19	52.7
+"Alliance"	"R1"	"I02"	1	"0"	"NE16656"	6	20	50.2
+"Alliance"	"R1"	"I02"	0	"Camelot"	"Camelot"	6	21	57.6
+"Alliance"	"R1"	"I02"	1	"0"	"NE16401"	6	22	62
+"Alliance"	"R1"	"I02"	1	"0"	"NE16478"	6	23	63.4
+"Alliance"	"R1"	"I02"	0	"Freeman"	"Freeman"	6	24	72.7
+"Alliance"	"R1"	"I02"	1	"0"	"NE16700"	6	25	65.8
+"Alliance"	"R2"	"I02"	1	"0"	"NE16432"	6	26	66.8
+"Alliance"	"R2"	"I02"	1	"0"	"NE16664"	6	27	59.1
+"Alliance"	"R2"	"I02"	1	"0"	"NE16601"	6	28	81.3
+"Alliance"	"R2"	"I02"	1	"0"	"NE16401"	6	29	63.7
+"Alliance"	"R2"	"I02"	1	"0"	"NE16444"	6	30	64
+"Alliance"	"R2"	"I02"	1	"0"	"NE16464"	6	31	57.5
+"Alliance"	"R2"	"I02"	0	"Freeman"	"Freeman"	6	32	80.6
+"Alliance"	"R2"	"I02"	1	"0"	"NE16558"	6	33	53.3
+"Alliance"	"R2"	"I02"	1	"0"	"NE16625"	6	34	58.5
+"Alliance"	"R2"	"I02"	1	"0"	"NE16517"	6	35	56.1
+"Alliance"	"R1"	"I03"	1	"0"	"NE16647"	7	16	58.3
+"Alliance"	"R1"	"I03"	1	"0"	"NE16412"	7	17	54.7
+"Alliance"	"R1"	"I03"	1	"0"	"NE16512"	7	18	35
+"Alliance"	"R1"	"I03"	1	"0"	"NE16616"	7	19	68.9
+"Alliance"	"R1"	"I03"	1	"0"	"NE16580V"	7	20	52.8
+"Alliance"	"R1"	"I03"	1	"0"	"NE16540"	7	21	59.9
+"Alliance"	"R1"	"I03"	1	"0"	"NE16564"	7	22	49.4
+"Alliance"	"R1"	"I03"	0	"Freeman"	"Freeman"	7	23	80.7
+"Alliance"	"R1"	"I03"	1	"0"	"NE16496"	7	24	59.7
+"Alliance"	"R1"	"I03"	1	"0"	"NE16485"	7	25	62.2
+"Alliance"	"R2"	"I03"	1	"0"	"NE16539"	7	26	70.2
+"Alliance"	"R2"	"I03"	1	"0"	"NE16493"	7	27	70
+"Alliance"	"R2"	"I03"	1	"0"	"NE16557"	7	28	60.8
+"Alliance"	"R2"	"I03"	1	"0"	"NE16494"	7	29	56.3
+"Alliance"	"R2"	"I03"	1	"0"	"NE16524"	7	30	59.3
+"Alliance"	"R2"	"I03"	1	"0"	"NE16434"	7	31	54.6
+"Alliance"	"R2"	"I03"	1	"0"	"NE16697"	7	32	54
+"Alliance"	"R2"	"I03"	1	"0"	"NE16438"	7	33	57.4
+"Alliance"	"R2"	"I03"	1	"0"	"NE16548"	7	34	62.4
+"Alliance"	"R2"	"I03"	0	"Freeman"	"Freeman"	7	35	72
+"Alliance"	"R1"	"I03"	1	"0"	"NE16621"	8	16	40.4
+"Alliance"	"R1"	"I03"	0	"GOODSTREAK"	"GOODSTREAK"	8	17	55.3
+"Alliance"	"R1"	"I03"	1	"0"	"NE16445"	8	18	50
+"Alliance"	"R1"	"I03"	1	"0"	"NE16573"	8	19	44.1
+"Alliance"	"R1"	"I03"	1	"0"	"NE16465"	8	20	57.6
+"Alliance"	"R1"	"I03"	1	"0"	"NE16518"	8	21	55
+"Alliance"	"R1"	"I03"	1	"0"	"NE16457"	8	22	51.8
+"Alliance"	"R1"	"I03"	1	"0"	"NE16437"	8	23	46.8
+"Alliance"	"R1"	"I03"	1	"0"	"NE16674"	8	24	44.8
+"Alliance"	"R1"	"I03"	1	"0"	"NE16657"	8	25	61.5
+"Alliance"	"R2"	"I03"	1	"0"	"NE16631"	8	26	65.2
+"Alliance"	"R2"	"I03"	1	"0"	"NE16604"	8	27	83
+"Alliance"	"R2"	"I03"	1	"0"	"NE16576V"	8	28	71.5
+"Alliance"	"R2"	"I03"	1	"0"	"NE16465"	8	29	75.9
+"Alliance"	"R2"	"I03"	1	"0"	"NE16556"	8	30	64.2
+"Alliance"	"R2"	"I03"	0	"GOODSTREAK"	"GOODSTREAK"	8	31	52.4
+"Alliance"	"R2"	"I03"	1	"0"	"NE16629"	8	32	67.7
+"Alliance"	"R2"	"I03"	1	"0"	"NE16471"	8	33	69.9
+"Alliance"	"R2"	"I03"	1	"0"	"NE16612"	8	34	66.5
+"Alliance"	"R2"	"I03"	1	"0"	"NE16449"	8	35	68
+"Alliance"	"R1"	"I03"	1	"0"	"NE16557"	9	16	45.4
+"Alliance"	"R1"	"I03"	1	"0"	"NE16623"	9	17	53.7
+"Alliance"	"R1"	"I03"	1	"0"	"NE16581"	9	18	61.2
+"Alliance"	"R1"	"I03"	1	"0"	"NE16686"	9	19	54.8
+"Alliance"	"R1"	"I03"	1	"0"	"NE16619"	9	20	50.4
+"Alliance"	"R1"	"I03"	0	"Camelot"	"Camelot"	9	21	60.2
+"Alliance"	"R1"	"I03"	1	"0"	"NE16693"	9	22	59.7
+"Alliance"	"R1"	"I03"	1	"0"	"NE16537"	9	23	51.8
+"Alliance"	"R1"	"I03"	1	"0"	"NE16533"	9	24	62.1
+"Alliance"	"R1"	"I03"	1	"0"	"NE16543"	9	25	70.7
+"Alliance"	"R2"	"I03"	1	"0"	"NE16679"	9	26	58
+"Alliance"	"R2"	"I03"	0	"Camelot"	"Camelot"	9	27	71.8
+"Alliance"	"R2"	"I03"	1	"0"	"NE16609V"	9	28	73.1
+"Alliance"	"R2"	"I03"	1	"0"	"NE16592"	9	29	69.5
+"Alliance"	"R2"	"I03"	1	"0"	"NE16544"	9	30	56.4
+"Alliance"	"R2"	"I03"	1	"0"	"NE16689"	9	31	58.7
+"Alliance"	"R2"	"I03"	1	"0"	"NE16531"	9	32	57.8
+"Alliance"	"R2"	"I03"	1	"0"	"NE16424"	9	33	72.6
+"Alliance"	"R2"	"I03"	1	"0"	"NE16656"	9	34	51.4
+"Alliance"	"R2"	"I03"	1	"0"	"NE16562"	9	35	65.7
+"Alliance"	"R1"	"I04"	1	"0"	"NE16472"	10	16	29
+"Alliance"	"R1"	"I04"	1	"0"	"NE16451"	10	17	80
+"Alliance"	"R1"	"I04"	1	"0"	"NE16515"	10	18	66.2
+"Alliance"	"R1"	"I04"	1	"0"	"NE16660"	10	19	74.8
+"Alliance"	"R1"	"I04"	1	"0"	"NE16596"	10	20	63.3
+"Alliance"	"R1"	"I04"	1	"0"	"NE16503V"	10	21	57.4
+"Alliance"	"R1"	"I04"	1	"0"	"NE16444"	10	22	55.1
+"Alliance"	"R1"	"I04"	1	"0"	"NE16536"	10	23	53
+"Alliance"	"R1"	"I04"	1	"0"	"NE16452"	10	24	58.1
+"Alliance"	"R1"	"I04"	0	"Camelot"	"Camelot"	10	25	67.3
+"Alliance"	"R2"	"I04"	1	"0"	"NE16641"	10	26	73.6
+"Alliance"	"R2"	"I04"	1	"0"	"NE16567"	10	27	69.7
+"Alliance"	"R2"	"I04"	1	"0"	"NE16554"	10	28	61.6
+"Alliance"	"R2"	"I04"	1	"0"	"NE16428"	10	29	40.8
+"Alliance"	"R2"	"I04"	1	"0"	"NE16673"	10	30	53.3
+"Alliance"	"R2"	"I04"	0	"Camelot"	"Camelot"	10	31	65.9
+"Alliance"	"R2"	"I04"	1	"0"	"NE16684"	10	32	53.8
+"Alliance"	"R2"	"I04"	1	"0"	"NE16417"	10	33	57
+"Alliance"	"R2"	"I04"	1	"0"	"NE16662"	10	34	55.1
+"Alliance"	"R2"	"I04"	1	"0"	"NE16439"	10	35	58.9
+"Alliance"	"R1"	"I04"	1	"0"	"NE16459"	11	16	52.9
+"Alliance"	"R1"	"I04"	1	"0"	"NE16520"	11	17	58.3
+"Alliance"	"R1"	"I04"	1	"0"	"NE16662"	11	18	52.5
+"Alliance"	"R1"	"I04"	1	"0"	"NE16644"	11	19	50.6
+"Alliance"	"R1"	"I04"	0	"Freeman"	"Freeman"	11	20	77.2
+"Alliance"	"R1"	"I04"	1	"0"	"NE16528"	11	21	55.7
+"Alliance"	"R1"	"I04"	1	"0"	"NE16546"	11	22	66
+"Alliance"	"R1"	"I04"	1	"0"	"NE16613"	11	23	47.8
+"Alliance"	"R1"	"I04"	1	"0"	"NE16524"	11	24	48.6
+"Alliance"	"R1"	"I04"	1	"0"	"NE16680"	11	25	66.1
+"Alliance"	"R2"	"I04"	1	"0"	"NE16686"	11	26	56.6
+"Alliance"	"R2"	"I04"	0	"Freeman"	"Freeman"	11	27	86.8
+"Alliance"	"R2"	"I04"	1	"0"	"NE16574"	11	28	57.5
+"Alliance"	"R2"	"I04"	1	"0"	"NE16640"	11	29	70.4
+"Alliance"	"R2"	"I04"	1	"0"	"NE16608"	11	30	52.9
+"Alliance"	"R2"	"I04"	1	"0"	"NE16550"	11	31	55.6
+"Alliance"	"R2"	"I04"	1	"0"	"NE16510"	11	32	49.1
+"Alliance"	"R2"	"I04"	0	"GOODSTREAK"	"GOODSTREAK"	11	33	52.6
+"Alliance"	"R2"	"I04"	1	"0"	"NE16698"	11	34	41.5
+"Alliance"	"R2"	"I04"	1	"0"	"NE16564"	11	35	44.3
+"Alliance"	"R1"	"I04"	1	"0"	"NE16598"	12	16	65
+"Alliance"	"R1"	"I04"	1	"0"	"NE16495"	12	17	59.2
+"Alliance"	"R1"	"I04"	0	"GOODSTREAK"	"GOODSTREAK"	12	18	53.5
+"Alliance"	"R1"	"I04"	1	"0"	"NE16699"	12	19	66.5
+"Alliance"	"R1"	"I04"	1	"0"	"NE16638"	12	20	51.6
+"Alliance"	"R1"	"I04"	1	"0"	"NE16402"	12	21	65.1
+"Alliance"	"R1"	"I04"	1	"0"	"NE16688"	12	22	62.9
+"Alliance"	"R1"	"I04"	1	"0"	"NE16483"	12	23	50.7
+"Alliance"	"R1"	"I04"	1	"0"	"NE16529"	12	24	50.5
+"Alliance"	"R1"	"I04"	1	"0"	"NE16561"	12	25	65.4
+"Alliance"	"R2"	"I04"	1	"0"	"NE16668"	12	26	65.8
+"Alliance"	"R2"	"I04"	1	"0"	"NE16536"	12	27	59.4
+"Alliance"	"R2"	"I04"	1	"0"	"NE16699"	12	28	75.9
+"Alliance"	"R2"	"I04"	1	"0"	"NE16647"	12	29	62.3
+"Alliance"	"R2"	"I04"	1	"0"	"NE16593"	12	30	81.4
+"Alliance"	"R2"	"I04"	1	"0"	"NE16555"	12	31	59.8
+"Alliance"	"R2"	"I04"	1	"0"	"NE16519"	12	32	65.8
+"Alliance"	"R2"	"I04"	1	"0"	"NE16522"	12	33	58.9
+"Alliance"	"R2"	"I04"	1	"0"	"NE16535"	12	34	43.1
+"Alliance"	"R2"	"I04"	1	"0"	"NE16685"	12	35	60.3
+"Alliance"	"R1"	"I05"	1	"0"	"NE16692"	13	16	39.4
+"Alliance"	"R1"	"I05"	1	"0"	"NE16484"	13	17	51.9
+"Alliance"	"R1"	"I05"	1	"0"	"NE16462"	13	18	41.3
+"Alliance"	"R1"	"I05"	1	"0"	"NE16542"	13	19	53.6
+"Alliance"	"R1"	"I05"	1	"0"	"NE16614"	13	20	58.5
+"Alliance"	"R1"	"I05"	1	"0"	"NE16610"	13	21	53
+"Alliance"	"R1"	"I05"	0	"GOODSTREAK"	"GOODSTREAK"	13	22	57
+"Alliance"	"R1"	"I05"	1	"0"	"NE16436"	13	23	60.3
+"Alliance"	"R1"	"I05"	1	"0"	"NE16449"	13	24	63.1
+"Alliance"	"R1"	"I05"	1	"0"	"NE16643"	13	25	58.7
+"Alliance"	"R2"	"I05"	1	"0"	"NE16478"	13	26	74.4
+"Alliance"	"R2"	"I05"	1	"0"	"NE16482"	13	27	60.7
+"Alliance"	"R2"	"I05"	1	"0"	"NE16580V"	13	28	61
+"Alliance"	"R2"	"I05"	1	"0"	"NE16407"	13	29	52.6
+"Alliance"	"R2"	"I05"	1	"0"	"NE16615"	13	30	62.8
+"Alliance"	"R2"	"I05"	1	"0"	"NE16611"	13	31	70.7
+"Alliance"	"R2"	"I05"	1	"0"	"NE16479"	13	32	77.8
+"Alliance"	"R2"	"I05"	1	"0"	"NE16692"	13	33	34.1
+"Alliance"	"R2"	"I05"	1	"0"	"NE16525"	13	34	48.3
+"Alliance"	"R2"	"I05"	1	"0"	"NE16657"	13	35	54.7
+"Alliance"	"R1"	"I05"	1	"0"	"NE16604"	14	16	68.4
+"Alliance"	"R1"	"I05"	1	"0"	"NE16526"	14	17	58.8
+"Alliance"	"R1"	"I05"	1	"0"	"NE16560"	14	18	75.6
+"Alliance"	"R1"	"I05"	1	"0"	"NE16648"	14	19	62.3
+"Alliance"	"R1"	"I05"	1	"0"	"NE16414"	14	20	57.9
+"Alliance"	"R1"	"I05"	1	"0"	"NE16659"	14	21	70.7
+"Alliance"	"R1"	"I05"	1	"0"	"NE16519"	14	22	58.4
+"Alliance"	"R1"	"I05"	1	"0"	"NE16583"	14	23	44.4
+"Alliance"	"R1"	"I05"	1	"0"	"NE16466"	14	24	50
+"Alliance"	"R1"	"I05"	1	"0"	"NE16420"	14	25	38
+"Alliance"	"R2"	"I05"	0	"GOODSTREAK"	"GOODSTREAK"	14	26	52.6
+"Alliance"	"R2"	"I05"	1	"0"	"NE16518"	14	27	65.7
+"Alliance"	"R2"	"I05"	1	"0"	"NE16617"	14	28	64.2
+"Alliance"	"R2"	"I05"	1	"0"	"NE16457"	14	29	49.2
+"Alliance"	"R2"	"I05"	1	"0"	"NE16463"	14	30	52.3
+"Alliance"	"R2"	"I05"	1	"0"	"NE16545"	14	31	65.5
+"Alliance"	"R2"	"I05"	1	"0"	"NE16421"	14	32	66.6
+"Alliance"	"R2"	"I05"	1	"0"	"NE16566"	14	33	63.8
+"Alliance"	"R2"	"I05"	1	"0"	"NE16414"	14	34	69.8
+"Alliance"	"R2"	"I05"	1	"0"	"NE16508"	14	35	54.6
+"Alliance"	"R1"	"I05"	0	"Camelot"	"Camelot"	15	16	66.5
+"Alliance"	"R1"	"I05"	1	"0"	"NE16535"	15	17	40.5
+"Alliance"	"R1"	"I05"	1	"0"	"NE16461"	15	18	44.9
+"Alliance"	"R1"	"I05"	1	"0"	"NE16527"	15	19	59.7
+"Alliance"	"R1"	"I05"	1	"0"	"NE16607"	15	20	56
+"Alliance"	"R1"	"I05"	1	"0"	"NE16697"	15	21	53.7
+"Alliance"	"R1"	"I05"	1	"0"	"NE16625"	15	22	63.9
+"Alliance"	"R1"	"I05"	1	"0"	"NE16549"	15	23	58.2
+"Alliance"	"R1"	"I05"	1	"0"	"NE16443"	15	24	70.2
+"Alliance"	"R1"	"I05"	0	"Freeman"	"Freeman"	15	25	82.1
+"Alliance"	"R2"	"I05"	1	"0"	"NE16600"	15	26	77.3
+"Alliance"	"R2"	"I05"	1	"0"	"NE16406"	15	27	75.4
+"Alliance"	"R2"	"I05"	1	"0"	"NE16511"	15	28	72.2
+"Alliance"	"R2"	"I05"	1	"0"	"NE16666"	15	29	64.4
+"Alliance"	"R2"	"I05"	1	"0"	"NE16591"	15	30	88.1
+"Alliance"	"R2"	"I05"	1	"0"	"NE16415"	15	31	NA
+"Alliance"	"R2"	"I05"	0	"Camelot"	"Camelot"	15	32	63
+"Alliance"	"R2"	"I05"	0	"Freeman"	"Freeman"	15	33	86.5
+"Alliance"	"R2"	"I05"	1	"0"	"NE16635"	15	34	68.4
+"Alliance"	"R2"	"I05"	1	"0"	"NE16587"	15	35	79.5
+"Alliance"	"R1"	"I06"	1	"0"	"NE16431"	16	16	52.9
+"Alliance"	"R1"	"I06"	1	"0"	"NE16696"	16	17	67.7
+"Alliance"	"R1"	"I06"	0	"Freeman"	"Freeman"	16	18	72
+"Alliance"	"R1"	"I06"	1	"0"	"NE16603"	16	19	45.4
+"Alliance"	"R1"	"I06"	1	"0"	"NE16424"	16	20	59.9
+"Alliance"	"R1"	"I06"	0	"GOODSTREAK"	"GOODSTREAK"	16	21	46.1
+"Alliance"	"R1"	"I06"	1	"0"	"NE16534"	16	22	45.9
+"Alliance"	"R1"	"I06"	0	"Camelot"	"Camelot"	16	23	54
+"Alliance"	"R1"	"I06"	1	"0"	"NE16531"	16	24	49.8
+"Alliance"	"R1"	"I06"	1	"0"	"NE16609V"	16	25	64.8
+"Alliance"	"R2"	"I06"	1	"0"	"NE16418"	16	26	69.2
+"Alliance"	"R2"	"I06"	1	"0"	"NE16596"	16	27	74.1
+"Alliance"	"R2"	"I06"	1	"0"	"NE16403"	16	28	66.1
+"Alliance"	"R2"	"I06"	1	"0"	"NE16420"	16	29	44.4
+"Alliance"	"R2"	"I06"	1	"0"	"NE16622"	16	30	34.5
+"Alliance"	"R2"	"I06"	1	"0"	"NE16503V"	16	31	NA
+"Alliance"	"R2"	"I06"	1	"0"	"NE16614"	16	32	57.1
+"Alliance"	"R2"	"I06"	1	"0"	"NE16470"	16	33	49.9
+"Alliance"	"R2"	"I06"	1	"0"	"NE16486"	16	34	59.1
+"Alliance"	"R2"	"I06"	1	"0"	"NE16672"	16	35	65.4
+"Alliance"	"R1"	"I06"	1	"0"	"NE16683"	17	16	55
+"Alliance"	"R1"	"I06"	1	"0"	"NE16446"	17	17	55.8
+"Alliance"	"R1"	"I06"	1	"0"	"NE16602"	17	18	53.1
+"Alliance"	"R1"	"I06"	1	"0"	"NE16635"	17	19	47.5
+"Alliance"	"R1"	"I06"	1	"0"	"NE16550"	17	20	49.1
+"Alliance"	"R1"	"I06"	1	"0"	"NE16666"	17	21	39.2
+"Alliance"	"R1"	"I06"	1	"0"	"NE16681"	17	22	42.7
+"Alliance"	"R1"	"I06"	1	"0"	"NE16413"	17	23	42.7
+"Alliance"	"R1"	"I06"	1	"0"	"NE16429"	17	24	56.9
+"Alliance"	"R1"	"I06"	1	"0"	"NE16475"	17	25	60.3
+"Alliance"	"R2"	"I06"	0	"Freeman"	"Freeman"	17	26	84.3
+"Alliance"	"R2"	"I06"	1	"0"	"NE16443"	17	27	73.9
+"Alliance"	"R2"	"I06"	1	"0"	"NE16490"	17	28	51.6
+"Alliance"	"R2"	"I06"	1	"0"	"NE16462"	17	29	48.1
+"Alliance"	"R2"	"I06"	0	"GOODSTREAK"	"GOODSTREAK"	17	30	53.9
+"Alliance"	"R2"	"I06"	1	"0"	"NE16674"	17	31	NA
+"Alliance"	"R2"	"I06"	1	"0"	"NE16675"	17	32	34.7
+"Alliance"	"R2"	"I06"	1	"0"	"NE16636"	17	33	71.5
+"Alliance"	"R2"	"I06"	1	"0"	"NE16476"	17	34	59.5
+"Alliance"	"R2"	"I06"	1	"0"	"NE16466"	17	35	65.4
+"Alliance"	"R1"	"I06"	1	"0"	"NE16468"	18	16	74.9
+"Alliance"	"R1"	"I06"	1	"0"	"NE16622"	18	17	39
+"Alliance"	"R1"	"I06"	1	"0"	"NE16467"	18	18	61.9
+"Alliance"	"R1"	"I06"	1	"0"	"NE16545"	18	19	60.5
+"Alliance"	"R1"	"I06"	1	"0"	"NE16541"	18	20	57.2
+"Alliance"	"R1"	"I06"	1	"0"	"NE16448"	18	21	56
+"Alliance"	"R1"	"I06"	1	"0"	"NE16685"	18	22	57.2
+"Alliance"	"R1"	"I06"	1	"0"	"NE16438"	18	23	42.7
+"Alliance"	"R1"	"I06"	1	"0"	"NE16690"	18	24	60.4
+"Alliance"	"R1"	"I06"	1	"0"	"NE16460"	18	25	54
+"Alliance"	"R2"	"I06"	1	"0"	"NE16409"	18	26	58
+"Alliance"	"R2"	"I06"	1	"0"	"NE16526"	18	27	58.6
+"Alliance"	"R2"	"I06"	1	"0"	"NE16695"	18	28	67.4
+"Alliance"	"R2"	"I06"	1	"0"	"NE16483"	18	29	62.4
+"Alliance"	"R2"	"I06"	1	"0"	"NE16571"	18	30	70
+"Alliance"	"R2"	"I06"	1	"0"	"NE16585"	18	31	46.7
+"Alliance"	"R2"	"I06"	1	"0"	"NE16472"	18	32	30.5
+"Alliance"	"R2"	"I06"	1	"0"	"NE16552"	18	33	48
+"Alliance"	"R2"	"I06"	1	"0"	"NE16654"	18	34	42
+"Alliance"	"R2"	"I06"	0	"Camelot"	"Camelot"	18	35	66.6
+"Alliance"	"R1"	"I07"	1	"0"	"NE16658"	19	16	67.1
+"Alliance"	"R1"	"I07"	1	"0"	"NE16513"	19	17	54.7
+"Alliance"	"R1"	"I07"	1	"0"	"NE16601"	19	18	73.9
+"Alliance"	"R1"	"I07"	1	"0"	"NE16522"	19	19	57.9
+"Alliance"	"R1"	"I07"	1	"0"	"NE16463"	19	20	42.7
+"Alliance"	"R1"	"I07"	1	"0"	"NE16645"	19	21	41
+"Alliance"	"R1"	"I07"	0	"Camelot"	"Camelot"	19	22	56.8
+"Alliance"	"R1"	"I07"	1	"0"	"NE16671"	19	23	60
+"Alliance"	"R1"	"I07"	0	"Freeman"	"Freeman"	19	24	76.6
+"Alliance"	"R1"	"I07"	1	"0"	"NE16567"	19	25	66.7
+"Alliance"	"R2"	"I07"	0	"Camelot"	"Camelot"	19	26	73.8
+"Alliance"	"R2"	"I07"	1	"0"	"NE16537"	19	27	55
+"Alliance"	"R2"	"I07"	1	"0"	"NE16634"	19	28	70.7
+"Alliance"	"R2"	"I07"	1	"0"	"NE16658"	19	29	80.3
+"Alliance"	"R2"	"I07"	1	"0"	"NE16651"	19	30	49.3
+"Alliance"	"R2"	"I07"	1	"0"	"NE16410"	19	31	63.4
+"Alliance"	"R2"	"I07"	1	"0"	"NE16605"	19	32	76.8
+"Alliance"	"R2"	"I07"	1	"0"	"NE16441"	19	33	59.3
+"Alliance"	"R2"	"I07"	1	"0"	"NE16527"	19	34	65
+"Alliance"	"R2"	"I07"	1	"0"	"NE16569"	19	35	53.4
+"Alliance"	"R1"	"I07"	1	"0"	"NE16418"	20	16	60.5
+"Alliance"	"R1"	"I07"	1	"0"	"NE16661"	20	17	47
+"Alliance"	"R1"	"I07"	1	"0"	"NE16675"	20	18	30.8
+"Alliance"	"R1"	"I07"	1	"0"	"NE16632"	20	19	58
+"Alliance"	"R1"	"I07"	1	"0"	"NE16624"	20	20	54.2
+"Alliance"	"R1"	"I07"	1	"0"	"NE16447"	20	21	47.3
+"Alliance"	"R1"	"I07"	1	"0"	"NE16502"	20	22	55.7
+"Alliance"	"R1"	"I07"	1	"0"	"NE16566"	20	23	57
+"Alliance"	"R1"	"I07"	1	"0"	"NE16691"	20	24	51.1
+"Alliance"	"R1"	"I07"	1	"0"	"NE16511"	20	25	58.3
+"Alliance"	"R2"	"I07"	1	"0"	"NE16603"	20	26	54.2
+"Alliance"	"R2"	"I07"	1	"0"	"NE16650"	20	27	51.8
+"Alliance"	"R2"	"I07"	1	"0"	"NE16460"	20	28	49.3
+"Alliance"	"R2"	"I07"	1	"0"	"NE16412"	20	29	75.3
+"Alliance"	"R2"	"I07"	1	"0"	"NE16534"	20	30	67.6
+"Alliance"	"R2"	"I07"	1	"0"	"NE16683"	20	31	70.7
+"Alliance"	"R2"	"I07"	1	"0"	"NE16586"	20	32	61.1
+"Alliance"	"R2"	"I07"	1	"0"	"NE16660"	20	33	76.1
+"Alliance"	"R2"	"I07"	1	"0"	"NE16602"	20	34	67.4
+"Alliance"	"R2"	"I07"	1	"0"	"NE16543"	20	35	59.6
+"Alliance"	"R1"	"I07"	0	"GOODSTREAK"	"GOODSTREAK"	21	16	54.7
+"Alliance"	"R1"	"I07"	1	"0"	"NE16509"	21	17	51.3
+"Alliance"	"R1"	"I07"	1	"0"	"NE16490"	21	18	48.6
+"Alliance"	"R1"	"I07"	1	"0"	"NE16480"	21	19	63.6
+"Alliance"	"R1"	"I07"	1	"0"	"NE16591"	21	20	63.9
+"Alliance"	"R1"	"I07"	1	"0"	"NE16523"	21	21	38.6
+"Alliance"	"R1"	"I07"	1	"0"	"NE16407"	21	22	36.7
+"Alliance"	"R1"	"I07"	1	"0"	"NE16595"	21	23	68.5
+"Alliance"	"R1"	"I07"	1	"0"	"NE16544"	21	24	55.8
+"Alliance"	"R1"	"I07"	1	"0"	"NE16470"	21	25	52.4
+"Alliance"	"R2"	"I07"	1	"0"	"NE16572"	21	26	40
+"Alliance"	"R2"	"I07"	1	"0"	"NE16648"	21	27	68
+"Alliance"	"R2"	"I07"	1	"0"	"NE16687"	21	28	70.8
+"Alliance"	"R2"	"I07"	1	"0"	"NE16667"	21	29	70.6
+"Alliance"	"R2"	"I07"	1	"0"	"NE16469"	21	30	66.1
+"Alliance"	"R2"	"I07"	1	"0"	"NE16665"	21	31	57.2
+"Alliance"	"R2"	"I07"	0	"Freeman"	"Freeman"	21	32	84.7
+"Alliance"	"R2"	"I07"	1	"0"	"NE16422"	21	33	74.1
+"Alliance"	"R2"	"I07"	1	"0"	"NE16696"	21	34	67.5
+"Alliance"	"R2"	"I07"	0	"GOODSTREAK"	"GOODSTREAK"	21	35	57.6
+"Alliance"	"R1"	"I08"	0	"GOODSTREAK"	"GOODSTREAK"	22	16	50.4
+"Alliance"	"R1"	"I08"	1	"0"	"NE16569"	22	17	53.4
+"Alliance"	"R1"	"I08"	1	"0"	"NE16454"	22	18	51.2
+"Alliance"	"R1"	"I08"	1	"0"	"NE16562"	22	19	63.9
+"Alliance"	"R1"	"I08"	1	"0"	"NE16668"	22	20	42.4
+"Alliance"	"R1"	"I08"	1	"0"	"NE16458"	22	21	45
+"Alliance"	"R1"	"I08"	1	"0"	"NE16504"	22	22	67.1
+"Alliance"	"R1"	"I08"	1	"0"	"NE16606"	22	23	69.8
+"Alliance"	"R1"	"I08"	1	"0"	"NE16498"	22	24	53.7
+"Alliance"	"R1"	"I08"	1	"0"	"NE16639"	22	25	70.2
+"Alliance"	"R2"	"I08"	1	"0"	"NE16446"	22	26	64.1
+"Alliance"	"R2"	"I08"	0	"GOODSTREAK"	"GOODSTREAK"	22	27	61.8
+"Alliance"	"R2"	"I08"	1	"0"	"NE16467"	22	28	76.9
+"Alliance"	"R2"	"I08"	1	"0"	"NE16461"	22	29	61.3
+"Alliance"	"R2"	"I08"	1	"0"	"NE16502"	22	30	60.4
+"Alliance"	"R2"	"I08"	1	"0"	"NE16619"	22	31	72.3
+"Alliance"	"R2"	"I08"	1	"0"	"NE16475"	22	32	64.9
+"Alliance"	"R2"	"I08"	1	"0"	"NE16512"	22	33	30.7
+"Alliance"	"R2"	"I08"	1	"0"	"NE16492"	22	34	52
+"Alliance"	"R2"	"I08"	1	"0"	"NE16630"	22	35	65.1
+"Alliance"	"R1"	"I08"	1	"0"	"NE16629"	23	16	49.1
+"Alliance"	"R1"	"I08"	1	"0"	"NE16477"	23	17	56
+"Alliance"	"R1"	"I08"	1	"0"	"NE16456"	23	18	45.9
+"Alliance"	"R1"	"I08"	1	"0"	"NE16605"	23	19	58.1
+"Alliance"	"R1"	"I08"	1	"0"	"NE16689"	23	20	47.4
+"Alliance"	"R1"	"I08"	0	"Camelot"	"Camelot"	23	21	53.4
+"Alliance"	"R1"	"I08"	1	"0"	"NE16664"	23	22	45.5
+"Alliance"	"R1"	"I08"	1	"0"	"NE16628"	23	23	58
+"Alliance"	"R1"	"I08"	0	"Freeman"	"Freeman"	23	24	83.1
+"Alliance"	"R1"	"I08"	1	"0"	"NE16576V"	23	25	63.4
+"Alliance"	"R2"	"I08"	1	"0"	"NE16645"	23	26	55.6
+"Alliance"	"R2"	"I08"	1	"0"	"NE16691"	23	27	66.9
+"Alliance"	"R2"	"I08"	1	"0"	"NE16529"	23	28	63.3
+"Alliance"	"R2"	"I08"	1	"0"	"NE16595"	23	29	80.8
+"Alliance"	"R2"	"I08"	1	"0"	"NE16452"	23	30	67.4
+"Alliance"	"R2"	"I08"	1	"0"	"NE16509"	23	31	79.3
+"Alliance"	"R2"	"I08"	0	"Camelot"	"Camelot"	23	32	74.2
+"Alliance"	"R2"	"I08"	1	"0"	"NE16523"	23	33	49.3
+"Alliance"	"R2"	"I08"	1	"0"	"NE16610"	23	34	69.6
+"Alliance"	"R2"	"I08"	1	"0"	"NE16533"	23	35	72.2
+"Alliance"	"R1"	"I08"	1	"0"	"NE16494"	24	16	59.2
+"Alliance"	"R1"	"I08"	1	"0"	"NE16491"	24	17	57.7
+"Alliance"	"R1"	"I08"	1	"0"	"NE16493"	24	18	51.1
+"Alliance"	"R1"	"I08"	1	"0"	"NE16684"	24	19	49.4
+"Alliance"	"R1"	"I08"	1	"0"	"NE16415"	24	20	50.9
+"Alliance"	"R1"	"I08"	1	"0"	"NE16554"	24	21	51.3
+"Alliance"	"R1"	"I08"	1	"0"	"NE16617"	24	22	53
+"Alliance"	"R1"	"I08"	1	"0"	"NE16592"	24	23	51
+"Alliance"	"R1"	"I08"	1	"0"	"NE16474"	24	24	21.1
+"Alliance"	"R1"	"I08"	1	"0"	"NE16501"	24	25	73.6
+"Alliance"	"R2"	"I08"	1	"0"	"NE16589"	24	26	73.9
+"Alliance"	"R2"	"I08"	1	"0"	"NE16501"	24	27	78
+"Alliance"	"R2"	"I08"	1	"0"	"NE16643"	24	28	76.5
+"Alliance"	"R2"	"I08"	1	"0"	"NE16430"	24	29	44.6
+"Alliance"	"R2"	"I08"	1	"0"	"NE16429"	24	30	75.6
+"Alliance"	"R2"	"I08"	1	"0"	"NE16649"	24	31	53.9
+"Alliance"	"R2"	"I08"	1	"0"	"NE16578"	24	32	85.1
+"Alliance"	"R2"	"I08"	1	"0"	"NE16644"	24	33	58.5
+"Alliance"	"R2"	"I08"	1	"0"	"NE16516"	24	34	65.2
+"Alliance"	"R2"	"I08"	0	"Freeman"	"Freeman"	24	35	94.5
+"Alliance"	"R1"	"I09"	1	"0"	"NE16641"	25	16	64.3
+"Alliance"	"R1"	"I09"	1	"0"	"NE16430"	25	17	33.3
+"Alliance"	"R1"	"I09"	1	"0"	"NE16669"	25	18	41.7
+"Alliance"	"R1"	"I09"	1	"0"	"NE16563V"	25	19	50
+"Alliance"	"R1"	"I09"	1	"0"	"NE16539"	25	20	42.4
+"Alliance"	"R1"	"I09"	1	"0"	"NE16442"	25	21	46.7
+"Alliance"	"R1"	"I09"	1	"0"	"NE16556"	25	22	56.7
+"Alliance"	"R1"	"I09"	1	"0"	"NE16453"	25	23	57.4
+"Alliance"	"R1"	"I09"	1	"0"	"NE16479"	25	24	67.7
+"Alliance"	"R1"	"I09"	1	"0"	"NE16677"	25	25	58.2
+"Alliance"	"R2"	"I09"	1	"0"	"NE16653"	25	26	41.6
+"Alliance"	"R2"	"I09"	1	"0"	"NE16549"	25	27	75.1
+"Alliance"	"R2"	"I09"	1	"0"	"NE16627"	25	28	77
+"Alliance"	"R2"	"I09"	1	"0"	"NE16402"	25	29	82.9
+"Alliance"	"R2"	"I09"	1	"0"	"NE16541"	25	30	65.8
+"Alliance"	"R2"	"I09"	1	"0"	"NE16436"	25	31	67.8
+"Alliance"	"R2"	"I09"	1	"0"	"NE16620"	25	32	73.4
+"Alliance"	"R2"	"I09"	1	"0"	"NE16700"	25	33	68.4
+"Alliance"	"R2"	"I09"	1	"0"	"NE16693"	25	34	56
+"Alliance"	"R2"	"I09"	1	"0"	"NE16628"	25	35	56.1
+"Alliance"	"R1"	"I09"	1	"0"	"NE16441"	26	16	54.3
+"Alliance"	"R1"	"I09"	1	"0"	"NE16497"	26	17	68.9
+"Alliance"	"R1"	"I09"	1	"0"	"NE16582"	26	18	54.9
+"Alliance"	"R1"	"I09"	1	"0"	"NE16611"	26	19	56.4
+"Alliance"	"R1"	"I09"	1	"0"	"NE16552"	26	20	45.1
+"Alliance"	"R1"	"I09"	1	"0"	"NE16409"	26	21	50.4
+"Alliance"	"R1"	"I09"	1	"0"	"NE16589"	26	22	60.3
+"Alliance"	"R1"	"I09"	1	"0"	"NE16492"	26	23	46.2
+"Alliance"	"R1"	"I09"	1	"0"	"NE16631"	26	24	54.5
+"Alliance"	"R1"	"I09"	1	"0"	"NE16651"	26	25	40.9
+"Alliance"	"R2"	"I09"	1	"0"	"NE16669"	26	26	58.7
+"Alliance"	"R2"	"I09"	1	"0"	"NE16690"	26	27	72.2
+"Alliance"	"R2"	"I09"	1	"0"	"NE16505"	26	28	50.1
+"Alliance"	"R2"	"I09"	1	"0"	"NE16616"	26	29	78.2
+"Alliance"	"R2"	"I09"	1	"0"	"NE16688"	26	30	72.6
+"Alliance"	"R2"	"I09"	1	"0"	"NE16561"	26	31	70
+"Alliance"	"R2"	"I09"	1	"0"	"NE16498"	26	32	63.6
+"Alliance"	"R2"	"I09"	1	"0"	"NE16477"	26	33	66.7
+"Alliance"	"R2"	"I09"	1	"0"	"NE16528"	26	34	67
+"Alliance"	"R2"	"I09"	1	"0"	"NE16582"	26	35	59.3
+"Alliance"	"R1"	"I09"	1	"0"	"NE16667"	27	16	51.8
+"Alliance"	"R1"	"I09"	0	"Freeman"	"Freeman"	27	17	62.7
+"Alliance"	"R1"	"I09"	1	"0"	"NE16577"	27	18	39.8
+"Alliance"	"R1"	"I09"	1	"0"	"NE16422"	27	19	48.2
+"Alliance"	"R1"	"I09"	1	"0"	"NE16505"	27	20	36.2
+"Alliance"	"R1"	"I09"	0	"GOODSTREAK"	"GOODSTREAK"	27	21	46.7
+"Alliance"	"R1"	"I09"	1	"0"	"NE16419"	27	22	44.3
+"Alliance"	"R1"	"I09"	1	"0"	"NE16637"	27	23	50.2
+"Alliance"	"R1"	"I09"	1	"0"	"NE16574"	27	24	50.8
+"Alliance"	"R1"	"I09"	0	"Camelot"	"Camelot"	27	25	64.1
+"Alliance"	"R2"	"I09"	1	"0"	"NE16583"	27	26	57.9
+"Alliance"	"R2"	"I09"	0	"Freeman"	"Freeman"	27	27	87.6
+"Alliance"	"R2"	"I09"	1	"0"	"NE16606"	27	28	82
+"Alliance"	"R2"	"I09"	1	"0"	"NE16497"	27	29	68.4
+"Alliance"	"R2"	"I09"	0	"GOODSTREAK"	"GOODSTREAK"	27	30	55.2
+"Alliance"	"R2"	"I09"	1	"0"	"NE16437"	27	31	42.2
+"Alliance"	"R2"	"I09"	1	"0"	"NE16594"	27	32	57.4
+"Alliance"	"R2"	"I09"	1	"0"	"NE16568"	27	33	48.1
+"Alliance"	"R2"	"I09"	1	"0"	"NE16588"	27	34	66.2
+"Alliance"	"R2"	"I09"	0	"Camelot"	"Camelot"	27	35	61.7
+"Alliance"	"R1"	"I10"	1	"0"	"NE16486"	28	16	58.8
+"Alliance"	"R1"	"I10"	0	"Camelot"	"Camelot"	28	17	61
+"Alliance"	"R1"	"I10"	1	"0"	"NE16642"	28	18	50
+"Alliance"	"R1"	"I10"	1	"0"	"NE16507"	28	19	44.5
+"Alliance"	"R1"	"I10"	1	"0"	"NE16440"	28	20	59.3
+"Alliance"	"R1"	"I10"	1	"0"	"NE16672"	28	21	57
+"Alliance"	"R1"	"I10"	1	"0"	"NE16587"	28	22	56.2
+"Alliance"	"R1"	"I10"	1	"0"	"NE16517"	28	23	63.1
+"Alliance"	"R1"	"I10"	1	"0"	"NE16608"	28	24	49.6
+"Alliance"	"R1"	"I10"	1	"0"	"NE16435"	28	25	46.7
+"Alliance"	"R2"	"I10"	1	"0"	"NE16642"	28	26	62.6
+"Alliance"	"R2"	"I10"	1	"0"	"NE16560"	28	27	80.7
+"Alliance"	"R2"	"I10"	1	"0"	"NE16680"	28	28	76.2
+"Alliance"	"R2"	"I10"	1	"0"	"NE16676"	28	29	49.8
+"Alliance"	"R2"	"I10"	1	"0"	"NE16632"	28	30	65.6
+"Alliance"	"R2"	"I10"	1	"0"	"NE16442"	28	31	59.5
+"Alliance"	"R2"	"I10"	1	"0"	"NE16440"	28	32	66.8
+"Alliance"	"R2"	"I10"	1	"0"	"NE16495"	28	33	62.3
+"Alliance"	"R2"	"I10"	1	"0"	"NE16427"	28	34	58.9
+"Alliance"	"R2"	"I10"	1	"0"	"NE16456"	28	35	49
+"Alliance"	"R1"	"I10"	1	"0"	"NE16434"	29	16	50
+"Alliance"	"R1"	"I10"	1	"0"	"NE16640"	29	17	57.7
+"Alliance"	"R1"	"I10"	1	"0"	"NE16421"	29	18	49.2
+"Alliance"	"R1"	"I10"	1	"0"	"NE16673"	29	19	44.5
+"Alliance"	"R1"	"I10"	1	"0"	"NE16439"	29	20	44
+"Alliance"	"R1"	"I10"	1	"0"	"NE16508"	29	21	41.7
+"Alliance"	"R1"	"I10"	1	"0"	"NE16488"	29	22	52.9
+"Alliance"	"R1"	"I10"	1	"0"	"NE16593"	29	23	67.9
+"Alliance"	"R1"	"I10"	0	"Freeman"	"Freeman"	29	24	74.9
+"Alliance"	"R1"	"I10"	1	"0"	"NE16427"	29	25	50.3
+"Alliance"	"R2"	"I10"	1	"0"	"NE16681"	29	26	65.1
+"Alliance"	"R2"	"I10"	1	"0"	"NE16575"	29	27	78.8
+"Alliance"	"R2"	"I10"	1	"0"	"NE16607"	29	28	74.4
+"Alliance"	"R2"	"I10"	0	"Camelot"	"Camelot"	29	29	71.9
+"Alliance"	"R2"	"I10"	1	"0"	"NE16425"	29	30	73.5
+"Alliance"	"R2"	"I10"	1	"0"	"NE16453"	29	31	66.3
+"Alliance"	"R2"	"I10"	1	"0"	"NE16491"	29	32	57.2
+"Alliance"	"R2"	"I10"	1	"0"	"NE16454"	29	33	60
+"Alliance"	"R2"	"I10"	1	"0"	"NE16553"	29	34	70.4
+"Alliance"	"R2"	"I10"	0	"Freeman"	"Freeman"	29	35	73.7
+"Alliance"	"R1"	"I10"	1	"0"	"NE16571"	30	16	67
+"Alliance"	"R1"	"I10"	1	"0"	"NE16620"	30	17	57
+"Alliance"	"R1"	"I10"	1	"0"	"NE16585"	30	18	37
+"Alliance"	"R1"	"I10"	1	"0"	"NE16416"	30	19	46.5
+"Alliance"	"R1"	"I10"	0	"GOODSTREAK"	"GOODSTREAK"	30	20	44.1
+"Alliance"	"R1"	"I10"	1	"0"	"NE16687"	30	21	47.5
+"Alliance"	"R1"	"I10"	1	"0"	"NE16555"	30	22	51.5
+"Alliance"	"R1"	"I10"	1	"0"	"NE16425"	30	23	60.8
+"Alliance"	"R1"	"I10"	1	"0"	"NE16432"	30	24	58.6
+"Alliance"	"R1"	"I10"	1	"0"	"NE16405"	30	25	58
+"Alliance"	"R2"	"I10"	0	"GOODSTREAK"	"GOODSTREAK"	30	26	52.8
+"Alliance"	"R2"	"I10"	1	"0"	"NE16542"	30	27	58.8
+"Alliance"	"R2"	"I10"	1	"0"	"NE16480"	30	28	70.4
+"Alliance"	"R2"	"I10"	1	"0"	"NE16413"	30	29	49.6
+"Alliance"	"R2"	"I10"	1	"0"	"NE16419"	30	30	57.7
+"Alliance"	"R2"	"I10"	1	"0"	"NE16624"	30	31	71.9
+"Alliance"	"R2"	"I10"	1	"0"	"NE16581"	30	32	65.8
+"Alliance"	"R2"	"I10"	1	"0"	"NE16488"	30	33	60.8
+"Alliance"	"R2"	"I10"	1	"0"	"NE16546"	30	34	79.4
+"Alliance"	"R2"	"I10"	1	"0"	"NE16639"	30	35	74.8
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16443"	1	11	68.4
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16656"	1	12	30.8
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16522"	1	13	44.2
+"Clay Center"	"R1"	"I01"	0	"Camelot"	"Camelot"	1	14	21.3
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16554"	1	15	36
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16606"	1	16	48.8
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16519"	1	17	36.7
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16566"	1	18	38
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16645"	1	19	31.7
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16623"	1	20	20.2
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16446"	2	11	27.4
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16592"	2	12	35.6
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16437"	2	13	34.1
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16448"	2	14	29.3
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16560"	2	15	30.3
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16671"	2	16	26
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16469"	2	17	25
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16553"	2	18	30.2
+"Clay Center"	"R1"	"I01"	0	"Freeman"	"Freeman"	2	19	32
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16619"	2	20	25.9
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16409"	3	11	42.8
+"Clay Center"	"R1"	"I01"	0	"GOODSTREAK"	"GOODSTREAK"	3	12	23.3
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16454"	3	13	36.8
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16644"	3	14	23.4
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16525"	3	15	10.4
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16511"	3	16	31.1
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16685"	3	17	31
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16622"	3	18	21.3
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16497"	3	19	27.9
+"Clay Center"	"R1"	"I01"	1	"0"	"NE16649"	3	20	24.8
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16420"	4	11	24.1
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16673"	4	12	31.8
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16546"	4	13	30.9
+"Clay Center"	"R1"	"I02"	0	"GOODSTREAK"	"GOODSTREAK"	4	14	16.2
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16504"	4	15	35
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16698"	4	16	38.4
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16580V"	4	17	32.2
+"Clay Center"	"R1"	"I02"	0	"Camelot"	"Camelot"	4	18	17.3
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16502"	4	19	28.2
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16537"	4	20	26.8
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16539"	5	11	44.5
+"Clay Center"	"R1"	"I02"	0	"Freeman"	"Freeman"	5	12	43.3
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16513"	5	13	23
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16631"	5	14	55
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16428"	5	15	33.7
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16594"	5	16	37.1
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16478"	5	17	25.9
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16604"	5	18	43.8
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16655"	5	19	27.5
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16503V"	5	20	35.5
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16482"	6	11	31
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16468"	6	12	43.3
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16642"	6	13	40.8
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16602"	6	14	27.5
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16436"	6	15	41.4
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16595"	6	16	23.7
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16410"	6	17	29.4
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16573"	6	18	18.8
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16629"	6	19	22.6
+"Clay Center"	"R1"	"I02"	1	"0"	"NE16495"	6	20	32.5
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16575"	7	11	50.3
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16697"	7	12	42
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16421"	7	13	51.1
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16552"	7	14	35.8
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16442"	7	15	29.5
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16675"	7	16	20.5
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16492"	7	17	19.9
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16647"	7	18	30
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16669"	7	19	34.2
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16458"	7	20	36.6
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16663"	8	11	45.1
+"Clay Center"	"R1"	"I03"	0	"Freeman"	"Freeman"	8	12	44
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16515"	8	13	36.7
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16405"	8	14	31
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16581"	8	15	23.5
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16529"	8	16	37
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16434"	8	17	32.1
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16627"	8	18	31.2
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16660"	8	19	35.4
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16614"	8	20	60.5
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16403"	9	11	41
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16449"	9	12	34
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16445"	9	13	47.7
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16690"	9	14	21.3
+"Clay Center"	"R1"	"I03"	0	"GOODSTREAK"	"GOODSTREAK"	9	15	16.1
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16471"	9	16	28
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16520"	9	17	45.3
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16485"	9	18	33.3
+"Clay Center"	"R1"	"I03"	0	"Camelot"	"Camelot"	9	19	15
+"Clay Center"	"R1"	"I03"	1	"0"	"NE16668"	9	20	39.1
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16425"	10	11	43.5
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16601"	10	12	40.2
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16476"	10	13	35.7
+"Clay Center"	"R1"	"I04"	0	"Camelot"	"Camelot"	10	14	20.1
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16508"	10	15	47.1
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16700"	10	16	33.4
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16489"	10	17	31.2
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16491"	10	18	32.6
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16699"	10	19	32.2
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16599"	10	20	19.2
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16467"	11	11	62.2
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16507"	11	12	37.3
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16541"	11	13	43.3
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16534"	11	14	40.5
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16681"	11	15	28.2
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16571"	11	16	35.1
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16526"	11	17	36
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16600"	11	18	25.6
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16444"	11	19	45.1
+"Clay Center"	"R1"	"I04"	0	"Freeman"	"Freeman"	11	20	45.4
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16674"	12	11	34.7
+"Clay Center"	"R1"	"I04"	0	"GOODSTREAK"	"GOODSTREAK"	12	12	21.9
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16430"	12	13	22.8
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16518"	12	14	42.7
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16564"	12	15	18.1
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16583"	12	16	50.2
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16422"	12	17	52.4
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16464"	12	18	44.9
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16501"	12	19	41.7
+"Clay Center"	"R1"	"I04"	1	"0"	"NE16505"	12	20	28.7
+"Clay Center"	"R1"	"I05"	0	"GOODSTREAK"	"GOODSTREAK"	13	11	35.5
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16576V"	13	12	42.1
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16615"	13	13	41.1
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16609V"	13	14	45.5
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16632"	13	15	44.3
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16558"	13	16	37.5
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16608"	13	17	33.9
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16641"	13	18	42.8
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16462"	13	19	32.3
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16493"	13	20	46
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16533"	14	11	66.4
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16402"	14	12	72.6
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16693"	14	13	50
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16516"	14	14	54.7
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16638"	14	15	29.6
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16620"	14	16	57.9
+"Clay Center"	"R1"	"I05"	0	"Camelot"	"Camelot"	14	17	24.3
+"Clay Center"	"R1"	"I05"	0	"Freeman"	"Freeman"	14	18	51.4
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16484"	14	19	36.6
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16607"	14	20	58.5
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16540"	15	11	64
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16612"	15	12	57.6
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16664"	15	13	35.1
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16616"	15	14	62.8
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16465"	15	15	61.4
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16589"	15	16	44.2
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16588"	15	17	44.4
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16579"	15	18	46.6
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16577"	15	19	56.2
+"Clay Center"	"R1"	"I05"	1	"0"	"NE16461"	15	20	54.2
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16415"	16	11	50.4
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16542"	16	12	38
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16625"	16	13	36.4
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16582"	16	14	54
+"Clay Center"	"R1"	"I06"	0	"Freeman"	"Freeman"	16	15	53.6
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16591"	16	16	51.2
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16688"	16	17	29.1
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16441"	16	18	29.1
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16544"	16	19	49.9
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16555"	16	20	51.3
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16611"	17	11	51.7
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16475"	17	12	29.5
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16451"	17	13	46.5
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16463"	17	14	31.9
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16562"	17	15	59.8
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16407"	17	16	21.8
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16689"	17	17	25.7
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16416"	17	18	30.7
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16648"	17	19	43.9
+"Clay Center"	"R1"	"I06"	0	"GOODSTREAK"	"GOODSTREAK"	17	20	25.3
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16695"	18	11	42.8
+"Clay Center"	"R1"	"I06"	0	"Camelot"	"Camelot"	18	12	34.8
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16459"	18	13	31.4
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16435"	18	14	38.2
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16683"	18	15	23.6
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16628"	18	16	37.8
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16585"	18	17	16.6
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16453"	18	18	48.1
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16427"	18	19	28.9
+"Clay Center"	"R1"	"I06"	1	"0"	"NE16696"	18	20	33.4
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16677"	19	11	57.1
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16624"	19	12	46.5
+"Clay Center"	"R1"	"I07"	0	"Camelot"	"Camelot"	19	13	24.4
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16486"	19	14	39.9
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16550"	19	15	43.4
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16637"	19	16	28
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16603"	19	17	33.8
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16528"	19	18	31.7
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16452"	19	19	49
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16665"	19	20	41.3
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16672"	20	11	37.1
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16570"	20	12	27.2
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16510"	20	13	33.2
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16667"	20	14	26.2
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16424"	20	15	52.6
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16639"	20	16	42.1
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16568"	20	17	33.8
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16691"	20	18	37.6
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16572"	20	19	33.9
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16536"	20	20	37.9
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16419"	21	11	24.1
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16404"	21	12	20.2
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16523"	21	13	29.9
+"Clay Center"	"R1"	"I07"	0	"Freeman"	"Freeman"	21	14	36.9
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16423"	21	15	25.9
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16617"	21	16	34.1
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16561"	21	17	21.4
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16657"	21	18	38.4
+"Clay Center"	"R1"	"I07"	1	"0"	"NE16440"	21	19	37
+"Clay Center"	"R1"	"I07"	0	"GOODSTREAK"	"GOODSTREAK"	21	20	19.8
+"Clay Center"	"R1"	"I08"	0	"GOODSTREAK"	"GOODSTREAK"	22	11	22.9
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16457"	22	12	27.9
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16524"	22	13	15.5
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16686"	22	14	32.7
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16500"	22	15	32.3
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16574"	22	16	23.4
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16472"	22	17	21.1
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16517"	22	18	26.9
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16596"	22	19	27.6
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16538"	22	20	37.2
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16556"	23	11	36.2
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16605"	23	12	35
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16483"	23	13	41.2
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16651"	23	14	33.1
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16490"	23	15	35.1
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16460"	23	16	35.7
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16543"	23	17	42.1
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16401"	23	18	33.6
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16531"	23	19	32.9
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16494"	23	20	38.1
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16621"	24	11	34.5
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16479"	24	12	43.7
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16549"	24	13	42.7
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16634"	24	14	42.6
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16488"	24	15	34.2
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16418"	24	16	33.1
+"Clay Center"	"R1"	"I08"	0	"Camelot"	"Camelot"	24	17	16.1
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16447"	24	18	33.8
+"Clay Center"	"R1"	"I08"	1	"0"	"NE16521"	24	19	39.5
+"Clay Center"	"R1"	"I08"	0	"Freeman"	"Freeman"	24	20	41
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16567"	25	11	43.3
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16535"	25	12	26.9
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16659"	25	13	59.8
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16474"	25	14	26.6
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16438"	25	15	42.3
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16406"	25	16	54.6
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16431"	25	17	54.3
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16661"	25	18	40.7
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16593"	25	19	55
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16650"	25	20	33.7
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16692"	26	11	32.6
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16545"	26	12	60.8
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16679"	26	13	40.5
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16610"	26	14	42.7
+"Clay Center"	"R1"	"I09"	0	"Freeman"	"Freeman"	26	15	61.2
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16512"	26	16	30.4
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16676"	26	17	31.4
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16456"	26	18	36.3
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16684"	26	19	52.3
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16414"	26	20	40.2
+"Clay Center"	"R1"	"I09"	0	"GOODSTREAK"	"GOODSTREAK"	27	11	17.2
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16578"	27	12	42.6
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16548"	27	13	56.8
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16658"	27	14	50.4
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16586"	27	15	40.6
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16630"	27	16	29.3
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16557"	27	17	32.4
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16432"	27	18	43.3
+"Clay Center"	"R1"	"I09"	1	"0"	"NE16635"	27	19	34.8
+"Clay Center"	"R1"	"I09"	0	"Camelot"	"Camelot"	27	20	35.5
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16640"	28	11	35
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16598"	28	12	35.7
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16653"	28	13	19.5
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16527"	28	14	24
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16654"	28	15	35.7
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16412"	28	16	31.7
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16477"	28	17	20.7
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16496"	28	18	30.1
+"Clay Center"	"R1"	"I10"	0	"Camelot"	"Camelot"	28	19	15.5
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16662"	28	20	41.2
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16563V"	29	11	48.2
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16480"	29	12	33.9
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16413"	29	13	35.6
+"Clay Center"	"R1"	"I10"	0	"Freeman"	"Freeman"	29	14	39.7
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16569"	29	15	24.5
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16466"	29	16	36.3
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16417"	29	17	29.6
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16687"	29	18	52.3
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16470"	29	19	34
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16439"	29	20	40.6
+"Clay Center"	"R1"	"I10"	0	"GOODSTREAK"	"GOODSTREAK"	30	11	16
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16587"	30	12	60.4
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16509"	30	13	29.7
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16666"	30	14	26
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16643"	30	15	24.2
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16429"	30	16	48.3
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16613"	30	17	58.9
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16636"	30	18	25.8
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16680"	30	19	31.7
+"Clay Center"	"R1"	"I10"	1	"0"	"NE16498"	30	20	32.3
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16452"	1	1	71.8
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16423"	1	2	77.9
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16643"	1	3	78.6
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16556"	1	4	72.9
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16498"	1	5	53.7
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16617"	1	6	70.2
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16628"	1	7	NA
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16483"	1	8	84
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16616"	1	9	92.7
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16672"	1	10	87.1
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16588"	1	11	86.2
+"Grant_D"	"R1"	"I06"	0	"Freeman"	"Freeman"	1	12	79.4
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16577"	1	13	71.9
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16609V"	1	14	80
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16684"	1	15	76.5
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16505"	1	16	58.9
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16449"	1	17	75
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16557"	1	18	54.1
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16578"	1	19	82.5
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16448"	1	20	67.5
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16527"	2	1	56.1
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16561"	2	2	72
+"Grant_D"	"R1"	"I01"	0	"Camelot"	"Camelot"	2	3	63
+"Grant_D"	"R1"	"I01"	0	"Freeman"	"Freeman"	2	4	88.2
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16638"	2	5	58.8
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16535"	2	6	47.8
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16438"	2	7	NA
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16412"	2	8	83.7
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16419"	2	9	56.6
+"Grant_D"	"R1"	"I01"	0	"GOODSTREAK"	"GOODSTREAK"	2	10	56.4
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16692"	2	11	46.4
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16477"	2	12	69.7
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16650"	2	13	63.9
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16507"	2	14	70.9
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16662"	2	15	73.4
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16421"	2	16	70.3
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16647"	2	17	62.7
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16428"	2	18	49.2
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16518"	2	19	59.9
+"Grant_D"	"R1"	"I06"	0	"GOODSTREAK"	"GOODSTREAK"	2	20	38.7
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16698"	3	1	66.4
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16522"	3	2	66.4
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16442"	3	3	71.5
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16627"	3	4	82.6
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16649"	3	5	61.8
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16613"	3	6	70.6
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16591"	3	7	86.8
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16432"	3	8	87.8
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16657"	3	9	82.7
+"Grant_D"	"R1"	"I01"	1	"0"	"NE16482"	3	10	72
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16536"	3	11	81
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16517"	3	12	68.5
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16430"	3	13	56.6
+"Grant_D"	"R1"	"I06"	0	"Camelot"	"Camelot"	3	14	67
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16583"	3	15	69.6
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16490"	3	16	66.7
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16564"	3	17	59.2
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16488"	3	18	67.4
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16611"	3	19	64.8
+"Grant_D"	"R1"	"I06"	1	"0"	"NE16573"	3	20	53.5
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16680"	4	1	67.4
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16604"	4	2	76.5
+"Grant_D"	"R1"	"I02"	0	"GOODSTREAK"	"GOODSTREAK"	4	3	63.6
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16414"	4	4	66.4
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16491"	4	5	72.8
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16534"	4	6	68.9
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16470"	4	7	59.2
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16524"	4	8	65.1
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16526"	4	9	65.8
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16575"	4	10	74.2
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16587"	4	11	75.5
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16602"	4	12	62.9
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16571"	4	13	82.7
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16568"	4	14	70.1
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16586"	4	15	72.4
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16466"	4	16	67
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16525"	4	17	60.1
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16540"	4	18	61
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16619"	4	19	73.3
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16621"	4	20	51.8
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16427"	5	1	68.7
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16695"	5	2	84.1
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16425"	5	3	79.3
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16567"	5	4	83.6
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16639"	5	5	78.4
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16589"	5	6	78
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16665"	5	7	70
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16480"	5	8	81.9
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16634"	5	9	66.4
+"Grant_D"	"R1"	"I02"	0	"Camelot"	"Camelot"	5	10	73.2
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16580V"	5	11	76
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16407"	5	12	63.5
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16689"	5	13	74.5
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16555"	5	14	60
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16501"	5	15	72.8
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16460"	5	16	69.1
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16691"	5	17	69.2
+"Grant_D"	"R1"	"I07"	0	"Camelot"	"Camelot"	5	18	78.6
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16659"	5	19	83.3
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16546"	5	20	89.1
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16599"	6	1	72.2
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16475"	6	2	83.9
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16422"	6	3	84.1
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16543"	6	4	80.8
+"Grant_D"	"R1"	"I02"	0	"Freeman"	"Freeman"	6	5	85.6
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16686"	6	6	70.8
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16420"	6	7	53.5
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16417"	6	8	63.6
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16632"	6	9	65.2
+"Grant_D"	"R1"	"I02"	1	"0"	"NE16558"	6	10	70.5
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16641"	6	11	82
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16593"	6	12	79.5
+"Grant_D"	"R1"	"I07"	0	"Freeman"	"Freeman"	6	13	84.3
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16606"	6	14	78
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16598"	6	15	74.1
+"Grant_D"	"R1"	"I07"	0	"GOODSTREAK"	"GOODSTREAK"	6	16	53.1
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16457"	6	17	54.6
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16519"	6	18	68.1
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16600"	6	19	72.2
+"Grant_D"	"R1"	"I07"	1	"0"	"NE16651"	6	20	52.2
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16443"	7	1	103.3
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16666"	7	2	73.4
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16673"	7	3	85.1
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16700"	7	4	73.1
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16615"	7	5	69.1
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16667"	7	6	92.7
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16484"	7	7	79.9
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16494"	7	8	75.9
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16435"	7	9	60
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16688"	7	10	66.3
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16544"	7	11	75.7
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16607"	7	12	72.1
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16523"	7	13	73
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16515"	7	14	81.6
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16496"	7	15	73.3
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16629"	7	16	64.9
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16623"	7	17	56.9
+"Grant_D"	"R1"	"I08"	0	"GOODSTREAK"	"GOODSTREAK"	7	18	63.5
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16528"	7	19	74.8
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16675"	7	20	37.2
+"Grant_D"	"R1"	"I03"	0	"Freeman"	"Freeman"	8	1	79.9
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16545"	8	2	69.6
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16476"	8	3	67.5
+"Grant_D"	"R1"	"I03"	0	"GOODSTREAK"	"GOODSTREAK"	8	4	55.7
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16493"	8	5	70.5
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16685"	8	6	69.6
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16538"	8	7	80.8
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16471"	8	8	73.7
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16560"	8	9	76
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16608"	8	10	66.2
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16699"	8	11	74.7
+"Grant_D"	"R1"	"I08"	0	"Camelot"	"Camelot"	8	12	79.9
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16510"	8	13	60.2
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16436"	8	14	74.1
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16656"	8	15	68.6
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16569"	8	16	63.4
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16541"	8	17	60
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16642"	8	18	75
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16655"	8	19	71.2
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16516"	8	20	68
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16468"	9	1	85.7
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16446"	9	2	69.2
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16554"	9	3	92.2
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16453"	9	4	79.9
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16693"	9	5	78.4
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16485"	9	6	NA
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16472"	9	7	55.1
+"Grant_D"	"R1"	"I03"	0	"Camelot"	"Camelot"	9	8	79.3
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16661"	9	9	67.6
+"Grant_D"	"R1"	"I03"	1	"0"	"NE16463"	9	10	64.7
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16582"	9	11	70.3
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16404"	9	12	66.6
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16513"	9	13	71.4
+"Grant_D"	"R1"	"I08"	0	"Freeman"	"Freeman"	9	14	94.7
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16415"	9	15	67.3
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16495"	9	16	64
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16552"	9	17	65.6
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16447"	9	18	73
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16405"	9	19	77.9
+"Grant_D"	"R1"	"I08"	1	"0"	"NE16620"	9	20	73.6
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16566"	10	1	77.9
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16497"	10	2	83.4
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16464"	10	3	65.5
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16409"	10	4	65
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16668"	10	5	76
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16503V"	10	6	NA
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16603"	10	7	68.2
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16504"	10	8	82.9
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16595"	10	9	81.2
+"Grant_D"	"R1"	"I04"	0	"Camelot"	"Camelot"	10	10	73.2
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16594"	10	11	70.2
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16624"	10	12	73.4
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16674"	10	13	58.5
+"Grant_D"	"R1"	"I09"	0	"Freeman"	"Freeman"	10	14	79
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16529"	10	15	70.4
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16454"	10	16	66.5
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16489"	10	17	68.1
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16671"	10	18	72.9
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16456"	10	19	66.2
+"Grant_D"	"R1"	"I09"	0	"GOODSTREAK"	"GOODSTREAK"	10	20	52.5
+"Grant_D"	"R1"	"I04"	0	"Freeman"	"Freeman"	11	1	88.4
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16502"	11	2	73.1
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16572"	11	3	64.1
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16520"	11	4	75.9
+"Grant_D"	"R1"	"I04"	0	"GOODSTREAK"	"GOODSTREAK"	11	5	70.1
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16640"	11	6	82.3
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16441"	11	7	68
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16585"	11	8	49.5
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16669"	11	9	53.1
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16630"	11	10	79.2
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16681"	11	11	76.1
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16622"	11	12	63.2
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16461"	11	13	71
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16444"	11	14	75.8
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16416"	11	15	70.1
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16439"	11	16	74.1
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16509"	11	17	68.7
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16663"	11	18	75
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16500"	11	19	80.5
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16581"	11	20	63.5
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16479"	12	1	76
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16410"	12	2	74.6
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16612"	12	3	81.5
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16690"	12	4	70.8
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16440"	12	5	83.6
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16429"	12	6	76.5
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16474"	12	7	51.8
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16508"	12	8	69.2
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16511"	12	9	57.6
+"Grant_D"	"R1"	"I04"	1	"0"	"NE16601"	12	10	83.7
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16424"	12	11	84.7
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16531"	12	12	70.4
+"Grant_D"	"R1"	"I09"	0	"Camelot"	"Camelot"	12	13	81.6
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16654"	12	14	71.7
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16521"	12	15	76.3
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16465"	12	16	73.6
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16576V"	12	17	77.4
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16614"	12	18	78.3
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16549"	12	19	83.1
+"Grant_D"	"R1"	"I09"	1	"0"	"NE16645"	12	20	73.5
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16625"	13	1	72.3
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16401"	13	2	63
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16413"	13	3	72.8
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16437"	13	4	53.8
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16664"	13	5	65.3
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16478"	13	6	86.7
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16431"	13	7	71.2
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16533"	13	8	79.5
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16537"	13	9	68.1
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16406"	13	10	90.6
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16539"	13	11	79.4
+"Grant_D"	"R1"	"I10"	0	"Camelot"	"Camelot"	13	12	74.2
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16574"	13	13	70.6
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16486"	13	14	63.7
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16418"	13	15	82.9
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16676"	13	16	60.8
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16579"	13	17	72
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16660"	13	18	76.5
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16563V"	13	19	85.4
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16548"	13	20	78.3
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16596"	14	1	83
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16697"	14	2	73
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16637"	14	3	64.3
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16610"	14	4	73.5
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16451"	14	5	87.7
+"Grant_D"	"R1"	"I05"	0	"GOODSTREAK"	"GOODSTREAK"	14	6	59.4
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16677"	14	7	85.5
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16467"	14	8	83
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16648"	14	9	68.9
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16631"	14	10	77.6
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16462"	14	11	66.4
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16658"	14	12	92.7
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16469"	14	13	83.4
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16687"	14	14	78.2
+"Grant_D"	"R1"	"I10"	0	"Freeman"	"Freeman"	14	15	92.7
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16459"	14	16	64.9
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16434"	14	17	60.9
+"Grant_D"	"R1"	"I10"	0	"GOODSTREAK"	"GOODSTREAK"	14	18	65.2
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16562"	14	19	83.5
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16592"	14	20	65.3
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16679"	15	1	76.9
+"Grant_D"	"R1"	"I05"	0	"Camelot"	"Camelot"	15	2	81.3
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16492"	15	3	69.9
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16683"	15	4	81.4
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16458"	15	5	74.8
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16635"	15	6	76.4
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16542"	15	7	86.3
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16653"	15	8	49.4
+"Grant_D"	"R1"	"I05"	1	"0"	"NE16636"	15	9	90.7
+"Grant_D"	"R1"	"I05"	0	"Freeman"	"Freeman"	15	10	98.4
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16644"	15	11	81.3
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16570"	15	12	81.6
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16402"	15	13	86.4
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16445"	15	14	73.4
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16550"	15	15	69.3
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16605"	15	16	81
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16512"	15	17	59.8
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16553"	15	18	89
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16696"	15	19	73.5
+"Grant_D"	"R1"	"I10"	1	"0"	"NE16403"	15	20	62.9
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16453"	1	6	75.9
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16667"	1	7	60.2
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16513"	1	8	56.4
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16498"	1	9	56.5
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16485"	1	10	63.4
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16571"	1	11	70.2
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16563V"	1	12	81.8
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16566"	1	13	67.8
+"Lincoln"	"R1"	"I01"	0	"Camelot"	"Camelot"	1	14	40.6
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16528"	1	15	48.9
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16482"	2	6	48.3
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16451"	2	7	73.2
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16666"	2	8	46.3
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16616"	2	9	75.3
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16539"	2	10	61
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16534"	2	11	62.9
+"Lincoln"	"R1"	"I01"	0	"Freeman"	"Freeman"	2	12	75.9
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16615"	2	13	55.3
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16624"	2	14	57.1
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16587"	2	15	71.4
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16420"	3	6	45.2
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16486"	3	7	51.2
+"Lincoln"	"R1"	"I01"	0	"GOODSTREAK"	"GOODSTREAK"	3	8	30.9
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16568"	3	9	58.6
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16432"	3	10	73.7
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16688"	3	11	65.5
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16660"	3	12	68.4
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16410"	3	13	57.1
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16677"	3	14	44.2
+"Lincoln"	"R1"	"I01"	1	"0"	"NE16476"	3	15	59.6
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16553"	4	6	48.5
+"Lincoln"	"R1"	"I02"	0	"GOODSTREAK"	"GOODSTREAK"	4	7	34.7
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16595"	4	8	51.4
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16675"	4	9	34.3
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16457"	4	10	52.2
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16524"	4	11	42.1
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16642"	4	12	76.6
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16474"	4	13	37.8
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16419"	4	14	51.1
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16515"	4	15	38.1
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16555"	5	6	51.5
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16607"	5	7	49
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16416"	5	8	49.1
+"Lincoln"	"R1"	"I02"	0	"Camelot"	"Camelot"	5	9	45.9
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16698"	5	10	73.2
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16423"	5	11	55.1
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16610"	5	12	53.3
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16421"	5	13	50.6
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16671"	5	14	56.3
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16639"	5	15	62.2
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16602"	6	6	39.1
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16573"	6	7	31.4
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16684"	6	8	48.5
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16569"	6	9	52.3
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16673"	6	10	63.2
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16583"	6	11	57.9
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16418"	6	12	60.9
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16606"	6	13	66.1
+"Lincoln"	"R1"	"I02"	0	"Freeman"	"Freeman"	6	14	63.8
+"Lincoln"	"R1"	"I02"	1	"0"	"NE16576V"	6	15	69.8
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16504"	7	6	61.2
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16456"	7	7	43.8
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16696"	7	8	41.8
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16502"	7	9	53.5
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16505"	7	10	40
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16459"	7	11	48.2
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16406"	7	12	64.1
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16588"	7	13	58
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16552"	7	14	55.3
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16680"	7	15	51.4
+"Lincoln"	"R1"	"I03"	0	"Freeman"	"Freeman"	8	6	59.4
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16578"	8	7	54.4
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16601"	8	8	70
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16415"	8	9	64
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16608"	8	10	58.8
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16686"	8	11	60.7
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16488"	8	12	56
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16443"	8	13	69.3
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16560"	8	14	54.6
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16535"	8	15	28.9
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16609V"	9	6	52.8
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16413"	9	7	47.7
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16483"	9	8	61.1
+"Lincoln"	"R1"	"I03"	0	"GOODSTREAK"	"GOODSTREAK"	9	9	38.7
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16554"	9	10	61.6
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16605"	9	11	72.6
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16477"	9	12	39.5
+"Lincoln"	"R1"	"I03"	0	"Camelot"	"Camelot"	9	13	30.2
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16631"	9	14	61.3
+"Lincoln"	"R1"	"I03"	1	"0"	"NE16635"	9	15	57.3
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16468"	10	6	55.7
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16627"	10	7	50.7
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16625"	10	8	54.6
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16691"	10	9	59.8
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16699"	10	10	65.9
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16656"	10	11	61.1
+"Lincoln"	"R1"	"I04"	0	"Camelot"	"Camelot"	10	12	48
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16669"	10	13	38.3
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16508"	10	14	56.4
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16619"	10	15	61.7
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16490"	11	6	43.1
+"Lincoln"	"R1"	"I04"	0	"Freeman"	"Freeman"	11	7	64.7
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16454"	11	8	57
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16447"	11	9	53.4
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16647"	11	10	60.5
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16664"	11	11	43
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16529"	11	12	56.9
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16649"	11	13	31.8
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16436"	11	14	62.6
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16438"	11	15	53.1
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16533"	12	6	57.7
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16494"	12	7	53.3
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16604"	12	8	62.5
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16431"	12	9	67.7
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16469"	12	10	45
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16676"	12	11	31.3
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16556"	12	12	54.9
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16613"	12	13	53.4
+"Lincoln"	"R1"	"I04"	1	"0"	"NE16648"	12	14	55
+"Lincoln"	"R1"	"I04"	0	"GOODSTREAK"	"GOODSTREAK"	12	15	35.3
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16401"	13	6	55.1
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16653"	13	7	43.7
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16545"	13	8	68.1
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16638"	13	9	43.6
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16425"	13	10	63
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16409"	13	11	46.8
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16471"	13	12	52.8
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16442"	13	13	44.2
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16685"	13	14	55.3
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16525"	13	15	30.6
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16460"	14	6	17.1
+"Lincoln"	"R1"	"I05"	0	"GOODSTREAK"	"GOODSTREAK"	14	7	32.7
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16697"	14	8	54.5
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16462"	14	9	50.9
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16598"	14	10	72
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16643"	14	11	55
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16461"	14	12	47.4
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16542"	14	13	46.9
+"Lincoln"	"R1"	"I05"	0	"Camelot"	"Camelot"	14	14	43.6
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16585"	14	15	29.1
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16407"	15	6	35.9
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16517"	15	7	56
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16681"	15	8	45.5
+"Lincoln"	"R1"	"I05"	0	"Freeman"	"Freeman"	15	9	71.1
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16693"	15	10	43.9
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16668"	15	11	42.6
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16623"	15	12	43.3
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16620"	15	13	59.5
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16687"	15	14	55
+"Lincoln"	"R1"	"I05"	1	"0"	"NE16548"	15	15	57.1
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16655"	16	6	47.9
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16557"	16	7	31
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16448"	16	8	52.6
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16658"	16	9	47.8
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16475"	16	10	52.8
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16622"	16	11	22.2
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16612"	16	12	66.4
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16700"	16	13	55.2
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16572"	16	14	46.4
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16538"	16	15	56.6
+"Lincoln"	"R1"	"I06"	0	"Freeman"	"Freeman"	17	6	68.9
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16593"	17	7	64.8
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16637"	17	8	40.1
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16662"	17	9	58.9
+"Lincoln"	"R1"	"I06"	0	"GOODSTREAK"	"GOODSTREAK"	17	10	35.9
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16567"	17	11	60.2
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16478"	17	12	64.6
+"Lincoln"	"R1"	"I06"	0	"Camelot"	"Camelot"	17	13	36.9
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16579"	17	14	58.6
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16645"	17	15	61.9
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16531"	18	6	55.7
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16611"	18	7	58.5
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16537"	18	8	47
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16674"	18	9	30.4
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16403"	18	10	47.4
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16634"	18	11	64.3
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16636"	18	12	64.4
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16452"	18	13	70.8
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16574"	18	14	55.6
+"Lincoln"	"R1"	"I06"	1	"0"	"NE16492"	18	15	49.5
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16422"	19	6	60.9
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16580V"	19	7	59
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16577"	19	8	45.1
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16458"	19	9	61.1
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16465"	19	10	49.5
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16596"	19	11	64.5
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16659"	19	12	68.3
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16599"	19	13	59.5
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16510"	19	14	60.1
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16549"	19	15	67
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16444"	20	6	57.4
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16672"	20	7	51.7
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16437"	20	8	51.7
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16467"	20	9	70.5
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16434"	20	10	52.3
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16589"	20	11	62.9
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16526"	20	12	61.3
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16665"	20	13	43.6
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16632"	20	14	68.5
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16654"	20	15	59.3
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16695"	21	6	57.1
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16689"	21	7	46.9
+"Lincoln"	"R1"	"I07"	0	"Camelot"	"Camelot"	21	8	29.3
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16489"	21	9	66.6
+"Lincoln"	"R1"	"I07"	0	"Freeman"	"Freeman"	21	10	77.4
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16544"	21	11	60.4
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16512"	21	12	38.7
+"Lincoln"	"R1"	"I07"	0	"GOODSTREAK"	"GOODSTREAK"	21	13	22.2
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16501"	21	14	63.9
+"Lincoln"	"R1"	"I07"	1	"0"	"NE16491"	21	15	56.8
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16594"	22	6	61.7
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16440"	22	7	59.8
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16464"	22	8	67.5
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16527"	22	9	63
+"Lincoln"	"R1"	"I08"	0	"GOODSTREAK"	"GOODSTREAK"	22	10	29.1
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16629"	22	11	46.9
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16683"	22	12	53.4
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16439"	22	13	53.7
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16550"	22	14	55.6
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16521"	22	15	52.4
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16523"	23	6	51
+"Lincoln"	"R1"	"I08"	0	"Camelot"	"Camelot"	23	7	40.6
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16424"	23	8	76.9
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16500"	23	9	54.1
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16546"	23	10	61.5
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16570"	23	11	50.2
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16558"	23	12	58.4
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16561"	23	13	21.9
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16414"	23	14	47.1
+"Lincoln"	"R1"	"I08"	0	"Freeman"	"Freeman"	23	15	65.9
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16412"	24	6	69.1
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16435"	24	7	49.1
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16614"	24	8	67.3
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16663"	24	9	61.6
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16651"	24	10	50.4
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16518"	24	11	42.6
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16644"	24	12	51.9
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16564"	24	13	32.4
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16463"	24	14	47.5
+"Lincoln"	"R1"	"I08"	1	"0"	"NE16430"	24	15	43.7
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16479"	25	6	62.7
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16617"	25	7	55.8
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16429"	25	8	58.4
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16493"	25	9	68.8
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16543"	25	10	59
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16540"	25	11	55.1
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16661"	25	12	41.4
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16692"	25	13	25.5
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16466"	25	14	53
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16657"	25	15	53.9
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16449"	26	6	56.3
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16591"	26	7	57.9
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16536"	26	8	58.4
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16520"	26	9	71.5
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16470"	26	10	54.3
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16582"	26	11	57.8
+"Lincoln"	"R1"	"I09"	0	"Freeman"	"Freeman"	26	12	69.1
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16592"	26	13	43.2
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16679"	26	14	58.6
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16519"	26	15	61.8
+"Lincoln"	"R1"	"I09"	0	"GOODSTREAK"	"GOODSTREAK"	27	6	25.6
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16516"	27	7	47.2
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16402"	27	8	69.5
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16417"	27	9	42
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16541"	27	10	59
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16484"	27	11	51
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16586"	27	12	60.7
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16575"	27	13	59.7
+"Lincoln"	"R1"	"I09"	0	"Camelot"	"Camelot"	27	14	44.4
+"Lincoln"	"R1"	"I09"	1	"0"	"NE16446"	27	15	33.5
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16640"	28	6	74.7
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16427"	28	7	43
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16404"	28	8	43.7
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16495"	28	9	64.6
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16628"	28	10	57.5
+"Lincoln"	"R1"	"I10"	0	"Camelot"	"Camelot"	28	11	40.6
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16603"	28	12	68.5
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16630"	28	13	39.6
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16509"	28	14	56
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16581"	28	15	46
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16690"	29	6	56.5
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16621"	29	7	37.2
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16522"	29	8	64.2
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16428"	29	9	59.1
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16650"	29	10	49.4
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16441"	29	11	45.6
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16507"	29	12	53.3
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16641"	29	13	60.9
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16511"	29	14	71.1
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16503V"	29	15	67.6
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16445"	30	6	66.7
+"Lincoln"	"R1"	"I10"	0	"Freeman"	"Freeman"	30	7	71.3
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16497"	30	8	47.8
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16480"	30	9	66.7
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16562"	30	10	75.7
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16405"	30	11	71.5
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16472"	30	12	44.3
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16496"	30	13	38.7
+"Lincoln"	"R1"	"I10"	1	"0"	"NE16600"	30	14	75
+"Lincoln"	"R1"	"I10"	0	"GOODSTREAK"	"GOODSTREAK"	30	15	26.7
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16571"	1	43	56
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16603"	1	44	70.2
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16653"	1	45	47.8
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16602"	1	46	74.4
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16545"	1	47	96.1
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16541"	1	48	65.2
+"Lincoln IM"	"R1"	"I01"	0	"Camelot"	"Camelot"	1	49	49
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16471"	1	50	84.7
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16467"	1	51	86.5
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16591"	1	52	89.7
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16548"	2	43	80.9
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16461"	2	44	72.6
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16470"	2	45	59.8
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16511"	2	46	72.6
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16690"	2	47	74.1
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16488"	2	48	58.2
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16638"	2	49	59.6
+"Lincoln IM"	"R1"	"I01"	0	"Freeman"	"Freeman"	2	50	79.4
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16660"	2	51	71.8
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16674"	2	52	50.2
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16581"	3	43	61.2
+"Lincoln IM"	"R1"	"I01"	0	"GOODSTREAK"	"GOODSTREAK"	3	44	64.7
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16409"	3	45	67.6
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16658"	3	46	59.5
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16479"	3	47	90.3
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16438"	3	48	58.4
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16453"	3	49	93.3
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16459"	3	50	60.7
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16494"	3	51	78.2
+"Lincoln IM"	"R1"	"I01"	1	"0"	"NE16612"	3	52	88.7
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16518"	4	43	62.8
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16457"	4	44	85.3
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16430"	4	45	60.1
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16592"	4	46	72.3
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16512"	4	47	64.3
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16621"	4	48	53.9
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16431"	4	49	81.5
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16698"	4	50	82.2
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16569"	4	51	53.2
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16451"	4	52	89.9
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16490"	5	43	73.5
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16663"	5	44	77.5
+"Lincoln IM"	"R1"	"I02"	0	"GOODSTREAK"	"GOODSTREAK"	5	45	61.8
+"Lincoln IM"	"R1"	"I02"	0	"Camelot"	"Camelot"	5	46	57.4
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16627"	5	47	88.5
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16476"	5	48	81.3
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16651"	5	49	64.8
+"Lincoln IM"	"R1"	"I02"	0	"Freeman"	"Freeman"	5	50	86.9
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16601"	5	51	87.4
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16628"	5	52	82
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16583"	6	43	72.8
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16630"	6	44	70.7
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16668"	6	45	60.6
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16616"	6	46	80.4
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16416"	6	47	75.1
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16435"	6	48	64.4
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16531"	6	49	71.9
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16692"	6	50	45.4
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16422"	6	51	94.4
+"Lincoln IM"	"R1"	"I02"	1	"0"	"NE16675"	6	52	44.8
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16536"	7	43	77.6
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16439"	7	44	86.7
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16501"	7	45	85.6
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16619"	7	46	79
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16599"	7	47	77
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16477"	7	48	75.7
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16434"	7	49	64.2
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16673"	7	50	69.8
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16587"	7	51	96.2
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16515"	7	52	57.2
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16419"	8	43	67.5
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16533"	8	44	92.4
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16466"	8	45	69.2
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16510"	8	46	70
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16684"	8	47	45.6
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16608"	8	48	71.6
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16517"	8	49	73
+"Lincoln IM"	"R1"	"I03"	0	"Freeman"	"Freeman"	8	50	108
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16667"	8	51	82.7
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16540"	8	52	85.1
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16436"	9	43	75.1
+"Lincoln IM"	"R1"	"I03"	0	"GOODSTREAK"	"GOODSTREAK"	9	44	82
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16659"	9	45	98.7
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16640"	9	46	103.5
+"Lincoln IM"	"R1"	"I03"	0	"Camelot"	"Camelot"	9	47	73.9
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16521"	9	48	62.6
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16474"	9	49	61.6
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16634"	9	50	71.5
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16624"	9	51	98.7
+"Lincoln IM"	"R1"	"I03"	1	"0"	"NE16642"	9	52	89
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16401"	10	43	83.5
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16574"	10	44	88.1
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16681"	10	45	86.6
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16676"	10	46	52.1
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16538"	10	47	82.1
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16503V"	10	48	73
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16700"	10	49	72.2
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16444"	10	50	77.6
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16662"	10	51	63.3
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16664"	10	52	76
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16572"	11	43	78.9
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16553"	11	44	88.7
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16496"	11	45	62.4
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16686"	11	46	83.9
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16458"	11	47	83.3
+"Lincoln IM"	"R1"	"I04"	0	"Camelot"	"Camelot"	11	48	58
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16502"	11	49	77.3
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16423"	11	50	81.1
+"Lincoln IM"	"R1"	"I04"	0	"Freeman"	"Freeman"	11	51	113.3
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16631"	11	52	96.1
+"Lincoln IM"	"R1"	"I04"	0	"GOODSTREAK"	"GOODSTREAK"	12	43	91.4
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16491"	12	44	81.9
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16671"	12	45	89
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16560"	12	46	73.9
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16441"	12	47	60.4
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16680"	12	48	87.4
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16445"	12	49	76.4
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16580V"	12	50	90.4
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16418"	12	51	81.6
+"Lincoln IM"	"R1"	"I04"	1	"0"	"NE16549"	12	52	92.8
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16610"	13	43	91.4
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16564"	13	44	79.2
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16688"	13	45	73.7
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16606"	13	46	101
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16542"	13	47	86.5
+"Lincoln IM"	"R1"	"I05"	0	"GOODSTREAK"	"GOODSTREAK"	13	48	73.4
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16679"	13	49	89.9
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16447"	13	50	79.6
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16557"	13	51	61.2
+"Lincoln IM"	"R1"	"I05"	0	"Camelot"	"Camelot"	13	52	90.5
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16519"	14	43	85.1
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16689"	14	44	88.3
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16647"	14	45	91.7
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16508"	14	46	91.2
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16623"	14	47	78.4
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16586"	14	48	89.7
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16525"	14	49	70.3
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16588"	14	50	108
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16464"	14	51	81.7
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16554"	14	52	93.2
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16629"	15	43	83.1
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16456"	15	44	75.1
+"Lincoln IM"	"R1"	"I05"	0	"Freeman"	"Freeman"	15	45	116.9
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16620"	15	46	87.5
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16468"	15	47	98.2
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16544"	15	48	70.8
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16637"	15	49	76
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16475"	15	50	100.6
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16520"	15	51	104.8
+"Lincoln IM"	"R1"	"I05"	1	"0"	"NE16406"	15	52	86.7
+"Lincoln IM"	"R1"	"I06"	0	"Freeman"	"Freeman"	16	43	109.5
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16577"	16	44	94.1
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16486"	16	45	74.8
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16669"	16	46	75
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16405"	16	47	85.8
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16644"	16	48	79
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16460"	16	49	70.6
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16605"	16	50	89.3
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16585"	16	51	43.3
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16636"	16	52	89.8
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16402"	17	43	110
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16654"	17	44	99
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16526"	17	45	89.4
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16609V"	17	46	91.9
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16410"	17	47	76.8
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16432"	17	48	85.4
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16425"	17	49	88.3
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16413"	17	50	75.2
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16632"	17	51	101.9
+"Lincoln IM"	"R1"	"I06"	0	"GOODSTREAK"	"GOODSTREAK"	17	52	99.6
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16617"	18	43	83.1
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16523"	18	44	75.3
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16611"	18	45	84.1
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16655"	18	46	80.4
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16696"	18	47	87.5
+"Lincoln IM"	"R1"	"I06"	0	"Camelot"	"Camelot"	18	48	64.7
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16504"	18	49	89.1
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16661"	18	50	68.7
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16596"	18	51	84.7
+"Lincoln IM"	"R1"	"I06"	1	"0"	"NE16417"	18	52	74.8
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16420"	19	43	57.1
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16535"	19	44	75.6
+"Lincoln IM"	"R1"	"I07"	0	"Camelot"	"Camelot"	19	45	76
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16483"	19	46	84.2
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16645"	19	47	82.2
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16635"	19	48	82.6
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16462"	19	49	66.6
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16582"	19	50	91.8
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16440"	19	51	89.5
+"Lincoln IM"	"R1"	"I07"	0	"Freeman"	"Freeman"	19	52	107.6
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16414"	20	43	79.8
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16625"	20	44	91.4
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16509"	20	45	89.9
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16546"	20	46	100.4
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16469"	20	47	86.2
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16594"	20	48	87.6
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16516"	20	49	74.9
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16550"	20	50	76.8
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16543"	20	51	90.6
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16415"	20	52	71.4
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16593"	21	43	93.2
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16404"	21	44	68.9
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16507"	21	45	76.6
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16622"	21	46	69.9
+"Lincoln IM"	"R1"	"I07"	0	"GOODSTREAK"	"GOODSTREAK"	21	47	69.9
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16578"	21	48	88.7
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16556"	21	49	74.8
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16524"	21	50	93.5
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16657"	21	51	99.9
+"Lincoln IM"	"R1"	"I07"	1	"0"	"NE16563V"	21	52	85.7
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16429"	22	43	83
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16677"	22	44	84.9
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16428"	22	45	63.9
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16648"	22	46	94.4
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16683"	22	47	79
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16465"	22	48	59.5
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16443"	22	49	96.6
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16567"	22	50	101.5
+"Lincoln IM"	"R1"	"I08"	0	"GOODSTREAK"	"GOODSTREAK"	22	51	75.7
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16687"	22	52	81.7
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16522"	23	43	80.3
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16412"	23	44	88.8
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16639"	23	45	88.9
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16537"	23	46	67.3
+"Lincoln IM"	"R1"	"I08"	0	"Camelot"	"Camelot"	23	47	86.8
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16493"	23	48	82.6
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16480"	23	49	109.4
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16505"	23	50	73.8
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16697"	23	51	91.3
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16454"	23	52	83.4
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16497"	24	43	95.8
+"Lincoln IM"	"R1"	"I08"	0	"Freeman"	"Freeman"	24	44	102.5
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16699"	24	45	90.9
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16495"	24	46	47.8
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16579"	24	47	100.6
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16539"	24	48	85.6
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16529"	24	49	73.4
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16595"	24	50	81
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16534"	24	51	86.3
+"Lincoln IM"	"R1"	"I08"	1	"0"	"NE16656"	24	52	84.7
+"Lincoln IM"	"R1"	"I09"	0	"Freeman"	"Freeman"	25	43	104.2
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16695"	25	44	88.8
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16672"	25	45	88.6
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16685"	25	46	78.6
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16576V"	25	47	74.3
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16528"	25	48	73.9
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16472"	25	49	65.1
+"Lincoln IM"	"R1"	"I09"	0	"GOODSTREAK"	"GOODSTREAK"	25	50	87.3
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16421"	25	51	81.6
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16463"	25	52	84.6
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16558"	26	43	80.2
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16452"	26	44	91.5
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16552"	26	45	83.8
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16613"	26	46	77.1
+"Lincoln IM"	"R1"	"I09"	0	"Camelot"	"Camelot"	26	47	63.1
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16478"	26	48	87.4
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16570"	26	49	92.1
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16693"	26	50	81.9
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16598"	26	51	90.9
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16561"	26	52	73.4
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16448"	27	43	88.6
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16449"	27	44	82.1
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16650"	27	45	84.5
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16424"	27	46	112.6
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16492"	27	47	63.6
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16615"	27	48	74.1
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16500"	27	49	86.6
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16643"	27	50	90.3
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16489"	27	51	77.4
+"Lincoln IM"	"R1"	"I09"	1	"0"	"NE16446"	27	52	75.1
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16566"	28	43	90.2
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16666"	28	44	70.3
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16665"	28	45	87.8
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16482"	28	46	78.5
+"Lincoln IM"	"R1"	"I10"	0	"Camelot"	"Camelot"	28	47	80.8
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16568"	28	48	71.6
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16485"	28	49	86.5
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16527"	28	50	97.3
+"Lincoln IM"	"R1"	"I10"	0	"Freeman"	"Freeman"	28	51	103.6
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16604"	28	52	102.3
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16498"	29	43	60.1
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16427"	29	44	80.7
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16573"	29	45	73.3
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16555"	29	46	62.9
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16407"	29	47	58.5
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16691"	29	48	69.4
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16589"	29	49	93.7
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16641"	29	50	95.3
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16607"	29	51	83.6
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16403"	29	52	74.6
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16649"	30	43	68.9
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16437"	30	44	58.5
+"Lincoln IM"	"R1"	"I10"	0	"GOODSTREAK"	"GOODSTREAK"	30	45	58.1
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16513"	30	46	79.8
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16562"	30	47	89.6
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16575"	30	48	84.4
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16484"	30	49	NA
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16600"	30	50	86.2
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16442"	30	51	66
+"Lincoln IM"	"R1"	"I10"	1	"0"	"NE16614"	30	52	91
+"McCook"	"R1"	"I01"	1	"0"	"NE16641"	3	1	10
+"McCook"	"R1"	"I01"	1	"0"	"NE16546"	3	2	99.5
+"McCook"	"R1"	"I01"	1	"0"	"NE16595"	3	3	76.5
+"McCook"	"R1"	"I01"	1	"0"	"NE16519"	3	4	58.5
+"McCook"	"R1"	"I01"	1	"0"	"NE16445"	3	5	61.1
+"McCook"	"R1"	"I01"	1	"0"	"NE16610"	3	6	63.5
+"McCook"	"R1"	"I01"	1	"0"	"NE16492"	3	7	74.7
+"McCook"	"R1"	"I01"	1	"0"	"NE16689"	3	8	62.6
+"McCook"	"R1"	"I01"	1	"0"	"NE16502"	3	9	84.1
+"McCook"	"R1"	"I01"	1	"0"	"NE16591"	3	10	70.8
+"McCook"	"R1"	"I06"	0	"Freeman"	"Freeman"	3	11	103.3
+"McCook"	"R1"	"I06"	1	"0"	"NE16575"	3	12	81
+"McCook"	"R1"	"I06"	1	"0"	"NE16674"	3	13	68.8
+"McCook"	"R1"	"I06"	1	"0"	"NE16552"	3	14	68.8
+"McCook"	"R1"	"I06"	1	"0"	"NE16483"	3	15	70
+"McCook"	"R1"	"I06"	1	"0"	"NE16675"	3	16	52.5
+"McCook"	"R1"	"I06"	1	"0"	"NE16419"	3	17	74.8
+"McCook"	"R1"	"I06"	1	"0"	"NE16606"	3	18	71.2
+"McCook"	"R1"	"I06"	1	"0"	"NE16634"	3	19	70
+"McCook"	"R1"	"I06"	1	"0"	"NE16430"	3	20	50
+"McCook"	"R1"	"I01"	1	"0"	"NE16443"	4	1	77
+"McCook"	"R1"	"I01"	1	"0"	"NE16605"	4	2	90.4
+"McCook"	"R1"	"I01"	1	"0"	"NE16690"	4	3	74.8
+"McCook"	"R1"	"I01"	1	"0"	"NE16425"	4	4	59.7
+"McCook"	"R1"	"I01"	1	"0"	"NE16447"	4	5	73.3
+"McCook"	"R1"	"I01"	1	"0"	"NE16533"	4	6	54.3
+"McCook"	"R1"	"I01"	0	"Camelot"	"Camelot"	4	7	80.7
+"McCook"	"R1"	"I01"	1	"0"	"NE16459"	4	8	51.7
+"McCook"	"R1"	"I01"	1	"0"	"NE16406"	4	9	84.8
+"McCook"	"R1"	"I01"	1	"0"	"NE16403"	4	10	67
+"McCook"	"R1"	"I06"	1	"0"	"NE16598"	4	11	101.5
+"McCook"	"R1"	"I06"	1	"0"	"NE16669"	4	12	62.7
+"McCook"	"R1"	"I06"	1	"0"	"NE16644"	4	13	78
+"McCook"	"R1"	"I06"	1	"0"	"NE16560"	4	14	73.9
+"McCook"	"R1"	"I06"	0	"GOODSTREAK"	"GOODSTREAK"	4	15	98
+"McCook"	"R1"	"I06"	1	"0"	"NE16673"	4	16	78.6
+"McCook"	"R1"	"I06"	1	"0"	"NE16468"	4	17	93
+"McCook"	"R1"	"I06"	1	"0"	"NE16624"	4	18	57.3
+"McCook"	"R1"	"I06"	1	"0"	"NE16500"	4	19	65.6
+"McCook"	"R1"	"I06"	1	"0"	"NE16563V"	4	20	81.5
+"McCook"	"R1"	"I01"	1	"0"	"NE16472"	5	1	53.5
+"McCook"	"R1"	"I01"	0	"Freeman"	"Freeman"	5	2	78.9
+"McCook"	"R1"	"I01"	1	"0"	"NE16557"	5	3	66.5
+"McCook"	"R1"	"I01"	1	"0"	"NE16484"	5	4	70.3
+"McCook"	"R1"	"I01"	1	"0"	"NE16464"	5	5	44.6
+"McCook"	"R1"	"I01"	1	"0"	"NE16684"	5	6	65.3
+"McCook"	"R1"	"I01"	1	"0"	"NE16662"	5	7	59
+"McCook"	"R1"	"I01"	0	"GOODSTREAK"	"GOODSTREAK"	5	8	57.9
+"McCook"	"R1"	"I01"	1	"0"	"NE16638"	5	9	75.4
+"McCook"	"R1"	"I01"	1	"0"	"NE16657"	5	10	78.2
+"McCook"	"R1"	"I06"	1	"0"	"NE16660"	5	11	78.8
+"McCook"	"R1"	"I06"	1	"0"	"NE16696"	5	12	78.5
+"McCook"	"R1"	"I06"	1	"0"	"NE16410"	5	13	65.8
+"McCook"	"R1"	"I06"	1	"0"	"NE16421"	5	14	74.4
+"McCook"	"R1"	"I06"	1	"0"	"NE16456"	5	15	75.4
+"McCook"	"R1"	"I06"	1	"0"	"NE16478"	5	16	76.8
+"McCook"	"R1"	"I06"	1	"0"	"NE16542"	5	17	53.2
+"McCook"	"R1"	"I06"	0	"Camelot"	"Camelot"	5	18	80.9
+"McCook"	"R1"	"I06"	1	"0"	"NE16594"	5	19	56.2
+"McCook"	"R1"	"I06"	1	"0"	"NE16621"	5	20	26.9
+"McCook"	"R1"	"I02"	1	"0"	"NE16432"	6	1	76.7
+"McCook"	"R1"	"I02"	1	"0"	"NE16650"	6	2	58.1
+"McCook"	"R1"	"I02"	1	"0"	"NE16512"	6	3	37.2
+"McCook"	"R1"	"I02"	1	"0"	"NE16607"	6	4	72
+"McCook"	"R1"	"I02"	1	"0"	"NE16482"	6	5	52.6
+"McCook"	"R1"	"I02"	1	"0"	"NE16558"	6	6	46.4
+"McCook"	"R1"	"I02"	1	"0"	"NE16463"	6	7	45.8
+"McCook"	"R1"	"I02"	1	"0"	"NE16540"	6	8	74.4
+"McCook"	"R1"	"I02"	1	"0"	"NE16526"	6	9	64.3
+"McCook"	"R1"	"I02"	1	"0"	"NE16668"	6	10	64
+"McCook"	"R1"	"I07"	1	"0"	"NE16620"	6	11	89.4
+"McCook"	"R1"	"I07"	1	"0"	"NE16524"	6	12	58.1
+"McCook"	"R1"	"I07"	1	"0"	"NE16520"	6	13	27.1
+"McCook"	"R1"	"I07"	1	"0"	"NE16485"	6	14	81
+"McCook"	"R1"	"I07"	1	"0"	"NE16480"	6	15	81.5
+"McCook"	"R1"	"I07"	1	"0"	"NE16613"	6	16	63.3
+"McCook"	"R1"	"I07"	0	"Camelot"	"Camelot"	6	17	91.5
+"McCook"	"R1"	"I07"	1	"0"	"NE16444"	6	18	48.2
+"McCook"	"R1"	"I07"	1	"0"	"NE16475"	6	19	99.6
+"McCook"	"R1"	"I07"	1	"0"	"NE16603"	6	20	37
+"McCook"	"R1"	"I02"	1	"0"	"NE16469"	7	1	82.4
+"McCook"	"R1"	"I02"	1	"0"	"NE16440"	7	2	59
+"McCook"	"R1"	"I02"	0	"GOODSTREAK"	"GOODSTREAK"	7	3	61.2
+"McCook"	"R1"	"I02"	1	"0"	"NE16521"	7	4	85.1
+"McCook"	"R1"	"I02"	0	"Camelot"	"Camelot"	7	5	81.5
+"McCook"	"R1"	"I02"	1	"0"	"NE16592"	7	6	58.8
+"McCook"	"R1"	"I02"	1	"0"	"NE16677"	7	7	81.3
+"McCook"	"R1"	"I02"	1	"0"	"NE16617"	7	8	68.9
+"McCook"	"R1"	"I02"	1	"0"	"NE16656"	7	9	81.6
+"McCook"	"R1"	"I02"	1	"0"	"NE16515"	7	10	73.6
+"McCook"	"R1"	"I07"	1	"0"	"NE16579"	7	11	72.4
+"McCook"	"R1"	"I07"	1	"0"	"NE16687"	7	12	83.2
+"McCook"	"R1"	"I07"	1	"0"	"NE16587"	7	13	35.4
+"McCook"	"R1"	"I07"	1	"0"	"NE16698"	7	14	72.1
+"McCook"	"R1"	"I07"	1	"0"	"NE16640"	7	15	86.3
+"McCook"	"R1"	"I07"	1	"0"	"NE16429"	7	16	75.7
+"McCook"	"R1"	"I07"	1	"0"	"NE16470"	7	17	58.5
+"McCook"	"R1"	"I07"	1	"0"	"NE16630"	7	18	83.2
+"McCook"	"R1"	"I07"	0	"Freeman"	"Freeman"	7	19	96.9
+"McCook"	"R1"	"I07"	1	"0"	"NE16417"	7	20	61.1
+"McCook"	"R1"	"I02"	1	"0"	"NE16635"	8	1	60.6
+"McCook"	"R1"	"I02"	1	"0"	"NE16453"	8	2	82.4
+"McCook"	"R1"	"I02"	1	"0"	"NE16422"	8	3	67.4
+"McCook"	"R1"	"I02"	1	"0"	"NE16629"	8	4	77.9
+"McCook"	"R1"	"I02"	1	"0"	"NE16616"	8	5	91.3
+"McCook"	"R1"	"I02"	1	"0"	"NE16507"	8	6	57.2
+"McCook"	"R1"	"I02"	1	"0"	"NE16423"	8	7	83.9
+"McCook"	"R1"	"I02"	1	"0"	"NE16404"	8	8	76.5
+"McCook"	"R1"	"I02"	0	"Freeman"	"Freeman"	8	9	99.2
+"McCook"	"R1"	"I02"	1	"0"	"NE16585"	8	10	56.7
+"McCook"	"R1"	"I07"	1	"0"	"NE16441"	8	11	60.3
+"McCook"	"R1"	"I07"	1	"0"	"NE16415"	8	12	66.7
+"McCook"	"R1"	"I07"	0	"GOODSTREAK"	"GOODSTREAK"	8	13	68
+"McCook"	"R1"	"I07"	1	"0"	"NE16402"	8	14	85
+"McCook"	"R1"	"I07"	1	"0"	"NE16446"	8	15	76.2
+"McCook"	"R1"	"I07"	1	"0"	"NE16420"	8	16	NA
+"McCook"	"R1"	"I07"	1	"0"	"NE16490"	8	17	71.2
+"McCook"	"R1"	"I07"	1	"0"	"NE16562"	8	18	91.9
+"McCook"	"R1"	"I07"	1	"0"	"NE16497"	8	19	75.1
+"McCook"	"R1"	"I07"	1	"0"	"NE16412"	8	20	112.6
+"McCook"	"R1"	"I03"	1	"0"	"NE16522"	9	1	69.9
+"McCook"	"R1"	"I03"	1	"0"	"NE16588"	9	2	77.9
+"McCook"	"R1"	"I03"	1	"0"	"NE16479"	9	3	71.7
+"McCook"	"R1"	"I03"	1	"0"	"NE16659"	9	4	81.5
+"McCook"	"R1"	"I03"	1	"0"	"NE16570"	9	5	72
+"McCook"	"R1"	"I03"	1	"0"	"NE16672"	9	6	86.2
+"McCook"	"R1"	"I03"	1	"0"	"NE16691"	9	7	62.7
+"McCook"	"R1"	"I03"	1	"0"	"NE16529"	9	8	63.7
+"McCook"	"R1"	"I03"	1	"0"	"NE16649"	9	9	55.9
+"McCook"	"R1"	"I03"	0	"Freeman"	"Freeman"	9	10	93.6
+"McCook"	"R1"	"I08"	1	"0"	"NE16593"	9	11	78.6
+"McCook"	"R1"	"I08"	1	"0"	"NE16451"	9	12	59.7
+"McCook"	"R1"	"I08"	1	"0"	"NE16550"	9	13	44.6
+"McCook"	"R1"	"I08"	1	"0"	"NE16642"	9	14	64
+"McCook"	"R1"	"I08"	1	"0"	"NE16428"	9	15	49.7
+"McCook"	"R1"	"I08"	1	"0"	"NE16401"	9	16	9.5
+"McCook"	"R1"	"I08"	1	"0"	"NE16581"	9	17	61.4
+"McCook"	"R1"	"I08"	0	"GOODSTREAK"	"GOODSTREAK"	9	18	84.1
+"McCook"	"R1"	"I08"	1	"0"	"NE16491"	9	19	79.2
+"McCook"	"R1"	"I08"	1	"0"	"NE16645"	9	20	65.2
+"McCook"	"R1"	"I03"	1	"0"	"NE16496"	10	1	49.1
+"McCook"	"R1"	"I03"	1	"0"	"NE16528"	10	2	70.6
+"McCook"	"R1"	"I03"	0	"GOODSTREAK"	"GOODSTREAK"	10	3	67.3
+"McCook"	"R1"	"I03"	0	"Camelot"	"Camelot"	10	4	88.6
+"McCook"	"R1"	"I03"	1	"0"	"NE16609V"	10	5	77.3
+"McCook"	"R1"	"I03"	1	"0"	"NE16437"	10	6	60
+"McCook"	"R1"	"I03"	1	"0"	"NE16531"	10	7	73.9
+"McCook"	"R1"	"I03"	1	"0"	"NE16643"	10	8	62.7
+"McCook"	"R1"	"I03"	1	"0"	"NE16653"	10	9	49.7
+"McCook"	"R1"	"I03"	1	"0"	"NE16599"	10	10	66.7
+"McCook"	"R1"	"I08"	1	"0"	"NE16527"	10	11	57.2
+"McCook"	"R1"	"I08"	1	"0"	"NE16693"	10	12	59.3
+"McCook"	"R1"	"I08"	1	"0"	"NE16449"	10	13	70.3
+"McCook"	"R1"	"I08"	0	"Camelot"	"Camelot"	10	14	89.8
+"McCook"	"R1"	"I08"	1	"0"	"NE16477"	10	15	76.8
+"McCook"	"R1"	"I08"	1	"0"	"NE16555"	10	16	61.2
+"McCook"	"R1"	"I08"	1	"0"	"NE16608"	10	17	75.7
+"McCook"	"R1"	"I08"	1	"0"	"NE16431"	10	18	77.4
+"McCook"	"R1"	"I08"	1	"0"	"NE16556"	10	19	89.2
+"McCook"	"R1"	"I08"	1	"0"	"NE16586"	10	20	92.4
+"McCook"	"R1"	"I03"	1	"0"	"NE16664"	11	1	77.4
+"McCook"	"R1"	"I03"	1	"0"	"NE16614"	11	2	61.8
+"McCook"	"R1"	"I03"	1	"0"	"NE16636"	11	3	93.4
+"McCook"	"R1"	"I03"	1	"0"	"NE16578"	11	4	66.1
+"McCook"	"R1"	"I03"	1	"0"	"NE16513"	11	5	80.9
+"McCook"	"R1"	"I03"	1	"0"	"NE16465"	11	6	57
+"McCook"	"R1"	"I03"	1	"0"	"NE16573"	11	7	62.4
+"McCook"	"R1"	"I03"	1	"0"	"NE16566"	11	8	69.4
+"McCook"	"R1"	"I03"	1	"0"	"NE16679"	11	9	80.6
+"McCook"	"R1"	"I03"	1	"0"	"NE16474"	11	10	50.6
+"McCook"	"R1"	"I08"	1	"0"	"NE16628"	11	11	75.6
+"McCook"	"R1"	"I08"	0	"Freeman"	"Freeman"	11	12	99.9
+"McCook"	"R1"	"I08"	1	"0"	"NE16435"	11	13	67
+"McCook"	"R1"	"I08"	1	"0"	"NE16580V"	11	14	78
+"McCook"	"R1"	"I08"	1	"0"	"NE16666"	11	15	56.2
+"McCook"	"R1"	"I08"	1	"0"	"NE16508"	11	16	65.3
+"McCook"	"R1"	"I08"	1	"0"	"NE16534"	11	17	70
+"McCook"	"R1"	"I08"	1	"0"	"NE16510"	11	18	63.8
+"McCook"	"R1"	"I08"	1	"0"	"NE16517"	11	19	60.6
+"McCook"	"R1"	"I08"	1	"0"	"NE16680"	11	20	72.4
+"McCook"	"R1"	"I04"	1	"0"	"NE16686"	12	1	70.5
+"McCook"	"R1"	"I04"	0	"Camelot"	"Camelot"	12	2	86.2
+"McCook"	"R1"	"I04"	1	"0"	"NE16466"	12	3	66.4
+"McCook"	"R1"	"I04"	1	"0"	"NE16407"	12	4	72.7
+"McCook"	"R1"	"I04"	1	"0"	"NE16553"	12	5	88.6
+"McCook"	"R1"	"I04"	1	"0"	"NE16537"	12	6	62
+"McCook"	"R1"	"I04"	1	"0"	"NE16658"	12	7	68.3
+"McCook"	"R1"	"I04"	1	"0"	"NE16596"	12	8	96.3
+"McCook"	"R1"	"I04"	1	"0"	"NE16442"	12	9	64.6
+"McCook"	"R1"	"I04"	1	"0"	"NE16554"	12	10	81.6
+"McCook"	"R1"	"I09"	0	"Freeman"	"Freeman"	12	11	103
+"McCook"	"R1"	"I09"	1	"0"	"NE16611"	12	12	59.1
+"McCook"	"R1"	"I09"	1	"0"	"NE16589"	12	13	70.8
+"McCook"	"R1"	"I09"	1	"0"	"NE16561"	12	14	59.4
+"McCook"	"R1"	"I09"	1	"0"	"NE16685"	12	15	91.5
+"McCook"	"R1"	"I09"	1	"0"	"NE16448"	12	16	78.6
+"McCook"	"R1"	"I09"	1	"0"	"NE16424"	12	17	77.1
+"McCook"	"R1"	"I09"	1	"0"	"NE16627"	12	18	69.2
+"McCook"	"R1"	"I09"	1	"0"	"NE16577"	12	19	84.4
+"McCook"	"R1"	"I09"	1	"0"	"NE16572"	12	20	46.9
+"McCook"	"R1"	"I04"	1	"0"	"NE16648"	13	1	68
+"McCook"	"R1"	"I04"	1	"0"	"NE16697"	13	2	81.9
+"McCook"	"R1"	"I04"	1	"0"	"NE16501"	13	3	52.2
+"McCook"	"R1"	"I04"	1	"0"	"NE16495"	13	4	73.9
+"McCook"	"R1"	"I04"	1	"0"	"NE16471"	13	5	56.2
+"McCook"	"R1"	"I04"	1	"0"	"NE16661"	13	6	65.3
+"McCook"	"R1"	"I04"	1	"0"	"NE16639"	13	7	66.1
+"McCook"	"R1"	"I04"	1	"0"	"NE16582"	13	8	76.7
+"McCook"	"R1"	"I04"	1	"0"	"NE16544"	13	9	63.8
+"McCook"	"R1"	"I04"	0	"Freeman"	"Freeman"	13	10	85.4
+"McCook"	"R1"	"I09"	1	"0"	"NE16622"	13	11	62.4
+"McCook"	"R1"	"I09"	1	"0"	"NE16637"	13	12	61.7
+"McCook"	"R1"	"I09"	1	"0"	"NE16486"	13	13	52.6
+"McCook"	"R1"	"I09"	1	"0"	"NE16409"	13	14	48.8
+"McCook"	"R1"	"I09"	0	"GOODSTREAK"	"GOODSTREAK"	13	15	77.7
+"McCook"	"R1"	"I09"	1	"0"	"NE16535"	13	16	62
+"McCook"	"R1"	"I09"	1	"0"	"NE16654"	13	17	68.3
+"McCook"	"R1"	"I09"	1	"0"	"NE16489"	13	18	56.7
+"McCook"	"R1"	"I09"	1	"0"	"NE16602"	13	19	63.3
+"McCook"	"R1"	"I09"	0	"Camelot"	"Camelot"	13	20	73.9
+"McCook"	"R1"	"I04"	1	"0"	"NE16688"	14	1	85.6
+"McCook"	"R1"	"I04"	1	"0"	"NE16676"	14	2	63.7
+"McCook"	"R1"	"I04"	1	"0"	"NE16612"	14	3	77.6
+"McCook"	"R1"	"I04"	1	"0"	"NE16700"	14	4	44
+"McCook"	"R1"	"I04"	1	"0"	"NE16647"	14	5	69.4
+"McCook"	"R1"	"I04"	1	"0"	"NE16683"	14	6	89.2
+"McCook"	"R1"	"I04"	0	"GOODSTREAK"	"GOODSTREAK"	14	7	76.1
+"McCook"	"R1"	"I04"	1	"0"	"NE16625"	14	8	45.5
+"McCook"	"R1"	"I04"	1	"0"	"NE16692"	14	9	64
+"McCook"	"R1"	"I04"	1	"0"	"NE16574"	14	10	69.1
+"McCook"	"R1"	"I09"	1	"0"	"NE16416"	14	11	68.8
+"McCook"	"R1"	"I09"	1	"0"	"NE16516"	14	12	91.5
+"McCook"	"R1"	"I09"	1	"0"	"NE16667"	14	13	43.1
+"McCook"	"R1"	"I09"	1	"0"	"NE16458"	14	14	63.7
+"McCook"	"R1"	"I09"	1	"0"	"NE16549"	14	15	86.9
+"McCook"	"R1"	"I09"	1	"0"	"NE16539"	14	16	76.2
+"McCook"	"R1"	"I09"	1	"0"	"NE16663"	14	17	75.7
+"McCook"	"R1"	"I09"	1	"0"	"NE16427"	14	18	63.2
+"McCook"	"R1"	"I09"	1	"0"	"NE16511"	14	19	51.4
+"McCook"	"R1"	"I09"	1	"0"	"NE16436"	14	20	84.7
+"McCook"	"R1"	"I05"	1	"0"	"NE16568"	15	1	70.5
+"McCook"	"R1"	"I05"	1	"0"	"NE16494"	15	2	75.7
+"McCook"	"R1"	"I05"	0	"GOODSTREAK"	"GOODSTREAK"	15	3	70.5
+"McCook"	"R1"	"I05"	1	"0"	"NE16476"	15	4	63
+"McCook"	"R1"	"I05"	1	"0"	"NE16567"	15	5	71.7
+"McCook"	"R1"	"I05"	1	"0"	"NE16454"	15	6	54.1
+"McCook"	"R1"	"I05"	1	"0"	"NE16541"	15	7	57.3
+"McCook"	"R1"	"I05"	1	"0"	"NE16498"	15	8	33.3
+"McCook"	"R1"	"I05"	1	"0"	"NE16538"	15	9	77.1
+"McCook"	"R1"	"I05"	1	"0"	"NE16493"	15	10	63.2
+"McCook"	"R1"	"I10"	1	"0"	"NE16503V"	15	11	79.5
+"McCook"	"R1"	"I10"	1	"0"	"NE16543"	15	12	65.3
+"McCook"	"R1"	"I10"	1	"0"	"NE16405"	15	13	72.9
+"McCook"	"R1"	"I10"	1	"0"	"NE16600"	15	14	77.7
+"McCook"	"R1"	"I10"	1	"0"	"NE16671"	15	15	68.5
+"McCook"	"R1"	"I10"	1	"0"	"NE16571"	15	16	90.3
+"McCook"	"R1"	"I10"	1	"0"	"NE16518"	15	17	72.4
+"McCook"	"R1"	"I10"	1	"0"	"NE16615"	15	18	86.2
+"McCook"	"R1"	"I10"	1	"0"	"NE16414"	15	19	69.1
+"McCook"	"R1"	"I10"	1	"0"	"NE16434"	15	20	58.2
+"McCook"	"R1"	"I05"	1	"0"	"NE16695"	16	1	88.8
+"McCook"	"R1"	"I05"	1	"0"	"NE16545"	16	2	92.1
+"McCook"	"R1"	"I05"	1	"0"	"NE16619"	16	3	73.2
+"McCook"	"R1"	"I05"	1	"0"	"NE16460"	16	4	38.3
+"McCook"	"R1"	"I05"	1	"0"	"NE16576V"	16	5	79.1
+"McCook"	"R1"	"I05"	1	"0"	"NE16631"	16	6	77.7
+"McCook"	"R1"	"I05"	1	"0"	"NE16564"	16	7	62.6
+"McCook"	"R1"	"I05"	1	"0"	"NE16439"	16	8	80.3
+"McCook"	"R1"	"I05"	1	"0"	"NE16413"	16	9	57.2
+"McCook"	"R1"	"I05"	0	"Camelot"	"Camelot"	16	10	65
+"McCook"	"R1"	"I10"	1	"0"	"NE16583"	16	11	81.2
+"McCook"	"R1"	"I10"	1	"0"	"NE16523"	16	12	76.5
+"McCook"	"R1"	"I10"	1	"0"	"NE16418"	16	13	73.6
+"McCook"	"R1"	"I10"	0	"Camelot"	"Camelot"	16	14	95.4
+"McCook"	"R1"	"I10"	1	"0"	"NE16632"	16	15	67.9
+"McCook"	"R1"	"I10"	1	"0"	"NE16457"	16	16	73.6
+"McCook"	"R1"	"I10"	1	"0"	"NE16651"	16	17	54
+"McCook"	"R1"	"I10"	0	"Freeman"	"Freeman"	16	18	89.2
+"McCook"	"R1"	"I10"	1	"0"	"NE16665"	16	19	62.9
+"McCook"	"R1"	"I10"	1	"0"	"NE16536"	16	20	71.2
+"McCook"	"R1"	"I05"	1	"0"	"NE16504"	17	1	94.2
+"McCook"	"R1"	"I05"	1	"0"	"NE16438"	17	2	48.1
+"McCook"	"R1"	"I05"	1	"0"	"NE16548"	17	3	68.8
+"McCook"	"R1"	"I05"	1	"0"	"NE16569"	17	4	47.8
+"McCook"	"R1"	"I05"	0	"Freeman"	"Freeman"	17	5	90.9
+"McCook"	"R1"	"I05"	1	"0"	"NE16699"	17	6	56.7
+"McCook"	"R1"	"I05"	1	"0"	"NE16488"	17	7	73.8
+"McCook"	"R1"	"I05"	1	"0"	"NE16525"	17	8	43.7
+"McCook"	"R1"	"I05"	1	"0"	"NE16462"	17	9	54.3
+"McCook"	"R1"	"I05"	1	"0"	"NE16509"	17	10	65.2
+"McCook"	"R1"	"I10"	0	"GOODSTREAK"	"GOODSTREAK"	17	11	65.9
+"McCook"	"R1"	"I10"	1	"0"	"NE16623"	17	12	54.3
+"McCook"	"R1"	"I10"	1	"0"	"NE16601"	17	13	69.1
+"McCook"	"R1"	"I10"	1	"0"	"NE16505"	17	14	65.6
+"McCook"	"R1"	"I10"	1	"0"	"NE16604"	17	15	48.8
+"McCook"	"R1"	"I10"	1	"0"	"NE16681"	17	16	70.9
+"McCook"	"R1"	"I10"	1	"0"	"NE16452"	17	17	62.7
+"McCook"	"R1"	"I10"	1	"0"	"NE16467"	17	18	78.3
+"McCook"	"R1"	"I10"	1	"0"	"NE16655"	17	19	78.5
+"McCook"	"R1"	"I10"	1	"0"	"NE16461"	17	20	62.7
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16438"	1	61	60.7
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16558"	1	62	48.1
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16616"	1	63	52.9
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16523"	1	64	73
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16669"	1	65	57.6
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16680"	1	66	61
+"NORTH PLATTE"	"R1"	"I01"	0	"Camelot"	"Camelot"	1	67	71.6
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16509"	1	68	63.6
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16629"	1	69	57.2
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16583"	1	70	85.7
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16654"	1	71	83.3
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16463"	1	72	64.2
+"NORTH PLATTE"	"R1"	"I06"	0	"Freeman"	"Freeman"	1	73	92.3
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16413"	1	74	54.5
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16434"	1	75	60.9
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16538"	1	76	85.3
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16466"	1	77	45.6
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16666"	1	78	68.2
+"NORTH PLATTE"	"R1"	"I06"	0	"GOODSTREAK"	"GOODSTREAK"	1	79	67.9
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16673"	1	80	73.3
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16642"	2	61	68.3
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16478"	2	62	64.7
+"NORTH PLATTE"	"R1"	"I01"	0	"Freeman"	"Freeman"	2	63	74.2
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16580V"	2	64	63
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16457"	2	65	67.4
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16593"	2	66	67.5
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16533"	2	67	58.4
+"NORTH PLATTE"	"R1"	"I01"	0	"GOODSTREAK"	"GOODSTREAK"	2	68	65.9
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16604"	2	69	88
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16684"	2	70	56.5
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16405"	2	71	61.9
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16586"	2	72	62.9
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16571"	2	73	96.2
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16562"	2	74	88.6
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16522"	2	75	77.1
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16681"	2	76	50.7
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16671"	2	77	71.4
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16581"	2	78	68.3
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16471"	2	79	59.7
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16401"	2	80	63.1
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16576V"	3	61	67.9
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16489"	3	62	53.4
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16637"	3	63	46.7
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16447"	3	64	58
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16585"	3	65	45.8
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16508"	3	66	62.6
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16415"	3	67	69.7
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16687"	3	68	81.4
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16691"	3	69	54.1
+"NORTH PLATTE"	"R1"	"I01"	1	"0"	"NE16577"	3	70	71.6
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16501"	3	71	58.5
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16621"	3	72	52.7
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16685"	3	73	76.1
+"NORTH PLATTE"	"R1"	"I06"	0	"Camelot"	"Camelot"	3	74	61.7
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16589"	3	75	49.8
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16486"	3	76	65
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16663"	3	77	66.7
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16639"	3	78	65.6
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16500"	3	79	64.5
+"NORTH PLATTE"	"R1"	"I06"	1	"0"	"NE16494"	3	80	67.6
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16480"	4	61	57.1
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16688"	4	62	66
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16469"	4	63	50.6
+"NORTH PLATTE"	"R1"	"I02"	0	"GOODSTREAK"	"GOODSTREAK"	4	64	45.6
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16630"	4	65	61
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16648"	4	66	53.5
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16432"	4	67	70.1
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16449"	4	68	50.6
+"NORTH PLATTE"	"R1"	"I02"	0	"Camelot"	"Camelot"	4	69	63.7
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16546"	4	70	74.1
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16578"	4	71	77.4
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16465"	4	72	71
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16662"	4	73	67
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16698"	4	74	60.5
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16417"	4	75	56.3
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16439"	4	76	69.9
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16572"	4	77	50.1
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16598"	4	78	66
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16657"	4	79	75
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16622"	4	80	61.2
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16697"	5	61	60.8
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16535"	5	62	53.9
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16579"	5	63	63
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16674"	5	64	49.2
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16464"	5	65	56.5
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16686"	5	66	69.7
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16459"	5	67	48.5
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16634"	5	68	68
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16599"	5	69	57.5
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16587"	5	70	70.8
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16607"	5	71	79
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16554"	5	72	83.9
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16431"	5	73	70.7
+"NORTH PLATTE"	"R1"	"I07"	0	"Camelot"	"Camelot"	5	74	66.5
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16520"	5	75	63.6
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16645"	5	76	61.7
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16655"	5	77	72.4
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16679"	5	78	70.8
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16628"	5	79	75.1
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16588"	5	80	66.5
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16677"	6	61	63.5
+"NORTH PLATTE"	"R1"	"I02"	0	"Freeman"	"Freeman"	6	62	68
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16515"	6	63	65.9
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16667"	6	64	70.5
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16528"	6	65	65.3
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16653"	6	66	63.9
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16574"	6	67	76.9
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16592"	6	68	61.9
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16570"	6	69	80.2
+"NORTH PLATTE"	"R1"	"I02"	1	"0"	"NE16647"	6	70	71.1
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16675"	6	71	54.8
+"NORTH PLATTE"	"R1"	"I07"	0	"Freeman"	"Freeman"	6	72	86.6
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16404"	6	73	80.7
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16517"	6	74	52.1
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16542"	6	75	85.5
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16696"	6	76	66.3
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16527"	6	77	67.3
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16650"	6	78	67.1
+"NORTH PLATTE"	"R1"	"I07"	1	"0"	"NE16460"	6	79	58.3
+"NORTH PLATTE"	"R1"	"I07"	0	"GOODSTREAK"	"GOODSTREAK"	6	80	61.1
+"NORTH PLATTE"	"R1"	"I03"	0	"Freeman"	"Freeman"	7	61	73.5
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16695"	7	62	81.1
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16490"	7	63	56.9
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16615"	7	64	86.1
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16545"	7	65	60.3
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16573"	7	66	49
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16566"	7	67	57.7
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16544"	7	68	68.6
+"NORTH PLATTE"	"R1"	"I03"	0	"GOODSTREAK"	"GOODSTREAK"	7	69	60.4
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16631"	7	70	62.8
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16507"	7	71	76.4
+"NORTH PLATTE"	"R1"	"I08"	0	"GOODSTREAK"	"GOODSTREAK"	7	72	57.4
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16693"	7	73	83.9
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16428"	7	74	56.5
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16540"	7	75	55.8
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16421"	7	76	34
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16582"	7	77	77
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16553"	7	78	70.8
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16531"	7	79	78.6
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16543"	7	80	48.7
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16563V"	8	61	75.6
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16605"	8	62	69.1
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16479"	8	63	72.9
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16488"	8	64	74.4
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16424"	8	65	69.5
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16623"	8	66	43.2
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16619"	8	67	84.4
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16456"	8	68	65.1
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16539"	8	69	61.1
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16609V"	8	70	90.7
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16651"	8	71	67.7
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16664"	8	72	52.7
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16641"	8	73	82.2
+"NORTH PLATTE"	"R1"	"I08"	0	"Camelot"	"Camelot"	8	74	61.6
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16564"	8	75	49
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16549"	8	76	92.3
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16665"	8	77	62
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16420"	8	78	40
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16624"	8	79	71.9
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16423"	8	80	83.4
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16493"	9	61	55.2
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16525"	9	62	48.2
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16610"	9	63	67.1
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16495"	9	64	73.9
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16692"	9	65	55
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16461"	9	66	50.2
+"NORTH PLATTE"	"R1"	"I03"	0	"Camelot"	"Camelot"	9	67	80
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16476"	9	68	68.9
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16445"	9	69	63.6
+"NORTH PLATTE"	"R1"	"I03"	1	"0"	"NE16568"	9	70	66.1
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16689"	9	71	68.5
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16409"	9	72	45.8
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16600"	9	73	77
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16636"	9	74	70.9
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16690"	9	75	57.9
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16505"	9	76	65.6
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16676"	9	77	66.8
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16430"	9	78	51.2
+"NORTH PLATTE"	"R1"	"I08"	0	"Freeman"	"Freeman"	9	79	82.6
+"NORTH PLATTE"	"R1"	"I08"	1	"0"	"NE16477"	9	80	60.8
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16594"	10	61	69
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16649"	10	62	59.1
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16443"	10	63	63.9
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16613"	10	64	56.4
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16541"	10	65	59.2
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16406"	10	66	76.4
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16435"	10	67	58.5
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16462"	10	68	67.3
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16635"	10	69	76.4
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16644"	10	70	81.6
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16483"	10	71	78.8
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16425"	10	72	86.7
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16524"	10	73	79.3
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16482"	10	74	69.1
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16557"	10	75	67.5
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16643"	10	76	73.8
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16468"	10	77	78.3
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16503V"	10	78	69.2
+"NORTH PLATTE"	"R1"	"I09"	0	"Freeman"	"Freeman"	10	79	89
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16458"	10	80	63
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16612"	11	61	80.1
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16475"	11	62	76
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16444"	11	63	52.2
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16556"	11	64	72.3
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16608"	11	65	69.4
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16407"	11	66	54.3
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16474"	11	67	45.2
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16668"	11	68	86.2
+"NORTH PLATTE"	"R1"	"I04"	0	"Camelot"	"Camelot"	11	69	70.9
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16659"	11	70	77.8
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16656"	11	71	73.1
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16700"	11	72	53.1
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16555"	11	73	52
+"NORTH PLATTE"	"R1"	"I09"	0	"GOODSTREAK"	"GOODSTREAK"	11	74	55.9
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16511"	11	75	48.8
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16606"	11	76	77.6
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16419"	11	77	59
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16498"	11	78	57.6
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16638"	11	79	71.3
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16548"	11	80	70.8
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16534"	12	61	86.3
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16614"	12	62	72.5
+"NORTH PLATTE"	"R1"	"I04"	0	"Freeman"	"Freeman"	12	63	88.8
+"NORTH PLATTE"	"R1"	"I04"	0	"GOODSTREAK"	"GOODSTREAK"	12	64	57.9
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16472"	12	65	55.3
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16442"	12	66	73.8
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16513"	12	67	77.8
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16560"	12	68	76.6
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16512"	12	69	50.2
+"NORTH PLATTE"	"R1"	"I04"	1	"0"	"NE16620"	12	70	78.1
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16492"	12	71	69.5
+"NORTH PLATTE"	"R1"	"I09"	0	"Camelot"	"Camelot"	12	72	73.2
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16601"	12	73	97.8
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16504"	12	74	82.1
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16661"	12	75	72.1
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16467"	12	76	79.4
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16567"	12	77	75.8
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16660"	12	78	86.8
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16561"	12	79	82.6
+"NORTH PLATTE"	"R1"	"I09"	1	"0"	"NE16403"	12	80	62.2
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16617"	13	61	73.6
+"NORTH PLATTE"	"R1"	"I05"	0	"GOODSTREAK"	"GOODSTREAK"	13	62	61.3
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16470"	13	63	52.5
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16536"	13	64	50.2
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16440"	13	65	59.1
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16596"	13	66	81
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16441"	13	67	53.3
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16521"	13	68	79.9
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16412"	13	69	75.4
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16569"	13	70	54.9
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16575"	13	71	61.6
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16552"	13	72	70.9
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16416"	13	73	62.2
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16502"	13	74	68.1
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16452"	13	75	71.4
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16519"	13	76	74.2
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16485"	13	77	57.8
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16591"	13	78	45.4
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16454"	13	79	58.9
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16484"	13	80	79.9
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16595"	14	61	87.2
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16437"	14	62	61.4
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16402"	14	63	72.4
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16658"	14	64	69.8
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16497"	14	65	60.7
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16526"	14	66	62.3
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16491"	14	67	86.2
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16429"	14	68	66
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16453"	14	69	67.2
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16418"	14	70	78.5
+"NORTH PLATTE"	"R1"	"I10"	0	"Camelot"	"Camelot"	14	71	72.4
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16446"	14	72	57.6
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16516"	14	73	54.7
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16529"	14	74	63
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16436"	14	75	80.7
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16422"	14	76	66.8
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16683"	14	77	70.8
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16451"	14	78	58.5
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16414"	14	79	69.8
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16640"	14	80	76.3
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16672"	15	61	82.9
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16427"	15	62	68
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16510"	15	63	55.2
+"NORTH PLATTE"	"R1"	"I05"	0	"Camelot"	"Camelot"	15	64	67.1
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16625"	15	65	59.2
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16518"	15	66	50.6
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16410"	15	67	56.8
+"NORTH PLATTE"	"R1"	"I05"	0	"Freeman"	"Freeman"	15	68	78.3
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16550"	15	69	61.4
+"NORTH PLATTE"	"R1"	"I05"	1	"0"	"NE16448"	15	70	77.4
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16496"	15	71	72.5
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16602"	15	72	69
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16603"	15	73	81.4
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16627"	15	74	49.9
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16632"	15	75	58.4
+"NORTH PLATTE"	"R1"	"I10"	0	"Freeman"	"Freeman"	15	76	84.9
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16611"	15	77	57.9
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16537"	15	78	56.4
+"NORTH PLATTE"	"R1"	"I10"	1	"0"	"NE16699"	15	79	60.3
+"NORTH PLATTE"	"R1"	"I10"	0	"GOODSTREAK"	"GOODSTREAK"	15	80	54.7
+"Sidney"	"R1"	"I01"	1	"0"	"NE16446"	1	32	35.5
+"Sidney"	"R1"	"I01"	1	"0"	"NE16516"	1	33	46.8
+"Sidney"	"R1"	"I01"	1	"0"	"NE16697"	1	34	36.7
+"Sidney"	"R1"	"I01"	1	"0"	"NE16447"	1	35	37.5
+"Sidney"	"R1"	"I01"	1	"0"	"NE16441"	1	36	58.4
+"Sidney"	"R1"	"I01"	1	"0"	"NE16601"	1	37	49
+"Sidney"	"R1"	"I01"	1	"0"	"NE16598"	1	38	43
+"Sidney"	"R1"	"I01"	1	"0"	"NE16602"	1	39	42.8
+"Sidney"	"R1"	"I01"	1	"0"	"NE16534"	1	40	41.4
+"Sidney"	"R1"	"I01"	1	"0"	"NE16491"	1	41	33.6
+"Sidney"	"R1"	"I01"	1	"0"	"NE16692"	2	32	30.5
+"Sidney"	"R1"	"I01"	1	"0"	"NE16574"	2	33	46.8
+"Sidney"	"R1"	"I01"	1	"0"	"NE16478"	2	34	51.5
+"Sidney"	"R1"	"I01"	1	"0"	"NE16647"	2	35	47.7
+"Sidney"	"R1"	"I01"	1	"0"	"NE16427"	2	36	46.8
+"Sidney"	"R1"	"I01"	1	"0"	"NE16461"	2	37	54.4
+"Sidney"	"R1"	"I01"	0	"Camelot"	"Camelot"	2	38	49.3
+"Sidney"	"R1"	"I01"	1	"0"	"NE16585"	2	39	36.3
+"Sidney"	"R1"	"I01"	1	"0"	"NE16507"	2	40	52.6
+"Sidney"	"R1"	"I01"	1	"0"	"NE16510"	2	41	42.5
+"Sidney"	"R1"	"I01"	0	"Freeman"	"Freeman"	3	32	73.1
+"Sidney"	"R1"	"I01"	1	"0"	"NE16522"	3	33	55.1
+"Sidney"	"R1"	"I01"	1	"0"	"NE16443"	3	34	57.9
+"Sidney"	"R1"	"I01"	1	"0"	"NE16494"	3	35	60.3
+"Sidney"	"R1"	"I01"	1	"0"	"NE16594"	3	36	53.4
+"Sidney"	"R1"	"I01"	1	"0"	"NE16604"	3	37	36.6
+"Sidney"	"R1"	"I01"	1	"0"	"NE16674"	3	38	39.2
+"Sidney"	"R1"	"I01"	1	"0"	"NE16616"	3	39	47.9
+"Sidney"	"R1"	"I01"	0	"GOODSTREAK"	"GOODSTREAK"	3	40	39.5
+"Sidney"	"R1"	"I01"	1	"0"	"NE16432"	3	41	30.2
+"Sidney"	"R1"	"I02"	1	"0"	"NE16649"	4	32	58.7
+"Sidney"	"R1"	"I02"	0	"GOODSTREAK"	"GOODSTREAK"	4	33	44.8
+"Sidney"	"R1"	"I02"	1	"0"	"NE16600"	4	34	50.9
+"Sidney"	"R1"	"I02"	1	"0"	"NE16457"	4	35	52
+"Sidney"	"R1"	"I02"	1	"0"	"NE16685"	4	36	55.7
+"Sidney"	"R1"	"I02"	1	"0"	"NE16539"	4	37	41.5
+"Sidney"	"R1"	"I02"	1	"0"	"NE16648"	4	38	63.3
+"Sidney"	"R1"	"I02"	0	"Camelot"	"Camelot"	4	39	43.3
+"Sidney"	"R1"	"I02"	1	"0"	"NE16459"	4	40	16
+"Sidney"	"R1"	"I02"	1	"0"	"NE16580V"	4	41	31.1
+"Sidney"	"R1"	"I02"	1	"0"	"NE16414"	5	32	50.2
+"Sidney"	"R1"	"I02"	1	"0"	"NE16448"	5	33	71.6
+"Sidney"	"R1"	"I02"	1	"0"	"NE16419"	5	34	42.6
+"Sidney"	"R1"	"I02"	1	"0"	"NE16410"	5	35	52.2
+"Sidney"	"R1"	"I02"	1	"0"	"NE16686"	5	36	62.4
+"Sidney"	"R1"	"I02"	1	"0"	"NE16490"	5	37	63.3
+"Sidney"	"R1"	"I02"	1	"0"	"NE16488"	5	38	48.5
+"Sidney"	"R1"	"I02"	1	"0"	"NE16525"	5	39	24.2
+"Sidney"	"R1"	"I02"	1	"0"	"NE16619"	5	40	55.5
+"Sidney"	"R1"	"I02"	1	"0"	"NE16470"	5	41	53.8
+"Sidney"	"R1"	"I02"	1	"0"	"NE16571"	6	32	64.2
+"Sidney"	"R1"	"I02"	1	"0"	"NE16544"	6	33	65.7
+"Sidney"	"R1"	"I02"	1	"0"	"NE16665"	6	34	58.2
+"Sidney"	"R1"	"I02"	1	"0"	"NE16463"	6	35	45.1
+"Sidney"	"R1"	"I02"	0	"Freeman"	"Freeman"	6	36	76.8
+"Sidney"	"R1"	"I02"	1	"0"	"NE16579"	6	37	72.6
+"Sidney"	"R1"	"I02"	1	"0"	"NE16421"	6	38	61.9
+"Sidney"	"R1"	"I02"	1	"0"	"NE16464"	6	39	57.7
+"Sidney"	"R1"	"I02"	1	"0"	"NE16592"	6	40	36.3
+"Sidney"	"R1"	"I02"	1	"0"	"NE16567"	6	41	57.6
+"Sidney"	"R1"	"I03"	1	"0"	"NE16645"	7	32	71.5
+"Sidney"	"R1"	"I03"	1	"0"	"NE16572"	7	33	41.1
+"Sidney"	"R1"	"I03"	0	"Freeman"	"Freeman"	7	34	80.5
+"Sidney"	"R1"	"I03"	1	"0"	"NE16599"	7	35	55.4
+"Sidney"	"R1"	"I03"	1	"0"	"NE16422"	7	36	51
+"Sidney"	"R1"	"I03"	1	"0"	"NE16456"	7	37	42.3
+"Sidney"	"R1"	"I03"	1	"0"	"NE16423"	7	38	68.6
+"Sidney"	"R1"	"I03"	1	"0"	"NE16404"	7	39	55.4
+"Sidney"	"R1"	"I03"	1	"0"	"NE16690"	7	40	36.9
+"Sidney"	"R1"	"I03"	1	"0"	"NE16495"	7	41	78.5
+"Sidney"	"R1"	"I03"	1	"0"	"NE16699"	8	32	77.3
+"Sidney"	"R1"	"I03"	1	"0"	"NE16586"	8	33	62.6
+"Sidney"	"R1"	"I03"	1	"0"	"NE16659"	8	34	55.5
+"Sidney"	"R1"	"I03"	1	"0"	"NE16445"	8	35	58.9
+"Sidney"	"R1"	"I03"	0	"GOODSTREAK"	"GOODSTREAK"	8	36	42.2
+"Sidney"	"R1"	"I03"	1	"0"	"NE16413"	8	37	44
+"Sidney"	"R1"	"I03"	1	"0"	"NE16479"	8	38	59.3
+"Sidney"	"R1"	"I03"	1	"0"	"NE16540"	8	39	54.2
+"Sidney"	"R1"	"I03"	0	"Camelot"	"Camelot"	8	40	40.4
+"Sidney"	"R1"	"I03"	1	"0"	"NE16482"	8	41	50.8
+"Sidney"	"R1"	"I03"	1	"0"	"NE16515"	9	32	82
+"Sidney"	"R1"	"I03"	1	"0"	"NE16679"	9	33	65.9
+"Sidney"	"R1"	"I03"	1	"0"	"NE16557"	9	34	50.4
+"Sidney"	"R1"	"I03"	1	"0"	"NE16543"	9	35	59.1
+"Sidney"	"R1"	"I03"	1	"0"	"NE16687"	9	36	72.6
+"Sidney"	"R1"	"I03"	1	"0"	"NE16696"	9	37	65.8
+"Sidney"	"R1"	"I03"	1	"0"	"NE16693"	9	38	60.9
+"Sidney"	"R1"	"I03"	1	"0"	"NE16406"	9	39	71
+"Sidney"	"R1"	"I03"	1	"0"	"NE16676"	9	40	53.7
+"Sidney"	"R1"	"I03"	1	"0"	"NE16591"	9	41	36.2
+"Sidney"	"R1"	"I04"	1	"0"	"NE16588"	10	32	62.1
+"Sidney"	"R1"	"I04"	1	"0"	"NE16501"	10	33	64.5
+"Sidney"	"R1"	"I04"	0	"Camelot"	"Camelot"	10	34	59.6
+"Sidney"	"R1"	"I04"	1	"0"	"NE16428"	10	35	50.7
+"Sidney"	"R1"	"I04"	1	"0"	"NE16629"	10	36	64.5
+"Sidney"	"R1"	"I04"	1	"0"	"NE16609V"	10	37	69.8
+"Sidney"	"R1"	"I04"	1	"0"	"NE16452"	10	38	63
+"Sidney"	"R1"	"I04"	1	"0"	"NE16415"	10	39	60
+"Sidney"	"R1"	"I04"	1	"0"	"NE16631"	10	40	70.2
+"Sidney"	"R1"	"I04"	1	"0"	"NE16671"	10	41	52
+"Sidney"	"R1"	"I04"	1	"0"	"NE16680"	11	32	74.8
+"Sidney"	"R1"	"I04"	1	"0"	"NE16485"	11	33	61.9
+"Sidney"	"R1"	"I04"	1	"0"	"NE16608"	11	34	60
+"Sidney"	"R1"	"I04"	1	"0"	"NE16503V"	11	35	65.8
+"Sidney"	"R1"	"I04"	1	"0"	"NE16638"	11	36	48.7
+"Sidney"	"R1"	"I04"	1	"0"	"NE16662"	11	37	68.2
+"Sidney"	"R1"	"I04"	1	"0"	"NE16424"	11	38	86.6
+"Sidney"	"R1"	"I04"	1	"0"	"NE16546"	11	39	64.2
+"Sidney"	"R1"	"I04"	0	"Freeman"	"Freeman"	11	40	77.7
+"Sidney"	"R1"	"I04"	1	"0"	"NE16498"	11	41	53.2
+"Sidney"	"R1"	"I04"	1	"0"	"NE16581"	12	32	56.6
+"Sidney"	"R1"	"I04"	1	"0"	"NE16625"	12	33	60.6
+"Sidney"	"R1"	"I04"	1	"0"	"NE16612"	12	34	71.2
+"Sidney"	"R1"	"I04"	1	"0"	"NE16493"	12	35	75.4
+"Sidney"	"R1"	"I04"	1	"0"	"NE16468"	12	36	61.6
+"Sidney"	"R1"	"I04"	1	"0"	"NE16401"	12	37	67.9
+"Sidney"	"R1"	"I04"	0	"GOODSTREAK"	"GOODSTREAK"	12	38	46.1
+"Sidney"	"R1"	"I04"	1	"0"	"NE16570"	12	39	78.5
+"Sidney"	"R1"	"I04"	1	"0"	"NE16637"	12	40	62.3
+"Sidney"	"R1"	"I04"	1	"0"	"NE16593"	12	41	73.9
+"Sidney"	"R1"	"I05"	1	"0"	"NE16439"	13	32	66.3
+"Sidney"	"R1"	"I05"	1	"0"	"NE16576V"	13	33	71.9
+"Sidney"	"R1"	"I05"	1	"0"	"NE16650"	13	34	52.2
+"Sidney"	"R1"	"I05"	0	"GOODSTREAK"	"GOODSTREAK"	13	35	45.9
+"Sidney"	"R1"	"I05"	1	"0"	"NE16526"	13	36	54.1
+"Sidney"	"R1"	"I05"	1	"0"	"NE16480"	13	37	61.2
+"Sidney"	"R1"	"I05"	1	"0"	"NE16474"	13	38	31.3
+"Sidney"	"R1"	"I05"	1	"0"	"NE16636"	13	39	68.2
+"Sidney"	"R1"	"I05"	1	"0"	"NE16655"	13	40	67.5
+"Sidney"	"R1"	"I05"	0	"Camelot"	"Camelot"	13	41	50.3
+"Sidney"	"R1"	"I05"	1	"0"	"NE16573"	14	32	53
+"Sidney"	"R1"	"I05"	1	"0"	"NE16403"	14	33	50.4
+"Sidney"	"R1"	"I05"	1	"0"	"NE16617"	14	34	70.6
+"Sidney"	"R1"	"I05"	1	"0"	"NE16658"	14	35	65.4
+"Sidney"	"R1"	"I05"	1	"0"	"NE16640"	14	36	56.8
+"Sidney"	"R1"	"I05"	1	"0"	"NE16611"	14	37	67.8
+"Sidney"	"R1"	"I05"	1	"0"	"NE16529"	14	38	67.4
+"Sidney"	"R1"	"I05"	1	"0"	"NE16453"	14	39	58.1
+"Sidney"	"R1"	"I05"	1	"0"	"NE16469"	14	40	57
+"Sidney"	"R1"	"I05"	1	"0"	"NE16454"	14	41	55.5
+"Sidney"	"R1"	"I05"	1	"0"	"NE16615"	15	32	71.6
+"Sidney"	"R1"	"I05"	1	"0"	"NE16642"	15	33	69.6
+"Sidney"	"R1"	"I05"	0	"Freeman"	"Freeman"	15	34	77.9
+"Sidney"	"R1"	"I05"	1	"0"	"NE16688"	15	35	63.3
+"Sidney"	"R1"	"I05"	1	"0"	"NE16440"	15	36	65.2
+"Sidney"	"R1"	"I05"	1	"0"	"NE16556"	15	37	70.8
+"Sidney"	"R1"	"I05"	1	"0"	"NE16550"	15	38	59.8
+"Sidney"	"R1"	"I05"	1	"0"	"NE16596"	15	39	71
+"Sidney"	"R1"	"I05"	1	"0"	"NE16425"	15	40	61.7
+"Sidney"	"R1"	"I05"	1	"0"	"NE16620"	15	41	60.5
+"Sidney"	"R1"	"I06"	1	"0"	"NE16569"	16	32	63.1
+"Sidney"	"R1"	"I06"	1	"0"	"NE16475"	16	33	73.3
+"Sidney"	"R1"	"I06"	1	"0"	"NE16533"	16	34	63.1
+"Sidney"	"R1"	"I06"	1	"0"	"NE16542"	16	35	60.4
+"Sidney"	"R1"	"I06"	1	"0"	"NE16689"	16	36	51.1
+"Sidney"	"R1"	"I06"	1	"0"	"NE16553"	16	37	65.5
+"Sidney"	"R1"	"I06"	1	"0"	"NE16639"	16	38	65.9
+"Sidney"	"R1"	"I06"	1	"0"	"NE16564"	16	39	41.4
+"Sidney"	"R1"	"I06"	1	"0"	"NE16700"	16	40	60.6
+"Sidney"	"R1"	"I06"	1	"0"	"NE16577"	16	41	50.4
+"Sidney"	"R1"	"I06"	1	"0"	"NE16623"	17	32	43
+"Sidney"	"R1"	"I06"	1	"0"	"NE16691"	17	33	63.9
+"Sidney"	"R1"	"I06"	1	"0"	"NE16610"	17	34	59.1
+"Sidney"	"R1"	"I06"	1	"0"	"NE16624"	17	35	47.9
+"Sidney"	"R1"	"I06"	1	"0"	"NE16420"	17	36	35.8
+"Sidney"	"R1"	"I06"	1	"0"	"NE16632"	17	37	58.5
+"Sidney"	"R1"	"I06"	1	"0"	"NE16512"	17	38	37
+"Sidney"	"R1"	"I06"	1	"0"	"NE16627"	17	39	53.9
+"Sidney"	"R1"	"I06"	1	"0"	"NE16449"	17	40	65.5
+"Sidney"	"R1"	"I06"	1	"0"	"NE16407"	17	41	37.6
+"Sidney"	"R1"	"I06"	1	"0"	"NE16673"	18	32	70
+"Sidney"	"R1"	"I06"	0	"Freeman"	"Freeman"	18	33	72.4
+"Sidney"	"R1"	"I06"	1	"0"	"NE16435"	18	34	56.7
+"Sidney"	"R1"	"I06"	1	"0"	"NE16511"	18	35	55.2
+"Sidney"	"R1"	"I06"	0	"GOODSTREAK"	"GOODSTREAK"	18	36	40
+"Sidney"	"R1"	"I06"	1	"0"	"NE16484"	18	37	56.3
+"Sidney"	"R1"	"I06"	1	"0"	"NE16489"	18	38	64.2
+"Sidney"	"R1"	"I06"	1	"0"	"NE16641"	18	39	67
+"Sidney"	"R1"	"I06"	0	"Camelot"	"Camelot"	18	40	63.1
+"Sidney"	"R1"	"I06"	1	"0"	"NE16675"	18	41	42.7
+"Sidney"	"R1"	"I07"	1	"0"	"NE16504"	19	32	74
+"Sidney"	"R1"	"I07"	1	"0"	"NE16405"	19	33	68
+"Sidney"	"R1"	"I07"	1	"0"	"NE16467"	19	34	62.6
+"Sidney"	"R1"	"I07"	1	"0"	"NE16535"	19	35	38.1
+"Sidney"	"R1"	"I07"	1	"0"	"NE16436"	19	36	41.9
+"Sidney"	"R1"	"I07"	1	"0"	"NE16472"	19	37	31.8
+"Sidney"	"R1"	"I07"	1	"0"	"NE16666"	19	38	47.2
+"Sidney"	"R1"	"I07"	1	"0"	"NE16418"	19	39	59.1
+"Sidney"	"R1"	"I07"	0	"Camelot"	"Camelot"	19	40	56.5
+"Sidney"	"R1"	"I07"	1	"0"	"NE16613"	19	41	64.6
+"Sidney"	"R1"	"I07"	0	"Freeman"	"Freeman"	20	32	61.7
+"Sidney"	"R1"	"I07"	1	"0"	"NE16552"	20	33	54.1
+"Sidney"	"R1"	"I07"	1	"0"	"NE16508"	20	34	63.6
+"Sidney"	"R1"	"I07"	1	"0"	"NE16524"	20	35	49.5
+"Sidney"	"R1"	"I07"	1	"0"	"NE16634"	20	36	59.2
+"Sidney"	"R1"	"I07"	0	"GOODSTREAK"	"GOODSTREAK"	20	37	41.8
+"Sidney"	"R1"	"I07"	1	"0"	"NE16521"	20	38	61.5
+"Sidney"	"R1"	"I07"	1	"0"	"NE16683"	20	39	52.2
+"Sidney"	"R1"	"I07"	1	"0"	"NE16417"	20	40	51.3
+"Sidney"	"R1"	"I07"	1	"0"	"NE16531"	20	41	65.6
+"Sidney"	"R1"	"I07"	1	"0"	"NE16434"	21	32	57.1
+"Sidney"	"R1"	"I07"	1	"0"	"NE16630"	21	33	63.1
+"Sidney"	"R1"	"I07"	1	"0"	"NE16500"	21	34	53.1
+"Sidney"	"R1"	"I07"	1	"0"	"NE16460"	21	35	52
+"Sidney"	"R1"	"I07"	1	"0"	"NE16643"	21	36	59.5
+"Sidney"	"R1"	"I07"	1	"0"	"NE16628"	21	37	45.7
+"Sidney"	"R1"	"I07"	1	"0"	"NE16555"	21	38	45.5
+"Sidney"	"R1"	"I07"	1	"0"	"NE16660"	21	39	51.5
+"Sidney"	"R1"	"I07"	1	"0"	"NE16558"	21	40	55.5
+"Sidney"	"R1"	"I07"	1	"0"	"NE16667"	21	41	55.2
+"Sidney"	"R1"	"I08"	1	"0"	"NE16465"	22	32	67.1
+"Sidney"	"R1"	"I08"	0	"GOODSTREAK"	"GOODSTREAK"	22	33	56
+"Sidney"	"R1"	"I08"	1	"0"	"NE16505"	22	34	55
+"Sidney"	"R1"	"I08"	1	"0"	"NE16562"	22	35	76
+"Sidney"	"R1"	"I08"	1	"0"	"NE16560"	22	36	51.5
+"Sidney"	"R1"	"I08"	1	"0"	"NE16545"	22	37	50.3
+"Sidney"	"R1"	"I08"	1	"0"	"NE16663"	22	38	57.7
+"Sidney"	"R1"	"I08"	1	"0"	"NE16684"	22	39	60.1
+"Sidney"	"R1"	"I08"	1	"0"	"NE16587"	22	40	68.1
+"Sidney"	"R1"	"I08"	1	"0"	"NE16429"	22	41	61.8
+"Sidney"	"R1"	"I08"	1	"0"	"NE16549"	23	32	67.1
+"Sidney"	"R1"	"I08"	1	"0"	"NE16695"	23	33	74.4
+"Sidney"	"R1"	"I08"	1	"0"	"NE16528"	23	34	57.1
+"Sidney"	"R1"	"I08"	1	"0"	"NE16621"	23	35	44.4
+"Sidney"	"R1"	"I08"	0	"Camelot"	"Camelot"	23	36	49.3
+"Sidney"	"R1"	"I08"	1	"0"	"NE16563V"	23	37	58.4
+"Sidney"	"R1"	"I08"	1	"0"	"NE16561"	23	38	62.5
+"Sidney"	"R1"	"I08"	1	"0"	"NE16437"	23	39	38.4
+"Sidney"	"R1"	"I08"	1	"0"	"NE16527"	23	40	55
+"Sidney"	"R1"	"I08"	1	"0"	"NE16661"	23	41	56.7
+"Sidney"	"R1"	"I08"	1	"0"	"NE16582"	24	32	58
+"Sidney"	"R1"	"I08"	1	"0"	"NE16513"	24	33	66.7
+"Sidney"	"R1"	"I08"	1	"0"	"NE16486"	24	34	61.7
+"Sidney"	"R1"	"I08"	1	"0"	"NE16653"	24	35	38
+"Sidney"	"R1"	"I08"	1	"0"	"NE16595"	24	36	62.1
+"Sidney"	"R1"	"I08"	1	"0"	"NE16575"	24	37	45
+"Sidney"	"R1"	"I08"	1	"0"	"NE16416"	24	38	49.9
+"Sidney"	"R1"	"I08"	1	"0"	"NE16466"	24	39	59
+"Sidney"	"R1"	"I08"	0	"Freeman"	"Freeman"	24	40	73.3
+"Sidney"	"R1"	"I08"	1	"0"	"NE16657"	24	41	59.4
+"Sidney"	"R1"	"I09"	1	"0"	"NE16654"	25	32	66.2
+"Sidney"	"R1"	"I09"	1	"0"	"NE16606"	25	33	73.4
+"Sidney"	"R1"	"I09"	1	"0"	"NE16554"	25	34	69.9
+"Sidney"	"R1"	"I09"	1	"0"	"NE16664"	25	35	52.9
+"Sidney"	"R1"	"I09"	1	"0"	"NE16537"	25	36	53.1
+"Sidney"	"R1"	"I09"	1	"0"	"NE16502"	25	37	53.9
+"Sidney"	"R1"	"I09"	1	"0"	"NE16492"	25	38	50.5
+"Sidney"	"R1"	"I09"	1	"0"	"NE16651"	25	39	50
+"Sidney"	"R1"	"I09"	1	"0"	"NE16677"	25	40	64.5
+"Sidney"	"R1"	"I09"	1	"0"	"NE16548"	25	41	70.7
+"Sidney"	"R1"	"I09"	1	"0"	"NE16668"	26	32	69.2
+"Sidney"	"R1"	"I09"	1	"0"	"NE16568"	26	33	59.1
+"Sidney"	"R1"	"I09"	0	"Freeman"	"Freeman"	26	34	81.5
+"Sidney"	"R1"	"I09"	1	"0"	"NE16431"	26	35	56.8
+"Sidney"	"R1"	"I09"	1	"0"	"NE16430"	26	36	49.1
+"Sidney"	"R1"	"I09"	1	"0"	"NE16458"	26	37	57.8
+"Sidney"	"R1"	"I09"	0	"GOODSTREAK"	"GOODSTREAK"	26	38	44.6
+"Sidney"	"R1"	"I09"	1	"0"	"NE16509"	26	39	50.8
+"Sidney"	"R1"	"I09"	1	"0"	"NE16698"	26	40	71.4
+"Sidney"	"R1"	"I09"	0	"Camelot"	"Camelot"	26	41	50.1
+"Sidney"	"R1"	"I09"	1	"0"	"NE16444"	27	32	63.1
+"Sidney"	"R1"	"I09"	1	"0"	"NE16402"	27	33	76.1
+"Sidney"	"R1"	"I09"	1	"0"	"NE16442"	27	34	70.1
+"Sidney"	"R1"	"I09"	1	"0"	"NE16519"	27	35	68.2
+"Sidney"	"R1"	"I09"	1	"0"	"NE16409"	27	36	48.9
+"Sidney"	"R1"	"I09"	1	"0"	"NE16451"	27	37	64.8
+"Sidney"	"R1"	"I09"	1	"0"	"NE16681"	27	38	51.1
+"Sidney"	"R1"	"I09"	1	"0"	"NE16483"	27	39	64.9
+"Sidney"	"R1"	"I09"	1	"0"	"NE16518"	27	40	38.5
+"Sidney"	"R1"	"I09"	1	"0"	"NE16583"	27	41	59.5
+"Sidney"	"R1"	"I10"	1	"0"	"NE16517"	28	32	64.3
+"Sidney"	"R1"	"I10"	1	"0"	"NE16476"	28	33	73.2
+"Sidney"	"R1"	"I10"	1	"0"	"NE16523"	28	34	55.9
+"Sidney"	"R1"	"I10"	1	"0"	"NE16644"	28	35	61.9
+"Sidney"	"R1"	"I10"	1	"0"	"NE16477"	28	36	52.8
+"Sidney"	"R1"	"I10"	1	"0"	"NE16669"	28	37	35.1
+"Sidney"	"R1"	"I10"	1	"0"	"NE16471"	28	38	60.7
+"Sidney"	"R1"	"I10"	1	"0"	"NE16589"	28	39	48.5
+"Sidney"	"R1"	"I10"	1	"0"	"NE16614"	28	40	56.9
+"Sidney"	"R1"	"I10"	1	"0"	"NE16607"	28	41	75.7
+"Sidney"	"R1"	"I10"	1	"0"	"NE16497"	29	32	38.3
+"Sidney"	"R1"	"I10"	1	"0"	"NE16656"	29	33	69.7
+"Sidney"	"R1"	"I10"	0	"Camelot"	"Camelot"	29	34	64.1
+"Sidney"	"R1"	"I10"	1	"0"	"NE16538"	29	35	57.4
+"Sidney"	"R1"	"I10"	1	"0"	"NE16566"	29	36	72.2
+"Sidney"	"R1"	"I10"	1	"0"	"NE16536"	29	37	68.4
+"Sidney"	"R1"	"I10"	1	"0"	"NE16438"	29	38	63.5
+"Sidney"	"R1"	"I10"	1	"0"	"NE16635"	29	39	64.2
+"Sidney"	"R1"	"I10"	0	"Freeman"	"Freeman"	29	40	74.9
+"Sidney"	"R1"	"I10"	1	"0"	"NE16605"	29	41	71.3
+"Sidney"	"R1"	"I10"	1	"0"	"NE16622"	30	32	33.9
+"Sidney"	"R1"	"I10"	1	"0"	"NE16541"	30	33	61.4
+"Sidney"	"R1"	"I10"	1	"0"	"NE16603"	30	34	66.9
+"Sidney"	"R1"	"I10"	1	"0"	"NE16578"	30	35	52.7
+"Sidney"	"R1"	"I10"	1	"0"	"NE16462"	30	36	50.9
+"Sidney"	"R1"	"I10"	1	"0"	"NE16496"	30	37	50.1
+"Sidney"	"R1"	"I10"	0	"GOODSTREAK"	"GOODSTREAK"	30	38	35.2
+"Sidney"	"R1"	"I10"	1	"0"	"NE16520"	30	39	63
+"Sidney"	"R1"	"I10"	1	"0"	"NE16672"	30	40	74.3
+"Sidney"	"R1"	"I10"	1	"0"	"NE16412"	30	41	69.5

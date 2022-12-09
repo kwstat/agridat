@@ -29,6 +29,8 @@ The season of 1906 was abnormally wet compared with 1905 and 1907. [9th report]
 
 }
 \source{
+  Lehmann, A.
+  Ninth Annual Report of the Agricultural Chemist For the Year 1907-08.
   Department of Agriculture, Mysore State.
   [2nd-9th] Annual Report of the Agricultural Chemist. 
   https://books.google.com/books?id=u_dHAAAAYAAJ

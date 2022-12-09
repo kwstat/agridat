@@ -21,6 +21,8 @@
 }
 \details{
 
+  1930 Experiment
+  
   Beets were planted in rows 22 inches apart, thinned to 1 plant per
   row. At harvest, the rows were marked into segments 33 feet long with
   2 foot alleys between ends of plots.  The harvested area was 60 rows
@@ -41,6 +43,19 @@
 
   Immer found that aggregating the data from one row to two
   resulted in a dramatic reduction in the standard error (for yield).
+
+  ----------
+
+  1931 Experiment (Immer 1933)
+
+  Planted 13 May 1931. 
+  
+  Field width:
+  Field length:
+  
+  This data was made available with special help from the staff at
+  Rothamsted Research Library.
+
 }
 
 \source{
@@ -48,6 +63,13 @@
   Size and shape of plot in relation to field experiments with sugar beets.
   Jour. Agr. Research, 44, 649--668.
   https://naldc.nal.usda.gov/download/IND43968078/PDF
+
+  Immer, F. R. and S. M. Raleigh (1933).
+  Further studies of size and shape of plot in relation to field experiments with sugar beets.
+  Journal of Agricultural Research, 47, 591-598.
+  https://naldc.nal.usda.gov/download/IND43968370/PDF
+  Rothamsted Research Library, Box STATS17  WG Cochran, Folder 5.
+
 }
 
 \examples{

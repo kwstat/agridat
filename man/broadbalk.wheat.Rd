@@ -53,13 +53,15 @@
     18   \tab  N2 applied in odd years; P K Na Mg applied in even years \cr
     19   \tab  N1.5 P and rape cake 1852-78, 1879-1925 rape cake only\cr
   }
+
+  Electronic version of the data was retrieved from http://lib.stat.cmu.edu/datasets/Andrews/
+
 }
 \source{
   D.F. Andrews and A.M. Herzberg. 1985.
-	\emph{Data: A Collection of Problems from Many Fields for the Student
-	  and Research Worker}.  Springer.
-
-  Retrieved from https://lib.stat.cmu.edu/datasets/Andrews/
+	Data: A Collection of Problems from Many Fields for the Student and
+  Research Worker.
+  Springer.
 }
 \references{
   Broadbalk Winter Wheat Experiment.

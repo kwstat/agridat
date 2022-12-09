@@ -20,23 +20,24 @@
   }
 }
 \details{
-  The data are from an unreplicated field
-  experiment conducted at Tullibigeal, New South Wales, Australia in
-  1987-88.  In each row, every 6th plot was the variety 'Kite'.  Six
-  other standard varieties were randomly interspersed over the trial.
+  
+  The data are from a field experiment conducted at Tullibigeal, New
+  South Wales, Australia in 1987-88. The aim of these trials is to
+  identify and retain the top (10-20 percent) lines for further
+  testing.
+
+  Most genotypes are unreplicated, with some augmented genotypes.
+  In each row, every 6th plot was variety 526 = 'Kite'.
+  Six other varieties 527-532 were randomly placed in the trial, with 3
+  to 5 plots of each.
   Each plot was 15m x 1.8m, "oriented with the longest side with rows".
 
-  The 'weed' variable is a visual score on a 0 to 10 scale,
-  0 = no weeds, 10 = 100 percent weeds.
+  The 'weed' variable is a visual score on a 0 to 10 scale, 0 = no
+  weeds, 10 = 100 percent weeds.
 
-  The replicated check variety was numbered 526. A further 6 replicated
-  commercially available varieties (numbered 527 to 532) were also
-  randomly assigned to plots with between 3 to 5 plots of each. The aim
-  of these trials is to identify and retain the top, say 20 percent of
-  lines for further testing. Cullis et al. (1989) presented an analysis
-  of early generation variety trials that included a one-dimensional
-  spatial analysis.  Below, a two-dimensional spatial analysis is
-  presented.
+  Cullis et al. (1989) presented an analysis of early generation variety
+  trials that included a one-dimensional spatial analysis.  Below, a
+  two-dimensional spatial analysis is presented.
 
   Note: The 'row' and 'col' variables are as in the VSN link below (switched
   compared to the paper by Cullis et al.)
@@ -71,8 +72,12 @@
   # Show field layout of checks.  Cullis Table 1.
   dat$check <- ifelse(dat$entry < 8, dat$entry, NA)
   libs(desplot)
+  desplot(dat, check ~ col*row,
+          num=entry, cex=0.5, flip=TRUE, aspect=121/150, # true aspect
+          main="cullis.earlygen (yield)")
+
   desplot(dat, yield ~ col*row,
-          col="check", cex=0.5, flip=TRUE, aspect=121/150, # true aspect
+          num="check", cex=0.5, flip=TRUE, aspect=121/150, # true aspect
           main="cullis.earlygen (yield)")
 
   grays <- colorRampPalette(c("white","#252525"))

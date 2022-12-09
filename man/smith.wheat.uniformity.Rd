@@ -50,7 +50,7 @@
 
 }
 \source{
-  Rothamsted Research Library, Box STATS17  WG Cochran, Folder 2.
+  Rothamsted Research Library, Box STATS17  WG Cochran, Folder 7.
 }
 \references{
   H. Fairfield Smith (1938).
