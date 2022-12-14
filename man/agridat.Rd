@@ -78,7 +78,8 @@ name                                      \tab dimensions \tab other \tab model 
 \link{lyon.potato.uniformity}             \tab 34 x 6 \tab xy \tab \cr
 \link{magistad.pineapple.uniformity}      \tab 5 x 5 \tab xy \tab \cr
 \link{masood.rice.uniformity}             \tab 12 x 24 \tab xy \tab \cr
-\link{mcclelland.corn.uniformity}         \tab 2 x 219 \tab xy \tab \cr
+\link{mckinstry.cotton.uniformity}        \tab 24 x 20 \tab xy \tab \cr
+\link{mercer.mangold.uniformity}          \tab 10 x 20 \tab xy \tab \cr
 \link{mercer.mangold.uniformity}          \tab 10 x 20 \tab xy \tab \cr
 \link{mercer.wheat.uniformity}            \tab 25 x 20 \tab xy, 2 traits \tab spplot \cr
 \link{montgomery.wheat.uniformity}        \tab 14 x 16 \tab xy, 2 years \tab lm \cr
