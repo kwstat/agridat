@@ -12,9 +12,10 @@
 \format{
   A data frame with 600 observations on the following 5 variables.
   \describe{
+    \item{\code{year}}{year of experiment}
     \item{\code{row}}{row}
     \item{\code{col}}{column}
-    \item{\code{yield}}{yield, pounds}
+    \item{\code{yield}}{yield, pounds per plot}
     \item{\code{sugar}}{sugar percentage}
     \item{\code{purity}}{apparent purity}
   }
@@ -46,12 +47,17 @@
 
   ----------
 
-  1931 Experiment (Immer 1933)
+  1931 Experiment
 
-  Planted 13 May 1931. 
+  Planted 13 May 1931. Field layout was the same as the previous year.
+  Unclear if the same land was used.
   
-  Field width:
-  Field length:
+  Field width: 10 plots * 33 feet + 9 alleys * 2 feet = 348 feet
+  
+  Field length: 60 plots * 22 inches/row / 12 in/feet = 110 feet
+
+  The data for this experiment were not published in Immer (1933), but
+  were deposited at Rothamsted.
   
   This data was made available with special help from the staff at
   Rothamsted Research Library.
@@ -59,9 +65,9 @@
 }
 
 \source{
-  F. R. Immer. 1932.
+  Immer, F. R. (1932).
   Size and shape of plot in relation to field experiments with sugar beets.
-  Jour. Agr. Research, 44, 649--668.
+  Journal of Agricultural Research, 44, 649-668.
   https://naldc.nal.usda.gov/download/IND43968078/PDF
 
   Immer, F. R. and S. M. Raleigh (1933).
@@ -69,7 +75,6 @@
   Journal of Agricultural Research, 47, 591-598.
   https://naldc.nal.usda.gov/download/IND43968370/PDF
   Rothamsted Research Library, Box STATS17  WG Cochran, Folder 5.
-
 }
 
 \examples{
@@ -82,18 +87,26 @@ library(agridat)
 
   # Immer numbers rows from the top
   libs(desplot)
-  desplot(dat, yield~col*row,
+  # Similar to Immer (1932) figure 2
+  desplot(dat, yield~col*row, subset=year==1930,
           aspect=110/348, tick=TRUE, flip=TRUE, # true aspect
-          main="immer.sugarbeet.uniformity - yield")
-  desplot(dat, sugar~col*row,
+          main="immer.sugarbeet.uniformity - 1930 yield")
+  # Similar to Immer (1932) figure 3
+  desplot(dat, sugar~col*row, subset=year==1930,
           aspect=110/348, tick=TRUE, flip=TRUE,
-          main="immer.sugarbeet.uniformity - sugar")
-  desplot(dat, purity~col*row,
+          main="immer.sugarbeet.uniformity - 1930 sugar")
+  # Similar to Immer (1932) figure 4
+  desplot(dat, purity~col*row, subset=year==1930,
           aspect=110/348, tick=TRUE, flip=TRUE,
-          main="immer.sugarbeet.uniformity - purity")
+          main="immer.sugarbeet.uniformity - 1930 purity")
   
   pairs(dat[,c('yield','sugar','purity')],
         main="immer.sugarbeet.uniformity")
+
+  # Similar to Immer (1933) figure 1
+  desplot(dat, yield~col*row, subset=year==1931,
+          aspect=110/348, tick=TRUE, flip=TRUE, # true aspect
+          main="immer.sugarbeet.uniformity - 1931 yield")
 
 } 
 }

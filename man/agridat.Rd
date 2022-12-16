@@ -56,7 +56,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{heath.raddish.uniformity}           \tab 10 x 10 \tab xy \tab \cr
 \link{holtsmark.timothy.uniformity}       \tab 6 x 40 \tab xy \tab \cr
 \link{igue.sugarcane.uniformity}          \tab 36 x 42 \tab xy \tab \cr
-\link{immer.sugarbeet.uniformity}         \tab 10 x 60 \tab xy, 3 traits \tab \cr
+\link{immer.sugarbeet.uniformity}         \tab 10 x 60 \tab xy, 3 traits, 2 yr \tab \cr
 \link{iyer.wheat.uniformity}              \tab 25 x 80 \tab xy \tab \cr
 \link{kadam.millet.uniformity}            \tab 8 x 20 \tab xy, 2 expts \tab \cr
 \link{kalamkar.potato.uniformity}         \tab 6 x 96 \tab xy \tab \cr
