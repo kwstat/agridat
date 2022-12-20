@@ -218,6 +218,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{caribbean.maize}             \tab     \tab 17 \tab 4   \tab    \tab 3     \tab \tab \cr
 \link{carmer.density}              \tab 8   \tab    \tab     \tab    \tab 4     \tab \tab nls,nlme \cr
 \link{carlson.germination}         \tab 15  \tab    \tab     \tab    \tab 8     \tab \tab glm\cr
+\link{chakravertti.factorial}      \tab 3   \tab    \tab 3   \tab    \tab 3x5x3x3 \tab factorial \tab aov\cr
 \link{chinloy.fractionalfactorial} \tab     \tab    \tab 9   \tab    \tab 1/3 3^5 \tab xy \tab aov\cr
 \link{christidis.competition}      \tab 9   \tab    \tab 5   \tab    \tab       \tab xy \tab \cr
 \link{cochran.beets}               \tab     \tab    \tab 6   \tab    \tab 7     \tab \tab \cr

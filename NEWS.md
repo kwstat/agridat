@@ -3,6 +3,7 @@
 ## New data with motivation
 
 * belamkar.augmented (augmented design at multiple locations)
+* chakravertti.factorial (3 block, 3x5x3x3 factorial is largest factorial expt so far)
 * evans.sugarcane.uniformity
 * goulden.barley.uniformity (expanded from the previously published 20x20 to 48x48)
 * hansen.multi.uniformity (multi-year uniformity trials)
