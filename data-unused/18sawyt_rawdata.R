@@ -1,5 +1,7 @@
 # 18sawyt_rawdata.R
-# Time-stamp: <02 Jan 2019 11:39:05 c:/x/rpack/agridat/data-unused/18sawyt_rawdata.R>
+# Time-stamp: <11 Jan 2023 15:22:21 c:/drop/rpack/agridat/data-unused/18sawyt_rawdata.R>
+
+# Reason not used: ?
 
 # Source: Data downloaded from:
 #   https://data.cimmyt.org/dataset.xhtml?persistentId=hdl:11529/10170

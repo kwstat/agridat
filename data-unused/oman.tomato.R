@@ -1,5 +1,6 @@
 # oman.tomato.R
 
+# Reason not used:
 # The data in Oman's paper is a table of means.
 # I can't match most of the parameter estimates found in
 # the results sections of the Oman paper and Gogel paper.

@@ -1,5 +1,7 @@
 # mead.milletsorghum.R
 
+# Reason not used: ?
+
 # Source: Mead, "Statistical Methods in Agriculture".
 # Possible original sources:
 
@@ -12,7 +14,6 @@
 # The Journal of Agricultural Science, 91, pp 625-632. doi:10.1017/S0021859600060007.
 # http://journals.cambridge.org/action/displayAbstract;jsessionid=D505978E6C332EF8F57B99D7159FB6DE.journals?fromPage=online&aid=4772728
 
-# Why is this data unused?
 
 library(asreml)
 library(kw)

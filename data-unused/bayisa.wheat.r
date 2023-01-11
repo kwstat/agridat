@@ -1,5 +1,7 @@
 # bayisa.wheat.R
-# Time-stamp: <02 Jan 2019 09:58:20 c:/x/rpack/agridat/data-unused/bayisa.wheat.R>
+# Time-stamp: <11 Jan 2023 15:22:33 c:/drop/rpack/agridat/data-unused/bayisa.wheat.R>
+
+# Reason not used: ?
 
 # Source: Bayisa, D. (2010).
 # Application of Spatial Mixed Model in Agricultural Field Experiment.
@@ -18,13 +20,13 @@ library(Hmisc)
 library(lattice)
 library(rio)
 
-setwd("c:/x/rpack/agridat/data-unused/")
+setwd("c:/drop/rpack/agridat/data-unused/")
 dat0 <- import("bayisa.wheat.xlsx")
 
 dat <- dat0
 
 lib(desplot)
-desplot(yield~east+north, dat, out1=rep)
+desplot(dat, yield~east+north, out1=rep, tick=TRUE)
 str(dat)
 describe(dat)
 

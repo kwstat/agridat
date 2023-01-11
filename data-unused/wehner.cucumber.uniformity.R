@@ -1,15 +1,15 @@
 # wehner.cucumber.uniformity.R
 
-Source:
-Todd C. Wehner. (1984).
-Variation for Yield within Locations in Homogeneous and Heterogeneous Cucumber Populations
-In: Cucurbit Genetics Cooperative Report 7:33-34 (article 15) 1984
+# Reason not used:
+# The first dataset is a homogeneous (one cultivar) population,
+# but has many missing columns.
+# The second dataset is a heterogeneous (many cultivar) population.
 
-The first dataset is a homogeneous (one cultivar) population, but has many missing columns.
+## Source:
+## Todd C. Wehner. (1984).
+## Variation for Yield within Locations in Homogeneous and Heterogeneous Cucumber Populations
+## In: Cucurbit Genetics Cooperative Report 7:33-34 (article 15) 1984
 
-The second dataset is a heterogeneous (many cultivar) population.
-
-Decided not to use this data.
 
 
 libs(desplot,dplyr,kw,lattice,magrittr,readxl,readr,reshape2,tibble)

@@ -1,10 +1,11 @@
 # yan.winterwheat2.R
 
-# Source: Yan 2002, Singular Value Partitioning In Biplots, Table 1.
-
-# Note: Yan says there are 33 genotypes, but table 1 contains only 31,
+# Reason not used:
+# Yan says there are 33 genotypes, but table 1 contains only 31,
 # and "Zor" is a genotype that does not appear in the table, but does appear
 # in the biplots (upper left quadrant).
+
+# Source: Yan 2002, Singular Value Partitioning In Biplots, Table 1.
 
 lib(rio)
 lib(reshape2)

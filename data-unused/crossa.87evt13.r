@@ -1,5 +1,7 @@
 # crossa.87evt13.R
 
+# Reason not used: This is not the original rep-level data, but means.
+
 # Source: Crossa 1997
 # Sites Regression and Shifted Multiplicative Model Clustering
 

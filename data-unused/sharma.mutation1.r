@@ -1,8 +1,8 @@
 # sharma.mutation1.R
 
-# Source: Biometry book by Sharma
+# Reason not used:
 
-# Why is this unused?
+# Source: Biometry book by Sharma
 
 library(asreml)
 library(kw)

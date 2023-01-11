@@ -1,11 +1,12 @@
 # summerby.unif.R
 
+# Reason not used:
+# Structure is a bit odd with multiple crops in each year.
+
 # Source: Summerby 1934.
 # The value of preliminary uniformity trials in increasing the precision
 # of field experiments.
 
-# Structure is a bit odd with multiple crops in each year.
-# Decided not to use this data.
 
 libs(agridat,desplot,lattice,reshape2,rio)
 

@@ -1,11 +1,13 @@
 # sinebo.R
-# Time-stamp: <02 Jan 2019 09:50:36 c:/x/rpack/agridat/data-unused/sinebo.R>
+# Time-stamp: <11 Jan 2023 15:27:35 c:/drop/rpack/agridat/data-unused/sinebo.R>
+
+# Reason not used:
+# Soil covariates are NOT given in the table!
 
 # Source: Sinebo 2005
 # Trade off between yield increase and yield stability in three
 # decades of barley breeding in a tropical highland environment
 
-# Ahg, soil covariates are NOT given in the table! Decided not to use.
 
 library(rio)
 

@@ -1,10 +1,10 @@
 # federer.augmented.R
 
+# Reason not used: This is simulated data.
+
 # Source: Federer, Walter T.
 # Augmented Split-Block Experiment Design
 # Agronomy Journal, Vol 97, page 578--586, 2005.
-
-# This is simulated data.
 
 # Note that using the values in Table 6 does NOT give
 # the results shown in the paper.  To match the output as shown in the paper,

@@ -1,5 +1,8 @@
 # plaisted.potatoes.R
 
+# Reason not used:
+# I can't match anything from Plaisted...
+
 # Source: Plaisted, Sanford, Federer, Kehr, Peterson
 # Specific and general combining ability for yield in potatoes
 # Table 1-3 have "Unadjusted total yields of six ten-hill plots"
@@ -10,7 +13,6 @@
 # gravity and tuber appearance in the potato
 # Table 10-12 have adjusted yields
 
-# I can't match anything from Plaisted...
 
 library(asreml)
 library(lattice)

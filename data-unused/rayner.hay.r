@@ -1,10 +1,12 @@
 # rayner.hay.R
 
+# Reason not used:
+# The data in this experiment are extremely variable with no obvious
+# treatment or spatial pattern.
+
 # Source: Rayner. A First Course In Biometry For Agriculture Students
 # Chap 21, page 515.
 
-# The data in this experiment are extremely variable with no obvious
-# treatment or spatial pattern. Decided not to use.
 
 library(asreml)
 library(dplyr)

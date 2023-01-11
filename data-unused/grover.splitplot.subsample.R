@@ -1,5 +1,7 @@
 # grover.splitplot.subsample.R
 
+# Reason not used: ?
+
 # This is an interesting example of split-plot experiment with subsampling.
 # Similar to other
 

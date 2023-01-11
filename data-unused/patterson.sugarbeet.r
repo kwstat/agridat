@@ -1,10 +1,12 @@
 # patterson.sugarbeet.R
 
+# Reason not used:
+# I could match _some_ of the adjusted means in the book, but
+# not all of them.  Weird.
+
 # Source: Statistical Methods for Plant Variety Evaluation, table 9.13
 # Chapter: Analysis of series of variety trials
 
-# I could match _some_ of the adjusted means in the book, but
-# not all of them.  Weird.  Decided not to use this data.
 
 library(lattice)
 library(rio)

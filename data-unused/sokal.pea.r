@@ -1,5 +1,7 @@
 # sokal.pea.R
-# Time-stamp: <02 Jan 2019 09:45:21 c:/x/rpack/agridat/data-unused/sokal.pea.R>
+# Time-stamp: <11 Jan 2023 15:27:50 c:/drop/rpack/agridat/data-unused/sokal.pea.R>
+
+# Reason not used: ?
 
 # Source: Sokal R.R., Rohlf F.J (1994). Biometry: The Principles and
 # Practices of Statistics in Biological Research. Third Edition.
