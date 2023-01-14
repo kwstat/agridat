@@ -2,6 +2,7 @@
 
 ## New data with motivation
 
+* bailey.cotton.uniformity
 * belamkar.augmented (augmented design at multiple locations)
 * chakravertti.factorial (3 block, 3x5x3x3 factorial is largest factorial expt so far)
 * evans.sugarcane.uniformity
