@@ -343,8 +343,9 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{perry.springwheat}           \tab 28  \tab 5  \tab     \tab 4  \tab       \tab gain \tab lm,lmer,asreml\cr
 \link{petersen.sorghum.cowpea}     \tab 2   \tab    \tab 4   \tab 7  \tab 4     \tab intercrop \tab \cr
 \link{piepho.cocksfoot}            \tab 25  \tab    \tab     \tab 7  \tab       \tab \tab mumm\cr
-\link{ratkowsky.onions}            \tab     \tab    \tab     \tab    \tab       \tab  \tab lm\cr
+\link{ratkowsky.onions}            \tab     \tab    \tab     \tab    \tab       \tab \tab lm\cr
 \link{reid.grasses}                \tab 4   \tab    \tab     \tab 3  \tab 21    \tab \tab nlme SSfpl \cr
+\link{riddle.wheat}                \tab 25  \tab    \tab 5   \tab 2  \tab       \tab xy, latin \tab aov\cr
 \link{ridout.appleshoots}          \tab     \tab    \tab 30  \tab    \tab 2,4   \tab zip \tab zeroinfl\cr
 \link{rothamsted.brussels}         \tab     \tab    \tab 4   \tab    \tab 6     \tab \tab \cr
 \link{rothamsted.oats}             \tab     \tab    \tab 8   \tab    \tab 9     \tab rcb \tab \cr
