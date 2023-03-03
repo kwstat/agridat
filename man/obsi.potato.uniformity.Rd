@@ -14,12 +14,13 @@
     \item{\code{loc}}{location, 2 levels}
     \item{\code{row}}{row}
     \item{\code{col}}{column}
-    \item{\code{yield}}{yield}
+    \item{\code{yield}}{yield, kg/m^2}
   }
 }
 \details{
   Data collected from potato uniformity trials at Hollota (L1) and Kulumsa (L2).
   Each field was 0.15 hectares.
+  
   In each field, 75cm between rows and 60cm between plants. The basic
   units harvested were 1.2m x 1.5m. It is not clear which way the plots
   are oriented in the field with respect to the rows and columns.
@@ -27,7 +28,19 @@
   At location L1, plot (10,7) was 22.5 in the source document, but was
   changed to 2.25 for this electronic data.
 
+  Hollota:
+  
+  Field width: 26 * 1.2 m
+
+  Field length: 63 rows * 1.5 m
+  
   Note the horizontal banding of 8 or 9 rows at location L1.
+
+  Kulumsa
+
+  Field width: 19 * 1.2 m
+
+  Field length: 49 * 1.5 m
   
 }
 \source{

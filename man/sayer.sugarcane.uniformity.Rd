@@ -54,9 +54,6 @@
   
   Field length: 136 rows * 3 feet = 408 feet
 
-  
-  Note:
-  
   ----------
 
   1934 Experiment, 8 col x 121 row = 968 plots

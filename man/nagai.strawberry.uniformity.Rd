@@ -13,19 +13,19 @@
   \describe{
     \item{\code{row}}{row}
     \item{\code{col}}{column}
-    \item{\code{yield}}{yield grams/plot}
+    \item{\code{yield}}{yield, grams/plot}
   }
 }
 \details{
-A uniformity trial of strawberry, at Jundiai, Brazil, in April 1976.
+  A uniformity trial of strawberry, at Jundiai, Brazil, in April 1976.
 
-The spacing between plants and rows was 0.3 m. Test area was 233.34 m^2.
-There were 18 rows of 144 plants. Each plat consisted of 6 consecutive plants.
-There were 432 plats, each 0.54 m^2. 
+  The spacing between plants and rows was 0.3 m. Test area was 233.34 m^2.
+  There were 18 rows of 144 plants. Each plat consisted of 6 consecutive plants.
+  There were 432 plats, each 0.54 m^2. 
 
-Field length: 18 rows * 0.3 m = 5.4 m.
+  Field length: 18 rows * 0.3 m = 5.4 m.
 
-Field width: 24 columns * 6 plants * 0.3 m = 43.2 m.
+  Field width: 24 columns * 6 plants * 0.3 m = 43.2 m.
 }
 \source{
   Violeta Nagai (1978).

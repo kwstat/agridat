@@ -16,7 +16,7 @@
     \item{\code{expt}}{experiment}
     \item{\code{row}}{row}
     \item{\code{col}}{col}
-    \item{\code{yield}}{yield}
+    \item{\code{yield}}{yield, pounds}
   }
 }
 \details{
@@ -32,7 +32,7 @@
   
   Experiment E2-E3.
   
-  Field width = 20 units * 44 inches = 73 feet
+  Field width = 20 units * 40 inches = 73 feet
   
   Field length = 20 units * 5 ft = 100 feet.
     

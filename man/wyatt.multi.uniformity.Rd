@@ -74,6 +74,5 @@ desplot(dat, yield ~ col*row, subset=crop=="wheat",
         aspect=(440)/(1591), # true aspect
         main="wyatt.multi.uniformity - 1926 wheat")
 }
-
 }
 \keyword{datasets}

@@ -35,7 +35,7 @@
 \examples{
 \dontrun{
 
-library(agridat)
+  library(agridat)
   data(strickland.apple.uniformity)
   dat <- strickland.apple.uniformity
   libs(desplot)

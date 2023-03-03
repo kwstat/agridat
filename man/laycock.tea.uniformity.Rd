@@ -14,7 +14,7 @@
     \item{\code{loc}}{location, L1 or L2}
     \item{\code{row}}{row}
     \item{\code{col}}{column}
-    \item{\code{yield}}{yield}
+    \item{\code{yield}}{yield (pounds)}
   }
 }
 \details{

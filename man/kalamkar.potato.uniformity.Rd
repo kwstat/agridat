@@ -26,6 +26,9 @@
   Field width: 6 plots * 22 feet = 132 feet
 
   Field length: 96 rows * 3 feet = 288 feet
+
+  Units of yield are not given, but might appear in the paper by Kirk
+  (no access).
 }
 \source{
   Kalamkar, R.J. (1932).
@@ -33,7 +36,13 @@
   The Journal of Agricultural Science, 22, 373-385.
   https://doi.org/10.1017/S0021859600053697
 }
-
+\references{
+  Kirk, L. E. (1929)
+  Field plot technique with potatoes with special reference to the Latin
+  square.
+  Scientific Agriculture, 9, 719.
+  https://doi.org/10.4141/sa-1929-0067
+}
 \examples{
 \dontrun{
 

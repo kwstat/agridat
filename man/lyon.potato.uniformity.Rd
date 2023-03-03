@@ -23,8 +23,8 @@
   There were 34 rows, 34 inches apart.
   Lyon, page 97 says "He harvested each row in six sections,
   each of which was seventy-two feet and seven inches long."
-  It is not clear if each section is 72 feet long, or if the
-  entire row is 72 feet long.  Yield of potato is roughly 0.5 to 0.8
+  It is not clear if each SECTION is 72 feet long, or if each
+  ROW is 72 feet long.  Yield of potato is roughly 0.5 to 0.8
   pounds per square foot, so it seems more plausible the entire row is
   72 feet long (see calculations below).
 

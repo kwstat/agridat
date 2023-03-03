@@ -28,7 +28,8 @@
   
   Each experiment was aggregated into experimental units by combining 8
   hills, both in East/West direction and also in North/South direction.
-  Thus, each field is represented twice in the data.
+  Thus, each field is represented twice in the data, once with "E" in
+  the field name and once with "N".
 }
 \source{
   Arthur Bryan (1933).

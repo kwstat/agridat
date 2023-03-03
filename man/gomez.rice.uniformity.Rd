@@ -25,9 +25,11 @@
   Field width: 18 plots x 1 m = 18 m
 
   Field length: 38 plots x 1 m = 38 m
+
+  Note that Gomez published a paper in 1969 on rice uniformity data.
+  Quite likely this is the same data. Estimated harvest year is 1968.
   
   Used with permission of Kwanchai Gomez.
-
 }
 
 \source{

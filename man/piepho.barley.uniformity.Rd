@@ -22,10 +22,12 @@
   
   Note: The paper by Piepho says "The trial had 30 rows and 36
   columns. Plot widths were 1.90 m along rows and 3.73 m along columns."
+  This is confirmed by the variograms in Figure 1.
+  It is not clear what "along rows" and "along columns" means in
+  English.
+  
   However, the SAS code supplement to the paper, called
-  "PBR_1654_sm_example1.sas", has row=1-36, col=1-30.  We cannot
-  determine which dimension is "row" and which is "column", and
-  therefore cannot determine the actual dimensions of the field.
+  "PBR_1654_sm_example1.sas", has row=1-36, col=1-30.
 }
 \source{
   H. P. Piepho & E. R. Williams (2010).
@@ -41,8 +43,8 @@
   data(piepho.barley.uniformity) 
   dat <- piepho.barley.uniformity
   libs(desplot)
-  desplot(yield ~ col*row, dat,
-          tick=TRUE, # aspect unknown
+  desplot(dat, yield ~ col*row,
+          tick=TRUE, aspect=(36*3.73)/(30*1.90),
           main="piepho.barley.uniformity.csv")
 
   libs(asreml,dplyr)

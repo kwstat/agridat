@@ -18,7 +18,9 @@
 }
 \details{
   
-  A uniformity trial of corn in 1925 at the Arkansas Experimental Station.
+  A uniformity trial of corn in 1925 at the Arkansas Experimental
+  Station.
+  Unit of measure not given.
 
   Field width = 66ft * 2 = 132 feet.
 
@@ -27,7 +29,7 @@
   Note: In the source document, table 2, first 'west' column and
   second-to-last row (page 822), the value 1.40 is assumed to be a
   typographical error and was changed to 14.0 for this data.
-  
+
 }
 
 \source{

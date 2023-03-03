@@ -14,8 +14,8 @@
   \describe{
     \item{\code{row}}{row}
     \item{\code{col}}{column}
-    \item{\code{oats}}{yield of oat hay}
-    \item{\code{wheat}}{yield of wheat grain}
+    \item{\code{oats}}{yield of oat hay, pounds}
+    \item{\code{wheat}}{yield of wheat grain, bu}
   }
 }
 \details{
@@ -53,7 +53,7 @@
   https://archive.org/details/in.ernet.dli.2015.229753?q=method+of+laying+out+experiment+plats
 }
 \source{
-  Garber, RJ and Mcllvaine, TC and Hoover, MM. 1926.
+  Garber, R.J. and Mcllvaine, T.C. and Hoover, M.M. 1926.
   A study of soil heterogeneity in experiment plots.
   Jour Agr Res, 33, 255-268. Tables 3, 5.
   https://naldc.nal.usda.gov/download/IND43967148/PDF

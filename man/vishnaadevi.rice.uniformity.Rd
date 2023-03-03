@@ -19,6 +19,10 @@
 \details{
   A uniformity trial of rice raised during 2017 late samba season near
   Madurai, India.
+
+  Field width: 12 columns x 1m = 12 m
+
+  Field length: 24 rows x 1m = 24m
 }
 \source{
   Vishnaadevi, S.; K. Prabakaran, E. Subramanian, P. Arunachalam. (2019).

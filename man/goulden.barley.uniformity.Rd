@@ -19,8 +19,8 @@
 \details{
   Yield (in grams) of 2304 square-yard plots of barley grown in a field
   48 yards on each side at Dominion Rust Research Laboratory (Manitoba,
-  Canada). The field was sown at half density in one direction, then
-  half-density in a perpendicular direction.
+  Canada) in 1931. The field was sown at half density in one direction,
+  then half-density in a perpendicular direction.
   
   In a letter from Goulden to Cochran, Goulden said: I had intended to
   use these yields for a study of the effect of systematic arrangements
@@ -48,7 +48,7 @@
   https://archive.org/stream/methodsofstatist031744mbp
   Note: This version is 20 plots x 20 plots.
 
-  Warren Leonard, Andrew Clark (1939).
+  Leonard, Warren and Andrew Clark (1939).
   Field Plot Technique. Page 39.
   https://archive.org/stream/fieldplottechniq00leon
   Note: This version is 20 plots x 20 plots.

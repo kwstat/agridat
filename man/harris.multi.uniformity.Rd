@@ -28,7 +28,8 @@
   All yields are given in pound per plot, except sugar beets, which are
   given in tons per acre.  Harris (1928) shows a map of the location.
 
-  Harris 1920:
+  Harris (1920):
+  
   In the spring of 1911 this field was laid out into 46 plots, each
   measuring 23.5 by 317 feet and containing 0.17 acre, arranged in two
   parallel series of 23 plots each. The two series of plots were
@@ -52,7 +53,8 @@
   1918 silage corn was grown. In 1919 the land produced a crop of
   barley.
 
-  Harris 1928:
+  Harris (1928):
+  
   The southeast corner of Series II, the east series, is
   about 80 feet from the main canal, and the southwest corner of Series
   III is about 50 feet from Ouster Coulee. The main project canal

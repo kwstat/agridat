@@ -79,7 +79,7 @@
   
   # ----------
   
-  libs(asreml,lucid) # asreml4
+  libs(asreml,lucid)
     
   # Show the negative correlation between rows
   dat <- transform(dat,

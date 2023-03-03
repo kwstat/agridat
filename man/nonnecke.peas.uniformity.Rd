@@ -54,7 +54,7 @@
 \examples{
 \dontrun{
 
-library(agridat)
+  library(agridat)
   
   data(nonnecke.peas.uniformity)
   dat <- nonnecke.peas.uniformity

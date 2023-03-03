@@ -56,9 +56,8 @@ library(agridat)
 data(giles.wheat)
 dat <- giles.wheat
 dat <- transform(dat, gen=factor(gen))
-dat <- transform(dat, env=factor(env))
-dat1 <- subset(dat, !is.na(straw))
-dat2 <- subset(dat, !is.na(emergence))
+dat_straw <- droplevels( subset(dat, !is.na(straw)) )
+dat_emerg <- droplevels( subset(dat, !is.na(emergence)) )
 
 # Traits are not related
 # with(dat, plot(straw~emergence))
@@ -66,9 +65,10 @@ dat2 <- subset(dat, !is.na(emergence))
 # Show unbalancedness of data
 libs(lattice, reshape2)
 redblue <- colorRampPalette(c("firebrick", "lightgray", "#375997"))
-levelplot(acast(dat, gen ~ env, value.var='emergence'),
+levelplot(acast(dat_straw, env ~ gen, value.var='straw'),
           col.regions=redblue,
-          xlab="genotype", ylab="year",
+          scales=list(x=list(rot=90)),
+          xlab="year", ylab="genotype",
           main="giles.wheat - straw length")
 
 
@@ -78,22 +78,22 @@ levelplot(acast(dat, gen ~ env, value.var='emergence'),
 libs(emmeans)
 
 # Mean across years. Matches Piepho Table 7 'Simple'
-m1 = lm(straw ~ gen, data=dat1)
+m1 = lm(straw ~ gen, data=dat_straw)
 emmeans(m1, 'gen')
 
 # Simple two-way model.  NOT the bi-additive model of Piepho.
-m2 = lm(straw ~ gen + env, data=dat1)
+m2 = lm(straw ~ gen + env, data=dat_straw)
 emmeans(m2, 'gen')
 
 # Bi-additive model. Matches Piepho Table 6, rows (c)
 libs(gnm)
-m3 <- gnm(straw ~ env + Mult(gen,env), data=dat1)
-cbind(adjusted=round(fitted(m3),0), dat1) 
+m3 <- gnm(straw ~ env + Mult(gen,env), data=dat_straw)
+cbind(adjusted=round(fitted(m3),0), dat_straw) 
 
 # ----- Analysis of Ear emergence -----
 
 # Simple two-way model. 
-m4 = lm(emergence ~ 1 + gen + env, data=dat2)
+m4 = lm(emergence ~ 1 + gen + env, data=dat_emerg)
 emmeans(m4, c('gen','env')) # Matches Piepho Table 9. rpws (c)
 emmeans(m4, 'gen') # Match Piepho table 10, Least Squares column
 

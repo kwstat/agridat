@@ -21,7 +21,19 @@
 \details{
 
   Grown at West Virginia Experiment Station in 1925 & 1926.
+
+  \bold{Soy beans}
+  
   Soybeans were planted in rows 30 inches apart.
+  In 1926 the crop was harvested for seed, 55 rows, each 232 feet long.
+  Yields of 8-foot plats were recorded.
+  In 1926, data for the last row on page 96 seems to be missing.
+    
+  Field width: 55 plots * 30 in / 12in/ft = 137.5 feet
+  
+  Field length: 28 plots * 8 feet = 224 feet + border = total 232 feet.
+  
+  Odland and Garber provide no agronomic context for the yield variation.
 
   \bold{Soy hay}
 
@@ -32,17 +44,6 @@
   
   Field length: 24 plots * 8 feet = 192 feet + border = total 200 feet.
 
-  \bold{Soy beans}
-  
-  In 1926 the crop was harvested for seed, 55 rows, each 232 feet
-  long. Yields of 8-foot plats were recorded.
-  In 1926, data for the last row on page 96 seems to be missing.
-    
-  Field width: 55 plots * 30 in / 12in/ft = 137.5 feet
-  
-  Field length: 28 plots * 8 feet = 224 feet + border = total 232 feet.
-  
-  Odland and Garber provide no agronomic context for the yield variation.
 }
 
 \source{

@@ -13,7 +13,7 @@
   \describe{
     \item{\code{row}}{row}
     \item{\code{col}}{col}
-    \item{\code{yield}}{yield}
+    \item{\code{yield}}{yield (grams)}
   }
 }
 \details{

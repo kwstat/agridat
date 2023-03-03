@@ -17,12 +17,20 @@ Uniformity trial of pasture in Australia.
   }
 }
 \details{
-  Conducted at the Waite Agricultural Research Institute in 1928. A rectangle 250 x 200 links was selected, divided into 1000 plots measuring 10 x 5 links, that is 1/2000th acre.
-  Plots were hand harvested for herbage and air-dried. Cutting began Tue, 25 Sep and ended Sat, 29 Sep, by which time 760 plots had been harvested. Rain fell, harvesting ceased.
+  Conducted at the Waite Agricultural Research Institute in 1928. A
+  rectangle 250 x 200 links was selected, divided into 1000 plots
+  measuring 10 x 5 links, that is 1/2000th acre. 
+  Plots were hand harvested for herbage and air-dried. Cutting began
+  Tue, 25 Sep and ended Sat, 29 Sep, by which time 760 plots had been
+  harvested. Rain fell, harvesting ceased. 
   
-  The minimum recommended plot size is 150 square links. The optimum recommended plot size is 450 square links, 5 x 90 links in size.
+  The minimum recommended plot size is 150 square links. The optimum
+  recommended plot size is 450 square links, 5 x 90 links in size. 
   
-  Note, there were 4 digits that were hard to read in the original document. Best estimates of these digits were used for the yields of the affects plots.  The yields were watermarked with an extra .01 added.
+  Note, there were 4 digits that were hard to read in the original
+  document. Best estimates of these digits were used for the yields of
+  the affects plots.  The yields were watermarked with an extra .01
+  added. 
 
   The botanical composition of species clearly influenced the total herbage.
 

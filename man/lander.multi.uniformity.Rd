@@ -34,7 +34,7 @@
   207 ft 5 in by 19 ft 1 in.
 
   The same land was used for 4 consecutive crops. The first crop was
-  wheat, followed by chari/sorghum, followed by wheat 2 times.
+  wheat, followed by chari (sorghum), followed by wheat 2 times.
   
   Field width: 207.42 * 5 plots = 1037.1 feet
 

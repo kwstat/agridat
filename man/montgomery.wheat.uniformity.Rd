@@ -40,12 +40,12 @@
   The 1911 data are given by Montgomery (1912), figure 1, page
   165. NOTE: North is at the top of this diagram.
 
-  Surface & Pearl (1916) give a simple method for adjusting yield due to
-  fertility effects using the 1909 data.
-
   Field width: 14 plots * 5.5 feet
 
   Field length: 16 blocks * 5.5 feet
+
+  Surface & Pearl (1916) give a simple method for adjusting yield due to
+  fertility effects using the 1909 data.
 
 }
 \source{

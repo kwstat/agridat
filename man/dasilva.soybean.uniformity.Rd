@@ -31,7 +31,10 @@
   https://seer.sct.embrapa.br/index.php/pab/article/view/17250
 }
 \references{
-  None
+  Humada-Gonzalez, G.G. (2013).
+  Estimação do tamanho otimo de parcela experimental em experimento com soja.
+  Dissertation, Universidade Federal de Lavras.
+  http://repositorio.ufla.br/jspui/handle/1/744
 }
 \examples{
 \dontrun{

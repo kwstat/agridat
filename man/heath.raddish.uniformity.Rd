@@ -14,18 +14,19 @@
     \item{\code{row}}{row}
     \item{\code{col}}{column}
     \item{\code{block}}{block}
-    \item{\code{yield}}{weight per plant}
+    \item{\code{yield}}{weight per plant, grams}
   }
 }
 \details{
-Weight of 399 radish plants grown at 1in x 1in spacing in four plastic basins.
-Seed wetted 1968-02-15, planted 1968-02-17, harvested 1968-03-26.
+  Weight of 399 radish plants grown at 1in x 1in spacing in four plastic basins.
+  Seed wetted 1968-02-15, planted 1968-02-17, harvested 1968-03-26.
 
-Heath said, Most of the large plants were round the edges...one important source of variation might have been competition for light.
+  Heath said, Most of the large plants were round the edges...one
+  important source of variation might have been competition for light.
 }
 \source{
   O.V.S. Heath (1970).
-  Investigation by Experiment. Table 1.
+  Investigation by Experiment. Table 1, p 24-25.
   https://archive.org/details/investigationbye0000heat
 }
 \references{

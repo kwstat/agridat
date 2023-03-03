@@ -24,6 +24,7 @@
 Field 19. Kunia. Harvested 1932.
 
 "In this field, harvested in 1932, there were four rows per bed. A 300-foot bed was divided into four equal parts to form plats 1, 2, 3, and 4.  The third [sic, second] bed from this was similarly divided to form plats 5 to 8, inclusive.  In the same manner plats 9 to 24 were formed. In this way 24 plats each 75 feet long and 1 bed wide were formed."
+Page 635: "the smallest plats are 75 by 6.5 feet".
 
 Field length: 4 plats * 75 feet = 300 feet
 
@@ -33,12 +34,13 @@ Field width: 6 plats * 6.5 feet = 39 feet
 Field 82. Pearl City.
 
 "Eight beds, each separated by two beds, were selected and harvested. Beds were 8 feet center to center. Each bed was divided into three plats 76 feet long."
+The columns which have data are bed 1, 4, 7, 10, 13, 16, 19, 22
 
 Note: Layout of plats into rows/columns assumes the same pattern as field 19.
 
 Field length: 3 plats * 76 feet = 228 feet
 
-Field width: 8 plats * 8 feet * 3 (every third bed) = 192 feet.
+Field width: 22 plats * 8 feet = 176 feet.
 
 
 Field 21. Kahuku.
@@ -48,18 +50,18 @@ Note: Layout of plats into rows/columns assumes the same pattern as field 19.
 
 Field lenght: 5 plats * 60 feet = 300 feet
 
-Field width: 5 plats * 7.5 feet * 3 (every third bed) = 112.5 feet
+Field width: 13 plats * 7.5 feet = 97.5 feet
 
 
 Field 1. Kunia.
 
 "This experiment was another Latin square test having eight plats in each column and eight plats in each row. It was harvested in 1930.  Each plat consisted of two beds 150 feet long. Beds were 6 feet center to center and consisted of three rows each. The entire experimental area occupied 2.85 acres."
 
-Field length: 8 plats * 2 beds * 150 feet = 2400 feet
+Field length: 8 plats * 150 feet = 1200 feet
 
-Field width: 8 plats * 6 feet = 48 feet
+Field width: 8 plats * 2 beds * 6 feet = 96 feet
 
-Total area: 2400*48/43560=2.64 acres
+Total area: 1200*96/43560=2.64 acres
 
 }
 \source{
@@ -90,21 +92,21 @@ library(agridat)
   
   libs(desplot)
   desplot(dat, weight ~ col*row,
-          subset=field==1,
-          aspect=2400/48,
-          main="magistad.pineapple.uniformity - field 1")          
-  desplot(dat, weight ~ col*row,
           subset=field==19,
           aspect=300/39,
           main="magistad.pineapple.uniformity - field 19")
   desplot(dat, weight ~ col*row,
           subset=field==82,
-          aspect=228/192,
+          aspect=228/176,
           main="magistad.pineapple.uniformity - field 82")          
   desplot(dat, weight ~ col*row,
           subset=field==21,
-          aspect=300/112.5,
+          aspect=300/97.5,
           main="magistad.pineapple.uniformity - field 21")
+  desplot(dat, weight ~ col*row,
+          subset=field==1,
+          aspect=1200/96,
+          main="magistad.pineapple.uniformity - field 1")          
   
 }
 }

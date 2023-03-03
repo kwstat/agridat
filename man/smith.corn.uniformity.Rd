@@ -41,9 +41,6 @@
   the records offer a rather exceptional opportunity for a study of this
   kind.
 
-  The yields of all these plots in terms of bushels of shelled corn per
-  acre for the three years are given in the accompanying table.
-
   A study of this data reveals some very striking variations. It will be
   noticed in the first place that there is a tremendous difference in
   production in the different years. The first year, 1895, was an
@@ -99,11 +96,13 @@
 }
 
 \source{
-  Smith, L.H. 1910. Plot arrangement for variety experiments with corn.
+  Smith, L.H. 1910.
+  Plot arrangement for variety experiments with corn.
   Agronomy Journal, 1, 84--89. Table 1.
   https://books.google.com/books?id=mQT0AAAAMAAJ&pg=PA84
 
-  Harris, J.A. 1920. Practical universality of field heterogeneity as a factor
+  Harris, J.A. 1920.
+  Practical universality of field heterogeneity as a factor
   influencing plot yields.
   Journal of Agricultural Research, 19, 279--314. Page 296-297.
   https://books.google.com/books?id=jyEXAAAAYAAJ&pg=PA279
@@ -112,10 +111,9 @@
 \examples{
 \dontrun{
 
-library(agridat)
-
-data(smith.corn.uniformity)
-dat <- smith.corn.uniformity
+  library(agridat)
+  data(smith.corn.uniformity)
+  dat <- smith.corn.uniformity
 
   dat = transform(dat, year=factor(year))
   libs(desplot)

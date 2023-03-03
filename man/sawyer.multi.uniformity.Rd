@@ -24,17 +24,19 @@
 }
 \details{
   
-  An experiment conducted at Rothamsted, England, in 1925-1927, in Sawyers Field.
+  An experiment conducted at Rothamsted, England, in 1925-1927, in
+  Sawyers Field.
 
   Row 6, column 1 was not planted in any year.
+
+  1925: Wheat was harvested
   
-  Wheat was harvested in 1925.
   Row 1, column 1 had partially missing data for the wheat values in
   1925 and was not used in the Rothamsted summary statistics on page 155.
   
-  Swedes were harvested in 1926.
+  1926: Swedes were harvested
   
-  Oats were harvested in 1927.
+  1927: Oats were harvested
   
   Note the summaries statistics at the bottom of the page in each report
   are calibrated to ACRES.

@@ -60,7 +60,7 @@
   numbered strips.  This oscillation apparently arose as a legacy of the
   old practice of ploughing in high ridges: the tops of the ridges
   exhibited greater fertility than the borders of the furrows, so that
-  soil was worked from the former to the latter and the field levelled
+  soil was worked from the former to the latter and the field leveled
   out. This meant that over the site of the old furrows there was a good
   depth of rich soil, whilst it was very shallow where the ridges had
   been. The strips were so arranged as to cover the site of the furrow
@@ -69,9 +69,9 @@
   strips together (so that the new strips each included the whole of one
   of the old "lands") making it an 8 by 8 square.
 
-  Sanders said: In field E2 in  1908, column  10 sums  to  791 instead
-  of 786  as  shown:  reference  to  Fig.  13 indicated  that  the yield
-  of plot  10g should  probably have been 92 instead  of 97. 
+  Sanders said: In field E2 in 1908, column 10 sums to 791 instead
+  of 786 as shown: reference to Fig. 13 indicated that the yield
+  of plot 10g should probably have been 92 instead of 97. 
 
   The version of the data in the package uses the changes suggested by Sanders.
 

@@ -21,8 +21,10 @@
 }
 \source{
   Ira Arankacami, R. Rangaswamy. (1995).
-  A Text Book of Agricultural Statistics. New Age International Publishers.
+  A Text Book of Agricultural Statistics.
+  New Age International Publishers.
   Table 19.1.
+  https://www.google.com/books/edition/A_Text_Book_of_Agricultural_Statistics/QDLWE4oakSgC
 }
 \references{
   None
@@ -34,8 +36,8 @@ data(arankacami.groundnut.uniformity)
 dat <- arankacami.groundnut.uniformity
 
 require(desplot)
-desplot(yield ~ col*row, dat,
-        flip=TRUE, aspect=(12*.75)/(8*1),
+desplot(dat, yield ~ col*row,
+        flip=TRUE, aspect=(12*.75)/(8*4),
         main="arankacami.groundnut.uniformity")
 
 }

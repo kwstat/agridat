@@ -51,7 +51,7 @@
 \examples{
 \dontrun{
 
-library(agridat)
+  library(agridat)
   
   # Corn 1
   data(nonnecke.sweetcorn.uniformity)
