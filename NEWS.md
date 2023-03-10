@@ -10,6 +10,7 @@
 * goulden.barley.uniformity (expanded from the previously published 20x20 to 48x48)
 * hansen.multi.uniformity (multi-year uniformity trials)
 * immer.sugarbeet.uniformity (add 1931 results from Rothamsted archive)
+* khan.brassica.uniformity
 * kirk.potato (20 varieties with 15 reps)
 * mckinstry.cotton.uniformity
 * riddle.wheat (Modified Latin Square, "significant" variety switches high/low)
