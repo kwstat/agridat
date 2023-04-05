@@ -83,7 +83,7 @@
   wireframe(p1lo~row+bed, new1, aspect=c(1,.5), main="Field trend")
 
 
-  libs(asreml) # asreml4
+  libs(asreml)
 
   dat <- transform(dat, rowf=factor(row), bedf=factor(bed))
   dat <- dat[order(dat$rowf, dat$bedf),]

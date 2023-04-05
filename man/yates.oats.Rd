@@ -118,7 +118,7 @@
   # asreml r 4 has a bug with asreml( factor(nitro))
   dat2$nitrof <- factor(dat2$nitro)
 
-  # --- asreml4  ---
+  # --- asreml  ---
   libs(asreml)
   m5a <- asreml(yield ~ nitrof + gen,
                 random = ~ block + block:gen, data=dat2)

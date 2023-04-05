@@ -97,7 +97,7 @@
   }
 
 
-  # asreml 4
+  # asreml
   if(0){
     libs(asreml)
     ped.ainv <- ainverse(ped)

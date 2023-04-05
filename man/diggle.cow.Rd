@@ -76,7 +76,7 @@ Bodyweight of cows in a 2-by-2 factorial experiment
   dat <- transform(dat, time = (day-122)/10)
 
 
-  libs(asreml) # asreml4
+  libs(asreml)
   ## libs(latticeExtra)
   
   ## # Smooth for each animal.  No treatment effects. Similar to SAS Output 38.6.9

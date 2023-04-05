@@ -66,7 +66,7 @@
   bwplot(yield ~ loc|factor(.sample), dat20,
          main="bridges.cucumber - graphical inference")
 
-  libs(asreml) # asreml4
+  libs(asreml) # asreml
     
   ## Random row/col/resid. Same as Bridges 1989, p. 147
   m1 <- asreml(yield ~ 1 + gen + loc + loc:gen,

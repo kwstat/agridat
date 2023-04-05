@@ -61,7 +61,7 @@
   ##      rep (Intercept) <NA> 0.1916 0.4378
   ## Residual        <NA> <NA> 0.1796 0.4238
   
-  libs(asreml) # asreml4
+  libs(asreml)
 
   # AR1 x AR1 with linear row/col effects, random spline row/col
   dat <- transform(dat, xf=factor(col), yf=factor(row))

@@ -67,7 +67,7 @@
                              "#999999","#a6761d","deep pink"),
                            length=nrow(dat2)))
   
-  # asreml 4
+  # asreml
   libs(asreml)
 
   # Unstructured covariance

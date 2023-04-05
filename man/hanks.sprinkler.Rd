@@ -131,7 +131,7 @@
     m1 <- asreml(yield ~ gen + dir + irrf + gen:dir + gen:irrf + dir:irrf,
                  data=dat,
                  random= ~ block + block:dir + block:irrf,
-                 resid = ~ block:gen:corb(subf, 2))
+                 resid = ~ block:gen:corb(subf, 1))
 
     lucid::vc(m1)
     #                   effect component std.error z.ratio bound %ch

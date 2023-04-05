@@ -101,7 +101,7 @@
   
 
   # ----------
-  # asreml4
+  # asreml
 
   libs(asreml,lucid)
 

@@ -60,7 +60,7 @@
 
   # ----------
 
-  libs(asreml,lucid) # asreml4
+  libs(asreml,lucid)
   
   dat <- transform(dat, xf = factor(col), yf=factor(row))
   m1 <- asreml(yield ~ 1, data=dat, resid = ~ar1(xf):ar1(yf))

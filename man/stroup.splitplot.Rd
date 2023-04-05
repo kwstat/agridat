@@ -74,7 +74,7 @@
   # a3     25.75   1.082 Estimable
 
   # Intermediate space predictions
-  predict(m1, data=dat, classify="a", ignore=list("a:rep"),
+  predict(m1, data=dat, classify="a", ignore="a:rep",
           average=list(rep=NULL))
   #  a Predicted Std Err    Status
   # a1     32.88    2.24 Estimable

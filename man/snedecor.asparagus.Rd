@@ -61,12 +61,12 @@
 
   # ----------
 
-  libs(asreml,lucid) # asreml4
+  libs(asreml,lucid)
 
   # Split-plot with asreml
   m2 <- asreml(yield ~ trt + year + trt:year, data=dat,
                random = ~ block + block:trt)
-  # vc(m2)
+  vc(m2)
   ##    effect component std.error z.ratio bound %ch
   ##     block     354.3     405      0.87     P 0.1
   ## block:trt     462.8     256.9    1.8      P 0  
@@ -78,6 +78,8 @@
                random = ~ block,
                residual = ~ block:trt:ante(year,1),
                max=50)
+  m3 <- update(m3)
+  m3 <- update(m3)
 
   ## # Extract the covariance matrix for years and convert to correlation
   ## covmat <- diag(4)

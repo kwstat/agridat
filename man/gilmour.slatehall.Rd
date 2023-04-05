@@ -58,7 +58,7 @@
 
   # ----------------------------------------------------------------------------
 
-  libs(asreml,lucid) # asreml4
+  libs(asreml,lucid)
 
   # Model 4 of Gilmour et al 1997
   dat <- transform(dat, xf=factor(col), yf=factor(row))

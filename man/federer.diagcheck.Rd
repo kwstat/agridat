@@ -161,7 +161,7 @@
   ##  one.13   r1           10360   101.8
   ##  Residual               4127    64.24
   
-  libs(asreml,lucid) # asreml4
+  libs(asreml,lucid)
     
   m3 <- asreml(yield ~ -1 + trtn, data=dat,
                random = ~ r1 + r2 + r4 + r8 + r10 +

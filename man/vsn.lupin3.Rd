@@ -55,7 +55,7 @@
   desplot(dat, check~ col*row|site,
           main="vsn.lupin3: check plot placement") 
 
-  # asreml 4
+  # asreml
   libs(asreml,lucid)
      
   # Single-site analyses suggested random row term for site 3,

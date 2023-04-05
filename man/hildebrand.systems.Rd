@@ -72,7 +72,7 @@
 
   # ----------
 
-  libs(asreml,lucid) # asreml4
+  libs(asreml,lucid)
 
   # Environmental variance model, unstructured correlations
   

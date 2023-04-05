@@ -53,13 +53,15 @@
 
   # Use asreml to fit a model with AR1 gradient in rows  
   dat <- transform(dat, cf=factor(col), rf=factor(rrow))
-  m1 <- asreml(yield ~ -1 + gen, data=dat, random= ~ ar1v(rf))
+  m1 <- asreml(yield ~ -1 + gen, data=dat, random= ~ rf)
+  m1 <- update(m1, random= ~ ar1v(rf))
   m1 <- update(m1)
   m1 <- update(m1)
   m1 <- update(m1)
-    
+  lucid::vc(m1)
+  
   # Visualize trends, similar to Besag figure 2.
-  # Need 'as.vector' because asreml4 uses a named vector
+  # Need 'as.vector' because asreml uses a named vector
   dat$res <- unname(m1$resid)
   dat$geneff <- coef(m1)$fixed[as.numeric(dat$gen)]
   dat <- transform(dat, fert=yield-geneff-res)

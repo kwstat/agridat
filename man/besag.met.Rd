@@ -86,12 +86,7 @@
   ## ... etc ...
   
 
-  # Note, the FA biplots from asreml3 and asreml4 are surprisingly
-  # different from each other.  The predicted-value biplots are
-  # almost identical.
-  
   libs(asreml)
-  # asreml4
 
   # Average reps
   datm <- aggregate(yield ~ county + gen, data=dat, FUN=mean)
@@ -157,7 +152,7 @@
   rownames(lam) <- levels(dat$county)
   sco[,1:2] <- -1 * sco[,1:2]
   lam[,1:2] <- -1 * lam[,1:2]
-  biplot(sco, lam, cex=.5, main="FA2 coefficient biplot (asreml4)")
+  biplot(sco, lam, cex=.5, main="FA2 coefficient biplot (asreml)")
   # G variance matrix
   gvar <- lam %*% t(lam) + diag(mat[,1])
   

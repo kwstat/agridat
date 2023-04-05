@@ -93,7 +93,7 @@
   
   # ----------
 
-  # asreml4
+  # asreml
   # Mohring 2011 used 6 varieties to calculate GCA & SCA
   # Matches Table 3, column 2
   d2 <- subset(dat, is.element(p1, c("M","H","G","B","K","K2")) &
@@ -101,7 +101,7 @@
   d2 <- droplevels(d2)
   libs(asreml,lucid)
   m2 <- asreml(yield~ 1, data=d2, random = ~ p1 + and(p2))
-  # vc(m2)
+  vc(m2)
   ##     effect component std.error z.ratio      con
   ##  p1!p1.var     3.865     3.774     1   Positive
   ## R!variance    15.93      5.817     2.7 Positive

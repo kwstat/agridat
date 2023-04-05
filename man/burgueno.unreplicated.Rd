@@ -54,7 +54,7 @@
           col=check, num=gen, #text=gen, cex=.3, # aspect unknown
           main="burgueno.unreplicated")
 
-  libs(asreml,lucid) # asreml4
+  libs(asreml,lucid)
 
   # AR1 x AR1 with random genotypes
   dat <- transform(dat, xf=factor(col), yf=factor(row))

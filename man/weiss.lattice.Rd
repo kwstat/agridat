@@ -65,7 +65,7 @@ rep (instead of across reps).
   
   # ----------
 
-  libs(asreml) # asreml4
+  libs(asreml)
   m2 <- asreml(yield ~ rep + rep:xf + rep:yf + gen, data=dat)
   # Weiss table 6 means
   wald(m2)

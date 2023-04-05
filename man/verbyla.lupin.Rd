@@ -118,7 +118,6 @@
   # ----------
 
   libs(asreml,lucid)
-  # asreml 4
     
   # We try to reproduce the analysis of Verbyla 1999.
   # May not be exactly the same, but is pretty close.

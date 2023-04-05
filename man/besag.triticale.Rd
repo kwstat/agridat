@@ -66,7 +66,7 @@
          as.table=TRUE, type="s", layout=c(1,3),
          main="besag.triticale")
   
-  libs(asreml) # asreml4
+  libs(asreml)
 
   # Besag uses an adjustment based on neighboring plots.
   # This analysis fits the standard AR1xAR1 residual model

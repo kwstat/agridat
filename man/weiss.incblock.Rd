@@ -62,7 +62,7 @@
 
   # asreml
   # Standard inc block analysis used by Weiss and Cox
-  libs(asreml) # asreml 4
+  libs(asreml)
   m1 <- asreml(yield ~ gen + block , data=dat)
   predict(m1, data=dat, classify="gen")$pvals
   

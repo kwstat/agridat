@@ -74,7 +74,7 @@
   wireframe(p2lo~row+bed, new2, aspect=c(1,.5),
             main="durban.splitplot - Field trend")
 
-  libs(asreml) # asreml4
+  libs(asreml)
     
   # Table 5, variance components.  Table 6, F tests
   dat <- transform(dat, rowf=factor(row), bedf=factor(bed))

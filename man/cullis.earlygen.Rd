@@ -102,7 +102,7 @@
                    shapeCross=shape, layers=NULL)
   dat$mov.avg <- fitted(m0)
 
-  libs(asreml) # asreml4
+  libs(asreml)
 
   # Start with the standard AR1xAR1 analysis
   dat <- transform(dat, xf=factor(col), yf=factor(row))

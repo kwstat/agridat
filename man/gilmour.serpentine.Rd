@@ -69,7 +69,7 @@
   # ----------------------------------------------------------------------------
 
   
-  libs(asreml,lucid) # asreml4
+  libs(asreml,lucid)
     
   dat <- transform(dat, rowf=factor(row), colf=factor(10*(col-8)))
   dat <- dat[order(dat$rowf, dat$colf), ] # Sort order needed by asreml

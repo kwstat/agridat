@@ -97,8 +97,6 @@
 
   # -----------
 
-  # asreml3 & asreml4
-  
   # ASREML approach to model. Not final by any means.
   # Maybe a spline curve for each treatment, plus random deviations for each time
   libs(asreml)

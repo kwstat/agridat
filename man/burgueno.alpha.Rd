@@ -62,7 +62,7 @@
   ##   Residual        <NA> <NA> 133200 365  
 
 
-  libs(asreml) # asreml4
+  libs(asreml)
     
   dat <- transform(dat, xf=factor(col), yf=factor(row))
   dat <- dat[order(dat$xf, dat$yf),]                 

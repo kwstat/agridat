@@ -98,7 +98,6 @@
   ## (Intercept)        yorc
   ##  5.87492444  0.05494464
 
-  # asreml3 & asreml4
   libs(asreml,lucid)
   m3a <- asreml(y ~ 1 + yorc, data=dat, random = ~ env + env:yorc)
   vc(m3)
