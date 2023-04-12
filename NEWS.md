@@ -7,6 +7,7 @@
 * chakravertti.factorial (3 block, 3x5x3x3 factorial is largest factorial expt so far)
 * coombs.rice.uniformity 
 * evans.sugarcane.uniformity
+* forster.wheat.uniformity
 * goulden.barley.uniformity (expanded from the previously published 20x20 to 48x48)
 * hansen.multi.uniformity (multi-year uniformity trials)
 * immer.sugarbeet.uniformity (add 1931 results from Rothamsted archive)
@@ -16,6 +17,10 @@
 * riddle.wheat (Modified Latin Square, "significant" variety switches high/low)
 * smith.wheat.uniformity (classic data for measuring field heterogeneity)
 * vishnaadevi.rice.uniformity
+
+## Other notes
+
+* Switch to MIT license.
 
 
 # agridat 1.21 - Jun 2022

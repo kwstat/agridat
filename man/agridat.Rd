@@ -49,6 +49,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{draper.safflower.uniformity}        \tab 18 x 16 \tab xy, 2 expt \tab smith\cr
 \link{eden.tea.uniformity}                \tab 12 x 12 \tab xy \tab \cr
 \link{evans.sugarcane.uniformity}         \tab 142 x 5 \tab xy \tab \cr
+\link{forster.wheat.uniformity}           \tab 10 x 16 \tab xy \tab \cr
 \link{garber.multi.uniformity}            \tab 45 x 6 \tab xy, 2 years/crops \tab \cr
 \link{gomez.rice.uniformity}              \tab 18 x 36 \tab xy \tab aov,smith \cr
 \link{goulden.barley.uniformity}          \tab 48 x 48 \tab xy \tab \cr
