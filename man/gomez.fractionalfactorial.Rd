@@ -2,10 +2,10 @@
 \alias{gomez.fractionalfactorial}
 \docType{data}
 \title{
-  Rice fractional factorial experiment 1/2 2^6.
+  Fractional factorial of rice, 1/2 2^6 = 2x2x2x2x2x2
 }
 \description{
-  Rice fractional factorial experiment 1/2 2^6.
+  Fractional factorial of rice, 1/2 2^6 = 2x2x2x2x2x2.
   Two reps with 2 blocks in each rep.
 }
 
@@ -18,6 +18,12 @@
     \item{\code{trt}}{treatment, levels (1) to abcdef}
     \item{\code{col}}{column position in the field}
     \item{\code{row}}{row position in the field}
+    \item{\code{a}}{a treatment, 2 levels}
+    \item{\code{b}}{b treatment, 2 levels}
+    \item{\code{c}}{c treatment, 2 levels}
+    \item{\code{d}}{d treatment, 2 levels}
+    \item{\code{e}}{e treatment, 2 levels}
+    \item{\code{f}}{f treatment, 2 levels}
   }
 }
 \details{
@@ -57,15 +63,11 @@ desplot(dat, yield~col*row,
         main="gomez.fractionalfactorial - treatment & yield")
 
 
-# Split treatment into individual factors
-dat <- transform(dat,
-                 a = -1 + 2 * grepl('a',trt),
-                  b = -1 + 2 * grepl('b',trt),
-                 c = -1 + 2 * grepl('c',trt),
-                 d = -1 + 2 * grepl('d',trt),
-                 e = -1 + 2 * grepl('e',trt),
-                 f = -1 + 2 * grepl('f',trt))
-
+  # Ensure factors
+  dat <- transform(dat,
+                   a=factor(a), b=factor(b), c=factor(c),
+                   d=factor(d), e=factor(e), f=factor(f) )
+  
 # Gomez table 4.24, trt SS totalled together.
 # Why didn't Gomez nest block within rep?
 m0 <- lm(yield ~ rep * block + trt, dat)

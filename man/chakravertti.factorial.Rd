@@ -2,10 +2,10 @@
 \alias{chakravertti.factorial}
 \docType{data}
 \title{
-A 3x5x3x3 factorial experiment in rice
+  Factorial experiment of rice, 3x5x3x3
 }
 \description{
-A 3x5x3x3 factorial experiment in rice
+  Factorial experiment of rice, 3x5x3x3.
 }
 \usage{data("chakravertti.factorial")}
 \format{
@@ -13,15 +13,15 @@ A 3x5x3x3 factorial experiment in rice
   \describe{
     \item{\code{block}}{block/field}
     \item{\code{yield}}{yield}
-    \item{\code{date}}{planting date}
-    \item{\code{gen}}{genotype/variety}
-    \item{\code{treat}}{treatment combination}
-    \item{\code{seeds}}{number of seeds per hole}
-    \item{\code{spacing}}{spacing, inches}
+    \item{\code{date}}{planting date, 5 levels}
+    \item{\code{gen}}{genotype/variety, 3 levels}
+    \item{\code{treat}}{treatment combination, 135 levels}
+    \item{\code{seeds}}{number of seeds per hole, 3 levels}
+    \item{\code{spacing}}{spacing, inches, 3 levels}
   }
 }
 \details{
-  There were 4 factors studied:
+  There were 4 treatment factors:
                        
   3 Genotypes (varieties): Nehara, Bhasamanik, Bhasakalma
   
@@ -31,8 +31,10 @@ A 3x5x3x3 factorial experiment in rice
 
   3 Seedlings per hole: 1, 2, local method
 
-  In addition, the experiment was divided in 3 blocks (fields). There
-  were 3x5x3x3=135 treatment combinations. Total 405 plots. 
+  
+  There were 3x5x3x3=135 treatment combinations. 
+  The experiment was divided in 3 blocks (fields).
+  Total 405 plots. 
 
   "The plots of the same sowing date within each block were grouped
   together, and the position occupied by the sowing date groups within

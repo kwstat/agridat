@@ -2,43 +2,57 @@
 \alias{welch.bermudagrass}
 \docType{data}
 \title{
-  Factorial experiment of bermuda grass, N, P, K fertilizers
+  Factorial experiment of bermuda grass, 4x4x4, N, P, K fertilizers
 }
 \description{
-  Factorial experiment of bermuda grass, N, P, K fertilizers
+  Factorial experiment of bermuda grass, 4x4x4, N, P, K fertilizers.
 }
 
 \format{
   A data frame with 64 observations on the following 4 variables.
   \describe{
-    \item{\code{n}}{nitrogen fertilizer, pounds/acre}
-    \item{\code{p}}{phosphorus, lb/ac}
-    \item{\code{k}}{potassium, lb/ac}
+    \item{\code{n}}{nitrogen fertilizer, 4 levels}
+    \item{\code{p}}{phosphorus, 4 levels}
+    \item{\code{k}}{potassium, 4 levels}
     \item{\code{yield}}{yield of grass, tons/ac}
   }
 }
 \details{
-  The experiment was conducted 1955, 1956, and 1957.  There were 3
-  blocks. The harvests were oven-dried.  Each value is the mean for 3
-  years and 3 replications.  In most cases, the yield increased with
-  additions of the fertilizer nutrients.
+  The experiment was conducted 1955, 1956, and 1957.
+
+  There were 3 treatment factors:
+
+  4 n nitrogen levels: 0, 100, 200, 400 pounds/acre
+
+  4 p phosphorous levels: 0, 22, 44, 88 pounds/acre
+
+  4 k potassium levels: 0, 42, 84, 168 pounds/acre
+
+  
+  There were 3 blocks.
+  The harvests were oven-dried.
+  Each value is the mean for 3 years and 3 replications.
+  In most cases, the yield increased with additions of the fertilizer nutrients.
+
 }
 
 \source{
-  Welch, Louis Frederick and Adams, William Eugenius and Carmon,
-  JL. 1963. Yield response surfaces, isoquants, and economic fertilizer
-  optima for Coastal Bermudagrass. \emph{Agronomy Journal}, 55,
-  63-67. Table 1.
+  Welch, Louis Frederick and Adams, William Eugenius and Carmon, JL. (1963).
+  Yield response surfaces, isoquants, and economic fertilizer optima for
+  Coastal Bermudagrass.
+  Agronomy Journal, 55, 63-67. Table 1.
   https://doi.org/10.2134/agronj1963.00021962005500010023x
 }
 
 \references{
-  Jim Albert. \emph{Bayesian Computation with R}. Page 256.
+  Jim Albert.
+  Bayesian Computation with R. Page 256.
 
-  Peter Congdon. \emph{Bayesian Statistical Modeling}. Page 124-125.
+  Peter Congdon.
+  Bayesian Statistical Modeling. Page 124-125.
 
-  P. McCullagh, John A. Nelder. \emph{Generalized Linear Models}, Second
-  Edition. Page 382.
+  P. McCullagh, John A. Nelder.
+  Generalized Linear Models, 2nd ed. Page 382.
 
 }
 

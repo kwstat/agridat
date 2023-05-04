@@ -2,10 +2,10 @@
 \alias{chinloy.fractionalfactorial}
 \docType{data}
 \title{
-  Sugarcane fractional factorial 1/3 3^5
+  Fractional factorial of sugarcane, 1/3 3^5 = 3x3x3x3x3
 }
 \description{
-  Sugarcane fractional factorial 1/3 3^5.
+  Fractional factorial of sugarcane, 1/3 3^5 = 3x3x3x3x3.
 }
 \usage{data("chinloy.fractionalfactorial")}
 \format{
@@ -16,29 +16,29 @@
     \item{\code{row}}{row position}
     \item{\code{col}}{column position}
     \item{\code{trt}}{treatment code}
-    \item{\code{N}}{nitrogen treatment: 0, 1, 2}
-    \item{\code{P}}{phosphorous treatment: 0, 1, 2}
-    \item{\code{K}}{potassium treatment: 0, 1, 2}
-    \item{\code{B}}{bagasse treatment: 0, 1, 2}
-    \item{\code{F}}{filter press mud treatment: 0, 1, 2}
+    \item{\code{n}}{nitrogen treatment, 3 levels 0, 1, 2}
+    \item{\code{p}}{phosphorous treatment, 3 levels 0, 1, 2}
+    \item{\code{k}}{potassium treatment, 3 levels 0, 1, 2}
+    \item{\code{b}}{bagasse treatment, 3 levels 0, 1, 2}
+    \item{\code{m}}{filter press mud treatment, 3 levels 0, 1, 2}
   }
 }
 \details{
-
   An experiment grown in 1949 at the Worthy Park Estate in Jamaica.
   
-  Nitrogen was applied as sulphate of ammonia at 0, 3, 6 hundred-weight
-  per acre.
+  There were 5 treatment factors:
 
-  Phosphorous was applied as superphosphate at 0, 4, 8 hundred-weight
+  3 Nitrogen levels: 0, 3, 6 hundred-weight per acre.
+
+  3 Phosphorous levels: 0, 4, 8 hundred-weight per acre.
+  
+  3 Potassium (muriate of potash) levels: 0, 1, 2 hundred-weight
   per acre.
   
-  Potassium was applied as muriate of potash at 0, 1, 2 hundred-weight
-  per acre.
-  
-  Bagasse applied pre-plant at 0, 20, 40 tons per acre.
+  3 Bagasse (applied pre-plant) levels: 0, 20, 40 tons per acre.
 
-  Filter press mud applied pre-plant at 0, 10, 20 tons per acre.
+  3 Filter press mud (applied pre-plant) levels: 0, 10, 20 tons per acre.
+
   
   Each plot was 18 yards long by 6 yards (3 rows) wide. Plots were
   arranged in nine columns of nine, a 2-yard space separating plots
@@ -52,7 +52,7 @@
 \source{
   T. Chinloy, R. F. Innes and D. J. Finney. (1953).
   An example of fractional replication in an experiment on sugar cane manuring.
-  \emph{Journ Agricultural Science}, 43, 1-11.
+  Journ Agricultural Science, 43, 1-11.
   https://doi.org/10.1017/S0021859600044567
 }
 \references{
@@ -67,7 +67,7 @@ dat <- chinloy.fractionalfactorial
 
 # Treatments are coded with levels 0,1,2. Make sure they are factors
 dat <- transform(dat,
-                 N=factor(N), P=factor(P), K=factor(K), B=factor(B), F=factor(F))
+                 n=factor(n), p=factor(p), k=factor(k), b=factor(b), m=factor(m))
 
 # Experiment layout
 libs(desplot)
@@ -77,8 +77,8 @@ desplot(dat, yield ~ col*row,
         main="chinloy.fractionalfactorial")
 
 # Main effect and some two-way interactions. These match Chinloy table 6.
-# Not sure how to code terms like P^2K=B^2F
-m1 <- aov(yield ~ block + N + P + K + B + F + N:P + N:K + N:B + N:F, dat)
+# Not sure how to code terms like p^2k=b^2m
+m1 <- aov(yield ~ block + n + p + k + b + m + n:p + n:k + n:b + n:m, dat)
 anova(m1)
 
 }

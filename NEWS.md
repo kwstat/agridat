@@ -1,10 +1,10 @@
 # agridat 1.22 - Unpublished
 
-## New data with motivation
+## New data
 
 * bailey.cotton.uniformity
 * belamkar.augmented (augmented design at multiple locations)
-* chakravertti.factorial (3 block, 3x5x3x3 factorial is largest factorial expt so far)
+* chakravertti.factorial (3 block, 3x5x3x3 factorial is a large factorial experiment)
 * coombs.rice.uniformity 
 * evans.sugarcane.uniformity
 * forster.wheat.uniformity
@@ -20,12 +20,14 @@
 
 ## Other notes
 
-* Switch to MIT license.
+* Switch the package to MIT license.
+
+* Modify factorial datasets to include individual treatment factors.
 
 
-# agridat 1.21 - Jun 2022
+# agridat 1.21 (2022-06-15)
 
-## New data with motivation
+## New data
 
 * bachmaier.quadratic (confidence intervals for optimum of quadratic)
 * ducker.groundnut.uniformity
@@ -33,7 +35,7 @@
 * sharma.met (Finlay-Wilkinson regression)
 
 
-# agridat 1.19 - Dec 2021
+# agridat 1.20 (2021-12-20)
 
 ## New data
 
@@ -48,7 +50,7 @@ arankacami.groundnut.uniformity, barrero.maize, buntaran.wheat, gomez.heterogene
 * There are more than 200 URLs in the vignettes and these were slow to check and generated too many false warnings. Stopped the Rmd to html conversion from creating URL links via an option in the Rmd YAML.
 
 
-# agridat 1.18 - Jan 2021
+# agridat 1.18 (2021-01-12)
 
 ## New data
 
@@ -56,7 +58,7 @@ damesa.maize, jayaraman.bamboo, nair.turmeric.uniformity, shafi.tomato.uniformit
 
 
 
-# agridat 1.17 - Jul 2020
+# agridat 1.17 (2020-08-03)
 
 ## New data
 
@@ -80,12 +82,12 @@ alwan.lamb, baker.strawberry.uniformity, besag.checks, bryan.corn.uniformity, da
 
 
 
-# agridat 1.16 - Jul 2018
+# agridat 1.16 (2018-07-06)
 
 * Minor release to make a small change for the next release of the `broom` package.
 
 
-# agridat 1.15 - Jun 2018
+# agridat 1.15 (2018-06-28)
 
 ## New data
 
@@ -103,7 +105,7 @@ dasilva.maize, mead.turnip
 
 
 
-# agridat 1.13 - Nov 2017
+# agridat 1.13 (2017-11-30)
 
 ## New data for uniformity trials
 
@@ -149,7 +151,7 @@ acorsi.grayleafspot, becker.chicken, chinloy.fractionalfactorial, cramer.cucumbe
 
 
 
-# agridat 1.12 - Jun 2015
+# agridat 1.12 (2015-06-29)
 
 ## New data
 
@@ -157,7 +159,7 @@ cochran.beets, cochran.lattice, jansen.apple, jansen.carrot
 
 
 
-# agridat 1.11 - Mar 2015
+# agridat 1.11 (2015-03-03)
 
 ## New data
 
@@ -169,7 +171,7 @@ besag.beans, besag.triticale, burgeuno.alpha, burgueno.rowcol, burgueno.unreplic
 
 
 
-# agridat 1.10 - Nov 2014
+# agridat 1.10 (2014-11-26)
 
 ## New data
 
@@ -181,7 +183,7 @@ beaven.barley, perry.springwheat, ridout.appleshoots
 
 
 
-# agridat 1.9 - Jul 2014
+# agridat 1.9 - (2014-07-02)
 
 ## New data
 
@@ -195,7 +197,7 @@ beall.webworms, besag.endive, brandt.switchback, butron.maize, carlson.germinati
 
 
 
-# agridat 1.8 - Sep 2013
+# agridat 1.8 (2013-09-23)
 
 ## New data
 
@@ -203,7 +205,7 @@ brandle.rape, salmon.bunt
 
 
 
-# agridat 1.7 - Sep 2013
+# agridat 1.7 (2013-09-06)
 
 ## New data
 
@@ -211,7 +213,7 @@ baker.barley.uniformity, bliss.borers, bond.diallel, harris.wateruse, hayman.tob
 
 
 
-# agridat 1.6 - June 2013
+# agridat 1.6 (2013-06-04)
 
 ## New data
 
@@ -219,7 +221,7 @@ crossa.wheat, garber.multi.uniformity, gomez.nitrogen, harris.multi.uniformity, 
 
 
 
-# agridat 1.5 - Apr 2013
+# agridat 1.5 (2013-04-26)
 
 ## New data
 
@@ -227,7 +229,7 @@ adugna.sorghum, ars.earlywhitecorn96, besag.bayesian, box.cork, broadbalk.wheat,
 
 
 
-# agridat 1.4 - Mar 2012
+# agridat 1.4 (2012-03-14)
 
 ## New data
 
@@ -235,7 +237,7 @@ archbold.apple, blackman.wheat, cochran.crd, cochran.latin, darwin.maize, denis.
 
 
 
-# agridat 1.3 - Sep 2011
+# agridat 1.3 (2011-10-20)
 
 ## New data
 
@@ -243,7 +245,7 @@ bridges.cucumber, cox.stripsplit, diggle.cow, eden.potato, gauch.soy, graybill.h
 
 
 
-# agridat 1.2 - Jun 2011
+# agridat 1.2 (2011-06-30)
 
 ## New data
 
@@ -251,7 +253,7 @@ aastveit.barley, gathmann.bt, kempton.competition, wedderburn.barley
 
 
 
-# agridat 1.0 - Apr 2011
+# agridat 1.0 (2011-04-27)
 
 ## First release to CRAN
 
@@ -261,6 +263,6 @@ allcroft.lodging, australia.soybean, batchelor.apple.uniformity, batchelor.lemon
 
 
 
-# agridat 0.0 - Oct 2010
+# agridat 0.0 (2010-10-01)
 
 * Development begins

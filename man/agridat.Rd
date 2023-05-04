@@ -222,13 +222,13 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{caribbean.maize}             \tab     \tab 17 \tab 4   \tab    \tab 3     \tab \tab \cr
 \link{carmer.density}              \tab 8   \tab    \tab     \tab    \tab 4     \tab \tab nls,nlme \cr
 \link{carlson.germination}         \tab 15  \tab    \tab     \tab    \tab 8     \tab \tab glm\cr
-\link{chakravertti.factorial}      \tab 3   \tab    \tab 3   \tab    \tab 3x5x3x3 \tab factorial \tab aov\cr
-\link{chinloy.fractionalfactorial} \tab     \tab    \tab 9   \tab    \tab 1/3 3^5 \tab xy \tab aov\cr
+\link{chakravertti.factorial}      \tab 3   \tab    \tab 3   \tab    \tab 3,5,3,3 \tab factorial \tab aov\cr
+\link{chinloy.fractionalfactorial} \tab     \tab    \tab 9   \tab    \tab 1/3 3^5 = 3,3,3,3 \tab xy,factorial \tab aov\cr
 \link{christidis.competition}      \tab 9   \tab    \tab 5   \tab    \tab       \tab xy \tab \cr
 \link{cochran.beets}               \tab     \tab    \tab 6   \tab    \tab 7     \tab \tab \cr
 \link{cochran.bib}                 \tab 13  \tab 13 \tab     \tab    \tab       \tab bib \tab aov, lme \cr
 \link{cochran.crd}                 \tab     \tab    \tab     \tab    \tab 7     \tab xy, crd\tab aov \cr
-\link{cochran.factorial}           \tab     \tab    \tab 2   \tab    \tab 4^2   \tab factorial \tab aov \cr
+\link{cochran.factorial}           \tab     \tab    \tab 2   \tab    \tab 2,2,2,2 = 2^4 \tab factorial \tab aov \cr
 \link{cochran.latin}               \tab     \tab    \tab 6   \tab    \tab 6     \tab xy, latin\tab aov \cr
 \link{cochran.lattice}             \tab     \tab    \tab 5   \tab    \tab 16    \tab xy, latin\tab lmer \cr
 \link{cochran.wireworms}           \tab     \tab    \tab 5   \tab    \tab 5     \tab xy, latin\tab glm \cr
@@ -267,7 +267,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{giles.wheat}                 \tab 19  \tab    \tab     \tab 13 \tab       \tab 2 traits\tab gnm \cr
 \link{gilmour.serpentine}          \tab 108 \tab    \tab 3   \tab    \tab       \tab xy, serpentine\tab asreml \cr
 \link{gilmour.slatehall}           \tab 25  \tab    \tab 6   \tab    \tab       \tab xy \tab asreml \cr
-\link{gomez.fractionalfactorial}   \tab     \tab    \tab 2   \tab    \tab 1/2 2^6 \tab xy \tab lm \cr
+\link{gomez.fractionalfactorial}   \tab     \tab    \tab 2   \tab    \tab 1/2 2^6 = 2,2,2,2,2,2 \tab xy,factorial \tab lm \cr
 \link{gomez.groupsplit}            \tab 45  \tab    \tab 3   \tab    \tab 2     \tab xy, 3 gen groups \tab aov \cr
 \link{gomez.heteroskedastic}       \tab 35  \tab    \tab 3   \tab    \tab       \tab hetero \tab \cr
 \link{gomez.multilocsplitplot}     \tab 2   \tab 3  \tab 3   \tab    \tab       \tab rsm1,nitro \tab aov, lmer \cr
@@ -388,7 +388,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{wheatley.carrot}             \tab     \tab    \tab 3   \tab    \tab 11    \tab \tab glm-binomial \cr
 \link{yan.winterwheat}             \tab 18  \tab 9  \tab     \tab    \tab       \tab \tab gge,biplot \cr
 \link{yang.barley}                 \tab 6   \tab 18 \tab     \tab    \tab       \tab \tab biplot \cr
-\link{yates.missing}               \tab     \tab    \tab 10  \tab    \tab 3^2   \tab factorial \tab lm, pca \cr
+\link{yates.missing}               \tab     \tab    \tab 10  \tab    \tab 3^2 = 3,3 \tab factorial \tab lm, pca \cr
 \link{yates.oats}                  \tab 3   \tab    \tab 6   \tab    \tab       \tab xy,split,nitro\tab lmer
 }
 
@@ -430,7 +430,20 @@ name                       \tab model \cr
 
 Summaries:
 
+Factorial experiments:
+
+\tabular{llllllll}{
+  name                               \tab gen \tab loc\tab reps\tab years \tab trt \tab other \tab model \cr
+\link{chakravertti.factorial}      \tab 3   \tab    \tab 3   \tab    \tab 3,5,3,3 \tab factorial \tab aov\cr
+\link{chinloy.fractionalfactorial} \tab     \tab    \tab 9   \tab    \tab 1/3 3^5 = 3,3,3,3 \tab xy,factorial \tab aov\cr
+\link{cochran.factorial}           \tab     \tab    \tab 2   \tab    \tab 2,2,2,2 = 2^4 \tab factorial \tab aov \cr
+\link{gomez.fractionalfactorial}   \tab     \tab    \tab 2   \tab    \tab 1/2 2^6 = 2,2,2,2,2,2 \tab xy,factorial \tab lm \cr
+\link{welch.bermudagrass}          \tab     \tab    \tab     \tab    \tab 4,4,4 \tab rsm3, factorial \tab lm, jags \cr
+\link{yates.missing}               \tab     \tab    \tab 10  \tab    \tab 3^2 = 3,3 \tab factorial \tab lm, pca \cr
+}
+
 Multi-environment trials with multi-genotype,loc,rep,year:
+
 \tabular{llllllll}{
   name                               \tab gen \tab loc\tab reps\tab years \tab trt \tab other \tab model \cr
   \link{barrero.maize}               \tab 847  \tab 16 \tab 4  \tab 11  \tab 6  \tab \tab asreml\cr
