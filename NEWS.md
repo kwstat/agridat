@@ -15,8 +15,12 @@
 * kirk.potato (20 varieties with 15 reps)
 * mckinstry.cotton.uniformity
 * riddle.wheat (Modified Latin Square, "significant" variety switches high/low)
+* saunders.maize.uniformity (Data from Rothamsted archive)
 * smith.wheat.uniformity (classic data for measuring field heterogeneity)
 * vishnaadevi.rice.uniformity
+
+# Rothamsted
+
 
 ## Other notes
 
