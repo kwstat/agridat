@@ -102,9 +102,9 @@ name                                      \tab dimensions \tab other \tab model 
 \link{obsi.potato.uniformity}             \tab 63 x 26, 49 x 19 \tab xy \tab \cr
 \link{odland.soybean.uniformity}          \tab 25 x 42 \tab xy \tab \cr
 \link{odland.soyhay.uniformity}           \tab 28 x 55 \tab xy \tab \cr
+\link{paez.coffee.uniformity}             \tab 32 x 36 \tab xy, 5 yr \tab \cr
 \link{panse.cotton.uniformity}            \tab 32 x 40 \tab xy \tab \cr
 \link{parker.orange.uniformity}           \tab 10 x 27 \tab xy, 6 yr \tab \cr
-\link{paez.coffee.uniformity}             \tab 32 x 36 \tab xy, 5 yr \tab \cr
 \link{piepho.barley.uniformity}           \tab 30 x 36 \tab xy \tab \cr
 \link{polson.safflower.uniformity}        \tab 52 x 33 \tab xy \tab smith\cr
 \link{robinson.peanut.uniformity}         \tab 16 x 36 \tab xy \tab \cr
@@ -342,6 +342,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{onofri.winterwheat}          \tab 8   \tab    \tab 3   \tab 7  \tab       \tab \tab ammi\cr
 \link{ortiz.tomato}                \tab 15  \tab 18 \tab     \tab    \tab 16     \tab env*gen~env*cov \tab pls \cr
 \link{pacheco.soybean}             \tab 18  \tab 11 \tab     \tab    \tab       \tab \tab ammi\cr
+\link{payne.wheat}                 \tab     \tab    \tab     \tab 20 \tab 6     \tab rotation\tab asreml\cr
 \link{pederson.lettuce.repeated}   \tab     \tab    \tab 18  \tab    \tab 3     \tab \tab nlme\cr
 \link{perry.springwheat}           \tab 28  \tab 5  \tab     \tab 4  \tab       \tab gain \tab lm,lmer,asreml\cr
 \link{petersen.sorghum.cowpea}     \tab 2   \tab    \tab 4   \tab 7  \tab 4     \tab intercrop \tab \cr
@@ -430,6 +431,19 @@ name                       \tab model \cr
 }
 
 Summaries:
+
+Diallel:
+
+\tabular{llllll}{
+name                    \tab gen \tab loc\tab reps\tab trt   \tab model \cr
+\link{bond.diallel}     \tab 6*6 \tab    \tab     \tab 9     \tab \cr
+\link{butron.maize}     \tab 49  \tab 3  \tab     \tab       \tab biplot,asreml \cr
+\link{grover.diallel}   \tab     \tab    \tab 4   \tab 6*6   \tab lmDiallel \cr
+\link{hayman.tobacco}   \tab 8   \tab    \tab 2   \tab       \tab asreml\cr
+\link{ilri.sheep}       \tab 4   \tab 6  \tab     \tab       \tab \cr
+\link{lonnquist.maize}  \tab 11  \tab    \tab     \tab       \tab asreml \cr
+
+}
 
 Factorial experiments:
 
