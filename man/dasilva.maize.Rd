@@ -45,7 +45,7 @@
   Plos One. Supplemental material.
   https://doi.org/10.1371/journal.pone.0131414
 
-  Used via Creative Commons Attribution License.
+  Used via license: Creative Commons BY-SA.
 }
 \references{
   J.J. Nuvunga, L.A. Oliveira, A.K.A. Pamplona, C.P. Silva, R.R. Lima

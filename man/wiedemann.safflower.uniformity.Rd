@@ -60,6 +60,7 @@
   Estimation of Optimum Plot Size and Shape for Use in Safflower Yield Trails. Table 5.
   All Graduate Theses and Dissertations. Paper 3600. Table 5.
   https://digitalcommons.usu.edu/etd/3600
+  https://doi.org/10.26076/7184-afa1
 }
 
 \references{

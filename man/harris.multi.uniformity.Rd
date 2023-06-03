@@ -84,7 +84,8 @@
   Permanence of differences in the plats of an experimental field.
   Jour. Agr. Res, 20, 335-356.
   https://naldc.nal.usda.gov/catalog/IND43966236
-
+  https://www.google.com/books/edition/Journal_of_the_American_Society_of_Agron/Zwz0AAAAMAAJ?hl=en&gbpv=1&pg=PA257
+  
   Harris, J Arthur and Scofield, CS. (1928).
   Further studies on the permanence of differences in the plots of an
   experimental field.

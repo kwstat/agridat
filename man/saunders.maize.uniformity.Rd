@@ -38,6 +38,8 @@
   Dataset for 1929-30 experiment
   
   Row 255 is missing
+
+  There is an obvious edge effect in the first column.
   
   Field width: 5 plots * 20 yards = 100 yards
   
@@ -59,7 +61,7 @@
   Rothamsted Research Library, Box STATS17  WG Cochran, Folder 5.
 }
 \references{
-  Rayner & Saunders.
+  Rayner & A. R. Saunders.
   Statistical Methods, with Special Reference to Field Experiments.
 }
 \examples{

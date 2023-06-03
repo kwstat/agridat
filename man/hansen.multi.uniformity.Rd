@@ -80,6 +80,7 @@
   Hansen, Niels Anton (1914).
   Prøvedyrkning paa Forsøgsstationen ved Aarslev.
   Page 557 has field A2. Page 562 has field E2.
+  https://dca.au.dk/publikationer/historiske/planteavl
 }
 \references{
   Eden, T. and E. J. Maskell. (1928).

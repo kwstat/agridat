@@ -52,7 +52,7 @@
 
   Retrieved 27 Aug 2015 from https://web.archive.org/web/20100717003256/https://www.soils.umn.edu/academics/classes/soil4111/files/yield_a.xls
 
-  Used under Creative Commons BY-SA 3.0 license.
+  Used via license: Creative Commons BY-SA 3.0.
 }
 \references{
   Suman Rakshit, Adrian Baddeley, Katia Stefanova, Karyn Reeves, Kefei

@@ -53,7 +53,7 @@
   https://biometrics.ilri.org/CS/case%20study%204/DatafilesDocs/
   Retrieved Dec 2011.
   
-  Licensed with Creative Commons BY-NC-SA 3.0 Unported license.  
+  Used via license: Creative Commons BY-NC-SA 3.0.
 }
 
 \references{

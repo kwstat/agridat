@@ -68,6 +68,7 @@ Total area: 1200*96/43560=2.64 acres
   O. C. Magistad & C. A. Farden (1934).
   Experimental Error In Field Experiments With Pineapples.
   Journal of the American Society of Agronomy, 26, 631--643.
+  https://doi.org/10.2134/agronj1934.00021962002600080001x
 }
 \references{
   None

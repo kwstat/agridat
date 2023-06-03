@@ -49,6 +49,7 @@
 }
 \source{
   J. D. Hartman and E. C. Stair (1942).
+  Field Plot Technique With Tomatoes.
   Proceedings Of The American Society For Horticultural Science, 41, 315-320.
   https://archive.org/details/in.ernet.dli.2015.240678
 }

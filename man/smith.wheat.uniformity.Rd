@@ -13,7 +13,7 @@
   \describe{
     \item{\code{row}}{row ordinate}
     \item{\code{col}}{column ordinate}
-    \item{\code{yield}}{grain yield per plot, decigrams}
+    \item{\code{yield}}{grain yield per plot, grams}
     \item{\code{ears}}{number of ears per plot}
   }
 }
@@ -45,6 +45,15 @@
   and also the variance of the data matches the value in Smith (1938),
   which is 2201 on page 7.
 
+  The documents at Rothamsted claim that the grain yield is shown as
+  "Yields of grain in decigrams per foot length".  However, we believe
+  that that actual unit of weight is grams. Note that the yield values
+  in the high-yielding parts of the field are close to 200 g per plot,
+  and a plot is 0.5 sq feet.  Multiply by 8 to get 1600 g per 4 sq
+  feet. In Smith's paper, the fertility contour map in figure 1 shows
+  the high-yielding part of the field having a yield close to
+  "16 d.kg per 4 sq ft", and 16 d.kg = 16 kg = 1600 g.
+  
   This data was made available with special help from the staff at
   Rothamsted Research Library.
 
