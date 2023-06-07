@@ -1,13 +1,13 @@
-\name{heath.raddish.uniformity}
-\alias{heath.raddish.uniformity}
+\name{heath.radish.uniformity}
+\alias{heath.radish.uniformity}
 \docType{data}
 \title{
-  Uniformity trial of raddish
+  Uniformity trial of radish
 }
 \description{
-  Uniformity trial of raddish in four containers.
+  Uniformity trial of radish in four containers.
 }
-\usage{data("heath.raddish.uniformity")}
+\usage{data("heath.radish.uniformity")}
 \format{
   A data frame with 400 observations on the following 4 variables.
   \describe{
@@ -18,7 +18,7 @@
   }
 }
 \details{
-  Weight of 399 radish plants grown at 1in x 1in spacing in four plastic basins.
+  Weight of 399 radish plants grown at 1 inch x 1 inch spacing in four plastic basins.
   Seed wetted 1968-02-15, planted 1968-02-17, harvested 1968-03-26.
 
   Heath said, Most of the large plants were round the edges...one
@@ -35,12 +35,12 @@
 \examples{
 \dontrun{
   require(agridat)
-  data(heath.raddish.uniformity)
-  dat <- heath.raddish.uniformity
+  data(heath.radish.uniformity)
+  dat <- heath.radish.uniformity
   libs(desplot, dplyr)
   desplot(dat, yield ~ col*row|block,
           aspect=1,
-          main="heath.raddish.uniformity")
+          main="heath.radish.uniformity")
 
   # Indicator for border/interior plants
   dat <- mutate(dat,

@@ -10,6 +10,7 @@
 * forster.wheat.uniformity
 * goulden.barley.uniformity (expanded from the previously published 20x20 to 48x48)
 * hansen.multi.uniformity (multi-year uniformity trials)
+* heath.cabbage.uniformity
 * immer.sugarbeet.uniformity (add 1931 results from Rothamsted archive)
 * khan.brassica.uniformity
 * kirk.potato (20 varieties with 15 reps)
@@ -27,7 +28,7 @@
 
 * Switch the package to MIT license.
 
-* Modified factorial datasets to split treatments into individual treatment factors.
+* Modified factorial datasets to include individual treatment factors.
 
 
 # agridat 1.21 (2022-06-15)
@@ -48,9 +49,9 @@ arankacami.groundnut.uniformity, barrero.maize, buntaran.wheat, gomez.heterogene
 
 ## Other notes
 
-* Re-named `mead.cowpeamaize` to `mead.cowpea.maize`.
+* Re-named mead.cowpeamaize to mead.cowpea.maize.
 
-* Re-named `correa.soybean.uniformity` to `dasilva.soybean.uniformity`.
+* Re-named correa.soybean.uniformity to dasilva.soybean.uniformity.
 
 * There are more than 200 URLs in the vignettes and these were slow to check and generated too many false warnings. Stopped the Rmd to html conversion from creating URL links via an option in the Rmd YAML.
 
@@ -67,15 +68,15 @@ damesa.maize, jayaraman.bamboo, nair.turmeric.uniformity, shafi.tomato.uniformit
 
 ## New datasets added
 
-alwan.lamb, baker.strawberry.uniformity, besag.checks, bryan.corn.uniformity, davidian.soybean, devries.pine, edwards.oats, george.wheat, hartman.tomato.uniformity, heath.raddish.uniformity, johnson.douglasfir, kayad.alfalfa, kerr.sugarcane.uniformity, laycock.tea.uniformity, lehmann.millet.uniformity, linder.wheat, loesell.bean.uniformity, miguez.biomass, obsi.potato.uniformity, paez.coffee.uniformity, pederson.lettuce.repeated, piepho.barley.uniformity, rothamsted.oats, shaw.oats, wyatt.multi.uniformity
+alwan.lamb, baker.strawberry.uniformity, besag.checks, bryan.corn.uniformity, davidian.soybean, devries.pine, edwards.oats, george.wheat, hartman.tomato.uniformity, heath.radish.uniformity, johnson.douglasfir, kayad.alfalfa, kerr.sugarcane.uniformity, laycock.tea.uniformity, lehmann.millet.uniformity, linder.wheat, loesell.bean.uniformity, miguez.biomass, obsi.potato.uniformity, paez.coffee.uniformity, pederson.lettuce.repeated, piepho.barley.uniformity, rothamsted.oats, shaw.oats, wyatt.multi.uniformity
 
 ## Other notes
 
 * Examples now use asreml version 4.
 
-* Re-named `hutchinson.cotton.uniformity` to `panse.cotton.uniformity`.
+* Re-named hutchinson.cotton.uniformity to panse.cotton.uniformity.
 
-* Added INLA example to `crowder.seeds`.
+* Added INLA example to crowder.seeds.
 
 * Wrapped most example sections with `dontrun`.
 
@@ -122,7 +123,7 @@ fisher.barley, lu.stability, tai.potato
 
 ## New datasets added
 
-acorsi.grayleafspot, becker.chicken, chinloy.fractionalfactorial, cramer.cucumber, crampton.pig, battese.survey, christidis.competition, depalluel.sheep. eden.nonnormal, gartner.corn, giles.wheat, gomez.heteroskedastic, gomez.nonnormal1, gomez.nonnormal2, gomez.nonnormal3, gomez.wetdry, goulden.eggs, goulden.splitsplit, gregory.cotton, hanover.whitepine, harvey.lsmeans, harville.lamb, huehn.wheat, kenward.cattle, kreusler.maize, lehner.soybeanmold, lillemo.wheat, lin.superiority, lin.unbalanced, little.splitblock, mead.lambs, omer.sorghum, onofri.winterwheat, reid.grasses, silva.cotton, urquhart.feedlot, usgs.herbicides, vaneeuwijk.fusarium, vaneeuwijk.nematodes, vaneeuwijk.drymatter, wheatley.carrot
+acorsi.grayleafspot, becker.chicken, chinloy.fractionalfactorial, cramer.cucumber, crampton.pig, battese.survey, christidis.competition, depalluel.sheep. eden.nonnormal, gartner.corn, giles.wheat, gomez.heteroskedastic, gomez.nonnormal1, gomez.nonnormal2, gomez.nonnormal3, gomez.wetdry, goulden.eggs, goulden.splitsplit, gregory.cotton, hanover.whitepine, harvey.lsmeans, harville.lamb, huehn.wheat, kenward.cattle, kreusler.maize, lehner.soybeanmold, lillemo.wheat, lin.superiority, lin.unbalanced, little.splitblock, mead.lamb, omer.sorghum, onofri.winterwheat, reid.grasses, silva.cotton, urquhart.feedlot, usgs.herbicides, vaneeuwijk.fusarium, vaneeuwijk.nematodes, vaneeuwijk.drymatter, wheatley.carrot
 
 ## Other notes
 
@@ -137,8 +138,6 @@ acorsi.grayleafspot, becker.chicken, chinloy.fractionalfactorial, cramer.cucumbe
 * Changed all hyperlinks to plain text (for faster checking, avoids re-direct errors).
 
 * Replaced use of `gam` package in examples, in favor of `mgcv` package.
-
-* The mead.lambs data is renamed to `mead.lamb` for consistency.
 
 * Added package logo on github.
 

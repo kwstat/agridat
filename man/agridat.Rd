@@ -56,19 +56,20 @@ name                                      \tab dimensions \tab other \tab model 
 \link{harris.multi.uniformity}            \tab 2 x 23 \tab xy, 23 crops \tab corrgram\cr
 \link{hansen.multi.uniformity}            \tab 6 x 5, 16 x 8 \tab xy, 4-5 yr \tab splom\cr
 \link{hartman.tomato.uniformity}          \tab 12 x 32 \tab xy \tab \cr
-\link{heath.raddish.uniformity}           \tab 10 x 10 \tab xy \tab \cr
-\link{holtsmark.timothy.uniformity}       \tab 6 x 40 \tab xy \tab \cr
+\link{heath.cabbage.uniformity}           \tab 6 x 8   \tab xy \tab \cr
+\link{heath.radish.uniformity}            \tab 10 x 10 \tab xy \tab \cr
+\link{holtsmark.timothy.uniformity}       \tab 6 x 40  \tab xy \tab \cr
 \link{igue.sugarcane.uniformity}          \tab 36 x 42 \tab xy \tab \cr
 \link{immer.sugarbeet.uniformity}         \tab 10 x 60 \tab xy, 3 traits, 2 yr \tab \cr
 \link{iyer.wheat.uniformity}              \tab 25 x 80 \tab xy \tab \cr
-\link{kadam.millet.uniformity}            \tab 8 x 20 \tab xy, 2 expts \tab \cr
-\link{kalamkar.potato.uniformity}         \tab 6 x 96 \tab xy \tab \cr
+\link{kadam.millet.uniformity}            \tab 8 x 20  \tab xy, 2 expts \tab \cr
+\link{kalamkar.potato.uniformity}         \tab 6 x 96  \tab xy \tab \cr
 \link{kalamkar.wheat.uniformity}          \tab 16 x 80 \tab xy, 2 traits \tab \cr
-\link{kempton.barley.uniformity}          \tab 7 x 28 \tab xy \tab \cr
+\link{kempton.barley.uniformity}          \tab 7 x 28  \tab xy \tab \cr
 \link{kerr.sugarcane.uniformity}          \tab 12 x 12 \tab xy \tab, 4 fields \cr
 \link{khan.brassica.uniformity}           \tab 18 x 18 \tab xy, 2 fields \tab \cr
 \link{khin.rice.uniformity}               \tab 30 x 36 \tab xy \tab \cr
-\link{kiesselbach.oats.uniformity}        \tab 3 x 69 \tab xy \tab \cr
+\link{kiesselbach.oats.uniformity}        \tab 3 x 69  \tab xy \tab \cr
 \link{kristensen.barley.uniformity}       \tab 22 x 11 \tab xy \tab \cr
 \link{kulkarni.sorghum.uniformity}        \tab 4 x 40 \tab xy, 3 years \tab \cr
 \link{lander.multi.uniformity}            \tab 5 x 39 \tab xy, 4 years \tab \cr
