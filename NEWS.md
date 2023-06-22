@@ -6,11 +6,12 @@
 * belamkar.augmented (augmented design at multiple locations)
 * chakravertti.factorial (3 block, 3x5x3x3 factorial is a large factorial experiment)
 * coombs.rice.uniformity 
-* evans.sugarcane.uniformity
+* evans.sugarcane.uniformity (Data from Rothamsted archive)
 * forster.wheat.uniformity
 * goulden.barley.uniformity (expanded from the previously published 20x20 to 48x48)
 * hansen.multi.uniformity (multi-year uniformity trials)
 * heath.cabbage.uniformity
+* hutchinson.cotton.uniformity (Data from Rothamsted archive)
 * immer.sugarbeet.uniformity (add 1931 results from Rothamsted archive)
 * khan.brassica.uniformity
 * kirk.potato (20 varieties with 15 reps)
@@ -21,14 +22,11 @@
 * smith.wheat.uniformity (classic data for measuring field heterogeneity)
 * vishnaadevi.rice.uniformity
 
-## Rothamsted
-
-
 ## Other notes
 
-* Switch the package to MIT license.
+* Switched the package to MIT license.
 
-* Modified factorial datasets to include individual treatment factors.
+* Modified factorial-experiment datasets to separate the treatment factors into individual treatment factors.
 
 
 # agridat 1.21 (2022-06-15)
