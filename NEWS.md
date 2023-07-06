@@ -15,11 +15,12 @@
 * immer.sugarbeet.uniformity (add 1931 results from Rothamsted archive)
 * khan.brassica.uniformity
 * kirk.potato (20 varieties with 15 reps)
-* mckinstry.cotton.uniformity
+* mckinstry.cotton.uniformity (Data from Rothamsted archive)
 * payne.wheat (long term rotation experiment)
 * riddle.wheat (Modified Latin Square, "significant" variety switches high/low)
 * saunders.maize.uniformity (Data from Rothamsted archive)
 * smith.wheat.uniformity (classic data for measuring field heterogeneity)
+* tesfaye.millet (GxE dataset with multiple reps, xy coordinates)
 * vishnaadevi.rice.uniformity
 
 ## Other notes
