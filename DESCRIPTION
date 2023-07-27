@@ -56,11 +56,11 @@ Suggests:
     survival,
     vcd,
     testthat
-License: CC BY-SA 4.0
-LazyData: yes
+License: MIT + file LICENSE
+LazyData: true
 URL: https://kwstat.github.io/agridat/
 BugReports: https://github.com/kwstat/agridat/issues
 VignetteBuilder: knitr
 Language: en-US
 Encoding: UTF-8
-RoxygenNote: 7.2.0
+RoxygenNote: 7.2.3

@@ -28,9 +28,12 @@
   there were 432 beds in the experiment. At the time of harvest, each
   bed was divided into equal plots of size .6 m x .75 m, and the yield
   from each plot was recorded.
-
   
-  Field map on page 64 of Nair.
+  Field map on page 64 of Nair.   Nair focused mostly on the statistical
+  methods and did not discuss the actual experimental results in very
+  much detail. 
+
+  There are an excess number of plots with 0 yield.
 
   Field length: 14 plots * .6 m + 13 alleys * .4 m = 13.6 m
 
@@ -54,7 +57,9 @@
   library(agridat)
   data(nair.turmeric.uniformity)
   dat <- nair.turmeric.uniformity
-  
+
+  libs(lattice)
+  qqmath( ~ yield, dat)
   libs(desplot)
   desplot(dat, yield ~ col*row,
           flip=TRUE, aspect=13.6/68,

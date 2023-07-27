@@ -1,16 +1,19 @@
 # summerby.oat.uniformity.R
 
 # Reason not used:
-# Only 2 rows.
 # The heatmap shows that the field is hardly 'uniform' as claimed by the
-# authors. Flood damage.
+# authors. Some plots were suppressed by the author due to flood damage,
+# but clearly most of the top row should have been suppressed.
 
-# Source: Summerby, 1925. A Study of Sizes of Plats, Numbers of Replications,
-# and the Frequency and Methods of using Check Plats, in Relation to
-# Accuracy in Field Experiments.
-# \emph{Agronomy Journal}, 3, 140--150.
-# \url{https://www.crops.org/publications/aj/pdfs/17/3/AJ0170030140}.
+# Summerby, 1925.
+# A Study of Sizes of Plats, Numbers of Replications, and the Frequency and Methods of using Check Plats, in Relation to Accuracy in Field Experiments.
+# Agronomy Journal, 3, 140--150.
+# https://www.crops.org/publications/aj/pdfs/17/3/AJ0170030140
 
+A study conducted at Cornell University, harvested in 1921.
+The area investigated was 300 ft x 31 ft.
+It was seeded to 300 oat rows 1 foot apart, 15 feet long, with a strip 1 foot between.
+On account of flooding near one end of one of the series early in the spring, it was necessary to elimnate a number of rows.
 
 
 libs(desplot,readr,reshape2)
@@ -36,4 +39,5 @@ dat$col <- ifelse(dat$plat <65, dat$plat+236, dat$col)
 dat$col <- ifelse(dat$plat>64 & dat$plat<365, 365-dat$plat, dat$col)
 dat$col <- ifelse(dat$plat>364, dat$plat-364, dat$col)
 
-desplot(dat, yield ~ col*row, aspect=31/300, main="summerby.oat") # true shape
+desplot(dat, yield ~ col*row, aspect=31/300,
+        main="summerby.oat") # true shape

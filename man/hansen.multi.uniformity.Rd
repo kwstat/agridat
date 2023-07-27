@@ -40,7 +40,7 @@
 
   Sanders said: There appeared to be two printer errors in the paper.
   In field A2 the yields given for 1908 add up to 3010 instead of 3000:
-  reference to the Fig.  6 given there seemed to indicate that the
+  reference to the Fig. 6 given there seemed to indicate that the
   excess lay in row 3 and eventually it was decided to reduce plots 3c
   to 96 and 3f to 84.
 
@@ -74,7 +74,8 @@
   of plot 10g should probably have been 92 instead of 97. 
 
   The version of the data in the package uses the changes suggested by Sanders.
-
+  Data were typed by K.Wright.
+  
 }
 \source{
   Hansen, Niels Anton (1914).

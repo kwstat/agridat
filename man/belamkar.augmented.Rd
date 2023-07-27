@@ -28,7 +28,9 @@
   location. There were 2 replicate blocks at Alliance and 1 block at all
   other locations. Each plot was 3 m long by 1.2 m wide.
 
-  The electronic data were found in supplement S4 downloaded from https://doi.org/10.25387/g3.6249410
+  The electronic data were found in supplement S4 downloaded from
+  https://doi.org/10.25387/g3.6249410
+  The license for the data is CC-BY 4.0.
 }
 \source{
   Vikas Belamkar, Mary J. Guttieri, Waseem Hussain, Diego Jarquín,

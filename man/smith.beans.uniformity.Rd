@@ -32,19 +32,21 @@
 
   There are four datasets:
 
-  \bold{1954}
+  -----
+
+  1954 Experiment 1: Red Kidney.
   
-  Experiment 1: Red Kidney.
-  Experiment 2: Standard Pink
+  1954 Experiment 2: Standard Pink
 
   Field width: 18 plots * 30 inches = 45 ft
   
   Field length: 12 plots * 15 ft = 180 ft
 
-  \bold{1955}
+  -----
   
-  Experiment 3: Red Kidney.
-  Experiment 4: Standard Pink
+  1955 Experiment 3: Red Kidney.
+  
+  1955 Experiment 4: Standard Pink
 
   Field width: 16 plots * 2 rows * 30 in = 80 ft
 

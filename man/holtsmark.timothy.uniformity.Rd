@@ -38,7 +38,8 @@
   https://books.google.com/books?id=eXA2AQAAMAAJ&pg=PA1
 }
 \references{
-  Theodor Roemer (1920). \emph{Der Feldversuch}.
+  Theodor Roemer (1920).
+  Der Feldversuch.
 }
 
 \examples{

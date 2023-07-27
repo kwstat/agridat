@@ -43,15 +43,16 @@
 
   Field length: 54 rows * 22 in/row = 99 feet
 
-  For this R package, the tables in Wiedemann were converted by OCR to
-  digital format, and all values were checked by hand.
-
   The original source document has columns labeled 33, 32, ... 1.  Here
   the columns are labeled 1:33 so that plotting tools work normally.
   See Wiedemann figure 8.
 
   Wiedemann notes the statistical analysis of the data required 100
   hours of labor.  Today the analysis takes only a second.
+
+  For this R package, the tables in Wiedemann were converted by OCR to
+  digital format, and all values were checked by hand.
+
 
 }
 

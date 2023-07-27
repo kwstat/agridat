@@ -20,6 +20,14 @@
   A uniformity trial of rice raised during 2017 late samba season near
   Madurai, India.
 
+  Note: There is a clear outlier value '685'.
+  When this outlier is included, the calculated value of CV matches the
+  value in Vishnaadevi et al.
+  If we remove this outlier, the CV is smaller than the value in the
+  paper.
+  This means that the outlier value is not a simple typo in the
+  publication, but was the actual value in the original data.
+  
   Field width: 12 columns x 1m = 12 m
 
   Field length: 24 rows x 1m = 24m
@@ -38,7 +46,10 @@
   library(agridat)
   data(vishnaadevi.rice.uniformity)
   dat <-vishnaadevi.rice.uniformity
-  
+
+  # CV in Table 2 for 1x1 is reported as 2.8
+  # sd(dat$yield)/mean(dat$yield) = .0277
+  # If we remove the outlier yield 685, then we calculate .0256
   libs(desplot)
   desplot(dat, yield ~ col*row,
           flip=TRUE, aspect=24/12,

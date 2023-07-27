@@ -13,46 +13,80 @@
   A data frame with 1058 observations on the following 5 variables.
   \describe{
     \item{\code{series}}{series (field coordinate)}
-    \item{\code{plot}}{plot number (field coordinate)}
+    \item{\code{plot}}{plot number (field ordinate)}
     \item{\code{year}}{year, 1911-1925}
-    \item{\code{crop}}{crop factor}
-    \item{\code{yield}}{yield, numeric}
+    \item{\code{crop}}{crop}
+    \item{\code{yield}}{yield per plot (pounds)}
   }
 }
 \details{
+
+  The yields given in Harris (1920) (Practical universality...) are given for quarter-plots.
+
+  The yields given in Harris (1920) (Permanence of ...) 
+
+  The yields given in Harris (1928) are given for single plots.
+  
 
   Field width: 2 plots * 317 ft  + 5 feet alley = 639 feet
 
   Field length: 23 plots * 23.3 feet = 536 feet
   
-  All yields are given in pound per plot, except sugar beets, which are
-  given in tons per acre.  Harris (1928) shows a map of the location.
+  All yields are given in pound per plot.
+  The original data in Harris (1920) for the 1911 sugarbeet yields were
+  in tons/ac,  (Harris 1920, table 3 footnote), but these were converted
+  to pounds/plot for the purpose of this dataset.  given in tons per acre.
+  
+  Harris (1928) shows a map of the location on page 16.
 
   Harris (1920):
   
-  In the spring of 1911 this field was laid out into 46 plots, each
-  measuring 23.5 by 317 feet and containing 0.17 acre, arranged in two
-  parallel series of 23 plots each. The two series of plots were
+  1911: In the spring of 1911 this field was laid out into 46 plots,
+  each measuring 23.5 by 317 feet and containing 0.17 acre, arranged in
+  two parallel series of 23 plots each. The two series of plots were
   separated merely by a temporary irrigation ditch. In 1911 it was
-  planted to sugar beets, and in the spring of 1912 it was seeded to
+  planted to sugar beets.
+
+  1912: In the spring of 1912 it was seeded to
   alfalfa, and one cutting was harvested that year. This stand remained
   on the ground during 1913 and 1914, when the entire field was
-  fall-plowed. In 1913 three cuttings were made, but the third cutting
+  fall-plowed.
+
+  1913: Three cuttings were made, but the third cutting
   was lost in a heavy wind which scattered and mixed the crop before
   weighings from the various plots could be made. The first cutting,
   designated as alfalfa I, was made on plots one-half the original
   size. The second cutting was harvested from plots one-quarter the
-  original size. The first and second cuttings in 1914 were weighed for
+  original size.
+
+  1914: The first and second cuttings in 1914 were weighed for
   plots one-quarter the original size--that is, 0.0425-acre plots--while
   the third cutting was recorded for plots one-third the original
   size. These furnish the data for alfalfa I, II, and III for 1914.
   Total yields for the first and second cuttings in 1913 and 1914 and
   for the first, second, and third cuttings in 1914 are also considered.
-  In 1915 and 1916 ear corn was grown. In 1917 the fields were planted
-  to oats, and records were made of grain, straw, and total yield.  In
-  1918 silage corn was grown. In 1919 the land produced a crop of
-  barley.
 
+  1915: Ear corn.
+
+  1916: Ear corn.
+
+  1917: The fields were planted to oats, and records were made of grain,
+  straw, and total yield.
+
+  1918: Silage corn was grown.
+
+  1919: The land produced a crop of barley.
+
+  1920: Silage corn
+
+  1921 Alfalfa
+
+  1922 Alfalfa, cutting 3
+
+  1923 Alfalfa, cutting 1 and 3
+
+  1914 Alfalfa, cutting 2 and 3
+  
   Harris (1928):
   
   The southeast corner of Series II, the east series, is
@@ -101,8 +135,6 @@ data(harris.multi.uniformity)
 dat <- harris.multi.uniformity
 # Combine year/crop into 'harvest'
 dat <- transform(dat, harv = factor(paste0(year,".",crop)))
-# Convert 1911 from tons to pounds
-dat$yield[dat$year==1911] <- 340 * dat$yield[dat$year==1911]
 
 # Average yields. Harris 1928, table 2.
 aggregate(yield~harv, dat, mean)
@@ -131,6 +163,7 @@ d2$plot <- as.numeric(substring(d2$ord,3))
 d2$xord <- 5 - dat$series
 # Note that for alfalfa, higher-yielding plots in 1912-1914 were
 # lower-yielding in 1922-1923.
+# Heatmaps for individual year/harvest combinations
 libs(desplot)
 desplot(d2, yield ~ xord*plot|harv,
         aspect=536/639, flip=TRUE, # true aspect

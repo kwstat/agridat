@@ -20,7 +20,7 @@
   A field of ratoon canes was harvested in 20-hole plots.
   Described in a letter to Frank Yates written 21 May 1935.
 
-  Field length: 5 plots x 50 feet (20 stools per plot; 30 in between stools) = 250 feet
+  Field length: 5 plots x 50 feet (20 stools per plot; 30 inches between stools) = 250 feet
 
   Field width: 142 plots x 5 feet = 710 feet
   

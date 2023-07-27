@@ -21,7 +21,8 @@
   and then the rest of the row was harvested in 5-foot lengths.
 
   Crop location is unknown, but likely Southeast Asia given Love's work
-  teaching in China. Date circa 1930.
+  teaching in China. Date is likely about 1930-1932 based on the Cornell
+  reference below.
 
   Possibly more information would be in the collected papers of Harry
   Love at Cornell:

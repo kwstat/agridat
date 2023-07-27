@@ -28,7 +28,7 @@ Morning glories infested the middle two columns of blocks, uniformly
 over the blocks affected.
 
 The data here include missing values for the alleys so that the field
-map is approximately correct.
+map is approximately the correct shape and size.
 
 Field width: 4 blocks of 40 feet + 3 alleys of 20 feet = 220 feet.
 

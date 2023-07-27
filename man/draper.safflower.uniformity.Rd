@@ -28,7 +28,7 @@
   In each test, the end ranges and one row of plots on one side were
   next to alleys, and those plots gave estimates of border effects. 
 
-  \bold{Experiment E4 (four foot test)}.
+  Experiment E4 (four foot test)
 
   Sandy streaks were present in the field. Average yield was 1487
   lb/ac. A diagonal fertility gradient was in this field.  Widening the
@@ -41,7 +41,7 @@
   Field length: 18 ranges * 4 feet = 72 feet
 
 
-  \bold{Experiment E5 (five foot test)}
+  Experiment E5 (five foot test)
 
   Average yield 2517 lb/ac, typical for this crop.  Combining plots
   lengthwise was more effective than widening the plots, in order to
@@ -54,6 +54,7 @@
   Field length: 18 ranges * 5 feet = 90 feet.
 
   Data are from Table A & B of Draper, p. 53-56.
+  Typed by K.Wright.
 }
 
 \source{
@@ -61,6 +62,7 @@
   Optimum plot size and shape for safflower yield tests.
   Dissertation. University of Arizona.
   https://hdl.handle.net/10150/319371
+  Page 53-56.
 }
 \references{
   None

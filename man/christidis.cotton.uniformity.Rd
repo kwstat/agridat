@@ -22,7 +22,7 @@
 
   Each block consisted of 20 rows, 1 meter apart and 66 meters long. Two
   rows on each side and 1 meter on each end were removed for
-  borderr Each row was divided into 4 meter-lengths and harvested
+  borders. Each row was divided into 4 meter-lengths and harvested
   separately.  There were 4 blocks, oriented at 0, 30, 60, 90 degrees.
 
   Each block contained 16 rows, each 64 meters long.

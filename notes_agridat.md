@@ -2,11 +2,28 @@
 title: "agridat notes"
 ---
 
+# License note
+
+Substantial effort has been made to contact authors of papers published within the past few decades to secure permission to use data in this package.
+
+In the U.S., raw data are not generally subject to copyright. See
+\url{http://www.lib.umich.edu/copyright-office-mpublishing/copyrightability-charts-tables-and-graphs}
+and \url{http://sciencecommons.org/about/towards} for some discussion.
+
+Data produced from work of the United States government
+(including the U.S. Department of Agriculture) are not subject to copyright.
+\url{http://en.wikipedia.org/wiki/Copyright_status_of_work_by_the_U.S._government}
+
+Creative Commons licenses can apply to the \emph{structure} of a database, but not to the factual data. \url{https://wiki.creativecommons.org/wiki/Data}
+
 # Cochran uniformity done
 
+evans.sugarcane.uniformity
 goulden.barley.uniformity
 ducker.groundnut.uniformity
 immer.sugarbeet.uniformity (1931)
+mckinstry.cotton.uniformity
+saunders.maize.uniformity
 smith.wheat.uniformity
 
   This data was made available with special help from the staff at
@@ -17,130 +34,150 @@ smith.wheat.uniformity
 }
 
 
-## data-raw/cochran_folder1_genstat_data
 
-Genstat data 01.pdf    # series F multicrop 1925-1934
-Genstat data 02.pdf    # series G multicrop 1925-1934
-Genstat data 03.pdf # Done. Same as goulden.barley.uniformity
-Genstat data 04.pdf    # nuts per plot 1919-1928
-Genstat data 05.pdf # Done. Same as panse.cotton.uniformity
-Genstat data 06.pdf    # cotton, gatooma 480 plots
-Genstat data 07.pdf    # maize potchefstroom 1930
-Genstat data 08.pdf    # B5a B5a
-Genstat data 09.pdf    # maie potchefstroom 1929
-Genstat data 10.pdf # immer.sugarbeet.uniformity 1931
-Genstat data 11.pdf # Done. Sames as evans.sugarcane.uniformity SQUARED values
-Genstat data 12.pdf # Done. Same as sayer.sugarcane.uniformity 1932
-Genstat data 13.pdf # Done. Same as christidis.wheat.uniformity
-Genstat data 14.pdf # Done. Same as smith.wheat.uniformity
+Murray, E. K. S. (1934).
+The value of a uniformity trial in field experimentation with rubber.
+The Journal of Agricultural Science, 24(2), 177-184.
+https://doi.org/10.1017/s0021859600006572
+Reviewed. Not used. 
+Has 2 years of 5x5 grid from rubber trees.  Based on data archived at Rothamsted, so not used at this time.
 
-## data-raw/cochran_folder2_data_received_since_publiction
 
-2632_001.pdf
-2633_001.pdf
-2634_001.pdf
-2635_001.pdf
-2636_001.pdf # oats 1923
-2637_001.pdf # cotton 1940, 40 rows, 50 columns
-2638_001.pdf
-2639_ducker_groundnut.R
-2639_ducker_groundnut.pdf
-2639_ducker_groundnut.xlsx
-2640_001.pdf # oats 1921
-2641_001.pdf # letter summerby
-2642_001.pdf
-2643_001.pdf # ribes
-2644_001.pdf
-2645_001.pdf # green cloves, tree yields, 5 years
-2645_015.pdf # individual trees 1933-1938
-2646_001.pdf steiner wireworms
-2647_001.pdf # sugar beets MN 1937 LeClerg
-2648_001.pdf # sugar beet MN 1933 LeClerg
-2649_001.pdf
+   
+### Folder 1 Genstat data
 
-## data-raw/cochran_folder3/:
+101                  #       1925-1934 single rows, series E/F
+102                  #       1925-1934 single rows, series G
+103_goulden_barley   # done  Grown at Dominion, 1931
+104_beckett_coconut  #       1919-1928, 22 plots, nuts per plot. Cochran paper #17
+105_panse_cotton     # done  (see also 509)
+106_mckinstry_cotton # done  Gatooma 480 plots
+107_saunders_maize   # done  Maize, Potchefstroom 1929-30
+108                  #       Field B2a, B5b
+109_saunders_maize   # done  Maize, Potchefstroom 1928-1929
+110_immer_sugarbeet  # done  U of Minn 1931
+111_evans_sugarcane  # done  Squared values
+112_sayer_sugarcane  # done  At Harpr Jhili
+113_christidis_wheat # done
+114_smith_wheat      # done  Fairfield Smith data
 
-Cochran links to journal articles in files - Archives STATS17.docx
-Journal of the american society of Agronomy 1930 Swanson Variety of grain p833.pdf
-Letter to Cochran from Freda Thurman April 91936.pdf
+### Folder 2 Data received since publication
 
-## data-raw/cochran_folder4_uniformity_trials_1936_1936/
+201  # cotton Wad Medani, Sudan
+202  # Wad Medani, Cotton 24x8=192
+203  # 3x20, 1935-1936, weight in rotl
+204  # Letter from Parish to Fisher, 
+205  # Oats 1923, Sudan Grass 1923, Wheat 1922 (10x26=260 plots)
+206     # done hutchinson.cotton
+207                  # done Letter from Finney to Kilby 1943
+208_ducker_groundnut # done Letter from Killby to Fisher, Ducker groundnut data
+209  # 1938 Summerby to Cochran, Oats, 1921 3x33, Wheat todo. Data. Have pdf.
+210  # 1937 Letter from Summerby to Cochran, Cochran to Summerby
+211  # 1943 Letter Finney to Wadley. Thanks for the data.
+212  # 1934 Letter Wadley to Finney. Ribes data.
+213  # ignore China, 1x16
+214     # omit - clove trees 600, 5 years, no coordinates, East Africa
+215     # omit - clove tree part 2
+216     # omit - wireworm traps, not a plant trial
+217  # LeClerg field expt 1937-1938 sugar beet U Minn
+218  # LeClerg greenhouse 1933
+219  # 1939 letter LeClerg to Cochran, Narain to Cochran, Cochran to Westover, Eden to Cochran
+
+### Folder 3 
+
+301_day_table    # done No data.
+
+### Folder 4 Uniformity trials 1936-1938
 
 This folder contains correspondence
 
-2652_001.pdf
-2653_001.pdf
-2654_001.pdf
-2655_001.pdf
-2656_001.pdf
-2657_001.pdf
-2658_001.pdf
-2659_001.pdf
-2660_001.pdf konigsberger
-2661_001.pdf demandt
-2662_001.pdf
-2663_001.pdf
-2664_001.pdf
-2665_001.pdf
-2666_001.pdf
-2667_001.pdf
-2668_001.pdf
-2669_001.pdf
-2670_001.pdf
-2671_001.pdf
+401
+402_pound
+403 cheesman christidis collinson collison
+404
+405_day # Done.  demandt vandyk
+406
+407
+408 posthumus
+409_konigsberger about the demandt trials
+410_demandt                  $ done
+411 hutchinson immer  look for parnell
+412
+413 kirk parnell macdonald
+414 metzger parker pound
+415 pound reynolds(cotton) richardson
+416_saunders  # done
+417_saunders sayer swanson
+418_swanson thompson
+419 thompson notes
+420 day westover wilcox
 
-## data-raw/cochran_folder5_uniformity_data/:
+### Folder 5 Uniformity data
 
-2705_metzger.pdf
-2706_001.pdf
-2707_001.pdf
-2708_goulden_barley.pdf    # Done. goulden.barley.uniformity
-2709_beckett_coconut.pdf
-2710_001.pdf
-2711_001.pdf
-2712_001.pdf                   # Gatooma
-2713_pansee.pdf            # Done. Same as pansee.cotton.uniformity
-2714_christidis.pdf        # Done. Same as christidis.wheat.uniformity
-2715_singh.pdf             # Done. sayer.sugarcane.uniformity 1932, 48 rows, 20 columns
-2716_maize.pdf             # todo 5 col, 300 row = 1500 plots potchefstroom
-2717_maize.pdf             # todo potchefstroom 29-30  see folder 1, file 7
-2718_hastings.pdf          # todo potchefstroom 28-29  see folder 1, file 9
-2719_immer.pdf #  60 row, 10 col todo todo 2nd year of data
-2720_sugarcane.pdf
-2721_macdonald_cotton.pdf  # field B2a B5b. See folder 1, file 8
-2722_rothamsted.pdf
+501_metzger               # multi-year series
+502_kansas
+503
+504_goulden_barley        # done  goulden.barley.uniformity
+505_beckett_coconut       #       multi-year, Cochran #17
+506
+507_coffee                #       coffee 1934-1939, Cochran #18
+508_mckinstry_cotton      # done  mckinstry.cotton.uniformity (correspondence, hand-written)
+509_panse_cotton          # done  panse.cotton.uniformity (see also 109)
+510_christidis_wheat      # done  christidis.wheat.uniformity
+511_sayer_sugarcane       # done  sayer.sugarcane.uniformity 1932, 48 rows, 20 columns
+513_hastings_oats_1911    #
+514_immer_sugarbeet       # done. 60 row, 10 col, 2nd year of data
+515_sugarcane             # barbados sugarcane
+516_macdonald_cotton      # field B2a B5b. See folder 1, file 8
+517_rothamsted
+518_saunders_maize_28_29  # done  potchefstroom
+519_saunders_maize_29_30  # done  potchefstroom
 
-## data-raw/cochran_folder6_ovs_health_cotton_uniformity
+### Folder 6 OVS Heath cotton uniformity 1934-1935
 
-2679_001.pdf
-2680_001.pdf
-2681_001.pdf
-2682_001.pdf
-2683_001.pdf
-2684_001.pdf
-2685_001.pdf
-2686_001.pdf
-2687_001.pdf
+Decided not to use this data.
 
-## data-raw/cochran_folder7_yield_of_grain_per_foot
+There were 2 cut dates. The data for dry matter is highly variable.
+The field notes are a bit cryptic and suggest that there was some
+lack of uniformity in how the plants were handled (cut in morning, afternoon, etc).
 
-2672_smith_correspondence.pdf # done
-2673_smith_reference.pdf      # done
-2674_smith_ears_copy_B.pdf    # done
-2675_smith_grain_copy_B.pdf   # done
-2676_smith_grain_copy_A.pdf   # done
-2677_smith_reference.pdf      # done
-2678_smith_ears_copy_A.pdf    # done
+601 7/1 pt 2, copy 1, row 1-84, col k-u
+602 7/1 pt 2, copy 2, row 1-84, col k-u
+603 4/2 pt 1, copy2, row 1-84, col a-k
+604 4/2 pt 1, copy1, row 1-84, col a-k
+605 4/2 pt 2, copy2, row 1-84, col l-v
+606 7/1 pt 1, copy 2, row 1-84, col za-j
+607   experiment details
+608 7/1 pt 1, copy 1, row 1-84, col za-j
+609 4/2 pt 2, copy1, row 1-84, col l-v
 
-## data-raw/cochran_folder8_catalog_of_uniformity_data
+### Folder 7 Yield of grain per foot, Fairfield smith
 
-2688_001.pdf
-2689_001.pdf
-2690_001.pdf
-2691_001.pdf
-2692_001.pdf
-2693_evans_sugarcane_letter.pdf # done evans.sugarcane.uniformity
-2694_evans_sugarcane_data.pdf   # done evans.sugarcane.uniformity
+701_smith_correspondence  # done
+702_smith_reference       # done
+703_smith_ears_copy_B     # done
+704_smith_grain_copy_B    # done
+705_smith_grain_copy_A    # done
+707_smith_ears_copy_A     # done
+
+### Folder 8 Catalog of uniformity data
+
+801_cochran_notes_1
+802_cochran_notes_2
+803_cochran_notes_3
+804_cochran_notes_4
+800_cochran_notes_0
+805_evans_sugarcane_letter  # done evans.sugarcane.uniformity
+806_evans_sugarcane_data    # done evans.sugarcane.uniformity
+
+### Folder 9 Demandt 1931
+
+Decided not to use this data.
+
+There is very little contextual information about these data.
+
+901_demandt_diagram
+902_demandt_data
 
 ---------------------------------------------------------------------------
 
@@ -178,8 +215,6 @@ http://aspace.lib.uiowa.edu/repositories/2/archival_objects/400615
 
 # wanted
 
-* Plant-level data for distinctness, uniformity and stability testing.  Most published data is for plot-means.
-This page mentions an R version for DUS: http://www.bioss.ac.uk/knowledge/software.html
 * Yield-monitor data for a split-planter field
 * Yield-monitor data for a strip trial.
 
@@ -190,7 +225,8 @@ Meta-r http://repository.cimmyt.org/xmlui/handle/10883/4130
 Data http://repository.cimmyt.org/xmlui/handle/10883/4036 
 http://repository.cimmyt.org/xmlui/handle/10883/2976 
 http://repository.cimmyt.org/xmlui/handle/10883/1380 
-http://repository.cimmyt.org/xmlui/handle/10883/4128 http://repository.cimmyt.org/xmlui/handle/10883/4290
+http://repository.cimmyt.org/xmlui/handle/10883/4128
+http://repository.cimmyt.org/xmlui/handle/10883/4290
 
 ---
 
@@ -218,10 +254,12 @@ https://plant-breeding-genomics.extension.org/plant-breeding-and-genomics-learni
 
 https://plant-breeding-genomics.extension.org/estimating-heritability-and-blups-for-traits-using-tomato-phenotypic-data/
 
-https://plant-breeding-genomics.extension.org/genomic-relationships-and-gblup  <--- review this
+https://plant-breeding-genomics.extension.org/genomic-relationships-and-gblup  <--- todo review this
 
 https://plant-breeding-genomics.extension.org/rrblup-package-in-r-for-genomewide-selection/
 
+
+# ---------------------------------------------------------------------------
 
 # Items below have been reviewed for data sources
 
@@ -260,7 +298,8 @@ Vol 4.
 Vol 5.
   579. agridat::bose.multi.uniformity
 Vol 6. 
-  34. 4-way factorial with whole-plot date, but non-contiguous sub-plots. todo fixme
+https://archive.org/details/in.ernet.dli.2015.271737
+  34. 4-way factorial (3 gen, 5 date, 3 spacing, 3 pop) non-contiguous sub-plots. agridat::chakravertti.factorial
   460. agridat::kulkarni.sorghum.uniformity
   917. agridat::sayer.sugarcane.uniformity
 Vol 9.
@@ -364,3 +403,4 @@ https://www.cambridge.org/core/journals/experimental-agriculture
 ## SAS Global Forum
 http://support.sas.com/events/sasglobalforum/previous/online.html 
 22-31, 2007-2013
+

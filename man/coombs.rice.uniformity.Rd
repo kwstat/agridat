@@ -41,6 +41,10 @@
   # Data check. Matches Coombs 709.4
   # sum(dat$yield)
 
+  # There are an excess number of 12s and 14s in the yield
+  libs(lattice)
+  qqmath( ~ yield, dat) # weird
+  
   libs(desplot)
   desplot(dat, yield ~ col*row,
           main="coombs.rice.uniformity",

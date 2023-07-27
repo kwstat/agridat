@@ -17,7 +17,10 @@
   }
 }
 \details{
+  The year of the experiment is unknown, but before 1995.
+  
   Basic plot size is 0.75 m (rows) x  4 m (columns).
+  
 }
 \source{
   Ira Arankacami, R. Rangaswamy. (1995).

@@ -24,6 +24,8 @@
   
   Field length: 36 plots * 3 feet.
 
+  Data typed by K.Wright.
+  
 }
 \source{
   Khin, San. 1950.
