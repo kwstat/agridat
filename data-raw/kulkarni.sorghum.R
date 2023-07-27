@@ -1,8 +1,5 @@
 # kulkarni.sorghum.R
-# Time-stamp: <20 Jan 2018 15:40:44 c:/x/rpack/agridat/data-raw/kulkarni.sorghum.R>
-
-
-
+# Time-stamp: <12 Jul 2023 16:52:37 c:/drop/rpack/agridat/data-raw/kulkarni.sorghum.R>
 
 libs(dplyr,kw,lattice,readxl,readr,reshape2,tibble)
 
@@ -23,5 +20,4 @@ dat <- rbind(dat,dat2)
 
 kulkarni.sorghum.uniformity <- dat
 
-# ----------------------------------------------------------------------------
 

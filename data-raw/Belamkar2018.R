@@ -6,6 +6,8 @@ File S2 has location heritabilities.
 
 The experiment had 8 locations with 270 new, experimental lines (genotypes) and 3 check lines. There were 10 incomplete blocks at each location. There were 2 replicate blocks at Alliance and 1 block at all other locations. Each plot was 3 m long by 1.2 m wide.
 
+The heatmap for Lincoln location in this data does not match the heatmap from Keith.
+
 setwd("c:/Users/wrightkevi/Downloads/Belamkar 2018")
 
 # Data download from:

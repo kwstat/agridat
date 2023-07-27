@@ -1,8 +1,5 @@
 # strickland.apple.uniformity.R
-# Time-stamp: <07 May 2018 20:22:20 c:/x/rpack/agridat/data-raw/strickland.apple.uniformity.R>
-
-# 0_template.R
-# Time-stamp: <07 May 2018 14:24:16 c:/x/rpack/agridat/data-raw/0_template.R>
+# Time-stamp: <12 Jul 2023 17:10:08 c:/drop/rpack/agridat/data-raw/strickland.apple.uniformity.R>
 
 libs(desplot,dplyr,kw,lattice,magrittr,readxl,readr,reshape2,tibble)
 

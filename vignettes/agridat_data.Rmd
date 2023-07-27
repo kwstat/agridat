@@ -11,15 +11,39 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+# Other
+
+## Rothamsted Library 
+https://www.rothamsted.ac.uk/library-and-information-services
+
+This has now been scanned and PDFs put into the GitHub repository for the agridat package.
+
+Box of uniformity trial data
+```
+STATS17  WG Cochran
+ 
+1. Uniformity trial data. 
+2. Genstat data. Data received since publication of the catalogue.  1935-1943. 
+3. Uniformity trial data.  1930-1936. 
+4. Uniformity trials.  1936-1938. 
+5. Uniformity trials.  R data.  1936-1937. 
+6. O. V. S. Heath.  Cotton uniformity trial data.  1934-1935. 
+7. Data.  Yields of grain per foot length.  1934. 
+8. Catalogue of field uniformity trial data.  N. d. 
+9. Demandt.  1931. One box 
+```
+
+
+
 # Books
 
-### _Die Landwirtschaftlichen Versuchs-Stations_
+### "Die Landwirtschaftlichen Versuchs-Stations"
 https://catalog.hathitrust.org/Record/000549685
 
 Full view of research station reports 1859-1920. In German.
 
 
-### D. F. Andrews and A. M. Herzberg (1985). _Data_. 
+### D. F. Andrews and A. M. Herzberg (1985). "Data". 
 https://www2.stat.duke.edu/courses/Spring01/sta114/data/andrews.html
 
 ```
@@ -30,13 +54,13 @@ Table  6.2: agridat::wiebe.wheat.uniformity
 Table 58.1: agridat::caribbean.maize
 ```
 
-### D. Bayisa (2010). _Application of Spatial Mixed Model in Agricultural Field Experiment_.
+### D. Bayisa (2010). "Application of Spatial Mixed Model in Agricultural Field Experiment".
 
 Master thesis. Department of Statistics, Addis Ababa University.
 One dataset from wheat, RCB, with field coordinates.
 
 
-### M. N. Das & Narayan C. Giri (1987). _Design and Analysis of Experiments_.
+### M. N. Das & Narayan C. Giri (1987). "Design and Analysis of Experiments".
 
 ```
  31 wool from 24 ewes, 6 cuttings
@@ -53,18 +77,18 @@ One dataset from wheat, RCB, with field coordinates.
 ```
 
 
-### Peter Diggle, Patrick Heagerty, Kung-Yee Liang, Scott Zeger. _Analysis of Longitudinal Data_.
+### Peter Diggle, Patrick Heagerty, Kung-Yee Liang, Scott Zeger. "Analysis of Longitudinal Data".
 https://faculty.washington.edu/heagerty/Books/AnalysisLongitudinal/datasets.html
 
 Pig weight data is found in `SemiPar::pig.weights`
 
 Sitka spruce data is found in: `geepack::spruce`
 
-Milk protein data is found in: `nlme::Milk`.  A thorough description of this data can be found in Molenberghs & Kenward, _Missing Data in Clinical Studies_, p. 377.
+Milk protein data is found in: `nlme::Milk`.  A thorough description of this data can be found in Molenberghs & Kenward, "Missing Data in Clinical Studies", p. 377.
 Original source: A. P. Verbyla and B. R. Cullis, Modelling in Repeated Measures Experiments.
 
 
-### Federer, Walt (1955). _Experimental Design_.
+### Federer, Walt (1955). "Experimental Design".
 
 ```
 192 3x3 factorial 
@@ -79,12 +103,12 @@ Original source: A. P. Verbyla and B. R. Cullis, Modelling in Repeated Measures 
 ```
 
 
-### Finney 1972. _An Introduction to Statistical Science in Agriculture_.
+### Finney 1972. "An Introduction to Statistical Science in Agriculture".
 
 Small, mostly simulated data.
 
 
-### Galwey, N.W. (2014). _Introduction to Mixed Modelling_, 2nd ed.
+### Galwey, N.W. (2014). "Introduction to Mixed Modelling", 2nd ed.
 https://www.wiley.com/en-us/Introduction+to+Mixed+Modelling%3A+Beyond+Regression+and+Analysis+of+Variance%2C+2nd+Edition-p-9781119945499
 
 ```
@@ -97,14 +121,15 @@ https://www.wiley.com/en-us/Introduction+to+Mixed+Modelling%3A+Beyond+Regression
  7 285 sheep milk fat and lactose
  7 290 wheat anoxia root porosity, 9 gen
  7 291 wool fibers, 3 trt, 21 animals
- 9 370 alphalpha design (row-column inc block), xy
-10 434 hollamby wheat trial, xy - agridat::gilmour.serpentine
+ 9 370 alphalpha design (row-column inc block for 2 reps) (not latinized row col)
+10 434 hollamby wheat trial - agridat::gilmour.serpentine
 ```
 
 
-### Grover, Deepak & Lajpat Rai. *Experimental Designing And Data Analysis In Agriculture And Biology*. 
+### Grover, Deepak & Lajpat Rai. "Experimental Designing And Data Analysis In Agriculture And Biology". 
 Agrotech Publishing Academy, 2010.
 https://archive.org/details/expldesnanddatanalinagblg00023
+
 ```
 43 Percent insect survival in 12 rice varieties, 3 reps
 50 CRD
@@ -130,24 +155,23 @@ https://archive.org/details/expldesnanddatanalinagblg00023
 241 Augmented group-divisible
 245 Augmented PBIB
 250 6x6 full diallel, 4 rep   agridat::grover.diallel
-
 ```
 
 
-### O.V.S. Heath. _Investigation by experiment_.
+### O.V.S. Heath (1970). "Investigation by experiment".
 https://archive.org/details/investigationbye0000heat
 ```
-?  uniformity trial of raddish - agridat::heath.raddish.uniformity
-50 uniformity trial of cabbage 6x8 plots
+23 uniformity trial of radish - agridat::heath.raddish.uniformity
+50 uniformity trial of cabbage - agridat::heath.cabbage.uniformity
 ```
 
 
-### Kwanchai A. Gomez & Gomez (1984). _Statistical Procedures for Agricultural Research_.
+### Kwanchai A. Gomez & Gomez (1984). "Statistical Procedures for Agricultural Research".
 
 Extensive collection of datasets from rice experiments. Many added to agridat.
 
 
-### Cyril H. Goulden, _Methods of Statistical Analysis_.
+### Cyril H. Goulden (1939), "Methods of Statistical Analysis".
 First edition: https://archive.org/details/methodsofstatist031744mbp 
 
 ```
@@ -167,16 +191,16 @@ Second edition: `http://krishikosh.egranth.ac.in/handle/1/2034118` (broken)
 ```
 
 
-### Harry Love (1936). _Applications of Statistical Methods to Agricultural Research_.
+### Harry Love (1936). "Applications of Statistical Methods to Agricultural Research".
 
 ```
 379 MET 4 year, 2 field, 5 block, 5 gen
 ```
 
-### Kang, Manjit (2003). _Handbook of Formulas and Software for Plant Geneticists and Breeders_
+### Kang, Manjit (2003). "Handbook of Formulas and Software for Plant Geneticists and Breeders"
 
 
-### Kuehl, Robert. _Design of Experiments_, 2nd ed.
+### Kuehl, Robert. "Design of Experiments", 2nd ed.
 
 ```
 357 alfalfa quadruple lattice
@@ -187,7 +211,7 @@ Second edition: `http://krishikosh.egranth.ac.in/handle/1/2034118` (broken)
 ```
 
 
-### Erwin LeClerg, Warren Leonard, Andrew Clark (1962). _Field Plot Technique_
+### Erwin LeClerg, Warren Leonard, Andrew Clark (1962). "Field Plot Technique"
 https://archive.org/details/fieldplottechniq00leon
 
 Many small datasets.
@@ -203,7 +227,7 @@ Many small datasets.
 ```
 
 
-### Thomas M Little & F. Jackson Hills (1978). _Agricultural Experimentation_.
+### Thomas M Little & F. Jackson Hills (1978). "Agricultural Experimentation".
 
 ```
  79 Latin square 
@@ -219,13 +243,13 @@ Many small datasets.
 ```
 
 
-### Harald Martens & Magni Martens. _Multivariate Analysis of Quality_
+### Harald Martens & Magni Martens. "Multivariate Analysis of Quality"
 https://www.wiley.com/legacy/wileychi/chemometrics/datasets.html
 
 The 'NIR' data has NIR spectra measurements of wheat for the purpose of understanding protein quality.
 
 
-### Roger Mead, Robert N. Curnow, Anne M. Hasted (2002). _Statistical Methods in Agriculture and Experimental Biology_, 3rd ed.
+### Roger Mead, Robert N. Curnow, Anne M. Hasted (2002). "Statistical Methods in Agriculture and Experimental Biology", 3rd ed.
 
 ```
  10 weekly milk yields
@@ -248,7 +272,7 @@ The 'NIR' data has NIR spectra measurements of wheat for the purpose of understa
 ```
 
 
-### Roger Mead (1988). _The Design of Experiments_
+### Roger Mead (1988). "The Design of Experiments"
 https://books.google.com/books?id=CaFZPbCllrMC&pg=PA323
 
 ```
@@ -256,7 +280,7 @@ https://books.google.com/books?id=CaFZPbCllrMC&pg=PA323
 ```
 
 ### Leonard C. Onyiah (2008).
-_Design and Analysis of Experiments: Classical and Regression Approaches with SAS_.
+"Design and Analysis of Experiments: Classical and Regression Approaches with SAS".
 https://books.google.com/books?id=_P3LBQAAQBAJ&pg=PA334
 
 ```
@@ -264,8 +288,7 @@ https://books.google.com/books?id=_P3LBQAAQBAJ&pg=PA334
 ```
 
 
-
-### Bernard Ostle (1963). _Statistics in Research_, 2nd ed.
+### Bernard Ostle (1963). "Statistics in Research", 2nd ed.
 https://archive.org/details/secondeditionsta001000mbp
 
 ```
@@ -274,7 +297,7 @@ https://archive.org/details/secondeditionsta001000mbp
 ```
 
 
-### V. G. Panse and P. V. Sukhatme (1957). _Statistical Methods for Agricultural Workers_.
+### V. G. Panse and P. V. Sukhatme (1957). "Statistical Methods for Agricultural Workers".
 
 ```
   3 Length and number of grains per ear of wheat
@@ -289,11 +312,13 @@ https://archive.org/details/secondeditionsta001000mbp
 256 8x8 simpple lattice, 4 reps
 282 5 varieties at 6 locations
 295 5 N levels at 5 locations
-332 4 regions, 9 villages each, 3 treatments
+332 4 regions, 9-11 villages in each region, 3 fertilizer treatments
 
 ```
+Note: The 1954 edition can be found at https://archive.org/details/dli.scoerat.949statisticalmethodsforagriculturalworkers/page/138/mode/2up
 
-### D. D. Paterson (1939). _Statistical Technique in Agricultural Research_.
+
+### D. D. Paterson (1939). "Statistical Technique in Agricultural Research".
 https://archive.org/details/statisticaltechn031729mbp
 
 ```
@@ -305,7 +330,8 @@ https://archive.org/details/statisticaltechn031729mbp
 ```
 
 
-### Roger Petersen, *Agricultural Field Experiments*
+### Roger Petersen, "Agricultural Field Experiments"
+
 ```
 8 Uniformity trial 18 * 6 plots
 56 RCB 4 rep, 5 trt
@@ -336,11 +362,11 @@ https://archive.org/details/statisticaltechn031729mbp
 372 Intercrop, 2 crop, 4 mixtures, 4 rep. agridat::petersen.sorghum.cowpea
 ```
 
-### Richard Plant, _Spatial Data Analysis in Ecology and Agriculture using R_
+### Richard Plant, "Spatial Data Analysis in Ecology and Agriculture using R"
 https://psfaculty.plantsciences.ucdavis.edu/plant/
 
 
-### Arthur Asquith Rayner (1969). _A First Course In Biometry For Agriculture Students_.
+### Arthur Asquith Rayner (1969). "A First Course In Biometry For Agriculture Students".
 
 ```
 19 456 2x2x4 Factorial, 2 rep
@@ -353,20 +379,20 @@ https://psfaculty.plantsciences.ucdavis.edu/plant/
 22 537 2x2x2x2 factorial, 2 rep, wheat, layout
 ```
 
-### F.S.F. Shaw (1936). _A Handbook of Statistics For Use in Plant Breeding and Agricultural Problems_
+### F.S.F. Shaw (1936). "A Handbook of Statistics For Use in Plant Breeding and Agricultural Problems"
 https://archive.org/details/in.ernet.dli.2015.176662
 
 ```
-5 - Length of ear head and number of grains per ear, 400 ears.
-95 - variety RCB, 5 gen, 25 rep, diagonal layout
-107 - Latin square, 8 entries.
-117 - Factorial: 8 blocks, 3 varieties, 5 treatments, 2 infections
-126 - Multi-environment trial, 3 year, 13 varieties, 2 loc, 5 blocks  agridat::shaw.oats
+5 Length of ear head and number of grains per ear, 400 ears.
+95 variety RCB, 5 gen, 25 rep, diagonal layout
+107 Latin square, 8 entries.
+117 Factorial: 8 blocks, 3 varieties, 5 treatments, 2 infections
+126 Multi-environment trial, 3 year, 13 varieties, 2 loc, 5 blocks  agridat::shaw.oats
 
 ```
 
 
-### G. W. Snedecor & W. G. Cochran. _Statistical Methods_.
+### G. W. Snedecor & W. G. Cochran. "Statistical Methods".
 
 ```
 168 regression
@@ -383,7 +409,7 @@ https://archive.org/details/in.ernet.dli.2015.176662
 
 ```
 
-### Robert G. D. Steel & James Hiram Torrie. _Principles and Procedures of Statistics_, 2nd ed.
+### Robert G. D. Steel & James Hiram Torrie. "Principles and Procedures of Statistics", 2nd ed.
 
 ```
 154 Mint plant growth, 2-way + pot + plant
@@ -397,12 +423,12 @@ https://archive.org/details/in.ernet.dli.2015.176662
 434 Soybean lodging
 ```
 
-### Oliver Schabenberger and Francis J. Pierce. _Contemporary Statistical Models for the Plant and Soil Sciences_.
+### Oliver Schabenberger and Francis J. Pierce. "Contemporary Statistical Models for the Plant and Soil Sciences".
 
 Many datasets. Some added to agridat.
 
 
-### S. J. Welham et al. (2015). _Statistical Methods In Biology_.
+### S. J. Welham et al. (2015). "Statistical Methods In Biology".
 
 The online-supplements contain many small datasets for the examples and exercises.
 
@@ -436,6 +462,15 @@ https://dataverse.harvard.edu/
 
 IRRI Rice Research includes plot-level data for long term rice experiments.
 https://dataverse.harvard.edu/dataverse/RiceResearch
+
+
+### Kellogg Biological Station Long-Term Research
+KBS037:Precision Agriculture Yield Monitoring in Row Crop Agriculture 
+https://lter.kbs.msu.edu/datasets/40
+https://doi.org/10.6073/pasta/423c07d6ea3317c545beabb4b8e502c8
+Yield monitor data across several years and crops.
+Un-friendly license.
+
 
 ### Nature Scientific Data
 https://www.nature.com/sdata/
@@ -501,6 +536,21 @@ Vol 35/503. North Central Regional Potassium Studies with Corn.
 
 # Papers
 
+### Bakare et al
+Exploring genotype by environment interaction on cassava yield and yield related traits using classical statistical methods
+https://doi.org/10.1371/journal.pone.0268189
+
+36 gen, 20 env, 3 rep. 
+Analysis and data here:
+https://github.com/mab658/classical_analysis_GxE
+
+
+### Chaves 2023 et al
+Analysis of multi-harvest data through mixed models: an application in Theobroma grandiflorum breeding
+https://acsess.onlinelibrary.wiley.com/doi/epdf/10.1002/csc2.20995
+Nice. Complete data and R code. They found FA3 best for genetic covariances, AR1H best for residual structure. Used FAST and OP (by Cullis) for selection.
+
+
 ### Cleveland, M.A. and John M. Hickey, Selma Forni (2012).
 A Common Dataset for Genomic Analysis of Livestock Populations.
 G3, 2, 429-435.
@@ -508,6 +558,12 @@ https://doi.org/10.1534/g3.111.001453
 
 The supplemental information for this paper contains data for 3534 pigs with high-density genotypes (50000 SNPs), and a pedigree including parents and grandparents of the animals.
 
+
+### Coelho 2021 et al
+Accounting for spatial trends in multi-environment diallel analysis in maize breeding
+https://doi.org/10.1371/journal.pone.0258473
+
+78 hybrids in a diallel, 4 environments, 3 reps. Compared spatial and non-spatial analyses.
 
 ### Daillant-Spinnler (1996). Relationships between perceived sensory properties and major preference directions of 12 variaties of apples from the southern hemisphere.
 Food Quality and Preference, 7(2), 113-126.
@@ -560,7 +616,7 @@ See the comments on PLOS article for some peculiarities in the data.
 
 
 ### Lado, B. et al. (2013). 
-*Increased Genomic Prediction Accuracy in Wheat Breeding Through Spatial Adjustment of Field Trial Data*.  G3, 3, 2105-2114.
+"Increased Genomic Prediction Accuracy in Wheat Breeding Through Spatial Adjustment of Field Trial Data".  G3, 3, 2105-2114.
 https://doi.org/10.1534/g3.113.007807
 
 Has a large haplotype dataset (83 MB) and two-year phenotype data with multiple traits.
@@ -573,12 +629,6 @@ http://www.g3journal.org/content/6/5/1313/suppl/DC1
 648 genotypes planted in pots yr 1, 856 lines yr 2, 639 common to both years.
 7864 SNP markerks
 
-### Payne, Roger (2015). 
-The Design and Analysis of Long-Term Rotation Experiments.
-Agronomy Journal, 107, 772-784.
-https://doi.org/10.2134/agronj2012.0411
-
-The data and R code appeared in the paper. Free access, but closed copyright.
 
 ### Peixoto, Marco Antonio et al (2020)
 Random regression for modeling yield genetic trajectories in Jatropha curcas breeding.
@@ -671,6 +721,8 @@ Winter wheat, 31 gen in 8 loc. This data is different from Yan's earlier papers.
 
 
 # R packages on CRAN, Github, etc.
+
+See also: https://cran.r-project.org/web/views/Agriculture.html
 
 
 ### agriCensData
@@ -780,6 +832,15 @@ Vignettes and functions for working with (non)linear mixed models
 `nlme::Soybean`: Growth of soybean plants. From the book "Nonlinear Models for Repeated Measurement Data".
 
 
+### OFPE - On-Farm Precision Experiments
+https://paulhegedus.github.io/OFPE-Website/
+https://github.com/paulhegedus/OFPEDATA/
+
+
+### onfant.dataset
+https://github.com/AnabelleLaurent/onfant.dataset
+
+
 ### pbkrtest
 
 `pbkrtest::beets` Yield and percent sugar in split-plot experiment.
@@ -790,7 +851,7 @@ https://r-forge.r-project.org/projects/plantbreeding/
 ```
 Data: fulldial
 Data: linetester
-Data: peanut same as agridat::kang.peanut
+Data: peanut - same as agridat::kang.peanut
 ```
 
 ### SDaA - Survey Data and Analysis
@@ -842,6 +903,11 @@ Dataset with phenotype data 3 yr, 9 locations, 18 environments, 60 thousand obse
 Data formatted for the analysis of the NAM package is available with the following command: `SoyNAM::ENV()`.
 
 
+### SoyURT 
+https://github.com/mdkrause/SoyURT
+Large historical data to study GxE and identify mega-environments with genetic and non-genetic factors.
+
+
 ### spdep
 
 Has a vignette 'The Problem of Spatial Autocorrelation: forty years on' that examines agriculture in Irish counties.
@@ -866,11 +932,13 @@ https://biometris.github.io/statgenGxE/
 
 AMMI, FW, GGE stability analyses.
 
+
 ### Biometris - statgenGWAS
 https://github.com/Biometris/statgenGWAS/
 https://CRAN.R-project.org/package=statgenGWAS
 
-This is a very nice package with full GxE data and marker data.
+This is a very nice package with full GxE data and marker data with 41722 loci on 246 lines.
+
 256 hybrids, 29 envts across 2 years, multi-trait (yield, silking, pltht, earht, etc).
 Includes a worked example with data from:
 https://data.inra.fr/dataset.xhtml?persistentId=doi:10.15454/IASSTN 
@@ -910,6 +978,9 @@ The Harrington x TR306 Barley Mapping Population. The genotype and phenotype dat
 2. https://wheat.pw.usda.gov/ggpages/SxM/ . This data is agridat::steptoe.morex.
 
 
+
+### GLTEN - A network of Long-Term trials around the world
+https://glten.org/
 
 ### Ideals
 https://www.ideals.illinois.edu/handle/2142/3528
@@ -970,9 +1041,21 @@ Year, page
 1936,241 Similar to the 1934 experiment, but only gives the main effects, 
   not the actual data.
 1937-1939
-1946-1953
+1946-1955
+
+1986
 ```
 
+### Yates (1937), The Design and analysis of factorial experiments
+
+```
+9 2x2x2, 4 rep
+27 2x2x2x2x2 factorial
+33 2x2x2 factorial in two 4x4 Latin Squares
+42 3x3x3 factorial
+59 3x2x2 factorial in 3 reps.  See also page 39.
+74 Split-plot agridat::yates.oats
+```
 
 ### Statistical Analysis of Agricultural Experiments with R
 rstats4ag.org (no http included here because of firewall problems).
@@ -1004,26 +1087,4 @@ Data Item:   Corn grain Acres Harvested, Yield Bu/Ac
 Domain:      Total
 Geography:   State
 See `agridat::nass.corn`, nass.wheat, etc.
-
-# Other
-
-## Rothamsted Library 
-https://www.rothamsted.ac.uk/library-and-information-services
-
-Archive catalog.
-
-Box of uniformity trial data
-```
-STATS17  WG Cochran
- 
-1. Uniformity trial data. 
-2. Genstat data. Data received since publication of the catalogue.  1935-1943. 
-3. Uniformity trial data.  1930-1936. 
-4. Uniformity trials.  1936-1938. 
-5. Uniformity trials.  R data.  1936-1937. 
-6. O. V. S. Heath.  Cotton uniformity trial data.  1934-1935. 
-7. Data.  Yields of grain per foot length.  1934. 
-8. Catalogue of field uniformity trial data.  N. d. 
-9. Demandt.  1931. One box 
-```
 

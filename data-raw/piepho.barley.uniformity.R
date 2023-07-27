@@ -1,8 +1,5 @@
 # 0_template.R
-# Time-stamp: <08 Oct 2020 17:37:57 c:/x/rpack/agridat/data-raw/piepho.barley.R>
-
-A uniformity trial was performed with spring barley at the research farm Ihinger Hof (University of Hohenheim, Germany) in 2007. 
-
+# Time-stamp: <12 Jul 2023 17:03:38 c:/drop/rpack/agridat/data-raw/piepho.barley.uniformity.R>
 
 libs(desplot,dplyr,kw,lattice,magrittr,readxl,readr,reshape2,tibble)
 

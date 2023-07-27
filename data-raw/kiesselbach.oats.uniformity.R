@@ -1,7 +1,5 @@
 # kiesselbach.oats.r
-# Time-stamp: <23 Jun 2016 18:09:35 c:/x/rpack/agridat/data-done/kiesselbach.oats.r>
-
-
+# Time-stamp: <12 Jul 2023 16:52:09 c:/drop/rpack/agridat/data-raw/kiesselbach.oats.uniformity.R>
   
 library(asreml)
 library(dplyr)

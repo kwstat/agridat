@@ -1,7 +1,5 @@
 
 
-
-
 lib(readxl)
 
 setwd("c:/x/rpack/agridat/data-done/")
@@ -18,5 +16,4 @@ d1 <- subset(d1, !is.na(d1$yield))
 
 kristensen.barley.uniformity <- d1
 
-# ----------------------------------------------------------------------------
 

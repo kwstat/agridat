@@ -4,7 +4,6 @@
 # Location means of this data match the published means.
 
 
-
 libs(dplyr,readxl,reshape2)
 setwd("c:/drop/rpack/agridat/data-raw/")
 dat1 <- read_excel("bailey.cotton.uniformity.xlsx", sheet="Sakha1921", col_names = FALSE)

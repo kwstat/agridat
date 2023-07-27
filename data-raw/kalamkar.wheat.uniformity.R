@@ -1,5 +1,5 @@
 # kalamkar.wheat.r
-# Time-stamp: <20 Jan 2017 12:03:45 c:/x/rpack/agridat/data-done/kalamkar.wheat.r>
+# Time-stamp: <12 Jul 2023 16:51:37 c:/drop/rpack/agridat/data-raw/kalamkar.wheat.uniformity.R>
 
 library(asreml)
 library(dplyr)
@@ -30,7 +30,6 @@ inner_join(dat0, dat1, by=c('row','col')) -> dat
 
 kalamkar.wheat.uniformity <- dat
 
-# ----------------------------------------------------------------------------
 
 
 

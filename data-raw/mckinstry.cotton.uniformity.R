@@ -1,7 +1,5 @@
 # mckinstry.cotton.uniformity.R
 
-
-
 libs(desplot,dplyr,kw,lattice,magrittr,readxl,readr,reshape2,tibble)
 dat <- read_excel("mckinstry.cotton.uniformity.xlsx", col_names=FALSE)
 

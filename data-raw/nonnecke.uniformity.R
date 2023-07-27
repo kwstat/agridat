@@ -1,8 +1,6 @@
 # nonnecke.r
 # Time-stamp: c:/x/rpack/agridat/data-done/nonnecke.r
 
-
-
 library(asreml)
 library(kw)
 library(Hmisc)

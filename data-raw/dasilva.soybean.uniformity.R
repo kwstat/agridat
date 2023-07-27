@@ -1,7 +1,5 @@
 # dasilva.soybean.uniformity.R
-# Time-stamp: <30 Aug 2021 15:30:12 c:/one/rpack/agridat/data-raw/dasilva.soybean.uniformity.R>
-# 0_template.R
-# Time-stamp: <03 Apr 2018 17:50:46 c:/x/rpack/agridat/data-raw/0_template.R>
+# Time-stamp: <12 Jul 2023 16:42:51 c:/drop/rpack/agridat/data-raw/dasilva.soybean.uniformity.R>
 
 libs(desplot,dplyr,kw,lattice,magrittr,readxl,readr,reshape2,tibble)
 

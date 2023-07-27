@@ -1,7 +1,5 @@
 # kadam.millet.uniformity.r
-# Time-stamp: <20 Jul 2017 20:15:53 c:/x/rpack/agridat/data-done/kadam.millet.uniformity.r>
-
-
+# Time-stamp: <12 Jul 2023 16:51:06 c:/drop/rpack/agridat/data-raw/kadam.millet.uniformity.R>
 
 # similar to Kadam fig 1
 dat1 <- subset(kadam.millet.uniformity, year==1933)

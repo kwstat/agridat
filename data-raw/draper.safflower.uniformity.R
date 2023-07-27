@@ -1,5 +1,5 @@
-# draper.r
-# Time-stamp: <02 Sep 2022 16:23:25 c:/one/rpack/agridat/data-raw/draper.safflower.uniformity.R>
+# draper.safflower.uniformity.R
+# Time-stamp: <12 Jul 2023 16:44:00 c:/drop/rpack/agridat/data-raw/draper.safflower.uniformity.R>
 
 library(asreml)
 library(dplyr)

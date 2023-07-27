@@ -1,5 +1,5 @@
-# 0_template.R
-# Time-stamp: <13 Jun 2022 10:53:47 c:/one/rpack/agridat/data-raw/cochran_folder2/2639_ducker_groundnut.R>
+
+# ducker.groundnut.uniformity.R>
 
 libs(desplot,dplyr,kw,lattice,magrittr,readxl,readr,reshape2,tibble)
 

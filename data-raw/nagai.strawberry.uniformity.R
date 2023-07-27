@@ -1,11 +1,7 @@
 # 0_template.R
-# Time-stamp: <03 Apr 2018 21:48:38 c:/x/rpack/agridat/data-raw/nagai.strawberry.uniformity.R>
+# Time-stamp: <12 Jul 2023 16:58:17 c:/drop/rpack/agridat/data-raw/nagai.strawberry.uniformity.R>
 
 libs(desplot,dplyr,kw,lattice,magrittr,readxl,readr,reshape2,tibble)
-
-# ----------------------------------------------------------------------------
-
-# one matrix, no column names
 
 setwd("c:/x/rpack/agridat/data-raw/")
 dat <- read_excel("nagai.strawberry.uniformity.xlsx","Sheet1", col_names=FALSE)
@@ -16,6 +12,5 @@ desplot(yield ~ col*row, dat, main=NULL)
 
 nagai.strawberry.uniformity <- dat
 
-# ----------------------------------------------------------------------------
 
 

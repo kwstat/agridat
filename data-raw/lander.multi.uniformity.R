@@ -1,9 +1,9 @@
 # lander.multi.R
-# Time-stamp: <27 Feb 2018 11:50:46 c:/x/rpack/agridat/data-done/lander.multi.R>
+# Time-stamp: <12 Jul 2023 16:54:16 c:/drop/rpack/agridat/data-raw/lander.multi.uniformity.R>
 
-Lander, P. E. et al. (1938).
-"Soil Uniformity Trials in the Punjab I."
-Ind. J. Agr. Sci. 8:271-307.
+## Lander, P. E. et al. (1938).
+## "Soil Uniformity Trials in the Punjab I."
+## Ind. J. Agr. Sci. 8:271-307.
 
 # ----------------------------------------------------------------------------
 
