@@ -20,6 +20,7 @@
 * riddle.wheat (Modified Latin Square, "significant" variety switches high/low)
 * saunders.maize.uniformity (Data from Rothamsted archive)
 * smith.wheat.uniformity (classic data for measuring field heterogeneity)
+* summerby.multi.uniformity
 * tesfaye.millet (GxE dataset with multiple reps, xy coordinates)
 * vishnaadevi.rice.uniformity
 

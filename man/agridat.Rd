@@ -122,6 +122,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{strickland.grape.uniformity}        \tab 5 x 31 \tab xy \tab \cr
 \link{strickland.peach.uniformity}        \tab 8 x 18 \tab xy \tab \cr
 \link{strickland.tomato.uniformity}       \tab 30 x 6 \tab xy \tab \cr
+\link{summerby.multi.uniformity}          \tab 35 x 5 \tab xy \tab 5 years \cr
 \link{wassom.brome.uniformity}            \tab 36 x 36 \tab xy, 3 expts \tab \cr
 \link{wiebe.wheat.uniformity}             \tab 12 x 125 \tab xy \tab medianpolish, loess \cr
 \link{wiedemann.safflower.uniformity}     \tab 54 x 33 \tab xy \tab smith \cr
