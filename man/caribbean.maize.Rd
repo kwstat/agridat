@@ -52,7 +52,6 @@
 }
 
 \examples{
-\dontrun{
 library(agridat)
 data(caribbean.maize)
 dat <- caribbean.maize
@@ -74,6 +73,5 @@ dat <- transform(dat, env=paste(substring(isle,1,1),site,sep="-"))
 # Now we can see the strong N*site interaction
 bwplot(yield~N|env, dat,
        main="caribbean.maize", xlab="nitrogen")
-}
 }
 \keyword{datasets}

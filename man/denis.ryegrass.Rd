@@ -40,7 +40,6 @@
 }
 
 \examples{
-\dontrun{
 
 library(agridat)
 data(denis.ryegrass)
@@ -51,6 +50,5 @@ libs(gge)
 m1 <- gge(dat, strength ~ gen*loc, scale=FALSE)
 biplot(m1, main="denis.ryegrass biplot")
 
-}
 }
 \keyword{datasets}

@@ -42,7 +42,6 @@
 }
 
 \examples{
-\dontrun{
 
 library(agridat)
 data(engelstad.nitro)
@@ -74,6 +73,5 @@ coef(m1)['M']
 # Set the first derivative equal to N/corn price, k(M-nitro)=.11/1.15
 coef(m1)['M']-(.11/1.15)/coef(m1)['k']
 
-}
 }
 \keyword{datasets}

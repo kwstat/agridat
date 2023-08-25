@@ -1,4 +1,4 @@
-# agridat 1.22 - Unpublished
+# agridat 1.22 (2023-08-24)
 
 ## New datasets added
 
@@ -29,6 +29,10 @@
 * Switched the package to MIT license.
 
 * Modified factorial-experiment datasets to separate the treatment factors into individual treatment factors.
+
+* Add docType{package} fix for CRAN.
+
+* Removed 'donttest' for some examples.
 
 
 # agridat 1.21 (2022-06-15)

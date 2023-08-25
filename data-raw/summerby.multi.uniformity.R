@@ -1,6 +1,7 @@
 # summerby.multi.uniformity.R
 
-# The Excel workbook tab labeled 20x100 links is for the
+# The Excel workbook tab labeled 20x100 links is for the larger-plot data
+# and is not included in agridat
 
 libs(agridat,desplot,dplyr,lattice,readxl,reshape2,rio)
 

@@ -40,7 +40,7 @@
   maturity between a plot and its neighbor as the actual covariate.
 
   https://doi.org/10.1111/j.1744-7348.1993.tb04099.x
-  
+
   Used with permission of Iain Currie.
 
 }
@@ -52,10 +52,8 @@
 }
 
 \examples{
-\dontrun{
 
 library(agridat)
-
 data(connolly.potato)
 dat <- connolly.potato
 
@@ -107,6 +105,5 @@ xyplot(yadj~cov, data=dat, type=c('p','r'),
        xlab="Avg yield of nearest neighbors",
        ylab="Yield, adjusted for variety and block effects")
 
-}
 }
 \keyword{datasets}

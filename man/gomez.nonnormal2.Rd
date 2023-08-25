@@ -33,7 +33,6 @@
   None.
 }
 \examples{
-\dontrun{
 
 library(agridat)
 
@@ -53,11 +52,10 @@ qqmath( ~ value|variable, data=melt(dat),
 m1 <- lm(twhite ~ rep + gen, data=dat)
 anova(m1)
 ## Response: twhite2
-##           Df Sum Sq Mean Sq F value    Pr(>F)    
-## rep        2  2.401  1.2004  1.9137    0.1678    
+##           Df Sum Sq Mean Sq F value    Pr(>F)
+## rep        2  2.401  1.2004  1.9137    0.1678
 ## gen       13 48.011  3.6931  5.8877 6.366e-05 ***
-## Residuals 26 16.309  0.6273                      
+## Residuals 26 16.309  0.6273
 
-}
 }
 \keyword{datasets}

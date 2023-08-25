@@ -33,7 +33,6 @@
 }
 
 \examples{
-\dontrun{
 
 library(agridat)
 data(carmer.density)
@@ -93,7 +92,6 @@ xyplot(yield~pop|gen, dat, pch=16, as.table=TRUE,
   xyplot(predf~pop|gen, pdat, type='l', as.table=TRUE, col="red") +
   xyplot(pred~pop|gen, pdat, type='l', col="darkgreen", lwd=2)
 
-}
 }
 \keyword{datasets}
 

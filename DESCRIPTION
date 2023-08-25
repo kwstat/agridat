@@ -1,9 +1,9 @@
 Package: agridat
 Title: Agricultural Datasets
-Version: 1.21
+Version: 1.22
 Authors@R: person("Kevin","Wright", email="kw.stat@gmail.com",
                   comment=c(ORCID = "0000-0002-0617-8673"),
-                  role=c("aut","cre"))
+                  role=c("aut","cre","cph"))
 Type: Package
 Description: Datasets from books, papers, and websites related to agriculture.
     Example graphics and analyses are included. Data come from small-plot trials,

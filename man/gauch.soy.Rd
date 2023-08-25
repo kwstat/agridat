@@ -28,7 +28,7 @@
   The replications appear in random order and do _NOT_ define blocks.
   Environment names are a combination of the first letter of the
   location name and the last two digits of the year.  The location codes
-  are: 
+  are:
   A=Aurora, C=Chazy, D=Riverhead, E=Etna, G=Geneseo,
   I=Ithica, L=Lockport, N=Canton, R=Romulus, V=Valatie.
   Plots were 7.6 m long, four rows wide (middle two rows were
@@ -57,7 +57,6 @@
 }
 
 \examples{
-\dontrun{
 
 library(agridat)
 data(gauch.soy)
@@ -81,6 +80,5 @@ with(bip, plot(yield, PC1, type='n', main="gauch.soy -- AMMI biplot"))
 with(bip, text(yield, PC1, rownames(bip),
                col=ifelse(bip$type=="GEN", "darkgreen", "blue"),
                cex=ifelse(bip$type=="GEN", 1.5, .75)))
-}
 }
 

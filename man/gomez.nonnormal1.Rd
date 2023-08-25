@@ -17,14 +17,14 @@
   }
 }
 \details{
-  
+
   Nine treatments (including the control, T9) were used on four
   replicates.  The number of living insect larvae were recorded.
 
   The data show signs of non-normality, and a log transform was used by Gomez.
 
   Used with permission of Kwanchai Gomez.
-  
+
 }
 \source{
   Gomez, K.A. and Gomez, A.A.. 1984,
@@ -36,7 +36,6 @@
   None.
 }
 \examples{
-\dontrun{
 
 library(agridat)
 data(gomez.nonnormal1)
@@ -66,11 +65,10 @@ qqmath( ~ value|variable, data=melt(dat),
 m1 <- lm(tlarvae ~ rep + trt, data=dat)
 anova(m1)
 ## Response: tlarvae
-##           Df Sum Sq Mean Sq F value    Pr(>F)    
-## rep        3 0.9567 0.31889  3.6511 0.0267223 *  
+##           Df Sum Sq Mean Sq F value    Pr(>F)
+## rep        3 0.9567 0.31889  3.6511 0.0267223 *
 ## trt        8 3.9823 0.49779  5.6995 0.0004092 ***
 ## Residuals 24 2.0961 0.08734
 
-}
 }
 \keyword{datasets}

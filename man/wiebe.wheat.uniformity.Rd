@@ -30,7 +30,7 @@
   Field width: 12 columns * 15 feet = 180 feet wide.
 
   Field length: 125 rows * 12 in = 125 feet
-  
+
 }
 
 \source{
@@ -52,7 +52,7 @@
   \emph{J. R. Statist. Soc. B}, 45, 151-211.
   https://doi.org/10.1111/j.2517-6161.1983.tb01240.x
   https://www.jstor.org/stable/2345523
-  
+
   Wiebe, G.A. 1937.
   The Error in grain yield attending misspaced wheat nursery rows and
   the extent of the misspacing effect.
@@ -66,18 +66,17 @@
 }
 
 \examples{
-\dontrun{
 
   library(agridat)
   data(wiebe.wheat.uniformity)
   dat <- wiebe.wheat.uniformity
-  
+
   libs(desplot)
   desplot(dat, yield~col+row,
           aspect=125/180, flip=TRUE, # true aspect
           main="wiebe.wheat.uniformity: yield") # row 1 is at south
-  
-  
+
+
   # Preece (1981) found the last digits have an interesting distribution
   # with 0 and 5 much more common than other digits.
   dig <- substring(dat$yield, nchar(dat$yield))
@@ -85,7 +84,7 @@
   hist(dig, breaks=0:10-.5, xlab="Last digit",
        main="wiebe.wheat.uniformity - histogram of last digit")
   table(dat$col, dig) # Table 3 of Preece
-  
+
   # Wilkinson (1983, p. 152) noted that an 8-row planter was used which
   # produced a recurring pattern of row effects on yield.  This can be seen
   # in the high autocorrelations of row means at lag 8 and lag 16
@@ -124,7 +123,7 @@
   tmp$area[112:113] <- 6 + 12.9/2
   tmp$area[120:121] <- 6 + 12.4/2
   dat <- merge(dat, tmp)
-  
+
   # It's not clear if Wiebe used border rows...we delete them
   dat <- subset(dat, row >  1 & row < 125)
 
@@ -137,6 +136,5 @@
   coef(lm(yield ~ area, dat))[2]
   # 33.1
 
-}
 }
 \keyword{datasets}

@@ -34,7 +34,6 @@
 }
 
 \examples{
-\dontrun{
 
 library(agridat)
 data(gomez.groupsplit)
@@ -50,5 +49,4 @@ desplot(dat, group ~ col*row,
 m1 <- aov(yield ~ fert*group + gen:group + fert:gen:group +
             Error(rep/fert/group), data=dat)
 summary(m1)
-}
 }

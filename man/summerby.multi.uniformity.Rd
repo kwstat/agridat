@@ -41,6 +41,8 @@
   The row numbers in this data are based on the figure on page 13 of Summerby.
   Row 1 is at the bottom. There appears to be approximately a blank row between ranges.
 
+  These data were converted from PDF to png images, then OCR converted
+  to text, then hand-checked by K.Wright.
 }
 \source{
   Summerby, R. (1934).
@@ -59,16 +61,16 @@
 
   libs(desplot)
   dat <- mutate(dat, env=paste(range, year, crop))
-  desplot(dat, yield ~ col*row|env, aspect=(5*20)/(35*20))
-  #qqmath( ~ yield|env, data=dat)
+  desplot(dat, yield ~ col*row|env, aspect=(5*20)/(35*20),
+          main="summerby.multi.uniformity")
 
   # Show all ranges for a single year.
-  dat %>% filter(year==1924) %>% desplot(yield ~ col*row, aspect=23/35, main="1924")
+  # dat %>% filter(year==1924) %>% desplot(yield ~ col*row, aspect=23/35, main="1924")
 
   # Compare the variance for each dataset in Summerby, page 18, column (a)
   # with what we calculate.  Very slight differences.
-  libs(dplyr)
-  dat %>% group_by(range,year) %>% summarize(var=var(yield))
+  # libs(dplyr)
+  # dat %>% group_by(range,year) %>% summarize(var=var(yield))
   ## range  year       var  summerby
   ##  1 R2     1922  82404      82404
   ##  2 R2     1923 254780.    254780  

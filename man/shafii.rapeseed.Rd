@@ -55,8 +55,7 @@
 }
 
 \examples{
-\dontrun{
-  
+
 library(agridat)
 data(shafii.rapeseed)
 dat <- shafii.rapeseed
@@ -95,5 +94,4 @@ dmat <- acast(dm, gen~locyr)
 # AMMI biplot.  Figure 1 of Shafii (1998)
 biplot(prcomp(dmat), main="shafii.rapeseed - AMMI biplot")
 
-}
 }

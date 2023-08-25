@@ -31,7 +31,6 @@
 }
 
 \examples{
-\dontrun{
 
 library(agridat)
 data(gomez.multilocsplitplot)
@@ -64,7 +63,6 @@ summary(m1)
   ## loc:gen     2  4270469  2135235  5.5223
   ## nf:gen      5  1501767   300353  0.7768
   ## loc:nf:gen 10  1502273   150227  0.3885
-}
 
 }
 

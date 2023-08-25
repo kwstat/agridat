@@ -38,7 +38,6 @@
 }
 
 \examples{
-\dontrun{
 
 library(agridat)
 
@@ -50,7 +49,7 @@ libs(HH)
 interaction2wt(nitro ~ rep/trt + trt*stage, data=dat,
                x.between=0, y.between=0,
                main="gomez.nitrogen")
-  
+
 # Just the fertilizer profiles
 with(dat, interaction.plot(stage, trt, nitro,
                            col=1:4, lty=1:3, main="gomez.nitrogen",
@@ -85,6 +84,5 @@ summary(m2, expand.split=FALSE,
             "rest:P"=c(5,6,7,12,13,14))
           ))
 
-}
 }
 \keyword{datasets}

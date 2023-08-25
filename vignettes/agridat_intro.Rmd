@@ -1,7 +1,6 @@
 ---
 title: "Introduction to `agridat`"
 author: "Kevin Wright"
-date: "`r Sys.Date()`"
 bibliography: agridat.bib
 output: 
   rmarkdown::html_vignette:

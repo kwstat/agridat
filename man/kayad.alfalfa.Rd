@@ -27,11 +27,11 @@
   # to create a productivity map. Two ways to normalize:
   # Normalize to 0-100: ((mapValue - min) * 100) / (max - min)
   # Standardize: ((mapValue - mean) / stdev) * 100
-  
+
 }
 \source{
   Ahmed G. Kayad, et al. (2016).
-  Assessing the Spatial Variability of Alfalfa Yield Using Satellite Imagery and Ground-Based Data. 
+  Assessing the Spatial Variability of Alfalfa Yield Using Satellite Imagery and Ground-Based Data.
   PLOS One, 11(6).
   https://doi.org/10.1371/journal.pone.0157166
 }
@@ -39,11 +39,11 @@
   None
 }
 \examples{
-\dontrun{
+
   library(agridat)
   data(kayad.alfalfa)
   dat <- kayad.alfalfa
-  
+
   # match Kayad table 1 stats
   libs(dplyr)
   dat <- group_by(dat, harvest)
@@ -65,6 +65,5 @@
   ##           panel=panel.levelplot.points,
   ##           col.regions=pals::brewer.reds)
 
-}
 }
 \keyword{datasets}

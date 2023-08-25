@@ -1,6 +1,6 @@
 \name{agridat}
 \alias{agridat}
-\docType{package}
+\alias{agridat-package}
 \title{
   Datasets from agricultural experiments
 }

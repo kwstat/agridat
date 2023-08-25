@@ -1,7 +1,6 @@
 ---
 title: "Notes on uniformity data"
 author: "Kevin Wright"
-date: "`r Sys.Date()`"
 output: 
   rmarkdown::html_vignette:
     md_extensions: -autolink_bare_uris
@@ -23,10 +22,6 @@ archive.org search 2023.04.07
 "optimum size of plots"
 "Optimum Size and Shape of Plots"
 
-Summerby, R. (1934).
-The value of preliminary uniformity trials in increasing the precision of field experiments.
-Macdonald College.
-https://books.google.com/books?id=6zlMAAAAYAAJ&pg=RA14-PA47
 
 
 
@@ -2400,13 +2395,20 @@ J. Am Soc Agron, 15.
 https://www.google.com/books/edition/Proceedings_of_the_American_Society_of_A/MWU4AQAAMAAJ
 Also: https://doi.org/10.2134/agronj1923.00021962001500050004x
 Reviewed. No data. Data sent to Rothamsted in 1938.
-Two areas of land, 100 links by 505 links. One area was Alaska Oats. Another area was Huron wheat.
+Two areas of land, 100 links by 505 links. One area was Alaska Oats. Another area was Huron wheat. fixme check if I can find this in the Rothamsted papers.
 
 
-Summerby. (1925).
+Summerby, R. (1925).
 A Study of Sizes of Plats, Number of Replications, and the Frequency and Methods of Using Check Plots in Relation to Accuracy in Field Experiments.
 Jour. Amer. Soc, Agron. 17: 140-149.
 Reviewed. Data is not very uniform. data-unused/summerby.oat.uniformity
+
+
+Summerby, R. (1934).
+The value of preliminary uniformity trials in increasing the precision of field experiments.
+Macdonald College.
+https://books.google.com/books?id=6zlMAAAAYAAJ&pg=RA14-PA47
+Reviewed. Has data for 5x35 and 1x35 grid layouts. agridat::summerby.multi.uniformity.
 
 
 Swallow, William H.; Todd C. Wehner (1986).

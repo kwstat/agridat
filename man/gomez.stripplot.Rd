@@ -38,7 +38,6 @@
 }
 
 \examples{
-\dontrun{
 
 library(agridat)
 data(gomez.stripplot)
@@ -67,26 +66,26 @@ m1 <- aov(yield ~ gen * nf + Error(rep + rep:gen + rep:nf), data=dat)
 summary(m1)
 ## Error: rep
 ##           Df  Sum Sq Mean Sq F value Pr(>F)
-## Residuals  2 9220962 4610481               
+## Residuals  2 9220962 4610481
 
 ## Error: rep:gen
-##           Df   Sum Sq  Mean Sq F value  Pr(>F)   
+##           Df   Sum Sq  Mean Sq F value  Pr(>F)
 ## gen        5 57100201 11420040   7.653 0.00337 **
-## Residuals 10 14922619  1492262                   
+## Residuals 10 14922619  1492262
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 ## Error: rep:nf
-##           Df   Sum Sq  Mean Sq F value  Pr(>F)   
+##           Df   Sum Sq  Mean Sq F value  Pr(>F)
 ## nf         2 50676061 25338031   34.07 0.00307 **
-## Residuals  4  2974908   743727                   
+## Residuals  4  2974908   743727
 ## ---
 ## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
 
 ## Error: Within
-##           Df   Sum Sq Mean Sq F value   Pr(>F)    
+##           Df   Sum Sq Mean Sq F value   Pr(>F)
 ## gen:nf    10 23877979 2387798   5.801 0.000427 ***
-## Residuals 20  8232917  411646                     
+## Residuals 20  8232917  411646
 
 
 # More compact view
@@ -95,14 +94,14 @@ summary(m1)
 
 ## Analysis of Variance Table
 ## Response: yield
-##        Df   Sum Sq  Mean Sq F value    Pr(>F)    
+##        Df   Sum Sq  Mean Sq F value    Pr(>F)
 ## rep     2  9220962  4610481 11.2001 0.0005453 ***
-## nf      2 50676061 25338031 34.0690 0.0030746 ** 
-## Ea      4  2974908   743727  1.8067 0.1671590    
-## gen     5 57100201 11420040  7.6528 0.0033722 ** 
-## Eb     10 14922619  1492262  3.6251 0.0068604 ** 
+## nf      2 50676061 25338031 34.0690 0.0030746 **
+## Ea      4  2974908   743727  1.8067 0.1671590
+## gen     5 57100201 11420040  7.6528 0.0033722 **
+## Eb     10 14922619  1492262  3.6251 0.0068604 **
 ## gen:nf 10 23877979  2387798  5.8006 0.0004271 ***
-## Ec     20  8232917   411646                      
+## Ec     20  8232917   411646
 
 
 # Mixed-model version
@@ -116,5 +115,4 @@ summary(m1)
 ## nf      2 28048730 14024365 34.0690
 ## gen:nf 10 23877979  2387798  5.8006
 
-}
 }

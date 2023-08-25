@@ -43,7 +43,6 @@
 }
 
 \examples{
-\dontrun{
 
 library(agridat)
 data(onofri.winterwheat)
@@ -53,11 +52,10 @@ dat <- transform(dat, year=factor(dat$year))
 m1 <- aov(yield ~ year + block:year + gen + gen:year, dat)
 anova(m1) # Matches Onofri figure 1
 
-  libs(agricolae)
-  m2 <- AMMI(dat$year, dat$gen, dat$block, dat$yield)
-  plot(m2)
-  title("onofri.winterwheat - AMMI biplot")
-}
+libs(agricolae)
+m2 <- AMMI(dat$year, dat$gen, dat$block, dat$yield)
+plot(m2)
+title("onofri.winterwheat - AMMI biplot")
 
 }
 \keyword{datasets}

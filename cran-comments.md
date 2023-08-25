@@ -1,10 +1,39 @@
+# agridat 1.22
+
+* Switched the package to MIT license.
+* Fix docType{package} for CRAN.
+
+## Test environments and results
+
+1. R 4.1.3 on Windows 10, devtools::check(cran=TRUE)
+2. WinBuilder Devel.
+3. Rhub
+
+OK (Except usual random notes from Rhub)
+
+## revdepcheck results
+
+We checked 7 reverse dependencies (6 from CRAN + 1 from Bioconductor), comparing R CMD check results across CRAN and dev versions of this package.
+
+ * We saw 0 new problems
+ * We failed to check 1 packages
+
+Issues with CRAN packages are summarised below.
+
+### Failed to check
+
+* spaMM (NA) # Note, this is a "Suggests" package.
+
+
+# ----------
+
 # agridat 1.21
 
 This release fixes a minor problem identified by CRAN.
 
 ## Test environments and results
 
-1. R 4.1.3 on Windows 10, devtools::check()
+1. R 4.1.3 on Windows 10, devtools::check(cran=TRUE)
 2. devtools::check_win_devel()
 3. devtools::check_win_release()
 4. devtools::check_win_oldrelease()
