@@ -1,3 +1,11 @@
+# agridat 1.23
+
+## New datasets added
+
+## Other notes
+
+* Updated cochran.eelworms to fix a typo, and added more columns for grain yield, straw yield, weeds. Updates to documentation.
+
 # agridat 1.22 (2023-08-24)
 
 ## New datasets added

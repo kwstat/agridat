@@ -18,28 +18,53 @@
     \item{\code{dose}}{dose, Numeric 0,1,2.  Maybe should be a factor?}
     \item{\code{initial}}{count of eelworms pre-treatment}
     \item{\code{final}}{count of eelworms post-treatment}
+    \item{\code{grain}}{grain yield in pounds}
+    \item{\code{straw}}{straw yield in pounds}
+    \item{\code{weeds}}{ratio of weeds to total oats}
   }
 }
 \details{
 
-  In the original experiment plan (as shown in Bailey 2008), columns 9, 10, 11 are
-  shifted up slightly.
-
+  A soil fumigation experiment on Spring Oats, conducted in 1935.
+  
+  Each plot is 30 links x 41.7 links, but it is not clear which side of
+  the plot has a specific length.
+  
   Treatment codes: Con = Control, Chl = Chlorodinitrobenzen, Cym =
   Cymag, Car = Carbon Disulphide jelly, See = Seekay.
 
   Experiment was conducted in 1935 at Rothamsted Experiment Station.  In
-  early March 400 grams of soil were sampled and the number of eelworm
-  cysts were counted.  Fumigants were added to the soil, oats were sown
-  and later harvested.  In October, the plots were again sampled and the
-  final count of cysts recorded.
+  early March 400 grams of soil (4 x 100g) were sampled and the number
+  of eelworm cysts were counted.  Fumigants were added to the soil, oats
+  were sown and later harvested.  In October, the plots were again
+  sampled and the final count of cysts recorded.
+
+  The Rothamsted report concludes that "Car" and "Cym" produced higher
+  yields, due partly to the nitrogen in the fumigant, while "Chl"
+  decreased the yield.  All fumigants reduced weeds. The crop was
+  'unusually weedy'. "Car" and "See" decreased the number of eelworm
+  cysts in the soil.
+  
+  The original data can be found in the Rothamsted Report. The report
+  notes the position of the blocks in the field were slightly different
+  than shown.
+  
+  The experiment plan shown in Bailey (2008, p. 73), shows columns 9-11
+  shifted slightly upward. It is not clear why.
+  
+  Thanks to U.Genschel for identifying a typo.
 }
 \source{
   Cochran and Cox, 1950.
   \emph{Experimental Designs}. Table 3.1.
 }
 \references{
-  R. A. Bailey, 2008. \emph{Design of Comparative Experiments}. Cambridge.
+  R. A. Bailey (2008).
+  Design of Comparative Experiments. Cambridge.
+
+  Other Experiments at Rothamsted (1936).
+  Report For 1935, Rothamsted Research. pp 174 - 193.
+  https://doi.org/10.23637/ERADOC-1-67
 }
 
 \examples{
@@ -49,8 +74,15 @@ library(agridat)
 data(cochran.eelworms)
 dat <- cochran.eelworms
 
-# Very strong spatial trends
+libs(lattice)
+splom(dat[ , 5:10],
+      group=dat$fumigant, auto.key=TRUE,
+      main="cochran.eelworms")
+  
 libs(desplot)
+desplot(dat, fumigant~col*row, text=dose, flip=TRUE, cex=2)
+  
+# Very strong spatial trends
 desplot(dat, initial ~ col*row,
         flip=TRUE, # aspect unknown
         main="cochran.eelworms")
