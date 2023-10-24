@@ -47,7 +47,6 @@ Suggests:
     pls,
     pscl,
     reshape2,
-    rgdal,
     rmarkdown,
     qicharts,
     qtl,

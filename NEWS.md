@@ -4,7 +4,9 @@
 
 ## Other notes
 
-* Updated cochran.eelworms to fix a typo, and added more columns for grain yield, straw yield, weeds. Updates to documentation.
+* cochran.eelworms - Fix a typo reported by U.Genschel, and added more columns for grain yield, straw yield, weeds. Updates to documentation.
+
+* gartner.corn - Remove 'rgdal' package from example (Issue #11).
 
 # agridat 1.22 (2023-08-24)
 
@@ -20,7 +22,7 @@
 * hansen.multi.uniformity (multi-year uniformity trials)
 * heath.cabbage.uniformity
 * hutchinson.cotton.uniformity (Data from Rothamsted archive)
-* immer.sugarbeet.uniformity (add 1931 results from Rothamsted archive)
+* immer.sugarbeet.uniformity (add year 1931 results from Rothamsted archive)
 * khan.brassica.uniformity
 * kirk.potato (20 varieties with 15 reps)
 * mckinstry.cotton.uniformity (Data from Rothamsted archive)
