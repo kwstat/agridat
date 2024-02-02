@@ -31,7 +31,7 @@
 }
 
 \examples{
-
+\dontrun{
 library(agridat)
 data(gomez.multilocsplitplot)
 dat <- gomez.multilocsplitplot
@@ -65,4 +65,4 @@ summary(m1)
   ## loc:nf:gen 10  1502273   150227  0.3885
 
 }
-
+}

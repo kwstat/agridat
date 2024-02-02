@@ -51,17 +51,17 @@ https://figshare.com/articles/dataset/Lettuce_trial_phenotypic_and_marker_data_/
 
 }
 \source{
-Hadasch, S., I. Simko, R. J. Hayes, J. O. Ogutu, and H.P. Piepho (2016).
-Comparing the predictive abilities of phenotypic and
-marker-assisted selection methods in a biparental lettuce population.
-Plant Genome 9.
-https://doi.org/10.3835/plantgenome2015.03.0014
+  Hadasch, S., I. Simko, R. J. Hayes, J. O. Ogutu, and H.P. Piepho (2016).
+  Comparing the predictive abilities of phenotypic and
+  marker-assisted selection methods in a biparental lettuce population.
+  Plant Genome 9.
+  https://doi.org/10.3835/plantgenome2015.03.0014
 }
 \references{
-Hayes, R. J., Galeano, C. H., Luo, Y., Antonise, R., & Simko, I. (2014).
-Inheritance of Decay of Fresh-cut Lettuce in a Recombinant Inbred Line Population from "Salinas 88" × "La Brillante".
-J. Amer. Soc. Hort. Sci., 139(4), 388-398.
-https://doi.org/10.21273/JASHS.139.4.388
+  Hayes, R. J., Galeano, C. H., Luo, Y., Antonise, R., & Simko, I. (2014).
+  Inheritance of Decay of Fresh-cut Lettuce in a Recombinant Inbred Line Population from "Salinas 88" × "La Brillante".
+  J. Amer. Soc. Hort. Sci., 139(4), 388-398.
+  https://doi.org/10.21273/JASHS.139.4.388
 }
 \examples{
 \dontrun{
@@ -78,13 +78,15 @@ https://doi.org/10.21273/JASHS.139.4.388
         main="hadasch.lettuce")
 
   # kinship matrix
-  tcrossprod(as.matrix(datm[,-1])) %>% head
+  # head( tcrossprod(as.matrix(datm[,-1])) )
 
-  libs(asreml)
-  dat <- transform(dat, loc=factor(loc), gen=factor(gen), rep=factor(rep))
-  m1 <- asreml(dmr ~ 1 + gen, data=dat,
-               random = ~ loc + gen:loc + rep:loc)
-  p1 <- predict(m1, classify="gen")$pvals
+  if(require("asreml", quietly=TRUE)){
+    libs(asreml)
+    dat <- transform(dat, loc=factor(loc), gen=factor(gen), rep=factor(rep))
+    m1 <- asreml(dmr ~ 1 + gen, data=dat,
+                 random = ~ loc + gen:loc + rep:loc)
+    p1 <- predict(m1, classify="gen")$pvals
+  }
   
   libs(sommer)
   m2 <- mmer(dmr ~ 0 + gen, data=dat,

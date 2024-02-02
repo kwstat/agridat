@@ -71,17 +71,16 @@
 \examples{
 \dontrun{
 
- library(agridat)
-
+  library(agridat)
   data(draper.safflower.uniformity)
   dat4 <- subset(draper.safflower.uniformity, expt=="E4")
   dat5 <- subset(draper.safflower.uniformity, expt=="E5")
-
+  
   libs(desplot)
   desplot(dat4, yield~col*row,
           flip=TRUE, tick=TRUE, aspect=72/53, # true aspect
           main="draper.safflower.uniformity (four foot)")
-
+  
   desplot(dat5, yield~col*row,
           flip=TRUE, tick=TRUE, aspect=90/46, # true aspect
           main="draper.safflower.uniformity (five foot)")
@@ -91,7 +90,7 @@
   dat4 <- subset(dat4, row>1 & row<20)
   dat4 <- subset(dat4, col>1 & col<17)
   dat5 <- subset(dat5, row>1 & row<20)
-  dat5 <- subset(dat5, col<15)\
+  dat5 <- subset(dat5, col<15)
   # Convert gm/plot to pounds/acre. Draper (p. 20) says 1487 pounds/acre
   mean(dat4$yield) / 453.592 / (3.33*4) * 43560 # 1472 lb/ac
   

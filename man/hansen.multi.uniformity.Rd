@@ -74,6 +74,7 @@
   of plot 10g should probably have been 92 instead of 97. 
 
   The version of the data in the package uses the changes suggested by Sanders.
+
   Data were typed by K.Wright.
   
 }
@@ -87,7 +88,7 @@
   Eden, T. and E. J. Maskell. (1928).
   The influence of soil heterogeneity on the growth and yield of
   successive crops.
-  Jour of Agricultural Science, 18, 163-185.
+  Journal of Agricultural Science, 18, 163-185.
   https://archive.org/stream/in.ernet.dli.2015.25895/2015.25895.Journal-Of-Agricultural-Science-Vol-xviii-1928#page/n175
   
   Sanders, H. G. 1930.
@@ -104,25 +105,25 @@
   dat <- hansen.multi.uniformity
   
   # Field A2: Average across years
-  libs(dplyr)
-  dat %>% group_by(row,col) %>% summarize(mn=mean(yield)) %>% dcast(row ~ col, value.var="mn")
+  libs(dplyr,reshape2)
+  #dat %>% group_by(row,col) %>% summarize(mn=mean(yield)) %>% dcast(row ~   col, value.var="mn")
 
   # Field E2: Match column totals
-  dat %>% filter(field=="E2") %>% group_by(year,col) %>% summarize(tot=sum(yield)) %>% dcast(year~col, value.var="tot")
+  #dat %>% filter(field=="E2") %>% group_by(year,col) %>% summarize(tot=sum(yield)) %>% dcast(year~col, value.var="tot")
 
   # Heatmaps. Aspect ratio is an educated guess
   libs(dplyr, desplot)
   dat <- dat %>% mutate(dat, field=factor(field), year=factor(year))
-  dat %>% filter(field=="A2") %>% desplot(yield ~ col*row|year, tick=TRUE, flip=TRUE, aspect=(5*7.4)/(6*7.4))
-  dat %>% filter(field=="E2") %>% desplot(yield ~ col*row|year, tick=TRUE, flip=TRUE, aspect=(8*8)/(16*8))
+  dat %>% filter(field=="A2") %>% desplot(yield ~ col*row|year, main="hansen.multi.uniformity field A2", tick=TRUE, flip=TRUE, aspect=(5*7.4)/(6*7.4))
+  dat %>% filter(field=="E2") %>% desplot(yield ~ col*row|year, main="hansen.multi.uniformity field E2", tick=TRUE, flip=TRUE, aspect=(8*8)/(16*8))
 
-  # Look at correlation of plots across years
-  libs(dplyr, lattice)
-  dat <- dat %>% mutate(plot=paste(row,col))
-  filter(dat, field=="A2") %>% acast(plot ~ year, value.var="yield") %>%
-    splom()
-  filter(dat, field=="E2") %>% acast(plot ~ year, value.var="yield") %>%
-    splom()
+  # Look at correlation of experimental unit plots across years
+  libs(dplyr, reshape2, lattice)
+  dat <- mutate(dat, plot=paste(row,col))
+  mat1 <- filter(dat, field=="A2") %>% acast(plot ~ year, value.var="yield")
+  splom(mat1, main="hansen.multi.uniformity field A2")
+  mat2 <- filter(dat, field=="E2") %>% acast(plot ~ year, value.var="yield")
+  splom(mat2, main="hansen.multi.uniformity field A2")
 
 }
 }

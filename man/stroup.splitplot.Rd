@@ -56,38 +56,38 @@
   # m0 <- lme(y ~ -1 + a + b + a:b, data=dat, random = ~ 1|rep/a)
   
   # ----- ASREML model ---
-  libs(asreml)
-  m1 <- asreml(y~ -1 + a + b + a:b, random=~ rep + a:rep, data=dat)
+  if(require("asreml", quietly=TRUE)){
+    libs(asreml,lucid)
+    m1 <- asreml(y~ -1 + a + b + a:b, random=~ rep + a:rep, data=dat)
   
-  libs(lucid)
-  # vc(m1) # Variance components match Stroup p. 41
-  ##   effect component std.error z.ratio bound
-  ##      rep    62.42     56.41      1.1     P
-  ##    a:rep    15.39     11.8       1.3     P
-  ## units(R)     9.364     4.415     2.1     P
+    # vc(m1) # Variance components match Stroup p. 41
+    ##   effect component std.error z.ratio bound
+    ##      rep    62.42     56.41      1.1     P
+    ##    a:rep    15.39     11.8       1.3     P
+    ## units(R)     9.364     4.415     2.1     P
     
-  # Narrow space predictions
-  predict(m1, data=dat, classify="a", average=list(rep=NULL))
-  #  a Predicted Std Err    Status
-  # a1     32.88   1.082 Estimable
-  # a2     34.12   1.082 Estimable
-  # a3     25.75   1.082 Estimable
-
-  # Intermediate space predictions
-  predict(m1, data=dat, classify="a", ignore="a:rep",
-          average=list(rep=NULL))
-  #  a Predicted Std Err    Status
-  # a1     32.88    2.24 Estimable
-  # a2     34.12    2.24 Estimable
-  # a3     25.75    2.24 Estimable
-
-  # Broad space predictions
-  predict(m1, data=dat, classify="a")
-  #  a Predicted Std Err    Status
-  # a1     32.88    4.54 Estimable
-  # a2     34.12    4.54 Estimable
-  # a3     25.75    4.54 Estimable
-
+    # Narrow space predictions
+    predict(m1, data=dat, classify="a", average=list(rep=NULL))
+    #  a Predicted Std Err    Status
+    # a1     32.88   1.082 Estimable
+    # a2     34.12   1.082 Estimable
+    # a3     25.75   1.082 Estimable
+    
+    # Intermediate space predictions
+    predict(m1, data=dat, classify="a", ignore="a:rep",
+            average=list(rep=NULL))
+    #  a Predicted Std Err    Status
+    # a1     32.88    2.24 Estimable
+    # a2     34.12    2.24 Estimable
+    # a3     25.75    2.24 Estimable
+    
+    # Broad space predictions
+    predict(m1, data=dat, classify="a")
+    #  a Predicted Std Err    Status
+    # a1     32.88    4.54 Estimable
+    # a2     34.12    4.54 Estimable
+    # a3     25.75    4.54 Estimable
+  }    
 
   # ----- MCMCglmm model -----
   # Use the point estimates from REML with a prior distribution
@@ -115,7 +115,7 @@
   # the linear contrast for the the narrow-space predictions
   # (also called adjusted mean) for the a1:a2 interaction.
   #              a1n   a1i  a1b a1a2n a1a2ib
-    cm <- matrix(c(1,   1,   1,    1,    1,   # a1
+  cm <- matrix(c(1,   1,   1,    1,    1,   # a1
                  0,   0,   0,   -1,   -1,   # a2
                  0,   0,   0,    0,    0,   # a3
                  1/2, 1/2, 1/2,    0,    0,   # b2
@@ -159,13 +159,15 @@
   # REML est    32.88 32.88 32.88  -1.25   -1.25
   # REML stderr  1.08  2.24  4.54   1.53    3.17
   # MCMC mode   32.95 32.38 31.96  -1.07   -1.17
-    # MCMC stderr  1.23  2.64  5.93   1.72    3.73
-    plot(post2)
-    
+  # MCMC stderr  1.23  2.64  5.93   1.72    3.73
+  # plot(post2)
+  
   post22 <- lattice::make.groups(
     Narrow=post2[,1], Intermediate=post2[,2], Broad=post2[,3])
   print(densityplot(~data|which, data=post22, groups=which,
                     cex=.25, lty=1, layout=c(1,3),
+                    main="stroup.splitplot",
                     xlab="MCMC model value of predictable function for A1"))
+
 }
 }

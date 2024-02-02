@@ -86,11 +86,12 @@ libs(gnm)
 m3 <- glm(y ~ gen + site, data=dat, family="wedderburn")
 summary(m3)
 # Similar to McCullagh fig 9.2
-plot(m3, which=1)
+  plot(m3, which=1)
+  title("wedderburn.barley")
 
 # Compare data and model
 dat$pwed <- predict(m3, type="response")
-dotplot(gen~pwed+y|site, dat)
+dotplot(gen~pwed+y|site, dat, main="wedderburn.barley")
 }
 
 }

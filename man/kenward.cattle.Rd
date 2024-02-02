@@ -99,39 +99,41 @@
 
   # ASREML approach to model. Not final by any means.
   # Maybe a spline curve for each treatment, plus random deviations for each time
-  libs(asreml)
-  m1 <- asreml(weight ~  1 + lin(day) +    # overall line
-                 trt + trt:lin(day),       # different line for each treatment
-               data=dat,
-               random = ~ spl(day) +       # overall spline
-                 trt:spl(day) +            # different spline for each treatment
-                 dev(day) + trt:dev(day) ) # non-spline deviation at each time*trt
+  if(require("asreml", quietly=TRUE)){
+    libs(asreml)
+    m1 <- asreml(weight ~  1 + lin(day) +    # overall line
+                   trt + trt:lin(day),       # different line for each treatment
+                 data=dat,
+                 random = ~ spl(day) +       # overall spline
+                   trt:spl(day) +            # different spline for each treatment
+                   dev(day) + trt:dev(day) ) # non-spline deviation at each time*trt
+    
+    p1 <- predict(m1, data=dat, classify="trt:day")
+    p1 <- p1$pvals
+    
+    foo2 <- xyplot(predicted.value ~ day|trt, p1, type='l', lwd=2, lty=1, col="black")
   
-  p1 <- predict(m1, data=dat, classify="trt:day")
-  p1 <- p1$pvals
-  
-  foo2 <- xyplot(predicted.value ~ day|trt, p1, type='l', lwd=2, lty=1, col="black")
-  
-  libs(latticeExtra)
-  print(foo1 + foo2)
+    libs(latticeExtra)
+    print(foo1 + foo2)
 
-  # Not much evidence for treatment differences
+    # Not much evidence for treatment differences
   
-  # wald(m1)
-  ##               Df Sum of Sq Wald statistic Pr(Chisq)    
-  ## (Intercept)    1  37128459         139060    <2e-16 ***
-  ## trt            1       455              2    0.1917    
-  ## lin(day)       1    570798           2138    <2e-16 ***
-  ## trt:lin(day)   1       283              1    0.3031    
-  ## residual (MS)          267                             
+    # wald(m1)
+    ##               Df Sum of Sq Wald statistic Pr(Chisq)    
+    ## (Intercept)    1  37128459         139060    <2e-16 ***
+    ## trt            1       455              2    0.1917    
+    ## lin(day)       1    570798           2138    <2e-16 ***
+    ## trt:lin(day)   1       283              1    0.3031    
+    ## residual (MS)          267                             
   
-  # vc(m1)
-  ##               effect component std.error z.ratio constr
-  ##             spl(day)  25.29    24.09        1       pos
-  ##             dev(day)   1.902    4.923       0.39    pos
-  ## trt:spl(day)!trt.var   0.00003  0.000002   18      bnd 
-  ## trt:dev(day)!trt.var   0.00003  0.000002   18      bnd 
-  ##           R!variance 267       14.84       18       pos
+    # lucid::vc(m1)
+    ##               effect component std.error z.ratio constr
+    ##             spl(day)  25.29    24.09        1       pos
+    ##             dev(day)   1.902    4.923       0.39    pos
+    ## trt:spl(day)!trt.var   0.00003  0.000002   18      bnd 
+    ## trt:dev(day)!trt.var   0.00003  0.000002   18      bnd 
+    ##           R!variance 267       14.84       18       pos
+  }
   
 }
 }

@@ -49,13 +49,13 @@
           main="damesa.maize",
           out1=rep, out2=block, num=gen, cex=1)
 
-  if(0){
+  if(require("asreml", quietly=TRUE)) {
     # Fit the single-stage model in Damesa
-    lib(asreml)
+    libs(asreml,lucid)
     m0 <- asreml(data=damesa.maize,
-             fixed = yield ~ gen,
-             random = ~ site + gen:site + at(site):rep/block,
-             residual = ~ dsum( ~ units|site) )
+                 fixed = yield ~ gen,
+                 random = ~ site + gen:site + at(site):rep/block,
+                 residual = ~ dsum( ~ units|site) )
     lucid::vc(m0) # match Damesa table 1 column 3
     ##                 effect component std.error z.ratio bound %ch
     ##       at(site, S1):rep   0.08819   0.1814     0.49     P 0  
@@ -73,6 +73,7 @@
     ##              site_S3!R   1.153     0.2349     4.9      P 0  
     ##              site_S4!R   0.1112    0.03665    3        P 0  
   }
+  
 }
 } 
 \keyword{datasets}

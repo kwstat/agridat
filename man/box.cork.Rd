@@ -18,12 +18,10 @@
 }
 
 \source{
-  
   C.R. Rao (1948).
   Tests of significance in multivariate analysis. 
   \emph{Biometrika}, 35, 58-79.
-  https://doi.org/10.2307/2332629
-  
+  https://doi.org/10.2307/2332629  
 }
 
 \references{
@@ -66,42 +64,42 @@
               line.col=rep(c("royalblue","red","#009900","dark orange",
                              "#999999","#a6761d","deep pink"),
                            length=nrow(dat2)))
-  
-  # asreml
-  libs(asreml)
 
-  # Unstructured covariance
-  dat$dir <- factor(dat$dir)
-  dat$tree <- factor(dat$tree)  
-  dat <- dat[order(dat$tree, dat$dir), ]
+  if(require("asreml", quietly=TRUE)) {  
+    libs(asreml, lucid)
+    
+    # Unstructured covariance
+    dat$dir <- factor(dat$dir)
+    dat$tree <- factor(dat$tree)  
+    dat <- dat[order(dat$tree, dat$dir), ]
+    
+    # Unstructured covariance matrix
+    m1 <- asreml(y~dir, data=dat, residual = ~ tree:us(dir))
+    
+    lucid::vc(m1)
+    
+    # Note: 'rcor' is a personal function to extract the correlations
+    # into a matrix format
+    # round(kw::rcor(m1)$dir, 2)
+    #        E      N      S      W
+    # E 219.93 223.75 229.06 171.37
+    # N 223.75 290.41 288.44 226.27
+    # S 229.06 288.44 350.00 259.54
+    # W 171.37 226.27 259.54 226.00
+    
+    # Note: Wolfinger used a common diagonal variance
+    
+    # Factor Analytic with different specific variances
+    # fixme: does not work with asreml4
+    # m2 <- update(m1, residual = ~tree:facv(dir,1))
+    # round(kw::rcor(m2)$dir, 2)
+    #       E       N      S      W
+    # E 219.94 209.46 232.85 182.27
+    # N 209.46 290.41 291.82 228.43
+    # S 232.85 291.82 349.99 253.94
+    # W 182.27 228.43 253.94 225.99
+  }
   
-  # Unstructured covariance matrix
-  m1 <- asreml(y~dir, data=dat, residual = ~ tree:us(dir))
-    
-  libs(lucid)
-  vc(m1)
-    
-  # Note: 'rcor' is a personal function to extract the correlations
-  # into a matrix format
-  # round(kw::rcor(m1)$dir, 2)
-  #        E      N      S      W
-  # E 219.93 223.75 229.06 171.37
-  # N 223.75 290.41 288.44 226.27
-  # S 229.06 288.44 350.00 259.54
-  # W 171.37 226.27 259.54 226.00
-    
-  # Note: Wolfinger used a common diagonal variance
-  
-  # Factor Analytic with different specific variances
-  # fixme: does not work with asreml4
-  # m2 <- update(m1, residual = ~tree:facv(dir,1))
-  # round(kw::rcor(m2)$dir, 2)
-  #       E       N      S      W
-  # E 219.94 209.46 232.85 182.27
-  # N 209.46 290.41 291.82 228.43
-  # S 232.85 291.82 349.99 253.94
-  # W 182.27 228.43 253.94 225.99
-    
 }
 }
 \keyword{datasets}

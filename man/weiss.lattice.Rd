@@ -65,20 +65,21 @@ rep (instead of across reps).
   
   # ----------
 
-  libs(asreml)
-  m2 <- asreml(yield ~ rep + rep:xf + rep:yf + gen, data=dat)
-  # Weiss table 6 means
-  wald(m2)
-  predict(m2, data=dat, classify="gen")$pvals
+  if(require("asreml", quietly=TRUE)){
+    libs(asreml)
+    m2 <- asreml(yield ~ rep + rep:xf + rep:yf + gen, data=dat)
+    # Weiss table 6 means
+    wald(m2)
+    predict(m2, data=dat, classify="gen")$pvals
+    ##  gen pred.value std.error  est.stat
+    ##  G01      27.74     1.461 Estimable
+    ##  G02      24.95     1.461 Estimable
+    ##  G03      24.38     1.461 Estimable
+    ##  G04      28.05     1.461 Estimable
+    ##  G05      19.6      1.461 Estimable
+    ##  G06      23.79     1.461 Estimable
+  }
   
-  ##  gen pred.value std.error  est.stat
-  ##  G01      27.74     1.461 Estimable
-  ##  G02      24.95     1.461 Estimable
-  ##  G03      24.38     1.461 Estimable
-  ##  G04      28.05     1.461 Estimable
-  ##  G05      19.6      1.461 Estimable
-  ##  G06      23.79     1.461 Estimable
-
 }
 }
 \keyword{datasets}

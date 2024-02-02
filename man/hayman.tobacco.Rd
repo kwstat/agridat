@@ -41,7 +41,7 @@
 \source{
 
   B. I. Hayman (1954a). The Analysis of Variance of Diallel Tables.
-  \emph{Biometrics}, 10, 235-244.  Table 5, page 241.
+  Biometrics, 10, 235-244.  Table 5, page 241.
   https://doi.org/10.2307/3001877
 
   Hayman, B.I. (1954b). The theory and analysis of diallel crosses.
@@ -56,13 +56,13 @@
 
   Mohring, Melchinger, Piepho. (2011).
   REML-Based Diallel Analysis.
-  \emph{Crop Science}, 51, 470-478.
+  Crop Science, 51, 470-478.
 
   # For 1952 data
 
   C. Clark Cockerham and B. S. Weir. (1977).
   Quadratic analyses of reciprocal crosses.
-  \emph{Biometrics} 33, 187-203.  Appendix C.
+  Biometrics, 33, 187-203.  Appendix C.
 
   Andrea Onofri, Niccolo Terzaroli, Luigi Russi (2020).
   Linear models for diallel crosses: A review with R functions.

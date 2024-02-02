@@ -79,6 +79,7 @@
 \dontrun{
   
   library(agridat)
+  data(smith.wheat.uniformity)
   dat <- smith.wheat.uniformity
 
   libs(desplot)

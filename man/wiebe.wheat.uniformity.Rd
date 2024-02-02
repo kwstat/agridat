@@ -132,6 +132,7 @@
   # and found 21.5 g / inch of space between rows.  We used all the
   # data without correcting for fertility and obtained 33.1 g / inch.
   xyplot(yield ~ area, dat, type=c('p','r'),
+         main="wiebe.wheat.uniformity",
          xlab="Average area per row", ylab="Yield")
   coef(lm(yield ~ area, dat))[2]
   # 33.1

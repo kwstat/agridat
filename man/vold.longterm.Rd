@@ -78,7 +78,8 @@
   # Separate fit for each year.  Overfitting with 3x19=57 params.
   libs(nlme)
   m2.lis <- nlsList(yield ~ SSasymp(nitro,max,int,lograte) | year, data=dat)
-  plot(intervals(m2.lis),layout = c(3,1)) # lograte might be same for each year
+  plot(intervals(m2.lis),layout = c(3,1),
+       main="vold.longterm") # lograte might be same for each year
 
 
   # Fixed overall asymptotic model, plus random deviations for each year

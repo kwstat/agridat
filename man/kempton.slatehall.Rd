@@ -75,25 +75,24 @@
   
   # ----------
 
-  # asreml3 & asreml4
-  libs(asreml,lucid)
+  if(require("asreml", quietly=TRUE)){
+    libs(asreml,lucid)
   
-  # Incomplete block model of Gilmour et al 1995
-  dat <- transform(dat, xf=factor(col), yf=factor(row))
-  m2 <- asreml(yield ~ gen, random = ~ rep/(xf+yf), data=dat)
+    # Incomplete block model of Gilmour et al 1995
+    dat <- transform(dat, xf=factor(col), yf=factor(row))
+    m2 <- asreml(yield ~ gen, random = ~ rep/(xf+yf), data=dat)
+    
+    lucid::vc(m2)
+    ##          effect component std.error z.ratio constr
+    ##     rep!rep.var      4262      6890    0.62    pos
+    ##  rep:xf!rep.var     14810      4865    3       pos
+    ##  rep:yf!rep.var     15600      5091    3.1     pos
+    ##      R!variance      8062      1340    6       pos
+    
+    # Table 4
+    # asreml4
+    # predict(m2, data=dat, classify="gen")$pvals
+  }
   
-  vc(m2)
-  ##          effect component std.error z.ratio constr
-  ##     rep!rep.var      4262      6890    0.62    pos
-  ##  rep:xf!rep.var     14810      4865    3       pos
-  ##  rep:yf!rep.var     15600      5091    3.1     pos
-  ##      R!variance      8062      1340    6       pos
-  
-  # Table 4
-  # asreml3
-  # predict(m2, data=dat, classify="gen")$predictions$pvals
-  # asreml4
-  # predict(m2, data=dat, classify="gen")$pvals
-
 }
 }

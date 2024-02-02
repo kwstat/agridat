@@ -49,30 +49,31 @@
   xyplot(yield ~ rrow|col, dat, layout=c(1,3), type='s',
          xlab="row", ylab="yield", main="besag.bayesian")
 
-  libs(asreml)
+  if(require("asreml", quietly=TRUE)) {
+    libs(asreml, lucid)
 
-  # Use asreml to fit a model with AR1 gradient in rows  
-  dat <- transform(dat, cf=factor(col), rf=factor(rrow))
-  m1 <- asreml(yield ~ -1 + gen, data=dat, random= ~ rf)
-  m1 <- update(m1, random= ~ ar1v(rf))
-  m1 <- update(m1)
-  m1 <- update(m1)
-  m1 <- update(m1)
-  lucid::vc(m1)
+    # Use asreml to fit a model with AR1 gradient in rows  
+    dat <- transform(dat, cf=factor(col), rf=factor(rrow))
+    m1 <- asreml(yield ~ -1 + gen, data=dat, random= ~ rf)
+    m1 <- update(m1, random= ~ ar1v(rf))
+    m1 <- update(m1)
+    m1 <- update(m1)
+    m1 <- update(m1)
+    lucid::vc(m1)
   
-  # Visualize trends, similar to Besag figure 2.
-  # Need 'as.vector' because asreml uses a named vector
-  dat$res <- unname(m1$resid)
-  dat$geneff <- coef(m1)$fixed[as.numeric(dat$gen)]
-  dat <- transform(dat, fert=yield-geneff-res)
-  libs(lattice)
-  xyplot(geneff ~ rrow|col, dat, layout=c(1,3), type='s',
-         main="besag.bayesian - Variety effects", ylim=c(5,15 ))
-  xyplot(fert ~ rrow|col, dat, layout=c(1,3), type='s',
-         main="besag.bayesian - Fertility", ylim=c(-2,2))
-  xyplot(res ~ rrow|col, dat, layout=c(1,3), type='s',
-         main="besag.bayesian - Residuals", ylim=c(-4,4))
-
+    # Visualize trends, similar to Besag figure 2.
+    # Need 'as.vector' because asreml uses a named vector
+    dat$res <- unname(m1$resid)
+    dat$geneff <- coef(m1)$fixed[as.numeric(dat$gen)]
+    dat <- transform(dat, fert=yield-geneff-res)
+    libs(lattice)
+    xyplot(geneff ~ rrow|col, dat, layout=c(1,3), type='s',
+           main="besag.bayesian - Variety effects", ylim=c(5,15 ))
+    xyplot(fert ~ rrow|col, dat, layout=c(1,3), type='s',
+           main="besag.bayesian - Fertility", ylim=c(-2,2))
+    xyplot(res ~ rrow|col, dat, layout=c(1,3), type='s',
+           main="besag.bayesian - Residuals", ylim=c(-4,4))
+  }
 } 
 }
 

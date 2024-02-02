@@ -74,27 +74,27 @@
   ## Xy  -0.144800    NA    NA   NA
   ## eta  0.806200    NA    NA   NA
 
-
-  libs(asreml)
+  
+  if(require("asreml", quietly=TRUE)) {
+    libs(asreml,lucid)
     
-  # Now try an AR1xAR1 model.
-  dat2 <- transform(dat, xf=factor(col), yf=factor(row),
-                    pres=as.numeric(disease=="Y"))
-  
-  m2 <- asreml(pres ~ 1, data=dat2,
-               resid = ~ar1(xf):ar1(yf))
-  # The 0/1 response is arbitrary, but there is some suggestion
-  # of auto-correlation in the x (.17) and y (.10) directions,
-  # suggesting the pattern is more 'patchy' than just random noise,
-  # but is it meaningful?
-  
-  libs(lucid)
-  vc(m2)
-  ##       effect component std.error z.ratio bound %ch
-  ##     xf:yf(R)   0.1301   0.003798    34       P   0
-  ## xf:yf!xf!cor   0.1699   0.01942      8.7     U   0
-  ## xf:yf!yf!cor   0.09842  0.02038      4.8     U   0
-  
+    # Now try an AR1xAR1 model.
+    dat2 <- transform(dat, xf=factor(col), yf=factor(row),
+                      pres=as.numeric(disease=="Y"))
+    
+    m2 <- asreml(pres ~ 1, data=dat2,
+                 resid = ~ar1(xf):ar1(yf))
+    # The 0/1 response is arbitrary, but there is some suggestion
+    # of auto-correlation in the x (.17) and y (.10) directions,
+    # suggesting the pattern is more 'patchy' than just random noise,
+    # but is it meaningful?
+    
+    lucid::vc(m2)
+    ##       effect component std.error z.ratio bound %ch
+    ##     xf:yf(R)   0.1301   0.003798    34       P   0
+    ## xf:yf!xf!cor   0.1699   0.01942      8.7     U   0
+    ## xf:yf!yf!cor   0.09842  0.02038      4.8     U   0
+  }
 
 }
 }

@@ -131,7 +131,7 @@
   # black/gray dots very close to each other
   plot3d(dat$col, dat$row, dat$yield, col=dat$year,
          xlab="col",ylab="row",zlab="yield")
-  rgl.close()
+  close3d()
   
 }
 }

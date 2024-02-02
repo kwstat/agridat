@@ -47,22 +47,23 @@
           tick=TRUE, aspect=(36*3.73)/(30*1.90),
           main="piepho.barley.uniformity.csv")
 
-  libs(asreml,dplyr)
-  dat <- mutate(dat, x=factor(col), y=factor(row))
-  dat <- arrange(dat, x, y)
+  if(require("asreml", quietly=TRUE)){
+    libs(asreml,dplyr,lucid)
+    dat <- mutate(dat, x=factor(col), y=factor(row))
+    dat <- arrange(dat, x, y)
   
-  # Piepho AR1xAR1 model (in random term, NOT residual)
-  m1 <- asreml(data=dat,
-               yield ~ 1, 
-               random = ~ x + y + ar1(x):ar1(y), 
-               residual = ~  units,
-               na.action=na.method(x="keep") )
-  m1 <- update(m1)
-  # Match Piepho table 3, footnote 4: .9671, .9705 for col,row correlation
-  # Note these parameters are basically at the boundary of the parameter
-  # space. Questionable fit.
-  libs(lucid)
-  lucid::vc(m1) 
+    # Piepho AR1xAR1 model (in random term, NOT residual)
+    m1 <- asreml(data=dat,
+                 yield ~ 1, 
+                 random = ~ x + y + ar1(x):ar1(y), 
+                 residual = ~  units,
+                 na.action=na.method(x="keep") )
+    m1 <- update(m1)
+    # Match Piepho table 3, footnote 4: .9671, .9705 for col,row correlation
+    # Note these parameters are basically at the boundary of the parameter
+    # space. Questionable fit.
+    lucid::vc(m1)
+  }
 }
 }
 \keyword{datasets}

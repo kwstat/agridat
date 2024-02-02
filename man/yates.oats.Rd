@@ -51,8 +51,7 @@
 
 \references{
   Yates, Frank (1935) Complex experiments,
-  \emph{Journal of the Royal Statistical Society Suppl}
-  2, 181-247. Figure 2.
+  Journal of the Royal Statistical Society Supplement 2, 181-247. Figure 2.
   https://doi.org/10.2307/2983638
 }
 
@@ -62,7 +61,6 @@
   library(agridat)
   data(yates.oats)
   dat <- yates.oats
-
 
   ## # Means match Rothamsted report p. 144
   ## libs(dplyr)
@@ -105,7 +103,7 @@
 
   # ----------
 
-  # Marginal predictions from emmeans package and asreml::predict
+  # Marginal predictions
 
   # --- nlme ---
   libs(nlme)
@@ -119,44 +117,17 @@
   dat2$nitrof <- factor(dat2$nitro)
 
   # --- asreml  ---
-  libs(asreml)
-  m5a <- asreml(yield ~ nitrof + gen,
-                random = ~ block + block:gen, data=dat2)
-  libs(lucid)
-  vc(m5l)
-  vc(m5a)
+  if(require("asreml", quietly=TRUE)){
+    libs(asreml,lucid)
+    m5a <- asreml(yield ~ nitrof + gen,
+                  random = ~ block + block:gen, data=dat2)
+    lucid::vc(m5l)
+    lucid::vc(m5a)
 
   emmeans::emmeans(m5l, "gen")
   predict(m5a, data=dat2, classify="gen")$pvals
-
-  # ----------
-
-  if(0){
-
-    # Demonstrate use of regress package, compare to lme
-
-    libs(regress)
-    m6 <- regress(yield ~ nitrof + gen, ~block + I(block:gen), identity=TRUE,
-                  verbose=1, data=dat)
-    summary(m6)
-    ## Variance Coefficients:
-    ##                Estimate Std. Error
-    ##   block         214.468    168.794
-    ##   I(block:gen)  109.700     67.741
-    ##   In            162.558     32.189
-
-    # ordinal causes clash with VarCorr
-    if(is.element("package:ordinal", search())) detach(package:ordinal)
-
-    m7 <- lme(yield ~ nitrof + gen, random = ~ 1|block/gen, data=dat)
-    lme4::VarCorr(m7)
-    ##             Variance     StdDev
-    ## block =     pdLogChol(1)
-    ## (Intercept) 214.4716     14.64485
-    ## gen =       pdLogChol(1)
-    ## (Intercept) 109.6929     10.47344
-    ## Residual    162.5591     12.74987
   }
+  
 
 }
 }

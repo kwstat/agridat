@@ -70,35 +70,35 @@
 \examples{
 \dontrun{
 
-library(agridat)
-data(cochran.eelworms)
-dat <- cochran.eelworms
+  library(agridat)
+  data(cochran.eelworms)
+  dat <- cochran.eelworms
 
-libs(lattice)
-splom(dat[ , 5:10],
-      group=dat$fumigant, auto.key=TRUE,
-      main="cochran.eelworms")
-  
-libs(desplot)
-desplot(dat, fumigant~col*row, text=dose, flip=TRUE, cex=2)
-  
-# Very strong spatial trends
-desplot(dat, initial ~ col*row,
-        flip=TRUE, # aspect unknown
+  libs(lattice)
+  splom(dat[ , 5:10],
+        group=dat$fumigant, auto.key=TRUE,
         main="cochran.eelworms")
+  
+  libs(desplot)
+  desplot(dat, fumigant~col*row, text=dose, flip=TRUE, cex=2)
+  
+  # Very strong spatial trends
+  desplot(dat, initial ~ col*row,
+          flip=TRUE, # aspect unknown
+          main="cochran.eelworms")
 
 
-# final counts are strongly related to initial counts
-libs(lattice)
-xyplot(final~initial|factor(dose), data=dat, group=fumigant,
-       main="cochran.eelworms - by dose (panel) & fumigant",
-       xlab="Initial worm count",
-       ylab="Final worm count", auto.key=list(columns=5))
-
-# One approach...log transform, use 'initial' as covariate, create 9 treatments
-dat <- transform(dat, trt=factor(paste0(fumigant, dose)))
-m1 <- aov(log(final) ~ block + trt + log(initial), data=dat)
-anova(m1)
+  # final counts are strongly related to initial counts
+  libs(lattice)
+  xyplot(final~initial|factor(dose), data=dat, group=fumigant,
+         main="cochran.eelworms - by dose (panel) & fumigant",
+         xlab="Initial worm count",
+         ylab="Final worm count", auto.key=list(columns=5))
+  
+  # One approach...log transform, use 'initial' as covariate, create 9 treatments
+  dat <- transform(dat, trt=factor(paste0(fumigant, dose)))
+  m1 <- aov(log(final) ~ block + trt + log(initial), data=dat)
+  anova(m1)
 
 }
 }

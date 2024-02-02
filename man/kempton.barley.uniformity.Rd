@@ -60,20 +60,22 @@
 
   # ----------
 
-  libs(asreml,lucid)
+  if(require("asreml", quietly=TRUE)){
+    libs(asreml,lucid)
   
-  dat <- transform(dat, xf = factor(col), yf=factor(row))
-  m1 <- asreml(yield ~ 1, data=dat, resid = ~ar1(xf):ar1(yf))
+    dat <- transform(dat, xf = factor(col), yf=factor(row))
+    m1 <- asreml(yield ~ 1, data=dat, resid = ~ar1(xf):ar1(yf))
   
-  # vc(m1)
-  ##       effect component std.error z.ratio bound %ch
-  ##      xf:yf!R    0.1044   0.02197     4.7     P   0
-  ## xf:yf!xf!cor    0.2458   0.07484     3.3     U   0
-  ## xf:yf!yf!cor    0.8186   0.03821    21       U   0
+    # lucid::vc(m1)
+    ##       effect component std.error z.ratio bound %ch
+    ##      xf:yf!R    0.1044   0.02197     4.7     P   0
+    ## xf:yf!xf!cor    0.2458   0.07484     3.3     U   0
+    ## xf:yf!yf!cor    0.8186   0.03821    21       U   0
   
-  # asreml estimates auto-regression correlations of 0.25, 0.82
-  # Kempton estimated auto-regression coefficients b1=0.10, b2=0.91
-
+    # asreml estimates auto-regression correlations of 0.25, 0.82
+    # Kempton estimated auto-regression coefficients b1=0.10, b2=0.91
+  }
+  
   # ----------
 
   if(0){

@@ -177,36 +177,36 @@
 
 
   # -----
-  # asreml
-  libs(asreml,lucid)
+  if(require("asreml", quietly=TRUE)){
+    libs(asreml,lucid)
 
-  # RCB analysis
-  as1 <- asreml(yield ~ gen, random = ~ rep, data=dat,
-                na.action=na.method(x="omit"))
-  preds$asreml1 <- predict(as1, data=dat, classify="gen")$pvals$predicted.value
+    # RCB analysis
+    as1 <- asreml(yield ~ gen, random = ~ rep, data=dat,
+                  na.action=na.method(x="omit"))
+    preds$asreml1 <- predict(as1, data=dat, classify="gen")$pvals$predicted.value
+    
+    # Two-dimensional AR1xAR1 spatial model
+    dat <- transform(dat, xf=factor(col), yf=factor(row))
+    dat <- dat[order(dat$xf, dat$yf),]
+    as2 <- asreml(yield~gen, data=dat,
+                  residual = ~ar1(xf):ar1(yf),
+                  na.action=na.method(x="omit"))
+    preds$asreml2 <- predict(as2, data=dat, classify="gen")$pvals$predicted.value
 
-  # Two-dimensional AR1xAR1 spatial model
-  dat <- transform(dat, xf=factor(col), yf=factor(row))
-  dat <- dat[order(dat$xf, dat$yf),]
-  as2 <- asreml(yield~gen, data=dat,
-                residual = ~ar1(xf):ar1(yf),
-                na.action=na.method(x="omit"))
-  preds$asreml2 <- predict(as2, data=dat, classify="gen")$pvals$predicted.value
-
-  lucid::vc(as2)
-  ##     effect component std.error z.ratio constr
-  ## R!variance   48.7      7.155       6.8    pos
-  ##   R!xf.cor    0.6555   0.05638    12      unc
-  ##   R!yf.cor    0.4375   0.0806      5.4    unc
+    lucid::vc(as2)
+    ##     effect component std.error z.ratio constr
+    ## R!variance   48.7      7.155       6.8    pos
+    ##   R!xf.cor    0.6555   0.05638    12      unc
+    ##   R!yf.cor    0.4375   0.0806      5.4    unc
 
   # Compare the estimates from the two asreml models.
   # We see that Buckskin has correctly been shifted upward by the spatial model
-  plot(preds$as1, preds$as2, xlim=c(13,37), ylim=c(13,37),
-       xlab="RCB", ylab="AR1xAR1", type='n')
-  title("stroup.nin: Comparison of predicted values")
-  text(preds$asreml1, preds$asreml2, preds$gen, cex=0.5)
-  abline(0,1)
-
+    plot(preds$as1, preds$as2, xlim=c(13,37), ylim=c(13,37),
+         xlab="RCB", ylab="AR1xAR1", type='n')
+    title("stroup.nin: Comparison of predicted values")
+    text(preds$asreml1, preds$asreml2, preds$gen, cex=0.5)
+    abline(0,1)
+  }
 
   # -----
   # sommer

@@ -50,53 +50,54 @@
 \examples{
 \dontrun{
 
-library(agridat)
-data(payne.wheat)
-dat <- payne.wheat
+  library(agridat)
+  data(payne.wheat)
+  dat <- payne.wheat
 
-libs(asreml)
+  # make factors
+  dat <- transform(dat,
+                   rotf = factor(rotation),
+                   yrf = factor(year),
+                   nitrof = factor(nitro))
+    
+  # visualize the response to nitrogen
+  libs(lattice)
+  # Why does Payne use nitrogen factor, when it is an obvious polynomial term?
+  # Probably doesn't matter too much.
+  xyplot(yield ~ nitro|yrf, dat,
+         groups=rotf, type='b',
+         auto.key=list(columns=6),
+         main="payne.wheat")
+  
+  # What are the long-term trends?  Yields are decreasing
+  xyplot(yield ~ year | rotf, data=dat, groups=nitrof,
+         type='l', auto.key=list(columns=4))
 
-# make factors
-dat <- transform(dat,
-                 rotf = factor(rotation),
-                 yrf = factor(year),
-                 nitrof = factor(nitro))
-
-# visualize the response to nitrogen
-libs(lattice)
-# Why does Payne use nitrogen factor, when it is an obvious polynomial term?
-# Probably doesn't matter too much.
-xyplot(yield ~ nitro|yrf, dat,
-       groups=rotf, type='b',
-       auto.key=list(columns=6),
-       main="payne.wheat")
-
-# What are the long-term trends?  Yields are decreasing
-xyplot(yield ~ year | rotf, data=dat, groups=nitrof,
-       type='l', auto.key=list(columns=4))
-
+  if(require("asreml", quietly=TRUE)){
+    libs(asreml)
 # Model 5: drop 3-way interaction and return to pol function (easier prediction)
-m5 <- asreml(yield ~ rotf * nitrof * pol(year,2) -
-               (rotf:nitrof:pol(year,2)),
-             data=dat,
-             random = ~yrf,
-             residual = ~ dsum( ~ units|yrf))
-summary(m5)$varcomp # Table 7 of Payne
-# lucid::vc(m5)
+    m5 <- asreml(yield ~ rotf * nitrof * pol(year,2) -
+                   (rotf:nitrof:pol(year,2)),
+                 data=dat,
+                 random = ~yrf,
+                 residual = ~ dsum( ~ units|yrf))
+    summary(m5)$varcomp # Table 7 of Payne
+    # lucid::vc(m5)
 
-# Table 8 of Payne
-wald(m5, denDF="default") 
-
-# Predictions of three-way interactions from final model
-p5 <- predict(m5, classify="rotf:nitrof:year")
-p5 <- p5$pvals # Matches Payne table 8
-head(p5)
-
-# Plot the predictions.  Matches Payne figure 1
-xyplot(predicted.value ~ year | rotf, data=p5,
- groups=nitrof,
-       ylab="yield t/ha", type='l', auto.key=list(columns=5))
-
+    # Table 8 of Payne
+    wald(m5, denDF="default") 
+    
+    # Predictions of three-way interactions from final model
+    p5 <- predict(m5, classify="rotf:nitrof:year")
+    p5 <- p5$pvals # Matches Payne table 8
+    head(p5)
+    
+    # Plot the predictions.  Matches Payne figure 1
+    xyplot(predicted.value ~ year | rotf, data=p5,
+           groups=nitrof,
+           ylab="yield t/ha", type='l', auto.key=list(columns=5))
+  }
+  
 }
 }
 \keyword{datasets}

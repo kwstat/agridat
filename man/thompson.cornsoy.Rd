@@ -122,7 +122,7 @@ xyplot(corn+soy~year|state, dat,
   m2 <- aov(corn ~ ns(rain0, 3) + ns(rain7, 3) +
               ns(temp8, 3) + ns(year,3), dat.ia)
   op <- par(mfrow=c(2,2))
-  termplot(m2, se=TRUE, rug=TRUE, partial=TRUE)
+  termplot(m2, se=TRUE, rug=TRUE, partial=TRUE, main="thompson.cornsoy")
   par(op)
 
   # do NOT use gam package
@@ -130,7 +130,7 @@ xyplot(corn+soy~year|state, dat,
   m1 <- gam(corn ~ s(year, k=5) + s(rain0, k=5) +
               s(rain7, k=5) + s(temp8, k=5), data=dat.ia)
   op <- par(mfrow=c(2,2))
-  plot.gam(m1, residuals=TRUE, se=TRUE, cex=2)
+  plot.gam(m1, residuals=TRUE, se=TRUE, cex=2, main="thompson.cornsoy")
   par(op)
 }
 

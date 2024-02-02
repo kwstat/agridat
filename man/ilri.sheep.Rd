@@ -121,27 +121,29 @@
 
   # ----------
 
-  libs(asreml,lucid)
-  # case study page 4.20
-  m1 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
-               data=dat)
-  # wald(m1)
+  if(require("asreml", quietly=TRUE)){
+    libs(asreml,lucid)
+    # case study page 4.20
+    m1 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
+                 data=dat)
+    # wald(m1)
   
-  # case study page 4.26
-  m2 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
-               random = ~ ram + ewe, data=dat)
-  # wald(m2)
-  
-  # case study page 4.37, year means
-  # predict(m2, data=dat, classify="year")
-  ##   year predicted.value standard.error est.status
-  ## 1   91       12.638564      0.2363652  Estimable
-  ## 2   92       11.067659      0.2285252  Estimable
-  ## 3   93       11.561932      0.1809891  Estimable
-  ## 4   94        9.636058      0.2505478  Estimable
-  ## 5   95        9.350247      0.2346849  Estimable
-  ## 6   96       10.188482      0.2755387  Estimable
+    # case study page 4.26
+    m2 <- asreml(weanwt ~ year + sex + weanage + dl + dq + ramgen + ewegen,
+                 random = ~ ram + ewe, data=dat)
+    # wald(m2)
     
+    # case study page 4.37, year means
+    # predict(m2, data=dat, classify="year")
+    ##   year predicted.value standard.error est.status
+    ## 1   91       12.638564      0.2363652  Estimable
+    ## 2   92       11.067659      0.2285252  Estimable
+    ## 3   93       11.561932      0.1809891  Estimable
+    ## 4   94        9.636058      0.2505478  Estimable
+    ## 5   95        9.350247      0.2346849  Estimable
+    ## 6   96       10.188482      0.2755387  Estimable
+  }
+  
 }
 }
 \keyword{datasets}

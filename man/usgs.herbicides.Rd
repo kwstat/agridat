@@ -76,7 +76,8 @@ Sample types: CR = concurrent replicate sample, FB = field blank, LD = laborator
   # median/mean
   with(dat, cenmle(y, ycen, dist="lognormal"))
   # boxplot
-  with(dat, cenboxplot(obs=y, cen=ycen, log=FALSE))
+  with(dat, cenboxplot(obs=y, cen=ycen, log=FALSE,
+                       main="usgs.herbicides"))
   # with(dat, boxplot(y))
   pp <- with(dat, ros(obs=y, censored=ycen, forwardT="log")) # default lognormal
   plot(pp)

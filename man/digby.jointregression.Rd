@@ -117,9 +117,11 @@
 
   # Using 'mumm' gives similar results, though gen is random and the
   # coeffecients are shrunk toward 0 a bit.
-  libs(mumm)
-  m1 <- mumm(yield ~ -1 + env + mp(gen, env), dat)
-  round(1 + ranef(m1)$`mp gen:env`,2)
+  if(require("mumm", quietly=TRUE)) {
+    libs(mumm)
+    m1 <- mumm(yield ~ -1 + env + mp(gen, env), dat)
+    round(1 + ranef(m1)$`mp gen:env`,2)
+  }
   
 }
 }

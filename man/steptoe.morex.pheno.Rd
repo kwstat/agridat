@@ -159,31 +159,35 @@
   libs(qtl)
   data(steptoe.morex.geno)
   datg <- steptoe.morex.geno
-  plot.map(datg, main="steptoe.morex.pheno")  # or just use plot()
-
+  qtl::plot.map(datg, main="steptoe.morex.pheno")
+  qtl::plotMissing(datg)
+    
 
   # This is a very rudimentary example.
-    
-  # Fit a simple multi-environment mixed model
-  libs(asreml)
-  m1 <- asreml(yield ~ env, data=dat, random=~gen)
-  
-  libs(wgaim)
-  qtl::plotMissing(datg)
-  wgaim::linkMap(datg)
-  # Create an interval object for wgaim
-  dati <- wgaim::cross2int(datg, id="gen")
-  
-  # Whole genome qtl
-  q1 <- wgaim::wgaim(m1, intervalObj=dati, merge.by="gen", na.action=na.method(x="include"))
-  #wgaim::linkMap(q1, dati) # Visualize
-  wgaim::outStat(q1, dati) # outlier statistic
-  summary(q1, dati)  # Table of important intervals
-  # Chrom Left Marker dist(cM) Right Marker dist(cM)   Size Pvalue % Var
-  #     3      ABG399     52.6       BCD828     56.1  0.254  0.000  45.0
-  #     5      MWG912      148      ABG387A    151.2  0.092  0.001   5.9
-  #     6     ABC169B     64.8       CDO497     67.5 -0.089  0.001   5.6
+  # The 'wgaim' function works interactively, but fails during
+  # devtools::check().
+  if(0 & require("asreml", quietly=TRUE)){
+    libs(asreml)
 
+    # Fit a simple multi-environment mixed model
+    m1 <- asreml(yield ~ env, data=dat, random=~gen)
+  
+    libs(wgaim)
+    wgaim::linkMap(datg)
+    # Create an interval object for wgaim
+    dati <- wgaim::cross2int(datg, id="gen")
+    
+    # Whole genome qtl
+    q1 <- wgaim::wgaim(m1, intervalObj=dati,
+                       merge.by="gen", na.action=na.method(x="include"))
+    #wgaim::linkMap(q1, dati) # Visualize
+    wgaim::outStat(q1, dati) # outlier statistic
+    summary(q1, dati)  # Table of important intervals
+    # Chrom Left Marker dist(cM) Right Marker dist(cM)   Size Pvalue % Var
+    #     3      ABG399     52.6       BCD828     56.1  0.254  0.000  45.0
+    #     5      MWG912      148      ABG387A    151.2  0.092  0.001   5.9
+    #     6     ABC169B     64.8       CDO497     67.5 -0.089  0.001   5.6
+  }
   
 }
 }

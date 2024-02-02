@@ -66,49 +66,50 @@
   bwplot(yield ~ loc|factor(.sample), dat20,
          main="bridges.cucumber - graphical inference")
 
-  libs(asreml) # asreml
+  if(require("asreml", quietly=TRUE)) {
+    libs(asreml,lucid)
     
-  ## Random row/col/resid. Same as Bridges 1989, p. 147
-  m1 <- asreml(yield ~ 1 + gen + loc + loc:gen,
-               random = ~ rowf:loc + colf:loc, data=dat)
+    ## Random row/col/resid. Same as Bridges 1989, p. 147
+    m1 <- asreml(yield ~ 1 + gen + loc + loc:gen,
+                 random = ~ rowf:loc + colf:loc, data=dat)
   
-  libs(lucid)
-  lucid::vc(m1)
-  ##   effect component std.error z.ratio bound %ch
-  ## rowf:loc     31.62     23.02     1.4     P   0
-  ## colf:loc     18.08     15.32     1.2     P   0
-  ## units(R)     31.48     12.85     2.4     P   0
+    lucid::vc(m1)
+    ##   effect component std.error z.ratio bound %ch
+    ## rowf:loc     31.62     23.02     1.4     P   0
+    ## colf:loc     18.08     15.32     1.2     P   0
+    ## units(R)     31.48     12.85     2.4     P   0
+    
+    ## Random row/col/resid at each loc. Matches p. 147
+    m2 <- asreml(yield ~ 1 + gen + loc + loc:gen,
+                 random = ~ at(loc):rowf + at(loc):colf, data=dat,
+                 resid = ~ dsum( ~ units|loc))
+    lucid::vc(m2)
+    ##                effect component std.error z.ratio bound %ch
+    ## at(loc, Clemson):rowf     32.32    36.58     0.88     P   0
+    ##  at(loc, Tifton):rowf     30.92    28.63     1.1      P   0
+    ## at(loc, Clemson):colf     22.55    28.78     0.78     P   0
+    ##  at(loc, Tifton):colf     13.62    14.59     0.93     P   0
+    ##        loc_Clemson(R)     46.85    27.05     1.7      P   0
+    ##         loc_Tifton(R)     16.11     9.299    1.7      P   0
+    
+    predict(m2, data=dat, classify='loc:gen')$pvals
+    ##       loc      gen predicted.value std.error    status
+    ## 1 Clemson   Dasher            45.6      5.04 Estimable
+    ## 2 Clemson Guardian            31.6      5.04 Estimable
+    ## 3 Clemson Poinsett            21.4      5.04 Estimable
+    ## 4 Clemson   Sprint            26        5.04 Estimable
+    ## 5  Tifton   Dasher            50.5      3.89 Estimable
+    ## 6  Tifton Guardian            38.7      3.89 Estimable
+    ## 7  Tifton Poinsett            33        3.89 Estimable
+    ## 8  Tifton   Sprint            39.2      3.89 Estimable
+    
+    # Is a heterogeneous model justified? Maybe not.
+    # m1$loglik
+    ## -67.35585
+    # m2$loglik
+    ## -66.35621
+  }
   
-  ## Random row/col/resid at each loc. Matches p. 147
-  m2 <- asreml(yield ~ 1 + gen + loc + loc:gen,
-               random = ~ at(loc):rowf + at(loc):colf, data=dat,
-               resid = ~ dsum( ~ units|loc))
-  lucid::vc(m2)
-  ##                effect component std.error z.ratio bound %ch
-  ## at(loc, Clemson):rowf     32.32    36.58     0.88     P   0
-  ##  at(loc, Tifton):rowf     30.92    28.63     1.1      P   0
-  ## at(loc, Clemson):colf     22.55    28.78     0.78     P   0
-  ##  at(loc, Tifton):colf     13.62    14.59     0.93     P   0
-  ##        loc_Clemson(R)     46.85    27.05     1.7      P   0
-  ##         loc_Tifton(R)     16.11     9.299    1.7      P   0
-  
-  predict(m2, data=dat, classify='loc:gen')$pvals
-  ##       loc      gen predicted.value std.error    status
-  ## 1 Clemson   Dasher            45.6      5.04 Estimable
-  ## 2 Clemson Guardian            31.6      5.04 Estimable
-  ## 3 Clemson Poinsett            21.4      5.04 Estimable
-  ## 4 Clemson   Sprint            26        5.04 Estimable
-  ## 5  Tifton   Dasher            50.5      3.89 Estimable
-  ## 6  Tifton Guardian            38.7      3.89 Estimable
-  ## 7  Tifton Poinsett            33        3.89 Estimable
-  ## 8  Tifton   Sprint            39.2      3.89 Estimable
-  
-  # Is a heterogeneous model justified? Maybe not.
-  # m1$loglik
-  ## -67.35585
-  # m2$loglik
-  ## -66.35621
-
 }
 }
 

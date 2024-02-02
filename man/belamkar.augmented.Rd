@@ -58,21 +58,23 @@
           main="belamkar.augmented")
 
   # Belamkar supplement S3 has R code for analysis
-  library(asreml)
+  if(require("asreml", quietly=TRUE)){
+    library(asreml)
 
-  # AR1xAR1 model to calculate BLUEs for a single loc
-  d1 <- droplevels(subset(dat, loc=="Lincoln"))
-  d1$colf <- factor(d1$col)
-  d1$rowf <- factor(d1$row)
-  d1$gen <- factor(d1$gen)
-  d1$gen_check <- factor(d1$gen_check)
-  d1 <- d1[order(d1$col),]
-  d1 <- as.data.frame(d1)
-  m1 <- asreml(fixed=yield ~ gen_check, data=d1,
-               random = ~ gen_new:gen,
-               residual = ~ar1(colf):ar1v(rowf) )
-  p1 <- predict(m1, classify="gen")
-  head(p1$pvals)
+    # AR1xAR1 model to calculate BLUEs for a single loc
+    d1 <- droplevels(subset(dat, loc=="Lincoln"))
+    d1$colf <- factor(d1$col)
+    d1$rowf <- factor(d1$row)
+    d1$gen <- factor(d1$gen)
+    d1$gen_check <- factor(d1$gen_check)
+    d1 <- d1[order(d1$col),]
+    d1 <- as.data.frame(d1)
+    m1 <- asreml(fixed=yield ~ gen_check, data=d1,
+                 random = ~ gen_new:gen,
+                 residual = ~ar1(colf):ar1v(rowf) )
+    p1 <- predict(m1, classify="gen")
+    head(p1$pvals)
+  }
 }
 }
 \keyword{datasets}

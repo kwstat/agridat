@@ -1,5 +1,5 @@
 ---
-title: "Introduction to `agridat`"
+title: "Introduction to agridat"
 author: "Kevin Wright"
 bibliography: agridat.bib
 output: 

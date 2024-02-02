@@ -41,13 +41,13 @@
   Johnson, D. E., Chaudhuri, U. N., and Kanemasu, E. T. (1983).
   Statistical Analysis of Line-Source Sprinkler Irrigation Experiments
   and Other Nonrandomized Experiments Using Multivariate Methods.
-  \emph{Soil Science Society American Journal}, 47, 309-312.
+  Soil Science Society American Journal, 47, 309-312.
 
   Stroup, W. W. (1989).
   Use of Mixed Model Procedure to Analyze Spatially Correlated Data: An
   Example Applied to a Line-Source Sprinkler Irrigation Experiment.
-  \emph{Applications of Mixed Models in Agriculture and Related
-    Disciplines, Southern Cooperative Series Bulletin No. 343}, 104-122.
+  Applications of Mixed Models in Agriculture and Related
+    Disciplines, Southern Cooperative Series Bulletin No. 343, 104-122.
 
   SAS Stat User's Guide.
   https://support.sas.com/documentation/cdl/en/statug/63347/HTML/default/viewer.htm#statug_mixed_sect038.htm
@@ -76,7 +76,6 @@
            panel.abline(v=6.5, col='wheat')
          })
   
-  # ----------------------------------------------------------------------------
 
   ## This is the model from the SAS documentation
   ## proc mixed;
@@ -84,64 +83,34 @@
   ## model yield = gen|dir|irr@2;
   ## random block block*dir block*irr;
   ## repeated / type=toep(4) sub=block*gen r;
-  
-  # ----------------------------------------------------------------------------
+ 
 
-  # asreml 3
-  libs(asreml,lucid)
-  if( utils::packageVersion("asreml") < "4") {
-    # asreml3
-
+  if(require("asreml", quietly=TRUE)){
+    libs(asreml,lucid)
+      
     dat <- transform(dat, subf=factor(subplot),
                      irrf=factor(irr))
     dat <- dat[order(dat$block, dat$gen, dat$subplot),]
     
-    m1 <- asreml(yield ~ gen + dir + irrf + gen:dir + gen:irrf + dir:irrf,
-                 data=dat,
-                 random= ~ block + block:dir + block:irrf,
-                 rcov= ~ block:gen:corb(subf, k=4))
-    
-    libs(lucid)
-    vc(m1)
-    ##                effect component std.error z.ratio constr
-    ##       block!block.var  0.2194     0.2393     0.92    pos
-    ##   block:dir!block.var  0.01768    0.03154    0.56    pos
-    ##  block:irrf!block.var  0.03539    0.03617    0.98    pos
-    ##            R!variance  0.285      0.05086    5.6     pos
-    ##                R!cor1  0.02802    0.1143     0.25  uncon
-    ##                R!cor2  0.005095   0.1278     0.04  uncon
-    ##                R!cor3 -0.3246     0.0905    -3.6   uncon
-    
-    ## # convert asreml correlations to SAS covariances
-    ## round(.2850 * c(1, .02802, .005095, -.3246),4) # res var * (cor1, cor2, cor3)
-    ## [1]  0.2850  0.0080  0.0015 -0.0925
-  }
-
-  # asreml 4
-  libs(asreml,lucid)
-  if( utils::packageVersion("asreml") > "4") {
-
-    dat <- transform(dat, subf=factor(subplot),
-                     irrf=factor(irr))
-    dat <- dat[order(dat$block, dat$gen, dat$subplot),]
-
     # In asreml3, we can specify corb(subf, 3)
     # In asreml4, only corb(subf, 1) runs.  corb(subf, 3) says:
     # Correlation structure is not positive definite
     m1 <- asreml(yield ~ gen + dir + irrf + gen:dir + gen:irrf + dir:irrf,
                  data=dat,
                  random= ~ block + block:dir + block:irrf,
-                 resid = ~ block:gen:corb(subf, 1))
-
+                 resid = ~ block:gen:corb(subf, 3))
+    
     lucid::vc(m1)
-    #                   effect component std.error z.ratio bound %ch
-    #                    block   0.194     0.2231     0.87     P 0.5
-    #                block:dir   0.02729   0.04959    0.55     P 0  
-    #               block:irrf   0.02275   0.0347     0.66     P 0.1
-    #         block:gen:subf!R   0.3234    0.05921    5.5      P 0  
-    # block:gen:subf!subf!cor1   0.169     0.09906    1.7      P 0.1
-
-  }
+    ##                   effect component std.error z.ratio bound %ch
+    ##                    block  0.2195     0.2378    0.92      P 0.5
+    ##                block:dir  0.01769    0.03156   0.56      P 0  
+    ##               block:irrf  0.03539    0.0362    0.98      P 0.1
+    ##         block:gen:subf!R  0.2851     0.05088   5.6       P 0  
+    ## block:gen:subf!subf!cor1  0.02829    0.1142    0.25      U 0.9
+    ## block:gen:subf!subf!cor2  0.004997   0.1278    0.039     U 9.5
+    ## block:gen:subf!subf!cor3 -0.3245     0.09044  -3.6       U 0.1
+    
+    }
 
 }
 }

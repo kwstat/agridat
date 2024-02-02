@@ -40,7 +40,7 @@
 \dontrun{
   library(agridat)
   data(shafi.tomato.uniformity)
-  shafi.tomato.uniformity <- dat
+  dat <- shafi.tomato.uniformity
 
   libs(desplot)
   desplot(dat, yield ~ col*row,

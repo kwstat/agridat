@@ -39,7 +39,7 @@
   Battese, George E and Harter, Rachel M and Fuller, Wayne A. (1988).
   An error-components model for prediction of county crop areas using
   survey and satellite data.
-  emph{Journal of the American Statistical Association}, 83, 28-36.
+  Journal of the American Statistical Association, 83, 28-36.
   https://doi.org/10.2307/2288915
 
   Battese (1982) preprint version.

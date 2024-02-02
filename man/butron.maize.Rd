@@ -46,7 +46,7 @@
 
 }
 \source{
-  Butron, A and Velasco, P and Ord{\'a}s, A and Malvar, RA (2004).
+  Butron, A and Velasco, P and Ordas, A and Malvar, RA (2004).
   Yield evaluation of maize cultivars across environments with different
   levels of pink stem borer infestation.
   Crop Science, 44, 741-747.
@@ -71,8 +71,8 @@
   biplot(princomp(mat), main="butron.maize", cex=.7) # Figure 1 of Butron
 
 
-  if(0){
-    # Fixme: This section is broken because synbreed has been removed from CRAN
+  if(require("asreml", quietly=TRUE)) {
+
     # Here we see if including pedigree information is helpful for a
     # multi-environment model
     # Including the pedigree provided little benefit
@@ -93,12 +93,7 @@
                  ped)
     ped[is.na(ped$male),'male'] <- 0
     ped[is.na(ped$female),'female'] <- 0
-    
-  }
 
-
-  # asreml
-  if(0){
     libs(asreml)
     ped.ainv <- ainverse(ped)
       
@@ -134,9 +129,10 @@
          p0$gen, cex=.5, srt=-45)
     text(x=min(lims), y=p1par$predicted.value, p1par$gen, cex=.5, col="red")
     round( cor(p0$predicted.value, p1$predicted.value), 3)
+    # 0.994
     # Including the pedigree provided very little change
-    
   }
+  
 }
 }
 

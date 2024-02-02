@@ -99,7 +99,7 @@ summary(m4)
   with(d2, plot3d(K,P,yield))
   with(d3, plot3d(K,P,yield))
   with(d4, plot3d(N,P,yield)) # Mostly linear in both N and P
-  rgl.close()
+  close3d()
 
 }
 }

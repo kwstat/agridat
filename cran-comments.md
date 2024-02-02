@@ -1,3 +1,24 @@
+# agridat 1.23
+
+* Removed suggested use of sf/terra packages in examples.
+
+## Test environments and results
+
+1. R 4.3.2 on Windows 10, devtools::check(cran=TRUE)
+2. Rhub Windows Server 2022 R-devel
+3. WinBuilder R-Devel
+
+OK (Except usual random notes from Rhub)
+
+## revdepcheck results
+
+* We checked 6 reverse dependencies that were OK.
+* The geneticae package failed, but the error message indicates that the failure is not caused by the 'agridat' package.
+
+
+
+# -----
+
 # agridat 1.22
 
 * Switched the package to MIT license.

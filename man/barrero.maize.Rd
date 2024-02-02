@@ -60,31 +60,33 @@
          scales=list(x=list(rot=90)))
   
   # Table 6 of Barrero. Model equation 1.
-  pacman::p_load(dplyr, asreml, lucid)
-  dat <- arrange(dat, env)
-  dat <- mutate(dat,
-                yearf=factor(year), env=factor(env),
-                loc=factor(loc), gen=factor(gen), rep=factor(rep))
+  if(require("asreml", quietly=TRUE)){
+    libs(dplyr,lucid)
+    dat <- arrange(dat, env)
+    dat <- mutate(dat,
+                  yearf=factor(year), env=factor(env),
+                  loc=factor(loc), gen=factor(gen), rep=factor(rep))
   
-  m1 <- asreml(yield ~ loc + yearf + loc:yearf, data=dat,
-               random = ~ gen + rep:loc:yearf +
-                 gen:yearf + gen:loc +
-                 gen:loc:yearf,
-               residual = ~ dsum( ~ units|env) )
+    m1 <- asreml(yield ~ loc + yearf + loc:yearf, data=dat,
+                 random = ~ gen + rep:loc:yearf +
+                   gen:yearf + gen:loc +
+                   gen:loc:yearf,
+                 residual = ~ dsum( ~ units|env),
+                 workspace="500mb")
   
-  # Variance components for yield match Barrero table 6.
-  lucid::vc(m1)[1:5,]
-  ##        effect component std.error z.ratio bound %ch
-  ## rep:loc:yearf   0.111     0.01092    10       P 0  
-  ##           gen   0.505     0.03988    13       P 0  
-  ##     gen:yearf   0.05157   0.01472     3.5     P 0  
-  ##       gen:loc   0.02283   0.0152      1.5     P 0.2
-  ## gen:loc:yearf   0.2068    0.01806    11       P 0  
-  
-  summary(vc(m1)[6:112,"component"]) # Means match last row of table 6
-  ##   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-  ## 0.1286  0.3577  0.5571  0.8330  1.0322  2.9867 
-  
+    # Variance components for yield match Barrero table 6.
+    lucid::vc(m1)[1:5,]
+    ##        effect component std.error z.ratio bound %ch
+    ## rep:loc:yearf   0.111     0.01092    10       P 0  
+    ##           gen   0.505     0.03988    13       P 0  
+    ##     gen:yearf   0.05157   0.01472     3.5     P 0  
+    ##       gen:loc   0.02283   0.0152      1.5     P 0.2
+    ## gen:loc:yearf   0.2068    0.01806    11       P 0  
+    
+    summary(vc(m1)[6:112,"component"]) # Means match last row of table 6
+    ##   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    ## 0.1286  0.3577  0.5571  0.8330  1.0322  2.9867 
+  }
 }
 }
 \keyword{datasets}

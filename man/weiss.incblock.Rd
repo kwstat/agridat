@@ -60,18 +60,19 @@
           main="weiss.incblock")
   
 
-  # asreml
-  # Standard inc block analysis used by Weiss and Cox
-  libs(asreml)
-  m1 <- asreml(yield ~ gen + block , data=dat)
-  predict(m1, data=dat, classify="gen")$pvals
-  
-  ## gen pred.value std.error est.stat
-  ## G01     24.59    0.8312  Estimable
-  ## G02     26.92    0.8312  Estimable
-  ## G03     32.62    0.8312  Estimable
-  ## G04     26.97    0.8312  Estimable
-  ## G05     26.02    0.8312  Estimable
+  if(require("asreml", quietly=TRUE)){
+    # Standard inc block analysis used by Weiss and Cox
+    libs(asreml)
+    m1 <- asreml(yield ~ gen + block , data=dat)
+    predict(m1, data=dat, classify="gen")$pvals
+    
+    ## gen pred.value std.error est.stat
+    ## G01     24.59    0.8312  Estimable
+    ## G02     26.92    0.8312  Estimable
+    ## G03     32.62    0.8312  Estimable
+    ## G04     26.97    0.8312  Estimable
+    ## G05     26.02    0.8312  Estimable
+  }
 
 }
 }

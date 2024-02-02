@@ -79,19 +79,21 @@
   
   # ----------
   
-  libs(asreml,lucid)
+  if(require("asreml", quietly=TRUE)){
+    libs(asreml,lucid)
     
-  # Show the negative correlation between rows
-  dat <- transform(dat,
-                   rowf=factor(row), colf=factor(col))
-  dat <- dat[order(dat$rowf, dat$colf),]
-  m1 = asreml(yield ~ 1, data=dat, resid= ~ ar1(rowf):ar1(colf))
-  vc(m1)
-  ##             effect component std.error z.ratio bound pctch
-  ##        rowf:colf!R  81.53      3.525      23       P 0  
-  ## rowf:colf!rowf!cor  -0.09464   0.0277     -3.4     U 0.1
-  ## rowf:colf!colf!cor   0.2976    0.02629    11       U 0.1
-
+    # Show the negative correlation between rows
+    dat <- transform(dat,
+                     rowf=factor(row), colf=factor(col))
+    dat <- dat[order(dat$rowf, dat$colf),]
+    m1 = asreml(yield ~ 1, data=dat, resid= ~ ar1(rowf):ar1(colf))
+    lucid::vc(m1)
+    ##             effect component std.error z.ratio bound pctch
+    ##        rowf:colf!R  81.53      3.525      23       P 0  
+    ## rowf:colf!rowf!cor  -0.09464   0.0277     -3.4     U 0.1
+    ## rowf:colf!colf!cor   0.2976    0.02629    11       U 0.1
+  }
+  
 }
 }
 \keyword{datasets}
