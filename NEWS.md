@@ -1,3 +1,19 @@
+# agridat 1.24 (unpublished)
+
+## New datasets added
+
+* roemer.sugarbeet.uniformity
+
+## Other notes
+
+* baker.strawberry.uniformity: inserted 3 blank columns to more closely align with the experiment layout.
+
+* shafi.tomato.uniformity: Had incorrect yield scale, now divided by 1000.
+
+* odland.soyhay.uniformity: Yields have been divided by 10 so that the yield values are now tons instead of 0.1 tons.
+
+
+
 # agridat 1.23 (2024-01-30)
 
 ## New datasets added

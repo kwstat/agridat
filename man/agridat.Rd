@@ -109,6 +109,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{piepho.barley.uniformity}           \tab 30 x 36 \tab xy \tab \cr
 \link{polson.safflower.uniformity}        \tab 52 x 33 \tab xy \tab smith\cr
 \link{robinson.peanut.uniformity}         \tab 16 x 36 \tab xy \tab \cr
+\link{roemer.sugarbeet.uniformity}        \tab 2 x 48  \tab xy \tab \cr
 \link{saunders.maize.uniformity}          \tab 5 x 300 \tab xy, 2 year \tab \cr
 \link{sawyer.multi.uniformity}            \tab 8 x 6   \tab xy, 3 year \tab \cr
 \link{sayer.sugarcane.uniformity}         \tab 8 x 136, 8 x 121 \tab xy, 2 year \tab \cr
