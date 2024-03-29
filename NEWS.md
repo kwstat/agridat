@@ -2,6 +2,7 @@
 
 ## New datasets added
 
+* haritonenko.sugarbeet.uniformity
 * roemer.sugarbeet.uniformity
 
 ## Other notes
