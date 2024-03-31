@@ -54,7 +54,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{gomez.rice.uniformity}              \tab 18 x 36 \tab xy \tab aov,smith \cr
 \link{goulden.barley.uniformity}          \tab 48 x 48 \tab xy \tab \cr
 \link{hansen.multi.uniformity}            \tab 6 x 5, 16 x 8 \tab xy, 4-5 yr \tab splom\cr
-\link{haritonenko.sugarbeet}               \tab 4 x 104 \tab xy \tab \cr
+\link{haritonenko.sugarbeet.uniformity}               \tab 4 x 104 \tab xy \tab \cr
 \link{harris.multi.uniformity}            \tab 2 x 23 \tab xy, 23 crops \tab corrgram\cr
 \link{hartman.tomato.uniformity}          \tab 12 x 32 \tab xy \tab \cr
 \link{heath.cabbage.uniformity}           \tab 6 x 8   \tab xy \tab \cr
@@ -125,6 +125,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{strickland.peach.uniformity}        \tab 8 x 18 \tab xy \tab \cr
 \link{strickland.tomato.uniformity}       \tab 30 x 6 \tab xy \tab \cr
 \link{summerby.multi.uniformity}          \tab 35 x 5 \tab xy \tab 5 years \cr
+\link{tulaikow.wheat.uniformity}          \tab 24 x 10, 15 x 16 \tab xy \tab 5 years \cr
 \link{wassom.brome.uniformity}            \tab 36 x 36 \tab xy, 3 expts \tab \cr
 \link{wiebe.wheat.uniformity}             \tab 12 x 125 \tab xy \tab medianpolish, loess \cr
 \link{wiedemann.safflower.uniformity}     \tab 54 x 33 \tab xy \tab smith \cr

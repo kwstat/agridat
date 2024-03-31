@@ -4,6 +4,7 @@
 
 * haritonenko.sugarbeet.uniformity
 * roemer.sugarbeet.uniformity
+* tulaikow.wheat.uniformity
 
 ## Other notes
 
