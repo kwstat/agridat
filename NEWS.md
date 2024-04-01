@@ -3,6 +3,7 @@
 ## New datasets added
 
 * haritonenko.sugarbeet.uniformity
+* jegorow.oats.uniformity
 * roemer.sugarbeet.uniformity
 * tulaikow.wheat.uniformity
 
