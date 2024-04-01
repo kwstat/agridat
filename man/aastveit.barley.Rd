@@ -40,7 +40,6 @@ data("aastveit.barley.height")
     \item{\code{T4}}{avg temp (deg Celsius) in period 4}
     \item{\code{T5}}{avg temp (deg Celsius) in period 5}
     \item{\code{T6}}{avg temp (deg Celsius) in period 6}
-    \item{\code{value}}{value of the covariate}
   }
 
   The 'aastveit.barley.height' dataframe has 135 observations on the
