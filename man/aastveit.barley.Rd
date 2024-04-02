@@ -33,7 +33,7 @@ data("aastveit.barley.height")
     \item{\code{S4}}{daily solar radiation (ca/cm^2) in period 4}
     \item{\code{S5}}{daily solar radiation (ca/cm^2) in period 5}
     \item{\code{S6}}{daily solar radiation (ca/cm^2) in period 6}
-    \item{\code{ST}}{sowing date}
+    \item{\code{ST}}{sowing time, measured in days after April 1}
     \item{\code{T1}}{avg temp (deg Celsius) in period 1}
     \item{\code{T2}}{avg temp (deg Celsius) in period 2}
     \item{\code{T3}}{avg temp (deg Celsius) in period 3}
@@ -45,7 +45,7 @@ data("aastveit.barley.height")
   The 'aastveit.barley.height' dataframe has 135 observations on the
   following 3 variables.
   \describe{
-    \item{\code{year}}{year, 9 }
+    \item{\code{year}}{year, 9 years spanning from 1974 to 1982}
     \item{\code{gen}}{genotype, 15 levels}
     \item{\code{height}}{height (cm)}
   }
