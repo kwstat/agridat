@@ -5,7 +5,7 @@
   Uniformity trial of oranges
 }
 \description{
-  Uniformity trial  of oranges at Riverside, CA, 1921-1927.
+  Uniformity trial of oranges at Riverside, CA, 1921-1927.
 }
 \usage{data("parker.orange.uniformity")}
 \format{
@@ -49,8 +49,8 @@
   Parker et al. state that soil heterogeneity is considerable and
   first-year yields are not predictive of future yields.
 
-  Table 25 has mean top volume per tree for each plot in 1926.  Table 26
-  has mean area of trunk cross section.
+  Table 25 has mean top volume per tree for each plot in 1926.
+  Table 26 has mean area of trunk cross section.
 
 }
 \source{

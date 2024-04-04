@@ -24,12 +24,12 @@
   "Wheat was sown over an area of 180 ft. x 243 ft. with 324 rows on a
   field of average fertility. It had wheat during 1938-39 rabi and was
   fallow during 1939-40 kharif. The seed was sown behind desi plough in
-  rows 9 in. apart, the length of each row being 180 ft".
+  rows 9 inches apart, the length of each row being 180 feet".
 
-  "At the time of harvest, 18 rows on both sides and 10 ft. at the end of
+  "At the time of harvest, 18 rows on both sides and 10 feet at the end of
   the field were discarded to eliminate border effects and an area of
-  160 ft. x 216 ft. with 288 rows was harvested in small units, each
-  being 2 ft. 3 in. broad with three rows 20 ft. long. There were 96
+  160 feet x 216 feet with 288 rows was harvested in small units, each
+  being 2 feet 3 inches broad with three rows 20 feet long. There were 96
   units across the rows and eight units along the rows. The total number
   of unit plots thus obtained was 768. The yield of grain for each unit
   plot was weighed and recorded separately and is given in the appendix."

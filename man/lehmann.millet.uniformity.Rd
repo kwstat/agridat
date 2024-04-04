@@ -26,10 +26,11 @@
 
   The 6th report:
   Map (only partially scanned in the pdf).
-  "A part of the dry lands nearest the tank, which is not quite as uniform as the remainder, is already excluded from the experimental ground proper".
+  "A part of the dry lands nearest the tank, which is not quite as
+  uniform as the remainder, is already excluded from the experimental ground proper".
 
   The 7th report:
-  P. 12 has grain/straw yield for 1905.
+  P. 12 (pdf page 233) has grain/straw yield for 1905.
    
   The 9th report:
   P. 1-10 has comments.
@@ -52,7 +53,8 @@
   https://books.google.com/books?id=u_dHAAAAYAAJ
 }
 \references{
-  None
+  Theodor Roemer (1920).
+  Der Feldversuch. Page 69, table 13.
 }
 \examples{
 \dontrun{

@@ -30,6 +30,7 @@
   Holtsmark, G and Larsen, BR (1905).
   Om Muligheder for at indskraenke de Fejl, som ved Markforsog betinges af Jordens Uensartethed.
   Tidsskrift for Landbrugets Planteavl. 12, 330-351. (In Danish)
+  Data on page 347.
   https://books.google.com/books?id=MdM0AQAAMAAJ&pg=PA330
   https://dca.au.dk/publikationer/historiske/planteavl/
 
@@ -39,7 +40,7 @@
 }
 \references{
   Theodor Roemer (1920).
-  Der Feldversuch.
+  Der Feldversuch. Page 67, table 11.
 }
 
 \examples{

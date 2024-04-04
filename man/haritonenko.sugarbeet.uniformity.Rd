@@ -18,15 +18,11 @@
 }
 \details{
 
-  Roemer (1920) says: Haritonenko (36), Versuch der landwirtschaftlichen
-  Versuchsstation Iwanowskoje, Gouvernement Nowgorod. Versuchsfläche 5
-  ha 68 a mit 416 Teilstücken zu 136,5 qm. Die Reihe 1 weist erheblich
-  geringeren Boden auf als die drei anderen Reihen.
-
-  Translated: Haritonenko (36), experiment at Ivanovskoye Agricultural
-  Experimental Station, Novgorod Governorate. Test area 5.68 ha with
-  416 sections (plots) of 136.5 square meters. Row 1 has significantly
-  less soil than the other three rows.
+  Roemer (1920) says: Haritonenko (36), experiment at Ivanovskoye Agricultural
+  Experimental Station, Novgorod Governorate.
+  The test area was 5.68 ha with 416 sections (plots) of 136.5 square
+  meters.
+  Row 1 has significantly less soil than the other three rows.
 
   Based on the heatmap, 'Row 1' is the left column.
 

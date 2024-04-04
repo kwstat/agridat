@@ -18,6 +18,10 @@
 }
 \details{
   Grown in Indiana in 1941.
+
+  The column ordinates in this R package dataset are not quite exactly
+  the same as in the field due to the presence of roads.
+  
   Plants were spaced 3 feet apart in rows 6 feet apart, 330 feet
   long. Each row was divided into 3 sections of 34 plants sparated by
   strips 12 feet long to provide roadways for vehicles.
@@ -50,7 +54,8 @@
 \source{
   J. D. Hartman and E. C. Stair (1942).
   Field Plot Technique With Tomatoes.
-  Proceedings Of The American Society For Horticultural Science, 41, 315-320.
+  Proceedings Of The American Society For Horticultural Science, 41,
+  315-320.
   https://archive.org/details/in.ernet.dli.2015.240678
 }
 \references{
@@ -63,7 +68,7 @@ library(agridat)
 data(hartman.tomato.uniformity)
 libs(desplot)
 desplot(hartman.tomato.uniformity, yield ~ col*row, 
-        flip=TRUE, aspect=192/330, # true aspect
+        flip=TRUE, tick=TRUE, aspect=192/330, # true aspect
         main="hartman.tomato.uniformity")
 
 }

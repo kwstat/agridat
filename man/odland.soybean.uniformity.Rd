@@ -15,13 +15,25 @@
   \describe{
     \item{\code{row}}{row}
     \item{\code{col}}{column}
-    \item{\code{yield}}{yield: hay in tons, beans in bushels}
+    \item{\code{yield}}{yield: hay in tons/acre, beans in bushels/acre}
   }
 }
 \details{
 
   Grown at West Virginia Experiment Station in 1925 & 1926.
 
+  Soy forage hay:
+
+  In 1925 the crop was harvested for forage, 42 rows, each 200 feet long.
+  Yields of 8-foot plats recorded to the nearest 0.1 tons.
+  
+  Field width: 42 plots * 30 in / 12in/ft = 105 ft
+  
+  Field length: 24 plots * 8 feet = 192 feet + border = total 200 feet.
+
+  Note, the hay data in Odland & Garber is measured in 0.1 tons, but has
+  been converted to tons here.
+  
   Soy beans:
   
   Soybeans were planted in rows 30 inches apart.
@@ -34,21 +46,11 @@
   Field length: 28 plots * 8 feet = 224 feet + border = total 232 feet.
   
   Odland and Garber provide no agronomic context for the yield variation.
-
-  Soy hay:
-
-  In 1925 the crop was harvested for forage, 42 rows, each 200 feet long.
-  Yields of 8-foot plats recorded.
-  
-  Field width: 42 plots * 30 in / 12in/ft = 105 ft
-  
-  Field length: 24 plots * 8 feet = 192 feet + border = total 200 feet.
-
   
 }
 
 \source{
-  Odland, TE and Garber, RJ. 1928.
+  Odland, T.E. and Garber, R.J. (1928).
   Size of Plat and Number of Replications in Field Experiments with
   Soybeans.
   Agronomy Journal, 20, 93--108.

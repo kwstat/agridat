@@ -15,7 +15,7 @@
     \item{\code{crop}}{crop}
     \item{\code{row}}{row ordinate}
     \item{\code{col}}{column ordinate}
-    \item{\code{yield}}{plot yield, grams}
+    \item{\code{yield}}{yield per plot in grams}
   }
 }
 \details{

@@ -29,6 +29,7 @@
   https://en.wikipedia.org/wiki/Alen_(unit_of_length) The Danish alen =
   62.77 cm.
 
+  
   Field A2:
 
   Based on the map, the field is approximately 60 alen x 70 alen (38 m x
@@ -44,6 +45,7 @@
   excess lay in row 3 and eventually it was decided to reduce plots 3c
   to 96 and 3f to 84.
 
+  
   Field E2:
   
   Field is approximately 120 alen x 200 alen (76m x 125m).  Plots are

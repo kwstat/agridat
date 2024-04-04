@@ -13,8 +13,8 @@ Uniformity trial of wheat in 1903 in Missouri.
   \describe{
     \item{\code{row}}{row}
     \item{\code{col}}{col}
-    \item{\code{grain}}{grain weight, grams}
-    \item{\code{straw}}{straw weight, grams}
+    \item{\code{grain}}{grain weight, grams per plot}
+    \item{\code{straw}}{straw weight, grams per plot}
   }
 }
 

@@ -29,11 +29,18 @@
   Add 1.5m for irrigation channel.
   Center-to-center distances 15m x 8.5m.
 
-  Chart 1: Sakha 1921, 8 x 20. Length 20 ridges * .75 m = 15m. Width = 7m.
+  Charts 3 & 5 show yield of "Selected Average Plants". These data are
+  not used here.
+  
+  Chart 1: Sakha 1921, 8 x 20. Bed yield in rotls. Length 20 ridges * .75 m = 15m. Width = 7m.
   
   Chart 2: Gemmeiza 1921, 8 x 20.
+
+  Chart 3: Total S.A.P. yield in grams. (not used here)
   
   Chart 4: Gemmeiza 1922, 8 x 20.
+
+  Chart 5: Total S.A.P. yield in grams. (not used here)
   
   Layout at Giza (page 10)
   

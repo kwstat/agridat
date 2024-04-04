@@ -19,8 +19,8 @@
 }
 \details{
   Three varieties of corn were planted.
-  Each experiment was 48 rows, each row 48 hills long, .65 acres.  (A
-  "hill" is a single hole with possibly multiple seeds).
+  Each experiment was 48 rows, each row 48 hills long, .65 acres.
+  A "hill" is a single hole with possibly multiple seeds.
   Spacing between the hills would be sqrt(43560 sq ft * .64) / 48 = 3.5 feet.
 
   In the experiment code, K=Krug, I=Iodent, M=McCulloch (varieties of

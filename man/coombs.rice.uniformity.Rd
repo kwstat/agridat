@@ -13,7 +13,7 @@
   \describe{
     \item{\code{row}}{row}
     \item{\code{col}}{column}
-    \item{\code{yield}}{yield in gantangs}
+    \item{\code{yield}}{yield in gantangs per plot}
   }
 }
 \details{

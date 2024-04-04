@@ -159,7 +159,7 @@
   libs(qtl)
   data(steptoe.morex.geno)
   datg <- steptoe.morex.geno
-  qtl::plot.map(datg, main="steptoe.morex.pheno")
+  qtl::plot.map(datg, main="steptoe.morex.geno")
   qtl::plotMissing(datg)
     
 

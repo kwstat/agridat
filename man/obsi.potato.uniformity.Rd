@@ -59,13 +59,14 @@ library(agridat)
 data(obsi.potato.uniformity)
 dat <- obsi.potato.uniformity
 
-# libs(dplyr)
-# dat <- group_by(dat, loc)
-# summarize(dat, yield=mean(yield))
-##   loc   yield
-##   <fct> <dbl>
-## 1 L1     2.54 # Obsi says 2.55
-## 2 L2     5.31 # Obsi says 5.36
+  # Mean plot yield according to Obsi p. 54
+  # libs(dplyr)
+  # dat <- group_by(dat, loc)
+  # summarize(dat, yield=mean(yield))
+  ##   loc   yield
+  ##   <fct> <dbl>
+  ## 1 L1     2.54 # Obsi says 2.55
+  ## 2 L2     5.31 # Obsi says 5.36
 
 libs(desplot)
 desplot(dat, yield ~ col*row, subset=loc=="L1",

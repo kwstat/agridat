@@ -32,10 +32,10 @@
 
   Field length: 23 plots * 23.3 feet = 536 feet
   
-  All yields are given in pound per plot.
+  All yields here are given in pound per plot.
   The original data in Harris (1920) for the 1911 sugarbeet yields were
   in tons/ac,  (Harris 1920, table 3 footnote), but these were converted
-  to pounds/plot for the purpose of this dataset.  given in tons per acre.
+  to pounds/plot for the purpose of this dataset.
   
   Harris (1928) shows a map of the location on page 16.
 
@@ -119,12 +119,14 @@
   Jour. Agr. Res, 20, 335-356.
   https://naldc.nal.usda.gov/catalog/IND43966236
   https://www.google.com/books/edition/Journal_of_the_American_Society_of_Agron/Zwz0AAAAMAAJ?hl=en&gbpv=1&pg=PA257
+  This has the data for 1911-1919.
   
   Harris, J Arthur and Scofield, CS. (1928).
   Further studies on the permanence of differences in the plots of an
   experimental field.
   Jour. Agr. Res, 36, 15--40.
   https://naldc.nal.usda.gov/catalog/IND43967538
+  This has the data for 1920-1925.
 }
 
 \examples{

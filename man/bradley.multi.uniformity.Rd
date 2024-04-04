@@ -72,7 +72,8 @@
   P. L. Bradley (1941).
   A study of the variation in productivity over a number of fixed plots in field 2.
   Dissertation: The University of the West Indies. Appendix 1a, 1b, 1c, 1d.
-  https://hdl.handle.net/2139/41264
+  https://uwispace.sta.uwi.edu/items/e874561d-52e5-4e39-8416-ff8c1756049c
+  https://hdl.handle.net/2139/41259
 
   The data are repeated in:
   C. E. Wilson.

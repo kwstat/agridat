@@ -11,7 +11,7 @@
 \format{
   A data frame with 144 observations on the following 5 variables.
   \describe{
-    \item{\code{yield}}{a numeric vector}
+    \item{\code{yield}}{yield value}
     \item{\code{rep}}{a character vector}
     \item{\code{parent1}}{a character vector}
     \item{\code{parent2}}{a character vector}

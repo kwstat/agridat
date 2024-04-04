@@ -30,6 +30,12 @@
   second-to-last row (page 822), the value 1.40 is assumed to be a
   typographical error and was changed to 14.0 for this data.
 
+  The source document does not give the unit of measure for the plot
+  yields. If the yield was bu/ac, the value of 12 bu/ac would be very
+  low. On the other hand, a value of 12 pounds per plot * 180 plots per
+  acre / 56 pounds per bushel = 39 bu/ac would be very reasonable yield
+  for corn in 1925, whereas 12 kg per plot would be unlikely too high.
+  Also, in 1925, pound would have been more likely than kilogram.
 }
 
 \source{

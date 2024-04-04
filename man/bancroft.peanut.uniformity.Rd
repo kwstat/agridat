@@ -13,7 +13,7 @@
   \describe{
     \item{\code{row}}{row}
     \item{\code{col}}{column}
-    \item{\code{yield}}{yield, pounds}
+    \item{\code{yield}}{yield, pounds per plot}
     \item{\code{block}}{block}
   }
 }

@@ -19,7 +19,7 @@
   \describe{
     \item{\code{row}}{row}
     \item{\code{col}}{column}
-    \item{\code{yield}}{yield per tree (pounds)}
+    \item{\code{yield}}{yield per tree in pounds}
   }
 }
 \details{
@@ -29,6 +29,7 @@
 
   The following details are from Batchelor (1918).
 
+  
   \bold{Jonathan Apples}
 
   "The apple records were obtained from a 10-year old
@@ -64,6 +65,7 @@
 
   Field length: 26 trees * 24 feet = 624 feet
   
+
   \bold{Navel 1 at Arlington}
 
   These records were of the 1915-16 yields of one thousand 24-year-old
@@ -82,6 +84,7 @@
   
   Field length: 50 trees * 22 feet = 1100 feet
 
+
   \bold{Navel 2 at Antelope}
 
   The navel-orange grove later referred to as the Antelope Heights
@@ -95,6 +98,7 @@
 
   Field length: 33 trees * 22 feet = 726 feet
   
+
   \bold{Valencia Orange}
 
   The Valencia orange grove is composed of 240 15-year-old trees,
@@ -104,6 +108,7 @@
   Field width: 12 rows * 22 feet = 264 feet
   
   Field length: 20 rows * 22 feet = 440 feet
+
 
   \bold{Walnut}
 

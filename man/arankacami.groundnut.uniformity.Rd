@@ -26,7 +26,7 @@
   Ira Arankacami, R. Rangaswamy. (1995).
   A Text Book of Agricultural Statistics.
   New Age International Publishers.
-  Table 19.1.
+  Table 19.1. Page 237.
   https://www.google.com/books/edition/A_Text_Book_of_Agricultural_Statistics/QDLWE4oakSgC
 }
 \references{

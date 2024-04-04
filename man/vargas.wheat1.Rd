@@ -22,21 +22,21 @@ data("vargas.wheat1.traits")
   \describe{
     \item{\code{year}}{year, 1990-1995}
     \item{\code{MTD}}{Mean daily max temperature December, deg C}
-    \item{\code{MTJ}}{January}
-    \item{\code{MTF}}{February}
-    \item{\code{MTM}}{March}
+    \item{\code{MTJ}}{Mean max in January}
+    \item{\code{MTF}}{Mean max in February}
+    \item{\code{MTM}}{Mean max in March}
     \item{\code{mTD}}{Mean daily minimum temperature December, deg C}
-    \item{\code{mTJ}}{January}
-    \item{\code{mTF}}{February}
-    \item{\code{mTM}}{March}
+    \item{\code{mTJ}}{Mean min in January}
+    \item{\code{mTF}}{Mean min in February}
+    \item{\code{mTM}}{Mean min in March}
     \item{\code{PRD}}{Monthly precipitation in December, mm}
-    \item{\code{PRJ}}{January}
-    \item{\code{PRF}}{February}
-    \item{\code{PRM}}{March}
-    \item{\code{SHD}}{{a numeric vector}}
-    \item{\code{SHJ}}{January}
-    \item{\code{SHF}}{February}
-    \item{\code{SHM}}{March}
+    \item{\code{PRJ}}{Precipitation in January}
+    \item{\code{PRF}}{Precipitation in February}
+    \item{\code{PRM}}{Precipitation in March}
+    \item{\code{SHD}}{{Sun hours in December}}
+    \item{\code{SHJ}}{Sun hours in January}
+    \item{\code{SHF}}{Sun hours in February}
+    \item{\code{SHM}}{Sun hours in March}
   }
 
   The \code{vargas.wheat1.traits} dataframe has 126 observations on the following 19 variables.
@@ -75,7 +75,8 @@ data("vargas.wheat1.traits")
   Mateo Vargas and Jose Crossa and Ken Sayre and Matthew Renolds and
   Martha E Ramirez and Mike Talbot, 1998.
   Interpreting Genotype x Environment Interaction in Wheat by
-  Partial Least Squares Regression, \emph{Crop Science}, 38, 679--689.
+  Partial Least Squares Regression.
+  Crop Science, 38, 679-689.
   https://doi.org/10.2135/cropsci1998.0011183X003800030010x
 
   Data provided by Jose Crossa.

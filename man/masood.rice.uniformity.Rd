@@ -27,6 +27,9 @@
   results in the American-Eurasian Journal, which seems to be the same
   paper and seems to refer to the same data.  The results may simply
   differ by a scaling factor.
+
+  The yield values in Masood are labeled as "gm^2" (gram per sq meter),
+  but this would be extremely low. Probably should be "kgm^2".
   
   Field length: 24 plots x 1m = 24m.
 

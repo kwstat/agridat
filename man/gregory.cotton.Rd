@@ -11,7 +11,7 @@
 \format{
   A data frame with 144 observations on the following 6 variables.
   \describe{
-    \item{\code{yield}}{a numeric vector}
+    \item{\code{yield}}{yield}
     \item{\code{year}}{year}
     \item{\code{nitrogen}}{nitrogen level}
     \item{\code{date}}{sowing date}

@@ -19,9 +19,13 @@
   }
 }
 \details{
-  Experiments conducted at the Soils Experimental field at the University of Alberta, Canada.
-  Oats were grown in 1925, The average yield was 88 bushels.
-  Wheat was grown in 1926, with an average yield of 32.2 bu/acre.
+  Experiments conducted at the Soils Experimental field at the
+  University of Alberta, Canada.
+  
+  Oats were grown in 1925, with average yield 88 bu/ac.
+  
+  Wheat was grown in 1926, with average yield 32.2 bu/ac.
+
   The data reported are relative yields within each year.
 
   The plot size in rows 1 and 2 (Series A and B in the original paper) is 1/10th acre.

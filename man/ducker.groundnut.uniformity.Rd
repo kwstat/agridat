@@ -2,7 +2,7 @@
 \alias{ducker.groundnut.uniformity}
 \docType{data}
 \title{
-Uniformity trial of groundnut.
+Uniformity trial of groundnut
 }
 \description{
 Uniformity trial of groundnut.

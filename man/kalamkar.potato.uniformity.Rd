@@ -13,7 +13,7 @@
   \describe{
     \item{\code{row}}{row}
     \item{\code{col}}{column}
-    \item{\code{yield}}{yield of potatoes per plot}
+    \item{\code{yield}}{yield, pounds per plot}
   }
 }
 \details{
@@ -27,8 +27,14 @@
 
   Field length: 96 rows * 3 feet = 288 feet
 
-  Units of yield are not given, but might appear in the paper by Kirk
-  (no access).
+  Units of yield are not given.  In this experiment, there were 22
+  plants per plot. Today potato plants yield 3-5 pounds.
+  If we assume this experiment had a yield of about 2 pound per plant,
+  that would be 22 pounds per plot, which is similar to the data
+  values. Also, Kirk 1929 mentions "200 bushels per acre", and 22 pounds
+  per plot x (43560/66) divided by (60 pounds per bushel) = 242, so this
+  seems reasonable.  Also the `kirk.potato` data by the same author was
+  recorded in pounds per plot.
 }
 \source{
   Kalamkar, R.J. (1932).
@@ -41,7 +47,9 @@
   Field plot technique with potatoes with special reference to the Latin
   square.
   Scientific Agriculture, 9, 719.
+  https://cdnsciencepub.com/doi/10.4141/sa-1929-0067
   https://doi.org/10.4141/sa-1929-0067
+  https://www.google.com/books/edition/Revue_Agronomique_Canadien/-gMkAQAAMAAJ
 }
 \examples{
 \dontrun{

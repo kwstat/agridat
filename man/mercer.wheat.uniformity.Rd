@@ -49,6 +49,9 @@
     Engineering Science}, 462, 2119--2143.
   https://doi.org/10.1098/rspa.2006.1667
 
+  Theodor Roemer (1920).
+  Der Feldversuch. Page 65, table 6.
+
   D. G. Rossiter (2014). Tutorial: Using the R Environment for Statistical Computing
   An example with the Mercer & Hall wheat yield dataset.
 

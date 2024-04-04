@@ -13,7 +13,7 @@
   \describe{
     \item{\code{row}}{row ordinate}
     \item{\code{col}}{column ordinate}
-    \item{\code{yield}}{yield per plot, kg}
+    \item{\code{yield}}{yield, grams per plot}
   }
 }
 \details{
@@ -46,7 +46,7 @@
   Nair, B. Gopakumaran  (1984).
   Optimum plot size for field experiments on turmeric.
   Thesis, Kerala Agriculture University.
-  https://krishikosh.egranth.ac.in/handle/1/5810147397
+  http://hdl.handle.net/123456789/7829
 }
 \references{
   None.

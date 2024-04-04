@@ -28,6 +28,9 @@
   presentation of the data here in order to be more consistent with the
   figures in the paper.
 
+  The electronic supplemental data is in bu/ac, but the paper uses
+  kg/ha.
+  
   Used with permission of Marcus Jones. 
 }
 \source{
