@@ -4,6 +4,7 @@
 
 * haritonenko.sugarbeet.uniformity
 * jegorow.oats.uniformity
+* jurowski.wheat.uniformity
 * roemer.sugarbeet.uniformity
 * tulaikow.wheat.uniformity
 
@@ -83,7 +84,17 @@
 
 ## New datasets added
 
-arankacami.groundnut.uniformity, barrero.maize, buntaran.wheat, gomez.heterogeneity, grover.diallel, grover.rcb.subsample, hadasch.lettuce, hadasch.lettuce.markers, jones.corn.uniformity, petersen.sorghum.cowpea, woodman.pig
+* arankacami.groundnut.uniformity
+* barrero.maize
+* buntaran.wheat
+* gomez.heterogeneity
+* grover.diallel
+* grover.rcb.subsample
+* hadasch.lettuce
+* hadasch.lettuce.markers
+* jones.corn.uniformity
+* petersen.sorghum.cowpea
+* woodman.pig
 
 ## Other notes
 
@@ -98,8 +109,10 @@ arankacami.groundnut.uniformity, barrero.maize, buntaran.wheat, gomez.heterogene
 
 ## New datasets added
 
-damesa.maize, jayaraman.bamboo, nair.turmeric.uniformity, shafi.tomato.uniformity
-
+* damesa.maize
+* jayaraman.bamboo
+* nair.turmeric.uniformity
+* shafi.tomato.uniformity
 
 
 # agridat 1.17 (2020-08-03)
@@ -185,15 +198,22 @@ acorsi.grayleafspot, becker.chicken, chinloy.fractionalfactorial, cramer.cucumbe
 
 ## New datasets added
 
-cochran.beets, cochran.lattice, jansen.apple, jansen.carrot
-
+* cochran.beets
+* cochran.lattice
+* jansen.apple
+* jansen.carrot
 
 
 # agridat 1.11 (2015-03-03)
 
 ## New datasets added
 
-besag.beans, besag.triticale, burgeuno.alpha, burgueno.rowcol, burgueno.unreplicated, steptoe.morex.pheno
+* besag.beans
+* besag.triticale
+* burgeuno.alpha
+* burgueno.rowcol
+* burgueno.unreplicated
+* steptoe.morex.pheno
 
 ## Other
 
@@ -231,7 +251,8 @@ beall.webworms, besag.endive, brandt.switchback, butron.maize, carlson.germinati
 
 ## New datasets added
 
-brandle.rape, salmon.bunt
+* brandle.rape
+* salmon.bunt
 
 
 
@@ -239,7 +260,14 @@ brandle.rape, salmon.bunt
 
 ## New datasets added
 
-baker.barley.uniformity, bliss.borers, bond.diallel, harris.wateruse, hayman.tobacco, holshouser.splitstrip, pearce.apple, waynick.soil
+* baker.barley.uniformity
+* bliss.borers
+* bond.diallel
+* harris.wateruse
+* hayman.tobacco
+* holshouser.splitstrip
+* pearce.apple
+* waynick.soil
 
 
 

@@ -65,6 +65,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{iyer.wheat.uniformity}              \tab 25 x 80 \tab xy \tab \cr
 \link{jones.corn.uniformity}              \tab 12 x 12 \tab xy \tab \cr
 \link{jegorow.oats.uniformity}            \tab 8 x 30 \tab xy \tab \cr
+\link{jurowski.wheat.uniformity}          \tab 4 x 40 \tab xy \tab \cr
 \link{kadam.millet.uniformity}            \tab 8 x 20  \tab xy, 2 expts \tab \cr
 \link{kalamkar.potato.uniformity}         \tab 6 x 96  \tab xy \tab \cr
 \link{kalamkar.wheat.uniformity}          \tab 16 x 80 \tab xy, 2 traits \tab \cr
