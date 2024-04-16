@@ -6,6 +6,7 @@
 * jegorow.oats.uniformity
 * jurowski.wheat.uniformity
 * roemer.sugarbeet.uniformity
+* siao.cotton.uniformity
 * tulaikow.wheat.uniformity
 
 ## Other notes

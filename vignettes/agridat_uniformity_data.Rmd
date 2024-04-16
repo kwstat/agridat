@@ -10,37 +10,48 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-Searched Google
+
+todo
+  Garber, R. J. and T. C. McIlvaine and M. M. Hoover (1931).
+  A Method of Laying Out Experimental Plats.
+  Journal of the American Society of Agronomy, 23, 286-298,
+  https://archive.org/details/in.ernet.dli.2015.229753/page/n299
+
+Rothamsted scans
+
+Beckett, W.H.; Fletcher, S.R.B. (1929).
+A uniformity trial with maize.
+Gold Coast Dept Agric Bull 16: 222-226.
+https://babel.hathitrust.org/cgi/pt?id=coo.31924066682166&seq=470
+
+
+
+
+# Searches
+
+#### archive.org  - 2023.04.07
+"uniformity trial"
+"optimum size of plots"
+"Optimum Size and Shape of Plots"
+
+#### Google
 "uniformity trial data"
 "optimum size of plots"
 "Optimum Size and Shape of Plots"
 "plot shape and size"
 "field plot technique"
 
-archive.org search 2023.04.07
+#### HathiTrust
+"blank experiment"
+"plot technic"
+"plot technique"
 "uniformity trial"
-"optimum size of plots"
-"Optimum Size and Shape of Plots"
 
 
 
-
-Data published on figshare?
-
-
-
-
-
-Todo: Hansen paper
-
-Rothamsted data
 
 
 # ToDo
-
-Becket not yet in public domain. Perhaps in 2024.
-https://www.google.com/books/edition/Bulletin_Year_book_1928/58ZBAQAAIAAJ?hl=en&gbpv=1&bsq=%22beckett%22+%22uniformity+trial+with+maize%22&dq=%22beckett%22+%22uniformity+trial+with+maize%22&printsec=frontcover
-https://eurekamag.com/research/029/823/029823954.php
 
 ## U. Nebr
 
@@ -101,13 +112,6 @@ Optimum plot size and shape for trials of maize.
 Annals of Agricultural Science, Moshtohor 36(3): 1361-1372.
 https://eurekamag.com/research/012/808/012808132.php
 Not found. 
-
-
-Beckett, W.H.; Fletcher, S.R.B. (1929).
-A uniformity trial with maize.
-Gold Coast Dept Agric Bull 16: 222-226.
-https://eurekamag.com/research/029/823/029823954.php
-Not found.
 
 
 Bhatnagar, S.; Srivastava, O.P. and Lather, B. P. S.
@@ -281,6 +285,12 @@ Rept, Potato Assoc. Am. 42-44.
 Not found.
 
 
+Krantz, F. A. (1923)
+Further studies in field plot technique in potato yield tests.
+Proc. Tenth Ann. Meeting of the Pot. Assn of Amer, 174-179.
+No found.
+
+
 Kristiensen, K. and Ersboll, A.K. 1995. 
 The use of Geostatistical methods in variety trials, where some varieties are unreplicated. 
 Biuletyn Oceny Odmain (Cultivar Testing Bulletin), 26-27, 113-122.
@@ -325,7 +335,7 @@ Love, Harry H. (1943).
 Experimental Methods in Agricultural Research.
 The Agr. Exp. Sta. of the University of Puerto Rico.
 Rio Piedras Puerto Rico.
-Has data (according to Mendez).  TODO
+Has data (according to Mendez). Might be same data as love.cotton.uniformity TODO
 Physical copy at Univ Nebr.
 https://unl.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma991020452609706387&context=L&vid=01UON_LINC:UNL&lang=en&search_scope=MyInst_and_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,Experimental%20Methods%20in%20Agricultural%20Research&mode=basic
 
@@ -338,7 +348,7 @@ Not found; pdf only contains abstract.
 
 
 Mangat, N. S. (1984).
-"Optimum size and shape of plot and block in cotton field experiments."
+Optimum size and shape of plot and block in cotton field experiments.
 Journal of Research-Punjab Agricultural University (India).
 
 
@@ -360,12 +370,6 @@ Optimum size and shape of plots in experiments with mandarin orange.
 Indian Journal of agricultural science, 41, 857-861.
 https://eurekamag.com/research/000/153/000153659.php
 Not available.
-
-
-Mortensen, M. L. (1911).
-The Technique of Field Experiments.
-In Jahresber Ver. Angew. Bot., 9, 177-187.
-Not found. Probably in German.
 
 
 Murray, D.B. 1950.
@@ -462,6 +466,7 @@ Srinivasan, C.S.; George, M.V.; Subbalakshmi, V.; Amarnath, C.H. (1994).
 Optimum plot size for field trials with Coffea arabica cv. Cauvery (Catimor)
 Journal of Coffee Research 24(2): 87-96.
 
+
 Srinivasan, V.R.; Biswas, S.R.; Ramachander, P.R.; Reddy, B.M.C.; Prakash, G.S.; Dass, H.C. (1982).
 Estimation of optimum size and shape of plots and blocks for pineapple yield trials.
 Singapore Journal of Primary Industries 10(2): 107-115.
@@ -481,7 +486,7 @@ Gujarat Agricultural University Research Journal, 19, 92-97.
 Not found.
 
 
-Vaidyanathan, M. (1934).
+Vaidyanathan, M. (1934).
 The method of covariance applicable to the utilization of the previous crop records for judging the improved precision of experiments.
 Ind. J. Agric. Sci., 4, 327-42. 
 Not found. Has data for 24 plots. TODO
@@ -580,7 +585,6 @@ Bailey, M. A., and Trought, T. (1926).
 An account of experiments carried out to determine the experimental error of field trials with cotton in Egypt.
 Egypt Ministry of Agriculture, Technical and Science Service Bulletin 63, Min. Agriculture Egypt Technical and Science Bulletin 63.
 https://www.google.com/books/edition/Bulletin/xBQlAQAAIAAJ?pg=PA46-IA205
-Has data.
 agridat::bailey.cotton.uniformity
 
 
@@ -808,7 +812,7 @@ Damor, Bhavika. (2019).
 Comparison of uniformity trial data with experimental data for plot technique.
 Department of Agricultural Statistics, B. A. College of Agriculture, Anand Agricultural University.
 https://krishikosh.egranth.ac.in/handle/1/5810169594
-Reviewed. Not used. Has data for 3 uniformity trials, but the data look strange. In Appendix I, there are 500 numbers but only about 9 of them have "4" in the hundredths place. We would expect to see 50. It could be that the data were collected in non-kg weights and then converted to kg. In Appendix III, there are some plots along the left edge that are measured to 3 decimals (0.993, 0.631), but most of the field is measured to 2 decimals. Weird.
+Reviewed. Not used. Has data for 3 uniformity trials, but the data just looks very strange. In Appendix I, there are 500 numbers but only about 9 of them have "4" in the hundredths place. We would expect to see 50. It could be that the data were collected in non-kg weights and then converted to kg. In Appendix III, there are some plots along the left edge that are measured to 3 decimals (0.993, 0.631), but most of the field is measured to 2 decimals. Weird.
 
 
 da Silva, Enedino Correa. (1974).
@@ -1083,11 +1087,26 @@ https://dca.au.dk/publikationer/historiske/planteavl/
 Reviewed. agridat::hansen.multi.uniformity
 
 
+Haque, H. N. Azad, N. K. Jha, R. N. and Sing, S. N. (1988).
+Optimum Size and Shape of Plots for Wheat.
+Annals of Agricultural Research, 9, 165-170.
+https://eurekamag.com/research/001/901/001901913.php
+Reviewed. No data.
+The criterion for selection of optimum plot size should be CV and not the point of maximum curvature.
+
+
 Hariharan, V., Jacob Thomas, M. George, K.C. (1986).
 Optimum size and shape of plots for field experiments in brinjal.
 Agricultural Research Journal of Kerala, 24(2), 189-194.
 https://krishikosh.egranth.ac.in/handle/1/5810100010
 Reviewed. No data.
+
+
+Haritonenko, Pavlo.
+Neue Präzisionsmethoden auf den Versuchsfeldern.
+Arbeiten der landw. Versuchsstation Iwanowskoje 1904-06, S. 159.
+In Russian with German summary.
+Original not found. Data appears in Roemer (1920).
 
 
 Harris, J Arthur and Scofield, CS. (1920).
@@ -1109,14 +1128,6 @@ Practical universality of field heterogeneity as a factor influencing plot yield
 Journal of Agricultural Research, 19, 279--314. Page 296-297.
 https://books.google.com/books?id=jyEXAAAAYAAJ&pg=PA279
 agridat::harris.multi.uniformity
-
-
-Haque, H. N. Azad, N. K. Jha, R. N. and Sing, S. N. (1988).
-Optimum Size and Shape of Plots for Wheat.
-Annals of Agricultural Research, 9, 165-170.
-https://eurekamag.com/research/001/901/001901913.php
-Reviewed. No data.
-The criterion for selection of optimum plot size should be CV and not the point of maximum curvature.
 
 
 Hartman, J. D.; and E. C. Stair (1942).
@@ -1265,11 +1276,28 @@ https://doi.org/10.1111/j.1744-7348.1975.tb01641.x
 Reviewed. No data.
 
 
+Jain, M. B.
+Studies in the techniques of field trials in range lands I. Size, Shape and arrangement of plots.
+
+
+Jain, M. B. and R. K. Bohra.
+Size and Shape of Plots and Blocks for field Experiments with Lasiurus Sindicus.
+Reviewed. No data.
+
+
 James, W. C., & Shih, C. S. (1973).
 Size and Shape of Plots for Estimating Yield Losses from Cereal Foliage Diseases.
 Experimental Agriculture, 9(01), 63.
 https://doi.org/10.1017/s0014479700023693 
 Reviewed. No data.
+
+
+Jegorow, M. (1909).
+Zur Methodik des feldversuches.
+Russian Journ Expt Agric, 10, 502-520.
+https://www.google.com/books/edition/Journal_de_l_agriculture_experimentale/510jAQAAIAAJ?hl=en
+Has a uniformity trial of oats. 
+agridat::jegorow.oats.uniformity
 
 
 Joachim, A.W.R. 1935.
@@ -1342,9 +1370,9 @@ J. Ind. Soc. Ag. Stat. 46, 231-234.
 Reviewed. No data.
 
 
-Kaushik, L. S., R. P. Singh, and T. P. Yadava. 
-"A uniformity trial with mustard [India]." 
-Indian Journal of Agricultural Sciences (1977).
+Kaushik, L. S., R. P. Singh, and T. P. Yadava. (1977).
+A uniformity trial with mustard [India].
+Indian Journal of Agricultural Sciences.
 Reviewed. No data.
 
 
@@ -1570,6 +1598,12 @@ Uniformity trials on colocasia.
 https://krishikosh.egranth.ac.in/handle/1/5810113181
 Reviewed. No data.
 
+Lizy, M. J.; K. C. George and Jacob Thomas (1988).
+Optimum Size and Shape of Plots Under Colocasia.
+Agric. Res. J. Kerala, 25, 241-248.
+http://14.139.185.57:8080/jspui/bitstream/123456789/4103/1/25_2_241-248_0002-1628.pdf
+Reviewed. No data.
+
 
 Lizy, M.J.; George, K.C.; Thomas, M.J. (1988).
 Optimum size and shape of plots under colocasia (Colocasia esculenta L.)
@@ -1609,6 +1643,13 @@ Application of Statistical Methods to Agricultural Research.
 The Commercial Press, Shanghai. Page 411.
 https://archive.org/details/in.ernet.dli.2015.233346/page/n421
 agridat::love.cotton.uniformity
+
+
+Love, H.H. and W.T. Craig (1938).
+Investigations in plot technic with small grains.
+Cornell University, Memoir 214.
+https://catalog.hathitrust.org/Record/011481484
+Reviewed. No data. Described 3 trials with 600 plots.
 
 
 Lorentz, Leandro Homrich; Alexandra Augusti Boligon; Lindolfo Storck; Alessandro Dal'Col Lúcio. (2010).
@@ -1700,12 +1741,18 @@ https://acsess.onlinelibrary.wiley.com/doi/abs/10.2134/agronj1962.00021962005400
 Reviewed. No data.
 
 
+Mitscherlich, Alfred and Franz Dühring. (1921).
+Über die Größe der Teilstücke bei Feldversuchen.
+Die Landwirtschaftlichen Versuchsstationen. Bd. XCVIII. 1921 p. 365-383.
+https://archive.org/details/dielandwirtschaf9819reun/page/364/mode/2up
+Reviewed. No data given. Used the same datasets as Roemer (1920).
+
+
 Miyaska, Susan C.; Charles E. McCulloch, Graham E. Fogg, James R. Hollyer.
 Optimum Plot Size for Field Trials of Taro (Colocasia esculenta).
 HortScience 48, 435-443.
 https://doi.org/10.21273/HORTSCI.48.4.435 
 Reviewed. No data. Optimum plot size was 18-21 plants (4.9 - 5.7 m^2).
-
 
 
 
@@ -1752,6 +1799,13 @@ https://babel.hathitrust.org/cgi/pt?id=uiug.30112019919072&view=1up&seq=33&skin=
 agridat::moore.uniformity
 
 
+Mortensen, M. L. (1911).
+Die Technik der Feldversuche (The Technique of Field Experiments).
+Jahresbericht der Vereinigung für Angewandte Botanik, 9, 177-187.
+https://www.biodiversitylibrary.org/item/36059#page/573/mode/1up
+No data.
+
+
 Muniya, Sejal ben. (2017).
 Plot size study through mathematical approach.
 Thesis, Agricultural University Anand.
@@ -1780,11 +1834,16 @@ https://krishikosh.egranth.ac.in/handle/1/5810115906
 Reviewed. No data.
 
 
+Nair, Remesh B.; P. v. Prabhakaran (1983).
+Optimum size and shape of plots in field experiments with cashew.
+Agric Res J Kerrala, 21, 27-34.
+Reviewed. No data.
+
+
 Nair, B. Gopakumaran Nair, (1984).
 Optimum plot size for field experiments on turmeric (Curcuma longa L)
 Thesis, Department of Statistics, College of Veterinary & Animal Sciences, Mannuthy.
 https://krishikosh.egranth.ac.in/handle/1/5810147397
-Appendix has data.
 agridat::nair.turmeric.uniformity
 
 
@@ -1806,6 +1865,12 @@ Narayanbhai, P.J. (2005).
 Plot size study from uniformity trial data of French bean.
 https://krishikosh.egranth.ac.in/handle/1/5810115923
 Reviewed. No data.
+
+
+Neyman, J., & Iwaszkiewicz, K. (1935).
+Statistical problems in agricultural experimentation.
+Supplement to the Journal of the Royal Statistical Society, 2(2), 107-180.
+Reviewed. Used datasets from other papers.
 
 
 Nokoe, Sagary & Rodomiro Ortiz (1998).
@@ -1882,6 +1947,12 @@ Estudios sobre tamano y forma de parcela para ensayos en cafe.
 Instituto Interamericano de Ciencias Agricolas de la O.E.A. Centro Tropical de Investigacion y Ensenanza para Graduados. Costa Rica.
 https://www.google.com/books/edition/Estudio_Sobre_Tamano_Y_Forma_de_Parcela/7ScOAQAAIAAJ
 agridat::paez.coffee.uniformity
+
+
+Pal, Satyabrata; Ayanendranath Basu; Goutam Mandal; Asim Kumar Chakraborty; Arunava Ghosh (2016).
+A State of the Art Review on Methods of Determination of Robust Optimum Plot Size.
+International Journal of Science and Technology, 6.
+Reviewed. No data.
 
 
 Pal, Satyabrata; Satyananda Basak; Subhabaha Pal; Sanpei Kageyama (2007).
@@ -2015,7 +2086,7 @@ Reviewed. No data. Heatmaps of 5 terraces.
 
 
 Prabhakaran, P.V. (1974).
-Optimum plot size for field experiments with tapioca
+Optimum plot size for field experiments with tapioca.
 Agricultural Research Journal of Kerala, 12(1), 19-23.
 https://krishikosh.egranth.ac.in/handle/1/5810114240
 Reviewed. No data.
@@ -2098,6 +2169,14 @@ Univ California Tech. Bul. No 86.
 agridat::robinson.peanut.uniformity
 
 
+Roemer, T. (1920).
+Der Feldversuch.
+Arbeiten der Deutschen Landwirtschafts-Gesellschaft, 302.
+https://www.google.com/books/edition/Arbeiten_der_Deutschen_Landwirtschafts_G/7zBSAQAAMAAJ
+agridat::roemer.sugarbeet.uniformity
+
+
+
 Rossettii, A.G.; Pimentel Gomes, F. (1983).
 Determinação do Tamanho Otimo de Parcelas em Ensaios Agricolas (Determination of the Optimum Plot Size in Agricultural Essays).
 Pesq.  agropec.  bras.,  Brasilia,  18(5), 477.
@@ -2147,6 +2226,13 @@ Sands, Daniel E. (1954).
 A Determination of Optimum Plot Size for Estimating Mean Number of Bolls.
 USDA. https://www.nass.usda.gov/Education_and_Outreach/Reports,_Presentations_and_Conferences/Yield_Reports/A%20Determination%20of%20Optimum%20Plot%20Size%20for%20Estimating%20Mean%20Number%20of%20Bolls.pdf
 Reviewed. No data.
+
+
+Sapěhin, A. A. (1927).
+Beiträge zur Methodik des Feldversuches.
+Die Landwirtschaflichen Versuchsstationen, 105, 243-259.
+https://www.google.com/books/edition/Die_Landwirthschaftlichen_Versuchs_Stati/cLZGAAAAYAAJ?hl=en&pg=PA243
+agridat::jurowski.wheat.uniformity
 
 
 Sari, Bruno Giacomini; Alessandro Dal'Col Lucio. (2018).
@@ -2264,11 +2350,21 @@ http://hdl.handle.net/10603/228329
 Reviewed. No data.
 
 
-Siao, F.U. 1935.
+Siao, Fu.
+A field plot technic study with cotton.
+Found in:
+Harry H. Love papers, 1907-1964.
+Box 3, folder 34, Cotton - Plot Technic Study 1930-1932.
+https://rmc.library.cornell.edu/EAD/htmldocs/RMA00890.html
+This is the same experiments as in Siao (1935).
+agridat::siao.cotton.uniformity
+
+
+Siao, Fu (1935).
 Uniformity trials with cotton.
 J. Amer. Soc. Agron., 27, 974-979.
 https://doi.org/10.2134/agronj1935.00021962002700120004x
-Reviewed. No data.
+Reviewed. No data. Data were found in the personal papers of Harry Love.
 
 
 Sills, G. R., & Nienhuis, J. (1993).
@@ -2324,6 +2420,14 @@ Experiments in field plot technic for the preliminary determination of comparati
 University Of Missouri.
 https://hdl.handle.net/2027/umn.319510008017444
 Reviewed. No data. Uniformity trial discussed on page 43.
+
+
+Stadler, L. J. (1926).
+Experimental Error in Field Plot Tests.
+Proceedings of the International Congress of Plant Sciences, Vol 1, 107-127.
+https://babel.hathitrust.org/cgi/pt?id=mdp.39015069524372&seq=197
+Reviewed. No original data. Used datasets similar to Roemer (1920).
+Page 110 summarizes blank experiments that had more than 100 plots.
 
 
 Stephens, Joseph C. (1928).
@@ -2433,7 +2537,7 @@ Data from 9 trials. Each trial was RCBD with 4 'varieties' and 4 reps. Not clear
 
 
 Taha, R.S. and M.M. Shafik (2000).
-Relative  precision  of  some  incomplete  block designs  for  soybean  uniformity  trials  and optimum sample size.
+Relative precision of some incomplete block designs for soybean uniformity trials and optimum sample size.
 J. Agric. Sci. Mansoura Univ, 25, 5601-5610.
 Reviewed. No data.
 
@@ -2497,6 +2601,14 @@ Torrie, J.H., Schmidt, D.R. and Tenpas, G.H. (1963).
 Estimates of Optimum Plot Size and Shape and Replicate Number for Forage Yield of Alfalfa-Bromegrass Mixtures.
 Agron. Journal, 55: 258-260.
 https://doi.org/10.2134/agronj1963.00021962005500030015x
+
+
+Tulaikow, N. (1913)
+Resultate einer mathematischen Bearbeitung von Ernteergebnissen.
+Russian Journal fur Exp Landw., 14, 88-113. 
+In Russian with German summary.
+Two uniformity trials with winter and summer wheat.
+agridat::tulaikow.wheat.uniformity
 
 
 Vagholkar, B. P. ;  Apte, V. N. ;  Iyer, S. S. (1940).
@@ -2606,6 +2718,12 @@ https://www.nass.usda.gov/Education_and_Outreach/Reports,_Presentations_and_Conf
 No data found.
 
 
+Wood, T. B. and F. J. M. Stratton. (1910).
+The interpretation of experimental results.
+J. Agric Sci 3, 417-440.
+Reviewed. No data. Several plots of the distribution of data.
+
+
 Wood, Ronald A. (1972).
 Optimum Plot size for winter wheat.
 Research & Development Branch, Standards and Research Division Statistical Reporting Service.
@@ -2663,8 +2781,193 @@ Agron J., 62, 61-64.
 https://doi.org/10.2134/agronj1970.00021962006200010020x
 Reviewed. No data.
 
+# ---------------------------------------------------------------------------
+
+Roemer
+Note: Neyman (1935) says, "I used all data on uniformity trials published by T. Roemer ("Der Feldversuch, Berlin, 1920), which were suitable for the purpose, having many rows and columns.
+
+Cochran says about Roemer: 
+
+Sugarbeet: 96 plots in 1916 and 1918 - table 1 & 3
+Sugarbeet: 416 plots - table 4
+Millet 105 plots (also in Lehman) - table 13
+Oats: 240 plots 8x30 - table 10
+Ragi: 34 plots <---- fixme
+Timothy: 240 plots (also in Holtsmark) - table 11
+Summer wheat: 16x15=240 plots. Tulaikow Russian Journ Exp Agric , 14. (1913) - table 9
+Winter wheat: 10x25=230 plots  Tulaikow Russian Journ Exp Agric , 14. (1913) - table 8
+
+Roemer (1920).
+Der Feldversuch.
+Arbeiten der Deutschen Landwirtschafts-Gesellschaft, 302.
+https://www.google.com/books/edition/Arbeiten_der_Deutschen_Landwirtschafts_G/7zBSAQAAMAAJ
+
+Page34. P 37 has mean.
+| Tab | Orig qm | Mu   | Wt | unit        | note                                                                    |
+| 1   | 6.8     | 21.7 | kg |             | agridat::roemer.sugarbeet.uniformity (1916)                             |
+| 2   | 6.8     |      | kg |             | 1917 2x48=96 plots                                                      |
+| 3   | 6.8     | 23.5 | kg |             | agridat::roemer.sugarbeet.uniformity (1918)                             |
+| 4   | 136.5   | 617  | pf | 1.33 x 22.5 | agridat::haritonenko.sugarbeet.uniformity                               |
+| 5   | 20.2    | 329  | lb | 1/10 acre   | Same as agridat::mercer.mangold.uniformity                              |
+| 6   | 8.1     | 395  | lb | 1/10 acre   | Same as agridat::mercer.wheat.uniformity                                |
+| 7   | 2.8     | 681  | g  |             | Same as agridat::montgomery.wheat.uniformity 1909, 14x16                |
+| 8   | 4.6     | 700  | g  | qm          | agridat::tulaikow.wheat.uniformity (winter)                             |
+| 9   | 4.6     | 532  | g  | qm          | agridat::tulaikow.wheat.uniformity (summer)                             |
+| 10  | 4.6     | 203  | kg | qm          | agridat::jegorow.oats.uniformity                                        |
+| 11  | 6.3     | 17.8 | kg | 25 qm       | Same as agridat::holtsmark.timothy.uniformity (orig 5m x 5m)            |
+| 12  | 404.7   | 286  | lb | 20.2 qm     | todo 17x2 4 years Lehmann rice                                          |
+| 13  | 404.7   | 167  | lb | 20.2 qm     | Same as agridat::lehmann.millet.uniformity (only 20 rows instead of 22) |
+    
+
+Roemer (1925)
+Der Feldversuch.
+Arbeiten der Deutschen Landwirtschafts-Gesellschaft, 302.
+https://www.google.com/books/edition/Arbeiten/6LJGAAAAYAAJ
+
+# ---------------------------------------------------------------------------
 
 
+Roemer (1920).
+
+Note, based on the note for Larsen (240 plot * 25 sq m = 6000 sq m / 60 a = 100 sq m per "a" it appears that "a" is "are = 100m^2")
+
+Page 27
+
+1-3. Eigene Versuche mit Zuckerrüben, ausgeführt auf dem Neßthaler Zuchtfeld des Kaiser-Wilhelm-Institutes, Bromberg, in den Jahren 1916, 1917 und 1918. 1916 und 1918 war die Versuchsfläche ein und dieselbe, 6,80 a groß und in den beiden Jahren mit Original Klein-Wanzlebener Zuckerrüben auf 30 X 40 cm bebaut. Vorfrucht für 1916 war Hafer, für 1918 Roggen; 1917 war eine andere Fläche, ebenfalls 6,80 a groß, für den Versuch benußt; gesät wurden zwei verschiedene Zuchten von Strube, Schlanstedt. Beide Flächen sind von sehr gleichmäßiger Bodenbeschaffenheit. Bei der Fläche 1916 und 1918 machte sich im ersten Jahre bei den Reihen 31-33 eine geringe Stelle bemerkbar, die 1918 weit weniger in Erscheinung trat. Die Bodenunterschiede sind in allen drei Jahren geringer als die durch die Versuchstechnik bedingten Fehler.
+
+Translated: Own (Roemer) experiments with sugar beets, carried out on the Neßthal breeding field of the Kaiser Wilhelm Institute, Bromberg, in the years 1916, 1917 and 1918. In 1916 and 1918 the test area was one and the same, 6.80 are large and with original in both years Klein-Wanzleben sugar beets cultivated on 30 x 40 cm. The previous crop for 1916 was oats, for 1918 it was rye; In 1917 another area, also 6.80 a large, was used for the experiment; Two different varieties from Strube, Schlanstedt were sown. Both areas have very uniform soil conditions. In the 1916 and 1918 area, a small spot was noticeable in rows 31-33 in the first year, which was much less noticeable in 1918. In all three years the soil differences are smaller than the errors caused by the experimental technology.
+
+## ---
+
+4. Haritonenko (36), Versuch der landwirtschaftlichen Versuchsstation Iwanowskoje, Gouvernement Nowgorod. Versuchsfläche 5 ha 68 a mit 416 Teilstücken zu 136,5 qm. Die Reihe I weist erheblich geringeren Boden auf als die drei anderen Reihen.
+
+Translated: Haritonenko (36), experiment at Ivanovskoye Agricultural Experimental Station, Novgorod Governorate. Test area 5 ha 68 a with 416 sections (plots) of 136.5 square meters. Row I has significantly less soil than the other three rows.
+
+(36) Haritonenko, Pavlo. Neue Präzisionsmethoden auf den Versuchsfeldern. Arbeiten der landw. Versuchsstation Iwanowskoje 1904-06, S. 159.
+Note: P. Haritonenko is sometimes translated as Pavlo/Pavel Kharitonenko.
+
+English: Pavel Kharitonenko
+Russian: Павел Иванович Харитоненко
+Russian name of Journal: Журнал опытной агрономии
+
+1904. Paper is not in this volume?
+Zhurnal opytnoĭ agronomii. Russisches journal fūr experimentelle landwirtschaft. Journal de l'agriculture experimentale v.5 (1904)
+https://babel.hathitrust.org/cgi/pt?id=uc1.b2907722&seq=770
+
+1905 vol 6. Paper is not in this volume?
+https://babel.hathitrust.org/cgi/pt?id=uc1.b2907723&seq=8
+
+List of all volumes here.  Missing 1906 issue 1-2
+https://catalog.hathitrust.org/Record/007918356
+
+## ----
+
+5. Mercer und Hall (71), Mangold, Versuchsfeld Rothamsted. Versuchsfläche 40,40 a mit 200 Teilstücken zu 20,2 qm (9,2×2,2 m). Das Feld ist weitgehend gleichmäßig, obwohl seine Qualität von Nord nach Süd abnimmt, wie aus den Mittelwerten zu ersehen ist.
+Trans: 5. Mercer and Hall (71), Mangold, Rothamsted experimental field. Test area 40.40 a with 200 sections of 20.2 square meters (9.2 × 2.2 m). The field is largely uniform, although its quality decreases from north to south, as can be seen from the averages.
+
+6. Mercer und Hall (71), Winterweizen, Versuchsfeld Rothamsted. Versuchsfläche 40,45 a mit 500 Teilstücken zu 8,09 qm. Die Fläche ist weniger aus geglichen als jene von Versuch 5.
+Trans: 6. Mercer and Hall (71), winter wheat, Rothamsted experimental field. Test area 40.45 a with 500 sections of 8.09 square meters. The area is less uniform than that of experiment 5.
+
+7. Montgomery (86), Winterweizen, Versuchsfeld der Versuchsstation Nebraska, U. S. A. Versuchsfläche 6 a 30 qm mit 224 Teilstücken zu 2,81 qm. Das Feld wird von unten nach oben hin besser, ist auch in der rechten Hälfte ertragreicher als in der linken, entspricht aber einem sehr ausgeglichenen Versuchsfelde der Praxis.
+Trans: 7. Montgomery (86), winter wheat, experimental field at the Nebraska Experimental Station, USA. Experimental area 6 of 30 square meters with 224 sections of 2.81 square meters. The field gets better from bottom to top, and is also more productive in the right half than in the left, but corresponds to a very uniform experimental field in practice.
+
+8. Tulaikow (131), Winterweizen, Versuchsfeld der landwirtschaftlichen Versuchsstation Besentschuk. Versuchsfläche 10 a 92 qm mit 240 Teilstücken zu 4,55 qm. Diese Fläche ist mäßig ausgeglichen.
+
+Translated: Tulaikow (131), Winter wheat, experimental field of the Besenchuk Agricultural Experimental Station. Test area 10 x 92 sqm with 240 plots of 4.55 sqm. This area is moderately uniform.
+
+Neyman cites: Tulaikow, Russian Journ Exp Agric 14 (1913). Number 2, p. 113
+
+9. Tulaikow (131), Sommerweizen, genau wie bei Winterweizen, jedoch erscheint das Bild gleichmäßiger als jenes von Versuch 8.
+
+Trans: 9. Tulaikow (131), spring wheat, same as winter wheat, but the picture appears more uniform than that of experiment 8.
+
+10. Jegerow (52), Hafer, Versuchsfeld der landwirtschaftlichen Versuchsstation Saumy (Gouvernement Charkow), Versuchsfläche 10 a 92 qm mit 240 Teilstücken zu 4,55 qm. Sehr gleichmäßiges Versuchsfeld.
+
+Translated: 10. Jegerow (52), oats, experimental field of the Saumy agricultural experimental station (Kharkov Governorate), experimental area 10 x 92 sqm with 240 sections of 4.55 sqm. Very even test field.
+
+11. Larsen (49), Timothyheu, Versuchsfläche 60 a mit 240 Teilstücken zu 25 qm. Die Versuchsfläche wird von Ost nach West langsam etwas besser, und von Süd nach Nord nimmt die Ertragsfähigkeit ziemlich stark ab (A-Streifen 1496 kg, B-Streifen 1449 kg, C-Streifen 1326 kg).
+
+Trans: Timothy hay, test area 60 are with 240 sections of 25 square meters. The test area slowly improves slightly from east to west, and from south to north the yield decreases quite sharply (A strip 1496 kg, B strip 1449 kg, C strip 1326 kg).
+
+12. Lehmann (61), Reis, Versuchsfeld Hebbal bei Benjalore, Indien. Versuchsfläche 68,68 a mit 34 Teilstücken zu 20,2 qm, durch vier Jahre (1905-1908) fortgeführt. Dieser Versuch ist seines geringen Umfanges wegen nicht für alle zu be handelnden Fragen brauchbar.
+Trans: 12. Lehmann (61), Reis, Hebbal experimental field near Benjalore, India. Experimental area 68.68 a with 34 sections of 20.2 square meters, continued for four years (1905-1908). Because of its small scope, this experiment cannot be used for all questions to be addressed.
+
+13. Lehmann (61), Hirse, Versuchsfeld Hebbal bei Benjalore. Versuchsfläche 21 a 21 qm mit 105 Teilstüden zu 20,2 qm, durch drei Jahre (1905-1907) fortgesezt, jedoch sind die Teilstücke durch Gebäude getrennt. Dieses Versuchsfeld ist aus kleinbäuerlichem Besit zusammengekauft, also in früheren Jahren verschieden be arbeitet und bestellt worden, es ist die ungleichmäßigste Fläche von allen 13 Versuchen.
+Trans: 13. Lehmann (61), millet, Hebbal test field near Benjalore. Experimental area 21 x 21 sqm with 105 sections of 20.2 sqm, continued for three years (1905-1907), but the sections are separated by buildings. This experimental field was purchased from small farmers property and was therefore worked and cultivated differently in previous years. It is the most uneven area of all 13 experiments.
+
+Die Originalerntezahlen finden sich in den Tabellen des Anhanges, die die Lage der Teilstücke erkennen lassen. Es ließ sich infolge verschiedener Anlage der Versuche nicht ermöglichen, daß alle Versuche in einheitlicher Anordnung verrechnet wurden. Die Ergebnisse sind so übereinstimmend, daß die gezogenen Schlußfolgerungen große Sicherheit besigen.
+Trans: The original harvest figures can be found in the tables in the appendix, which show the location of the cuts. Due to the different design of the experiments, it was not possible for all experiments to be calculated in a uniform manner. The results are so consistent that the conclusions drawn are very certain.
+
+Untersuchungen über Beeinflussung der Genauigkeit.
+Trans: Studies on the influence of accuracy.
+
+An Hand der bezeichneten 13 Versuche will ich nun im einzelnen nachweisen, welche Umstände und in welchem Maße diese auf die Genauigkeit der Versuchsergeb nisse einwirken. Es können jeweils nur die Endzahlen der mühsamen und sehr umfangreichen Berechnungen gegeben werden, die ich selbst ausgeführt habe.
+Trans: Using the 13 experiments mentioned, I now want to demonstrate in detail which circumstances and to what extent they influence the accuracy of the test results. Only the final numbers of the laborious and very extensive calculations that I carried out myself can be given.
+
+# ---------------------------------------------------------------------------
+
+Ehrenberg, P. 1920.
+Versuch eines Beweises für die Anwendbarkeit der Wahrscheinlichkeitsrechnung bei Feldversuchen.
+Die Landwirtschaflichen versuchs-stationen, 95,  157-294
+https://archive.org/details/dielandwirtschaf9519reun/page/156/
+https://www.google.com/books/edition/Die_Landwirtschaftlichen_Versuchs_Statio/h9FGAAAAYAAJ?hl=en&gbpv=1&dq=bolatitz+jegorow&pg=RA1-PA160&printsec=frontcover
+Extensive datasets given as 1 row of text per plot! But, field layout not given???
+
+1. Ehrenberg, Mitteilungen der Landwirtschaflichen Institute der Kgl. Universitat Breslau, 6, 21 (1910).
+2. Jegorow
+3. Tulaikow
+4. Lehmann ragi
+5. Lehmann
+6. Lehmann 1907
+7. Montgomery
+8. Larsen
+
+ Page 288-290 summarizes many studies and refers to this paper:
+ Landw. Versuchs-Stationen Bd. 87 (1915), S. 34. 
+ https://www.google.com/books/edition/Die_Landwirthschaftlichen_Versuchs_Stati/qFPbIBaHZKUC?hl=en&gbpv=1
+ 
+ # ---------------------------------------------------------------------------
 
 
-patterson hunter 1983
+Vageler, H. (1919)
+Beziehung zwischen Parzellengrösse und Fehler der Einzelbeobachtung bei Felderversuchen (Relation between size of plats and error in detached observations in field experiments).
+Journal für Landwirtschaft, 67, 97-108.
+https://www.google.com/books/edition/Journal_f%C3%BCr_Landwirtschaft/JHAZAQAAIAAJ?hl=en&gbpv=1&dq=Vageler+Beziehung+zwischen+parzellengr%C3%B6sse&pg=PA107&printsec=frontcover
+128 plots for roggen (rye) hafer (oats) kartoffeln (potatoes) wruken (rape/rutabega/kohlrabi?)
+What is the layout?
+
+same: 
+https://archive.org/details/journalfurlandwi6719unse/page/96/mode/2up?q=ehrenberg+%22versuch+eines+beweises%22
+
+# ---------------------------------------------------------------------------
+
+Gorski
+Mentioned in Neyman (1935).
+
+Gorski, M. and Stefaniow, M. (1917).
+Die Anwendbarkeit der Wahrscheinlichkeits-rechnung bei Feldversuchen.
+Die Landwirtschaflichen Versuchsstationen,  90, 225-240.
+https://babel.hathitrust.org/cgi/pt?id=coo.31924078248048&seq=241&q1=gorski
+Two experiments given, 200 and 300 plots, but what is the layout?
+
+Gorski & Stefaniow. (1917)
+Zastosowanie rachunku prawdopodobienstwa do doswiadczen polowych
+Roczniki Nauk Rolniczych.
+
+searched google books, hathi, archive
+
+Roczniki journal 
+https://catalog.hathitrust.org/Record/007913696
+
+11-12 1924
+17-18 1927
+
+1917 vol 11
+1923 vol 9
+1930 vol 24
+
+See also Cochran, # 52
+ 
+# ---------------------------------------------------------------------------
+
+Geisler 1958.  Downloaded. Uniformity trial (?) page 269.
