@@ -51,7 +51,7 @@
 \source{
   N. Tulaikow (1913)
   Resultate einer mathematischen Bearbeitung von Ernteergebnissen.
-  Russian Journal fur Exp Landw., 14, 88-113. https://www.google.com/books/edition/Journal_de_l_agriculture_experimentale/i2EjAQAAIAAJ?hl=en&gbpv=1&dq=tulaikow%201913%20Bearbeitung&pg=PA88&printsec=frontcover
+  Russian Journal fur Exp Landw., 14, 88-113. https://www.google.com/books/edition/Journal_de_l_agriculture_experimentale/i2EjAQAAIAAJ?hl=en&gbpv=1&dq=tulaikow%201913%20Bearbeitung&pg=PA88
   
 }
 \references{

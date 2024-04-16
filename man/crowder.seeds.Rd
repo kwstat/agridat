@@ -64,7 +64,16 @@
   libs(lattice)
   dotplot(germ/n~gen|extract, dat, main="crowder.seeds")
 
- 
+
+  # ----- brms
+  # Note, in Emacs brms ends the R process for some reason.
+  ## m1.brms <- brms::brm( germ|trials(n)~ gen*extract,
+  ##   data = dat,
+  ##   family = binomial,
+  ##   chains=3, iter=3000, warmup=1000)
+  ## summary(m1)
+
+  
   # ----- GLM.
   # family=binomial() fixes dispersion at 1
   # family=quasibinomial() estimates dispersion, had larger std errors
@@ -82,11 +91,11 @@
                      family=binomial(), data=dat)
   summary(m1.glmm)
   
-    # ----- HGML package. Beta-binomial with beta-distributed random effects
-    # libs(hglm)
-    # m1.hglm <- hglm(fixed= germ/n ~ I(gen=="O75")*extract, weights=n, data=dat,
-    #                 random=~1|plate, family=binomial(), rand.family=Beta(),
-    #                 fix.disp=1)
+  # ----- HGML package. Beta-binomial with beta-distributed random effects
+   libs(hglm)
+   m1.hglm <- hglm(fixed= germ/n ~ I(gen=="O75")*extract, weights=n, data=dat,
+                   random=~1|plate, family=binomial(), rand.family=Beta(),
+                   fix.disp=1)
 
     # ----- INLA package. See: https://haakonbakka.bitbucket.io/btopic102.html
     # libs(INLA)
@@ -98,42 +107,55 @@
     #                family="binomial", Ntrials=n, 
     #                control.family=list(control.link=list(model="logit")))
     
-    # Compare coefficients
-    
-    ## round(summary(m1.glm)$coef,2)
-    ##                        Estimate Std. Error t value Pr(>|t|)
-    ## (Intercept)               -0.41       0.25   -1.64     0.12
-    ## genO75                    -0.15       0.30   -0.48     0.64
-    ## extractcucumber            0.54       0.34    1.58     0.13
-    ## genO75:extractcucumber     0.78       0.42    1.86     0.08
-    
-    ## round(summary(m1.glmm)$tTable,2)
-    ##                        Value Std.Error DF t-value p-value
-    ## (Intercept)            -0.44      0.25 17   -1.80    0.09
-    ## genO75                 -0.10      0.31 17   -0.34    0.74
-    ## extractcucumber         0.52      0.34 17    1.56    0.14
-    ## genO75:extractcucumber  0.80      0.42 17    1.88    0.08
-    
-    ## round(summary(m1.bb)$BCoef,2)
-    ##                        Estimate Std. Error z value Pr(> |z|)
-    ## (Intercept)               -0.44       0.22   -2.04      0.04
-    ## genO75                    -0.10       0.27   -0.36      0.72
-    ## extractcucumber            0.52       0.30    1.76      0.08
-    ## genO75:extractcucumber     0.80       0.38    2.11      0.03
-    
-    ## round(summary(m1.hglm)$FixCoefMat,2)
-    ##                                     Estimate Std. Error t-value Pr(>|t|)
-    ## (Intercept)                            -0.47       0.24   -1.92     0.08
-    ## I(gen == "O75")TRUE                    -0.08       0.31   -0.25     0.81
-    ## extractcucumber                         0.51       0.33    1.53     0.16
-    ## I(gen == "O75")TRUE:extractcucumber     0.83       0.43    1.92     0.08
-    
-    ## round(m1.inla$summary.fixed,2)
-    ##                         mean   sd 0.025quant 0.5quant 0.975quant  mode kld
-    ## (Intercept)            -0.46 0.24      -0.94    -0.45      -0.01 -0.45   0
-    ## genO75                 -0.09 0.30      -0.67    -0.10       0.52 -0.11   0
-    ## extractcucumber         0.53 0.32      -0.12     0.53       1.17  0.53   0
-    ## genO75:extractcucumber  0.82 0.42       0.01     0.82       1.66  0.81   0
+  # Compare coefficients
+
+  
+  # round(  summary(m1.brms)$fixed[,1:4] , 2)
+  #                        Estimate Est.Error l-95% CI u-95% CI
+  # Intercept                 -0.42      0.18    -0.77    -0.06
+  # genO75                    -0.14      0.22    -0.56     0.29
+  # extractcucumber            0.55      0.25     0.07     1.05
+  # genO75:extractcucumber     0.77      0.30     0.18     1.36
+ 
+
+  ## round(summary(m1.glm)$coef,2)
+  ##                        Estimate Std. Error t value Pr(>|t|)
+  ## (Intercept)               -0.41       0.25   -1.64     0.12
+  ## genO75                    -0.15       0.30   -0.48     0.64
+  ## extractcucumber            0.54       0.34    1.58     0.13
+  ## genO75:extractcucumber     0.78       0.42    1.86     0.08
+
+  
+  ## round(summary(m1.glmm)$tTable,2)
+  ##                        Value Std.Error DF t-value p-value
+  ## (Intercept)            -0.44      0.25 17   -1.80    0.09
+  ## genO75                 -0.10      0.31 17   -0.34    0.74
+  ## extractcucumber         0.52      0.34 17    1.56    0.14
+  ## genO75:extractcucumber  0.80      0.42 17    1.88    0.08
+
+  
+  ## round(summary(m1.bb)$BCoef,2)
+  ##                        Estimate Std. Error z value Pr(> |z|)
+  ## (Intercept)               -0.44       0.22   -2.04      0.04
+  ## genO75                    -0.10       0.27   -0.36      0.72
+  ## extractcucumber            0.52       0.30    1.76      0.08
+  ## genO75:extractcucumber     0.80       0.38    2.11      0.03
+
+  
+  ## round(summary(m1.hglm)$FixCoefMat,2)
+  ##                                     Estimate Std. Error t-value Pr(>|t|)
+  ## (Intercept)                            -0.47       0.24   -1.92     0.08
+  ## I(gen == "O75")TRUE                    -0.08       0.31   -0.25     0.81
+  ## extractcucumber                         0.51       0.33    1.53     0.16
+  ## I(gen == "O75")TRUE:extractcucumber     0.83       0.43    1.92     0.08
+
+  
+  ## round(m1.inla$summary.fixed,2)
+  ##                         mean   sd 0.025quant 0.5quant 0.975quant  mode kld
+  ## (Intercept)            -0.46 0.24      -0.94    -0.45      -0.01 -0.45   0
+  ## genO75                 -0.09 0.30      -0.67    -0.10       0.52 -0.11   0
+  ## extractcucumber         0.53 0.32      -0.12     0.53       1.17  0.53   0
+  ## genO75:extractcucumber  0.82 0.42       0.01     0.82       1.66  0.81   0
     
   
   # ----- Stan using pre-built models from rstanarm
