@@ -1,13 +1,17 @@
+Type: Package
 Package: agridat
 Title: Agricultural Datasets
 Version: 1.23
-Authors@R: person("Kevin","Wright", email="kw.stat@gmail.com",
-                  comment=c(ORCID = "0000-0002-0617-8673"),
-                  role=c("aut","cre","cph"))
-Type: Package
-Description: Datasets from books, papers, and websites related to agriculture.
-    Example graphics and analyses are included. Data come from small-plot trials,
-    multi-environment trials, uniformity trials, yield monitors, and more.
+Authors@R: 
+    person("Kevin", "Wright", , "kw.stat@gmail.com", role = c("aut", "cre", "cph"),
+           comment = c(ORCID = "0000-0002-0617-8673"))
+Description: Datasets from books, papers, and websites related to
+    agriculture.  Example graphics and analyses are included. Data come
+    from small-plot trials, multi-environment trials, uniformity trials,
+    yield monitors, and more.
+License: MIT + file LICENSE
+URL: https://kwstat.github.io/agridat/
+BugReports: https://github.com/kwstat/agridat/issues
 Suggests: 
     AER,
     agricolae,
@@ -19,8 +23,8 @@ Suggests:
     desplot,
     dplyr,
     effects,
-    equivalence,
     emmeans,
+    equivalence,
     FrF2,
     gam,
     gge,
@@ -46,20 +50,18 @@ Suggests:
     pbkrtest,
     pls,
     pscl,
-    reshape2,
-    rmarkdown,
     qicharts,
     qtl,
+    reshape2,
+    rmarkdown,
     sp,
     SpATS,
     survival,
-    vcd,
-    testthat
-License: MIT + file LICENSE
-LazyData: true
-URL: https://kwstat.github.io/agridat/
-BugReports: https://github.com/kwstat/agridat/issues
-VignetteBuilder: knitr
-Language: en-US
+    testthat,
+    vcd
+VignetteBuilder: 
+    knitr
 Encoding: UTF-8
+Language: en-US
+LazyData: true
 RoxygenNote: 7.3.1

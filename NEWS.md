@@ -13,6 +13,8 @@
 
 * baker.strawberry.uniformity: inserted 3 blank columns to more closely align with the experiment layout.
 
+* garber.multi.uniformity: The data has been reshaped to tall and additional years added.
+
 * shafi.tomato.uniformity: Had incorrect yield scale, now divided by 1000.
 
 * odland.soyhay.uniformity: Yields have been divided by 10 so that the yield values are now tons instead of 0.1 tons.

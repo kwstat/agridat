@@ -53,11 +53,13 @@ Table  6.2: agridat::wiebe.wheat.uniformity
 Table 58.1: agridat::caribbean.maize
 ```
 
-### D. Bayisa (2010). "Application of Spatial Mixed Model in Agricultural Field Experiment".
+### Gemechu, "Application of Spatial Mixed Model in Agricultural Field Experiment"
+Dibaba Bayisa Gemechu and Aweke, Girma (or maybe Girma Taye)
 
 Master thesis. Department of Statistics, Addis Ababa University.
 One dataset from wheat, RCB, with field coordinates.
 
+Note: Forkman cites this author as "D. Bayisa"
 
 ### M. N. Das & Narayan C. Giri (1987). "Design and Analysis of Experiments".
 
@@ -635,6 +637,11 @@ https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0244021
 
 Repeated measurements over six years.  Data in supplemental Word doc.
 
+### Perez-Valencia (2022).
+A two‑stage approach for the spatio‑temporal analysis of high‑throughput phenotyping data.
+https://doi.org/10.1038/s41598-022-06935-9
+
+Time-series data for individual plots in a field of many genotypes.
 
 ### Roger W. Hexem, Earl O.Heady, Metin Caglar (1974)
 A compendium of experimental data for corn, wheat, cotton and sugar beets grown at selected sites in the western United States and alternative production functions fitted to these data.
@@ -723,6 +730,11 @@ Winter wheat, 31 gen in 8 loc. This data is different from Yan's earlier papers.
 
 See also: https://cran.r-project.org/web/views/Agriculture.html
 
+
+### AgML
+https://github.com/Project-AgML/AgML
+
+Datasets for agricultural machine learning such as image classification, semantic segmentation, object detection, etc.
 
 ### agriCensData
 https://github.com/OnofriAndreaPG/agriCensData

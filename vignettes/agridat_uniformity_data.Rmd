@@ -10,12 +10,7 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-
 todo
-  Garber, R. J. and T. C. McIlvaine and M. M. Hoover (1931).
-  A Method of Laying Out Experimental Plats.
-  Journal of the American Society of Agronomy, 23, 286-298,
-  https://archive.org/details/in.ernet.dli.2015.229753/page/n299
 
 Rothamsted scans
 
@@ -978,10 +973,17 @@ https://doi.org/10.2134/agronj1953.00021962004500100012x
 Reviewed. No data.
 
 
-Garber, RJ and Mcllvaine, TC and Hoover, MM. 1926.
+Garber, RJ and McIlvaine, TC and Hoover, MM. (1926).
 A study of soil heterogeneity in experiment plots.
 Jour Agr Res, 33, 255-268. Tables 3, 5.
 https://naldc.nal.usda.gov/download/IND43967148/PDF
+agridat::garber.multi.uniformity
+
+
+Garber, R. J. and T. C. McIlvaine and M. M. Hoover (1931).
+A Method of Laying Out Experimental Plats.
+Journal of the American Society of Agronomy, 23, 286-298.
+https://archive.org/details/in.ernet.dli.2015.229753/page/n299
 agridat::garber.multi.uniformity
 
 
@@ -2804,6 +2806,7 @@ https://www.google.com/books/edition/Arbeiten_der_Deutschen_Landwirtschafts_G/7z
 
 Page34. P 37 has mean.
 | Tab | Orig qm | Mu   | Wt | unit        | note                                                                    |
+|-----|---------|------|----|-------------|-------------------------------------------------------------------------|
 | 1   | 6.8     | 21.7 | kg |             | agridat::roemer.sugarbeet.uniformity (1916)                             |
 | 2   | 6.8     |      | kg |             | 1917 2x48=96 plots                                                      |
 | 3   | 6.8     | 23.5 | kg |             | agridat::roemer.sugarbeet.uniformity (1918)                             |
