@@ -18,5 +18,3 @@ vignettes/*.pdf
 vignettes/*.synctex.gz
 vignettes/*.tex
 revdep
-pkgdown
-docs
