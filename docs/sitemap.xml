@@ -4,10 +4,19 @@
     <loc>/404.html</loc>
   </url>
   <url>
+    <loc>/LICENSE-text.html</loc>
+  </url>
+  <url>
+    <loc>/LICENSE.html</loc>
+  </url>
+  <url>
     <loc>/articles/agridat_data.html</loc>
   </url>
   <url>
     <loc>/articles/agridat_examples.html</loc>
+  </url>
+  <url>
+    <loc>/articles/agridat_graphical_gems.html</loc>
   </url>
   <url>
     <loc>/articles/agridat_intro.html</loc>
@@ -17,6 +26,9 @@
   </url>
   <url>
     <loc>/articles/agridat_uniformity.html</loc>
+  </url>
+  <url>
+    <loc>/articles/agridat_uniformity_data.html</loc>
   </url>
   <url>
     <loc>/articles/index.html</loc>
@@ -67,6 +79,12 @@
     <loc>/reference/australia.soybean.html</loc>
   </url>
   <url>
+    <loc>/reference/bachmaier.nitrogen.html</loc>
+  </url>
+  <url>
+    <loc>/reference/bailey.cotton.uniformity.html</loc>
+  </url>
+  <url>
     <loc>/reference/baker.barley.uniformity.html</loc>
   </url>
   <url>
@@ -95,6 +113,9 @@
   </url>
   <url>
     <loc>/reference/becker.chicken.html</loc>
+  </url>
+  <url>
+    <loc>/reference/belamkar.augmented.html</loc>
   </url>
   <url>
     <loc>/reference/besag.bayesian.html</loc>
@@ -181,6 +202,9 @@
     <loc>/reference/cate.potassium.html</loc>
   </url>
   <url>
+    <loc>/reference/chakravertti.factorial.html</loc>
+  </url>
+  <url>
     <loc>/reference/chinloy.fractionalfactorial.html</loc>
   </url>
   <url>
@@ -221,6 +245,9 @@
   </url>
   <url>
     <loc>/reference/connolly.potato.html</loc>
+  </url>
+  <url>
+    <loc>/reference/coombs.rice.uniformity.html</loc>
   </url>
   <url>
     <loc>/reference/cornelius.maize.html</loc>
@@ -292,6 +319,9 @@
     <loc>/reference/draper.safflower.uniformity.html</loc>
   </url>
   <url>
+    <loc>/reference/ducker.groundnut.uniformity.html</loc>
+  </url>
+  <url>
     <loc>/reference/durban.competition.html</loc>
   </url>
   <url>
@@ -316,6 +346,9 @@
     <loc>/reference/engelstad.nitro.html</loc>
   </url>
   <url>
+    <loc>/reference/evans.sugarcane.uniformity.html</loc>
+  </url>
+  <url>
     <loc>/reference/fan.stability.html</loc>
   </url>
   <url>
@@ -329,6 +362,9 @@
   </url>
   <url>
     <loc>/reference/fisher.latin.html</loc>
+  </url>
+  <url>
+    <loc>/reference/forster.wheat.uniformity.html</loc>
   </url>
   <url>
     <loc>/reference/foulley.calving.html</loc>
@@ -448,6 +484,12 @@
     <loc>/reference/hanover.whitepine.html</loc>
   </url>
   <url>
+    <loc>/reference/hansen.multi.uniformity.html</loc>
+  </url>
+  <url>
+    <loc>/reference/haritonenko.sugarbeet.uniformity.html</loc>
+  </url>
+  <url>
     <loc>/reference/harris.multi.uniformity.html</loc>
   </url>
   <url>
@@ -473,6 +515,9 @@
   </url>
   <url>
     <loc>/reference/heady.fertilizer.html</loc>
+  </url>
+  <url>
+    <loc>/reference/heath.cabbage.uniformity.html</loc>
   </url>
   <url>
     <loc>/reference/heath.raddish.uniformity.html</loc>
@@ -508,6 +553,9 @@
     <loc>/reference/hunter.corn.html</loc>
   </url>
   <url>
+    <loc>/reference/hutchinson.cotton.uniformity.html</loc>
+  </url>
+  <url>
     <loc>/reference/igue.sugarcane.uniformity.html</loc>
   </url>
   <url>
@@ -538,6 +586,9 @@
     <loc>/reference/jayaraman.bamboo.html</loc>
   </url>
   <url>
+    <loc>/reference/jegorow.oats.uniformity.html</loc>
+  </url>
+  <url>
     <loc>/reference/jenkyn.mildew.html</loc>
   </url>
   <url>
@@ -551,6 +602,9 @@
   </url>
   <url>
     <loc>/reference/jones.corn.uniformity.html</loc>
+  </url>
+  <url>
+    <loc>/reference/jurowski.wheat.uniformity.html</loc>
   </url>
   <url>
     <loc>/reference/kadam.millet.uniformity.html</loc>
@@ -595,10 +649,19 @@
     <loc>/reference/kerr.sugarcane.uniformity.html</loc>
   </url>
   <url>
+    <loc>/reference/khan.brassica.uniformity.html</loc>
+  </url>
+  <url>
     <loc>/reference/khin.rice.uniformity.html</loc>
   </url>
   <url>
     <loc>/reference/kiesselbach.oats.uniformity.html</loc>
+  </url>
+  <url>
+    <loc>/reference/kirk.potato.html</loc>
+  </url>
+  <url>
+    <loc>/reference/kling.augmented.html</loc>
   </url>
   <url>
     <loc>/reference/kreusler.maize.html</loc>
@@ -692,6 +755,9 @@
   </url>
   <url>
     <loc>/reference/mcconway.turnip.html</loc>
+  </url>
+  <url>
+    <loc>/reference/mckinstry.cotton.uniformity.html</loc>
   </url>
   <url>
     <loc>/reference/mcleod.barley.html</loc>
@@ -793,6 +859,9 @@
     <loc>/reference/patterson.switchback.html</loc>
   </url>
   <url>
+    <loc>/reference/payne.wheat.html</loc>
+  </url>
+  <url>
     <loc>/reference/pearce.apple.html</loc>
   </url>
   <url>
@@ -823,10 +892,16 @@
     <loc>/reference/reid.grasses.html</loc>
   </url>
   <url>
+    <loc>/reference/riddle.wheat.html</loc>
+  </url>
+  <url>
     <loc>/reference/ridout.appleshoots.html</loc>
   </url>
   <url>
     <loc>/reference/robinson.peanut.uniformity.html</loc>
+  </url>
+  <url>
+    <loc>/reference/roemer.sugarbeet.uniformity.html</loc>
   </url>
   <url>
     <loc>/reference/rothamsted.brussels.html</loc>
@@ -839,6 +914,9 @@
   </url>
   <url>
     <loc>/reference/salmon.bunt.html</loc>
+  </url>
+  <url>
+    <loc>/reference/saunders.maize.uniformity.html</loc>
   </url>
   <url>
     <loc>/reference/sawyer.multi.uniformity.html</loc>
@@ -856,7 +934,13 @@
     <loc>/reference/shafii.rapeseed.html</loc>
   </url>
   <url>
+    <loc>/reference/sharma.met.html</loc>
+  </url>
+  <url>
     <loc>/reference/shaw.oats.html</loc>
+  </url>
+  <url>
+    <loc>/reference/siao.cotton.uniformity.html</loc>
   </url>
   <url>
     <loc>/reference/silva.cotton.html</loc>
@@ -869,6 +953,9 @@
   </url>
   <url>
     <loc>/reference/smith.corn.uniformity.html</loc>
+  </url>
+  <url>
+    <loc>/reference/smith.wheat.uniformity.html</loc>
   </url>
   <url>
     <loc>/reference/snedecor.asparagus.html</loc>
@@ -913,10 +1000,16 @@
     <loc>/reference/student.barley.html</loc>
   </url>
   <url>
+    <loc>/reference/summerby.multi.uniformity.html</loc>
+  </url>
+  <url>
     <loc>/reference/tai.potato.html</loc>
   </url>
   <url>
     <loc>/reference/talbot.potato.html</loc>
+  </url>
+  <url>
+    <loc>/reference/tesfaye.millet.html</loc>
   </url>
   <url>
     <loc>/reference/theobald.barley.html</loc>
@@ -926,6 +1019,9 @@
   </url>
   <url>
     <loc>/reference/thompson.cornsoy.html</loc>
+  </url>
+  <url>
+    <loc>/reference/tulaikow.wheat.uniformity.html</loc>
   </url>
   <url>
     <loc>/reference/turner.herbicide.html</loc>
@@ -956,6 +1052,9 @@
   </url>
   <url>
     <loc>/reference/verbyla.lupin.html</loc>
+  </url>
+  <url>
+    <loc>/reference/vishnaadevi.rice.uniformity.html</loc>
   </url>
   <url>
     <loc>/reference/vold.longterm.html</loc>
