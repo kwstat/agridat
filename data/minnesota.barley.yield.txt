@@ -1,648 +1,2084 @@
-yield	gen	year	site
-47.5	Manchuria	1927	StPaul
-45.4	Glabron	1927	StPaul
-45	Svansota	1927	StPaul
-43.4	Velvet	1927	StPaul
-60.2	Trebi	1927	StPaul
-45.2	ManxSA	1927	StPaul
-50.3	SAxMan	1927	StPaul
-49	Peatland	1927	StPaul
-45.9	Colsess	1927	StPaul
-49.4	Heinrichs	1927	StPaul
-51.8	Manchuria	1927	Duluth
-56	Glabron	1927	Duluth
-41.9	Svansota	1927	Duluth
-60	Velvet	1927	Duluth
-65.1	Trebi	1927	Duluth
-53.2	ManxSA	1927	Duluth
-62.9	SAxMan	1927	Duluth
-56.4	Peatland	1927	Duluth
-62.5	Colsess	1927	Duluth
-41.3	Manchuria	1927	Waseca
-39.4	Glabron	1927	Waseca
-36.3	Svansota	1927	Waseca
-39.8	Velvet	1927	Waseca
-53.8	Trebi	1927	Waseca
-42.9	ManxSA	1927	Waseca
-42.7	SAxMan	1927	Waseca
-45.4	Peatland	1927	Waseca
-35.6	Colsess	1927	Waseca
-30.4	Glabron	1927	GrandRapids
-32.1	Svansota	1927	GrandRapids
-20.1	Velvet	1927	GrandRapids
-17.2	Trebi	1927	GrandRapids
-32.7	ManxSA	1927	GrandRapids
-14.9	Peatland	1927	GrandRapids
-26.9	Colsess	1927	GrandRapids
-43.6	Manchuria	1927	Morris
-50	Glabron	1927	Morris
-49.1	Svansota	1927	Morris
-45.6	Velvet	1927	Morris
-54.6	Trebi	1927	Morris
-52.3	ManxSA	1927	Morris
-31.3	SAxMan	1927	Morris
-45.4	Peatland	1927	Morris
-41.9	Colsess	1927	Morris
-26	Manchuria	1927	Crookston
-27.6	Glabron	1927	Crookston
-32.8	Velvet	1927	Crookston
-36.8	Trebi	1927	Crookston
-25.9	ManxSA	1927	Crookston
-31.9	SAxMan	1927	Crookston
-39.8	Peatland	1927	Crookston
-34.2	Svansota	1927	Crookston
-28.1	Colsess	1927	Crookston
-32.9	Manchuria	1928	StPaul
-30.1	Glabron	1928	StPaul
-38.1	Svansota	1928	StPaul
-28.4	Velvet	1928	StPaul
-34.1	Trebi	1928	StPaul
-31.8	ManxSA	1928	StPaul
-37.5	SAxMan	1928	StPaul
-34.8	Peatland	1928	StPaul
-31.5	Colsess	1928	StPaul
-39.3	Heinrichs	1928	StPaul
-36.3	Manchuria	1928	Duluth
-37	Glabron	1928	Duluth
-22.5	Svansota	1928	Duluth
-38	Velvet	1928	Duluth
-41.3	Trebi	1928	Duluth
-35.1	ManxSA	1928	Duluth
-39.6	SAxMan	1928	Duluth
-35.5	Peatland	1928	Duluth
-34.4	Colsess	1928	Duluth
-57.4	Manchuria	1928	Waseca
-56.7	Glabron	1928	Waseca
-55.3	Svansota	1928	Waseca
-54.9	Velvet	1928	Waseca
-67.5	Trebi	1928	Waseca
-58.8	ManxSA	1928	Waseca
-65.5	SAxMan	1928	Waseca
-53	Peatland	1928	Waseca
-55.2	Colsess	1928	Waseca
-58.9	Heinrichs	1928	Waseca
-48.1	Dryland	1928	Waseca
-28.6	Glabron	1928	GrandRapids
-39.7	Svansota	1928	GrandRapids
-34.8	Velvet	1928	GrandRapids
-39.2	Trebi	1928	GrandRapids
-33.8	ManxSA	1928	GrandRapids
-44.4	Peatland	1928	GrandRapids
-28.2	Colsess	1928	GrandRapids
-33.5	Manchuria	1928	GrandRapids
-40.3	SAxMan	1928	GrandRapids
-35.1	Manchuria	1928	Morris
-32.4	Glabron	1928	Morris
-42.3	Svansota	1928	Morris
-36.8	Velvet	1928	Morris
-27.4	Trebi	1928	Morris
-41.8	ManxSA	1928	Morris
-38.3	SAxMan	1928	Morris
-26.8	Peatland	1928	Morris
-29.6	Colsess	1928	Morris
-29.1	Dryland	1928	Morris
-48.9	Manchuria	1929	StPaul
-51.8	Glabron	1929	StPaul
-51.2	Svansota	1929	StPaul
-49.5	Velvet	1929	StPaul
-60.7	Trebi	1929	StPaul
-54	ManxSA	1929	StPaul
-58.1	SAxMan	1929	StPaul
-49.4	Peatland	1929	StPaul
-44.6	Colsess	1929	StPaul
-53.9	Heinrichs	1929	StPaul
-54.6	No474	1929	StPaul
-33.2	Manchuria	1929	Duluth
-25.8	Glabron	1929	Duluth
-21.1	Svansota	1929	Duluth
-29.7	Velvet	1929	Duluth
-30.5	Trebi	1929	Duluth
-34	ManxSA	1929	Duluth
-23.9	SAxMan	1929	Duluth
-28.8	Peatland	1929	Duluth
-28.5	Colsess	1929	Duluth
-24.3	No474	1929	Duluth
-24.7	No475	1929	Duluth
-49.5	Manchuria	1929	Waseca
-52.4	Glabron	1929	Waseca
-47.1	Svansota	1929	Waseca
-48.9	Velvet	1929	Waseca
-63.9	Trebi	1929	Waseca
-50.3	ManxSA	1929	Waseca
-53.7	SAxMan	1929	Waseca
-50.5	Peatland	1929	Waseca
-46.2	Colsess	1929	Waseca
-39.9	Heinrichs	1929	Waseca
-38.1	Dryland	1929	Waseca
-41.4	No474	1929	Waseca
-45	No475	1929	Waseca
-28.3	Glabron	1929	GrandRapids
-34	Svansota	1929	GrandRapids
-23.7	Velvet	1929	GrandRapids
-29.8	Trebi	1929	GrandRapids
-31.3	ManxSA	1929	GrandRapids
-27.1	Peatland	1929	GrandRapids
-32.5	Colsess	1929	GrandRapids
-26.4	Manchuria	1929	GrandRapids
-30.6	SAxMan	1929	GrandRapids
-29.4	No474	1929	GrandRapids
-30.9	No475	1929	GrandRapids
-27.3	Manchuria	1929	Morris
-34.5	Glabron	1929	Morris
-31.4	Svansota	1929	Morris
-26.6	Velvet	1929	Morris
-28.3	Trebi	1929	Morris
-29.9	ManxSA	1929	Morris
-29.3	SAxMan	1929	Morris
-26.5	Peatland	1929	Morris
-26.3	Colsess	1929	Morris
-32.4	No474	1929	Morris
-30.8	No475	1929	Morris
-32.1	Manchuria	1929	Crookston
-33.5	Glabron	1929	Crookston
-29.1	Velvet	1929	Crookston
-33.1	Trebi	1929	Crookston
-40.1	ManxSA	1929	Crookston
-48.5	SAxMan	1929	Crookston
-33.7	Peatland	1929	Crookston
-39.5	Svansota	1929	Crookston
-31.5	Colsess	1929	Crookston
-35.3	No474	1929	Crookston
-39.5	No475	1929	Crookston
-34.1	Manchuria	1930	StPaul
-42	Glabron	1930	StPaul
-32.3	Svansota	1930	StPaul
-36.6	Velvet	1930	StPaul
-41.5	Trebi	1930	StPaul
-41.7	ManxSA	1930	StPaul
-41	SAxMan	1930	StPaul
-33.1	Peatland	1930	StPaul
-30	Colsess	1930	StPaul
-33.4	Heinrichs	1930	StPaul
-30.4	No474	1930	StPaul
-37	Minsturdi	1930	StPaul
-37.5	CompCross	1930	StPaul
-34.8	MechMixture	1930	StPaul
-26.4	Manchuria	1930	Duluth
-31.7	Glabron	1930	Duluth
-32.8	Svansota	1930	Duluth
-27.9	Velvet	1930	Duluth
-30.9	Trebi	1930	Duluth
-37.8	ManxSA	1930	Duluth
-32.9	SAxMan	1930	Duluth
-27.5	Peatland	1930	Duluth
-33.2	Colsess	1930	Duluth
-34.4	No474	1930	Duluth
-39.3	No475	1930	Duluth
-40.4	Manchuria	1930	Waseca
-38.8	Glabron	1930	Waseca
-40.5	Svansota	1930	Waseca
-37.8	Velvet	1930	Waseca
-45.1	Trebi	1930	Waseca
-39.1	ManxSA	1930	Waseca
-46	SAxMan	1930	Waseca
-42.7	Peatland	1930	Waseca
-38.3	Colsess	1930	Waseca
-41.3	Heinrichs	1930	Waseca
-44.4	No474	1930	Waseca
-41.9	No475	1930	Waseca
-31.3	Glabron	1930	GrandRapids
-32.4	Svansota	1930	GrandRapids
-37.8	Velvet	1930	GrandRapids
-42.5	Trebi	1930	GrandRapids
-33.4	ManxSA	1930	GrandRapids
-38.9	Peatland	1930	GrandRapids
-28.4	Colsess	1930	GrandRapids
-31.8	Manchuria	1930	GrandRapids
-38.9	SAxMan	1930	GrandRapids
-37.4	No474	1930	GrandRapids
-40.6	No475	1930	GrandRapids
-19.3	Manchuria	1930	Morris
-23.9	Glabron	1930	Morris
-26.4	Svansota	1930	Morris
-28.1	Velvet	1930	Morris
-28.4	Trebi	1930	Morris
-21.9	ManxSA	1930	Morris
-34.1	SAxMan	1930	Morris
-26	Peatland	1930	Morris
-22	Colsess	1930	Morris
-27.5	No474	1930	Morris
-35.9	No475	1930	Morris
-34	Manchuria	1930	Crookston
-35.7	Glabron	1930	Crookston
-36.7	Velvet	1930	Crookston
-32.5	Trebi	1930	Crookston
-35.9	ManxSA	1930	Crookston
-35.2	SAxMan	1930	Crookston
-29	Peatland	1930	Crookston
-38.6	Svansota	1930	Crookston
-27.9	Colsess	1930	Crookston
-32.1	No474	1930	Crookston
-36.7	No475	1930	Crookston
-27	Manchuria	1931	StPaul
-43.1	Glabron	1931	StPaul
-35.1	Svansota	1931	StPaul
-39.9	Velvet	1931	StPaul
-36.6	Trebi	1931	StPaul
-43.3	ManxSA	1931	StPaul
-36.6	SAxMan	1931	StPaul
-32.8	Peatland	1931	StPaul
-33.5	Colsess	1931	StPaul
-28.9	Heinrichs	1931	StPaul
-30	No474	1931	StPaul
-28.5	Minsturdi	1931	StPaul
-32.1	CompCross	1931	StPaul
-35.2	MechMixture	1931	StPaul
-39.3	WisNo38	1931	StPaul
-26.8	Jeans	1931	StPaul
-29	Manchuria	1931	Duluth
-29.7	Glabron	1931	Duluth
-25.7	Svansota	1931	Duluth
-26.3	Velvet	1931	Duluth
-33.9	Trebi	1931	Duluth
-33.6	ManxSA	1931	Duluth
-28.1	SAxMan	1931	Duluth
-32	Peatland	1931	Duluth
-21	Colsess	1931	Duluth
-33.1	No475	1931	Duluth
-31.6	WisNo38	1931	Duluth
-48.9	Manchuria	1931	Waseca
-55.2	Glabron	1931	Waseca
-47.3	Svansota	1931	Waseca
-50.2	Velvet	1931	Waseca
-63.8	Trebi	1931	Waseca
-58.1	ManxSA	1931	Waseca
-65.8	SAxMan	1931	Waseca
-48.6	Peatland	1931	Waseca
-47.2	Colsess	1931	Waseca
-41.4	Heinrichs	1931	Waseca
-46.5	No474	1931	Waseca
-46.8	No475	1931	Waseca
-48.2	Minsturdi	1931	Waseca
-58.8	WisNo38	1931	Waseca
-29.1	Glabron	1931	GrandRapids
-29.7	Svansota	1931	GrandRapids
-23	Velvet	1931	GrandRapids
-29.8	Trebi	1931	GrandRapids
-32.2	ManxSA	1931	GrandRapids
-34.7	Peatland	1931	GrandRapids
-28.8	Colsess	1931	GrandRapids
-33	Manchuria	1931	GrandRapids
-24.9	SAxMan	1931	GrandRapids
-21.3	No474	1931	GrandRapids
-19.7	No475	1931	GrandRapids
-23.2	Heinrichs	1931	GrandRapids
-34.5	WisNo38	1931	GrandRapids
-27.4	Manchuria	1931	Morris
-28.8	Glabron	1931	Morris
-25.8	Svansota	1931	Morris
-26.1	Velvet	1931	Morris
-43.8	Trebi	1931	Morris
-28.7	ManxSA	1931	Morris
-30.4	SAxMan	1931	Morris
-29.9	Peatland	1931	Morris
-26.2	Colsess	1931	Morris
-19.4	No474	1931	Morris
-22.6	No475	1931	Morris
-20.4	Heinrichs	1931	Morris
-29.5	WisNo38	1931	Morris
-39.9	Manchuria	1931	Crookston
-38.1	Glabron	1931	Crookston
-41.3	Velvet	1931	Crookston
-46.9	Trebi	1931	Crookston
-45.7	ManxSA	1931	Crookston
-48.6	SAxMan	1931	Crookston
-41.6	Peatland	1931	Crookston
-40.5	Svansota	1931	Crookston
-36.5	Colsess	1931	Crookston
-37.6	No474	1931	Crookston
-44.1	No475	1931	Crookston
-33.3	Heinrichs	1931	Crookston
-49.9	WisNo38	1931	Crookston
-26.9	Manchuria	1932	StPaul
-26.8	Velvet	1932	StPaul
-38	WisNo38	1932	StPaul
-29.1	Trebi	1932	StPaul
-25.8	Minsturdi	1932	StPaul
-28.1	Peatland	1932	StPaul
-27.4	Svansota	1932	StPaul
-25.9	Spartan	1932	StPaul
-25.6	SAxMan	1932	StPaul
-26.4	ManxSA	1932	StPaul
-30.9	No474	1932	StPaul
-33.5	Manchuria	1932	Waseca
-37.4	Velvet	1932	Waseca
-37.7	Glabron	1932	Waseca
-58.2	WisNo38	1932	Waseca
-49.2	Trebi	1932	Waseca
-41	Minsturdi	1932	Waseca
-36	Peatland	1932	Waseca
-36.7	No474	1932	Waseca
-33.2	Spartan	1932	Waseca
-44.7	SAxMan	1932	Waseca
-42.2	ManxSA	1932	Waseca
-38.5	Svansota	1932	Waseca
-34.4	Manchuria	1932	Morris
-38.8	Velvet	1932	Morris
-35.1	Glabron	1932	Morris
-47.2	WisNo38	1932	Morris
-46.6	Trebi	1932	Morris
-43.2	Peatland	1932	Morris
-47	SAxMan	1932	Morris
-43.5	ManxSA	1932	Morris
-43.8	No474	1932	Morris
-33	Manchuria	1932	Crookston
-32.1	Velvet	1932	Crookston
-26.2	Glabron	1932	Crookston
-35.9	WisNo38	1932	Crookston
-41.8	Trebi	1932	Crookston
-25.2	Peatland	1932	Crookston
-30.5	SAxMan	1932	Crookston
-34.3	ManxSA	1932	Crookston
-32	No474	1932	Crookston
-20.6	Svansota	1932	Crookston
-22.1	Manchuria	1932	GrandRapids
-32.2	Velvet	1932	GrandRapids
-14.4	Glabron	1932	GrandRapids
-20.7	WisNo38	1932	GrandRapids
-20.7	Trebi	1932	GrandRapids
-26.8	Peatland	1932	GrandRapids
-19.9	SAxMan	1932	GrandRapids
-19.5	ManxSA	1932	GrandRapids
-18.6	No474	1932	GrandRapids
-16.6	Svansota	1932	GrandRapids
-22.6	Manchuria	1932	Duluth
-22.5	Velvet	1932	Duluth
-25.9	Glabron	1932	Duluth
-29.3	WisNo38	1932	Duluth
-30.6	Trebi	1932	Duluth
-31.4	Peatland	1932	Duluth
-22.2	Svansota	1932	Duluth
-22.5	SAxMan	1932	Duluth
-22.7	ManxSA	1932	Duluth
-27.1	Manchuria	1933	StPaul
-38.2	Velvet	1933	StPaul
-38.8	WisNo38	1933	StPaul
-45.9	Trebi	1933	StPaul
-40.4	Minsturdi	1933	StPaul
-31	Peatland	1933	StPaul
-36.2	Svansota	1933	StPaul
-43.3	Spartan	1933	StPaul
-34.8	SAxMan	1933	StPaul
-40.8	ManxSA	1933	StPaul
-30.9	No474	1933	StPaul
-34.4	Glabron	1933	StPaul
-26	Oderbrucker	1933	StPaul
-32.9	Odessa	1933	StPaul
-41.1	SD1340	1933	StPaul
-44.8	Manchuria	1933	Waseca
-53.5	Velvet	1933	Waseca
-59.6	Glabron	1933	Waseca
-65.9	WisNo38	1933	Waseca
-62.1	Trebi	1933	Waseca
-54.7	Minsturdi	1933	Waseca
-59.1	Peatland	1933	Waseca
-46.9	No474	1933	Waseca
-56.8	Spartan	1933	Waseca
-58.4	SAxMan	1933	Waseca
-57.8	ManxSA	1933	Waseca
-46.4	Oderbrucker	1933	Waseca
-62	Odessa	1933	Waseca
-58	SD1340	1933	Waseca
-26.2	Manchuria	1933	Crookston
-35.6	Velvet	1933	Crookston
-28.4	Glabron	1933	Crookston
-44.5	WisNo38	1933	Crookston
-22.8	Trebi	1933	Crookston
-35.3	Peatland	1933	Crookston
-31.3	SAxMan	1933	Crookston
-27.6	ManxSA	1933	Crookston
-36.1	No474	1933	Crookston
-34.7	Oderbrucker	1933	Crookston
-33.3	Odessa	1933	Crookston
-8.8	SD1340	1933	Crookston
-10.1	Manchuria	1933	GrandRapids
-8	Velvet	1933	GrandRapids
-14.2	Glabron	1933	GrandRapids
-10.6	WisNo38	1933	GrandRapids
-15.5	Trebi	1933	GrandRapids
-14.4	Peatland	1933	GrandRapids
-10.9	SAxMan	1933	GrandRapids
-12.7	ManxSA	1933	GrandRapids
-9.8	No474	1933	GrandRapids
-10.1	Oderbrucker	1933	GrandRapids
-14	Odessa	1933	GrandRapids
-38.4	Manchuria	1933	Duluth
-30.4	Velvet	1933	Duluth
-36.3	Glabron	1933	Duluth
-60.1	WisNo38	1933	Duluth
-35.8	Trebi	1933	Duluth
-41.7	Peatland	1933	Duluth
-33.5	Svansota	1933	Duluth
-34.7	SAxMan	1933	Duluth
-21.6	ManxSA	1933	Duluth
-32.9	Oderbrucker	1933	Duluth
-44.1	Odessa	1933	Duluth
-34.1	No474	1933	Duluth
-12.7	Manchuria	1934	StPaul
-15	Velvet	1934	StPaul
-5.5	WisNo38	1934	StPaul
-14.6	Trebi	1934	StPaul
-16.3	Minsturdi	1934	StPaul
-5.4	Peatland	1934	StPaul
-2.9	Svansota	1934	StPaul
-9.3	Spartan	1934	StPaul
-12	SAxMan	1934	StPaul
-19.6	ManxSA	1934	StPaul
-6.6	No474	1934	StPaul
-13.6	Glabron	1934	StPaul
-6.1	Oderbrucker	1934	StPaul
-13.8	Odessa	1934	StPaul
-10.1	SD1340	1934	StPaul
-18.9	Manchuria	1934	Waseca
-18.5	Velvet	1934	Waseca
-22.6	Glabron	1934	Waseca
-22.1	WisNo38	1934	Waseca
-25.3	Trebi	1934	Waseca
-19.9	Minsturdi	1934	Waseca
-11.3	Peatland	1934	Waseca
-27.7	No474	1934	Waseca
-8.8	Spartan	1934	Waseca
-23	SAxMan	1934	Waseca
-26.8	ManxSA	1934	Waseca
-13.8	Oderbrucker	1934	Waseca
-17.4	Odessa	1934	Waseca
-13.3	SD1340	1934	Waseca
-15.8	Manchuria	1934	Waseca
-49.4	Manchuria	1934	Crookston
-47.2	Velvet	1934	Crookston
-52.1	Glabron	1934	Crookston
-51.4	WisNo38	1934	Crookston
-65.1	Trebi	1934	Crookston
-44.7	Peatland	1934	Crookston
-60.5	SAxMan	1934	Crookston
-57.6	ManxSA	1934	Crookston
-51.5	No474	1934	Crookston
-48.2	Oderbrucker	1934	Crookston
-59.3	Odessa	1934	Crookston
-56.8	SD1340	1934	Crookston
-29.3	Manchuria	1934	GrandRapids
-40.4	Velvet	1934	GrandRapids
-37.3	Glabron	1934	GrandRapids
-43.3	WisNo38	1934	GrandRapids
-42.6	Trebi	1934	GrandRapids
-43.2	Peatland	1934	GrandRapids
-39.5	SAxMan	1934	GrandRapids
-35.5	ManxSA	1934	GrandRapids
-44.5	No474	1934	GrandRapids
-26.7	Oderbrucker	1934	GrandRapids
-42.5	Odessa	1934	GrandRapids
-31.8	SD1340	1934	GrandRapids
-55.7	Manchuria	1934	Duluth
-51.8	Velvet	1934	Duluth
-50.3	Glabron	1934	Duluth
-73.4	WisNo38	1934	Duluth
-75.5	Trebi	1934	Duluth
-50.7	Peatland	1934	Duluth
-54.7	Svansota	1934	Duluth
-64	SAxMan	1934	Duluth
-58	ManxSA	1934	Duluth
-38.8	Oderbrucker	1934	Duluth
-54.5	Odessa	1934	Duluth
-51.2	SD1340	1934	Duluth
-48.4	No474	1934	Duluth
-51.9	Manchuria	1935	StPaul
-57	Velvet	1935	StPaul
-63.3	WisNo38	1935	StPaul
-62.1	Trebi	1935	StPaul
-62.1	Minsturdi	1935	StPaul
-51.9	Peatland	1935	StPaul
-56.7	Svansota	1935	StPaul
-64.4	Spartan	1935	StPaul
-49.4	SAxMan	1935	StPaul
-60	ManxSA	1935	StPaul
-58.9	No474	1935	StPaul
-46	Glabron	1935	StPaul
-43.3	Oderbrucker	1935	StPaul
-53.6	Odessa	1935	StPaul
-61.1	SD1340	1935	StPaul
-53.5	Manchuria	1935	Waseca
-56.5	Velvet	1935	Waseca
-59	Glabron	1935	Waseca
-72.3	WisNo38	1935	Waseca
-66.9	Trebi	1935	Waseca
-61.3	Minsturdi	1935	Waseca
-47.8	Peatland	1935	Waseca
-63.7	No474	1935	Waseca
-61.3	Spartan	1935	Waseca
-57.8	SAxMan	1935	Waseca
-51.1	ManxSA	1935	Waseca
-40.4	Oderbrucker	1935	Waseca
-61.2	Odessa	1935	Waseca
-54.5	SD1340	1935	Waseca
-40.7	Manchuria	1935	Waseca
-34.2	Manchuria	1935	Morris
-36.7	Velvet	1935	Morris
-33.8	Glabron	1935	Morris
-55.2	WisNo38	1935	Morris
-43.8	Trebi	1935	Morris
-49.1	Peatland	1935	Morris
-34	SAxMan	1935	Morris
-31.5	ManxSA	1935	Morris
-48.9	No474	1935	Morris
-34.3	Oderbrucker	1935	Morris
-41.9	Odessa	1935	Morris
-35.1	SD1340	1935	Morris
-40	Manchuria	1935	Crookston
-40.6	Velvet	1935	Crookston
-32.9	Glabron	1935	Crookston
-45.2	WisNo38	1935	Crookston
-56.5	Trebi	1935	Crookston
-52	Peatland	1935	Crookston
-37.3	SAxMan	1935	Crookston
-43	ManxSA	1935	Crookston
-40.6	No474	1935	Crookston
-32.5	Oderbrucker	1935	Crookston
-44	Odessa	1935	Crookston
-42	SD1340	1935	Crookston
-28.6	Manchuria	1935	GrandRapids
-26	Velvet	1935	GrandRapids
-21.4	Glabron	1935	GrandRapids
-25.1	WisNo38	1935	GrandRapids
-33.5	Trebi	1935	GrandRapids
-35.6	Peatland	1935	GrandRapids
-31.5	SAxMan	1935	GrandRapids
-29.7	ManxSA	1935	GrandRapids
-24.5	No474	1935	GrandRapids
-23.8	Oderbrucker	1935	GrandRapids
-28	Odessa	1935	GrandRapids
-25.9	SD1340	1935	GrandRapids
-24.6	Manchuria	1935	Duluth
-27.5	Velvet	1935	Duluth
-21.4	Glabron	1935	Duluth
-40.5	WisNo38	1935	Duluth
-30.5	Trebi	1935	Duluth
-33	Peatland	1935	Duluth
-23	Svansota	1935	Duluth
-17.9	SAxMan	1935	Duluth
-24.5	ManxSA	1935	Duluth
-19.2	Oderbrucker	1935	Duluth
-33	Odessa	1935	Duluth
-27	SD1340	1935	Duluth
-24.5	No474	1935	Duluth
-22.7	Manchuria	1936	StPaul
-17	Velvet	1936	StPaul
-18.3	WisNo38	1936	StPaul
-25.3	Trebi	1936	StPaul
-30.9	Minsturdi	1936	StPaul
-11	Peatland	1936	StPaul
-24	Glabron	1936	StPaul
-10.3	Oderbrucker	1936	StPaul
-21.7	Odessa	1936	StPaul
-31.8	SD1340	1936	StPaul
-38	Manchuria	1936	Waseca
-39.4	Velvet	1936	Waseca
-42.8	Glabron	1936	Waseca
-45	WisNo38	1936	Waseca
-55.9	Trebi	1936	Waseca
-46.6	Minsturdi	1936	Waseca
-38.5	Peatland	1936	Waseca
-36.5	Oderbrucker	1936	Waseca
-39.3	Odessa	1936	Waseca
-48	SD1340	1936	Waseca
-23.3	Manchuria	1936	Morris
-21.1	Velvet	1936	Morris
-23.8	Glabron	1936	Morris
-20.1	WisNo38	1936	Morris
-26.1	Trebi	1936	Morris
-18.1	Peatland	1936	Morris
-19	Oderbrucker	1936	Morris
-25.7	Odessa	1936	Morris
-20.1	SD1340	1936	Morris
-8.2	Manchuria	1936	Crookston
-12.6	Velvet	1936	Crookston
-11.5	Glabron	1936	Crookston
-8.8	WisNo38	1936	Crookston
-23.1	Trebi	1936	Crookston
-6.7	Peatland	1936	Crookston
-4.1	Oderbrucker	1936	Crookston
-17.2	Odessa	1936	Crookston
-13.9	SD1340	1936	Crookston
-18	Manchuria	1936	GrandRapids
-7.7	Velvet	1936	GrandRapids
-12.8	Glabron	1936	GrandRapids
-9	WisNo38	1936	GrandRapids
-19	Trebi	1936	GrandRapids
-16.5	Peatland	1936	GrandRapids
-13	Oderbrucker	1936	GrandRapids
-14.4	Odessa	1936	GrandRapids
-15	SD1340	1936	GrandRapids
-12	Manchuria	1936	Duluth
-8.9	Velvet	1936	Duluth
-12.9	Glabron	1936	Duluth
-10.3	WisNo38	1936	Duluth
-21.2	Trebi	1936	Duluth
-17.5	Peatland	1936	Duluth
-9.2	Oderbrucker	1936	Duluth
-17.4	Odessa	1936	Duluth
-14.2	SD1340	1936	Duluth
+site	gen	CI	year	yield
+StPaul	BlackHullless	596	1893	24.1
+StPaul	Horsford	507	1893	25
+StPaul	Bernard	881	1893	22.8
+StPaul	HighlandChief	883	1893	18.4
+StPaul	Oderbrucker	2700	1894	17.3
+StPaul	Manchuria	244	1894	11.3
+StPaul	FrenchChevalier	175	1894	1.8
+StPaul	Cheyney	326	1894	4.6
+StPaul	Thanet	2652	1894	6.9
+StPaul	Scotch	848	1894	17.7
+StPaul	Empress	2824	1894	1.8
+StPaul	GoldenDrop	2135	1894	3
+StPaul	Common	184	1894	9.2
+StPaul	BlackHullless	596	1895	51.5
+StPaul	Horsford	507	1895	42.7
+StPaul	Bernard	881	1895	45.4
+StPaul	HighlandChief	883	1895	50
+StPaul	Oderbrucker	2700	1895	43.3
+StPaul	FrenchChevalier	175	1895	57.9
+StPaul	Thanet	2652	1895	46.2
+StPaul	Royal	1252	1895	55.7
+StPaul	Surprise	171	1895	51.5
+StPaul	Summit	174	1895	52.4
+StPaul	Victor	179	1895	34.9
+StPaul	Trooper	173	1895	60.7
+StPaul	Manchuria	241	1895	47.9
+StPaul	Mensury	170	1895	53.7
+StPaul	ChampionVermont	1892	1895	49.8
+StPaul	NewZealand	2656	1895	43.9
+StPaul	PrizeProlific	169	1895	40.8
+StPaul	SibleyImperial	2805	1895	39.4
+StPaul	Chevalier	2802	1895	52.3
+StPaul	KinverChevalier	587	1895	44.8
+StPaul	DanishChevalier	180	1895	39.2
+StPaul	Petschora	2658	1895	44.6
+StPaul	Goldthorpe	327	1895	34.1
+StPaul	Odessa	182	1895	62.5
+StPaul	SharpeChevalier	2650	1895	42.7
+StPaul	GoldenGrain	588	1895	44.8
+StPaul	CanadianThorpe	740	1895	38.3
+StPaul	BlackHullless	596	1896	38.1
+StPaul	Horsford	507	1896	50.7
+StPaul	Bernard	881	1896	53.3
+StPaul	HighlandChief	883	1896	56.3
+StPaul	FrenchChevalier	175	1896	53.3
+StPaul	Royal	1252	1896	41.3
+StPaul	Surprise	171	1896	45.8
+StPaul	Summit	174	1896	48.3
+StPaul	Victor	179	1896	44.6
+StPaul	Trooper	173	1896	53.7
+StPaul	Manchuria	241	1896	50.6
+StPaul	Mensury	170	1896	56.7
+StPaul	ChampionVermont	1892	1896	61.7
+StPaul	Chevalier	2802	1896	45
+StPaul	Odessa	182	1896	50.4
+StPaul	BlackHullless	596	1897	35
+StPaul	Horsford	507	1897	39.6
+StPaul	Bernard	881	1897	45
+StPaul	Oderbrucker	2700	1897	50.9
+StPaul	Manchuria	244	1897	49.5
+StPaul	FrenchChevalier	175	1897	32.1
+StPaul	Scotch	848	1897	56
+StPaul	Empress	2824	1897	19.2
+StPaul	Common	184	1897	57.7
+StPaul	Royal	1252	1897	38.8
+StPaul	Surprise	171	1897	35.4
+StPaul	Summit	174	1897	34.6
+StPaul	Victor	179	1897	38.3
+StPaul	Trooper	173	1897	42.1
+StPaul	Manchuria	241	1897	54.6
+StPaul	Mensury	170	1897	55.6
+StPaul	ChampionVermont	1892	1897	39.8
+StPaul	Chevalier	2802	1897	45.8
+StPaul	Odessa	182	1897	45.8
+StPaul	Culver	2825	1897	49.4
+StPaul	GoldenQueen	558	1897	51.7
+StPaul	Baxter	185	1897	56.3
+StPaul	Coast	690	1897	38.5
+StPaul	SouthAfrican	2826	1897	46.7
+StPaul	Oderbrucker	2700	1898	66.6
+StPaul	Manchuria	244	1898	66.8
+StPaul	ChampionVermont	1892	1898	51.6
+StPaul	Bernard	881	1899	61.2
+StPaul	Oderbrucker	2700	1899	46.6
+StPaul	Manchuria	244	1899	64.6
+StPaul	FrenchChevalier	175	1899	51.2
+StPaul	Scotch	848	1899	50
+StPaul	Common	184	1899	53.7
+StPaul	Manchuria	241	1899	46.6
+StPaul	ChampionVermont	1892	1899	49.1
+StPaul	Odessa	182	1899	60
+StPaul	Culver	2825	1899	36.2
+StPaul	GoldenQueen	558	1899	67
+StPaul	Baxter	185	1899	60.4
+StPaul	Coast	690	1899	53.3
+StPaul	SouthAfrican	2826	1899	43.7
+StPaul	Sisolsk	89	1899	27.5
+StPaul	Bernard	881	1900	51.3
+StPaul	Oderbrucker	2700	1900	48.3
+StPaul	Manchuria	244	1900	52.7
+StPaul	FrenchChevalier	175	1900	44.2
+StPaul	Scotch	848	1900	52.5
+StPaul	Common	184	1900	57.5
+StPaul	Manchuria	241	1900	45.8
+StPaul	ChampionVermont	1892	1900	43.3
+StPaul	Odessa	182	1900	51.3
+StPaul	Culver	2825	1900	58.7
+StPaul	GoldenQueen	558	1900	53.7
+StPaul	Baxter	185	1900	42.5
+StPaul	Coast	690	1900	52.5
+StPaul	SouthAfrican	2826	1900	64.6
+StPaul	Sisolsk	89	1900	42.5
+StPaul	Bernard	881	1901	49.6
+StPaul	Oderbrucker	2700	1901	44.8
+StPaul	Manchuria	244	1901	60
+StPaul	FrenchChevalier	175	1901	32.1
+StPaul	Scotch	848	1901	47.5
+StPaul	Common	184	1901	51.7
+StPaul	Manchuria	241	1901	55.4
+StPaul	ChampionVermont	1892	1901	38
+StPaul	Odessa	182	1901	45.4
+StPaul	Culver	2825	1901	25.4
+StPaul	GoldenQueen	558	1901	51.7
+StPaul	Baxter	185	1901	44.2
+StPaul	Coast	690	1901	32.5
+StPaul	SouthAfrican	2826	1901	25
+StPaul	Sisolsk	89	1901	45.4
+StPaul	Sandwell	584	1901	29.2
+StPaul	Invincible	590	1901	23.3
+StPaul	Kitzing	189	1901	35.4
+StPaul	Kitzing	201	1901	33.8
+StPaul	Frankish	207	1901	32.1
+StPaul	Pilsen	186	1901	32.5
+StPaul	Hanna	203	1901	40
+StPaul	Svanhals	187	1901	36.6
+StPaul	Princess	529	1901	29.6
+StPaul	ChevalierII	200	1901	32.5
+StPaul	Bernard	881	1902	39.9
+StPaul	Oderbrucker	2700	1902	32.7
+StPaul	Manchuria	244	1902	53.5
+StPaul	FrenchChevalier	175	1902	33.9
+StPaul	Scotch	848	1902	41
+StPaul	Common	184	1902	42.5
+StPaul	Manchuria	241	1902	42.8
+StPaul	ChampionVermont	1892	1902	34.2
+StPaul	Odessa	182	1902	40
+StPaul	Culver	2825	1902	23.2
+StPaul	GoldenQueen	558	1902	58.6
+StPaul	Baxter	185	1902	30.6
+StPaul	Coast	690	1902	33.7
+StPaul	SouthAfrican	2826	1902	16.1
+StPaul	Sisolsk	89	1902	40.4
+StPaul	Sandwell	584	1902	18.9
+StPaul	Invincible	590	1902	14.4
+StPaul	Kitzing	189	1902	30.8
+StPaul	Kitzing	201	1902	34.2
+StPaul	Frankish	207	1902	28.8
+StPaul	Pilsen	186	1902	27.7
+StPaul	Hanna	203	1902	34.2
+StPaul	Svanhals	187	1902	21.8
+StPaul	Princess	529	1902	22.5
+StPaul	ChevalierII	200	1902	29.5
+StPaul	Bernard	881	1903	33.9
+StPaul	Oderbrucker	2700	1903	42.3
+StPaul	Manchuria	244	1903	43.4
+StPaul	Scotch	848	1903	37.1
+StPaul	Common	184	1903	43
+StPaul	Manchuria	241	1903	46.3
+StPaul	Odessa	182	1903	46
+StPaul	GoldenQueen	558	1903	51.1
+StPaul	Sisolsk	89	1903	40.6
+StPaul	Kitzing	189	1903	39
+StPaul	Kitzing	201	1903	46.3
+StPaul	Frankish	207	1903	37.1
+StPaul	Pilsen	186	1903	38.3
+StPaul	Hanna	203	1903	33
+StPaul	Svanhals	187	1903	23.8
+StPaul	Princess	529	1903	27.9
+StPaul	ChevalierII	200	1903	23.7
+StPaul	DuckbillBald	2828	1903	33.9
+StPaul	Brush	2829	1903	29.1
+StPaul	Ross	2830	1903	42.3
+StPaul	Manchuria	2831	1903	50.3
+StPaul	CropNursery	2832	1903	23.3
+StPaul	Hybrid	2834	1903	32
+StPaul	HighlandChief	883	1904	36.6
+StPaul	Manchuria	244	1904	43.5
+StPaul	Manchuria	241	1904	39.7
+StPaul	GoldenQueen	558	1904	43
+StPaul	Princess	529	1904	49.1
+StPaul	ChevalierII	200	1904	37
+StPaul	DuckbillBald	2828	1904	38.7
+StPaul	Brush	2829	1904	37
+StPaul	Ross	2830	1904	32
+StPaul	Manchuria	2831	1904	37
+StPaul	CropNursery	2832	1904	34.7
+StPaul	Hybrid	2834	1904	33.5
+StPaul	Hybrid	2833	1904	34.1
+StPaul	Manchuria	2835	1904	41.4
+StPaul	Manchuria	2836	1904	41.4
+StPaul	Manchuria	2837	1904	32.5
+StPaul	Hybrid	2838	1904	34.5
+StPaul	Hybrid	2839	1904	17.9
+StPaul	Hybrid	2840	1904	25.1
+StPaul	Hybrid	2841	1904	22.3
+StPaul	Hybrid	2842	1904	38
+StPaul	Hybrid	2843	1904	30.4
+StPaul	Hybrid	2844	1904	20.4
+StPaul	Hybrid	2845	1904	25
+StPaul	Hybrid	2846	1904	31.1
+StPaul	Hybrid	2847	1904	26
+StPaul	Hanna	319	1904	37.1
+StPaul	Hannchen	531	1904	29.2
+StPaul	Primus	532	1904	25.4
+StPaul	HighlandChief	883	1905	46.6
+StPaul	Manchuria	244	1905	52.7
+StPaul	Manchuria	241	1905	52.3
+StPaul	GoldenQueen	558	1905	43.7
+StPaul	Princess	529	1905	48.3
+StPaul	ChevalierII	200	1905	45.8
+StPaul	DuckbillBald	2828	1905	56.2
+StPaul	Brush	2829	1905	45.4
+StPaul	Ross	2830	1905	62.5
+StPaul	Manchuria	2831	1905	60
+StPaul	CropNursery	2832	1905	55.4
+StPaul	Hybrid	2834	1905	42.9
+StPaul	Hybrid	2833	1905	45
+StPaul	Manchuria	2835	1905	55
+StPaul	Manchuria	2836	1905	54.5
+StPaul	Manchuria	2837	1905	51.6
+StPaul	Hybrid	2838	1905	51.2
+StPaul	Hybrid	2839	1905	34.1
+StPaul	Hybrid	2840	1905	33.7
+StPaul	Hybrid	2841	1905	32.9
+StPaul	Hybrid	2842	1905	42
+StPaul	Hybrid	2843	1905	32.9
+StPaul	Hybrid	2844	1905	31.6
+StPaul	Hybrid	2845	1905	38.7
+StPaul	Hybrid	2846	1905	42.9
+StPaul	Hybrid	2847	1905	39.2
+StPaul	Hanna	319	1905	45.8
+StPaul	Hannchen	531	1905	51.2
+StPaul	Primus	532	1905	40
+StPaul	BlueRibbon	611	1905	50
+StPaul	HighlandChief	883	1906	38.9
+StPaul	Manchuria	244	1906	37.7
+StPaul	Manchuria	241	1906	34.3
+StPaul	GoldenQueen	558	1906	35.4
+StPaul	Princess	529	1906	33.5
+StPaul	ChevalierII	200	1906	29.2
+StPaul	DuckbillBald	2828	1906	30
+StPaul	Ross	2830	1906	47.9
+StPaul	Manchuria	2831	1906	41.6
+StPaul	CropNursery	2832	1906	40.8
+StPaul	Hybrid	2834	1906	30.8
+StPaul	Hybrid	2833	1906	32.5
+StPaul	Manchuria	2835	1906	45.8
+StPaul	Manchuria	2836	1906	45.8
+StPaul	Manchuria	2837	1906	41.6
+StPaul	Hybrid	2838	1906	31.2
+StPaul	Hybrid	2839	1906	23.7
+StPaul	Hybrid	2840	1906	22.7
+StPaul	Hybrid	2841	1906	34.5
+StPaul	Hybrid	2842	1906	40.4
+StPaul	Hybrid	2843	1906	34.1
+StPaul	Hybrid	2844	1906	33.5
+StPaul	Hybrid	2845	1906	30.2
+StPaul	Hybrid	2846	1906	34.1
+StPaul	Hybrid	2847	1906	33.5
+StPaul	Hanna	319	1906	36.5
+StPaul	Hannchen	531	1906	29.2
+StPaul	Primus	532	1906	25
+StPaul	BlueRibbon	611	1906	41.2
+StPaul	Manchuria	2827	1906	44.2
+StPaul	Manchuria	2848	1906	45
+StPaul	Manchuria	2849	1906	45.8
+StPaul	Manchuria	2850	1906	49.2
+StPaul	Manchuria	2851	1906	43
+StPaul	Manchuria	2852	1906	42.9
+StPaul	Manchuria	2853	1906	42.5
+StPaul	Manchuria	2854	1906	50
+StPaul	Manchuria	2855	1906	50
+StPaul	Manchuria	2856	1906	44.2
+StPaul	Manchuria	2857	1906	49.2
+StPaul	Manchuria	2858	1906	59.6
+StPaul	Manchuria	2861	1906	59.2
+StPaul	Manchuria	2863	1906	55.8
+StPaul	Manchuria	2865	1906	60
+StPaul	Manchuria	2867	1906	51.7
+StPaul	Manchuria	2866	1906	48.8
+StPaul	Manchuria	2868	1906	50.8
+StPaul	Manchuria	2869	1906	47.9
+StPaul	Manchuria	2870	1906	49.2
+StPaul	Manchuria	2330	1906	50
+StPaul	Manchuria	2871	1906	53
+StPaul	Manchuria	2872	1906	47
+StPaul	Manchuria	2873	1906	45
+StPaul	Manchuria	2874	1906	37.5
+StPaul	Hybrid	2875	1906	37.9
+StPaul	Hybrid	2876	1906	33.8
+StPaul	Chevalier	2877	1906	26.7
+StPaul	FrankishBrewing	2878	1906	37.9
+StPaul	HighlandChief	883	1907	20
+StPaul	Manchuria	244	1907	43.5
+StPaul	Manchuria	241	1907	40
+StPaul	GoldenQueen	558	1907	40
+StPaul	Ross	2830	1907	40.4
+StPaul	Manchuria	2831	1907	38.7
+StPaul	CropNursery	2832	1907	32
+StPaul	Manchuria	2835	1907	35.4
+StPaul	Manchuria	2836	1907	41.6
+StPaul	Manchuria	2837	1907	41.6
+StPaul	BlueRibbon	611	1907	37.5
+StPaul	Manchuria	2827	1907	41.6
+StPaul	Manchuria	2848	1907	43.7
+StPaul	Manchuria	2849	1907	44.1
+StPaul	Manchuria	2850	1907	45.8
+StPaul	Manchuria	2851	1907	47.1
+StPaul	Manchuria	2852	1907	47.1
+StPaul	Manchuria	2853	1907	40
+StPaul	Manchuria	2854	1907	39.5
+StPaul	Manchuria	2855	1907	46.2
+StPaul	Manchuria	2856	1907	45.8
+StPaul	Manchuria	2861	1907	29.2
+StPaul	Manchuria	2866	1907	44.2
+StPaul	Manchuria	2868	1907	43.7
+StPaul	Manchuria	2869	1907	39.5
+StPaul	Manchuria	2870	1907	41.6
+StPaul	Manchuria	2879	1907	36.2
+StPaul	HighlandChief	883	1908	33.1
+StPaul	Oderbrucker	2700	1908	40.6
+StPaul	Manchuria	244	1908	34.4
+StPaul	Scotch	848	1908	32.5
+StPaul	GoldenQueen	558	1908	48.3
+StPaul	Svanhals	187	1908	30
+StPaul	Princess	529	1908	31.7
+StPaul	ChevalierII	200	1908	37.1
+StPaul	DuckbillBald	2828	1908	26.4
+StPaul	Manchuria	2831	1908	46.9
+StPaul	CropNursery	2832	1908	31.3
+StPaul	Hybrid	2838	1908	33.5
+StPaul	Hybrid	2843	1908	41.6
+StPaul	Hybrid	2844	1908	26.8
+StPaul	Hybrid	2846	1908	26.6
+StPaul	Hanna	319	1908	34.3
+StPaul	Hannchen	531	1908	29.4
+StPaul	Primus	532	1908	23.3
+StPaul	BlueRibbon	611	1908	38.6
+StPaul	Manchuria	2827	1908	43.9
+StPaul	Manchuria	2848	1908	47
+StPaul	Manchuria	2849	1908	45.8
+StPaul	Manchuria	2850	1908	45.2
+StPaul	Manchuria	2851	1908	44.5
+StPaul	Manchuria	2852	1908	41.6
+StPaul	Manchuria	2854	1908	43.8
+StPaul	Manchuria	2855	1908	45.8
+StPaul	Manchuria	2856	1908	45.8
+StPaul	Manchuria	2857	1908	43.5
+StPaul	Manchuria	2858	1908	46.2
+StPaul	Manchuria	2863	1908	50
+StPaul	Manchuria	2865	1908	44.1
+StPaul	Manchuria	2867	1908	40.8
+StPaul	Manchuria	2866	1908	38.3
+StPaul	Manchuria	2868	1908	42.7
+StPaul	Manchuria	2869	1908	37.7
+StPaul	Manchuria	2870	1908	40.4
+StPaul	Manchuria	2330	1908	48.3
+StPaul	Manchuria	2871	1908	43.9
+StPaul	Manchuria	2872	1908	42.5
+StPaul	Manchuria	2873	1908	39.3
+StPaul	Manchuria	2874	1908	44.3
+StPaul	Hybrid	2875	1908	34.7
+StPaul	Hybrid	2876	1908	34.1
+StPaul	FrankishBrewing	2878	1908	40.6
+StPaul	Manchuria	2879	1908	43.3
+StPaul	Himalaya	620	1908	15.4
+StPaul	Gutekorn	606	1908	41.8
+StPaul	Manchuria	2881	1908	41.2
+StPaul	Manchuria	2882	1908	56.6
+StPaul	Manchuria	2883	1908	55.2
+StPaul	Manchuria	2884	1908	55.6
+StPaul	Manchuria	2885	1908	56.2
+StPaul	Hanna	2886	1908	28.9
+StPaul	SilverBeardless	2887	1908	26.7
+StPaul	Hybrid	2888	1908	31.8
+StPaul	Hybrid	2889	1908	46.6
+StPaul	Hybrid	2890	1908	41.4
+StPaul	Hybrid	2891	1908	39.5
+StPaul	Hybrid	2892	1908	33.5
+StPaul	Hybrid	2893	1908	38.5
+StPaul	Hybrid	2894	1908	32.5
+StPaul	Hybrid	2895	1908	33.9
+StPaul	Hybrid	2896	1908	30
+StPaul	Cheney	2897	1908	29.1
+StPaul	AustralianWhite	2898	1908	23.3
+StPaul	ChampionVermont	2899	1908	28.8
+StPaul	FrenchChevalier	2900	1908	38.3
+StPaul	GoldenQueen	2901	1908	40.8
+StPaul	Hanna	2902	1908	30.5
+StPaul	Chevalier	156	1908	28.8
+StPaul	TennesseeWinter	257	1908	11.7
+StPaul	CanadianLakeshore	2750	1908	33.4
+StPaul	Gottland	2749	1908	36.8
+StPaul	Manchurian	739	1908	37
+StPaul	Garton	266	1908	32
+StPaul	Manchuria	2859	1908	39.3
+StPaul	Manchuria	2860	1908	35
+StPaul	Manchuria	2862	1908	46.8
+StPaul	Manchuria	2864	1908	47.5
+StPaul	Daniels	2880	1908	43.3
+StPaul	BlackHullless	596	1909	35.8
+StPaul	Oderbrucker	2700	1909	40.4
+StPaul	Manchuria	244	1909	47.4
+StPaul	Odessa	182	1909	38.3
+StPaul	GoldenQueen	558	1909	41.7
+StPaul	Svanhals	187	1909	46.7
+StPaul	Princess	529	1909	29.6
+StPaul	ChevalierII	200	1909	32.5
+StPaul	DuckbillBald	2828	1909	51.7
+StPaul	Manchuria	2831	1909	35
+StPaul	Hybrid	2838	1909	49.2
+StPaul	Hybrid	2846	1909	46.7
+StPaul	Hanna	319	1909	45.5
+StPaul	Hannchen	531	1909	38.3
+StPaul	Primus	532	1909	31.7
+StPaul	Manchuria	2863	1909	40.8
+StPaul	Manchuria	2330	1909	42.5
+StPaul	Hybrid	2875	1909	26.7
+StPaul	FrankishBrewing	2878	1909	38.3
+StPaul	Gutekorn	606	1909	40.8
+StPaul	Manchuria	2881	1909	41.7
+StPaul	Manchuria	2882	1909	40.8
+StPaul	Manchuria	2883	1909	37.5
+StPaul	Manchuria	2884	1909	35.4
+StPaul	Manchuria	2885	1909	39.2
+StPaul	Hanna	2886	1909	44.2
+StPaul	Hybrid	2888	1909	35
+StPaul	Hybrid	2889	1909	44.2
+StPaul	Hybrid	2890	1909	30.8
+StPaul	Hybrid	2891	1909	31.7
+StPaul	Hybrid	2892	1909	36.7
+StPaul	Hybrid	2893	1909	34.2
+StPaul	Hybrid	2894	1909	29.2
+StPaul	Hybrid	2895	1909	29.2
+StPaul	Hybrid	2896	1909	22.5
+StPaul	Cheney	2897	1909	42.5
+StPaul	ChampionVermont	2899	1909	40.8
+StPaul	FrenchChevalier	2900	1909	50
+StPaul	GoldenQueen	2901	1909	31.7
+StPaul	Gottland	2749	1909	35
+StPaul	Manchurian	739	1909	36.7
+StPaul	Garton	266	1909	45
+StPaul	Manchuria	2862	1909	36.7
+StPaul	Daniels	2880	1909	36.7
+StPaul	Mensury	2657	1909	40.8
+StPaul	Malting	2909	1909	38.3
+StPaul	SilverKing	890	1909	43.3
+StPaul	Chevalier	2910	1909	40.8
+StPaul	Nepal	595	1909	25.8
+StPaul	BlackHullless	596	1910	28.7
+StPaul	Oderbrucker	2700	1910	26.2
+StPaul	Manchuria	244	1910	29
+StPaul	Manchuria	241	1910	26.6
+StPaul	Odessa	182	1910	30.4
+StPaul	GoldenQueen	558	1910	24.7
+StPaul	Svanhals	187	1910	27.2
+StPaul	Princess	529	1910	25.4
+StPaul	DuckbillBald	2828	1910	23.7
+StPaul	Manchuria	2831	1910	22.2
+StPaul	Hybrid	2838	1910	29.3
+StPaul	Hybrid	2846	1910	20.8
+StPaul	Hanna	319	1910	28.7
+StPaul	Hannchen	531	1910	29.3
+StPaul	Primus	532	1910	22
+StPaul	BlueRibbon	611	1910	29.3
+StPaul	Manchuria	2863	1910	34.5
+StPaul	Manchuria	2330	1910	46.2
+StPaul	Gutekorn	606	1910	17.9
+StPaul	Manchuria	2881	1910	46.8
+StPaul	Manchuria	2882	1910	46.8
+StPaul	Manchuria	2883	1910	34.7
+StPaul	Manchuria	2884	1910	32.9
+StPaul	Manchuria	2885	1910	37.9
+StPaul	Hybrid	2889	1910	28.3
+StPaul	Hybrid	2890	1910	25.4
+StPaul	Hybrid	2891	1910	24.7
+StPaul	Hybrid	2892	1910	34.5
+StPaul	Hybrid	2893	1910	24.5
+StPaul	Hybrid	2894	1910	20.4
+StPaul	Hybrid	2895	1910	22.7
+StPaul	Hybrid	2896	1910	25.4
+StPaul	ChampionVermont	2899	1910	25.4
+StPaul	FrenchChevalier	2900	1910	28.1
+StPaul	GoldenQueen	2901	1910	30.2
+StPaul	Gottland	2749	1910	20
+StPaul	Manchurian	739	1910	34.3
+StPaul	Garton	266	1910	24.9
+StPaul	Mensury	2657	1910	42
+StPaul	Malting	2909	1910	29.7
+StPaul	SilverKing	890	1910	31.4
+StPaul	Chevalier	2910	1910	25.4
+StPaul	Nepal	595	1910	26.9
+StPaul	ReedTriumph	889	1910	15.4
+StPaul	Hybrid	2911	1910	28.9
+StPaul	Hybrid	2912	1910	26.6
+StPaul	Hybrid	2913	1910	22.7
+StPaul	Hybrid	2914	1910	26.2
+StPaul	Manchuria	2903	1910	25.6
+StPaul	Manchuria	2904	1910	23.9
+StPaul	Manchuria	2905	1910	28.7
+StPaul	Manchuria	2906	1910	23.1
+StPaul	Manchuria	2907	1910	24.7
+StPaul	Manchuria	2908	1910	28.7
+StPaul	Manchuria	2915	1910	28.3
+StPaul	Manchuria	2916	1910	31.2
+StPaul	Manchuria	2917	1910	26.2
+StPaul	Manchuria	2918	1910	24.7
+StPaul	BlackHullless	596	1911	27.5
+StPaul	Oderbrucker	2700	1911	38.9
+StPaul	Manchuria	244	1911	43.4
+StPaul	Manchuria	241	1911	36.7
+StPaul	Odessa	182	1911	38.3
+StPaul	GoldenQueen	558	1911	43.7
+StPaul	Manchuria	2831	1911	44.6
+StPaul	Hybrid	2846	1911	30.8
+StPaul	BlueRibbon	611	1911	37.1
+StPaul	Manchuria	2863	1911	42.9
+StPaul	Manchuria	2330	1911	54.2
+StPaul	Manchuria	2881	1911	33.7
+StPaul	Manchuria	2882	1911	44.2
+StPaul	Manchuria	2883	1911	44.6
+StPaul	Manchuria	2884	1911	44.2
+StPaul	Manchuria	2885	1911	47.5
+StPaul	Mensury	2657	1911	41.7
+StPaul	Malting	2909	1911	38.3
+StPaul	SilverKing	890	1911	38.3
+StPaul	Nepal	595	1911	22.5
+StPaul	ReedTriumph	889	1911	30.4
+StPaul	Hybrid	2911	1911	38.8
+StPaul	Hybrid	2912	1911	35
+StPaul	Hybrid	2913	1911	25
+StPaul	Hybrid	2914	1911	38.3
+StPaul	Manchuria	2903	1911	44.2
+StPaul	Manchuria	2904	1911	36.3
+StPaul	Manchuria	2905	1911	29.2
+StPaul	Manchuria	2906	1911	38.3
+StPaul	Manchuria	2907	1911	35
+StPaul	Manchuria	2908	1911	39.2
+StPaul	Manchuria	2915	1911	30.8
+StPaul	Manchuria	2916	1911	29.6
+StPaul	Manchuria	2917	1911	40.8
+StPaul	Manchuria	2918	1911	41
+StPaul	Manchuria	244	1912	33.6
+StPaul	Svanhals	187	1912	38.3
+StPaul	Princess	529	1912	5
+StPaul	DuckbillBald	2828	1912	34.2
+StPaul	Hybrid	2838	1912	34.2
+StPaul	Hanna	319	1912	48.3
+StPaul	Hannchen	531	1912	38.3
+StPaul	Primus	532	1912	38.3
+StPaul	Gutekorn	606	1912	37.9
+StPaul	Hybrid	2889	1912	35.8
+StPaul	ChampionVermont	2899	1912	29.2
+StPaul	FrenchChevalier	2900	1912	39.2
+StPaul	Garton	266	1912	23.3
+StPaul	Hanna	2919	1912	38.3
+StPaul	Maltster	585	1912	10
+StPaul	Proskowetz	893	1912	40
+StPaul	BlackHullless	2726	1912	15.8
+StPaul	BlackHullless	596	1913	53.2
+StPaul	Horsford	507	1913	43.5
+StPaul	Oderbrucker	2700	1913	68.5
+StPaul	Manchuria	244	1913	67.4
+StPaul	Manchuria	241	1913	69.3
+StPaul	KinverChevalier	587	1913	44.4
+StPaul	Odessa	182	1913	59.6
+StPaul	GoldenQueen	558	1913	66.7
+StPaul	Svanhals	187	1913	63.4
+StPaul	Princess	529	1913	25.7
+StPaul	DuckbillBald	2828	1913	72.5
+StPaul	Hybrid	2838	1913	55.3
+StPaul	Hybrid	2846	1913	49.6
+StPaul	Hanna	319	1913	57.5
+StPaul	Hannchen	531	1913	35.6
+StPaul	Primus	532	1913	51.8
+StPaul	BlueRibbon	611	1913	59.6
+StPaul	Manchuria	2854	1913	65.6
+StPaul	Manchuria	2330	1913	79.6
+StPaul	Gutekorn	606	1913	55.9
+StPaul	Hybrid	2889	1913	62.7
+StPaul	ChampionVermont	2899	1913	47.1
+StPaul	FrenchChevalier	2900	1913	67
+StPaul	Garton	266	1913	50.1
+StPaul	Mensury	2657	1913	64.2
+StPaul	Malting	2909	1913	60.7
+StPaul	SilverKing	890	1913	69.3
+StPaul	Nepal	595	1913	26.6
+StPaul	ReedTriumph	889	1913	67
+StPaul	Hybrid	2911	1913	54.7
+StPaul	Hybrid	2912	1913	56.2
+StPaul	Hybrid	2913	1913	60.7
+StPaul	Hybrid	2914	1913	61.6
+StPaul	Manchuria	2903	1913	69.9
+StPaul	Manchuria	2904	1913	62.5
+StPaul	Manchuria	2905	1913	73.9
+StPaul	Manchuria	2906	1913	68.2
+StPaul	Manchuria	2907	1913	65.3
+StPaul	Manchuria	2908	1913	63
+StPaul	Manchuria	2915	1913	57.6
+StPaul	Manchuria	2916	1913	62.5
+StPaul	Manchuria	2917	1913	70.5
+StPaul	Manchuria	2918	1913	65.9
+StPaul	Hanna	2919	1913	65
+StPaul	Gisborne	1030	1913	17.7
+StPaul	Maltster	585	1913	21.5
+StPaul	Proskowetz	893	1913	63
+StPaul	BlackHullless	2726	1913	43.1
+StPaul	Chevalier	1170	1913	36.7
+StPaul	Baku	2920	1913	45.8
+StPaul	Sexradigt	607	1913	63.3
+StPaul	Coast	2921	1913	67
+StPaul	Scotch	2922	1913	75.1
+StPaul	Mansfield	2923	1913	64.7
+StPaul	Mensury	2924	1913	79.6
+StPaul	Manchuria	2925	1913	77.9
+StPaul	Manchuria	2926	1913	68.8
+StPaul	Manchuria	2823	1913	76
+StPaul	Manchuria	2927	1913	77.1
+StPaul	Manchuria	2928	1913	81.9
+StPaul	Manchuria	2929	1913	70.5
+StPaul	Manchuria	2930	1913	79.1
+StPaul	WhiteSmyrna	195	1913	48.7
+StPaul	Composite	1147	1913	55
+StPaul	Gatami	575	1913	69.3
+StPaul	BlackHullless	1106	1913	41.8
+StPaul	Hybrid	2931	1913	73.9
+StPaul	Hybrid	2932	1913	70.2
+StPaul	BlackHullless	596	1914	26.9
+StPaul	Horsford	507	1914	41.8
+StPaul	Oderbrucker	2700	1914	58.2
+StPaul	Manchuria	244	1914	59.8
+StPaul	KinverChevalier	587	1914	13.8
+StPaul	GoldenQueen	558	1914	48.7
+StPaul	Svanhals	187	1914	37.8
+StPaul	Princess	529	1914	8
+StPaul	DuckbillBald	2828	1914	32.1
+StPaul	Hybrid	2838	1914	50.4
+StPaul	Hanna	319	1914	34.9
+StPaul	Hannchen	531	1914	49.3
+StPaul	Primus	532	1914	14.9
+StPaul	BlueRibbon	611	1914	52.7
+StPaul	Manchuria	2330	1914	57.8
+StPaul	Gutekorn	606	1914	27.5
+StPaul	FrenchChevalier	2900	1914	40.7
+StPaul	Mensury	2657	1914	52.1
+StPaul	SilverKing	890	1914	47.5
+StPaul	Nepal	595	1914	25.2
+StPaul	ReedTriumph	889	1914	56
+StPaul	Gisborne	1030	1914	9.7
+StPaul	Maltster	585	1914	14.3
+StPaul	Proskowetz	893	1914	33.5
+StPaul	BlackHullless	2726	1914	44.7
+StPaul	Chevalier	1170	1914	22.9
+StPaul	Sexradigt	607	1914	35.5
+StPaul	Coast	2921	1914	60.1
+StPaul	Scotch	2922	1914	56.1
+StPaul	Mansfield	2923	1914	51.5
+StPaul	Mensury	2924	1914	63.6
+StPaul	Manchuria	2925	1914	54.4
+StPaul	Manchuria	2926	1914	60.2
+StPaul	Manchuria	2823	1914	61.3
+StPaul	Manchuria	2927	1914	59.6
+StPaul	Manchuria	2928	1914	63
+StPaul	Manchuria	2929	1914	61.3
+StPaul	Manchuria	2930	1914	57.3
+StPaul	WhiteSmyrna	195	1914	33.8
+StPaul	Composite	1147	1914	48.7
+StPaul	Gatami	575	1914	48.8
+StPaul	BlackHullless	1106	1914	13.8
+StPaul	Hybrid	2931	1914	52.1
+StPaul	Hybrid	2932	1914	41.3
+StPaul	Luth	908	1914	52.7
+StPaul	Hanna	906	1914	48.1
+StPaul	Featherston	911	1914	45.8
+StPaul	Steigum	907	1914	45.8
+StPaul	Eagle	913	1914	41.3
+StPaul	Servian	915	1914	66.5
+StPaul	Mahrische	912	1914	43.5
+StPaul	BlackHullless	596	1915	52.1
+StPaul	Horsford	507	1915	61.9
+StPaul	Oderbrucker	2700	1915	72.8
+StPaul	Manchuria	244	1915	71.2
+StPaul	DuckbillBald	2828	1915	76.7
+StPaul	Hybrid	2838	1915	68.3
+StPaul	BlueRibbon	611	1915	71.2
+StPaul	Manchuria	2330	1915	53.2
+StPaul	FrenchChevalier	2900	1915	73.8
+StPaul	Nepal	595	1915	35.6
+StPaul	BlackHullless	2726	1915	72.3
+StPaul	Coast	2921	1915	75.6
+StPaul	Scotch	2922	1915	70.8
+StPaul	Mansfield	2923	1915	74.5
+StPaul	Mensury	2924	1915	74.9
+StPaul	Manchuria	2925	1915	76.2
+StPaul	Manchuria	2926	1915	72.4
+StPaul	Manchuria	2823	1915	76.1
+StPaul	Manchuria	2927	1915	66.4
+StPaul	Manchuria	2928	1915	73.6
+StPaul	Manchuria	2930	1915	80.3
+StPaul	Composite	1147	1915	69.2
+StPaul	Hybrid	2931	1915	75.4
+StPaul	Hybrid	2932	1915	81
+StPaul	Luth	908	1915	74.7
+StPaul	Hanna	906	1915	51.5
+StPaul	Featherston	911	1915	52.5
+StPaul	Steigum	907	1915	53.7
+StPaul	Eagle	913	1915	63.4
+StPaul	Servian	915	1915	85.6
+StPaul	Black	2936	1915	50.3
+StPaul	Manchuria	244	1916	30.7
+StPaul	DuckbillBald	2828	1916	22.1
+StPaul	Manchuria	2330	1916	35.4
+StPaul	FrenchChevalier	2900	1916	32.9
+StPaul	Scotch	2922	1916	33.8
+StPaul	Manchuria	2823	1916	37.9
+StPaul	Manchuria	2928	1916	36.3
+StPaul	Manchuria	244	1917	32.8
+StPaul	Manchuria	2330	1917	43.9
+StPaul	FrenchChevalier	2900	1917	46.3
+StPaul	Manchuria	2823	1917	42.8
+StPaul	Manchuria	2928	1917	38.5
+StPaul	Manchuria	244	1918	53.9
+StPaul	Manchuria	2330	1918	52.9
+StPaul	FrenchChevalier	2900	1918	52.5
+StPaul	Manchuria	2823	1918	48.2
+StPaul	Manchuria	2928	1918	52.3
+StPaul	Hybrid	2935	1918	60
+StPaul	Minsturdi	1556	1918	53.8
+StPaul	Svansota	1907	1918	56.5
+Waseca	Manchuria	2330	1918	66
+Waseca	FrenchChevalier	2900	1918	56.1
+Waseca	Manchuria	244	1918	58.5
+GrandRapids	Manchuria	2330	1918	51.5
+GrandRapids	FrenchChevalier	2900	1918	50.3
+GrandRapids	Odessa	182	1918	52.8
+GrandRapids	Hanna	319	1918	55.7
+GrandRapids	Nepal	595	1918	24.8
+GrandRapids	Manchuria	244	1918	51.1
+GrandRapids	BlueRibbon	611	1918	46.7
+GrandRapids	Oderbrucker	2700	1918	39
+GrandRapids	OAC21	1470	1918	47.8
+GrandRapids	GoldenQueen	558	1918	47.7
+GrandRapids	Manchuria	241	1918	50.3
+GrandRapids	ChampionVermont	2899	1918	40.7
+GrandRapids	Svanhals	187	1918	49
+Morris	Manchuria	2330	1918	38.1
+Morris	FrenchChevalier	2900	1918	35.2
+Morris	Manchuria	2823	1918	41.1
+Morris	WisconsinPedigree	835	1918	35.7
+Morris	Manchuria	244	1918	30.4
+Morris	Oderbrucker	2700	1918	42.7
+StPaul	Manchuria	2330	1919	35.6
+StPaul	FrenchChevalier	2900	1919	27.4
+StPaul	Manchuria	2823	1919	36
+StPaul	Servian	915	1919	23.2
+StPaul	Hybrid	2935	1919	23.5
+StPaul	Minsturdi	1556	1919	24.2
+StPaul	Svansota	1907	1919	24
+StPaul	Aker	1577	1919	34
+StPaul	Samofa	1211	1919	25.7
+StPaul	Bohman	2933	1919	26.9
+StPaul	Lion	923	1919	21.6
+Waseca	Manchuria	2330	1919	34.8
+Waseca	FrenchChevalier	2900	1919	29.8
+Waseca	Hybrid	2935	1919	35.6
+Waseca	Minsturdi	1556	1919	37.2
+Waseca	Svansota	1907	1919	33
+Duluth	Manchuria	2330	1919	47.1
+Duluth	FrenchChevalier	2900	1919	41.3
+Duluth	Minsturdi	1556	1919	42.6
+Duluth	Svansota	1907	1919	53.7
+GrandRapids	Manchuria	2330	1919	37.5
+GrandRapids	FrenchChevalier	2900	1919	34.8
+GrandRapids	Odessa	182	1919	38.3
+GrandRapids	Hanna	319	1919	29.7
+GrandRapids	Nepal	595	1919	18.3
+GrandRapids	Hybrid	2935	1919	32.4
+GrandRapids	Svansota	1907	1919	32
+GrandRapids	Minsturdi	1556	1919	40.3
+Crookston	Manchuria	2330	1919	25.9
+Crookston	Manchuria	2823	1919	22.2
+Crookston	FrenchChevalier	2900	1919	14.4
+Crookston	Hybrid	2935	1919	15.8
+Crookston	Minsturdi	1556	1919	25.2
+Crookston	Svansota	1907	1919	15.5
+Crookston	Aker	1577	1919	22.4
+Crookston	Hanna	319	1919	16.6
+Crookston	OAC21	1470	1919	26.9
+Crookston	Beardless	3144	1919	27.2
+Crookston	Hannchen	531	1919	9.3
+Crookston	Svanhals	187	1919	12.8
+Crookston	Oderbrucker	2700	1919	20.2
+Crookston	Princess	529	1919	13.4
+Crookston	Nepal	595	1919	12
+Morris	Manchuria	2330	1919	29.4
+Morris	FrenchChevalier	2900	1919	32.7
+Morris	WisconsinPedigree	835	1919	25.7
+Morris	Hybrid	2935	1919	24.4
+Morris	Minsturdi	1556	1919	34.3
+Morris	Svansota	1907	1919	31.5
+StPaul	Princess	529	1920	29.2
+StPaul	Manchuria	2330	1920	27.9
+StPaul	FrenchChevalier	2900	1920	27.8
+StPaul	Manchuria	2823	1920	13.9
+StPaul	Servian	915	1920	24.8
+StPaul	Hybrid	2935	1920	18.8
+StPaul	Minsturdi	1556	1920	29.1
+StPaul	Svansota	1907	1920	29.3
+StPaul	Aker	1577	1920	29
+StPaul	Samofa	1211	1920	26.9
+StPaul	Bohman	2933	1920	27.7
+StPaul	Lion	923	1920	24.3
+StPaul	Gold	1145	1920	17.2
+StPaul	Manchuria	1478	1920	29.4
+StPaul	Manchuria	1189	1920	25.7
+Waseca	Manchuria	2330	1920	33.5
+Waseca	FrenchChevalier	2900	1920	37.4
+Waseca	Hybrid	2935	1920	35.1
+Waseca	Minsturdi	1556	1920	33.2
+Waseca	Svansota	1907	1920	35.1
+Waseca	Manchuria	1478	1920	31.2
+Waseca	Manchuria	1189	1920	31.7
+Waseca	Samofa	1211	1920	33.4
+Duluth	Manchuria	2330	1920	45.1
+Duluth	FrenchChevalier	2900	1920	33.5
+Duluth	Minsturdi	1556	1920	40.1
+Duluth	Svansota	1907	1920	50.1
+Duluth	Manchuria	1478	1920	42.3
+Duluth	Manchuria	1189	1920	39.3
+GrandRapids	Manchuria	2330	1920	34.1
+GrandRapids	FrenchChevalier	2900	1920	30.5
+GrandRapids	Hanna	319	1920	24.7
+GrandRapids	Nepal	595	1920	18.8
+GrandRapids	Hybrid	2935	1920	27.6
+GrandRapids	Svansota	1907	1920	31.6
+GrandRapids	Minsturdi	1556	1920	33.1
+Crookston	Manchuria	2330	1920	30.7
+Crookston	Manchuria	2823	1920	22.3
+Crookston	FrenchChevalier	2900	1920	30.8
+Crookston	Hybrid	2935	1920	31
+Crookston	Minsturdi	1556	1920	34.3
+Crookston	Svansota	1907	1920	28.2
+Crookston	Hanna	319	1920	26.6
+Crookston	OAC21	1470	1920	25.8
+Crookston	Beardless	3144	1920	32.7
+Crookston	Hannchen	531	1920	31.3
+Crookston	Svanhals	187	1920	31.6
+Crookston	Oderbrucker	2700	1920	26.4
+Crookston	Princess	529	1920	26.7
+Crookston	Manchuria	2823	1920	22.3
+Crookston	Manchuria	1189	1920	34.7
+Crookston	Samofa	1211	1920	36.7
+Crookston	Bohman	2933	1920	25.7
+Crookston	Mahrische	912	1920	26.9
+Crookston	Manchuria	1478	1920	29.7
+Morris	Manchuria	2330	1920	32.1
+Morris	Manchuria	2823	1920	23
+Morris	WisconsinPedigree	835	1920	24.9
+Morris	Hybrid	2935	1920	17
+Morris	Minsturdi	1556	1920	19.4
+Morris	Svansota	1907	1920	28.7
+Morris	Manchuria	1478	1920	24.4
+Morris	Manchuria	1189	1920	30.5
+Morris	Samofa	1211	1920	16.4
+StPaul	Princess	529	1921	22.2
+StPaul	Manchuria	2330	1921	26.9
+StPaul	FrenchChevalier	2900	1921	29.5
+StPaul	Servian	915	1921	29.5
+StPaul	Hybrid	2935	1921	29.9
+StPaul	Minsturdi	1556	1921	43.3
+StPaul	Svansota	1907	1921	32.5
+StPaul	Aker	1577	1921	27.5
+StPaul	Samofa	1211	1921	28
+StPaul	Bohman	2933	1921	23
+StPaul	Lion	923	1921	31.2
+StPaul	Gold	1145	1921	17.1
+StPaul	Manchuria	1478	1921	23
+StPaul	Manchuria	1189	1921	23
+StPaul	Bark	2793	1921	22
+Waseca	Manchuria	2330	1921	47.8
+Waseca	FrenchChevalier	2900	1921	34.3
+Waseca	Hybrid	2935	1921	48.5
+Waseca	Minsturdi	1556	1921	42.6
+Waseca	Svansota	1907	1921	29
+Waseca	Manchuria	1478	1921	35.8
+Waseca	Manchuria	1189	1921	28.2
+Waseca	Samofa	1211	1921	38.3
+Waseca	Aker	1577	1921	34.4
+Waseca	Bohman	2933	1921	22.8
+Duluth	Manchuria	2330	1921	25.5
+Duluth	FrenchChevalier	2900	1921	30.4
+Duluth	Minsturdi	1556	1921	29
+Duluth	Svansota	1907	1921	33.5
+Duluth	Manchuria	1478	1921	28.9
+Duluth	Manchuria	1189	1921	32.2
+Duluth	Aker	1577	1921	28.3
+Duluth	Samofa	1211	1921	25.7
+Duluth	Bohman	2933	1921	25.4
+GrandRapids	Manchuria	2330	1921	14.5
+GrandRapids	FrenchChevalier	2900	1921	9.9
+GrandRapids	Odessa	182	1921	10.8
+GrandRapids	Hanna	319	1921	12
+GrandRapids	Nepal	595	1921	4.5
+GrandRapids	Hybrid	2935	1921	9.1
+GrandRapids	Svansota	1907	1921	9.4
+GrandRapids	Minsturdi	1556	1921	14.9
+GrandRapids	Aker	1577	1921	11.8
+GrandRapids	Manchuria	1478	1921	12.7
+GrandRapids	Manchuria	1189	1921	14.9
+GrandRapids	Samofa	1211	1921	16.5
+GrandRapids	Bohman	2933	1921	15.1
+Crookston	Manchuria	2330	1921	24.4
+Crookston	Manchuria	2823	1921	17.8
+Crookston	FrenchChevalier	2900	1921	17
+Crookston	Hybrid	2935	1921	26.4
+Crookston	Minsturdi	1556	1921	25.2
+Crookston	Svansota	1907	1921	23.1
+Crookston	Hanna	319	1921	21.4
+Crookston	OAC21	1470	1921	21.6
+Crookston	Beardless	3144	1921	14.7
+Crookston	Hannchen	531	1921	16
+Crookston	Svanhals	187	1921	14.9
+Crookston	Oderbrucker	2700	1921	20
+Crookston	Princess	529	1921	18.1
+Crookston	Manchuria	2823	1921	14.9
+Crookston	Manchuria	1189	1921	17.6
+Crookston	Samofa	1211	1921	16.1
+Crookston	Bohman	2933	1921	19.9
+Crookston	Mahrische	912	1921	15.2
+Crookston	Manchuria	1478	1921	14.9
+Morris	Manchuria	2330	1921	28.8
+Morris	FrenchChevalier	2900	1921	21
+Morris	Manchuria	2823	1921	29.5
+Morris	Hybrid	2935	1921	11.6
+Morris	Minsturdi	1556	1921	21.3
+Morris	Svansota	1907	1921	21.5
+Morris	Manchuria	1478	1921	27
+Morris	Manchuria	1189	1921	30.6
+Morris	Samofa	1211	1921	23.7
+Morris	Aker	1577	1921	23.4
+Morris	Bohman	2933	1921	22
+StPaul	Glabron	4577	1922	67.2
+StPaul	Velvet	4252	1922	67.2
+StPaul	Manchuria	2330	1922	48.3
+StPaul	Minsturdi	1556	1922	54.1
+StPaul	Oderbrucker	1529	1922	74.8
+Duluth	Velvet	4252	1922	42.5
+Duluth	Glabron	4577	1922	36.2
+Duluth	Manchuria	2330	1922	31.3
+Duluth	Svansota	1907	1922	25.8
+Waseca	Velvet	4252	1922	65
+Waseca	Manchuria	2330	1922	70.4
+Waseca	Svansota	1907	1922	72.1
+Waseca	Glabron	4577	1922	70.4
+Waseca	Minsturdi	1556	1922	65.6
+GrandRapids	Svansota	1907	1922	41
+GrandRapids	Manchuria	2330	1922	41.5
+GrandRapids	Glabron	4577	1922	44.2
+Morris	Glabron	4577	1922	29
+Morris	Svansota	1907	1922	26.6
+Morris	Velvet	4252	1922	30.3
+Morris	Manchuria	2330	1922	31
+Crookston	Velvet	4252	1922	53
+Crookston	Glabron	4577	1922	58.2
+Crookston	Manchuria	2330	1922	53.6
+Crookston	Svansota	1907	1922	56.8
+StPaul	Glabron	4577	1923	33.8
+StPaul	Velvet	4252	1923	28.2
+StPaul	Manchuria	2330	1923	35.4
+StPaul	Minsturdi	1556	1923	24.1
+StPaul	Oderbrucker	1529	1923	31.3
+StPaul	Svansota	1907	1923	35.2
+StPaul	Comfort	4578	1923	28.9
+StPaul	Trebi	936	1923	23.9
+Duluth	Velvet	4252	1923	35.2
+Duluth	Glabron	4577	1923	41.1
+Duluth	Manchuria	2330	1923	44
+Duluth	Svansota	1907	1923	37.3
+Duluth	Trebi	936	1923	38.7
+Duluth	Comfort	4578	1923	41.9
+Waseca	Velvet	4252	1923	50.9
+Waseca	Manchuria	2330	1923	49.5
+Waseca	Svansota	1907	1923	53.5
+Waseca	Glabron	4577	1923	47
+Waseca	Minsturdi	1556	1923	39.1
+Waseca	Trebi	936	1923	62.2
+Waseca	Comfort	4578	1923	50.9
+GrandRapids	Svansota	1907	1923	35.3
+GrandRapids	Manchuria	2330	1923	30.5
+GrandRapids	Glabron	4577	1923	34.3
+GrandRapids	Trebi	936	1923	31.2
+GrandRapids	Comfort	4578	1923	37.5
+GrandRapids	Velvet	4252	1923	23.2
+Morris	Glabron	4577	1923	36.8
+Morris	Svansota	1907	1923	43.2
+Morris	Velvet	4252	1923	39.3
+Morris	Manchuria	2330	1923	37.5
+Morris	Trebi	936	1923	38.6
+Morris	Comfort	4578	1923	37.6
+Crookston	Velvet	4252	1923	37.8
+Crookston	Glabron	4577	1923	34.1
+Crookston	Manchuria	2330	1923	34.8
+Crookston	Svansota	1907	1923	38.7
+Crookston	Trebi	936	1923	38.4
+Crookston	Comfort	4578	1923	42.8
+StPaul	Glabron	4577	1924	40.4
+StPaul	Velvet	4252	1924	25.4
+StPaul	Manchuria	2330	1924	25.4
+StPaul	Minsturdi	1556	1924	41.2
+StPaul	Oderbrucker	1529	1924	35.8
+StPaul	Svansota	1907	1924	37.2
+StPaul	Comfort	4578	1924	34.8
+StPaul	Trebi	936	1924	43.4
+Duluth	Velvet	4252	1924	37.3
+Duluth	Glabron	4577	1924	30.5
+Duluth	Manchuria	2330	1924	34.8
+Duluth	Svansota	1907	1924	37.9
+Duluth	Trebi	936	1924	28.9
+Duluth	Comfort	4578	1924	36
+Waseca	Velvet	4252	1924	68.5
+Waseca	Manchuria	2330	1924	70.3
+Waseca	Svansota	1907	1924	72.5
+Waseca	Glabron	4577	1924	74.2
+Waseca	Minsturdi	1556	1924	53.6
+Waseca	Trebi	936	1924	82.5
+Waseca	Comfort	4578	1924	66.8
+GrandRapids	Svansota	1907	1924	22.4
+GrandRapids	Manchuria	2330	1924	24.5
+GrandRapids	Glabron	4577	1924	27.1
+GrandRapids	Trebi	936	1924	29.7
+GrandRapids	Comfort	4578	1924	27.6
+GrandRapids	Velvet	4252	1924	24.9
+Morris	Glabron	4577	1924	46.6
+Morris	Svansota	1907	1924	46.5
+Morris	Velvet	4252	1924	37.4
+Morris	Manchuria	2330	1924	40.8
+Morris	Trebi	936	1924	46.8
+Morris	Comfort	4578	1924	36.1
+Crookston	Velvet	4252	1924	31.3
+Crookston	Glabron	4577	1924	45.8
+Crookston	Manchuria	2330	1924	44.1
+Crookston	Svansota	1907	1924	41.6
+Crookston	Trebi	936	1924	47
+Crookston	Comfort	4578	1924	33
+StPaul	Glabron	4577	1925	52.5
+StPaul	Velvet	4252	1925	46.3
+StPaul	Manchuria	2330	1925	46.2
+StPaul	Minsturdi	1556	1925	53.5
+StPaul	Oderbrucker	1529	1925	39
+StPaul	Svansota	1907	1925	48.1
+StPaul	Comfort	4578	1925	43.4
+StPaul	Trebi	936	1925	55.2
+Duluth	Velvet	4252	1925	26.3
+Duluth	Glabron	4577	1925	26.2
+Duluth	Manchuria	2330	1925	11.4
+Duluth	Svansota	1907	1925	30.7
+Duluth	Trebi	936	1925	46.4
+Duluth	Oderbrucker	1529	1925	27.6
+Waseca	Velvet	4252	1925	60.6
+Waseca	Manchuria	2330	1925	58.2
+Waseca	Svansota	1907	1925	56.9
+Waseca	Glabron	4577	1925	58.3
+Waseca	Minsturdi	1556	1925	51.9
+Waseca	Trebi	936	1925	64.5
+Waseca	Comfort	4578	1925	58
+Waseca	Oderbrucker	1529	1925	60.6
+GrandRapids	Manchuria	2330	1925	17.4
+GrandRapids	Glabron	4577	1925	26.7
+GrandRapids	Comfort	4578	1925	11.2
+GrandRapids	Velvet	4252	1925	14.6
+GrandRapids	Oderbrucker	1529	1925	25.6
+Morris	Glabron	4577	1925	42
+Morris	Svansota	1907	1925	43.5
+Morris	Velvet	4252	1925	42.2
+Morris	Manchuria	2330	1925	43.1
+Morris	Trebi	936	1925	41.4
+Morris	Comfort	4578	1925	44.7
+Morris	Oderbrucker	1529	1925	34.8
+Crookston	Velvet	4252	1925	32.2
+Crookston	Glabron	4577	1925	32.3
+Crookston	Manchuria	2330	1925	30.3
+Crookston	Svansota	1907	1925	39.8
+Crookston	Trebi	936	1925	48.6
+Crookston	Comfort	4578	1925	42.4
+Crookston	Oderbrucker	1529	1925	29.7
+StPaul	Glabron	4577	1926	59.5
+StPaul	Velvet	4252	1926	48.5
+StPaul	Manchuria	2330	1926	43.2
+StPaul	Minsturdi	1556	1926	40.9
+StPaul	Oderbrucker	1529	1926	39.1
+StPaul	Svansota	1907	1926	36.4
+StPaul	Comfort	4578	1926	47.1
+StPaul	Trebi	936	1926	43.2
+StPaul	ManSA4668	4668	1926	55.9
+StPaul	ManSA4667	4667	1926	55.4
+StPaul	ManSA4669	4669	1926	45.8
+Duluth	Velvet	4252	1926	45.6
+Duluth	Glabron	4577	1926	45.1
+Duluth	Manchuria	2330	1926	43.2
+Duluth	Svansota	1907	1926	40.5
+Duluth	Trebi	936	1926	50.6
+Duluth	Comfort	4578	1926	50.4
+Duluth	Oderbrucker	1529	1926	44.2
+Duluth	ManSA4668	4668	1926	48.5
+Duluth	ManSA4667	4667	1926	46
+Waseca	Velvet	4252	1926	56.1
+Waseca	Manchuria	2330	1926	55.1
+Waseca	Svansota	1907	1926	52.6
+Waseca	Glabron	4577	1926	46.8
+Waseca	Minsturdi	1556	1926	40.6
+Waseca	Trebi	936	1926	60.6
+Waseca	Comfort	4578	1926	47.9
+Waseca	Oderbrucker	1529	1926	49.7
+Waseca	ManSA4667	4667	1926	54.2
+Waseca	ManSA4668	4668	1926	52.1
+Waseca	ManSA4669	4669	1926	45.6
+GrandRapids	Svansota	1907	1926	47
+GrandRapids	Manchuria	2330	1926	43.5
+GrandRapids	Glabron	4577	1926	39
+GrandRapids	Trebi	936	1926	54
+GrandRapids	Comfort	4578	1926	32.6
+GrandRapids	Velvet	4252	1926	29
+GrandRapids	Oderbrucker	1529	1926	32.7
+GrandRapids	ManSA4667	4667	1926	51
+GrandRapids	Colsess	2792	1926	45.4
+GrandRapids	ManSA4668	4668	1926	36.8
+Morris	Glabron	4577	1926	30.3
+Morris	Svansota	1907	1926	26.2
+Morris	Velvet	4252	1926	25.5
+Morris	Manchuria	2330	1926	24.1
+Morris	Trebi	936	1926	32.9
+Morris	Comfort	4578	1926	29.5
+Morris	Oderbrucker	1529	1926	23.1
+Morris	ManSA4667	4667	1926	28.8
+Morris	ManSA4668	4668	1926	27.4
+Morris	ManSA4668	4668	1926	24.5
+Crookston	Velvet	4252	1926	45.4
+Crookston	Glabron	4577	1926	41.2
+Crookston	Manchuria	2330	1926	38.6
+Crookston	Svansota	1907	1926	32.4
+Crookston	Trebi	936	1926	42.5
+Crookston	Comfort	4578	1926	36.7
+Crookston	Oderbrucker	1529	1926	41.2
+Crookston	ManSA4667	4667	1926	39
+Crookston	ManSA4669	4669	1926	36.4
+Crookston	ManSA4668	4668	1926	34.5
+StPaul	Manchuria	2330	1927	47.5
+StPaul	Glabron	4577	1927	45.4
+StPaul	Svansota	1907	1927	45
+StPaul	Velvet	4252	1927	43.4
+StPaul	Trebi	936	1927	60.2
+StPaul	ManSA4667	4667	1927	45.2
+StPaul	SAxMan	5998	1927	50.3
+StPaul	Peatland	5267	1927	49
+StPaul	Colsess	2792	1927	45.9
+StPaul	Heinrichs	-1	1927	49.4
+Duluth	Manchuria	2330	1927	51.8
+Duluth	Glabron	4577	1927	56
+Duluth	Svansota	1907	1927	41.9
+Duluth	Velvet	4252	1927	60
+Duluth	Trebi	936	1927	65.1
+Duluth	ManSA4667	4667	1927	53.2
+Duluth	SAxMan	5998	1927	62.9
+Duluth	Peatland	5267	1927	56.4
+Duluth	Colsess	2792	1927	62.5
+Waseca	Manchuria	2330	1927	41.3
+Waseca	Glabron	4577	1927	39.4
+Waseca	Svansota	1907	1927	36.3
+Waseca	Velvet	4252	1927	39.8
+Waseca	Trebi	936	1927	53.8
+Waseca	ManSA4667	4667	1927	42.9
+Waseca	SAxMan	5998	1927	42.7
+Waseca	Peatland	5267	1927	45.4
+Waseca	Colsess	2792	1927	35.6
+GrandRapids	Glabron	4577	1927	30.4
+GrandRapids	Svansota	1907	1927	32.1
+GrandRapids	Velvet	4252	1927	20.1
+GrandRapids	Trebi	936	1927	17.2
+GrandRapids	ManSA4667	4667	1927	32.7
+GrandRapids	Peatland	5267	1927	14.9
+GrandRapids	Colsess	2792	1927	26.9
+Morris	Manchuria	2330	1927	43.6
+Morris	Glabron	4577	1927	50
+Morris	Svansota	1907	1927	49.1
+Morris	Velvet	4252	1927	45.6
+Morris	Trebi	936	1927	54.6
+Morris	ManSA4667	4667	1927	52.3
+Morris	SAxMan	5998	1927	31.3
+Morris	Peatland	5267	1927	45.4
+Morris	Colsess	2792	1927	41.9
+Crookston	Manchuria	2330	1927	26
+Crookston	Glabron	4577	1927	27.6
+Crookston	Velvet	4252	1927	32.8
+Crookston	Trebi	936	1927	36.8
+Crookston	ManSA4667	4667	1927	25.9
+Crookston	SAxMan	5998	1927	31.9
+Crookston	Peatland	5267	1927	39.8
+Crookston	Svansota	1907	1927	34.2
+Crookston	Colsess	2792	1927	28.1
+StPaul	Manchuria	2330	1928	32.9
+StPaul	Glabron	4577	1928	30.1
+StPaul	Svansota	1907	1928	38.1
+StPaul	Velvet	4252	1928	28.4
+StPaul	Trebi	936	1928	34.1
+StPaul	ManSA4667	4667	1928	31.8
+StPaul	SAxMan	5998	1928	37.5
+StPaul	Peatland	5267	1928	34.8
+StPaul	Colsess	2792	1928	31.5
+StPaul	Heinrichs	-1	1928	39.3
+Duluth	Manchuria	2330	1928	36.3
+Duluth	Glabron	4577	1928	37
+Duluth	Svansota	1907	1928	22.5
+Duluth	Velvet	4252	1928	38
+Duluth	Trebi	936	1928	41.3
+Duluth	ManSA4667	4667	1928	35.1
+Duluth	SAxMan	5998	1928	39.6
+Duluth	Peatland	5267	1928	35.5
+Duluth	Colsess	2792	1928	34.4
+Waseca	Manchuria	2330	1928	57.4
+Waseca	Glabron	4577	1928	56.7
+Waseca	Svansota	1907	1928	55.3
+Waseca	Velvet	4252	1928	54.9
+Waseca	Trebi	936	1928	67.5
+Waseca	ManSA4667	4667	1928	58.8
+Waseca	SAxMan	5998	1928	65.5
+Waseca	Peatland	5267	1928	53
+Waseca	Colsess	2792	1928	55.2
+Waseca	Heinrichs	-1	1928	58.9
+Waseca	Dryland	5673	1928	48.1
+GrandRapids	Glabron	4577	1928	28.6
+GrandRapids	Svansota	1907	1928	39.7
+GrandRapids	Velvet	4252	1928	34.8
+GrandRapids	Trebi	936	1928	39.2
+GrandRapids	ManSA4667	4667	1928	33.8
+GrandRapids	Peatland	5267	1928	44.4
+GrandRapids	Colsess	2792	1928	28.2
+GrandRapids	Manchuria	2330	1928	33.5
+GrandRapids	SAxMan	5998	1928	40.3
+Morris	Manchuria	2330	1928	35.1
+Morris	Glabron	4577	1928	32.4
+Morris	Svansota	1907	1928	42.3
+Morris	Velvet	4252	1928	36.8
+Morris	Trebi	936	1928	27.4
+Morris	ManSA4667	4667	1928	41.8
+Morris	SAxMan	5998	1928	38.3
+Morris	Peatland	5267	1928	26.8
+Morris	Colsess	2792	1928	29.6
+Morris	Dryland	5673	1928	29.1
+StPaul	Manchuria	2330	1929	48.9
+StPaul	Glabron	4577	1929	51.8
+StPaul	Svansota	1907	1929	51.2
+StPaul	Velvet	4252	1929	49.5
+StPaul	Trebi	936	1929	60.7
+StPaul	ManSA4667	4667	1929	54
+StPaul	SAxMan	5998	1929	58.1
+StPaul	Peatland	5267	1929	49.4
+StPaul	Colsess	2792	1929	44.6
+StPaul	Heinrichs	-1	1929	53.9
+StPaul	No474	5999	1929	54.6
+Duluth	Manchuria	2330	1929	33.2
+Duluth	Glabron	4577	1929	25.8
+Duluth	Svansota	1907	1929	21.1
+Duluth	Velvet	4252	1929	29.7
+Duluth	Trebi	936	1929	30.5
+Duluth	ManSA4667	4667	1929	34
+Duluth	SAxMan	5998	1929	23.9
+Duluth	Peatland	5267	1929	28.8
+Duluth	Colsess	2792	1929	28.5
+Duluth	No474	5999	1929	24.3
+Duluth	No475	6000	1929	24.7
+Waseca	Manchuria	2330	1929	49.5
+Waseca	Glabron	4577	1929	52.4
+Waseca	Svansota	1907	1929	47.1
+Waseca	Velvet	4252	1929	48.9
+Waseca	Trebi	936	1929	63.9
+Waseca	ManSA4667	4667	1929	50.3
+Waseca	SAxMan	5998	1929	53.7
+Waseca	Peatland	5267	1929	50.5
+Waseca	Colsess	2792	1929	46.2
+Waseca	Heinrichs	-1	1929	39.9
+Waseca	Dryland	5673	1929	38.1
+Waseca	No474	5999	1929	41.4
+Waseca	No475	6000	1929	45
+GrandRapids	Glabron	4577	1929	28.3
+GrandRapids	Svansota	1907	1929	34
+GrandRapids	Velvet	4252	1929	23.7
+GrandRapids	Trebi	936	1929	29.8
+GrandRapids	ManSA4667	4667	1929	31.3
+GrandRapids	Peatland	5267	1929	27.1
+GrandRapids	Colsess	2792	1929	32.5
+GrandRapids	Manchuria	2330	1929	26.4
+GrandRapids	SAxMan	5998	1929	30.6
+GrandRapids	No474	5999	1929	29.4
+GrandRapids	No475	6000	1929	30.9
+Morris	Manchuria	2330	1929	27.3
+Morris	Glabron	4577	1929	34.5
+Morris	Svansota	1907	1929	31.4
+Morris	Velvet	4252	1929	26.6
+Morris	Trebi	936	1929	28.3
+Morris	ManSA4667	4667	1929	29.9
+Morris	SAxMan	5998	1929	29.3
+Morris	Peatland	5267	1929	26.5
+Morris	Colsess	2792	1929	26.3
+Morris	No474	5999	1929	32.4
+Morris	No475	6000	1929	30.8
+Crookston	Manchuria	2330	1929	32.1
+Crookston	Glabron	4577	1929	33.5
+Crookston	Velvet	4252	1929	29.1
+Crookston	Trebi	936	1929	33.1
+Crookston	ManSA4667	4667	1929	40.1
+Crookston	SAxMan	5998	1929	48.5
+Crookston	Peatland	5267	1929	33.7
+Crookston	Svansota	1907	1929	39.5
+Crookston	Colsess	2792	1929	31.5
+Crookston	No474	5999	1929	35.3
+Crookston	No475	6000	1929	39.5
+StPaul	Manchuria	2330	1930	34.1
+StPaul	Glabron	4577	1930	42
+StPaul	Svansota	1907	1930	32.3
+StPaul	Velvet	4252	1930	36.6
+StPaul	Trebi	936	1930	41.5
+StPaul	ManSA4667	4667	1930	41.7
+StPaul	SAxMan	5998	1930	41
+StPaul	Peatland	5267	1930	33.1
+StPaul	Colsess	2792	1930	30
+StPaul	Heinrichs	-1	1930	33.4
+StPaul	No474	5999	1930	30.4
+StPaul	Minsturdi	1556	1930	37
+StPaul	CompCross	4116	1930	37.5
+StPaul	MechMixture	4115	1930	34.8
+Duluth	Manchuria	2330	1930	26.4
+Duluth	Glabron	4577	1930	31.7
+Duluth	Svansota	1907	1930	32.8
+Duluth	Velvet	4252	1930	27.9
+Duluth	Trebi	936	1930	30.9
+Duluth	ManSA4667	4667	1930	37.8
+Duluth	SAxMan	5998	1930	32.9
+Duluth	Peatland	5267	1930	27.5
+Duluth	Colsess	2792	1930	33.2
+Duluth	No474	5999	1930	34.4
+Duluth	No475	6000	1930	39.3
+Waseca	Manchuria	2330	1930	40.4
+Waseca	Glabron	4577	1930	38.8
+Waseca	Svansota	1907	1930	40.5
+Waseca	Velvet	4252	1930	37.8
+Waseca	Trebi	936	1930	45.1
+Waseca	ManSA4667	4667	1930	39.1
+Waseca	SAxMan	5998	1930	46
+Waseca	Peatland	5267	1930	42.7
+Waseca	Colsess	2792	1930	38.3
+Waseca	Heinrichs	-1	1930	41.3
+Waseca	No474	5999	1930	44.4
+Waseca	No475	6000	1930	41.9
+GrandRapids	Glabron	4577	1930	31.3
+GrandRapids	Svansota	1907	1930	32.4
+GrandRapids	Velvet	4252	1930	37.8
+GrandRapids	Trebi	936	1930	42.5
+GrandRapids	ManSA4667	4667	1930	33.4
+GrandRapids	Peatland	5267	1930	38.9
+GrandRapids	Colsess	2792	1930	28.4
+GrandRapids	Manchuria	2330	1930	31.8
+GrandRapids	SAxMan	5998	1930	38.9
+GrandRapids	No474	5999	1930	37.4
+GrandRapids	No475	6000	1930	40.6
+Morris	Manchuria	2330	1930	19.3
+Morris	Glabron	4577	1930	23.9
+Morris	Svansota	1907	1930	26.4
+Morris	Velvet	4252	1930	28.1
+Morris	Trebi	936	1930	28.4
+Morris	ManSA4667	4667	1930	21.9
+Morris	SAxMan	5998	1930	34.1
+Morris	Peatland	5267	1930	26
+Morris	Colsess	2792	1930	22
+Morris	No474	5999	1930	27.5
+Morris	No475	6000	1930	35.9
+Crookston	Manchuria	2330	1930	34
+Crookston	Glabron	4577	1930	35.7
+Crookston	Velvet	4252	1930	36.7
+Crookston	Trebi	936	1930	32.5
+Crookston	ManSA4667	4667	1930	35.9
+Crookston	SAxMan	5998	1930	35.2
+Crookston	Peatland	5267	1930	29
+Crookston	Svansota	1907	1930	38.6
+Crookston	Colsess	2792	1930	27.9
+Crookston	No474	5999	1930	32.1
+Crookston	No475	6000	1930	36.7
+StPaul	Manchuria	2330	1931	27
+StPaul	Glabron	4577	1931	43.1
+StPaul	Svansota	1907	1931	35.1
+StPaul	Velvet	4252	1931	39.9
+StPaul	Trebi	936	1931	36.6
+StPaul	ManSA4667	4667	1931	43.3
+StPaul	SAxMan	5998	1931	36.6
+StPaul	Peatland	5267	1931	32.8
+StPaul	Colsess	2792	1931	33.5
+StPaul	Heinrichs	-1	1931	28.9
+StPaul	No474	5999	1931	30
+StPaul	Minsturdi	1556	1931	28.5
+StPaul	CompCross	4116	1931	32.1
+StPaul	MechMixture	4115	1931	35.2
+StPaul	WisconsinBarbless	5105	1931	39.3
+StPaul	Jeans	-1	1931	26.8
+Duluth	Manchuria	2330	1931	29
+Duluth	Glabron	4577	1931	29.7
+Duluth	Svansota	1907	1931	25.7
+Duluth	Velvet	4252	1931	26.3
+Duluth	Trebi	936	1931	33.9
+Duluth	ManSA4667	4667	1931	33.6
+Duluth	SAxMan	5998	1931	28.1
+Duluth	Peatland	5267	1931	32
+Duluth	Colsess	2792	1931	21
+Duluth	No475	6000	1931	33.1
+Duluth	WisconsinBarbless	5105	1931	31.6
+Waseca	Manchuria	2330	1931	48.9
+Waseca	Glabron	4577	1931	55.2
+Waseca	Svansota	1907	1931	47.3
+Waseca	Velvet	4252	1931	50.2
+Waseca	Trebi	936	1931	63.8
+Waseca	ManSA4667	4667	1931	58.1
+Waseca	SAxMan	5998	1931	65.8
+Waseca	Peatland	5267	1931	48.6
+Waseca	Colsess	2792	1931	47.2
+Waseca	Heinrichs	-1	1931	41.4
+Waseca	No474	5999	1931	46.5
+Waseca	No475	6000	1931	46.8
+Waseca	Minsturdi	1556	1931	48.2
+Waseca	WisconsinBarbless	5105	1931	58.8
+GrandRapids	Glabron	4577	1931	29.1
+GrandRapids	Svansota	1907	1931	29.7
+GrandRapids	Velvet	4252	1931	23
+GrandRapids	Trebi	936	1931	29.8
+GrandRapids	ManSA4667	4667	1931	32.2
+GrandRapids	Peatland	5267	1931	34.7
+GrandRapids	Colsess	2792	1931	28.8
+GrandRapids	Manchuria	2330	1931	33
+GrandRapids	SAxMan	5998	1931	24.9
+GrandRapids	No474	5999	1931	21.3
+GrandRapids	No475	6000	1931	19.7
+GrandRapids	Heinrichs	-1	1931	23.2
+GrandRapids	WisconsinBarbless	5105	1931	34.5
+Morris	Manchuria	2330	1931	27.4
+Morris	Glabron	4577	1931	28.8
+Morris	Svansota	1907	1931	25.8
+Morris	Velvet	4252	1931	26.1
+Morris	Trebi	936	1931	43.8
+Morris	ManSA4667	4667	1931	28.7
+Morris	SAxMan	5998	1931	30.4
+Morris	Peatland	5267	1931	29.9
+Morris	Colsess	2792	1931	26.2
+Morris	No474	5999	1931	19.4
+Morris	No475	6000	1931	22.6
+Morris	Heinrichs	-1	1931	20.4
+Morris	WisconsinBarbless	5105	1931	29.5
+Crookston	Manchuria	2330	1931	39.9
+Crookston	Glabron	4577	1931	38.1
+Crookston	Velvet	4252	1931	41.3
+Crookston	Trebi	936	1931	46.9
+Crookston	ManSA4667	4667	1931	45.7
+Crookston	SAxMan	5998	1931	48.6
+Crookston	Peatland	5267	1931	41.6
+Crookston	Svansota	1907	1931	40.5
+Crookston	Colsess	2792	1931	36.5
+Crookston	No474	5999	1931	37.6
+Crookston	No475	6000	1931	44.1
+Crookston	Heinrichs	-1	1931	33.3
+Crookston	WisconsinBarbless	5105	1931	49.9
+StPaul	Manchuria	2330	1932	26.9
+StPaul	Velvet	4252	1932	26.8
+StPaul	WisconsinBarbless	5105	1932	38
+StPaul	Trebi	936	1932	29.1
+StPaul	Minsturdi	1556	1932	25.8
+StPaul	Peatland	5267	1932	28.1
+StPaul	Svansota	1907	1932	27.4
+StPaul	Spartan	5027	1932	25.9
+StPaul	SAxMan	5998	1932	25.6
+StPaul	ManSA4667	4667	1932	26.4
+StPaul	No474	5999	1932	30.9
+Waseca	Manchuria	2330	1932	33.5
+Waseca	Velvet	4252	1932	37.4
+Waseca	Glabron	4577	1932	37.7
+Waseca	WisconsinBarbless	5105	1932	58.2
+Waseca	Trebi	936	1932	49.2
+Waseca	Minsturdi	1556	1932	41
+Waseca	Peatland	5267	1932	36
+Waseca	No474	5999	1932	36.7
+Waseca	Spartan	5027	1932	33.2
+Waseca	SAxMan	5998	1932	44.7
+Waseca	ManSA4667	4667	1932	42.2
+Waseca	Svansota	1907	1932	38.5
+Morris	Manchuria	2330	1932	34.4
+Morris	Velvet	4252	1932	38.8
+Morris	Glabron	4577	1932	35.1
+Morris	WisconsinBarbless	5105	1932	47.2
+Morris	Trebi	936	1932	46.6
+Morris	Peatland	5267	1932	43.2
+Morris	SAxMan	5998	1932	47
+Morris	ManSA4667	4667	1932	43.5
+Morris	No474	5999	1932	43.8
+Crookston	Manchuria	2330	1932	33
+Crookston	Velvet	4252	1932	32.1
+Crookston	Glabron	4577	1932	26.2
+Crookston	WisconsinBarbless	5105	1932	35.9
+Crookston	Trebi	936	1932	41.8
+Crookston	Peatland	5267	1932	25.2
+Crookston	SAxMan	5998	1932	30.5
+Crookston	ManSA4667	4667	1932	34.3
+Crookston	No474	5999	1932	32
+Crookston	Svansota	1907	1932	20.6
+GrandRapids	Manchuria	2330	1932	22.1
+GrandRapids	Velvet	4252	1932	32.2
+GrandRapids	Glabron	4577	1932	14.4
+GrandRapids	WisconsinBarbless	5105	1932	20.7
+GrandRapids	Trebi	936	1932	20.7
+GrandRapids	Peatland	5267	1932	26.8
+GrandRapids	SAxMan	5998	1932	19.9
+GrandRapids	ManSA4667	4667	1932	19.5
+GrandRapids	No474	5999	1932	18.6
+GrandRapids	Svansota	1907	1932	16.6
+Duluth	Manchuria	2330	1932	22.6
+Duluth	Velvet	4252	1932	22.5
+Duluth	Glabron	4577	1932	25.9
+Duluth	WisconsinBarbless	5105	1932	29.3
+Duluth	Trebi	936	1932	30.6
+Duluth	Peatland	5267	1932	31.4
+Duluth	Svansota	1907	1932	22.2
+Duluth	SAxMan	5998	1932	22.5
+Duluth	ManSA4667	4667	1932	22.7
+StPaul	Manchuria	2330	1933	27.1
+StPaul	Velvet	4252	1933	38.2
+StPaul	WisconsinBarbless	5105	1933	38.8
+StPaul	Trebi	936	1933	45.9
+StPaul	Minsturdi	1556	1933	40.4
+StPaul	Peatland	5267	1933	31
+StPaul	Svansota	1907	1933	36.2
+StPaul	Spartan	5027	1933	43.3
+StPaul	SAxMan	5998	1933	34.8
+StPaul	ManSA4667	4667	1933	40.8
+StPaul	No474	5999	1933	30.9
+StPaul	Glabron	4577	1933	34.4
+StPaul	Oderbrucker	4666	1933	26
+StPaul	Odessa	182	1933	32.9
+StPaul	LionManchuria	6001	1933	41.1
+Waseca	Manchuria	2330	1933	44.8
+Waseca	Velvet	4252	1933	53.5
+Waseca	Glabron	4577	1933	59.6
+Waseca	WisconsinBarbless	5105	1933	65.9
+Waseca	Trebi	936	1933	62.1
+Waseca	Minsturdi	1556	1933	54.7
+Waseca	Peatland	5267	1933	59.1
+Waseca	No474	5999	1933	46.9
+Waseca	Spartan	5027	1933	56.8
+Waseca	SAxMan	5998	1933	58.4
+Waseca	ManSA4667	4667	1933	57.8
+Waseca	Oderbrucker	4666	1933	46.4
+Waseca	Odessa	182	1933	62
+Waseca	LionManchuria	6001	1933	58
+Crookston	Manchuria	2330	1933	26.2
+Crookston	Velvet	4252	1933	35.6
+Crookston	Glabron	4577	1933	28.4
+Crookston	WisconsinBarbless	5105	1933	44.5
+Crookston	Trebi	936	1933	22.8
+Crookston	Peatland	5267	1933	35.3
+Crookston	SAxMan	5998	1933	31.3
+Crookston	ManSA4667	4667	1933	27.6
+Crookston	No474	5999	1933	36.1
+Crookston	Oderbrucker	4666	1933	34.7
+Crookston	Odessa	182	1933	33.3
+Crookston	LionManchuria	6001	1933	8.8
+GrandRapids	Manchuria	2330	1933	10.1
+GrandRapids	Velvet	4252	1933	8
+GrandRapids	Glabron	4577	1933	14.2
+GrandRapids	WisconsinBarbless	5105	1933	10.6
+GrandRapids	Trebi	936	1933	15.5
+GrandRapids	Peatland	5267	1933	14.4
+GrandRapids	SAxMan	5998	1933	10.9
+GrandRapids	ManSA4667	4667	1933	12.7
+GrandRapids	No474	5999	1933	9.8
+GrandRapids	Oderbrucker	4666	1933	10.1
+GrandRapids	Odessa	182	1933	14
+Duluth	Manchuria	2330	1933	38.4
+Duluth	Velvet	4252	1933	30.4
+Duluth	Glabron	4577	1933	36.3
+Duluth	WisconsinBarbless	5105	1933	60.1
+Duluth	Trebi	936	1933	35.8
+Duluth	Peatland	5267	1933	41.7
+Duluth	Svansota	1907	1933	33.5
+Duluth	SAxMan	5998	1933	34.7
+Duluth	ManSA4667	4667	1933	21.6
+Duluth	Oderbrucker	4666	1933	32.9
+Duluth	Odessa	182	1933	44.1
+Duluth	No474	5999	1933	34.1
+StPaul	Manchuria	2330	1934	12.7
+StPaul	Velvet	4252	1934	15
+StPaul	WisconsinBarbless	5105	1934	5.5
+StPaul	Trebi	936	1934	14.6
+StPaul	Minsturdi	1556	1934	16.3
+StPaul	Peatland	5267	1934	5.4
+StPaul	Svansota	1907	1934	2.9
+StPaul	Spartan	5027	1934	9.3
+StPaul	SAxMan	5998	1934	12
+StPaul	ManSA4667	4667	1934	19.6
+StPaul	No474	5999	1934	6.6
+StPaul	Glabron	4577	1934	13.6
+StPaul	Oderbrucker	4666	1934	6.1
+StPaul	Odessa	182	1934	13.8
+StPaul	LionManchuria	6001	1934	10.1
+Waseca	Manchuria	2330	1934	18.9
+Waseca	Velvet	4252	1934	18.5
+Waseca	Glabron	4577	1934	22.6
+Waseca	WisconsinBarbless	5105	1934	22.1
+Waseca	Trebi	936	1934	25.3
+Waseca	Minsturdi	1556	1934	19.9
+Waseca	Peatland	5267	1934	11.3
+Waseca	No474	5999	1934	27.7
+Waseca	Spartan	5027	1934	8.8
+Waseca	SAxMan	5998	1934	23
+Waseca	ManSA4667	4667	1934	26.8
+Waseca	Oderbrucker	4666	1934	13.8
+Waseca	Odessa	182	1934	17.4
+Waseca	LionManchuria	6001	1934	13.3
+Waseca	Manchuria	2947	1934	15.8
+Crookston	Manchuria	2330	1934	49.4
+Crookston	Velvet	4252	1934	47.2
+Crookston	Glabron	4577	1934	52.1
+Crookston	WisconsinBarbless	5105	1934	51.4
+Crookston	Trebi	936	1934	65.1
+Crookston	Peatland	5267	1934	44.7
+Crookston	SAxMan	5998	1934	60.5
+Crookston	ManSA4667	4667	1934	57.6
+Crookston	No474	5999	1934	51.5
+Crookston	Oderbrucker	4666	1934	48.2
+Crookston	Odessa	182	1934	59.3
+Crookston	LionManchuria	6001	1934	56.8
+GrandRapids	Manchuria	2330	1934	29.3
+GrandRapids	Velvet	4252	1934	40.4
+GrandRapids	Glabron	4577	1934	37.3
+GrandRapids	WisconsinBarbless	5105	1934	43.3
+GrandRapids	Trebi	936	1934	42.6
+GrandRapids	Peatland	5267	1934	43.2
+GrandRapids	SAxMan	5998	1934	39.5
+GrandRapids	ManSA4667	4667	1934	35.5
+GrandRapids	No474	5999	1934	44.5
+GrandRapids	Oderbrucker	4666	1934	26.7
+GrandRapids	Odessa	182	1934	42.5
+GrandRapids	LionManchuria	6001	1934	31.8
+Duluth	Manchuria	2330	1934	55.7
+Duluth	Velvet	4252	1934	51.8
+Duluth	Glabron	4577	1934	50.3
+Duluth	WisconsinBarbless	5105	1934	73.4
+Duluth	Trebi	936	1934	75.5
+Duluth	Peatland	5267	1934	50.7
+Duluth	Svansota	1907	1934	54.7
+Duluth	SAxMan	5998	1934	64
+Duluth	ManSA4667	4667	1934	58
+Duluth	Oderbrucker	4666	1934	38.8
+Duluth	Odessa	182	1934	54.5
+Duluth	LionManchuria	6001	1934	51.2
+Duluth	No474	5999	1934	48.4
+StPaul	Manchuria	2330	1935	51.9
+StPaul	Velvet	4252	1935	57
+StPaul	WisconsinBarbless	5105	1935	63.3
+StPaul	Trebi	936	1935	62.1
+StPaul	Minsturdi	1556	1935	62.1
+StPaul	Peatland	5267	1935	51.9
+StPaul	Svansota	1907	1935	56.7
+StPaul	Spartan	5027	1935	64.4
+StPaul	SAxMan	5998	1935	49.4
+StPaul	ManSA4667	4667	1935	60
+StPaul	No474	5999	1935	58.9
+StPaul	Glabron	4577	1935	46
+StPaul	Oderbrucker	4666	1935	43.3
+StPaul	Odessa	182	1935	53.6
+StPaul	LionManchuria	6001	1935	61.1
+Waseca	Manchuria	2330	1935	53.5
+Waseca	Velvet	4252	1935	56.5
+Waseca	Glabron	4577	1935	59
+Waseca	WisconsinBarbless	5105	1935	72.3
+Waseca	Trebi	936	1935	66.9
+Waseca	Minsturdi	1556	1935	61.3
+Waseca	Peatland	5267	1935	47.8
+Waseca	No474	5999	1935	63.7
+Waseca	Spartan	5027	1935	61.3
+Waseca	SAxMan	5998	1935	57.8
+Waseca	ManSA4667	4667	1935	51.1
+Waseca	Oderbrucker	4666	1935	40.4
+Waseca	Odessa	182	1935	61.2
+Waseca	LionManchuria	6001	1935	54.5
+Waseca	Manchuria	2947	1935	40.7
+Morris	Manchuria	2330	1935	34.2
+Morris	Velvet	4252	1935	36.7
+Morris	Glabron	4577	1935	33.8
+Morris	WisconsinBarbless	5105	1935	55.2
+Morris	Trebi	936	1935	43.8
+Morris	Peatland	5267	1935	49.1
+Morris	SAxMan	5998	1935	34
+Morris	ManSA4667	4667	1935	31.5
+Morris	No474	5999	1935	48.9
+Morris	Oderbrucker	4666	1935	34.3
+Morris	Odessa	182	1935	41.9
+Morris	LionManchuria	6001	1935	35.1
+Crookston	Manchuria	2330	1935	40
+Crookston	Velvet	4252	1935	40.6
+Crookston	Glabron	4577	1935	32.9
+Crookston	WisconsinBarbless	5105	1935	45.2
+Crookston	Trebi	936	1935	56.5
+Crookston	Peatland	5267	1935	52
+Crookston	SAxMan	5998	1935	37.3
+Crookston	ManSA4667	4667	1935	43
+Crookston	No474	5999	1935	40.6
+Crookston	Oderbrucker	4666	1935	32.5
+Crookston	Odessa	182	1935	44
+Crookston	LionManchuria	6001	1935	42
+GrandRapids	Manchuria	2330	1935	28.6
+GrandRapids	Velvet	4252	1935	26
+GrandRapids	Glabron	4577	1935	21.4
+GrandRapids	WisconsinBarbless	5105	1935	25.1
+GrandRapids	Trebi	936	1935	33.5
+GrandRapids	Peatland	5267	1935	35.6
+GrandRapids	SAxMan	5998	1935	31.5
+GrandRapids	ManSA4667	4667	1935	29.7
+GrandRapids	No474	5999	1935	24.5
+GrandRapids	Oderbrucker	4666	1935	23.8
+GrandRapids	Odessa	182	1935	28
+GrandRapids	LionManchuria	6001	1935	25.9
+Duluth	Manchuria	2330	1935	24.6
+Duluth	Velvet	4252	1935	27.5
+Duluth	Glabron	4577	1935	21.4
+Duluth	WisconsinBarbless	5105	1935	40.5
+Duluth	Trebi	936	1935	30.5
+Duluth	Peatland	5267	1935	33
+Duluth	Svansota	1907	1935	23
+Duluth	SAxMan	5998	1935	17.9
+Duluth	ManSA4667	4667	1935	24.5
+Duluth	Oderbrucker	4666	1935	19.2
+Duluth	Odessa	182	1935	33
+Duluth	LionManchuria	6001	1935	27
+Duluth	No474	5999	1935	24.5
+StPaul	Manchuria	2330	1936	22.7
+StPaul	Velvet	4252	1936	17
+StPaul	WisconsinBarbless	5105	1936	18.3
+StPaul	Trebi	936	1936	25.3
+StPaul	Minsturdi	1556	1936	30.9
+StPaul	Peatland	5267	1936	11
+StPaul	Glabron	4577	1936	24
+StPaul	Oderbrucker	4666	1936	10.3
+StPaul	Odessa	182	1936	21.7
+StPaul	LionManchuria	6001	1936	31.8
+Waseca	Manchuria	2330	1936	38
+Waseca	Velvet	4252	1936	39.4
+Waseca	Glabron	4577	1936	42.8
+Waseca	WisconsinBarbless	5105	1936	45
+Waseca	Trebi	936	1936	55.9
+Waseca	Minsturdi	1556	1936	46.6
+Waseca	Peatland	5267	1936	38.5
+Waseca	Oderbrucker	4666	1936	36.5
+Waseca	Odessa	182	1936	39.3
+Waseca	LionManchuria	6001	1936	48
+Morris	Manchuria	2330	1936	23.3
+Morris	Velvet	4252	1936	21.1
+Morris	Glabron	4577	1936	23.8
+Morris	WisconsinBarbless	5105	1936	20.1
+Morris	Trebi	936	1936	26.1
+Morris	Peatland	5267	1936	18.1
+Morris	Oderbrucker	4666	1936	19
+Morris	Odessa	182	1936	25.7
+Morris	LionManchuria	6001	1936	20.1
+Crookston	Manchuria	2330	1936	8.2
+Crookston	Velvet	4252	1936	12.6
+Crookston	Glabron	4577	1936	11.5
+Crookston	WisconsinBarbless	5105	1936	8.8
+Crookston	Trebi	936	1936	23.1
+Crookston	Peatland	5267	1936	6.7
+Crookston	Oderbrucker	4666	1936	4.1
+Crookston	Odessa	182	1936	17.2
+Crookston	LionManchuria	6001	1936	13.9
+GrandRapids	Manchuria	2330	1936	18
+GrandRapids	Velvet	4252	1936	7.7
+GrandRapids	Glabron	4577	1936	12.8
+GrandRapids	WisconsinBarbless	5105	1936	9
+GrandRapids	Trebi	936	1936	19
+GrandRapids	Peatland	5267	1936	16.5
+GrandRapids	Oderbrucker	4666	1936	13
+GrandRapids	Odessa	182	1936	14.4
+GrandRapids	LionManchuria	6001	1936	15
+Duluth	Manchuria	2330	1936	12
+Duluth	Velvet	4252	1936	8.9
+Duluth	Glabron	4577	1936	12.9
+Duluth	WisconsinBarbless	5105	1936	10.3
+Duluth	Trebi	936	1936	21.2
+Duluth	Peatland	5267	1936	17.5
+Duluth	Oderbrucker	4666	1936	9.2
+Duluth	Odessa	182	1936	17.4
+Duluth	LionManchuria	6001	1936	14.2
+StPaul	Manchuria	2330	1937	27.9
+StPaul	Peatland	5267	1937	33
+StPaul	Velvet	4252	1937	34
+StPaul	Minsturdi	1556	1937	42
+StPaul	WisconsinBarbless	5105	1937	30.5
+StPaul	Glabron	4577	1937	37.9
+StPaul	Trebi	936	1937	46
+StPaul	Oderbrucker	4666	1937	18.8
+StPaul	Odessa	182	1937	34.6
+StPaul	LionManchuria	6001	1937	47.6
+Waseca	Manchuria	2330	1937	47.7
+Waseca	Peatland	5267	1937	48.3
+Waseca	Velvet	4252	1937	44.6
+Waseca	Minsturdi	1556	1937	54.1
+Waseca	WisconsinBarbless	5105	1937	57.1
+Waseca	Glabron	4577	1937	39
+Waseca	Trebi	936	1937	67.3
+Waseca	Oderbrucker	4666	1937	38.3
+Waseca	Odessa	182	1937	52.4
+Waseca	LionManchuria	6001	1937	46.4
+Morris	Manchuria	2330	1937	31.5
+Morris	Peatland	5267	1937	31.8
+Morris	Velvet	4252	1937	34.3
+Morris	WisconsinBarbless	5105	1937	43.4
+Morris	Glabron	4577	1937	30.5
+Morris	Trebi	936	1937	42.9
+Morris	Oderbrucker	4666	1937	24.1
+Morris	Odessa	182	1937	34.8
+Morris	LionManchuria	6001	1937	37.5
+Crookston	Manchuria	2330	1937	25.2
+Crookston	Peatland	5267	1937	43.1
+Crookston	Velvet	4252	1937	38.6
+Crookston	WisconsinBarbless	5105	1937	40.2
+Crookston	OAC21	1470	1937	34.1
+Crookston	Glabron	4577	1937	33.4
+Crookston	Trebi	936	1937	39
+Crookston	Oderbrucker	4666	1937	28.4
+Crookston	Odessa	182	1937	35.5
+Crookston	LionManchuria	6001	1937	29.6
+GrandRapids	Manchuria	2330	1937	24.1
+GrandRapids	Peatland	5267	1937	45.5
+GrandRapids	Velvet	4252	1937	25.8
+GrandRapids	WisconsinBarbless	5105	1937	33.8
+GrandRapids	Glabron	4577	1937	21.3
+GrandRapids	Trebi	936	1937	32.7
+GrandRapids	Oderbrucker	4666	1937	22.4
+GrandRapids	Odessa	182	1937	38.3
+GrandRapids	LionManchuria	6001	1937	27.1
+Duluth	Manchuria	2330	1937	12.3
+Duluth	Peatland	5267	1937	27.9
+Duluth	Velvet	4252	1937	14
+Duluth	WisconsinBarbless	5105	1937	11.6
+Duluth	Glabron	4577	1937	19.8
+Duluth	Trebi	936	1937	20.5
+Duluth	Oderbrucker	4666	1937	7.4
+Duluth	Odessa	182	1937	20.3
+Duluth	LionManchuria	6001	1937	12.4
+StPaul	Manchuria	2330	1938	41.1
+StPaul	Peatland	5267	1938	50.6
+StPaul	Velvet	4252	1938	42.2
+StPaul	Minsturdi	1556	1938	58.3
+StPaul	WisconsinBarbless	5105	1938	54.8
+StPaul	Glabron	4577	1938	45.9
+StPaul	Trebi	936	1938	58.4
+StPaul	Ioglos	6239	1938	56.8
+StPaul	Oderbrucker	4666	1938	42.4
+StPaul	Odessa	182	1938	42.4
+StPaul	LionManchuria	6001	1938	46.1
+Waseca	Manchuria	2330	1938	41.5
+Waseca	Peatland	5267	1938	44
+Waseca	Velvet	4252	1938	47.7
+Waseca	Minsturdi	1556	1938	47.4
+Waseca	WisconsinBarbless	5105	1938	56.8
+Waseca	Glabron	4577	1938	44.4
+Waseca	Trebi	936	1938	50.3
+Waseca	Oderbrucker	4666	1938	43.7
+Waseca	Ioglos	6239	1938	45.1
+Morris	Manchuria	2330	1938	49
+Morris	Peatland	5267	1938	48.8
+Morris	Velvet	4252	1938	50.9
+Morris	WisconsinBarbless	5105	1938	64.6
+Morris	Glabron	4577	1938	30.5
+Morris	Trebi	936	1938	42.9
+Morris	Oderbrucker	4666	1938	24.1
+Morris	Odessa	182	1938	34.8
+Morris	LionManchuria	6001	1938	37.5
+Crookston	Manchuria	2330	1938	29.7
+Crookston	Peatland	5267	1938	44.3
+Crookston	Velvet	4252	1938	33.7
+Crookston	WisconsinBarbless	5105	1938	45.7
+Crookston	OAC21	1470	1938	48.3
+Crookston	Glabron	4577	1938	39.8
+Crookston	Trebi	936	1938	37.5
+Crookston	Ioglos	6239	1938	34.1
+Crookston	Oderbrucker	4666	1938	25.7
+Crookston	Odessa	182	1938	35.1
+GrandRapids	Manchuria	2330	1938	19.8
+GrandRapids	Peatland	5267	1938	16.8
+GrandRapids	Velvet	4252	1938	16.6
+GrandRapids	Glabron	4577	1938	16.1
+GrandRapids	Trebi	936	1938	19
+GrandRapids	Ioglos	6239	1938	15.2
+GrandRapids	Oderbrucker	4666	1938	17.6
+Duluth	Manchuria	2330	1938	30
+Duluth	Peatland	5267	1938	28.5
+Duluth	Velvet	4252	1938	27.7
+Duluth	WisconsinBarbless	5105	1938	36.3
+Duluth	Glabron	4577	1938	24.2
+Duluth	Trebi	936	1938	27.6
+Duluth	Ioglos	6239	1938	28.4
+Duluth	Oderbrucker	4666	1938	26.5
+StPaul	Manchuria	2330	1939	33.5
+StPaul	Peatland	5267	1939	51.6
+StPaul	Velvet	4252	1939	44.4
+StPaul	Minsturdi	1556	1939	42
+StPaul	WisconsinBarbless	5105	1939	49.6
+StPaul	OAC21	1470	1939	56.7
+StPaul	Gartons	7016	1939	52
+StPaul	Glabron	4577	1939	45.7
+StPaul	Trebi	936	1939	48.7
+StPaul	Ioglos	6239	1939	37.2
+Waseca	Manchuria	2330	1939	48.8
+Waseca	Peatland	5267	1939	58.2
+Waseca	Velvet	4252	1939	61.7
+Waseca	Minsturdi	1556	1939	52.7
+Waseca	Glabron	4577	1939	53.7
+Waseca	Trebi	936	1939	64.8
+Waseca	Oderbrucker	4666	1939	60.4
+Waseca	Ioglos	6239	1939	59.5
+Morris	Manchuria	2330	1939	31.1
+Morris	Peatland	5267	1939	41.7
+Morris	Velvet	4252	1939	48.6
+Morris	WisconsinBarbless	5105	1939	55.1
+Morris	Gartons	7016	1939	44
+Morris	Glabron	4577	1939	46.8
+Morris	Trebi	936	1939	44.6
+Morris	Ioglos	6239	1939	46.7
+Crookston	Manchuria	2330	1939	35
+Crookston	Peatland	5267	1939	43.1
+Crookston	Velvet	4252	1939	41.2
+Crookston	WisconsinBarbless	5105	1939	42.9
+Crookston	OAC21	1470	1939	47.2
+Crookston	Gartons	7016	1939	42.9
+Crookston	Glabron	4577	1939	41.4
+Crookston	Trebi	936	1939	56.3
+Crookston	Ioglos	6239	1939	43.8
+GrandRapids	Manchuria	2330	1939	30.2
+GrandRapids	Peatland	5267	1939	26.8
+GrandRapids	Velvet	4252	1939	38.4
+GrandRapids	WisconsinBarbless	5105	1939	49.7
+GrandRapids	Glabron	4577	1939	32.8
+GrandRapids	Trebi	936	1939	42.7
+GrandRapids	Ioglos	6239	1939	30
+Duluth	Manchuria	2330	1939	35.9
+Duluth	Peatland	5267	1939	33.5
+Duluth	Velvet	4252	1939	39
+Duluth	WisconsinBarbless	5105	1939	45.4
+Duluth	Glabron	4577	1939	30.5
+Duluth	Trebi	936	1939	49.4
+Duluth	Ioglos	6239	1939	43.1
+StPaul	Manchuria	2330	1940	55.5
+StPaul	Peatland	5267	1940	73.3
+StPaul	Velvet	4252	1940	73.3
+StPaul	Minsturdi	1556	1940	68.9
+StPaul	WisconsinBarbless	5105	1940	77.8
+StPaul	OAC21	1470	1940	71.8
+StPaul	Gartons	7016	1940	71.2
+StPaul	Spartan	5027	1940	77
+StPaul	Glabron	4577	1940	69.7
+StPaul	Trebi	936	1940	71.5
+StPaul	Ioglos	6239	1940	65.7
+Waseca	Manchuria	2330	1940	53.4
+Waseca	Peatland	5267	1940	83.7
+Waseca	Velvet	4252	1940	61.3
+Waseca	Minsturdi	1556	1940	66.2
+Waseca	WisconsinBarbless	5105	1940	103.4
+Waseca	Spartan	5027	1940	62.9
+Waseca	Glabron	4577	1940	61.6
+Waseca	Trebi	936	1940	84.2
+Waseca	Oderbrucker	4666	1940	53.2
+Waseca	Ioglos	6239	1940	66.9
+Morris	Manchuria	2330	1940	51.2
+Morris	Peatland	5267	1940	59.6
+Morris	Velvet	4252	1940	52.7
+Morris	WisconsinBarbless	5105	1940	72.4
+Morris	Gartons	7016	1940	61.2
+Morris	Glabron	4577	1940	58.9
+Morris	Trebi	936	1940	70.4
+Morris	Ioglos	6239	1940	65.1
+Crookston	Manchuria	2330	1940	42.2
+Crookston	Peatland	5267	1940	42.8
+Crookston	Velvet	4252	1940	40
+Crookston	WisconsinBarbless	5105	1940	58.5
+Crookston	OAC21	1470	1940	35.7
+Crookston	Gartons	7016	1940	52
+Crookston	Spartan	5027	1940	46.2
+Crookston	Glabron	4577	1940	42.2
+Crookston	Trebi	936	1940	43.9
+Crookston	Ioglos	6239	1940	45.9
+GrandRapids	Manchuria	2330	1940	36
+GrandRapids	Peatland	5267	1940	39.4
+GrandRapids	Velvet	4252	1940	44.5
+GrandRapids	WisconsinBarbless	5105	1940	60.7
+GrandRapids	Glabron	4577	1940	43.3
+GrandRapids	Trebi	936	1940	58.7
+GrandRapids	Ioglos	6239	1940	41.9
+Duluth	Manchuria	2330	1940	28.9
+Duluth	Peatland	5267	1940	29.3
+Duluth	Velvet	4252	1940	29
+Duluth	WisconsinBarbless	5105	1940	38.3
+Duluth	Spartan	5027	1940	25.9
+Duluth	Glabron	4577	1940	29.9
+Duluth	Trebi	936	1940	39.8
+Duluth	Ioglos	6239	1940	32.1
+StPaul	Manchuria	2330	1941	46.5
+StPaul	Peatland	5267	1941	54.9
+StPaul	Velvet	4252	1941	54.7
+StPaul	Minsturdi	1556	1941	61
+StPaul	WisconsinBarbless	5105	1941	64.7
+StPaul	OAC21	1470	1941	65.5
+StPaul	Gartons	7016	1941	42.4
+StPaul	Spartan	5027	1941	58.4
+StPaul	Minn462xPeatland7010	7010	1941	52.8
+StPaul	Minn462xPeatland7011	7011	1941	55.4
+StPaul	Minn462xPeatland7012	7012	1941	52.1
+StPaul	Minn462xPeatland7013	7013	1941	52.2
+StPaul	Minn462xPeatland7014	7014	1941	53.3
+StPaul	Mars	7015	1941	62.4
+Waseca	Manchuria	2330	1941	35.9
+Waseca	Peatland	5267	1941	34.5
+Waseca	Velvet	4252	1941	35.1
+Waseca	Minsturdi	1556	1941	36.5
+Waseca	WisconsinBarbless	5105	1941	43.3
+Waseca	Spartan	5027	1941	46.9
+Waseca	Minn462xPeatland7010	7010	1941	41.5
+Waseca	Minn462xPeatland7011	7011	1941	42.4
+Waseca	Minn462xPeatland7012	7012	1941	32.5
+Waseca	Minn462xPeatland7013	7013	1941	37.9
+Waseca	Minn462xPeatland7014	7014	1941	28.9
+Waseca	Mars	7015	1941	43.6
+Morris	Manchuria	2330	1941	39.3
+Morris	Peatland	5267	1941	47
+Morris	Velvet	4252	1941	41.4
+Morris	WisconsinBarbless	5105	1941	53.3
+Morris	Gartons	7016	1941	43.6
+Morris	Spartan	5027	1941	54.1
+Morris	Minn462xPeatland7010	7010	1941	46.1
+Morris	Minn462xPeatland7011	7011	1941	51.5
+Morris	Minn462xPeatland7012	7012	1941	45
+Morris	Minn462xPeatland7013	7013	1941	47.6
+Morris	Minn462xPeatland7014	7014	1941	41.5
+Morris	Mars	7015	1941	56
+Crookston	Manchuria	2330	1941	23.7
+Crookston	Peatland	5267	1941	37.9
+Crookston	Velvet	4252	1941	43.8
+Crookston	WisconsinBarbless	5105	1941	41.5
+Crookston	OAC21	1470	1941	36.2
+Crookston	Gartons	7016	1941	32.3
+Crookston	Spartan	5027	1941	38.8
+Crookston	Minn462xPeatland7010	7010	1941	37.1
+Crookston	Minn462xPeatland7011	7011	1941	42.8
+Crookston	Minn462xPeatland7012	7012	1941	31.6
+Crookston	Minn462xPeatland7013	7013	1941	37.6
+Crookston	Minn462xPeatland7014	7014	1941	37.3
+Crookston	Mars	7015	1941	41.9
+GrandRapids	Manchuria	2330	1941	31.2
+GrandRapids	Peatland	5267	1941	37.2
+GrandRapids	Velvet	4252	1941	48.2
+GrandRapids	WisconsinBarbless	5105	1941	49.5
+GrandRapids	Spartan	5027	1941	36.6
+GrandRapids	Minn462xPeatland7010	7010	1941	42
+GrandRapids	Minn462xPeatland7011	7011	1941	26.1
+GrandRapids	Minn462xPeatland7012	7012	1941	37.7
+GrandRapids	Minn462xPeatland7013	7013	1941	33.6
+GrandRapids	Minn462xPeatland7014	7014	1941	26.3
+GrandRapids	Mars	7015	1941	39.7
+Duluth	Manchuria	2330	1941	25.5
+Duluth	Peatland	5267	1941	29.8
+Duluth	Velvet	4252	1941	27.5
+Duluth	WisconsinBarbless	5105	1941	32.8

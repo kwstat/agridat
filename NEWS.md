@@ -11,15 +11,17 @@
 
 ## Other notes
 
-* baker.strawberry.uniformity: inserted 3 blank columns to more closely align with the experiment layout.
+* baker.strawberry.uniformity: inserted 3 columns into the field to more closely align with the experiment layout.
 
 * garber.multi.uniformity: The data has been reshaped to tall and additional years added.
 
-* shafi.tomato.uniformity: Had incorrect yield scale, now divided by 1000.
+* minnesota.barley.yield: Added 10+ more years of data.
 
 * odland.soyhay.uniformity: Yields have been divided by 10 so that the yield values are now tons instead of 0.1 tons.
 
+* shafi.tomato.uniformity: Had incorrect yield scale, now divided by 1000.
 
+* Package website now created via GitHub Actions (Issue #12). Thanks to E.Tanaka.
 
 # agridat 1.23 (2024-01-30)
 
@@ -182,8 +184,6 @@ acorsi.grayleafspot, becker.chicken, chinloy.fractionalfactorial, cramer.cucumbe
 ## Other notes
 
 * The following data objects have been changed from lists of 2 matrices into tidy dataframes: aastveit.barley, box.cork, ortiz.tomato, talbot.potato, vargas.txe, vargas.wheat1, vargas.wheat2
-
-* Checked aspect ratio of field plot heatmaps where possible.
 
 * `devtools::run_examples()` now works even without suggested packages installed.
 

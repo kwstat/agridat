@@ -78,12 +78,12 @@
   data(siao.cotton.uniformity)
   dat <- siao.cotton.uniformity
   
-  # 1930. Siao reports mean 132.25
-  dat %>% filter(crop=="1930") %>% pull(yield) %>% mean() # 132.15
+  # 1930. Siao reports mean 132.25. We have 132.15
+  dat %>% filter(crop=="1930") %>% pull(yield) %>% mean()
   dat %>% filter(crop=="1930") %>% desplot(yield~col*row, aspect=(200*1)/(24))
 
-  # 1931a. Siao reports 61.8
-  dat %>% filter(crop=="1931a") %>% pull(yield) %>% mean() # 61.79
+  # 1931a. Siao reports 61.8. We have 61.79
+  dat %>% filter(crop=="1931a") %>% pull(yield) %>% mean()
   dat %>% filter(crop=="1931a") %>% desplot(yield~col*row, aspect=(200*1)/(24))
 
   # 1931b. Siao p 56 reports mean 212.7 (after dropping border???). We have 212.26
@@ -92,8 +92,8 @@
                                             tick=TRUE, flip=TRUE,
                                             main="siao.cotton.uniformity 1931b")
   
-  # 1932. Siao p 61 mean 43.4
-  dat %>% filter(crop=="1932") %>% pull(yield) %>% mean() # 43.03
+  # 1932. Siao p 61 reports mean 43.4. We have 43.03
+  dat %>% filter(crop=="1932") %>% pull(yield) %>% mean()
   dat %>% filter(crop=="1931a") %>% desplot(yield~col*row, aspect=(200*1)/(24),
                                             tick=TRUE,
                                             main="siao.cotton.uniformity 1932")

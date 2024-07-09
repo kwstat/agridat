@@ -13,7 +13,7 @@ OK (Except usual random notes from Rhub)
 ## revdepcheck results
 
 * We checked 6 reverse dependencies that were OK.
-* The geneticae package failed, but the error message indicates that the failure is not caused by the 'agridat' package.
+* The geneticae package check failed, but the error message indicates that the failure is not caused by the 'agridat' package.
 
 
 

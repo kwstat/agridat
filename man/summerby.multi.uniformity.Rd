@@ -41,6 +41,9 @@
   The row numbers in this data are based on the figure on page 13 of Summerby.
   Row 1 is at the bottom. There appears to be approximately a blank row between ranges.
 
+  The paper by Summerby has more year/range combinations, but those
+  plots are 20 links by 100 links and are only a single plot wide.
+  
   These data were converted from PDF to png images, then OCR converted
   to text, then hand-checked by K.Wright.
 }

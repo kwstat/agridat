@@ -26,8 +26,12 @@
 
   Field length: 38 plots x 1 m = 38 m
 
-  Note that Gomez published a paper in 1969 on rice uniformity data.
-  Quite likely this is the same data. Estimated harvest year is 1968.
+  Note that Gomez published a paper in 1969 on rice uniformity data from
+  four trials conducted in the 1968 dry and wet seasons. It is likely
+  that this data is taken from one of those four trials. Estimated
+  harvest year is 1968.
+  "Estimation of optimum plot size from rice uniformity data".
+  https://www.cabidigitallibrary.org/doi/full/10.5555/19711601105
   
   Used with permission of Kwanchai Gomez.
 }

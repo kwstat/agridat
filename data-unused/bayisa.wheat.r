@@ -1,7 +1,7 @@
 # bayisa.wheat.R
-# Time-stamp: <11 Jan 2023 15:22:33 c:/drop/rpack/agridat/data-unused/bayisa.wheat.R>
+# Time-stamp: <23 Apr 2024 14:48:28 c:/drop/rpack/agridat/data-unused/bayisa.wheat.r>
 
-# Reason not used: ?
+# Reason not used: Confusing source citation.
 
 # Source: Bayisa, D. (2010).
 # Application of Spatial Mixed Model in Agricultural Field Experiment.
@@ -9,10 +9,10 @@
 
 # Electronic version from Johannes Forkman document
 # "Exercise: Agricultural field experiment with spatial correlation"
+# The data below is 4 rep, 20 genotype
 
 # This thesis gives data for 1 uniformity experiment.
 # A couple other experiments were also analyzed.
-# Decided not to use.
 
 library(asreml)
 library(kw)
@@ -25,7 +25,8 @@ dat0 <- import("bayisa.wheat.xlsx")
 
 dat <- dat0
 
-lib(desplot)
+head(dat)
+libs(desplot)
 desplot(dat, yield~east+north, out1=rep, tick=TRUE)
 str(dat)
 describe(dat)

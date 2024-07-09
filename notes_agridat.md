@@ -185,7 +185,6 @@ There is very little contextual information about these data.
 ## To do
 
 * change theobald.covariate from JAGS to brms?
-* brms examples for crowder.seeds
 * Figure out best way to use jags
 * JAGS code for edwards.oats
 * JAGS code for lee.potatoblight
@@ -380,7 +379,7 @@ http://www.unc.edu/courses/2006spring/ecol/145/001/docs/lectures.htm
 # Journals / Proceedings
 
 
-## Applied Statistics in Agriculture
+## Applied Statistics in Agriculture Conference
 http://newprairiepress.org/agstatconference/ 
 1989-2014
 
@@ -398,9 +397,3 @@ https://www.cambridge.org/core/journals/journal-of-agricultural-science/all-issu
 ## Experimental Agriculture
 https://www.cambridge.org/core/journals/experimental-agriculture
 1965-2016
-
-
-## SAS Global Forum
-http://support.sas.com/events/sasglobalforum/previous/online.html 
-22-31, 2007-2013
-

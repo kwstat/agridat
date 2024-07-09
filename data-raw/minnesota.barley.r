@@ -1,42 +1,59 @@
-# minnesota.barley.r
-# Time-stamp: c:/x/rpack/agridat2/minnesota.barley.r
+# minnesota.barley.R
 
+# Other books
 
-# 1937-1941 here
-# Technical bulletin, Issues 876-900, By United States. Dept. of Agriculture
-#http://books.google.com/books?id=eywaJmlWRecC&pg=RA3-PA20&dq=morris+trebi+velvet+-trellis+-lattice&hl=en&sa=X&ei=fJirT5TNJ4Sq2QXs1sjGCQ&ved=0CEAQ6AEwAg#v=onepage&q=morris%20trebi%20velvet%20-trellis%20-lattice&f=false
-
-# Others
 # Report of Northwest Experiment Station, Crookston, 1917
  By University of Minnesota. Northwest Experiment Station (Crookston, Minn.)
 http://books.google.com/books?id=8NoxAQAAMAAJ&pg=RA7-PA13&lpg=RA7-PA13&dq=%22improved+manchuria%22+crookston&source=bl&ots=YaR89ZC4-f&sig=3QE_CyUIfSUsQjcByRnR_jdfaVw&hl=en&sa=X&ei=QcWzT6OGEsSE2wW1xInqCA&ved=0CDgQ6AEwAQ#v=onepage&q=%22improved%20manchuria%22%20crookston&f=false
-
 
 # ----------------------------------------------------------------------------
 
 # Create the yield data
 
-library(asreml)
-library(kw)
-library(rio)
-library(Hmisc)
-library(lattice)
+libs(asreml, kw, rio, Hmisc, lattice, readxl, reshape2)
+setwd("c:/drop/rpack/agridat/data-raw/")
 
-setwd("c:/x/rpack/agridat/data-done/")
+d0 <- read_excel("minnesota.barley.yield.xlsx", sheet="1893-1921")
+d1 <- read_excel("minnesota.barley.yield.xlsx", sheet="1922-1926")
+d2 <- read_excel("minnesota.barley.yield.xlsx", sheet="1927-1931")
+d3 <- read_excel("minnesota.barley.yield.xlsx", sheet="1932-1936")
+d4 <- read_excel("minnesota.barley.yield.xlsx", sheet="1937-1941")
 
-d1 <- import("minnesota.barley.yield.1927.csv")
-m1 <- melt(d1, id.var=c('site','gen'))
-d2 <- import("minnesota.barley.yield.1932.csv")
-m2 <- melt(d2, id.var=c('site','gen'))
-dat <- rbind(m1,m2)
-names(dat) <- c('site','gen','year','yield')
-dat$year <- as.numeric(substring(dat$year,2))
+d0 <- melt(d0, id.var=c('site','gen', "CI"))
+d1 <- melt(d1, id.var=c('site','gen', "CI"))
+d2 <- melt(d2, id.var=c('site','gen', "CI"))
+d3 <- melt(d3, id.var=c('site','gen', "CI"))
+d4 <- melt(d4, id.var=c('site','gen', "CI"))
+
+dat <- rbind(d0,d1,d2,d3,d4)
+names(dat) <- c('site','gen','CI', 'year','yield')
 dat <- subset(dat, !is.na(yield))
-dat <- dat[,c('yield','gen','year','site')]
+head(dat)
+dat[ dat$gen=="WisNo38" & dat$CI==5105, "gen"] <- "WisconsinBarbless"
+
+# check for duplicate gen CI combinations
+dat %>% select(CI,gen) %>% unique() %>% arrange(CI)
+dat %>% select(CI,gen) %>% unique() %>% arrange(CI) %>% pull(CI) %>% table() %>% sort()
+dat %>% select(CI,gen) %>% unique() %>% pull(gen) %>% table() %>% sort()
+   ## WisconsinPedigree      ChampionVermont                Coast      FrenchChevalier 
+   ##                 1                    2                    2                    2 
+   ##       GoldenQueen              Kitzing               Scotch        BlackHullless 
+   ##                 2                    2                    2                    3 
+   ##           Mensury          Oderbrucker             Machuria            Chevalier 
+   ##                 3                    3                    4                    5 
+   ##             Hanna               Hybrid            Manchuria 
+   ##                 6                   30                   57 
+
+dat %>% select(CI,gen) %>% unique() %>% arrange(gen) 
+# The gen/CI are questionable prior to 1908
+
+# check for outliers, confirmed 103.4 is in original source 
+densityplot(~dat$yield)
+
 minnesota.barley.yield <- dat
 
-export(minnesota.barley.yield, "c:/x/rpack/agridat/data/minnesota.barley.yield.txt")
-export(minnesota.barley.yield, "c:/x/rpack/agridat/man/minnesota.barley.yield.Rd")
+export(minnesota.barley.yield, "c:/drop/rpack/agridat/data/minnesota.barley.yield.txt")
+#export(minnesota.barley.yield, "c:/drop/rpack/agridat/man/minnesota.barley.yield.Rd")
 # ----------------------------------------------------------------------------
 
 dat <- minnesota.barley.yield
@@ -44,8 +61,11 @@ dat$yr <- factor(dat$year)
 
 # Drop Dryland, Jeans, CompCross, MechMixture because they have less than 5
 # year-loc values
-dat <- droplevels(subset(dat, !is.element(gen, c("CompCross","Dryland","Jeans","MechMixture"))))
-
+dat <- droplevels(subset(dat, !is.element(gen, c("CompCross","Dryland","Jeans","MechMixture",
+                                                 "Minn462xPeatland7010", "Minn462xPeatland7011",
+                                                 "Minn462xPeatland7012","Minn462xPeatland7013",
+                                                 "Minn462xPeatland7014","Mars",
+                                                 "ManSA4667", "ManSA4668", "ManSA4669"  ))))
 uos(dotplot(gen~yield|yr*site, dat, scales=list(y=list(cex=.5))))
 
 uos(dotplot(gen~yield|site*yr, dat, scales=list(y=list(cex=.5))))
@@ -55,14 +75,22 @@ dotplot(gen~yield|site, dat, groups=yr, #layout=c(1,6),
         auto.key=list(columns=5), scales=list(y=list(cex=.5)))
 
 # 28/29 show one reversal
-dotplot(gen~yield|site, dat, groups=yr, subset=year %in% c(1928,1929),
+# At StPaul, 1929 had higher yields. At other locations, 1928 had higher yields
+dotplot(gen~yield|site, dat, groups=yr, subset=yr %in% c(1928,1929),
+        auto.key=list(columns=10),
         layout=c(1,6), scales=list(y=list(cex=.5)))
 
 require(HH)
 interaction2wt(yield~site+yr, dat) # 28/29
+kw::interaction2wt(dat, yield~site+yr) # 28/29
 
+
+heat(dat, yield~ gen*site)
+heat(dat, yield~ year*site)
+heat(dat, yield~ gen*year)
 # How does variability compare to 10% G, 70% E, 20% GE ?
 require(asreml)
+dat <- mutate(dat, gen=factor(gen), site=factor(site))
 a1 <- asreml(yield ~ 1, random = ~ gen + site:yr + gen:site:yr, data=dat)
 a1 <- update(a1)
 vc(a1)
@@ -115,17 +143,17 @@ minnesota.barley.weather <- datw
 export(datw, "c:/x/rpack/agridat/data/minnesota.barley.weather.txt")
 export(datw, "c:/x/rpack/agridat/man/minnesota.barley.weather.Rd")
 
-# Total cooling/heating/precip in May-Aug for each site/yr
+# Total cooling/heating/precip in May-Aug for each site/year
 ww <- subset(datw, mo>=4 & mo<=8)
-ww <- aggregate(cbind(cdd,hdd,precip,min,max,mn)~site+yr, data=ww, sum)
+ww <- aggregate(cbind(cdd,hdd,precip,min,max,mn)~site+year, data=ww, sum)
 #ww <- subset(ww, site=="Morris")
 
 # Mean yield per each site/env
-yy <- aggregate(yield~site+yr, dat, mean)
+yy <- aggregate(yield~site+year, dat, mean)
 # yy <- subset(yy, site=="Morris")
 
 minn <- merge(ww, yy)
-splom(~minn[,c('cdd','hdd','precip','yield')]|minn$site, groups=minn$yr,
+splom(~minn[,c('cdd','hdd','precip','yield')]|minn$site, groups=minn$year,
       auto.key=list(columns=5),
       scales=list(cex=.8),
       #subset=minn$site=="Morris"

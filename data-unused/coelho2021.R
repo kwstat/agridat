@@ -9,8 +9,9 @@
 # The paper shows no heatmaps!
 
 setwd("c:/drop/rpack/agridat/data-raw")
-dat <- read.csv("coelho2021.txt", sep="\t")
+dat <- read.csv("coelho.maize.diallel.txt", sep="\t")
 head(dat)
+# 4 trials, 3 rep, 12 parents, 79 hyb offspring
 
 libs(desplot)
 desplot(dat, GY ~ Columns*Rows|Trials, out1=Replications)

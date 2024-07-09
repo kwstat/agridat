@@ -370,7 +370,7 @@ Not available.
 Murray, D.B. 1950.
 A uniformity trial with swamp rice.
 Tropical Agriculture
-https://journals.sta.uwi.edu/ta/index.asp?action=viewIssue&issueId=406
+https://journals.sta.uwi.edu/ojs/index.php/ta/article/view/4964
 No access.
 
 
@@ -1719,6 +1719,13 @@ Some determinations of plat variability.
 Agronomy Journal, 18, 819-823.
 https://doi.org/10.2134/agronj1926.00021962001800090009x
 agridat::mcclelland.corn.uniformity
+
+
+McGuire, Judson U. (1954).
+Uniformity Data From European Corn Borer, Pyrausta Nubilalis Hbn., Populations.
+[Ames, Ia.: s.n.], 1954. 
+https://hdl.handle.net/2027/umn.31951000404095s
+Reviewed. This publication has data relating to corn borer infestation of thousands of individual corn plants. Not used.
 
 
 Meier, V.D. and Lessman, K.J. (1971).

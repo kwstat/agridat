@@ -12,10 +12,11 @@
 \format{
   A data frame with 647 observations on the following 4 variables.
   \describe{
-    \item{\code{yield}}{yield in bu/ac}
-    \item{\code{gen}}{genotype (variety) factor}
-    \item{\code{year}}{year}
     \item{\code{site}}{site factor, 6 levels}
+    \item{\code{gen}}{genotype (variety) factor}
+    \item{\code{CI}}{cereal introduction cultivar ID factor}
+    \item{\code{year}}{year}
+    \item{\code{yield}}{yield in bu/ac}
   }
 }
 \details{
@@ -28,7 +29,7 @@
 
   Notes about Immer (1934).
 
-  The University Farm location is at the city of Saint Paul.
+  The University Farm location is at Saint Paul.
 
   This source provides the yield data for each of the three blocks at
   each location in 1931 and 1932.  The following registration numbers
@@ -48,7 +49,26 @@
     Minn 529 \tab  Wisconsin No 38 \cr
   }
 
-  Notes about Harlan (1935):
+  
+  ----- Notes from Harlan et al (1925) -----
+
+  The data from these early tests are accurate at some stations, but may
+  have problems at other stations. (p. 14).
+
+  Identification of many varieties is inadequate...the chance of their
+  being incorrectly identified is small...Officials of the StPaul
+  station have expressed a desire that conclusions be drawn from the
+  yields only when the limitations of the earlier experiments are taken
+  into full consideration. (p. 72)
+  
+  The Chevalier and Hanna varieties are not well adapted for StPaul
+  (p. 73).
+
+  
+  ----- Notes from Harlan et al (1929) -----
+
+  
+  ----- Notes from Harlan et al (1935) -----
 
   The 1931 yields match the average values of Immer (1934).
 
@@ -59,8 +79,11 @@
   Also, in the report for North Dakota it says
   "the zero yields at Williston, ND in 1931 were caused by drought". (Page 31)
 
+  
+  ----- Notes from Wiebe et al (1935) -----
 
-  Notes about Wiebe (1940):
+  
+  ----- Notes from Wiebe et al (1940) -----
 
   The 1932 data generally match the average values from Immer (1934)
   with the following notes.
@@ -80,37 +103,56 @@
   No yields are reported at Morris in 1933 and 1934, because of a crop
   failure owing to drought.
 
-  Notes about Hayes (1942).
+  
+  ----- Notes from Hayes (1942) -----
 
-  This sources gives the block-level yield data for 5 cultivars at 4
+  This source gives the block-level yield data for 5 cultivars at 4
   sites in 1932 and 1935.  Cultivar 'Barbless' is the same as 'Wisconsin
   No38'.
 
 }
 
 \source{
-  H V Harlan and P R Cowan and Lucille Reinbach. (1935).
-  \emph{Yields of barley varieties in the United States and Canada, 1927-1931}.
-  United States Dept of Agriculture.
+
+  Harry V. Harlan and Mary L. Martini and Merrit N. Pope (1925).
+  Tests of barley varieties in America.
+  United States Department of Agriculture, Department Bulletin 1334.
+  https://archive.org/details/testsofbarleyvar1334harl
+  
+  H. V. Harlan and L. H. Newman and Mary L. Martini (1929).
+  Yields of barley in the United States and Canada 1922-1926.
+  United States Department of Agriculture, Technical Bulletin 96.
+  https://handle.nal.usda.gov/10113/CAT86200091
+    
+  Harlan, H. V. and Philip Russell Cowan and Lucille Reinbach. (1935).
+  Yields of barley in the United States and Canada 1927-1931.
+  United States Dept of Agriculture, Technical Bulletin 446.
   https://naldc.nal.usda.gov/download/CAT86200440/PDF
 
-  Gustav A. Wiebe, Philip Russell Cowan, Lucille Reinbach-Welch. (1940).
-  \emph{Yields of barley varieties in the United States and Canada, 1932-36}.
-  United States Dept of Agriculture.
+  Wiebe, Gustav A. and Philip Russell Cowan, Lucille Reinbach-Welch. (1940).
+  Yields of barley varieties in the United States and Canada 1932-36.
+  United States Dept of Agriculture, Technical Bulletin 735.
   https://books.google.com/books?id=OUfxLocnpKkC&pg=PA19
+
+  Wiebe, Gustav A. and Philip Russell Cowan, Lucille Reinbach-Welch. (1944).
+  Yields of barley varieties in the United States and Canada, 1937-41.
+  United States Dept of Agriculture, Technical Bulletin 881.
+  https://handle.nal.usda.gov/10113/CAT86200873
+    
 }
 
 \references{
   Immer, R. F. and H. K. Hayes and LeRoy Powers. (1934).
   Statistical Determination of Barley Varietal Adaptation.
-  \emph{Journal of the American Society of Agronomy}, 26, 403-419.
+  Journal of the American Society of Agronomy, 26, 403-419.
   https://doi.org/10.2134/agronj1934.00021962002600050008x
 
   Hayes, H.K. and Immer, F.R. (1942).
-  \emph{Methods of plant breeding}. McGraw Hill.
+  Methods of plant breeding.
+  McGraw Hill.
 
   Kevin Wright. (2013).  Revisiting Immer's Barley Data.
-  \emph{The American Statistitician}, 67, 129-133.
+  The American Statistitician, 67, 129-133.
   https://doi.org/10.1080/00031305.2013.801783
 }
 \examples{
