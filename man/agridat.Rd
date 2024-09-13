@@ -207,7 +207,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{ars.earlywhitecorn96}        \tab 60  \tab 9  \tab     \tab    \tab       \tab 6 traits \tab dotplot \cr
 \link{australia.soybean}           \tab 58  \tab 4  \tab     \tab 2  \tab       \tab 4-way, 6 traits \tab biplot \cr
 \link{bachmaier.nitrogen}          \tab     \tab    \tab 4   \tab    \tab 2,11  \tab \tab quadratic lm\cr
-\link{barrero.maize}               \tab 847 \tab 16 \tab 4   \tab 11 \tab 6     \tab \tab asreml\cr
+\link{barrero.maize}               \tab 847 \tab 16 \tab 4   \tab 11 \tab 6     \tab \tab gain,asreml\cr
 \link{battese.survey}              \tab     \tab 12 \tab 1-5 \tab    \tab 2     \tab \tab lmer \cr
 \link{beall.webworms}              \tab     \tab    \tab 15  \tab    \tab 2,2   \tab xy, split-block \tab glm poisson,nb\cr
 \link{beaven.barley}               \tab  8  \tab    \tab 20  \tab    \tab       \tab xy \tab \cr

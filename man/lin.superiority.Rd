@@ -47,7 +47,6 @@
 \dontrun{
 
 library(agridat)
-
 data(lin.superiority)
 dat <- lin.superiority
 

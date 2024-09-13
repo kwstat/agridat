@@ -1,6 +1,6 @@
 # agridat 1.24 (unpublished)
 
-## New datasets added
+## New datasets
 
 * haritonenko.sugarbeet.uniformity
 * jegorow.oats.uniformity
@@ -21,11 +21,12 @@
 
 * shafi.tomato.uniformity: Had incorrect yield scale, now divided by 1000.
 
-* Package website now created via GitHub Actions (Issue #12). Thanks to E.Tanaka.
+* Documentation pages now created via Github Actions. (Issue #12). Thanks to E.Tanaka.
+
 
 # agridat 1.23 (2024-01-30)
 
-## New datasets added
+## New datasets
 
 ## Other notes
 
@@ -40,7 +41,7 @@
 
 # agridat 1.22 (2023-08-24)
 
-## New datasets added
+## New datasets
 
 * bailey.cotton.uniformity
 * belamkar.augmented (augmented design at multiple locations)
@@ -66,7 +67,7 @@
 
 ## Other notes
 
-* Switched the package to MIT license.
+* Changed the package to MIT license.
 
 * Modified factorial-experiment datasets to separate the treatment factors into individual treatment factors.
 
@@ -77,7 +78,7 @@
 
 # agridat 1.21 (2022-06-15)
 
-## New datasets added
+## New datasets
 
 * bachmaier.quadratic (confidence intervals for optimum of quadratic)
 * ducker.groundnut.uniformity
@@ -87,7 +88,7 @@
 
 # agridat 1.20 (2021-12-20)
 
-## New datasets added
+## New datasets
 
 * arankacami.groundnut.uniformity
 * barrero.maize
@@ -112,7 +113,7 @@
 
 # agridat 1.18 (2021-01-12)
 
-## New datasets added
+## New datasets
 
 * damesa.maize
 * jayaraman.bamboo
@@ -122,7 +123,7 @@
 
 # agridat 1.17 (2020-08-03)
 
-## New datasets added
+## New datasets
 
 alwan.lamb, baker.strawberry.uniformity, besag.checks, bryan.corn.uniformity, davidian.soybean, devries.pine, edwards.oats, george.wheat, hartman.tomato.uniformity, heath.radish.uniformity, johnson.douglasfir, kayad.alfalfa, kerr.sugarcane.uniformity, laycock.tea.uniformity, lehmann.millet.uniformity, linder.wheat, loesell.bean.uniformity, miguez.biomass, obsi.potato.uniformity, paez.coffee.uniformity, pederson.lettuce.repeated, piepho.barley.uniformity, rothamsted.oats, shaw.oats, wyatt.multi.uniformity
 
@@ -151,7 +152,7 @@ alwan.lamb, baker.strawberry.uniformity, besag.checks, bryan.corn.uniformity, da
 
 # agridat 1.15 (2018-06-28)
 
-## New datasets added
+## New datasets
 
 ansari.wheat.uniformity, baker.wheat.uniformity, bancroft.peanut.uniformity, bose.multi.uniformity, christidis.cotton.uniformity, dasilva.soybean.uniformity, davies.pasture.uniformity, eden.tea.uniformity, hutchinson.cotton.uniformity, igue.sugarcane.uniformity, kulkarni.sorghum.uniformity, lander.multi.uniformity, lord.rice.uniformity, magistad.pineapple.uniformity, nagai.strawberry.uniformity, narain.sorghum.uniformity, robinson.peanut.uniformity, sayer.sugarcane.uniformity, strickland.apple.uniformity, strickland.grape.uniformity, strickland.peach.uniformity, strickland.tomato.uniformity
 
@@ -169,15 +170,15 @@ dasilva.maize, mead.turnip
 
 # agridat 1.13 (2017-11-30)
 
-## New datasets added for uniformity trials
+## New datasets for uniformity trials
 
 bradley.multi.uniformity, christidis.wheat.uniformity, day.wheat.uniformity, draper.safflower.uniformity, holtsmark.timothy.uniformity, iyer.wheat.uniformity, kadam.millet.uniformity, kalamkar.wheat.uniformity, khin.rice.uniformity, kiesselbach.oats.uniformity, kristensen.barley.uniformity, lessman.sorghum.uniformity, love.cotton.uniformity, masood.rice.uniformity, mcclelland.corn.uniformity, montgomery.wheat.uniformity, moore.polebean.uniformity, moore.bushbean.uniformity, moore.sweetcorn.uniformity, moore.carrot.uniformity, moore.springcauliflower.uniformity, moore.fallcauliflower.uniformity, nonnecke.corn.uniformity, nonnecke.peas.uniformity, parker.orange.uniformity, polson.safflower.uniformity, sawyer.multi.uniformity, smith.beans.uniformity, stickler.sorghum.uniformity, wiedemann.safflower.uniformity
 
-## New datasets added for stability
+## New datasets for stability
 
 fisher.barley, lu.stability, tai.potato
 
-## New datasets added
+## New datasets
 
 acorsi.grayleafspot, becker.chicken, chinloy.fractionalfactorial, cramer.cucumber, crampton.pig, battese.survey, christidis.competition, depalluel.sheep. eden.nonnormal, gartner.corn, giles.wheat, gomez.heteroskedastic, gomez.nonnormal1, gomez.nonnormal2, gomez.nonnormal3, gomez.wetdry, goulden.eggs, goulden.splitsplit, gregory.cotton, hanover.whitepine, harvey.lsmeans, harville.lamb, huehn.wheat, kenward.cattle, kreusler.maize, lehner.soybeanmold, lillemo.wheat, lin.superiority, lin.unbalanced, little.splitblock, mead.lamb, omer.sorghum, onofri.winterwheat, reid.grasses, silva.cotton, urquhart.feedlot, usgs.herbicides, vaneeuwijk.fusarium, vaneeuwijk.nematodes, vaneeuwijk.drymatter, wheatley.carrot
 
@@ -199,7 +200,7 @@ acorsi.grayleafspot, becker.chicken, chinloy.fractionalfactorial, cramer.cucumbe
 
 # agridat 1.12 (2015-06-29)
 
-## New datasets added
+## New datasets
 
 * cochran.beets
 * cochran.lattice
@@ -209,7 +210,7 @@ acorsi.grayleafspot, becker.chicken, chinloy.fractionalfactorial, cramer.cucumbe
 
 # agridat 1.11 (2015-03-03)
 
-## New datasets added
+## New datasets
 
 * besag.beans
 * besag.triticale
@@ -223,10 +224,9 @@ acorsi.grayleafspot, becker.chicken, chinloy.fractionalfactorial, cramer.cucumbe
 * Removed `asreml` package from Suggests (due to CRAN check problems).
 
 
-
 # agridat 1.10 (2014-11-26)
 
-## New datasets added
+## New datasets
 
 beaven.barley, perry.springwheat, ridout.appleshoots
 
@@ -235,10 +235,9 @@ beaven.barley, perry.springwheat, ridout.appleshoots
 * Move packages from Depends to Imports.
 
 
-
 # agridat 1.9 (2014-07-02)
 
-## New datasets added
+## New datasets
 
 beall.webworms, besag.endive, brandt.switchback, butron.maize, carlson.germination, cochran.factorial, connolly.potato, cornelius.maize, cullis.earlygen, fisher.latin, foulley.calving, fox.wheat, gomez.splitplot.subsample, goulden.latin, gumpertz.pepper, harrison.priors, hazell.vegetables, heady.fertilizer, holland.arthropods, hunter.corn, jansen.strawberry, kalamkar.potato.uniformity, kang.maize, kang.peanut, karcher.turfgrass, keen.potatodamage, lasrosas.corn, lee.potatoblight, lonnquist.maize, lucas.switchback, maindonald.barley, mead.cauliflower, mercer.mangold.uniformity, patterson.switchback, piepho.cocksfoot, sinclair.clover, snijders.fusarium, stirret.borers, theobald.barley, turner.herbicide, vargas.txe, vold.longterm, wallace.iowaland, walsh.cottonprice, wassom.brome.uniformity, welch.bermudagrass, weiss.incblock, weiss.lattice, yang.barley
 
@@ -249,19 +248,17 @@ beall.webworms, besag.endive, brandt.switchback, butron.maize, carlson.germinati
 * All data (almost) now have an example graphic.
 
 
-
 # agridat 1.8 (2013-09-23)
 
-## New datasets added
+## New datasets
 
 * brandle.rape
 * salmon.bunt
 
 
-
 # agridat 1.7 (2013-09-06)
 
-## New datasets added
+## New datasets
 
 * baker.barley.uniformity
 * bliss.borers
@@ -273,55 +270,48 @@ beall.webworms, besag.endive, brandt.switchback, butron.maize, carlson.germinati
 * waynick.soil
 
 
-
 # agridat 1.6 (2013-06-04)
 
-## New datasets added
+## New datasets
 
 crossa.wheat, garber.multi.uniformity, gomez.nitrogen, harris.multi.uniformity, hughes.grapes, li.millet.uniformity, odland.soybean.uniformity, odland.soyhay.uniformity, ratkowsky.onions, stephens.sorghum.uniformity
 
 
-
 # agridat 1.5 (2013-04-26)
 
-## New datasets added
+## New datasets
 
 adugna.sorghum, ars.earlywhitecorn96, besag.bayesian, box.cork, broadbalk.wheat, byers.apple, caribbean.maize, carmer.density, cate.potassium, cleveland.soil, cochran.eelworms, cochran.wireworms, fan.stability, gomez.seedrate, gotway.hessianfly, goulden.barley.uniformity, henderson.milkfat, hernandez.nitrogen, hessling.argentina, immer.sugarbeet.uniformity, ivins.herbs, jenkyn.mildew, johnson.blight, lambert.soiltemp, lavoranti.eucalyptus, lyon.potato.uniformity, lyons.wheat, mead.cowpeamaize, mead.germination, minnesota.barley.weather, minnesota.barley.yield, nebraska.farmincome, nass.barley, nass.corn, nass.cotton, nass.hay, nass.rice, nass.sorghum, nass.soybean, nass.wheat, ortiz.tomato, pacheco.soybean, senshu.rice, snedecor.asparagus, streibig.competition, zuidhof.broiler
 
 
-
 # agridat 1.4 (2012-03-14)
 
-## New datasets added
+## New datasets
 
 archbold.apple, blackman.wheat, cochran.crd, cochran.latin, darwin.maize, denis.ryegrass, digby.jointregression, engelstad.nitro, federer.diagcheck, gilmour.slatehall, john.alpha, ilra.sheep, kempton.slatehall, ryder.groundnut, vsn.lupin3
 
 
-
 # agridat 1.3 (2011-10-20)
 
-## New datasets added
+## New datasets
 
 bridges.cucumber, cox.stripsplit, diggle.cow, eden.potato, gauch.soy, graybill.heteroskedastic, hildebrand.systems, hanks.sprinkler, mcconway.turnip, pearl.kernels, williams.barley.uniformity, williams.cotton.uniformity
 
 
-
 # agridat 1.2 (2011-06-30)
 
-## New datasets added
+## New datasets
 
 aastveit.barley, gathmann.bt, kempton.competition, wedderburn.barley
-
 
 
 # agridat 1.0 (2011-04-27)
 
 * First release to CRAN
 
-## New datasets added
+## New datasets
 
 allcroft.lodging, australia.soybean, batchelor.apple.uniformity, batchelor.lemon.uniformity, batchelor.navel1.uniformity, batchelor.navel2.uniformity, batchelor.valencia.uniformity, batchelor.walnut.uniformity, besag.elbatan, besag.met, cochran.bib, corsten.interaction, crowder.germination, denis.missing, durban.competition, durban.rowcol, durban.splitplot, federer.tobacco, gilmour.serpentine, gomez.fractionalfactorial, gomez.groupsplit, gomez.multilocsplitplot, gomez.splitsplit, gomez.stripplot, gomez.stripsplitplot, gomez.rice.uniformity, hughes.grapes, kempton.rowcol, kempton.barley.uniformity, mead.strawberry, mercer.wheat.uniformity, rothamsted.brussels, shafii.rapeseed, smith.uniformity3, stroup.nin, stroup.splitplot, student.barley, talbot.potato, theobald.covariate, thompson.cornsoy, vargas.wheat1, vargas.wheat2, verbyla.lupin, williams.trees, wiebe.wheat.uniformity, yan.winterwheat, yates.missing, yates.oats
-
 
 
 # agridat 0.0 (2010-10-01)

@@ -709,6 +709,12 @@ The full datasets for the GRACE studies A-E are available here: https://www.cadi
 CC license.
 
 
+### Volpato et al (2024)
+A retrospective analysis of historical data of multi-environment trials for dry bean ( Phaseolus vulgaris L.) in Michigan.
+https://github.com/msudrybeanbreeding/DryBean_MultiEnvTrials
+Full dataset and R code.
+
+
 ### Xavier, Alencar et al..
 Genome-Wide Analysis of Grain Yield Stability and Environmental Interactions in a Multiparental Soybean Population.
 https://doi.org/10.1534/g3.117.300300
@@ -916,7 +922,14 @@ Data formatted for the analysis of the NAM package is available with the followi
 
 ### SoyURT 
 https://github.com/mdkrause/SoyURT
-Large historical data to study GxE and identify mega-environments with genetic and non-genetic factors.
+
+Large historical data of yield trials from Uniform Soybean Tests Northern States.
+Years 1989-2019, 63 locations, 4257 genotypes.
+The package also contains soils and weather data for the trial locations.
+
+Note: The USDA published papers with results from:
+National Cotton Variety Tests, Uniform Soybean Tests Northern States, and Uniform Soybean Tests Southern States here:
+https://www.ars.usda.gov/southeast-area/stoneville-ms/crop-genetics-research/docs/
 
 
 ### spdep

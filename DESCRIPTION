@@ -64,4 +64,4 @@ VignetteBuilder:
 Encoding: UTF-8
 Language: en-US
 LazyData: true
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2

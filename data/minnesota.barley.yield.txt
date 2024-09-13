@@ -1,4 +1,4 @@
-site	gen	CI	year	yield
+site	gen_name	gen	year	yield
 StPaul	BlackHullless	596	1893	24.1
 StPaul	Horsford	507	1893	25
 StPaul	Bernard	881	1893	22.8

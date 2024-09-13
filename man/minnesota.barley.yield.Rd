@@ -5,16 +5,19 @@
   Multi-environment trial of barley in Minnesota at 6 sites in 1927-1936.
 }
 \description{
-  This is an expanded version of the barley data that is often
-  used to illustrate dot plots.
+  These data come from barley breeding experiments conducted in
+  Minnesota during the years 1893-1942.
+  During the early years, the experiments were conducted only at StPaul.
+  By the late 1920s, the experiments had expanded to 6 sites across the
+  state.  
 }
 
 \format{
   A data frame with 647 observations on the following 4 variables.
   \describe{
     \item{\code{site}}{site factor, 6 levels}
-    \item{\code{gen}}{genotype (variety) factor}
-    \item{\code{CI}}{cereal introduction cultivar ID factor}
+    \item{\code{gen_name}}{genotype name}
+    \item{\code{gen}}{genotype (CI cereal introduction ID)}
     \item{\code{year}}{year}
     \item{\code{yield}}{yield in bu/ac}
   }
@@ -23,11 +26,15 @@
 
   The \code{lattice} package contains a smaller version of this data for
   the years 1931 and 1932.
-
+  
+  This is an expanded version of the barley data that is often
+  used to illustrate dot plots.
+  
   The following comments are in reference to the mentioned source
   documents.
 
-  Notes about Immer (1934).
+  
+  ----- Notes about Immer (1934) -----
 
   The University Farm location is at Saint Paul.
 
@@ -166,11 +173,13 @@ dat$yr <- factor(dat$year)
 
 # Drop Dryland, Jeans, CompCross, MechMixture because they have less than 5
 # year-loc values
-dat <- droplevels(subset(dat, !is.element(gen, c("CompCross","Dryland","Jeans","MechMixture"))))
+dat <- subset(dat, !is.element(gen_name, c("CompCross","Dryland","Jeans","MechMixture")))
+dat <- subset(dat, year >= 1927 & year <= 1936)
+dat <- droplevels(dat)
 
 # 1934 has huge swings from one loc to the next
 libs(lattice)
-dotplot(gen~yield|site, dat, groups=yr,
+dotplot(gen_name~yield|site, dat, groups=yr,
         main="minnesota.barley.yield",
         auto.key=list(columns=5), scales=list(y=list(cex=.5)))
 }

@@ -55,7 +55,7 @@
   xyplot(yield~yor|env, dat, type=c('p','r'), xlab="year of release",
          main="perry.springwheat")
   
-  # Show a table of sites*year
+  # Show the genetic trend for each testing location * year.
   # libs(latticeExtra)
   # useOuterStrips(xyplot(yield~yor|site*factor(year), dat,
   #                       type=c('p','r')))
