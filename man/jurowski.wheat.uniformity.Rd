@@ -43,8 +43,8 @@
   
 }
 \source{
-  Sapěhin, A. A. (1927).
-  Beiträge zur Methodik des Feldversuches.
+  Sapehin, A. A. (1927).
+  Beitrage zur Methodik des Feldversuches.
   Die Landwirtschaflichen Versuchsstationen, 105, 243-259.
   https://www.google.com/books/edition/Die_Landwirthschaftlichen_Versuchs_Stati/cLZGAAAAYAAJ?hl=en&pg=PA243
 }

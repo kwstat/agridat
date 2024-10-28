@@ -39,9 +39,9 @@
   
   Field width: 15 columns * 1 sazhen.
 
-  Note: The Russian word “саж” refers to a unit of
-  measurement. Specifically, it represents the sazhen (саже́нь or
-  са́жень), which was used in traditional Russian systems of
+  Note: The Russian word (that looks like "cax" with a vertical line in
+  the "x") refers to a unit of
+  measurement. Specifically, it represents the sazhen, which was used in traditional Russian systems of
   measurement. The sazhen itself is approximately 3 meters (7 feet)
   long. Google Translate sometimes converts "sazhen" into "soot",
   "meter" or "fathom". 

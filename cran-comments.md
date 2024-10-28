@@ -1,3 +1,21 @@
+# agridat 1.24
+
+## test environments and results
+
+1. R 4.4.1 on Windows 11
+2. WinBuilder R-Devel
+3. Rhub linux
+
+OK
+
+## revdepcheck results
+
+We checked 8 reverse dependencies (7 from CRAN + 1 from Bioconductor), comparing R CMD check results across CRAN and dev versions of this package.
+
+ * We saw 0 new problems
+ * We failed to check 0 packages
+
+
 # agridat 1.23
 
 * Removed suggested use of sf/terra packages in examples.
@@ -16,8 +34,6 @@ OK (Except usual random notes from Rhub)
 * The geneticae package check failed, but the error message indicates that the failure is not caused by the 'agridat' package.
 
 
-
-# -----
 
 # agridat 1.22
 
@@ -45,8 +61,6 @@ Issues with CRAN packages are summarised below.
 
 * spaMM (NA) # Note, this is a "Suggests" package.
 
-
-# ----------
 
 # agridat 1.21
 

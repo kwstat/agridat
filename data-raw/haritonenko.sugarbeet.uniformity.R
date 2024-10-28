@@ -1,5 +1,10 @@
 # kharitonenko.sugarbeet.uniformity.R
 
+  Note: The name Haritonenko is sometimes translated into English as:
+  Pavel Kharitonenko. The original name in Russian is: Павел Иванович
+  Харитоненко .
+
+
 libs(desplot,dplyr,kw,lattice,magrittr,readxl,readr,reshape2,tibble)
 
 setwd("c:/drop/rpack/agridat/data-raw/")

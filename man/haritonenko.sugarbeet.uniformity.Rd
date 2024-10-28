@@ -42,15 +42,14 @@
   faden = 6 feet, but this does not match the total area 5.68 ha.
 
   Note: The name Haritonenko is sometimes translated into English as:
-  Pavel Kharitonenko. The original name in Russian is: Павел Иванович
-  Харитоненко .
+  Pavel Kharitonenko.
 
   The data were typed by K.Wright from Roemer (1920), table 4, p. 63.
 
 }
 \source{
   Haritonenko, Pavlo.
-  Neue Präzisionsmethoden auf den Versuchsfeldern.
+  Neue Prazisionsmethoden auf den Versuchsfeldern.
   Arbeiten der landw. Versuchsstation Iwanowskoje 1904-06, S. 159.
   In Russian with German summary.
 }

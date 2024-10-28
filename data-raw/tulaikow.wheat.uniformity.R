@@ -1,5 +1,13 @@
 # tulaikow.wheat.uniformity.R
 
+  Note: The Russian word “саж” refers to a unit of
+  measurement. Specifically, it represents the sazhen (саже́нь or
+  са́жень), which was used in traditional Russian systems of
+  measurement. The sazhen itself is approximately 3 meters (7 feet)
+  long. Google Translate sometimes converts "sazhen" into "soot",
+  "meter" or "fathom". 
+
+
 libs(desplot,dplyr,kw,lattice,magrittr,readxl,readr,reshape2,tibble)
 
 setwd("c:/drop/rpack/agridat/data-raw/")

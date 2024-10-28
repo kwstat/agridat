@@ -1,4 +1,4 @@
-# agridat 1.24 (unpublished)
+# agridat 1.24 (2024-10-25)
 
 ## New datasets
 
@@ -11,13 +11,13 @@
 
 ## Other notes
 
-* baker.strawberry.uniformity: inserted 3 columns into the field to more closely align with the experiment layout.
+* baker.strawberry.uniformity: inserted 3 columns into the layout of the field to more closely align with the experiment layout.
 
-* garber.multi.uniformity: The data has been reshaped to tall and additional years added.
+* garber.multi.uniformity: The data has been reshaped from wide to tall and additional years added.
 
 * minnesota.barley.yield: Added 10+ more years of data.
 
-* odland.soyhay.uniformity: Yields have been divided by 10 so that the yield values are now tons instead of 0.1 tons.
+* odland.soyhay.uniformity: Yields have been divided by 10 so that the yield values are now in units of "tons" instead of "0.1 tons".
 
 * shafi.tomato.uniformity: Had incorrect yield scale, now divided by 1000.
 
