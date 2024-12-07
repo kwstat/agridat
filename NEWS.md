@@ -1,3 +1,10 @@
+# agridat 1.25 ()
+
+## New datasets
+
+* beckett.maize.uniformity
+
+
 # agridat 1.24 (2024-10-25)
 
 ## New datasets

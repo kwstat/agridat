@@ -14,10 +14,6 @@ todo
 
 Rothamsted scans
 
-Beckett, W.H.; Fletcher, S.R.B. (1929).
-A uniformity trial with maize.
-Gold Coast Dept Agric Bull 16: 222-226.
-https://babel.hathitrust.org/cgi/pt?id=coo.31924066682166&seq=470
 
 
 
@@ -651,6 +647,13 @@ Pot and plant variation in Virginia Peanuts.
 Proceedings Of The American Society For Horticultural Science, 34.
 https://archive.org/details/dli.ernet.26569/page/585/mode/2up?q=beattie
 Reviewed. No data.
+
+
+Beckett, W.H.; Fletcher, S.R.B. (1929).
+A uniformity trial with maize.
+Gold Coast Dept Agric Bull 16: 222-226.
+https://babel.hathitrust.org/cgi/pt?id=coo.31924066682166&seq=470
+Reviewed. Yield data for 15 plots.
 
 
 Bhatt, Hitesh M. (1998). 
@@ -2848,7 +2851,7 @@ Page 27
 
 Translated: Own (Roemer) experiments with sugar beets, carried out on the Neßthal breeding field of the Kaiser Wilhelm Institute, Bromberg, in the years 1916, 1917 and 1918. In 1916 and 1918 the test area was one and the same, 6.80 are large and with original in both years Klein-Wanzleben sugar beets cultivated on 30 x 40 cm. The previous crop for 1916 was oats, for 1918 it was rye; In 1917 another area, also 6.80 a large, was used for the experiment; Two different varieties from Strube, Schlanstedt were sown. Both areas have very uniform soil conditions. In the 1916 and 1918 area, a small spot was noticeable in rows 31-33 in the first year, which was much less noticeable in 1918. In all three years the soil differences are smaller than the errors caused by the experimental technology.
 
-## ---
+---
 
 4. Haritonenko (36), Versuch der landwirtschaftlichen Versuchsstation Iwanowskoje, Gouvernement Nowgorod. Versuchsfläche 5 ha 68 a mit 416 Teilstücken zu 136,5 qm. Die Reihe I weist erheblich geringeren Boden auf als die drei anderen Reihen.
 
@@ -2868,7 +2871,7 @@ https://babel.hathitrust.org/cgi/pt?id=uc1.b2907722&seq=770
 1905 vol 6. Paper is not in this volume?
 https://babel.hathitrust.org/cgi/pt?id=uc1.b2907723&seq=8
 
-List of all volumes here.  Missing 1906 issue 1-2
+List of all volumes here.  Missing 1906 issue 1-2.  Searched for but not found.
 https://catalog.hathitrust.org/Record/007918356
 
 ## ----
@@ -2890,7 +2893,7 @@ Neyman cites: Tulaikow, Russian Journ Exp Agric 14 (1913). Number 2, p. 113
 
 9. Tulaikow (131), Sommerweizen, genau wie bei Winterweizen, jedoch erscheint das Bild gleichmäßiger als jenes von Versuch 8.
 
-Trans: 9. Tulaikow (131), spring wheat, same as winter wheat, but the picture appears more uniform than that of experiment 8.
+Translated: Tulaikow (131), spring wheat, same as winter wheat, but the picture appears more uniform than that of experiment 8.
 
 10. Jegerow (52), Hafer, Versuchsfeld der landwirtschaftlichen Versuchsstation Saumy (Gouvernement Charkow), Versuchsfläche 10 a 92 qm mit 240 Teilstücken zu 4,55 qm. Sehr gleichmäßiges Versuchsfeld.
 
@@ -2898,13 +2901,20 @@ Translated: 10. Jegerow (52), oats, experimental field of the Saumy agricultural
 
 11. Larsen (49), Timothyheu, Versuchsfläche 60 a mit 240 Teilstücken zu 25 qm. Die Versuchsfläche wird von Ost nach West langsam etwas besser, und von Süd nach Nord nimmt die Ertragsfähigkeit ziemlich stark ab (A-Streifen 1496 kg, B-Streifen 1449 kg, C-Streifen 1326 kg).
 
-Trans: Timothy hay, test area 60 are with 240 sections of 25 square meters. The test area slowly improves slightly from east to west, and from south to north the yield decreases quite sharply (A strip 1496 kg, B strip 1449 kg, C strip 1326 kg).
+Translated: Timothy hay, test area 60 are with 240 sections of 25 square meters. The test area slowly improves slightly from east to west, and from south to north the yield decreases quite sharply (A strip 1496 kg, B strip 1449 kg, C strip 1326 kg).
 
-12. Lehmann (61), Reis, Versuchsfeld Hebbal bei Benjalore, Indien. Versuchsfläche 68,68 a mit 34 Teilstücken zu 20,2 qm, durch vier Jahre (1905-1908) fortgeführt. Dieser Versuch ist seines geringen Umfanges wegen nicht für alle zu be handelnden Fragen brauchbar.
-Trans: 12. Lehmann (61), Reis, Hebbal experimental field near Benjalore, India. Experimental area 68.68 a with 34 sections of 20.2 square meters, continued for four years (1905-1908). Because of its small scope, this experiment cannot be used for all questions to be addressed.
+12.
 
-13. Lehmann (61), Hirse, Versuchsfeld Hebbal bei Benjalore. Versuchsfläche 21 a 21 qm mit 105 Teilstüden zu 20,2 qm, durch drei Jahre (1905-1907) fortgesezt, jedoch sind die Teilstücke durch Gebäude getrennt. Dieses Versuchsfeld ist aus kleinbäuerlichem Besit zusammengekauft, also in früheren Jahren verschieden be arbeitet und bestellt worden, es ist die ungleichmäßigste Fläche von allen 13 Versuchen.
-Trans: 13. Lehmann (61), millet, Hebbal test field near Benjalore. Experimental area 21 x 21 sqm with 105 sections of 20.2 sqm, continued for three years (1905-1907), but the sections are separated by buildings. This experimental field was purchased from small farmers property and was therefore worked and cultivated differently in previous years. It is the most uneven area of all 13 experiments.
+Lehmann (61), Reis, Versuchsfeld Hebbal bei Benjalore, Indien. Versuchsfläche 68,68 a mit 34 Teilstücken zu 20,2 qm, durch vier Jahre (1905-1908) fortgeführt. Dieser Versuch ist seines geringen Umfanges wegen nicht für alle zu be handelnden Fragen brauchbar.
+
+Translated: Lehmann (61), Reis, Hebbal experimental field near Benjalore, India. Experimental area 68.68 a with 34 sections of 20.2 square meters, continued for four years (1905-1908). Because of its small scope, this experiment cannot be used for all questions to be addressed.
+
+61 = Lehmann 7 to 9. Jahresbericht der Agriculturechemie 1905-1907.
+13.
+6th
+Lehmann (61), Hirse, Versuchsfeld Hebbal bei Benjalore. Versuchsfläche 21 a 21 qm mit 105 Teilstüden zu 20,2 qm, durch drei Jahre (1905-1907) fortgesezt, jedoch sind die Teilstücke durch Gebäude getrennt. Dieses Versuchsfeld ist aus kleinbäuerlichem Besit zusammengekauft, also in früheren Jahren verschieden be arbeitet und bestellt worden, es ist die ungleichmäßigste Fläche von allen 13 Versuchen.
+
+Translated: 13. Lehmann (61), millet, Hebbal test field near Benjalore. Experimental area 21 x 21 sqm with 105 sections of 20.2 sqm, continued for three years (1905-1907), but the sections are separated by buildings. This experimental field was purchased from small farmers property and was therefore worked and cultivated differently in previous years. It is the most uneven area of all 13 experiments.
 
 Die Originalerntezahlen finden sich in den Tabellen des Anhanges, die die Lage der Teilstücke erkennen lassen. Es ließ sich infolge verschiedener Anlage der Versuche nicht ermöglichen, daß alle Versuche in einheitlicher Anordnung verrechnet wurden. Die Ergebnisse sind so übereinstimmend, daß die gezogenen Schlußfolgerungen große Sicherheit besigen.
 Trans: The original harvest figures can be found in the tables in the appendix, which show the location of the cuts. Due to the different design of the experiments, it was not possible for all experiments to be calculated in a uniform manner. The results are so consistent that the conclusions drawn are very certain.

@@ -37,6 +37,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{batchelor.navel2.uniformity}        \tab 15 x 33 \tab xy \tab \cr
 \link{batchelor.valencia.uniformity}      \tab 12 x 20 \tab xy \tab \cr
 \link{batchelor.walnut.uniformity}        \tab 10 x 28 \tab xy \tab \cr
+\link{beckett.maize.uniformity}           \tab 6 x 19 \tab xy \tab \cr
 \link{bose.multi.uniformity}              \tab 15 x 26 \tab xy, 3 years \tab \cr
 \link{bradley.multi.uniformity}           \tab 10 x 11 \tab xy \tab \cr
 \link{bryan.corn.uniformity}              \tab 6 x 48 \tab xy \tab \cr
