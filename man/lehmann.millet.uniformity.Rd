@@ -19,20 +19,23 @@
   }
 }
 \details{
+  A uniformity experiment of ragi (millet) on the Experimental Farm at
+  Hebbal (near Bangalore). The plots were the same year-over-year. 
 
-  Experiment farm near Bangalore. The plots are 1/10 acre, each 50 links
-  wide and 200 links long. [6th report, p. 2]. The middle part of the
-  field is occupied by buildings.
-
-  The 6th report:
+  The 6th report
+  
+  P. 2: The plots are 1/10 acre, each 50 links wide and 200 links long. 
   Map (only partially scanned in the pdf).
   "A part of the dry lands nearest the tank, which is not quite as
   uniform as the remainder, is already excluded from the experimental ground proper".
 
-  The 7th report:
-  P. 12 (pdf page 233) has grain/straw yield for 1905.
+  The 7th report
+
+  P. 12, pdf p. 233:
+  Table 3 has grain/straw yield for 1905.
    
-  The 9th report:
+  The 9th report
+  
   P. 1-10 has comments.
   P. 36-39 have data: Table 1 has grain yield, table 2 total yield of
   grain and straw. Columns are, left-right, A-F. Rows are, top-bottom,
@@ -55,6 +58,7 @@
 \references{
   Theodor Roemer (1920).
   Der Feldversuch. Page 69, table 13.
+  https://www.google.com/books/edition/Arbeiten_der_Deutschen_Landwirtschafts_G/7zBSAQAAMAAJ
 }
 \examples{
 \dontrun{
