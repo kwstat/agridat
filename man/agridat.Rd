@@ -54,8 +54,9 @@ name                                      \tab dimensions \tab other \tab model 
 \link{garber.multi.uniformity}            \tab 6 x 45 \tab xy, 5 years/crops \tab \cr
 \link{gomez.rice.uniformity}              \tab 18 x 36 \tab xy \tab aov,smith \cr
 \link{goulden.barley.uniformity}          \tab 48 x 48 \tab xy \tab \cr
+\link{gorski.oats.uniformity}             \tab 10 x 20, 15 x 20 \tab xy \tab \cr
 \link{hansen.multi.uniformity}            \tab 6 x 5, 16 x 8 \tab xy, 4-5 yr \tab splom\cr
-\link{haritonenko.sugarbeet.uniformity}               \tab 4 x 104 \tab xy \tab \cr
+\link{haritonenko.sugarbeet.uniformity}   \tab 4 x 104 \tab xy \tab \cr
 \link{harris.multi.uniformity}            \tab 2 x 23 \tab xy, 23 crops \tab corrgram\cr
 \link{hartman.tomato.uniformity}          \tab 12 x 32 \tab xy \tab \cr
 \link{heath.cabbage.uniformity}           \tab 6 x 8   \tab xy \tab \cr
@@ -75,6 +76,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{khan.brassica.uniformity}           \tab 18 x 18 \tab xy, 2 fields \tab \cr
 \link{khin.rice.uniformity}               \tab 30 x 36 \tab xy \tab \cr
 \link{kiesselbach.oats.uniformity}        \tab 3 x 69  \tab xy \tab \cr
+\link{kotowski.potato.uniformity}         \tab 12 x 4, 26 x 4 \tab xy \tab \cr
 \link{kristensen.barley.uniformity}       \tab 22 x 11 \tab xy \tab \cr
 \link{kulkarni.sorghum.uniformity}        \tab 4 x 40 \tab xy, 3 years \tab \cr
 \link{lander.multi.uniformity}            \tab 5 x 39 \tab xy, 4 years \tab \cr

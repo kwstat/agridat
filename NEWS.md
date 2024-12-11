@@ -3,6 +3,8 @@
 ## New datasets
 
 * beckett.maize.uniformity
+* gorski.oats.uniformity
+* kotowski.potato.uniformity
 * lehmann.rice.uniformity
 
 # agridat 1.24 (2024-10-25)
