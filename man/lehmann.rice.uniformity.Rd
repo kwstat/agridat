@@ -41,6 +41,8 @@
   Field width: 3 plots * 200 links
 
   Field length: 17 plots * 50 links
+
+  Data values typed and checked by K.Wright 2024.12.09.
 }
 \source{
   Lehmann, A.

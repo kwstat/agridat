@@ -1,5 +1,5 @@
-\name{arankacami.groundnut.uniformity}
-\alias{arankacami.groundnut.uniformity}
+\name{rangaswamy.groundnut.uniformity}
+\alias{rangaswamy.groundnut.uniformity}
 \docType{data}
 \title{
   Uniformity trial of groundnut
@@ -7,23 +7,25 @@
 \description{
   Uniformity trial of groundnut
 }
-\usage{data("arankacami.groundnut.uniformity")}
+\usage{data("rangaswamy.groundnut.uniformity")}
 \format{
   A data frame with 96 observations on the following 3 variables.
   \describe{
-    \item{\code{row}}{row}
-    \item{\code{col}}{column}
+    \item{\code{row}}{row ordinate}
+    \item{\code{col}}{column ordinate}
     \item{\code{yield}}{yield, kg/plot}
   }
 }
 \details{
   The year of the experiment is unknown, but before 1995.
   
-  Basic plot size is 0.75 m (rows) x  4 m (columns).
+  Field width: 8 plots x 4 m = 32 m
+
+  Field length: 12 plots x .75 m = 8 m
   
 }
 \source{
-  Ira Arankacami, R. Rangaswamy. (1995).
+  R. Rangaswamy. (1995).
   A Text Book of Agricultural Statistics.
   New Age International Publishers.
   Table 19.1. Page 237.
@@ -35,13 +37,13 @@
 \examples{
 \dontrun{
 library(agridat)
-data(arankacami.groundnut.uniformity)
-dat <- arankacami.groundnut.uniformity
+data(rangaswamy.groundnut.uniformity)
+dat <- rangaswamy.groundnut.uniformity
 
 require(desplot)
 desplot(dat, yield ~ col*row,
         flip=TRUE, aspect=(12*.75)/(8*4),
-        main="arankacami.groundnut.uniformity")
+        main="rangaswamy.groundnut.uniformity")
 
 }
 }

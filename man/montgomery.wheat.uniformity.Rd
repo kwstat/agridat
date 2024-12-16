@@ -35,8 +35,10 @@
   NOTE: North is at the right side of this diagram (as determined by
   comparing yield values with the fertility map in Montgomery 1912, p. 178).
 
-  The 1910 data are not available.
   
+  The 1910 data are not available.
+
+
   The 1911 data are given by Montgomery (1912), figure 1, page
   165. NOTE: North is at the top of this diagram.
 

@@ -58,6 +58,10 @@
   bwplot(yield ~ factor(year)|loc, dat,
          main="barrero.maize - Yield trends by loc",
          scales=list(x=list(rot=90)))
+
+  #libs(connected)
+  #con_view(dat, yield ~ gen * env, cex.x=0.5, cex.y=0.5)
+  #con_view(dat, yield ~ gen * year, cex.x=0.5, cex.y=0.5)
   
   # Table 6 of Barrero. Model equation 1.
   if(require("asreml", quietly=TRUE)){
