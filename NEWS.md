@@ -5,7 +5,13 @@
 * beckett.maize.uniformity
 * gorski.oats.uniformity
 * kotowski.potato.uniformity
+* larsen.timothy.uniformity
 * lehmann.rice.uniformity
+
+## Other notes
+
+* Renamed arankacami.groundnut.uniformity to rangaswamy.groundnut.uniformity.
+
 
 # agridat 1.24 (2024-10-25)
 
@@ -99,7 +105,7 @@
 
 ## New datasets
 
-* arankacami.groundnut.uniformity
+* arankacami.groundnut.uniformity (later changed to rangaswamy.groundnut.uniformity)
 * barrero.maize
 * buntaran.wheat
 * gomez.heterogeneity

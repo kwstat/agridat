@@ -2,10 +2,10 @@
 \alias{holtsmark.timothy.uniformity}
 \docType{data}
 \title{
-  Uniformity trial of timothy
+  Uniformity trial of timothy grass in Norway
 }
 \description{
-  Uniformity trial of timothy hay circa 1905
+  Uniformity trial of timothy grass in Norway
 }
 \usage{data("holtsmark.timothy.uniformity")}
 \format{
@@ -17,6 +17,14 @@
   }
 }
 \details{
+  The experiment was probably conducted shortly before 1898.
+  Ehrenberg says the data come from Norway.
+    
+  The test plot was a 3-year old Timothy grass meadow, uniform to the
+  eye. The individual plots were square 1/16 are in size.
+  An are is 10m x 10m, so 1/16 are is 2.5m x 2.5m
+  
+  Bastien Larsen sent the data to Ehrenberg, who published the plot
 
   Field width: 40 plots * 5 m = 200 m.
 
@@ -24,16 +32,24 @@
 
   Holtsmark & Larsen used this trial to compare standard deviations of
   different sized plots (combined from smaller plots).
-  
+
+  Note: The two datasets in agridat, holtsmark.timothy.uniformity and
+  larsen.timothy.uniformity refer to the same trial.
+  Heatmaps show the same trends for the two datasets.
+  The 'larsen' data has been aggregated 2x2 to create the 'holtsmark'
+  data.
+  Both versions appear in published papers and are included here.
+
 }
 \source{
-  Holtsmark, G and Larsen, BR (1905).
+  Holtsmark, G and Larsen, B R (1905).
   Om Muligheder for at indskraenke de Fejl, som ved Markforsog betinges af Jordens Uensartethed.
   Tidsskrift for Landbrugets Planteavl. 12, 330-351. (In Danish)
   Data on page 347.
   https://books.google.com/books?id=MdM0AQAAMAAJ&pg=PA330
   https://dca.au.dk/publikationer/historiske/planteavl/
 
+  Holtsmark, G. and Bastian R. Larsen (1907)
   Uber die Fehler, welche bei Feldversuchen, durch die Ungleichartigkeit des Bodens bedingt werden.
   Die Landwirtschaftlichen Versuchs-Stationen, 65, 1--22. (In German)
   https://books.google.com/books?id=eXA2AQAAMAAJ&pg=PA1
@@ -41,6 +57,13 @@
 \references{
   Theodor Roemer (1920).
   Der Feldversuch. Page 67, table 11.
+  https://www.google.com/books/edition/Arbeiten_der_Deutschen_Landwirtschafts_G/7zBSAQAAMAAJ
+
+  Larsen, B. R. (1898).
+  Om metoder för fältförsök.
+  Ber. Andra nordiska Landsbrukskongressen in Stockholm 1897. P. 72-84. Discussion 85-94.
+  (document not found)
+
 }
 
 \examples{
