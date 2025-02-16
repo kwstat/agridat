@@ -10,7 +10,20 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+
 todo
+
+Bist (1975).
+Size and shape of plots and blocks in field experiments with potato crops in hills.
+Indian J. Agric. Sci, 45, 5-8.
+
+Sardana (1967).
+Size and shape of plots and blocks in field trials with potato.
+Indian J. Agric. Sci ,37, 348-355.
+
+Saxena (1972).
+Optimum plot size for oat grown for fodder.
+Indian J. Agric. Sci., 42, 63-69.
 
 Rothamsted scans
 
@@ -40,10 +53,6 @@ Rothamsted scans
 
 
 # ToDo
-
-## U. Nebr
-
-Love, "Experimental methods in agricultural research". In storage.
 
 ## Iowa State
 
@@ -321,6 +330,11 @@ https://eurekamag.com/research/001/901/001901900.php
 Paywall.
 
 
+Larsen, B. R. (1898).
+Om metoder för fältförsök. In Ber. Andra nordiska Landsbrukskongressen in Stockholm 1897. P. 72-84. Discussion 85-94.
+This is probably the original description of the holtsmark.timothy.uniformity and larsen.timothy.uniformity datasets.
+
+
 Lopes, S. J. et al. (2005).
 Experimental plot size in grain sorghum in different plant densities.
 June 2005; Pesquisa Agropecuária Brasileira 40(6):525-530. 
@@ -329,15 +343,6 @@ June 2005; Pesquisa Agropecuária Brasileira 40(6):525-530.
 Lu,  ChunTang et al (1995).
 Estimation of optimum plot size and replicates number using data from rice uniformity trials.
 J. of Agricultural Research of China, 44, 229-241.
-
-
-Love, Harry H. (1943).
-Experimental Methods in Agricultural Research.
-The Agr. Exp. Sta. of the University of Puerto Rico.
-Rio Piedras Puerto Rico.
-Has data (according to Mendez). Might be same data as love.cotton.uniformity TODO
-Physical copy at Univ Nebr.
-https://unl.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma991020452609706387&context=L&vid=01UON_LINC:UNL&lang=en&search_scope=MyInst_and_CI&adaptor=Local%20Search%20Engine&tab=Everything&query=any,contains,Experimental%20Methods%20in%20Agricultural%20Research&mode=basic
 
 
 Mahalanobis, P C; Chakravorti, S C; Banerjee, E A R. 1934.
@@ -922,6 +927,7 @@ Ehrenberg, P. (1915).
 Versuch eines Beweises für die Anwendbarkeit der Wahrscheinlichkeitsrechnung bei Feldversuchen.
 Die Landwwirthschaftlichen Versuchs-Stationen 87, 29-88. 41-100
 https://www.google.com/books/edition/Die_Landwirthschaftlichen_Versuchs_Stati/qFPbIBaHZKUC
+agridat::larsen.timothy.uniformity
 
 
 Elliott, F. C., Darroch, J.G. and Wang, H.L. (1952). 
@@ -1709,6 +1715,14 @@ https://archive.org/details/in.ernet.dli.2015.233346/page/n421
 agridat::love.cotton.uniformity
 
 
+Love, Harry H. (1943).
+Experimental Methods in Agricultural Research.
+The Agr. Exp. Sta. of the University of Puerto Rico.
+Rio Piedras Puerto Rico.
+Has data for 400 plots in sugar cane (according to Mendez).
+agridat::love.sugarcane.uniformity
+
+
 Love, H.H. and W.T. Craig (1938).
 Investigations in plot technic with small grains.
 Cornell University, Memoir 214.
@@ -1874,6 +1888,12 @@ Mortensen, M. L. (1911).
 Die Technik der Feldversuche (The Technique of Field Experiments).
 Jahresbericht der Vereinigung für Angewandte Botanik, 9, 177-187.
 https://www.biodiversitylibrary.org/item/36059#page/573/mode/1up
+No data.
+
+
+Mountier, N. S.
+Plot size and guard rows in potato experiments.
+New Zealand Journal of Agricultural Research, 7, 180-197.
 No data.
 
 
@@ -2393,6 +2413,19 @@ https://krishikosh.egranth.ac.in/handle/1/5810142527
 Reviewed. No data.
 
 
+Shen (1930)
+Field technique for determining comparative yields in wheat under different environmental conditions in China.
+Journal of American Society of Agronomy, 22, 193-215.
+No data.
+
+
+Shen, Li-Ying (1934)
+Statistical analysis of a blank test of rice with suggestions for field technique.
+Agriculture Sinica, 1, 107-138.
+https://upload.wikimedia.org/wikipedia/commons/9/96/NLC416-16jh004002-107129_%E6%B0%B4%E7%A8%BB%E8%A9%A6%E9%A9%97%E4%B9%8B%E7%B5%B1%E8%A8%88%E5%88%86%E6%9E%90.pdf
+No data.
+
+
 Shitap, Shri M.S. (2011).
 Plot technique in Brinjal (Solanum melongena L.)
 https://krishikosh.egranth.ac.in/handle/1/5810010600
@@ -2435,7 +2468,7 @@ Siao, Fu (1935).
 Uniformity trials with cotton.
 J. Amer. Soc. Agron., 27, 974-979.
 https://doi.org/10.2134/agronj1935.00021962002700120004x
-Reviewed. No data. Data were found in the personal papers of Harry Love.
+Reviewed. No data in the paper. Data were found in the personal papers of Harry Love.
 
 
 Sills, G. R., & Nienhuis, J. (1993).
@@ -2772,6 +2805,12 @@ Agron. J., 55: 222-225. https://doi.org/10.2134/agronj1963.00021962005500030004x
 Reviewed. See Wiedemann thesis for data.
 agridat::wiedemann.safflower.uniformity
 
+
+Wilcox, A.N. (1927).
+A study of field plot technique with strawberries.
+Scientific Agriculture, 8, 171-174.
+Reviewed. No data.
+https://archive.org/details/canadian-journal-of-animal-science_1927-11_8_3/page/174/mode/2up
 
 Williams, ER and Luckett, DJ. (1988).
 The use of uniformity data in the design and analysis of cotton and barley variety trials.

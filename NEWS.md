@@ -7,10 +7,11 @@
 * kotowski.potato.uniformity
 * larsen.timothy.uniformity
 * lehmann.rice.uniformity
+* love.sugarcane.uniformity
 
 ## Other notes
 
-* Renamed arankacami.groundnut.uniformity to rangaswamy.groundnut.uniformity.
+* Renamed arankacami.groundnut.uniformity to rangaswamy.groundnut.uniformity .
 
 
 # agridat 1.24 (2024-10-25)

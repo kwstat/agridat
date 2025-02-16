@@ -91,6 +91,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{loesell.bean.uniformity}            \tab 21 x 90 \tab xy \tab \cr
 \link{lord.rice.uniformity}               \tab 5 x 14 \tab xy, 8 fields \tab \cr
 \link{love.cotton.uniformity}             \tab 16 x 10 \tab xy \tab \cr
+\link{love.sugarcane.uniformity}          \tab 20 x 20 \tab xy \tab \cr
 \link{lyon.potato.uniformity}             \tab 34 x 6 \tab xy \tab \cr
 \link{magistad.pineapple.uniformity}      \tab 5 x 5 \tab xy \tab \cr
 \link{masood.rice.uniformity}             \tab 12 x 24 \tab xy \tab \cr

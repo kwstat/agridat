@@ -20,7 +20,8 @@
 \details{
   Experiment conducted at the Sugar Experiment Station, Brisbane, Queensland, Australia in 1937.
 
-  Four trials were harvested, each 12 plots by 12 plots, each plot 19 feet by 19 feet (one field used 18-foot plots).
+  Four trials were harvested, each 12 plots by 12 plots, each plot 19
+  feet by 19 feet (one of the fields used 18-foot plots).
 
   Trial 1 is plant cane.
 
