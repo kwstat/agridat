@@ -1,4 +1,4 @@
-# agridat 1.25 ()
+# agridat 1.25 (2025)
 
 ## New datasets
 
@@ -8,6 +8,7 @@
 * larsen.timothy.uniformity
 * lehmann.rice.uniformity
 * love.sugarcane.uniformity
+* rau.coffee.uniformity
 
 ## Other notes
 
