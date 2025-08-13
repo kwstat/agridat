@@ -24,7 +24,7 @@
   
   Field length: 36 plots * 3 feet.
 
-  Data typed by K.Wright.
+  Transcription details: Data typed by K.Wright.
   
 }
 \source{

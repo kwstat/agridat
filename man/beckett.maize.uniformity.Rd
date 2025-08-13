@@ -37,7 +37,9 @@
 
   Field length: 19 plots * 33 feet = 627 feet
 
-  Data typed by hand and checked by K.Wright 2024.12.06.
+  Transcription details: Data typed by hand and checked by K.Wright
+  2024.12.06.
+  
 }
 \source{
   Beckett, W.H.; Fletcher, S.R.B. (1929).
@@ -65,6 +67,9 @@
   desplot(dat, germination ~ col*row,
           flip=TRUE, aspect=19/6,
           main="beckett.maize.uniformity - stalks")
+  desplot(dat, yield ~ col*row,
+          flip=TRUE, aspect=19/6,
+          main="beckett.maize.uniformity - yield")
 }
 }
 \keyword{datasets}

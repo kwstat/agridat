@@ -36,7 +36,9 @@
   Conclusions: Lower error was obtained when the plots were long rows
   instead of across the rows.
 
-  The data were typed by K.Wright from Panse (1941) p. 864-865.
+  Transcription details: The data were typed by K.Wright from Panse
+  (1941) p. 864-865.
+  
 }
 \source{
   V. G. Panse (1941).

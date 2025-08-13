@@ -5,7 +5,7 @@
   Uniformity trial of cabbage.
 }
 \description{
-  Uniformity trial of cabbage.
+  Uniformity trial of cabbage in 1958
 }
 \usage{data("heath.cabbage.uniformity")}
 \format{
@@ -23,6 +23,11 @@
   = 480 sq ft.
   Each plot had "some 350" plants.
   Harvested 1958.
+
+  Location if the experiment is unknown, but Heath was Professor of
+  Horticulture at the University of Reading, United Kingdom, so it is
+  likely the experiment was conducted in the U.K.
+  
 }
 \source{
   O.V.S. Heath (1970).

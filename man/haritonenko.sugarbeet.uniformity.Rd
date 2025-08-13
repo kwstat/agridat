@@ -44,7 +44,8 @@
   Note: The name Haritonenko is sometimes translated into English as:
   Pavel Kharitonenko.
 
-  The data were typed by K.Wright from Roemer (1920), table 4, p. 63.
+  Transcription details: The data were typed by K.Wright from Roemer
+  (1920), table 4, p. 63.
 
 }
 \source{

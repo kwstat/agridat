@@ -55,7 +55,8 @@
   Bailey said the results at Giza 1921 were not suitable for reliability
   experiments.
 
-  Data were typed and proofread by KW 2023.01.11
+  Transcription details: Data were typed and proofread by K.Wright
+  2023.01.11.
 
 }
 \source{
@@ -85,6 +86,7 @@
   # are different, so plot each location separately.
   # Note: Bailey does not say if plots are 7x15 meters, or 15x7 meters.
   # The choices here seem most likely in our opinion.
+
   desplot(dat, yield ~ col*row, subset= env=="1921 Sakha",
     main="1921 Sakha", aspect=(20*8.5)/(8*15))
   desplot(dat, yield ~ col*row, subset= env=="1921 Gemmeiza",
@@ -93,9 +95,11 @@
     main="1922 Gemmeiza", aspect=(20*8.5)/(8*15))
   desplot(dat, yield ~ col*row, subset= env=="1921 Giza",
     main="1921 Giza", aspect=(11*6)/(14*8.5))
+
   # 1923 Giza has alternately hi/lo yield rows. Not noticed by Bailey.
   desplot(dat, yield ~ col*row, subset= env=="1923 Giza",
     main="1923 Giza", aspect=(20*6)/(8*8.5))
+  lattice::bwplot(yield~row, data= dat, subset=env=="1923 Giza", horizontal=FALSE)
   
 }  
 }

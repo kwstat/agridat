@@ -29,9 +29,9 @@ Uniformity trial of cotton harvested in 1941
   This data was made available with special help from the staff at
   Rothamsted Research Library.
 
-  Rothamsted library scanned the paper documents to pdf.
+  Transcription details: Rothamsted library scanned the paper documents to pdf.
   K.Wright used the pdf to manually type the values into an Excel file
-  and immediately checked the hand-typed values. Plants marked as "Dead"
+  and checked the hand-typed values. Plants marked as "Dead"
   on the PDF were left blank. There were 6 numbers that were illegible
   in the PDF. These were also left blank.
 

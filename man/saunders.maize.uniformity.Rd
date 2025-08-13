@@ -51,10 +51,11 @@
   This data was made available with special help from the staff at
   Rothamsted Research Library.
 
-  Rothamsted library scanned the paper documents to pdf. Screen captures
-  of the pdf were saved as jpg files, then uploaded to an OCR conversion
-  site. The resulting text was about 95 percent accurate and was
-  carefully hand-checked and formatted into csv files.
+  Transcription details: Rothamsted library scanned the paper documents
+  to pdf. Screen captures of the pdf were saved as jpg files, then
+  uploaded to an OCR conversion site. The resulting text was about 95
+  percent accurate and was carefully hand-checked by K.Wright and
+  formatted into csv files.
 
 }
 \source{

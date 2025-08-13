@@ -33,7 +33,8 @@ Uniformity trial of groundnut.
   This data was made available with special help from the staff at
   Rothamsted Research Library.
 
-  Data typed by K.Wright and checked by hand.
+  Transcription details: Data typed by K.Wright and checked by hand.
+  
 }
 \source{
     Rothamsted Research Library, Box STATS17  WG Cochran, Folder 2.

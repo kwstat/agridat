@@ -5,7 +5,7 @@
   Uniformity trial of coffee
 }
 \description{
-  Uniformity trial of coffee in Caldas Columbia
+  Uniformity trial of coffee in Caldas, Columbia
 }
 \usage{data("paez.coffee.uniformity")}
 \format{
@@ -21,7 +21,7 @@
 \details{
   The field map on Paez page 56, has plots 1 to 838.
   The data tables on page 79-97 have data for plots 1 to 900.
-
+  
   Note: The 'row' ordinate in this data would imply that the rows and
   columns are perpendicular. But the field map on page 56 of Paez shows
   that the rows are not at a 90-degree angle compared to the columns,
@@ -31,12 +31,14 @@
   
   Paez looks at blocks that are 1,2,...36 trees in size.
   Page 30 shows annual CV.
+  
 }
 \source{
   Gilberto Paez Bogarin (1962).
   Estudios sobre tamano y forma de parcela para ensayos en cafe.
-  Instituto Interamericano de Ciencias Agricolas de la O.E.A. Centro Tropical de Investigacion y Ensenanza para Graduados. Costa Rica.
-  https://hdl.handle.net/11554/1892
+  Instituto Interamericano de Ciencias Agricolas de la O.E.A. Centro
+  Tropical de Investigacion y Ensenanza para Graduados. Costa Rica.
+  https://repositorio.catie.ac.cr/handle/11554/1892
 }
 \references{
   None

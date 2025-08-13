@@ -138,6 +138,11 @@
   \emph{Proceedings of the Royal Society A: Mathematical, Physical and
     Engineering Science}, 462, 2119--2143.
   https://doi.org/10.1098/rspa.2006.1667
+
+  Pearce, S.C. and Jean M. S. Thom.
+  The Variability of Apple Trees (1951).
+  Journal of Horticultural Science and Biotechnology, 26, 98-108.
+  https://archive.org/details/journal-horticultural-science-biotechnology_1951_26  
 }
 \examples{
 \dontrun{

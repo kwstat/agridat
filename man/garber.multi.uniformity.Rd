@@ -27,7 +27,8 @@
 
   Note, Garber et al (1926) and Garber et al (1931) describe uniformity
   trials from the same field, but the experimental plot numbers in the
-  two papers are different, indicating different parts of the field.
+  two papers are different, indicating different parts of the field for
+  the two papers.
   
   The data from 1923 and 1924 are given in Garber (1926).
 
@@ -37,7 +38,8 @@
   from mean, but have been converted to absolute yields for this
   package.
 
-  First paper: Garber (1926)
+  
+  Paper #1 - Garber (1926)
   
   Each plot was 68 feet x 21 feet. After discarding a 3.5 foot border on
   all sides, the harvested area was 61 feet x 14 feet. The plots were
@@ -75,9 +77,12 @@
   deviations from the mean yield (15.6 bu).
   We added the mean to all plot data.
 
-  Second paper: Garber (1926)
   
-  1927 corn, 1928 oats, 1929 wheat
+  Paper #2 - Garber (1931)
+  
+  The year and crop was 1927 corn, 1928 oats, 1929 wheat. The data given
+  in the paper were percent-of-mean. We converted the data back to
+  absolute yield 
 
   The field is 10 plots wide, 84 plots tall.
   
@@ -130,6 +135,7 @@ library(agridat)
   # Correlation of same plots in 1923 vs 1924. Garber has 0.37
   # cor(subset(dat, year==1923)$yield,
   #     subset(dat, year==1924)$yield ) # .37
+
   # Garber 1931 table 2 has .58, .20
   # cor(subset(dat, year==1927)$yield,
   #     subset(dat, year==1928)$yield, use="pair" ) # .58

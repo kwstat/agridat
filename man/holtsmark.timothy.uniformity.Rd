@@ -24,7 +24,7 @@
   eye. The individual plots were square 1/16 are in size.
   An are is 10m x 10m, so 1/16 are is 2.5m x 2.5m
   
-  Bastien Larsen sent the data to Ehrenberg, who published the plot
+  Bastien Larsen sent the data to Ehrenberg, who published the plot yields.
 
   Field width: 40 plots * 5 m = 200 m.
 

@@ -45,6 +45,7 @@
   I. L. Nonnecke, 1959.
   The precision of field experiments with vegetable crops as influenced by plot and block size and shape: I. Sweet corn.
   Canadian Journal of Plant Science, 39(4): 443-457. Tables 1-7.
+  https://archive.org/details/sim_canadian-journal-of-plant-science_1959-10_39_4
   https://doi.org/10.4141/cjps59-061
 }
 

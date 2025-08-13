@@ -18,21 +18,21 @@
 }
 \details{
   
-Data was collected in 1939-1940.  The trial consists of sixteen 40 ft. x
-40 ft. blocks subdivided into nine plots each. The data were secured in
-1939-1940 from White Federation wheat. The design of the experiment was
-square with alleys 20 feet wide between blocks. The plots were 10 feet
-long with two guard rows on each side.
+  Data was collected in 1939-1940.  The trial consists of sixteen 40
+  ft. x 40 ft. blocks subdivided into nine plots each. The data were
+  secured in 1939-1940 from White Federation wheat. The design of the
+  experiment was square with alleys 20 feet wide between blocks. The
+  plots were 10 feet long with two guard rows on each side.
 
-Morning glories infested the middle two columns of blocks, uniformly
-over the blocks affected.
+  Morning glories infested the middle two columns of blocks, uniformly
+  over the blocks affected.
 
-The data here include missing values for the alleys so that the field
-map is approximately the correct shape and size.
+  The data here include missing values for the alleys so that the field
+  map is approximately the correct shape and size.
 
-Field width: 4 blocks of 40 feet + 3 alleys of 20 feet = 220 feet.
+  Field width: 4 blocks of 40 feet + 3 alleys of 20 feet = 220 feet.
 
-Field length: 4 blocks of 40 feet + 3 alleys of 20 feet = 220 feet.
+  Field length: 4 blocks of 40 feet + 3 alleys of 20 feet = 220 feet.
 
 }
 \source{

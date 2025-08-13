@@ -5,7 +5,7 @@
   Uniformity trial of tomato
 }
 \description{
-  Uniformity trial of tomato in Indiana
+  Uniformity trial of tomato in Indiana 1941
 }
 \usage{data("hartman.tomato.uniformity")}
 \format{

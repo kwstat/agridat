@@ -29,7 +29,7 @@ Uniformity trial of pasture in Australia.
   
   Note, there were 4 digits that were hard to read in the original
   document. Best estimates of these digits were used for the yields of
-  the affects plots.  The yields were digitally watermarked with an
+  the affects plots.  The values were digitally watermarked with an
   extra .01 added to the yield value.
 
   The botanical composition of species clearly influenced the total herbage.

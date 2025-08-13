@@ -23,6 +23,11 @@
 
   Heath said, Most of the large plants were round the edges...one
   important source of variation might have been competition for light.
+
+  Location if the experiment is unknown, but Heath was Professor of
+  Horticulture at the University of Reading, United Kingdom, so it is
+  likely the experiment was conducted in the U.K.
+
 }
 \source{
   O.V.S. Heath (1970).

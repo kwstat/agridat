@@ -50,8 +50,8 @@
   Wiedemann notes the statistical analysis of the data required 100
   hours of labor.  Today the analysis takes only a second.
 
-  For this R package, the tables in Wiedemann were converted by OCR to
-  digital format, and all values were checked by hand.
+  Transcription details: The tables in Wiedemann were converted by OCR to
+  digital format, and all values were checked by K.Wright.
 
 
 }

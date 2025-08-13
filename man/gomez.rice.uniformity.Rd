@@ -5,7 +5,7 @@
   Uniformity trial of rice
 }
 \description{
-  Uniformity trial of rice in Philippines.
+  Uniformity trial of rice in Philippines in 1968.
 }
 
 \format{
@@ -26,13 +26,10 @@
 
   Field length: 38 plots x 1 m = 38 m
 
-  Note that Gomez published a paper in 1969 on rice uniformity data from
-  four trials conducted in the 1968 dry and wet seasons. It is likely
-  that this data is taken from one of those four trials. Estimated
-  harvest year is 1968.
-  "Estimation of optimum plot size from rice uniformity data".
-  https://www.cabidigitallibrary.org/doi/full/10.5555/19711601105
-  
+  Gomez and Alicbusan (1969) published 4 heatmaps of uniformity
+  trials. Trial I heatmap matches the 3x3 moving average heatmap example
+  below. The field was planted in 1968.
+
   Used with permission of Kwanchai Gomez.
 }
 
@@ -40,6 +37,11 @@
   Gomez, K.A. and Gomez, A.A. (1984).
   Statistical Procedures for Agricultural Research.
   Wiley-Interscience. Page 481.
+}
+\references{
+  Gomez, K.A. and R. C. Alicbusan (1969).
+  Estimation of optimum plot size from rice uniformity data.
+  The Philippine Agriculturist. 52, 586-601
 }
 
 \examples{

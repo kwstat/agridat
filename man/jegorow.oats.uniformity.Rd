@@ -26,7 +26,8 @@
 
   Field length: 30 plots * 1 sazhen
 
-  Data typed by K.Wright from Roemer (1920), table 10.
+  Transcription details: Data typed by K.Wright from Roemer (1920),
+  table 10.
   
 }
 \source{

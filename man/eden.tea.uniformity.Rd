@@ -19,16 +19,18 @@
 }
 \details{
   Tea plucking in Ceylon extended from 20 Apr 1928 to 10 Dec 1929. There
-  were 42 pluckings.
+  were 42 pickings of tea.
 
-  It is not clear what the units are, but the paper mentions "quarter pound".
+  It is not clear what the units are, but the paper mentions
+  "quarter pound".
   
   The field was divided into 144 plots of 1/72 acre = 605 sq ft.
   
   Each plot contained 6 rows of bushes, approximately 42 bushes. (Each
   row was thus about 7 bushes).
 
-  Plots in row 12 were at high on a hillside, plots in row 1 were low on the hill.
+  Plots in row 12 were at high on a hillside, plots in row 1 were low on
+  the hill. 
   
   Note: We will assume the plots are roughly square: 6 rows of 7 bushes.
   
@@ -36,10 +38,11 @@
   
   Field length: 12 plots * 24.6 feet = 295 feet
 
-  Data were typed by K.Wright.
-  Although the pdf of the paper had a crease across the page that hid
-  some of the digits, the row and column totals included in the paper
-  allowed for re-construction of the missing digits.
+  Transcription details: Data were typed by K.Wright.  Although the pdf
+  of the paper had a crease across the page that hid some of the digits,
+  the row and column totals included in the paper allowed for
+  re-construction of the missing digits.
+  
 }
 \source{
   T. Eden. (1931).

@@ -44,8 +44,9 @@
   The paper by Summerby has more year/range combinations, but those
   plots are 20 links by 100 links and are only a single plot wide.
   
-  These data were converted from PDF to png images, then OCR converted
-  to text, then hand-checked by K.Wright.
+  Transcription details: These data were converted from PDF to png
+  images, then OCR converted to text, then hand-checked by K.Wright.
+  
 }
 \source{
   Summerby, R. (1934).

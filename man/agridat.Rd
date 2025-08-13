@@ -119,7 +119,8 @@ name                                      \tab dimensions \tab other \tab model 
 \link{parker.orange.uniformity}           \tab 10 x 27 \tab xy, 6 yr \tab \cr
 \link{piepho.barley.uniformity}           \tab 30 x 36 \tab xy \tab \cr
 \link{polson.safflower.uniformity}        \tab 52 x 33 \tab xy \tab smith\cr
-\link{rangaswamy.groundnut.uniformity}    \tab 8 x 12 \tab xy \tab \cr
+\link{rau.coffee.uniformity}              \tab 12 x 12 \tab xy \tab \cr
+\link{robinson.peanut.uniformity}         \tab 16 x 36 \tab xy \tab \cr
 \link{robinson.peanut.uniformity}         \tab 16 x 36 \tab xy \tab \cr
 \link{roemer.sugarbeet.uniformity}        \tab 2 x 48  \tab xy \tab \cr
 \link{saunders.maize.uniformity}          \tab 5 x 300 \tab xy, 2 year \tab \cr

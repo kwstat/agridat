@@ -23,7 +23,8 @@
 
   Uniformity trials were carried out between 1906 and 1911 on two fields
   at Aarslev, Denmark. The yield values are expressed as percent of mean
-  yield for the year.
+  yield for the year. The absolute average yields do not appear to be
+  given in the paper.
 
   The scale on the map in Hansen shows "Alen" as the scale. See
   https://en.wikipedia.org/wiki/Alen_(unit_of_length) The Danish alen =
@@ -77,12 +78,13 @@
 
   The version of the data in the package uses the changes suggested by Sanders.
 
-  Data were typed by K.Wright.
+  Transcription details: Data were typed by K.Wright.
   
 }
 \source{
   Hansen, Niels Anton (1914).
   Prøvedyrkning paa Forsøgsstationen ved Aarslev.
+  Tidsskrift for Planteavl, 21, 553-617.
   Page 557 has field A2. Page 562 has field E2.
   https://dca.au.dk/publikationer/historiske/planteavl
 }

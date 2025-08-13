@@ -49,6 +49,7 @@
   The precision of field experiments with vegetable crops as influenced by plot and block size and shape: II. Canning peas.
   Canadian Journal of Plant Science, 40(2): 396-404.
   https://doi.org/10.4141/cjps60-053
+  https://archive.org/details/sim_canadian-journal-of-plant-science_1960-04_40_2
 }
 
 \examples{

@@ -52,7 +52,7 @@
   were rounded to nearest even pound.) Source document also has number
   of yams.
 
-  Notes by Bradley.
+  Notes by Bradley:
 
   The edges of the field tended to be slightly higher yielding. Thought
   to be due to the heavier cultivation which the edges recieve (p. 18).

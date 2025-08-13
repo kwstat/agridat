@@ -1,9 +1,11 @@
 # 0_template.R
-# Time-stamp: <02 May 2024 14:24:15 c:/drop/rpack/agridat/data-raw/garber.multi.uniformity.R>
+# Time-stamp: <2025-03-05 18:13:05 wrightkevi>
 
 libs(desplot,dplyr,kw,lattice,magrittr,readxl,readr,reshape2,tibble)
 
 setwd("c:/drop/rpack/agridat/data-raw/")
+
+# Paper #1 - Garber (1926)
 
 # First, melt the existing garber.multi.uniformity
 tmp <- agridat::garber.multi.uniformity
@@ -19,7 +21,7 @@ plotnum23 %<>% as.matrix %>% `colnames<-`(1:ncol(plotnum23)) %>% melt %>% rename
 tmp <- left_join(tmp, plotnum23)
 head(tmp)
 
-# Now the data from the Garber 1931 paper
+# Paper #2 - Garber (1931)
 
 dat27 <- read_excel("garber.multi2.uniformity.xlsx","1927", col_names=FALSE)
 dat28 <- read_excel("garber.multi2.uniformity.xlsx","1928", col_names=FALSE)

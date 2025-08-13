@@ -32,7 +32,7 @@
 
   Field length: 23 plots * 23.3 feet = 536 feet
   
-  All yields here are given in pound per plot.
+  All yields here are given in pounds per plot.
   The original data in Harris (1920) for the 1911 sugarbeet yields were
   in tons/ac,  (Harris 1920, table 3 footnote), but these were converted
   to pounds/plot for the purpose of this dataset.

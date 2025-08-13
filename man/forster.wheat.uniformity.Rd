@@ -44,14 +44,15 @@
   Since the omitted strip is about 1/3 the width of a plot, we (agridat
   authors) decided to ignore the omitted strip.
   
-  This electronic data was manually typed from the source on 2023-04-12.
-  Summary statistics of this electronic data differ slightly from the
-  summaries in Forster, indicating possible typos or rounding of the
-  printed yield values in the paper. Values were checked by hand and
-  match the paper.
+  Transcription details: This electronic data was manually typed from
+  the source on 2023-04-12.  Summary statistics of this electronic data
+  differ slightly from the summaries in Forster, indicating possible
+  typos or rounding of the printed yield values in the paper. Values
+  were checked by hand and match the paper.
+  
 }
 \source{
-  Forster, H. C. (Howard Carlyle), - Vasey, A. J. (1928).
+  Forster, Howard Carlyle and A. J. Vasey (1928).
   Experimental error of field trials in Australia.
   Proceedings of the Royal Society of Victoria. New series, 40, 70--80.
   Table 1.

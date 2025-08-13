@@ -44,7 +44,9 @@
 
   Field F2 length: 4 plots * 10m = 40 m
 
-  Data typed by K.Wright 2024.12.09. Text translation via Google Translate.
+  Transcription details: Data typed by K.Wright 2024.12.09. Text
+  translation via Google Translate.
+  
 }
 \source{
   Kotowski, Feliks. (1924).

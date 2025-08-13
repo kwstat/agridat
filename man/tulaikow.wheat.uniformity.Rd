@@ -46,7 +46,9 @@
   long. Google Translate sometimes converts "sazhen" into "soot",
   "meter" or "fathom". 
 
-  The data were typed by K.Wright from Roemer (1920), table 4, p. 63.
+  Transcription details: The data were typed by K.Wright from Roemer
+  (1920), table 4, p. 63.
+  
 }
 \source{
   N. Tulaikow (1913)

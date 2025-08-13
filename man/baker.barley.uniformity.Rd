@@ -46,13 +46,13 @@ library(agridat)
 data(baker.barley.uniformity)
 dat <- baker.barley.uniformity
 
-# Ten-year average
-dat2 <- aggregate(yield ~ row*col, data=dat, FUN=mean, na.rm=TRUE)
-
 libs(desplot)
 desplot(dat, yield~col*row|year,
         aspect = 513/827, # true aspect
         main="baker.barley.uniformity - heatmaps by year")
+
+# Ten-year average
+dat2 <- aggregate(yield ~ row*col, data=dat, FUN=mean, na.rm=TRUE)
 
 desplot(dat2, yield~col*row,
         aspect = 513/827, # true aspect
@@ -68,9 +68,9 @@ plot(dat2$yield, dat3$yield, xlab="Mean yield", ylab="Std Dev yield",
 
 # Baker table 4, correlation of plots across years
 # libs(reshape2)
-# mat <- acast(dat, row+col~year)
+# mat <- acast(dat, row+col~year, value.var="yield")
 # round(cor(mat, use='pair'),2)
-
+# lattice::splom(mat)
 }
 }
 \keyword{datasets}

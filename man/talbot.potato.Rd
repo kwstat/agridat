@@ -57,7 +57,6 @@ data("talbot.potato.yield")
     TE \tab Terrington \cr
   }
 
-
   Used with permission of Mike Talbot.
 }
 
