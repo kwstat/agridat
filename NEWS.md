@@ -3,6 +3,7 @@
 ## New datasets
 
 * beckett.maize.uniformity
+* deoliveira.lupin.uniformity
 * gorski.oats.uniformity
 * kotowski.potato.uniformity
 * larsen.timothy.uniformity

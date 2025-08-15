@@ -47,6 +47,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{dasilva.soybean.uniformity}         \tab 24 x 48 \tab xy \tab \cr
 \link{davies.pasture.uniformity}          \tab 19 x 40 \tab xy \tab \cr
 \link{day.wheat.uniformity}               \tab 31 x 100 \tab xy \tab \cr
+\link{deoliveira.lupin.uniformity}        \tab 10 x 40 \tab xy \tab \cr
 \link{draper.safflower.uniformity}        \tab 18 x 16 \tab xy, 2 expt \tab smith\cr
 \link{ducker.groundnut.uniformity}        \tab 44 x 5 \tab xy \tab \cr
 \link{eden.tea.uniformity}                \tab 12 x 12 \tab xy \tab \cr
