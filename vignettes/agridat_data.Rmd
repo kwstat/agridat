@@ -830,11 +830,6 @@ https://github.com/OnofriAndreaPG/lmDiallel/tree/master/data
 Data `lmtest::ChickEgg` time series of annual chicken and egg production in the United States 1930-1983.
 
 
-### NADA
-
-Data `Atra` and `Recon` contain measurements of Atrazine in water samples.
-
-
 ### nlraa
 
 Miguez. Non-linear models in agriculture.
