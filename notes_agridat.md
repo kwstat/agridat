@@ -186,10 +186,6 @@ There is very little contextual information about these data.
 
 * change theobald.covariate from JAGS to brms?
 * Figure out best way to use jags
-* JAGS code for edwards.oats
-* JAGS code for lee.potatoblight
-* JAGS code for theobald.barley
-* JAGS code for besag.elbatan
 * Note: R_MAX_NUM_DLLS=150
 * Rcmd check --run-dontrun before release
   devtools::run_examples(run=FALSE, start="butron.maize")

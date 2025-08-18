@@ -45,6 +45,7 @@
   None
 }
 \examples{
+\dontrun{
 library(agridat)
 data(rau.coffee.uniformity)
 dat <- rau.coffee.uniformity
@@ -54,5 +55,6 @@ desplot(dat, yield~col*row,
         aspect=144/360, # probably true aspect
         flip=TRUE, main="rau.coffee.uniformity")
 mean(dat$yield) # matches 27.24 in Rau
+}
 }
 \keyword{datasets}

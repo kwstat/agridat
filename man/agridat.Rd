@@ -47,7 +47,6 @@ name                                      \tab dimensions \tab other \tab model 
 \link{dasilva.soybean.uniformity}         \tab 24 x 48 \tab xy \tab \cr
 \link{davies.pasture.uniformity}          \tab 19 x 40 \tab xy \tab \cr
 \link{day.wheat.uniformity}               \tab 31 x 100 \tab xy \tab \cr
-\link{deoliveira.lupin.uniformity}        \tab 10 x 40 \tab xy \tab \cr
 \link{draper.safflower.uniformity}        \tab 18 x 16 \tab xy, 2 expt \tab smith\cr
 \link{ducker.groundnut.uniformity}        \tab 44 x 5 \tab xy \tab \cr
 \link{eden.tea.uniformity}                \tab 12 x 12 \tab xy \tab \cr
@@ -115,6 +114,8 @@ name                                      \tab dimensions \tab other \tab model 
 \link{obsi.potato.uniformity}             \tab 63 x 26, 49 x 19 \tab xy \tab \cr
 \link{odland.soybean.uniformity}          \tab 25 x 42 \tab xy \tab \cr
 \link{odland.soyhay.uniformity}           \tab 28 x 55 \tab xy \tab \cr
+\link{oliveira.lupin.uniformity}          \tab 10 x 40 \tab xy \tab \cr
+\link{oliveira.potato.uniformity}         \tab  5 x 40 \tab xy \tab \cr
 \link{paez.coffee.uniformity}             \tab 32 x 36 \tab xy, 5 yr \tab \cr
 \link{panse.cotton.uniformity}            \tab 32 x 40 \tab xy \tab \cr
 \link{parker.orange.uniformity}           \tab 10 x 27 \tab xy, 6 yr \tab \cr

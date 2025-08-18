@@ -1,5 +1,5 @@
-\name{deoliveira.lupin.uniformity}
-\alias{deoliveira.lupin.uniformity}
+\name{oliveira.lupin.uniformity}
+\alias{oliveira.lupin.uniformity}
 \docType{data}
 \title{
   Uniformity trial of lupin in Portugal
@@ -7,7 +7,7 @@
 \description{
   Uniformity trial of lupin in Portugal
 }
-\usage{data("deoliveira.lupin.uniformity")}
+\usage{data("oliveira.lupin.uniformity")}
 \format{
   A data frame with 400 observations on the following 3 variables.
   \describe{
@@ -46,11 +46,11 @@
 
   p 226b Table A, Number of plants and production (grams) of 400 plots of Lupinus Luteus L.
 
-  Transcription details: Variously OCR and checked or typed by K.Wright.
+  Transcription details: Variously OCR and checked, or typed by K.Wright.
 
 }
 \source{
-  de Oliveira, Augusto (1945).
+  Oliveira, Augusto (1945).
   Ensaios de uniformidade: Estudio preliminar com lupinus luteus L., em Sacavem.
   Agronomia Lusitana, 7, 207-244.
   https://archive.org/details/agronomia-lusitana_1945_7_3/
@@ -61,12 +61,12 @@
 \examples{
 \dontrun{
 library(agridat)
-dat <- deoliveira.lupin.uniformity
+dat <- oliveira.lupin.uniformity
 
 require(desplot)
 desplot(dat, yield ~ col*row,
         flip=TRUE, aspect=20/50, tick=TRUE,
-        main="deoliveira.lupin.uniformity")
+        main="oliveira.lupin.uniformity")
 }
 }
 \keyword{datasets}

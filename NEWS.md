@@ -3,12 +3,13 @@
 ## New datasets
 
 * beckett.maize.uniformity
-* deoliveira.lupin.uniformity
 * gorski.oats.uniformity
 * kotowski.potato.uniformity
 * larsen.timothy.uniformity
 * lehmann.rice.uniformity
 * love.sugarcane.uniformity
+* oliveira.lupin.uniformity
+* oliveira.potato.uniformity
 * rau.coffee.uniformity
 
 ## Other notes
