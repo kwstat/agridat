@@ -11,6 +11,7 @@
 * oliveira.lupin.uniformity
 * oliveira.potato.uniformity
 * rau.coffee.uniformity
+* usda.gmoadoption
 
 ## Other notes
 

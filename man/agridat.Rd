@@ -432,6 +432,7 @@ name                             \tab years \tab trt \tab other \tab model \cr
 \link{nass.wheat}                \tab 146 \tab    \tab \tab \cr
 \link{nass.rice}                 \tab 117 \tab    \tab \tab \cr
 \link{nass.soybean}              \tab 88  \tab    \tab \tab \cr
+\link{usda.gmoadoption}          \tab 31  \tab 5  \tab \tab \cr
 \link{walsh.cottonprice}         \tab 34  \tab    \tab \tab cor
 
 }

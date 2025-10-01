@@ -41,3 +41,5 @@
 ^CRAN-SUBMISSION$
 ^LICENSE\.md$
 ^\.github$
+^\.vscode$
+^[.]?air[.]toml$

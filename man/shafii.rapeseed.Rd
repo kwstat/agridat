@@ -20,22 +20,19 @@
 }
 \details{
   The data are from the U.S. National Winter Rapeseed trials conducted
-  in 1986, 1987, and 1988.  Trial locations included Georgia (GGA, TGA),
+  in 1986, 1987, and 1988.
+
+  Trial locations included Georgia (GGA, TGA),
   Idaho (ID), Kansas (KS), Mississippi (MS), Montana (MT), New York
   (NY), North Carolina (NC), Oregon (OR), South Carolina (SC), Tennessee
   (TN), Texas (TX), Virginia (VA), and Washington (WA).
 
-  SAS codes for the analysis can be found at
-  https://webpages.uidaho.edu/cals-statprog/ammi/index.html
-
-
-  Electronic version from:
-  https://www.uiweb.uidaho.edu/ag/statprog/ammi/yld.data
-
+  The experiment design was RCB with 4 replications per trial.
+  
   Used with permission of Bill Price.
 }
 \source{
-  Bahman Shafii and William J Price, 1998.
+  Bahman Shafii and William J Price, (1998).
   Analysis of Genotype-by-Environment Interaction Using the
   Additive Main Effects and Multiplicative Interaction Model
   and Stability Estimates.
@@ -52,9 +49,17 @@
   Accounting for G×E interactions in plant breeding: a probabilistic
   approach
   https://doi.org/10.21203/rs.3.rs-2052233/v1
+
+  Reyhaneh Bijari, Hanisha Vemireddy and Sigurdur Olafsson (2025).
+  A method for approximate rank confidence intervals in plant breeding
+  experiments.
+  Heliyon, 11.
+  https://doi.org/10.1016/j.heliyon.2025.e42973
+  
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 data(shafii.rapeseed)
@@ -94,4 +99,5 @@ dmat <- acast(dm, gen~locyr)
 # AMMI biplot.  Figure 1 of Shafii (1998)
 biplot(prcomp(dmat), main="shafii.rapeseed - AMMI biplot")
 
+}
 }
