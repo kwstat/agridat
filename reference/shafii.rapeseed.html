@@ -67,20 +67,17 @@
     <div class="section level2">
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
     <p>The data are from the U.S. National Winter Rapeseed trials conducted
-  in 1986, 1987, and 1988.  Trial locations included Georgia (GGA, TGA),
+  in 1986, 1987, and 1988.</p>
+<p>Trial locations included Georgia (GGA, TGA),
   Idaho (ID), Kansas (KS), Mississippi (MS), Montana (MT), New York
   (NY), North Carolina (NC), Oregon (OR), South Carolina (SC), Tennessee
   (TN), Texas (TX), Virginia (VA), and Washington (WA).</p>
-<p>SAS codes for the analysis can be found at
-  https://webpages.uidaho.edu/cals-statprog/ammi/index.html</p>
-
-<p>Electronic version from:
-  https://www.uiweb.uidaho.edu/ag/statprog/ammi/yld.data</p>
+<p>The experiment design was RCB with 4 replications per trial.</p>
 <p>Used with permission of Bill Price.</p>
     </div>
     <div class="section level2">
     <h2 id="source">Source<a class="anchor" aria-label="anchor" href="#source"></a></h2>
-    <p>Bahman Shafii and William J Price, 1998.
+    <p>Bahman Shafii and William J Price, (1998).
   Analysis of Genotype-by-Environment Interaction Using the
   Additive Main Effects and Multiplicative Interaction Model
   and Stability Estimates.
@@ -97,11 +94,17 @@
   Accounting for G×E interactions in plant breeding: a probabilistic
   approach
   https://doi.org/10.21203/rs.3.rs-2052233/v1</p>
+<p>Reyhaneh Bijari, Hanisha Vemireddy and Sigurdur Olafsson (2025).
+  A method for approximate rank confidence intervals in plant breeding
+  experiments.
+  Heliyon, 11.
+  https://doi.org/10.1016/j.heliyon.2025.e42973</p>
     </div>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+<span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://kwstat.github.io/agridat/" class="external-link">agridat</a></span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">shafii.rapeseed</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="va">shafii.rapeseed</span></span></span>
@@ -128,7 +131,6 @@
 <span class="r-in"><span>        auto.key<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>columns<span class="op">=</span><span class="fl">3</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>        par.settings<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>superpose.symbol<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>pch <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'7'</span>,<span class="st">'8'</span>,<span class="st">'9'</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>        main<span class="op">=</span><span class="st">"shafii.rapeseed"</span>,ylab<span class="op">=</span><span class="st">"Location"</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="shafii.rapeseed-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># AMMI biplot.  Remove gen and locyr effects.</span></span></span>
@@ -140,8 +142,8 @@
 <span class="r-in"><span><span class="va">dmat</span> <span class="op">&lt;-</span> <span class="fu">acast</span><span class="op">(</span><span class="va">dm</span>, <span class="va">gen</span><span class="op">~</span><span class="va">locyr</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="co"># AMMI biplot.  Figure 1 of Shafii (1998)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/biplot.html" class="external-link">biplot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/prcomp.html" class="external-link">prcomp</a></span><span class="op">(</span><span class="va">dmat</span><span class="op">)</span>, main<span class="op">=</span><span class="st">"shafii.rapeseed - AMMI biplot"</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="shafii.rapeseed-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
