@@ -77,6 +77,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{kerr.sugarcane.uniformity}          \tab 12 x 12 \tab xy \tab, 4 fields \cr
 \link{khan.brassica.uniformity}           \tab 18 x 18 \tab xy, 2 fields \tab \cr
 \link{khin.rice.uniformity}               \tab 30 x 36 \tab xy \tab \cr
+\link{kirk.potato.uniformity}             \tab 6 x 6   \tab xy \tab \cr
 \link{kiesselbach.oats.uniformity}        \tab 3 x 69  \tab xy \tab \cr
 \link{kotowski.potato.uniformity}         \tab 12 x 4, 26 x 4 \tab xy \tab \cr
 \link{kristensen.barley.uniformity}       \tab 22 x 11 \tab xy \tab \cr
