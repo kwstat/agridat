@@ -1,4 +1,4 @@
----
+op---
 title: "Notes on uniformity data"
 author: "Kevin Wright"
 output: 
@@ -10,20 +10,23 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+# checklist
+
+1. Add data to agriat. Add man page. Edit NEWS, agridat.Rd
+2. Add source to uniformity_paper.bib
+3. Add citation to uniformity_paper.Rmd
+4. Add info to 00_uniformity_trial_meta_data
+
 ChatGPT: 
 Can you find some examples of uniformity trials published in Polish scientific journals?
 
 
+
+
+Minnesota Agricultural Experiment Station paper No. 1446
 todo
 
 Rothamsted scans
-
-Mitscherlich, E. Alfred (1919).
-Feldversuche mit kartoffeln.
-Landwirtschaftliche Jahrbucher, 54, 703-746
-https://archive.org/details/landwirtschaftliche-jahrbucher-v-54-1919-20/page/702/
-Many tables. 
-
 
 # ---------------------------------------------------------------------------
 
@@ -36,6 +39,7 @@ Many tables.
 "optimum size of plots"
 "Optimum Size and Shape of Plots"
 "blank experiment"
+"tamanho de parcela"
 
 #### Google
 "uniformity trial data"
@@ -271,6 +275,7 @@ https://krishikosh.egranth.ac.in/handle/1/80362
 Seems like paper is unlocked and should be here, but download fails. Archive.org does not have.
 
 
+
 Khurana, A., Rai, L. and Gupta, S.N. (1992).
 A uniformity trial on soybean (Glycine max. L.).
 Haryana agricultural University Journal of research, 22, 225-228.
@@ -281,11 +286,10 @@ A Preliminary Study of Field Plot Technique in Potato Yield Test.
 Rept, Potato Assoc. Am. 42-44.
 Not found.
 
-
 Krantz, F. A. (1923)
 Further studies in field plot technique in potato yield tests.
 Proc. Tenth Ann. Meeting of the Pot. Assn of Amer, 174-179.
-No found.
+Not found.
 
 
 Kristiensen, K. and Ersboll, A.K. 1995. 
@@ -615,6 +619,12 @@ http://hdl.handle.net/11200/1345
 agridat::bancroft.peanut.uniformity
 
 
+Barbacki & Fisher (1936).
+A test of the supposed precision of systematic arrangements.
+Ann. Eugen. Lond. 7, 189-193.
+Reviewed. Used the data from Wiebe.
+
+
 Barber, Clarence W. (1914).
 Note on the Influence of Shape and Size of Plot in Tests of Varieties of Grain.
 Maine Agr. Expt. Sta. Bul. 226:76-84. 1914. 
@@ -755,6 +765,12 @@ https://doi.org/10.1007/bf00227411
 Reviewed. No data.
 
 
+Chaves, Lazaro Jose. (1985).
+Tamanho da percela para selecao de progenies de milho.
+Thesis, University of Sao Paulo.
+https://www.teses.usp.br/teses/disponiveis/11/11137/tde-20200111-130705/publico/ChavesLazaroJose.pdf
+
+
 Cheesman, E.  E., and Pound, F. J.
 Uniformity trials on Cacao.
 Tropical Agriculture, 9, 277-88. 
@@ -842,6 +858,13 @@ Estudo do tamanho e forma de parcelas para experimentos de soja (Plot size and s
 Pesquisa Agropecuaria Brasileira, Serie Agronomia, 9, 49-59. Table 3,
 page 52-53.
 agridat::dasilva.soybean.uniformity
+https://ainfo.cnptia.embrapa.br/digital/bitstream/item/194024/1/Estudo-do-tamanho-e-forma-de-parcelas.pdf
+
+
+da Silva, Jose Robson.
+TAMAHO DE PARCELA E EFEITO DE BORDADURA EM EXPERIMENTOS COM O MELOEIRO
+https://ppgfito.ufersa.edu.br/wp-content/uploads/sites/45/2021/01/Tese_Robson.pdf
+Reviewed. No data.
 
 
 da Silva, Willerson  Custódio; Mário  Puiatti; Paulo  Roberto  Cecon; Leandro  Roberto  de  Macedo;  Tocio  Sediyama. (2019)
@@ -862,6 +885,13 @@ de Assis, J. P., de Sousa, R. P., Rodrigues, W. M., Linhares, P. C. F., Cardoso,
 Optimum Size and Shape of Experimental Units for Cassava Cropping.
 Journal of Experimental Agriculture International, 31(6), 1–10.
 https://doi.org/10.9734/jeai/2019/v31i630090
+Reviewed. No data.
+
+
+de Sousa, Roberto (2013).
+Tamanho de parcela para experimentacao com girassol.
+Thesis, Universidade Federal Rural do Semi-Arido
+https://repositorio.ufersa.edu.br/server/api/core/bitstreams/535569a6-5993-40f3-a089-3464c2fd4b08/content
 Reviewed. No data.
 
 
@@ -1550,6 +1580,20 @@ https://digitalcommons.unl.edu/extensionhist/430/
 agridat::kiesselbach.oats.uniformity
 
 
+Kirk, L. E. (1929).
+Field plot technique with potatoes with special reference to the Latin square.
+Scientific Agriculture, 9, 719-729.
+https://babel.hathitrust.org/cgi/pt?id=chi.096360757&seq=733
+agridat::kirk.potato.uniformity
+
+
+E. J. Koch (1952).
+Plot technique in Small Fruits.
+Proceedings of the American Society for Horticultural Science v.62
+https://babel.hathitrust.org/cgi/pt?id=osu.32435028190270&seq=44
+Reviewed. Data are for different varieties.
+
+
 Koch, E.J. and Rigney, J.A. (1951).
 A Method of Estimating Optimum Plot Size from Experimental Data.
 Agron. J., 43: 17-21. https://doi.org/10.2134/agronj1951.00021962004300010005x
@@ -1650,6 +1694,12 @@ Cienc. Rural 54 (10)
 https://doi.org/10.1590/0103-8478cr20230428
 Reviewed. No data.
 
+
+Lana, E. P. (1952)
+Field plot technique in vegetable crops.
+Proceedings of the American Society for Horticultural Science v.62, 21-30.
+https://babel.hathitrust.org/cgi/pt?id=osu.32435028190270&seq=44
+Reviewed. Data are for different varieties.
 
 Lander, P. E. et al. (1938).
 Soil Uniformity Trials in the Punjab I.
@@ -1891,6 +1941,13 @@ Miller, John D., and E. James Koch. (1962)
 Agronomy Journal, 54, 95-97.
 https://acsess.onlinelibrary.wiley.com/doi/abs/10.2134/agronj1962.00021962005400020001x
 Reviewed. No data.
+
+
+Mitscherlich, E. Alfred (1919).
+Feldversuche mit kartoffeln.
+Landwirtschaftliche Jahrbucher, 54, 703-746
+https://archive.org/details/landwirtschaftliche-jahrbucher-v-54-1919-20/page/702/
+Reviewed. No data (that I can see).
 
 
 Mitscherlich, Alfred and Franz Dühring. (1921).
@@ -2272,6 +2329,15 @@ http://dl.nsf.gov.lk/handle/1/19649
 Reviewed. No data.
 
 
+Pereira, C. P. (1972).
+TAMANHO DE PARCELA E NÚMERO NECESSÁRIO DE REPETIÇÕES EM EXPERIMENTOS DE
+PRODUÇÃO COM CACAUEIROS. C. P. Pereira. Comissão Executiva do Plano da Lavoura
+Cacaueira-Ceplac. Revista Theobroma, Brasil, 1972 v.02 n.4 out-dez, p3-7.
+Palavras-Chave: Desenho experimental, ensaios, coeficiente de variação
+https://repositorio-dspace.agricultura.gov.br/bitstream/1/1838/1/BR2019001237.pdf
+Reviewed. No data.
+
+
 Pieris, W.V.D. and M.L.M. Salgado (1937).
 Experimental  error in field experiments with coconuts.
 Tropical Agriculturist, 89, 75-85.
@@ -2305,6 +2371,13 @@ Utah State University, All Graduate Theses and Dissertations, 2979.
 Table 6.
 https://digitalcommons.usu.edu/etd/2979/
 agridat::polson.safflower.uniformity
+
+
+Potter, George.
+Field Plot Technique for Tree Crops.
+Proceedings of the American Society for Horticultural Science v.62
+https://babel.hathitrust.org/cgi/pt?id=osu.32435028190270&seq=34&q1=plot+technique
+Reviewed. No data.
 
 
 Poultney, R., Riley, J., & Webster, R. (1997).
@@ -2394,7 +2467,7 @@ Reviewed. No data. Trials were conducted 1954-1958.
 
 Robinson, H.F.; and J.A.Rigney and P.H.Harvey (1948).
 Investigations In Peanut Plot Technique With Peanuts.
-Univ California Tech. Bul. No 86.
+Agricultural Experiment Station, North Carolina State College.
 agridat::robinson.peanut.uniformity
 
 
@@ -2496,6 +2569,14 @@ Optimum plot size for experiments with papaya genotypes in field.
 African Journal of Agricultural Research, 13, 360-365.
 https://doi.org/10.5897/AJAR2017.12951 
 Reviewed. No data. Optimum plot size if four plants by plot, using four replications.
+
+
+Schneidewind, W. Mitwirkung von Dr. D. Meyer und Dr. F. Münter. (1919)
+Parzellengrößenversuche, Untersuchungen über die Brauchbarkeit verschieden großer und verschieden angelegter Parzellen bei Düngungsversuchen und die Wahrscheinlichkeitsrechnung. 
+Arbeiten der Deutschen Landwirtschafts-Gesellschaft.
+Heft 296. 1-51.
+https://babel.hathitrust.org/cgi/pt?id=chi.105133922&seq=1201
+Reviewed. No data.
 
 
 Schwertner, Diogo Vanderlei and Alessandro Dal’Col Lúcio, Alberto Cargnelutti Filho. (2015).

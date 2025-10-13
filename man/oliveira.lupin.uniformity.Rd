@@ -61,6 +61,7 @@
 \examples{
 \dontrun{
 library(agridat)
+data(oliveira.lupin.uniformity)
 dat <- oliveira.lupin.uniformity
 
 require(desplot)

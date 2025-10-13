@@ -52,11 +52,11 @@
 }
 \source{
   Ehrenberg, P. (1920).
-  Versuch eines Beweises für die Anwendbarkeit der   Wahrscheinlichkeitsrechnung bei Feldversuchen.
+  Versuch eines Beweises für die Anwendbarkeit der Wahrscheinlichkeitsrechnung bei Feldversuchen.
   Die Landwirtschaflichen versuchs-stationen, 95, 157-294.
   Table Ih. Page 254-276.
   https://archive.org/details/dielandwirtschaf9519reun/page/156/
- https://www.google.com/books/edition/Die_Landwirtschaftlichen_Versuchs_Statio/h9FGAAAAYAAJ
+  https://www.google.com/books/edition/Die_Landwirtschaftlichen_Versuchs_Statio/h9FGAAAAYAAJ
 }
 \references{
   Holtsmark, G and Larsen, B R (1905).

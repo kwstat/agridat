@@ -46,6 +46,7 @@
 \examples{
 \dontrun{
 library(agridat)
+data(oliveira.potato.uniformity)
 dat <- oliveira.potato.uniformity
 
 library(desplot)

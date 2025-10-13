@@ -214,11 +214,17 @@
   libs(sommer)
   dat <- stroup.nin
   dat <- transform(dat, yf = as.factor(row), xf = as.factor(col))
-  so1 <- mmer(yield ~ 0+gen,
-              random = ~ vs(xf) + vs(yf) + spl2Db(row,col),
-              data=dat)
-  preds$so1 <- coef(so1)[,"Estimate"]
-  # spatPlot
+
+  so1 <- mmes(fixed= yield ~ gen,
+    random = ~ row + col + spl2Dc(row,col),
+    rcov=~units, verbose=FALSE, data=dat)
+  # Determine which effects to include in prediction
+  Dtab = so1$Dtable
+  Dtab
+  Dtab[1,"include"] = TRUE
+  pr1 <- predict(so1, Dtable=Dtab, D="gen")
+  pr1 <- pr1$pvals
+  preds$so1 <- pr1$predicted.value
 
   # -----
   # compare variety effects from different packages

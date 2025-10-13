@@ -54,7 +54,7 @@
 \source{
   Gorski, M. and Stefaniow, M. (1917).
   Die Anwendbarkeit der Wahrscheinlichkeits-rechnung bei Feldversuchen.
-  Die Landwirtschaflichen Versuchsstationen,  90, 225-240.
+  Die Landwirtschaflichen Versuchsstationen, 90, 225-240.
   https://www.google.com/books/edition/Die_Landwirtschaftlichen_versuchs_statio/qr8jAQAAMAAJ?hl=en&gbpv=1&pg=RA1-PA225
 }
 \references{

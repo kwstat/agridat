@@ -1,19 +1,25 @@
-# agridat 1.24
+# agridat 1.25
 
 ## test environments and results
 
-1. R 4.4.1 on Windows 11
+1. R 4.5.1 on Windows 11
 2. WinBuilder R-Devel
-3. Rhub linux
+3. WinBuilder R-Release
 
 OK
 
 ## revdepcheck results
 
-We checked 8 reverse dependencies (7 from CRAN + 1 from Bioconductor), comparing R CMD check results across CRAN and dev versions of this package.
+We checked 8 reverse dependencies and saw 0 new problems.
 
- * We saw 0 new problems
- * We failed to check 0 packages
+✔ fbglm 1.5.0                            ── E: 0     | W: 0     | N: 1
+✔ connected 1.1                          ── E: 0     | W: 0     | N: 0
+✔ desplot 1.10                           ── E: 0     | W: 0     | N: 0
+✔ agriutilities 1.2.1                    ── E: 0     | W: 0     | N: 0
+✔ gge 1.9                                ── E: 0     | W: 0     | N: 0
+✔ geneticae 0.4.0                        ── E: 0     | W: 0     | N: 1
+✔ LMMsolver 1.0.11                       ── E: 0     | W: 0     | N: 0
+✔ spaMM 4.6.1                            ── E: 0     | W: 0     | N: 0
 
 
 # agridat 1.23

@@ -28,7 +28,7 @@ dat1 <- dat1 %>%
 dat2 <- dat2 %>%
   as.matrix %>% `colnames<-`(1:ncol(dat2)) %>% melt %>% rename(row=Var1,col=Var2,yield=value)
 
-desplot(yield ~ col*row, dat1, flip=TRUE,
+desplot(yield ~ col*row, dat1, flip=TRUE, tick=TRUE,
         main="wehner.cucumber.uniformity")
 desplot(yield ~ col*row, dat2, flip=TRUE,
         main="wehner.cucumber.uniformity")

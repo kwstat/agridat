@@ -50,8 +50,7 @@
 }
 \source{
   Kotowski, Feliks. (1924).
-  A criterion of field homegenity and its value in field
-  trials. (English title).
+  A criterion of field homegenity and its value in field trials. (English title).
   Roczniki Nauk Rolniczych, 11, 26-35.
   https://www.google.com/books/edition/Roczniki_nauk_rolniczych/mz0iAQAAIAAJ
   Polish version on page 26. English abstract on page 35.
