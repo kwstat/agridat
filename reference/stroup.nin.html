@@ -9,7 +9,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">agridat</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.24</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.25</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,7 +24,7 @@
     <li><a class="dropdown-item" href="../articles/agridat_graphical_gems.html">Graphical Gems in the agridat Package</a></li>
     <li><a class="dropdown-item" href="../articles/agridat_intro.html">Introduction to agridat</a></li>
     <li><a class="dropdown-item" href="../articles/agridat_mixed_model_example.html">Example generalized linear mixed model analysis with different packages</a></li>
-    <li><a class="dropdown-item" href="../articles/agridat_uniformity_data.html">Notes on uniformity data</a></li>
+    <li><a class="dropdown-item" href="../articles/agridat_uniformity_data.html">UNKNOWN TITLE</a></li>
   </ul></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
@@ -248,11 +248,17 @@
 <span class="r-in"><span>  <span class="fu"><a href="libs.html">libs</a></span><span class="op">(</span><span class="va">sommer</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="va">dat</span> <span class="op">&lt;-</span> <span class="va">stroup.nin</span></span></span>
 <span class="r-in"><span>  <span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/transform.html" class="external-link">transform</a></span><span class="op">(</span><span class="va">dat</span>, yf <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">as.factor</a></span><span class="op">(</span><span class="va">row</span><span class="op">)</span>, xf <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">as.factor</a></span><span class="op">(</span><span class="va">col</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-in"><span>  <span class="va">so1</span> <span class="op">&lt;-</span> <span class="fu">mmer</span><span class="op">(</span><span class="va">yield</span> <span class="op">~</span> <span class="fl">0</span><span class="op">+</span><span class="va">gen</span>,</span></span>
-<span class="r-in"><span>              random <span class="op">=</span> <span class="op">~</span> <span class="fu">vs</span><span class="op">(</span><span class="va">xf</span><span class="op">)</span> <span class="op">+</span> <span class="fu">vs</span><span class="op">(</span><span class="va">yf</span><span class="op">)</span> <span class="op">+</span> <span class="fu">spl2Db</span><span class="op">(</span><span class="va">row</span>,<span class="va">col</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>              data<span class="op">=</span><span class="va">dat</span><span class="op">)</span></span></span>
-<span class="r-in"><span>  <span class="va">preds</span><span class="op">$</span><span class="va">so1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/coef.html" class="external-link">coef</a></span><span class="op">(</span><span class="va">so1</span><span class="op">)</span><span class="op">[</span>,<span class="st">"Estimate"</span><span class="op">]</span></span></span>
-<span class="r-in"><span>  <span class="co"># spatPlot</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span>  <span class="va">so1</span> <span class="op">&lt;-</span> <span class="fu">mmes</span><span class="op">(</span>fixed<span class="op">=</span> <span class="va">yield</span> <span class="op">~</span> <span class="va">gen</span>,</span></span>
+<span class="r-in"><span>    random <span class="op">=</span> <span class="op">~</span> <span class="va">row</span> <span class="op">+</span> <span class="va">col</span> <span class="op">+</span> <span class="fu">spl2Dc</span><span class="op">(</span><span class="va">row</span>,<span class="va">col</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>    rcov<span class="op">=</span><span class="op">~</span><span class="va">units</span>, verbose<span class="op">=</span><span class="cn">FALSE</span>, data<span class="op">=</span><span class="va">dat</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="co"># Determine which effects to include in prediction</span></span></span>
+<span class="r-in"><span>  <span class="va">Dtab</span> <span class="op">=</span> <span class="va">so1</span><span class="op">$</span><span class="va">Dtable</span></span></span>
+<span class="r-in"><span>  <span class="va">Dtab</span></span></span>
+<span class="r-in"><span>  <span class="va">Dtab</span><span class="op">[</span><span class="fl">1</span>,<span class="st">"include"</span><span class="op">]</span> <span class="op">=</span> <span class="cn">TRUE</span></span></span>
+<span class="r-in"><span>  <span class="va">pr1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html" class="external-link">predict</a></span><span class="op">(</span><span class="va">so1</span>, Dtable<span class="op">=</span><span class="va">Dtab</span>, D<span class="op">=</span><span class="st">"gen"</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="va">pr1</span> <span class="op">&lt;-</span> <span class="va">pr1</span><span class="op">$</span><span class="va">pvals</span></span></span>
+<span class="r-in"><span>  <span class="va">preds</span><span class="op">$</span><span class="va">so1</span> <span class="op">&lt;-</span> <span class="va">pr1</span><span class="op">$</span><span class="va">predicted.value</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span>  <span class="co"># -----</span></span></span>
 <span class="r-in"><span>  <span class="co"># compare variety effects from different packages</span></span></span>

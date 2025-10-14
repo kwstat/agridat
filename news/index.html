@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">agridat</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.24</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.25</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +22,7 @@
     <li><a class="dropdown-item" href="../articles/agridat_graphical_gems.html">Graphical Gems in the agridat Package</a></li>
     <li><a class="dropdown-item" href="../articles/agridat_intro.html">Introduction to agridat</a></li>
     <li><a class="dropdown-item" href="../articles/agridat_mixed_model_example.html">Example generalized linear mixed model analysis with different packages</a></li>
-    <li><a class="dropdown-item" href="../articles/agridat_uniformity_data.html">Notes on uniformity data</a></li>
+    <li><a class="dropdown-item" href="../articles/agridat_uniformity_data.html">UNKNOWN TITLE</a></li>
   </ul></li>
 <li class="active nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
@@ -40,7 +40,15 @@
     </div>
 
     <div class="section level2">
-<h2 class="pkg-version" data-toc-text="1.25" id="agridat-125-2025">agridat 1.25 (2025)<a class="anchor" aria-label="anchor" href="#agridat-125-2025"></a></h2>
+<h2 class="pkg-version" data-toc-text="1.26" id="agridat-126-">agridat 1.26 ()<a class="anchor" aria-label="anchor" href="#agridat-126-"></a></h2>
+<div class="section level3">
+<h3 id="new-datasets-1-26">New datasets<a class="anchor" aria-label="anchor" href="#new-datasets-1-26"></a></h3>
+<ul><li>kirk.potato.uniformity</li>
+<li>wehner.cucumber.uniformity</li>
+</ul></div>
+</div>
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="1.25" id="agridat-125-2025-10-06">agridat 1.25 (2025-10-06)<a class="anchor" aria-label="anchor" href="#agridat-125-2025-10-06"></a></h2><p class="text-muted">CRAN release: 2025-10-08</p>
 <div class="section level3">
 <h3 id="new-datasets-1-25">New datasets<a class="anchor" aria-label="anchor" href="#new-datasets-1-25"></a></h3>
 <ul><li>beckett.maize.uniformity</li>
@@ -72,12 +80,12 @@
 </ul></div>
 <div class="section level3">
 <h3 id="other-notes-1-24">Other notes<a class="anchor" aria-label="anchor" href="#other-notes-1-24"></a></h3>
-<ul><li><p>baker.strawberry.uniformity: inserted 3 columns into the layout of the field to more closely align with the experiment layout.</p></li>
-<li><p>garber.multi.uniformity: The data has been reshaped from wide to tall and additional years added.</p></li>
-<li><p>minnesota.barley.yield: Added 10+ more years of data.</p></li>
-<li><p>odland.soyhay.uniformity: Yields have been divided by 10 so that the yield values are now in units of “tons” instead of “0.1 tons”.</p></li>
-<li><p>shafi.tomato.uniformity: Had incorrect yield scale, now divided by 1000.</p></li>
-<li><p>Documentation pages now created via Github Actions. (Issue <a href="https://github.com/kwstat/agridat/issues/12" class="external-link">#12</a>). Thanks to E.Tanaka.</p></li>
+<ul><li>baker.strawberry.uniformity: inserted 3 columns into the layout of the field to more closely align with the experiment layout.</li>
+<li>garber.multi.uniformity: The data has been reshaped from wide to tall and additional years added.</li>
+<li>minnesota.barley.yield: Added 10+ more years of data.</li>
+<li>odland.soyhay.uniformity: Yields have been divided by 10 so that the yield values are now in units of “tons” instead of “0.1 tons”.</li>
+<li>shafi.tomato.uniformity: Had incorrect yield scale, now divided by 1000.</li>
+<li>Documentation pages now created via Github Actions. (Issue <a href="https://github.com/kwstat/agridat/issues/12" class="external-link">#12</a>). Thanks to E.Tanaka.</li>
 </ul></div>
 </div>
     <div class="section level2">
@@ -87,10 +95,10 @@
 </div>
 <div class="section level3">
 <h3 id="other-notes-1-23">Other notes<a class="anchor" aria-label="anchor" href="#other-notes-1-23"></a></h3>
-<ul><li><p>Removed suggested use of sf/terra packages in examples.</p></li>
-<li><p>Add <code>if(require("asreml", quietly=TRUE))</code> to example sections. This way we can allow people (or GitHub Actions) to force run the <code>dontrun</code> sections, even if <code>asreml</code> is not installed.</p></li>
-<li><p>cochran.eelworms - Fix a typo reported by U.Genschel, and added more columns for grain yield, straw yield, weeds. Updates to documentation.</p></li>
-<li><p>gartner.corn - Remove ‘rgdal’ package from example (Issue <a href="https://github.com/kwstat/agridat/issues/11" class="external-link">#11</a>).</p></li>
+<ul><li>Removed suggested use of sf/terra packages in examples.</li>
+<li>Add <code>if(require("asreml", quietly=TRUE))</code> to example sections. This way we can allow people (or GitHub Actions) to force run the <code>dontrun</code> sections, even if <code>asreml</code> is not installed.</li>
+<li>cochran.eelworms - Fix a typo reported by U.Genschel, and added more columns for grain yield, straw yield, weeds. Updates to documentation.</li>
+<li>gartner.corn - Remove ‘rgdal’ package from example (Issue <a href="https://github.com/kwstat/agridat/issues/11" class="external-link">#11</a>).</li>
 </ul></div>
 </div>
     <div class="section level2">
@@ -121,10 +129,10 @@
 </ul></div>
 <div class="section level3">
 <h3 id="other-notes-1-22">Other notes<a class="anchor" aria-label="anchor" href="#other-notes-1-22"></a></h3>
-<ul><li><p>Changed the package to MIT license.</p></li>
-<li><p>Modified factorial-experiment datasets to separate the treatment factors into individual treatment factors.</p></li>
-<li><p>Add docType{package} fix for CRAN.</p></li>
-<li><p>Removed ‘donttest’ for some examples.</p></li>
+<ul><li>Changed the package to MIT license.</li>
+<li>Modified factorial-experiment datasets to separate the treatment factors into individual treatment factors.</li>
+<li>Add docType{package} fix for CRAN.</li>
+<li>Removed ‘donttest’ for some examples.</li>
 </ul></div>
 </div>
     <div class="section level2">
@@ -155,9 +163,9 @@
 </ul></div>
 <div class="section level3">
 <h3 id="other-notes-1-20">Other notes<a class="anchor" aria-label="anchor" href="#other-notes-1-20"></a></h3>
-<ul><li><p>Re-named mead.cowpeamaize to mead.cowpea.maize.</p></li>
-<li><p>Re-named correa.soybean.uniformity to dasilva.soybean.uniformity.</p></li>
-<li><p>There are more than 200 URLs in the vignettes and these were slow to check and generated too many false warnings. Stopped the Rmd to html conversion from creating URL links via an option in the Rmd YAML.</p></li>
+<ul><li>Re-named mead.cowpeamaize to mead.cowpea.maize.</li>
+<li>Re-named correa.soybean.uniformity to dasilva.soybean.uniformity.</li>
+<li>There are more than 200 URLs in the vignettes and these were slow to check and generated too many false warnings. Stopped the Rmd to html conversion from creating URL links via an option in the Rmd YAML.</li>
 </ul></div>
 </div>
     <div class="section level2">
@@ -174,17 +182,45 @@
 <h2 class="pkg-version" data-toc-text="1.17" id="agridat-117-2020-08-03">agridat 1.17 (2020-08-03)<a class="anchor" aria-label="anchor" href="#agridat-117-2020-08-03"></a></h2><p class="text-muted">CRAN release: 2020-08-03</p>
 <div class="section level3">
 <h3 id="new-datasets-1-17">New datasets<a class="anchor" aria-label="anchor" href="#new-datasets-1-17"></a></h3>
-<p>alwan.lamb, baker.strawberry.uniformity, besag.checks, bryan.corn.uniformity, davidian.soybean, devries.pine, edwards.oats, george.wheat, hartman.tomato.uniformity, heath.radish.uniformity, johnson.douglasfir, kayad.alfalfa, kerr.sugarcane.uniformity, laycock.tea.uniformity, lehmann.millet.uniformity, linder.wheat, loesell.bean.uniformity, miguez.biomass, obsi.potato.uniformity, paez.coffee.uniformity, pederson.lettuce.repeated, piepho.barley.uniformity, rothamsted.oats, shaw.oats, wyatt.multi.uniformity</p>
-</div>
+<ul><li>alwan.lamb</li>
+<li>baker.strawberry.uniformity</li>
+<li>besag.checks</li>
+<li>bryan.corn.uniformity</li>
+<li>davidian.soybean</li>
+<li>devries.pine</li>
+<li>edwards.oats</li>
+<li>george.wheat</li>
+<li>hartman.tomato.uniformity</li>
+<li>heath.radish.uniformity</li>
+<li>johnson.douglasfir</li>
+<li>kayad.alfalfa</li>
+<li>kerr.sugarcane.uniformity</li>
+<li>laycock.tea.uniformity</li>
+<li>lehmann.millet.uniformity</li>
+<li>linder.wheat</li>
+<li>loesell.bean.uniformity</li>
+<li>miguez.biomass</li>
+<li>obsi.potato.uniformity</li>
+<li>paez.coffee.uniformity</li>
+<li>pederson.lettuce.repeated</li>
+<li>piepho.barley.uniformity</li>
+<li>rothamsted.oats</li>
+<li>shaw.oats</li>
+<li>wyatt.multi.uniformity</li>
+</ul></div>
 <div class="section level3">
 <h3 id="other-notes-1-17">Other notes<a class="anchor" aria-label="anchor" href="#other-notes-1-17"></a></h3>
-<ul><li><p>Examples now use asreml version 4.</p></li>
-<li><p>Re-named hutchinson.cotton.uniformity to panse.cotton.uniformity.</p></li>
-<li><p>Added INLA example to crowder.seeds.</p></li>
-<li><p>Wrapped most example sections with <code>dontrun</code>.</p></li>
-<li><p>New function <code><a href="../reference/libs.html">libs()</a></code>, which is basically the same as <code>pacman::p_load()</code>, but without the dependency on <code>pacman</code>.</p></li>
-<li><p>Example sections now use <code><a href="https://kwstat.github.io/agridat/" class="external-link">library(agridat)</a></code> and then <code><a href="../reference/libs.html">libs()</a></code> to load all other packages on the fly if needed.</p></li>
-<li><p>Website built with <code>pkgdown</code>.</p></li>
+<ul><li>Examples now use asreml version 4.</li>
+<li>Re-named hutchinson.cotton.uniformity to panse.cotton.uniformity.</li>
+<li>Added INLA example to crowder.seeds.</li>
+<li>Wrapped most example sections with <code>dontrun</code>.</li>
+<li>New function <code><a href="../reference/libs.html">libs()</a></code>
+</li>
+<li>which is basically the same as <code>pacman::p_load()</code>
+</li>
+<li>but without the dependency on <code>pacman</code>.</li>
+<li>Example sections now use <code><a href="https://kwstat.github.io/agridat/" class="external-link">library(agridat)</a></code> and then <code><a href="../reference/libs.html">libs()</a></code> to load all other packages on the fly if needed.</li>
+<li>Website built with <code>pkgdown</code>.</li>
 </ul></div>
 </div>
     <div class="section level2">
@@ -195,38 +231,132 @@
 <h2 class="pkg-version" data-toc-text="1.15" id="agridat-115-2018-06-28">agridat 1.15 (2018-06-28)<a class="anchor" aria-label="anchor" href="#agridat-115-2018-06-28"></a></h2><p class="text-muted">CRAN release: 2018-06-27</p>
 <div class="section level3">
 <h3 id="new-datasets-1-15">New datasets<a class="anchor" aria-label="anchor" href="#new-datasets-1-15"></a></h3>
-<p>ansari.wheat.uniformity, baker.wheat.uniformity, bancroft.peanut.uniformity, bose.multi.uniformity, christidis.cotton.uniformity, dasilva.soybean.uniformity, davies.pasture.uniformity, eden.tea.uniformity, hutchinson.cotton.uniformity, igue.sugarcane.uniformity, kulkarni.sorghum.uniformity, lander.multi.uniformity, lord.rice.uniformity, magistad.pineapple.uniformity, nagai.strawberry.uniformity, narain.sorghum.uniformity, robinson.peanut.uniformity, sayer.sugarcane.uniformity, strickland.apple.uniformity, strickland.grape.uniformity, strickland.peach.uniformity, strickland.tomato.uniformity</p>
-<p>dasilva.maize, mead.turnip</p>
-</div>
+<ul><li>ansari.wheat.uniformity</li>
+<li>baker.wheat.uniformity</li>
+<li>bancroft.peanut.uniformity</li>
+<li>bose.multi.uniformity</li>
+<li>christidis.cotton.uniformity</li>
+<li>dasilva.maize</li>
+<li>dasilva.soybean.uniformity</li>
+<li>davies.pasture.uniformity</li>
+<li>eden.tea.uniformity</li>
+<li>hutchinson.cotton.uniformity</li>
+<li>igue.sugarcane.uniformity</li>
+<li>kulkarni.sorghum.uniformity</li>
+<li>lander.multi.uniformity</li>
+<li>lord.rice.uniformity</li>
+<li>magistad.pineapple.uniformity</li>
+<li>mead.turnip</li>
+<li>nagai.strawberry.uniformity</li>
+<li>narain.sorghum.uniformity</li>
+<li>robinson.peanut.uniformity</li>
+<li>sayer.sugarcane.uniformity</li>
+<li>strickland.apple.uniformity</li>
+<li>strickland.grape.uniformity</li>
+<li>strickland.peach.uniformity</li>
+<li>strickland.tomato.uniformity</li>
+</ul></div>
 <div class="section level3">
 <h3 id="other-notes-1-15">Other notes<a class="anchor" aria-label="anchor" href="#other-notes-1-15"></a></h3>
-<ul><li><p>nonnecke.corn.uniformity is renamed nonnecke.sweetcorn.uniformity</p></li>
-<li><p>moore.carrots.uniformity is renamed moore.carrot.uniformity</p></li>
-<li><p>Switch from <code>lsmeans</code> to <code>emmeans</code> in examples.</p></li>
+<ul><li>nonnecke.corn.uniformity is renamed nonnecke.sweetcorn.uniformity</li>
+<li>moore.carrots.uniformity is renamed moore.carrot.uniformity</li>
+<li>Switch from <code>lsmeans</code> to <code>emmeans</code> in examples.</li>
 </ul></div>
 </div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="1.13" id="agridat-113-2017-11-30">agridat 1.13 (2017-11-30)<a class="anchor" aria-label="anchor" href="#agridat-113-2017-11-30"></a></h2><p class="text-muted">CRAN release: 2017-11-29</p>
 <div class="section level3">
 <h3 id="new-datasets-for-uniformity-trials-1-13">New datasets for uniformity trials<a class="anchor" aria-label="anchor" href="#new-datasets-for-uniformity-trials-1-13"></a></h3>
-<p>bradley.multi.uniformity, christidis.wheat.uniformity, day.wheat.uniformity, draper.safflower.uniformity, holtsmark.timothy.uniformity, iyer.wheat.uniformity, kadam.millet.uniformity, kalamkar.wheat.uniformity, khin.rice.uniformity, kiesselbach.oats.uniformity, kristensen.barley.uniformity, lessman.sorghum.uniformity, love.cotton.uniformity, masood.rice.uniformity, mcclelland.corn.uniformity, montgomery.wheat.uniformity, moore.polebean.uniformity, moore.bushbean.uniformity, moore.sweetcorn.uniformity, moore.carrot.uniformity, moore.springcauliflower.uniformity, moore.fallcauliflower.uniformity, nonnecke.corn.uniformity, nonnecke.peas.uniformity, parker.orange.uniformity, polson.safflower.uniformity, sawyer.multi.uniformity, smith.beans.uniformity, stickler.sorghum.uniformity, wiedemann.safflower.uniformity</p>
-</div>
+<ul><li>bradley.multi.uniformity</li>
+<li>christidis.wheat.uniformity</li>
+<li>day.wheat.uniformity</li>
+<li>draper.safflower.uniformity</li>
+<li>holtsmark.timothy.uniformity</li>
+<li>iyer.wheat.uniformity</li>
+<li>kadam.millet.uniformity</li>
+<li>kalamkar.wheat.uniformity</li>
+<li>khin.rice.uniformity</li>
+<li>kiesselbach.oats.uniformity</li>
+<li>kristensen.barley.uniformity</li>
+<li>lessman.sorghum.uniformity</li>
+<li>love.cotton.uniformity</li>
+<li>masood.rice.uniformity</li>
+<li>mcclelland.corn.uniformity</li>
+<li>montgomery.wheat.uniformity</li>
+<li>moore.polebean.uniformity</li>
+<li>moore.bushbean.uniformity</li>
+<li>moore.sweetcorn.uniformity</li>
+<li>moore.carrot.uniformity</li>
+<li>moore.springcauliflower.uniformity</li>
+<li>moore.fallcauliflower.uniformity</li>
+<li>nonnecke.corn.uniformity</li>
+<li>nonnecke.peas.uniformity</li>
+<li>parker.orange.uniformity</li>
+<li>polson.safflower.uniformity</li>
+<li>sawyer.multi.uniformity</li>
+<li>smith.beans.uniformity</li>
+<li>stickler.sorghum.uniformity</li>
+<li>wiedemann.safflower.uniformity</li>
+</ul></div>
 <div class="section level3">
 <h3 id="new-datasets-for-stability-1-13">New datasets for stability<a class="anchor" aria-label="anchor" href="#new-datasets-for-stability-1-13"></a></h3>
-<p>fisher.barley, lu.stability, tai.potato</p>
-</div>
+<ul><li>fisher.barley</li>
+<li>lu.stability</li>
+<li>tai.potato</li>
+</ul></div>
 <div class="section level3">
 <h3 id="new-datasets-1-13">New datasets<a class="anchor" aria-label="anchor" href="#new-datasets-1-13"></a></h3>
-<p>acorsi.grayleafspot, becker.chicken, chinloy.fractionalfactorial, cramer.cucumber, crampton.pig, battese.survey, christidis.competition, depalluel.sheep. eden.nonnormal, gartner.corn, giles.wheat, gomez.heteroskedastic, gomez.nonnormal1, gomez.nonnormal2, gomez.nonnormal3, gomez.wetdry, goulden.eggs, goulden.splitsplit, gregory.cotton, hanover.whitepine, harvey.lsmeans, harville.lamb, huehn.wheat, kenward.cattle, kreusler.maize, lehner.soybeanmold, lillemo.wheat, lin.superiority, lin.unbalanced, little.splitblock, mead.lamb, omer.sorghum, onofri.winterwheat, reid.grasses, silva.cotton, urquhart.feedlot, usgs.herbicides, vaneeuwijk.fusarium, vaneeuwijk.nematodes, vaneeuwijk.drymatter, wheatley.carrot</p>
-</div>
+<ul><li>acorsi.grayleafspot</li>
+<li>becker.chicken</li>
+<li>chinloy.fractionalfactorial</li>
+<li>cramer.cucumber</li>
+<li>crampton.pig</li>
+<li>battese.survey</li>
+<li>christidis.competition</li>
+<li>depalluel.sheep</li>
+<li>eden.nonnormal</li>
+<li>gartner.corn</li>
+<li>giles.wheat</li>
+<li>gomez.heteroskedastic</li>
+<li>gomez.nonnormal1</li>
+<li>gomez.nonnormal2</li>
+<li>gomez.nonnormal3</li>
+<li>gomez.wetdry</li>
+<li>goulden.eggs</li>
+<li>goulden.splitsplit</li>
+<li>gregory.cotton</li>
+<li>hanover.whitepine</li>
+<li>harvey.lsmeans</li>
+<li>harville.lamb</li>
+<li>huehn.wheat</li>
+<li>kenward.cattle</li>
+<li>kreusler.maize</li>
+<li>lehner.soybeanmold</li>
+<li>lillemo.wheat</li>
+<li>lin.superiority</li>
+<li>lin.unbalanced</li>
+<li>little.splitblock</li>
+<li>mead.lamb</li>
+<li>omer.sorghum</li>
+<li>onofri.winterwheat</li>
+<li>reid.grasses</li>
+<li>silva.cotton</li>
+<li>urquhart.feedlot</li>
+<li>usgs.herbicides</li>
+<li>vaneeuwijk.fusarium</li>
+<li>vaneeuwijk.nematodes</li>
+<li>vaneeuwijk.drymatter</li>
+<li>wheatley.carrot</li>
+</ul></div>
 <div class="section level3">
 <h3 id="other-notes-1-13">Other notes<a class="anchor" aria-label="anchor" href="#other-notes-1-13"></a></h3>
-<ul><li><p>The following data objects have been changed from lists of 2 matrices into tidy dataframes: aastveit.barley, box.cork, ortiz.tomato, talbot.potato, vargas.txe, vargas.wheat1, vargas.wheat2</p></li>
-<li><p><code>devtools::run_examples()</code> now works even without suggested packages installed.</p></li>
-<li><p>Changed extensions in inst/files from .bug to .jag .</p></li>
-<li><p>Changed all hyperlinks to plain text (for faster checking, avoids re-direct errors).</p></li>
-<li><p>Replaced use of <code>gam</code> package in examples, in favor of <code>mgcv</code> package.</p></li>
-<li><p>Added package logo on github.</p></li>
+<ul><li>The following data objects have been changed from lists of 2 matrices into tidy dataframes: aastveit.barley, box.cork, ortiz.tomato, talbot.potato, vargas.txe, vargas.wheat1, vargas.wheat2</li>
+<li>
+<code>devtools::run_examples()</code> now works even without suggested packages installed.</li>
+<li>Changed extensions in inst/files from .bug to .jag .</li>
+<li>Changed all hyperlinks to plain text (for faster checking, avoids re-direct errors).</li>
+<li>Replaced use of <code>gam</code> package in examples, in favor of <code>mgcv</code> package.</li>
+<li>Added package logo on github.</li>
 </ul></div>
 </div>
     <div class="section level2">
@@ -259,8 +389,10 @@
 <h2 class="pkg-version" data-toc-text="1.10" id="agridat-110-2014-11-26">agridat 1.10 (2014-11-26)<a class="anchor" aria-label="anchor" href="#agridat-110-2014-11-26"></a></h2><p class="text-muted">CRAN release: 2014-11-26</p>
 <div class="section level3">
 <h3 id="new-datasets-1-10">New datasets<a class="anchor" aria-label="anchor" href="#new-datasets-1-10"></a></h3>
-<p>beaven.barley, perry.springwheat, ridout.appleshoots</p>
-</div>
+<ul><li>beaven.barley</li>
+<li>perry.springwheat</li>
+<li>ridout.appleshoots</li>
+</ul></div>
 <div class="section level3">
 <h3 id="other-1-10">Other<a class="anchor" aria-label="anchor" href="#other-1-10"></a></h3>
 <ul><li>Move packages from Depends to Imports.</li>
@@ -270,12 +402,60 @@
 <h2 class="pkg-version" data-toc-text="1.9" id="agridat-19-2014-07-02">agridat 1.9 (2014-07-02)<a class="anchor" aria-label="anchor" href="#agridat-19-2014-07-02"></a></h2><p class="text-muted">CRAN release: 2014-07-02</p>
 <div class="section level3">
 <h3 id="new-datasets-1-9">New datasets<a class="anchor" aria-label="anchor" href="#new-datasets-1-9"></a></h3>
-<p>beall.webworms, besag.endive, brandt.switchback, butron.maize, carlson.germination, cochran.factorial, connolly.potato, cornelius.maize, cullis.earlygen, fisher.latin, foulley.calving, fox.wheat, gomez.splitplot.subsample, goulden.latin, gumpertz.pepper, harrison.priors, hazell.vegetables, heady.fertilizer, holland.arthropods, hunter.corn, jansen.strawberry, kalamkar.potato.uniformity, kang.maize, kang.peanut, karcher.turfgrass, keen.potatodamage, lasrosas.corn, lee.potatoblight, lonnquist.maize, lucas.switchback, maindonald.barley, mead.cauliflower, mercer.mangold.uniformity, patterson.switchback, piepho.cocksfoot, sinclair.clover, snijders.fusarium, stirret.borers, theobald.barley, turner.herbicide, vargas.txe, vold.longterm, wallace.iowaland, walsh.cottonprice, wassom.brome.uniformity, welch.bermudagrass, weiss.incblock, weiss.lattice, yang.barley</p>
-</div>
+<ul><li>beall.webworms</li>
+<li>besag.endive</li>
+<li>brandt.switchback</li>
+<li>butron.maize</li>
+<li>carlson.germination</li>
+<li>cochran.factorial</li>
+<li>connolly.potato</li>
+<li>cornelius.maize</li>
+<li>cullis.earlygen</li>
+<li>fisher.latin</li>
+<li>foulley.calving</li>
+<li>fox.wheat</li>
+<li>gomez.splitplot.subsample</li>
+<li>goulden.latin</li>
+<li>gumpertz.pepper</li>
+<li>harrison.priors</li>
+<li>hazell.vegetables</li>
+<li>heady.fertilizer</li>
+<li>holland.arthropods</li>
+<li>hunter.corn</li>
+<li>jansen.strawberry</li>
+<li>kalamkar.potato.uniformity</li>
+<li>kang.maize</li>
+<li>kang.peanut</li>
+<li>karcher.turfgrass</li>
+<li>keen.potatodamage</li>
+<li>lasrosas.corn</li>
+<li>lee.potatoblight</li>
+<li>lonnquist.maize</li>
+<li>lucas.switchback</li>
+<li>maindonald.barley</li>
+<li>mead.cauliflower</li>
+<li>mercer.mangold.uniformity</li>
+<li>patterson.switchback</li>
+<li>piepho.cocksfoot</li>
+<li>sinclair.clover</li>
+<li>snijders.fusarium</li>
+<li>stirret.borers</li>
+<li>theobald.barley</li>
+<li>turner.herbicide</li>
+<li>vargas.txe</li>
+<li>vold.longterm</li>
+<li>wallace.iowaland</li>
+<li>walsh.cottonprice</li>
+<li>wassom.brome.uniformity</li>
+<li>welch.bermudagrass</li>
+<li>weiss.incblock</li>
+<li>weiss.lattice</li>
+<li>yang.barley</li>
+</ul></div>
 <div class="section level3">
 <h3 id="other-1-9">Other<a class="anchor" aria-label="anchor" href="#other-1-9"></a></h3>
-<ul><li><p>Use <code>if(require(lme4))</code> in examples. B.Ripley request.</p></li>
-<li><p>All data (almost) now have an example graphic.</p></li>
+<ul><li>Use <code>if(require(lme4))</code> in examples. Request by Brian Ripley.</li>
+<li>Almost all data now have an example graphic.</li>
 </ul></div>
 </div>
     <div class="section level2">
@@ -304,44 +484,173 @@
 <h2 class="pkg-version" data-toc-text="1.6" id="agridat-16-2013-06-04">agridat 1.6 (2013-06-04)<a class="anchor" aria-label="anchor" href="#agridat-16-2013-06-04"></a></h2><p class="text-muted">CRAN release: 2013-06-04</p>
 <div class="section level3">
 <h3 id="new-datasets-1-6">New datasets<a class="anchor" aria-label="anchor" href="#new-datasets-1-6"></a></h3>
-<p>crossa.wheat, garber.multi.uniformity, gomez.nitrogen, harris.multi.uniformity, hughes.grapes, li.millet.uniformity, odland.soybean.uniformity, odland.soyhay.uniformity, ratkowsky.onions, stephens.sorghum.uniformity</p>
-</div>
+<ul><li>crossa.wheat</li>
+<li>garber.multi.uniformity</li>
+<li>gomez.nitrogen</li>
+<li>harris.multi.uniformity</li>
+<li>hughes.grapes</li>
+<li>li.millet.uniformity</li>
+<li>odland.soybean.uniformity</li>
+<li>odland.soyhay.uniformity</li>
+<li>ratkowsky.onions</li>
+<li>stephens.sorghum.uniformity</li>
+</ul></div>
 </div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="1.5" id="agridat-15-2013-04-26">agridat 1.5 (2013-04-26)<a class="anchor" aria-label="anchor" href="#agridat-15-2013-04-26"></a></h2><p class="text-muted">CRAN release: 2013-04-26</p>
 <div class="section level3">
 <h3 id="new-datasets-1-5">New datasets<a class="anchor" aria-label="anchor" href="#new-datasets-1-5"></a></h3>
-<p>adugna.sorghum, ars.earlywhitecorn96, besag.bayesian, box.cork, broadbalk.wheat, byers.apple, caribbean.maize, carmer.density, cate.potassium, cleveland.soil, cochran.eelworms, cochran.wireworms, fan.stability, gomez.seedrate, gotway.hessianfly, goulden.barley.uniformity, henderson.milkfat, hernandez.nitrogen, hessling.argentina, immer.sugarbeet.uniformity, ivins.herbs, jenkyn.mildew, johnson.blight, lambert.soiltemp, lavoranti.eucalyptus, lyon.potato.uniformity, lyons.wheat, mead.cowpeamaize, mead.germination, minnesota.barley.weather, minnesota.barley.yield, nebraska.farmincome, nass.barley, nass.corn, nass.cotton, nass.hay, nass.rice, nass.sorghum, nass.soybean, nass.wheat, ortiz.tomato, pacheco.soybean, senshu.rice, snedecor.asparagus, streibig.competition, zuidhof.broiler</p>
-</div>
+<ul><li>adugna.sorghum</li>
+<li>ars.earlywhitecorn96</li>
+<li>besag.bayesian</li>
+<li>box.cork</li>
+<li>broadbalk.wheat</li>
+<li>byers.apple</li>
+<li>caribbean.maize</li>
+<li>carmer.density</li>
+<li>cate.potassium</li>
+<li>cleveland.soil</li>
+<li>cochran.eelworms</li>
+<li>cochran.wireworms</li>
+<li>fan.stability</li>
+<li>gomez.seedrate</li>
+<li>gotway.hessianfly</li>
+<li>goulden.barley.uniformity</li>
+<li>henderson.milkfat</li>
+<li>hernandez.nitrogen</li>
+<li>hessling.argentina</li>
+<li>immer.sugarbeet.uniformity</li>
+<li>ivins.herbs</li>
+<li>jenkyn.mildew</li>
+<li>johnson.blight</li>
+<li>lambert.soiltemp</li>
+<li>lavoranti.eucalyptus</li>
+<li>lyon.potato.uniformity</li>
+<li>lyons.wheat</li>
+<li>mead.cowpeamaize</li>
+<li>mead.germination</li>
+<li>minnesota.barley.weather</li>
+<li>minnesota.barley.yield</li>
+<li>nebraska.farmincome</li>
+<li>nass.barley</li>
+<li>nass.corn</li>
+<li>nass.cotton</li>
+<li>nass.hay</li>
+<li>nass.rice</li>
+<li>nass.sorghum</li>
+<li>nass.soybean</li>
+<li>nass.wheat</li>
+<li>ortiz.tomato</li>
+<li>pacheco.soybean</li>
+<li>senshu.rice</li>
+<li>snedecor.asparagus</li>
+<li>streibig.competition</li>
+<li>zuidhof.broiler</li>
+</ul></div>
 </div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="1.4" id="agridat-14-2012-03-14">agridat 1.4 (2012-03-14)<a class="anchor" aria-label="anchor" href="#agridat-14-2012-03-14"></a></h2><p class="text-muted">CRAN release: 2012-03-14</p>
 <div class="section level3">
 <h3 id="new-datasets-1-4">New datasets<a class="anchor" aria-label="anchor" href="#new-datasets-1-4"></a></h3>
-<p>archbold.apple, blackman.wheat, cochran.crd, cochran.latin, darwin.maize, denis.ryegrass, digby.jointregression, engelstad.nitro, federer.diagcheck, gilmour.slatehall, john.alpha, ilra.sheep, kempton.slatehall, ryder.groundnut, vsn.lupin3</p>
-</div>
+<ul><li>archbold.apple</li>
+<li>blackman.wheat</li>
+<li>cochran.crd</li>
+<li>cochran.latin</li>
+<li>darwin.maize</li>
+<li>denis.ryegrass</li>
+<li>digby.jointregression</li>
+<li>engelstad.nitro</li>
+<li>federer.diagcheck</li>
+<li>gilmour.slatehall</li>
+<li>john.alpha</li>
+<li>ilra.sheep</li>
+<li>kempton.slatehall</li>
+<li>ryder.groundnut</li>
+<li>vsn.lupin3</li>
+</ul></div>
 </div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="1.3" id="agridat-13-2011-10-20">agridat 1.3 (2011-10-20)<a class="anchor" aria-label="anchor" href="#agridat-13-2011-10-20"></a></h2><p class="text-muted">CRAN release: 2011-10-20</p>
 <div class="section level3">
 <h3 id="new-datasets-1-3">New datasets<a class="anchor" aria-label="anchor" href="#new-datasets-1-3"></a></h3>
-<p>bridges.cucumber, cox.stripsplit, diggle.cow, eden.potato, gauch.soy, graybill.heteroskedastic, hildebrand.systems, hanks.sprinkler, mcconway.turnip, pearl.kernels, williams.barley.uniformity, williams.cotton.uniformity</p>
-</div>
+<ul><li>bridges.cucumber</li>
+<li>cox.stripsplit</li>
+<li>diggle.cow</li>
+<li>eden.potato</li>
+<li>gauch.soy</li>
+<li>graybill.heteroskedastic</li>
+<li>hildebrand.systems</li>
+<li>hanks.sprinkler</li>
+<li>mcconway.turnip</li>
+<li>pearl.kernels</li>
+<li>williams.barley.uniformity</li>
+<li>williams.cotton.uniformity</li>
+</ul></div>
 </div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="1.2" id="agridat-12-2011-06-30">agridat 1.2 (2011-06-30)<a class="anchor" aria-label="anchor" href="#agridat-12-2011-06-30"></a></h2><p class="text-muted">CRAN release: 2011-06-30</p>
 <div class="section level3">
 <h3 id="new-datasets-1-2">New datasets<a class="anchor" aria-label="anchor" href="#new-datasets-1-2"></a></h3>
-<p>aastveit.barley, gathmann.bt, kempton.competition, wedderburn.barley</p>
-</div>
+<ul><li>aastveit.barley</li>
+<li>gathmann.bt</li>
+<li>kempton.competition</li>
+<li>wedderburn.barley</li>
+</ul></div>
 </div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="1.0" id="agridat-10-2011-04-27">agridat 1.0 (2011-04-27)<a class="anchor" aria-label="anchor" href="#agridat-10-2011-04-27"></a></h2>
 <ul><li>First release to CRAN</li>
 </ul><div class="section level3">
 <h3 id="new-datasets-1-0">New datasets<a class="anchor" aria-label="anchor" href="#new-datasets-1-0"></a></h3>
-<p>allcroft.lodging, australia.soybean, batchelor.apple.uniformity, batchelor.lemon.uniformity, batchelor.navel1.uniformity, batchelor.navel2.uniformity, batchelor.valencia.uniformity, batchelor.walnut.uniformity, besag.elbatan, besag.met, cochran.bib, corsten.interaction, crowder.germination, denis.missing, durban.competition, durban.rowcol, durban.splitplot, federer.tobacco, gilmour.serpentine, gomez.fractionalfactorial, gomez.groupsplit, gomez.multilocsplitplot, gomez.splitsplit, gomez.stripplot, gomez.stripsplitplot, gomez.rice.uniformity, hughes.grapes, kempton.rowcol, kempton.barley.uniformity, mead.strawberry, mercer.wheat.uniformity, rothamsted.brussels, shafii.rapeseed, smith.uniformity3, stroup.nin, stroup.splitplot, student.barley, talbot.potato, theobald.covariate, thompson.cornsoy, vargas.wheat1, vargas.wheat2, verbyla.lupin, williams.trees, wiebe.wheat.uniformity, yan.winterwheat, yates.missing, yates.oats</p>
-</div>
+<ul><li>allcroft.lodging</li>
+<li>australia.soybean</li>
+<li>batchelor.apple.uniformity</li>
+<li>batchelor.lemon.uniformity</li>
+<li>batchelor.navel1.uniformity</li>
+<li>batchelor.navel2.uniformity</li>
+<li>batchelor.valencia.uniformity</li>
+<li>batchelor.walnut.uniformity</li>
+<li>besag.elbatan</li>
+<li>besag.met</li>
+<li>cochran.bib</li>
+<li>corsten.interaction</li>
+<li>crowder.germination</li>
+<li>denis.missing</li>
+<li>durban.competition</li>
+<li>durban.rowcol</li>
+<li>durban.splitplot</li>
+<li>federer.tobacco</li>
+<li>gilmour.serpentine</li>
+<li>gomez.fractionalfactorial</li>
+<li>gomez.groupsplit</li>
+<li>gomez.multilocsplitplot</li>
+<li>gomez.splitsplit</li>
+<li>gomez.stripplot</li>
+<li>gomez.stripsplitplot</li>
+<li>gomez.rice.uniformity</li>
+<li>hughes.grapes</li>
+<li>kempton.rowcol</li>
+<li>kempton.barley.uniformity</li>
+<li>mead.strawberry</li>
+<li>mercer.wheat.uniformity</li>
+<li>rothamsted.brussels</li>
+<li>shafii.rapeseed</li>
+<li>smith.uniformity3</li>
+<li>stroup.nin</li>
+<li>stroup.splitplot</li>
+<li>student.barley</li>
+<li>talbot.potato</li>
+<li>theobald.covariate</li>
+<li>thompson.cornsoy</li>
+<li>vargas.wheat1</li>
+<li>vargas.wheat2</li>
+<li>verbyla.lupin</li>
+<li>williams.trees</li>
+<li>wiebe.wheat.uniformity</li>
+<li>yan.winterwheat</li>
+<li>yates.missing</li>
+<li>yates.oats</li>
+</ul></div>
 </div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="0.0" id="agridat-00-2010-10-01">agridat 0.0 (2010-10-01)<a class="anchor" aria-label="anchor" href="#agridat-00-2010-10-01"></a></h2>
