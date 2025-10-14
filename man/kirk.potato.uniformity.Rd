@@ -48,14 +48,14 @@
 }
 \examples{
 \dontrun{
-data(kirk.potato.uniformity)
-dat <- kirk.potato.uniformity
+  require(agridat)
+  data(kirk.potato.uniformity)
+  dat <- kirk.potato.uniformity
 
-libs(desplot)
-desplot(dat, yield ~ col*row,
-        flip=TRUE, aspect=(6*12)/(6*22),
-        main="kirk.potato.uniformity")
-
+  require(desplot)
+  desplot(dat, yield ~ col*row,
+          flip=TRUE, aspect=(6*12)/(6*22),
+          main="kirk.potato.uniformity")
 }
 }
 \keyword{datasets}
