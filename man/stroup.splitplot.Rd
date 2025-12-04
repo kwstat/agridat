@@ -11,7 +11,7 @@
 
   For example, the density of narrow, intermediate and broad-space
   predictable function for factor level A1 is shown below (html help only)
-  \if{html}{\figure{stroupsplitplot.png}{options: width=50\% alt="Figure: stroup.splitplot.png"}}
+  \if{html}{\figure{stroupsplitplot.png}{options: style="width: 50\%"}}
 
 }
 

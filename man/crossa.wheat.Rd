@@ -39,9 +39,9 @@
     ID \tab India \tab Delhi \tab 29 \tab 228 \cr
     JM \tab Jordan \tab Madaba \tab 36 \tab 785 \cr
     KN \tab Kenya \tab Njoro \tab 0 \tab 2,165 \cr
-    MG \tab Mexico \tab Guanajuato \tab 21 \tab 1,765 \cr
+    MG \tab Mexico \tab Guanajuato \tab 21 \tab 1765 \cr
     MS \tab Mexico \tab Sonora \tab 27 \tab 38 \cr
-    MM \tab Mexico \tab Michoacfin \tab 20 \tab 1,517 \cr
+    MM \tab Mexico \tab Michoacfin \tab 20 \tab 1517 \cr
     NB \tab Nepal \tab Bhairahwa \tab 27 \tab 105 \cr
     PI \tab Pakistan \tab Islamabad \tab 34 \tab 683 \cr
     PA \tab Pakistan \tab Ayub \tab 32 \tab 213 \cr
@@ -52,7 +52,7 @@
     SC \tab Spain \tab Cordoba \tab 38 \tab 110 \cr
     SS \tab Spain \tab Sevilla \tab 38 \tab 20 \cr
     TB \tab Tunisia \tab Beja \tab 37 \tab 150 \cr
-    TC \tab Thailand \tab Chiang Mai \tab 18 820 \cr
+    TC \tab Thailand \tab Chiang Mai \tab 18 \tab 820 \cr
   }
 
   Used with permission of Jose' Crossa.

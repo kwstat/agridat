@@ -816,6 +816,9 @@ https://doi.org/10.18637/jss.v089.i13
 Data `sbGeneal` contains a soybean pedigree with 230 varieties.
 
 
+### gosset
+
+Data `nicabean` was generated with decentralized on-farm trials of common bean (Phaseolus vulgaris L.) varieties in Nicaragua over five seasons (between 2015 and 2016)
 ### gRbase 
 
 Data `gRbase::carcass`: thickness of meat and fat on slaughter pigs

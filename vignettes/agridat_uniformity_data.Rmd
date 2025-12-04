@@ -1,4 +1,4 @@
-op---
+---
 title: "Notes on uniformity data"
 author: "Kevin Wright"
 output: 
@@ -443,6 +443,12 @@ Shu, S.C.; Park, S.H.; Yu, I.S.; Joo, Y.J.; Hong, Y.K. (1970).
 Studies on the optimum plot size, plot shape and number of replications in field experiments for wheat.
 Research Reports of the Office of Rural Development, S. Korea, Crops, 13: 95-99
 https://eurekamag.com/research/014/696/014696398.php
+
+
+Siao, Fu. (1954).
+Dissertation at University of Minnesota. 
+https://www.google.com/books/edition/Uniformity_Trials_with_Cotton/tLKEDzeG9IEC?hl=en
+Not viewable. Probably the same data as in the hand-written manuscript by Siao.
 
 
 Singh, R.P. (1989).
@@ -2648,7 +2654,7 @@ Shen, Li-Ying (1934)
 Statistical analysis of a blank test of rice with suggestions for field technique.
 Agriculture Sinica, 1, 107-138.
 https://upload.wikimedia.org/wikipedia/commons/9/96/NLC416-16jh004002-107129_%E6%B0%B4%E7%A8%BB%E8%A9%A6%E9%A9%97%E4%B9%8B%E7%B5%B1%E8%A8%88%E5%88%86%E6%9E%90.pdf
-No data.
+No data. Only a little bit of data shown on page 109.
 
 
 Shitap, Shri M.S. (2011).

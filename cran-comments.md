@@ -1,3 +1,17 @@
+# agridat 1.26
+
+## test environments and results
+
+1. R 4.5.2 on Windows 11
+2. WinBuilder R-Devel
+3. WinBuilder R-Release
+
+All OK.
+
+## revdepcheck results
+
+Did not check, this version is a small bug fix requested by CRAN.
+
 # agridat 1.25
 
 ## test environments and results

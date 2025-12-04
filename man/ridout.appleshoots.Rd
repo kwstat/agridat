@@ -59,7 +59,8 @@ dat <- ridout.appleshoots
 dat <- transform(dat, photo=factor(photo), bap=factor(bap))
 
 libs(lattice)
-# histogram(~roots, dat, breaks=0:18-0.5)
+histogram(~roots, dat, breaks=0:18-0.5,
+  main="ridout.appleshoots")
 
 # For photo=8, Poisson distribution looks reasonable.
 # For photo=16, half of the shoots had no roots
