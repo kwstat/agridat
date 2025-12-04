@@ -1,0 +1,75 @@
+# Introduction to agridat
+
+For a quick overview of the datasets available in the package, type
+[`?agridat`](../reference/agridat.md) at the R prompt.
+
+## Comments on the package purpose
+
+When this project was first begun in the early 2000s, electronic
+versions of agricultural datasets were hard to find. Since then, there
+has been a revolution in the availability of datasets related to
+agriculture. See the vignette which describes some data sources.
+
+Box (1957) said, “I had hoped that we had seen the end of the obscene
+tribal habit practiced by statisticians of continually exhuming and
+massaging dead data sets after their purpose in life has long since been
+forgotten and there was no possibility of doing anything useful as a
+result of this treatment.”
+
+Massaging these dead data sets will not lead to any of the genetics
+being released for commercial use. The value of this package is: 1.
+Validating published analyses. 2. Providing data for testing new
+analysis methods. 3. Illustrating (and validating) the use of R
+packages.
+
+White and van Evert (2008) present some guidelines for publication of
+data.
+
+Some of the examples use the `asreml` package since it is the *only* R
+tool for fitting mixed models with complex variance structures to large
+datasets, and the best option for modelling AR1xAR1 residual variance
+structures. Commercial use of `asreml` requires a license from VSN. (Use
+a search engine to find the latest version).
+
+## Comments on the package structure
+
+Many of these datasets appear in electronic form here for the first
+time.
+
+A tremendous amount of effort has been given to the curating process of
+identifying datasets, extracting the data from source materials,
+checking data values, and documenting the data. In effect, to make the
+data somewhat ‘computable’ (Wolfram 2017).
+
+The original sources for these data use different words to refer to
+genotypes including `accession`, `breed`, `cultivar`, `genotype`,
+`hybrid`, `line`, `progeny`, `stock`, `type`, and `variety`. For
+consistency, these datasets mostly use `gen` (genotype).
+
+Also for consistency, `row` and `col` are usually used for the field
+coordinates.
+
+In dataframes, `block`, `rep`, and similar terms are almost always coded
+like B1, B2, B3 instead of 1, 2, 3. This causes R to treat the data as a
+factor instead of a numeric covariate (which is a good thing).
+
+Almost all of the data are presented as ‘tidy’ dataframes with
+observations in rows and variables in columns.
+
+Although using [`data()`](https://rdrr.io/r/utils/data.html) is not
+necessary to access the data files, the example sections do include the
+use of [`data()`](https://rdrr.io/r/utils/data.html) because
+`devtools::run_examples()` needs it.
+
+## References
+
+G. E. P. Box (1957). Integration of Techniques in Process Development,
+Transactions of the American Society for Quality Control.
+
+J. White and Frits van Evert. (2008). Publishing Agronomic Data.
+Agronomy Journal, 100, 1396-1400.
+<https://doi.org/10.2134/agronj2008.0080F>
+
+Stephen Wolfram (2017). Launching the Wolfram Data Repository: Data
+Publishing that Really Works.
+<https://writings.stephenwolfram.com/2017/04/launching-the-wolfram-data-repository-data-publishing-that-really-works/>

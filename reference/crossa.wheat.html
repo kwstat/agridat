@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">agridat</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.25</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.26</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,7 +22,7 @@
     <li><a class="dropdown-item" href="../articles/agridat_graphical_gems.html">Graphical Gems in the agridat Package</a></li>
     <li><a class="dropdown-item" href="../articles/agridat_intro.html">Introduction to agridat</a></li>
     <li><a class="dropdown-item" href="../articles/agridat_mixed_model_example.html">Example generalized linear mixed model analysis with different packages</a></li>
-    <li><a class="dropdown-item" href="../articles/agridat_uniformity_data.html">UNKNOWN TITLE</a></li>
+    <li><a class="dropdown-item" href="../articles/agridat_uniformity_data.html">Notes on uniformity data</a></li>
   </ul></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
@@ -70,7 +70,7 @@
   18 bread wheat genotypes at 25 locations in 15 countries.</p>
 <p>Cross et al. used this data to cluster loctions into 2
   mega-environments and clustered genotypes into 3 wheat clusters.</p>
-<p>Locations</p><table class="table table"><tr><td>Code</td><td>Country</td><td>Location</td><td>Latitude (N)</td><td>Elevation (m)</td></tr><tr><td>AK</td><td>Algeria</td><td>El Khroub</td><td>36</td><td>640</td></tr><tr><td>AL</td><td>Algeria</td><td>Setif</td><td>36</td><td>1,023</td></tr><tr><td>BJ</td><td>Bangladesh</td><td>Joydebpur</td><td>24</td><td>8</td></tr><tr><td>CA</td><td>Cyprus</td><td>Athalassa</td><td>35</td><td>142</td></tr><tr><td>EG</td><td>Egypt</td><td>E1 Gemmeiza</td><td>31</td><td>8</td></tr><tr><td>ES</td><td>Egypt</td><td>Sakha</td><td>31</td><td>6</td></tr><tr><td>EB</td><td>Egypt</td><td>Beni-Suef</td><td>29</td><td>28</td></tr><tr><td>IL</td><td>India</td><td>Ludhiana</td><td>31</td><td>247</td></tr><tr><td>ID</td><td>India</td><td>Delhi</td><td>29</td><td>228</td></tr><tr><td>JM</td><td>Jordan</td><td>Madaba</td><td>36</td><td>785</td></tr><tr><td>KN</td><td>Kenya</td><td>Njoro</td><td>0</td><td>2,165</td></tr><tr><td>MG</td><td>Mexico</td><td>Guanajuato</td><td>21</td><td>1,765</td></tr><tr><td>MS</td><td>Mexico</td><td>Sonora</td><td>27</td><td>38</td></tr><tr><td>MM</td><td>Mexico</td><td>Michoacfin</td><td>20</td><td>1,517</td></tr><tr><td>NB</td><td>Nepal</td><td>Bhairahwa</td><td>27</td><td>105</td></tr><tr><td>PI</td><td>Pakistan</td><td>Islamabad</td><td>34</td><td>683</td></tr><tr><td>PA</td><td>Pakistan</td><td>Ayub</td><td>32</td><td>213</td></tr><tr><td>SR</td><td>Saudi Arabia</td><td>Riyadh</td><td>24</td><td>600</td></tr><tr><td>SG</td><td>Sudan</td><td>Gezira</td><td>14</td><td>411</td></tr><tr><td>SE</td><td>Spain</td><td>Encinar</td><td>38</td><td>20</td></tr><tr><td>SJ</td><td>Spain</td><td>Jerez</td><td>37</td><td>180</td></tr><tr><td>SC</td><td>Spain</td><td>Cordoba</td><td>38</td><td>110</td></tr><tr><td>SS</td><td>Spain</td><td>Sevilla</td><td>38</td><td>20</td></tr><tr><td>TB</td><td>Tunisia</td><td>Beja</td><td>37</td><td>150</td></tr><tr><td>TC</td><td>Thailand</td><td>Chiang Mai</td><td>18 820</td><td></td></tr></table><p>Used with permission of Jose' Crossa.</p>
+<p>Locations</p><table class="table table"><tr><td>Code</td><td>Country</td><td>Location</td><td>Latitude (N)</td><td>Elevation (m)</td></tr><tr><td>AK</td><td>Algeria</td><td>El Khroub</td><td>36</td><td>640</td></tr><tr><td>AL</td><td>Algeria</td><td>Setif</td><td>36</td><td>1,023</td></tr><tr><td>BJ</td><td>Bangladesh</td><td>Joydebpur</td><td>24</td><td>8</td></tr><tr><td>CA</td><td>Cyprus</td><td>Athalassa</td><td>35</td><td>142</td></tr><tr><td>EG</td><td>Egypt</td><td>E1 Gemmeiza</td><td>31</td><td>8</td></tr><tr><td>ES</td><td>Egypt</td><td>Sakha</td><td>31</td><td>6</td></tr><tr><td>EB</td><td>Egypt</td><td>Beni-Suef</td><td>29</td><td>28</td></tr><tr><td>IL</td><td>India</td><td>Ludhiana</td><td>31</td><td>247</td></tr><tr><td>ID</td><td>India</td><td>Delhi</td><td>29</td><td>228</td></tr><tr><td>JM</td><td>Jordan</td><td>Madaba</td><td>36</td><td>785</td></tr><tr><td>KN</td><td>Kenya</td><td>Njoro</td><td>0</td><td>2,165</td></tr><tr><td>MG</td><td>Mexico</td><td>Guanajuato</td><td>21</td><td>1765</td></tr><tr><td>MS</td><td>Mexico</td><td>Sonora</td><td>27</td><td>38</td></tr><tr><td>MM</td><td>Mexico</td><td>Michoacfin</td><td>20</td><td>1517</td></tr><tr><td>NB</td><td>Nepal</td><td>Bhairahwa</td><td>27</td><td>105</td></tr><tr><td>PI</td><td>Pakistan</td><td>Islamabad</td><td>34</td><td>683</td></tr><tr><td>PA</td><td>Pakistan</td><td>Ayub</td><td>32</td><td>213</td></tr><tr><td>SR</td><td>Saudi Arabia</td><td>Riyadh</td><td>24</td><td>600</td></tr><tr><td>SG</td><td>Sudan</td><td>Gezira</td><td>14</td><td>411</td></tr><tr><td>SE</td><td>Spain</td><td>Encinar</td><td>38</td><td>20</td></tr><tr><td>SJ</td><td>Spain</td><td>Jerez</td><td>37</td><td>180</td></tr><tr><td>SC</td><td>Spain</td><td>Cordoba</td><td>38</td><td>110</td></tr><tr><td>SS</td><td>Spain</td><td>Sevilla</td><td>38</td><td>20</td></tr><tr><td>TB</td><td>Tunisia</td><td>Beja</td><td>37</td><td>150</td></tr><tr><td>TC</td><td>Thailand</td><td>Chiang Mai</td><td>18</td><td>820</td></tr></table><p>Used with permission of Jose' Crossa.</p>
     </div>
     <div class="section level2">
     <h2 id="source">Source<a class="anchor" aria-label="anchor" href="#source"></a></h2>
@@ -140,7 +140,7 @@
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer></div>

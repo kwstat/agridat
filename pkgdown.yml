@@ -1,5 +1,5 @@
 pandoc: 3.1.11
-pkgdown: 2.1.3
+pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
   agridat_data: agridat_data.html
@@ -7,4 +7,4 @@ articles:
   agridat_intro: agridat_intro.html
   agridat_mixed_model_example: agridat_mixed_model_example.html
   agridat_uniformity_data: agridat_uniformity_data.html
-last_built: 2025-10-14T16:01Z
+last_built: 2025-12-04T15:31Z

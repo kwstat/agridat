@@ -1,0 +1,71 @@
+# Density/spacing experiment for turnips in 3 blocks.
+
+Density/spacing experiment for turnips in 3 blocks.
+
+## Usage
+
+``` r
+data("mead.turnip")
+```
+
+## Format
+
+A data frame with 60 observations on the following 4 variables.
+
+- `yield`:
+
+  log yield (pounds/plot)
+
+- `block`:
+
+  block
+
+- `spacing`:
+
+  row spacing, inches
+
+- `density`:
+
+  density of seeds, pounds/acre
+
+## Details
+
+An experiment with turnips, 3 blocks, 20 treatments in a factorial
+arrangement of 5 seeding rates (density) and 4 widths (spacing).
+
+## Source
+
+Roger Mead. (1988). *The Design of Experiments: Statistical Principles
+for Practical Applications*. Example 12.3. Page 323.
+
+## References
+
+H. P. Piepho, R. N. Edmondson. (2018). A tutorial on the statistical
+analysis of factorial experiments with qualitative and quantitative
+treatment factor levels. Jour Agronomy and Crop Science, 8, 1-27.
+https://doi.org/10.1111/jac.12267
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+
+library(agridat)
+data(mead.turnip)
+dat <- mead.turnip
+
+dat$ratef <- factor(dat$density)
+dat$widthf <- factor(dat$spacing)
+
+m1 <- aov(yield ~ block + ratef + widthf + ratef:widthf, data=dat)
+anova(m1) # table 12.10 in Mead
+
+# Similar to Piepho fig 10
+libs(lattice)
+xyplot(yield ~ log(spacing)|ratef, data=dat,
+       auto.key=list(columns=5),
+       main="mead.turnip - log(yield) for each density",
+       group=ratef)
+
+} # }
+```

@@ -1,0 +1,80 @@
+# RCB experiment of rice, measuring white heads
+
+RCB experiment of rice, measuring white heads
+
+## Usage
+
+``` r
+data("gomez.nonnormal2")
+```
+
+## Format
+
+A data frame with 42 observations on the following 3 variables.
+
+- `gen`:
+
+  genotype
+
+- `rep`:
+
+  replicate
+
+- `white`:
+
+  percentage of white heads
+
+## Details
+
+The data are the percent of white heads from a rice variety trial of 14
+varieties with 3 reps. Because many of the values are less than 10, the
+suggested data transformation is sqrt(x+.5).
+
+Used with permission of Kwanchai Gomez.
+
+## Source
+
+Gomez, K.A. and Gomez, A.A.. 1984, Statistical Procedures for
+Agricultural Research. Wiley-Interscience. Page 300.
+
+## References
+
+None.
+
+## Examples
+
+``` r
+library(agridat)
+
+data(gomez.nonnormal2)
+dat <- gomez.nonnormal2
+
+# Gomez suggested sqrt transform
+dat <- transform(dat, twhite = sqrt(white+.5))
+
+# QQ plots for raw/transformed data
+libs(reshape2, lattice)
+qqmath( ~ value|variable, data=melt(dat),
+       main="gomez.nonnormal2 - raw/transformed QQ plot",
+       scales=list(relation="free"))
+#> Using gen, rep as id variables
+
+
+# Gomez anova table 7.21
+m1 <- lm(twhite ~ rep + gen, data=dat)
+anova(m1)
+#> Analysis of Variance Table
+#> 
+#> Response: twhite
+#>           Df Sum Sq Mean Sq F value    Pr(>F)    
+#> rep        2  2.401  1.2004  1.9137    0.1678    
+#> gen       13 48.011  3.6931  5.8877 6.366e-05 ***
+#> Residuals 26 16.309  0.6273                      
+#> ---
+#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+## Response: twhite2
+##           Df Sum Sq Mean Sq F value    Pr(>F)
+## rep        2  2.401  1.2004  1.9137    0.1678
+## gen       13 48.011  3.6931  5.8877 6.366e-05 ***
+## Residuals 26 16.309  0.6273
+```

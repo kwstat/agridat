@@ -1,0 +1,739 @@
+# Package index
+
+## All functions
+
+- [`aastveit.barley.covs`](aastveit.barley.md)
+  [`aastveit.barley.height`](aastveit.barley.md) : Barley heights and
+  environmental covariates in Norway
+- [`acorsi.grayleafspot`](acorsi.grayleafspot.md) : Multi-environment
+  trial evaluating 36 maize genotypes in 9 locations
+- [`adugna.sorghum`](adugna.sorghum.md) : Multi-environment trial of
+  sorghum at 3 locations across 5 years
+- [`agridat`](agridat.md) [`agridat-package`](agridat.md) : Datasets
+  from agricultural experiments
+- [`allcroft.lodging`](allcroft.lodging.md) : Multi-environment trial of
+  cereal with lodging data
+- [`alwan.lamb`](alwan.lamb.md) : For the 34 sheep sires, the number of
+  lambs in each of 5 foot shape classes.
+- [`ansari.wheat.uniformity`](ansari.wheat.uniformity.md) : Uniformity
+  trial of wheat
+- [`archbold.apple`](archbold.apple.md) : Split-split plot experiment of
+  apple trees
+- [`ars.earlywhitecorn96`](ars.earlywhitecorn96.md) : Multi-environment
+  trial of early white food corn
+- [`australia.soybean`](australia.soybean.md) : Multi-environment trial
+  of soybean in Australia
+- [`bachmaier.nitrogen`](bachmaier.nitrogen.md) : Trial of wheat with
+  nitrogen fertilizer in two fertility zones
+- [`bailey.cotton.uniformity`](bailey.cotton.uniformity.md) : Uniformity
+  trial of cotton in Egypt
+- [`baker.barley.uniformity`](baker.barley.uniformity.md) : Uniformity
+  trials of barley, 10 years on same ground
+- [`baker.strawberry.uniformity`](baker.strawberry.uniformity.md) :
+  Uniformity trial of strawberry
+- [`baker.wheat.uniformity`](baker.wheat.uniformity.md) : Uniformity
+  trial of wheat
+- [`bancroft.peanut.uniformity`](bancroft.peanut.uniformity.md) :
+  Uniformity trial of peanuts
+- [`barrero.maize`](barrero.maize.md) : Multi-environment trial of maize
+  in Texas.
+- [`batchelor.apple.uniformity`](batchelor.uniformity.md)
+  [`batchelor.lemon.uniformity`](batchelor.uniformity.md)
+  [`batchelor.navel1.uniformity`](batchelor.uniformity.md)
+  [`batchelor.navel2.uniformity`](batchelor.uniformity.md)
+  [`batchelor.valencia.uniformity`](batchelor.uniformity.md)
+  [`batchelor.walnut.uniformity`](batchelor.uniformity.md) : Uniformity
+  trials of apples, lemons, oranges, and walnuts
+- [`battese.survey`](battese.survey.md) : Survey and satellite data for
+  corn and soy areas in Iowa
+- [`beall.webworms`](beall.webworms.md) : Counts of webworms in a beet
+  field, with insecticide treatments.
+- [`beaven.barley`](beaven.barley.md) : Yields of 8 barley varieties in
+  1913 as used by Student.
+- [`becker.chicken`](becker.chicken.md) : Mating crosses of chickens
+- [`beckett.maize.uniformity`](beckett.maize.uniformity.md) : A
+  uniformity trial of maize in Ghana.
+- [`belamkar.augmented`](belamkar.augmented.md) : Multi-environment
+  trial of wheat with Augmented design
+- [`besag.bayesian`](besag.bayesian.md) : RCB experiment of spring
+  barley in United Kingdom
+- [`besag.beans`](besag.beans.md) : Competition experiment in beans with
+  height measurements
+- [`besag.checks`](besag.checks.md) : Check variety yields in winter
+  wheat.
+- [`besag.elbatan`](besag.elbatan.md) : RCB experiment of wheat, 50
+  varieties in 3 blocks with strong spatial trend.
+- [`besag.endive`](besag.endive.md) : Presence of footroot disease in an
+  endive field
+- [`besag.met`](besag.met.md) : Multi-environment trial of corn,
+  incomplete-block design
+- [`besag.triticale`](besag.triticale.md) : Four-way factorial agronomic
+  experiment in triticale
+- [`blackman.wheat`](blackman.wheat.md) : Multi-environment trial of
+  wheat, conventional and semi-dwarf varieties
+- [`bliss.borers`](bliss.borers.md) : Corn borer infestation under four
+  treatments
+- [`bond.diallel`](bond.diallel.md) : Diallel cross of winter beans
+- [`bose.multi.uniformity`](bose.multi.uniformity.md) : Uniformity
+  trials of barley, wheat, lentils
+- [`box.cork`](box.cork.md) : Weight of cork samples on four sides of
+  trees
+- [`bradley.multi.uniformity`](bradley.multi.uniformity.md) : Uniformity
+  trial of 4 crops on the same land
+- [`brandle.rape`](brandle.rape.md) : Multi-environment trial of rape in
+  Manitoba
+- [`brandt.switchback`](brandt.switchback.md) : Switchback experiment on
+  dairy cattle, milk yield for two treatments
+- [`bridges.cucumber`](bridges.cucumber.md) : Multi-environment trial of
+  cucumbers in a latin square design
+- [`broadbalk.wheat`](broadbalk.wheat.md) : Long term wheat yields on
+  Broadbalk fields at Rothamsted.
+- [`bryan.corn.uniformity`](bryan.corn.uniformity.md) : Uniformity trial
+  of corn at 3 locations in Iowa.
+- [`buntaran.wheat`](buntaran.wheat.md) : Multi-environment trial of
+  wheat in Sweden in 2016.
+- [`burgueno.alpha`](burgueno.alpha.md) : Incomplete block alpha design
+- [`burgueno.rowcol`](burgueno.rowcol.md) : Row-column design
+- [`burgueno.unreplicated`](burgueno.unreplicated.md) : Field experiment
+  with unreplicated genotypes plus one repeated check.
+- [`butron.maize`](butron.maize.md) : Multi-environment trial of maize
+  with pedigrees
+- [`byers.apple`](byers.apple.md) : Diameters of apples
+- [`caribbean.maize`](caribbean.maize.md) : Multi-environment trial of
+  maize with fertilization
+- [`carlson.germination`](carlson.germination.md) : Germination of
+  alfalfa seeds at various salt concentrations
+- [`carmer.density`](carmer.density.md) : Nonlinear maize yield-density
+  model
+- [`cate.potassium`](cate.potassium.md) : Relative cotton yield for
+  different soil potassium concentrations
+- [`chakravertti.factorial`](chakravertti.factorial.md) : Factorial
+  experiment of rice, 3x5x3x3
+- [`chinloy.fractionalfactorial`](chinloy.fractionalfactorial.md) :
+  Fractional factorial of sugarcane, 1/3 3^5 = 3x3x3x3x3
+- [`christidis.competition`](christidis.competition.md) : Competition
+  between varieties in cotton
+- [`christidis.cotton.uniformity`](christidis.cotton.uniformity.md) :
+  Uniformity trial of cotton
+- [`christidis.wheat.uniformity`](christidis.wheat.uniformity.md) :
+  Uniformity trial of wheat
+- [`cleveland.soil`](cleveland.soil.md) : Soil resistivity in a field
+- [`cochran.beets`](cochran.beets.md) : Yield and number of plants in a
+  sugarbeet fertilizer experiment
+- [`cochran.bib`](cochran.bib.md) : Multi-environment trial of corn,
+  balanced incomplete block design
+- [`cochran.crd`](cochran.crd.md) : Potato scab infection with sulfur
+  treatments
+- [`cochran.eelworms`](cochran.eelworms.md) : Counts of eelworms before
+  and after fumigant treatments
+- [`cochran.factorial`](cochran.factorial.md) : Factorial experiment of
+  beans, 2x2x2x2
+- [`cochran.latin`](cochran.latin.md) : Latin square design in wheat
+- [`cochran.lattice`](cochran.lattice.md) : Balanced lattice experiment
+  in cotton
+- [`cochran.wireworms`](cochran.wireworms.md) : Wireworms controlled by
+  fumigants in a latin square
+- [`connolly.potato`](connolly.potato.md) : Potato yields in
+  single-drill plots
+- [`coombs.rice.uniformity`](coombs.rice.uniformity.md) : Uniformity
+  trial of rice in Malaysia
+- [`cornelius.maize`](cornelius.maize.md) : Multi-environment trial of
+  maize for 9 cultivars at 20 locations.
+- [`corsten.interaction`](corsten.interaction.md) : Multi-environment
+  trial of corn
+- [`cox.stripsplit`](cox.stripsplit.md) : Strip-split-plot of barley
+  with fertilizer, calcium, and soil factors.
+- [`cramer.cucumber`](cramer.cucumber.md) : Cucumber yields and
+  quantitative traits
+- [`crampton.pig`](crampton.pig.md) : Weight gain in pigs for different
+  treatments
+- [`crossa.wheat`](crossa.wheat.md) : Multi-environment trial of wheat
+  for 18 genotypes at 25 locations
+- [`crowder.seeds`](crowder.seeds.md) : Germination of Orobanche seeds
+  for two genotypes and two treatments.
+- [`cullis.earlygen`](cullis.earlygen.md) : Early generation variety
+  trial in wheat
+- [`damesa.maize`](damesa.maize.md) : Incomplete-block experiment of
+  maize in Ethiopia.
+- [`darwin.maize`](darwin.maize.md) : Darwin's maize data of
+  crossed/inbred plant heights
+- [`dasilva.maize`](dasilva.maize.md) : Multi-environment trial of maize
+- [`dasilva.soybean.uniformity`](dasilva.soybean.uniformity.md) :
+  Uniformity trial of soybean
+- [`davidian.soybean`](davidian.soybean.md) : Growth of soybean
+  varieties in 3 years
+- [`davies.pasture.uniformity`](davies.pasture.uniformity.md) :
+  Uniformity trial of pasture.
+- [`day.wheat.uniformity`](day.wheat.uniformity.md) : Uniformity trial
+  of wheat
+- [`denis.missing`](denis.missing.md) : Multi-environment trial with
+  structured missing values
+- [`denis.ryegrass`](denis.ryegrass.md) : Multi-environment trial of
+  perennial ryegrass in France
+- [`depalluel.sheep`](depalluel.sheep.md) : Latin square of four breeds
+  of sheep with four diets
+- [`devries.pine`](devries.pine.md) : Graeco-Latin Square experiment in
+  pine
+- [`digby.jointregression`](digby.jointregression.md) :
+  Multi-environment trial of wheat
+- [`diggle.cow`](diggle.cow.md) : Bodyweight of cows in a 2-by-2
+  factorial experiment
+- [`draper.safflower.uniformity`](draper.safflower.uniformity.md) :
+  Uniformity trial of safflower
+- [`ducker.groundnut.uniformity`](ducker.groundnut.uniformity.md) :
+  Uniformity trial of groundnut
+- [`durban.competition`](durban.competition.md) : Sugar beet yields with
+  competition effects
+- [`durban.rowcol`](durban.rowcol.md) : Row-column experiment of spring
+  barley, many varieties
+- [`durban.splitplot`](durban.splitplot.md) : Split-plot experiment of
+  barley with fungicide treatments
+- [`eden.nonnormal`](eden.nonnormal.md) : Height of barley plants in a
+  study of non-normal data
+- [`eden.potato`](eden.potato.md) : Potato yields in response to potash
+  and nitrogen fertilizer
+- [`eden.tea.uniformity`](eden.tea.uniformity.md) : Uniformity trial of
+  tea
+- [`edwards.oats`](edwards.oats.md) : Multi-environment trial of oats in
+  United States, 5 locations, 7 years.
+- [`engelstad.nitro`](engelstad.nitro.md) : Multi-environment trial of
+  corn with nitrogen fertilizer
+- [`evans.sugarcane.uniformity`](evans.sugarcane.uniformity.md) :
+  Uniformity trial of sugarcane
+- [`fan.stability`](fan.stability.md) : Multi-environment trial of maize
+  hybrids in China
+- [`federer.diagcheck`](federer.diagcheck.md) : Wheat experiment with
+  diagonal checks
+- [`federer.tobacco`](federer.tobacco.md) : RCB of tobacco, height
+  plants exposed to radiation
+- [`fisher.barley`](fisher.barley.md) : Multi-environment trial of 5
+  barley varieties, 6 locations, 2 years
+- [`fisher.latin`](fisher.latin.md) : Latin square experiment on
+  mangolds
+- [`forster.wheat.uniformity`](forster.wheat.uniformity.md) : Uniformity
+  trial of wheat in Australia.
+- [`foulley.calving`](foulley.calving.md) : Calving difficulty by calf
+  sex and age of dam
+- [`fox.wheat`](fox.wheat.md) : Multi-environment trial of wheat, 22
+  varieties at 14 sites in Australia
+- [`garber.multi.uniformity`](garber.multi.uniformity.md) : Uniformity
+  trials of oat hay and wheat grain
+- [`gartner.corn`](gartner.corn.md) : Yield monitor data from a corn
+  field in Minnesota
+- [`gathmann.bt`](gathmann.bt.md) : Impact of Bt corn on non-target
+  species
+- [`gauch.soy`](gauch.soy.md) : Multi-environment trial of soybeans in
+  New York, 1977 to 1988
+- [`george.wheat`](george.wheat.md) : Multi-location/year breeding trial
+  in California
+- [`giles.wheat`](giles.wheat.md) : Straw length and ear emergence for
+  wheat genotypes.
+- [`gilmour.serpentine`](gilmour.serpentine.md) : Wheat yield in South
+  Australia with serpentine row/col effects
+- [`gilmour.slatehall`](gilmour.slatehall.md) : Slate Hall Farm 1978
+- [`gomez.fractionalfactorial`](gomez.fractionalfactorial.md) :
+  Fractional factorial of rice, 1/2 2^6 = 2x2x2x2x2x2
+- [`gomez.groupsplit`](gomez.groupsplit.md) : Group balanced split-plot
+  design in rice
+- [`gomez.heterogeneity`](gomez.heterogeneity.md) : RCB experiment of
+  rice, heterogeneity of regressions
+- [`gomez.heteroskedastic`](gomez.heteroskedastic.md) : RCB experiment
+  of rice, heteroskedastic varieties
+- [`gomez.multilocsplitplot`](gomez.multilocsplitplot.md) :
+  Multi-environment trial of rice, split-plot design
+- [`gomez.nitrogen`](gomez.nitrogen.md) : Soil nitrogen at three times
+  for eight fertilizer treatments
+- [`gomez.nonnormal1`](gomez.nonnormal1.md) : Insecticide treatment
+  effectiveness
+- [`gomez.nonnormal2`](gomez.nonnormal2.md) : RCB experiment of rice,
+  measuring white heads
+- [`gomez.nonnormal3`](gomez.nonnormal3.md) : RCB experiment of rice, 12
+  varieties with leafhopper survival
+- [`gomez.rice.uniformity`](gomez.rice.uniformity.md) : Uniformity trial
+  of rice
+- [`gomez.seedrate`](gomez.seedrate.md) : RCB experiment of rice, 6
+  densities
+- [`gomez.splitplot.subsample`](gomez.splitplot.subsample.md) :
+  Split-plot experiment of rice, with subsamples
+- [`gomez.splitsplit`](gomez.splitsplit.md) : Split-split-plot
+  experiment of rice
+- [`gomez.stripplot`](gomez.stripplot.md) : Strip-plot experiment of
+  rice
+- [`gomez.stripsplitplot`](gomez.stripsplitplot.md) : Strip-split-plot
+  experiment of rice
+- [`gomez.wetdry`](gomez.wetdry.md) : Rice yield in wet & dry seasons
+  with nitrogen fertilizer treatments
+- [`gorski.oats.uniformity`](gorski.oats.uniformity.md) : Uniformity
+  trial of oats in Poland
+- [`gotway.hessianfly`](gotway.hessianfly.md) : Hessian fly damage to
+  wheat varieties
+- [`goulden.barley.uniformity`](goulden.barley.uniformity.md) :
+  Uniformity trial of barley
+- [`goulden.eggs`](goulden.eggs.md) : Sample of egg weights on 24
+  consecutive days
+- [`goulden.latin`](goulden.latin.md) : Latin square experiment for
+  testing fungicide
+- [`goulden.splitsplit`](goulden.splitsplit.md) : Split-split-plot
+  experiment of wheat
+- [`graybill.heteroskedastic`](graybill.heteroskedastic.md) :
+  Multi-environment trial of wheat varieties with heteroskedastic yields
+- [`gregory.cotton`](gregory.cotton.md) : Factorial experiment of cotton
+  in Sudan.
+- [`grover.diallel`](grover.diallel.md) : Diallel 6x6
+- [`grover.rcb.subsample`](grover.rcb.subsample.md) : Rice RCB with
+  subsamples
+- [`gumpertz.pepper`](gumpertz.pepper.md) : Phytophtera disease
+  incidence in a pepper field
+- [`hadasch.lettuce`](hadasch.lettuce.md) : Lettuce resistance to downy
+  mildew resistance (with marker data)
+- [`hanks.sprinkler`](hanks.sprinkler.md) : Wheat yields in a
+  line-source sprinkler experiment
+- [`hanover.whitepine`](hanover.whitepine.md) : Mating crosses of white
+  pine trees
+- [`hansen.multi.uniformity`](hansen.multi.uniformity.md) : Multi-year
+  uniformity trial in Denmark
+- [`haritonenko.sugarbeet.uniformity`](haritonenko.sugarbeet.uniformity.md)
+  : Uniformity trial of sugar beet
+- [`harris.multi.uniformity`](harris.multi.uniformity.md) : Uniformity
+  trials with multiple crops, 15 years on the same land
+- [`harris.wateruse`](harris.wateruse.md) : Water use by horticultural
+  trees
+- [`harrison.priors`](harrison.priors.md) : Ranges of analytes in
+  soybean from other authors
+- [`hartman.tomato.uniformity`](hartman.tomato.uniformity.md) :
+  Uniformity trial of tomato
+- [`harvey.lsmeans`](harvey.lsmeans.md) : Average daily gain of 65
+  steers for 3 lines, 9 sires.
+- [`harville.lamb`](harville.lamb.md) : Birth weight of lambs from
+  different lines/sires
+- [`hayman.tobacco`](hayman.tobacco.md) : Diallel cross of Aztec tobacco
+- [`hazell.vegetables`](hazell.vegetables.md) : Gross profit for 4
+  vegetable crops in 6 years
+- [`heady.fertilizer`](heady.fertilizer.md) : Yield of corn, alfalfa,
+  clover with two fertilizers
+- [`heath.cabbage.uniformity`](heath.cabbage.uniformity.md) : Uniformity
+  trial of cabbage.
+- [`heath.radish.uniformity`](heath.raddish.uniformity.md) : Uniformity
+  trial of radish
+- [`henderson.milkfat`](henderson.milkfat.md) : Milk fat yields for a
+  single cow
+- [`hernandez.nitrogen`](hernandez.nitrogen.md) : Multi-environment
+  trial of corn with nitrogen fertilizer at 5 sites.
+- [`hessling.argentina`](hessling.argentina.md) : Relation between wheat
+  yield and weather in Argentina
+- [`hildebrand.systems`](hildebrand.systems.md) : Multi-environment
+  trial of maize for four cropping systems
+- [`holland.arthropods`](holland.arthropods.md) : Counts of arthropods
+  in a grid-sampled wheat field
+- [`holshouser.splitstrip`](holshouser.splitstrip.md) : Split-strip-plot
+  of soybeans
+- [`holtsmark.timothy.uniformity`](holtsmark.timothy.uniformity.md) :
+  Uniformity trial of timothy grass in Norway
+- [`huehn.wheat`](huehn.wheat.md) : Multi-environment trial of wheat to
+  illustrate stability statistics
+- [`hughes.grapes`](hughes.grapes.md) : RCB experiment of grape, disease
+  incidence
+- [`hunter.corn`](hunter.corn.md) : Multi-environment trial of corn with
+  nitrogen fertilizer
+- [`hutchinson.cotton.uniformity`](hutchinson.cotton.uniformity.md) :
+  Uniformity trial of cotton
+- [`igue.sugarcane.uniformity`](igue.sugarcane.uniformity.md) :
+  Uniformity trial with sugarcane
+- [`ilri.sheep`](ilri.sheep.md) : Birth weight and weaning weight of
+  Dorper x Red Maasi lambs
+- [`immer.sugarbeet.uniformity`](immer.sugarbeet.uniformity.md) :
+  Uniformity trial of sugarbeets, measurements of yield, sugar, purity
+- [`ivins.herbs`](ivins.herbs.md) : Percent ground cover of herbage
+  species and nettles.
+- [`iyer.wheat.uniformity`](iyer.wheat.uniformity.md) : Uniformity
+  trials of wheat in India
+- [`jansen.apple`](jansen.apple.md) : Infestation of apple shoots by
+  apple canker.
+- [`jansen.carrot`](jansen.carrot.md) : Infestation of carrots by fly
+  larvae
+- [`jansen.strawberry`](jansen.strawberry.md) : Ordered disease ratings
+  of strawberry crosses.
+- [`jayaraman.bamboo`](jayaraman.bamboo.md) : Bamboo progeny trial
+- [`jegorow.oats.uniformity`](jegorow.oats.uniformity.md) : Uniformity
+  trial of oats in Russia
+- [`jenkyn.mildew`](jenkyn.mildew.md) : Yields from treatment for mildew
+  control
+- [`john.alpha`](john.alpha.md) : Alpha lattice design of spring oats
+- [`johnson.blight`](johnson.blight.md) : Potato blight due to weather
+  in Prosser, Washington
+- [`johnson.douglasfir`](johnson.douglasfir.md) : A study of small-plots
+  of old-growth Douglas Fir in Oregon.
+- [`jones.corn.uniformity`](jones.corn.uniformity.md) : Uniformity trial
+  of corn.
+- [`jurowski.wheat.uniformity`](jurowski.wheat.uniformity.md) :
+  Uniformity trial of wheat in Russia
+- [`kadam.millet.uniformity`](kadam.millet.uniformity.md) : Uniformity
+  trial of millet
+- [`kalamkar.potato.uniformity`](kalamkar.potato.uniformity.md) :
+  Uniformity trial of potatoes
+- [`kalamkar.wheat.uniformity`](kalamkar.wheat.uniformity.md) :
+  Uniformity trial of wheat
+- [`kang.maize`](kang.maize.md) : Multi-environment trial of maize in
+  Louisianna at 4 locs in 3 years
+- [`kang.peanut`](kang.peanut.md) : Multi-environment trial of peanuts
+  for 10 genotypes in 15 environments
+- [`karcher.turfgrass`](karcher.turfgrass.md) : Turfgrass ratings for
+  different treatments
+- [`kayad.alfalfa`](kayad.alfalfa.md) : Yield monitor data for 4
+  cuttings of alfalfa in Saudi Arabia.
+- [`keen.potatodamage`](keen.potatodamage.md) : Damage to potato tubers
+  from lifting rods.
+- [`kempton.barley.uniformity`](kempton.barley.uniformity.md) :
+  Uniformity trial of barley
+- [`kempton.competition`](kempton.competition.md) : Sugar beet trial
+  with competition effects
+- [`kempton.rowcol`](kempton.rowcol.md) : Row-column experiment of wheat
+- [`kempton.slatehall`](kempton.slatehall.md) : Slate Hall Farm 1976
+  spring wheat
+- [`kenward.cattle`](kenward.cattle.md) : Repeated measurement of
+  weights of calves with two treatments.
+- [`kerr.sugarcane.uniformity`](kerr.sugarcane.uniformity.md) :
+  Uniformity trials of sugarcane, 4 fields
+- [`khan.brassica.uniformity`](khan.brassica.uniformity.md) : Uniformity
+  trial of brassica.
+- [`khin.rice.uniformity`](khin.rice.uniformity.md) : Uniformity trial
+  of rice
+- [`kiesselbach.oats.uniformity`](kiesselbach.oats.uniformity.md) :
+  Uniformity trial of oats
+- [`kirk.potato`](kirk.potato.md) : Variety trial of potatoes, highly
+  replicated
+- [`kirk.potato.uniformity`](kirk.potato.uniformity.md) : Uniformity
+  trial of potato in Saskatchewan
+- [`kling.augmented`](kling.augmented.md) : Augmented design of
+  meadowfoam
+- [`kotowski.potato.uniformity`](kotowski.potato.uniformity.md) :
+  Uniformity trial of potato in Poland.
+- [`kreusler.maize`](kreusler.maize.md) : Growth of maize plants in
+  Germany during 1875-1878
+- [`kristensen.barley.uniformity`](kristensen.barley.uniformity.md) :
+  Uniformity trial of barley
+- [`kulkarni.sorghum.uniformity`](kulkarni.sorghum.uniformity.md) :
+  Uniformity trial of sorghum
+- [`lambert.soiltemp`](lambert.soiltemp.md) : Average monthly soil
+  temperature near Zurich
+- [`lander.multi.uniformity`](lander.multi.uniformity.md) : Uniformity
+  trials of wheat and chari, 4 years on the same land.
+- [`larsen.timothy.uniformity`](larsen.timothy.uniformity.md) :
+  Uniformity trial of timothy grass in Norway
+- [`lasrosas.corn`](lasrosas.corn.md) : Yield monitor data for a corn
+  field in Argentina with variable nitrogen.
+- [`lavoranti.eucalyptus`](lavoranti.eucalyptus.md) : Height of
+  Eucalyptus trees in southern Brazil
+- [`laycock.tea.uniformity`](laycock.tea.uniformity.md) : Uniformity
+  trials of tea
+- [`lee.potatoblight`](lee.potatoblight.md) : Repeated measurements of
+  resistance to potato blight
+- [`lehmann.millet.uniformity`](lehmann.millet.uniformity.md) :
+  Uniformity trial of millet in India
+- [`lehmann.rice.uniformity`](lehmann.rice.uniformity.md) : Uniformity
+  trial of rice in India
+- [`lehner.soybeanmold`](lehner.soybeanmold.md) : Yield, white mold, and
+  sclerotia for soybeans in Brazil
+- [`lessman.sorghum.uniformity`](lessman.sorghum.uniformity.md) :
+  Uniformity trial of sorghum
+- [`li.millet.uniformity`](li.millet.uniformity.md) : Uniformity trial
+  of millet
+- [`libs()`](libs.md) : Load multiple packages and install if needed
+- [`lillemo.wheat`](lillemo.wheat.md) : Multi-environment trial of wheat
+  susceptibile to powdery mildew
+- [`lin.superiority`](lin.superiority.md) : Multi-environment trial of
+  33 barley genotypes in 12 locations
+- [`lin.unbalanced`](lin.unbalanced.md) : Multi-environment trial of 33
+  barley genotypes in 18 locations
+- [`linder.wheat`](linder.wheat.md) : Multi-environment trial of wheat
+  in Switzerland
+- [`little.splitblock`](little.splitblock.md) : Split-block experiment
+  of sugar beets
+- [`loesell.bean.uniformity`](loesell.bean.uniformity.md) : Uniformity
+  trial of white pea beans
+- [`lonnquist.maize`](lonnquist.maize.md) : Multi-environment trial of
+  maize, half diallel
+- [`lord.rice.uniformity`](lord.rice.uniformity.md) : Uniformity trial
+  of rice
+- [`love.cotton.uniformity`](love.cotton.uniformity.md) : Uniformity
+  trial of cotton
+- [`love.sugarcane.uniformity`](love.sugarcane.uniformity.md) :
+  Uniformity Trial of Sugarcane in Puerto Rico
+- [`lu.stability`](lu.stability.md) : Multi-environment trial of maize,
+  to illustrate stability statistics
+- [`lucas.switchback`](lucas.switchback.md) : Switchback experiment on
+  dairy cattle, milk yield for 3 treatments
+- [`lyon.potato.uniformity`](lyon.potato.uniformity.md) : Uniformity
+  trial of potatoes
+- [`lyons.wheat`](lyons.wheat.md) : Multi-environment trial of winter
+  wheat at 12 sites in 4 years.
+- [`magistad.pineapple.uniformity`](magistad.pineapple.uniformity.md) :
+  Uniformity trial of pineapple
+- [`masood.rice.uniformity`](masood.rice.uniformity.md) : Uniformity
+  trial of rice
+- [`mcclelland.corn.uniformity`](mcclelland.corn.uniformity.md) :
+  Uniformity trial of corn
+- [`mcconway.turnip`](mcconway.turnip.md) : RCB experiment of turnips
+- [`mckinstry.cotton.uniformity`](mckinstry.cotton.uniformity.md) :
+  Uniformity trial of cotton in South Rhodesia
+- [`mcleod.barley`](mcleod.barley.md) : Multi-environment trial of
+  barley in South Canterbury with yield and yield components
+- [`mead.cauliflower`](mead.cauliflower.md) : Leaves for cauliflower
+  plants at different times
+- [`mead.cowpea.maize`](mead.cowpea.maize.md) : Intercropping experiment
+  of maize/cowpea
+- [`mead.germination`](mead.germination.md) : Seed germination with
+  different temperatures/concentrations
+- [`mead.lamb`](mead.lamb.md) : Number of lambs born to 3 breeds on 3
+  farms
+- [`mead.strawberry`](mead.strawberry.md) : RCB experiment of strawberry
+- [`mead.turnip`](mead.turnip.md) : Density/spacing experiment for
+  turnips in 3 blocks.
+- [`mercer.mangold.uniformity`](mercer.mangold.uniformity.md) :
+  Uniformity trial of mangolds
+- [`mercer.wheat.uniformity`](mercer.wheat.uniformity.md) : Uniformity
+  trial of wheat
+- [`miguez.biomass`](miguez.biomass.md) : Biomass of 3 crops in Greece
+- [`minnesota.barley.weather`](minnesota.barley.weather.md) : Monthly
+  weather at 6 sites in Minnesota 1927-1936.
+- [`minnesota.barley.yield`](minnesota.barley.yield.md) :
+  Multi-environment trial of barley in Minnesota at 6 sites in
+  1927-1936.
+- [`montgomery.wheat.uniformity`](montgomery.wheat.uniformity.md) :
+  Uniformity trial of wheat, 2 years on the same land
+- [`moore.bushbean.uniformity`](moore.uniformity.md)
+  [`moore.carrot.uniformity`](moore.uniformity.md)
+  [`moore.polebean.uniformity`](moore.uniformity.md)
+  [`moore.sweetcorn.uniformity`](moore.uniformity.md)
+  [`moore.springcauliflower.uniformity`](moore.uniformity.md)
+  [`moore.fallcauliflower.uniformity`](moore.uniformity.md) : Uniformity
+  trials of pole beans, bush beans, sweet corn, carrots, spring and fall
+  cauliflower
+- [`nagai.strawberry.uniformity`](nagai.strawberry.uniformity.md) :
+  Uniformity trial of strawberry
+- [`nair.turmeric.uniformity`](nair.turmeric.uniformity.md) : Uniformity
+  trial of turmeric.
+- [`narain.sorghum.uniformity`](narain.sorghum.uniformity.md) :
+  Uniformity trial of sorghum
+- [`nass.barley`](nass.corn.md) [`nass.corn`](nass.corn.md)
+  [`nass.cotton`](nass.corn.md) [`nass.hay`](nass.corn.md)
+  [`nass.sorghum`](nass.corn.md) [`nass.wheat`](nass.corn.md)
+  [`nass.rice`](nass.corn.md) [`nass.soybean`](nass.corn.md) : U.S.
+  historical crop yields by state
+- [`nebraska.farmincome`](nebraska.farmincome.md) : Nebraska farm income
+  in 2007 by county
+- [`nonnecke.peas.uniformity`](nonnecke.peas.uniformity.md) : Uniformity
+  trial of canning peas
+- [`nonnecke.sweetcorn.uniformity`](nonnecke.sweetcorn.uniformity.md) :
+  Uniformity trial of sweet corn
+- [`obsi.potato.uniformity`](obsi.potato.uniformity.md) : Uniformity
+  trial of potato in Africa 2001
+- [`odland.soybean.uniformity`](odland.soybean.uniformity.md)
+  [`odland.soyhay.uniformity`](odland.soybean.uniformity.md) :
+  Uniformity trials of soy hay and soybeans
+- [`oliveira.lupin.uniformity`](oliveira.lupin.uniformity.md) :
+  Uniformity trial of lupin in Portugal
+- [`oliveira.potato.uniformity`](oliveira.potato.uniformity.md) :
+  Uniformity trial of potato
+- [`omer.sorghum`](omer.sorghum.md) : Multi-environment trial of
+  sorghum, 6 environments
+- [`onofri.winterwheat`](onofri.winterwheat.md) : Multi-environment
+  trial of winter wheat, 7 years
+- [`ortiz.tomato.covs`](ortiz.tomato.md)
+  [`ortiz.tomato.yield`](ortiz.tomato.md) : Multi-environment trial of
+  tomato in Latin America, weight/yield and environmental covariates
+- [`pacheco.soybean`](pacheco.soybean.md) : Multi-environment trial of
+  soybean in Brazil.
+- [`paez.coffee.uniformity`](paez.coffee.uniformity.md) : Uniformity
+  trial of coffee
+- [`panse.cotton.uniformity`](panse.cotton.uniformity.md) : Uniformity
+  trial of cotton
+- [`parker.orange.uniformity`](parker.orange.uniformity.md) : Uniformity
+  trial of oranges
+- [`patterson.switchback`](patterson.switchback.md) : Switchback
+  experiment on dairy cattle, milk yield for 4 treatments
+- [`payne.wheat`](payne.wheat.md) : Long term rotation experiment at
+  Rothamsted
+- [`pearce.apple`](pearce.apple.md) : Apple tree yields for 6 treatments
+  with covariate
+- [`pearl.kernels`](pearl.kernels.md) : Counts of yellow/white and
+  sweet/starchy maize kernels by 15 observers
+- [`pederson.lettuce.repeated`](pederson.lettuce.repeated.md) : Repeated
+  measurements of lettuce growth
+- [`perry.springwheat`](perry.springwheat.md) : Multi-environment trial
+  of wheat cultivars introduced 1860-1982.
+- [`petersen.sorghum.cowpea`](petersen.sorghum.cowpea.md) :
+  Intercropping experiment of sorghum/cowpea
+- [`piepho.barley.uniformity`](piepho.barley.uniformity.md) : Uniformity
+  trial of barley
+- [`piepho.cocksfoot`](piepho.cocksfoot.md) : Multi-environment trial of
+  cock's foot, heading dates for 25 varieties in 7 years
+- [`polson.safflower.uniformity`](polson.safflower.uniformity.md) :
+  Uniformity trial of safflower
+- [`rangaswamy.groundnut.uniformity`](rangaswamy.groundnut.uniformity.md)
+  : Uniformity trial of groundnut
+- [`ratkowsky.onions`](ratkowsky.onions.md) : Onion yields for different
+  densities at two locations
+- [`rau.coffee.uniformity`](rau.coffee.uniformity.md) : Uniformity trial
+  of coffee in India
+- [`reid.grasses`](reid.grasses.md) : Yields of four grasses for a wide
+  range of nitrogen fertilizer
+- [`riddle.wheat`](riddle.wheat.md) : Modified Latin Square experiments
+  of wheat
+- [`ridout.appleshoots`](ridout.appleshoots.md) : Root counts for
+  propagated columnar apple shoots.
+- [`robinson.peanut.uniformity`](robinson.peanut.uniformity.md) :
+  Uniformity trial of peanuts
+- [`roemer.sugarbeet.uniformity`](roemer.sugarbeet.uniformity.md) :
+  Uniformity trial of sugar beets
+- [`rothamsted.brussels`](rothamsted.brussels.md) : RCB experiment of
+  brussels sprouts, 9 fertilizer treatments
+- [`rothamsted.oats`](rothamsted.oats.md) : RCB experiment of oats,
+  straw and grain, 9 fertilizer treatments
+- [`ryder.groundnut`](ryder.groundnut.md) : RCB experiment of groundut,
+  wet and dry yields
+- [`salmon.bunt`](salmon.bunt.md) : Fungus infection in varieties of
+  wheat
+- [`saunders.maize.uniformity`](saunders.maize.uniformity.md) :
+  Uniformity trial of maize in South Africa
+- [`sawyer.multi.uniformity`](sawyer.multi.uniformity.md) : Uniformity
+  trials of wheat, swedes, oats, 3 years on the same land
+- [`sayer.sugarcane.uniformity`](sayer.sugarcane.uniformity.md) :
+  Uniformity trial of sugarcane in India, 1932, 1933 & 1934.
+- [`senshu.rice`](senshu.rice.md) : Multi-environment trial of rice,
+  with solar radiation and temperature
+- [`shafi.tomato.uniformity`](shafi.tomato.uniformity.md) : Uniformity
+  trial of tomato
+- [`shafii.rapeseed`](shafii.rapeseed.md) : Multi-environment trial of
+  rapeseed in U.S.
+- [`sharma.met`](sharma.met.md) : Multi-environment trial
+- [`shaw.oats`](shaw.oats.md) : Multi-environment trial of oats in India
+- [`siao.cotton.uniformity`](siao.cotton.uniformity.md) : Uniformity
+  trials of cotton in China
+- [`silva.cotton`](silva.cotton.md) : Number of cotton bolls for
+  different levels of defoliation.
+- [`sinclair.clover`](sinclair.clover.md) : Clover yields in a factorial
+  fertilizer experiment
+- [`smith.beans.uniformity`](smith.beans.uniformity.md) : Uniformity
+  trials of beans, 2 species in 2 years
+- [`smith.corn.uniformity`](smith.corn.uniformity.md) : Uniformity trial
+  of corn, 3 years on same ground
+- [`smith.wheat.uniformity`](smith.wheat.uniformity.md) : Uniformity
+  trial of wheat
+- [`snedecor.asparagus`](snedecor.asparagus.md) : Asparagus yields for
+  different cutting treatments
+- [`snijders.fusarium`](snijders.fusarium.md) : Fusarium infection in
+  wheat varieties
+- [`stephens.sorghum.uniformity`](stephens.sorghum.uniformity.md) :
+  Uniformity trial of sorghum silage
+- [`steptoe.morex.pheno`](steptoe.morex.pheno.md) : Multi-environment
+  trial of barley, phenotypic and genotypic data for a population of
+  Steptoe x Morex
+- [`stickler.sorghum.uniformity`](stickler.sorghum.uniformity.md) :
+  Uniformity trial of sorghum
+- [`stirret.borers`](stirret.borers.md) : Corn borer control by
+  application of fungal spores.
+- [`streibig.competition`](streibig.competition.md) : Competition
+  experiment between barley and sinapis.
+- [`strickland.apple.uniformity`](strickland.apple.uniformity.md) :
+  Uniformity trial in apple
+- [`strickland.grape.uniformity`](strickland.grape.uniformity.md) :
+  Uniformity trial of grape
+- [`strickland.peach.uniformity`](strickland.peach.uniformity.md) :
+  Uniformity trial of peach
+- [`strickland.tomato.uniformity`](strickland.tomato.uniformity.md) :
+  Uniformity trial of tomato
+- [`stroup.nin`](stroup.nin.md) : RCB experiment of wheat at the
+  Nebraska Intrastate Nursery
+- [`stroup.splitplot`](stroup.splitplot.md) : Split-plot experiment of
+  simulated data
+- [`student.barley`](student.barley.md) : Multi-environment trial of
+  barley
+- [`summerby.multi.uniformity`](summerby.multi.uniformity.md) :
+  Uniformity trial of maize, oat, alfalfa, mangolds
+- [`tai.potato`](tai.potato.md) : Multi-environment trial of potato
+- [`talbot.potato.traits`](talbot.potato.md)
+  [`talbot.potato.yield`](talbot.potato.md) : Multi-environment trial of
+  potato in UK, yields and trait scores at 12 locations
+- [`tesfaye.millet`](tesfaye.millet.md) : Multi-environment trial of
+  millet
+- [`theobald.barley`](theobald.barley.md) : Multi-environment trial of
+  barley, multiple years & fertilizer levels
+- [`theobald.covariate`](theobald.covariate.md) : Multi-environment
+  trial of corn silage, Year \* Loc \* Variety with covariate
+- [`thompson.cornsoy`](thompson.cornsoy.md) : Multi-environment trial of
+  corn & soybean, 1930-1962, with temperature and precipitation
+- [`tulaikow.wheat.uniformity`](tulaikow.wheat.uniformity.md) :
+  Uniformity trial of winter/spring wheat
+- [`turner.herbicide`](turner.herbicide.md) : Herbicide control of
+  larkspur
+- [`urquhart.feedlot`](urquhart.feedlot.md) : Weight gain calves in a
+  feedlot
+- [`usda.gmoadoption`](usda.gmoadoption.md) : Adoption of genetically
+  modified crops in the United States
+- [`usgs.herbicides`](usgs.herbicides.md) : Concentrations of herbicides
+  in streams in the United States
+- [`vaneeuwijk.drymatter`](vaneeuwijk.drymatter.md) : Multi-environment
+  trial of maize, dry matter content
+- [`vaneeuwijk.fusarium`](vaneeuwijk.fusarium.md) : Infection of wheat
+  varieties by Fusarium strains from 1990 to 1993
+- [`vaneeuwijk.nematodes`](vaneeuwijk.nematodes.md) : Number of cysts on
+  11 potato genotypes for 5 potato cyst nematode populations.
+- [`vargas.txe.covs`](vargas.txe.md) [`vargas.txe.yield`](vargas.txe.md)
+  : Treatment x environment interaction in agronomy trials
+- [`vargas.wheat1.covs`](vargas.wheat1.md)
+  [`vargas.wheat1.traits`](vargas.wheat1.md) : Wheat yields in 7 years
+  with genetic and environment covariates
+- [`vargas.wheat2.covs`](vargas.wheat2.md)
+  [`vargas.wheat2.yield`](vargas.wheat2.md) : Multi-environment trial of
+  wheat with environmental covariates
+- [`verbyla.lupin`](verbyla.lupin.md) : Multi-environment trial of
+  lupin, multiple varieties and densities
+- [`vishnaadevi.rice.uniformity`](vishnaadevi.rice.uniformity.md) :
+  Uniformity trial of rice
+- [`vold.longterm`](vold.longterm.md) : Long-term barley yields at
+  different fertilizer levels
+- [`vsn.lupin3`](vsn.lupin3.md) : Multi-environment trial of lupin,
+  early generation trial
+- [`wallace.iowaland`](wallace.iowaland.md) : Iowa farmland values by
+  county in 1925
+- [`walsh.cottonprice`](walsh.cottonprice.md) : Acres and price of
+  cotton 1910-1943
+- [`wassom.brome.uniformity`](wassom.brome.uniformity.md) : Uniformity
+  trials of bromegrass
+- [`waynick.soil`](waynick.soil.md) : Soil nitrogen and carbon in two
+  fields
+- [`wedderburn.barley`](wedderburn.barley.md) : Multi-environment trial
+  of barley, percent of leaves affected by leaf blotch
+- [`wehner.cucumber.uniformity`](wehner.cucumber.uniformity.md) :
+  Uniformity trial of cucumber in North Carolina
+- [`weiss.incblock`](weiss.incblock.md) : Soybean balanced incomplete
+  block experiment
+- [`weiss.lattice`](weiss.lattice.md) : Lattice experiment in soybeans.
+- [`welch.bermudagrass`](welch.bermudagrass.md) : Factorial experiment
+  of bermuda grass, 4x4x4, N, P, K fertilizers
+- [`wheatley.carrot`](wheatley.carrot.md) : Insecticide treatments for
+  carrot fly larvae
+- [`wiebe.wheat.uniformity`](wiebe.wheat.uniformity.md) : Uniformity
+  trial of wheat
+- [`wiedemann.safflower.uniformity`](wiedemann.safflower.uniformity.md)
+  : Uniformity trial of safflower
+- [`williams.barley.uniformity`](williams.barley.uniformity.md) :
+  Uniformity trial of barley
+- [`williams.cotton.uniformity`](williams.cotton.uniformity.md) :
+  Uniformity trial of cotton
+- [`williams.trees`](williams.trees.md) : Multi-environment trial of
+  trees, height / survival of 37 species at 6 sites in Thailand
+- [`woodman.pig`](woodman.pig.md) : Weight gain in pigs for different
+  treatments
+- [`wyatt.multi.uniformity`](wyatt.multi.uniformity.md) : Uniformity
+  trial of oats and wheat on the same ground.
+- [`yan.winterwheat`](yan.winterwheat.md) : Multi-environment trial of
+  winter wheat in Ontario
+- [`yang.barley`](yang.barley.md) : Multi-environment trial of barley in
+  Alberta, 6 varieties at 18 locations in Alberta.
+- [`yates.missing`](yates.missing.md) : Factorial experiment of potato,
+  3x3 with missing values
+- [`yates.oats`](yates.oats.md) : Split-plot experiment of oats
+- [`zuidhof.broiler`](zuidhof.broiler.md) : Daily weight, feed, egg
+  measurements for a broiler chicken
