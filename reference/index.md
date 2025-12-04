@@ -564,6 +564,8 @@
   of wheat cultivars introduced 1860-1982.
 - [`petersen.sorghum.cowpea`](petersen.sorghum.cowpea.md) :
   Intercropping experiment of sorghum/cowpea
+- [`petersen.wheat`](petersen.wheat.md) : Augmented design of durum
+  wheat
 - [`piepho.barley.uniformity`](piepho.barley.uniformity.md) : Uniformity
   trial of barley
 - [`piepho.cocksfoot`](piepho.cocksfoot.md) : Multi-environment trial of
