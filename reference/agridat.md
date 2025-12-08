@@ -234,6 +234,7 @@ row-column design, ts = time series,
 | [chakravertti.factorial](chakravertti.factorial.md)           | 3    |     | 3    |       | 3,5,3,3               | factorial                         | aov                        |
 | [chinloy.fractionalfactorial](chinloy.fractionalfactorial.md) |      |     | 9    |       | 1/3 3^5 = 3,3,3,3     | xy,factorial                      | aov                        |
 | [christidis.competition](christidis.competition.md)           | 9    |     | 5    |       |                       | xy                                |                            |
+| [clewer.wheat](clewer.wheat.md)                               | 4    |     | 3    |       |                       | xy                                |                            |
 | [cochran.beets](cochran.beets.md)                             |      |     | 6    |       | 7                     |                                   |                            |
 | [cochran.bib](cochran.bib.md)                                 | 13   | 13  |      |       |                       | bib                               | aov, lme                   |
 | [cochran.crd](cochran.crd.md)                                 |      |     |      |       | 7                     | xy, crd                           | aov                        |
@@ -354,6 +355,7 @@ row-column design, ts = time series,
 | [pederson.lettuce.repeated](pederson.lettuce.repeated.md)     |      |     | 18   |       | 3                     |                                   | nlme                       |
 | [perry.springwheat](perry.springwheat.md)                     | 28   | 5   |      | 4     |                       | gain                              | lm,lmer,asreml             |
 | [petersen.sorghum.cowpea](petersen.sorghum.cowpea.md)         | 2    |     | 4    | 7     | 4                     | intercrop                         |                            |
+| [petersen.wheat](petersen.wheat.md)                           | 33   |     | 1    |       |                       | augmented                         |                            |
 | [piepho.cocksfoot](piepho.cocksfoot.md)                       | 25   |     |      | 7     |                       |                                   | mumm                       |
 | [ratkowsky.onions](ratkowsky.onions.md)                       |      |     |      |       |                       |                                   | lm                         |
 | [reid.grasses](reid.grasses.md)                               | 4    |     |      | 3     | 21                    |                                   | nlme SSfpl                 |

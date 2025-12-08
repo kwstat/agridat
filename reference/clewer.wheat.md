@@ -68,6 +68,8 @@ Grand mean: 7.25 t/ha.
 
 Block means: B1=8.50, B2=6.85, B3=6.40 t/ha.
 
+Data added by Paul Scmidt.
+
 ## Source
 
 Clewer, Alan G. and Scarisbrick, David H. (2001). Practical Statistics

@@ -11,12 +11,12 @@ Source:
 [`DESCRIPTION`](https://github.com/kwstat/agridat/blob/main/DESCRIPTION)
 
 Wright K (2025). *agridat: Agricultural Datasets*. R package version
-1.26, <https://kwstat.github.io/agridat/>.
+1.27, <https://kwstat.github.io/agridat/>.
 
     @Manual{,
       title = {agridat: Agricultural Datasets},
       author = {Kevin Wright},
       year = {2025},
-      note = {R package version 1.26},
+      note = {R package version 1.27},
       url = {https://kwstat.github.io/agridat/},
     }

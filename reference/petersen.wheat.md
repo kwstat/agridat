@@ -45,10 +45,14 @@ The field layout consisted of a single line of 48 plots.
 
 Petersen reports MSE = 91,103 from the ANOVA of check varieties.
 
+Data collected for agridat by Paul Schmidt.
+
 ## Source
 
 Roger G Petersen (1994). Agricultural Field Experiments: Design and
-Analysis. Marcel Dekker, New York. Table 5.7, page 170.
+Analysis. Marcel Dekker, New York.
+https://archive.org/details/agriculturalfiel0000pete Table 5.7, page
+170.
 
 ## References
 
