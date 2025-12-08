@@ -118,6 +118,8 @@
 - [`christidis.wheat.uniformity`](christidis.wheat.uniformity.md) :
   Uniformity trial of wheat
 - [`cleveland.soil`](cleveland.soil.md) : Soil resistivity in a field
+- [`clewer.wheat`](clewer.wheat.md) : Randomized complete block design
+  for wheat
 - [`cochran.beets`](cochran.beets.md) : Yield and number of plants in a
   sugarbeet fertilizer experiment
 - [`cochran.bib`](cochran.bib.md) : Multi-environment trial of corn,
