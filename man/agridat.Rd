@@ -271,7 +271,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{darwin.maize}                \tab     \tab    \tab 12  \tab    \tab 2     \tab \tab t.test \cr
 \link{davidian.soybean}            \tab 2   \tab    \tab     \tab 3  \tab       \tab \tab nlme \cr
 \link{denis.missing}               \tab 5   \tab 26 \tab     \tab    \tab       \tab \tab lme \cr
-\link{denis.ryegrass}              \tab 21  \tab 7  \tab     \tab    \tab       \tab \tab aov \cr
+\link{desousa.potato}              \tab 11  \tab 168 \tab     \tab    tab       \tab \tab PlackettLuce \cr
 \link{digby.jointregression}       \tab 10  \tab 17 \tab     \tab    \tab 4     \tab \tab lm \cr
 \link{durban.competition}          \tab 36  \tab    \tab 3   \tab    \tab       \tab xy, competition \tab lm \cr
 \link{durban.rowcol}               \tab 272 \tab    \tab 2   \tab    \tab       \tab xy \tab lm, gam, asreml \cr
