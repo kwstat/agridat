@@ -13,7 +13,7 @@
 
   Manurial (nitrogen) treatments were applied to the sub-plots.
 
-  Each plot is 1/80 acre = 28.4 links * 44 links.
+  Each plot is 28.4 links * 44 links = 1/80 acre.
 
   Field width: 4 plots * 44 links = 176 links.
 
@@ -25,7 +25,7 @@
   'hundredweight (cwt)' is 112 pounds, so converting from sub-plot
   weight to hundredweight/acre needs a conversion factor of 80/112.
 
-  The 'yield' values are the values as they appeared in the paper by
+  The 'yield' values here are the values as they appeared in the paper by
   Yates, who used 1/4-pounds as the units (i.e. he multiplied the
   original weight by 4) for simpler calculations.
 

@@ -249,6 +249,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{chakravertti.factorial}      \tab 3   \tab    \tab 3   \tab    \tab 3,5,3,3 \tab factorial \tab aov\cr
 \link{chinloy.fractionalfactorial} \tab     \tab    \tab 9   \tab    \tab 1/3 3^5 = 3,3,3,3 \tab xy,factorial \tab aov\cr
 \link{christidis.competition}      \tab 9   \tab    \tab 5   \tab    \tab       \tab xy \tab \cr
+\link{clewer.wheat}                \tab 4   \tab    \tab 3   \tab    \tab       \tab xy \tab \cr
 \link{cochran.beets}               \tab     \tab    \tab 6   \tab    \tab 7     \tab \tab \cr
 \link{cochran.bib}                 \tab 13  \tab 13 \tab     \tab    \tab       \tab bib \tab aov, lme \cr
 \link{cochran.crd}                 \tab     \tab    \tab     \tab    \tab 7     \tab xy, crd\tab aov \cr
@@ -363,12 +364,13 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{minnesota.barley.yield}      \tab 22  \tab 6  \tab     \tab 10 \tab       \tab \tab dotplot\cr
 \link{omer.sorghum}                \tab 18  \tab 6  \tab 4   \tab    \tab       \tab \tab jags\cr
 \link{onofri.winterwheat}          \tab 8   \tab    \tab 3   \tab 7  \tab       \tab \tab ammi\cr
-\link{ortiz.tomato}                \tab 15  \tab 18 \tab     \tab    \tab 16     \tab env*gen~env*cov \tab pls \cr
+\link{ortiz.tomato}                \tab 15  \tab 18 \tab     \tab    \tab 16    \tab env*gen~env*cov \tab pls \cr
 \link{pacheco.soybean}             \tab 18  \tab 11 \tab     \tab    \tab       \tab \tab ammi\cr
 \link{payne.wheat}                 \tab     \tab    \tab     \tab 20 \tab 6     \tab rotation\tab asreml\cr
 \link{pederson.lettuce.repeated}   \tab     \tab    \tab 18  \tab    \tab 3     \tab \tab nlme\cr
 \link{perry.springwheat}           \tab 28  \tab 5  \tab     \tab 4  \tab       \tab gain \tab lm,lmer,asreml\cr
 \link{petersen.sorghum.cowpea}     \tab 2   \tab    \tab 4   \tab 7  \tab 4     \tab intercrop \tab \cr
+\link{petersen.wheat}              \tab 33   \tab   \tab 1   \tab    \tab      \tab augmented \tab \cr
 \link{piepho.cocksfoot}            \tab 25  \tab    \tab     \tab 7  \tab       \tab \tab mumm\cr
 \link{ratkowsky.onions}            \tab     \tab    \tab     \tab    \tab       \tab \tab lm\cr
 \link{reid.grasses}                \tab 4   \tab    \tab     \tab 3  \tab 21    \tab \tab nlme SSfpl \cr

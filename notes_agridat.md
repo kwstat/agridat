@@ -360,18 +360,6 @@ Howard Lewis Taylor (1951).
 The effect of plot shape on experimental error. Master's Thesis.
 No data given. Used data from a corn uniformity trial, oats uniformity, and the data of Fairfield Smith. Smaller experimental errors were found for long narrow plots.
 
-# Classes
-
-
-## Jack Weiss
-Ecol 563 Stat Meth in Ecology 
-http://www.unc.edu/courses/2010fall/ecol/563/001/ 
-Env Studies 562 Stat for Envt Science 
-http://www.unc.edu/courses/2010spring/ecol/562/001/ 
-Ecol 145 
-http://www.unc.edu/courses/2006spring/ecol/145/001/docs/lectures.htm
-
-
 # Journals / Proceedings
 
 

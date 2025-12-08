@@ -1,3 +1,8 @@
+# agridat 1.27 ()
+
+* clewer.wheat
+* petersen.wheat
+
 # agridat 1.26 (2025-11-14)
 
 ## New datasets
