@@ -174,6 +174,8 @@
   perennial ryegrass in France
 - [`depalluel.sheep`](depalluel.sheep.md) : Latin square of four breeds
   of sheep with four diets
+- [`desousa.potato`](desousa.potato.md) : On-farm tricot evaluation of
+  potatoes
 - [`devries.pine`](devries.pine.md) : Graeco-Latin Square experiment in
   pine
 - [`digby.jointregression`](digby.jointregression.md) :

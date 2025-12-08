@@ -2,7 +2,10 @@
 
 ## agridat 1.27 ()
 
+### New datasets
+
 - clewer.wheat
+- desousa.potato
 - petersen.wheat
 
 ## agridat 1.26 (2025-11-14)
