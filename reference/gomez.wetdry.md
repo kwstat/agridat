@@ -4,7 +4,7 @@ Rice yield in wet & dry seasons with nitrogen fertilizer treatments
 
 ## Format
 
-A data frame with 96 observations on the following 4 variables.
+A data frame with 30 observations on the following 4 variables.
 
 - `season`:
 

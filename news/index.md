@@ -8,6 +8,10 @@
 - desousa.potato
 - petersen.wheat
 
+### Other note
+
+- Fix typo ([\#19](https://github.com/kwstat/agridat/issues/19))
+
 ## agridat 1.26 (2025-11-14)
 
 CRAN release: 2025-11-19
