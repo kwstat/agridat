@@ -6,6 +6,10 @@
 * desousa.potato
 * petersen.wheat
 
+## Other note
+
+* Fix typo (#19)
+
 # agridat 1.26 (2025-11-14)
 
 ## New datasets

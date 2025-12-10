@@ -81,7 +81,8 @@
   # This is log scale.
   plot(mod0qv, ylab = "Worth (log)", main = "desousa.potato", las=2)
 
-  # Could add weather covariates
+  # Could add weather covariates as in
+  # https://www.sciencedirect.com/science/article/pii/S2352711023000985?via%3Dihub
 }
 }
 \keyword{datasets}

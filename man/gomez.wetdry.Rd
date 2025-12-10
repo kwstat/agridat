@@ -9,7 +9,7 @@
 }
 
 \format{
-  A data frame with 96 observations on the following 4 variables.
+  A data frame with 30 observations on the following 4 variables.
   \describe{
     \item{\code{season}}{season = wet/dry}
     \item{\code{nitrogen}}{nitrogen fertilizer kg/ha}
