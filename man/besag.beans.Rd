@@ -41,13 +41,13 @@
 \source{
   Julian Besag and Rob Kempton (1986).
   Statistical Analysis of Field Experiments Using Neighbouring Plots.
-  \emph{Biometrics}, 42, 231-251.  Table 6.
+  Biometrics, 42, 231-251.  Table 6.
   https://doi.org/10.2307/2531047
 }
 \references{
   Kempton, RA and Lockwood, G. (1984).
   Inter-plot competition in variety trials of field beans (Vicia faba L.).
-  \emph{The Journal of Agricultural Science}, 103, 293--302.
+  The Journal of Agricultural Science, 103, 293--302.
 }
 \examples{
 \dontrun{
