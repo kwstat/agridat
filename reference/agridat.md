@@ -93,6 +93,7 @@ row-column design, ts = time series,
 | [mcclelland.corn.uniformity](mcclelland.corn.uniformity.md)             | 2 x 44           | xy                   |                     |
 | [mckinstry.cotton.uniformity](mckinstry.cotton.uniformity.md)           | 24 x 20          | xy                   |                     |
 | [mercer.mangold.uniformity](mercer.mangold.uniformity.md)               | 10 x 20          | xy                   |                     |
+| [metzger.multi.uniformity](metzger.multi.uniformity.md)                 | 3 x 12           | xy, 9 years          |                     |
 | [mercer.wheat.uniformity](mercer.wheat.uniformity.md)                   | 25 x 20          | xy, 2 traits         | spplot              |
 | [montgomery.wheat.uniformity](montgomery.wheat.uniformity.md)           | 14 x 16          | xy, 2 years          | lm                  |
 | [moore.polebean.uniformity](moore.uniformity.md)                        | 12 x 12          | xy                   |                     |

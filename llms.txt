@@ -543,6 +543,8 @@ library(agridat)
   Uniformity trial of mangolds
 - [`mercer.wheat.uniformity`](mercer.wheat.uniformity.md) : Uniformity
   trial of wheat
+- [`metzger.multi.uniformity`](metzger.multi.uniformity.md) : Uniformity
+  trials with multiple crops, 9 years on the same land
 - [`miguez.biomass`](miguez.biomass.md) : Biomass of 3 crops in Greece
 - [`minnesota.barley.weather`](minnesota.barley.weather.md) : Monthly
   weather at 6 sites in Minnesota 1927-1936.
