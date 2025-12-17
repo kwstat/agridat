@@ -46,13 +46,16 @@ be made of these data it would be advisable to ignore the row 1 and row
 This data was made available with special help from the staff at
 Rothamsted Research Library.
 
+ChatGPT found information about Arthur McKinstry, but no relevant
+publications.
+
 ## Source
 
 Rothamsted Research Library, Box STATS17 WG Cochran, Folder 5.
 
 ## References
 
-None
+None.
 
 ## Examples
 

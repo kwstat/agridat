@@ -471,6 +471,8 @@
   trial of potatoes
 - [`lyons.wheat`](lyons.wheat.md) : Multi-environment trial of winter
   wheat at 12 sites in 4 years.
+- [`macdonald.cotton.uniformity`](macdonald.cotton.uniformity.md) :
+  Uniformity trial of cotton in South Africa
 - [`magistad.pineapple.uniformity`](magistad.pineapple.uniformity.md) :
   Uniformity trial of pineapple
 - [`masood.rice.uniformity`](masood.rice.uniformity.md) : Uniformity

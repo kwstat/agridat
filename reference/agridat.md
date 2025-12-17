@@ -87,6 +87,7 @@ row-column design, ts = time series,
 | [love.cotton.uniformity](love.cotton.uniformity.md)                     | 16 x 10          | xy                   |                     |
 | [love.sugarcane.uniformity](love.sugarcane.uniformity.md)               | 20 x 20          | xy                   |                     |
 | [lyon.potato.uniformity](lyon.potato.uniformity.md)                     | 34 x 6           | xy                   |                     |
+| [macdonald.cotton.uniformity](macdonald.cotton.uniformity.md)           | 4 x 144          | xy                   |                     |
 | [magistad.pineapple.uniformity](magistad.pineapple.uniformity.md)       | 5 x 5            | xy                   |                     |
 | [masood.rice.uniformity](masood.rice.uniformity.md)                     | 12 x 24          | xy                   |                     |
 | [mcclelland.corn.uniformity](mcclelland.corn.uniformity.md)             | 2 x 44           | xy                   |                     |

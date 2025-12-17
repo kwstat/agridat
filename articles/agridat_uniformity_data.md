@@ -2,10 +2,11 @@
 
 ## checklist
 
-1.  Add data to agriat. Add man page. Edit NEWS, agridat.Rd
+1.  Add data to agridat. Add man page. Edit NEWS, agridat.Rd
 2.  Add source to uniformity_paper.bib
 3.  Add citation to uniformity_paper.Rmd
-4.  Add info to 00_uniformity_trial_meta_data
+4.  Add info to 00_uniformity_trial_meta_data.xlsx
+5.  Add to uniformity_data_assembly.R
 
 ChatGPT: Can you find some examples of uniformity trials published in
 Polish scientific journals?
@@ -79,6 +80,19 @@ maize. Annals of Agricultural Science, Moshtohor 36(3): 1361-1372.
 Alwood, W. B. and Price, R. H. (1890). Suggestions regarding size of
 plats. Virginia Agricultural Experiment Station, Bul. No. 6 pp 20. Not
 found.
+
+Barbacki, Stefan. (1933). Z badań nad jęczmieniem. Cz. III. Zmienność i
+dziedziczenie zawartości azotu w ziarnie czystych linii i mieszańców.
+Pamiętnik Państwowego Instytutu Naukowego Gospodarstwa Wiejskiego w
+Puławach, t. 14 (1933), nr 213: 106–157. English citation: Barbacki S.
+(1933). Studies on Barley. III. Variability and Inheritance of Nitrogen
+Content of the Grain of Pure Lines and Hybrids. Mémoires de l’Institut
+National Polonais d’Economie Rurale & Pulawy. T. XIV, Mémoire Nr 213:
+106-157. Not found by ChatGPT.
+
+Beckett, W. H. (1930). randomization in field experiment and its
+application on experiment stations. Dept. Agric. Bull. No 20, 25-74. Not
+found. Cochran says data filed at Rothamsted.
 
 Bhatnagar, S.; Srivastava, O.P. and Lather, B. P. S. Optimum size and
 shape of plot for mustard. Annals of Agricultural Research. Not found.
@@ -525,6 +539,10 @@ Agricultural Science 9, 807-816 <https://hdl.handle.net/10263/1896>
 <http://library.isical.ac.in:8080/jspui/handle/10263/1896> Reviewed. No
 data.
 
+Boudreaux,J. E. and Jones,L. G., (1978) Field-plot studies with sweet
+potato. Journal of the American Society for Horticultural Science, 103,
+87-89. Reviewed. No data.
+
 Boyhan, George E.; David B. Langston; Albert C. Purvis; C. Randell Hill.
 (2003). Research to determine suitable plot size and the number of
 replications in the field trials of sugarbeet. J. Amer. Soc. Hort. Sci.,
@@ -565,11 +583,21 @@ Shape for Grain Sorghum Yield Trials. Agron. J., 59: 576-577.
 <https://doi.org/10.2134/agronj1967.00021962005900060026x> Reviewed. No
 data.
 
+Arthur Bryan (1933). Factors Affecting Experimental Error in Field Plot
+Tests With Corn. Agricultural Experiment Station, Iowa State College.
+Tables 22-27. <https://hdl.handle.net/2027/uiug.30112019568168>
+Reviewed. agridat::bryan.corn.uniformity
+
 Brykczynski, Jerzy. Dokładność doświadczeń polowych w praktyce
 hodowlanej. (Accuracy of field experiments in breeding practice)
 Roczniki Nauk Rolniczych, 11 Page 249 looks like it might be a
 uniformity trial, measurements in percent. Page 264 summary in German.
 <https://www.google.com/books/edition/Roczniki_nauk_rolniczych/mz0iAQAAIAAJ?hl=en&gbpv=1&bsq=gorski>
+
+Caligari, P. D. S., J. Brown, and C. A. Manhood. The effect of varying
+the number of drills per plot and the amount of replication on the
+efficiency of potato yield trials. Euphytica 34.2 (1985): 291-296.
+Reviewed. No data.
 
 Chapas, L.C. 1961. Plot size and reduction of variability in oil palm
 experiments. Emp Jour. Exp. Agric., 29, 212-224.
@@ -603,17 +631,23 @@ early-generation plant-breeding trials with unreplicated or partially
 replicated test lines. Aust. N. Z. Jour. of Stat., 53, 461-480.
 Reviewed. No data.
 
-Collison, R. C. and J. D. Harlan. Technical bulletin No 194. Some
-relationships between soil properties and performance of Baldwin and
-Greening Apple Trees. New York State Agricultural Experiment Station
-<https://babel.hathitrust.org/cgi/pt?id=uiug.30112019767000> Reviewed.
-Has data for a few trees.
-
-Collison, R. C. and J. D. Harlan. Technical bulletin No 126. Annual
-variation in apple yields - a possible cause. New York State
+Collison, R. C. and J. D. Harlan. (1927). Technical bulletin No 126.
+Annual variation in apple yields - a possible cause. New York State
 Agricultural Experiment Station
 <https://babel.hathitrust.org/cgi/pt?id=uiug.30112019766267> Reviewed.
 No data.
+
+Collison, R.C. and J. D. Harlan. (1930). Technical bulletin No 164.
+Variability and size relations in apple trees. New York State
+Agricultural Experiment Station
+<https://babel.hathitrust.org/cgi/pt?id=uiug.30112019766671&seq=7&q1=collison>
+Reviewed. No data.
+
+Collison, R. C. and J. D. Harlan. (1932). Technical bulletin No 194.
+Some relationships between soil properties and performance of Baldwin
+and Greening Apple Trees. New York State Agricultural Experiment Station
+<https://babel.hathitrust.org/cgi/pt?id=uiug.30112019767000> Reviewed.
+Has data for a few trees.
 
 Conners, Helen Elizabeth (1951). Field plot techniques for sweet
 potatoes obtained from uniformity trial data. Master’s Thesis, Iowa
@@ -636,8 +670,14 @@ Shape. Agron. J., 55: 197-199.
 <https://doi.org/10.2134/agronj1963.00021962005500020033x> Reviewed. No
 data.
 
+Currence, T. M. (1943). Studies Related to field plot technique with
+tomatoes. Proceedings Of The American Society For Horticural Science,
+50, 290-295.
+<https://archive.org/details/in.ernet.dli.2015.20635/page/n301/>
+Reviewed. No data.
+
 Currence, T.M.; Krantz, F.A. (1936). The relation of plot size and shape
-to potato yield variations. Amer. Potato J 13, 310-313.
+to potato yield variations. American Potato Journal 13, 310-313.
 <https://archive.org/details/sim_american-journal-of-potato-research_1936-10_13_10/>
 Reviewed. No data.
 
@@ -722,7 +762,7 @@ tests. Dissertation. University of Arizona.
 <https://hdl.handle.net/10150/319371>
 agridat::draper.safflower.uniformity
 
-Dutta, S. K., and HEATH, E. D. (1960) Size, shape, and number of plots
+Dutta, S. K., and Heath, E. D. (1960) Size, shape, and number of plots
 for field experiments with tea. The Empire Journal of Experimental
 Agriculture, 28, 121.
 <https://archive.org/details/sim_empire-journal-of-experimental-agriculture_1960-04_28_110>
@@ -1357,6 +1397,11 @@ a uniformity test, but rather a ‘cultural’ test and a ‘varietal’ test.
 Liji, Kumari (1997). Optimum size of plots in coconut using multivariate
 techniques. Thesis, Kerala Agriculture Univ. Reviewed. No data.
 
+Livermore, Josiah. (1927). A critical study of some of the factors
+concerned in measuring the effect of selection in the potato. Cornell
+University, Thesis. <https://catalog.hathitrust.org/Record/009117234>
+Reviewed. No data. Discussed uniformity trial.
+
 Lizy, M.J. (1986). Uniformity trials on colocasia.
 <https://krishikosh.egranth.ac.in/handle/1/5810113181> Reviewed. No
 data.
@@ -1443,8 +1488,10 @@ agridat::lyon.potato.uniformity
 MacDonald, D. and Fielding, W. L. and Ruston, D. F. (1939). Experimental
 methods with cotton: I. The design of plots for variety trials. The
 Journal of Agricultural Science, 29, 35-47.
-<http://dx.doi.org/10.1017/S0021859600051534> Reviewed. No data. Two
-heatmaps of fields.
+<http://dx.doi.org/10.1017/S0021859600051534>
+<https://archive.org/details/in.ernet.dli.2015.26648/page/n45/>
+Reviewed. No data. Two heatmaps of fields on page 42, 44.
+agridat::macdonald.cotton.uniformity
 
 Magistad, O. C.; & C. A. Farden (1934). Experimental Error In Field
 Experiments With Pineapples. Journal of the American Society of

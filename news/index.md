@@ -4,9 +4,10 @@
 
 ### New datasets
 
-- clewer.wheat
+- clewer.wheat (via P.Schmidt)
 - desousa.potato
-- petersen.wheat
+- macdonald.cotton.uniformity
+- petersen.wheat (via P.Schmidt)
 
 ### Other note
 

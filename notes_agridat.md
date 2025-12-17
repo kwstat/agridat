@@ -36,7 +36,7 @@ series G 103_goulden_barley \# done Grown at Dominion, 1931
 104_beckett_coconut \# 1919-1928, 22 plots, nuts per plot. Cochran paper
 \#17 105_panse_cotton \# done (see also 509) 106_mckinstry_cotton \#
 done Gatooma 480 plots 107_saunders_maize \# done Maize, Potchefstroom
-1929-30 108 \# Field B2a, B5b 109_saunders_maize \# done Maize,
+1929-30 108 \# done Field B2a, B5b 109_saunders_maize \# done Maize,
 Potchefstroom 1928-1929 110_immer_sugarbeet \# done U of Minn 1931
 111_evans_sugarcane \# done Squared values 112_sayer_sugarcane \# done
 At Harpr Jhili 113_christidis_wheat \# done 114_smith_wheat \# done
@@ -86,9 +86,9 @@ christidis.wheat.uniformity 511_sayer_sugarcane \# done
 sayer.sugarcane.uniformity 1932, 48 rows, 20 columns
 513_hastings_oats_1911 \# 514_immer_sugarbeet \# done. 60 row, 10 col,
 2nd year of data 515_sugarcane \# barbados sugarcane
-516_macdonald_cotton \# field B2a B5b. See folder 1, file 8
-517_rothamsted 518_saunders_maize_28_29 \# done potchefstroom
-519_saunders_maize_29_30 \# done potchefstroom
+516_macdonald_cotton \# done macdonald.cotton.uniformity field B2a B5b.
+See folder 1, file 8 517_rothamsted 518_saunders_maize_28_29 \# done
+potchefstroom 519_saunders_maize_29_30 \# done potchefstroom
 
 ### Folder 6 OVS Heath cotton uniformity 1934-1935
 
