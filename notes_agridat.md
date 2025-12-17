@@ -53,7 +53,7 @@ Has 2 years of 5x5 grid from rubber trees.  Based on data archived at Rothamsted
 105_panse_cotton     # done  (see also 509)
 106_mckinstry_cotton # done  Gatooma 480 plots
 107_saunders_maize   # done  Maize, Potchefstroom 1929-30
-108                  #       Field B2a, B5b
+108                  # done  Field B2a, B5b
 109_saunders_maize   # done  Maize, Potchefstroom 1928-1929
 110_immer_sugarbeet  # done  U of Minn 1931
 111_evans_sugarcane  # done  Squared values
@@ -128,7 +128,7 @@ This folder contains correspondence
 513_hastings_oats_1911    #
 514_immer_sugarbeet       # done. 60 row, 10 col, 2nd year of data
 515_sugarcane             # barbados sugarcane
-516_macdonald_cotton      # field B2a B5b. See folder 1, file 8
+516_macdonald_cotton      # done  macdonald.cotton.uniformity field B2a B5b. See folder 1, file 8
 517_rothamsted
 518_saunders_maize_28_29  # done  potchefstroom
 519_saunders_maize_29_30  # done  potchefstroom
