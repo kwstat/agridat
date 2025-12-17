@@ -58,14 +58,14 @@ Field width: 38 plots \* 0.5 m = 19m
 ## Source
 
 Julian Besag and Rob Kempton (1986). Statistical Analysis of Field
-Experiments Using Neighbouring Plots. *Biometrics*, 42, 231-251. Table
-6. https://doi.org/10.2307/2531047
+Experiments Using Neighbouring Plots. Biometrics, 42, 231-251. Table 6.
+https://doi.org/10.2307/2531047
 
 ## References
 
 Kempton, RA and Lockwood, G. (1984). Inter-plot competition in variety
-trials of field beans (Vicia faba L.). *The Journal of Agricultural
-Science*, 103, 293–302.
+trials of field beans (Vicia faba L.). The Journal of Agricultural
+Science, 103, 293–302.
 
 ## Examples
 

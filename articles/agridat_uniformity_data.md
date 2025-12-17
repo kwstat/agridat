@@ -11,7 +11,7 @@
 ChatGPT: Can you find some examples of uniformity trials published in
 Polish scientific journals?
 
-Minnesota Agricultural Experiment Station paper No. 1446 todo
+todo
 
 Rothamsted scans
 
@@ -90,9 +90,12 @@ Content of the Grain of Pure Lines and Hybrids. Mémoires de l’Institut
 National Polonais d’Economie Rurale & Pulawy. T. XIV, Mémoire Nr 213:
 106-157. Not found by ChatGPT.
 
-Beckett, W. H. (1930). randomization in field experiment and its
-application on experiment stations. Dept. Agric. Bull. No 20, 25-74. Not
-found. Cochran says data filed at Rothamsted.
+Beckett, W. H. (1930). Randomization in field experiment and its
+application on experiment stations. Dept. Agric. Bull. No 20, 25-74.
+Cochran says data filed at Rothamsted, 44 plots of coconut trees. Data
+found in Rothamsted File 505, layout uncertain. Paper at HathiTrust, but
+content not viewable yet due to copyright?
+<https://catalog.hathitrust.org/Record/010316409>
 
 Bhatnagar, S.; Srivastava, O.P. and Lather, B. P. S. Optimum size and
 shape of plot for mustard. Annals of Agricultural Research. Not found.
@@ -190,6 +193,11 @@ Not found.
 Hoshyar Chand Sharma (1991). Some observations on estimation of plot
 size and shape, Bartlett’s Rate Index and yield loss adjustments.
 Journal of Indian potato Association, 18, 9-18.
+
+Jakowski, Z. (unpublished) Uniformity trial of potatoes 1929, University
+of Poznan. Not found by ChatGPT. Mentioned by Neyman. Could possibly be
+in Jerzy Neyman papers 1938-1980 at UC Berkley Bancroft Library.
+Collection stored off site, 78 feet.
 
 Jayaram, K.; Venkataramu, M.N.; Sunderrajan, N.; Seetharam, A. (1981)
 Optimum size and shape of plots and blocks for field experiments in
@@ -1529,6 +1537,14 @@ The Journal of Agricultural Science, 4, 107-132. Table 1.
 <https://doi.org/10.1017/S002185960000160X>
 agridat::mercer.mangold.uniformity agridat::mercer.wheat.uniformity
 
+Metzger, W. H. (1935). The relation of varying rainfall to soil
+heterogeneity as measured by crop production. Journal of the American
+Society of Agronomy, 27, 274-278.
+<https://doi.org/10.2134/agronj1935.00021962002700040006x>
+<https://archive.org/details/dli.ernet.232701/page/273/> No data in
+paper. On file at Rothamsted, paper 505
+agridat::metzger.multi.uniformity
+
 Miller, John D., and E. James Koch. (1962) “A Plot Technique Study with
 Birdsfoot Trefoil”. Agronomy Journal, 54, 95-97.
 <https://acsess.onlinelibrary.wiley.com/doi/abs/10.2134/agronj1962.00021962005400020001x>
@@ -1647,7 +1663,7 @@ Reviewed. No data.
 Neyman, J., & Iwaszkiewicz, K. (1935). Statistical problems in
 agricultural experimentation. Supplement to the Journal of the Royal
 Statistical Society, 2(2), 107-180. Reviewed. Used datasets from other
-papers.
+papers. <https://doi.org/10.2307/2983637>
 
 Nokoe, Sagary & Rodomiro Ortiz (1998). Optimum Plot Size for Banana
 Trials. HortScience 33, 130-132. <https://hdl.handle.net/10568/95942>
@@ -1716,8 +1732,8 @@ relatively as efficient as bigger plots. The CV observed was about 10
 percent, which implies 5 replicates are needed to detect a mean
 difference of 10 percent.
 
-Oscar Morgan, J. Some Experiments to Determine the Uniformity of Certain
-Plats for Field Tests. Agronomy Journal, 1, 58-67.
+Morgan, J. Oscar (1907) Some Experiments to Determine the Uniformity of
+Certain Plats for Field Tests. Agronomy Journal, 1, 58-67.
 <https://doi.org/10.2134/agronj1907-1909.00021962000100010015x>
 Reviewed. Has relative yields for 1x63 plots of wheat followed by fodder
 corn in the same season. Not included in agridat because the experiment
@@ -2721,3 +2737,120 @@ accuracy of the test results. Only the final numbers of the laborious
 and very extensive calculations that I carried out myself can be given.
 
 ------------------------------------------------------------------------
+
+## Cochran uniformity done
+
+evans.sugarcane.uniformity goulden.barley.uniformity
+ducker.groundnut.uniformity immer.sugarbeet.uniformity (1931)
+mckinstry.cotton.uniformity metzger.multi.uniformity
+saunders.maize.uniformity smith.wheat.uniformity
+
+This data was made available with special help from the staff at
+Rothamsted Research Library.
+
+Murray, E. K. S. (1934). The value of a uniformity trial in field
+experimentation with rubber. The Journal of Agricultural Science, 24(2),
+177-184. <https://doi.org/10.1017/s0021859600006572> Reviewed. Not used.
+Has 2 years of 5x5 grid from rubber trees. Based on data archived at
+Rothamsted, so not used at this time.
+
+### Folder 1 Genstat data
+
+101_metzger \# done 1925-1934 single rows, series E/F. See 102_metzger
+\# done 1925-1934 single rows, series G 103_goulden_barley \# done Grown
+at Dominion, 1931 104_beckett_coconut \# 1919-1928, 22 plots, nuts per
+plot. Cochran paper \#17 105_panse_cotton \# done (see also 509)
+106_mckinstry_cotton \# done Gatooma 480 plots 107_saunders_maize \#
+done Maize, Potchefstroom 1929-30 108_macdonald_cotton \# done Field
+B2a, B5b 109_saunders_maize \# done Maize, Potchefstroom 1928-1929
+110_immer_sugarbeet \# done U of Minn 1931 111_evans_sugarcane \# done
+Squared values 112_sayer_sugarcane \# done At Harpr Jhili
+113_christidis_wheat \# done 114_smith_wheat \# done Fairfield Smith
+data
+
+### Folder 2 Data received since publication
+
+201 \# cotton Wad Medani, Sudan 202 \# Wad Medani, Cotton 24x8=192 203
+\# 3x20, 1935-1936, weight in rotl 204 \# Letter from Parish to Fisher,
+205 \# Oats 1923, Sudan Grass 1923, Wheat 1922 (10x26=260 plots) 206 \#
+done hutchinson.cotton 207 \# done Letter from Finney to Kilby 1943
+208_ducker_groundnut \# done Letter from Killby to Fisher, Ducker
+groundnut data 209 \# 1938 Summerby to Cochran, Oats, 1921 3x33, Wheat
+todo. Data. Have pdf. 210 \# 1937 Letter from Summerby to Cochran,
+Cochran to Summerby 211 \# 1943 Letter Finney to Wadley. Thanks for the
+data. 212 \# 1934 Letter Wadley to Finney. Ribes data. 213 \# ignore
+China, 1x16 214 \# omit - clove trees 600, 5 years, no coordinates, East
+Africa 215 \# omit - clove tree part 2 216 \# omit - wireworm traps, not
+a plant trial 217 \# LeClerg field expt 1937-1938 sugar beet U Minn 218
+\# LeClerg greenhouse 1933 219 \# 1939 letter LeClerg to Cochran, Narain
+to Cochran, Cochran to Westover, Eden to Cochran
+
+### Folder 3
+
+301_day_table \# done No data.
+
+### Folder 4 Uniformity trials 1936-1938
+
+This folder contains correspondence
+
+401 402_pound 403 cheesman christidis collinson collison 404 405_day \#
+Done. demandt vandyk 406 407 408 posthumus 409_konigsberger about the
+demandt trials 410_demandt \$ done 411 hutchinson immer look for parnell
+412 413 kirk parnell macdonald 414 metzger parker pound 415 pound
+reynolds(cotton) richardson 416_saunders \# done 417_saunders sayer
+swanson 418_swanson thompson 419 thompson notes 420 day westover wilcox
+
+### Folder 5 Uniformity data
+
+501_metzger_rank \# done Kansas multi-year series 502_metzger_yield \#
+done metzger.multi.uniformity See file 101.pdf, 102.pdf
+503_metzger_summary \# done 504_goulden_barley \# done
+goulden.barley.uniformity 505_beckett_coconut \# multi-year, Cochran
+\#17 506 507_coffee \# coffee 1934-1939, Cochran \#18
+508_mckinstry_cotton \# done mckinstry.cotton.uniformity
+(correspondence, hand-written) 509_panse_cotton \# done
+panse.cotton.uniformity (see also 109) 510_christidis_wheat \# done
+christidis.wheat.uniformity 511_sayer_sugarcane \# done
+sayer.sugarcane.uniformity 1932, 48 rows, 20 columns
+513_hastings_oats_1911 \# 514_immer_sugarbeet \# done. 60 row, 10 col,
+2nd year of data 515_sugarcane \# barbados sugarcane
+516_macdonald_cotton \# done macdonald.cotton.uniformity field B2a B5b.
+See folder 1, file 8 517_rothamsted \# 1970, crop unknown
+518_saunders_maize_28_29 \# done potchefstroom 519_saunders_maize_29_30
+\# done potchefstroom
+
+#### Folder 6 OVS Heath cotton uniformity 1934-1935
+
+Decided not to use this data.
+
+There were 2 cut dates. The data for dry matter is highly variable. The
+field notes are a bit cryptic and suggest that there was some lack of
+uniformity in how the plants were handled (cut in morning, afternoon,
+etc).
+
+601 7/1 pt 2, copy 1, row 1-84, col k-u 602 7/1 pt 2, copy 2, row 1-84,
+col k-u 603 4/2 pt 1, copy2, row 1-84, col a-k 604 4/2 pt 1, copy1, row
+1-84, col a-k 605 4/2 pt 2, copy2, row 1-84, col l-v 606 7/1 pt 1, copy
+2, row 1-84, col za-j 607 experiment details 608 7/1 pt 1, copy 1, row
+1-84, col za-j 609 4/2 pt 2, copy1, row 1-84, col l-v
+
+#### Folder 7 Yield of grain per foot, Fairfield smith
+
+701_smith_correspondence \# done 702_smith_reference \# done
+703_smith_ears_copy_B \# done 704_smith_grain_copy_B \# done
+705_smith_grain_copy_A \# done 707_smith_ears_copy_A \# done
+
+#### Folder 8 Catalog of uniformity data
+
+801_cochran_notes_1 802_cochran_notes_2 803_cochran_notes_3
+804_cochran_notes_4 800_cochran_notes_0 805_evans_sugarcane_letter \#
+done evans.sugarcane.uniformity 806_evans_sugarcane_data \# done
+evans.sugarcane.uniformity
+
+#### Folder 9 Demandt 1931
+
+Decided not to use this data.
+
+There is very little contextual information about these data.
+
+901_demandt_diagram 902_demandt_data
