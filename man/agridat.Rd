@@ -100,6 +100,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{mcclelland.corn.uniformity}         \tab 2 x 44 \tab xy \tab \cr
 \link{mckinstry.cotton.uniformity}        \tab 24 x 20 \tab xy \tab \cr
 \link{mercer.mangold.uniformity}          \tab 10 x 20 \tab xy \tab \cr
+\link{metzger.multi.uniformity}           \tab 3 x 12 \tab xy, 9 years \tab \cr
 \link{mercer.wheat.uniformity}            \tab 25 x 20 \tab xy, 2 traits \tab spplot \cr
 \link{montgomery.wheat.uniformity}        \tab 14 x 16 \tab xy, 2 years \tab lm \cr
 \link{moore.polebean.uniformity}          \tab 12 x 12 \tab xy \tab \cr

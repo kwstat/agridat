@@ -4,6 +4,7 @@
 
 * clewer.wheat (via P.Schmidt)
 * desousa.potato
+* metzger.multi.uniformity
 * macdonald.cotton.uniformity
 * petersen.wheat (via P.Schmidt)
 
