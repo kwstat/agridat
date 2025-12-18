@@ -103,6 +103,7 @@ row-column design, ts = time series,
 | [moore.springcauliflower.uniformity](moore.uniformity.md)               | 12 x 20          | xy                   |                     |
 | [moore.fallcauliflower.uniformity](moore.uniformity.md)                 | 12 x 20          | xy                   |                     |
 | [nagai.strawberry.uniformity](nagai.strawberry.uniformity.md)           | 18 x 24          | xy                   |                     |
+| [morgan.multi.uniformity](morgan.multi.uniformity.md)                   | 1 x 63           | xy                   | 2 crops             |
 | [nair.turmeric.uniformity](nair.turmeric.uniformity.md)                 | 72 x 12          | xy                   |                     |
 | [narain.sorghum.uniformity](narain.sorghum.uniformity.md)               | 10 x 16          | xy                   |                     |
 | [nonnecke.peas.uniformity](nonnecke.peas.uniformity.md)                 | 15 x 18          | xy, 2 traits         |                     |

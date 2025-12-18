@@ -561,6 +561,8 @@ library(agridat)
   [`moore.fallcauliflower.uniformity`](moore.uniformity.md) : Uniformity
   trials of pole beans, bush beans, sweet corn, carrots, spring and fall
   cauliflower
+- [`morgan.multi.uniformity`](morgan.multi.uniformity.md) : Uniformity
+  trial of wheat and corn
 - [`nagai.strawberry.uniformity`](nagai.strawberry.uniformity.md) :
   Uniformity trial of strawberry
 - [`nair.turmeric.uniformity`](nair.turmeric.uniformity.md) : Uniformity
