@@ -110,6 +110,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{moore.springcauliflower.uniformity} \tab 12 x 20 \tab xy \tab \cr
 \link{moore.fallcauliflower.uniformity}   \tab 12 x 20 \tab xy \tab \cr
 \link{nagai.strawberry.uniformity}        \tab 18 x 24 \tab xy \tab \cr
+\link{morgan.multi.uniformity}            \tab 1 x 63 \tab xy \tab 2 crops\cr
 \link{nair.turmeric.uniformity}           \tab 72 x 12 \tab xy \tab \cr
 \link{narain.sorghum.uniformity}          \tab 10 x 16 \tab xy \tab \cr
 \link{nonnecke.peas.uniformity}           \tab 15 x 18 \tab xy, 2 traits \tab \cr

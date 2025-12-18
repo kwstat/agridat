@@ -20,3 +20,4 @@ vignettes/*.tex
 revdep
 docs/
 docs
+data-raw/cochran/*
