@@ -39,6 +39,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{batchelor.walnut.uniformity}        \tab 10 x 28 \tab xy \tab \cr
 \link{beckett.maize.uniformity}           \tab 6 x 19 \tab xy \tab \cr
 \link{bose.multi.uniformity}              \tab 15 x 26 \tab xy, 3 years \tab \cr
+\link{borden.sugarcane.uniformity}        \tab 4 x 12 \tab xy \tab \cr
 \link{bradley.multi.uniformity}           \tab 10 x 11 \tab xy \tab \cr
 \link{bryan.corn.uniformity}              \tab 6 x 48 \tab xy \tab \cr
 \link{christidis.cotton.uniformity}       \tab 16 x 16 \tab xy, 4 blocks \tab \cr
@@ -52,6 +53,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{eden.tea.uniformity}                \tab 12 x 12 \tab xy \tab \cr
 \link{evans.sugarcane.uniformity}         \tab 142 x 5 \tab xy \tab \cr
 \link{forster.wheat.uniformity}           \tab 10 x 16 \tab xy \tab \cr
+\link{garber.frames.uniformity}           \tab 30 x 1 \tab xy, 2 crops \tab \cr
 \link{garber.multi.uniformity}            \tab 6 x 45 \tab xy, 5 years/crops \tab \cr
 \link{gomez.rice.uniformity}              \tab 18 x 36 \tab xy \tab aov,smith \cr
 \link{gorski.oats.uniformity}             \tab 10 x 20, 15 x 20 \tab xy \tab \cr
@@ -142,9 +144,10 @@ name                                      \tab dimensions \tab other \tab model 
 \link{strickland.apple.uniformity}        \tab 11 x 18 \tab xy \tab \cr
 \link{strickland.grape.uniformity}        \tab 5 x 31 \tab xy \tab \cr
 \link{strickland.peach.uniformity}        \tab 8 x 18 \tab xy \tab \cr
-\link{strickland.tomato.uniformity}       \tab 30 x 6 \tab xy \tab \cr
-\link{summerby.multi.uniformity}          \tab 35 x 5 \tab xy \tab 5 years \cr
-\link{tulaikow.wheat.uniformity}          \tab 24 x 10, 15 x 16 \tab xy \tab 5 years \cr
+  \link{strickland.tomato.uniformity}       \tab 30 x 6 \tab xy \tab \cr
+  \link{summerby.multi.uniformity}          \tab 35 x 5 \tab xy \tab 5 years \cr
+  \link{trought.cotton.uniformity}          \tab 8 x 24 \tab xy \tab \cr
+  \link{tulaikow.wheat.uniformity}          \tab 24 x 10, 15 x 16 \tab xy \tab 5 years \cr
 \link{vishnaadevi.rice.uniformity}        \tab 12 x 24 \tab xy \tab \cr
 \link{wassom.brome.uniformity}            \tab 36 x 36 \tab xy, 3 expts \tab \cr
 \link{wehner.cucumber.uniformity}         \tab 6 x 25 \tab xy \tab \cr

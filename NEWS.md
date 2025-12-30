@@ -2,15 +2,19 @@
 
 ## New datasets
 
+* borden.sugarcane.uniformity
 * clewer.wheat (via P.Schmidt)
 * desousa.potato
+* garber.frames.uniformity
 * metzger.multi.uniformity
 * macdonald.cotton.uniformity
+* morgan.multi.uniformity
 * petersen.wheat (via P.Schmidt)
 
 ## Other note
 
 * Fix typo (#19)
+* sawyer.multi.uniformity has been reshaped to tall format.
 
 # agridat 1.26 (2025-11-14)
 

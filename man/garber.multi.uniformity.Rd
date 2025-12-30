@@ -81,8 +81,8 @@
   Paper #2 - Garber (1931)
   
   The year and crop was 1927 corn, 1928 oats, 1929 wheat. The data given
-  in the paper were percent-of-mean. We converted the data back to
-  absolute yield 
+  in the paper as percent of mean. We converted the data back to
+  absolute yield.
 
   The field is 10 plots wide, 84 plots tall.
   

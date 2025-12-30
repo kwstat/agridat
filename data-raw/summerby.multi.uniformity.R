@@ -89,3 +89,26 @@ dat %>% filter(year==1924) %>% desplot(yield ~ col*row, aspect=23/35, main="1924
 ## 14 R5     1925 289001.    289026  
 ## 15 R5     1926 131714.    131714  
 ## 16 R5     1927      8.62       8.622
+
+## ---------------------------------------------------------------------------
+
+# 1921
+
+Summerby, R. (1923).
+Replication in relation to accuracy in comparative crop tests.
+J. Am Soc Agron, 15.
+https://www.google.com/books/edition/Proceedings_of_the_American_Society_of_A/MWU4AQAAMAAJ
+https://doi.org/10.2134/agronj1923.00021962001500050004x
+Reviewed. No data. Data sent to Rothamsted in 1938.
+Two areas of land, 100 links by 505 links. One area was Alaska Oats. Another area was Huron wheat. fixme check if I can find this in the Rothamsted papers.
+
+Rothamsted pdf 209, 210.
+
+
+Grown at Macdonald College, Quebec, in 1921.
+Two parcels of land about 300 feet apart, each 100 links x 505 links = .505 acres.
+1 link = .66 feet
+Field 1: Alaska Oats sown at 2 bu/acre. Sown in rows 1 link apart, 100 links long.
+
+Field 2: Huron wheat sown at 1.75 bu/acre.
+

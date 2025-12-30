@@ -18,11 +18,14 @@ plot(dat$wheat, dat$wheatpom)
 plot(dat$corn, dat$cornpom)
 dat$wheatpom <- dat$cornpom <- NULL
 dat <- select(dat, plot, wheat=wheatabs, cornfodder=cornabs)
+dat$col <- 1
+# convert from wide to tall, keeping row/plot the same, combining wheat and cornfodder into one variable
+dat <- tidyr::pivot_longer(dat, cols=c("wheat","cornfodder"),
+  names_to="crop", values_to="yield")
 head(dat)
 
-
 morgan.multi.uniformity <- dat
-
+kw::agex(morgan.multi.uniformity, prompt=FALSE))
 dat <- morgan.multi.uniformity
 dat$col = 1
 libs(desplot)

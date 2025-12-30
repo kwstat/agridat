@@ -53,7 +53,7 @@
   Odland, T.E. and Garber, R.J. (1928).
   Size of Plat and Number of Replications in Field Experiments with
   Soybeans.
-  Agronomy Journal, 20, 93--108.
+  Agronomy Journal, 20, 93-108.
   https://doi.org/10.2134/agronj1928.00021962002000020002x
 }
 

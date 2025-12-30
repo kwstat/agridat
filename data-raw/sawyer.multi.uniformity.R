@@ -33,5 +33,19 @@ colnames(dat5) <- c('row','col','rootct')
 dat <- Reduce(function(...) merge(...), list(dat1, dat2, dat3, dat4, dat5))
 # ----------------------------------------------------------------------------
 
-sawyer.multi.uniformity <- dat
+# 2025.12.30
+# Decided to change from wide to tall
 
+libs(agridat,reshape2)
+dat <- sawyer.multi.uniformity
+
+libs(dplyr)
+dat2 <- melt(dat, id.vars=c("year","crop","row","col"))
+dat2 <- mutate(dat2, crop=paste0(crop, "_", variable))
+dat2$variable <- NULL
+dat2 <- rename(dat2, yield=value)
+head(dat2)
+dat2 <- filter(dat2, !is.na(yield))
+
+sawyer.multi.uniformity <- dat2
+kw::agex(sawyer.multi.uniformity, prompt=FALSE)
