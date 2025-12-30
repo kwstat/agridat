@@ -46,6 +46,7 @@
 <url><loc>/reference/blackman.wheat.html</loc></url>
 <url><loc>/reference/bliss.borers.html</loc></url>
 <url><loc>/reference/bond.diallel.html</loc></url>
+<url><loc>/reference/borden.sugarcane.uniformity.html</loc></url>
 <url><loc>/reference/bose.multi.uniformity.html</loc></url>
 <url><loc>/reference/box.cork.html</loc></url>
 <url><loc>/reference/bradley.multi.uniformity.html</loc></url>
@@ -122,6 +123,7 @@
 <url><loc>/reference/forster.wheat.uniformity.html</loc></url>
 <url><loc>/reference/foulley.calving.html</loc></url>
 <url><loc>/reference/fox.wheat.html</loc></url>
+<url><loc>/reference/garber.frames.uniformity.html</loc></url>
 <url><loc>/reference/garber.multi.uniformity.html</loc></url>
 <url><loc>/reference/gartner.corn.html</loc></url>
 <url><loc>/reference/gathmann.bt.html</loc></url>
@@ -350,6 +352,7 @@
 <url><loc>/reference/theobald.barley.html</loc></url>
 <url><loc>/reference/theobald.covariate.html</loc></url>
 <url><loc>/reference/thompson.cornsoy.html</loc></url>
+<url><loc>/reference/trought.cotton.uniformity.html</loc></url>
 <url><loc>/reference/tulaikow.wheat.uniformity.html</loc></url>
 <url><loc>/reference/turner.herbicide.html</loc></url>
 <url><loc>/reference/urquhart.feedlot.html</loc></url>

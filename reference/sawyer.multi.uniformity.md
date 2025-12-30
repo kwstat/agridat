@@ -29,44 +29,21 @@ A data frame with 48 observations on the following 7 variables.
 
   column
 
-- `grain`:
+- `yield`:
 
-  wheat/oats grain weight, pounds
-
-- `straw`:
-
-  wheat/oats straw weight, pounds
-
-- `leafwt`:
-
-  swedes leaf weight, pounds
-
-- `rootwt`:
-
-  swedes root weight, pounds
-
-- `rootct`:
-
-  swedes root count
+  crop yield
 
 ## Details
 
-An experiment conducted at Rothamsted, England, in 1925-1927, in Sawyers
-Field.
+An experiment conducted at Rothamsted, England, in Sawyers Field.
 
-Row 6, column 1 was not planted in any year.
-
-1925: Wheat was harvested
-
-Row 1, column 1 had partially missing data for the wheat values in 1925
-and was not used in the Rothamsted summary statistics on page 155.
-
-1926: Swedes were harvested
-
-1927: Oats were harvested
-
-Note the summaries statistics at the bottom of the page in each report
-are calibrated to ACRES.
+Eden & Maskell (page 165) say the field was clover, and ploughed in the
+autumn of 1924. The field was laid out uniformly in lands of one chain
+width and each plot width made to coincide with the land width from
+ridge to ridge. The length of each plot was also one chain and from the
+point of view of yield data the trial comprised 47 plots in 8x6 except
+that a hedge only allowed a rank of 6 plots at one end. Row 6, column 1
+was not planted in any year.
 
 Field width: 8 plots \* 22 feet = 528 feet
 
@@ -76,13 +53,18 @@ The field is 8 plots wide, 6 plots long. The plots are drawn in the
 source documents as squares .098 acres each (1 chain = 66 feet on each
 side).
 
-Eden & Maskell (page 165) say the field was clover, and ploughed in the
-autumn of 1924. The field was laid out uniformly in lands of one chain
-width and each plot width made to coincide with the land width from
-ridge to ridge. The length of each plot was also one chain and from the
-point of view of yield data the trial comprised 47 plots in 8x6 except
-that the run of the hedge only allowed a rank of five plots at one of
-the ends.
+1925: Wheat was harvested. Grain and straw weight measured in pounds.
+
+Row 1, column 1 had partially missing data for the wheat values in 1925
+and was not used in the Rothamsted summary statistics on page 155.
+
+1926: Swedes were harvested. Leaf weight and root weight measured in
+pounds. Root count was measured. Note: Swedes are also called rutabagas.
+
+1927: Oats were harvested. Grain and straw weight measured.
+
+Note the summaries statistics at the bottom of the page in each report
+are calibrated to ACRES.
 
 ## Source
 
@@ -120,33 +102,33 @@ if (FALSE) { # \dontrun{
   
   libs(desplot)
   # The field plan shows square plots
-  desplot(dat, grain~col*row,
-          subset= year==1925,
+  desplot(dat, yield~col*row,
+          subset= (year==1925 & crop=="wheat_grain"),
           main="sawyer.multi.uniformity - 1925 wheat grain yield",
           aspect=(6)/(8)) # true aspect
   
-  desplot(dat, rootwt~col*row,
-          subset= year==1926,
+  desplot(dat, yield~col*row,
+          subset= (year==1926 & crop=="swedes_rootwt"),
           main="sawyer.multi.uniformity - 1926 root weight of swedes",
           aspect=(6)/(8))
 
-  desplot(dat, grain~col*row, subset= year==1927,
+  desplot(dat, yield~col*row,
+          subset= (year==1927 & crop=="oats_grain"),
           main="sawyer.multi.uniformity - 1927 oats grain yield",
           aspect=(6)/(8))
 
-
-  # This plot shows the "outlier" in the wheat data reported by Mackenzie.
-  libs(lattice)
-  xyplot(grain ~ straw, data=subset(dat, year==1925))
+  # Match Mackenzie, p. 279. This plot shows a possible "outlier".
+  d1 <- subset(dat, year==1925 & crop=="wheat_grain")
+  d2 <- subset(dat, year==1925 & crop=="wheat_straw")
+  d12 <- merge(d1[ , c("row","col","yield")],
+               d2[ , c("row","col","yield")], by=c("row","col"))
+  plot(d12$yield.y, d12$yield.x, xlab="1925 straw", ylab="1925 grain")
   
-  round(cor(dat[,7:9], use="pair"),2) # Matches McCullagh p 2121
+  # Swede correlations, matches McCullagh p 2121
   ##        leafwt rootwt rootct
   ## leafwt   1.00   0.66   0.47
   ## rootwt   0.66   1.00   0.43
   ## rootct   0.47   0.43   1.00
   
-  ## pairs(dat[,7:9],
-  ##       main="sawyer.multi.uniformity")
-
 } # }
 ```

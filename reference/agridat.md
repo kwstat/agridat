@@ -32,6 +32,7 @@ row-column design, ts = time series,
 | [batchelor.walnut.uniformity](batchelor.uniformity.md)                  | 10 x 28          | xy                   |                     |
 | [beckett.maize.uniformity](beckett.maize.uniformity.md)                 | 6 x 19           | xy                   |                     |
 | [bose.multi.uniformity](bose.multi.uniformity.md)                       | 15 x 26          | xy, 3 years          |                     |
+| [borden.sugarcane.uniformity](borden.sugarcane.uniformity.md)           | 4 x 12           | xy                   |                     |
 | [bradley.multi.uniformity](bradley.multi.uniformity.md)                 | 10 x 11          | xy                   |                     |
 | [bryan.corn.uniformity](bryan.corn.uniformity.md)                       | 6 x 48           | xy                   |                     |
 | [christidis.cotton.uniformity](christidis.cotton.uniformity.md)         | 16 x 16          | xy, 4 blocks         |                     |
@@ -45,6 +46,7 @@ row-column design, ts = time series,
 | [eden.tea.uniformity](eden.tea.uniformity.md)                           | 12 x 12          | xy                   |                     |
 | [evans.sugarcane.uniformity](evans.sugarcane.uniformity.md)             | 142 x 5          | xy                   |                     |
 | [forster.wheat.uniformity](forster.wheat.uniformity.md)                 | 10 x 16          | xy                   |                     |
+| [garber.frames.uniformity](garber.frames.uniformity.md)                 | 30 x 1           | xy, 2 crops          |                     |
 | [garber.multi.uniformity](garber.multi.uniformity.md)                   | 6 x 45           | xy, 5 years/crops    |                     |
 | [gomez.rice.uniformity](gomez.rice.uniformity.md)                       | 18 x 36          | xy                   | aov,smith           |
 | [gorski.oats.uniformity](gorski.oats.uniformity.md)                     | 10 x 20, 15 x 20 | xy                   |                     |
@@ -137,6 +139,7 @@ row-column design, ts = time series,
 | [strickland.peach.uniformity](strickland.peach.uniformity.md)           | 8 x 18           | xy                   |                     |
 | [strickland.tomato.uniformity](strickland.tomato.uniformity.md)         | 30 x 6           | xy                   |                     |
 | [summerby.multi.uniformity](summerby.multi.uniformity.md)               | 35 x 5           | xy                   | 5 years             |
+| [trought.cotton.uniformity](trought.cotton.uniformity.md)               | 8 x 24           | xy                   |                     |
 | [tulaikow.wheat.uniformity](tulaikow.wheat.uniformity.md)               | 24 x 10, 15 x 16 | xy                   | 5 years             |
 | [vishnaadevi.rice.uniformity](vishnaadevi.rice.uniformity.md)           | 12 x 24          | xy                   |                     |
 | [wassom.brome.uniformity](wassom.brome.uniformity.md)                   | 36 x 36          | xy, 3 expts          |                     |

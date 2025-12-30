@@ -36,7 +36,9 @@ on the fields of the Dublany estate.
 
 Gorski & Stefaniow (1917) does not show the layout of the plots. They
 say more details are given in the journal "Roczniki nauk rolniczych".
-(Not yet found) Kotowski (1924) does shows the layout of the plots.
+(Not yet found)
+
+Kotowski (1924) does shows the layout of the plots.
 
 Field F1
 

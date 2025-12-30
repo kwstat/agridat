@@ -10,19 +10,23 @@ data("morgan.multi.uniformity")
 
 ## Format
 
-A data frame with 63 observations on the following 3 variables.
+A data frame with 126 observations on the following 4 variables.
+
+- `col`:
+
+  column ordinate
 
 - `plot`:
 
   plot ordinate
 
-- `wheat`:
+- `crop`:
 
-  wheat yield
+  crop name: wheat or cornfodder
 
-- `cornfodder`:
+- `yield`:
 
-  corn fodder yield
+  yield of the crop
 
 ## Details
 
@@ -52,16 +56,17 @@ if (FALSE) { # \dontrun{
   library(agridat)
   data(morgan.multi.uniformity)
   dat <- morgan.multi.uniformity
-  dat$col = 1
-
+  
   libs(desplot)
-  desplot(dat, wheat ~ col*plot,
+  libs(tidyr)
+  datw <- pivot_wider(dat, names_from=crop, values_from=yield)
+  desplot(datw, wheat ~ col*plot,
           aspect=945/112.5,
           main="morgan.multi.uniformity: wheat yield")
-  desplot(dat, cornfodder ~ col*plot,
+  desplot(datw, cornfodder ~ col*plot,
           aspect=945/112.5,
           main="morgan.multi.uniformity: corn fodder yield")
-  plot(dat$wheat, dat$cornfodder,
+  plot(datw$wheat, datw$cornfodder,
        xlab="Wheat yield (bu/a)",
        ylab="Corn fodder yield (bu/a)",
        main="morgan.multi.uniformity")

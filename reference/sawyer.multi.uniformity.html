@@ -63,20 +63,8 @@
     <dt><code>col</code></dt>
 <dd><p>column</p></dd>
 
-    <dt><code>grain</code></dt>
-<dd><p>wheat/oats grain weight, pounds</p></dd>
-
-    <dt><code>straw</code></dt>
-<dd><p>wheat/oats straw weight, pounds</p></dd>
-
-    <dt><code>leafwt</code></dt>
-<dd><p>swedes leaf weight, pounds</p></dd>
-
-    <dt><code>rootwt</code></dt>
-<dd><p>swedes root weight, pounds</p></dd>
-
-    <dt><code>rootct</code></dt>
-<dd><p>swedes root count</p></dd>
+    <dt><code>yield</code></dt>
+<dd><p>crop yield</p></dd>
 
 
 </dl></div>
@@ -84,28 +72,31 @@
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
 
 
-<p>An experiment conducted at Rothamsted, England, in 1925-1927, in
-  Sawyers Field.</p>
-<p>Row 6, column 1 was not planted in any year.</p>
-<p>1925: Wheat was harvested</p>
-<p>Row 1, column 1 had partially missing data for the wheat values in
-  1925 and was not used in the Rothamsted summary statistics on page 155.</p>
-<p>1926: Swedes were harvested</p>
-<p>1927: Oats were harvested</p>
-<p>Note the summaries statistics at the bottom of the page in each report
-  are calibrated to ACRES.</p>
-<p>Field width: 8 plots * 22 feet = 528 feet</p>
-<p>Field length: 6 plots * 22 feet = 396 feet</p>
-<p>The field is 8 plots wide, 6 plots long.  The plots are drawn in the
-  source documents as squares .098 acres each (1 chain = 66 feet on each
-  side).</p>
+<p>An experiment conducted at Rothamsted, England, in Sawyers Field.</p>
 <p>Eden &amp; Maskell (page 165) say the field was clover, and ploughed in
   the autumn of 1924. The field was laid out uniformly in lands of one
   chain width and each plot width made to coincide with the land width
   from ridge to ridge. The length of each plot was also one chain and
   from the point of view of yield data the trial comprised 47 plots in
-  8x6 except that the run of the hedge only allowed a rank of five plots
-  at one of the ends.</p>
+  8x6 except that a hedge only allowed a rank of 6 plots at one end.
+  Row 6, column 1 was not planted in any year.</p>
+<p>Field width: 8 plots * 22 feet = 528 feet</p>
+<p>Field length: 6 plots * 22 feet = 396 feet</p>
+<p>The field is 8 plots wide, 6 plots long.  The plots are drawn in the
+  source documents as squares .098 acres each (1 chain = 66 feet on each
+  side).</p>
+
+<p>1925: Wheat was harvested. Grain and straw weight measured in pounds.</p>
+<p>Row 1, column 1 had partially missing data for the wheat values in
+  1925 and was not used in the Rothamsted summary statistics on page 155.</p>
+
+<p>1926: Swedes were harvested. Leaf weight and root weight measured in
+  pounds. Root count was measured.
+  Note: Swedes are also called rutabagas.</p>
+
+<p>1927: Oats were harvested. Grain and straw weight measured.</p>
+<p>Note the summaries statistics at the bottom of the page in each report
+  are calibrated to ACRES.</p>
     </div>
     <div class="section level2">
     <h2 id="source">Source<a class="anchor" aria-label="anchor" href="#source"></a></h2>
@@ -145,34 +136,34 @@
 <span class="r-in"><span>  </span></span>
 <span class="r-in"><span>  <span class="fu"><a href="libs.html">libs</a></span><span class="op">(</span><span class="va">desplot</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="co"># The field plan shows square plots</span></span></span>
-<span class="r-in"><span>  <span class="fu"><a href="http://kwstat.github.io/desplot/reference/desplot.html" class="external-link">desplot</a></span><span class="op">(</span><span class="va">dat</span>, <span class="va">grain</span><span class="op">~</span><span class="va">col</span><span class="op">*</span><span class="va">row</span>,</span></span>
-<span class="r-in"><span>          subset<span class="op">=</span> <span class="va">year</span><span class="op">==</span><span class="fl">1925</span>,</span></span>
+<span class="r-in"><span>  <span class="fu"><a href="http://kwstat.github.io/desplot/reference/desplot.html" class="external-link">desplot</a></span><span class="op">(</span><span class="va">dat</span>, <span class="va">yield</span><span class="op">~</span><span class="va">col</span><span class="op">*</span><span class="va">row</span>,</span></span>
+<span class="r-in"><span>          subset<span class="op">=</span> <span class="op">(</span><span class="va">year</span><span class="op">==</span><span class="fl">1925</span> <span class="op">&amp;</span> <span class="va">crop</span><span class="op">==</span><span class="st">"wheat_grain"</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>          main<span class="op">=</span><span class="st">"sawyer.multi.uniformity - 1925 wheat grain yield"</span>,</span></span>
 <span class="r-in"><span>          aspect<span class="op">=</span><span class="op">(</span><span class="fl">6</span><span class="op">)</span><span class="op">/</span><span class="op">(</span><span class="fl">8</span><span class="op">)</span><span class="op">)</span> <span class="co"># true aspect</span></span></span>
 <span class="r-in"><span>  </span></span>
-<span class="r-in"><span>  <span class="fu"><a href="http://kwstat.github.io/desplot/reference/desplot.html" class="external-link">desplot</a></span><span class="op">(</span><span class="va">dat</span>, <span class="va">rootwt</span><span class="op">~</span><span class="va">col</span><span class="op">*</span><span class="va">row</span>,</span></span>
-<span class="r-in"><span>          subset<span class="op">=</span> <span class="va">year</span><span class="op">==</span><span class="fl">1926</span>,</span></span>
+<span class="r-in"><span>  <span class="fu"><a href="http://kwstat.github.io/desplot/reference/desplot.html" class="external-link">desplot</a></span><span class="op">(</span><span class="va">dat</span>, <span class="va">yield</span><span class="op">~</span><span class="va">col</span><span class="op">*</span><span class="va">row</span>,</span></span>
+<span class="r-in"><span>          subset<span class="op">=</span> <span class="op">(</span><span class="va">year</span><span class="op">==</span><span class="fl">1926</span> <span class="op">&amp;</span> <span class="va">crop</span><span class="op">==</span><span class="st">"swedes_rootwt"</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>          main<span class="op">=</span><span class="st">"sawyer.multi.uniformity - 1926 root weight of swedes"</span>,</span></span>
 <span class="r-in"><span>          aspect<span class="op">=</span><span class="op">(</span><span class="fl">6</span><span class="op">)</span><span class="op">/</span><span class="op">(</span><span class="fl">8</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span>  <span class="fu"><a href="http://kwstat.github.io/desplot/reference/desplot.html" class="external-link">desplot</a></span><span class="op">(</span><span class="va">dat</span>, <span class="va">grain</span><span class="op">~</span><span class="va">col</span><span class="op">*</span><span class="va">row</span>, subset<span class="op">=</span> <span class="va">year</span><span class="op">==</span><span class="fl">1927</span>,</span></span>
+<span class="r-in"><span>  <span class="fu"><a href="http://kwstat.github.io/desplot/reference/desplot.html" class="external-link">desplot</a></span><span class="op">(</span><span class="va">dat</span>, <span class="va">yield</span><span class="op">~</span><span class="va">col</span><span class="op">*</span><span class="va">row</span>,</span></span>
+<span class="r-in"><span>          subset<span class="op">=</span> <span class="op">(</span><span class="va">year</span><span class="op">==</span><span class="fl">1927</span> <span class="op">&amp;</span> <span class="va">crop</span><span class="op">==</span><span class="st">"oats_grain"</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>          main<span class="op">=</span><span class="st">"sawyer.multi.uniformity - 1927 oats grain yield"</span>,</span></span>
 <span class="r-in"><span>          aspect<span class="op">=</span><span class="op">(</span><span class="fl">6</span><span class="op">)</span><span class="op">/</span><span class="op">(</span><span class="fl">8</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span></span></span>
-<span class="r-in"><span>  <span class="co"># This plot shows the "outlier" in the wheat data reported by Mackenzie.</span></span></span>
-<span class="r-in"><span>  <span class="fu"><a href="libs.html">libs</a></span><span class="op">(</span><span class="va">lattice</span><span class="op">)</span></span></span>
-<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/lattice/man/xyplot.html" class="external-link">xyplot</a></span><span class="op">(</span><span class="va">grain</span> <span class="op">~</span> <span class="va">straw</span>, data<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/subset.html" class="external-link">subset</a></span><span class="op">(</span><span class="va">dat</span>, <span class="va">year</span><span class="op">==</span><span class="fl">1925</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="co"># Match Mackenzie, p. 279. This plot shows a possible "outlier".</span></span></span>
+<span class="r-in"><span>  <span class="va">d1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html" class="external-link">subset</a></span><span class="op">(</span><span class="va">dat</span>, <span class="va">year</span><span class="op">==</span><span class="fl">1925</span> <span class="op">&amp;</span> <span class="va">crop</span><span class="op">==</span><span class="st">"wheat_grain"</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="va">d2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/subset.html" class="external-link">subset</a></span><span class="op">(</span><span class="va">dat</span>, <span class="va">year</span><span class="op">==</span><span class="fl">1925</span> <span class="op">&amp;</span> <span class="va">crop</span><span class="op">==</span><span class="st">"wheat_straw"</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="va">d12</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/merge.html" class="external-link">merge</a></span><span class="op">(</span><span class="va">d1</span><span class="op">[</span> , <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"row"</span>,<span class="st">"col"</span>,<span class="st">"yield"</span><span class="op">)</span><span class="op">]</span>,</span></span>
+<span class="r-in"><span>               <span class="va">d2</span><span class="op">[</span> , <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"row"</span>,<span class="st">"col"</span>,<span class="st">"yield"</span><span class="op">)</span><span class="op">]</span>, by<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"row"</span>,<span class="st">"col"</span><span class="op">)</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">d12</span><span class="op">$</span><span class="va">yield.y</span>, <span class="va">d12</span><span class="op">$</span><span class="va">yield.x</span>, xlab<span class="op">=</span><span class="st">"1925 straw"</span>, ylab<span class="op">=</span><span class="st">"1925 grain"</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  </span></span>
-<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/cor.html" class="external-link">cor</a></span><span class="op">(</span><span class="va">dat</span><span class="op">[</span>,<span class="fl">7</span><span class="op">:</span><span class="fl">9</span><span class="op">]</span>, use<span class="op">=</span><span class="st">"pair"</span><span class="op">)</span>,<span class="fl">2</span><span class="op">)</span> <span class="co"># Matches McCullagh p 2121</span></span></span>
+<span class="r-in"><span>  <span class="co"># Swede correlations, matches McCullagh p 2121</span></span></span>
 <span class="r-in"><span>  <span class="co">##        leafwt rootwt rootct</span></span></span>
 <span class="r-in"><span>  <span class="co">## leafwt   1.00   0.66   0.47</span></span></span>
 <span class="r-in"><span>  <span class="co">## rootwt   0.66   1.00   0.43</span></span></span>
 <span class="r-in"><span>  <span class="co">## rootct   0.47   0.43   1.00</span></span></span>
 <span class="r-in"><span>  </span></span>
-<span class="r-in"><span>  <span class="co">## pairs(dat[,7:9],</span></span></span>
-<span class="r-in"><span>  <span class="co">##       main="sawyer.multi.uniformity")</span></span></span>
-<span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>

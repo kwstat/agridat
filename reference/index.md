@@ -74,6 +74,8 @@
 - [`bliss.borers`](bliss.borers.md) : Corn borer infestation under four
   treatments
 - [`bond.diallel`](bond.diallel.md) : Diallel cross of winter beans
+- [`borden.sugarcane.uniformity`](borden.sugarcane.uniformity.md) :
+  Uniformity trial of sugarcane in Hawaii
 - [`bose.multi.uniformity`](bose.multi.uniformity.md) : Uniformity
   trials of barley, wheat, lentils
 - [`box.cork`](box.cork.md) : Weight of cork samples on four sides of
@@ -220,6 +222,8 @@
   sex and age of dam
 - [`fox.wheat`](fox.wheat.md) : Multi-environment trial of wheat, 22
   varieties at 14 sites in Australia
+- [`garber.frames.uniformity`](garber.frames.uniformity.md) : Uniformity
+  trials of soybeans and wheat in artificially constructed frames
 - [`garber.multi.uniformity`](garber.multi.uniformity.md) : Uniformity
   trials of oat hay and wheat grain
 - [`gartner.corn`](gartner.corn.md) : Yield monitor data from a corn
@@ -675,6 +679,8 @@
   trial of corn silage, Year \* Loc \* Variety with covariate
 - [`thompson.cornsoy`](thompson.cornsoy.md) : Multi-environment trial of
   corn & soybean, 1930-1962, with temperature and precipitation
+- [`trought.cotton.uniformity`](trought.cotton.uniformity.md) :
+  Uniformity trial of cotton in Sudan
 - [`tulaikow.wheat.uniformity`](tulaikow.wheat.uniformity.md) :
   Uniformity trial of winter/spring wheat
 - [`turner.herbicide`](turner.herbicide.md) : Herbicide control of
