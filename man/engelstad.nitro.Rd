@@ -42,6 +42,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 data(engelstad.nitro)
@@ -72,6 +73,6 @@ coef(m1)['M']
 # Optimum nitro level using $0.11 for N cost, $1.15 for grain price = 140
 # Set the first derivative equal to N/corn price, k(M-nitro)=.11/1.15
 coef(m1)['M']-(.11/1.15)/coef(m1)['k']
-
+}
 }
 \keyword{datasets}

@@ -43,6 +43,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 data(onofri.winterwheat)
@@ -57,5 +58,6 @@ m2 <- AMMI(dat$year, dat$gen, dat$block, dat$yield)
 plot(m2)
 title("onofri.winterwheat - AMMI biplot")
 
+}
 }
 \keyword{datasets}

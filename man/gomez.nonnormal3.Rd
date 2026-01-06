@@ -41,6 +41,7 @@
   None.
 }
 \examples{
+\dontrun{
 
 library(agridat)
 data(gomez.nonnormal3)
@@ -66,6 +67,6 @@ anova(m1) # Match Gomez table 7.25
 ##           Df  Sum Sq Mean Sq F value    Pr(>F)
 ## gen       11 16838.7 1530.79  16.502 1.316e-08 ***
 ## Residuals 24  2226.4   92.77
-
+}
 }
 \keyword{datasets}

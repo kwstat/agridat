@@ -64,6 +64,8 @@
 }
 
 \examples{
+\dontrun{
+
 library(agridat)
 data(caribbean.maize)
 dat <- caribbean.maize
@@ -81,5 +83,6 @@ dotplot(trt~yield|site, data=dat, main="caribbean.maize treatment response")
 dat <- transform(dat, env=paste(substring(isle,1,1),site,sep="-"))
 bwplot(yield~N|env, dat,
        main="caribbean.maize", xlab="nitrogen")
+}
 }
 \keyword{datasets}

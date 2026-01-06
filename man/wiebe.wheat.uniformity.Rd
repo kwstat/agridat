@@ -66,6 +66,7 @@
 }
 
 \examples{
+\dontrun{
 
   library(agridat)
   data(wiebe.wheat.uniformity)
@@ -137,5 +138,6 @@
   coef(lm(yield ~ area, dat))[2]
   # 33.1
 
+}
 }
 \keyword{datasets}

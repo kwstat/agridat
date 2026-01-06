@@ -40,6 +40,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 data(wallace.iowaland)
@@ -72,5 +73,6 @@ mapplot(polnm~fedval , data=dat, colramp=redblue,
         map=map('county', 'iowa', plot=FALSE,
           fill=TRUE, projection="mercator"))
 
+}
 }
 \keyword{datasets}

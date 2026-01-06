@@ -36,6 +36,7 @@
   None.
 }
 \examples{
+\dontrun{
 
 library(agridat)
 data(gomez.nonnormal1)
@@ -69,6 +70,6 @@ anova(m1)
 ## rep        3 0.9567 0.31889  3.6511 0.0267223 *
 ## trt        8 3.9823 0.49779  5.6995 0.0004092 ***
 ## Residuals 24 2.0961 0.08734
-
+}
 }
 \keyword{datasets}

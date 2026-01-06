@@ -39,6 +39,7 @@ A study of small-plots of old-growth Douglas Fir in Oregon.
   None
 }
 \examples{
+\dontrun{
 
 library(agridat)
 data(johnson.douglasfir)
@@ -52,6 +53,6 @@ mean(dat$volume) * 400
 libs(lattice)
 levelplot(volume ~ col*row, dat, main="johnson.douglasfir", aspect=1)
 histogram( ~ volume, data=dat, main="johnson.douglasfir")
-
+}
 }
 \keyword{datasets}

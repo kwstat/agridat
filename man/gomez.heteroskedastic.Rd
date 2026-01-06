@@ -37,6 +37,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 data(gomez.heteroskedastic)
@@ -57,6 +58,6 @@ anova(m1)
 ## rep        2  3.306 1.65304  5.6164  0.005528 **
 ## gen       34 40.020 1.17705  3.9992 5.806e-07 ***
 ## Residuals 68 20.014 0.29432
-
+}
 }
 \keyword{datasets}

@@ -55,6 +55,7 @@
   Genet. Mol. Res. 14.
 }
 \examples{
+\dontrun{
 
 library(agridat)
 data(dasilva.maize)
@@ -88,5 +89,6 @@ dat <- dasilva.maize
 ## env:gen   432  938.1    2.17   1.8622 1.825e-15 ***
 ## Residuals 972 1133.5    1.17                       
 
+}
 }
 \keyword{datasets}

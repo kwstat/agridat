@@ -33,6 +33,7 @@
   None.
 }
 \examples{
+\dontrun{
 
 library(agridat)
 
@@ -56,6 +57,6 @@ anova(m1)
 ## rep        2  2.401  1.2004  1.9137    0.1678
 ## gen       13 48.011  3.6931  5.8877 6.366e-05 ***
 ## Residuals 26 16.309  0.6273
-
+}
 }
 \keyword{datasets}

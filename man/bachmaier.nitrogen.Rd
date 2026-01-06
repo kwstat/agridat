@@ -38,6 +38,7 @@
   Stat Papers (2010) 51:285–296, https://doi.org/10.1007/s00362-008-0159-7
 }
 \examples{
+\dontrun{
 
 library(agridat)
 data(bachmaier.nitrogen)
@@ -79,5 +80,6 @@ abline(v=opt.bach, col="blue")
 abline(v=ci.bach, col="skyblue")
 title("Economic optimum with 95 pct confidence interval")
 
+}
 }
 \keyword{datasets}

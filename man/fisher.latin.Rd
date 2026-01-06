@@ -37,6 +37,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 
@@ -46,6 +47,6 @@ dat <- fisher.latin
 # Standard latin-square analysis
 m1 <- lm(yield ~ trt + factor(row) + factor(col), data=dat)
 anova(m1)
-
+}
 }
 \keyword{datasets}

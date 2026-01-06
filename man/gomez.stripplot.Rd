@@ -38,6 +38,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 data(gomez.stripplot)
@@ -114,5 +115,5 @@ summary(m1)
 ## gen     5 15751300  3150260  7.6528
 ## nf      2 28048730 14024365 34.0690
 ## gen:nf 10 23877979  2387798  5.8006
-
+}
 }

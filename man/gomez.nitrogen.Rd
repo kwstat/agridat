@@ -38,6 +38,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 
@@ -83,6 +84,6 @@ summary(m2, expand.split=FALSE,
             "(T2 vs T5):P"=c(4,11),
             "rest:P"=c(5,6,7,12,13,14))
           ))
-
+}
 }
 \keyword{datasets}

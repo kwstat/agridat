@@ -39,6 +39,7 @@
   None
 }
 \examples{
+\dontrun{
 
   library(agridat)
   data(kayad.alfalfa)
@@ -64,6 +65,6 @@
   ##           prepanel=prepanel.default.xyplot,
   ##           panel=panel.levelplot.points,
   ##           col.regions=pals::brewer.reds)
-
+}
 }
 \keyword{datasets}

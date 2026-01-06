@@ -60,6 +60,7 @@
 }
 
 \examples{
+\dontrun{
 
 library(agridat)
 data(connolly.potato)
@@ -113,5 +114,6 @@ xyplot(yadj~cov, data=dat, type=c('p','r'),
        xlab="Avg yield of nearest neighbors",
        ylab="Yield, adjusted for variety and block effects")
 
+}
 }
 \keyword{datasets}

@@ -32,6 +32,7 @@
   None.
 }
 \examples{
+\dontrun{
 
 library(agridat)
 data(linder.wheat)
@@ -41,6 +42,6 @@ libs(gge)
 dat <- transform(dat, eb=paste0(env,block))
 m1 <- gge(dat, yield~gen*eb, env.group=env)
 biplot(m1, main="linder.wheat")
-
+}
 }
 \keyword{datasets}
