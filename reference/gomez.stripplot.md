@@ -48,6 +48,8 @@ Biological Environmental Stat, 19, 258-277.
 ## Examples
 
 ``` r
+if (FALSE) { # \dontrun{
+
 library(agridat)
 data(gomez.stripplot)
 dat <- gomez.stripplot
@@ -58,7 +60,6 @@ desplot(dat, gen ~ col*row,
         # aspect unknown
         out1=rep, out2=nitro, num=nitro, cex=1,
         main="gomez.stripplot")
-
 
 
 # Gertheiss figure 1
@@ -74,31 +75,6 @@ desplot(dat, gen ~ col*row,
 dat <- transform(dat, nf=factor(nitro))
 m1 <- aov(yield ~ gen * nf + Error(rep + rep:gen + rep:nf), data=dat)
 summary(m1)
-#> 
-#> Error: rep
-#>           Df  Sum Sq Mean Sq F value Pr(>F)
-#> Residuals  2 9220962 4610481               
-#> 
-#> Error: rep:gen
-#>           Df   Sum Sq  Mean Sq F value  Pr(>F)   
-#> gen        5 57100201 11420040   7.653 0.00337 **
-#> Residuals 10 14922619  1492262                   
-#> ---
-#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-#> 
-#> Error: rep:nf
-#>           Df   Sum Sq  Mean Sq F value  Pr(>F)   
-#> nf         2 50676061 25338031   34.07 0.00307 **
-#> Residuals  4  2974908   743727                   
-#> ---
-#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-#> 
-#> Error: Within
-#>           Df   Sum Sq Mean Sq F value   Pr(>F)    
-#> gen:nf    10 23877979 2387798   5.801 0.000427 ***
-#> Residuals 20  8232917  411646                     
-#> ---
-#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 ## Error: rep
 ##           Df  Sum Sq Mean Sq F value Pr(>F)
 ## Residuals  2 9220962 4610481
@@ -149,4 +125,5 @@ summary(m1)
 ## gen     5 15751300  3150260  7.6528
 ## nf      2 28048730 14024365 34.0690
 ## gen:nf 10 23877979  2387798  5.8006
+} # }
 ```

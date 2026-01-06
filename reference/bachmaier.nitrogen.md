@@ -48,6 +48,8 @@ Papers (2010) 51:285–296, https://doi.org/10.1007/s00362-008-0159-7
 ## Examples
 
 ``` r
+if (FALSE) { # \dontrun{
+
 library(agridat)
 data(bachmaier.nitrogen)
 dat <- bachmaier.nitrogen
@@ -63,15 +65,9 @@ b1 <- coef(m1)[2]
 b2 <- coef(m1)[3]
 opt.bach <- (m-b1)/(2*b2)
 round(opt.bach, 0)
-#> nitro 
-#>   199 
 
 # conf int for x value of tangent point
 round(vcovs <- vcov(m1), 7)
-#>             (Intercept)      nitro I(nitro^2)
-#> (Intercept)   0.1346512 -0.0016680    4.7e-06
-#> nitro        -0.0016680  0.0000295   -1.0e-07
-#> I(nitro^2)    0.0000047 -0.0000001    0.0e+00
 b1b1 <- vcovs[2,2] # estimated var of b1
 b1b2 <- vcovs[2,3] # estimated cov of b1,b2
 b2b2 <- vcovs[3,3]
@@ -83,9 +79,7 @@ D <- B^2 - 4*A*C
 x.lo <- -2*C / (B-sqrt(B^2-4*A*C))
 x.hi <- (-B + sqrt(B^2-4*A*C))/(2*A)
 ci.bach <- c(x.lo, x.hi)
-round(ci.bach,0) # 95% CI 173,260 Matches Bachmaier
-#> nitro nitro 
-#>   173   260 
+round(ci.bach,0) # 95
 
 # Plot raw data, fitted quadratic, optimum, conf int
 plot(yield~nitro, dlow)
@@ -96,4 +90,5 @@ abline(v=opt.bach, col="blue")
 abline(v=ci.bach, col="skyblue")
 title("Economic optimum with 95 pct confidence interval")
 
+} # }
 ```

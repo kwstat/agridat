@@ -51,11 +51,14 @@
 
     <div class="section level2">
     <h2 id="format">Format<a class="anchor" aria-label="anchor" href="#format"></a></h2>
-    <p>A data frame with 48 observations on the following 3 variables.</p><dl><dt><code>row</code></dt>
+    <p>A data frame with 48 observations on the following 4 variables.</p><dl><dt><code>row</code></dt>
 <dd><p>row ordinate</p></dd>
 
     <dt><code>col</code></dt>
 <dd><p>column ordinate</p></dd>
+
+    <dt><code>year</code></dt>
+<dd><p>year, 1929 or 1931</p></dd>
 
     <dt><code>yield</code></dt>
 <dd><p>yield, tons per acre</p></dd>
@@ -66,11 +69,19 @@
     <h2 id="details">Details<a class="anchor" aria-label="anchor" href="#details"></a></h2>
 
 
-<p>Harvested at Hakalau Plantation, Hawaii, 1929.
-  We observe extreme soil variation in our cane fields.
-  Plots 30 feet wide by 75 feet long.</p>
-<p>Field width: 4 plots * 30 ft = 120 ft</p>
-<p>Field length: 12 plots * 75 ft = 900 ft</p>
+<p>Harvested at Hakalau Plantation, Hawaii.</p>
+<p>1929 data reported in Borden (1930). Plots are 30 ft x 75 ft.
+  Plots 75 feet wide by 30 feet long.</p>
+<p>We observe extreme soil variation in our cane fields.</p>
+<p>Field width: 4 plots * 75 ft = 300 ft</p>
+<p>Field length: 12 plots * 30 ft = 360 ft</p>
+<p>1931 data are reported in Borden (1931). Map given.
+  Plots are 35 ft x 62 ft.
+  Col 1, row 10 was missing. Estimated as the average of neighboring plots.
+  Col 4, row 3 was 102. Replaced with average of neighboring plots.</p>
+<p>Field width: 4 plots * 62 feet = 248 feet (plus alleys on map)</p>
+<p>Field length: 12 plots * 35 ft = 420 feet</p>
+<p>Data provenance: From tables in original papers, transcribed by K.Wright.</p>
     </div>
     <div class="section level2">
     <h2 id="source">Source<a class="anchor" aria-label="anchor" href="#source"></a></h2>
@@ -78,6 +89,10 @@
   Replications of plot treatments in field experiments.
   Hawaiian Planters' Record, 34, 151-155.
   https://archive.org/details/hawaiian-planters-record_1930-04_34_2/page/150/</p>
+<p>Borden, R.J. (1931).
+  Studies in experimental technique–shape, size, and replication.
+  Hawaiian Planters' Record, 35, 295-304.
+  https://archive.org/details/hawaiian-planters-record_1931-07_35_3/page/n93</p>
     </div>
     <div class="section level2">
     <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
@@ -91,11 +106,10 @@
 <span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">borden.sugarcane.uniformity</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="va">dat</span> <span class="op">&lt;-</span> <span class="va">borden.sugarcane.uniformity</span></span></span>
 <span class="r-in"><span></span></span>
-<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">yield</span><span class="op">)</span> <span class="co"># 83.127 # Borden has 83.1</span></span></span>
-<span class="r-in"><span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="libs.html">libs</a></span><span class="op">(</span><span class="va">desplot</span><span class="op">)</span></span></span>
-<span class="r-in"><span>  <span class="fu">desplot</span><span class="op">(</span><span class="va">dat</span>, <span class="va">yield</span> <span class="op">~</span> <span class="va">col</span><span class="op">*</span><span class="va">row</span>,</span></span>
-<span class="r-in"><span>          aspect<span class="op">=</span><span class="op">(</span><span class="fl">12</span><span class="op">*</span><span class="fl">75</span><span class="op">)</span><span class="op">/</span><span class="op">(</span><span class="fl">4</span><span class="op">*</span><span class="fl">30</span><span class="op">)</span>, tick<span class="op">=</span><span class="cn">TRUE</span>, flip<span class="op">=</span><span class="cn">TRUE</span>,</span></span>
+<span class="r-in"><span>  <span class="fu">desplot</span><span class="op">(</span><span class="va">dat</span>, <span class="va">yield</span> <span class="op">~</span> <span class="va">col</span><span class="op">*</span><span class="va">row</span><span class="op">|</span><span class="va">year</span>,</span></span>
+<span class="r-in"><span>          aspect<span class="op">=</span><span class="op">(</span><span class="fl">400</span><span class="op">)</span><span class="op">/</span><span class="op">(</span><span class="fl">300</span><span class="op">)</span>, <span class="co"># rough average size of 2 years</span></span></span>
+<span class="r-in"><span>          tick<span class="op">=</span><span class="cn">TRUE</span>, flip<span class="op">=</span><span class="cn">TRUE</span>,</span></span>
 <span class="r-in"><span>          main<span class="op">=</span><span class="st">"borden.sugarcane.uniformity"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>

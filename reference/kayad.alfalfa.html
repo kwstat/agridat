@@ -90,40 +90,17 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+<span class="r-in"><span></span></span>
 <span class="r-in"><span>  <span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://kwstat.github.io/agridat/" class="external-link">agridat</a></span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">kayad.alfalfa</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="va">dat</span> <span class="op">&lt;-</span> <span class="va">kayad.alfalfa</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span>  <span class="co"># match Kayad table 1 stats</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="libs.html">libs</a></span><span class="op">(</span><span class="va">dplyr</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Attaching package: ‘dplyr’</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> The following object is masked from ‘package:gridExtra’:</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>     combine</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> The following object is masked from ‘package:MASS’:</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>     select</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> The following object is masked from ‘package:nlme’:</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>     collapse</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> The following objects are masked from ‘package:stats’:</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>     filter, lag</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> The following objects are masked from ‘package:base’:</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>     intersect, setdiff, setequal, union</span>
 <span class="r-in"><span>  <span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu">group_by</span><span class="op">(</span><span class="va">dat</span>, <span class="va">harvest</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="fu">summarize</span><span class="op">(</span><span class="va">dat</span>, min<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">yield</span><span class="op">)</span>, max<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">yield</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>            mean<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/mean.html" class="external-link">mean</a></span><span class="op">(</span><span class="va">yield</span><span class="op">)</span>, stdev<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/sd.html" class="external-link">sd</a></span><span class="op">(</span><span class="va">yield</span><span class="op">)</span>, var<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/stats/cor.html" class="external-link">var</a></span><span class="op">(</span><span class="va">yield</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 4 × 6</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   harvest   min   max  mean stdev   var</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> H10     0      6.68  2.86  1.24  1.55</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> H11     0      9.96  4.01  1.69  2.85</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> H8      0      5.86  2.32  1.01  1.03</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> H9      0.191  5.97  2.45  1.07  1.14</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span>  <span class="co"># Figure 4 of Kayad</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="libs.html">libs</a></span><span class="op">(</span><span class="va">latticeExtra</span><span class="op">)</span></span></span>
@@ -133,14 +110,13 @@
 <span class="r-in"><span>            main<span class="op">=</span><span class="st">"kayad.alfalfa"</span>,</span></span>
 <span class="r-in"><span>            prepanel<span class="op">=</span><span class="va">prepanel.default.xyplot</span>,</span></span>
 <span class="r-in"><span>            panel<span class="op">=</span><span class="va">panel.levelplot.points</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="kayad.alfalfa-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span>  <span class="co"># Similar to Kayad fig 5.</span></span></span>
 <span class="r-in"><span>  <span class="co">## levelplot(yield ~ long*lat |harvest, dat,</span></span></span>
 <span class="r-in"><span>  <span class="co">##           prepanel=prepanel.default.xyplot,</span></span></span>
 <span class="r-in"><span>  <span class="co">##           panel=panel.levelplot.points,</span></span></span>
 <span class="r-in"><span>  <span class="co">##           col.regions=pals::brewer.reds)</span></span></span>
-<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

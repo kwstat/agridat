@@ -88,7 +88,8 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+<span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://kwstat.github.io/agridat/" class="external-link">agridat</a></span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">bachmaier.nitrogen</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="va">bachmaier.nitrogen</span></span></span>
@@ -104,15 +105,9 @@
 <span class="r-in"><span><span class="va">b2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/coef.html" class="external-link">coef</a></span><span class="op">(</span><span class="va">m1</span><span class="op">)</span><span class="op">[</span><span class="fl">3</span><span class="op">]</span></span></span>
 <span class="r-in"><span><span class="va">opt.bach</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="va">m</span><span class="op">-</span><span class="va">b1</span><span class="op">)</span><span class="op">/</span><span class="op">(</span><span class="fl">2</span><span class="op">*</span><span class="va">b2</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="va">opt.bach</span>, <span class="fl">0</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> nitro </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   199 </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># conf int for x value of tangent point</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="va">vcovs</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/vcov.html" class="external-link">vcov</a></span><span class="op">(</span><span class="va">m1</span><span class="op">)</span>, <span class="fl">7</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             (Intercept)      nitro I(nitro^2)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> (Intercept)   0.1346512 -0.0016680    4.7e-06</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> nitro        -0.0016680  0.0000295   -1.0e-07</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> I(nitro^2)    0.0000047 -0.0000001    0.0e+00</span>
 <span class="r-in"><span><span class="va">b1b1</span> <span class="op">&lt;-</span> <span class="va">vcovs</span><span class="op">[</span><span class="fl">2</span>,<span class="fl">2</span><span class="op">]</span> <span class="co"># estimated var of b1</span></span></span>
 <span class="r-in"><span><span class="va">b1b2</span> <span class="op">&lt;-</span> <span class="va">vcovs</span><span class="op">[</span><span class="fl">2</span>,<span class="fl">3</span><span class="op">]</span> <span class="co"># estimated cov of b1,b2</span></span></span>
 <span class="r-in"><span><span class="va">b2b2</span> <span class="op">&lt;-</span> <span class="va">vcovs</span><span class="op">[</span><span class="fl">3</span>,<span class="fl">3</span><span class="op">]</span></span></span>
@@ -124,9 +119,7 @@
 <span class="r-in"><span><span class="va">x.lo</span> <span class="op">&lt;-</span> <span class="op">-</span><span class="fl">2</span><span class="op">*</span><span class="va">C</span> <span class="op">/</span> <span class="op">(</span><span class="va">B</span><span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/MathFun.html" class="external-link">sqrt</a></span><span class="op">(</span><span class="va">B</span><span class="op">^</span><span class="fl">2</span><span class="op">-</span><span class="fl">4</span><span class="op">*</span><span class="va">A</span><span class="op">*</span><span class="va">C</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">x.hi</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="op">-</span><span class="va">B</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/MathFun.html" class="external-link">sqrt</a></span><span class="op">(</span><span class="va">B</span><span class="op">^</span><span class="fl">2</span><span class="op">-</span><span class="fl">4</span><span class="op">*</span><span class="va">A</span><span class="op">*</span><span class="va">C</span><span class="op">)</span><span class="op">)</span><span class="op">/</span><span class="op">(</span><span class="fl">2</span><span class="op">*</span><span class="va">A</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">ci.bach</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">x.lo</span>, <span class="va">x.hi</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="va">ci.bach</span>,<span class="fl">0</span><span class="op">)</span> <span class="co"># 95% CI 173,260 Matches Bachmaier</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> nitro nitro </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   173   260 </span>
+<span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="va">ci.bach</span>,<span class="fl">0</span><span class="op">)</span> <span class="co"># 95</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Plot raw data, fitted quadratic, optimum, conf int</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">yield</span><span class="op">~</span><span class="va">nitro</span>, <span class="va">dlow</span><span class="op">)</span></span></span>
@@ -136,8 +129,8 @@
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>v<span class="op">=</span><span class="va">opt.bach</span>, col<span class="op">=</span><span class="st">"blue"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>v<span class="op">=</span><span class="va">ci.bach</span>, col<span class="op">=</span><span class="st">"skyblue"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/title.html" class="external-link">title</a></span><span class="op">(</span><span class="st">"Economic optimum with 95 pct confidence interval"</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="bachmaier.nitrogen-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

@@ -54,39 +54,17 @@ None
 ## Examples
 
 ``` r
+if (FALSE) { # \dontrun{
+
   library(agridat)
   data(kayad.alfalfa)
   dat <- kayad.alfalfa
 
   # match Kayad table 1 stats
   libs(dplyr)
-#> 
-#> Attaching package: ‘dplyr’
-#> The following object is masked from ‘package:gridExtra’:
-#> 
-#>     combine
-#> The following object is masked from ‘package:MASS’:
-#> 
-#>     select
-#> The following object is masked from ‘package:nlme’:
-#> 
-#>     collapse
-#> The following objects are masked from ‘package:stats’:
-#> 
-#>     filter, lag
-#> The following objects are masked from ‘package:base’:
-#> 
-#>     intersect, setdiff, setequal, union
   dat <- group_by(dat, harvest)
   summarize(dat, min=min(yield), max=max(yield),
             mean=mean(yield), stdev=sd(yield), var=var(yield))
-#> # A tibble: 4 × 6
-#>   harvest   min   max  mean stdev   var
-#>   <fct>   <dbl> <dbl> <dbl> <dbl> <dbl>
-#> 1 H10     0      6.68  2.86  1.24  1.55
-#> 2 H11     0      9.96  4.01  1.69  2.85
-#> 3 H8      0      5.86  2.32  1.01  1.03
-#> 4 H9      0.191  5.97  2.45  1.07  1.14
 
   # Figure 4 of Kayad
   libs(latticeExtra)
@@ -97,10 +75,10 @@ None
             prepanel=prepanel.default.xyplot,
             panel=panel.levelplot.points)
 
-
   # Similar to Kayad fig 5.
   ## levelplot(yield ~ long*lat |harvest, dat,
   ##           prepanel=prepanel.default.xyplot,
   ##           panel=panel.levelplot.points,
   ##           col.regions=pals::brewer.reds)
+} # }
 ```

@@ -88,6 +88,8 @@ Library, Box STATS17 WG Cochran, Folder 5.
 ## Examples
 
 ``` r
+if (FALSE) { # \dontrun{
+
 library(agridat)
 
   data(immer.sugarbeet.uniformity)
@@ -99,25 +101,21 @@ library(agridat)
   desplot(dat, yield~col*row, subset=year==1930,
           aspect=110/348, tick=TRUE, flip=TRUE, # true aspect
           main="immer.sugarbeet.uniformity - 1930 yield")
-
   # Similar to Immer (1932) figure 3
   desplot(dat, sugar~col*row, subset=year==1930,
           aspect=110/348, tick=TRUE, flip=TRUE,
           main="immer.sugarbeet.uniformity - 1930 sugar")
-
   # Similar to Immer (1932) figure 4
   desplot(dat, purity~col*row, subset=year==1930,
           aspect=110/348, tick=TRUE, flip=TRUE,
           main="immer.sugarbeet.uniformity - 1930 purity")
 
-
   pairs(dat[,c('yield','sugar','purity')],
         main="immer.sugarbeet.uniformity")
-
 
   # Similar to Immer (1933) figure 1
   desplot(dat, yield~col*row, subset=year==1931,
           aspect=110/348, tick=TRUE, flip=TRUE, # true aspect
           main="immer.sugarbeet.uniformity - 1931 yield")
-
+} # }
 ```

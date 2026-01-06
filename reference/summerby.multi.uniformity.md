@@ -47,11 +47,11 @@ by 20 links plots.
 
 In oats, the yields are for cleaned grain. In mangolds and alfalfa, the
 yields of dry matter were calculated. In maize, the green weights of
-fodder were obtained. In 1925, range R3 oats were damaged by birds. In
-1927, range R4 oats were lodges and not harvested. In 1924 range R5 had
-some flooding and is considered 'inadvisable' for use. In 1914 range R3
-oat yield was variable, perhaps from poor germination. Data are included
-here for completeness, but should perhaps not be included.
+fodder were obtained. In 1914 range R3 oat yield was variable, perhaps
+from poor germination. In 1924 range R5 had some flooding and is
+considered 'inadvisable' for use. In 1925, range R3 oats were damaged by
+birds. In 1927, range R4 oats were lodges and not harvested. Data are
+included here for completeness, but should perhaps not be included.
 
 The row numbers in this data are based on the figure on page 13 of
 Summerby. Row 1 is at the bottom. There appears to be approximately a

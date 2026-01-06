@@ -83,7 +83,8 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+<span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://kwstat.github.io/agridat/" class="external-link">agridat</a></span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">gomez.nitrogen</span><span class="op">)</span></span></span>
@@ -91,27 +92,9 @@
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Note the depletion of nitrogen over time (stage)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="libs.html">libs</a></span><span class="op">(</span><span class="va">HH</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: grid</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: multcomp</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: mvtnorm</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: survival</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: TH.data</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: MASS</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Attaching package: ‘TH.data’</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> The following object is masked from ‘package:MASS’:</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>     geyser</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Loading required package: gridExtra</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Attaching package: ‘HH’</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> The following object is masked from ‘package:base’:</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span>     is.R</span>
 <span class="r-in"><span><span class="fu">interaction2wt</span><span class="op">(</span><span class="va">nitro</span> <span class="op">~</span> <span class="va">rep</span><span class="op">/</span><span class="va">trt</span> <span class="op">+</span> <span class="va">trt</span><span class="op">*</span><span class="va">stage</span>, data<span class="op">=</span><span class="va">dat</span>,</span></span>
 <span class="r-in"><span>               x.between<span class="op">=</span><span class="fl">0</span>, y.between<span class="op">=</span><span class="fl">0</span>,</span></span>
 <span class="r-in"><span>               main<span class="op">=</span><span class="st">"gomez.nitrogen"</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="gomez.nitrogen-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Just the fertilizer profiles</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/with.html" class="external-link">with</a></span><span class="op">(</span><span class="va">dat</span>, <span class="fu"><a href="https://rdrr.io/r/stats/interaction.plot.html" class="external-link">interaction.plot</a></span><span class="op">(</span><span class="va">stage</span>, <span class="va">trt</span>, <span class="va">nitro</span>,</span></span>
@@ -121,25 +104,6 @@
 <span class="r-in"><span><span class="co"># Gomez table 6.16</span></span></span>
 <span class="r-in"><span><span class="va">m1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aov.html" class="external-link">aov</a></span><span class="op">(</span><span class="va">nitro</span> <span class="op">~</span> <span class="fu">Error</span><span class="op">(</span><span class="va">rep</span><span class="op">/</span><span class="va">trt</span><span class="op">)</span> <span class="op">+</span> <span class="va">trt</span><span class="op">*</span><span class="va">stage</span>, data<span class="op">=</span><span class="va">dat</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">m1</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Error: rep</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           Df Sum Sq Mean Sq F value Pr(&gt;F)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals  3 0.8457  0.2819               </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Error: rep:trt</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           Df Sum Sq Mean Sq F value  Pr(&gt;F)   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> trt        7 1.2658 0.18083   4.935 0.00201 **</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals 21 0.7695 0.03664                   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> ---</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Error: Within</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           Df Sum Sq Mean Sq F value   Pr(&gt;F)    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> stage      2  52.04  26.021 715.871  &lt; 2e-16 ***</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> trt:stage 14   3.57   0.255   7.008 1.53e-07 ***</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals 48   1.74   0.036                     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> ---</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Gomez table 6.18</span></span></span>
 <span class="r-in"><span><span class="co"># Treatment                    1 2 3 4 5 6 7 8</span></span></span>
@@ -149,24 +113,6 @@
 <span class="r-in"><span>              <span class="st">"T2 vs T5"</span>       <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span> <span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">0</span>,<span class="op">-</span><span class="fl">1</span>, <span class="fl">0</span>, <span class="fl">0</span>, <span class="fl">0</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/contrasts.html" class="external-link">contrasts</a></span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">trt</span><span class="op">)</span> <span class="op">&lt;-</span> <span class="va">cont</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/contrasts.html" class="external-link">contrasts</a></span><span class="op">(</span><span class="va">dat</span><span class="op">$</span><span class="va">trt</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    T7 vs others T8 vs others T2,T5 vs others T2 vs T5              </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T1            1            1              -1        0 -3.028130e-01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T2            1            1               2        1  8.326673e-17</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T3            1            1              -1        0 -2.101031e-01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T4            1            1              -1        0 -3.487772e-01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T5            1            1               2       -1  2.775558e-17</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T6            1            1              -1        0  8.616933e-01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T7           -7            0               0        0 -1.387779e-17</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T8            1           -6               0        0  0.000000e+00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                               </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T1 -6.632738e-01 -4.673031e-01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T2  8.326673e-17  0.000000e+00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T3 -1.136421e-01  8.324315e-01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T4  7.387109e-01 -2.875078e-01</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T5  8.326673e-17  0.000000e+00</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T6  3.820501e-02 -7.762061e-02</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T7  5.551115e-17  2.775558e-17</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> T8  5.551115e-17  5.551115e-17</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">m2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aov.html" class="external-link">aov</a></span><span class="op">(</span><span class="va">nitro</span> <span class="op">~</span> <span class="fu">Error</span><span class="op">(</span><span class="va">rep</span><span class="op">/</span><span class="va">trt</span><span class="op">)</span> <span class="op">+</span> <span class="va">trt</span><span class="op">*</span><span class="va">stage</span>, data<span class="op">=</span><span class="va">dat</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">m2</span>, expand.split<span class="op">=</span><span class="cn">FALSE</span>,</span></span>
@@ -183,36 +129,7 @@
 <span class="r-in"><span>            <span class="st">"(T2 vs T5):P"</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">4</span>,<span class="fl">11</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>            <span class="st">"rest:P"</span><span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">5</span>,<span class="fl">6</span>,<span class="fl">7</span>,<span class="fl">12</span>,<span class="fl">13</span>,<span class="fl">14</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span>          <span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Error: rep</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           Df Sum Sq Mean Sq F value Pr(&gt;F)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals  3 0.8457  0.2819               </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Error: rep:trt</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                        Df Sum Sq Mean Sq F value  Pr(&gt;F)   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> trt                     7 1.2658  0.1808   4.935 0.00201 **</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   trt: T7 vs others     1 0.3511  0.3511   9.581 0.00548 **</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   trt: T8 vs others     1 0.0455  0.0455   1.242 0.27761   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   trt: T2,T5 vs others  1 0.0228  0.0228   0.621 0.43952   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   trt: T2 vs T5         1 0.1176  0.1176   3.209 0.08764 . </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   trt: rest             3 0.7289  0.2430   6.630 0.00252 **</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals              21 0.7695  0.0366                   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> ---</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Error: Within</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>                                  Df Sum Sq Mean Sq F value   Pr(&gt;F)    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> stage                             2  52.04  26.021 715.871  &lt; 2e-16 ***</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> trt:stage                        14   3.57   0.255   7.008 1.53e-07 ***</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   trt:stage: (T7 vs others):P     2   2.14   1.068  29.391 4.63e-09 ***</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   trt:stage: (T8 vs others):P     2   0.54   0.268   7.373 0.001613 ** </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   trt:stage: (T2,T5 vs others):P  2   0.64   0.321   8.843 0.000538 ***</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   trt:stage: (T2 vs T5):P         2   0.02   0.011   0.298 0.743303    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   trt:stage: rest:P               6   0.23   0.038   1.051 0.404967    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals                        48   1.74   0.036                     </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> ---</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</span>
-<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

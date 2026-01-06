@@ -102,7 +102,8 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+<span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://kwstat.github.io/agridat/" class="external-link">agridat</a></span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">wallace.iowaland</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="va">wallace.iowaland</span></span></span>
@@ -110,46 +111,15 @@
 <span class="r-in"><span><span class="co"># Interesting trends involving latitude</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="libs.html">libs</a></span><span class="op">(</span><span class="va">lattice</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/pkg/lattice/man/splom.html" class="external-link">splom</a></span><span class="op">(</span><span class="op">~</span><span class="va">dat</span><span class="op">[</span>,<span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">2</span><span class="op">)</span><span class="op">]</span>, type<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'p'</span>,<span class="st">'smooth'</span><span class="op">)</span>, lwd<span class="op">=</span><span class="fl">2</span>, main<span class="op">=</span><span class="st">"wallace.iowaland"</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="wallace.iowaland-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Means. Similar to Wallace table 1</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/apply.html" class="external-link">apply</a></span><span class="op">(</span><span class="va">dat</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'yield'</span>,<span class="st">'corn'</span>,<span class="st">'grain'</span>,<span class="st">'untillable'</span>,<span class="st">'fedval'</span><span class="op">)</span><span class="op">]</span>, <span class="fl">2</span>, <span class="va">mean</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      yield       corn      grain untillable     fedval </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   39.11111   32.47475   21.55556   18.84848  118.67677 </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Correlations.  Similar to Wallace table 2</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/cor.html" class="external-link">cor</a></span><span class="op">(</span><span class="va">dat</span><span class="op">[</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'yield'</span>,<span class="st">'corn'</span>,<span class="st">'grain'</span>,<span class="st">'untillable'</span>,<span class="st">'fedval'</span><span class="op">)</span><span class="op">]</span><span class="op">)</span>,<span class="fl">2</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>            yield  corn grain untillable fedval</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> yield       1.00  0.30  0.27      -0.16   0.61</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> corn        0.30  1.00  0.61      -0.82   0.81</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> grain       0.27  0.61  1.00      -0.59   0.62</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> untillable -0.16 -0.82 -0.59       1.00  -0.69</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> fedval      0.61  0.81  0.62      -0.69   1.00</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">m1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">fedval</span> <span class="op">~</span> <span class="va">yield</span> <span class="op">+</span> <span class="va">corn</span> <span class="op">+</span> <span class="va">grain</span> <span class="op">+</span> <span class="va">untillable</span>, <span class="va">dat</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">m1</span><span class="op">)</span> <span class="co"># estimates similar to Wallace, top of p. 389</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Call:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> lm(formula = fedval ~ yield + corn + grain + untillable, data = dat)</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     Min      1Q  Median      3Q     Max </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -36.392  -7.797  -0.110   6.068  31.778 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Coefficients:</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>             Estimate Std. Error t value Pr(&gt;|t|)    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> (Intercept) -64.7071    17.3420  -3.731 0.000326 ***</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> yield         3.1488     0.3717   8.472 3.24e-13 ***</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> corn          1.8175     0.3090   5.881 6.20e-08 ***</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> grain         0.5394     0.2566   2.102 0.038229 *  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> untillable   -0.5527     0.2697  -2.049 0.043270 *  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> ---</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Residual standard error: 11.61 on 94 degrees of freedom</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Multiple R-squared:  0.819,	Adjusted R-squared:  0.8113 </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> F-statistic: 106.3 on 4 and 94 DF,  p-value: &lt; 2.2e-16</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Choropleth map</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="libs.html">libs</a></span><span class="op">(</span><span class="va">maps</span><span class="op">)</span></span></span>
@@ -164,9 +134,8 @@
 <span class="r-in"><span>        scales<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>draw<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>        map<span class="op">=</span><span class="fu">map</span><span class="op">(</span><span class="st">'county'</span>, <span class="st">'iowa'</span>, plot<span class="op">=</span><span class="cn">FALSE</span>,</span></span>
 <span class="r-in"><span>          fill<span class="op">=</span><span class="cn">TRUE</span>, projection<span class="op">=</span><span class="st">"mercator"</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>6 unmatched regions: iowa,blackhawk, iowa,buenavista, iowa,cerrogordo, iowa,d....</span>
-<span class="r-plt img"><img src="wallace.iowaland-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

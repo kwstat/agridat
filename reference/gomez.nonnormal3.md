@@ -51,6 +51,8 @@ None.
 ## Examples
 
 ``` r
+if (FALSE) { # \dontrun{
+
 library(agridat)
 data(gomez.nonnormal3)
 dat <- gomez.nonnormal3
@@ -68,21 +70,12 @@ libs(reshape2, lattice)
 qqmath( ~ value|variable, data=melt(dat),
        main="gomez.nonnormal3 - raw/transformed QQ plot",
        scales=list(relation="free"))
-#> Using gen, rep as id variables
-
 
 m1 <- lm(thoppers ~ gen, data=dat)
 anova(m1) # Match Gomez table 7.25
-#> Analysis of Variance Table
-#> 
-#> Response: thoppers
-#>           Df  Sum Sq Mean Sq F value    Pr(>F)    
-#> gen       11 16838.7 1530.79  16.502 1.316e-08 ***
-#> Residuals 24  2226.4   92.77                      
-#> ---
-#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 ## Response: thoppers
 ##           Df  Sum Sq Mean Sq F value    Pr(>F)
 ## gen       11 16838.7 1530.79  16.502 1.316e-08 ***
 ## Residuals 24  2226.4   92.77
+} # }
 ```

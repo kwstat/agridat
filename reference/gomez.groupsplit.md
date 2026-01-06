@@ -49,6 +49,8 @@ Agricultural Research. Wiley-Interscience. Page 120.
 ## Examples
 
 ``` r
+if (FALSE) { # \dontrun{
+
 library(agridat)
 data(gomez.groupsplit)
 dat <- gomez.groupsplit
@@ -59,36 +61,9 @@ desplot(dat, group ~ col*row,
         out1=rep, col=fert, text=gen, # aspect unknown
         main="gomez.groupsplit")
 
-
 # Gomez table 3.19 (not partitioned by group)
 m1 <- aov(yield ~ fert*group + gen:group + fert:gen:group +
             Error(rep/fert/group), data=dat)
 summary(m1)
-#> 
-#> Error: rep
-#>           Df Sum Sq Mean Sq F value Pr(>F)
-#> Residuals  2  4.917   2.458               
-#> 
-#> Error: rep:fert
-#>           Df Sum Sq Mean Sq F value Pr(>F)  
-#> fert       1  96.05   96.05    68.7 0.0142 *
-#> Residuals  2   2.80    1.40                 
-#> ---
-#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-#> 
-#> Error: rep:fert:group
-#>            Df Sum Sq Mean Sq F value Pr(>F)  
-#> group       2  4.259  2.1294   6.674 0.0197 *
-#> fert:group  2  0.628  0.3138   0.984 0.4150  
-#> Residuals   8  2.553  0.3191                 
-#> ---
-#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
-#> 
-#> Error: Within
-#>                 Df Sum Sq Mean Sq F value   Pr(>F)    
-#> group:gen       42 20.494  0.4880   4.461 2.08e-12 ***
-#> fert:group:gen  42  4.093  0.0975   0.891    0.662    
-#> Residuals      168 18.378  0.1094                     
-#> ---
-#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+} # }
 ```

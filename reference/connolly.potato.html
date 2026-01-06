@@ -109,7 +109,8 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+<span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://kwstat.github.io/agridat/" class="external-link">agridat</a></span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">connolly.potato</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="va">connolly.potato</span></span></span>
@@ -119,38 +120,15 @@
 <span class="r-in"><span><span class="fu">desplot</span><span class="op">(</span><span class="va">dat</span>, <span class="va">yield</span><span class="op">~</span><span class="va">col</span><span class="op">*</span><span class="va">row</span>,</span></span>
 <span class="r-in"><span>        out1<span class="op">=</span><span class="va">rep</span>, <span class="co"># aspect unknown</span></span></span>
 <span class="r-in"><span>        main<span class="op">=</span><span class="st">"connolly.potato yields (reps not contiguous)"</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="connolly.potato-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Later maturities are higher yielding</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="libs.html">libs</a></span><span class="op">(</span><span class="va">lattice</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/pkg/lattice/man/xyplot.html" class="external-link">bwplot</a></span><span class="op">(</span><span class="va">yield</span><span class="op">~</span><span class="va">matur</span>, <span class="va">dat</span>, main<span class="op">=</span><span class="st">"connolly.potato yield by maturity"</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="connolly.potato-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Observed raw means. Matches Connolly table 2.</span></span></span>
 <span class="r-in"><span><span class="va">mn</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aggregate.html" class="external-link">aggregate</a></span><span class="op">(</span><span class="va">yield</span><span class="op">~</span><span class="va">gen</span>, data<span class="op">=</span><span class="va">dat</span>, FUN<span class="op">=</span><span class="va">mean</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">mn</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/rev.html" class="external-link">rev</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/order.html" class="external-link">order</a></span><span class="op">(</span><span class="va">mn</span><span class="op">$</span><span class="va">yield</span><span class="op">)</span><span class="op">)</span>,<span class="op">]</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    gen  yield</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 8  V08 16.200</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 19 V19 14.450</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 10 V10 13.925</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 12 V12 13.500</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 7  V07 13.300</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 20 V20 12.975</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 14 V14 12.975</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 6  V06 12.625</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 11 V11 12.575</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 16 V16 11.900</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 3  V03 11.650</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 9  V09 11.500</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 1  V01 11.275</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 18 V18 10.650</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 2  V02 10.325</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 17 V17 10.200</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 15 V15 10.125</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 13 V13 10.050</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 4  V04  9.425</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 5  V05  9.275</span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Create a covariate which is the average of neighboring plot yields</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="libs.html">libs</a></span><span class="op">(</span><span class="va">reshape2</span><span class="op">)</span></span></span>
@@ -167,8 +145,6 @@
 <span class="r-in"><span><span class="co"># Connolly et al fit a model with avg neighbor yield as a covariate</span></span></span>
 <span class="r-in"><span><span class="va">m1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">yield</span> <span class="op">~</span> <span class="fl">0</span> <span class="op">+</span> <span class="va">gen</span> <span class="op">+</span> <span class="va">rep</span> <span class="op">+</span> <span class="va">cov</span>, data<span class="op">=</span><span class="va">dat</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/coef.html" class="external-link">coef</a></span><span class="op">(</span><span class="va">m1</span><span class="op">)</span><span class="op">[</span><span class="st">'cov'</span><span class="op">]</span> <span class="co"># = -.303  (Connolly obtained -.31)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        cov </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> -0.3030545 </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Block names and effects</span></span></span>
 <span class="r-in"><span><span class="va">bnm</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"R1"</span>,<span class="st">"R2"</span>,<span class="st">"R3"</span>,<span class="st">"R4"</span><span class="op">)</span></span></span>
@@ -186,8 +162,8 @@
 <span class="r-in"><span>       main<span class="op">=</span><span class="st">"connolly.potato"</span>,</span></span>
 <span class="r-in"><span>       xlab<span class="op">=</span><span class="st">"Avg yield of nearest neighbors"</span>,</span></span>
 <span class="r-in"><span>       ylab<span class="op">=</span><span class="st">"Yield, adjusted for variety and block effects"</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="connolly.potato-3.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

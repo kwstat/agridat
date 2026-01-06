@@ -85,14 +85,15 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+<span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://kwstat.github.io/agridat/" class="external-link">agridat</a></span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">gomez.nonnormal1</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="va">gomez.nonnormal1</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Gomez figure 7.3</span></span></span>
 <span class="r-in"><span><span class="co">## libs(dplyr)</span></span></span>
-<span class="r-in"><span><span class="co">## dat2 &lt;- dat %&gt;% group_by(trt)</span></span></span>
+<span class="r-in"><span><span class="co">## dat2 &lt;- dat </span></span></span>
 <span class="r-in"><span><span class="co">## dat2 &lt;- summarize(dat2, mn=mean(larvae), rng=diff(range(larvae)))</span></span></span>
 <span class="r-in"><span><span class="co">## plot(rng ~ mn, data=dat2,</span></span></span>
 <span class="r-in"><span><span class="co">##      xlab="mean number of larvae", ylab="range of number of larvae",</span></span></span>
@@ -108,28 +109,17 @@
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/pkg/lattice/man/qqmath.html" class="external-link">qqmath</a></span><span class="op">(</span> <span class="op">~</span> <span class="va">value</span><span class="op">|</span><span class="va">variable</span>, data<span class="op">=</span><span class="fu">melt</span><span class="op">(</span><span class="va">dat</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>       main<span class="op">=</span><span class="st">"gomez.nonnormal1 - raw/transformed QQ plot"</span>,</span></span>
 <span class="r-in"><span>       scales<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>relation<span class="op">=</span><span class="st">"free"</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Using trt, rep as id variables</span>
-<span class="r-plt img"><img src="gomez.nonnormal1-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Gomez table 7.16</span></span></span>
 <span class="r-in"><span><span class="va">m1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html" class="external-link">lm</a></span><span class="op">(</span><span class="va">tlarvae</span> <span class="op">~</span> <span class="va">rep</span> <span class="op">+</span> <span class="va">trt</span>, data<span class="op">=</span><span class="va">dat</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/anova.html" class="external-link">anova</a></span><span class="op">(</span><span class="va">m1</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Analysis of Variance Table</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Response: tlarvae</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>           Df Sum Sq Mean Sq F value    Pr(&gt;F)    </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> rep        3 0.9567 0.31889  3.6511 0.0267223 *  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> trt        8 3.9823 0.49779  5.6995 0.0004092 ***</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Residuals 24 2.0961 0.08734                      </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> ---</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1</span>
 <span class="r-in"><span><span class="co">## Response: tlarvae</span></span></span>
 <span class="r-in"><span><span class="co">##           Df Sum Sq Mean Sq F value    Pr(&gt;F)</span></span></span>
 <span class="r-in"><span><span class="co">## rep        3 0.9567 0.31889  3.6511 0.0267223 *</span></span></span>
 <span class="r-in"><span><span class="co">## trt        8 3.9823 0.49779  5.6995 0.0004092 ***</span></span></span>
 <span class="r-in"><span><span class="co">## Residuals 24 2.0961 0.08734</span></span></span>
-<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

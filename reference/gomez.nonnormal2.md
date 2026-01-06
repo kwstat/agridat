@@ -44,6 +44,8 @@ None.
 ## Examples
 
 ``` r
+if (FALSE) { # \dontrun{
+
 library(agridat)
 
 data(gomez.nonnormal2)
@@ -57,24 +59,14 @@ libs(reshape2, lattice)
 qqmath( ~ value|variable, data=melt(dat),
        main="gomez.nonnormal2 - raw/transformed QQ plot",
        scales=list(relation="free"))
-#> Using gen, rep as id variables
-
 
 # Gomez anova table 7.21
 m1 <- lm(twhite ~ rep + gen, data=dat)
 anova(m1)
-#> Analysis of Variance Table
-#> 
-#> Response: twhite
-#>           Df Sum Sq Mean Sq F value    Pr(>F)    
-#> rep        2  2.401  1.2004  1.9137    0.1678    
-#> gen       13 48.011  3.6931  5.8877 6.366e-05 ***
-#> Residuals 26 16.309  0.6273                      
-#> ---
-#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 ## Response: twhite2
 ##           Df Sum Sq Mean Sq F value    Pr(>F)
 ## rep        2  2.401  1.2004  1.9137    0.1678
 ## gen       13 48.011  3.6931  5.8877 6.366e-05 ***
 ## Residuals 26 16.309  0.6273
+} # }
 ```

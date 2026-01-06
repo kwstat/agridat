@@ -32,6 +32,8 @@ Agricultural Research. Wiley-Interscience. Page 26.
 ## Examples
 
 ``` r
+if (FALSE) { # \dontrun{
+
 library(agridat)
 data(gomez.seedrate)
 dat <- gomez.seedrate
@@ -40,12 +42,9 @@ libs(lattice)
 xyplot(yield ~ rate, data=dat, group=rep, type='b',
        main="gomez.seedrate", auto.key=list(columns=4))
 
-
 # Quadratic response.  Use raw polynomials so we can compute optimum
 m1 <- lm(yield ~ rep + poly(rate,2,raw=TRUE), dat)
 -coef(m1)[5]/(2*coef(m1)[6]) # Optimum is at 29
-#> poly(rate, 2, raw = TRUE)1 
-#>                     29.148 
 
 # Plot the model predictions
 libs(latticeExtra)
@@ -55,5 +54,5 @@ p1 <- aggregate(pred ~ rate, newdat, mean) # average reps
   xyplot(yield ~ rate, data=dat, group=rep, type='b',
          main="gomez.seedrate (with model predictions)", auto.key=list(columns=4)) +
     xyplot(pred ~ rate, p1, type='l', col='black', lwd=2)
-
+} # }
 ```

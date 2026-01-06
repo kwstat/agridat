@@ -86,6 +86,8 @@ Also in the DAAG package as data sets antigua and stVincent.
 ## Examples
 
 ``` r
+if (FALSE) { # \dontrun{
+
 library(agridat)
 data(caribbean.maize)
 dat <- caribbean.maize
@@ -95,14 +97,13 @@ libs(lattice)
 xyplot(yield~ears|site, dat, ylim=c(0,10), subset=isle=="Antigua",
        main="caribbean.maize - Antiqua")
 
-
 # Some locs show large response to nitrogen (as expected), e.g. UISV, OOSV
 dotplot(trt~yield|site, data=dat, main="caribbean.maize treatment response")
-
 
 # Show the strong N*site interaction with little benefit on Antiqua, but
 # a strong response on St.Vincent.
 dat <- transform(dat, env=paste(substring(isle,1,1),site,sep="-"))
 bwplot(yield~N|env, dat,
        main="caribbean.maize", xlab="nitrogen")
+} # }
 ```

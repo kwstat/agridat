@@ -49,6 +49,8 @@ models for the plant and soil sciences*, CRC. Page 254-259.
 ## Examples
 
 ``` r
+if (FALSE) { # \dontrun{
+
 library(agridat)
 data(engelstad.nitro)
 dat <- engelstad.nitro
@@ -56,7 +58,6 @@ dat <- engelstad.nitro
 libs(latticeExtra)
 useOuterStrips(xyplot(yield ~ nitro | factor(year)*loc, dat,
                       main="engelstad.nitro"))
-
 
 # Fit a quadratic plateau model to one year/loc
 j62 <- droplevels(subset(dat, loc=="Jackson" & year==1962))
@@ -73,15 +74,11 @@ plot(yield ~ nitro, j62)
 lines(p1 ~ newdat$nitro, col="blue")
 title("engelstad.nitro: quadratic plateau at Jackson 1962")
 
-
 # Optimum nitro level ignoring prices = 225
 coef(m1)['M']
-#>        M 
-#> 225.3404 
 
 # Optimum nitro level using $0.11 for N cost, $1.15 for grain price = 140
 # Set the first derivative equal to N/corn price, k(M-nitro)=.11/1.15
 coef(m1)['M']-(.11/1.15)/coef(m1)['k']
-#>        M 
-#> 140.7837 
+} # }
 ```

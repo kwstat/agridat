@@ -60,6 +60,8 @@ https://archive.org/details/in.ernet.dli.2015.231848/page/n473
 ## Examples
 
 ``` r
+if (FALSE) { # \dontrun{
+
   library(agridat)
   data(wiebe.wheat.uniformity)
   dat <- wiebe.wheat.uniformity
@@ -70,42 +72,24 @@ https://archive.org/details/in.ernet.dli.2015.231848/page/n473
           main="wiebe.wheat.uniformity: yield") # row 1 is at south
 
 
-
   # Preece (1981) found the last digits have an interesting distribution
   # with 0 and 5 much more common than other digits.
   dig <- substring(dat$yield, nchar(dat$yield))
   dig <- as.numeric(dig)
   hist(dig, breaks=0:10-.5, xlab="Last digit",
        main="wiebe.wheat.uniformity - histogram of last digit")
-
   table(dat$col, dig) # Table 3 of Preece
-#>     dig
-#>       0  1  2  3  4  5  6  7  8  9
-#>   1  61  0  0  0  0 64  0  0  0  0
-#>   2  67  0  0  0  0 58  0  0  0  0
-#>   3  65  0  0  0  0 60  0  0  0  0
-#>   4  66  0  0  0  0 59  0  0  0  0
-#>   5  55  0  0  0  0 70  0  0  0  0
-#>   6  54  0  0  0  0 71  0  0  0  0
-#>   7  69  0  0  0  0 56  0  0  0  0
-#>   8  65  0  0  0  0 60  0  0  0  0
-#>   9   9 10  7  9 19 19 13 16 13 10
-#>   10 13 18 12 10 11 17 14  9  8 13
-#>   11 13  9 16 13 16 18  8  6 16 10
-#>   12 17  0 11 16 12 17  1 16 20 15
 
   # Wilkinson (1983, p. 152) noted that an 8-row planter was used which
   # produced a recurring pattern of row effects on yield.  This can be seen
   # in the high autocorrelations of row means at lag 8 and lag 16
   rowm <- tapply(dat$yield, dat$row, mean)
   acf(rowm, main="wiebe.wheat.uniformity row means")
-
   # Plot the row mean against the planter row unit 1-8
   libs("lattice")
   xyplot(rowm~rep(1:8, length=125),
          main="wiebe.wheat.uniformity",
          xlab="Planter row unit", ylab="Row mean yield")
-
 
   # Wiebe (1937) and Yates (1939) show the effect of "guess rows"
   # caused by the 8-row drill passing back and forth through
@@ -145,9 +129,8 @@ https://archive.org/details/in.ernet.dli.2015.231848/page/n473
   xyplot(yield ~ area, dat, type=c('p','r'),
          main="wiebe.wheat.uniformity",
          xlab="Average area per row", ylab="Yield")
-
   coef(lm(yield ~ area, dat))[2]
-#>    area 
-#> 33.1033 
   # 33.1
+
+} # }
 ```

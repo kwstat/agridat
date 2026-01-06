@@ -76,6 +76,8 @@ https://doi.org/10.1038/s41437-024-00743-9
 ## Examples
 
 ``` r
+if (FALSE) { # \dontrun{
+
 library(agridat)
 data(connolly.potato)
 dat <- connolly.potato
@@ -87,36 +89,13 @@ desplot(dat, yield~col*row,
         main="connolly.potato yields (reps not contiguous)")
 
 
-
 # Later maturities are higher yielding
 libs(lattice)
 bwplot(yield~matur, dat, main="connolly.potato yield by maturity")
 
-
 # Observed raw means. Matches Connolly table 2.
 mn <- aggregate(yield~gen, data=dat, FUN=mean)
 mn[rev(order(mn$yield)),]
-#>    gen  yield
-#> 8  V08 16.200
-#> 19 V19 14.450
-#> 10 V10 13.925
-#> 12 V12 13.500
-#> 7  V07 13.300
-#> 20 V20 12.975
-#> 14 V14 12.975
-#> 6  V06 12.625
-#> 11 V11 12.575
-#> 16 V16 11.900
-#> 3  V03 11.650
-#> 9  V09 11.500
-#> 1  V01 11.275
-#> 18 V18 10.650
-#> 2  V02 10.325
-#> 17 V17 10.200
-#> 15 V15 10.125
-#> 13 V13 10.050
-#> 4  V04  9.425
-#> 5  V05  9.275
 
 # Create a covariate which is the average of neighboring plot yields
 libs(reshape2)
@@ -133,8 +112,6 @@ dat <- merge(dat, dat2)
 # Connolly et al fit a model with avg neighbor yield as a covariate
 m1 <- lm(yield ~ 0 + gen + rep + cov, data=dat)
 coef(m1)['cov'] # = -.303  (Connolly obtained -.31)
-#>        cov 
-#> -0.3030545 
 
 # Block names and effects
 bnm <- c("R1","R2","R3","R4")
@@ -153,4 +130,5 @@ xyplot(yadj~cov, data=dat, type=c('p','r'),
        xlab="Avg yield of nearest neighbors",
        ylab="Yield, adjusted for variety and block effects")
 
+} # }
 ```

@@ -78,7 +78,8 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+<span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://kwstat.github.io/agridat/" class="external-link">agridat</a></span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">carmer.density</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="va">carmer.density</span></span></span>
@@ -101,26 +102,9 @@
 <span class="r-in"><span>  <span class="va">pi</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span>gen<span class="op">=</span><span class="va">i</span>, <span class="va">newdat</span>, pred<span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/predict.html" class="external-link">predict</a></span><span class="op">(</span><span class="va">mi</span>, newdat<span class="op">=</span><span class="va">newdat</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="va">preds</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="va">preds</span>, <span class="va">pi</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Hy2x0h7"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "WF9xC103"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "R61x187-2"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "WF9x38-11"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "WF9xB14"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "C103xB14"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "0h43xB37"</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "WF9xH60"</span>
 <span class="r-in"><span><span class="co"># Optimum plant density is -1/log(k)</span></span></span>
 <span class="r-in"><span><span class="va">out</span><span class="op">$</span><span class="va">pop.opt</span> <span class="op">&lt;-</span> <span class="op">-</span><span class="fl">1</span><span class="op">/</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log</a></span><span class="op">(</span><span class="va">out</span><span class="op">$</span><span class="va">k</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/base/Round.html" class="external-link">round</a></span><span class="op">(</span><span class="va">out</span>, <span class="fl">3</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>               a     k pop.opt</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> Hy2x0h7   0.782 0.865   6.875</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> WF9xC103  1.039 0.825   5.192</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> R61x187-2 0.998 0.798   4.441</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> WF9x38-11 1.042 0.825   5.203</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> WF9xB14   1.067 0.806   4.647</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> C103xB14  0.813 0.860   6.653</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 0h43xB37  0.673 0.862   6.740</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> WF9xH60   0.858 0.854   6.358</span>
 <span class="r-in"><span><span class="co">##               a     k pop.opt</span></span></span>
 <span class="r-in"><span><span class="co">## Hy2x0h7   0.782 0.865   6.875</span></span></span>
 <span class="r-in"><span><span class="co">## WF9xC103  1.039 0.825   5.192</span></span></span>
@@ -153,8 +137,8 @@
 <span class="r-in"><span>         col<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"blue"</span>, <span class="st">"red"</span>,<span class="st">"darkgreen"</span><span class="op">)</span>, columns<span class="op">=</span><span class="fl">3</span>, points<span class="op">=</span><span class="cn">FALSE</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/lattice/man/xyplot.html" class="external-link">xyplot</a></span><span class="op">(</span><span class="va">predf</span><span class="op">~</span><span class="va">pop</span><span class="op">|</span><span class="va">gen</span>, <span class="va">pdat</span>, type<span class="op">=</span><span class="st">'l'</span>, as.table<span class="op">=</span><span class="cn">TRUE</span>, col<span class="op">=</span><span class="st">"red"</span><span class="op">)</span> <span class="op">+</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/lattice/man/xyplot.html" class="external-link">xyplot</a></span><span class="op">(</span><span class="va">pred</span><span class="op">~</span><span class="va">pop</span><span class="op">|</span><span class="va">gen</span>, <span class="va">pdat</span>, type<span class="op">=</span><span class="st">'l'</span>, col<span class="op">=</span><span class="st">"darkgreen"</span>, lwd<span class="op">=</span><span class="fl">2</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="carmer.density-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

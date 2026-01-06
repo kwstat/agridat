@@ -44,18 +44,16 @@ Gower, J.C. and Hand, D.J., 1996. Biplots. Chapman and Hall.
 ## Examples
 
 ``` r
+if (FALSE) { # \dontrun{
+
 library(agridat)
 data(denis.ryegrass)
 dat <- denis.ryegrass
 
 # biplots (without ellipses) similar to Denis figure 1
 libs(gge)
-#> 
-#> Attaching package: ‘gge’
-#> The following object is masked from ‘package:desplot’:
-#> 
-#>     RedGrayBlue
 m1 <- gge(dat, strength ~ gen*loc, scale=FALSE)
 biplot(m1, main="denis.ryegrass biplot")
 
+} # }
 ```

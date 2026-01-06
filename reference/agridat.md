@@ -91,6 +91,7 @@ row-column design, ts = time series,
 | [lyon.potato.uniformity](lyon.potato.uniformity.md)                     | 34 x 6           | xy                   |                     |
 | [macdonald.cotton.uniformity](macdonald.cotton.uniformity.md)           | 4 x 144          | xy                   |                     |
 | [magistad.pineapple.uniformity](magistad.pineapple.uniformity.md)       | 5 x 5            | xy                   |                     |
+| [mamani.bean.uniformity](mamani.bean.uniformity.md)                     | 84 x 20          | xy                   |                     |
 | [masood.rice.uniformity](masood.rice.uniformity.md)                     | 12 x 24          | xy                   |                     |
 | [mcclelland.corn.uniformity](mcclelland.corn.uniformity.md)             | 2 x 44           | xy                   |                     |
 | [mckinstry.cotton.uniformity](mckinstry.cotton.uniformity.md)           | 24 x 20          | xy                   |                     |

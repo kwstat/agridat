@@ -60,6 +60,8 @@ None.
 ## Examples
 
 ``` r
+if (FALSE) { # \dontrun{
+
 library(agridat)
 data(mckinstry.cotton.uniformity)
 dat <- mckinstry.cotton.uniformity
@@ -68,4 +70,5 @@ libs(desplot)
 desplot(dat, yield ~ col*row,
         flip=TRUE, tick=TRUE, aspect=(20*25)/(24*3.5),
         main="mckinstry.cotton.uniformity")
+} # }
 ```

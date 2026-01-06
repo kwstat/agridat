@@ -92,7 +92,8 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+<span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://kwstat.github.io/agridat/" class="external-link">agridat</a></span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">engelstad.nitro</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="va">engelstad.nitro</span></span></span>
@@ -100,7 +101,6 @@
 <span class="r-in"><span><span class="fu"><a href="libs.html">libs</a></span><span class="op">(</span><span class="va">latticeExtra</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">useOuterStrips</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/lattice/man/xyplot.html" class="external-link">xyplot</a></span><span class="op">(</span><span class="va">yield</span> <span class="op">~</span> <span class="va">nitro</span> <span class="op">|</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html" class="external-link">factor</a></span><span class="op">(</span><span class="va">year</span><span class="op">)</span><span class="op">*</span><span class="va">loc</span>, <span class="va">dat</span>,</span></span>
 <span class="r-in"><span>                      main<span class="op">=</span><span class="st">"engelstad.nitro"</span><span class="op">)</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="engelstad.nitro-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Fit a quadratic plateau model to one year/loc</span></span></span>
 <span class="r-in"><span><span class="va">j62</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/droplevels.html" class="external-link">droplevels</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/subset.html" class="external-link">subset</a></span><span class="op">(</span><span class="va">dat</span>, <span class="va">loc</span><span class="op">==</span><span class="st">"Jackson"</span> <span class="op">&amp;</span> <span class="va">year</span><span class="op">==</span><span class="fl">1962</span><span class="op">)</span><span class="op">)</span></span></span>
@@ -116,19 +116,14 @@
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">yield</span> <span class="op">~</span> <span class="va">nitro</span>, <span class="va">j62</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span><span class="va">p1</span> <span class="op">~</span> <span class="va">newdat</span><span class="op">$</span><span class="va">nitro</span>, col<span class="op">=</span><span class="st">"blue"</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/graphics/title.html" class="external-link">title</a></span><span class="op">(</span><span class="st">"engelstad.nitro: quadratic plateau at Jackson 1962"</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="engelstad.nitro-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Optimum nitro level ignoring prices = 225</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/coef.html" class="external-link">coef</a></span><span class="op">(</span><span class="va">m1</span><span class="op">)</span><span class="op">[</span><span class="st">'M'</span><span class="op">]</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        M </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 225.3404 </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Optimum nitro level using $0.11 for N cost, $1.15 for grain price = 140</span></span></span>
 <span class="r-in"><span><span class="co"># Set the first derivative equal to N/corn price, k(M-nitro)=.11/1.15</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/stats/coef.html" class="external-link">coef</a></span><span class="op">(</span><span class="va">m1</span><span class="op">)</span><span class="op">[</span><span class="st">'M'</span><span class="op">]</span><span class="op">-</span><span class="op">(</span><span class="fl">.11</span><span class="op">/</span><span class="fl">1.15</span><span class="op">)</span><span class="op">/</span><span class="fu"><a href="https://rdrr.io/r/stats/coef.html" class="external-link">coef</a></span><span class="op">(</span><span class="va">m1</span><span class="op">)</span><span class="op">[</span><span class="st">'k'</span><span class="op">]</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>        M </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> 140.7837 </span>
-<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

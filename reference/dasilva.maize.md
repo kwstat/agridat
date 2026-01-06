@@ -66,6 +66,8 @@ trials with different levels of unbalancing. Genet. Mol. Res. 14.
 ## Examples
 
 ``` r
+if (FALSE) { # \dontrun{
+
 library(agridat)
 data(dasilva.maize)
 dat <- dasilva.maize
@@ -97,4 +99,6 @@ dat <- dasilva.maize
 ## env:rep    18   57.5    3.19   2.7390 0.0001274 ***
 ## env:gen   432  938.1    2.17   1.8622 1.825e-15 ***
 ## Residuals 972 1133.5    1.17                       
+
+} # }
 ```

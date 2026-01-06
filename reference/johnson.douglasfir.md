@@ -51,6 +51,8 @@ None
 ## Examples
 
 ``` r
+if (FALSE) { # \dontrun{
+
 library(agridat)
 data(johnson.douglasfir)
 dat <- johnson.douglasfir
@@ -58,12 +60,10 @@ dat <- johnson.douglasfir
 # Average volume per acre. Johnson & Hixon give 91000.
 # Transcription may have some errors...the pdf was blurry.
 mean(dat$volume) * 400
-#> [1] 91124.25
 # 91124 
 
 libs(lattice)
 levelplot(volume ~ col*row, dat, main="johnson.douglasfir", aspect=1)
-
 histogram( ~ volume, data=dat, main="johnson.douglasfir")
-
+} # }
 ```

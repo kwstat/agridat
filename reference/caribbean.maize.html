@@ -116,7 +116,9 @@
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://kwstat.github.io/agridat/" class="external-link">agridat</a></span><span class="op">)</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
+<span class="r-in"><span></span></span>
+<span class="r-in"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://kwstat.github.io/agridat/" class="external-link">agridat</a></span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/data.html" class="external-link">data</a></span><span class="op">(</span><span class="va">caribbean.maize</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="va">caribbean.maize</span></span></span>
 <span class="r-in"><span></span></span>
@@ -124,18 +126,16 @@
 <span class="r-in"><span><span class="fu"><a href="libs.html">libs</a></span><span class="op">(</span><span class="va">lattice</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/pkg/lattice/man/xyplot.html" class="external-link">xyplot</a></span><span class="op">(</span><span class="va">yield</span><span class="op">~</span><span class="va">ears</span><span class="op">|</span><span class="va">site</span>, <span class="va">dat</span>, ylim<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">10</span><span class="op">)</span>, subset<span class="op">=</span><span class="va">isle</span><span class="op">==</span><span class="st">"Antigua"</span>,</span></span>
 <span class="r-in"><span>       main<span class="op">=</span><span class="st">"caribbean.maize - Antiqua"</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="caribbean.maize-1.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Some locs show large response to nitrogen (as expected), e.g. UISV, OOSV</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/pkg/lattice/man/xyplot.html" class="external-link">dotplot</a></span><span class="op">(</span><span class="va">trt</span><span class="op">~</span><span class="va">yield</span><span class="op">|</span><span class="va">site</span>, data<span class="op">=</span><span class="va">dat</span>, main<span class="op">=</span><span class="st">"caribbean.maize treatment response"</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="caribbean.maize-2.png" alt="" width="700" height="433"></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Show the strong N*site interaction with little benefit on Antiqua, but</span></span></span>
 <span class="r-in"><span><span class="co"># a strong response on St.Vincent.</span></span></span>
 <span class="r-in"><span><span class="va">dat</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/transform.html" class="external-link">transform</a></span><span class="op">(</span><span class="va">dat</span>, env<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/paste.html" class="external-link">paste</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/substr.html" class="external-link">substring</a></span><span class="op">(</span><span class="va">isle</span>,<span class="fl">1</span>,<span class="fl">1</span><span class="op">)</span>,<span class="va">site</span>,sep<span class="op">=</span><span class="st">"-"</span><span class="op">)</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/pkg/lattice/man/xyplot.html" class="external-link">bwplot</a></span><span class="op">(</span><span class="va">yield</span><span class="op">~</span><span class="va">N</span><span class="op">|</span><span class="va">env</span>, <span class="va">dat</span>,</span></span>
 <span class="r-in"><span>       main<span class="op">=</span><span class="st">"caribbean.maize"</span>, xlab<span class="op">=</span><span class="st">"nitrogen"</span><span class="op">)</span></span></span>
-<span class="r-plt img"><img src="caribbean.maize-3.png" alt="" width="700" height="433"></span>
+<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

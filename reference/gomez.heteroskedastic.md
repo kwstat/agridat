@@ -47,6 +47,8 @@ None.
 ## Examples
 
 ``` r
+if (FALSE) { # \dontrun{
+
 library(agridat)
 data(gomez.heteroskedastic)
 dat <- gomez.heteroskedastic
@@ -58,22 +60,13 @@ libs(lattice)
 bwplot(gen ~ yield, dat, group=as.numeric(dat$group),
        ylab="genotype", main="gomez.heterogeneous")
 
-
 # Match Gomez table 7.28
 m1 <- lm(yield ~ rep + gen, data=dat)
 anova(m1)
-#> Analysis of Variance Table
-#> 
-#> Response: yield
-#>           Df Sum Sq Mean Sq F value    Pr(>F)    
-#> rep        2  3.306 1.65304  5.6164  0.005528 ** 
-#> gen       34 40.020 1.17705  3.9992 5.806e-07 ***
-#> Residuals 68 20.014 0.29432                      
-#> ---
-#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
 ## Response: yield
 ##           Df Sum Sq Mean Sq F value    Pr(>F)
 ## rep        2  3.306 1.65304  5.6164  0.005528 **
 ## gen       34 40.020 1.17705  3.9992 5.806e-07 ***
 ## Residuals 68 20.014 0.29432
+} # }
 ```

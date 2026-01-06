@@ -479,6 +479,8 @@
   Uniformity trial of cotton in South Africa
 - [`magistad.pineapple.uniformity`](magistad.pineapple.uniformity.md) :
   Uniformity trial of pineapple
+- [`mamani.bean.uniformity`](mamani.bean.uniformity.md) : Uniformity
+  trial of bean
 - [`masood.rice.uniformity`](masood.rice.uniformity.md) : Uniformity
   trial of rice
 - [`mcclelland.corn.uniformity`](mcclelland.corn.uniformity.md) :

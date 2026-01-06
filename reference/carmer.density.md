@@ -37,6 +37,8 @@ Optimum Plant Density and Maximum Corn Yield. *Agronomy Journal*, 57,
 ## Examples
 
 ``` r
+if (FALSE) { # \dontrun{
+
 library(agridat)
 data(carmer.density)
 dat <- carmer.density
@@ -59,26 +61,9 @@ for(i in levels(dat$gen)){
   pi <- cbind(gen=i, newdat, pred= predict(mi, newdat=newdat))
   preds <- rbind(preds, pi)
 }
-#> [1] "Hy2x0h7"
-#> [1] "WF9xC103"
-#> [1] "R61x187-2"
-#> [1] "WF9x38-11"
-#> [1] "WF9xB14"
-#> [1] "C103xB14"
-#> [1] "0h43xB37"
-#> [1] "WF9xH60"
 # Optimum plant density is -1/log(k)
 out$pop.opt <- -1/log(out$k)
 round(out, 3)
-#>               a     k pop.opt
-#> Hy2x0h7   0.782 0.865   6.875
-#> WF9xC103  1.039 0.825   5.192
-#> R61x187-2 0.998 0.798   4.441
-#> WF9x38-11 1.042 0.825   5.203
-#> WF9xB14   1.067 0.806   4.647
-#> C103xB14  0.813 0.860   6.653
-#> 0h43xB37  0.673 0.862   6.740
-#> WF9xH60   0.858 0.854   6.358
 ##               a     k pop.opt
 ## Hy2x0h7   0.782 0.865   6.875
 ## WF9xC103  1.039 0.825   5.192
@@ -112,4 +97,5 @@ xyplot(yield~pop|gen, dat, pch=16, as.table=TRUE,
   xyplot(predf~pop|gen, pdat, type='l', as.table=TRUE, col="red") +
   xyplot(pred~pop|gen, pdat, type='l', col="darkgreen", lwd=2)
 
+} # }
 ```

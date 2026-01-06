@@ -49,6 +49,8 @@ R. A. Fisher. *Statistical Methods for Research Workers*.
 ## Examples
 
 ``` r
+if (FALSE) { # \dontrun{
+
 library(agridat)
 
 data(fisher.latin)
@@ -57,14 +59,5 @@ dat <- fisher.latin
 # Standard latin-square analysis
 m1 <- lm(yield ~ trt + factor(row) + factor(col), data=dat)
 anova(m1)
-#> Analysis of Variance Table
-#> 
-#> Response: yield
-#>             Df Sum Sq Mean Sq F value   Pr(>F)   
-#> trt          4  330.2   82.56  0.5647 0.692978   
-#> factor(row)  4 4240.2 1060.06  7.2511 0.003294 **
-#> factor(col)  4  701.8  175.46  1.2002 0.360412   
-#> Residuals   12 1754.3  146.19                    
-#> ---
-#> Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+} # }
 ```
