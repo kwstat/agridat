@@ -6,6 +6,7 @@
 * clewer.wheat (via P.Schmidt)
 * desousa.potato
 * garber.frames.uniformity
+* mamani.bean.uniformity
 * metzger.multi.uniformity
 * macdonald.cotton.uniformity
 * morgan.multi.uniformity
