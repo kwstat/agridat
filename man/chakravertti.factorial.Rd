@@ -70,10 +70,11 @@
   dat <- chakravertti.factorial
   
   # Simple means for each factor. Same as Chakravertti Table 3
-  group_by(dat, gen) %>% summarize(mn=mean(yield))
-  group_by(dat, date) %>% summarize(mn=mean(yield))
-  group_by(dat, spacing) %>% summarize(mn=mean(yield))
-  group_by(dat, seeds) %>% summarize(mn=mean(yield))
+  # libs(dplyr)
+  # group_by(dat, gen) %>% summarize(mn=mean(yield))
+  # group_by(dat, date) %>% summarize(mn=mean(yield))
+  # group_by(dat, spacing) %>% summarize(mn=mean(yield))
+  # group_by(dat, seeds) %>% summarize(mn=mean(yield))
 
   libs(HH)
   interaction2wt(yield ~ gen + date + spacing + seeds, data=dat, main="chakravertti.factorial")
@@ -83,7 +84,7 @@
   # block:date is error term for date
   # block:date:gen is error term for gen and date:gen
   # Residual is error term for all other tests (not needed inside Error())
-  dat <- transform(dat,spacing=factor(spacing))
+  dat <- transform(dat, spacing=factor(spacing))
   m2 <- aov(yield ~ block + date + 
               gen + date:gen + 
               spacing + seeds +

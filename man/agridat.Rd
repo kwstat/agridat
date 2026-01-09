@@ -26,8 +26,10 @@
 \tabular{llll}{
 name                                      \tab dimensions \tab other \tab model \cr
 \link{ansari.wheat.uniformity}            \tab 96 x 8 \tab xy \tab \cr
+\link{andres.rice.uniformity}             \tab 33 x 30 \tab xy \tab \cr
 \link{bailey.cotton.uniformity}           \tab 8 x 20 \tab xy, 5 envts \tab \cr
 \link{baker.barley.uniformity}            \tab 3 x 19 \tab xy, 10 years \tab \cr
+\link{barrantesaguilar.sugarcane.uniformity} \tab 40 x 40 \tab xy \tab \cr
 \link{baker.strawberry.uniformity}        \tab 10 x 50 \tab xy \tab \cr
 \link{baker.wheat.uniformity}             \tab 12 x 12 \tab xy \tab \cr
 \link{bancroft.peanut.uniformity}         \tab 6 x 18 \tab xy, 2 blocks \tab \cr

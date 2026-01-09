@@ -2,17 +2,19 @@
 
 ## New datasets
 
+* andres.rice.uniformity
+* barrantesaguilar.sugarcane.uniformity
 * borden.sugarcane.uniformity
 * clewer.wheat (via P.Schmidt)
 * desousa.potato
 * garber.frames.uniformity
+* macdonald.cotton.uniformity
 * mamani.bean.uniformity
 * metzger.multi.uniformity
-* macdonald.cotton.uniformity
 * morgan.multi.uniformity
 * petersen.wheat (via P.Schmidt)
 
-## Other note
+## Other notes
 
 * Fix typo (#19)
 * sawyer.multi.uniformity has been reshaped to tall format.

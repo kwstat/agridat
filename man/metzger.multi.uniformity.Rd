@@ -87,11 +87,11 @@
 }
 \examples{
 \dontrun{
-library(agridat)
-data(metzger.multi.uniformity)
-dat <- metzger.multi.uniformity
+  library(agridat)
+  data(metzger.multi.uniformity)
+  dat <- metzger.multi.uniformity
 
-libs(lattice)
+library(lattice)
 # qq plot for each crop
 qqmath( ~ yield | crop, data=dat,
         main="metzger.multi.uniformity - QQ plot",
@@ -99,23 +99,21 @@ qqmath( ~ yield | crop, data=dat,
         scales=list(x=list(relation="free"), y=list(relation="free")) )
 
 # Convert yield values to percent of mean within each crop
-dat <- dat %>%
-  group_by(crop) %>%
-  mutate(pom = yield / mean(yield) * 100) %>%
-  ungroup()
+library(dplyr)
+dat2 <- group_by(dat, crop)
+dat2 <- mutate(dat2, pom = yield / mean(yield) * 100)
+dat2 <- ungroup(dat2)
 
 libs(desplot)
-desplot(dat, pom ~ col*row | crop,
+desplot(dat2, pom ~ col*row | crop,
         flip=TRUE, aspect=(12*66)/(3*33),
         main="metzger.multi.uniformity - percent of mean within crop")
 
 # reshape to wide format for splom
-libs(tidyr)
-dat_wide <- select(dat, row, col, crop, yield)
+library(tidyr)
+dat_wide <- select(dat2, row, col, crop, yield)
 dat_wide <- pivot_wider(dat_wide, names_from = crop, values_from = yield)
 splom(dat_wide[ , 3:15], main="metzger.multi.uniformity - scatterplot matrix")
-splom(dat[, 2:14])
-dat %<>% as.matrix %>% `colnames<-`(1:ncol(dat)) %>% melt %>% rename(row=Var1,col=Var2,yield=value)
 
 }
 }
