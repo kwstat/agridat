@@ -97,7 +97,7 @@ if (FALSE) { # \dontrun{
   data(cochran.eelworms)
   dat <- cochran.eelworms
 
-  libs(lattice)
+  library(lattice)
   splom(dat[ , 5:10],
         group=dat$fumigant, auto.key=TRUE,
         main="cochran.eelworms")

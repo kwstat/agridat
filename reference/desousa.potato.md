@@ -89,7 +89,7 @@ None
 if (FALSE) { # \dontrun{
   library(agridat)
   data(desousa.potato)
-  dat <- agridat::desousa.potato
+  dat <- desousa.potato
 
   # Convert each trial result to vector of ranks
   libs(gosset)

@@ -15,6 +15,8 @@
   cereal with lodging data
 - [`alwan.lamb`](alwan.lamb.md) : For the 34 sheep sires, the number of
   lambs in each of 5 foot shape classes.
+- [`andres.rice.uniformity`](andres.rice.uniformity.md) : A uniformity
+  trial of rice
 - [`ansari.wheat.uniformity`](ansari.wheat.uniformity.md) : Uniformity
   trial of wheat
 - [`archbold.apple`](archbold.apple.md) : Split-split plot experiment of
@@ -35,6 +37,8 @@
   trial of wheat
 - [`bancroft.peanut.uniformity`](bancroft.peanut.uniformity.md) :
   Uniformity trial of peanuts
+- [`barrantesaguilar.sugarcane.uniformity`](barrantesaguilar.sugarcane.uniformity.md)
+  : Uniformity trial of sugarcane in Costa Rica
 - [`barrero.maize`](barrero.maize.md) : Multi-environment trial of maize
   in Texas.
 - [`batchelor.apple.uniformity`](batchelor.uniformity.md)

@@ -92,10 +92,11 @@ if (FALSE) { # \dontrun{
   dat <- chakravertti.factorial
   
   # Simple means for each factor. Same as Chakravertti Table 3
-  group_by(dat, gen) 
-  group_by(dat, date) 
-  group_by(dat, spacing) 
-  group_by(dat, seeds) 
+  # libs(dplyr)
+  # group_by(dat, gen) 
+  # group_by(dat, date) 
+  # group_by(dat, spacing) 
+  # group_by(dat, seeds) 
 
   libs(HH)
   interaction2wt(yield ~ gen + date + spacing + seeds, data=dat, main="chakravertti.factorial")
@@ -105,7 +106,7 @@ if (FALSE) { # \dontrun{
   # block:date is error term for date
   # block:date:gen is error term for gen and date:gen
   # Residual is error term for all other tests (not needed inside Error())
-  dat <- transform(dat,spacing=factor(spacing))
+  dat <- transform(dat, spacing=factor(spacing))
   m2 <- aov(yield ~ block + date + 
               gen + date:gen + 
               spacing + seeds +

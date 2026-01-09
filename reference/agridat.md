@@ -15,141 +15,143 @@ row-column design, ts = time series,
 
 **Uniformity trials with a single genotype**
 
-|                                                                         |                  |                      |                     |
-|-------------------------------------------------------------------------|------------------|----------------------|---------------------|
-| name                                                                    | dimensions       | other                | model               |
-| [ansari.wheat.uniformity](ansari.wheat.uniformity.md)                   | 96 x 8           | xy                   |                     |
-| [bailey.cotton.uniformity](bailey.cotton.uniformity.md)                 | 8 x 20           | xy, 5 envts          |                     |
-| [baker.barley.uniformity](baker.barley.uniformity.md)                   | 3 x 19           | xy, 10 years         |                     |
-| [baker.strawberry.uniformity](baker.strawberry.uniformity.md)           | 10 x 50          | xy                   |                     |
-| [baker.wheat.uniformity](baker.wheat.uniformity.md)                     | 12 x 12          | xy                   |                     |
-| [bancroft.peanut.uniformity](bancroft.peanut.uniformity.md)             | 6 x 18           | xy, 2 blocks         |                     |
-| [batchelor.apple.uniformity](batchelor.uniformity.md)                   | 8 x 28           | xy                   |                     |
-| [batchelor.lemon.uniformity](batchelor.uniformity.md)                   | 14 x 16          | xy                   |                     |
-| [batchelor.navel1.uniformity](batchelor.uniformity.md)                  | 20 x 50          | xy                   |                     |
-| [batchelor.navel2.uniformity](batchelor.uniformity.md)                  | 15 x 33          | xy                   |                     |
-| [batchelor.valencia.uniformity](batchelor.uniformity.md)                | 12 x 20          | xy                   |                     |
-| [batchelor.walnut.uniformity](batchelor.uniformity.md)                  | 10 x 28          | xy                   |                     |
-| [beckett.maize.uniformity](beckett.maize.uniformity.md)                 | 6 x 19           | xy                   |                     |
-| [bose.multi.uniformity](bose.multi.uniformity.md)                       | 15 x 26          | xy, 3 years          |                     |
-| [borden.sugarcane.uniformity](borden.sugarcane.uniformity.md)           | 4 x 12           | xy                   |                     |
-| [bradley.multi.uniformity](bradley.multi.uniformity.md)                 | 10 x 11          | xy                   |                     |
-| [bryan.corn.uniformity](bryan.corn.uniformity.md)                       | 6 x 48           | xy                   |                     |
-| [christidis.cotton.uniformity](christidis.cotton.uniformity.md)         | 16 x 16          | xy, 4 blocks         |                     |
-| [christidis.wheat.uniformity](christidis.wheat.uniformity.md)           | 12 x 24          | xy                   |                     |
-| [coombs.rice.uniformity](coombs.rice.uniformity.md)                     | 3 x 18           | xy                   |                     |
-| [dasilva.soybean.uniformity](dasilva.soybean.uniformity.md)             | 24 x 48          | xy                   |                     |
-| [davies.pasture.uniformity](davies.pasture.uniformity.md)               | 19 x 40          | xy                   |                     |
-| [day.wheat.uniformity](day.wheat.uniformity.md)                         | 31 x 100         | xy                   |                     |
-| [draper.safflower.uniformity](draper.safflower.uniformity.md)           | 18 x 16          | xy, 2 expt           | smith               |
-| [ducker.groundnut.uniformity](ducker.groundnut.uniformity.md)           | 44 x 5           | xy                   |                     |
-| [eden.tea.uniformity](eden.tea.uniformity.md)                           | 12 x 12          | xy                   |                     |
-| [evans.sugarcane.uniformity](evans.sugarcane.uniformity.md)             | 142 x 5          | xy                   |                     |
-| [forster.wheat.uniformity](forster.wheat.uniformity.md)                 | 10 x 16          | xy                   |                     |
-| [garber.frames.uniformity](garber.frames.uniformity.md)                 | 30 x 1           | xy, 2 crops          |                     |
-| [garber.multi.uniformity](garber.multi.uniformity.md)                   | 6 x 45           | xy, 5 years/crops    |                     |
-| [gomez.rice.uniformity](gomez.rice.uniformity.md)                       | 18 x 36          | xy                   | aov,smith           |
-| [gorski.oats.uniformity](gorski.oats.uniformity.md)                     | 10 x 20, 15 x 20 | xy                   |                     |
-| [goulden.barley.uniformity](goulden.barley.uniformity.md)               | 48 x 48          | xy                   |                     |
-| [hansen.multi.uniformity](hansen.multi.uniformity.md)                   | 6 x 5, 16 x 8    | xy, 4-5 yr           | splom               |
-| [haritonenko.sugarbeet.uniformity](haritonenko.sugarbeet.uniformity.md) | 4 x 104          | xy                   |                     |
-| [harris.multi.uniformity](harris.multi.uniformity.md)                   | 2 x 23           | xy, 23 crops         | corrgram            |
-| [hartman.tomato.uniformity](hartman.tomato.uniformity.md)               | 12 x 32          | xy                   |                     |
-| [heath.cabbage.uniformity](heath.cabbage.uniformity.md)                 | 6 x 8            | xy                   |                     |
-| [heath.radish.uniformity](heath.raddish.uniformity.md)                  | 10 x 10          | xy                   |                     |
-| [holtsmark.timothy.uniformity](holtsmark.timothy.uniformity.md)         | 6 x 40           | xy                   |                     |
-| [hutchinson.cotton.uniformity](hutchinson.cotton.uniformity.md)         | 36 x 42          | xy                   |                     |
-| [igue.sugarcane.uniformity](igue.sugarcane.uniformity.md)               | 36 x 42          | xy                   |                     |
-| [immer.sugarbeet.uniformity](immer.sugarbeet.uniformity.md)             | 10 x 60          | xy, 3 traits, 2 yr   |                     |
-| [iyer.wheat.uniformity](iyer.wheat.uniformity.md)                       | 25 x 80          | xy                   |                     |
-| [jegorow.oats.uniformity](jegorow.oats.uniformity.md)                   | 8 x 30           | xy                   |                     |
-| [jones.corn.uniformity](jones.corn.uniformity.md)                       | 12 x 12          | xy                   |                     |
-| [jurowski.wheat.uniformity](jurowski.wheat.uniformity.md)               | 4 x 40           | xy                   |                     |
-| [kadam.millet.uniformity](kadam.millet.uniformity.md)                   | 8 x 20           | xy, 2 expts          |                     |
-| [kalamkar.potato.uniformity](kalamkar.potato.uniformity.md)             | 6 x 96           | xy                   |                     |
-| [kalamkar.wheat.uniformity](kalamkar.wheat.uniformity.md)               | 16 x 80          | xy, 2 traits         |                     |
-| [kempton.barley.uniformity](kempton.barley.uniformity.md)               | 7 x 28           | xy                   |                     |
-| [kerr.sugarcane.uniformity](kerr.sugarcane.uniformity.md)               | 12 x 12          | xy                   | , 4 fields          |
-| [khan.brassica.uniformity](khan.brassica.uniformity.md)                 | 18 x 18          | xy, 2 fields         |                     |
-| [khin.rice.uniformity](khin.rice.uniformity.md)                         | 30 x 36          | xy                   |                     |
-| [kirk.potato.uniformity](kirk.potato.uniformity.md)                     | 6 x 6            | xy                   |                     |
-| [kiesselbach.oats.uniformity](kiesselbach.oats.uniformity.md)           | 3 x 69           | xy                   |                     |
-| [kotowski.potato.uniformity](kotowski.potato.uniformity.md)             | 12 x 4, 26 x 4   | xy                   |                     |
-| [kristensen.barley.uniformity](kristensen.barley.uniformity.md)         | 22 x 11          | xy                   |                     |
-| [kulkarni.sorghum.uniformity](kulkarni.sorghum.uniformity.md)           | 4 x 40           | xy, 3 years          |                     |
-| [lander.multi.uniformity](lander.multi.uniformity.md)                   | 5 x 39           | xy, 4 years          |                     |
-| [larsen.timothy.uniformity](larsen.timothy.uniformity.md)               | 12 x 80          | xy                   |                     |
-| [laycock.tea.uniformity](laycock.tea.uniformity.md)                     | 6 x 9            | xy, 2 locations      |                     |
-| [lehmann.millet.uniformity](lehmann.millet.uniformity.md)               | 6 x 22           | xy, 3 years          |                     |
-| [lehmann.rice.uniformity](lehmann.rice.uniformity.md)                   | 2 x 17           | xy, 4 years          |                     |
-| [lessman.sorghum.uniformity](lessman.sorghum.uniformity.md)             | 46 x 60          | xy                   |                     |
-| [li.millet.uniformity](li.millet.uniformity.md)                         | 6 x 100          | xy                   |                     |
-| [loesell.bean.uniformity](loesell.bean.uniformity.md)                   | 21 x 90          | xy                   |                     |
-| [lord.rice.uniformity](lord.rice.uniformity.md)                         | 5 x 14           | xy, 8 fields         |                     |
-| [love.cotton.uniformity](love.cotton.uniformity.md)                     | 16 x 10          | xy                   |                     |
-| [love.sugarcane.uniformity](love.sugarcane.uniformity.md)               | 20 x 20          | xy                   |                     |
-| [lyon.potato.uniformity](lyon.potato.uniformity.md)                     | 34 x 6           | xy                   |                     |
-| [macdonald.cotton.uniformity](macdonald.cotton.uniformity.md)           | 4 x 144          | xy                   |                     |
-| [magistad.pineapple.uniformity](magistad.pineapple.uniformity.md)       | 5 x 5            | xy                   |                     |
-| [mamani.bean.uniformity](mamani.bean.uniformity.md)                     | 84 x 20          | xy                   |                     |
-| [masood.rice.uniformity](masood.rice.uniformity.md)                     | 12 x 24          | xy                   |                     |
-| [mcclelland.corn.uniformity](mcclelland.corn.uniformity.md)             | 2 x 44           | xy                   |                     |
-| [mckinstry.cotton.uniformity](mckinstry.cotton.uniformity.md)           | 24 x 20          | xy                   |                     |
-| [mercer.mangold.uniformity](mercer.mangold.uniformity.md)               | 10 x 20          | xy                   |                     |
-| [metzger.multi.uniformity](metzger.multi.uniformity.md)                 | 3 x 12           | xy, 9 years          |                     |
-| [mercer.wheat.uniformity](mercer.wheat.uniformity.md)                   | 25 x 20          | xy, 2 traits         | spplot              |
-| [montgomery.wheat.uniformity](montgomery.wheat.uniformity.md)           | 14 x 16          | xy, 2 years          | lm                  |
-| [moore.polebean.uniformity](moore.uniformity.md)                        | 12 x 12          | xy                   |                     |
-| [moore.bushbean.uniformity](moore.uniformity.md)                        | 24 x 24          | xy                   |                     |
-| [moore.sweetcorn.uniformity](moore.uniformity.md)                       | 24 x 12          | xy                   |                     |
-| [moore.carrot.uniformity](moore.uniformity.md)                          | 24 x 12          | xy                   |                     |
-| [moore.springcauliflower.uniformity](moore.uniformity.md)               | 12 x 20          | xy                   |                     |
-| [moore.fallcauliflower.uniformity](moore.uniformity.md)                 | 12 x 20          | xy                   |                     |
-| [nagai.strawberry.uniformity](nagai.strawberry.uniformity.md)           | 18 x 24          | xy                   |                     |
-| [morgan.multi.uniformity](morgan.multi.uniformity.md)                   | 1 x 63           | xy                   | 2 crops             |
-| [nair.turmeric.uniformity](nair.turmeric.uniformity.md)                 | 72 x 12          | xy                   |                     |
-| [narain.sorghum.uniformity](narain.sorghum.uniformity.md)               | 10 x 16          | xy                   |                     |
-| [nonnecke.peas.uniformity](nonnecke.peas.uniformity.md)                 | 15 x 18          | xy, 2 traits         |                     |
-| [nonnecke.sweetcorn.uniformity](nonnecke.sweetcorn.uniformity.md)       | 32 x 18          | xy, 3 loc            |                     |
-| [obsi.potato.uniformity](obsi.potato.uniformity.md)                     | 63 x 26, 49 x 19 | xy                   |                     |
-| [odland.soybean.uniformity](odland.soybean.uniformity.md)               | 25 x 42          | xy                   |                     |
-| [odland.soyhay.uniformity](odland.soybean.uniformity.md)                | 28 x 55          | xy                   |                     |
-| [oliveira.lupin.uniformity](oliveira.lupin.uniformity.md)               | 10 x 40          | xy                   |                     |
-| [oliveira.potato.uniformity](oliveira.potato.uniformity.md)             | 5 x 40           | xy                   |                     |
-| [paez.coffee.uniformity](paez.coffee.uniformity.md)                     | 32 x 36          | xy, 5 yr             |                     |
-| [panse.cotton.uniformity](panse.cotton.uniformity.md)                   | 32 x 40          | xy                   |                     |
-| [parker.orange.uniformity](parker.orange.uniformity.md)                 | 10 x 27          | xy, 6 yr             |                     |
-| [piepho.barley.uniformity](piepho.barley.uniformity.md)                 | 30 x 36          | xy                   |                     |
-| [polson.safflower.uniformity](polson.safflower.uniformity.md)           | 52 x 33          | xy                   | smith               |
-| [rau.coffee.uniformity](rau.coffee.uniformity.md)                       | 12 x 12          | xy                   |                     |
-| [robinson.peanut.uniformity](robinson.peanut.uniformity.md)             | 16 x 36          | xy                   |                     |
-| [robinson.peanut.uniformity](robinson.peanut.uniformity.md)             | 16 x 36          | xy                   |                     |
-| [roemer.sugarbeet.uniformity](roemer.sugarbeet.uniformity.md)           | 2 x 48           | xy                   |                     |
-| [saunders.maize.uniformity](saunders.maize.uniformity.md)               | 5 x 300          | xy, 2 year           |                     |
-| [sawyer.multi.uniformity](sawyer.multi.uniformity.md)                   | 8 x 6            | xy, 3 year           |                     |
-| [sayer.sugarcane.uniformity](sayer.sugarcane.uniformity.md)             | 8 x 136, 8 x 121 | xy, 2 year           |                     |
-| [shafi.tomato.uniformity](shafi.tomato.uniformity.md)                   | 10 x 20          | xy                   |                     |
-| [siao.cotton.uniformity](siao.cotton.uniformity.md)                     | 12 x 22          | xy                   |                     |
-| [smith.beans.uniformity](smith.beans.uniformity.md)                     | 18 x 12, 16 x 15 | xy, 2 yr, 2 crops    |                     |
-| [smith.corn.uniformity](smith.corn.uniformity.md)                       | 6 x 20           | xy, 3 years          | rgl                 |
-| [smith.wheat.uniformity](smith.wheat.uniformity.md)                     | 36 x 30          | xy, 2 traits         |                     |
-| [stephens.sorghum.uniformity](stephens.sorghum.uniformity.md)           | 100 x 20         | xy                   |                     |
-| [stickler.sorghum.uniformity](stickler.sorghum.uniformity.md)           | 20 x 20          | xy, 4 expts, 2 years |                     |
-| [strickland.apple.uniformity](strickland.apple.uniformity.md)           | 11 x 18          | xy                   |                     |
-| [strickland.grape.uniformity](strickland.grape.uniformity.md)           | 5 x 31           | xy                   |                     |
-| [strickland.peach.uniformity](strickland.peach.uniformity.md)           | 8 x 18           | xy                   |                     |
-| [strickland.tomato.uniformity](strickland.tomato.uniformity.md)         | 30 x 6           | xy                   |                     |
-| [summerby.multi.uniformity](summerby.multi.uniformity.md)               | 35 x 5           | xy                   | 5 years             |
-| [trought.cotton.uniformity](trought.cotton.uniformity.md)               | 8 x 24           | xy                   |                     |
-| [tulaikow.wheat.uniformity](tulaikow.wheat.uniformity.md)               | 24 x 10, 15 x 16 | xy                   | 5 years             |
-| [vishnaadevi.rice.uniformity](vishnaadevi.rice.uniformity.md)           | 12 x 24          | xy                   |                     |
-| [wassom.brome.uniformity](wassom.brome.uniformity.md)                   | 36 x 36          | xy, 3 expts          |                     |
-| [wehner.cucumber.uniformity](wehner.cucumber.uniformity.md)             | 6 x 25           | xy                   |                     |
-| [wiebe.wheat.uniformity](wiebe.wheat.uniformity.md)                     | 12 x 125         | xy                   | medianpolish, loess |
-| [wiedemann.safflower.uniformity](wiedemann.safflower.uniformity.md)     | 54 x 33          | xy                   | smith               |
-| [williams.barley.uniformity](williams.barley.uniformity.md)             | 48 x 15          | xy                   | loess               |
-| [williams.cotton.uniformity](williams.cotton.uniformity.md)             | 24 x 12          | xy                   | loess               |
-| [wyatt.multi.uniformity](wyatt.multi.uniformity.md)                     | 43 x 3           | xy                   |                     |
+|                                                                                   |                  |                      |                     |
+|-----------------------------------------------------------------------------------|------------------|----------------------|---------------------|
+| name                                                                              | dimensions       | other                | model               |
+| [ansari.wheat.uniformity](ansari.wheat.uniformity.md)                             | 96 x 8           | xy                   |                     |
+| [andres.rice.uniformity](andres.rice.uniformity.md)                               | 33 x 30          | xy                   |                     |
+| [bailey.cotton.uniformity](bailey.cotton.uniformity.md)                           | 8 x 20           | xy, 5 envts          |                     |
+| [baker.barley.uniformity](baker.barley.uniformity.md)                             | 3 x 19           | xy, 10 years         |                     |
+| [barrantesaguilar.sugarcane.uniformity](barrantesaguilar.sugarcane.uniformity.md) | 40 x 40          | xy                   |                     |
+| [baker.strawberry.uniformity](baker.strawberry.uniformity.md)                     | 10 x 50          | xy                   |                     |
+| [baker.wheat.uniformity](baker.wheat.uniformity.md)                               | 12 x 12          | xy                   |                     |
+| [bancroft.peanut.uniformity](bancroft.peanut.uniformity.md)                       | 6 x 18           | xy, 2 blocks         |                     |
+| [batchelor.apple.uniformity](batchelor.uniformity.md)                             | 8 x 28           | xy                   |                     |
+| [batchelor.lemon.uniformity](batchelor.uniformity.md)                             | 14 x 16          | xy                   |                     |
+| [batchelor.navel1.uniformity](batchelor.uniformity.md)                            | 20 x 50          | xy                   |                     |
+| [batchelor.navel2.uniformity](batchelor.uniformity.md)                            | 15 x 33          | xy                   |                     |
+| [batchelor.valencia.uniformity](batchelor.uniformity.md)                          | 12 x 20          | xy                   |                     |
+| [batchelor.walnut.uniformity](batchelor.uniformity.md)                            | 10 x 28          | xy                   |                     |
+| [beckett.maize.uniformity](beckett.maize.uniformity.md)                           | 6 x 19           | xy                   |                     |
+| [bose.multi.uniformity](bose.multi.uniformity.md)                                 | 15 x 26          | xy, 3 years          |                     |
+| [borden.sugarcane.uniformity](borden.sugarcane.uniformity.md)                     | 4 x 12           | xy                   |                     |
+| [bradley.multi.uniformity](bradley.multi.uniformity.md)                           | 10 x 11          | xy                   |                     |
+| [bryan.corn.uniformity](bryan.corn.uniformity.md)                                 | 6 x 48           | xy                   |                     |
+| [christidis.cotton.uniformity](christidis.cotton.uniformity.md)                   | 16 x 16          | xy, 4 blocks         |                     |
+| [christidis.wheat.uniformity](christidis.wheat.uniformity.md)                     | 12 x 24          | xy                   |                     |
+| [coombs.rice.uniformity](coombs.rice.uniformity.md)                               | 3 x 18           | xy                   |                     |
+| [dasilva.soybean.uniformity](dasilva.soybean.uniformity.md)                       | 24 x 48          | xy                   |                     |
+| [davies.pasture.uniformity](davies.pasture.uniformity.md)                         | 19 x 40          | xy                   |                     |
+| [day.wheat.uniformity](day.wheat.uniformity.md)                                   | 31 x 100         | xy                   |                     |
+| [draper.safflower.uniformity](draper.safflower.uniformity.md)                     | 18 x 16          | xy, 2 expt           | smith               |
+| [ducker.groundnut.uniformity](ducker.groundnut.uniformity.md)                     | 44 x 5           | xy                   |                     |
+| [eden.tea.uniformity](eden.tea.uniformity.md)                                     | 12 x 12          | xy                   |                     |
+| [evans.sugarcane.uniformity](evans.sugarcane.uniformity.md)                       | 142 x 5          | xy                   |                     |
+| [forster.wheat.uniformity](forster.wheat.uniformity.md)                           | 10 x 16          | xy                   |                     |
+| [garber.frames.uniformity](garber.frames.uniformity.md)                           | 30 x 1           | xy, 2 crops          |                     |
+| [garber.multi.uniformity](garber.multi.uniformity.md)                             | 6 x 45           | xy, 5 years/crops    |                     |
+| [gomez.rice.uniformity](gomez.rice.uniformity.md)                                 | 18 x 36          | xy                   | aov,smith           |
+| [gorski.oats.uniformity](gorski.oats.uniformity.md)                               | 10 x 20, 15 x 20 | xy                   |                     |
+| [goulden.barley.uniformity](goulden.barley.uniformity.md)                         | 48 x 48          | xy                   |                     |
+| [hansen.multi.uniformity](hansen.multi.uniformity.md)                             | 6 x 5, 16 x 8    | xy, 4-5 yr           | splom               |
+| [haritonenko.sugarbeet.uniformity](haritonenko.sugarbeet.uniformity.md)           | 4 x 104          | xy                   |                     |
+| [harris.multi.uniformity](harris.multi.uniformity.md)                             | 2 x 23           | xy, 23 crops         | corrgram            |
+| [hartman.tomato.uniformity](hartman.tomato.uniformity.md)                         | 12 x 32          | xy                   |                     |
+| [heath.cabbage.uniformity](heath.cabbage.uniformity.md)                           | 6 x 8            | xy                   |                     |
+| [heath.radish.uniformity](heath.raddish.uniformity.md)                            | 10 x 10          | xy                   |                     |
+| [holtsmark.timothy.uniformity](holtsmark.timothy.uniformity.md)                   | 6 x 40           | xy                   |                     |
+| [hutchinson.cotton.uniformity](hutchinson.cotton.uniformity.md)                   | 36 x 42          | xy                   |                     |
+| [igue.sugarcane.uniformity](igue.sugarcane.uniformity.md)                         | 36 x 42          | xy                   |                     |
+| [immer.sugarbeet.uniformity](immer.sugarbeet.uniformity.md)                       | 10 x 60          | xy, 3 traits, 2 yr   |                     |
+| [iyer.wheat.uniformity](iyer.wheat.uniformity.md)                                 | 25 x 80          | xy                   |                     |
+| [jegorow.oats.uniformity](jegorow.oats.uniformity.md)                             | 8 x 30           | xy                   |                     |
+| [jones.corn.uniformity](jones.corn.uniformity.md)                                 | 12 x 12          | xy                   |                     |
+| [jurowski.wheat.uniformity](jurowski.wheat.uniformity.md)                         | 4 x 40           | xy                   |                     |
+| [kadam.millet.uniformity](kadam.millet.uniformity.md)                             | 8 x 20           | xy, 2 expts          |                     |
+| [kalamkar.potato.uniformity](kalamkar.potato.uniformity.md)                       | 6 x 96           | xy                   |                     |
+| [kalamkar.wheat.uniformity](kalamkar.wheat.uniformity.md)                         | 16 x 80          | xy, 2 traits         |                     |
+| [kempton.barley.uniformity](kempton.barley.uniformity.md)                         | 7 x 28           | xy                   |                     |
+| [kerr.sugarcane.uniformity](kerr.sugarcane.uniformity.md)                         | 12 x 12          | xy                   | , 4 fields          |
+| [khan.brassica.uniformity](khan.brassica.uniformity.md)                           | 18 x 18          | xy, 2 fields         |                     |
+| [khin.rice.uniformity](khin.rice.uniformity.md)                                   | 30 x 36          | xy                   |                     |
+| [kirk.potato.uniformity](kirk.potato.uniformity.md)                               | 6 x 6            | xy                   |                     |
+| [kiesselbach.oats.uniformity](kiesselbach.oats.uniformity.md)                     | 3 x 69           | xy                   |                     |
+| [kotowski.potato.uniformity](kotowski.potato.uniformity.md)                       | 12 x 4, 26 x 4   | xy                   |                     |
+| [kristensen.barley.uniformity](kristensen.barley.uniformity.md)                   | 22 x 11          | xy                   |                     |
+| [kulkarni.sorghum.uniformity](kulkarni.sorghum.uniformity.md)                     | 4 x 40           | xy, 3 years          |                     |
+| [lander.multi.uniformity](lander.multi.uniformity.md)                             | 5 x 39           | xy, 4 years          |                     |
+| [larsen.timothy.uniformity](larsen.timothy.uniformity.md)                         | 12 x 80          | xy                   |                     |
+| [laycock.tea.uniformity](laycock.tea.uniformity.md)                               | 6 x 9            | xy, 2 locations      |                     |
+| [lehmann.millet.uniformity](lehmann.millet.uniformity.md)                         | 6 x 22           | xy, 3 years          |                     |
+| [lehmann.rice.uniformity](lehmann.rice.uniformity.md)                             | 2 x 17           | xy, 4 years          |                     |
+| [lessman.sorghum.uniformity](lessman.sorghum.uniformity.md)                       | 46 x 60          | xy                   |                     |
+| [li.millet.uniformity](li.millet.uniformity.md)                                   | 6 x 100          | xy                   |                     |
+| [loesell.bean.uniformity](loesell.bean.uniformity.md)                             | 21 x 90          | xy                   |                     |
+| [lord.rice.uniformity](lord.rice.uniformity.md)                                   | 5 x 14           | xy, 8 fields         |                     |
+| [love.cotton.uniformity](love.cotton.uniformity.md)                               | 16 x 10          | xy                   |                     |
+| [love.sugarcane.uniformity](love.sugarcane.uniformity.md)                         | 20 x 20          | xy                   |                     |
+| [lyon.potato.uniformity](lyon.potato.uniformity.md)                               | 34 x 6           | xy                   |                     |
+| [macdonald.cotton.uniformity](macdonald.cotton.uniformity.md)                     | 4 x 144          | xy                   |                     |
+| [magistad.pineapple.uniformity](magistad.pineapple.uniformity.md)                 | 5 x 5            | xy                   |                     |
+| [mamani.bean.uniformity](mamani.bean.uniformity.md)                               | 84 x 20          | xy                   |                     |
+| [masood.rice.uniformity](masood.rice.uniformity.md)                               | 12 x 24          | xy                   |                     |
+| [mcclelland.corn.uniformity](mcclelland.corn.uniformity.md)                       | 2 x 44           | xy                   |                     |
+| [mckinstry.cotton.uniformity](mckinstry.cotton.uniformity.md)                     | 24 x 20          | xy                   |                     |
+| [mercer.mangold.uniformity](mercer.mangold.uniformity.md)                         | 10 x 20          | xy                   |                     |
+| [metzger.multi.uniformity](metzger.multi.uniformity.md)                           | 3 x 12           | xy, 9 years          |                     |
+| [mercer.wheat.uniformity](mercer.wheat.uniformity.md)                             | 25 x 20          | xy, 2 traits         | spplot              |
+| [montgomery.wheat.uniformity](montgomery.wheat.uniformity.md)                     | 14 x 16          | xy, 2 years          | lm                  |
+| [moore.polebean.uniformity](moore.uniformity.md)                                  | 12 x 12          | xy                   |                     |
+| [moore.bushbean.uniformity](moore.uniformity.md)                                  | 24 x 24          | xy                   |                     |
+| [moore.sweetcorn.uniformity](moore.uniformity.md)                                 | 24 x 12          | xy                   |                     |
+| [moore.carrot.uniformity](moore.uniformity.md)                                    | 24 x 12          | xy                   |                     |
+| [moore.springcauliflower.uniformity](moore.uniformity.md)                         | 12 x 20          | xy                   |                     |
+| [moore.fallcauliflower.uniformity](moore.uniformity.md)                           | 12 x 20          | xy                   |                     |
+| [nagai.strawberry.uniformity](nagai.strawberry.uniformity.md)                     | 18 x 24          | xy                   |                     |
+| [morgan.multi.uniformity](morgan.multi.uniformity.md)                             | 1 x 63           | xy                   | 2 crops             |
+| [nair.turmeric.uniformity](nair.turmeric.uniformity.md)                           | 72 x 12          | xy                   |                     |
+| [narain.sorghum.uniformity](narain.sorghum.uniformity.md)                         | 10 x 16          | xy                   |                     |
+| [nonnecke.peas.uniformity](nonnecke.peas.uniformity.md)                           | 15 x 18          | xy, 2 traits         |                     |
+| [nonnecke.sweetcorn.uniformity](nonnecke.sweetcorn.uniformity.md)                 | 32 x 18          | xy, 3 loc            |                     |
+| [obsi.potato.uniformity](obsi.potato.uniformity.md)                               | 63 x 26, 49 x 19 | xy                   |                     |
+| [odland.soybean.uniformity](odland.soybean.uniformity.md)                         | 25 x 42          | xy                   |                     |
+| [odland.soyhay.uniformity](odland.soybean.uniformity.md)                          | 28 x 55          | xy                   |                     |
+| [oliveira.lupin.uniformity](oliveira.lupin.uniformity.md)                         | 10 x 40          | xy                   |                     |
+| [oliveira.potato.uniformity](oliveira.potato.uniformity.md)                       | 5 x 40           | xy                   |                     |
+| [paez.coffee.uniformity](paez.coffee.uniformity.md)                               | 32 x 36          | xy, 5 yr             |                     |
+| [panse.cotton.uniformity](panse.cotton.uniformity.md)                             | 32 x 40          | xy                   |                     |
+| [parker.orange.uniformity](parker.orange.uniformity.md)                           | 10 x 27          | xy, 6 yr             |                     |
+| [piepho.barley.uniformity](piepho.barley.uniformity.md)                           | 30 x 36          | xy                   |                     |
+| [polson.safflower.uniformity](polson.safflower.uniformity.md)                     | 52 x 33          | xy                   | smith               |
+| [rau.coffee.uniformity](rau.coffee.uniformity.md)                                 | 12 x 12          | xy                   |                     |
+| [robinson.peanut.uniformity](robinson.peanut.uniformity.md)                       | 16 x 36          | xy                   |                     |
+| [robinson.peanut.uniformity](robinson.peanut.uniformity.md)                       | 16 x 36          | xy                   |                     |
+| [roemer.sugarbeet.uniformity](roemer.sugarbeet.uniformity.md)                     | 2 x 48           | xy                   |                     |
+| [saunders.maize.uniformity](saunders.maize.uniformity.md)                         | 5 x 300          | xy, 2 year           |                     |
+| [sawyer.multi.uniformity](sawyer.multi.uniformity.md)                             | 8 x 6            | xy, 3 year           |                     |
+| [sayer.sugarcane.uniformity](sayer.sugarcane.uniformity.md)                       | 8 x 136, 8 x 121 | xy, 2 year           |                     |
+| [shafi.tomato.uniformity](shafi.tomato.uniformity.md)                             | 10 x 20          | xy                   |                     |
+| [siao.cotton.uniformity](siao.cotton.uniformity.md)                               | 12 x 22          | xy                   |                     |
+| [smith.beans.uniformity](smith.beans.uniformity.md)                               | 18 x 12, 16 x 15 | xy, 2 yr, 2 crops    |                     |
+| [smith.corn.uniformity](smith.corn.uniformity.md)                                 | 6 x 20           | xy, 3 years          | rgl                 |
+| [smith.wheat.uniformity](smith.wheat.uniformity.md)                               | 36 x 30          | xy, 2 traits         |                     |
+| [stephens.sorghum.uniformity](stephens.sorghum.uniformity.md)                     | 100 x 20         | xy                   |                     |
+| [stickler.sorghum.uniformity](stickler.sorghum.uniformity.md)                     | 20 x 20          | xy, 4 expts, 2 years |                     |
+| [strickland.apple.uniformity](strickland.apple.uniformity.md)                     | 11 x 18          | xy                   |                     |
+| [strickland.grape.uniformity](strickland.grape.uniformity.md)                     | 5 x 31           | xy                   |                     |
+| [strickland.peach.uniformity](strickland.peach.uniformity.md)                     | 8 x 18           | xy                   |                     |
+| [strickland.tomato.uniformity](strickland.tomato.uniformity.md)                   | 30 x 6           | xy                   |                     |
+| [summerby.multi.uniformity](summerby.multi.uniformity.md)                         | 35 x 5           | xy                   | 5 years             |
+| [trought.cotton.uniformity](trought.cotton.uniformity.md)                         | 8 x 24           | xy                   |                     |
+| [tulaikow.wheat.uniformity](tulaikow.wheat.uniformity.md)                         | 24 x 10, 15 x 16 | xy                   | 5 years             |
+| [vishnaadevi.rice.uniformity](vishnaadevi.rice.uniformity.md)                     | 12 x 24          | xy                   |                     |
+| [wassom.brome.uniformity](wassom.brome.uniformity.md)                             | 36 x 36          | xy, 3 expts          |                     |
+| [wehner.cucumber.uniformity](wehner.cucumber.uniformity.md)                       | 6 x 25           | xy                   |                     |
+| [wiebe.wheat.uniformity](wiebe.wheat.uniformity.md)                               | 12 x 125         | xy                   | medianpolish, loess |
+| [wiedemann.safflower.uniformity](wiedemann.safflower.uniformity.md)               | 54 x 33          | xy                   | smith               |
+| [williams.barley.uniformity](williams.barley.uniformity.md)                       | 48 x 15          | xy                   | loess               |
+| [williams.cotton.uniformity](williams.cotton.uniformity.md)                       | 24 x 12          | xy                   | loess               |
+| [wyatt.multi.uniformity](wyatt.multi.uniformity.md)                               | 43 x 3           | xy                   |                     |
 
 **Yield monitor**
 
