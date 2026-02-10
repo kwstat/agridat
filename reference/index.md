@@ -41,6 +41,8 @@
   : Uniformity trial of sugarcane in Costa Rica
 - [`barrero.maize`](barrero.maize.md) : Multi-environment trial of maize
   in Texas.
+- [`barrientosgarcia.sesame.uniformity`](barrientosgarcia.sesame.uniformity.md)
+  : Uniformity trials of sesame and maize in Guatemala
 - [`batchelor.apple.uniformity`](batchelor.uniformity.md)
   [`batchelor.lemon.uniformity`](batchelor.uniformity.md)
   [`batchelor.navel1.uniformity`](batchelor.uniformity.md)
@@ -174,6 +176,8 @@
   Uniformity trial of pasture.
 - [`day.wheat.uniformity`](day.wheat.uniformity.md) : Uniformity trial
   of wheat
+- [`delgadillolopez.sesame.uniformity`](delgadillolopez.sesame.uniformity.md)
+  : A uniformity trial of sesame
 - [`denis.missing`](denis.missing.md) : Multi-environment trial with
   structured missing values
 - [`denis.ryegrass`](denis.ryegrass.md) : Multi-environment trial of
@@ -438,6 +442,8 @@
   Eucalyptus trees in southern Brazil
 - [`laycock.tea.uniformity`](laycock.tea.uniformity.md) : Uniformity
   trials of tea
+- [`lechadolopez.sorghum.uniformity`](lechadolopez.sorghum.uniformity.md)
+  : Uniformity trial of sorghum in Nicaragua
 - [`lee.potatoblight`](lee.potatoblight.md) : Repeated measurements of
   resistance to potato blight
 - [`lehmann.millet.uniformity`](lehmann.millet.uniformity.md) :
@@ -487,6 +493,8 @@
   trial of bean
 - [`masood.rice.uniformity`](masood.rice.uniformity.md) : Uniformity
   trial of rice
+- [`mauricio.maize.uniformity`](mauricio.maize.uniformity.md) :
+  Uniformity trial of maize in Ecuador
 - [`mcclelland.corn.uniformity`](mcclelland.corn.uniformity.md) :
   Uniformity trial of corn
 - [`mcconway.turnip`](mcconway.turnip.md) : RCB experiment of turnips

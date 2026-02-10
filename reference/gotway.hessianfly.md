@@ -35,9 +35,8 @@ Each plot was square.
 ## Source
 
 C. A. Gotway and W. W. Stroup. A Generalized Linear Model Approach to
-Spatial Data Analysis and Prediction *Journal of Agricultural,
-Biological, and Environmental Statistics*, 2, 157-178.
-
+Spatial Data Analysis and Prediction Journal of Agricultural,
+Biological, and Environmental Statistics, 2, 157-178.
 https://doi.org/10.2307/1400401
 
 ## References

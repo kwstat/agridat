@@ -94,7 +94,7 @@ should probably have been 92 instead of 97.
 The version of the data in the package uses the changes suggested by
 Sanders.
 
-Transcription details: Data were typed by K.Wright.
+Data provenance: Data were typed by K.Wright.
 
 ## Source
 

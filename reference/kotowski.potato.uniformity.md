@@ -58,8 +58,8 @@ Field F2 width: 26 plots \* 2.5 m = 67 m
 
 Field F2 length: 4 plots \* 10m = 40 m
 
-Transcription details: Data typed by K.Wright 2024.12.09. Text
-translation via Google Translate.
+Data provenance: Data typed by K.Wright 2024.12.09. Text translation via
+Google Translate.
 
 ## Source
 

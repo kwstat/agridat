@@ -42,7 +42,7 @@ Field width: 44 plots, 1 yard each = 44 yards.
 This data was made available with special help from the staff at
 Rothamsted Research Library.
 
-Transcription details: Data typed by K.Wright and checked by hand.
+Data provenance: Data typed by K.Wright and checked by hand.
 
 ## Source
 

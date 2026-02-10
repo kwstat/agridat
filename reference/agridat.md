@@ -26,6 +26,8 @@ row-column design, ts = time series,
 | [baker.strawberry.uniformity](baker.strawberry.uniformity.md)                     | 10 x 50          | xy                   |                     |
 | [baker.wheat.uniformity](baker.wheat.uniformity.md)                               | 12 x 12          | xy                   |                     |
 | [bancroft.peanut.uniformity](bancroft.peanut.uniformity.md)                       | 6 x 18           | xy, 2 blocks         |                     |
+| [barrientosgarcia.maize.uniformity](barrientosgarcia.sesame.uniformity.md)        | 18 x 24          | xy                   |                     |
+| [barrientosgarcia.sesame.uniformity](barrientosgarcia.sesame.uniformity.md)       | 20 x 25          | xy                   |                     |
 | [batchelor.apple.uniformity](batchelor.uniformity.md)                             | 8 x 28           | xy                   |                     |
 | [batchelor.lemon.uniformity](batchelor.uniformity.md)                             | 14 x 16          | xy                   |                     |
 | [batchelor.navel1.uniformity](batchelor.uniformity.md)                            | 20 x 50          | xy                   |                     |
@@ -43,6 +45,7 @@ row-column design, ts = time series,
 | [dasilva.soybean.uniformity](dasilva.soybean.uniformity.md)                       | 24 x 48          | xy                   |                     |
 | [davies.pasture.uniformity](davies.pasture.uniformity.md)                         | 19 x 40          | xy                   |                     |
 | [day.wheat.uniformity](day.wheat.uniformity.md)                                   | 31 x 100         | xy                   |                     |
+| [delgadillolopez.sesame.uniformity](delgadillolopez.sesame.uniformity.md)         | 16 x 24          | xy                   |                     |
 | [draper.safflower.uniformity](draper.safflower.uniformity.md)                     | 18 x 16          | xy, 2 expt           | smith               |
 | [ducker.groundnut.uniformity](ducker.groundnut.uniformity.md)                     | 44 x 5           | xy                   |                     |
 | [eden.tea.uniformity](eden.tea.uniformity.md)                                     | 12 x 12          | xy                   |                     |
@@ -82,6 +85,7 @@ row-column design, ts = time series,
 | [lander.multi.uniformity](lander.multi.uniformity.md)                             | 5 x 39           | xy, 4 years          |                     |
 | [larsen.timothy.uniformity](larsen.timothy.uniformity.md)                         | 12 x 80          | xy                   |                     |
 | [laycock.tea.uniformity](laycock.tea.uniformity.md)                               | 6 x 9            | xy, 2 locations      |                     |
+| [lechadolopez.sorghum.uniformity](lechadolopez.sorghum.uniformity.md)             | 32 x 16          | xy                   |                     |
 | [lehmann.millet.uniformity](lehmann.millet.uniformity.md)                         | 6 x 22           | xy, 3 years          |                     |
 | [lehmann.rice.uniformity](lehmann.rice.uniformity.md)                             | 2 x 17           | xy, 4 years          |                     |
 | [lessman.sorghum.uniformity](lessman.sorghum.uniformity.md)                       | 46 x 60          | xy                   |                     |
@@ -95,6 +99,7 @@ row-column design, ts = time series,
 | [magistad.pineapple.uniformity](magistad.pineapple.uniformity.md)                 | 5 x 5            | xy                   |                     |
 | [mamani.bean.uniformity](mamani.bean.uniformity.md)                               | 84 x 20          | xy                   |                     |
 | [masood.rice.uniformity](masood.rice.uniformity.md)                               | 12 x 24          | xy                   |                     |
+| [mauricio.maize.uniformity](mauricio.maize.uniformity.md)                         | 26 x 26          | xy                   |                     |
 | [mcclelland.corn.uniformity](mcclelland.corn.uniformity.md)                       | 2 x 44           | xy                   |                     |
 | [mckinstry.cotton.uniformity](mckinstry.cotton.uniformity.md)                     | 24 x 20          | xy                   |                     |
 | [mercer.mangold.uniformity](mercer.mangold.uniformity.md)                         | 10 x 20          | xy                   |                     |

@@ -193,14 +193,14 @@
 <span class="r-in"><span><span class="co"># lower-yielding in 1922-1923.</span></span></span>
 <span class="r-in"><span><span class="co"># Heatmaps for individual year/harvest combinations</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="libs.html">libs</a></span><span class="op">(</span><span class="va">desplot</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">desplot</span><span class="op">(</span><span class="va">d2</span>, <span class="va">yield</span> <span class="op">~</span> <span class="va">xord</span><span class="op">*</span><span class="va">plot</span><span class="op">|</span><span class="va">harv</span>,</span></span>
+<span class="r-in"><span><span class="fu"><a href="http://kwstat.github.io/desplot/reference/desplot.html" class="external-link">desplot</a></span><span class="op">(</span><span class="va">d2</span>, <span class="va">yield</span> <span class="op">~</span> <span class="va">xord</span><span class="op">*</span><span class="va">plot</span><span class="op">|</span><span class="va">harv</span>,</span></span>
 <span class="r-in"><span>        aspect<span class="op">=</span><span class="fl">536</span><span class="op">/</span><span class="fl">639</span>, flip<span class="op">=</span><span class="cn">TRUE</span>, <span class="co"># true aspect</span></span></span>
 <span class="r-in"><span>        main<span class="op">=</span><span class="st">"harris.multi.uniformity"</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Crude fertility map by averaging across years shows probable</span></span></span>
 <span class="r-in"><span><span class="co"># sub-surface water effects</span></span></span>
 <span class="r-in"><span><span class="va">agg</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/aggregate.html" class="external-link">aggregate</a></span><span class="op">(</span><span class="va">yield</span> <span class="op">~</span> <span class="va">xord</span> <span class="op">+</span> <span class="va">plot</span>, data<span class="op">=</span><span class="va">d2</span>, <span class="va">mean</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">desplot</span><span class="op">(</span><span class="va">agg</span>, <span class="va">yield</span> <span class="op">~</span> <span class="va">xord</span> <span class="op">+</span> <span class="va">plot</span>,</span></span>
+<span class="r-in"><span><span class="fu"><a href="http://kwstat.github.io/desplot/reference/desplot.html" class="external-link">desplot</a></span><span class="op">(</span><span class="va">agg</span>, <span class="va">yield</span> <span class="op">~</span> <span class="va">xord</span> <span class="op">+</span> <span class="va">plot</span>,</span></span>
 <span class="r-in"><span>        aspect<span class="op">=</span><span class="fl">536</span><span class="op">/</span><span class="fl">639</span>, <span class="co"># true aspect</span></span></span>
 <span class="r-in"><span>        main<span class="op">=</span><span class="st">"harris.multi.uniformity fertility"</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>

@@ -73,8 +73,8 @@ reason for the variability.
 
 In the paper, 'plat' refers to 'col' (frame number).
 
-Data source: Using pdf of original paper, tables were scanned by iPhone,
-then manually formatted and checked by K.Wright.
+Data provenance: Using pdf of original paper, tables were scanned by
+iPhone, then manually formatted and checked by K.Wright.
 
 ## Source
 
@@ -109,7 +109,7 @@ if (FALSE) { # \dontrun{
   dat29 <- subset(dat, crop=="soybeans")
   desplot(dat29, yield ~ col*row,
           tick=TRUE, aspect=112/1680,
-          main="garber.frames.uniformity - 1929 soybeans")
+          main="garber.frames.uniformity - 1929 soy hay")
 
   # Wheat 1930
   dat30 <- subset(dat, crop=="wheat")
@@ -122,6 +122,6 @@ if (FALSE) { # \dontrun{
   plot(dat29$yield, dat30$yield,
        xlab="1929 soybeans yield (g)",
        ylab="1930 wheat yield (g)",
-       main="garber.frames.uniformity\n1929 soy vs 1930 wheat")
+       main="garber.frames.uniformity\n1930 wheat grain vs 1929 soy hay")
 } # }
 ```

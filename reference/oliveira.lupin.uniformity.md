@@ -55,7 +55,7 @@ Field length: 40 rows \* 0.5 m = 20 m
 p 226b Table A, Number of plants and production (grams) of 400 plots of
 Lupinus Luteus L.
 
-Transcription details: Variously OCR and checked, or typed by K.Wright.
+Data provenance: Variously OCR and checked, or typed by K.Wright.
 
 ## Source
 

@@ -58,8 +58,8 @@ measurement. The sazhen itself is approximately 3 meters (7 feet) long.
 Google Translate sometimes converts "sazhen" into "soot", "meter" or
 "fathom".
 
-Transcription details: The data were typed by K.Wright from Roemer
-(1920), table 4, p. 63.
+Data provenance: The data were typed by K.Wright from Roemer (1920),
+table 4, p. 63.
 
 ## Source
 

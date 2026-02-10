@@ -68,8 +68,7 @@ Chart 7 - Giza 1923, 20 x 8 = 160 plots
 Bailey said the results at Giza 1921 were not suitable for reliability
 experiments.
 
-Transcription details: Data were typed and proofread by K.Wright
-2023.01.11.
+Data provenance: Data were typed and proofread by K.Wright 2023.01.11.
 
 ## Source
 

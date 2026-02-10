@@ -60,8 +60,8 @@ blank row between ranges.
 The paper by Summerby has more year/range combinations, but those plots
 are 20 links by 100 links and are only a single plot wide.
 
-Transcription details: These data were converted from PDF to png images,
-then OCR converted to text, then hand-checked by K.Wright.
+Data provenance: These data were converted from PDF to png images, then
+OCR converted to text, then hand-checked by K.Wright.
 
 ## Source
 

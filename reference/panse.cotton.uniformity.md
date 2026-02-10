@@ -48,8 +48,8 @@ Field width: 32 plots \* 4 rows/plot \* 14 inches/row = 150 feet
 Conclusions: Lower error was obtained when the plots were long rows
 instead of across the rows.
 
-Transcription details: The data were typed by K.Wright from Panse (1941)
-p. 864-865.
+Data provenance: The data were typed by K.Wright from Panse (1941) p.
+864-865.
 
 ## Source
 

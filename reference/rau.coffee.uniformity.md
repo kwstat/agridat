@@ -41,8 +41,8 @@ Note: Rau does not specify exactly which ordinate of the plots in Table
 Table 1 (much wider than tall) and the logical arrangement of data, we
 believe we have the dimensions correct.
 
-Transcription details: An iPhone was used to capture the text in Table
-1, page 82, which was then manually corrected by K.Wright 2025.08.13.
+Data provenance: An iPhone was used to capture the text in Table 1, page
+82, which was then manually corrected by K.Wright 2025.08.13.
 
 ## Source
 

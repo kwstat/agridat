@@ -50,10 +50,10 @@ Field width: 12 plots \* 24.6 feet = 295 feet
 
 Field length: 12 plots \* 24.6 feet = 295 feet
 
-Transcription details: Data were typed by K.Wright. Although the pdf of
-the paper had a crease across the page that hid some of the digits, the
-row and column totals included in the paper allowed for re-construction
-of the missing digits.
+Data provenance: Data were typed by K.Wright. Although the pdf of the
+paper had a crease across the page that hid some of the digits, the row
+and column totals included in the paper allowed for re-construction of
+the missing digits.
 
 ## Source
 

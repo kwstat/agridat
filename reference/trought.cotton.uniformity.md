@@ -32,7 +32,7 @@ Field width: 8 plots \* 12.5 m = 100 m
 
 Field length: 24 ridges \* 0.9 m = 21.6 m
 
-Data scanned with iPhone, cleaned and formatted by by K.Wright.
+Data provenance: Scanned with iPhone, cleaned and formatted by K.Wright.
 
 ## Source
 

@@ -44,8 +44,8 @@ Field B: 144 rows 3 ft 6 in apart, 2 ft between plants. Rows divided
 into 40 ft units. In the Rothamsted documents, this field is called
 "B2a".
 
-This data was made available with special help from the staff at
-Rothamsted Research Library. Data were typed by K.Wright.
+Data provenance: This data was made available with special help from the
+staff at Rothamsted Research Library. Data were typed by K.Wright.
 
 ## Source
 

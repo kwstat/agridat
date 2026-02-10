@@ -43,7 +43,7 @@ Field width: 6 plots x 22 feet = 132 feet
 
 Field length: 6 plots x 12 feet = 72 feet
 
-Data typed by K.Wright.
+Data provenance: Prepared by K.Wright.
 
 ## Source
 

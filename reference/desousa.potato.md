@@ -66,11 +66,10 @@ There are 11 genotypes evaluated in 168 field trials in an incomplete
 block design with 3 genotypes at each trial. Within each trial the
 highest-yield and lowest-yield genotypes are recorded.
 
-Electronic data retrieved 2025.12.08 from
-https://zenodo.org/records/6286006. File: data/potato.csv Open license.
-Also at https://github.com/AgrDataSci/tricot-framework-rtb/tree/v0.1
-
-Data curated by K.Wright
+Data provenance: Prepared by K.Wright. Electronic data retrieved
+2025.12.08 from https://zenodo.org/records/6286006. File:
+data/potato.csv Open license. Also at
+https://github.com/AgrDataSci/tricot-framework-rtb/tree/v0.1
 
 ## Source
 

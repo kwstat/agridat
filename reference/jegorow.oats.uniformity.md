@@ -34,8 +34,7 @@ Field width: 8 plots \* 1 sazhen
 
 Field length: 30 plots \* 1 sazhen
 
-Transcription details: Data typed by K.Wright from Roemer (1920), table
-10.
+Data provenance: Data typed by K.Wright from Roemer (1920), table 10.
 
 ## Source
 

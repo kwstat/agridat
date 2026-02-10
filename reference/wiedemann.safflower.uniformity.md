@@ -57,7 +57,7 @@ Wiedemann figure 8.
 Wiedemann notes the statistical analysis of the data required 100 hours
 of labor. Today the analysis takes only a second.
 
-Transcription details: The tables in Wiedemann were converted by OCR to
+Data provenance: The tables in Wiedemann were converted by OCR to
 digital format, and all values were checked by K.Wright.
 
 ## Source

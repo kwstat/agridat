@@ -40,7 +40,7 @@ See pages 329-333 for details.
 
 Translation from Google.
 
-Transcription details: OCR on Chart B in the original pdf. Checked by
+Data provenance: OCR on Chart B in the original pdf. Checked by
 K.Wright.
 
 ## Source

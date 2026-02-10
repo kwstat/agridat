@@ -51,8 +51,8 @@ faden = 6 feet, but this does not match the total area 5.68 ha.
 Note: The name Haritonenko is sometimes translated into English as:
 Pavel Kharitonenko.
 
-Transcription details: The data were typed by K.Wright from Roemer
-(1920), table 4, p. 63.
+Data provenance: The data were typed by K.Wright from Roemer (1920),
+table 4, p. 63.
 
 ## Source
 

@@ -64,7 +64,7 @@ Field length: 18 ranges \* 5 feet = 90 feet.
 
 Data are from Table A & B of Draper, p. 53-56.
 
-Transcription details: Data typed by K.Wright.
+Data provenance: Data typed by K.Wright.
 
 ## Source
 
