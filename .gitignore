@@ -21,3 +21,5 @@ revdep
 docs/
 docs
 data-raw/cochran/*
+
+.vscode/settings.json

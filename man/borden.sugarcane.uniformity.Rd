@@ -39,7 +39,8 @@
 
   Field length: 12 plots * 35 ft = 420 feet
   
-  Data provenance: From tables in original papers, transcribed by K.Wright.
+  Data provenance: From tables in original papers, transcribed by
+  K.Wright.
 }
 \source{
   Borden, R. J. (1930)

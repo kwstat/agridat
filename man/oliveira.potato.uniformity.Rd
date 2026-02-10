@@ -31,7 +31,7 @@
  
   Translation from Google.
 
-  Transcription details: OCR on Chart B in the original pdf. Checked by K.Wright.
+  Data provenance: OCR on Chart B in the original pdf. Checked by K.Wright.
   
 }
 \source{

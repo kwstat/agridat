@@ -37,7 +37,7 @@
 
   Field length: 19 plots * 33 feet = 627 feet
 
-  Transcription details: Data typed by hand and checked by K.Wright
+  Data provenance: Data typed by hand and checked by K.Wright
   2024.12.06.
   
 }

@@ -32,9 +32,8 @@
   Love (1943) says the manuscript is based on lecture notes given in
   1940, so the data of the experiment is before 1940.
   
-  Transcription details: Data were scanned from source with iPhone,
-  checked by K.Wright.  Thanks to C.Wright for providing a copy of the
-  source book.
+  Data provenance: Data were scanned from source with iPhone, checked by
+  K.Wright.  Thanks to C.Wright for providing a copy of the source book.
   
 }
 \source{

@@ -35,7 +35,7 @@
 
   Field length: 6 plots x 12 feet = 72 feet
 
-  Data typed by K.Wright.
+  Data provenance: Prepared by K.Wright.
 }
 \source{
   Kirk, L. E. (1929).

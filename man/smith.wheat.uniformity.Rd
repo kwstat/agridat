@@ -54,6 +54,7 @@
   the high-yielding part of the field having a yield close to
   "16 d.kg per 4 sq ft", and 16 d.kg = 16 kg = 1600 g.
   
+  Data provenance:
   This data was made available with special help from the staff at
   Rothamsted Research Library. Data were typed by K.Wright.
 

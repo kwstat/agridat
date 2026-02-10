@@ -23,8 +23,8 @@ Uniformity trial of cotton in Sudan, 1936
 
   Field length: 24 ridges * 0.9 m = 21.6 m
 
-  Data scanned with iPhone, cleaned and formatted by
-  by K.Wright.
+  Data provenance: Scanned with iPhone, cleaned and formatted by
+  K.Wright.
 }
 \source{
   Rothamsted Research Library, Box STATS17  WG Cochran, Folder 6.

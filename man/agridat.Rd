@@ -33,6 +33,8 @@ name                                      \tab dimensions \tab other \tab model 
 \link{baker.strawberry.uniformity}        \tab 10 x 50 \tab xy \tab \cr
 \link{baker.wheat.uniformity}             \tab 12 x 12 \tab xy \tab \cr
 \link{bancroft.peanut.uniformity}         \tab 6 x 18 \tab xy, 2 blocks \tab \cr
+\link{barrientosgarcia.maize.uniformity}  \tab 18 x 24 \tab xy \tab \cr
+\link{barrientosgarcia.sesame.uniformity}  \tab 20 x 25 \tab xy \tab \cr
 \link{batchelor.apple.uniformity}         \tab 8 x 28 \tab xy \tab \cr
 \link{batchelor.lemon.uniformity}         \tab 14 x 16 \tab xy \tab \cr
 \link{batchelor.navel1.uniformity}        \tab 20 x 50 \tab xy \tab \cr
@@ -50,6 +52,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{dasilva.soybean.uniformity}         \tab 24 x 48 \tab xy \tab \cr
 \link{davies.pasture.uniformity}          \tab 19 x 40 \tab xy \tab \cr
 \link{day.wheat.uniformity}               \tab 31 x 100 \tab xy \tab \cr
+\link{delgadillolopez.sesame.uniformity}  \tab 16 x 24 \tab xy \tab \cr
 \link{draper.safflower.uniformity}        \tab 18 x 16 \tab xy, 2 expt \tab smith\cr
 \link{ducker.groundnut.uniformity}        \tab 44 x 5 \tab xy \tab \cr
 \link{eden.tea.uniformity}                \tab 12 x 12 \tab xy \tab \cr
@@ -89,6 +92,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{lander.multi.uniformity}            \tab 5 x 39 \tab xy, 4 years \tab \cr
 \link{larsen.timothy.uniformity}          \tab 12 x 80 \tab xy \tab \cr
 \link{laycock.tea.uniformity}             \tab 6 x 9  \tab xy, 2 locations \tab \cr
+\link{lechadolopez.sorghum.uniformity}    \tab 32 x 16 \tab xy \tab \cr
 \link{lehmann.millet.uniformity}          \tab 6 x 22 \tab xy, 3 years \tab \cr
 \link{lehmann.rice.uniformity}            \tab 2 x 17 \tab xy, 4 years \tab \cr
 \link{lessman.sorghum.uniformity}         \tab 46 x 60 \tab xy \tab \cr
@@ -102,6 +106,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{magistad.pineapple.uniformity}      \tab 5 x 5 \tab xy \tab \cr
 \link{mamani.bean.uniformity}             \tab 84 x 20 \tab xy \tab \cr
 \link{masood.rice.uniformity}             \tab 12 x 24 \tab xy \tab \cr
+\link{mauricio.maize.uniformity}          \tab 26 x 26 \tab xy \tab \cr
 \link{mcclelland.corn.uniformity}         \tab 2 x 44 \tab xy \tab \cr
 \link{mckinstry.cotton.uniformity}        \tab 24 x 20 \tab xy \tab \cr
 \link{mercer.mangold.uniformity}          \tab 10 x 20 \tab xy \tab \cr

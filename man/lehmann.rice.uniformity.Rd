@@ -42,7 +42,7 @@
 
   Field length: 17 plots * 50 links
 
-  Transcription details: Data values typed and checked by K.Wright
+  Data provenance: Data values typed and checked by K.Wright
   2024.12.09.
   
 }

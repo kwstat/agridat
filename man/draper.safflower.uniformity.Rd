@@ -55,7 +55,7 @@
 
   Data are from Table A & B of Draper, p. 53-56.
 
-  Transcription details: Data typed by K.Wright.
+  Data provenance: Data typed by K.Wright.
 }
 
 \source{

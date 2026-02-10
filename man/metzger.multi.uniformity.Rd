@@ -68,11 +68,11 @@
   In the source documents from Rothamsted, column 1 is series E, col 2 =
   series F, col 3 = series G.
   
-  Data acquisition: PDFs from Rothamsted archive were OCRd. Text copied
-  and formatted by K.Wright. 
-
   This data was made available with special help from the staff at
   Rothamsted Research Library.
+
+  Data provenance: PDFs from Rothamsted archive were OCRd. Text copied
+  and formatted by K.Wright. 
 
 }
 \source{

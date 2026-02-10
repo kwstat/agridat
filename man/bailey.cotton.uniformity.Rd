@@ -55,8 +55,7 @@
   Bailey said the results at Giza 1921 were not suitable for reliability
   experiments.
 
-  Transcription details: Data were typed and proofread by K.Wright
-  2023.01.11.
+  Data provenance:  Data were typed and proofread by K.Wright 2023.01.11.
 
 }
 \source{

@@ -9,9 +9,9 @@ library(rio)
 
 setwd("c:/x/rpack/agridat/data-done/")
 
-dat <- import("nonnecke.xlsx",sheet=1,col_names=FALSE)
-dat <- import("nonnecke.xlsx",sheet=2,col_names=FALSE)
-dat <- import("nonnecke.xlsx",sheet=3,col_names=FALSE)
+dat1 <- import("nonnecke.xlsx",sheet=1,col_names=FALSE)
+dat2 <- import("nonnecke.xlsx",sheet=2,col_names=FALSE)
+dat3 <- import("nonnecke.xlsx",sheet=3,col_names=FALSE)
 
 
 nonnecke.corn1.uniformity <- dat1

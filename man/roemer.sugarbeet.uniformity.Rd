@@ -57,7 +57,7 @@
   Cochran says: 96 plots, each 1 row x 55.8 ft (17m).
   Two sets (years) 1916 and 1918.
 
-  Transcription details: Data were typed by K.Wright from Roemer (1920).
+  Data provenance: Data were typed by K.Wright from Roemer (1920).
   
 }
 \source{

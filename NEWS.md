@@ -4,12 +4,17 @@
 
 * andres.rice.uniformity
 * barrantesaguilar.sugarcane.uniformity
+* barrientosgarcia.maize.uniformity
+* barrientosgarcia.sesame.uniformity
 * borden.sugarcane.uniformity
 * clewer.wheat (via P.Schmidt)
+* delgadillolopez.sesame.uniformity
 * desousa.potato
 * garber.frames.uniformity
+* lechadolopez.sorghum.uniformity
 * macdonald.cotton.uniformity
 * mamani.bean.uniformity
+* mauricio.maize.uniformity
 * metzger.multi.uniformity
 * morgan.multi.uniformity
 * petersen.wheat (via P.Schmidt)

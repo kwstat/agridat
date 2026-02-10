@@ -27,9 +27,7 @@
 \source{
   C. A. Gotway and W. W. Stroup.
   A Generalized Linear Model Approach to Spatial Data Analysis and Prediction
-  \emph{Journal of Agricultural, Biological, and Environmental
-    Statistics}, 2, 157-178.
-
+  Journal of Agricultural, Biological, and Environmental Statistics, 2, 157-178.
   https://doi.org/10.2307/1400401
 }
 \references{

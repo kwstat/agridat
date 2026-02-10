@@ -5,7 +5,8 @@
   Milk fat yields for a single cow
 }
 \description{
-  Average daily fat yields (kg/day) from milk from a single cow for each of 35 weeks.
+  Average daily fat yields (kg/day) from milk from a single cow for each
+  of 35 weeks.
 }
 
 \format{

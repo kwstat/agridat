@@ -39,7 +39,7 @@
   Sapehin says the std dev is "21.8 pud".  A "pud" is a Russian unit of
   weight equal to 16.38 kilograms.
   
-  Transcription details: Data converted by OCR from the paper and
+  Data provenance: Data converted by OCR from the paper and
   hand-checked by K.Wright.
   
 }
