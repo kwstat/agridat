@@ -567,6 +567,7 @@
   sorghum, 6 environments
 - [`onofri.winterwheat`](onofri.winterwheat.md) : Multi-environment
   trial of winter wheat, 7 years
+- [`onyiah.maize`](onyiah.maize.md) : Graeco-Latin experiment with maize
 - [`ortiz.tomato.covs`](ortiz.tomato.md)
   [`ortiz.tomato.yield`](ortiz.tomato.md) : Multi-environment trial of
   tomato in Latin America, weight/yield and environmental covariates
@@ -721,6 +722,8 @@
   wheat with environmental covariates
 - [`verbyla.lupin`](verbyla.lupin.md) : Multi-environment trial of
   lupin, multiple varieties and densities
+- [`versteeg.maize`](versteeg.maize.md) : Maize and pigeon pea
+  criss-cross trial in Benin
 - [`vishnaadevi.rice.uniformity`](vishnaadevi.rice.uniformity.md) :
   Uniformity trial of rice
 - [`vold.longterm`](vold.longterm.md) : Long-term barley yields at

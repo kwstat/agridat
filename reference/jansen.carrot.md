@@ -44,8 +44,8 @@ in 3 randomized complete blocks. About 50 carrots were sampled from each
 plot and evaluated. The data show the number of carrots and the number
 infested by fly larvae.
 
-Used with permission of J. Jansen. Electronic version supplied by
-Miroslav Zoric.
+Data provenance: Electronic version supplied by Miroslav Zoric. Used
+with permission of J. Jansen.
 
 ## Source
 

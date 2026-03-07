@@ -44,6 +44,8 @@ the final two measurements).
 Is there a difference in treatments, and when does that difference first
 become manifest?
 
+Data provenance: Electronic version supplied by Miroslav Zoric.
+
 ## Source
 
 Kenward, Michael G. (1987). A Method for Comparing Profiles of Repeated

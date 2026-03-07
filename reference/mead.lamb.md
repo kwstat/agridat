@@ -33,6 +33,8 @@ A data frame with 36 observations on the following 4 variables.
 The data 'y' are counts of ewes in different lambing classes. The
 classes are number of live lambs per birth for 0, 1, 2, 3+ lambs.
 
+Data provenance: Electronic version supplied by Miroslav Zoric.
+
 ## Source
 
 Roger Mead, Robert N Curnow, Anne M Hasted. 2002. Statistical Methods in

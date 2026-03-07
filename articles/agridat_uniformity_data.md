@@ -2,24 +2,6 @@
 
 todo
 
-12 El hecho de que el error experimental (como cоеficiente de variaciôn)
-decrece cuando se incrementa el tamaño de la parcela, pero la reducción
-no es proporcional al incremento, ha sido reportado por muchos
-investigadores como: Immer (1932), Chica, Fleming et al.(1957), y
-Martínez y Mendoza (1966) citados por Franco (10); Aviles Ramirez (3)
-quien a su vez cita a Bryan, Amézquita y Muñoz (1); Marquéz Sánchez
-(18); Palencia (23) quien al mismo tiempo cita a Day, Hoblyn, Batchelor
-y Redd y Mercer y Hall. Resulta entonces, como lo dicen Chica y
-Rodríguez, citados por Franco (10) que una forma de reducir la
-incidencia de la heterogeneidad del suelo en los resultados es el empleo
-de un número definido de parcelas con determinada forma y tamaño;
-complementado por Chacin (9), además de ser importante desde el punto de
-vista de variabilidad, lo es tambiến de costo, pués muchos son los
-eхреrimentos llevados a cabo en areas grandes, injustificables no sólo
-desde el punto de vista econômico, sino también es tadístico.
-
-## —————————————————————————
-
 Victor Manuel Alvarez Cajas (1982). Determinación del tamaño óptimo de
 parcela experimental en caña de azúcar (Saccharum officinarum L.) bajo
 condiciones de la finca Bulbuxyá. Universidad de San CarlosGuatemala.

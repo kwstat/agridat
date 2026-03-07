@@ -37,6 +37,8 @@ weight of plant, roots, soil, cup, and water. The plants were measured
 repeatedly beginning Dec 1, and ending Jan 9, when the plants were
 harvested.
 
+Data provenance: Electronic version supplied by M. Zoric.
+
 ## Source
 
 Levi Dawson Pederson (2015). Mixed Model Analysis for Repeated Measures

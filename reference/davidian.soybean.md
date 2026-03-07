@@ -49,6 +49,8 @@ are sampled at each date).
 
 Note: this data is the same as the "nlme::Soybean" data.
 
+Data provenance: Electronic version supplied by M. Zoric.
+
 ## Source
 
 Marie Davidian and D. M. Giltinan, (1995). *Nonlinear Models for

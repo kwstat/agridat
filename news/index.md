@@ -19,7 +19,9 @@
 - mauricio.maize.uniformity
 - metzger.multi.uniformity
 - morgan.multi.uniformity
+- onyiah.maize (Graeco-Latin square)
 - petersen.wheat (via P.Schmidt)
+- versteeg.maize (Strip-plot)
 
 ### Other notes
 

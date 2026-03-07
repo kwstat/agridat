@@ -50,9 +50,9 @@ Lillemo. This could easily be the result of the original data table
 being rounded to 1 decimal place. For example, environment 'Aa03' had 3
 reps and so the mean for genotype 1 was probably 16.333, not 16.3.
 
-Used with permission of Morten Lillemo.
+Data provenance: Electronic data supplied by Miroslav Zoric.
 
-Electronic data supplied by Miroslav Zoric.
+Used with permission of Morten Lillemo.
 
 ## Source
 
