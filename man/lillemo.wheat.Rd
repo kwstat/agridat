@@ -42,10 +42,9 @@
   'Aa03' had 3 reps and so the mean for genotype 1 was probably 16.333,
   not 16.3. 
 
+  Data provenance: Electronic data supplied by Miroslav Zoric.
   
   Used with permission of Morten Lillemo.
-
-  Electronic data supplied by Miroslav Zoric.
 }
 \source{
 

@@ -27,8 +27,9 @@
 
   There were 4 blocks.
   
-
-  Used with permission of J. Jansen. Electronic version supplied by Miroslav Zoric.
+  Data provenance: Electronic version supplied by Miroslav Zoric.
+  
+  Used with permission of J. Jansen.
 }
 \source{
   J. Jansen & J.A. Hoekstra (1993).

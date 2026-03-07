@@ -280,12 +280,22 @@ https://books.google.com/books?id=CaFZPbCllrMC&pg=PA323
 323 Turnip spacing data - agridat::mead.turnip
 ```
 
+### H. J. W. Mutsaers (1997). "A field guide for on-farm experimentation".
+https://archive.org/details/isbn_9781311258/page/n3/mode/1up
+
+```
+199 MET criss-cross, strip-plot - agridat::versteeg.maize
+212 soil characteristics of farmer fields in Nigeria, pca  <-- todo
+216 Nitrogen concentration in 35 fields
+```
+
 ### Leonard C. Onyiah (2008).
 "Design and Analysis of Experiments: Classical and Regression Approaches with SAS".
 https://books.google.com/books?id=_P3LBQAAQBAJ&pg=PA334
 
 ```
-334 Two examples of 5x5 Graeco-Latin squares in cassava and maize
+334 Casava 5x5 Latin square.
+334 Maize 5x5 Graeco-Latin squares. - onyiah.maize
 ```
 
 

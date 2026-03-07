@@ -20,7 +20,8 @@
 \details{
   The data 'y' are counts of ewes in different lambing classes.
   The classes are number of live lambs per birth for 0, 1, 2, 3+ lambs.
-  
+
+  Data provenance: Electronic version supplied by Miroslav Zoric.
 }
 
 \source{

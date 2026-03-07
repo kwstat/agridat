@@ -39,16 +39,15 @@
   It would be interesting to fit a model that uses differences in
   maturity between a plot and its neighbor as the actual covariate.
 
-  https://doi.org/10.1111/j.1744-7348.1993.tb04099.x
-
   Used with permission of Iain Currie.
 
 }
 \source{
-  Connolly, T and Currie, ID and Bradshaw, JE and McNicol, JW. (1993).
+  Connolly, T and I D Currie and J E Bradshaw and J W McNicol, (1993).
   Inter-plot competition in yield trials of potatoes
   \emph{Solanum tuberosum L.} with single-drill plots.
   Annals of Applied Biology, 123, 367-377.
+  https://doi.org/10.1111/j.1744-7348.1993.tb04099.x
 }
 
 \references{

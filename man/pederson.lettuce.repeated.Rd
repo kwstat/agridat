@@ -18,15 +18,21 @@
   }
 }
 \details{
-  Experiment conducted in a greenhouse in Silver Bay, Minnesota. Plants were grown hydroponically.
-Treatment 1 had 9 plants per raft. Treatment 2 had 18 plants, treatment 3 had 36 plants.
-The response variable is weight of plant, roots, soil, cup, and water. The plants were measured repeatedly beginning Dec 1, and ending Jan 9, when the plants were harvested.
+  Experiment conducted in a greenhouse in Silver Bay, Minnesota. Plants
+  were grown hydroponically.
+  Treatment 1 had 9 plants per raft. Treatment 2 had 18 plants,
+  treatment 3 had 36 plants.
+  The response variable is weight of plant, roots, soil, cup, and
+  water. The plants were measured repeatedly beginning Dec 1, and ending
+  Jan 9, when the plants were harvested.
+
+  Data provenance: Electronic version supplied by M. Zoric.
 }
 \source{
-Levi Dawson Pederson (2015).
-Mixed Model Analysis for Repeated Measures of Lettuce Growth
-Thesis at University of Minnesota. Appendix C.
-https://scse.d.umn.edu/sites/scse.d.umn.edu/files/pedersonprojectthesis.pdf
+  Levi Dawson Pederson (2015).
+  Mixed Model Analysis for Repeated Measures of Lettuce Growth
+  Thesis at University of Minnesota. Appendix C.
+  https://scse.d.umn.edu/sites/scse.d.umn.edu/files/pedersonprojectthesis.pdf
 }
 \references{
   None

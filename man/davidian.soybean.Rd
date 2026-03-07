@@ -33,6 +33,8 @@
   different plants are sampled at each date).
 
   Note: this data is the same as the "nlme::Soybean" data.
+
+  Data provenance: Electronic version supplied by M. Zoric.
 }
 \source{
   Marie Davidian and D. M. Giltinan, (1995).

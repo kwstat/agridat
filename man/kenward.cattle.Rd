@@ -33,6 +33,7 @@
   Is there a difference in treatments, and when does that difference
   first become manifest?
 
+  Data provenance: Electronic version supplied by Miroslav Zoric.
 }
 
 \source{

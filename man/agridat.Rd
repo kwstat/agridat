@@ -237,7 +237,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{bachmaier.nitrogen}          \tab     \tab    \tab 4   \tab    \tab 2,11  \tab \tab quadratic lm\cr
 \link{barrero.maize}               \tab 847 \tab 16 \tab 4   \tab 11 \tab 6     \tab \tab gain,asreml\cr
 \link{battese.survey}              \tab     \tab 12 \tab 1-5 \tab    \tab 2     \tab \tab lmer \cr
-\link{beall.webworms}              \tab     \tab    \tab 15  \tab    \tab 2,2   \tab xy, split-block \tab glm poisson,nb\cr
+\link{beall.webworms}              \tab     \tab    \tab 15  \tab    \tab 2,2   \tab xy, strip-plot/split-block \tab glm poisson,nb\cr
 \link{beaven.barley}               \tab  8  \tab    \tab 20  \tab    \tab       \tab xy \tab \cr
 \link{belamkar.augmented}          \tab 273 \tab 8  \tab     \tab    \tab       \tab xy, incblock\tab asreml \cr
 \link{besag.bayesian}              \tab 75  \tab    \tab 3   \tab    \tab       \tab xy \tab asreml \cr
@@ -278,7 +278,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{cramer.cucumber}             \tab     \tab    \tab 8   \tab    \tab       \tab \tab pathcoef \cr
 \link{crossa.wheat}                \tab 18  \tab 25 \tab     \tab    \tab       \tab \tab ammi \cr
 \link{crowder.seeds}               \tab 2   \tab    \tab 21  \tab    \tab 2     \tab \tab glm,INLA,jags \cr
-\link{cox.stripsplit}              \tab     \tab    \tab  4  \tab    \tab 3,4,2 \tab split-block \tab aov \cr
+\link{cox.stripsplit}              \tab     \tab    \tab  4  \tab    \tab 3,4,2 \tab strip-plot/split-block \tab aov \cr
 \link{cullis.earlygen}             \tab 532 \tab    \tab     \tab    \tab       \tab xy \tab asreml \cr
 \link{damesa.maize}                \tab 22  \tab 4  \tab 3   \tab    \tab       \tab xy,incblock,twostage \tab asreml \cr
 \link{dasilva.maize}               \tab 55  \tab 9  \tab 3   \tab    \tab       \tab \tab \cr
@@ -317,7 +317,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{gomez.seedrate}              \tab     \tab    \tab 4   \tab    \tab 6     \tab rate \tab lm\cr
 \link{gomez.splitplot.subsample}   \tab     \tab    \tab 3   \tab    \tab 8,4   \tab subsample \tab aov \cr
 \link{gomez.splitsplit}            \tab 3   \tab    \tab 3   \tab    \tab       \tab xy, nitro, mgmt \tab aov, lmer \cr
-\link{gomez.stripplot}             \tab 6   \tab    \tab 3   \tab    \tab       \tab xy, nitro \tab aov \cr
+\link{gomez.stripplot}             \tab 6   \tab    \tab 3   \tab    \tab       \tab xy, nitro, strip-plot/split-block \tab aov \cr
 \link{gomez.stripsplitplot}        \tab 6   \tab    \tab 3   \tab    \tab       \tab xy, nitro\tab aov \cr
 \link{gomez.wetdry}                \tab     \tab    \tab 3   \tab 2  \tab 5     \tab nitro\tab lmer \cr
 \link{gotway.hessianfly}           \tab 16  \tab    \tab 4   \tab    \tab       \tab xy \tab lmer \cr
@@ -362,7 +362,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{lin.superiority}             \tab 33  \tab 12 \tab     \tab    \tab       \tab \tab superiority \cr
 \link{lin.unbalanced}              \tab 33  \tab 18 \tab     \tab    \tab       \tab \tab superiority \cr
 \link{linder.wheat}                \tab  9  \tab  7 \tab  4  \tab    \tab       \tab \tab gge\cr
-\link{little.splitblock}           \tab     \tab    \tab 4   \tab    \tab 4,5   \tab xy, split-block\tab aov\cr
+\link{little.splitblock}           \tab     \tab    \tab 4   \tab    \tab 4,5   \tab xy, strip-plot/split-block\tab aov\cr
 \link{lonnquist.maize}             \tab 11  \tab    \tab     \tab    \tab       \tab diallel \tab asreml \cr
 \link{lyons.wheat}                 \tab     \tab 12 \tab     \tab 4  \tab       \tab \tab \cr
 \link{lu.stability}                \tab 5   \tab 6  \tab     \tab    \tab       \tab \tab huehn\cr
@@ -377,7 +377,8 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{minnesota.barley.weather}    \tab     \tab 6  \tab     \tab 10 \tab       \tab \tab \cr
 \link{minnesota.barley.yield}      \tab 22  \tab 6  \tab     \tab 10 \tab       \tab \tab dotplot\cr
 \link{omer.sorghum}                \tab 18  \tab 6  \tab 4   \tab    \tab       \tab \tab jags\cr
-\link{onofri.winterwheat}          \tab 8   \tab    \tab 3   \tab 7  \tab       \tab \tab ammi\cr
+\link{onyiah.maize}                \tab 5   \tab 5  \tab     \tab    \tab 5,5   \tab graeco \tab aov\cr
+\link{ortiz.tomato}                \tab 15  \tab 18 \tab     \tab    \tab 16    \tab env*gen~env*cov \tab pls \cr
 \link{ortiz.tomato}                \tab 15  \tab 18 \tab     \tab    \tab 16    \tab env*gen~env*cov \tab pls \cr
 \link{pacheco.soybean}             \tab 18  \tab 11 \tab     \tab    \tab       \tab \tab ammi\cr
 \link{payne.wheat}                 \tab     \tab    \tab     \tab 20 \tab 6     \tab rotation\tab asreml\cr
@@ -421,6 +422,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{vargas.wheat2}               \tab 8   \tab 7  \tab     \tab    \tab       \tab env*gen~env*cov \tab pls \cr
 \link{vargas.txe}                  \tab     \tab    \tab     \tab 10 \tab 24    \tab yr*trt~yr*cov \tab pls \cr
 \link{verbyla.lupin}               \tab 9   \tab 8  \tab 3   \tab 2  \tab 7     \tab rsm1, xy, density\tab asreml\cr
+\link{versteeg.maize}              \tab 3   \tab 25 \tab     \tab    \tab 2     \tab strip-plot/split-block \tab aov\cr
 \link{vold.longterm}               \tab     \tab    \tab     \tab 19 \tab 4     \tab rsm1 \tab nls,nlme \cr
 \link{vsn.lupin3}                  \tab 336 \tab 3  \tab     \tab    \tab       \tab xy \tab asreml\cr
 \link{wedderburn.barley}           \tab 10  \tab 9  \tab     \tab    \tab       \tab percent \tab glm/gnm \cr
