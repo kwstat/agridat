@@ -14,6 +14,7 @@
 * lechadolopez.sorghum.uniformity
 * macdonald.cotton.uniformity
 * mamani.bean.uniformity
+* matusgutierrez.maize.uniformity
 * mauricio.maize.uniformity
 * metzger.multi.uniformity
 * morgan.multi.uniformity

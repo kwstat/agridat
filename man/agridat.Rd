@@ -106,6 +106,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{magistad.pineapple.uniformity}      \tab 5 x 5 \tab xy \tab \cr
 \link{mamani.bean.uniformity}             \tab 84 x 20 \tab xy \tab \cr
 \link{masood.rice.uniformity}             \tab 12 x 24 \tab xy \tab \cr
+\link{matusgutierrez.maize.uniformity}    \tab 16 x 36 \tab xy \tab \cr
 \link{mauricio.maize.uniformity}          \tab 26 x 26 \tab xy \tab \cr
 \link{mcclelland.corn.uniformity}         \tab 2 x 44 \tab xy \tab \cr
 \link{mckinstry.cotton.uniformity}        \tab 24 x 20 \tab xy \tab \cr
