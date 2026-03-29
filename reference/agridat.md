@@ -99,6 +99,7 @@ row-column design, ts = time series,
 | [magistad.pineapple.uniformity](magistad.pineapple.uniformity.md)                 | 5 x 5            | xy                   |                     |
 | [mamani.bean.uniformity](mamani.bean.uniformity.md)                               | 84 x 20          | xy                   |                     |
 | [masood.rice.uniformity](masood.rice.uniformity.md)                               | 12 x 24          | xy                   |                     |
+| [matusgutierrez.maize.uniformity](matusgutierrez.maize.uniformity.md)             | 16 x 36          | xy                   |                     |
 | [mauricio.maize.uniformity](mauricio.maize.uniformity.md)                         | 26 x 26          | xy                   |                     |
 | [mcclelland.corn.uniformity](mcclelland.corn.uniformity.md)                       | 2 x 44           | xy                   |                     |
 | [mckinstry.cotton.uniformity](mckinstry.cotton.uniformity.md)                     | 24 x 20          | xy                   |                     |

@@ -537,6 +537,8 @@ library(agridat)
   trial of bean
 - [`masood.rice.uniformity`](masood.rice.uniformity.md) : Uniformity
   trial of rice
+- [`matusgutierrez.maize.uniformity`](matusgutierrez.maize.uniformity.md)
+  : Uniformity trial of maize in Nicaragua
 - [`mauricio.maize.uniformity`](mauricio.maize.uniformity.md) :
   Uniformity trial of maize in Ecuador
 - [`mcclelland.corn.uniformity`](mcclelland.corn.uniformity.md) :
