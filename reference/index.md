@@ -98,6 +98,10 @@
   Broadbalk fields at Rothamsted.
 - [`bryan.corn.uniformity`](bryan.corn.uniformity.md) : Uniformity trial
   of corn at 3 locations in Iowa.
+- [`buesocampos.melon.uniformity`](buesocampos.melon.uniformity.md) :
+  Uniformity trial of melon in Guatemala
+- [`buesocampos.tomato.uniformity`](buesocampos.tomato.uniformity.md) :
+  A uniformity trial of tomato in Guatemala
 - [`buntaran.wheat`](buntaran.wheat.md) : Multi-environment trial of
   wheat in Sweden in 2016.
 - [`burgueno.alpha`](burgueno.alpha.md) : Incomplete block alpha design

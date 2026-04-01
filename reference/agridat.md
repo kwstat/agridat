@@ -39,6 +39,8 @@ row-column design, ts = time series,
 | [borden.sugarcane.uniformity](borden.sugarcane.uniformity.md)                     | 4 x 12           | xy                   |                     |
 | [bradley.multi.uniformity](bradley.multi.uniformity.md)                           | 10 x 11          | xy                   |                     |
 | [bryan.corn.uniformity](bryan.corn.uniformity.md)                                 | 6 x 48           | xy                   |                     |
+| [buesocampos.melon.uniformity](buesocampos.melon.uniformity.md)                   | 20 x 24          | xy                   |                     |
+| [buesocampos.tomato.uniformity](buesocampos.tomato.uniformity.md)                 | 10 x 26          | xy                   |                     |
 | [christidis.cotton.uniformity](christidis.cotton.uniformity.md)                   | 16 x 16          | xy, 4 blocks         |                     |
 | [christidis.wheat.uniformity](christidis.wheat.uniformity.md)                     | 12 x 24          | xy                   |                     |
 | [coombs.rice.uniformity](coombs.rice.uniformity.md)                               | 3 x 18           | xy                   |                     |
