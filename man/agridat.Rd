@@ -46,6 +46,8 @@ name                                      \tab dimensions \tab other \tab model 
 \link{borden.sugarcane.uniformity}        \tab 4 x 12 \tab xy \tab \cr
 \link{bradley.multi.uniformity}           \tab 10 x 11 \tab xy \tab \cr
 \link{bryan.corn.uniformity}              \tab 6 x 48 \tab xy \tab \cr
+\link{buesocampos.melon.uniformity}       \tab 20 x 24 \tab xy \tab \cr
+\link{buesocampos.tomato.uniformity}      \tab 10 x 26 \tab xy \tab \cr
 \link{christidis.cotton.uniformity}       \tab 16 x 16 \tab xy, 4 blocks \tab \cr
 \link{christidis.wheat.uniformity}        \tab 12 x 24 \tab xy \tab \cr
 \link{coombs.rice.uniformity}             \tab 3 x 18 \tab xy \tab \cr
