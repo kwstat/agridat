@@ -26,10 +26,10 @@ A data frame with 576 observations on the following 3 variables.
 
 ## Details
 
-The experiment was located at 12 deg 3 min North, 86 deg 6 min West. The
-layout was rows 48 m long with spacing 0.75 m between rows. Each row was
-divided into basic units 3 m long, 16 per row. Total 576 basic units,
-each 2.25 m^2.
+The experiment was located at 12 deg 3 min North, 86 deg 6 min West in
+Nicaragua. Conducted 1989. The layout was rows 48 m long with spacing
+0.75 m between rows. Each row was divided into basic units 3 m long, 16
+per row. Total 576 basic units, each 2.25 m^2.
 
 Field length: 36 plots \* .75 m = 27 m
 

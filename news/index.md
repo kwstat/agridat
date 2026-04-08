@@ -5,10 +5,13 @@
 ### New datasets
 
 - andres.rice.uniformity
+- baena.bean.uniformity
 - barrantesaguilar.sugarcane.uniformity
 - barrientosgarcia.maize.uniformity
 - barrientosgarcia.sesame.uniformity
 - borden.sugarcane.uniformity
+- buesocampos.tomato.uniformity
+- buesocampos.melon.uniformity
 - clewer.wheat (via P.Schmidt)
 - delgadillolopez.sesame.uniformity
 - desousa.potato

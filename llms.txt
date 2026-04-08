@@ -71,6 +71,8 @@ library(agridat)
   of soybean in Australia
 - [`bachmaier.nitrogen`](bachmaier.nitrogen.md) : Trial of wheat with
   nitrogen fertilizer in two fertility zones
+- [`baena.bean.uniformity`](baena.bean.uniformity.md) : Uniformity trial
+  of beans in Columbia
 - [`bailey.cotton.uniformity`](bailey.cotton.uniformity.md) : Uniformity
   trial of cotton in Egypt
 - [`baker.barley.uniformity`](baker.barley.uniformity.md) : Uniformity

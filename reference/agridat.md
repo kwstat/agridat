@@ -20,6 +20,7 @@ row-column design, ts = time series,
 | name                                                                              | dimensions       | other                | model               |
 | [ansari.wheat.uniformity](ansari.wheat.uniformity.md)                             | 96 x 8           | xy                   |                     |
 | [andres.rice.uniformity](andres.rice.uniformity.md)                               | 33 x 30          | xy                   |                     |
+| [baena.bean.uniformity](baena.bean.uniformity.md)                                 | 36 x 36          | xy                   |                     |
 | [bailey.cotton.uniformity](bailey.cotton.uniformity.md)                           | 8 x 20           | xy, 5 envts          |                     |
 | [baker.barley.uniformity](baker.barley.uniformity.md)                             | 3 x 19           | xy, 10 years         |                     |
 | [barrantesaguilar.sugarcane.uniformity](barrantesaguilar.sugarcane.uniformity.md) | 40 x 40          | xy                   |                     |
