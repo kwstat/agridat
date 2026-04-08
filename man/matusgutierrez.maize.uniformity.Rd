@@ -17,7 +17,8 @@
   }
 }
 \details{
-  The experiment was located at 12 deg 3 min North, 86 deg 6 min West.
+  The experiment was located at 12 deg 3 min North, 86 deg 6 min West
+  in Nicaragua. Conducted 1989.
   The layout was rows 48 m long with spacing 0.75 m between rows.
   Each row was divided into basic units 3 m long, 16 per row.
   Total 576 basic units, each 2.25 m^2.
