@@ -27,6 +27,8 @@
 name                                      \tab dimensions \tab other \tab model \cr
 \link{ansari.wheat.uniformity}            \tab 96 x 8 \tab xy \tab \cr
 \link{andres.rice.uniformity}             \tab 33 x 30 \tab xy \tab \cr
+\link{alvarezcajas.sugarcane.uniformity}  \tab 40 x 15 \tab xy \tab \cr
+\link{athulya.rice.uniformity}            \tab 20 x 20 \tab xy \tab \cr
 \link{baena.bean.uniformity}              \tab 36 x 36 \tab xy \tab \cr
 \link{bailey.cotton.uniformity}           \tab 8 x 20 \tab xy, 5 envts \tab \cr
 \link{baker.barley.uniformity}            \tab 3 x 19 \tab xy, 10 years \tab \cr

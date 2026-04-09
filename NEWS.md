@@ -2,7 +2,9 @@
 
 ## New datasets
 
+* alvarezcajas.sugarcane.uniformity
 * andres.rice.uniformity
+* athulya.rice.uniformity
 * baena.bean.uniformity
 * barrantesaguilar.sugarcane.uniformity
 * barrientosgarcia.maize.uniformity
