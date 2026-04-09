@@ -13,6 +13,8 @@
   from agricultural experiments
 - [`allcroft.lodging`](allcroft.lodging.md) : Multi-environment trial of
   cereal with lodging data
+- [`alvarezcajas.sugarcane.uniformity`](alvarezcajas.sugarcane.uniformity.md)
+  : Uniformity trial of sugarcane in Guatemala
 - [`alwan.lamb`](alwan.lamb.md) : For the 34 sheep sires, the number of
   lambs in each of 5 foot shape classes.
 - [`andres.rice.uniformity`](andres.rice.uniformity.md) : A uniformity
@@ -23,6 +25,8 @@
   apple trees
 - [`ars.earlywhitecorn96`](ars.earlywhitecorn96.md) : Multi-environment
   trial of early white food corn
+- [`athulya.rice.uniformity`](athulya.rice.uniformity.md) : Uniformity
+  trial of rice in India
 - [`australia.soybean`](australia.soybean.md) : Multi-environment trial
   of soybean in Australia
 - [`bachmaier.nitrogen`](bachmaier.nitrogen.md) : Trial of wheat with
