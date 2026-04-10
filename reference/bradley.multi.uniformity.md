@@ -14,11 +14,11 @@ A data frame with 440 observations on the following 5 variables.
 
 - `row`:
 
-  row
+  row ordinate
 
 - `col`:
 
-  column
+  column ordinate
 
 - `yield`:
 

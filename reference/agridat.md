@@ -67,6 +67,7 @@ row-column design, ts = time series,
 | [hartman.tomato.uniformity](hartman.tomato.uniformity.md)                         | 12 x 32          | xy                   |                     |
 | [heath.cabbage.uniformity](heath.cabbage.uniformity.md)                           | 6 x 8            | xy                   |                     |
 | [heath.radish.uniformity](heath.raddish.uniformity.md)                            | 10 x 10          | xy                   |                     |
+| [hernandezdavila.potato.uniformity](hernandezdavila.potato.uniformity.md)         | 12 x 42          | xy, 2 expts          |                     |
 | [holtsmark.timothy.uniformity](holtsmark.timothy.uniformity.md)                   | 6 x 40           | xy                   |                     |
 | [hutchinson.cotton.uniformity](hutchinson.cotton.uniformity.md)                   | 36 x 42          | xy                   |                     |
 | [igue.sugarcane.uniformity](igue.sugarcane.uniformity.md)                         | 36 x 42          | xy                   |                     |

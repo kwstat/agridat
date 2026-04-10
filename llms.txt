@@ -389,6 +389,8 @@ library(agridat)
   single cow
 - [`hernandez.nitrogen`](hernandez.nitrogen.md) : Multi-environment
   trial of corn with nitrogen fertilizer at 5 sites.
+- [`hernandezdavila.potato.uniformity`](hernandezdavila.potato.uniformity.md)
+  : Uniformity trial of potato in Guatemala
 - [`hessling.argentina`](hessling.argentina.md) : Relation between wheat
   yield and weather in Argentina
 - [`hildebrand.systems`](hildebrand.systems.md) : Multi-environment
