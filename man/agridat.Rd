@@ -137,6 +137,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{oliveira.lupin.uniformity}          \tab 10 x 40 \tab xy \tab \cr
 \link{oliveira.potato.uniformity}         \tab  5 x 40 \tab xy \tab \cr
 \link{paez.coffee.uniformity}             \tab 32 x 36 \tab xy, 5 yr \tab \cr
+\link{palenciaortiz.sugarcane.uniformity} \tab 18 x 26 \tab xy \tab \cr
 \link{panse.cotton.uniformity}            \tab 32 x 40 \tab xy \tab \cr
 \link{parker.orange.uniformity}           \tab 10 x 27 \tab xy, 6 yr \tab \cr
 \link{piepho.barley.uniformity}           \tab 30 x 36 \tab xy \tab \cr

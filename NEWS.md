@@ -24,6 +24,7 @@
 * metzger.multi.uniformity
 * morgan.multi.uniformity
 * onyiah.maize (Graeco-Latin square)
+* palenciaortiz.sugarcane.uniformity
 * petersen.wheat (via P.Schmidt)
 * versteeg.maize (Strip-plot)
 
