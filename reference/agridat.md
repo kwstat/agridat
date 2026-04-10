@@ -130,6 +130,7 @@ row-column design, ts = time series,
 | [oliveira.lupin.uniformity](oliveira.lupin.uniformity.md)                         | 10 x 40          | xy                   |                     |
 | [oliveira.potato.uniformity](oliveira.potato.uniformity.md)                       | 5 x 40           | xy                   |                     |
 | [paez.coffee.uniformity](paez.coffee.uniformity.md)                               | 32 x 36          | xy, 5 yr             |                     |
+| [palenciaortiz.sugarcane.uniformity](palenciaortiz.sugarcane.uniformity.md)       | 18 x 26          | xy                   |                     |
 | [panse.cotton.uniformity](panse.cotton.uniformity.md)                             | 32 x 40          | xy                   |                     |
 | [parker.orange.uniformity](parker.orange.uniformity.md)                           | 10 x 27          | xy, 6 yr             |                     |
 | [piepho.barley.uniformity](piepho.barley.uniformity.md)                           | 30 x 36          | xy                   |                     |

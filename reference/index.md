@@ -587,6 +587,8 @@
   soybean in Brazil.
 - [`paez.coffee.uniformity`](paez.coffee.uniformity.md) : Uniformity
   trial of coffee
+- [`palenciaortiz.sugarcane.uniformity`](palenciaortiz.sugarcane.uniformity.md)
+  : Uniformity trial of sugarcane in Guatemala
 - [`panse.cotton.uniformity`](panse.cotton.uniformity.md) : Uniformity
   trial of cotton
 - [`parker.orange.uniformity`](parker.orange.uniformity.md) : Uniformity

@@ -1,5 +1,6 @@
 <urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
 <url><loc>/404.html</loc></url>
+<url><loc>/CLAUDE.html</loc></url>
 <url><loc>/LICENSE-text.html</loc></url>
 <url><loc>/LICENSE.html</loc></url>
 <url><loc>/articles/agridat_data.html</loc></url>
@@ -306,6 +307,7 @@
 <url><loc>/reference/ortiz.tomato.html</loc></url>
 <url><loc>/reference/pacheco.soybean.html</loc></url>
 <url><loc>/reference/paez.coffee.uniformity.html</loc></url>
+<url><loc>/reference/palenciaortiz.sugarcane.uniformity.html</loc></url>
 <url><loc>/reference/panse.cotton.uniformity.html</loc></url>
 <url><loc>/reference/parker.orange.uniformity.html</loc></url>
 <url><loc>/reference/patterson.switchback.html</loc></url>
