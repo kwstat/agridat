@@ -11,8 +11,8 @@
 \format{
   A data frame with 440 observations on the following 5 variables.
   \describe{
-    \item{\code{row}}{row}
-    \item{\code{col}}{column}
+    \item{\code{row}}{row ordinate}
+    \item{\code{col}}{column ordinate}
     \item{\code{yield}}{yield, pounds per plot}
     \item{\code{season}}{season}
     \item{\code{crop}}{crop}

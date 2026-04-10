@@ -16,6 +16,7 @@
 * delgadillolopez.sesame.uniformity
 * desousa.potato
 * garber.frames.uniformity
+* hernandezdavila.potato.uniformity
 * lechadolopez.sorghum.uniformity
 * macdonald.cotton.uniformity
 * mamani.bean.uniformity

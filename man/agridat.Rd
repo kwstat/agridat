@@ -74,6 +74,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{hartman.tomato.uniformity}          \tab 12 x 32 \tab xy \tab \cr
 \link{heath.cabbage.uniformity}           \tab 6 x 8   \tab xy \tab \cr
 \link{heath.radish.uniformity}            \tab 10 x 10 \tab xy \tab \cr
+\link{hernandezdavila.potato.uniformity}  \tab 12 x 42 \tab xy, 2 expts \tab \cr
 \link{holtsmark.timothy.uniformity}       \tab 6 x 40  \tab xy \tab \cr
 \link{hutchinson.cotton.uniformity}       \tab 36 x 42 \tab xy \tab \cr
 \link{igue.sugarcane.uniformity}          \tab 36 x 42 \tab xy \tab \cr

@@ -1,5 +1,5 @@
 # bose.multi.R
-# Time-stamp: <09 Jan 2018 15:47:00 c:/x/rpack/agridat/data-raw/bose.multi.R>
+# Time-stamp: <2026-04-10 13:22:18 wrightkevi>
 
 library(asreml)
 library(dplyr)

@@ -2,6 +2,8 @@
 
 # Do not put "LICENSE" below.  R needs to see that file.
 
+^CLAUDE.md$
+
 # ----- Git -----
 ^.gitignore$
 
