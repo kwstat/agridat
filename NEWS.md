@@ -2,6 +2,7 @@
 
 ## New datasets
 
+* aguileracarreras.bean.uniformity
 * alvarezcajas.sugarcane.uniformity
 * andres.rice.uniformity
 * athulya.rice.uniformity

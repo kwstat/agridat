@@ -25,6 +25,7 @@
 
 \tabular{llll}{
 name                                      \tab dimensions \tab other \tab model \cr
+\link{aguileracarreras.bean.uniformity}   \tab 16 x 15 \tab xy \tab \cr
 \link{ansari.wheat.uniformity}            \tab 96 x 8 \tab xy \tab \cr
 \link{andres.rice.uniformity}             \tab 33 x 30 \tab xy \tab \cr
 \link{alvarezcajas.sugarcane.uniformity}  \tab 40 x 15 \tab xy \tab \cr
