@@ -31,16 +31,16 @@ and 10 blocks. Mean tree height is reported.
 
 The testing locations are described in the following table:
 
-|     |                          |         |          |          |              |              |              |             |
-|-----|--------------------------|---------|----------|----------|--------------|--------------|--------------|-------------|
-| Loc | City                     | Lat (S) | Long (W) | Altitude | Avg min temp | Avg max temp | Avg temp (C) | Precip (mm) |
-| L1  | Barra Ribeiro, RS        | 30.33   | 51.23    | 30       | 9            | 25           | 19           | 1400        |
-| L2  | Telemaco Borba, PR       | 24.25   | 20.48    | 850      | 11           | 26           | 19           | 1480        |
-| L3  | Boa Experanca de Sul, SP | 21.95   | 48.53    | 540      | 15           | 23           | 21           | 1300        |
-| L4  | Guanhaes, MG             | 18.66   | 43       | 900      | 14           | 24           | 19           | 1600        |
-| L5  | Ipatinga, MG             | 19.25   | 42.33    | 250      | 15           | 24           | 22           | 1250        |
-| L6  | Aracruz, ES              | 19.8    | 40.28    | 50       | 15           | 26           | 24           | 1360        |
-| L7  | Cacapva, SP              | 23.05   | 45.76    | 650      | 14           | 24           | 20           | 1260        |
+|  |  |  |  |  |  |  |  |  |
+|----|----|----|----|----|----|----|----|----|
+| Loc | City | Lat (S) | Long (W) | Altitude | Avg min temp | Avg max temp | Avg temp (C) | Precip (mm) |
+| L1 | Barra Ribeiro, RS | 30.33 | 51.23 | 30 | 9 | 25 | 19 | 1400 |
+| L2 | Telemaco Borba, PR | 24.25 | 20.48 | 850 | 11 | 26 | 19 | 1480 |
+| L3 | Boa Experanca de Sul, SP | 21.95 | 48.53 | 540 | 15 | 23 | 21 | 1300 |
+| L4 | Guanhaes, MG | 18.66 | 43 | 900 | 14 | 24 | 19 | 1600 |
+| L5 | Ipatinga, MG | 19.25 | 42.33 | 250 | 15 | 24 | 22 | 1250 |
+| L6 | Aracruz, ES | 19.8 | 40.28 | 50 | 15 | 26 | 24 | 1360 |
+| L7 | Cacapva, SP | 23.05 | 45.76 | 650 | 14 | 24 | 20 | 1260 |
 
 Arciniegas-Alarcon (2010) used the 'Ravenshoe' subset of the data to
 illustrate imputation of missing values.

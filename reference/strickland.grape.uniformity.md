@@ -36,6 +36,7 @@ Certain sections were omitted because of missing vines.
 A. G. Strickland (1932). A vine uniformity trial. Journal of
 Agriculture, Victoria, 30, 584-593.
 https://handle.slv.vic.gov.au/10381/386462
+https://archive.org/details/journaldepartmev30pvictk/page/584/
 
 ## References
 

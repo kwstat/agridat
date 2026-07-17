@@ -1,4 +1,4 @@
-# Bamboo progeny trial
+# Bamboo progeny trial in India
 
 Bamboo progeny trial in 2 locations, 3 blocks
 
@@ -20,13 +20,13 @@ A data frame with 216 observations on the following 5 variables.
 
   block factor
 
-- `tree`:
-
-  tree factor
-
 - `family`:
 
   family factor
+
+- `tree`:
+
+  tree factor
 
 - `height`:
 
@@ -38,10 +38,17 @@ Data from a replicated trial of bamboo at two locations in Kerala,
 India. Each location had 3 blocks. In each block were 6 families, with 6
 trees in each family.
 
+Note: The data in `jayaraman.bamboo.uncorrected` is the same as
+`jayaraman.bamboo` except that the former has not been corrected for a
+data entry error in the `tree` variable. Thanks to Roger Stern for
+pointing out the error. The 'uncorrected' data is included for
+illustration purposes only, and should not be used for analysis.
+
 ## Source
 
 K. Jayaraman (1999). "A Statistical Manual For Forestry Research".
-Forestry Research Support Programme for Asia and the Pacific. Page 170.
+Forestry Research Support Programme for Asia and the Pacific. Section
+6.1, Page 170. https://openknowledge.fao.org/handle/20.500.14283/x6831e
 
 ## References
 

@@ -1,12 +1,14 @@
 # Example generalized linear mixed model analysis with different packages
 
 ``` r
+
 library(agridat)
 data(crowder.seeds)
 dat <- crowder.seeds
 ```
 
 ``` r
+
 libs(lattice)
 dotplot(germ/n~gen|extract, dat, main="crowder.seeds", xlab="gen")
 ```
@@ -29,6 +31,7 @@ It takes a minute or so to compile Stan program…
 Note, in Emacs brms ends the R process for some reason!
 
 ``` r
+
 if(require(brms)){
   m1.brms <- brms::brm( germ|trials(n)~ gen*extract,
      data = dat,
@@ -47,6 +50,7 @@ if(require(brms)){
 #### glm
 
 ``` r
+
 # ----- GLM.
 # family=binomial() fixes dispersion at 1
 # family=quasibinomial() estimates dispersion, had larger std errors
@@ -67,6 +71,7 @@ summary(m1.glm)
 #### rstan
 
 ``` r
+
   # ----- Stan using pre-built models from rstanarm
   libs(tidyverse, rstan, rstanarm,bayesplot)
   set.seed(42)
@@ -92,6 +97,7 @@ summary(m1.glm)
 #### asreml
 
 ``` r
+
 if(require(asreml)){
   m1.asreml <- asreml(germ ~ gen*extract,
                       data=dat,
@@ -116,6 +122,7 @@ if(require(asreml)){
 #### MASS::glmmPQL
 
 ``` r
+
 # --- GLMM.  Assumes Gaussian random effects
 libs(MASS)
 m1.glmm <- glmmPQL(cbind(germ, n-germ) ~ gen*extract,
@@ -133,6 +140,7 @@ summary(m1.glmm)
 #### glmmTMB
 
 ``` r
+
 libs(glmmTMB)
 m1.glmmtmb <- glmmTMB(cbind(germ, n-germ) ~ gen*extract + (1|plate),
                       data=dat,
@@ -148,6 +156,7 @@ round(summary(m1.glmmtmb)$coefficients$cond , 2)
 #### hglm
 
 ``` r
+
 # ----- HGML package. Beta-binomial with beta-distributed random effects
 if(require(hglm)){
   m1.hglm <- hglm(fixed= germ/n ~ I(gen=="O75")*extract, weights=n, data=dat,
@@ -168,6 +177,7 @@ if(require(hglm)){
 See: <https://haakonbakka.bitbucket.io/btopic102.html>
 
 ``` r
+
 if(require(INLA)){
   #gen,extract are fixed. plate is a random effect
   #Priors for hyper parameters. See: inla.doc("pc.prec")
@@ -190,6 +200,7 @@ if(require(INLA)){
 Requires JAGS to be installed.
 
 ``` r
+
 # JAGS/BUGS.  See https://mathstat.helsinki.fi/openbugs/Examples/Seeds.html
 # Germination rate depends on p, which is a logit of a linear predictor
 # based on genotype and extract, plus random deviation to intercept

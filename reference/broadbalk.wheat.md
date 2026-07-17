@@ -36,26 +36,26 @@ fertilizer treatments were applied in various combinations to the plots.
 
 N1 is 48kg, N1.5 is 72kg, N2 is 96kg, N4 is 192kg nitrogen.
 
-|      |                                                                            |
-|------|----------------------------------------------------------------------------|
-| Plot | Treatment                                                                  |
-| 2b   | manure                                                                     |
-| 3    | No fertilizer or manure                                                    |
-| 5    | P K Na Mg (No N)                                                           |
-| 6    | N1 P K Na Mg                                                               |
-| 7    | N2 P K Na Mg                                                               |
-| 8    | N3 P K Na Mg                                                               |
-| 9    | N1\* P K Na Mg since 1894; 9A and 9B received different treatments 1852-93 |
-| 10   | N2                                                                         |
-| 11   | N2 P                                                                       |
-| 12   | N2 P Na\*                                                                  |
-| 13   | N2 P K                                                                     |
-| 14   | N2 P Mg\*                                                                  |
-| 15   | N2 P K Na Mg (timing of N application different to other plots, see below) |
-| 16   | N4 P K Na Mg 1852-64; unmanured 1865-83; N2\*P K Na Mg since 1884          |
-| 17   | N2 applied in even years; P K Na Mg applied in odd years                   |
-| 18   | N2 applied in odd years; P K Na Mg applied in even years                   |
-| 19   | N1.5 P and rape cake 1852-78, 1879-1925 rape cake only                     |
+|  |  |
+|----|----|
+| Plot | Treatment |
+| 2b | manure |
+| 3 | No fertilizer or manure |
+| 5 | P K Na Mg (No N) |
+| 6 | N1 P K Na Mg |
+| 7 | N2 P K Na Mg |
+| 8 | N3 P K Na Mg |
+| 9 | N1\* P K Na Mg since 1894; 9A and 9B received different treatments 1852-93 |
+| 10 | N2 |
+| 11 | N2 P |
+| 12 | N2 P Na\* |
+| 13 | N2 P K |
+| 14 | N2 P Mg\* |
+| 15 | N2 P K Na Mg (timing of N application different to other plots, see below) |
+| 16 | N4 P K Na Mg 1852-64; unmanured 1865-83; N2\*P K Na Mg since 1884 |
+| 17 | N2 applied in even years; P K Na Mg applied in odd years |
+| 18 | N2 applied in odd years; P K Na Mg applied in even years |
+| 19 | N1.5 P and rape cake 1852-78, 1879-1925 rape cake only |
 
 Electronic version of the data was retrieved from
 http://lib.stat.cmu.edu/datasets/Andrews/

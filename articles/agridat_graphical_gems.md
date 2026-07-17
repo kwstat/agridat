@@ -140,9 +140,12 @@ See the example for the `sinclair.clover` data for the code.
 @sinclair1994sulphur examined clover yields as a function of sulfur and
 phosphorous fertilizer in a factorial-treatment experiment.
 @dodds1996bivariate modeled the yield response using a Mitzerlisch-like
-equation that allows interacting curvature in two dimensions $x$ and
-$y$:
-$$yield = \alpha*\left( 1 + \beta*\left( \frac{\sigma + \tau*x}{x + 1} \right)^{y} \right)*\left( 1 + \delta*\left( \frac{\theta + \rho*y}{y + 1} \right)^{x} \right)$$
+equation that allows interacting curvature in two dimensions $`x`$ and
+$`y`$:
+``` math
+yield = \alpha * \left( 1 + \beta *\left(\frac{\sigma + \tau*x}{x+1}\right)^y\right) *
+\left( 1+\delta*\left(\frac{\theta + \rho *y}{y+1}\right)^x \right)
+```
 
 The blue dots are observed data, and the tan surface is the fitted
 surface drawn by the `rgl` package).

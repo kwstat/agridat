@@ -27,6 +27,7 @@ Interoperable, Reusable.
 ## Installation
 
 ``` r
+
 # Install the released version from CRAN:
 install.packages("agridat")
 
@@ -38,6 +39,7 @@ devtools::install_github("kwstat/agridat")
 ## Usage
 
 ``` r
+
 library(agridat)
 ?agridat # list all datasets with keywords
 ```

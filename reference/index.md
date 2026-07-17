@@ -11,6 +11,8 @@
   sorghum at 3 locations across 5 years
 - [`agridat`](agridat.md) [`agridat-package`](agridat.md) : Datasets
   from agricultural experiments
+- [`aguileracarreras.bean.uniformity`](aguileracarreras.bean.uniformity.md)
+  : Uniformity trial of beans in El Salvador
 - [`allcroft.lodging`](allcroft.lodging.md) : Multi-environment trial of
   cereal with lodging data
 - [`alvarezcajas.sugarcane.uniformity`](alvarezcajas.sugarcane.uniformity.md)
@@ -381,7 +383,8 @@
   larvae
 - [`jansen.strawberry`](jansen.strawberry.md) : Ordered disease ratings
   of strawberry crosses.
-- [`jayaraman.bamboo`](jayaraman.bamboo.md) : Bamboo progeny trial
+- [`jayaraman.bamboo`](jayaraman.bamboo.md) : Bamboo progeny trial in
+  India
 - [`jegorow.oats.uniformity`](jegorow.oats.uniformity.md) : Uniformity
   trial of oats in Russia
 - [`jenkyn.mildew`](jenkyn.mildew.md) : Yields from treatment for mildew

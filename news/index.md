@@ -4,6 +4,7 @@
 
 ### New datasets
 
+- aguileracarreras.bean.uniformity
 - alvarezcajas.sugarcane.uniformity
 - andres.rice.uniformity
 - athulya.rice.uniformity
@@ -35,6 +36,7 @@
 
 - Fix typo ([\#19](https://github.com/kwstat/agridat/issues/19))
 - sawyer.multi.uniformity has been reshaped to tall format.
+- jayaraman.bamboo bug fix (thanks R.Stern)
 
 ## agridat 1.26 (2025-11-14)
 

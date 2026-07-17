@@ -26,6 +26,9 @@ A data frame with 180 observations on the following 3 variables.
 
 ## Details
 
+Strikland (1934) says the trial was located at Bendigo, Victoria, during
+the years 1932-1933.
+
 Tomato plants were placed 2 feet apart in rows 4 feet apart. Each plot
 contained 6 plants.
 
@@ -43,7 +46,9 @@ https://handle.slv.vic.gov.au/10381/386642
 
 ## References
 
-None
+A.G. Strickland (1934). Tomato Investigations: Results of Bendigo Tests.
+Journal of Agriculture, Victoria, 32, 335-346.
+https://archive.org/details/journaldepartmev32pvicte/page/334/
 
 ## Examples
 
