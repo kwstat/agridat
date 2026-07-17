@@ -18,9 +18,7 @@
 }
 \details{
   This experiment was a repeat of the classic experiment by Mercer and
-  Hall.
-  
-  Conducted at State Research Farm, Werribee, Victoria, Australia.
+  Hall, conducted at State Research Farm, Werribee, Victoria, Australia.
   
   Planted 1926. Harvested 1927. An acre of land was selected. Each plot
   had one double-sown row.
@@ -59,7 +57,10 @@
   https://www.biodiversitylibrary.org/page/54367272
 }
 \references{
-  None
+  Forster, H. C. and J. Vasey (1932).
+  The development of accuracy in Agricultural Experiments.
+  Journal of Agriculture, Victoria, 30, 35-52.
+  https://archive.org/details/journaldepartmev30pvictb/page/34
 }
 \examples{
 \dontrun{

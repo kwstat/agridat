@@ -41,7 +41,7 @@ Data provenance: OCR performed by Claude. Hand-corrected by K.Wright.
 \source{
 Aguilera Carreras, José Rutilio (1969).
 Heterogeneidad de un suelo latosol pardo forestal en un lote experimental de fertilización en café.
-Thesis, Universidad de El Salvador.
+Thesis, University of El Salvador.
 https://hdl.handle.net/20.500.14492/29100
 }
 \references{

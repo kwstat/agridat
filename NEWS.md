@@ -34,6 +34,7 @@
 
 * Fix typo (#19)
 * sawyer.multi.uniformity has been reshaped to tall format.
+* jayaraman.bamboo bug fix (thanks R.Stern)
 
 # agridat 1.26 (2025-11-14)
 

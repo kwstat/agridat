@@ -36,15 +36,17 @@
 \examples{
 \dontrun{
 
-library(agridat)
-data(gomez.stripsplitplot)
-dat <- gomez.stripsplitplot
+  library(agridat)
 
-# Layout
-libs(desplot)
-desplot(dat, gen ~ col*row,
-        out1=rep, col=nitro, text=planting, cex=1,
-        main="gomez.stripsplitplot")
+  data(gomez.stripsplitplot)
+  dat <- gomez.stripsplitplot
+
+  # Layout
+  libs(desplot)
+  dat$cell <- with(dat, paste0(rep,"_",gen,"_",nitro))
+  desplot(dat, gen ~ col*row,
+          out1=rep, out2=cell, col=nitro, text=planting, cex=1,
+          main="gomez.stripsplitplot")
 
 
 # Gomez table 4.19, ANOVA of strip-split-plot design

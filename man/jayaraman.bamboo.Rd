@@ -1,8 +1,9 @@
 \name{jayaraman.bamboo}
 \alias{jayaraman.bamboo}
+\alias{jayaraman.bamboo.uncorrected}
 \docType{data}
 \title{
-  Bamboo progeny trial
+  Bamboo progeny trial in India
 }
 \description{
   Bamboo progeny trial in 2 locations, 3 blocks
@@ -13,19 +14,27 @@
   \describe{
     \item{\code{loc}}{location factor}
     \item{\code{block}}{block factor}
-    \item{\code{tree}}{tree factor}
     \item{\code{family}}{family factor}
+    \item{\code{tree}}{tree factor}
     \item{\code{height}}{height, cm}
   }
 }
 \details{
   Data from a replicated trial of bamboo at two locations in Kerala,
   India.  Each location had 3 blocks.  In each block were 6 families,
-  with 6 trees in each family. 
+  with 6 trees in each family.
+
+  Note: The data in \code{jayaraman.bamboo.uncorrected} is the same as
+  \code{jayaraman.bamboo} except that the former has not been corrected for a
+  data entry error in the \code{tree} variable. Thanks to Roger Stern for 
+  pointing out the error. The 'uncorrected' data is included for illustration
+  purposes only, and should not be used for analysis.
 }
 \source{
   K. Jayaraman (1999). "A Statistical Manual For Forestry Research".
-  Forestry Research Support Programme for Asia and the Pacific. Page 170.
+  Forestry Research Support Programme for Asia and the Pacific.
+  Section 6.1, Page 170.
+  https://openknowledge.fao.org/handle/20.500.14283/x6831e
 }
 \references{
   None

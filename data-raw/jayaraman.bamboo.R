@@ -3,18 +3,26 @@
 
 libs(asreml,dplyr,fs,janitor,kw,lattice,readxl,readr,reshape2,tibble)
 
-setwd("c:/x/rpack/agridat/data-raw/")
-dat0 <- read_excel("jayaraman.bamboo.xlsx")
-dat <- janitor::clean_names(dat0)
-dat <- rename(dat, F1=x4, F2=x5, F3=x6, F4=x7, F5=x8, F6=x9)
-head(dat)
-d2 <- melt(dat, id.vars=c("loc","block","tree") )
+setwd("c:/drop/rpack/agridat/data-raw/")
+
+dat1 <- read_excel("jayaraman.bamboo.uncorrected.xlsx")
+head(dat1)
+d1 <- melt(dat1, id.vars=c("loc","block","tree") )
+d1 <- rename(d1, family=variable, height=value)
+d1 <- select(d1, loc, block, family, tree, height)
+head(d1)
+jayaraman.bamboo.uncorrected <- d1
+
+dat2 <- read_excel("jayaraman.bamboo.xlsx")
+head(dat2)
+d2 <- melt(dat2, id.vars=c("loc","block","tree") )
 d2 <- rename(d2, family=variable, height=value)
-
+d2 <- select(d2, loc, block, family, tree, height)
+head(d2)
 jayaraman.bamboo <- d2
-agex(jayaraman.bamboo)
 
-
+kw::agex(jayaraman.bamboo, prompt = FALSE)
+kw::agex(jayaraman.bamboo.uncorrected, prompt = FALSE)
 
 bwplot(height ~ family|loc, d2)
 m1 <- aov(height ~ loc+loc:block + family + family:loc + family:loc:block, data=d2)
