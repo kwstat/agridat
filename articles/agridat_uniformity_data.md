@@ -20,6 +20,11 @@ GitHub version). In the agridat package vignette “Notes on uniformity
 data” you will find a section on papers not yet found. Can you find any
 of these papers in a public place?
 
+Can you access this document:
+<https://github.com/kwstat/agridat/blob/main/vignettes/agridat_uniformity_data.Rmd>
+Can you suggest any more papers similar to the ones in the Rmd file,
+that are likely to contain data from agricultural uniformity trials?
+
 ## —————————————————————————
 
 ## Searches
@@ -590,6 +595,7 @@ Luz Elena Barrantes Aguilar; Adrián González Estrada; Miguel Ángel
 Martínez Damián; Ramón Valdivia Alcalá (2020). Modelos de regresión
 segmentada para estimar el tamaño óptimo de la parcela experimental con
 caña de azúcar Revista Mexicana Ciencias Agrícolas, 11, 8.
+<https://doi.org/10.29312/remexca.v11i8.1934>
 <https://cienciasagricolas.inifap.gob.mx/index.php/agricolas/article/view/1934/3677>
 Reviewed. No data.
 
@@ -877,6 +883,14 @@ non-kg weights and then converted to kg. In Appendix III, there are some
 plots along the left edge that are measured to 3 decimals (0.993,
 0.631), but most of the field is measured to 2 decimals. Weird.
 
+da Silva, Enedino Correa (1971). Estudo do tamanho e forma de parcelas
+para experimentos de soja. M.S. thesis, Escola Superior de Agricultura
+“Luiz de Queiroz”, Universidade de Sao Paulo, Piracicaba, Brazil.
+Appendix 5.
+<https://teses.usp.br/teses/disponiveis/11/0/tde-20240301-150533/pt-br.html>
+<https://doi.org/10.11606/D.11.1972.tde-20240301-150533>
+agridat::dasilva.soybean.uniformity
+
 da Silva, Enedino Correa. (1974). Estudo do tamanho e forma de parcelas
 para experimentos de soja (Plot size and shape for soybean yield
 trials). Pesquisa Agropecuaria Brasileira, Serie Agronomia, 9, 49-59.
@@ -914,8 +928,8 @@ de Sousa, Roberto Pequeno and Assis, Janilson Pinheiro de and Rodrigues,
 Walter Martins and Linhares, Paulo César Ferreira and Cardoso, Eudes de
 Almeida and Pereira, Maria Francisca Soares and Paula, José Aluisio de
 Araújo (2018). Optimum Plot Size for Experimental Cassava Production.
-Journal of Agricultural Science, 10, 231-237. Reviewed. No data.
-<https://doi.org/10.5539/jas.v10n10p231>
+Journal of Agricultural Science, 10, 231-237.
+<https://doi.org/10.5539/jas.v10n10p231> Reviewed. No data.
 
 de Sousa, Roberto Pequeno; Paulo Sérgio Lima e Silva; Janilson Pinheiro
 de Assis; Paulo Igor Barbosa e Silva; Júlio César DoVale. 2015. Optimum
@@ -939,6 +953,11 @@ de la unidad experimental en Ajonjolí (Sesamun spp). Thesis, National
 School of Agriculture, Nicaragua. License: BY-NC-ND.
 <https://repositorio.una.edu.ni/3076/> Data on page 22.
 agridat::delgadillolopez.sesame.uniformity
+
+Dinon, M. A., Delgado, S., & Castaño, F. (2019). Tamaño óptimo de
+parcela e incidencia de la podredumbre blanca del capítulo del girasol
+en el sudeste bonaerense. Revista de la Facultad de Agronomía, 118(1),
+43-50. <https://doi.org/10.24215/16699513e005> Reviewed. No data.
 
 Dorph-Petersen, K. 1949. Parcelfordeling i markforsog. Tidsskrift for
 Planteavl. 52, 111-175
@@ -1097,6 +1116,11 @@ Gavilánez Luna, Freddy Carlos and Judith Josefina García Bolívar (2022).
 Determinación del tamaño y de las dimensiones de unidades experimentales
 para ensayos de maíz <https://doi.org/10.33936/latecnica.v27i2.5337>
 Reviewed. No data.
+
+Gavilánez Luna, F., Andrade Alvarado, P., & Monserrate Gómez, J. (2022).
+Suitable dimensions of experimental plots for rice trials in Jujan,
+Ecuador. Bioagro, 34(3), 245-252.
+<https://doi.org/10.51372/bioagro343.4> Reviewed. No data.
 
 G. Geisler & J. Staab (1958) Versuchsanstellung im Weinbau. Vitis, 1,
 257-281. <https://core.ac.uk/download/235694455.pdf> Figure 3 has a
@@ -1317,6 +1341,7 @@ iniciação cientifica e I seminario integrado da Pos-graduação. 2018.
 Humada González G. G., Ramalho de Morais A, Caballero Mendoza CA,
 Bortolini J, Rodrigues Liska G. (2018). Estimation of Optimum Plot Size
 in Experimentation with Sweet Potato. Agrociencia Uruguay, 22(2):e13.
+<https://doi.org/10.31285/AGRO.22.2.2>
 <https://agrocienciauruguay.uy/index.php/agrociencia/article/view/13>
 Reviewed. No data.
 
@@ -1691,6 +1716,13 @@ Study on Optimum Block Size and Shape in Uniformity Trial of Sunflower
 (Helianthus annuus). Advances in Research, 9, 1-8. 2017. Reviewed. No
 data.
 
+Lopes, B. G. (2023). Estimação do tamanho ótimo de parcela e uso de
+medidas de não linearidade na validação de modelos em experimentos com
+Passiflora. Tese de Doutorado, Escola Superior de Agricultura Luiz de
+Queiroz, Universidade de São Paulo, Piracicaba.
+<https://doi.org/10.11606/T.11.2023.tde-03102023-100025> Reviewed. No
+data.
+
 Lopes, S. J., Storck, L., Lúcio, A. D., Lorentz, L. H., Lovato, C., &
 Dias, V. de O. (2005). Experimental plot size in grain sorghum in
 different plant densities. Pesquisa Agropecuaria Brasileira, 40(6),
@@ -1783,6 +1815,10 @@ Martinez G., Mario A. (1981). Utilidad de los ensayos de uniformidad
 para determinar forma y tamano de la parcela experimental. ICTA,
 Guatemala. <https://dloc.com/es/UF00081552/00001/images/0> Reviewed. No
 data.
+
+Masood, M. Asif and Malik Anver Javed (2003). Variability in field
+experiments in maize crop in Pakistan. Pak J Agri Sci, 40, 3-4.
+<https://pakjas.com.pk/papers/522.pdf> Reviewed. No data.
 
 Masood, M Asif and Irum Raza and Muhammad Yaseen. 2012. Estimation of
 optimum field plot size and shape in paddy yield trial. Pakistan J.
@@ -2019,6 +2055,11 @@ IMPORTÂNCIA DA AMOSTRAGEM NA EXPERIMENTAÇÃO AGRÍCOLA Agronomia Lusitana,
 Has individual yields of 3200 potatoes. But the plants are not
 necessarily adjacent, plots are not uniform in size.
 
+Oliveira, G. M. V. (2011). Tamanho de parcelas experimentais para
+Eremanthus erythropappus. Dissertação (Mestrado em Engenharia
+Florestal)-Universidade Federal de Lavras, Lavras.
+<https://repositorio.ufla.br/handle/1/2730> Reviewed. No data.
+
 Omanakuttan, Chithra (2015). Plot size study from uniformity trial data
 of mustard (Brassica juncea L.). M.S. Thesis, Sardarkrushinagar
 Dantiwada Agricultural University.
@@ -2185,6 +2226,10 @@ Pieris, W.V.D. and M.L.M. Salgado (1937). Experimental error in field
 experiments with coconuts. Tropical Agriculturist, 89, 75-85.
 <https://archive.org/details/tropical-agriculturist_1937-08_89>
 Reviewed. No data.
+
+Peixoto, A. P. B. (2009). Estimação do tamanho de parcelas para
+experimentos de conservação in vitro de maracujazeiro. Dissertação
+(Mestrado)-Universidade Federal de Lavras, Lavras. Reviewed. No data.
 
 Pimentel, Gomes; Couto, H.T.Z. (1985). O Tamanho Ótimo de Parcela
 Experimental Para Ensaios com Eucaliptos (The Optimum Experimental Plot
@@ -2579,6 +2624,11 @@ Dimensions for Performance Testing of Hybrid Potato in the Field. Potato
 Research, 65, 417–434. <https://doi.org/10.1007/s11540-021-09526-9>
 Reviewed. No data.
 
+Storck, Lindolfo, Dílson Antônio Bisognin, Sérgio José Ribeiro de
+Oliveira (2006). Dimensões dos ensaios e estimativas do tamanho ótimo de
+parcela em batata Pesquisa Agropecuária Brasileira, 41, 903-909.
+<https://doi.org/10.1590/S0100-204X2006000600002> Reviewed. No data.
+
 Storck, Lindolfo (2010). Partial collection of data on potato yield for
 experimental planning. Field Crops Research, 121, 286-290.
 <https://doi.org/10.1016/j.fcr.2010.12.018>. Reviewed. No data.
@@ -2745,9 +2795,8 @@ Vargas-Rojas, Jorge Claudio (2013). Determinación de un tamaño adecuado
 de unidad experimental, utilizando el método de curvature maxima, para
 ensayos de arroz (Oryza sative), en Bagaces, Guanacaste. Thesis,
 Universidad de Costa Rica.
-<https://repositorio.sibdi.ucr.ac.cr/server/api/core/bitstreams/df3c661f-0a0d-4010-99e6-604c4ad346f9/content>
-Reviewed. No data for basic units, but does have nice photographs page
-53-56.
+<https://repositorio.sibdi.ucr.ac.cr/handle/123456789/2500> Reviewed. No
+data for basic units, but does have nice photographs page 53-56.
 
 Vargas Rojas, J. C., & Navarro Flores, J. R. (2017). Size and shape
 determination of an experimental unit, with the maximum curvature
@@ -2757,6 +2806,7 @@ Research Journal, 9(1), 135–144.
 
 Vargas-Rojas, Jorge Claudio. (2020). Size and shape of the experimental
 unit in yield trials of Brachiaria, hybrid CIAT 3608.
+<https://www.redalyc.org/articulo.oa?id=269164290008>
 <https://www.semanticscholar.org/paper/Size-and-shape-of-the-experimental-unit-in-yield-of-Vargas-Rojas/e9964eca6ac42471aa44bc45e84bc376b02daf09>
 
 Vargas-Rojas, Jorge Claudio and Juan Ramón Navarro-Flores (2020).
@@ -2771,6 +2821,14 @@ experimental en ají dulce (Capsicum chinense Jacq.). Revista de la
 Facultad de Agronomía 43.1 (2017): 1-6.
 <http://saber.ucv.ve/ojs/index.php/rev_agro/article/view/16244/144814482807>
 Reviewed. No data.
+
+Vinícius Castro Guimarães, B., de Carvalho, A. J., Aspiazú, I., Santana
+da Silva, L., Pereira da Silva, R. R., Leal Pimenta, A. M., & Almeida
+Moura, M. M. (2021). Optimal plot size for experimentation of common
+beans (Phaseolus vulgaris L.) in the northern region of Minas Gerais,
+Brazil: Experimental plots. Revista De La Facultad De Ciencias Agrarias
+Uncuyo, 53(2), 55-63. <https://doi.org/10.48162/rev.39.039> Reviewed. No
+data.
 
 Vishnaadevi, S.; K. Prabakaran, E. Subramanian, P. Arunachalam. (2019).
 Determination of fertility gradient direction and optimum plot shape of

@@ -107,7 +107,7 @@
 <span class="r-in"><span>                            env <span class="op">=</span> <span class="fu">pdIdent</span><span class="op">(</span><span class="op">~</span> <span class="va">rep</span> <span class="op">-</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span>, </span></span>
 <span class="r-in"><span>              data<span class="op">=</span><span class="va">dat</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">m1fw</span><span class="op">)</span><span class="op">$</span><span class="va">tTable</span> <span class="co"># Match Sharma table 9.6</span></span></span>
-<span class="r-in"><span>  <span class="fu">VarCorr</span><span class="op">(</span><span class="va">m1fw</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/nlme/man/VarCorr.html" class="external-link">VarCorr</a></span><span class="op">(</span><span class="va">m1fw</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  </span></span>
 <span class="r-in"><span>  <span class="co">## Eberhart-Russell plot-level model ---</span></span></span>
 <span class="r-in"><span>  <span class="co"># Use pdDiag to get variance for each genotype</span></span></span>
@@ -116,7 +116,7 @@
 <span class="r-in"><span>                            env <span class="op">=</span> <span class="fu">pdIdent</span><span class="op">(</span><span class="op">~</span> <span class="va">rep</span> <span class="op">-</span> <span class="fl">1</span><span class="op">)</span><span class="op">)</span>, </span></span>
 <span class="r-in"><span>              data<span class="op">=</span><span class="va">dat</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/base/summary.html" class="external-link">summary</a></span><span class="op">(</span><span class="va">m1er</span><span class="op">)</span><span class="op">$</span><span class="va">tTable</span> <span class="co"># same as FW</span></span></span>
-<span class="r-in"><span>  <span class="fu">VarCorr</span><span class="op">(</span><span class="va">m1er</span><span class="op">)</span> <span class="co"># genotype variances differ</span></span></span>
+<span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/pkg/nlme/man/VarCorr.html" class="external-link">VarCorr</a></span><span class="op">(</span><span class="va">m1er</span><span class="op">)</span> <span class="co"># genotype variances differ</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span>  </span></span>
 <span class="r-in"><span>  <span class="co"># Calculate GxE cell means and environment index ---</span></span></span>

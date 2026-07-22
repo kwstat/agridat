@@ -650,6 +650,8 @@
   trials of wheat, swedes, oats, 3 years on the same land
 - [`sayer.sugarcane.uniformity`](sayer.sugarcane.uniformity.md) :
   Uniformity trial of sugarcane in India, 1932, 1933 & 1934.
+- [`scott.augmented`](scott.augmented.md) : Augmented RCB experiment
+  using soybean
 - [`senshu.rice`](senshu.rice.md) : Multi-environment trial of rice,
   with solar radiation and temperature
 - [`shafi.tomato.uniformity`](shafi.tomato.uniformity.md) : Uniformity

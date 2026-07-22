@@ -388,7 +388,8 @@ row-column design, ts = time series,
 |  |  | 4 |  | 6 |  |  | [rothamsted.oats](rothamsted.oats.md) |
 |  |  | 8 |  | 9 | rcb |  | [ryder.groundnut](ryder.groundnut.md) |
 | 5 |  | 4 |  |  | xy, rcb | lm | [salmon.bunt](salmon.bunt.md) |
-| 10 |  | 2 |  | 20 |  | betareg | [senshu.rice](senshu.rice.md) |
+| 10 |  | 2 |  | 20 |  | betareg | [scott.augmented](scott.augmented.md) |
+| 17 |  | 3 |  |  | augmented | asreml,lmer | [senshu.rice](senshu.rice.md) |
 |  | 40 |  |  |  |  | lm,Fieller | [shafii.rapeseed](shafii.rapeseed.md) |
 | 6 | 14 | 3 | 3 |  |  | biplot | [shaw.oats](shaw.oats.md) |
 | 13 | 2 | 5 | 3 |  |  | aov | [sharma.met](sharma.met.md) |

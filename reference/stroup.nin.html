@@ -160,7 +160,7 @@
 <span class="r-in"><span>  <span class="fu"><a href="libs.html">libs</a></span><span class="op">(</span><span class="va">nlme</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="co"># Random RCB model</span></span></span>
 <span class="r-in"><span>  <span class="va">lme1</span> <span class="op">&lt;-</span> <span class="fu">lme</span><span class="op">(</span><span class="va">yield</span> <span class="op">~</span> <span class="fl">0</span> <span class="op">+</span> <span class="va">gen</span>, random<span class="op">=</span><span class="op">~</span><span class="fl">1</span><span class="op">|</span><span class="va">rep</span>, data<span class="op">=</span><span class="va">dat</span>, na.action<span class="op">=</span><span class="va">na.omit</span><span class="op">)</span></span></span>
-<span class="r-in"><span>  <span class="va">preds</span><span class="op">$</span><span class="va">lme1</span> <span class="op">&lt;-</span> <span class="fu">fixef</span><span class="op">(</span><span class="va">lme1</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="va">preds</span><span class="op">$</span><span class="va">lme1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/nlme/man/fixed.effects.html" class="external-link">fixef</a></span><span class="op">(</span><span class="va">lme1</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span>  <span class="co"># Linear (Manhattan distance) correlation model</span></span></span>
 <span class="r-in"><span>  <span class="va">lme2</span> <span class="op">&lt;-</span> <span class="fu">gls</span><span class="op">(</span><span class="va">yield</span> <span class="op">~</span> <span class="fl">0</span> <span class="op">+</span> <span class="va">gen</span>, data<span class="op">=</span><span class="va">dat</span>,</span></span>
@@ -174,7 +174,7 @@
 <span class="r-in"><span>              random <span class="op">=</span> <span class="op">~</span> <span class="fl">1</span> <span class="op">|</span> <span class="va">rep</span>,</span></span>
 <span class="r-in"><span>              correlation <span class="op">=</span> <span class="fu">corExp</span><span class="op">(</span>form <span class="op">=</span> <span class="op">~</span> <span class="va">col</span> <span class="op">+</span> <span class="va">row</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>              na.action<span class="op">=</span><span class="va">na.omit</span><span class="op">)</span></span></span>
-<span class="r-in"><span>  <span class="va">preds</span><span class="op">$</span><span class="va">lme3</span> <span class="op">&lt;-</span> <span class="fu">fixef</span><span class="op">(</span><span class="va">lme3</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  <span class="va">preds</span><span class="op">$</span><span class="va">lme3</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/nlme/man/fixed.effects.html" class="external-link">fixef</a></span><span class="op">(</span><span class="va">lme3</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span>  <span class="co"># AIC(lme1,lme2,lme3) # lme2 is lowest</span></span></span>
 <span class="r-in"><span>  <span class="co">##      df      AIC</span></span></span>
