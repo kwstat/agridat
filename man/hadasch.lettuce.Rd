@@ -37,13 +37,14 @@ used as the response in a second stage:
 
   mn = 1 + Zu + error
 
-where Z is the design matrix of marker effects. The error term is fixed to have covariance matrix R be the same as from the first stage.
+where Z is the design matrix of marker effects. The error term is fixed
+to have covariance matrix R be the same as from the first stage.
 
 Genotyping was performed with 95 SNPs and 205 amplified fragment length
-polymporphism markers so that a marker matrix M (89×300) was
-provided. The biallelic marker M(iw) for the ith genotype and the wth
-marker with alleles A1 (i.e. the reference allele) and A2 was coded as 1
-for A1,A1, -1 for A2,A2 and 0 for A1,A2 and A2,A2.
+polymporphism markers so that a marker matrix M (89×300) was provided.
+The biallelic marker M(iw) for the ith genotype and the wth marker with
+alleles A1 (i.e. the reference allele) and A2 was coded as 1 for A1,A1,
+-1 for A2,A2 and 0 for A1,A2 and A2,A2.
 
 The electronic version of the lettuce data are licensed CC-BY 4 and were
 downloaded 20 Feb 2021. 

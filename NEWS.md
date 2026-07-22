@@ -28,6 +28,7 @@
 * onyiah.maize (Graeco-Latin square)
 * palenciaortiz.sugarcane.uniformity
 * petersen.wheat (via P.Schmidt)
+* scott.augmented
 * versteeg.maize (Strip-plot)
 
 ## Other notes

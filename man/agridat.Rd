@@ -404,6 +404,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{rothamsted.oats}             \tab     \tab    \tab 8   \tab    \tab 9     \tab rcb \tab \cr
 \link{ryder.groundnut}             \tab 5   \tab    \tab 4   \tab    \tab       \tab xy, rcb \tab lm \cr
 \link{salmon.bunt}                 \tab 10  \tab    \tab 2   \tab    \tab 20    \tab \tab betareg \cr
+\link{scott.augmented}             \tab 17  \tab    \tab 3   \tab    \tab       \tab augmented\tab asreml,lmer \cr
 \link{senshu.rice}                 \tab     \tab 40 \tab     \tab    \tab       \tab \tab lm,Fieller \cr
 \link{shafii.rapeseed}             \tab 6   \tab 14 \tab 3   \tab 3  \tab       \tab \tab biplot \cr
 \link{shaw.oats}                   \tab 13  \tab 2  \tab 5   \tab 3  \tab       \tab \tab aov \cr
