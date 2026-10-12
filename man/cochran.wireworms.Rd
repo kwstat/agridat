@@ -28,7 +28,7 @@
   \emph{Empire Journal of Experimental Agriculture}, 6, 157--175.
 }
 \references{
-  Ron Snee (1980). Graphical Display of Means.
+  H. P. Andrews, R. D. Snee & M. H. Sarner (1980). Graphical Display of Means.
   \emph{The American Statistician}, 34, 195-199.
   https://www.jstor.org/stable/2684060 
   https://doi.org/10.1080/00031305.1980.10483028
