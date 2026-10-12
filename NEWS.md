@@ -13,6 +13,7 @@
 * borden.sugarcane.uniformity
 * buesocampos.tomato.uniformity
 * buesocampos.melon.uniformity
+* cargneluttifilho.chickpea.uniformity
 * clewer.wheat (via P.Schmidt)
 * delgadillolopez.sesame.uniformity
 * desousa.potato
@@ -37,12 +38,14 @@
 * sawyer.multi.uniformity has been reshaped to tall format.
 * jayaraman.bamboo bug fix (thanks R.Stern)
 
+
 # agridat 1.26 (2025-11-14)
 
 ## New datasets
 
 * kirk.potato.uniformity
 * wehner.cucumber.uniformity
+
 
 # agridat 1.25 (2025-10-06)
 

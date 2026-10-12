@@ -20,7 +20,9 @@
   }
 }
 \details{
-  A randomized complete block experiment.  There are 108 varieties in 3
+  A randomized complete block experiment in a single trial.
+
+  There are 108 varieties in 3
   reps.  Plots are 6 meters long, 0.75 meters wide, trimmed to 4.2
   meters lengths before harvest. Trimming was done by spraying the wheat
   with herbicide.  The sprayer travelled in a serpentine pattern up and

@@ -7,6 +7,7 @@ This workflow describes the steps to add a new uniformity trial dataset to the a
 Use `data-raw/baena.bean.uniformity.csv` as an example for the raw data.
 Use `data-raw/baena.bean.uniformity.R` as an example for the data preparation script.
 Use `man/baena.bean.uniformity.Rd` as an example for the documentation file.
+The data name should end in `uniformity`, even if I forget to request that.
 
 ## 1. Create a data preparation script
 

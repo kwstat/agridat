@@ -96,7 +96,12 @@
   m1 <- index.smith(acast(dat, row~col, value.var='yield'),
                     main="smith.wheat.uniformity",
                     col="red")$uni
-  m1 # Compare to Smith table I
+                    
+  libs(reshape2)
+  matsmi <- acast(dat, row ~ col, value.var = "yield")
+  libs(trialSizing)
+  chk <- check_trial(matsmi)
+  plot(chk)                    
   
 }
 }

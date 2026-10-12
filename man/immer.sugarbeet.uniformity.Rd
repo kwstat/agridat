@@ -5,7 +5,7 @@
   Uniformity trial of sugarbeets, measurements of yield, sugar, purity
 }
 \description{
-  Uniformity trial of sugarbeets, at Minnesota, 1930, with measurements
+  Uniformity trial of sugarbeets, at Minnesota, with measurements
   of yield, sugar, purity.
 }
 

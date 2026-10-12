@@ -51,6 +51,7 @@ name                                      \tab dimensions \tab other \tab model 
 \link{bradley.multi.uniformity}           \tab 10 x 11 \tab xy \tab \cr
 \link{bryan.corn.uniformity}              \tab 6 x 48 \tab xy \tab \cr
 \link{buesocampos.melon.uniformity}       \tab 20 x 24 \tab xy \tab \cr
+\link{cargneluttifilho.chickpea.uniformity}\tab 6 x 6 \tab xy, 3 trials \tab \cr
 \link{buesocampos.tomato.uniformity}      \tab 10 x 26 \tab xy \tab \cr
 \link{christidis.cotton.uniformity}       \tab 16 x 16 \tab xy, 4 blocks \tab \cr
 \link{christidis.wheat.uniformity}        \tab 12 x 24 \tab xy \tab \cr
@@ -370,7 +371,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{lillemo.wheat}               \tab 24  \tab 13 \tab     \tab 7  \tab       \tab qq \tab medpolish, huehn\cr
 \link{lin.superiority}             \tab 33  \tab 12 \tab     \tab    \tab       \tab \tab superiority \cr
 \link{lin.unbalanced}              \tab 33  \tab 18 \tab     \tab    \tab       \tab \tab superiority \cr
-\link{linder.wheat}                \tab  9  \tab  7 \tab  4  \tab    \tab       \tab \tab gge\cr
+\link{linder.wheat}                \tab  9  \tab  7 \tab 4   \tab    \tab       \tab \tab gge\cr
 \link{little.splitblock}           \tab     \tab    \tab 4   \tab    \tab 4,5   \tab xy, strip-plot/split-block\tab aov\cr
 \link{lonnquist.maize}             \tab 11  \tab    \tab     \tab    \tab       \tab diallel \tab asreml \cr
 \link{lyons.wheat}                 \tab     \tab 12 \tab     \tab 4  \tab       \tab \tab \cr
@@ -394,7 +395,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{pederson.lettuce.repeated}   \tab     \tab    \tab 18  \tab    \tab 3     \tab \tab nlme\cr
 \link{perry.springwheat}           \tab 28  \tab 5  \tab     \tab 4  \tab       \tab gain \tab lm,lmer,asreml\cr
 \link{petersen.sorghum.cowpea}     \tab 2   \tab    \tab 4   \tab 7  \tab 4     \tab intercrop \tab \cr
-\link{petersen.wheat}              \tab 33   \tab   \tab 1   \tab    \tab      \tab augmented \tab \cr
+\link{petersen.wheat}              \tab 33  \tab    \tab 1   \tab    \tab      \tab augmented \tab \cr
 \link{piepho.cocksfoot}            \tab 25  \tab    \tab     \tab 7  \tab       \tab \tab mumm\cr
 \link{ratkowsky.onions}            \tab     \tab    \tab     \tab    \tab       \tab \tab lm\cr
 \link{reid.grasses}                \tab 4   \tab    \tab     \tab 3  \tab 21    \tab \tab nlme SSfpl \cr
