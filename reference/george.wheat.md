@@ -35,7 +35,7 @@ A data frame with 13996 observations on the following 5 variables.
 ## Details
 
 This is a nice example of data from a breeding trial, in which some
-check genotypes are kepts during the whole experiment, while other
+check genotypes are kept during the whole experiment, while other
 genotypes enter and leave the breeding program. The data is highly
 unbalanced with respect to genotypes-by-environments.
 

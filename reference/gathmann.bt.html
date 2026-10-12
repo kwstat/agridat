@@ -48,7 +48,7 @@
     <div class="section level2">
     <h2 id="format">Format<a class="anchor" aria-label="anchor" href="#format"></a></h2>
     <p>A data frame with 16 observations on the following 3 variables.</p><dl><dt><code>gen</code></dt>
-<dd><p>genotype/maize, <code>Bt</code> <code>ISO</code></p></dd>
+<dd><p>genotype, either Bt, ISO</p></dd>
 
     <dt><code>thysan</code></dt>
 <dd><p>thysan abundance</p></dd>
@@ -64,14 +64,27 @@
   control variety.</p>
 <p>Species abundances were measured for <em>Thysanoptera</em> (thrips) and
   <em>Araneida</em> (spiders) in 8 different plots.</p>
-<p>Each response is probably a mean across repeated measurements.</p>
+<p>Based on the decimal values in the response (.0 .2 .4 .6 .8) it
+  appears that each response value is probably the mean of 5 repeated
+  measurements.</p>
+<p>The assumption of Normality is questionable, which is why Hothorn used
+  exact tests.</p>
 <p>Used with permission of Achim Gathmann.</p>
     </div>
     <div class="section level2">
     <h2 id="source">Source<a class="anchor" aria-label="anchor" href="#source"></a></h2>
     <p>L. A. Hothorn, 2005.
   Evaluation of Bt-Maize Field Trials by a Proof of Safety.
-  https://www.seedtest.org/upload/cms/user/presentation7Hothorn.pdf</p>
+  https://www.seedtest.org/upload/cms/user/presentation7Hothorn.pdf
+  https://web.archive.org/web/20220119051451/https://www.seedtest.org/upload/cms/user/presentation7Hothorn.pdf</p>
+    </div>
+    <div class="section level2">
+    <h2 id="references">References<a class="anchor" aria-label="anchor" href="#references"></a></h2>
+    <p>Gathmann et al (2006).
+  Impact of Bt maize pollen (Mon810) on lepidopteran larvae living on
+  accompanying weeds.
+  Molecular Ecology, 15, 2677-2685.
+  https://doi.org/10.1111/j.1365-294X.2006.02962.x</p>
     </div>
 
     <div class="section level2">
@@ -114,7 +127,7 @@
 <span class="r-in"><span></span></span>
 <span class="r-in"><span>  <span class="va">th1</span> <span class="op">&lt;-</span> <span class="fu">wilcox_test</span><span class="op">(</span><span class="va">thysan</span> <span class="op">~</span> <span class="va">gen</span>, data<span class="op">=</span><span class="va">dat</span>, conf.int<span class="op">=</span><span class="cn">TRUE</span>, conf.level<span class="op">=</span><span class="fl">0.90</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">lapply</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/confint.html" class="external-link">confint</a></span><span class="op">(</span><span class="va">th1</span><span class="op">)</span>, <span class="va">round</span>, <span class="fl">2</span><span class="op">)</span></span></span>
-<span class="r-in"><span>  <span class="co"># 6.36, (2.8, 9.2) # Match Gathmann p. 11</span></span></span>
+<span class="r-in"><span>  <span class="co"># 6.36, (2.8, 9.2) # Match Gathmann p. 11 Non-param for Bt thysan</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span>  <span class="va">ar1</span> <span class="op">&lt;-</span> <span class="fu">wilcox_test</span><span class="op">(</span><span class="va">aranei</span> <span class="op">~</span> <span class="va">gen</span>, data<span class="op">=</span><span class="va">dat</span>, conf.int<span class="op">=</span><span class="cn">TRUE</span>, conf.level<span class="op">=</span><span class="fl">0.90</span><span class="op">)</span></span></span>
 <span class="r-in"><span>  <span class="fu"><a href="https://rdrr.io/r/base/lapply.html" class="external-link">lapply</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/confint.html" class="external-link">confint</a></span><span class="op">(</span><span class="va">ar1</span><span class="op">)</span>, <span class="va">round</span>, <span class="fl">2</span><span class="op">)</span></span></span>

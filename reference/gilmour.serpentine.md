@@ -29,12 +29,13 @@ A data frame with 330 observations on the following 5 variables.
 
 ## Details
 
-A randomized complete block experiment. There are 108 varieties in 3
-reps. Plots are 6 meters long, 0.75 meters wide, trimmed to 4.2 meters
-lengths before harvest. Trimming was done by spraying the wheat with
-herbicide. The sprayer travelled in a serpentine pattern up and down
-columns. The trial was sown in a serpentine manner with a planter that
-seeds three rows at a time (Left, Middle, Right).
+A randomized complete block experiment in a single trial.
+
+There are 108 varieties in 3 reps. Plots are 6 meters long, 0.75 meters
+wide, trimmed to 4.2 meters lengths before harvest. Trimming was done by
+spraying the wheat with herbicide. The sprayer travelled in a serpentine
+pattern up and down columns. The trial was sown in a serpentine manner
+with a planter that seeds three rows at a time (Left, Middle, Right).
 
 Field width 15 columns \* 6 m = 90 m
 

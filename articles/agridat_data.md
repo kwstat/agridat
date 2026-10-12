@@ -94,6 +94,8 @@ R. Cullis, Modelling in Repeated Measures Experiments.
 
 Small, mostly simulated data.
 
+#### Finney 1978, “Statistical Method in Biological Assay”
+
 #### Galwey, N.W. (2014). “Introduction to Mixed Modelling”, 2nd ed.
 
 <https://www.wiley.com/en-us/Introduction+to+Mixed+Modelling%3A+Beyond+Regression+and+Analysis+of+Variance%2C+2nd+Edition-p-9781119945499>
@@ -186,28 +188,36 @@ Second edition: `http://krishikosh.egranth.ac.in/handle/1/2034118`
 
 #### Erwin LeClerg, Warren Leonard, Andrew Clark (1962). “Field Plot Technique”
 
-<https://archive.org/details/fieldplottechniq00leon>
+1939 edition: <https://archive.org/details/fieldplottechniq00leon>
+
+1962 edition: <https://archive.org/details/fieldplottechniq0000lecl>
 
 Many small datasets.
 
      27 uniformity - agridat::goulden.barley.uniformity
+     165 factorial 3^2, 8 rep
+     186 split-plot
+     196 split-block
     213 split-plot
-    234 immer multi-environment
+    205 strip-strip-split
+    217 immer barley
+    234 immer multi-environment, 3 yr, 3 stations, 3 rep, 5 varieties, spring wheat   agridat::immer.wheat
     260 lattice pinto-bean
     276 triple lattice cotton
     280 lattice sugar beet
+    282 balanced lattice
     289 balanced lattice
-    336 repeated wheat
+    297 balanced lattice, 7x7, 4 rep
 
 #### Thomas M Little & F. Jackson Hills (1978). “Agricultural Experimentation”.
 
-     79 Latin square 
+     79 Latin square 6x6
      89 Split-plot 
     103 Split-split 
     117 Split-block - agridat::little.splitblock 
-    126 Repeated harvests.  In data-unused.
+    126 Repeated harvests.  5 blocks, 4 varieties, 4 alfalfa harvests, In data-unused.
     144 Non-IID errors
-    155 Square root transform
+    155 Square root transform, 11 trt, 4 blocks, count data
     158 Germination, 3 reps, 24 treatments
     261 Response surface, nitrogen, harvest
     277 Count data

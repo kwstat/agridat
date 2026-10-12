@@ -8,7 +8,7 @@ A data frame with 16 observations on the following 3 variables.
 
 - `gen`:
 
-  genotype/maize, `Bt` `ISO`
+  genotype, either Bt, ISO
 
 - `thysan`:
 
@@ -26,7 +26,12 @@ variety.
 Species abundances were measured for *Thysanoptera* (thrips) and
 *Araneida* (spiders) in 8 different plots.
 
-Each response is probably a mean across repeated measurements.
+Based on the decimal values in the response (.0 .2 .4 .6 .8) it appears
+that each response value is probably the mean of 5 repeated
+measurements.
+
+The assumption of Normality is questionable, which is why Hothorn used
+exact tests.
 
 Used with permission of Achim Gathmann.
 
@@ -35,6 +40,13 @@ Used with permission of Achim Gathmann.
 L. A. Hothorn, 2005. Evaluation of Bt-Maize Field Trials by a Proof of
 Safety.
 https://www.seedtest.org/upload/cms/user/presentation7Hothorn.pdf
+https://web.archive.org/web/20220119051451/https://www.seedtest.org/upload/cms/user/presentation7Hothorn.pdf
+
+## References
+
+Gathmann et al (2006). Impact of Bt maize pollen (Mon810) on
+lepidopteran larvae living on accompanying weeds. Molecular Ecology, 15,
+2677-2685. https://doi.org/10.1111/j.1365-294X.2006.02962.x
 
 ## Examples
 
@@ -77,7 +89,7 @@ if(0){
 
   th1 <- wilcox_test(thysan ~ gen, data=dat, conf.int=TRUE, conf.level=0.90)
   lapply(confint(th1), round, 2)
-  # 6.36, (2.8, 9.2) # Match Gathmann p. 11
+  # 6.36, (2.8, 9.2) # Match Gathmann p. 11 Non-param for Bt thysan
 
   ar1 <- wilcox_test(aranei ~ gen, data=dat, conf.int=TRUE, conf.level=0.90)
   lapply(confint(ar1), round, 2)

@@ -15,6 +15,7 @@
 - borden.sugarcane.uniformity
 - buesocampos.tomato.uniformity
 - buesocampos.melon.uniformity
+- cargneluttifilho.chickpea.uniformity
 - clewer.wheat (via P.Schmidt)
 - delgadillolopez.sesame.uniformity
 - desousa.potato

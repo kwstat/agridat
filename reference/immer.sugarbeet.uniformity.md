@@ -1,6 +1,6 @@
 # Uniformity trial of sugarbeets, measurements of yield, sugar, purity
 
-Uniformity trial of sugarbeets, at Minnesota, 1930, with measurements of
+Uniformity trial of sugarbeets, at Minnesota, with measurements of
 yield, sugar, purity.
 
 ## Format

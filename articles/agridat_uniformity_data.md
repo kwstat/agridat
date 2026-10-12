@@ -49,7 +49,9 @@ uniformidad” “smith” “tesis”
 
 ### Iowa State
 
-Parks Library Indian J of Ag Sciences, 1931-1968, S1 In2
+Parks Library Indian J of Ag Sciences v1 (1931)-v. 29 (1959),
+v.32(1962) - v.49 (1979) In Storage. v50 (1980) - v. 87 (2017) In Parks:
+S1 In2
 
 Empire Journal of Experimental Agriculture
 
@@ -114,7 +116,7 @@ Content of the Grain of Pure Lines and Hybrids. Mémoires de l’Institut
 National Polonais d’Economie Rurale & Pulawy. T. XIV, Mémoire Nr 213:
 106-157. Not found by ChatGPT 2025-12.
 
-Bhargava, P.; Saksena, A.B.tra, P. 1978. Size and shape of plots in
+Bhargava, P.; Saksena, A.B.tra, P. (1978). Size and shape of plots in
 field trials with banana. Indian journal of horticulture 35(1): 68-73
 <https://eurekamag.com/research/017/043/017043938.php> Paywall.
 
@@ -161,7 +163,7 @@ Forage Grasses. Thesis, Univ. of Nebr. 1952.
 CRI (1985). Report of the Coconut Research Institute for 1985. (Ed. R
 Mahindapala), Lunuwila, Sri Lanka.
 
-Evans, H. (1934) Some Preliminary Data concerning the Best Shape and
+Evans, H. (1934). Some Preliminary Data concerning the Best Shape and
 Size of Plot for Field Experiments with Sugarcane. Department of
 Agriculture, Mauritius : Sugarcane Research Station. Bulletin No. 3 :
 Pp. 11+2 plates. Not found 2025-12. Checked Hathi, Google books,
@@ -325,10 +327,6 @@ Parcelas em Experimentos Com Plantas Arbdreas (A New Contribution on the
 Problem of Plot Size in Experiments with Trees). Pesq. agropec. bras.,
 Brasilia.
 <https://teses.usp.br/teses/disponiveis/11/11134/tde-20231122-100346/pt-br.php>
-
-Prillwitz, P. M. H. H. (1929). Archief voor de thee cultuur, 19, 201.
-Not found. According to Eden (1935) Tropical Agriculturist, 84, this has
-data.
 
 Rabe, C., E. Thomas, 1983, Die Bestimmung optimaler Teilstuckgroßen und
 Wiederholungszahlen fur den Landwirtschaftlichen Feldversuch. Archiv fur
@@ -902,6 +900,11 @@ EXPERIMENTOS COM O MELOEIRO
 <https://ppgfito.ufersa.edu.br/wp-content/uploads/sites/45/2021/01/Tese_Robson.pdf>
 Reviewed. No data.
 
+da Silva, Willerson Custódio (2014). estimativas de tamanho ótimo de
+parcelas experimentais para a cultura do taro (Colocasia esculenta).
+Doctoral dissertation, Universidade Federal de Viçosa. Reviewed. No
+data.
+
 da Silva, Willerson Custódio; Mário Puiatti; Paulo Roberto Cecon;
 Leandro Roberto de Macedo; Tocio Sediyama. (2019) Estimation of optimum
 experimental plot size for taro culture. Ciência Rural, Santa Maria,
@@ -1056,6 +1059,12 @@ three methods. Revista Ciência Agronômica, v. 54, e20218267, 2023
 <https://scielo.figshare.com/articles/dataset/Optimal_plot_size_in_wheat_with_comparison_of_three_methods/22268947>
 Reviewed. No data. Supplemental files are only figures.
 
+Cargnelutti Filho, A., Loro, M. V., Ortiz, V. M., & Andretta, J. A.
+(2025). Determinação do tamanho de parcela para avaliar a massa de parte
+aérea de grão-de-bico. Vivências, 21(43), 499–513.
+<https://doi.org/10.31512/vivencias.v21i43.1246> Uniformity data p. 504.
+Three trials. agridat::cargneluttifilho.chickpea
+
 Fleming, A.A., Roger, T.H. and Bancroft, T.A. (1957). Field plot
 technique with hybrid corn under Alabama conditions. Agronomy Journal,
 49, 1-4. <https://doi.org/10.2134/agronj1957.00021962004900010001x>
@@ -1158,6 +1167,13 @@ same as used in Gomez & Gomez (1984).
 Gomez, K.A. and Gomez, A.A. (1984). Statistical Procedures for
 Agricultural Research. Wiley-Interscience. Page 481.
 agridat::gomez.rice.uniformity
+
+González, G. G. H., & de Morais, A. R. (2023). Modelo logarítmico
+modificado e coeficiente de precisão experimental no dimensionamento de
+parcelas experimentais (Modified logarithmic model and experimental
+precision coefficient in the design of experimental plots.) Brazilian
+Journal of Animal and Environmental Research, 6(4), 3458–3474.
+<https://doi.org/10.34188/bjaerv6n4-030> Reviewed. No data.
 
 González, Guido Gustavo Humada, María José Martínez Escobar, and Cindy
 Naomi Medina Santacruz (2025). Determinación del tamaño óptimo de
@@ -2140,6 +2156,12 @@ ICAR, New Delhi. Ch 7, p 141.
 <https://archive.org/details/dli.scoerat.949statisticalmethodsforagriculturalworkers/page/138/mode/2up>
 Same data as Panse (1941). agridat::panse.cotton.uniformity
 
+Paranaíba, P. F., Ferreira, D. F. & Morais, A. R. (2009). Tamanho ótimo
+de parcelas experimentais. Revista Brasileira de Biometria, 27(2),
+255-268.
+<https://biometria.ufla.br/antigos/fasciculos/v27/v27_n2/Patricia.pdf>
+Reviewed. Uses the IRRI rice data.
+
 Parker, E. R.; & L. D. Batchelor. (1932). Variation in the Yields of
 Fruit Trees in Relation to the Planning of Future Experiments.
 Hilgardia, 7(2), 81-161. Tables 3-9.
@@ -2274,6 +2296,14 @@ Prabhakaran, P.V. (1978). Optimum plot size for field trials with
 banana. Agricultural Research Journal of Kerala, 16(1), 33-38.
 <https://krishikosh.egranth.ac.in/handle/1/5810115813> Reviewed. No
 data.
+
+Prillwitz, P. M. H. H. (1929). Opzet en beoordeeling der resultaten van
+veldproeven bij de theecultuur. (The conduct of field experiments and
+interpretation of results) Archief voor de theecultuur in
+Nederlandsch-Indië, 4, 159-210.
+<https://www.google.com/books/edition/Archief_voor_de_thee_cultuur_in_Nederlan/8b1NAAAAYAAJ>
+There are data for 24 plots harvested 10 times. I cannot determine plot
+dimensions, nor the layout of the plots. Claude Opus could not either.
 
 Rakhi, T. and Arya V. Chandran, Vijayaraghava Kumar and Brigit Joseph.
 Estimation of Optimum Plot Size and Shape for Branching Variety of
@@ -2580,6 +2610,13 @@ Sampling Unit to Estimate Coastal Bermudagrass Yield”. Agronomy Journal
 67.4 (1975): 533-537.
 <https://doi.org/10.2134/agronj1975.00021962006700040020x> Reviewed. No
 data.
+
+Souza, J. L., Viçosi, D. B., Júnior, J. S. Z., da Costa, A. F., Costa,
+H., Fornazier, M. J., & Guarçoni, R. C. (2025). Tamanho ótimo da parcela
+experimental para repolho utilizando o método da comparação de
+variâncias. Revista Científica Intelletto, 10.
+<https://revista.grupofaveni.com.br/index.php/revista-intelletto/article/view/2198>
+Reviewed. No data.
 
 Squibbs, F. I. (). Uniformity trial on Established Cocoa. Half-Yearly
 Progress Report - Cocoa Research Institute of Nigeria 1938-1942, p. 6.

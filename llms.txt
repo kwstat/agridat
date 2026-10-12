@@ -165,6 +165,8 @@ library(agridat)
 - [`butron.maize`](butron.maize.md) : Multi-environment trial of maize
   with pedigrees
 - [`byers.apple`](byers.apple.md) : Diameters of apples
+- [`cargneluttifilho.chickpea.uniformity`](cargneluttifilho.chickpea.uniformity.md)
+  : Uniformity trial of chickpea in Brazil
 - [`caribbean.maize`](caribbean.maize.md) : Multi-environment trial of
   maize with fertilization
 - [`carlson.germination`](carlson.germination.md) : Germination of
