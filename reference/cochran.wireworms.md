@@ -36,8 +36,9 @@ replicated experiments. *Empire Journal of Experimental Agriculture*, 6,
 
 ## References
 
-Ron Snee (1980). Graphical Display of Means. *The American
-Statistician*, 34, 195-199. https://www.jstor.org/stable/2684060
+H. P. Andrews, R. D. Snee & M. H. Sarner (1980). Graphical Display of
+Means. *The American Statistician*, 34, 195-199.
+https://www.jstor.org/stable/2684060
 https://doi.org/10.1080/00031305.1980.10483028
 
 W. Cochran (1940). The analysis of variance when experimental errors

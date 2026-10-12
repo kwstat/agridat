@@ -42,7 +42,7 @@ Unsurprisingly, there are no significant treatment differences.
 
 Mercer, WB and Hall, AD, 1911. The experimental error of field trials
 The Journal of Agricultural Science, 4, 107-132. Table 1.
-http::/doi.org/10.1017/S002185960000160X
+https://doi.org/10.1017/S002185960000160X
 
 R. A. Fisher. *Statistical Methods for Research Workers*.
 
