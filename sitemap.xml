@@ -3,7 +3,7 @@
 <url><loc>/CLAUDE.html</loc></url>
 <url><loc>/LICENSE-text.html</loc></url>
 <url><loc>/LICENSE.html</loc></url>
-<url><loc>/articles/agridat_data.html</loc></url>
+<url><loc>/articles/agridat_data_sources.html</loc></url>
 <url><loc>/articles/agridat_graphical_gems.html</loc></url>
 <url><loc>/articles/agridat_intro.html</loc></url>
 <url><loc>/articles/agridat_mixed_model_example.html</loc></url>
@@ -201,6 +201,7 @@
 <url><loc>/reference/hutchinson.cotton.uniformity.html</loc></url>
 <url><loc>/reference/igue.sugarcane.uniformity.html</loc></url>
 <url><loc>/reference/ilri.sheep.html</loc></url>
+<url><loc>/reference/immer.mets.html</loc></url>
 <url><loc>/reference/immer.sugarbeet.uniformity.html</loc></url>
 <url><loc>/reference/index.html</loc></url>
 <url><loc>/reference/ivins.herbs.html</loc></url>

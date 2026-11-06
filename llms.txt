@@ -419,6 +419,8 @@ library(agridat)
   Uniformity trial with sugarcane
 - [`ilri.sheep`](ilri.sheep.md) : Birth weight and weaning weight of
   Dorper x Red Maasi lambs
+- [`immer.mets`](immer.mets.md) : Multi-environment trials of barley and
+  wheat
 - [`immer.sugarbeet.uniformity`](immer.sugarbeet.uniformity.md) :
   Uniformity trial of sugarbeets, measurements of yield, sugar, purity
 - [`ivins.herbs`](ivins.herbs.md) : Percent ground cover of herbage
@@ -846,7 +848,7 @@ library(agridat)
 
 ### All vignettes
 
-- [Additional sources of agricultural data](agridat_data.md):
+- [Additional sources of agricultural data](agridat_data_sources.md):
 - [Graphical Gems in the agridat Package](agridat_graphical_gems.md):
 - [Introduction to agridat](agridat_intro.md):
 - [Example generalized linear mixed model analysis with different

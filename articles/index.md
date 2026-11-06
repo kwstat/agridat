@@ -2,7 +2,7 @@
 
 ### All vignettes
 
-- [Additional sources of agricultural data](agridat_data.md):
+- [Additional sources of agricultural data](agridat_data_sources.md):
 - [Graphical Gems in the agridat Package](agridat_graphical_gems.md):
 - [Introduction to agridat](agridat_intro.md):
 - [Example generalized linear mixed model analysis with different

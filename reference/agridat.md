@@ -333,7 +333,8 @@ row-column design, ts = time series,
 | 4 |  | 4 |  | 2\*4 | rsm1,pop | lmer | [huehn.wheat](huehn.wheat.md) |
 | 20 | 10 |  |  |  |  | huehn | [hughes.grapes](hughes.grapes.md) |
 |  |  | 3 |  | 6 | binomial | lmer, aod, glmm | [hunter.corn](hunter.corn.md) |
-|  | 12 |  | 3 | 1 | rsm1 | xyplot | [ivins.herbs](ivins.herbs.md) |
+|  | 12 |  | 3 | 1 | rsm1 | xyplot | [immer.mets](immer.mets.md) |
+| 5 | 4 | 3 | 3 |  | 2 crops | aov | [ivins.herbs](ivins.herbs.md) |
 | 13 |  | 6 |  |  | 2 traits | lm, friedman | [jansen.apple](jansen.apple.md) |
 | 3 |  | 4 |  | 3 | binomial | glmer | [jansen.carrot](jansen.carrot.md) |
 | 16 |  | 3 |  | 2 | binomial | glmer | [jansen.strawberry](jansen.strawberry.md) |
@@ -493,7 +494,7 @@ Factorial experiments:
 | [welch.bermudagrass](welch.bermudagrass.md) |  |  |  |  | 4,4,4 | rsm3, factorial | lm, jags |
 | [yates.missing](yates.missing.md) |  |  | 10 |  | 3^2 = 3,3 | factorial | lm, pca |
 
-Multi-environment trials with multi-genotype,loc,rep,year:
+Multi-environment trials with multi genotype,loc,rep,year:
 
 |  |  |  |  |  |  |  |  |
 |----|----|----|----|----|----|----|----|
@@ -502,6 +503,7 @@ Multi-environment trials with multi-genotype,loc,rep,year:
 | [edwards.oats](edwards.oats.md) | 80 | 5 | 3 | 7 |  |  |  |
 | [gauch.soy](gauch.soy.md) | 7 | 7 | 4 | 12 |  |  | ammi |
 | [george.wheat](george.wheat.md) | 211 | 9 | 4 | 15 |  |  |  |
+| [immer.mets](immer.mets.md) | 5 | 4 | 3 | 3 |  | 2 crops | aov |
 | [shafii.rapeseed](shafii.rapeseed.md) | 6 | 14 | 3 | 3 |  |  | biplot |
 | [shaw.oats](shaw.oats.md) | 13 | 2 | 5 | 3 |  |  | aov |
 | [tesfaye.millet](tesfaye.millet.md) | 47 | 2 | 2-3 | 2 | 4 | xy,FA | asreml |

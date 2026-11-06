@@ -373,6 +373,8 @@
   Uniformity trial with sugarcane
 - [`ilri.sheep`](ilri.sheep.md) : Birth weight and weaning weight of
   Dorper x Red Maasi lambs
+- [`immer.mets`](immer.mets.md) : Multi-environment trials of barley and
+  wheat
 - [`immer.sugarbeet.uniformity`](immer.sugarbeet.uniformity.md) :
   Uniformity trial of sugarbeets, measurements of yield, sugar, purity
 - [`ivins.herbs`](ivins.herbs.md) : Percent ground cover of herbage
