@@ -216,22 +216,23 @@ Second edition: `http://krishikosh.egranth.ac.in/handle/1/2034118` (broken)
 
 
 ### Erwin LeClerg, Warren Leonard, Andrew Clark (1962). "Field Plot Technique"
+
 1939 edition: https://archive.org/details/fieldplottechniq00leon
 
 1962 edition: https://archive.org/details/fieldplottechniq0000lecl
 
-Many small datasets.
+Many small datasets. Page numbers below are for 1962 edition.
 ```
  27 uniformity - agridat::goulden.barley.uniformity
  165 factorial 3^2, 8 rep
  186 split-plot
- 196 split-block
-213 split-plot
-205 strip-strip-split
-217 immer barley
-234 immer multi-environment, 3 yr, 3 stations, 3 rep, 5 varieties, spring wheat   agridat::immer.wheat
+ 199 split-block
+205 strip-split-strip
+212-213 split-plot
+217 immer barley agriat::immer.mets
+234 immer multi-environment, 3 yr, 3 stations, 3 rep, 5 varieties, spring wheat   agridat::immer.mets
 260 lattice pinto-bean
-276 triple lattice cotton
+275 triple lattice cotton
 280 lattice sugar beet
 282 balanced lattice
 289 balanced lattice

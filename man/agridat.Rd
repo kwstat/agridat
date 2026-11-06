@@ -349,6 +349,7 @@ name                               \tab gen \tab loc\tab reps\tab years \tab trt
 \link{huehn.wheat}                 \tab 20  \tab 10 \tab     \tab    \tab       \tab  \tab huehn\cr
 \link{hughes.grapes}               \tab     \tab    \tab 3   \tab    \tab 6     \tab binomial \tab lmer, aod, glmm\cr
 \link{hunter.corn}                 \tab     \tab 12 \tab     \tab 3  \tab 1     \tab rsm1 \tab xyplot \cr
+\link{immer.mets}                  \tab 5   \tab 4  \tab 3   \tab 3  \tab       \tab 2 crops \tab aov\cr
 \link{ivins.herbs}                 \tab 13  \tab    \tab 6   \tab    \tab       \tab 2 traits \tab lm, friedman\cr
 \link{jansen.apple}                \tab 3   \tab    \tab 4   \tab    \tab 3     \tab binomial \tab glmer\cr
 \link{jansen.carrot}               \tab 16  \tab    \tab 3   \tab    \tab 2     \tab binomial \tab glmer\cr
@@ -511,18 +512,19 @@ Factorial experiments:
 \link{yates.missing}               \tab     \tab    \tab 10  \tab    \tab 3^2 = 3,3 \tab factorial \tab lm, pca \cr
 }
 
-Multi-environment trials with multi-genotype,loc,rep,year:
+Multi-environment trials with multi genotype,loc,rep,year:
 
 \tabular{llllllll}{
-  name                               \tab gen \tab loc\tab reps\tab years \tab trt \tab other \tab model \cr
-  \link{barrero.maize}               \tab 847 \tab 16 \tab 4   \tab 11    \tab 6  \tab \tab asreml\cr
-  \link{edwards.oats}                \tab 80  \tab 5  \tab 3   \tab 7     \tab       \tab \tab \cr
-  \link{gauch.soy}                   \tab 7   \tab 7  \tab 4   \tab 12    \tab       \tab \tab ammi \cr
-  \link{george.wheat}                \tab 211 \tab 9  \tab 4   \tab 15    \tab       \tab \tab \cr
-  \link{shafii.rapeseed}             \tab 6   \tab 14 \tab 3   \tab 3     \tab       \tab \tab biplot \cr
-  \link{shaw.oats}                   \tab 13  \tab 2  \tab 5   \tab 3     \tab       \tab \tab aov \cr
-  \link{tesfaye.millet}              \tab 47  \tab 2  \tab 2-3 \tab 2     \tab 4     \tab xy,FA \tab asreml \cr
-  \link{verbyla.lupin}               \tab 9   \tab 8  \tab 3   \tab 2     \tab 7     \tab rsm1, xy, density \tab asreml
+  name                               \tab gen \tab loc \tab reps\tab years \tab trt \tab other \tab model \cr
+  \link{barrero.maize}               \tab 847 \tab 16  \tab 4   \tab 11    \tab 6   \tab \tab asreml\cr
+  \link{edwards.oats}                \tab 80  \tab 5   \tab 3   \tab 7     \tab     \tab \tab \cr
+  \link{gauch.soy}                   \tab 7   \tab 7   \tab 4   \tab 12    \tab     \tab \tab ammi \cr
+  \link{george.wheat}                \tab 211 \tab 9   \tab 4   \tab 15    \tab     \tab \tab \cr
+  \link{immer.mets}                  \tab 5   \tab 4   \tab 3   \tab 3     \tab     \tab 2 crops \tab aov\cr
+  \link{shafii.rapeseed}             \tab 6   \tab 14  \tab 3   \tab 3     \tab     \tab \tab biplot \cr
+  \link{shaw.oats}                   \tab 13  \tab 2   \tab 5   \tab 3     \tab     \tab \tab aov \cr
+  \link{tesfaye.millet}              \tab 47  \tab 2   \tab 2-3 \tab 2     \tab 4   \tab xy,FA \tab asreml \cr
+  \link{verbyla.lupin}               \tab 9   \tab 8   \tab 3   \tab 2     \tab 7   \tab rsm1, xy, density \tab asreml
 }
 
 Data with markers: hadasch.lettuce.markers, steptoe.morex.geno
