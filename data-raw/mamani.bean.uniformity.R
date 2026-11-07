@@ -119,7 +119,7 @@ En el presente trabajo se encontraron 3 posibles tamaños óptimos de
 parcela. De estas alternativas unas ofrecen más ventajas que otras si se
 considera simultáneamente la forma de las parcelas.
 El tamaño óptimo mínimo de 4 m de largo (4 unidades de 1 m de largo cada una) en un solo surco, se consiguić en el subensayo 3. Eu confiabilidad es menor que el de los otros tamaños por haberse basado en un
-subensayo con un alto nűmero de parcelas perdidas. Este tamaño coincide
+subensayo con un alto número de parcelas perdidas. Este tamaño coincide
 con un tamaño relativamente similar de 1 surco de 3 m de largo, reportado por Miranda (27} como áptimo para ensayos en frijol. Calero (7) en
 frijol, aconseja el uso de parcelas pequeñas cuando se trata del estudio
 de ciertas labores como siembra, deshierbas y aplicación de productos
@@ -136,7 +136,7 @@ las labores sean efectuadas en forma mecanizada.
 El tamaño medio óptimo de 6-7 unidades básicas es evidentemente
 el mejor por las siguientes razones: a) ha sido obtenido a partir del promedio de los coeficientes ajustados por la ponderación (Cuadro 4) los
 cuales tuvieron el mismo valor en los subensayos 1 y 2 b) es resultado de
-un análisis en el que intervino un mayor nűmero de tamaños y formas de
+un análisis en el que intervino un mayor número de tamaños y formas de
 parcelas, que en los resultados anteriores, c) su forma óptima corresponde a 2 surcos de 3 m de largo, aproximandose más a la forma rectangular; d) fue confirmado por optimización mediante la aplicación de modelos matemáticos adecuados. Gartner y Cardona (18) encontraron un
 tamaño ptimo de parcela para frijol de 2 surcos de 4 m, que se asemeja
 al encontrado en este estudio. El tamaño medio obtenido puede ser usado
@@ -144,7 +144,7 @@ en cualquier tipo de estudio o investigación en frijol que sea cuantificado
 a través del rendimiento.
 Inversamente a lo que sucede en la forma de la parcela, en cuanto
 que la óptima es la alargada y estrecha, en el bloque se prefiere la cuadrada o cercana a esta. Si por razones de forma de bloque relacionamos
-el nűmero de tratamientos con el número de repeticiones, la mejor forma
+el número de tratamientos con el número de repeticiones, la mejor forma
 de bloque vendría a ser la de 4 repeticiones de la parcela de 2 surcos por
 3 m de largo. Resultados parecidos obtuvieron en frijol Gartner y Cardona
 (18), salvo que el largo del surco indicado por ellos era de 4 m. La
@@ -162,27 +162,27 @@ induce por la reducción correspondiente del número de repeticiones. Esto
 muestra que el concepto generalmente propuesto que "a medida que aumenta el tamaño de parcela disminuye la variabilidad", tiene un limite. Esto
 se demuestra al observar los resultados del subensayo 1 (Cuadro 3) donde
 el grupo 1 corresponde al tamaño de la unidad primaria más pequeña y
-esta va en aumento hasta llegar a un máximo tamaño en el grupo 8 (tendencia lineal). El valor del coeficiente en el grupo 1 es de b₂ =.91, el cual
+esta va en aumento hasta llegar a un máximo tamaño en el grupo 8 (tendencia lineal). El valor del coeficiente en el grupo 1 es de b2 =.91, el cual
 expresa alta variabilidad y conforme va aumentando el tamaño de la parcela (grupos 2 y 3) el valor del coeficiente va decreciendo, hasta llegar a
-un valor mínino en el grupo 4 (b₂ =.53). Esto quiere decir que la eficiencia del incremento del tamaño de la parcela para reducir el error
+un valor mínino en el grupo 4 (b2 =.53). Esto quiere decir que la eficiencia del incremento del tamaño de la parcela para reducir el error
 llega a su máximo con el tamaño correspondiente al grupo 4: pero a partir
 del grupo 5 en adelante hay un nuevo aumento del valor del coeficiente a
 pesar de seguir incrementandose el tamaño de las parcelas. Esto lo confirma el trabajo de Emith (56) en frijol.
 De los resultados del ensayo se deduce que en general en la determinación del tamaño al costo total por parcela no tiene mucha importancia,
-sino más bien su distribución proporcional en los coeficientes K₁ у К₂.
+sino más bien su distribución proporcional en los coeficientes K1 y K2.
 La mayor proporción de K1 en relación a K2 en este estudio coincide con
 los resultados obtenidos por Weber y Horner (66) en soya, aplicandose
 también una regresión lineal simple. En cambio Robinson et al (53) en
-maní, se valieron de una encuenta para determinar los valores de K₁y K2.
-De estos métodos se prefiere el que usa los coeficientes de la regresiőn
-lineal por su mayor exactitud. Se asignaron a K₁ las labores de toma de
+maní, se valieron de una encuenta para determinar los valores de K1y K2.
+De estos métodos se prefiere el que usa los coeficientes de la regresión
+lineal por su mayor exactitud. Se asignaron a K1 las labores de toma de
 notas y análisis estadístico debido a que la mayor parte de la bibliografía
 consultada sigue ese procedimiento. Pero Wiedemann y Leininger (67)
 en cártamo asignaron a K2 un 25% de la labor de toma de notas y 5% del
 análisis estadistico. Sin embargo, aún aplicándose esta modificación a
-los resultados del presente estudio no se cambiarían de manera significativa la relación entre K₁ y K2.
+los resultados del presente estudio no se cambiarían de manera significativa la relación entre K1 y K2.
 La omisión de los bordes de parcela no debería afectar seriamente
-los resultados en este estudio, si se toma en cuenta que Monzőn et al
+los resultados en este estudio, si se toma en cuenta que Monzón et al
 (41, 42) trabajando con frijol encontraron que no hubo efecto de competencia entre parcelas y por lo tanto no se requieren de borduras en parcelas
 de un mismo bloque. Asi mismo Zuhlke y Gritton (71) en arveja obtuvieron como tamaño optimo 3.3 m² sin bordes y 3.1 m² con bordes, lo cual
 en la práctica representaria poca diferencia. Además las inclusión de
@@ -196,13 +196,13 @@ consiguiente incremento de las dificultades y los costos inherentes.
 Tambiến las modificaciones introducidas a las fórmulas de Hatheway
 y Williams (22) de los coeficientes de regresión ponderados y su optimización con modelos matemáticos, ayudaron a refinar la metodología para
 obtener el tamaño óptimo de parcela.
-La modificación de la fórmula [4] de Hatheway y Williams (22) consistiő en que ésta fue reemplazada por la fórmula general para la solución
-de ecuaciones lineales mediante el método de cuadrados mínimos [ 7] у
-[ 8], para poder ser aplicada a la computadora con cualquier nűmero de
+La modificación de la fórmula [4] de Hatheway y Williams (22) consistió en que ésta fue reemplazada por la fórmula general para la solución
+de ecuaciones lineales mediante el método de cuadrados mínimos [ 7] y
+[ 8], para poder ser aplicada a la computadora con cualquier número de
 tamaños diferentes de parcela y en cualquier diseño experimental.
 Fueron empleados varios métodos para obtener los coeficientes de
 regresión y su respectivo ajuste por ponderación. Analizando los coeficientes obtenidos en el subensayo 3, el ajuste de b1 = 1.52 a b2 = 1.48
-mediante la főrmula de Federer (12) es relativamente pequeño. Un resultado similar con esta misma fórmula obtuvo Stickler (60) en sorgo de
+mediante la fórmula de Federer (12) es relativamente pequeño. Un resultado similar con esta misma fórmula obtuvo Stickler (60) en sorgo de
 grano. De allf se deduce que la fórmula de Federer es muy débil para
 realizar ajustes en comparación con la de Hatheway y Williams (22). Asĩ
 al aplicar ésta en el mismo subensayo 3, ajustamos el valor de b1 = 1.52
@@ -228,9 +228,9 @@ Contrary to what happens with plot shape—where the optimal is long and narrow�
 
 Two main factors are involved in determining the optimal size of any plot: the variability of the experimental material and the costs.
 
-In field experiments, soil variability as experimental material is of primary importance. Most researchers detect the variability of a soil through regression analysis, in which the coefficient (b) measures, according to Nonnecke (44), the correlation between adjacent plots as well. If the regression coefficients of the 16 groups in subtrial 1 (Table 3) are observed, they are seen to follow a parabolic curve. This indicates that as the size of the basic units increases within the same experimental area, efficiency decreases as error increases, which is induced by the corresponding reduction in the number of replications. This shows that the generally proposed concept that “as plot size increases, variability decreases” has a limit. This is demonstrated by observing the results of subtrial 1 (Table 3), where group 1 corresponds to the smallest primary unit size, which increases up to a maximum size in group 8 (linear trend). The coefficient value in group 1 is b₂ = .91, which expresses high variability, and as plot size increases (groups 2 and 3) the coefficient value decreases until reaching a minimum in group 4 (b₂ = .53). This means that the efficiency of increasing plot size to reduce error reaches its maximum with the size corresponding to group 4; but from group 5 onward there is a new increase in the coefficient value despite continuing to increase the plot size. This is confirmed by the work of Emith (56) in beans.
+In field experiments, soil variability as experimental material is of primary importance. Most researchers detect the variability of a soil through regression analysis, in which the coefficient (b) measures, according to Nonnecke (44), the correlation between adjacent plots as well. If the regression coefficients of the 16 groups in subtrial 1 (Table 3) are observed, they are seen to follow a parabolic curve. This indicates that as the size of the basic units increases within the same experimental area, efficiency decreases as error increases, which is induced by the corresponding reduction in the number of replications. This shows that the generally proposed concept that “as plot size increases, variability decreases” has a limit. This is demonstrated by observing the results of subtrial 1 (Table 3), where group 1 corresponds to the smallest primary unit size, which increases up to a maximum size in group 8 (linear trend). The coefficient value in group 1 is b2 = .91, which expresses high variability, and as plot size increases (groups 2 and 3) the coefficient value decreases until reaching a minimum in group 4 (b2 = .53). This means that the efficiency of increasing plot size to reduce error reaches its maximum with the size corresponding to group 4; but from group 5 onward there is a new increase in the coefficient value despite continuing to increase the plot size. This is confirmed by the work of Emith (56) in beans.
 
-From the trial results it can be deduced that, in general, in determining size the total cost per plot is not very important; rather, it is the proportional distribution into coefficients K₁ and K₂. The larger proportion of K₁ in relation to K₂ in this study coincides with the results obtained by Weber and Horner (66) in soybean, also applying a simple linear regression. In contrast, Robinson et al. (53) in peanut used a survey to determine the values of K₁ and K₂. Of these methods, the one that uses the coefficients from linear regression is preferred for its greater accuracy. The tasks of note-taking and statistical analysis were assigned to K₁ because most of the literature consulted follows that procedure. However, Wiedemann and Leininger (67) in safflower assigned to K₂ 25% of the note-taking and 5% of the statistical analysis. Even applying this modification to the results of the present study would not significantly change the relationship between K₁ and K₂.
+From the trial results it can be deduced that, in general, in determining size the total cost per plot is not very important; rather, it is the proportional distribution into coefficients K1 and K2. The larger proportion of K1 in relation to K2 in this study coincides with the results obtained by Weber and Horner (66) in soybean, also applying a simple linear regression. In contrast, Robinson et al. (53) in peanut used a survey to determine the values of K1 and K2. Of these methods, the one that uses the coefficients from linear regression is preferred for its greater accuracy. The tasks of note-taking and statistical analysis were assigned to K1 because most of the literature consulted follows that procedure. However, Wiedemann and Leininger (67) in safflower assigned to K2 25% of the note-taking and 5% of the statistical analysis. Even applying this modification to the results of the present study would not significantly change the relationship between K1 and K2.
 
 Omitting plot borders should not seriously affect the results in this study, considering that Monzón et al. (41, 42), working with beans, found that there was no competition effect between plots and therefore borders are not required within plots of the same block. Likewise, Zuhlke and Gritton (71) in pea obtained an optimal size of 3.3 m² without borders and 3.1 m² with borders, which in practice would represent little difference. Moreover, including borders in the plot would increase costs.
 

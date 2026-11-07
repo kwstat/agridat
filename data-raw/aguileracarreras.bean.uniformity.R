@@ -6,8 +6,8 @@ The experimental plot was divided into 256 plots of 5 x 5 m. each. In each of th
 
 Although the primary objective of the experiment related to coffee, a uniformity study was conducted with bean (*Phaseolus vulgaris*) of the variety Porrillo No 1. The reason for using bean was the need to use a crop that could be harvested in a relatively short period of time.
 
-Aguilera Carreras, José Rutilio (1969).
-Heterogeneidad de un suelo latosol pardo forestal en un lote experimental de fertilización en café.
+Aguilera Carreras, José Rutilio (1969).
+Heterogeneidad de un suelo latosol pardo forestal en un lote experimental de fertilización en café.
 Thesis, Universidad de El Salvador
 https://hdl.handle.net/20.500.14492/29100
 Reviewed. Data. 

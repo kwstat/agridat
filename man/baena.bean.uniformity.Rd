@@ -18,7 +18,7 @@ Uniformity trial of beans in Columbia.
 }
 \details{
 The experiment was carried out during the period between Sep 21 and Dec 16, 1976.
-The sowing was carried out in plot Q₂ of the experimental field at the
+The sowing was carried out in plot Q2 of the experimental field at the
 International Center for Tropical Agriculture, CIAT-Palmira, Columbia.
 Latitude of 3 deg 31 min N and a longitude of 76 deg 19 min W.
 
