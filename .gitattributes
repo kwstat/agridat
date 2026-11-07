@@ -1,0 +1,17 @@
+# Store text files with LF in the repo; check out with LF
+* text=auto eol=lf
+
+*.rda binary
+*.RData binary
+*.rds binary
+*.png binary
+*.jpg binary
+*.ico binary
+*.xcf binary
+*.pdf binary
+*.xls binary
+*.xlsx binary
+*.pptx binary
+*.shp binary
+*.shx binary
+*.dbf binary

@@ -6,6 +6,7 @@
 
 # ----- Git -----
 ^.gitignore$
+^\.gitattributes$
 
 # ----- devtools -----
 ^revdep$
