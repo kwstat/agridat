@@ -1,3 +1,30 @@
+# agridat 1.27
+
+## test environments and results
+
+1. R 4.6.1 devtools::check() on Windows 11
+2. WinBuilder R-Devel
+3. WinBuilder R-Release
+
+All OK.
+
+## revdepcheck results
+
+We checked 11 reverse dependencies and saw 0 new problems.
+
+✔ AgriFusionR 0.1.0                      ── E: 0     | W: 0     | N: 0
+✔ agriutilities 1.2.3                    ── E: 0     | W: 0     | N: 0
+✔ connected 1.2                          ── E: 0     | W: 0     | N: 0
+✔ desplot 1.11                           ── E: 0     | W: 0     | N: 0
+✔ fbglm 1.5.0                            ── E: 0     | W: 0     | N: 1
+✔ geneticae 1.0.1                        ── E: 0     | W: 0     | N: 0
+✔ gge 1.11                               ── E: 0     | W: 0     | N: 0
+✔ heritable 0.1.0                        ── E: 0     | W: 0     | N: 0
+✔ janusplot 0.1.1                        ── E: 0     | W: 0     | N: 0
+✔ powerutilities 0.7.1                   ── E: 0     | W: 0     | N: 0
+✔ spaMM 4.7.17                           ── E: 0     | W: 0     | N: 0
+
+
 # agridat 1.26
 
 ## test environments and results

@@ -1,4 +1,4 @@
-# agridat 1.27 ()
+# agridat 1.27 (2026-11-06)
 
 ## New datasets
 
