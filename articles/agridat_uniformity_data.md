@@ -145,7 +145,7 @@ Calzada Benza, J. 1957. El error experimental y la precision en los
 experimentos. Lima Peru, Estac. Expt. Agr. de La Molina, Bol. 67, 33 pp
 . Not found.
 
-Chacin-Lugo, F. 1977. Tamaño de parcela experimental y su forma. Revista
+Chacin-Lugo, F. 1977. Tamaño de parcela experimental y su forma. Revista
 9(3): 55-74 Not found.
 
 Chan Castaneda, J.L. (1974) Determinacion del tamano y la forma optimos
@@ -474,8 +474,8 @@ Pakistan Journal of Agricultural Sciences, Volume 21, Issue 3,4.
 <https://www.tehqeeqat.com/english/articleDetails/36510> Reviewed. No
 data.
 
-Aguilera Carreras, José Rutilio (1969). Heterogeneidad de un suelo
-latosol pardo forestal en un lote experimental de fertilización en café.
+Aguilera Carreras, José Rutilio (1969). Heterogeneidad de un suelo
+latosol pardo forestal en un lote experimental de fertilización en café.
 Thesis, Universidad de El Salvador.
 <https://hdl.handle.net/20.500.14492/29100> Reviewed. Data.
 agridat::aguileracarreras.bean.uniformity
@@ -484,9 +484,9 @@ Ahring, R. M., Morrison, R. D., & Wilhite, M. L. (1959). Uniformity
 Trials on Germination of Switchgrass Seed 1. Agronomy Journal, 51(12),
 734-737.
 
-Alvarez Cajas, Victor Manuel (1982). Determinación del tamaño óptimo de
-parcela experimental en caña de azúcar (Saccharum officinarum L.) bajo
-condiciones de la finca Bulbuxyá. Thesis, University of San Carlos,
+Alvarez Cajas, Victor Manuel (1982). Determinación del tamaño óptimo de
+parcela experimental en caña de azúcar (Saccharum officinarum L.) bajo
+condiciones de la finca Bulbuxyá. Thesis, University of San Carlos,
 Guatemala. <https://catalogosiidca.csuca.org/Record/USAC.92002>
 agridat::alvarezcajas.sugarcane.uniformity Page 32, data for basic units
 
@@ -605,9 +605,9 @@ Reviewed. 2026.01.08 Sent email requesting permission to use. Approved.
 Nice pictures p 46-49. Data p 72-74.
 agridat::barrantasaguilar.sugarcane.uniformity
 
-Barrientos Garcia, Marino (1981). Evaluación de 4 métodos para la
-determinación de tamaño y forma óptimos de parcela para experimentación
-agrícola. Thesis, Universidad de San Carlos de Guatemala.
+Barrientos Garcia, Marino (1981). Evaluación de 4 métodos para la
+determinación de tamaño y forma óptimos de parcela para experimentación
+agrícola. Thesis, Universidad de San Carlos de Guatemala.
 <http://biblioteca.usac.edu.gt/tesis/01/01_0564.pdf> Reviewed. Data on
 page 61-62. Two trials. agridat::barrientosgarcia.sesame.uniformity
 agridat::barrientosgarcia.maize.uniformity
@@ -2134,10 +2134,10 @@ Plot Size and Shape for Field Experiments in Tomato. Madras Agric. J.,
 <https://masujournal.org/store_file/archive/62-3-3-110-113.pdf>
 Reviewed. No data.
 
-Palencia Ortiz, Julia Anibal (1965). Determinación del tamaño óptimo de
-parcela para estudios experimentales en caña de azúcar (Saccharum
-officinarum L.) bajo las condiciones de la estación experimental
-agrícola Sabana Grande. University of San Carlos, Guatemala
+Palencia Ortiz, Julia Anibal (1965). Determinación del tamaño óptimo de
+parcela para estudios experimentales en caña de azúcar (Saccharum
+officinarum L.) bajo las condiciones de la estación experimental
+agrícola Sabana Grande. University of San Carlos, Guatemala
 <https://biblos.usac.edu.gt/opac/record/87128>
 agridat::palenciaortiz.sugarcane.uniformity
 

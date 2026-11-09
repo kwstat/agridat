@@ -69,9 +69,9 @@ K.Wright.
 
 ## Source
 
-Barrientos Garcia, Marino (1981). Evaluación de 4 métodos para la
-determinación de tamaño y forma óptimos de parcela para experimentación
-agrícola. Thesis, Universidad de San Carlos de Guatemala.
+Barrientos Garcia, Marino (1981). Evaluación de 4 métodos para la
+determinación de tamaño y forma óptimos de parcela para experimentación
+agrícola. Thesis, Universidad de San Carlos de Guatemala.
 http://biblioteca.usac.edu.gt/tesis/01/01_0564.pdf
 
 ## References

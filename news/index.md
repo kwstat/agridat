@@ -1,6 +1,8 @@
 # Changelog
 
-## agridat 1.27 ()
+## agridat 1.27 (2026-11-06)
+
+CRAN release: 2026-11-08
 
 ### New datasets
 
