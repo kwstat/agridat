@@ -2755,8 +2755,8 @@ the scan, but unfortunately incompletely scanned (the source document
 contained a folded page that was not unfolded for scanning). Also
 <https://babel.hathitrust.org/cgi/pt?id=uc1.b3026863&seq=127> no data
 scanned. Also
-[https://babel.hathitrust.org/cgi/pt?id=uc1.\$b717712&seq=623](https://babel.hathitrust.org/cgi/pt?id=uc1.%24b717712&seq=623)
-no data scanned.
+<https://babel.hathitrust.org/cgi/pt?id=uc1.$b717712&seq=623> no data
+scanned.
 
 Tedin, Olof (1931). The Influence of Systematic Plot Arrangement upon
 the Estimate of Error in field Experiments. J. Agric. Science, 21,
