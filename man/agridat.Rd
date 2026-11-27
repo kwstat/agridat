@@ -181,6 +181,7 @@ name                                      \tab dimensions \tab other \tab model 
 \bold{Yield monitor}
 \tabular{llllll}{
 name                             \tab reps\tab years \tab trt \tab other \tab model \cr
+\link{cordoba.corn}              \tab     \tab       \tab 2   \tab xy,ym \tab \cr
 \link{gartner.corn}              \tab     \tab       \tab     \tab xy,ym \tab \cr
 \link{lasrosas.corn}             \tab 3   \tab 2     \tab 6   \tab xy,ym \tab lm \cr
 \link{kayad.alfalfa}             \tab     \tab 4     \tab     \tab xy,ym \tab \cr
